@@ -97,28 +97,44 @@ def search_alias():
 
 
 # ════════════════════════════════════════════════════════════════
-# Tab 2: 升级规划 (skill + from/to → 每个配方的 XP 贡献 + 进度条)
+# Tab 2: 经验分析器 — 选技能 + 当前等级, 显示所有能涨 XP 的配方
 # ════════════════════════════════════════════════════════════════
 
 @bp.route("/levelup", methods=["GET"])
 def levelup():
+    from .database import Database
+    """经验分析器.
+
+    输入: skill + level (当前技能等级)
+    输出:
+      - 顶部信息卡片: 当前等级, 累计阈值, 还需 XP
+      - 所有你能制造的配方 (difficulty <= 当前等级), 按 XP/分钟效率排序
+      - 推荐: 升到下一级的最快方案
+      - 可选: 一次升多级 (from → to)
+    """
     db = _get_db()
     skills = sorted(SKILL_ZH_NAMES.items(), key=lambda x: x[1])
     stats = _stats(db)
 
-    # skill 兼容 name (旧链接)
+    # 兼容旧链接里的 skill / name 参数
     name = (request.args.get("skill") or
             request.args.get("name") or "").strip()
 
     if not name:
+        # 默认展示引导页 — 让用户先选技能 + 当前等级
         return render_template(
             "levelup.html",
             active_tab="levelup",
-            name="", matched_ids=[], crafts=[], plan=[],
-            progression=[], not_found=False, no_skill=True,
-            from_lv=0, to_lv=1,
+            name="", matched_ids=[],
+            crafts=[], plan=[], progression=[],
+            craftable=[], best_plan=None,
+            not_found=False, no_skill=True,
+            from_lv=0, to_lv=1, current_level=0,
+            xp_needed=0, xp_cutoff_target=0,
             xp_cutoff=Database.XP_CUTOFFS,
             skills=skills, stats=stats,
+            item_zh_names=db.item_zh_names,
+            zh_mat_names=db.item_zh_names,
         )
 
     try:
@@ -129,6 +145,9 @@ def levelup():
     if to_lv <= from_lv:
         to_lv = from_lv + 1
 
+    # current_level = from_lv (你的实际等级)
+    current_level = from_lv
+
     result = db.fastest_to_level(name, from_lv, to_lv)
     matched = result.get("matched_ids", [])
     if not matched:
@@ -136,13 +155,61 @@ def levelup():
             "levelup.html",
             active_tab="levelup",
             name=name, matched_ids=[], crafts=[], plan=[],
-            progression=[], not_found=True, no_skill=False,
-            from_lv=from_lv, to_lv=to_lv,
+            progression=[], craftable=[],
+            best_plan=None,
+            not_found=True, no_skill=False,
+            from_lv=from_lv, to_lv=to_lv, current_level=from_lv,
+            xp_needed=0, xp_cutoff_target=0,
             xp_cutoff=Database.XP_CUTOFFS,
             skills=skills, stats=stats,
+            item_zh_names=db.item_zh_names,
+            zh_mat_names=db.item_zh_names,
         )
 
-    # 逐级规划: from → from+1 → ... → to
+    # === 关键: 找出"当前等级可涨经验的所有配方" ===
+    # CDDA 规则: cap = difficulty × 1.25; 当 get_skill_level(id) > cap 时停止给 XP
+    # 等价于: difficulty >= 当前等级 的配方都能继续涨经验
+    # 含义: 难度 <= 你的等级 的反而已经被 cap 挡掉了 (无法涨 XP)
+    craftable = []
+    for result_id, recipes in db.recipes.items():
+        for r in recipes:
+            if r.skill_used.lower() not in matched:
+                continue
+            diff = r.difficulty if r.difficulty is not None else 99
+            # 难度 < 当前等级 → 已被 cap 挡掉 (低难度配方在你等级超过阈值后失效)
+            # 难度 >= 当前等级 → 仍可涨 XP (符合用户发现的规则)
+            if diff < current_level:
+                continue
+            xp_each = Database.xp_for_recipe(r.time)
+            if xp_each <= 0:
+                continue
+            time_sec = Database.parse_time_to_seconds(r.time)
+            efficiency = xp_each / max(time_sec, 1) * 60  # XP/分钟
+            craftable.append({
+                "it": db.items.get(result_id) or
+                     Item(id=result_id, type="?", name=result_id),
+                "r": r,
+                "xp_each": xp_each,
+                "time_sec": time_sec,
+                "efficiency": efficiency,
+            })
+
+    # 按效率降序 (XP/分钟)
+    craftable.sort(key=lambda c: -c["efficiency"])
+
+    # === 推荐: 升到下一级的最快方案 (当前 from_lv → to_lv 之间的最快) ===
+    best_plan = None
+    if from_lv < to_lv:
+        # 取 from_lv → current_level 的最快方案, 但只保留当前可造部分
+        sub = db.fastest_to_level(name, from_lv, to_lv)
+        best_plan = {
+            "from": from_lv,
+            "to": to_lv,
+            "xp_needed": sub["xp_needed"],
+            "crafts": sub["crafts"][:5],
+        }
+
+    # 逐级规划 (from → from+1 → ... → to)
     progression = []
     for lvl in range(from_lv, to_lv):
         sub = db.fastest_to_level(name, lvl, lvl + 1)
@@ -160,16 +227,16 @@ def levelup():
         name=name, matched_ids=matched,
         crafts=result["crafts"], plan=result["plan"],
         progression=progression,
+        craftable=craftable,
+        best_plan=best_plan,
         not_found=False, no_skill=False,
-        from_lv=from_lv, to_lv=to_lv,
-        current_level=result["current_level"],
-        target_level=result["target_level"],
+        from_lv=from_lv, to_lv=to_lv, current_level=from_lv,
         xp_needed=result["xp_needed"],
         xp_cutoff_target=result["xp_cutoff_target"],
         xp_cutoff=Database.XP_CUTOFFS,
         skills=skills, stats=stats,
         item_zh_names=db.item_zh_names,
-        zh_mat_names=db.item_zh_names,  # 材料/物品共用同一词典
+        zh_mat_names=db.item_zh_names,
     )
 
 

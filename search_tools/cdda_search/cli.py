@@ -82,52 +82,67 @@ def _fmt_min(seconds: int) -> str:
 
 
 def cmd_levelup(db, skill_query: str, current_level: int = 0,
-                 target_level: int = 1, max_show: int = 8) -> int:
-    """计算并展示升到 target_level 的最快方案."""
+                 target_level: int = 1, max_show: int = 12) -> int:
+    """经验分析器: 显示当前等级可造的所有配方 (按效率排序)."""
     from .database import Database
-    result = db.fastest_to_level(skill_query, current_level, target_level)
-    matched = result.get("matched_ids", [])
-    if not matched:
+    from .models import Item
+
+    # 找技能 id
+    matched_ids: set[str] = set()
+    q = skill_query.lower().strip()
+    for en_id, zh in SKILL_ZH_NAMES.items():
+        if q == en_id or q in zh or en_id in q:
+            matched_ids.add(en_id)
+    if q in set(SKILL_ZH_NAMES):
+        matched_ids.add(q)
+    if not matched_ids:
         print(f"未知技能 {skill_query!r}. 可用: "
               f"{', '.join(sorted(set(SKILL_ZH_NAMES)))}")
         return 1
-    if not result["crafts"]:
-        print(f"主技能 {skill_query!r} 没有可用配方")
-        return 0
 
-    from .constants import SKILL_ZH_NAMES
     zh_name = next((zh for en, zh in SKILL_ZH_NAMES.items()
-                    if en in matched), skill_query)
+                    if en in matched_ids), skill_query)
 
-    print(f"=== 升级计划: {zh_name} (id={', '.join(matched)})")
-    print(f"  当前等级: Lv.{result['current_level']}")
-    print(f"  目标等级: Lv.{result['target_level']}")
-    print(f"  升级阈值 (D&D 5e): {result['xp_cutoff_target']} XP")
-    print(f"  还需 XP:           {result['xp_needed']} XP")
-    print(f"  (XP 公式: 制作时间(秒) / 100 = 配方基础 XP, 不含 INT/PER 倍率)")
+    # CDDA 规则: cap = difficulty × 1.25; get_skill_level(id) > cap 时停止给 XP
+    # 即: difficulty >= 当前等级 的配方都能继续涨经验 (符合用户发现的规则)
+    craftable = []
+    for result_id, recipes in db.recipes.items():
+        for r in recipes:
+            if r.skill_used.lower() not in matched_ids:
+                continue
+            diff = r.difficulty if r.difficulty is not None else 99
+            if diff < current_level:  # 低难度配方在你等级超过阈值后失效
+                continue
+            xp_each = Database.xp_for_recipe(r.time)
+            if xp_each <= 0:
+                continue
+            time_sec = Database.parse_time_to_seconds(r.time)
+            eff = xp_each / max(time_sec, 1) * 60  # XP/分钟
+            it = db.items.get(result_id) or Item(id=result_id, type="?", name=result_id)
+            craftable.append((it, r, xp_each, time_sec, eff))
+    craftable.sort(key=lambda x: -x[4])
+
+    print(f"=== 经验分析器: {zh_name} (id={', '.join(sorted(matched_ids))})")
+    print(f"  当前等级: Lv.{current_level}")
+    if target_level > current_level:
+        cur_xp = 0 if current_level <= 0 else Database.XP_CUTOFFS[current_level - 1]
+        tgt_xp = Database.XP_CUTOFFS[target_level - 1]
+        print(f"  目标等级: Lv.{target_level}")
+        print(f"  累计阈值: {tgt_xp} XP (D&D 5e)")
+        print(f"  还需 XP:   {tgt_xp - cur_xp}")
+    print(f"  提示: cap = difficulty × 1.25, 即 difficulty ≤ 当前等级 都能涨经验")
     print()
 
-    print("=== 最快方案 (按 总制造时间 升序) ===")
-    plan = result["plan"]
-    for i, (it, r, n) in enumerate(plan[:max_show]):
-        total_sec = n * Database.parse_time_to_seconds(r.time)
-        total_xp = n * Database.xp_for_recipe(r.time)
-        auto = "✓自动" if r.autolearn else "书"
-        print(f"  [{i:2d}] 制造 {n}× {it.name!r} (id={it.id})")
-        print(f"       Lv.{r.difficulty}  {r.time}  {auto}  → 累计 XP {total_xp},"
-              f" 总耗时 {_fmt_min(total_sec)}")
-        # 所需材料
-        for group in r.components:
-            parts = []
-            for name, qty, flag in group:
-                tag = " (任选)" if flag == "LIST" else ""
-                parts.append(f"{qty}× {name}{tag}")
-            print(f"         材料: {' / '.join(parts)}")
-        # 工具质量
-        if r.qualities:
-            qs = ", ".join(f"{qid} Lv.{lv}" for qid, lv in r.qualities)
-            print(f"         工具: {qs}")
-        print()
+    print(f"=== 可制造配方 (Lv.{current_level} 能做的, 按 XP/分钟 降序, 前 {max_show} 条) ===")
+    print(f"{'#':>3s}  {'物品':28s}  {'Lv':>3s}  {'耗时':>7s}  {'单次':>5s}  {'效率':>7s}  {'解锁'}")
+    for i, (it, r, xp_each, time_sec, eff) in enumerate(craftable[:max_show]):
+        time_str = r.time or "?"
+        auto = "✓" if r.autolearn else "书"
+        print(f"  [{i:2d}]  {it.name[:26]:26s}  Lv.{r.difficulty:<2d}  "
+              f"{time_str:>7s}  +{xp_each:<4d}  {eff:6.1f}/分  {auto}")
+
+    if not craftable:
+        print(f"  (无 — 该等级范围内没有可用配方)")
     return 0
 
 

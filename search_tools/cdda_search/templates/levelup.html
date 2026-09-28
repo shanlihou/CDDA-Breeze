@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 
-{% block title %}{{ '升级 ' + name if name else '升级规划' }} - CDDA 物品查询{% endblock %}
+{% block title %}{% if name %}{{ '经验分析 ' + name }}{% else %}经验分析器{% endif %} - CDDA 物品查询{% endblock %}
 
 {% block content %}
 <h1>
+  ⬆ 经验分析器
   {% if no_skill %}
-    升级规划 <small class="muted">选技能 + 等级, 看每个配方能涨多少 XP</small>
+    <small class="muted">选技能 + 当前等级, 列出所有能涨经验的配方</small>
   {% else %}
-    <span class="zh">{{ name }}</span> 升级方案
-    {% if matched_ids %}<small class="muted">(id: {{ matched_ids | join(', ') }})</small>{% endif %}
+    <small class="muted">{{ name }}{% if matched_ids %} (id: {{ matched_ids | join(', ') }}){% endif %}</small>
   {% endif %}
 </h1>
 
@@ -22,17 +22,17 @@
       {% endfor %}
     </select>
   </label>
-  <label>当前:
+  <label>当前等级:
     <select name="from">
       {% for i in range(11) %}<option value="{{ i }}" {% if i == from_lv %}selected{% endif %}>{{ i }}</option>{% endfor %}
     </select>
   </label>
-  <label>→ 目标:
+  <label>→ 目标等级:
     <select name="to">
       {% for i in range(1, 11) %}<option value="{{ i }}" {% if i == to_lv %}selected{% endif %}>{{ i }}</option>{% endfor %}
     </select>
   </label>
-  <button type="submit">查询</button>
+  <button type="submit">分析</button>
 </form>
 
 <div class="quick-presets">
@@ -44,13 +44,29 @@
   <a class="chip" href="?skill=traps&from=0&to=2">陷阱 0→2</a>
   <a class="chip" href="?skill=archery&from=0&to=3">弓术 0→3</a>
   <a class="chip" href="?skill=survival&from=1&to=5">生存 1→5</a>
+  <a class="chip" href="?skill=fabrication&from=2&to=3">制造 Lv.2 看能造啥</a>
+  <a class="chip" href="?skill=cooking&from=3&to=4">烹饪 Lv.3 看能造啥</a>
 </div>
 
 {% if not_found %}
   <p class="empty">未知技能 "{{ name }}". <a href="{{ url_for('cdda_search.index') }}">回首页选技能</a></p>
 {% elif no_skill %}
-  <p class="hint">从下拉选技能, 再选当前/目标等级. 这里会列出每个配方能涨多少经验, 升一级要多久.</p>
+  <p class="hint">从下拉选技能, 再选当前/目标等级. 这里会列出:
+    <ul>
+      <li><strong>当前等级</strong>你能造的所有配方 (按 XP/分钟 排序)
+      <li><strong>升下一级</strong>的最快方案
+    </ul>
+  </p>
 {% else %}
+  <p class="formula">
+    <strong>CDDA XP 规则</strong>:
+    <code>基础 XP = 制作时间(秒) / 100</code> ·
+    <code>cap = difficulty × 1.25</code> ·
+    当 <code>当前等级 ≤ cap</code> 时配方可给经验, 一旦等级 ≥ cap 即停止给 XP.
+    也就是 <strong>difficulty ≤ 当前等级</strong>的配方都是"可用练级"配方.
+  </p>
+
+  {# ============ 顶部信息卡片 ============ #}
   <div class="levelup-info">
     <div class="info-card">
       <div class="info-label">当前等级</div>
@@ -59,99 +75,48 @@
     <div class="info-arrow">→</div>
     <div class="info-card">
       <div class="info-label">目标等级</div>
-      <div class="info-value accent">Lv.{{ target_level }}</div>
+      <div class="info-value accent">Lv.{{ to_lv }}</div>
     </div>
     <div class="info-card">
       <div class="info-label">累计阈值</div>
       <div class="info-value">{{ xp_cutoff_target }}</div>
     </div>
+    {% if xp_needed > 0 %}
     <div class="info-card highlight">
       <div class="info-label">还需 XP</div>
       <div class="info-value">{{ xp_needed }}</div>
     </div>
+    {% else %}
+    <div class="info-card">
+      <div class="info-label">已达标</div>
+      <div class="info-value">✓</div>
+    </div>
+    {% endif %}
   </div>
 
-  <p class="formula">
-    <strong>XP 公式</strong>:
-    <code>基础 XP = 制作时间(秒) / 100</code> ·
-    <code>cap = difficulty × 1.25</code> ·
-    实际 XP 受 INT/PER 倍率加成 (默认 ~1.4 倍)
-  </p>
-
-  {# ============ 逐级规划 ============ #}
-  {% if progression %}
-  <h2>📊 逐级规划</h2>
-  <p class="hint">每一级单独展示最快 3 个配方 (按 总耗时 升序). 卡片可展开看材料.</p>
-  <div class="progression">
-    {% for step in progression %}
-      <div class="level-block">
-        <div class="level-header">
-          <strong class="level-tag">Lv.{{ step.from }} → Lv.{{ step.to }}</strong>
-          <span class="muted">需 {{ step.xp_needed }} XP</span>
-          <div class="xp-bar"><div class="xp-fill" style="width: 100%"></div></div>
-        </div>
-        {% if step.crafts %}
-        <div class="craft-list compact">
-          {% for it, r, xp_each, n, total_xp, total_sec in step.crafts[:3] %}
-            {% set progress_pct = (xp_each / step.xp_needed * 100) | round(1) %}
-            {% set zh_name = item_zh_names.get(it.id) %}
-            <div class="craft-row">
-              <span class="craft-rank">#{{ loop.index0 }}</span>
-              <span class="craft-times">{{ n }}×</span>
-              <a class="craft-name" href="{{ url_for('cdda_search.item_detail', item_id=it.id) }}">{{ zh_name or it.name }}</a>
-              <span class="muted small">({{ it.id }})</span>
-              <span class="tag lv">Lv.{{ r.difficulty if r.difficulty else '?' }}</span>
-              <span class="tag time">{{ r.time or '?' }}</span>
-              {% if r.autolelearn %}<span class="tag auto">✓自动</span>
-              {% else %}<span class="tag book">书</span>{% endif %}
-              <span class="tag xp-each">单次 {{ xp_each }} XP</span>
-              <span class="muted small">{{ total_sec // 60 }}分{{ total_sec % 60 }}秒 · {{ total_xp }} XP · {{ progress_pct }}% / 升</span>
-              {% if r.components %}
-              <details class="craft-details">
-                <summary>材料 ({{ r.components | length }} 组)</summary>
-                <ul class="mat-list">
-                  {% for group in r.components %}
-                    <li>{% for n, q, f in group %}<span class="mat">{{ q }}× {{ zh_mat_names.get(n) or n }}</span>{% if f == 'LIST' %} (任选){% endif %}{% if not loop.last %} <span class="muted">或</span> {% endif %}{% endfor %}</li>
-                  {% endfor %}
-                </ul>
-                {% if r.qualities %}
-                <div class="tool-list">
-                  <span class="muted">工具:</span>
-                  {% for qid, lv in r.qualities %}<span class="mat">{{ qid }} Lv.{{ lv }}</span>{% endfor %}
-                </div>
-                {% endif %}
-              </details>
-              {% endif %}
-            </div>
-          {% endfor %}
-        </div>
-        {% else %}
-        <p class="muted">该等级范围内没有可用配方 (可能难度太低被 cap 挡掉).</p>
-        {% endif %}
-      </div>
-    {% endfor %}
-  </div>
-  {% endif %}
-
-  {# ============ 全部配方 XP 贡献速查 ============ #}
-  {% if crafts %}
-  <h2>📋 全部配方 (Lv.{{ current_level }} → Lv.{{ target_level }}, 按 总耗时 升序, 前 12 条)</h2>
+  {# ============ 主表: 你 Lv.{{ current_level }} 能造的所有配方 ============ #}
+  <h2>📦 你当前等级 (Lv.{{ current_level }}) 能造的所有 {{ craftable|length }} 个配方</h2>
   <p class="hint">
-    <strong>每条显示</strong>: 单次 XP · 制造次数 · 总 XP · 总耗时 · 相对升级进度%.
-    进度 = (单次 XP × 制造次数) / 还需 {{ xp_needed }} XP.
+    只显示 <code>difficulty ≤ {{ current_level }}</code> 的配方 (cap = difficulty × 1.25 ≥ {{ current_level }}, 才能继续涨 XP).
+    按 <strong>XP/分钟</strong> 降序. 每条配方 1 个就好, 重复造多次拿更多 XP.
   </p>
+  {% if craftable %}
   <table class="xp-table">
     <thead>
       <tr>
         <th>#</th><th>物品</th><th>难度</th><th>耗时</th><th>解锁</th>
-        <th>单次 XP</th><th>制造次数</th><th>总 XP</th>
-        <th>总耗时</th><th>进度</th><th>材料</th>
+        <th>单次 XP</th><th>效率</th><th>达到下一级</th><th>材料</th>
       </tr>
     </thead>
     <tbody>
-      {% for it, r, xp_each, n, total_xp, total_sec in crafts[:12] %}
-        {% set progress_pct = (total_xp / xp_needed * 100) | round(1) %}
+      {% for c in craftable[:30] %}
+        {% set it = c.it %}{% set r = c.r %}
+        {% set xp_each = c.xp_each %}{% set eff = c.efficiency %}
         {% set zh_name = item_zh_names.get(it.id) %}
+        {% set n_to_next = 0 if xp_needed == 0 else ((xp_needed + xp_each - 1) // xp_each) %}
+        {% set time_to_next = n_to_next * c.time_sec %}
+        {% set min_to_next = time_to_next // 60 %}
+        {% set sec_to_next = time_to_next % 60 %}
         <tr>
           <td>{{ loop.index0 }}</td>
           <td>
@@ -164,14 +129,13 @@
           <td>{% if r.autolearn %}<span class="tag auto">✓自动</span>
               {% else %}<span class="tag book">书</span>{% endif %}</td>
           <td><strong class="xp-each-cell">+{{ xp_each }}</strong></td>
-          <td>{{ n }}×</td>
-          <td><strong>{{ total_xp }}</strong></td>
-          <td>{{ total_sec // 60 }}分{{ total_sec % 60 }}秒</td>
+          <td><strong class="eff-cell">{{ "%.1f"|format(eff) }}/分</strong></td>
           <td>
-            <div class="progress-cell">
-              <div class="progress-bar"><div class="progress-fill" style="width: {{ [progress_pct, 100] | min }}%"></div></div>
-              <span class="progress-pct">{{ progress_pct }}%</span>
-            </div>
+            {% if xp_needed > 0 %}
+              <small>做 {{ n_to_next }}× (≈{{ min_to_next }}分{{ sec_to_next }}秒)</small>
+            {% else %}
+              <span class="muted">已达标</span>
+            {% endif %}
           </td>
           <td>
             {% if r.components %}
@@ -188,6 +152,43 @@
       {% endfor %}
     </tbody>
   </table>
+  {% else %}
+  <p class="empty">没有难度 ≤ Lv.{{ current_level }} 的可用配方. 你的等级太低.</p>
+  {% endif %}
+
+  {# ============ 推荐: 升下一级的最快方案 ============ #}
+  {% if best_plan and best_plan.crafts %}
+  <h2>🎯 推荐: 升 Lv.{{ current_level + 1 if current_level < 20 else 20 }} 的最快方案</h2>
+  <p class="hint">
+    选效率最高 + 总耗时最短 的组合. 每个配方可点击展开看材料.
+  </p>
+  <div class="progression">
+    <div class="level-block">
+      <div class="level-header">
+        <strong class="level-tag">Lv.{{ best_plan.from }} → Lv.{{ best_plan.to }}</strong>
+        <span class="muted">需 {{ best_plan.xp_needed }} XP</span>
+        <div class="xp-bar"><div class="xp-fill" style="width: 100%"></div></div>
+      </div>
+      <div class="craft-list compact">
+        {% for it, r, xp_each, n, total_xp, total_sec in best_plan.crafts[:3] %}
+          {% set zh_name = item_zh_names.get(it.id) %}
+          {% set eff = (xp_each / (total_sec or 1)) * 60 %}
+          <div class="craft-row">
+            <span class="craft-rank">#{{ loop.index0 }}</span>
+            <span class="craft-times">{{ n }}×</span>
+            <a class="craft-name" href="{{ url_for('cdda_search.item_detail', item_id=it.id) }}">{{ zh_name or it.name }}</a>
+            <span class="muted small">({{ it.id }})</span>
+            <span class="tag lv">Lv.{{ r.difficulty if r.difficulty else '?' }}</span>
+            <span class="tag time">{{ r.time or '?' }}</span>
+            {% if r.autolearn %}<span class="tag auto">✓自动</span>
+            {% else %}<span class="tag book">书</span>{% endif %}
+            <span class="tag xp-each">单次 {{ xp_each }} XP</span>
+            <span class="muted small">{{ total_sec // 60 }}分{{ total_sec % 60 }}秒 · {{ total_xp }} XP · {{ "%.1f"|format(eff) }}/分</span>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
   {% endif %}
 {% endif %}
 
