@@ -78,7 +78,8 @@
               <div class="craft-num">{{ loop.index0 }}</div>
               <div class="craft-body">
                 <div class="craft-title">
-                  <a href="{{ url_for('cdda_search.item_detail', item_id=it.id) }}">{{ it.name }}</a>
+                  <a href="{{ url_for('cdda_search.item_detail', item_id=it.id) }}">{{ item_zh_names.get(it.id) or it.name }}</a>
+                  {% if it.id in item_zh_names %}<small class="muted en-fallback">[{{ it.name }}]</small>{% endif %}
                   <small class="muted">({{ it.id }})</small>
                 </div>
                 <div class="craft-meta">

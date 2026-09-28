@@ -116,11 +116,20 @@ def render_recipe(r: Recipe) -> str:
 
 # ── 物品 ──
 
+def display_name(it: Item, db=None) -> tuple[str, str | None]:
+    """返回 (显示名, 中文名). 优先中文, fallback 英文."""
+    zh = db.get_zh_name(it.id) if db else None
+    if zh:
+        return zh, None
+    return it.name, None
+
+
 def render_item(it: Item, db=None) -> str:
     zh = db.get_zh_name(it.id) if db else None
     title_zh = f"  [{zh}]" if zh else ""
+    title_en = f"\n  [EN: {it.name}]" if zh else ""
     lines = [
-        f"=== {it.name}{title_zh}  (id = {it.id!r}) ===",
+        f"=== {zh or it.name}{title_zh}  (id = {it.id!r}) ==={title_en}",
         f"类型:           {it.type}",
         f"分类:           {it.category} / {it.subcategory}",
         f"重量:           {it.weight}",

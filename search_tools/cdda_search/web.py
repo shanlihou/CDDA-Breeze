@@ -168,6 +168,8 @@ def levelup():
         xp_cutoff_target=result["xp_cutoff_target"],
         xp_cutoff=Database.XP_CUTOFFS,
         skills=skills, stats=stats,
+        item_zh_names=db.item_zh_names,
+        zh_mat_names=db.item_zh_names,  # 材料/物品共用同一词典
     )
 
 
@@ -190,7 +192,8 @@ def browse():
             active_tab="browse", btype=btype, q="",
             matched_ids=[], groups=[], total=0,
             no_query=True,
-            skills=skills, prof_names=prof_names, stats=stats,
+            skills=skills, prof_names=prof_names,
+            item_zh_names=db.item_zh_names, stats=stats,
         )
 
     if btype == "proficiency":
@@ -217,7 +220,8 @@ def browse():
         active_tab="browse", btype=btype, q=q,
         matched_ids=matched, groups=groups, total=len(results),
         no_query=False, title_zh=title_zh,
-        skills=skills, prof_names=prof_names, stats=stats,
+        skills=skills, prof_names=prof_names,
+        item_zh_names=db.item_zh_names, stats=stats,
     )
 
 

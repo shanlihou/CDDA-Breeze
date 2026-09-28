@@ -56,10 +56,8 @@
         <a class="result-card" href="{{ url_for('cdda_search.item_detail', item_id=it.id) }}">
           <div class="result-type">{{ it.type }}</div>
           <div class="result-name">
-            {{ it.name }}
-            {% if it.id in item_zh_names %}
-              <small class="zh">[{{ item_zh_names[it.id] }}]</small>
-            {% endif %}
+            {{ item_zh_names.get(it.id) or it.name }}
+            {% if it.id in item_zh_names %}<small class="muted en-fallback">[{{ it.name }}]</small>{% endif %}
           </div>
           <div class="result-id">{{ it.id }}</div>
         </a>

@@ -94,14 +94,15 @@
         <div class="craft-list compact">
           {% for it, r, xp_each, n, total_xp, total_sec in step.crafts[:3] %}
             {% set progress_pct = (xp_each / step.xp_needed * 100) | round(1) %}
+            {% set zh_name = item_zh_names.get(it.id) %}
             <div class="craft-row">
               <span class="craft-rank">#{{ loop.index0 }}</span>
               <span class="craft-times">{{ n }}×</span>
-              <a class="craft-name" href="{{ url_for('cdda_search.item_detail', item_id=it.id) }}">{{ it.name }}</a>
+              <a class="craft-name" href="{{ url_for('cdda_search.item_detail', item_id=it.id) }}">{{ zh_name or it.name }}</a>
               <span class="muted small">({{ it.id }})</span>
               <span class="tag lv">Lv.{{ r.difficulty if r.difficulty else '?' }}</span>
               <span class="tag time">{{ r.time or '?' }}</span>
-              {% if r.autolearn %}<span class="tag auto">✓自动</span>
+              {% if r.autolelearn %}<span class="tag auto">✓自动</span>
               {% else %}<span class="tag book">书</span>{% endif %}
               <span class="tag xp-each">单次 {{ xp_each }} XP</span>
               <span class="muted small">{{ total_sec // 60 }}分{{ total_sec % 60 }}秒 · {{ total_xp }} XP · {{ progress_pct }}% / 升</span>
@@ -110,7 +111,7 @@
                 <summary>材料 ({{ r.components | length }} 组)</summary>
                 <ul class="mat-list">
                   {% for group in r.components %}
-                    <li>{% for n, q, f in group %}<span class="mat">{{ q }}× {{ n }}</span>{% if f == 'LIST' %} (任选){% endif %}{% if not loop.last %} <span class="muted">或</span> {% endif %}{% endfor %}</li>
+                    <li>{% for n, q, f in group %}<span class="mat">{{ q }}× {{ zh_mat_names.get(n) or n }}</span>{% if f == 'LIST' %} (任选){% endif %}{% if not loop.last %} <span class="muted">或</span> {% endif %}{% endfor %}</li>
                   {% endfor %}
                 </ul>
                 {% if r.qualities %}
@@ -150,10 +151,12 @@
     <tbody>
       {% for it, r, xp_each, n, total_xp, total_sec in crafts[:12] %}
         {% set progress_pct = (total_xp / xp_needed * 100) | round(1) %}
+        {% set zh_name = item_zh_names.get(it.id) %}
         <tr>
           <td>{{ loop.index0 }}</td>
           <td>
-            <a href="{{ url_for('cdda_search.item_detail', item_id=it.id) }}">{{ it.name }}</a>
+            <a href="{{ url_for('cdda_search.item_detail', item_id=it.id) }}">{{ zh_name or it.name }}</a>
+            {% if zh_name %}<small class="muted en-fallback">[{{ it.name }}]</small>{% endif %}
             <br><small class="muted">({{ it.id }})</small>
           </td>
           <td><strong>Lv.{{ r.difficulty if r.difficulty else '?' }}</strong></td>
@@ -175,7 +178,7 @@
               <details><summary>{{ r.components | length }} 组</summary>
                 <ul class="mat-list small">
                   {% for group in r.components %}
-                    <li>{% for n, q, f in group %}<span class="mat">{{ q }}× {{ n }}</span>{% if f == 'LIST' %} (任选){% endif %}{% endfor %}</li>
+                    <li>{% for n, q, f in group %}<span class="mat">{{ q }}× {{ zh_mat_names.get(n) or n }}</span>{% if f == 'LIST' %} (任选){% endif %}{% endfor %}</li>
                   {% endfor %}
                 </ul>
               </details>

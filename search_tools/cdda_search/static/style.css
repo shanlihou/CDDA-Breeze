@@ -322,6 +322,17 @@ h1 small.zh {
 
 .muted { color: var(--fg-muted); }
 
+.en-fallback {
+  display: inline-block;
+  font-size: 11px;
+  color: var(--fg-muted);
+  font-style: italic;
+  margin-left: 4px;
+  padding: 0 4px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 2px;
+}
+
 /* ── 升级方案页 ── */
 
 .levelup-form {
