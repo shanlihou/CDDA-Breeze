@@ -1,0 +1,34 @@
+[
+  {
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "id": "expose",
+    "condition": { "and": [ "player_see_u", "npc_is_avatar" ] },
+    "cooldown": 30
+  },
+  {
+    "type": "SPELL",
+    "id": "spell_expose",
+    "name": { "str": "露出" },
+    "description": "露出",
+    "valid_targets": [ "hostile", "ally" ],
+    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
+    "min_range": 30,
+    "max_range": 30,
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "base_casting_time": 500,
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_EXPOSE"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_EXPOSE",
+    "effect": [
+      { "message": "<hentai_expose>" },
+      { "run_eocs": "gain_corrupt", "variables": { "duration": "50 s" } },
+      { "u_add_effect": "lust", "duration": 24 }
+    ]
+  }
+]

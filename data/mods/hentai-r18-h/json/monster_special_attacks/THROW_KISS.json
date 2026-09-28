@@ -1,0 +1,47 @@
+[
+  {
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "cooldown": 1,
+    "id": "THROW_KISS",
+    "damage_max_instance": [ { "damage_type": "pure", "amount": 0 } ],
+    "move_cost": 50,
+    "range": 10,
+    "dodgeable": true,
+    "blockable": false,
+    "effects_require_dmg": false,
+    "effects": [
+      { "id": "lust", "duration": 4 },
+      { "id": "corrupt_attacked", "duration": 4 }
+    ],
+    "miss_msg_u": "%s抛出了一个飞吻，但你躲开了！",
+    "miss_msg_npc": "%s抛出了一个飞吻，但<npcname>躲开了！",
+    "no_dmg_msg_u": "%s给了你一个飞吻！",
+    "no_dmg_msg_npc": "%s给了<npcname>一个飞吻！",
+    "condition": { "and": [ 
+      { "or": [
+        { "not": { "math": [ "HENTAI_EXTEND_CUBI_WIFE_ONLY_HUMAN" ] } },
+        "npc_is_character"
+      ] },
+      { "or": [
+        { "not": { "u_has_effect": "pet" } },
+        { "math": [ "HENTAI_EXTEND_PET_CUBI_WIFE_ENEMY" ] },
+        { "and": [
+          { "u_has_effect": "cubi_allow_seduce_player" },
+          "npc_is_avatar"
+        ] }
+      ] }
+    ] },
+    
+    "//eoc": "EOC_THROW_KISS_GAIN_CORRUPT"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_THROW_KISS_GAIN_CORRUPT",
+    "effect": {
+      "run_eocs": "gain_corrupt",
+      "variables": { "duration": "50 t" },
+      "//alpha_talker": "npc"
+    }
+  }
+]

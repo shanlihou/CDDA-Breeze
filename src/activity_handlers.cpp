@@ -300,7 +300,7 @@ activity_handlers::finish_functions = {
     { ACT_VEHICLE, vehicle_finish },
     { ACT_START_ENGINES, start_engines_finish },
     { ACT_PULP, pulp_finish },
-    { ACT_REPAIR_ITEM, repair_item_finish },
+    { ACT_REPAIR_ITEM, activity_handlers::repair_item_finish },
     { ACT_HEATING, heat_item_finish },
     { ACT_MEND_ITEM, mend_item_finish },
     { ACT_TOOLMOD_ADD, toolmod_add_finish },

@@ -1,0 +1,92 @@
+[
+  {
+    "id": "condom_sealed",
+    "type": "ITEM",
+    "copy-from": "condom_sealed",
+    "name": { "str": "sealed condom" },
+    "use_action": [
+      { "menu_text": "开启", "type": "transform", "target": "condom", "msg": "你撕开包装好的避孕套。" },
+      {
+        "type": "effect_on_conditions",
+        "menu_text": "*使用*",
+        "description": "用来和谁度过一段幸福时光......如果你有能够使用对象的话。",
+        "effect_on_conditions": [ "yiff_actor_use" ]
+      }
+    ]
+  },
+  {
+    "type": "json_flag",
+    "id": "CONDOM_BREAK_20",
+    "info": "这件物品已经相当的<color_yellow>老旧</color>了。你不应该使用它而产生不必要的*麻烦*。"
+  },
+  {
+    "id": "condom_sealed_danger",
+    "type": "ITEM",
+    "copy-from": "condom_sealed",
+    "name": { "str_sp": "sealed condom" },
+    "extend": { "flags": [ "CONDOM_BREAK_20" ] }
+  },
+  {
+    "id": "holy_choker",
+    "type": "ITEM",
+    "subtypes": [ "TOOL", "ARMOR" ],
+    "name": { "str_sp": "伏魔项链" },
+    "description": "使用圣银制作的项链，足以封印邪恶之心，如果你能让恶魔戴上，那么她或许将成为一个非常好的同伴。",
+    "weight": "10 g",
+    "volume": "25 ml",
+    "price": "100 USD",
+    "material": [ "leather", "silver" ],
+    "symbol": "-",
+    "color": "black",
+    "flags": [ "FANCY", "BELTED" ],
+    "warmth": 0,
+    "environmental_protection": 0,
+    "material_thickness": 5,
+    "armor": [
+      {
+        "covers": [ "torso" ],
+        "specifically_covers": [ "torso_neck" ],
+        "encumbrance": 0,
+        "coverage": 20
+      }
+    ],
+    "use_action": {
+      "type": "effect_on_conditions",
+      "effect_on_conditions": [ "make_pet_actor_use" ],
+      "menu_text": "让其佩戴"
+    }
+  },
+  {
+    "id": "scroll_of_artifact",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
+    "name": { "str_sp": "随机神器生成卷轴" },
+    "description": "可以生成随机神器的卷轴，使用一次后消失。",
+    "weight": "10 g",
+    "volume": "250 ml",
+    "price": "10000 USD",
+    "material": [ "magic" ],
+    "symbol": "?",
+    "color": "light_gray",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "effect_on_conditions": [ "hentai_r18_spawn_artifact" ],
+      "menu_text": "使用"
+    }
+  },
+  {
+    "id": "bio_onahole",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
+    "name": { "str_sp": "生物按摩器" },
+    "description": "这是用Blob制造的活体生物按摩器。它的侧面有一幅著名色情演员的肖像，下面写着广告信息：「DNA结构的完全复制！真实的感觉！」。",
+    "looks_like": "vibrator",
+    "weight": "453 g",
+    "volume": "500 ml",
+    "price": "55 USD",
+    "material": [ "flesh" ],
+    "symbol": ";",
+    "color": "dark_gray",
+    "use_action": "VIBE"
+  }
+]

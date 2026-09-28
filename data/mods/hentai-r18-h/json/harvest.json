@@ -1,0 +1,54 @@
+[
+  {
+    "id": "cubi",
+    "//": "サキュバス・インキュバス用。亜人ベース。出血しないので血液は無し",
+    "type": "harvest",
+    "entries": [
+      { "drop": "demihuman_flesh", "type": "flesh", "mass_ratio": 0.2 },
+      { "drop": "demihuman_meat_scrap", "type": "flesh", "mass_ratio": 0.02 },
+      { "drop": "demihuman_stomach", "scale_num": [ 1, 1 ], "max": 1, "type": "offal" },
+      { "drop": "demihuman_fat", "type": "flesh", "mass_ratio": 0.1 },
+      { "drop": "demihuman_liver", "type": "offal", "mass_ratio": 0.01 },
+      { "drop": "demihuman_lung", "type": "flesh", "mass_ratio": 0.0035 },
+      { "drop": "demihuman_brain", "type": "flesh", "mass_ratio": 0.005 },
+      { "drop": "demihuman_sweetbread", "type": "flesh", "mass_ratio": 0.002 },
+      { "drop": "demihuman_kidney", "type": "offal", "mass_ratio": 0.002 },
+      { "drop": "bone_demihuman", "type": "bone", "mass_ratio": 0.12 },
+      { "drop": "demihuman_marrow", "type": "bone", "mass_ratio": 0.005 },
+      { "drop": "sinew", "type": "bone", "mass_ratio": 0.001 },
+      { "drop": "raw_demihumanleather", "type": "skin", "mass_ratio": 0.01 }
+    ]
+  },
+  {
+    "id": "dissect_cubi_sample_small",
+    "type": "harvest",
+    "entries": [ { "drop": "cubi_sample_small", "type": "mutagen_group" } ]
+  },
+  {
+    "id": "dissect_mon_incubi_phalloplas",
+    "type": "harvest",
+    "entries": [
+      { "drop": "cubi_sample_small", "type": "mutagen_group" },
+      {
+        "drop": "bio_power_storage",
+        "type": "bionic",
+        "flags": [ "FILTHY", "NO_STERILE", "NO_PACKED" ],
+        "faults": [ "fault_bionic_salvaged" ]
+      },
+      {
+        "drop": "bionics_common",
+        "type": "bionic_group",
+        "flags": [ "FILTHY", "NO_STERILE", "NO_PACKED" ],
+        "faults": [ "fault_bionic_salvaged" ]
+      }
+    ]
+  },
+  {
+    "id": "dissect_cambion_sample_small",
+    "type": "harvest",
+    "entries": [
+      { "drop": "cubi_sample", "type": "mutagen" },
+      { "drop": "human_sample", "type": "mutagen" }
+    ]
+  }
+]

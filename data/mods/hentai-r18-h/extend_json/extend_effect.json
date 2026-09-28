@@ -1,0 +1,54 @@
+[
+  {
+    "type": "effect_type",
+    "id": "went_heaven",
+    "name": [ "绝顶" ],
+    "desc": [ "感觉如同身处淫荡的天堂。疲劳大大增加。" ],
+    "max_duration": "60 s",
+    "base_mods": {
+      "str_mod": [ -3 ],
+      "dex_mod": [ -2 ],
+      "int_mod": [ -4 ],
+      "per_mod": [  2 ],
+      "thirst_tick": [ 1 ],
+      "thirst_min": [ 1 ]
+    }
+  },
+
+  {
+    "type": "effect_type",
+    "id": "creampie_ex",
+    "name": [ "Creampie" ],
+    "desc": [ "感觉有什么东西灌成了泡芙。" ],
+    "max_duration": "1200 s",
+    "base_mods": {
+      "str_mod": [ 1 ],
+      "dex_mod": [ -1 ],
+      "int_mod": [ -2 ],
+      "per_mod": [ 1 ]
+    }
+  },
+
+  {
+    "type": "effect_type",
+    "id": "cubi_allow_seduce_friendlyfire",
+    "name": [ "无差别诱惑" ],
+    "desc": [ "不分敌我都可以诱惑的怪物效果。" ],
+    "show_in_info": true
+  },
+
+  {
+    "type": "effect_type",
+    "id": "cubi_allow_seduce_player",
+    "name": [ "诱惑玩家" ],
+    "desc": [ "诱惑玩家获得许可的的怪物效果" ],
+    "show_in_info": true
+  },
+  {
+    "type": "effect_type",
+    "id": "cubi_ban_love_flame",
+    "name": [ "cubi_ban_love_flame" ],
+    "desc": [ "AI tag used for tied up critters.  This is a bug if you have it." ]
+  }
+
+]

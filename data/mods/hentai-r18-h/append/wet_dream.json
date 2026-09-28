@@ -1,0 +1,77 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HENTAI_WET_DREAM",
+    "eoc_type": "EVENT",
+    "required_event": "character_wakes_up",
+    "condition": {
+      "and": [
+        "u_is_avatar",
+        { "math": [ "HENTAI_EXTEND_WET_DREAM" ] },
+        { "not": { "u_has_effect": "nightmares" } },
+        { "math": [ "time_since(hentai_wet_dream_slept_time) > time('1 h')" ] }
+      ]
+    },
+    "effect":[
+      {
+        "switch": { "math": [ "u_effect_intensity('corrupt')" ] },
+        "cases": [
+          { "case": 0, "effect": { "set_string_var": "<wet_dream_normal>", "target_var": { "context_val": "msg" }, "parse_tags": true } },
+          { "case": 3, "effect": { "set_string_var": "<wet_dream_corrupt_3>", "target_var": { "context_val": "msg" }, "parse_tags": true } },
+          { "case": 6, "effect": { "set_string_var": "<wet_dream_corrupt_6>", "target_var": { "context_val": "msg" }, "parse_tags": true } }
+        ] 
+      },
+      { "math": [ "_chance", "=", "u_effect_intensity('corrupt') * 15 + ( u_effect_intensity('estrus') > 0 ? 30 : 0 ) + 1" ] },
+      {
+        "if": { "math": [ "rand(99) < _chance" ] },
+        "then": [
+          { "u_message": { "context_val":"msg" }, "type": "mixed" },
+          { "map_spawn_item": "h_body_fluids" }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HENTAI_WET_DREAM_SET_SLEEP_TIME",
+    "eoc_type": "EVENT",
+    "required_event": "character_gains_effect",
+    "condition": {
+      "and": [
+        "u_is_avatar",
+        { "compare_string": [ "sleep", { "context_val": "effect" } ] }
+      ]
+    },
+    "effect": [ { "math": [ "hentai_wet_dream_slept_time = time('now')" ] } ]
+  },
+  {
+    "type": "snippet",
+    "category": "<wet_dream_normal>",
+    "text": [
+      "...怎么感觉大腿附近湿湿的。",
+      "...看来是做了个色色的梦。"
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<wet_dream_corrupt_3>",
+    "text": [
+      "<wet_dream_normal>",
+      "睡着的时候好像高潮了。但身体的燥热还是没有消退。",
+      "难得做了个舒服的梦，却醒了过来。",
+      "睡着的时候被好几名梦魔包围，无法抵抗...看来是梦啊。"
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<wet_dream_corrupt_6>",
+    "text": [
+      "看来是在睡梦中高潮了。但身体的燥热却无法平息。",
+      "难得做了个舒服的梦，却醒了过来。",
+      "睡梦中被好几名梦魔包围，无法抵抗地被侵犯，高潮了一次又一次...看来是梦，真可惜。",
+      "浪费了献给梦魔的体液。",
+      "股间散发出强烈的气味。就这样走到外面的话，会被梦魔发现吗？",
+      "同伴顺利地增加，据点也得到了相当的扩张。收集物资回到据点的话，软绵绵的床铺、穿着猥亵的服装，有着你所喜欢的身材的*同伴*们在等着你。那么，今晚的侍寝对象该选谁呢...看来刚才是在做梦，继续做梦吧。"
+    ]
+  }
+]

@@ -1,0 +1,228 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SETUP_WIFE_U_CONSTATNTS",
+    "eoc_type": "EVENT",
+    "required_event": "game_start",
+    "effect": [
+      { "math": [ "WIFE_U_CORRUPT_TURNS", "=", "100" ] },
+      { "math": [ "WIFE_U_MUTATE_CHANCE", "=", "20" ] }
+    ]
+  },
+  
+  {
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "id": "START_WIFE_U",
+    "condition": {
+      "and": [
+        { "or": [
+          { "not": { "math": [ "HENTAI_EXTEND_CUBI_WIFE_ONLY_HUMAN" ] } },
+          "npc_is_character"
+        ] },
+        { "or": [
+          { "not": { "u_has_effect": "pet" } },
+          { "math": [ "HENTAI_EXTEND_PET_CUBI_WIFE_ENEMY" ] },
+          { "and": [
+            { "u_has_effect": "cubi_allow_seduce_player" },
+            "npc_is_avatar"
+          ] }
+        ] },
+        { "not": { "u_has_effect": "wife_u_cooldown" } },
+        { "not": { "u_has_effect": "wife_u_dominating" } },
+        { "or": [
+          { "npc_has_flag": "GRAB" },
+          { "npc_has_effect": "sleep" },
+          { "npc_has_any_effect": [ "crushed", "downed", "in_pit", "tied", "webbed" ] },
+          { "npc_has_move_mode": "prone" }
+        ] }
+      ]
+    },
+    "cooldown": 0
+  },
+  {
+    "type": "SPELL",
+    "id": "spell_start_wife_u",
+    "name": { "str": "start_wife_u" },
+    "description": "wife_u",
+    "valid_targets": [ "hostile", "ally" ],
+    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
+    "min_range": 1,
+    "max_range": 1,
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "base_casting_time": 100,
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "eoc_start_wife_u"
+  },
+  
+  {
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "id": "WIFE_U",
+    "condition": {
+      "and": [
+        { "or": [
+          { "not": { "math": [ "HENTAI_EXTEND_CUBI_WIFE_ONLY_HUMAN" ] } },
+          "npc_is_character"
+        ] },
+        { "or": [
+          { "not": { "u_has_effect": "pet" } },
+          { "math": [ "HENTAI_EXTEND_PET_CUBI_WIFE_ENEMY" ] },
+          { "and": [
+            { "u_has_effect": "cubi_allow_seduce_player" },
+            "npc_is_avatar"
+          ] }
+        ] },
+        { "u_has_effect": "wife_u_dominating" },
+        { "or": [
+          { "npc_has_flag": "GRAB" },
+          { "npc_has_effect": "sleep" },
+          { "npc_has_any_effect": [ "crushed", "downed", "in_pit", "tied", "webbed" ] },
+          { "npc_has_move_mode": "prone" }
+        ] }
+      ]
+    },
+    "cooldown": 0
+  },
+  {
+    "type": "SPELL",
+    "id": "spell_wife_u",
+    "name": { "str": "wife_u" },
+    "description": "wife_u",
+    "valid_targets": [ "hostile", "ally" ],
+    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
+    "min_range": 1,
+    "max_range": 1,
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "base_casting_time": 100,
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_wife_u"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_wife_u",
+    "effect": [
+      { "u_add_effect": "wife_u", "duration": 10 },
+      { "npc_add_effect": "wife_u_dominating", "duration": 10 },
+      { "set_string_var": "tmp", "target_var": { "context_val": "rslt" } },
+      { "run_eocs": "eoc_get_cubi_fake_dex_beta" },
+      { "math": [ "_fake_dex", "=", "tmp" ] },
+      {
+        "run_eocs": "gain_corrupt",
+        "variables": { "duration": { "global_val": "WIFE_U_CORRUPT_TURNS" } }
+      },
+      { "set_string_var": "tmp", "target_var": { "context_val": "rslt" } },
+      { "math": [ "_val", "=", "8 + rand(_fake_dex - 1) + 1" ] },
+      { "run_eocs": "eoc_gain_lust_alpha" },
+      
+      { "math": [ "_val", "=", "8 + rand(u_val('dexterity') - 1) + 1" ] },
+      { "run_eocs": "eoc_gain_lust_beta" },
+      {
+        "if": { "math": [ "tmp" ] },
+        "then": [
+          {
+            "if": { "and": [
+              { "not": { "npc_has_effect": "cubi_allow_seduce_player" } },
+              { "not": { "npc_has_effect": "cubi_allow_seduce_friendlyfire" } },
+              { "math": [ "rand(99)", "<", "WIFE_U_MUTATE_CHANCE" ] },
+              "u_is_character"
+            ] },
+            "then": [
+              {
+                "if": "u_is_avatar",
+                "then": { "message": "魔性体液会让你产生变异...", "type": "warning" },
+                "else": {
+                  "if": "player_see_u",
+                  "then": { "message": "魔性体液会让<u_name>产生变异...", "type": "warning" }
+                }
+              },
+              { "math": [ "_vitamin_backup", "=", "u_vitamin('mutagen_fiend')" ] },
+              { "math": [ "u_vitamin('mutagen_fiend')", "=", "2500" ] },
+              { "u_mutate": 0, "use_vitamins": false },
+              { "math": [ "u_vitamin('mutagen_fiend')", "=", "_vitamin_backup" ] }
+            ]
+          },
+          {
+            "if": { "not": { "npc_has_effect": "pet" } },
+            "then": [ 
+              { "math": [ "n_val('anger')", "-=", "50" ] },
+              { "math": [ "n_val('morale')", "-=", "30" ],
+                "//": "friendly+50していたが、友好化して他のモンスターと敵対するので削除"
+              }
+            ]
+          },
+          { "npc_lose_effect": "wife_u_dominating" },
+          { "npc_add_effect": "wife_u_cooldown", "duration": "10 t" },
+          {
+            "if": { "u_has_effect": "wife_u", "intensity": 2 },
+            "then":[
+              { "u_lose_effect": "wife_u" },
+              { "u_add_effect": "wife_u", "duration": 10, "intensity": 1 }
+            ],
+            "else": { "u_lose_effect": "wife_u" }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "eoc_start_wife_u",
+    "condition": { "not": { "u_has_effect": "wife_u", "intensity": 2 } },
+    "effect": [
+      {
+        "if": { "u_has_effect": "wife_u" },
+        "then": { "u_add_effect": "wife_u", "intensity": 2, "duration": 10 },
+        "else": { "u_add_effect": "wife_u", "intensity": 1, "duration": 10 }
+      },
+      { "npc_add_effect": "wife_u_dominating", "duration": 10 },
+      {
+        "if": "u_is_avatar",
+        "then": {
+          "if": "player_see_npc",
+          "then": { "message": "<npc_name>压住你，慢慢地把身体沉下去...", "type": "mixed" },
+          "else": { "message": "有什么东西压住你，慢慢地把身体沉下去...", "type": "mixed" }
+        },
+        "else": {
+          "if": "player_see_u",
+          "then": {
+            "if": "player_see_npc",
+            "then": { "message": "<npc_name>压住<u_name>，慢慢地把身体沉下去...", "type": "mixed" },
+            "else": { "message": "有什么东西压住<u_name>，慢慢地把身体沉下去...", "type": "mixed" }
+          }
+        }
+      }
+    ],
+    "false_effect": {
+      "if": "player_see_npc",
+      "then": {
+        "if": "u_is_avatar",
+        "then": { "message": "<npc_name>爱抚自己身体的同时凝视着你...", "type": "mixed" },
+        "else": {
+          "if": "player_see_u",
+          "then": { "message": "<npc_name>凝视着<u_name>同时爱抚自己身体...", "type": "mixed" },
+          "else": { "message": "<npc_name>凝视着什么东西同时爱抚自己身体...", "type": "mixed" }
+        }
+      }
+    }
+  },
+  
+  { 
+    "type": "SPELL",
+    "id": "mutate_fiend",
+    "name": { "str": "恶魔变异" },
+    "description": "从恶魔分类中变异",
+    "valid_targets": [ "self", "hostile", "ally"],
+    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX", "NO_FAIL" ],
+    "min_damage": 10000,
+    "base_casting_time": 0,
+    "shape": "blast",
+    "effect": "mutate",
+    "effect_str": "FIEND",
+    "min_range": 1
+  }
+]

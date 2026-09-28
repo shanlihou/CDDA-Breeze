@@ -1,0 +1,637 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "eoc_check_u_query_tile_target",
+    "//": [
+      "u_query_tileで選択した地点に何がいるか確認",
+      "開発版ではかなり単純にできるので不要かも",
+      "万が一選択した地点の対象とAlphaの名前が一致すると機能しない"
+    ],
+    "//pnt": "選択した地点",
+    "//retv": "結果を返す変数名, 結果はu, npc, monster, null",
+    "condition": { "expects_vars": [ "pnt", "retv" ] },
+    "effect": [
+      { "u_location_variable": { "context_val": "u_pos" } },
+      {
+        "if": { "compare_string": [ { "context_val": "u_pos" }, { "context_val": "pnt" } ] },
+        "then": {
+          "set_string_var": "u",
+          "target_var":  { "var_val": "retv" }
+        },
+        "else": {
+          "run_eocs": {
+            "id": "yiff_actor_use_check_select_something",
+            "effect": [
+              {
+                "set_string_var": "<npc_name>",
+                "target_var": { "context_val": "npc_name" },
+                "parse_tags": true
+              },
+              {
+                "set_string_var": "<u_name>",
+                "target_var": { "context_val": "u_name" },
+                "parse_tags": true
+              },
+              {
+                "if": { "compare_string": [ { "context_val": "u_name" }, { "context_val": "npc_name" } ] },
+                "then": {
+                  "set_string_var": "null",
+                  "target_var":  { "var_val": "retv" }
+                },
+                "else": {
+                  "if": "npc_is_npc",
+                  "then": {
+                    "set_string_var": "npc",
+                    "target_var":  { "var_val": "retv" }
+                  },
+                  "else": {
+                    "set_string_var": "monster",
+                    "target_var":  { "var_val": "retv" }
+                  }
+                }
+              } 
+            ]
+          },
+          "beta_loc": { "context_val": "pnt" }
+        }
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "gain_corrupt",
+    "//": "オリジナルではintensityは全てrand(1, 20)",
+    "condition": {
+      "and": [
+        { "expects_vars": [ "duration" ] },
+        { "math": [ "rand(19) + 1", ">", "u_val('intelligence')" ] }
+      ]
+    },
+    "effect": { "u_add_effect": "corrupt", "duration": { "context_val": "duration" } },
+    "false_effect": {
+      "if": "u_is_avatar",
+      "then": { "message": "但是你抵抗住了欲望。" },
+      "else": {
+        "if": "player_see_u",
+        "then": { "message": "但是<u_name>抵抗住了欲望。" }
+      }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "eoc_gain_lust_alpha",
+    "condition": { "expects_vars": [ "rslt", "val" ] },
+    "//rslt": "絶頂したかどうか",
+    "//val": "基本のlust時間、SEXUAL_SENSITIVEフラグで2倍",
+    "effect": [
+      { "math": [ "v_rslt", "=", "0" ] },
+      {
+        "if": { "u_has_flag": "SEXUAL_SENSITIVE" },
+        "then": { "math": [ "_val", "*=", "2" ] }
+      },
+      { "u_add_effect": "lust", "duration": { "context_val": "val" } },
+      {
+        "if": { "u_has_effect": "lust", "intensity": 100 },
+        "then":  [
+          { "u_lose_effect": "lust" },
+          { "math": [ "v_rslt", "=", "1" ] },
+          {
+            "if": {
+              "and": [
+                { "math": [ "HENTAI_EXTEND_AFTER_ORGASM" ] },
+                "u_is_character"
+              ]
+            },
+            "then": { "u_add_effect": "after_orgasm", "duration": "5 s" }
+          },
+          {
+            "if": { "u_has_species": "CUBI" },
+            "then": { "set_string_var": "d_body_fluids", "target_var": { "context_val": "fluid" } },
+            "else": { "set_string_var": "h_body_fluids", "target_var": { "context_val": "fluid" } }
+          },
+          {
+            "if": "u_is_avatar",
+            "then": [
+              { "message": "你到极限了！", "type": "info" },
+              {
+                "//": [
+                  "u_var_changedイベントに依存しているのでmathは使えない",
+                  "開発版ではtrigger_eventを使う"
+                ],
+                "math": [ "reached_orgasm", "+=", "1" ]
+              }
+            ],
+            "else": {
+              "if": "player_see_u",
+              "then": { "message": "<u_name>到极限了！", "type": "info" }
+            }
+          },
+          { "u_location_variable": { "context_val": "pnt" } },
+          { "map_spawn_item": { "context_val": "fluid" }, "loc": { "context_val": "pnt" } },
+          { "u_cast_spell": { "id": "STOP_50_MOVES", "hit_self": true } }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "eoc_gain_lust_beta",
+    "condition": { "expects_vars": [ "rslt", "val" ] },
+    "//rslt": "絶頂したかどうか",
+    "//val": "lust時間",
+    "effect": [
+      { "math": [ "v_rslt", "=", "0" ] },
+      {
+        "if": { "u_has_flag": "SEXUAL_SENSITIVE" },
+        "then": { "math": [ "_val", "*=", "2" ] }
+      },
+      { "npc_add_effect": "lust", "duration": { "context_val": "val" } },
+      {
+        "if": { "npc_has_effect": "lust", "intensity": 100 },
+        "then":  [
+          { "npc_lose_effect": "lust" },
+          { "math": [ "v_rslt", "=", "1" ] },
+          {
+            "if": {
+              "and": [
+                { "math": [ "HENTAI_EXTEND_AFTER_ORGASM" ] },
+                "npc_is_character"
+              ]
+            },
+            "then": { "npc_add_effect": "after_orgasm", "duration": "5 s" }
+          },
+          {
+            "if": { "npc_has_species": "CUBI" },
+            "then": { "set_string_var": "d_body_fluids", "target_var": { "context_val": "fluid" } },
+            "else": { "set_string_var": "h_body_fluids", "target_var": { "context_val": "fluid" } }
+          },
+          {
+            "if": "npc_is_avatar",
+            "then": [
+              { "message": "你到极限了！", "type": "info" },
+              { "math": [ "reached_orgasm", "+=", "1" ] }
+            ],
+            "else": {
+              "if": "player_see_npc",
+              "then": { "message": "<u_name>到极限了！", "type": "info" }
+            }
+          },
+          { "npc_location_variable": { "context_val": "pnt" } },
+          { "map_spawn_item": { "context_val": "fluid" }, "loc": { "context_val": "pnt" } },
+          { "npc_cast_spell": { "id": "STOP_50_MOVES", "hit_self": true } }
+        ]
+      }
+    ]
+  },
+  {
+    "//": "マッサージ器使用後を統計",
+    "type": "effect_on_condition",
+    "id": "EOC_ACT_VIBE_STATISTIC",
+    "eoc_type": "EVENT",
+    "required_event": "character_finished_activity",
+    "condition": {
+      "and": [
+        "u_is_avatar",
+        { "compare_string": [ "ACT_VIBE", { "context_val": "activity" } ] },
+        { "not": { "math": [ "_canceled" ] } }
+      ]
+    },
+    "effect": [
+      { "u_add_effect": "finished_onani", "duration": "1 s" },
+      {
+        "//": [
+          "u_var_changedイベントに依存しているのでmathは使えない",
+          "開発版ではtrigger_eventを使う"
+        ],
+        "math": [ "reached_orgasm", "+=", "1" ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "eoc_get_cubi_fake_dex_beta",
+    "condition": { "expects_vars": [ "rslt" ] },
+    "effect": {
+      "if": { "npc_has_flag": "WIFE_U_DEX_8" },
+        "then": { "math": [ "v_rslt", "=", "8" ] },
+      "else": { "if": { "npc_has_flag": "WIFE_U_DEX_10" },
+        "then": { "math": [ "v_rslt", "=", "10" ] },
+      "else": { "if": { "npc_has_flag": "WIFE_U_DEX_12" },
+        "then": { "math": [ "v_rslt", "=", "12" ] },
+      "else": { "if": { "npc_has_flag": "WIFE_U_DEX_14" },
+        "then": { "math": [ "v_rslt", "=", "14" ] },
+      "else": { "if": { "npc_has_flag": "WIFE_U_DEX_20" },
+        "then": { "math": [ "v_rslt", "=", "20" ] },
+      "else": { "if": { "npc_has_flag": "WIFE_U_DEX_50" },
+        "then": { "math": [ "v_rslt", "=", "50" ] },
+        "else": { "math": [ "v_rslt", "=", "0" ] }
+      } } } } }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "eoc_hentai_get_monster_id",
+    "condition": { "expects_vars": [ "pnt" ] },
+    "effect": {
+      "u_cast_spell": { "id": "spell_hentai_get_monster_id" },
+      "loc": { "context_val": "pnt" }
+    }
+  },
+  
+  {
+    "type": "SPELL",
+    "id": "spell_hentai_get_monster_id",
+    "name": "モンスターID取得呪文",
+    "description": "モンスターID取得呪文",
+    "valid_targets": [ "ally", "hostile" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_HENTAI_GET_MONSTER_ID",
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX", "NO_FAIL" ],
+    "extra_effects": [
+      { "id": "spell_hentai_get_monster_id_mon_cambion_male" },
+      { "id": "spell_hentai_get_monster_id_mon_cambion_female" },
+      { "id": "spell_hentai_get_monster_id_mon_lessor_succubi" },
+      { "id": "spell_hentai_get_monster_id_mon_succubi" },
+      { "id": "spell_hentai_get_monster_id_mon_succubi_sadist" },
+      { "id": "spell_hentai_get_monster_id_mon_succubi_somnophilia" },
+      { "id": "spell_hentai_get_monster_id_mon_succubi_exhibitionism" },
+      { "id": "spell_hentai_get_monster_id_mon_succubi_lactophilia" },
+      { "id": "spell_hentai_get_monster_id_mon_greater_succubi" },
+      { "id": "spell_hentai_get_monster_id_mon_lessor_incubi" },
+      { "id": "spell_hentai_get_monster_id_mon_incubi" },
+      { "id": "spell_hentai_get_monster_id_mon_incubi_sthenolagnia" },
+      { "id": "spell_hentai_get_monster_id_mon_incubi_phalloplas" },
+      { "id": "spell_hentai_get_monster_id_mon_incubi_hoplophilia" },
+      { "id": "spell_hentai_get_monster_id_mon_greater_incubi" },
+      { "id": "spell_hentai_get_monster_id_mon_corrupted_schoolgirl" },
+      { "id": "spell_hentai_get_monster_id_mon_corrupted_schoolteacher_female" },
+      { "id": "spell_hentai_get_monster_id_mon_corrupted_schoolboy" },
+      { "id": "spell_hentai_get_monster_id_mon_corrupted_schoolteacher_male" },
+      { "id": "spell_hentai_get_monster_id_mon_goathead_demon" },
+      { "id": "spell_hentai_get_monster_id_mon_hentai_vinebeast" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HENTAI_GET_MONSTER_ID",
+    "effect": { "set_string_var": "", "target_var": { "global_val": "hentai_monster_id" } }
+  },
+  {
+    "type": "SPELL",
+    "id": "spell_hentai_get_monster_id_mon_cambion_male",
+    "name": "モンスターID取得呪文mon_cambion_male",
+    "description": "モンスターID取得呪文mon_cambion_male",
+    "valid_targets": [ "ally", "hostile" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_HENTAI_GET_MONSTER_ID_mon_cambion_male",
+    "targeted_monster_ids": [ "mon_cambion_male" ],
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX", "NO_FAIL" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HENTAI_GET_MONSTER_ID_mon_cambion_male",
+    "effect": { "set_string_var": "mon_cambion_male", "target_var": { "global_val": "hentai_monster_id" } }
+  },
+  {
+    "type": "SPELL",
+    "id": "spell_hentai_get_monster_id_mon_cambion_female",
+    "name": "モンスターID取得呪文mon_cambion_female",
+    "description": "モンスターID取得呪文mon_cambion_female",
+    "valid_targets": [ "ally", "hostile" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_HENTAI_GET_MONSTER_ID_mon_cambion_female",
+    "targeted_monster_ids": [ "mon_cambion_female" ],
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX", "NO_FAIL" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HENTAI_GET_MONSTER_ID_mon_cambion_female",
+    "effect": { "set_string_var": "mon_cambion_female", "target_var": { "global_val": "hentai_monster_id" } }
+  },
+  {
+    "type": "SPELL",
+    "id": "spell_hentai_get_monster_id_mon_lessor_succubi",
+    "name": "モンスターID取得呪文mon_lessor_succubi",
+    "description": "モンスターID取得呪文mon_lessor_succubi",
+    "valid_targets": [ "ally", "hostile" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_HENTAI_GET_MONSTER_ID_mon_lessor_succubi",
+    "targeted_monster_ids": [ "mon_lessor_succubi" ],
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX", "NO_FAIL" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HENTAI_GET_MONSTER_ID_mon_lessor_succubi",
+    "effect": { "set_string_var": "mon_lessor_succubi", "target_var": { "global_val": "hentai_monster_id" } }
+  },
+  {
+    "type": "SPELL",
+    "id": "spell_hentai_get_monster_id_mon_succubi",
+    "name": "モンスターID取得呪文mon_succubi",
+    "description": "モンスターID取得呪文mon_succubi",
+    "valid_targets": [ "ally", "hostile" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_HENTAI_GET_MONSTER_ID_mon_succubi",
+    "targeted_monster_ids": [ "mon_succubi" ],
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX", "NO_FAIL" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HENTAI_GET_MONSTER_ID_mon_succubi",
+    "effect": { "set_string_var": "mon_succubi", "target_var": { "global_val": "hentai_monster_id" } }
+  },
+  {
+    "type": "SPELL",
+    "id": "spell_hentai_get_monster_id_mon_succubi_sadist",
+    "name": "モンスターID取得呪文mon_succubi_sadist",
+    "description": "モンスターID取得呪文mon_succubi_sadist",
+    "valid_targets": [ "ally", "hostile" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_HENTAI_GET_MONSTER_ID_mon_succubi_sadist",
+    "targeted_monster_ids": [ "mon_succubi_sadist" ],
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX", "NO_FAIL" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HENTAI_GET_MONSTER_ID_mon_succubi_sadist",
+    "effect": { "set_string_var": "mon_succubi_sadist", "target_var": { "global_val": "hentai_monster_id" } }
+  },
+  {
+    "type": "SPELL",
+    "id": "spell_hentai_get_monster_id_mon_succubi_somnophilia",
+    "name": "モンスターID取得呪文mon_succubi_somnophilia",
+    "description": "モンスターID取得呪文mon_succubi_somnophilia",
+    "valid_targets": [ "ally", "hostile" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_HENTAI_GET_MONSTER_ID_mon_succubi_somnophilia",
+    "targeted_monster_ids": [ "mon_succubi_somnophilia" ],
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX", "NO_FAIL" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HENTAI_GET_MONSTER_ID_mon_succubi_somnophilia",
+    "effect": { "set_string_var": "mon_succubi_somnophilia", "target_var": { "global_val": "hentai_monster_id" } }
+  },
+  {
+    "type": "SPELL",
+    "id": "spell_hentai_get_monster_id_mon_succubi_exhibitionism",
+    "name": "モンスターID取得呪文mon_succubi_exhibitionism",
+    "description": "モンスターID取得呪文mon_succubi_exhibitionism",
+    "valid_targets": [ "ally", "hostile" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_HENTAI_GET_MONSTER_ID_mon_succubi_exhibitionism",
+    "targeted_monster_ids": [ "mon_succubi_exhibitionism" ],
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX", "NO_FAIL" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HENTAI_GET_MONSTER_ID_mon_succubi_exhibitionism",
+    "effect": { "set_string_var": "mon_succubi_exhibitionism", "target_var": { "global_val": "hentai_monster_id" } }
+  },
+  {
+    "type": "SPELL",
+    "id": "spell_hentai_get_monster_id_mon_succubi_lactophilia",
+    "name": "モンスターID取得呪文mon_succubi_lactophilia",
+    "description": "モンスターID取得呪文mon_succubi_lactophilia",
+    "valid_targets": [ "ally", "hostile" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_HENTAI_GET_MONSTER_ID_mon_succubi_lactophilia",
+    "targeted_monster_ids": [ "mon_succubi_lactophilia" ],
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX", "NO_FAIL" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HENTAI_GET_MONSTER_ID_mon_succubi_lactophilia",
+    "effect": { "set_string_var": "mon_succubi_lactophilia", "target_var": { "global_val": "hentai_monster_id" } }
+  },
+  {
+    "type": "SPELL",
+    "id": "spell_hentai_get_monster_id_mon_greater_succubi",
+    "name": "モンスターID取得呪文mon_greater_succubi",
+    "description": "モンスターID取得呪文mon_greater_succubi",
+    "valid_targets": [ "ally", "hostile" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_HENTAI_GET_MONSTER_ID_mon_greater_succubi",
+    "targeted_monster_ids": [ "mon_greater_succubi" ],
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX", "NO_FAIL" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HENTAI_GET_MONSTER_ID_mon_greater_succubi",
+    "effect": { "set_string_var": "mon_greater_succubi", "target_var": { "global_val": "hentai_monster_id" } }
+  },
+  {
+    "type": "SPELL",
+    "id": "spell_hentai_get_monster_id_mon_lessor_incubi",
+    "name": "モンスターID取得呪文mon_lessor_incubi",
+    "description": "モンスターID取得呪文mon_lessor_incubi",
+    "valid_targets": [ "ally", "hostile" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_HENTAI_GET_MONSTER_ID_mon_lessor_incubi",
+    "targeted_monster_ids": [ "mon_lessor_incubi" ],
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX", "NO_FAIL" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HENTAI_GET_MONSTER_ID_mon_lessor_incubi",
+    "effect": { "set_string_var": "mon_lessor_incubi", "target_var": { "global_val": "hentai_monster_id" } }
+  },
+  {
+    "type": "SPELL",
+    "id": "spell_hentai_get_monster_id_mon_incubi",
+    "name": "モンスターID取得呪文mon_incubi",
+    "description": "モンスターID取得呪文mon_incubi",
+    "valid_targets": [ "ally", "hostile" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_HENTAI_GET_MONSTER_ID_mon_incubi",
+    "targeted_monster_ids": [ "mon_incubi" ],
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX", "NO_FAIL" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HENTAI_GET_MONSTER_ID_mon_incubi",
+    "effect": { "set_string_var": "mon_incubi", "target_var": { "global_val": "hentai_monster_id" } }
+  },
+  {
+    "type": "SPELL",
+    "id": "spell_hentai_get_monster_id_mon_incubi_sthenolagnia",
+    "name": "モンスターID取得呪文mon_incubi_sthenolagnia",
+    "description": "モンスターID取得呪文mon_incubi_sthenolagnia",
+    "valid_targets": [ "ally", "hostile" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_HENTAI_GET_MONSTER_ID_mon_incubi_sthenolagnia",
+    "targeted_monster_ids": [ "mon_incubi_sthenolagnia" ],
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX", "NO_FAIL" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HENTAI_GET_MONSTER_ID_mon_incubi_sthenolagnia",
+    "effect": { "set_string_var": "mon_incubi_sthenolagnia", "target_var": { "global_val": "hentai_monster_id" } }
+  },
+  {
+    "type": "SPELL",
+    "id": "spell_hentai_get_monster_id_mon_incubi_phalloplas",
+    "name": "モンスターID取得呪文mon_incubi_phalloplas",
+    "description": "モンスターID取得呪文mon_incubi_phalloplas",
+    "valid_targets": [ "ally", "hostile" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_HENTAI_GET_MONSTER_ID_mon_incubi_phalloplas",
+    "targeted_monster_ids": [ "mon_incubi_phalloplas" ],
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX", "NO_FAIL" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HENTAI_GET_MONSTER_ID_mon_incubi_phalloplas",
+    "effect": { "set_string_var": "mon_incubi_phalloplas", "target_var": { "global_val": "hentai_monster_id" } }
+  },
+  {
+    "type": "SPELL",
+    "id": "spell_hentai_get_monster_id_mon_incubi_hoplophilia",
+    "name": "モンスターID取得呪文mon_incubi_hoplophilia",
+    "description": "モンスターID取得呪文mon_incubi_hoplophilia",
+    "valid_targets": [ "ally", "hostile" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_HENTAI_GET_MONSTER_ID_mon_incubi_hoplophilia",
+    "targeted_monster_ids": [ "mon_incubi_hoplophilia" ],
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX", "NO_FAIL" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HENTAI_GET_MONSTER_ID_mon_incubi_hoplophilia",
+    "effect": { "set_string_var": "mon_incubi_hoplophilia", "target_var": { "global_val": "hentai_monster_id" } }
+  },
+  {
+    "type": "SPELL",
+    "id": "spell_hentai_get_monster_id_mon_greater_incubi",
+    "name": "モンスターID取得呪文mon_greater_incubi",
+    "description": "モンスターID取得呪文mon_greater_incubi",
+    "valid_targets": [ "ally", "hostile" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_HENTAI_GET_MONSTER_ID_mon_greater_incubi",
+    "targeted_monster_ids": [ "mon_greater_incubi" ],
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX", "NO_FAIL" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HENTAI_GET_MONSTER_ID_mon_greater_incubi",
+    "effect": { "set_string_var": "mon_greater_incubi", "target_var": { "global_val": "hentai_monster_id" } }
+  },
+  {
+    "type": "SPELL",
+    "id": "spell_hentai_get_monster_id_mon_corrupted_schoolgirl",
+    "name": "モンスターID取得呪文mon_corrupted_schoolgirl",
+    "description": "モンスターID取得呪文mon_corrupted_schoolgirl",
+    "valid_targets": [ "ally", "hostile" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_HENTAI_GET_MONSTER_ID_mon_corrupted_schoolgirl",
+    "targeted_monster_ids": [ "mon_corrupted_schoolgirl" ],
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX", "NO_FAIL" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HENTAI_GET_MONSTER_ID_mon_corrupted_schoolgirl",
+    "effect": { "set_string_var": "mon_corrupted_schoolgirl", "target_var": { "global_val": "hentai_monster_id" } }
+  },
+  {
+    "type": "SPELL",
+    "id": "spell_hentai_get_monster_id_mon_corrupted_schoolteacher_female",
+    "name": "モンスターID取得呪文mon_corrupted_schoolteacher_female",
+    "description": "モンスターID取得呪文mon_corrupted_schoolteacher_female",
+    "valid_targets": [ "ally", "hostile" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_HENTAI_GET_MONSTER_ID_mon_corrupted_schoolteacher_female",
+    "targeted_monster_ids": [ "mon_corrupted_schoolteacher_female" ],
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX", "NO_FAIL" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HENTAI_GET_MONSTER_ID_mon_corrupted_schoolteacher_female",
+    "effect": { "set_string_var": "mon_corrupted_schoolteacher_female", "target_var": { "global_val": "hentai_monster_id" } }
+  },
+  {
+    "type": "SPELL",
+    "id": "spell_hentai_get_monster_id_mon_corrupted_schoolboy",
+    "name": "モンスターID取得呪文mon_corrupted_schoolboy",
+    "description": "モンスターID取得呪文mon_corrupted_schoolboy",
+    "valid_targets": [ "ally", "hostile" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_HENTAI_GET_MONSTER_ID_mon_corrupted_schoolboy",
+    "targeted_monster_ids": [ "mon_corrupted_schoolboy" ],
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX", "NO_FAIL" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HENTAI_GET_MONSTER_ID_mon_corrupted_schoolboy",
+    "effect": { "set_string_var": "mon_corrupted_schoolboy", "target_var": { "global_val": "hentai_monster_id" } }
+  },
+  {
+    "type": "SPELL",
+    "id": "spell_hentai_get_monster_id_mon_corrupted_schoolteacher_male",
+    "name": "モンスターID取得呪文mon_corrupted_schoolteacher_male",
+    "description": "モンスターID取得呪文mon_corrupted_schoolteacher_male",
+    "valid_targets": [ "ally", "hostile" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_HENTAI_GET_MONSTER_ID_mon_corrupted_schoolteacher_male",
+    "targeted_monster_ids": [ "mon_corrupted_schoolteacher_male" ],
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX", "NO_FAIL" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HENTAI_GET_MONSTER_ID_mon_corrupted_schoolteacher_male",
+    "effect": { "set_string_var": "mon_corrupted_schoolteacher_male", "target_var": { "global_val": "hentai_monster_id" } }
+  },
+  {
+    "type": "SPELL",
+    "id": "spell_hentai_get_monster_id_mon_goathead_demon",
+    "name": "モンスターID取得呪文mon_goathead_demon",
+    "description": "モンスターID取得呪文mon_goathead_demon",
+    "valid_targets": [ "ally", "hostile" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_HENTAI_GET_MONSTER_ID_mon_goathead_demon",
+    "targeted_monster_ids": [ "mon_goathead_demon" ],
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX", "NO_FAIL" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HENTAI_GET_MONSTER_ID_mon_goathead_demon",
+    "effect": { "set_string_var": "mon_goathead_demon", "target_var": { "global_val": "hentai_monster_id" } }
+  },
+  {
+    "type": "SPELL",
+    "id": "spell_hentai_get_monster_id_mon_hentai_vinebeast",
+    "name": "モンスターID取得呪文mon_hentai_vinebeast",
+    "description": "モンスターID取得呪文mon_hentai_vinebeast",
+    "valid_targets": [ "ally", "hostile" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_HENTAI_GET_MONSTER_ID_mon_hentai_vinebeast",
+    "targeted_monster_ids": [ "mon_hentai_vinebeast" ],
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX", "NO_FAIL" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HENTAI_GET_MONSTER_ID_mon_hentai_vinebeast",
+    "effect": { "set_string_var": "mon_hentai_vinebeast", "target_var": { "global_val": "hentai_monster_id" } }
+  }
+]

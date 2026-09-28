@@ -1,0 +1,352 @@
+[
+  {
+    "type": "mutation_type",
+    "id": "CUBI_TYPE"
+  },
+  {
+    "type": "mutation",
+    "id": "BREAST_MILK",
+    "name": "母乳",
+    "description": "虽然不知道有没有生过孩子，但母乳已经流出来。使用挤奶器就能挤出母乳。",
+    "category": [ "CATTLE", "FELINE", "LUPINE", "MOUSE", "RABBIT", "RAT", "URSINE", "FIEND" ],
+    "points": 1,
+    "starting_trait": true,
+    "vitamin_rates": [ [ "breast_milk", -30 ] ]
+  },
+  {
+    "type": "mutation",
+    "id": "HUGE_BREAST",
+    "name": "爆乳",
+    "points": 1,
+    "mixed_effect": true,
+    "visibility": 3,
+    "ugliness": -4,
+    "description": "胸部相当大。NPC虽然反应会稍微变好，但对本人来说只是个累赘。躯干+5累赘度，如果没穿衣服的话，还会+5累赘度。",
+    "encumbrance_always": [ [ "torso", 10 ] ],
+    "encumbrance_covered": [ [ "torso", -5 ] ],
+    "starting_trait": true,
+    "types": [ "BREAST_SIZE" ],
+    "prereqs": [ "BIG_BREAST" ],
+    "changes_to": [ "ULTRA_BREAST" ],
+    "category": [ "CATTLE", "MEDICAL", "FIEND" ],
+    "social_modifiers": { "persuade": 5, "intimidate": -5 }
+  },
+  {
+    "type": "mutation",
+    "id": "ULTRA_BREAST",
+    "name": "超乳",
+    "points": -4,
+    "purifiable": false,
+    "mixed_effect": true,
+    "visibility": 8,
+    "ugliness": 4,
+    "description": "乳房进一步成长，接近躯干大小。离谱巨大的胸部虽然碍事，但其弹性可以有效缓冲打击。躯干+20累赘度，且上半身无法装备硬质护具。",
+    "encumbrance_always": [ [ "torso", 20 ] ],
+    "restricts_gear": [ "torso_upper" ],
+    "allow_soft_gear": true,
+    "types": [ "BREAST_SIZE" ],
+    "prereqs": [ "HUGE_BREAST" ],
+    "prereqs2": [ "BREAST_MILK" ],
+    "threshreq": [ "THRESH_CATTLE", "THRESH_FIEND" ],
+    "category": [ "CATTLE", "FIEND" ],
+    "armor": [ { "part_types": [ "torso" ], "bash": 3 } ]
+  },
+  {
+    "type": "mutation",
+    "id": "WINGS_FIEND",
+    "name": "恶魔之翼",
+    "points": 1,
+    "visibility": 9,
+    "ugliness": 4,
+    "purifiable": false,
+    "description": "背上长出硕大的漆黑翅膀。虽然能按照自己的意志优雅地自由活动，但无法拍动到能在空中飞翔的程度。似乎能用于威吓他人",
+    "types": [ "WINGS" ],
+    "prereqs": [ "WINGS_STUB" ],
+    "category": [ "FIEND" ],
+    "threshreq": [ "THRESH_FIEND" ],
+    "flags": [ "WINGS_1" ],
+    "social_modifiers": { "intimidate": 10 }
+  },
+  {
+    "type": "mutation",
+    "id": "EXHIBITIONISM",
+    "name": "露出癖",
+    "points": -2,
+    "starting_trait": true,
+    "description": "通过暴露自己的身体来获得强烈的快感。身体被衣服遮住会受到惩罚，肌肤的暴露程度越高，情绪就越高涨。",
+    "category": [ "FIEND" ],
+    "changes_to": [ "EXH_MUTATION" ]
+  },
+  {
+    "type": "mutation",
+    "id": "FIEND_MINDCONTROL",
+    "name": "诱惑",
+    "description": "擅长诱惑人类之术。只需要向其轻声细语，对方几乎会立刻听从你的要求。",
+    "points": 2,
+    "category": [ "FIEND" ],
+    "threshreq": [ "THRESH_FIEND" ],
+    "social_modifiers": { "lie": 20, "persuade": 20 }
+  },
+  {
+    "type": "mutation",
+    "id": "ESTRUS_FIEND",
+    "name": "发情",
+    "description": "随时处于发情状态。虽然可以暂时平息，但很快就会渴望下一次的快乐。",
+    "points": -4,
+    "purifiable": false,
+    "vitamin_rates": [ [ "estrus_fiend", -3600 ] ],
+    "category": [ "FIEND" ],
+    "threshreq": [ "THRESH_FIEND" ],
+    "types": [ "ESTRUS" ]
+  },
+  {
+    "type": "mutation",
+    "id": "HOPLO_MUTATION",
+    "name": "枪械偏爱",
+    "description": "非常喜爱枪械，对各种各样的枪械极其了解，在使用的过程中，能够更快、更准确、更有效率以及进行更远距离地瞄准。",
+    "points": 4,
+    "category": [ "FIEND" ],
+    "types": [ "CUBI_TYPE" ],
+    "prereqs": [ "ESTRUS_FIEND" ],
+    "threshreq": [ "THRESH_FIEND" ],
+    "purifiable": false,
+    "cancels": [ "BRAWLER" ],
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [
+          { "value": "WEAPON_DISPERSION", "multiply": -0.4 },
+          { "value": "RECOIL_MODIFIER", "multiply": -0.4 },
+          { "value": "RANGE", "add": 4 },
+          { "value": "RANGED_DAMAGE", "multiply": 0.15 }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "STHENO_MUTATION",
+    "name": "肌肉偏爱",
+    "description": "对于培养自己的肌肉、磨练肉体这件事很执着。因此肌肉力量增加到了以前无法比拟的程度。接下来要锻炼哪里呢？",
+    "points": 4,
+    "visibility": 4,
+    "ugliness": 6,
+    "category": [ "FIEND" ],
+    "types": [ "CUBI_TYPE" ],
+    "prereqs": [ "ESTRUS_FIEND" ],
+    "threshreq": [ "THRESH_FIEND" ],
+    "purifiable": false,
+    "armor": [ { "bash": 7, "part_types": [ "torso", "arm", "leg" ] } ], 
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [
+          { "value": "STRENGTH", "add": 4 },
+          { "value": "CARRY_WEIGHT", "multiply": 0.4 },
+          { "value": "ATTACK_NOISE", "multiply": 0.5 },
+          { "value": "FOOTSTEP_NOISE", "multiply": 0.5 },
+          { "value": "SHOUT_NOISE", "multiply": 1.0 },
+          { "value": "MELEE_DAMAGE", "multiply": 0.5 },
+          { "value": "REGEN_STAMINA", "multiply": 0.5 }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "PHALLO_MUTATION",
+    "name": "CBM偏爱",
+    "description": "全神贯注于调试自己的身体。如今电力就是驱动你的血液。根据体内能量提升性能。而且装有*避雷针*，能够使电击和EMP无效化。",
+    "//": [
+      "100kJ毎に速度ボーナス、1000kJで能力+1",
+      "本当は電力でやりたいが0.Hにまともな取得手段がない",
+      "power, power_percentageともにオーバーフローする"
+    ],
+    "points": 4,
+    "category": [ "FIEND" ],
+    "types": [ "CUBI_TYPE" ],
+    "prereqs": [ "ESTRUS_FIEND" ],
+    "threshreq": [ "THRESH_FIEND" ],
+    "purifiable": false,
+    "flags": [ "EMP_IMMUNE", "ELECTRIC_IMMUNE" ],
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [
+          {
+            "value": "STRENGTH",
+            "add": { "math": [ "max(u_power_max_phallo / 1000, 10)" ] }
+          },
+          {
+            "value": "DEXTERITY",
+            "add": { "math": [ "max(u_power_max_phallo / 1000, 10)" ] }
+          },
+          {
+            "value": "INTELLIGENCE",
+            "add": { "math": [ "max(u_power_max_phallo / 1000, 10)" ] }
+          },
+          {
+            "value": "PERCEPTION",
+            "add": { "math": [ "max(u_power_max_phallo / 1000, 10)" ] }
+          },
+          {
+            "value": "SPEED",
+            "add": { "math": [ "max(u_power_max_phallo / 100, 100)" ] }
+          },
+          {
+            "value": "ATTACK_SPEED",
+            "add": { "math": [ "max(u_power_max_phallo / 100, 100)" ] }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "LACTO_MUTATION",
+    "name": "强烈的母性",
+    "description": "有着非同寻常的巨乳，那里源源不断地溢出的母乳的甜美香气。因为你的强烈母性，周围的人可能会无条件地信任你、无法反抗你吧。",
+    "points": 4,
+    "visibility": 0,
+    "ugliness": 0,
+    "category": [ "FIEND" ],
+    "types": [ "CUBI_TYPE" ],
+    "prereqs": [ "ESTRUS_FIEND" ],
+    "prereqs2": [ "ULTRA_BREAST" ],
+    "threshreq": [ "THRESH_FIEND" ],
+    "purifiable": false,
+    "social_modifiers": { "lie": 120, "persuade": 120, "intimidate": -60 },
+    "vitamin_rates": [ [ "breast_milk", -5 ] ]
+  },
+  {
+    "type": "mutation",
+    "id": "EXH_MUTATION",
+    "name": "露出狂",
+    "description": "长时间让他人看到自己的裸体，因此感知变得敏锐，对周围的视线变得敏感。能够更轻易地闪避攻击给更多人表演，也更加习惯寒冷。",
+    "points": 4,
+    "category": [ "FIEND" ],
+    "types": [ "CUBI_TYPE" ],
+    "prereqs": [ "EXHIBITIONISM" ],
+    "prereqs2": [ "ESTRUS_FIEND" ],
+    "threshreq": [ "THRESH_FIEND" ],
+    "purifiable": false,
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [
+          { "value": "PERCEPTION", "add": 2 },
+          { "value": "CLIMATE_CONTROL_CHILL", "add": 20 },
+          { "value": "CLIMATE_CONTROL_HEAT", "add": 25 },
+          { "value": "BONUS_DODGE", "add": 4 }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "SADIST_MUTATION",
+    "name": "虐待嗜好",
+    "description": "通过折磨他人来获得强烈的兴奋。攻击时能力会暂时提升，恢复体力的速度变快。能够熟练使用鞭子，挥动更加快速有效。",
+    "points": 4,
+    "category": [ "FIEND" ],
+    "types": [ "CUBI_TYPE" ],
+    "prereqs": [ "ESTRUS_FIEND" ],
+    "threshreq": [ "THRESH_FIEND" ],
+    "purifiable": false,
+    "cancels": [ "PACIFIST" ],
+    "enchantments": [
+      {
+        "condition": { "u_has_wielded_with_flag": "WHIP" },
+        "values": [
+          { "value": "ATTACK_SPEED",  "multiply": -0.5 },
+          { "value": "MELEE_DAMAGE", "multiply": 2.0 },
+          { "value": "AVOID_FRIENDRY_FIRE", "add": 1.0 },
+          { "value": "SOCIAL_INTIMIDATE", "add": 20 }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "SOMNO_MUTATION",
+    "name": "催眠",
+    "description": "作为梦魔而能够使用让人产生困意的魔法，让对方做淫靡的梦。也能控制自己的睡眠。",
+    "points": 4,
+    "category": [ "FIEND" ],
+    "types": [ "CUBI_TYPE" ],
+    "prereqs": [ "ESTRUS_FIEND" ],
+    "threshreq": [ "THRESH_FIEND" ],
+    "purifiable": false,
+    "cancels": [ "INSOMNIA" ],
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [ { "value": "SLEEPY", "add": 60 } ]
+      }
+    ],
+    "spells_learned": [ [ "magic_sleep_somno_mutation", 1 ] ],
+    "flags": [ "IMMUNE_MAGIC_SLEEPY" ]
+  },
+  {
+    "id": "magic_sleep_somno_mutation",
+    "type": "SPELL",
+    "name": "睡眠魔法",
+    "description": "睡眠魔法(玩家用)",
+    "base_casting_time": 500,
+    "base_energy_cost": 100,
+    "energy_source": "MANA",
+    "spell_class": "NONE",
+    "difficulty": 1,
+    "max_level": 10,
+    "effect": "attack",
+    "effect_str": "magic_sleepy",
+    "valid_targets": [ "hostile" ],
+    "min_duration": 2000,
+    "min_range": 20,
+    "shape": "blast"
+  },
+  {
+    "type": "mutation",
+    "id": "CUBI_ARCH",
+    "name": "アーク",
+    "description": "你作为恶魔的实力战斗能力、魅力、技巧等远超其他梦魔。梦魔们被你的气场所压制，已不会主动发起攻击。不过，如果你无论如何都想与梦魔嬉戏，可以通过激活这种变异*挑衅*它们。",
+    "points": 10,
+    "visibility": 10,
+    "ugliness": 10,
+    "category": [ "FIEND" ],
+    "prereqs": [ "HOPLO_MUTATION", "STHENO_MUTATION", "PHALLO_MUTATION", "LACTO_MUTATION", "EXH_MUTATION", "SADIST_MUTATION", "SOMNO_MUTATION" ],
+    "threshreq": [ "THRESH_FIEND" ],
+    "purifiable": false,
+    "active": true,
+    "transform": { "target": "CUBI_ARCH_off", "msg_transform": "开始*挑衅*。", "active": true, "moves": 10 },
+    "social_modifiers": { "intimidate": 40 },
+    "enchantments": [ { "values": [ { "value": "CLIMATE_CONTROL_CHILL", "add": 1000 } ] } ],
+    "flags": [ "HEAT_IMMUNE", "HEATSINK" ],
+    "ignored_by": [ "CUBI", "FIEND" ]
+  },
+  {
+    "type": "mutation",
+    "id": "CUBI_ARCH_off",
+    "copy-from": "CUBI_ARCH",
+    "visibility": 2,
+    "ugliness": 2,
+    "description": "你正在挑衅其他梦魔。平时梦魔们会害怕你的实力而不敢出手，但是看到你这副煽情的模样，没有梦魔能抑制住自己的欲望。他们一定会想尽办法得到你。",
+    "valid": false,
+    "transform": { "target": "CUBI_ARCH", "msg_transform": "*挑発*を止めました。", "active": false, "moves": 10 },
+    "social_modifiers": { "intimidate": 0 },
+    "ignored_by": [] 
+  },
+  {
+    "type": "mutation",
+    "id": "CUBI_SPAWNER",
+    "name": "召唤使魔",
+    "description": "你的实力已经足以让其他梦魔服从了。有效化后会暂时召唤出友好的梦魔。",
+    "points": 10,
+    "category": [ "FIEND" ],
+    "prereqs": [ "CUBI_ARCH" ],
+    "threshreq": [ "THRESH_FIEND" ],
+    "purifiable": false,
+    "active": true,
+    "activated_eocs": [ "EOC_CAST_CUBI_SPAWNER" ]
+  }
+]

@@ -1,0 +1,130 @@
+[
+  {
+    "id": "TALK_DEMONBEING_SCHOOLGIRL",
+    "type": "talk_topic",
+    "dynamic_line": [
+      "噫呀——！...啊！对...对不起，吓了你一跳，我还以为是那些恶魔呢...",
+      "啊...你还没有变成恶魔吧？对吧？是这样的吧！？"
+    ],
+    "responses": [
+      { "text": "冷静点，我是还人类！", "topic": "TALK_DEMONBEING_SCHOOLGIRL_GREET" },
+      {
+        "text": "[变异] 冷静点，我是人类！...嗯，至少以前是吧。",
+        "topic": "TALK_DEMONBEING_SCHOOLGIRL_GREET",
+        "condition": {
+          "u_has_any_trait": [
+            "THRESH_LIZARD",
+            "THRESH_BIRD",
+            "THRESH_FISH",
+            "THRESH_BEAST",
+            "THRESH_FELINE",
+            "THRESH_LUPINE",
+            "THRESH_URSINE",
+            "THRESH_CATTLE",
+            "THRESH_INSECT",
+            "THRESH_PLANT",
+            "THRESH_SLIME",
+            "THRESH_TROGLOBITE",
+            "THRESH_CEPHALOPOD",
+            "THRESH_SPIDER",
+            "THRESH_RAT",
+            "THRESH_ELFA",
+            "THRESH_CHIMERA",
+            "THRESH_RAPTOR",
+            "THRESH_MOUSE",
+            "THRESH_MARLOSS",
+            "THRESH_MYCUS",
+            "THRESH_FIEND"
+          ]
+        }
+      },
+      {
+        "text": "[变异 堕落] 不好意思，我已经不再是人类了。",
+        "trial": { "type": "INTIMIDATE", "difficulty": 100 },
+        "success": { "topic": "TALK_DONE", "effect": "flee", "opinion": { "trust": -20, "fear": 20 } },
+        "failure": { "topic": "TALK_DONE", "effect": "hostile" },
+        "condition": { "u_has_trait": "THRESH_FIEND" }
+      }
+    ]
+  },
+  {
+    "id": "TALK_DEMONBEING_SCHOOLGIRL_GREET",
+    "type": "talk_topic",
+    "dynamic_line": "太好了，至少还有一个可以说话的活人...",
+    "responses": [
+      { "text": "这里发生了什么？", "topic": "TALK_DB_SCHOOLGIRL_WHATSHAPPEN_1" },
+      {
+        "text": "[感知 7] 抱歉，这样问可能有点失礼，但...请问你是人类吗？那个尾巴是...？",
+        "topic": "TALK_DB_SCHOOLGIRL_YOURTAIL",
+        "condition": { "u_has_perception": 7 }
+      },
+      {
+        "text": "这种地方很危险，我们一起行动怎么样？",
+        "trial": { "type": "PERSUADE", "difficulty": 50 },
+        "success": { "topic": "TALK_DEMONBEING_SCHOOLGIRL_JOINME" },
+        "failure": { "topic": "TALK_DEMONBEING_SCHOOLGIRL_WARY" }
+      },
+      { "text": "抱歉，我没时间说废话。", "topic": "TALK_DB_SCHOOLGIRL_STAYHERE" }
+    ]
+  },
+  {
+    "id": "TALK_DB_SCHOOLGIRL_WHATSHAPPEN_1",
+    "type": "talk_topic",
+    "dynamic_line": "我不知道...恶魔们突然就出现了。你应该知道什么是大灾变对吧？有传闻说当地的学生和老师都过来避难，聚集到这里，然后就...",
+    "responses": [
+      { "text": "原来如此...", "topic": "TALK_DEMONBEING_SCHOOLGIRL_GREET" },
+      {
+        "text": "[智力 9] 为了避难才聚集到一起的？也就是说，学校不是从刚开始就被恶魔占领的吗？",
+        "topic": "TALK_DB_SCHOOLGIRL_WHATSHAPPEN_2",
+        "condition": { "u_has_intelligence": 9 }
+      }
+    ]
+  },
+  {
+    "id": "TALK_DB_SCHOOLGIRL_WHATSHAPPEN_2",
+    "type": "talk_topic",
+    "dynamic_line": "是...是啊，直到后来我们才发现恶魔，我记得避难者中混杂着陌生人，但因为校长带有一些熟人，所以我们理所当然地认为他们是校长的亲戚...哦，对！他们在院子里做了一些非常可疑的事情！",
+    "responses": [ { "text": "なるほど...", "topic": "TALK_DEMONBEING_SCHOOLGIRL_GREET" } ]
+  },
+  {
+    "id": "TALK_DB_SCHOOLGIRL_YOURTAIL",
+    "type": "talk_topic",
+    "dynamic_line": "我绝对是人类！虽然有尾巴...但是是我被袭击了...没有别的情况，我发誓！它们夺走了我的初吻...除此之外，我仍然，嗯，在任何意义上都是纯洁的！毕竟我还是个处女哦！",
+    "responses": [
+      {
+        "text": "抱歉，我不是故意的...",
+        "success": { "opinion": { "anger": 1 }, "topic": "TALK_DEMONBEING_SCHOOLGIRL_GREET" }
+      }
+    ]
+  },
+  {
+    "id": "TALK_DEMONBEING_SCHOOLGIRL_JOINME",
+    "type": "talk_topic",
+    "dynamic_line": "嗯嗯，当然！我们快点离开这里！",
+    "responses": [ { "text": "走吧！", "effect": "follow", "opinion": { "trust": 1, "value": 2 }, "topic": "TALK_DONE" } ]
+  },
+  {
+    "id": "TALK_DEMONBEING_SCHOOLGIRL_WARY",
+    "type": "talk_topic",
+    "dynamic_line": "...对不起。我并不是不相信你...我只是...有点害怕。",
+    "responses": [ { "text": "是吗，那就没办法了。", "topic": "TALK_DONE" } ]
+  },
+  {
+    "id": "TALK_DB_SCHOOLGIRL_STAYHERE",
+    "type": "talk_topic",
+    "dynamic_line": [
+      {
+        "u_male": [
+          "嗯...但是要小心哦。所有的男性都被那些魅魔抓住了，然后把他们都变成了恶魔...",
+          "嗯...但是要小心哦。因为那些梦魔对男性绝对不会手下留情..."
+        ],
+        "no": [
+          "嗯...但是要小心哦。所有的女性都被那些魅魔抓住了，然后把她们都变成了恶魔...",
+          "嗯...但是要小心哦。所有的女性都被那些魅魔抓住了，然后被无情地强暴...看起来比死还糟...",
+          "嗯...但是要小心哦。因为那些魅魔对女性绝对不会手下留情"
+        ]
+      }
+    ],
+    "responses": [ { "text": "(离开)", "topic": "TALK_DONE" } ]
+  }
+]

@@ -1,0 +1,232 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_CAST_CUBI_SPAWNER",
+    "condition": { "u_has_effect": "CUBI_SPAWNER_cooldown" },
+    "effect": { "u_message": "要召唤新的使魔，需要等待一段时间。" },
+    "false_effect": [
+      { "u_cast_spell": { "id": "spell_CUBI_SPAWNER" } },
+      { "u_add_effect": "CUBI_SPAWNER_cooldown", "duration": "30 m" }
+    ]
+  },
+  {
+    "type": "SPELL",
+    "id": "spell_CUBI_SPAWNER",
+    "name": "召唤使魔",
+    "description": "召唤使魔",
+    "valid_targets": [ "ground" ],
+    "effect": "summon",
+    "effect_str": "GROUP_CUBI_SPAWNER",
+    "shape": "blast",
+    "min_range": 0,
+    "max_range": 0,
+    "min_aoe": 5,
+    "max_aoe": 5,
+    "min_damage": 1,
+    "max_damage": 5,
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX", "NO_CORPSE_QUIET", "RANDOM_DAMAGE", "RANDOM_DURATION", "SPAWN_GROUP", "NO_FAIL" ],
+    "min_duration": 30000,
+    "max_duration": 120000,
+    "base_casting_time": 500,
+    "final_casting_time": 500,
+    "extra_effects": [ { "id": "spell_CUBI_SPAWNER_make_friendly" } ]
+  },
+  {
+    "type": "SPELL",
+    "id": "spell_CUBI_SPAWNER_make_friendly",
+    "name": "使魔友好化",
+    "description": "使魔友好化",
+    "valid_targets": [ "ally" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_CUBI_SPAWNER_FAMILIA_MAKE_FRIENDLY",
+    "min_aoe": 5,
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX", "NO_FAIL" ],
+    "targeted_monster_ids": [
+      "mon_lessor_succubi_familia",
+      "mon_lessor_incubi_familia",
+      "mon_succubi_familia",
+      "mon_incubi_familia",
+      "mon_succubi_sadist_familia",
+      "mon_succubi_somnophilia_familia",
+      "mon_succubi_exhibitionism_familia",
+      "mon_succubi_lactophilia_familia",
+      "mon_incubi_sthenolagnia_familia",
+      "mon_incubi_phalloplas_familia",
+      "mon_incubi_hoplophilia_familia"
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_CUBI_SPAWNER_FAMILIA_MAKE_FRIENDLY",
+    "effect": [
+      { "math": [ "u_val('friendly')", "=", "-1" ] },
+      { "u_add_effect": "pet", "duration": "PERMANENT" }
+    ]    
+  },
+  {
+    "type": "effect_type",
+    "id": "CUBI_SPAWNER_cooldown",
+    "name": [ "" ],
+    "desc": [ "" ],
+    "show_in_info": false
+  },
+  {
+    "type": "monster_flag",
+    "id": "NO_YIFF"
+  },
+  {
+    "type": "monstergroup",
+    "id": "GROUP_CUBI_SPAWNER",
+    "monsters": [
+      { "monster": "mon_bat", "weight": 40 },
+      { "monster": "mon_lessor_succubi_familia", "weight": 50 },
+      { "monster": "mon_lessor_incubi_familia", "weight": 50 },
+      { "monster": "mon_succubi_familia", "weight": 20, "cost_multiplier": 2 },
+      { "monster": "mon_incubi_familia", "weight": 20, "cost_multiplier": 2 },
+      { "monster": "mon_succubi_sadist_familia", "weight": 3, "cost_multiplier": 3 },
+      { "monster": "mon_succubi_somnophilia_familia", "weight": 3, "cost_multiplier": 3 },
+      { "monster": "mon_succubi_exhibitionism_familia", "weight": 3, "cost_multiplier": 3 },
+      { "monster": "mon_succubi_lactophilia_familia", "weight": 1, "cost_multiplier": 3 },
+      { "monster": "mon_incubi_sthenolagnia_familia", "weight": 4, "cost_multiplier": 3 },
+      { "monster": "mon_incubi_phalloplas_familia", "weight": 4, "cost_multiplier": 3 },
+      { "monster": "mon_incubi_hoplophilia_familia", "weight": 2, "cost_multiplier": 3 }
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_lessor_succubi_familia",
+    "copy-from": "mon_lessor_succubi",
+    "looks_like": "mon_lessor_succubi",
+    "special_attacks": [ [ "PARROT_AT_DANGER", 50 ], { "id": "grab" } ],
+    "death_function": { "corpse_type": "NO_CORPSE", "message": "%s消失了。" },
+    "extend": { "flags": [ "NOT_HALLUCINATION", "NO_YIFF" ] },
+    "upgrades": false,
+    "chat_topics": [ ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_lessor_incubi_familia",
+    "copy-from": "mon_lessor_incubi",
+    "looks_like": "mon_lessor_incubi",
+    "special_attacks": [ [ "PARROT_AT_DANGER", 50 ], { "id": "grab" } ],
+    "death_function":  { "corpse_type": "NO_CORPSE", "message": "%s消失了。" },
+    "extend": { "flags": [ "NOT_HALLUCINATION", "NO_YIFF" ] },
+    "upgrades": false,
+    "chat_topics": [ ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_succubi_familia",
+    "copy-from": "mon_succubi",
+    "looks_like": "mon_succubi",
+    "special_attacks": [ [ "PARROT_AT_DANGER", 50 ], { "id": "grab" } ],
+    "death_function": { "corpse_type": "NO_CORPSE", "message": "%s消失了。" },
+    "extend": { "flags": [ "NOT_HALLUCINATION", "NO_YIFF" ] },
+    "upgrades": false,
+    "chat_topics": [ ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_incubi_familia",
+    "copy-from": "mon_incubi",
+    "looks_like": "mon_incubi",
+    "special_attacks": [ [ "PARROT_AT_DANGER", 50 ], { "id": "grab" } ],
+    "death_function": { "corpse_type": "NO_CORPSE", "message": "%s消失了。" },
+    "extend": { "flags": [ "NOT_HALLUCINATION", "NO_YIFF" ] },
+    "upgrades": false,
+    "chat_topics": [ ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_succubi_sadist_familia",
+    "copy-from": "mon_succubi_sadist",
+    "looks_like": "mon_succubi_sadist",
+    "special_attacks": [
+      [ "PARROT_AT_DANGER", 50 ],
+      { "id": "grab" },
+      [ "TAZER", 20 ],
+      [ "succubi_sadist_whip", 5 ]
+    ],
+    "death_function": { "corpse_type": "NO_CORPSE", "message": "%s消失了。" },
+    "extend": { "flags": [ "NOT_HALLUCINATION", "NO_YIFF" ] },
+    "upgrades": false,
+    "chat_topics": [ ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_succubi_somnophilia_familia",
+    "copy-from": "mon_succubi_somnophilia",
+    "looks_like": "mon_succubi_somnophilia",
+    "special_attacks": [ [ "PARROT_AT_DANGER", 50 ], [ "MAGIC_SUCCUBI_SOMNO", 10 ] ],
+    "death_function": { "corpse_type": "NO_CORPSE", "message": "%s消失了。" },
+    "extend": { "flags": [ "NOT_HALLUCINATION", "NO_YIFF" ] },
+    "upgrades": false,
+    "chat_topics": [ ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_succubi_exhibitionism_familia",
+    "copy-from": "mon_succubi_exhibitionism",
+    "looks_like": "mon_succubi_exhibitionism",
+    "special_attacks": [ [ "PARROT_AT_DANGER", 50 ], { "id": "grab" } ],
+    "death_function": { "corpse_type": "NO_CORPSE", "message": "%s消失了。" },
+    "extend": { "flags": [ "NOT_HALLUCINATION", "NO_YIFF" ] },
+    "upgrades": false,
+    "chat_topics": [ ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_succubi_lactophilia_familia",
+    "copy-from": "mon_succubi_lactophilia",
+    "looks_like": "mon_succubi_lactophilia",
+    "special_attacks": [ [ "PARROT_AT_DANGER", 50 ], { "id": "grab" } ],
+    "death_function": { "corpse_type": "NO_CORPSE", "message": "%s消失了。" },
+    "extend": { "flags": [ "NOT_HALLUCINATION", "NO_YIFF" ] },
+    "upgrades": false,
+    "chat_topics": [ ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_incubi_sthenolagnia_familia",
+    "copy-from": "mon_incubi_sthenolagnia",
+    "looks_like": "mon_incubi_sthenolagnia",
+    "special_attacks": [ [ "PARROT_AT_DANGER", 50 ], { "id": "grab" }, { "id": "flesh_golem_stheno_claw", "cooldown": 15 }, { "id": "grab_drag", "cooldown": 10 } ],
+    "death_function": { "corpse_type": "NO_CORPSE", "message": "%s消失了。" },
+    "extend": { "flags": [ "NOT_HALLUCINATION", "NO_YIFF" ] },
+    "upgrades": false,
+    "chat_topics": [ ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_incubi_phalloplas_familia",
+    "copy-from": "mon_incubi_phalloplas",
+    "looks_like": "mon_incubi_phalloplas",
+    "special_attacks": [
+      [ "PARROT_AT_DANGER", 50 ],
+      { "id": "grab" },
+      [ "TAZER", 10 ],
+      [ "phallo_gun", 20 ]
+    ],
+    "death_function": { "corpse_type": "NO_CORPSE", "message": "%s消失了。" },
+    "extend": { "flags": [ "NOT_HALLUCINATION", "NO_YIFF" ] },
+    "upgrades": false,
+    "chat_topics": [ ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_incubi_hoplophilia_familia",
+    "copy-from": "mon_incubi_hoplophilia",
+    "looks_like": "mon_incubi_hoplophilia",
+    "special_attacks": [
+      [ "PARROT_AT_DANGER", 50 ],
+      { "id": "grab" },
+      [ "hoplo_gun1", 5 ],
+      [ "hoplo_gun2", 5 ]
+    ],
+    "death_function": { "corpse_type": "NO_CORPSE", "message": "%s消失了。" },
+    "extend": { "flags": [ "NOT_HALLUCINATION", "NO_YIFF" ] },
+    "upgrades": false,
+    "chat_topics": [ ]
+  }
+]

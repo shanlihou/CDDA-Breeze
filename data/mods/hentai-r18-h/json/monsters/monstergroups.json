@@ -1,0 +1,230 @@
+[
+  {
+    "type": "monstergroup",
+    "id": "GROUP_SUCCUBI_UPGRADE",
+        "monsters": [
+      { "monster": "mon_succubi_sadist", "weight": 30, "cost_multiplier": 10 },
+      { "monster": "mon_succubi_somnophilia", "weight": 30, "cost_multiplier": 10 },
+      { "monster": "mon_succubi_exhibitionism", "weight": 30, "cost_multiplier": 10 },
+      { "monster": "mon_succubi_lactophilia", "weight": 10, "cost_multiplier": 10 }
+    ]
+  },
+  {
+    "type": "monstergroup",
+    "id": "GROUP_INCUBI_UPGRADE",
+        "monsters": [
+      { "monster": "mon_incubi_sthenolagnia", "weight": 40, "cost_multiplier": 0 },
+      { "monster": "mon_incubi_phalloplas", "weight": 40, "cost_multiplier": 0 },
+      { "monster": "mon_incubi_hoplophilia", "weight": 20, "cost_multiplier": 0 }
+    ]
+  },
+  {
+    "type": "monstergroup",
+    "id": "GROUP_SUCCUBI_SPAWN_BASIC",
+    "monsters": [
+      { "monster": "mon_lessor_succubi", "weight": 20, "pack_size": [ 1, 4 ] },
+      { "monster": "mon_succubi", "weight": 10, "cost_multiplier": 2, "pack_size": [ 1, 2 ] }
+    ]
+  },
+  {
+    "type": "monstergroup",
+    "id": "GROUP_INCUBI_SPAWN_BASIC",
+    "monsters": [
+      { "monster": "mon_lessor_incubi", "weight": 20, "pack_size": [ 1, 4 ] },
+      { "monster": "mon_incubi", "weight": 10, "cost_multiplier": 2, "pack_size": [ 1, 2 ] }
+    ]
+  },
+  {
+    "type": "monstergroup",
+    "id": "GROUP_SUCCUBI_SPAWN_UPGRADED",
+    "monsters": [
+      { "monster": "mon_succubi_sadist", "weight": 5, "cost_multiplier": 2 },
+      { "monster": "mon_succubi_exhibitionism", "weight": 5, "cost_multiplier": 5 },
+      { "monster": "mon_succubi_somnophilia", "weight": 5, "cost_multiplier": 5 },
+      { "monster": "mon_succubi_lactophilia", "weight": 3, "cost_multiplier": 5 },
+      { "monster": "mon_greater_succubi", "weight": 1, "cost_multiplier": 50 }
+    ]
+  },
+  {
+    "type": "monstergroup",
+    "id": "GROUP_INCUBI_SPAWN_UPGRADED",
+    "monsters": [
+      { "monster": "mon_incubi_sthenolagnia", "weight": 5, "cost_multiplier": 5 },
+      { "monster": "mon_incubi_phalloplas", "weight": 5, "cost_multiplier": 5 },
+      { "monster": "mon_incubi_hoplophilia", "weight": 5, "cost_multiplier": 5 },
+      { "monster": "mon_greater_incubi", "weight": 1, "cost_multiplier": 50 }
+    ]
+  },
+  {
+    "type": "monstergroup",
+    "id": "GROUP_CUBI_SPAWN",
+    "//": "デフォの進化倍率x4だと12日目から変わり始める",
+    "monsters": [
+      {
+        "group": "GROUP_SUCCUBI_SPAWN_BASIC",
+        "weight": 100,
+        "ends": "3 days"
+      },
+      {
+        "group": "GROUP_INCUBI_SPAWN_BASIC",
+        "weight": 100,
+        "ends": "3 days"
+      },
+      {
+        "group": "GROUP_SUCCUBI_SPAWN_UPGRADED",
+        "weight": 5,
+        "ends": "3 days"
+      },
+      {
+        "group": "GROUP_INCUBI_SPAWN_UPGRADED",
+        "weight": 5,
+        "ends": "3 days"
+      },
+      {
+        "group": "GROUP_SUCCUBI_SPAWN_BASIC",
+        "weight": 100,
+        "starts": "3 days",
+        "pack_size": [ 1, 2 ]
+      },
+      {
+        "group": "GROUP_INCUBI_SPAWN_BASIC",
+        "weight": 100,
+        "starts": "3 days",
+        "pack_size": [ 1, 2 ]
+      },
+      {
+        "group": "GROUP_SUCCUBI_SPAWN_UPGRADED",
+        "weight": 20,
+        "starts": "3 days"
+      },
+      {
+        "group": "GROUP_INCUBI_SPAWN_UPGRADED",
+        "weight": 20,
+        "starts": "3 days"
+      }
+    ]
+  },
+  {
+    "type": "monstergroup",
+    "id": "GROUP_CAMBION_MALE",
+    "default": "mon_lessor_incubi",
+    "monsters": [ { "monster": "mon_cambion_male", "cost_multiplier": 3 } ]
+  },
+  {
+    "type": "monstergroup",
+    "id": "GROUP_CAMBION_FEMALE",
+    "default": "mon_lessor_succubi",
+    "monsters": [ { "monster": "mon_cambion_female", "cost_multiplier": 3 } ]
+  },
+  {
+    "type": "monstergroup",
+    "id": "GROUP_CAMBION",
+    "monsters": [
+      { "group": "GROUP_CAMBION_MALE" },
+      { "group": "GROUP_CAMBION_FEMALE" }
+    ]
+  },
+  {
+    "type": "monstergroup",
+    "id": "GROUP_FOREST",
+    "monsters": [
+      { "group": "GROUP_CUBI_SPAWN", "weight": 100, "conditions": [ "DAY", "DAWN" ] },
+      { "group": "GROUP_CUBI_SPAWN", "weight": 450, "conditions": [ "DUSK", "NIGHT" ], "pack_size": [ 1, 3 ] },
+      { "group": "GROUP_CAMBION", "weight": 60, "pack_size": [ 1, 3 ] },
+      { "monster": "mon_hentai_vinebeast", "weight": 5, "cost_multiplier": 1 }
+    ]
+  },
+  {
+    "type": "monstergroup",
+    "id": "GROUP_CAVE",
+        "monsters": [
+      { "group": "GROUP_CUBI_SPAWN", "weight": 400, "pack_size": [ 1, 3 ] }
+    ]
+  },
+  {
+    "type": "monstergroup",
+    "id": "GROUP_TRIFFID",
+        "monsters": [ { "monster": "mon_hentai_vinebeast", "weight": 100, "cost_multiplier": 10 } ]
+  },
+  {
+    "type": "monstergroup",
+    "id": "GROUP_LAB",
+        "monsters": [
+      { "monster": "mon_lessor_succubi", "weight": 5, "cost_multiplier": 5, "pack_size": [ 1, 5 ] },
+      { "monster": "mon_succubi", "weight": 5, "cost_multiplier": 10, "pack_size": [ 1, 3 ] },
+      { "monster": "mon_lessor_incubi", "weight": 5, "cost_multiplier": 5, "pack_size": [ 1, 5 ] },
+      { "monster": "mon_incubi", "weight": 5, "cost_multiplier": 10, "pack_size": [ 1, 3 ] }
+    ]
+  },
+  {
+    "type": "monstergroup",
+    "id": "GROUP_BASEMENT_HOUSE",
+        "monsters": [
+      { "group": "GROUP_CUBI_SPAWN", "weight": 2, "pack_size": [ 1, 2 ] },
+      { "group": "GROUP_CAMBION", "weight": 3, "pack_size": [ 1, 3 ] }
+    ]
+  },
+  {
+    "type": "monstergroup",
+    "id": "GROUP_MANSION_SEX_LAIR",
+        "monsters": [
+      { "monster": "mon_lessor_succubi", "weight": 30, "cost_multiplier": 3 },
+      { "monster": "mon_succubi", "weight": 30, "cost_multiplier": 5 },
+      { "monster": "mon_lessor_incubi", "weight": 30, "cost_multiplier": 3 },
+      { "monster": "mon_incubi", "weight": 30, "cost_multiplier": 5 }
+    ]
+  },
+  {
+    "type": "monstergroup",
+    "id": "GROUP_SEWER",
+        "monsters": [
+      { "group": "GROUP_CAMBION", "weight": 150, "pack_size": [ 1, 3 ] }
+    ]
+  },
+  {
+    "type": "monstergroup",
+    "id": "GROUP_CORRUPTED_SCHOOL",
+        "monsters": [
+      { "monster": "mon_corrupted_schoolgirl", "weight": 100, "cost_multiplier": 1 },
+      { "monster": "mon_corrupted_schoolteacher_female", "weight": 20, "cost_multiplier": 1 },
+      { "monster": "mon_corrupted_schoolboy", "weight": 75, "cost_multiplier": 1 },
+      { "monster": "mon_corrupted_schoolteacher_male", "weight": 15, "cost_multiplier": 1 },
+      { "monster": "mon_succubi", "weight": 150, "cost_multiplier": 1 },
+      { "monster": "mon_succubi_sadist", "weight": 10, "cost_multiplier": 5 },
+      { "monster": "mon_succubi_somnophilia", "weight": 10, "cost_multiplier": 5 },
+      { "monster": "mon_succubi_exhibitionism", "weight": 10, "cost_multiplier": 5 },
+      { "monster": "mon_succubi_lactophilia", "weight": 5, "cost_multiplier": 5 },
+      { "monster": "mon_incubi", "weight": 150, "cost_multiplier": 1 },
+      { "monster": "mon_incubi_sthenolagnia", "weight": 10, "cost_multiplier": 5 },
+      { "monster": "mon_incubi_phalloplas", "weight": 10, "cost_multiplier": 5 },
+      { "monster": "mon_incubi_hoplophilia", "weight": 10, "cost_multiplier": 5 }
+    ]
+  },
+  {
+    "type": "monstergroup",
+    "id": "GROUP_CORRUPTED_SCHOOL_BLEEDINGQUEUE",
+        "monsters": [
+      { "monster": "mon_corrupted_schoolgirl", "weight": 200, "cost_multiplier": 1 },
+      { "monster": "mon_corrupted_schoolteacher_female", "weight": 50, "cost_multiplier": 1 },
+      { "monster": "mon_succubi_lactophilia", "weight": 10, "cost_multiplier": 5 },
+      { "monster": "mon_incubi_sthenolagnia", "weight": 5, "cost_multiplier": 5 },
+      { "monster": "mon_incubi_phalloplas", "weight": 5, "cost_multiplier": 5 },
+      { "monster": "mon_incubi_hoplophilia", "weight": 5, "cost_multiplier": 5 },
+      { "monster": "mon_cambion_male", "weight": 75, "cost_multiplier": 1 },
+      { "monster": "mon_cambion_female", "weight": 75, "cost_multiplier": 1 }
+    ]
+  },
+  {
+    "type": "monstergroup",
+    "id": "GROUP_MAGIC_GOATHEAD_DEMON",
+    "monsters": [
+      { "monster": "mon_succubi_sadist", "weight": 1 },
+      { "monster": "mon_succubi_somnophilia", "weight": 1 },
+      { "monster": "mon_succubi_exhibitionism", "weight": 1 },
+      { "monster": "mon_succubi_lactophilia", "weight": 1 },
+      { "monster": "mon_incubi_sthenolagnia", "weight": 1 },
+      { "monster": "mon_incubi_phalloplas", "weight": 1 },
+      { "monster": "mon_incubi_hoplophilia", "weight": 1 }
+    ]
+  }
+]

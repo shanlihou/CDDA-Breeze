@@ -1,0 +1,146 @@
+[
+  {
+    "id": "h_body_fluids",
+    "type": "ITEM",
+    "subtypes": [ "COMESTIBLE" ],
+    "name": { "str_sp": "人类体液" },
+    "weight": "28 g",
+    "volume": "25 ml",
+    "color": "white",
+    "spoils_in": "8 h",
+    "container": "condom",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": -5,
+    "healthy": 0,
+    "calories": 8,
+    "description": "粘稠的体液，一定是人的，好恶心！",
+    "price": "0 cent",
+    "material": [ "blood", "water" ],
+    "phase": "liquid",
+    "fun": -50,
+    "looks_like": "water",
+    "charges": 1
+  },
+  {
+    "id": "d_body_fluids",
+    "copy-from": "h_body_fluids",
+    "type": "ITEM",
+    "subtypes": [ "COMESTIBLE" ],
+    "name": { "str_sp": "魔性体液" },
+    "color": "pink",
+    "symbol": "~",
+    "healthy": -1,
+    "description": "粘稠的体液，显然不属于人类，喝下会有几率引起变异。",
+    "vitamins": [ [ "mutagen_fiend", 60 ] ]
+  },
+  {
+    "id": "oc_pill",
+    "type": "ITEM",
+    "subtypes": [ "COMESTIBLE" ],
+    "comestible_type": "MED",
+    "name": { "str_sp": "口服避孕药" },
+    "//": "まあ月経は実装しないので7日空けようが毎日飲もうが何も変わらないが",
+    "description": "一种含有雌激素和孕酮的避孕药，也被称为低剂量避孕药。这是28片型，每天服用可预防怀孕。",
+    "weight": "1 g",
+    "volume": "2 ml",
+    "price": "5 USD",
+    "stack_size": 200,
+    "symbol": "!",
+    "color": "blue",
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "服用了口服避孕药。",
+      "effects": [ { "id": "consume_oc_pill", "duration": "16 h" } ]
+    },
+    "flags": [ "NPC_SAFE" ]
+  },
+  {
+    "id": "after_pill",
+    "type": "ITEM",
+    "subtypes": [ "COMESTIBLE" ],
+    "comestible_type": "MED",
+    "name": { "str_sp": "紧急避孕药" },
+    "description": "含有左炔诺孕酮的紧急避孕药，甚至可以在做爱后抑制怀孕。然而，只在后120小时内有效，且效果会随着时间的推移而减弱。",
+    "//": [
+      "レボノルゲストレルは日本の緊急避妊薬、海外はウリプリスタル酢酸エステル",
+      "24時間で95%、72時間で85%、120時間では効果が無いとは言えない程度",
+      "出現数が4固定だったのはヤッペ法なのか？",
+      "成分はノルゲストレル＋エチニルエストラジオールだが"
+    ],
+    "weight": "1 g",
+    "volume": "2 ml",
+    "price": "5 USD",
+    "stack_size": 200,
+    "symbol": "!",
+    "color": "yellow",
+    "healthy": -1,
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "服用了紧急避孕药。",
+      "effects": [ { "id": "consume_after_pill", "duration": "12 h" } ]
+    },
+    "flags": [ "NPC_SAFE" ]
+  },
+  {
+    "id": "iv_mutagen_human",
+    "type": "ITEM",
+    "name": { "str_sp": "血清(人类)" },
+    "description": "一种超浓缩的诱变剂，需要一个注射器来注射...根据你使用的方式，你可以将非人类的生物体*变异*为人类。",
+    "price": "900000 cent",
+    "looks_like": "iv_mutagen",
+    "category": "mutagen",
+    "weight": "10 g",
+    "volume": "10 ml",
+    "container": "test_tube",
+    "symbol": "!",
+    "color": "magenta",
+    "flags": [ "NUTRIENT_OVERRIDE" ],
+    "material": [ "water" ],
+    "use_action": {
+      "type": "effect_on_conditions",
+      "menu_text": "使宠物变成人类",
+      "effect_on_conditions": [ "anthropomorph_actor_use" ]
+    }
+  },
+  {
+    "id": "mutagen_fiend",
+    "copy-from": "mutagen_flavor",
+    "type": "ITEM",
+    "subtypes": [ "COMESTIBLE" ],
+    "name": { "str_sp": "诱变剂(恶魔)" },
+    "description": "一种来源不明的稀有物质。将会导致突变。",
+    "looks_like": "mutagen",
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你摄取了恶魔诱变剂。",
+      "vitamins": [ [ "mutagen_fiend", 225 ], [ "mutagen", 125 ] ]
+    }
+  },
+  {
+    "id": "iv_mutagen_fiend",
+    "copy-from": "iv_mutagen_flavor",
+    "type": "ITEM",
+    "subtypes": [ "COMESTIBLE" ],
+    "name": { "str_sp": "浓缩诱变剂(恶魔)" },
+    "description": "浓缩的诱变剂，颜色如血液般赤红。需要一个注射器来注射...",
+    "color": "red",
+    "looks_like": "iv_mutagen",
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你注射了浓缩恶魔诱变剂",
+      "tools_needed": { "syringe": -1 },
+      "vitamins": [ [ "mutagen_fiend", 450, 550 ] ]
+    }
+  },
+  {
+    "type": "ITEM",
+    "id": "cubi_sample",
+    "copy-from": "mutagen_sample",
+    "color": "pink",
+    "name": { "str_sp": "生物样本(恶魔)" },
+    "description": "掌管着堕落的悬浊液。",
+    "looks_like": "medical_sample",
+    "material": [ "blood", "water" ]
+  }
+]

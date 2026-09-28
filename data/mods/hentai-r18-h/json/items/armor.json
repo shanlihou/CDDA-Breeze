@@ -1,0 +1,163 @@
+[
+  {
+    "id": "sexy_zipsuit",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
+    "name": { "str_sp": "乳胶拉链紧身衣" },
+    "description": "舒适紧身的连体衣，主要由透明的乳胶制成，只有关键部位被设计为拉链遮挡。",
+    "weight": "1587 g",
+    "volume": "3500 ml",
+    "price": "120 USD",
+    "material": [ "plastic" ],
+    "symbol": "[",
+    "color": "pink",
+    "armor": [
+      { "covers": [ "torso", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 5 }
+    ],
+    "warmth": 5,
+    "material_thickness": 1,
+    "environmental_protection": 1,
+    "flags": [ "SKINTIGHT", "FANCY", "FRAGILE", "VARSIZE", "WATER_FRIENDLY", "SOFT" ],
+    "looks_like": "bondage_suit"
+  },
+  {
+    "id": "slut_power_suit",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR", "TOOL" ],
+    "name": { "str_sp": "SWUT动力服" },
+    "description": "这是由DoubleTeck公司生产的动力服。它设计的目的是解决动力装甲在重量和机动性方面的缺点，就和乳胶紧身衣一样，它既轻巧又具有最大的灵活性，同时精心设计以尽可能保护重要的身体部位。然而，由于它相当性感以至于有点色情的外表，除了某些热情的士兵外，这套装备相当不受欢迎。",
+    "weight": "7670 g",
+    "volume": "15 L",
+    "material": [ "plastic", "superalloy" ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "max_contains_volume": "4 L",
+        "max_contains_weight": "30 kg",
+        "description": "Compartment for an UPS.",
+        "moves": 200
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "200 mm",
+        "holster": true,
+        "flag_restriction": [ "MAG_COMPACT", "MAG_BULKY" ],
+        "description": "Spring-loaded clamp.",
+        "moves": 60
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "200 mm",
+        "holster": true,
+        "flag_restriction": [ "MAG_COMPACT", "MAG_BULKY" ],
+        "description": "Spring-loaded clamp.",
+        "moves": 60
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "200 mm",
+        "holster": true,
+        "flag_restriction": [ "MAG_COMPACT", "MAG_BULKY" ],
+        "description": "Spring-loaded clamp.",
+        "moves": 60
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "200 mm",
+        "holster": true,
+        "flag_restriction": [ "MAG_COMPACT", "MAG_BULKY" ],
+        "description": "Spring-loaded clamp.",
+        "moves": 60
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "max_contains_volume": "1100 ml",
+        "max_contains_weight": "2 kg",
+        "description": "Compartment for grenades.",
+        "moves": 30,
+        "flag_restriction": [ "GRENADE" ]
+      }
+    ],
+    "armor": [
+      {
+        "encumbrance": 20,
+        "coverage": 100,
+        "covers": [ "torso", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r" ]
+      }
+    ],
+    "warmth": 10,
+    "material_thickness": 8,
+    "environmental_protection": 8,
+    "use_action": { "type": "transform", "msg": "动力服启动了。", "target": "slut_power_suit_on", "active": true },
+    "flags": [ "PADDED", "SKINTIGHT" ]
+  },
+  {
+    "id": "slut_power_suit_on",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR", "TOOL" ],
+    "name": { "str_sp": "SWUT动力服(ON)" },
+    "description": "这是由DoubleTeck公司生产的动力服。它设计的目的是解决动力装甲在重量和机动性方面的缺点，就和乳胶紧身衣一样，它既轻巧又具有最大的灵活性，同时精心设计以尽可能保护重要的身体部位。然而，由于它相当性感以至于有点色情的外表，除了某些热情的士兵外，这套装备相当不受欢迎。现在这套加入了电力系统，能够使用电力驱动，使用来切换电力开关。",
+    "weight": "7670 g",
+    "volume": "15 L",
+    "material": [ "plastic", "superalloy" ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "power_draw": "4 kW",
+    "use_action": { "type": "transform", "menu_text": "Turn off", "msg": "The %s armor disengages.", "target": "slut_power_suit" },
+    "revert_to": "slut_power_suit",
+    "flags": [ "PADDED", "SKINTIGHT", "USE_UPS", "TRADER_AVOID" ],
+    "armor": [
+      {
+        "encumbrance": 0,
+        "coverage": 100,
+        "covers": [ "torso", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r" ]
+      }
+    ]
+  },
+  {
+    "id": "sailor_dress",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
+    "name": { "str_sp": "水手服" },
+    "description": "有着特殊的衣领和躯干设计的上衣。于19世纪末到20世纪初在世界范围内广为流传，并且广泛使用于角色扮演cosplay文化中，在日本被用作女学生的制服。",
+    "weight": "200 g",
+    "volume": "1000 ml",
+    "price": "500 USD",
+    "material": [ "cotton" ],
+    "symbol": "[",
+    "color": "blue",
+    "armor": [
+      { "coverage": 80, "covers": [ "torso" ], "encumbrance": 5, "specifically_covers": [ "torso_upper" ] },
+      { "coverage": 100, "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ] },
+      { "coverage": 100, "covers": [ "arm_l", "arm_r" ], "encumbrance": 5, "volume_encumber_modifier": 0 }
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1 kg",
+        "max_item_length": "13 cm",
+        "moves": 200
+      }
+    ],
+    "warmth": 5,
+    "material_thickness": 1,
+    "flags": [ "VARSIZE", "FANCY" ]
+  }
+]

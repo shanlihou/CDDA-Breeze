@@ -1,0 +1,409 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SET_DEFAULT_HENTAI_EXTEND",
+    "eoc_type": "EVENT",
+    "required_event": "game_start",
+    "effect": [
+      { "math": [ "HENTAI_EXTEND_NAMAHAME_PET", "=", "1" ] },
+      { "math": [ "HENTAI_EXTEND_CUBI_YIFF_PARROT", "=", "1" ] },
+      { "math": [ "HENTAI_EXTEND_CUBI_NAKED_PARROT", "=", "1" ] },
+      { "math": [ "HENTAI_EXTEND_CUBI_WIFE_ONLY_HUMAN", "=", "1" ] },
+      { "math": [ "HENTAI_EXTEND_CREAMPIE_EX", "=", "1" ] },
+      { "math": [ "HENTAI_EXTEND_WET_DREAM", "=", "1" ] }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "SWITCH_HENTAI_EXTEND",
+    "name": "Hentai Mod的扩展能力",
+    "points": 0,
+    "description": "Hentai Mod的扩展能力设定。",
+    "valid": false,
+    "purifiable": false,
+    "player_display": true,
+    "active": true,
+    "activated_eocs": [ "EOC_SWITCH_HENTAI_EXTEND" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_ADD_HENTAI_MOD_TRAITS",
+    "eoc_type": "EVENT",
+    "required_event": "game_avatar_new",
+    "effect": [
+      { "u_add_trait": "SWITCH_HENTAI_EXTEND" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SWITCH_HENTAI_EXTEND",
+    "effect": {
+      "run_eoc_selector": [
+        "EOC_SWITCH_NAMAHAME_PET",
+        "EOC_SWITCH_HENTAI_EXTEND_CUBI",
+        "EOC_SWITCH_HENTAI_EXTEND_PREGNANCY",
+        "EOC_SWITCH_HENTAI_EXTEND_OTHER",
+        "EOC_CANCEL_YIFF_WITH_PET",
+        "EOC_NONE"
+      ],
+      "names": [
+        "宠物的避孕设定",
+        "淫魔的设定",
+        "怀孕的设定",
+        "其他",
+        "行动停滞的宠物重置",
+        "取消"
+      ],
+      "allow_cancel": true
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SWITCH_HENTAI_EXTEND_CUBI",
+    "effect": {
+      "run_eoc_selector": [
+        "EOC_SWITCH_CUBI_YIFF_PARROT",
+        "EOC_SWITCH_CUBI_NAKED_PARROT",
+        "EOC_SWITCH_SEDUCE_HEAL",
+        "EOC_SWITCH_CUBI_WIFE_ONLY_HUMAN",
+        "EOC_SWITCH_SEDUCE_AVATAR",
+        "EOC_SWITCH_PET_CUBI_WIFE_ENEMY",
+        "EOC_NONE"
+      ],
+      "names": [
+        "淫魔的行为言语",
+        "淫魔的裸体反应言语",
+        "淫魔诱惑行为回复体力",
+        "淫魔只*攻击*人类",
+        "宠物淫魔*攻击*玩家(开发中)",
+        "宠物淫魔*攻击*敌人",
+        "取消"
+      ],
+      "allow_cancel": true
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SWITCH_HENTAI_EXTEND_PREGNANCY",
+    "effect": {
+      "run_eoc_selector": [
+        "EOC_SWITCH_PREGNANCY_AVATAR",
+        "EOC_SWITCH_PREGNANCY_NPC",
+        "EOC_SWITCH_PREGNANCY_ANY",
+        "EOC_SET_PREGNANCY_SPEED",
+        "EOC_NONE"
+      ],
+      "names": [
+        "玩家怀孕",
+        "NPC怀孕",
+        "任意性别怀孕",
+        "怀孕天数设定",
+        "取消"
+      ],
+      "allow_cancel": true
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SWITCH_HENTAI_EXTEND_OTHER",
+    "effect": {
+      "run_eoc_selector": [
+        "EOC_SWITCH_CREAMPIE_EX",
+        "EOC_SWITCH_WET_DREAM",
+        "EOC_NONE"
+      ],
+      "names": [
+        "灌泡芙设定",
+        "遗精设定",
+        "取消"
+      ],
+      "allow_cancel": true
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SWITCH_NAMAHAME_PET",
+    "effect": {
+      "if": { "u_query": "和宠物做*舒服的事情*时，是否显示戴套选项？", "default": false },
+      "then": [
+        { "math": [ "HENTAI_EXTEND_NAMAHAME_PET", "=", "1" ] },
+        { "message": "没必要*关心*宠物对吧？", "type": "info" }
+      ],
+      "else": [
+        { "math": [ "HENTAI_EXTEND_NAMAHAME_PET", "=", "0" ] },
+        { "message": "就算是宠物也需要*体贴*。", "type": "info" }
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SWITCH_CUBI_YIFF_PARROT",
+    "effect": {
+      "if": { "u_query": "和宠物淫魔做*舒服的事情*时，是否显示特殊的台词？", "default": false },
+      "then": [
+        { "math": [ "HENTAI_EXTEND_CUBI_YIFF_PARROT", "=", "1" ] },
+        { "message": "需要听淫魔的*声音*。", "type": "info" } 
+      ],
+      "else": [
+        { "math": [ "HENTAI_EXTEND_CUBI_YIFF_PARROT", "=", "0" ] },
+        { "message": "需要让淫魔*闭嘴*。", "type": "info" } 
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SWITCH_CUBI_NAKED_PARROT",
+    "effect": {
+      "if": { "u_query": "玩家的腿部未穿戴装备时，敌对的淫魔会做出反应吗？", "default": false },
+      "then": [
+        { "math": [ "HENTAI_EXTEND_CUBI_NAKED_PARROT", "=", "1" ] },
+        { "message": "淫魔会对你的下半身产生反应。", "type": "info" } 
+      ],
+      "else": [
+        { "math": [ "HENTAI_EXTEND_CUBI_NAKED_PARROT", "=", "0" ] },
+        { "message": "淫魔会对你的下半身没有兴趣。", "type": "info" } 
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SWITCH_SEDUCE_HEAL",
+    "effect": {
+      "if": { "u_query": "淫魔诱惑攻击成功时，是否恢复体力？", "default": false },
+      "then": [
+        { "math": [ "HENTAI_EXTEND_SEDUCE_HEAL", "=", "1" ] },
+        { "message": "淫魔的诱惑攻击成功时回复体力。", "type": "info" } 
+      ],
+      "else": [
+        { "math": [ "HENTAI_EXTEND_SEDUCE_HEAL", "=", "0" ] },
+        { "message": "淫魔的诱惑攻击成功时不回复体力。", "type": "info" } 
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SWITCH_SEDUCE_AVATAR",
+    "effect": {
+      "u_cast_spell": { "id": "switch_seduce_player" },
+      "targeted": true
+    } 
+  },
+  {
+    "type": "SPELL",
+    "id": "switch_seduce_player",
+    "name": "玩家诱惑切换",
+    "description": "宠物诱惑许可切换",
+    "valid_targets": [ "ally", "hostile" ],
+    "targeted_monster_species": [ "CUBI" ],
+    "shape": "blast",
+    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX", "NO_FAIL" ],
+    "base_casting_time": 0,
+    "min_range": 60,
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_SWITCH_SEDUCE_AVATAR_EFFECT"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SWITCH_SEDUCE_AVATAR_EFFECT",
+    "condition": { "u_has_effect": "pet" },
+    "effect": [
+      {
+        "if": { "u_has_effect": "cubi_allow_seduce_player" },
+        "then": [
+          {
+            "set_string_var": "<u_name>的诱惑结束了吗？",
+            "target_var": { "context_val": "msg" },
+            "parse_tags": true
+          },
+          {
+            "if": { "npc_query": { "context_val": "msg" }, "default": false },
+            "then": [
+              { "u_lose_effect": "cubi_allow_seduce_player" },
+              { "u_lose_effect": "docile" },
+              { "u_lose_effect": "worked_on" },
+              { "message": "<u_name>停止了诱惑。", "type": "info" }
+            ]
+          }
+        ],
+        "else": [
+          {
+            "set_string_var": "宠物<u_name>允许对玩家使用诱惑吗？\n(开发中。如果不起作用，请移动或重复启用禁用几次。有时会真的攻击，请注意！)",
+            "target_var": { "context_val": "msg" },
+            "parse_tags": true
+          },
+          {
+            "if": { "npc_query": { "context_val": "msg" }, "default": false },
+            "then": [
+              { "u_add_effect": "cubi_allow_seduce_player", "duration": "PERMANENT" },
+              { "u_add_effect": "docile", "duration": "PERMANENT" },
+              { "u_add_effect": "worked_on", "duration": "PERMANENT" },
+              { "message": "<u_name>开始就当场诱惑你...", "type": "info" }
+            ]
+          }
+        ]
+      }
+    ],
+    "false_effect": { "message": "<u_name>不属于友好生物！" }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SWITCH_SEDUCE_ANY",
+    "effect": {
+      "u_cast_spell": { "id": "switch_seduce_any" },
+      "targeted": true
+    } 
+  },
+  {
+    "type": "SPELL",
+    "id": "switch_seduce_any",
+    "name": "无差别诱惑切换",
+    "description": "宠物的不分敌我诱惑切换许可",
+    "valid_targets": [ "ally" ],
+    "targeted_monster_species": [ "CUBI" ],
+    "shape": "blast",
+    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX", "NO_FAIL" ],
+    "base_casting_time": 0,
+    "min_range": 60,
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_SWITCH_SEDUCE_ANY_EFFECT"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SWITCH_SEDUCE_ANY_EFFECT",
+    "effect": [
+      {
+        "set_string_var": "允许宠物<u_name>不分敌我诱惑吗？如果选择不诱惑，则对玩家的诱惑可以另外设定。",
+        "target_var": { "context_val": "msg" },
+        "parse_tags": true
+      },
+      {
+        "if": { "npc_query": { "context_val": "msg" }, "default": false },
+        "then": [
+          { "u_add_effect": "cubi_allow_seduce_friendlyfire", "duration": "PERMANENT" },
+          { "message": "<u_name>不管谁都诱惑！", "type": "info" }
+        ],
+        "else": [
+          { "u_lose_effect": "cubi_allow_seduce_friendlyfire" },
+          { "message": "<u_name>不再诱惑同伴。", "type": "info" }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SWITCH_CUBI_WIFE_ONLY_HUMAN",
+    "effect": {
+      "if": { "u_query": "让淫魔只*攻击*人类吗？", "default": false },
+      "then": [
+        { "math": [ "HENTAI_EXTEND_CUBI_WIFE_ONLY_HUMAN", "=", "1" ] },
+        { "message": "现在淫魔只*攻击*人类。", "type": "info" } 
+      ],
+      "else": [
+        { "math": [ "HENTAI_EXTEND_CUBI_WIFE_ONLY_HUMAN", "=", "0" ] },
+        { "message": "现在淫魔会和任何生物一起玩！", "type": "info" } 
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SWITCH_PET_CUBI_WIFE_ENEMY",
+    "effect": {
+      "if": { "u_query": "允许宠物淫魔*攻击*敌人？", "default": false },
+      "then": [
+        { "math": [ "HENTAI_EXTEND_PET_CUBI_WIFE_ENEMY", "=", "1" ] },
+        { "message": "现在宠物可以和任何生物一起玩！", "type": "info" } 
+      ],
+      "else": [
+        { "math": [ "HENTAI_EXTEND_PET_CUBI_WIFE_ENEMY", "=", "0" ] },
+        { "message": "现在宠物开始认真地*攻击*敌人。", "type": "info" } 
+      ]
+    }
+  },
+  
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SWITCH_PREGNANCY_AVATAR",
+    "effect": {
+      "if": { "u_query": "允许玩家怀孕？", "default": false },
+      "then": [
+        { "math": [ "HENTAI_EXTEND_PREGNANCY_AVATAR", "=", "1" ] },
+        { "message": "玩家现在能够怀孕。", "type": "info" } 
+      ],
+      "else": [
+        { "math": [ "HENTAI_EXTEND_PREGNANCY_AVATAR", "=", "0" ] },
+        { "message": "玩家现在不会怀孕。", "type": "info" } 
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SWITCH_PREGNANCY_NPC",
+    "effect": {
+      "if": { "u_query": "允许NPC怀孕？", "default": false },
+      "then": [
+        { "math": [ "HENTAI_EXTEND_PREGNANCY_NPC", "=", "1" ] },
+        { "message": "NPC现在能够怀孕。", "type": "info" } 
+      ],
+      "else": [
+        { "math": [ "HENTAI_EXTEND_PREGNANCY_NPC", "=", "0" ] },
+        { "message": "NPC现在不会怀孕。", "type": "info" } 
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SWITCH_PREGNANCY_ANY",
+    "effect": {
+      "if": { "u_query": "允许男女同性恋怀孕？", "default": false },
+      "then": [
+        { "math": [ "HENTAI_EXTEND_PREGNANCY_ANY", "=", "1" ] },
+        { "message": "现在任何人都可以怀孕！", "type": "info" } 
+      ],
+      "else": [
+        { "math": [ "HENTAI_EXTEND_PREGNANCY_ANY", "=", "0" ] },
+        { "message": "现在只有异性才能怀孕。", "type": "info" } 
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SET_PREGNANCY_SPEED",
+    "effect": [
+      { "math": [ "HENTAI_EXTEND_PREGNANCY_DAY", "=", "num_input('从怀孕到分娩的平均天数', HENTAI_EXTEND_PREGNANCY_DAY)" ] },
+      {
+        "if": { "math": [ "HENTAI_EXTEND_PREGNANCY_DAY <= 0" ] },
+        "then": { "math": [ "HENTAI_EXTEND_PREGNANCY_DAY", "=", "280" ] }
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SWITCH_CREAMPIE_EX",
+    "effect": {
+      "if": { "u_query": "是否启用NPC行为结束后的弄脏功能？", "default": false },
+      "then": [
+        { "math": [ "HENTAI_EXTEND_CREAMPIE_EX", "=", "1" ] },
+        { "message": "激烈*运动*之后可能会被什么弄脏呢？", "type": "info" }
+      ],
+      "else": [
+        { "math": [ "HENTAI_EXTEND_CREAMPIE_EX", "=", "0" ] },
+        { "message": "现在不用担心弄脏了。", "type": "info" }
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SWITCH_WET_DREAM",
+    "effect": {
+      "if": { "u_query": "起床时会梦遗的功能是否有效？", "default": false },
+      "then": [
+        { "math": [ "HENTAI_EXTEND_WET_DREAM", "=", "1" ] },
+        { "message": "可能不小心会射出来？", "type": "info" }
+      ],
+      "else": [
+        { "math": [ "HENTAI_EXTEND_WET_DREAM", "=", "0" ] },
+        { "message": "不用担心弄脏被子了。", "type": "info" }
+      ]
+    }
+  }
+]

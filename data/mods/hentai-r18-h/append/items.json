@@ -1,0 +1,51 @@
+[
+  {
+    "type": "ITEM",
+    "subtypes": [ "COMESTIBLE" ],
+    "id": "breast_milk",
+    "copy-from": "milk_raw",
+    "name": { "str_sp": "母乳" },
+    "description": "从人类女性那里榨取的牛奶。",
+    "contamination": [],
+    "container": "bottle_plastic_small",
+    "vitamins": [ [ "vitC", 8 ], [ "calcium", 7 ] ],
+    "fun": 3,
+    "calories": 172,
+    "flags": [ "EATEN_HOT" ]
+  },
+  {
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
+    "id": "breast_pump",
+    "name": { "str_sp": "挤奶器" },
+    "description": "附带大把手和容器的手动挤奶器。将挤奶口对准乳头，拉动把手，挤出的母乳会流入容器。当然也可以取下容器，当作奶瓶使用。",
+    "material": [ "plastic" ],
+    "volume": "750 ml",
+    "weight": "90 g",
+    "longest_side": "20 cm",
+    "symbol": "/",
+    "color": "white",
+    "price": "10 USD",
+    "use_action":[
+      {
+        "type": "effect_on_conditions",
+        "menu_text": "使用",
+        "description": "使用了挤奶器。",
+        "effect_on_conditions": [ "EOC_USE_BREAST_PUMP" ] 
+      }
+    ]
+  },
+  {
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
+    "id": "breast_pump_handle",
+    "copy-from": "breast_pump",
+    "name": { "str_sp": "挤奶器把手" },
+    "description": "挤奶器的部件。安装在容器上使用。",
+    "material": [ "plastic" ],
+    "volume": "500 ml",
+    "weight": "80 g",
+    "longest_side": "10 cm",
+    "use_action": []
+  }
+]

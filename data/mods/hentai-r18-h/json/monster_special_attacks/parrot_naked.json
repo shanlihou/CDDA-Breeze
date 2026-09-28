@@ -1,0 +1,49 @@
+[
+  {
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "id": "parrot_naked",
+    "condition": {
+      "and": [
+        { "math": [ "HENTAI_EXTEND_CUBI_NAKED_PARROT" ] },
+        "npc_is_avatar",
+        { "one_in_chance": 40 },
+        { "math": [ "n_coverage('leg_l') + n_coverage('leg_r')", "==", "0" ] }
+      ]
+    },
+    "cooldown": 50
+  },
+  {
+    "type": "SPELL",
+    "id": "spell_parrot_naked",
+    "name": { "str": "parrot_naked" },
+    "description": "parrot naked",
+    "valid_targets": [ "hostile", "ally" ],
+    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX", "NO_FAIL" ],
+    "min_range": 10,
+    "max_range": 10,
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "base_casting_time": 100,
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "eoc_parrot_naked"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "eoc_parrot_naked",
+    "effect": [
+      { "npc_location_variable": { "context_val": "pnt" } },
+      { "run_eocs": "eoc_hentai_get_monster_id" },
+      {
+        "set_string_var": "<global_val:hentai_monster_id>_player_is_naked",
+        "target_var": { "context_val": "speech_id" },
+        "parse_tags": true
+      },
+      {
+        "if": { "math": [ "v_speech_id" ] },
+        "then": { "message": { "context_val": "speech_id" }, "snippet": true, "type": "info" }
+      }
+    ]
+  }
+]

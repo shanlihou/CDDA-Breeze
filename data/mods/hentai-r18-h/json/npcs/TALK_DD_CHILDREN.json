@@ -1,0 +1,28 @@
+[
+  {
+    "id": "TALK_DD_CHILDREN",
+    "type": "talk_topic",
+    "dynamic_line": { "u_male": "爸爸？", "no": "妈妈？" },
+    "responses": [
+      {
+        "text": "是我，我们一起走吧！",
+        "success": { "effect": "follow", "opinion": { "trust": 10, "value": 10 }, "topic": "TALK_DONE" }
+      },
+      { "text": "很抱歉，但我不是你的父母。", "topic": "TALK_DD_CHILDREN_IAM_NOT_YOUR_FATHER" },
+      { "text": "这真的是我的孩子吗？真是长得相当大了…", "topic": "TALK_DD_CHILDREN_WHATSTHEHECK" },
+      { "text": "什么都不做。", "topic": "TALK_DONE" }
+    ]
+  },
+  {
+    "id": "TALK_DD_CHILDREN_IAM_NOT_YOUR_FATHER",
+    "type": "talk_topic",
+    "dynamic_line": "欸——！",
+    "responses": [ { "text": "（离开）", "topic": "TALK_DONE" } ]
+  },
+  {
+    "id": "TALK_DD_CHILDREN_WHATSTHEHECK",
+    "type": "talk_topic",
+    "dynamic_line": "我们在为您节省时间和精力，你不想知道所有这些抚养孩子的过程，对吧？",
+    "responses": [ { "text": "就当作没听见吧...", "topic": "TALK_DD_CHILDREN" } ]
+  }
+]

@@ -1,0 +1,393 @@
+[
+  {
+    "type": "field_type",
+    "id": "fd_love_flame",
+    "looks_like": "fd_fire",
+    "intensity_levels": [
+      {
+        "name": "火焰(魔法)",
+        "sym": "4",
+        "color": "red",
+        "dangerous": true,
+        "light_emitted": 160,
+        "translucency": 0.1,
+        "convection_temperature_mod": 300,
+        "effects": [
+          {
+            "effect_id": "onfire",
+            "body_part": "torso",
+            "min_duration": "10 s",
+            "max_duration": "20 s",
+            "intensity": 1,
+            "immune_inside_vehicle": true,
+            "immunity_data": {
+              "flags": [ "FIREPROOF", "HEATSINK", "FIREY" ]
+            }
+          }
+        ]
+      }
+    ],
+    "description_affix": "on",
+    "decay_amount_factor": 1,
+    "priority": 4,
+    "half_life": "1 m",
+    "phase": "plasma",
+    "display_items": false,
+    "display_field": true,
+    "has_fire": true
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LOVE_FLAME",
+    "//": [
+      "どうやらオリジナルではageは10秒後に消滅させるつもりで設定されている",
+      "ような気がするが、これは設置から10秒経過状態にするだけなので、普通に",
+      "燃え盛っている。意図通りに消火する事は可能(SPELLのremove_field)"
+    ],
+    "effect": [
+      { "u_location_variable": { "context_val": "point" } },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": -10,
+        "y_adjust": -19
+      },
+      {
+        "u_set_field": "fd_love_flame",
+        "intensity": 3,
+        "radius": 0,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 2,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_love_flame",
+        "intensity": 3,
+        "radius": 0,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 2,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_love_flame",
+        "intensity": 3,
+        "radius": 0,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 2,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_love_flame",
+        "intensity": 3,
+        "radius": 0,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 8,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_love_flame",
+        "intensity": 3,
+        "radius": 0,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 2,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_love_flame",
+        "intensity": 3,
+        "radius": 0,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 2,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_love_flame",
+        "intensity": 3,
+        "radius": 0,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 2,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_love_flame",
+        "intensity": 3,
+        "radius": 0,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": -12,
+        "y_adjust": 1
+      },
+      {
+        "u_set_field": "fd_love_flame",
+        "intensity": 3,
+        "radius": 0,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 4,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_love_flame",
+        "intensity": 3,
+        "radius": 0,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": -14,
+        "y_adjust": 1
+      },
+      {
+        "u_set_field": "fd_love_flame",
+        "intensity": 3,
+        "radius": 0,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 24,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_love_flame",
+        "intensity": 3,
+        "radius": 0,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": -12,
+        "y_adjust": 2
+      },
+      {
+        "u_set_field": "fd_love_flame",
+        "intensity": 3,
+        "radius": 0,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": -14,
+        "y_adjust": 1
+      },
+      {
+        "u_set_field": "fd_love_flame",
+        "intensity": 3,
+        "radius": 0,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 28,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_love_flame",
+        "intensity": 3,
+        "radius": 0,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": -29,
+        "y_adjust": 5
+      },
+      {
+        "u_set_field": "fd_love_flame",
+        "intensity": 3,
+        "radius": 0,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 30,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_love_flame",
+        "intensity": 3,
+        "radius": 0,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": -28,
+        "y_adjust": 8
+      },
+      {
+        "u_set_field": "fd_love_flame",
+        "intensity": 3,
+        "radius": 0,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 26,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_love_flame",
+        "intensity": 3,
+        "radius": 0,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": -24,
+        "y_adjust": 3
+      },
+      {
+        "u_set_field": "fd_love_flame",
+        "intensity": 3,
+        "radius": 0,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 22,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_love_flame",
+        "intensity": 3,
+        "radius": 0,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": -20,
+        "y_adjust": 3
+      },
+      {
+        "u_set_field": "fd_love_flame",
+        "intensity": 3,
+        "radius": 0,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 18,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_love_flame",
+        "intensity": 3,
+        "radius": 0,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": -16,
+        "y_adjust": 2
+      },
+      {
+        "u_set_field": "fd_love_flame",
+        "intensity": 3,
+        "radius": 0,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 14,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_love_flame",
+        "intensity": 3,
+        "radius": 0,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": -12,
+        "y_adjust": 2
+      },
+      {
+        "u_set_field": "fd_love_flame",
+        "intensity": 3,
+        "radius": 0,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 10,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_love_flame",
+        "intensity": 3,
+        "radius": 0,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": -8,
+        "y_adjust": 2
+      },
+      {
+        "u_set_field": "fd_love_flame",
+        "intensity": 3,
+        "radius": 0,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 6,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_love_flame",
+        "intensity": 3,
+        "radius": 0,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": -4,
+        "y_adjust": 2
+      },
+      {
+        "u_set_field": "fd_love_flame",
+        "intensity": 3,
+        "radius": 0,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 2,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_love_flame",
+        "intensity": 3,
+        "radius": 0,
+        "target_var": { "context_val": "point" }
+      },
+      { "message": "四周被火焰覆盖！" }
+    ]
+  }
+]

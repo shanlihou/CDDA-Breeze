@@ -1,0 +1,42 @@
+[
+  {
+    "id": "TALK_ANTHRO_CUBI",
+    "type": "talk_topic",
+    "dynamic_line": "啊，这是什么啊！？你干了些什么！",
+    "responses": [
+      { "text": "使用血清(人类)。", "topic": "TALK_ANTHRO_CUBI_ITS_MY_TREAT" },
+      { "text": "等等，还是再考虑一下吧...", "topic": "TALK_DONE" }
+    ]
+  },
+  {
+    "id": "TALK_ANTHRO_CUBI_ITS_MY_TREAT",
+    "type": "talk_topic",
+    "dynamic_line": "我不太明白，但我想这意味着我现在是一个人类了。哈，我不能用我以前的能力，这有点难受...但像其他同类那样，为了寻找稀少的猎物而疯狂，相比之下哪个更好呢。",
+    "responses": [
+      {
+        "text": "很高兴能这么说，来，一起走吧。",
+        "success": { "effect": "follow", "opinion": { "trust": 5, "value": 5 }, "topic": "TALK_ANTHRO_CUBI_BE_FELLOW" }
+      },
+      {
+        "text": "你现在是我的宠物，别忘了。过来，别让我久等，宠物。",
+        "success": {
+          "effect": "follow",
+          "opinion": { "anger": 5, "fear": 5, "trust": -5, "value": 5 },
+          "topic": "TALK_ANTHRO_CUBI_BADBOY"
+        }
+      }
+    ]
+  },
+  {
+    "id": "TALK_ANTHRO_CUBI_BE_FELLOW",
+    "type": "talk_topic",
+    "dynamic_line": "好的~好的~我现在变成这副摸样啊，都是因为你的缘故，所以，要好好负起责任来啊，主——人♪",
+    "responses": [ { "text": "(对话结束)", "topic": "TALK_DONE" } ]
+  },
+  {
+    "id": "TALK_ANTHRO_CUBI_BADBOY",
+    "type": "talk_topic",
+    "dynamic_line": "好，很好。你这种态度哪天被背后捅一刀了的话，可别怪我。",
+    "responses": [ { "text": "(对话结束)", "topic": "TALK_DONE" } ]
+  }
+]

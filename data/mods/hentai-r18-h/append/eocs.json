@@ -1,0 +1,19 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_USE_BREAST_PUMP",
+    "condition": { "u_has_any_trait": [ "BREAST_MILK", "LACTO_MUTATION" ] },
+    "effect": {
+      "if": { "u_has_effect": "breast_milkable", "intensity": 2 },
+      "then": [
+        { "u_message": "用挤奶器挤了母乳。" },
+        { "u_spawn_item": "breast_milk", "container": "bottle_plastic_small",  "suppress_message": true },
+        { "u_spawn_item": "breast_pump_handle", "suppress_message": true },
+        { "math": [ "u_vitamin('breast_milk')", "=", "0" ] },
+        "npc_die"
+      ],
+      "else": { "u_message": "虽然用了挤奶器但几乎没有挤出母乳。"}
+    },
+    "false_effect": { "u_message": "尝试使用了挤奶器，不过什么都没挤出来。" }
+  }
+]

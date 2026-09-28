@@ -1,0 +1,502 @@
+[
+  {
+    "type": "effect_type",
+    "id": "oc_pill",
+    "name": [ "", "避孕" ],
+    "desc": [ "", "口服避孕药正在发挥作用，目前不会怀孕。" ],
+    "rating": "good"
+  },
+  {
+    "type": "effect_type",
+    "id": "consume_oc_pill",
+    "//": "避妊薬を連続服用しても効果が得られないようにする",
+    "max_duration": "16 h",
+    "dur_add_perc": 0,
+    "name": [ "服用口服避孕药" ],
+    "desc": [ "最近服用了避孕药，现在再吃也不会有什么效果吧。" ],
+    "vitamins": [
+      {
+        "vitamin": "oc_pill",
+        "rate": [ [ 1, 1 ] ],
+        "tick": [ "8 h" ]
+      }
+    ]
+  },
+  {
+    "type": "effect_type",
+    "id": "consume_after_pill",
+    "name": [ "服用紧急避孕药" ],
+    "desc": [ "服用了紧急避孕药。" ],
+    "base_mods": {
+      "vomit_chance": [ 7200 ],
+      "vomit_tick": [ 240 ],
+      "pain_min": [ 1 ],
+      "pain_chance": [ 200 ],
+      "pain_tick": [ 240 ]
+    },
+    "removes_effects": [ "creampie" ]
+  },
+  {
+    "type": "effect_type",
+    "id": "aborted",
+    "removes_effects": [ "creampie", "pregnant1", "pregnant2", "pregnant3", "pregnant4", "pregnant5", "pregnant6", "pregnant7", "pregnant8", "pregnant9", "pregnant10" ]
+  },
+  {
+    "type": "effect_type",
+    "id": "pregnant1",
+    "//": "妊娠1月、自覚症状無し",
+    "removes_effects": [ "creampie" ]
+  },
+  {
+    "type": "effect_type",
+    "id": "pregnant2",
+    "//": "妊娠2月、つわりが出始める、微熱、倦怠感",
+    "base_mods": {
+      "vomit_chance": [ 7200 ],
+      "vomit_tick": [ 60 ]
+    },
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [
+          { "value": "REGEN_STAMINA", "multiply": -0.05 },
+          { "value": "HUNGER", "multiply": 0.05 },
+          { "value": "THIRST", "multiply": 0.05 }
+        ]
+      }
+    ],
+    "removes_effects": [ "creampie" ]
+  },
+  {
+    "type": "effect_type",
+    "id": "pregnant3",
+    "//": "妊娠3月、つわりが最も激しい",
+    "//vomit": "一日2回程度",
+    "name": [ "怀孕初期" ],
+    "desc": [ "怀孕了，孕吐很严重。" ],
+    "base_mods": {
+      "vomit_chance": [ 720 ],
+      "vomit_tick": [ 60 ],
+      "pain_min": [ 1 ],
+      "pain_max": [ 3 ],
+      "pain_chance": [ 360 ],
+      "pain_tick": [ 60 ]
+    },
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [
+          { "value": "REGEN_STAMINA", "multiply": -0.2 },
+          { "value": "HUNGER", "multiply": -0.2 },
+          { "value": "METABOLISM", "multiply": 0.05 },
+          { "value": "THIRST", "multiply": 0.2 },
+          { "value": "REGEN_STAMINA", "multiply": -0.2 }
+        ]
+      }
+    ],
+    "apply_message": [ [ "从最近的身体状况来看，可能怀孕了...", "bad" ] ],
+    "miss_messages": [ [ "怀孕反应严重，锁定不了目标", 5 ] ],
+    "removes_effects": [ "creampie" ]
+  },
+  {
+    "type": "effect_type",
+    "id": "pregnant4",
+    "//": "妊娠4月、つわりが落ち着く",
+    "name": [ "怀孕初期" ],
+    "desc": [ "怀孕了。" ],
+    "base_mods": {
+      "vomit_chance": [ 2880 ],
+      "vomit_tick": [ 60 ]
+    },
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [
+          { "value": "REGEN_STAMINA", "multiply": -0.1 },
+          { "value": "HUNGER", "multiply": 0.2 },
+          { "value": "METABOLISM", "multiply": 0.05 },
+          { "value": "THIRST", "multiply": 0.1 },
+          { "value": "REGEN_STAMINA", "multiply": -0.1 }
+        ]
+      }
+    ],
+    "removes_effects": [ "creampie" ]
+  },
+  {
+    "type": "effect_type",
+    "id": "pregnant5",
+    "//": "妊娠5月、安定期、お腹が膨らみ始める、貧血、息切れ、疲労感",
+    "name": [ "怀孕中期" ],
+    "desc": [ "怀孕了，肚子稍微有些变大。" ],
+    "show_in_info": true,
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [
+          { "value": "REGEN_STAMINA", "multiply": -0.1 },
+          { "value": "METABOLISM", "multiply": 0.1 },
+          { "value": "THIRST", "multiply": 0.1 },
+          { "value": "REGEN_STAMINA", "multiply": -0.1 },
+          { "value": "SLEEPY", "add": -1 },
+          { "value": "SOCIAL_PERSUADE", "multiply": 0.1 },
+          { "value": "SOCIAL_INTIMIDATE", "multiply": -0.2 }
+        ]
+      }
+    ],
+    "miss_messages": [ [ "大肚子限制了你的行动。", 5 ] ],
+    "removes_effects": [ "creampie" ]
+  },
+  {
+    "type": "effect_type",
+    "id": "pregnant6",
+    "//": "妊娠6月、お腹が重くなる、腰痛が出る",
+    "name": [ "怀孕中期" ],
+    "desc": [ "怀孕了，肚子变得相当大。" ],
+    "show_in_info": true,
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [
+          { "value": "REGEN_STAMINA", "multiply": -0.2 },
+          { "value": "METABOLISM", "multiply": 0.1 },
+          { "value": "THIRST", "multiply": 0.1 },
+          { "value": "REGEN_STAMINA", "multiply": -0.1 },
+          { "value": "SLEEPY", "add": -2 },
+          { "value": "SOCIAL_PERSUADE", "multiply": 0.1 },
+          { "value": "SOCIAL_INTIMIDATE", "multiply": -0.2 }
+        ],
+        "mutations": [ "PREGNANCY_MIDDLE" ]
+      }
+    ],
+    "miss_messages": [ [ "大肚子限制了你的行动。", 5 ] ],
+    "removes_effects": [ "creampie" ]
+  },
+  {
+    "type": "effect_type",
+    "id": "pregnant7",
+    "//": "妊娠7月、お腹が大きくなる、消費カロリーの増加(+350kcal)",
+    "name": [ "怀孕中期" ],
+    "desc": [ "怀孕了，肚子变得相当大。" ],
+    "show_in_info": true,
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [
+          { "value": "REGEN_STAMINA", "multiply": -0.2 },
+          { "value": "METABOLISM", "multiply": 0.1 },
+          { "value": "THIRST", "multiply": 0.1 },
+          { "value": "REGEN_STAMINA", "multiply": -0.2 },
+          { "value": "SLEEPY", "add": -3 },
+          { "value": "SOCIAL_PERSUADE", "multiply": 0.2 },
+          { "value": "SOCIAL_INTIMIDATE", "multiply": -0.4 }
+        ],
+        "mutations": [ "PREGNANCY_MIDDLE" ]
+      }
+    ],
+    "miss_messages": [ [ "腹中的孩子让你无法集中注意力。", 5 ] ],
+    "removes_effects": [ "creampie" ]
+  },
+  {
+    "type": "effect_type",
+    "id": "pregnant8",
+    "//": "妊娠8月、動悸息切れ",
+    "name": [ "怀孕后期" ],
+    "desc": [ "怀孕了。" ],
+    "show_in_info": true,
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [
+          { "value": "REGEN_STAMINA", "multiply": -0.4 },
+          { "value": "METABOLISM", "multiply": 0.2 },
+          { "value": "THIRST", "multiply": 0.2 },
+          { "value": "REGEN_STAMINA", "multiply": -0.2 },
+          { "value": "SLEEPY", "add": -4 },
+          { "value": "SOCIAL_PERSUADE", "multiply": 0.2 },
+          { "value": "SOCIAL_INTIMIDATE", "multiply": -0.4 }
+        ],
+        "mutations": [ "PREGNANCY_LATE" ]
+      }
+    ],
+    "miss_messages": [ [ "腹中的孩子让你无法集中注意力。", 5 ] ],
+    "removes_effects": [ "creampie" ]
+  },
+  {
+    "type": "effect_type",
+    "id": "pregnant9",
+    "//": "妊娠9月",
+    "name": [ "怀孕后期" ],
+    "desc": [ "怀孕了。" ],
+    "show_in_info": true,
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [
+          { "value": "REGEN_STAMINA", "multiply": -0.4 },
+          { "value": "METABOLISM", "multiply": 0.2 },
+          { "value": "THIRST", "multiply": 0.2 },
+          { "value": "REGEN_STAMINA", "multiply": -0.2 },
+          { "value": "SLEEPY", "add": -5 },
+          { "value": "SOCIAL_PERSUADE", "multiply": 0.2 },
+          { "value": "SOCIAL_INTIMIDATE", "multiply": -0.4 }
+        ],
+        "mutations": [ "PREGNANCY_LATE" ]
+      }
+    ],
+    "miss_messages": [ [ "腹中的孩子让你无法集中注意力。", 5 ] ],
+    "removes_effects": [ "creampie" ]
+  },
+  {
+    "type": "effect_type",
+    "id": "pregnant10",
+    "//": "妊娠10月",
+    "name": [ "临月" ],
+    "desc": [ "怀孕了。现在孩子随时会出生。" ],
+    "show_in_info": true,
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [
+          { "value": "REGEN_STAMINA", "multiply": -0.4 },
+          { "value": "METABOLISM", "multiply": 0.2 },
+          { "value": "THIRST", "multiply": 0.2 },
+          { "value": "REGEN_STAMINA", "multiply": -0.2 },
+          { "value": "SLEEPY", "add": -5 },
+          { "value": "SOCIAL_PERSUADE", "multiply": 0.2 },
+          { "value": "SOCIAL_INTIMIDATE", "multiply": -0.4 }
+        ],
+        "mutations": [ "PREGNANCY_LATE" ]
+      }
+    ],
+    "miss_messages": [ [ "腹中的孩子让你无法集中注意力。", 5 ] ],
+    "removes_effects": [ "creampie" ]
+  },
+  {
+    "type": "effect_type",
+    "id": "labor_pain",
+    "name": [ "阵痛" ],
+    "desc": [
+      "非常痛苦，马上就要生了！",
+      "剧烈的疼痛有规律地反复发作，肚子里的孩子快要出生了。",
+      "阵痛开始了。",
+      "阵痛开始了。",
+      "阵痛开始了。"
+    ],
+    "decay_messages": [
+      [ "阵痛越来越激烈了，感觉已经快要生了！", "bad" ],
+      [ "阵痛的周期缩短了。", "bad" ],
+      [ "", "good" ]
+    ],
+    "max_intensity": 5,
+    "int_dur_factor": 7200,
+    "show_intensity": false,
+    "base_mods": {
+      "pain_min": [ 4 ],
+      "pain_max": [ 10 ],
+      "pain_chance": [ 1 ],
+      "pain_tick": [ 600 ]
+    },
+    "scaling_mods": {
+      "pain_min": [ -1 ],
+      "pain_max": [ -2 ],
+      "pain_chance": [ 0.75 ]
+    },
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "mutations": [ "PREGNANCY_LATE" ]
+      }
+    ],
+    "removes_effects": [ "creampie" ]
+  },
+  
+  {
+    "type": "mutation",
+    "id": "PREGNANCY_MIDDLE",
+    "name": "怀孕中期",
+    "points": 0,
+    "description": "肚子变大了。躯干受到+10累赘度的限制。",
+    "valid": false,
+    "purifiable": false,
+    "mixed_effect": true,
+    "encumbrance_always": [ [ "torso", 10 ] ]
+  },
+  {
+    "type": "mutation",
+    "id": "PREGNANCY_LATE",
+    "name": "怀孕后期",
+    "points": 0,
+    "description": "肚子变的相当大了。躯干受到+30累赘度的限制。",
+    "valid": false,
+    "purifiable": false,
+    "mixed_effect": true,
+    "encumbrance_always": [ [ "torso", 30 ] ]
+  },
+  
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SET_PREGNANCY_CONSTANTS",
+    "eoc_type": "EVENT",
+    "required_event": "game_begin",
+    "effect": [
+      {
+        "if": { "math": [ "HENTAI_EXTEND_PREGNANCY_DAY == 0" ] },
+        "then": { "math": [ "HENTAI_EXTEND_PREGNANCY_DAY", "=", "280" ] }
+      },
+      {
+        "//": "タイミングがあっていると25%、月経周期や精子の生存日数を考えるとそれの1/5...でもちょっと高めで15%にしておこう",
+        "math": [ "PREGNANCY_CHANCE", "=", "15" ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MOVE_NEXT_PREGNANT_STAGE",
+    "//": [
+      "妊娠の*一月*の長さをオプションから設定...したかった",
+      "整数のオプションが取得できるようになるのは0.Hの少し後(#71074)",
+      "デフォの280日なら4週"
+    ],
+    "condition": { "expects_vars": [ "effect" ] },
+    "effect": [
+      { "math": [ "_pregnancy_random", "=", "_pregnancy_random ? _pregnancy_random : 1" ] },
+      { "math": [ "_month", "=", "floor(HENTAI_EXTEND_PREGNANCY_DAY * 24 * 60 * 60 * _pregnancy_random / 10)" ] },
+      { "u_add_effect": { "context_val": "effect" } , "duration": { "context_val": "month" } }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_IMPLANTATION",
+    "eoc_type": "EVENT",
+    "required_event": "character_loses_effect",
+    "condition": { "compare_string": [ "creampie", { "context_val": "effect" } ] },
+    "effect": [ { "run_eocs": "EOC_MOVE_NEXT_PREGNANT_STAGE", "variables": { "effect": "pregnant1" } } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_PREGNANT_MONTH_1",
+    "eoc_type": "EVENT",
+    "required_event": "character_loses_effect",
+    "condition": { "compare_string": [ "pregnant1", { "context_val": "effect" } ] },
+    "effect": [ { "run_eocs": "EOC_MOVE_NEXT_PREGNANT_STAGE", "variables": { "effect": "pregnant2" } } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_PREGNANT_MONTH_2",
+    "eoc_type": "EVENT",
+    "required_event": "character_loses_effect",
+    "condition": { "compare_string": [ "pregnant2", { "context_val": "effect" } ] },
+    "effect": [ { "run_eocs": "EOC_MOVE_NEXT_PREGNANT_STAGE", "variables": { "effect": "pregnant3" } } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_PREGNANT_MONTH_3",
+    "eoc_type": "EVENT",
+    "required_event": "character_loses_effect",
+    "condition": { "compare_string": [ "pregnant3", { "context_val": "effect" } ] },
+    "effect": [ { "run_eocs": "EOC_MOVE_NEXT_PREGNANT_STAGE", "variables": { "effect": "pregnant4" } } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_PREGNANT_MONTH_4",
+    "eoc_type": "EVENT",
+    "required_event": "character_loses_effect",
+    "condition": { "compare_string": [ "pregnant4", { "context_val": "effect" } ] },
+    "effect": [ { "run_eocs": "EOC_MOVE_NEXT_PREGNANT_STAGE", "variables": { "effect": "pregnant5" } } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_PREGNANT_MONTH_5",
+    "eoc_type": "EVENT",
+    "required_event": "character_loses_effect",
+    "condition": { "compare_string": [ "pregnant5", { "context_val": "effect" } ] },
+    "effect": [ { "run_eocs": "EOC_MOVE_NEXT_PREGNANT_STAGE", "variables": { "effect": "pregnant6" } } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_PREGNANT_MONTH_6",
+    "eoc_type": "EVENT",
+    "required_event": "character_loses_effect",
+    "condition": { "compare_string": [ "pregnant6", { "context_val": "effect" } ] },
+    "effect": [ { "run_eocs": "EOC_MOVE_NEXT_PREGNANT_STAGE", "variables": { "effect": "pregnant7" } } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_PREGNANT_MONTH_7",
+    "eoc_type": "EVENT",
+    "required_event": "character_loses_effect",
+    "condition": { "compare_string": [ "pregnant7", { "context_val": "effect" } ] },
+    "effect": [ { "run_eocs": "EOC_MOVE_NEXT_PREGNANT_STAGE", "variables": { "effect": "pregnant8" } } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_PREGNANT_MONTH_8",
+    "eoc_type": "EVENT",
+    "required_event": "character_loses_effect",
+    "condition": { "compare_string": [ "pregnant8", { "context_val": "effect" } ] },
+    "effect": [ { "run_eocs": "EOC_MOVE_NEXT_PREGNANT_STAGE", "variables": { "effect": "pregnant9" } } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_PREGNANT_MONTH_9",
+    "eoc_type": "EVENT",
+    "required_event": "character_loses_effect",
+    "condition": { "compare_string": [ "pregnant9", { "context_val": "effect" } ] },
+    "effect": [
+      { "math": [ "_pregnancy_random", "=", "rng(0.1, 1.5)" ] },
+      { "run_eocs": "EOC_MOVE_NEXT_PREGNANT_STAGE", "variables": { "effect": "pregnant10" } }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_START_LABOR_PAIN",
+    "eoc_type": "EVENT",
+    "required_event": "character_loses_effect",
+    "condition": { "compare_string": [ "pregnant10", { "context_val": "effect" } ] },
+    "//": "初産:12~18h、経産婦: 6~8h",
+    "effect": [
+      { "u_add_effect": "labor_pain", "duration": [ "6 h", "18 h" ] },
+      {
+        "if": "u_is_avatar",
+        "then": {
+          "u_message": "阵痛开始了，请找个安全的地方度过。",
+          "popup": true,
+          "popup_w_interrupt_query": true,
+          "interrupt_type": "pain"
+        },
+        "else": {
+          "if": "player_see_u",
+          "then": {
+            "message": "<u_name>的阵痛开始了！",
+            "type": "bad"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GIVE_BIRTH_TO_DD_CHILDREN",
+    "eoc_type": "EVENT",
+    "required_event": "character_loses_effect",
+    "condition": { "compare_string": [ "labor_pain", { "context_val": "effect" } ] },
+    "effect": [
+      {
+        "if": "u_is_avatar",
+        "then": { "u_message": "顺利分娩了。", "popup": true, "popup_w_interrupt_query": true, "interrupt_type": "pain" },
+        "else": {
+          "if": "player_see_u",
+          "then": {
+            "message": "<u_name>生下了孩子！",
+            "type": "info"
+          }
+        }
+      },
+      { "u_spawn_npc": "darkdays_children", "real_count": 1, "max_radius": 1 },
+      {
+        "if": { "not": { "u_has_any_trait": [ "BREAST_MILK", "LACTO_MUTATION" ] } },
+        "then": { "u_add_trait": "BREAST_MILK" }
+      }
+    ]
+  }
+]

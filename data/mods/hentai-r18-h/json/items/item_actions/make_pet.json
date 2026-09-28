@@ -1,0 +1,52 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "make_pet_actor_use",
+    "condition": { "math": [ "1" ] },
+    "effect": [
+      {
+        "u_query_tile": "around",
+        "target_var": { "context_val": "pnt" },
+        "range": 1,
+        "message": "选择使用对象的方向"
+      },
+      { "math": [ "u_success_cubi_pet", "=", "0" ] },
+      {
+        "run_eocs": "eoc_check_u_query_tile_target",
+        "variables": { "retv": "tmp", "pnt": { "context_val": "pnt" } }
+      },
+      {
+        "if": { "compare_string": [ "monster", { "global_val": "tmp" } ] },
+        "then": {
+          "run_eocs": {
+            "id": "make_pet_actor_use_inner",
+            "condition": { "and": [
+              { "npc_has_species": "CUBI" }, 
+              {
+                "//": "すでにペットなら除外",
+                "math": [ "n_val('friendly')", "!=", "-1" ]
+              }
+            ] },
+            "//": "オリジナルでは必ず成功なので友好チェックなし",
+            "effect": [
+              { "u_message": "在<npc_name>放松的一瞬间，让它戴上了项链！\n<npc_name>已经成为你的同伴！", "type": "info" },
+              { "math": [ "n_val('friendly')", "=", "-1" ] },
+              { "npc_add_effect": "pet", "duration": "PERMANENT" },
+              { "math": [ "u_success_cubi_pet", "=", "1" ] }
+            ]
+          },
+          "beta_loc": { "context_val": "pnt" }
+        }
+      },
+      {
+        "if": { "math": [ "u_success_cubi_pet" ] },
+        "//": [
+          "オリジナルではモンスターにアイテムを移動させているみたいだが",
+          "回収することはできなかったのでここでは削除してしまう"
+        ],
+        "then": "npc_die",
+        "else": { "u_message": "Never mind." }
+      }
+    ]
+  }
+]

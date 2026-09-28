@@ -1,0 +1,602 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "anthropomorph_actor_use",
+    "condition": { "u_has_item": "syringe" },
+    "effect": [
+      {
+        "u_query_tile": "around",
+        "target_var": { "context_val": "pnt" },
+        "range": 1,
+        "message": "选择使用对象的方向"
+      },
+      { "set_string_var": "", "target_var": { "global_val": "anthro_npc" } },
+      {
+        "run_eocs": "eoc_check_u_query_tile_target",
+        "variables": { "retv": "tmp", "pnt": { "context_val": "pnt" } }
+      },
+      
+      {
+        "if": { "compare_string": [ "monster", { "global_val": "tmp" } ] },
+        "then": {
+          "run_eocs": {
+            "id": "anthropomorph_actor_use_check_monster",
+            "condition": { "or": [
+              { "npc_has_species": "CUBI" },
+              { "npc_has_flag": "DOGFOOD" },
+              { "npc_has_flag": "ANTHRO_FELINE" },
+              { "npc_has_flag": "ANTHRO_URSINE" },
+              { "npc_has_flag": "ANTHRO_CATTLE" },
+              { "npc_has_flag": "ANTHRO_RABBIT" },
+              { "npc_has_species": "BIRD" }
+            ] },
+            "effect": [
+              {
+                "run_eoc_selector": [
+                  "select_npc_anthro_succubi_morehuman",
+                  "select_npc_anthro_succubi_lesshuman",
+                  
+                  "select_npc_anthro_incubi_morehuman",
+                  "select_npc_anthro_incubi_lesshuman",
+                  
+                  "select_npc_anthro_canine_morehuman_male",
+                  "select_npc_anthro_canine_half_male",
+                  "select_npc_anthro_canine_lesshuman_male",
+                  "select_npc_anthro_canine_morehuman_female",
+                  "select_npc_anthro_canine_half_female",
+                  "select_npc_anthro_canine_lesshuman_female",
+                  
+                  "select_npc_anthro_feline_morehuman_male",
+                  "select_npc_anthro_feline_half_male",
+                  "select_npc_anthro_feline_lesshuman_male",
+                  "select_npc_anthro_feline_morehuman_female",
+                  "select_npc_anthro_feline_half_female",
+                  "select_npc_anthro_feline_lesshuman_female",
+                  
+                  "select_npc_anthro_ursine_morehuman_male",
+                  "select_npc_anthro_ursine_half_male",
+                  "select_npc_anthro_ursine_lesshuman_male",
+                  "select_npc_anthro_ursine_morehuman_female",
+                  "select_npc_anthro_ursine_half_female",
+                  "select_npc_anthro_ursine_lesshuman_female",
+                  
+                  "select_npc_anthro_cattle_morehuman_male",
+                  "select_npc_anthro_cattle_half_male",
+                  "select_npc_anthro_cattle_lesshuman_male",
+                  "select_npc_anthro_cattle_morehuman_female",
+                  "select_npc_anthro_cattle_half_female",
+                  "select_npc_anthro_cattle_lesshuman_female",
+                  
+                  "select_npc_anthro_rabbit_morehuman_male",
+                  "select_npc_anthro_rabbit_half_male",
+                  "select_npc_anthro_rabbit_lesshuman_male",
+                  "select_npc_anthro_rabbit_morehuman_female",
+                  "select_npc_anthro_rabbit_half_female",
+                  "select_npc_anthro_rabbit_lesshuman_female",
+                  
+                  "select_npc_anthro_bird_morehuman_male",
+                  "select_npc_anthro_bird_half_male",
+                  "select_npc_anthro_bird_lesshuman_male",
+                  "select_npc_anthro_bird_morehuman_female",
+                  "select_npc_anthro_bird_half_female",
+                  "select_npc_anthro_bird_lesshuman_female",
+                  
+                  "EOC_NONE"
+                ],
+                "names": [
+                  "类人生物",
+                  "形似恶魔",
+                  
+                  "类人生物",
+                  "形似恶魔",
+                  
+                  "类人生物(男)",
+                  "半人生物(男)",
+                  "非人生物(男)",
+                  "类人生物(女)",
+                  "半人生物(女)",
+                  "非人生物(女)",
+                  
+                  "类人生物(男)",
+                  "半人生物(男)",
+                  "非人生物(男)",
+                  "类人生物(女)",
+                  "半人生物(女)",
+                  "非人生物(女)",
+                  
+                  "类人生物(男)",
+                  "半人生物(男)",
+                  "非人生物(男)",
+                  "类人生物(女)",
+                  "半人生物(女)",
+                  "非人生物(女)",
+                  
+                  "类人生物(男)",
+                  "半人生物(男)",
+                  "非人生物(男)",
+                  "类人生物(女)",
+                  "半人生物(女)",
+                  "非人生物(女)",
+                  
+                  "类人生物(男)",
+                  "半人生物(男)",
+                  "非人生物(男)",
+                  "类人生物(女)",
+                  "半人生物(女)",
+                  "非人生物(女)",
+                  
+                  "类人生物(男)",
+                  "半人生物(男)",
+                  "非人生物(男)",
+                  "类人生物(女)",
+                  "半人生物(女)",
+                  "非人生物(女)",
+                  
+                  "取消"
+                ],
+                "hide_failing": true,
+                "allow_cancel": true,
+                "title": "喜欢什么外观？"
+              },
+              {
+                "if": { "not": { "compare_string": [ "", { "global_val": "anthro_npc" } ] } },
+                "then": [
+                  { "npc_cast_spell": { "id": "spell_anthropomorph_1", "hit_self": true } },
+                  {
+                    "u_spawn_npc": { "global_val": "anthro_npc" },
+                    "target_var": { "context_val": "pnt" },
+                    "real_count": 1,
+                    "min_radius": 0,
+                    "max_radius": 0
+                  }
+                ]
+              }
+            ],
+            "false_effect": { "message": "不能把这种生物变成人类。", "type": "info" }
+          },
+          "beta_loc": { "context_val": "pnt" }
+        }
+      },
+      {
+        "if": { "compare_string": [ "", { "global_val": "anthro_npc" } ] },
+        "then": { "message": "Never mind." },
+        "else": "npc_die"
+      }
+    ],
+    "false_effect": {
+      "if": { "not": { "u_has_item": "syringe" } },
+      "then": { "message": "<npc_name>必须使用针筒。" }
+    }
+  },
+  
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_succubi_morehuman",
+    "condition": { "and": [
+      { "npc_has_species": "CUBI" },
+      { "npc_has_species": "FEMALE" }
+    ] },
+    "effect": {
+      "set_string_var": "anthro_succubi_morehuman",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_succubi_lesshuman",
+    "condition": { "and": [
+      { "npc_has_species": "CUBI" },
+      { "npc_has_species": "FEMALE" }
+    ] },
+    "effect": {
+      "set_string_var": "anthro_succubi_lesshuman",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_incubi_morehuman",
+    "condition": { "and": [
+      { "npc_has_species": "CUBI" },
+      { "npc_has_species": "MALE" }
+    ] },
+    "effect": {
+      "set_string_var": "anthro_incubi_morehuman",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_incubi_lesshuman",
+    "condition": { "and": [
+      { "npc_has_species": "CUBI" },
+      { "npc_has_species": "MALE" }
+    ] },
+    "effect": {
+      "set_string_var": "anthro_incubi_lesshuman",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_canine_morehuman_male",
+    "condition": { "npc_has_flag": "DOGFOOD" },
+    "effect": {
+      "set_string_var": "anthro_canine_morehuman_male",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_canine_half_male",
+    "condition": { "npc_has_flag": "DOGFOOD" },
+    "effect": {
+      "set_string_var": "anthro_canine_half_male",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_canine_lesshuman_male",
+    "condition": { "npc_has_flag": "DOGFOOD" },
+    "effect": {
+      "set_string_var": "anthro_canine_lesshuman_male",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_canine_morehuman_female",
+    "condition": { "npc_has_flag": "DOGFOOD" },
+    "effect": {
+      "set_string_var": "anthro_canine_morehuman_female",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_canine_half_female",
+    "condition": { "npc_has_flag": "DOGFOOD" },
+    "effect": {
+      "set_string_var": "anthro_canine_half_female",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_canine_lesshuman_female",
+    "condition": { "npc_has_flag": "DOGFOOD" },
+    "effect": {
+      "set_string_var": "anthro_canine_lesshuman_female",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_feline_morehuman_male",
+    "condition": { "npc_has_flag": "ANTHRO_FELINE" },
+    "effect": {
+      "set_string_var": "anthro_feline_morehuman_male",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_feline_half_male",
+    "condition": { "npc_has_flag": "ANTHRO_FELINE" },
+    "effect": {
+      "set_string_var": "anthro_feline_half_male",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_feline_lesshuman_male",
+    "condition": { "npc_has_flag": "ANTHRO_FELINE" },
+    "effect": {
+      "set_string_var": "anthro_feline_lesshuman_male",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_feline_morehuman_female",
+    "condition": { "npc_has_flag": "ANTHRO_FELINE" },
+    "effect": {
+      "set_string_var": "anthro_feline_morehuman_female",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_feline_half_female",
+    "condition": { "npc_has_flag": "ANTHRO_FELINE" },
+    "effect": {
+      "set_string_var": "anthro_feline_half_female",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_feline_lesshuman_female",
+    "condition": { "npc_has_flag": "ANTHRO_FELINE" },
+    "effect": {
+      "set_string_var": "anthro_feline_lesshuman_female",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_ursine_morehuman_male",
+    "condition": { "npc_has_flag": "ANTHRO_URSINE" },
+    "effect": {
+      "set_string_var": "anthro_ursine_morehuman_male",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_ursine_half_male",
+    "condition": { "npc_has_flag": "ANTHRO_URSINE" },
+    "effect": {
+      "set_string_var": "anthro_ursine_half_male",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_ursine_lesshuman_male",
+    "condition": { "npc_has_flag": "ANTHRO_URSINE" },
+    "effect": {
+      "set_string_var": "anthro_ursine_lesshuman_male",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_ursine_morehuman_female",
+    "condition": { "npc_has_flag": "ANTHRO_URSINE" },
+    "effect": {
+      "set_string_var": "anthro_ursine_morehuman_female",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_ursine_half_female",
+    "condition": { "npc_has_flag": "ANTHRO_URSINE" },
+    "effect": {
+      "set_string_var": "anthro_ursine_half_female",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_ursine_lesshuman_female",
+    "condition": { "npc_has_flag": "ANTHRO_URSINE" },
+    "effect": {
+      "set_string_var": "anthro_ursine_lesshuman_female",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_cattle_morehuman_male",
+    "condition": { "npc_has_flag": "ANTHRO_CATTLE" },
+    "effect": {
+      "set_string_var": "anthro_cattle_morehuman_male",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_cattle_half_male",
+    "condition": { "npc_has_flag": "ANTHRO_CATTLE" },
+    "effect": {
+      "set_string_var": "anthro_cattle_half_male",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_cattle_lesshuman_male",
+    "condition": { "npc_has_flag": "ANTHRO_CATTLE" },
+    "effect": {
+      "set_string_var": "anthro_cattle_lesshuman_male",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_cattle_morehuman_female",
+    "condition": { "npc_has_flag": "ANTHRO_CATTLE" },
+    "effect": {
+      "set_string_var": "anthro_cattle_morehuman_female",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_cattle_half_female",
+    "condition": { "npc_has_flag": "ANTHRO_CATTLE" },
+    "effect": {
+      "set_string_var": "anthro_cattle_half_female",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_cattle_lesshuman_female",
+    "condition": { "npc_has_flag": "ANTHRO_CATTLE" },
+    "effect": {
+      "set_string_var": "anthro_cattle_lesshuman_female",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_rabbit_morehuman_male",
+    "condition": { "npc_has_flag": "ANTHRO_RABBIT" },
+    "effect": {
+      "set_string_var": "anthro_rabbit_morehuman_male",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_rabbit_half_male",
+    "condition": { "npc_has_flag": "ANTHRO_RABBIT" },
+    "effect": {
+      "set_string_var": "anthro_rabbit_half_male",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_rabbit_lesshuman_male",
+    "condition": { "npc_has_flag": "ANTHRO_RABBIT" },
+    "effect": {
+      "set_string_var": "anthro_rabbit_lesshuman_male",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_rabbit_morehuman_female",
+    "condition": { "npc_has_flag": "ANTHRO_RABBIT" },
+    "effect": {
+      "set_string_var": "anthro_rabbit_morehuman_female",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_rabbit_half_female",
+    "condition": { "npc_has_flag": "ANTHRO_RABBIT" },
+    "effect": {
+      "set_string_var": "anthro_rabbit_half_female",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_rabbit_lesshuman_female",
+    "condition": { "npc_has_flag": "ANTHRO_RABBIT" },
+    "effect": {
+      "set_string_var": "anthro_rabbit_lesshuman_female",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_bird_morehuman_male",
+    "condition": { "npc_has_species": "BIRD" },
+    "effect": {
+      "set_string_var": "anthro_bird_morehuman_male",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_bird_half_male",
+    "condition": { "npc_has_species": "BIRD" },
+    "effect": {
+      "set_string_var": "anthro_bird_half_male",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_bird_lesshuman_male",
+    "condition": { "npc_has_species": "BIRD" },
+    "effect": {
+      "set_string_var": "anthro_bird_lesshuman_male",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_bird_morehuman_female",
+    "condition": { "npc_has_species": "BIRD" },
+    "effect": {
+      "set_string_var": "anthro_bird_morehuman_female",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_bird_half_female",
+    "condition": { "npc_has_species": "BIRD" },
+    "effect": {
+      "set_string_var": "anthro_bird_half_female",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "select_npc_anthro_bird_lesshuman_female",
+    "condition": { "npc_has_species": "BIRD" },
+    "effect": {
+      "set_string_var": "anthro_bird_lesshuman_female",
+      "target_var": { "global_val": "anthro_npc" }
+    }
+  },
+  
+  {
+    "type": "SPELL",
+    "id": "spell_anthropomorph_1",
+    "name": { "str": "拟人化咒语1" },
+    "description": "瞬间变成拟人化怪物",
+    "valid_targets": [ "self" ],
+    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX", "NO_FAIL", "FRIENDLY_POLY" ],
+    "min_damage": 10000000,
+    "max_damage": 10000000,
+    "damage_type": "pure",
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "base_casting_time": 0,
+    "shape": "blast",
+    "effect": "targeted_polymorph",
+    "effect_str": "mon_monster_for_anthropomorph",
+    "extra_effects": [ { "id": "spell_anthropomorph_2", "hit_self": true } ]
+  },
+  {
+    "type": "SPELL",
+    "id": "spell_anthropomorph_2",
+    "name": { "str": "拟人化咒语2" },
+    "description": "即死",
+    "valid_targets": [ "self" ],
+    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX", "NO_FAIL" ],
+    "min_damage": 10000000,
+    "max_damage": 10000000,
+    "damage_type": "pure",
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "base_casting_time": 0,
+    "shape": "blast",
+    "effect": "attack"
+  },
+  {
+    "id": "mon_monster_for_anthropomorph",
+    "type": "MONSTER",
+    "name": { "str": "人类" },
+    "description": "拟人化道具的怪物。",
+    "default_faction": "human",
+    "bodytype": "blob",
+    "species": [ "HUMAN" ],
+    "volume": "1 ml",
+    "weight": "1 g",
+    "hp": 1,
+    "speed": 100,
+    "symbol": " ",
+    "color": "white",
+    "death_function": { "corpse_type": "NO_CORPSE", "message": "" },
+    "flags": [ "IMMOBILE", "NOT_HALLUCINATION" ]
+  }
+]

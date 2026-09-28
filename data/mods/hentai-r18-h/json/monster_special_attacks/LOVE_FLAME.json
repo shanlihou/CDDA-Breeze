@@ -1,0 +1,413 @@
+[
+  {
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "id": "LOVE_FLAME",
+    "condition": { "and": [
+      "npc_is_avatar",
+      { "not": { "u_has_effect": "cubi_allow_seduce_player" } }
+    ] },
+    "cooldown": 0
+  },
+  {
+    "type": "SPELL",
+    "id": "spell_LOVE_FLAME",
+    "name": { "str": "LOVE FLAME" },
+    "description": "ハート型に炎を配置",
+    "valid_targets": [ "hostile" ],
+    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
+    "min_range": 15,
+    "max_range": 15,
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "base_casting_time": 200,
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_LOVE_FLAME"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LOVE_FLAME",
+    "//": [
+      "どうやらオリジナルではageは10秒後に消滅させるつもりで設定されている",
+      "ような気がするが、これは設置から10秒経過状態にするだけなので、普通に",
+      "燃え盛っている。意図通りに消火する事は可能(SPELLのremove_field)"
+    ],
+    "effect": [
+      { "u_location_variable": { "context_val": "point" } },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": -10,
+        "y_adjust": -19
+      },
+      {
+        "u_set_field": "fd_fire",
+        "intensity": 3,
+        "radius": 0,
+        "age": 10,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 2,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_fire",
+        "intensity": 3,
+        "radius": 0,
+        "age": 10,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 2,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_fire",
+        "intensity": 3,
+        "radius": 0,
+        "age": 10,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 2,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_fire",
+        "intensity": 3,
+        "radius": 0,
+        "age": 10,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 8,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_fire",
+        "intensity": 3,
+        "radius": 0,
+        "age": 10,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 2,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_fire",
+        "intensity": 3,
+        "radius": 0,
+        "age": 10,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 2,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_fire",
+        "intensity": 3,
+        "radius": 0,
+        "age": 10,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 2,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_fire",
+        "intensity": 3,
+        "radius": 0,
+        "age": 10,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": -12,
+        "y_adjust": 1
+      },
+      {
+        "u_set_field": "fd_fire",
+        "intensity": 3,
+        "radius": 0,
+        "age": 10,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 4,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_fire",
+        "intensity": 3,
+        "radius": 0,
+        "age": 10,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": -14,
+        "y_adjust": 1
+      },
+      {
+        "u_set_field": "fd_fire",
+        "intensity": 3,
+        "radius": 0,
+        "age": 10,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 24,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_fire",
+        "intensity": 3,
+        "radius": 0,
+        "age": 10,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": -12,
+        "y_adjust": 2
+      },
+      {
+        "u_set_field": "fd_fire",
+        "intensity": 3,
+        "radius": 0,
+        "age": 10,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": -14,
+        "y_adjust": 1
+      },
+      {
+        "u_set_field": "fd_fire",
+        "intensity": 3,
+        "radius": 0,
+        "age": 10,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 28,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_fire",
+        "intensity": 3,
+        "radius": 0,
+        "age": 10,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": -29,
+        "y_adjust": 5
+      },
+      {
+        "u_set_field": "fd_fire",
+        "intensity": 3,
+        "radius": 0,
+        "age": 10,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 30,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_fire",
+        "intensity": 3,
+        "radius": 0,
+        "age": 10,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": -28,
+        "y_adjust": 8
+      },
+      {
+        "u_set_field": "fd_fire",
+        "intensity": 3,
+        "radius": 0,
+        "age": 10,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 26,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_fire",
+        "intensity": 3,
+        "radius": 0,
+        "age": 10,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": -24,
+        "y_adjust": 3
+      },
+      {
+        "u_set_field": "fd_fire",
+        "intensity": 3,
+        "radius": 0,
+        "age": 10,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 22,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_fire",
+        "intensity": 3,
+        "radius": 0,
+        "age": 10,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": -20,
+        "y_adjust": 3
+      },
+      {
+        "u_set_field": "fd_fire",
+        "intensity": 3,
+        "radius": 0,
+        "age": 10,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 18,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_fire",
+        "intensity": 3,
+        "radius": 0,
+        "age": 10,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": -16,
+        "y_adjust": 2
+      },
+      {
+        "u_set_field": "fd_fire",
+        "intensity": 3,
+        "radius": 0,
+        "age": 10,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 14,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_fire",
+        "intensity": 3,
+        "radius": 0,
+        "age": 10,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": -12,
+        "y_adjust": 2
+      },
+      {
+        "u_set_field": "fd_fire",
+        "intensity": 3,
+        "radius": 0,
+        "age": 10,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 10,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_fire",
+        "intensity": 3,
+        "radius": 0,
+        "age": 10,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": -8,
+        "y_adjust": 2
+      },
+      {
+        "u_set_field": "fd_fire",
+        "intensity": 3,
+        "radius": 0,
+        "age": 10,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 6,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_fire",
+        "intensity": 3,
+        "radius": 0,
+        "age": 10,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": -4,
+        "y_adjust": 2
+      },
+      {
+        "u_set_field": "fd_fire",
+        "intensity": 3,
+        "radius": 0,
+        "age": 10,
+        "target_var": { "context_val": "point" }
+      },
+      {
+        "location_variable_adjust": { "context_val": "point" },
+        "x_adjust": 2,
+        "y_adjust": 0
+      },
+      {
+        "u_set_field": "fd_fire",
+        "intensity": 3,
+        "radius": 0,
+        "age": 10,
+        "target_var": { "context_val": "point" }
+      },
+      { "message": "四周燃起了火焰！" }
+    ]
+  }
+]

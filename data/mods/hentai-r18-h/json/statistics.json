@@ -1,0 +1,166 @@
+[
+  {
+    "type": "event_transformation",
+    "id": "avatar_reached_orgasm",
+    "//": "1ターンで複数回絶頂する可能性があるのでu_var_changed",
+    "event_type": "u_var_changed",
+    "value_constraints": { "var": { "equals": [ "string", "reached_orgasm" ] } }
+  },
+  {
+    "type": "event_statistic",
+    "id": "num_avatar_reached_orgasm",
+    "stat_type": "count",
+    "event_transformation": "avatar_reached_orgasm",
+    "description": { "str_sp": "回絶頂した" }
+  },
+  {
+    "id": "score_reached_orgasm",
+    "type": "score",
+    "statistic": "num_avatar_reached_orgasm"
+  },
+  {
+    "type": "event_transformation",
+    "id": "avatar_finished_hentai_play_with",
+    "event_type": "character_gains_effect",
+    "value_constraints": {
+      "character": { "equals_statistic": "avatar_id" },
+      "effect": { "equals_any": [ "efftype_id", [ "finished_hentai_play_with_npc", "finished_hentai_play_with_monster" ] ] }
+    },
+    "drop_fields": [ "character", "effect" ]
+  },
+  {
+    "type": "event_statistic",
+    "id": "num_avatar_finished_hentai_play_with",
+    "stat_type": "count",
+    "event_transformation": "avatar_finished_hentai_play_with",
+    "description": { "str_sp": "回Hした"}
+  },
+  {
+    "id": "score_hentai_play_with",
+    "type": "score",
+    "statistic": "num_avatar_finished_hentai_play_with"
+  },
+  {
+    "type": "event_transformation",
+    "id": "avatar_finished_hentai_play_with_npc",
+    "event_type": "character_gains_effect",
+    "value_constraints": {
+      "character": { "equals_statistic": "avatar_id" },
+      "effect": { "equals": [ "efftype_id", "finished_hentai_play_with_npc" ] }
+    },
+    "drop_fields": [ "character", "effect" ]
+  },
+  {
+    "type": "event_statistic",
+    "id": "num_avatar_finished_hentai_play_with_npc",
+    "stat_type": "count",
+    "event_transformation": "avatar_finished_hentai_play_with_npc",
+    "description": { "str_sp": "回人間とHした"}
+  },
+  {
+    "id": "score_hentai_play_with_npc",
+    "type": "score",
+    "statistic": "num_avatar_finished_hentai_play_with_npc"
+  },
+  {
+    "type": "event_transformation",
+    "id": "avatar_finished_hentai_play_with_monster",
+    "event_type": "character_gains_effect",
+    "value_constraints": {
+      "character": { "equals_statistic": "avatar_id" },
+      "effect": { "equals": [ "efftype_id", "finished_hentai_play_with_monster" ] }
+    },
+    "drop_fields": [ "character", "effect" ]
+  },
+  {
+    "type": "event_statistic",
+    "id": "num_avatar_finished_hentai_play_with_monster",
+    "stat_type": "count",
+    "event_transformation": "avatar_finished_hentai_play_with_monster",
+    "description": { "str_sp": "回モンスターとHした"}
+  },
+  {
+    "id": "score_hentai_play_with_monster",
+    "type": "score",
+    "statistic": "num_avatar_finished_hentai_play_with_monster"
+  },
+  {
+    "type": "event_transformation",
+    "id": "avatar_finished_onani",
+    "event_type": "character_gains_effect",
+    "value_constraints": {
+      "character": { "equals_statistic": "avatar_id" },
+      "effect": { "equals": [ "efftype_id", "finished_onani" ] }
+    },
+    "drop_fields": [ "character", "effect" ]
+  },
+  {
+    "type": "event_statistic",
+    "id": "num_avatar_finished_onani",
+    "stat_type": "count",
+    "event_transformation": "avatar_finished_onani",
+    "description": { "str_sp": "回オナニーをした"}
+  },
+  {
+    "id": "score_onani",
+    "type": "score",
+    "statistic": "num_avatar_finished_onani"
+  },
+  {
+    "type": "event_transformation",
+    "id": "character_finished_labor_pain",
+    "event_type": "character_loses_effect",
+    "value_constraints": {
+      "effect": { "equals": [ "efftype_id", "labor_pain" ] }
+    },
+    "drop_fields": [ "effect" ]
+  },
+  {
+    "type": "event_statistic",
+    "id": "num_character_finished_labor_pain",
+    "stat_type": "count",
+    "event_transformation": "character_finished_labor_pain",
+    "description": { "str_sp": "人子どもができた"}
+  },
+  {
+    "id": "score_dd_child",
+    "type": "score",
+    "statistic": "num_character_finished_labor_pain"
+  },
+  {
+    "type": "event_transformation",
+    "id": "avatar_finished_labor_pain",
+    "event_type": "character_loses_effect",
+    "value_constraints": {
+      "character": { "equals_statistic": "avatar_id" },
+      "effect": { "equals": [ "efftype_id", "labor_pain" ] }
+    },
+    "drop_fields": [ "character", "effect" ]
+  },
+  {
+    "type": "event_statistic",
+    "id": "num_avatar_finished_labor_pain",
+    "stat_type": "count",
+    "event_transformation": "avatar_finished_labor_pain",
+    "description": { "str_sp": "人出産した"}
+  },
+  {
+    "id": "score_labor_pain",
+    "type": "score",
+    "statistic": "num_avatar_finished_labor_pain"
+  },
+  {
+    "id": "achievement_mutation_threshold_fiend",
+    "type": "achievement",
+    "name": "アビス",
+    "requirements": [
+      {
+        "event_statistic": "avatar_last_crosses_mutation_threshold",
+        "is": "==",
+        "target": [ "mutation_category_id", "FIEND" ],
+        "description": "悪魔の閾を超える",
+        "visible": "when_achievement_completed"
+      }
+    ]
+  }
+]

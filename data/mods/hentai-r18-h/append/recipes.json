@@ -1,0 +1,24 @@
+[
+  {
+    "type": "recipe",
+    "result": "breast_pump",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_OTHER",
+    "activity_level": "NO_EXERCISE",
+    "time": "10 s",
+    "reversible": true,
+    "autolearn": true,
+    "components": [ [ [ "bottle_plastic_small", 1 ] ], [ [ "breast_pump_handle", 1 ] ] ],
+    "flags": [ "BLIND_EASY" ]
+  },
+  {
+    "id": "milk_standard",
+    "type": "requirement",
+    "extend": { "components": [ [ [ "breast_milk", 1 ] ] ] }
+  },
+  {
+    "id": "milk_standard_raw_fresh",
+    "type": "requirement",
+    "extend": { "components": [ [ [ "breast_milk", 1 ] ] ] }
+  }
+]

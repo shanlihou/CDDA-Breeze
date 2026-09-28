@@ -1,0 +1,13 @@
+[
+  {
+    "id": "flintlock_ammo_magic",
+    "type": "ITEM",
+    "subtypes": [ "AMMO" ],
+    "copy-from": "flintlock_ammo",
+    "name": { "str_sp": "纸制弹匣（魔弹）" },
+    "description": "一种装有黑色粉末和金属弹丸的纸筒。子弹上画着魔法纹路，前6发一定会击中目标，而第7发则会在发射后飞向最不希望击中的目标。《魔弹射手》(Der Freischütz)，德国作曲家韦伯的代表作。",
+    "count": 7,
+    "damage": { "damage_type": "bullet", "amount": 50 },
+    "effects": [ "COOKOFF", "MUZZLE_SMOKE", "SHOT", "BOUNCE", "NEVER_MISFIRES" ]
+  }
+]

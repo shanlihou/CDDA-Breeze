@@ -1,0 +1,26 @@
+[
+  {
+	  "type": "mod_tileset",
+	  "compatibility": [ "UNDEAD_PEOPLE", "UNDEAD_PEOPLE_BASE", "MshockRealXotto", "Chibi_Ultica", "MshockXottoplus" ],
+	  "tiles-new": [
+		  {
+			  "file": "tile/hentai_effect.png",
+			  "sprite_offset_y":-16,
+			  "tiles": [
+				  {
+					  "id": ["overlay_effect_lust", "overlay_effect_corrupt"],
+					  "fg": 1
+				  },
+				  {
+					  "id": ["overlay_effect_dominate", "overlay_effect_movingdoing"],
+					  "fg": 2
+				  },
+				  {
+					  "id": "overlay_effect_estrus",
+					  "fg": 3
+				  }
+			  ]
+		  }
+	  ]
+  }
+]

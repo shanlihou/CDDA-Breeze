@@ -1,0 +1,702 @@
+[
+  {
+    "type": "talk_topic",
+    "id": [ "TALK_FRIEND", "TALK_STRANGER_NEUTRAL", "TALK_STRANGER_FRIENDLY", "TALK_SHELTER" ],
+    "insert_before_standard_exits": true,
+    "responses": [
+      {
+        "text": "<hentai_seduce_npc>",
+        "topic": "TALK_SEDUCE_NPC",
+        "effect": [
+          { "math": [ "_willing", "=", "u_val('intelligence') + u_val('perception') + u_skill('speech') * 3" ]
+          },
+          { "math": [ "_willing", "+=", "n_val('npc_trust') * 2 + n_val('npc_value') - n_val('npc_anger') / 2.0" ] },
+          { "math": [ "_willing", "*=", "n_effect_intensity('drunk') > 0 ? 1.2 : 1.0" ] },
+          { "math": [ "_willing", "*=", "n_effect_intensity('estrus') > 0 ? 3.0 : 1.0" ] },
+          { "math": [ "_willing", "+=", "n_effect_intensity('corrupt')" ] },
+          { "math": [ "_willing", "-=", "n_has_trait('VIRGIN') ? 30 : 0" ] }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_SEDUCE_NPC",
+    "dynamic_line": {
+      "math": [ "_willing", ">", "50" ],
+      "yes": "<hentai_seduce_npc_ok_love>",
+      "no": {
+        "math": [ "_willing", ">", "25" ],
+        "yes": "<hentai_seduce_npc_ok>",
+        "no": "<hentai_seduce_npc_no>"
+      }
+    },
+    "responses": [
+      {
+        "text": "马上开始吧。[使用避孕套(未开封)]",
+        "condition": { "and": [ { "math": [ "_willing", ">", "25" ] },  { "u_has_item": "condom_sealed" } ] },
+        "topic": "TALK_DONE",
+        "effect": [
+          { "math": [ "_has_partner", "=", "1" ] },
+          { "math": [ "_using_condom", "=", "1" ] },
+          { "math": [ "_opinion_changed", "=", "1" ] },
+          { "u_consume_item": "condom_sealed" },
+          { "run_eocs": "start_ACT_HENTAI_PLAY_WITH" }
+        ],
+        "opinion": { "trust": 2, "value": 2, "fear": -1, "anger": -1 }
+      },
+      {
+        "text": "马上开始吧。[使用避孕套(老旧)]",
+        "condition": { "and": [ { "math": [ "_willing", ">", "25" ] },  { "u_has_item": "condom_sealed_danger" } ] },
+        "topic": "TALK_DONE",
+        "effect": [
+          { "math": [ "_has_partner", "=", "1" ] },
+          { "math": [ "_using_condom", "=", "1" ] },
+          { "math": [ "_opinion_changed", "=", "1" ] },
+          { "math": [ "_condom_break_chance", "=", "20" ] },
+          { "u_consume_item": "condom_sealed_danger" },
+          { "run_eocs": "start_ACT_HENTAI_PLAY_WITH" }
+        ],
+        "opinion": { "trust": 2, "value": 2, "fear": -1, "anger": -1 }
+      },
+      {
+        "truefalsetext": {
+          "condition": { "or":[ { "u_has_item": "condom_sealed" }, { "u_has_item": "condom_sealed_danger" } ] },
+          "true": "想不用避孕套做。",
+          "false": "没有避孕套可以吗。"
+        },
+        "condition": { "math": [ "_willing", ">", "50" ] },
+        "topic": "TALK_SEDUCE_NPC_WITHOUT_CONDOM_OK",
+        "effect": {
+          "if": { "math": [ "HENTAI_EXTEND_PREGNANCY_ANY" ] },
+          "then": {
+            "if": { "one_in_chance": 2 },
+            "then": { "math": [ "_u_valid_for_pregnancy", "=", "1" ] },
+            "else": { "math": [ "_npc_valid_for_pregnancy", "=", "1" ] }
+          },
+          "else": {
+            "if": { "and": [ "u_male", "npc_female" ] },
+            "then": { "math": [ "_npc_valid_for_pregnancy", "=", "1" ] },
+            "else": {
+              "if": { "and": [ "u_female", "npc_male" ] },
+              "then": { "math": [ "_u_valid_for_pregnancy", "=", "1" ] }
+            }
+          }
+        }
+      },
+      {
+        "truefalsetext": {
+          "condition": { "or":[ { "u_has_item": "condom_sealed" }, { "u_has_item": "condom_sealed_danger" } ] },
+          "true": "想不用避孕套做。",
+          "false": "没有避孕套可以吗。"
+        },
+        "condition": { "math": [ "_willing > 25 ? _willing <= 50 : 0" ] },
+        "topic": "TALK_SEDUCE_NPC_WITHOUT_CONDOM_NO"
+      },
+      
+      {
+        "text": "<hentai_seduce_npc_persuade>",
+        "condition": { "math": [ "_willing", "<=", "25" ] },
+        "trial": {
+          "type": "PERSUADE",
+          "difficulty": 20,
+          "mod": [
+            [ "TRUST", 3 ],
+            [ "VALUE", 3 ],
+            [ "POS_FEAR", 1 ],
+            [ "ANGER", -1 ],
+            [ "ALTRUISM", 2 ]
+          ]
+        },
+        "success": { "topic": "TALK_SEDUCE_NPC_PERSUADE_OK" },
+        "failure": { "topic": "TALK_SEDUCE_NPC_PERSUADE_NO" }
+      },
+      {
+        "text": "[$500] <hentai_seduce_npc_persuade_owed>",
+        "condition": {
+          "and": [
+            { "math": [ "_willing", "<=", "25" ] },
+            { "not": "npc_friend" },
+            { "u_are_owed": 50000 }
+          ]
+        },
+        "topic": "TALK_SEDUCE_NPC_OWED_OK"
+      },
+      {
+        "text": "<hentai_seduce_npc_persuade_pet>",
+        "condition": { "and": [
+          { "math": [ "_willing", "<=", "25" ] },
+          {
+            "or": [
+              { "npc_has_class": "NC_ANTHRO_SUCCUBI_MOREHUMAN" },
+              { "npc_has_class": "NC_ANTHRO_SUCCUBI_LESSHUMAN" },
+              { "npc_has_class": "NC_ANTHRO_INCUBI_MOREHUMAN" },
+              { "npc_has_class": "NC_ANTHRO_INCUBI_LESSHUMAN" },
+              { "npc_has_class": "NC_ANTHRO_CANINE_MOREHUMAN_MALE" },
+              { "npc_has_class": "NC_ANTHRO_CANINE_HALF_MALE" },
+              { "npc_has_class": "NC_ANTHRO_CANINE_LESSHUMAN_MALE" },
+              { "npc_has_class": "NC_ANTHRO_CANINE_MOREHUMAN_FEMALE" },
+              { "npc_has_class": "NC_ANTHRO_CANINE_HALF_FEMALE" },
+              { "npc_has_class": "NC_ANTHRO_CANINE_LESSHUMAN_FEMALE" },
+              { "npc_has_class": "NC_ANTHRO_FELINE_MOREHUMAN_MALE" },
+              { "npc_has_class": "NC_ANTHRO_FELINE_HALF_MALE" },
+              { "npc_has_class": "NC_ANTHRO_FELINE_LESSHUMAN_MALE" },
+              { "npc_has_class": "NC_ANTHRO_FELINE_MOREHUMAN_FEMALE" },
+              { "npc_has_class": "NC_ANTHRO_FELINE_HALF_FEMALE" },
+              { "npc_has_class": "NC_ANTHRO_FELINE_LESSHUMAN_FEMALE" },
+              { "npc_has_class": "NC_ANTHRO_URSINE_MOREHUMAN_MALE" },
+              { "npc_has_class": "NC_ANTHRO_URSINE_HALF_MALE" },
+              { "npc_has_class": "NC_ANTHRO_URSINE_LESSHUMAN_MALE" },
+              { "npc_has_class": "NC_ANTHRO_URSINE_MOREHUMAN_FEMALE" },
+              { "npc_has_class": "NC_ANTHRO_URSINE_HALF_FEMALE" },
+              { "npc_has_class": "NC_ANTHRO_URSINE_LESSHUMAN_FEMALE" },
+              { "npc_has_class": "NC_ANTHRO_CATTLE_MOREHUMAN_MALE" },
+              { "npc_has_class": "NC_ANTHRO_CATTLE_HALF_MALE" },
+              { "npc_has_class": "NC_ANTHRO_CATTLE_LESSHUMAN_MALE" },
+              { "npc_has_class": "NC_ANTHRO_CATTLE_MOREHUMAN_FEMALE" },
+              { "npc_has_class": "NC_ANTHRO_CATTLE_HALF_FEMALE" },
+              { "npc_has_class": "NC_ANTHRO_CATTLE_LESSHUMAN_FEMALE" },
+              { "npc_has_class": "NC_ANTHRO_RABBIT_MOREHUMAN_MALE" },
+              { "npc_has_class": "NC_ANTHRO_RABBIT_HALF_MALE" },
+              { "npc_has_class": "NC_ANTHRO_RABBIT_LESSHUMAN_MALE" },
+              { "npc_has_class": "NC_ANTHRO_RABBIT_MOREHUMAN_FEMALE" },
+              { "npc_has_class": "NC_ANTHRO_RABBIT_HALF_FEMALE" },
+              { "npc_has_class": "NC_ANTHRO_RABBIT_LESSHUMAN_FEMALE" },
+              { "npc_has_class": "NC_ANTHRO_BIRD_MOREHUMAN_MALE" },
+              { "npc_has_class": "NC_ANTHRO_BIRD_HALF_MALE" },
+              { "npc_has_class": "NC_ANTHRO_BIRD_LESSHUMAN_MALE" },
+              { "npc_has_class": "NC_ANTHRO_BIRD_MOREHUMAN_FEMALE" },
+              { "npc_has_class": "NC_ANTHRO_BIRD_HALF_FEMALE" },
+              { "npc_has_class": "NC_ANTHRO_BIRD_LESSHUMAN_FEMALE" }
+            ]
+          }
+        ] },
+        "topic": "TALK_SEDUCE_NPC_PET_OK"
+      },
+      
+      {
+        "text": "<hentai_seduce_npc_intimidate>",
+        "condition": { "math": [ "_willing", "<=", "25" ] },
+        "trial": {
+          "type": "INTIMIDATE",
+          "difficulty": 20,
+          "mod": [
+            [ "POS_FEAR", 5 ],
+            [ "BRAVERY", -2 ],
+            [ "AGGRESSION", -2 ]
+          ]
+        },
+        "success": { "topic": "TALK_SEDUCE_NPC_INTIMIDATE_OK" },
+        "failure": { "topic": "TALK_SEDUCE_NPC_INTIMIDATE_NO", "effect": "hostile" }
+      },
+      
+      { "text": "刚才的忘掉吧。", "topic": "TALK_NONE" }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_SEDUCE_NPC_WITHOUT_CONDOM_OK",
+    "dynamic_line": [
+      "<hentai_seduce_npc_without_condom_ok>",
+      {
+        "math": [ "_u_valid_for_pregnancy" ],
+        "yes": [
+          "你愿意为我生孩子吗？我很乐意配合。",
+          "可以吗？那必须要加油了。",
+          "说好了哦？中途改变主意可不行。"
+        ],
+        "no": {
+          "math": [ "_npc_valid_for_pregnancy" ],
+          "yes": [
+            "嗯，我想和你有一个孩子。",
+            "OK，直到受精为止，我可不会让你逃走的。",
+            "要好好负起责任哦。"
+          ],
+          "no": "一起孕育两人爱的结晶吧。"
+        }
+      }
+    ],
+    "responses": [
+      {
+        "text": "马上开始吧。",
+        "topic": "TALK_DONE",
+        "effect": [
+          { "math": [ "_has_partner", "=", "1" ] },
+          { "math": [ "_using_condom", "=", "0" ] },
+          { "math": [ "_opinion_changed", "=", "1" ] },
+          { "run_eocs": "start_ACT_HENTAI_PLAY_WITH" }
+        ],
+        "opinion": { "trust": 2, "value": 2, "fear": -1, "anger": -1 }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_SEDUCE_NPC_WITHOUT_CONDOM_NO",
+    "dynamic_line": "<hentai_seduce_npc_without_condom_no>",
+    "responses": [
+      {
+        "text": "<hentai_seduce_npc_persuade_pet>",
+        "topic": "TALK_SEDUCE_NPC_PET_OK",
+        "condition": { "and": [
+          { "math": [ "HENTAI_EXTEND_NAMAHAME_PET" ] },
+          {
+            "or": [
+              { "npc_has_class": "NC_ANTHRO_SUCCUBI_MOREHUMAN" },
+              { "npc_has_class": "NC_ANTHRO_SUCCUBI_LESSHUMAN" },
+              { "npc_has_class": "NC_ANTHRO_INCUBI_MOREHUMAN" },
+              { "npc_has_class": "NC_ANTHRO_INCUBI_LESSHUMAN" },
+              { "npc_has_class": "NC_ANTHRO_CANINE_MOREHUMAN_MALE" },
+              { "npc_has_class": "NC_ANTHRO_CANINE_HALF_MALE" },
+              { "npc_has_class": "NC_ANTHRO_CANINE_LESSHUMAN_MALE" },
+              { "npc_has_class": "NC_ANTHRO_FELINE_MOREHUMAN_MALE" },
+              { "npc_has_class": "NC_ANTHRO_FELINE_HALF_MALE" },
+              { "npc_has_class": "NC_ANTHRO_FELINE_LESSHUMAN_MALE" },
+              { "npc_has_class": "NC_ANTHRO_URSINE_MOREHUMAN_MALE" },
+              { "npc_has_class": "NC_ANTHRO_URSINE_HALF_MALE" },
+              { "npc_has_class": "NC_ANTHRO_URSINE_LESSHUMAN_MALE" },
+              { "npc_has_class": "NC_ANTHRO_CANINE_MOREHUMAN_FEMALE" },
+              { "npc_has_class": "NC_ANTHRO_CANINE_HALF_FEMALE" },
+              { "npc_has_class": "NC_ANTHRO_CANINE_LESSHUMAN_FEMALE" },
+              { "npc_has_class": "NC_ANTHRO_FELINE_MOREHUMAN_FEMALE" },
+              { "npc_has_class": "NC_ANTHRO_FELINE_HALF_FEMALE" },
+              { "npc_has_class": "NC_ANTHRO_FELINE_LESSHUMAN_FEMALE" },
+              { "npc_has_class": "NC_ANTHRO_URSINE_MOREHUMAN_FEMALE" },
+              { "npc_has_class": "NC_ANTHRO_URSINE_HALF_FEMALE" },
+              { "npc_has_class": "NC_ANTHRO_URSINE_LESSHUMAN_FEMALE" }
+            ]
+          }
+        ] }
+      },
+      { "text": "抱歉。", "topic": "TALK_NONE" }
+    ]
+  },
+  
+  {
+    "type": "talk_topic",
+    "id": "TALK_SEDUCE_NPC_PERSUADE_OK",
+    "dynamic_line": "<hentai_seduce_npc_persuade_ok>",
+    "responses": [
+      {
+        "text": "马上开始吧。[使用避孕套(未开封)]",
+        "topic": "TALK_DONE",
+        "condition": { "u_has_item": "condom_sealed" },
+        "effect": [
+          { "math": [ "_has_partner", "=", "1" ] },
+          { "math": [ "_using_condom", "=", "1" ] },
+          { "math": [ "_opinion_changed", "=", "1" ] },
+          { "u_consume_item": "condom_sealed" },
+          { "run_eocs": "start_ACT_HENTAI_PLAY_WITH" }
+        ],
+        "opinion": { "trust": 1, "value": 1 }
+      },
+      {
+        "text": "马上开始吧。[使用避孕套(老旧)]",
+        "topic": "TALK_DONE",
+        "condition": { "u_has_item": "condom_sealed_danger" },
+        "effect": [
+          { "math": [ "_has_partner", "=", "1" ] },
+          { "math": [ "_using_condom", "=", "1" ] },
+          { "math": [ "_opinion_changed", "=", "1" ] },
+          { "math": [ "_condom_break_chance", "=", "20" ] },
+          { "u_consume_item": "condom_sealed_danger" },
+          { "run_eocs": "start_ACT_HENTAI_PLAY_WITH" }
+        ],
+        "opinion": { "trust": 1, "value": 1 }
+      },
+      {
+        "truefalsetext": {
+          "condition": { "or":[ { "u_has_item": "condom_sealed" }, { "u_has_item": "condom_sealed_danger" } ] },
+          "true": "还是算了吧。",
+          "false": "说起来我身上没带避孕套，还是算了吧。"
+        },
+        "topic": "TALK_NONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_SEDUCE_NPC_PERSUADE_NO",
+    "dynamic_line": "<hentai_seduce_npc_persuade_no>",
+    "responses": [
+      {
+        "text": "抱歉。",
+        "topic": "TALK_DONE",
+        "opinion": { "trust": -1, "value": -1, "anger": 1 }
+      }
+    ]
+  },
+  
+  {
+    "type": "talk_topic",
+    "id": "TALK_SEDUCE_NPC_OWED_OK",
+    "dynamic_line": "<hentai_seduce_npc_persuade_owed_ok>",
+    "responses": [
+      {
+        "text": "马上开始吧。[使用避孕套(未开封)]",
+        "topic": "TALK_DONE",
+        "condition": { "u_has_item": "condom_sealed" },
+        "effect": [
+          { "math": [ "_has_partner", "=", "1" ] },
+          { "math": [ "_using_condom", "=", "1" ] },
+          { "math": [ "_opinion_changed", "=", "1" ] },
+          { "u_consume_item": "condom_sealed" },
+          { "run_eocs": "start_ACT_HENTAI_PLAY_WITH" }
+        ],
+        "opinion": { "trust": -2, "owed": -50000 }
+      },
+      {
+        "text": "马上开始吧。[使用避孕套(老旧)]",
+        "topic": "TALK_DONE",
+        "condition": { "u_has_item": "condom_sealed_danger" },
+        "effect": [
+          { "math": [ "_has_partner", "=", "1" ] },
+          { "math": [ "_using_condom", "=", "1" ] },
+          { "math": [ "_opinion_changed", "=", "1" ] },
+          { "math": [ "_condom_break_chance", "=", "20" ] },
+          { "u_consume_item": "condom_sealed_danger" },
+          { "run_eocs": "start_ACT_HENTAI_PLAY_WITH" }
+        ],
+        "opinion": { "trust": -2, "owed": -50000 }
+      },
+      {
+        "text": "马上开始吧。[不使用避孕套]",
+        "topic": "TALK_DONE",
+        "effect": [
+          { "math": [ "_has_partner", "=", "1" ] },
+          { "math": [ "_using_condom", "=", "0" ] },
+          { "math": [ "_opinion_changed", "=", "1" ] },
+          { "run_eocs": "start_ACT_HENTAI_PLAY_WITH" }
+        ],
+        "opinion": { "trust": -2, "owed": -50000 }
+      },
+      {
+        "text": "还是算了吧。",
+        "topic": "TALK_NONE"
+      }
+    ]
+  },
+  
+  {
+    "type": "talk_topic",
+    "id": "TALK_SEDUCE_NPC_PET_OK",
+    "dynamic_line": "<hentai_seduce_npc_pet_ok>",
+    "responses": [
+      {
+        "text": "马上开始吧。[使用避孕套(未开封)]",
+        "topic": "TALK_DONE",
+        "condition": { "u_has_item": "condom_sealed" },
+        "effect": [
+          { "math": [ "_has_partner", "=", "1" ] },
+          { "math": [ "_using_condom", "=", "1" ] },
+          { "math": [ "_opinion_changed", "=", "1" ] },
+          { "u_consume_item": "condom_sealed" },
+          { "run_eocs": "start_ACT_HENTAI_PLAY_WITH" }
+        ]
+      },
+      {
+        "text": "马上开始吧。[使用避孕套(老旧)]",
+        "topic": "TALK_DONE",
+        "condition": { "u_has_item": "condom_sealed_danger" },
+        "effect": [
+          { "math": [ "_has_partner", "=", "1" ] },
+          { "math": [ "_using_condom", "=", "1" ] },
+          { "math": [ "_opinion_changed", "=", "1" ] },
+          { "math": [ "_condom_break_chance", "=", "20" ] },
+          { "u_consume_item": "condom_sealed_danger" },
+          { "run_eocs": "start_ACT_HENTAI_PLAY_WITH" }
+        ]
+      },
+      {
+        "text": "马上开始吧。[不使用避孕套]",
+        "topic": "TALK_DONE",
+        "effect": [
+          { "math": [ "_has_partner", "=", "1" ] },
+          { "math": [ "_using_condom", "=", "0" ] },
+          { "math": [ "_opinion_changed", "=", "1" ] },
+          { "run_eocs": "start_ACT_HENTAI_PLAY_WITH" }
+        ]
+      },
+      {
+        "text": "还是算了吧。",
+        "topic": "TALK_NONE"
+      }
+    ]
+  },
+  
+  {
+    "type": "talk_topic",
+    "id": "TALK_SEDUCE_NPC_INTIMIDATE_OK",
+    "dynamic_line": "<hentai_seduce_npc_intimidate_ok>",
+    "responses": [
+      {
+        "text": "<hentai_seduce_npc_intimidate_with_condom>[使用避孕套(未开封)]",
+        "topic": "TALK_DONE",
+        "condition": { "u_has_item": "condom_sealed" },
+        "effect": [
+          { "math": [ "_has_partner", "=", "1" ] },
+          { "math": [ "_using_condom", "=", "1" ] },
+          { "math": [ "_opinion_changed", "=", "1" ] },
+          { "u_consume_item": "condom_sealed" },
+          { "run_eocs": "start_ACT_HENTAI_PLAY_WITH" }
+        ],
+        "opinion": { "trust": -2, "fear": 5, "anger": 1 }
+      },
+      {
+        "text": "<hentai_seduce_npc_intimidate_with_condom>[使用避孕套(老旧)]",
+        "topic": "TALK_DONE",
+        "condition": { "u_has_item": "condom_sealed_danger" },
+        "effect": [
+          { "math": [ "_has_partner", "=", "1" ] },
+          { "math": [ "_using_condom", "=", "1" ] },
+          { "math": [ "_opinion_changed", "=", "1" ] },
+          { "math": [ "_condom_break_chance", "=", "20" ] },
+          { "u_consume_item": "condom_sealed_danger" },
+          { "run_eocs": "start_ACT_HENTAI_PLAY_WITH" }
+        ],
+        "opinion": { "trust": -2, "fear": 5, "anger": 1 }
+      },
+      {
+        "text": "<hentai_seduce_npc_intimidate_without_condom>",
+        "topic": "TALK_DONE",
+        "effect": [
+          { "math": [ "_has_partner", "=", "1" ] },
+          { "math": [ "_using_condom", "=", "0" ] },
+          { "math": [ "_opinion_changed", "=", "1" ] },
+          { "run_eocs": "start_ACT_HENTAI_PLAY_WITH" }
+        ],
+        "opinion": { "trust": -2, "fear": 5, "anger": 1 }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_SEDUCE_NPC_INTIMIDATE_NO",
+    "dynamic_line": "<hentai_seduce_npc_intimidate_no>",
+    "responses": [
+      { "text": "...。", "topic": "TALK_DONE" }
+    ]
+  },
+  
+  {
+    "type": "snippet",
+    "category": "<hentai_sex>",
+    "text": [
+      "*舒服的事情*",
+      "*快乐的事情*",
+      "HENTAI",
+      "坦诚相待"
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<hentai_swear>",
+    "text": [
+      "<swear>",
+      "差劲",
+      "垃圾",
+      "贱种",
+      "恶心",
+      "畜生",
+      "傻逼",
+      "婊子"
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<hentai_seduce_npc>",
+    "text": [
+      "要和我一起做<hentai_sex>事情吗？",
+      "我在找一起<hentai_sex>的对象。",
+      "能成为我<hentai_sex>的对象吗？",
+      "想要和你一起做<hentai_sex>的事情。",
+      "沉浸于<hentai_sex>的事情，忘掉现实怎么样。",
+      "有兴趣和我做<hentai_sex>的事情吗。",
+      "想要彼此确认爱的意义吗。"
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<hentai_seduce_npc_ok_love>",
+    "text": [
+      "当然了，准备好了吗？",
+      "我一直在等着你邀请我！",
+      "要是突然袭击会更好啊。",
+      "让我们确认两人的爱吧~",
+      "本来我想更浪漫一点，不过...算了。",
+      "这种话，我可不能当作没听见啊。"
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<hentai_seduce_npc_ok>",
+    "text": [
+      "换换心情吧。",
+      "正好用来打发时间。",
+      "有带避孕套吗？带了那就可以。",
+      "不舒服的话我是不会原谅你的哦。",
+      "*放松*时间也很重要啊。"
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<hentai_seduce_npc_without_condom_ok>",
+    "text": [
+      "OK，这样会比较舒服。",
+      "那些都无所谓，快点开始吧！！",
+      "只是一次也...没关系吧？"
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<hentai_seduce_npc_without_condom_no>",
+    "text": [
+      "不行，要好好戴上。",
+      "那可不行！",
+      "我可没那么信任你。"
+    ]
+  },
+  
+  {
+    "type": "snippet",
+    "category": "<hentai_seduce_npc_no>",
+    "text": [
+      "<no>",
+      "你突然在说什么？",
+      "你开玩笑吗？",
+      "你能再说一遍吗？我没听错吧？",
+      "我现在没心情。",
+      "下次再说吧。",
+      "FUCK…别误会，我可不是那个意思。"
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<hentai_seduce_npc_persuade>",
+    "text": [
+      "也不知道什么时候会死，难得这种情况不如就好好享受吧？",
+      "这种情况下，娱乐项目可是少得很哦？",
+      "这也不是电影，中途可不会有丧尸袭击什么的。",
+      "我只是想更多的了解你。",
+      "我会负责的。"
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<hentai_seduce_npc_persuade_ok>",
+    "text": [
+      "反正没有别的事请可做，就这样吧。",
+      "说实话，我还是有点兴趣的。",
+      "好吧，因为这指不定可能就是最后一次机会了。",
+      "好吧，如果不舒服的话我可不会放过你。",
+      "既然你这么说，那你应该很有自信吧？让我确认一下。"
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<hentai_seduce_npc_persuade_no>",
+    "text": [
+      "<fuck_you>",
+      "和你做爱？还不如死了算了。",
+      "给我滚蛋，<hentai_swear>。",
+      "你给我闭嘴，<hentai_swear>。",
+      "<hentai_swear>，别他妈靠近我。",
+      "滚那边自己解决。",
+      "找找哪里掉了本花花公子杂志？够你用了吧？",
+      "那我觉得还是去城里和丧尸做的好。",
+      "去让淫魔袭击都比和你更好吧？",
+      "我觉得米·戈很适合你。",
+      "和史莱姆做都比这好吧？"
+    ]
+  },
+  
+  {
+    "type": "snippet",
+    "category": "<hentai_seduce_npc_persuade_owed>",
+    "text": [
+      "我会给你减少债务。",
+      "这么说来，你好像欠的有点多，现在能马上还清吗。",
+      "我的意思是，希望你能用你的身体偿还债务。"
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<hentai_seduce_npc_persuade_owed_ok>",
+    "text": [
+      "<hentai_swear>...最开始的目的就是身体吗。",
+      "<hentai_swear>...居然被这种人抓到把柄。",
+      "<hentai_swear>...仅此一次。",
+      "<hentai_swear>...真没想到你是这种人。",
+      "<hentai_swear>...随你的便吧。"
+    ]
+  },
+
+  {
+   "type": "snippet",
+   "category": "<hentai_seduce_npc_persuade_pet>",
+   "text": [
+     "你可是宠物，给我乖乖听话。",
+     "宠物可能反抗主人吗？",
+     "这就是我把你变成这样的原因，给我做好准备吧。",
+     "早知道这样的话，也许保持原来的样子可能会更好。"
+   ]
+  },
+  {
+   "type": "snippet",
+   "category": "<hentai_seduce_npc_pet_ok>",
+   "text":[
+     "(要是主人更温柔一点就好了…)",
+     "就算是宠物，也不是什么都可以做的对吧？对的吧？",
+     "...难道其他人都不理你？",
+     "没办法啊——就由我来安慰一下没人要的可怜主人吧。"
+   ]
+  },
+  
+  {
+    "type": "snippet",
+    "category": "<hentai_seduce_npc_intimidate>",
+    "text": [
+      "吵死了，给我快点。",
+      "别废话了，给我做吧。",
+      "你还是乖乖听话，起码不会痛。",
+      "我可没兴趣玩弄尸体。",
+      "原来如此，但是动弹不得的话，你的意志就没有决定权了。",
+      "看着我的<mywp>，你要不再想想？。"
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<hentai_seduce_npc_intimidate_ok>",
+    "text": [
+      "好...好吧！但是至少要用避孕套...",
+      "我会老实的，但避孕套起码得有吧...",
+      "<hentai_swear>...有避孕套吗？"
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<hentai_seduce_npc_intimidate_no>",
+    "text": [
+      "<hentai_swear>、<ill_kill_you>"
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<hentai_seduce_npc_intimidate_with_condom>",
+    "text": [
+      "要不要用还得看你的努力了。",
+      "老实点的话，我也不是不能用。",
+      "稍微努力点吧，这点小事还用我说？",
+      "吵死了，你只需要安静就行。"
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<hentai_seduce_npc_intimidate_without_condom>",
+    "text": [
+      "不好意思，没有你的份。",
+      "你怎样都无所谓，这由我来决定。",
+      "不带套更舒服吧？为什么要用呢？"
+    ]
+  }
+]

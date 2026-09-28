@@ -1,0 +1,549 @@
+[
+  {
+    "type": "talk_topic",
+    "id": [
+      "talk_mon_lessor_succubi_with_condom",
+      "talk_mon_succubi_with_condom",
+      "talk_mon_succubi_sadist_with_condom",
+      "talk_mon_succubi_somnophilia_with_condom",
+      "talk_mon_succubi_exhibitionism_with_condom",
+      "talk_mon_succubi_lactophilia_with_condom",
+      "talk_mon_greater_succubi_with_condom",
+      "talk_mon_lessor_incubi_with_condom",
+      "talk_mon_incubi_with_condom",
+      "talk_mon_incubi_sthenolagnia_with_condom",
+      "talk_mon_incubi_phalloplas_with_condom",
+      "talk_mon_incubi_hoplophilia_with_condom",
+      "talk_mon_greater_incubi_with_condom",
+      "talk_mon_corrupted_schoolgirl_with_condom",
+      "talk_mon_corrupted_schoolteacher_female_with_condom",
+      "talk_mon_corrupted_schoolboy_with_condom",
+      "talk_mon_corrupted_schoolteacher_male_with_condom"
+    ],
+    "dynamic_line": [ "*好像有点不满..." ],
+    "responses": [
+      {
+        "text": "开始",
+        "topic": "TALK_DONE",
+        "effect": [
+          { "math": [ "_has_partner", "=", "1" ] },
+          { "math": [ "_using_condom", "=", "1" ] },
+          { "u_consume_item": { "context_val": "condom" } },
+          { "run_eocs": "start_ACT_HENTAI_PLAY_WITH" }
+        ]
+      },
+      { "text": "算了", "topic": "TALK_DONE" }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": [
+      "talk_mon_lessor_succubi_without_condom",
+      "talk_mon_succubi_without_condom",
+      "talk_mon_succubi_sadist_without_condom",
+      "talk_mon_succubi_somnophilia_without_condom",
+      "talk_mon_succubi_exhibitionism_without_condom",
+      "talk_mon_succubi_lactophilia_without_condom",
+      "talk_mon_greater_succubi_without_condom",
+      "talk_mon_lessor_incubi_without_condom",
+      "talk_mon_incubi_without_condom",
+      "talk_mon_incubi_sthenolagnia_without_condom",
+      "talk_mon_incubi_phalloplas_without_condom",
+      "talk_mon_incubi_hoplophilia_without_condom",
+      "talk_mon_greater_incubi_without_condom",
+      "talk_mon_corrupted_schoolgirl_without_condom",
+      "talk_mon_corrupted_schoolteacher_female_without_condom",
+      "talk_mon_corrupted_schoolboy_without_condom",
+      "talk_mon_corrupted_schoolteacher_male_without_condom"
+    ],
+    "dynamic_line": [ "*的眼神变了！" ],
+    "responses": [
+      {
+        "text": "开始",
+        "topic": "TALK_DONE",
+        "effect": [
+          { "math": [ "_has_partner", "=", "1" ] },
+          { "math": [ "_using_condom", "=", "0" ] },
+          { "run_eocs": "start_ACT_HENTAI_PLAY_WITH" }
+        ]
+      },
+      { "text": "算了", "topic": "TALK_DONE" }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "talk_mon_lessor_succubi",
+    "responses": [
+      {
+        "text": "用避孕套(未开封)来*玩*",
+        "topic": "talk_mon_lessor_succubi_with_condom",
+        "condition": { "u_has_item": "condom_sealed" },
+        "effect": { "set_string_var": "condom_sealed", "target_var": { "context_val": "condom" } }
+      },
+      {
+        "text": "用避孕套(老旧)来*玩*",
+        "topic": "talk_mon_lessor_succubi_with_condom",
+        "condition": { "u_has_item": "condom_sealed_danger" },
+        "effect": [
+          { "set_string_var": "condom_sealed_danger", "target_var": { "context_val": "condom" } },
+          { "math": [ "_condom_break_chance", "=", "20" ] }
+        ]
+      },
+      {
+        "text": "直接*接触*",
+        "topic": "talk_mon_lessor_succubi_without_condom",
+        "condition": { "math": [ "HENTAI_EXTEND_NAMAHAME_PET" ] }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "talk_mon_succubi",
+    "responses": [
+      {
+        "text": "用避孕套(老旧)来*玩*",
+        "topic": "talk_mon_succubi_with_condom",
+        "condition": { "u_has_item": "condom_sealed" },
+        "effect": { "set_string_var": "condom_sealed", "target_var": { "context_val": "condom" } }
+      },
+      {
+        "text": "用避孕套(老旧)来*玩*",
+        "topic": "talk_mon_succubi_with_condom",
+        "condition": { "u_has_item": "condom_sealed_danger" },
+        "effect": [
+          { "set_string_var": "condom_sealed_danger", "target_var": { "context_val": "condom" } },
+          { "math": [ "_condom_break_chance", "=", "20" ] }
+        ]
+      },
+      {
+        "text": "直接*接触*",
+        "topic": "talk_mon_succubi_without_condom",
+        "condition": { "math": [ "HENTAI_EXTEND_NAMAHAME_PET" ] }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "talk_mon_succubi_sadist",
+    "responses": [
+      {
+        "text": "用避孕套(老旧)来*玩*",
+        "topic": "talk_mon_succubi_sadist_with_condom",
+        "condition": { "u_has_item": "condom_sealed" },
+        "effect": { "set_string_var": "condom_sealed", "target_var": { "context_val": "condom" } }
+      },
+      {
+        "text": "用避孕套(老旧)来*玩*",
+        "topic": "talk_mon_succubi_sadist_with_condom",
+        "condition": { "u_has_item": "condom_sealed_danger" },
+        "effect": [
+          { "set_string_var": "condom_sealed_danger", "target_var": { "context_val": "condom" } },
+          { "math": [ "_condom_break_chance", "=", "20" ] }
+        ]
+      },
+      {
+        "text": "直接*接触*",
+        "topic": "talk_mon_succubi_sadist_without_condom",
+        "condition": { "math": [ "HENTAI_EXTEND_NAMAHAME_PET" ] }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "talk_mon_succubi_somnophilia",
+    "responses": [
+      {
+        "text": "用避孕套(老旧)来*玩*",
+        "topic": "talk_mon_succubi_somnophilia_with_condom",
+        "condition": { "u_has_item": "condom_sealed" },
+        "effect": { "set_string_var": "condom_sealed", "target_var": { "context_val": "condom" } }
+      },
+      {
+        "text": "用避孕套(老旧)来*玩*",
+        "topic": "talk_mon_succubi_somnophilia_with_condom",
+        "condition": { "u_has_item": "condom_sealed_danger" },
+        "effect": [
+          { "set_string_var": "condom_sealed_danger", "target_var": { "context_val": "condom" } },
+          { "math": [ "_condom_break_chance", "=", "20" ] }
+        ]
+      },
+      {
+        "text": "直接*接触*",
+        "topic": "talk_mon_succubi_somnophilia_without_condom",
+        "condition": { "math": [ "HENTAI_EXTEND_NAMAHAME_PET" ] }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "talk_mon_succubi_exhibitionism",
+    "responses": [
+      {
+        "text": "用避孕套(老旧)来*玩*",
+        "topic": "talk_mon_succubi_exhibitionism_with_condom",
+        "condition": { "u_has_item": "condom_sealed" },
+        "effect": { "set_string_var": "condom_sealed", "target_var": { "context_val": "condom" } }
+      },
+      {
+        "text": "用避孕套(老旧)来*玩*",
+        "topic": "talk_mon_succubi_exhibitionism_with_condom",
+        "condition": { "u_has_item": "condom_sealed_danger" },
+        "effect": [
+          { "set_string_var": "condom_sealed_danger", "target_var": { "context_val": "condom" } },
+          { "math": [ "_condom_break_chance", "=", "20" ] }
+        ]
+      },
+      {
+        "text": "直接*接触*",
+        "topic": "talk_mon_succubi_exhibitionism_without_condom",
+        "condition": { "math": [ "HENTAI_EXTEND_NAMAHAME_PET" ] }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "talk_mon_succubi_lactophilia",
+    "responses": [
+      {
+        "text": "用避孕套(老旧)来*玩*",
+        "topic": "talk_mon_succubi_lactophilia_with_condom",
+        "condition": { "u_has_item": "condom_sealed" },
+        "effect": { "set_string_var": "condom_sealed", "target_var": { "context_val": "condom" } }
+      },
+      {
+        "text": "用避孕套(老旧)来*玩*",
+        "topic": "talk_mon_succubi_lactophilia_with_condom",
+        "condition": { "u_has_item": "condom_sealed_danger" },
+        "effect": [
+          { "set_string_var": "condom_sealed_danger", "target_var": { "context_val": "condom" } },
+          { "math": [ "_condom_break_chance", "=", "20" ] }
+        ]
+      },
+      {
+        "text": "直接*接触*",
+        "topic": "talk_mon_succubi_lactophilia_without_condom",
+        "condition": { "math": [ "HENTAI_EXTEND_NAMAHAME_PET" ] }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "talk_mon_greater_succubi",
+    "responses": [
+      {
+        "text": "用避孕套(老旧)来*玩*",
+        "topic": "talk_mon_greater_succubi_with_condom",
+        "condition": { "u_has_item": "condom_sealed" },
+        "effect": { "set_string_var": "condom_sealed", "target_var": { "context_val": "condom" } }
+      },
+      {
+        "text": "用避孕套(老旧)来*玩*",
+        "topic": "talk_mon_greater_succubi_with_condom",
+        "condition": { "u_has_item": "condom_sealed_danger" },
+        "effect": [
+          { "set_string_var": "condom_sealed_danger", "target_var": { "context_val": "condom" } },
+          { "math": [ "_condom_break_chance", "=", "20" ] }
+        ]
+      },
+      {
+        "text": "直接*接触*",
+        "topic": "talk_mon_greater_succubi_without_condom",
+        "condition": { "math": [ "HENTAI_EXTEND_NAMAHAME_PET" ] }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "talk_mon_lessor_incubi",
+    "responses": [
+      {
+        "text": "用避孕套(老旧)来*玩*",
+        "topic": "talk_mon_lessor_incubi_with_condom",
+        "condition": { "u_has_item": "condom_sealed" },
+        "effect": { "set_string_var": "condom_sealed", "target_var": { "context_val": "condom" } }
+      },
+      {
+        "text": "用避孕套(老旧)来*玩*",
+        "topic": "talk_mon_lessor_incubi_with_condom",
+        "condition": { "u_has_item": "condom_sealed_danger" },
+        "effect": [
+          { "set_string_var": "condom_sealed_danger", "target_var": { "context_val": "condom" } },
+          { "math": [ "_condom_break_chance", "=", "20" ] }
+        ]
+      },
+      {
+        "text": "直接*接触*",
+        "topic": "talk_mon_lessor_incubi_without_condom",
+        "condition": { "math": [ "HENTAI_EXTEND_NAMAHAME_PET" ] }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "talk_mon_incubi",
+    "responses": [
+      {
+        "text": "用避孕套(老旧)来*玩*",
+        "topic": "talk_mon_incubi_with_condom",
+        "condition": { "u_has_item": "condom_sealed" },
+        "effect": { "set_string_var": "condom_sealed", "target_var": { "context_val": "condom" } }
+      },
+      {
+        "text": "用避孕套(老旧)来*玩*",
+        "topic": "talk_mon_incubi_with_condom",
+        "condition": { "u_has_item": "condom_sealed_danger" },
+        "effect": [
+          { "set_string_var": "condom_sealed_danger", "target_var": { "context_val": "condom" } },
+          { "math": [ "_condom_break_chance", "=", "20" ] }
+        ]
+      },
+      {
+        "text": "直接*接触*",
+        "topic": "talk_mon_incubi_without_condom",
+        "condition": { "math": [ "HENTAI_EXTEND_NAMAHAME_PET" ] }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "talk_mon_incubi_sthenolagnia",
+    "responses": [
+      {
+        "text": "用避孕套(老旧)来*玩*",
+        "topic": "talk_mon_incubi_sthenolagnia_with_condom",
+        "condition": { "u_has_item": "condom_sealed" },
+        "effect": { "set_string_var": "condom_sealed", "target_var": { "context_val": "condom" } }
+      },
+      {
+        "text": "用避孕套(老旧)来*玩*",
+        "topic": "talk_mon_incubi_sthenolagnia_with_condom",
+        "condition": { "u_has_item": "condom_sealed_danger" },
+        "effect": [
+          { "set_string_var": "condom_sealed_danger", "target_var": { "context_val": "condom" } },
+          { "math": [ "_condom_break_chance", "=", "20" ] }
+        ]
+      },
+      {
+        "text": "直接*接触*",
+        "topic": "talk_mon_incubi_sthenolagnia_without_condom",
+        "condition": { "math": [ "HENTAI_EXTEND_NAMAHAME_PET" ] }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "talk_mon_incubi_phalloplas",
+    "responses": [
+      {
+        "text": "用避孕套(老旧)来*玩*",
+        "topic": "talk_mon_incubi_phalloplas_with_condom",
+        "condition": { "u_has_item": "condom_sealed" },
+        "effect": { "set_string_var": "condom_sealed", "target_var": { "context_val": "condom" } }
+      },
+      {
+        "text": "用避孕套(老旧)来*玩*",
+        "topic": "talk_mon_incubi_phalloplas_with_condom",
+        "condition": { "u_has_item": "condom_sealed_danger" },
+        "effect": [
+          { "set_string_var": "condom_sealed_danger", "target_var": { "context_val": "condom" } },
+          { "math": [ "_condom_break_chance", "=", "20" ] }
+        ]
+      },
+      {
+        "text": "直接*接触*",
+        "topic": "talk_mon_incubi_phalloplas_without_condom",
+        "condition": { "math": [ "HENTAI_EXTEND_NAMAHAME_PET" ] }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "talk_mon_incubi_hoplophilia",
+    "responses": [
+      {
+        "text": "用避孕套(老旧)来*玩*",
+        "topic": "talk_mon_incubi_hoplophilia_with_condom",
+        "condition": { "u_has_item": "condom_sealed" },
+        "effect": { "set_string_var": "condom_sealed", "target_var": { "context_val": "condom" } }
+      },
+      {
+        "text": "用避孕套(老旧)来*玩*",
+        "topic": "talk_mon_incubi_hoplophilia_with_condom",
+        "condition": { "u_has_item": "condom_sealed_danger" },
+        "effect": [
+          { "set_string_var": "condom_sealed_danger", "target_var": { "context_val": "condom" } },
+          { "math": [ "_condom_break_chance", "=", "20" ] }
+        ]
+      },
+      {
+        "text": "直接*接触*",
+        "topic": "talk_mon_incubi_hoplophilia_without_condom",
+        "condition": { "math": [ "HENTAI_EXTEND_NAMAHAME_PET" ] }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "talk_mon_greater_incubi",
+    "responses": [
+      {
+        "text": "用避孕套(老旧)来*玩*",
+        "topic": "talk_mon_greater_incubi_with_condom",
+        "condition": { "u_has_item": "condom_sealed" },
+        "effect": { "set_string_var": "condom_sealed", "target_var": { "context_val": "condom" } }
+      },
+      {
+        "text": "用避孕套(老旧)来*玩*",
+        "topic": "talk_mon_greater_incubi_with_condom",
+        "condition": { "u_has_item": "condom_sealed_danger" },
+        "effect": [
+          { "set_string_var": "condom_sealed_danger", "target_var": { "context_val": "condom" } },
+          { "math": [ "_condom_break_chance", "=", "20" ] }
+        ]
+      },
+      {
+        "text": "直接*接触*",
+        "topic": "talk_mon_greater_incubi_without_condom",
+        "condition": { "math": [ "HENTAI_EXTEND_NAMAHAME_PET" ] }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "talk_mon_corrupted_schoolgirl",
+    "responses": [
+      {
+        "text": "用避孕套(老旧)来*玩*",
+        "topic": "talk_mon_corrupted_schoolgirl_with_condom",
+        "condition": { "u_has_item": "condom_sealed" },
+        "effect": { "set_string_var": "condom_sealed", "target_var": { "context_val": "condom" } }
+      },
+      {
+        "text": "用避孕套(老旧)来*玩*",
+        "topic": "talk_mon_corrupted_schoolgirl_with_condom",
+        "condition": { "u_has_item": "condom_sealed_danger" },
+        "effect": [
+          { "set_string_var": "condom_sealed_danger", "target_var": { "context_val": "condom" } },
+          { "math": [ "_condom_break_chance", "=", "20" ] }
+        ]
+      },
+      {
+        "text": "直接*接触*",
+        "topic": "talk_mon_corrupted_schoolgirl_without_condom",
+        "condition": { "math": [ "HENTAI_EXTEND_NAMAHAME_PET" ] }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "talk_mon_corrupted_schoolteacher_female",
+    "responses": [
+      {
+        "text": "用避孕套(老旧)来*玩*",
+        "topic": "talk_mon_corrupted_schoolteacher_female_with_condom",
+        "condition": { "u_has_item": "condom_sealed" },
+        "effect": { "set_string_var": "condom_sealed", "target_var": { "context_val": "condom" } }
+      },
+      {
+        "text": "用避孕套(老旧)来*玩*",
+        "topic": "talk_mon_corrupted_schoolteacher_female_with_condom",
+        "condition": { "u_has_item": "condom_sealed_danger" },
+        "effect": [
+          { "set_string_var": "condom_sealed_danger", "target_var": { "context_val": "condom" } },
+          { "math": [ "_condom_break_chance", "=", "20" ] }
+        ]
+      },
+      {
+        "text": "直接*接触*",
+        "topic": "talk_mon_corrupted_schoolteacher_female_without_condom",
+        "condition": { "math": [ "HENTAI_EXTEND_NAMAHAME_PET" ] }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "talk_mon_corrupted_schoolboy",
+    "responses": [
+      {
+        "text": "用避孕套(老旧)来*玩*",
+        "topic": "talk_mon_corrupted_schoolboy_with_condom",
+        "condition": { "u_has_item": "condom_sealed" },
+        "effect": { "set_string_var": "condom_sealed", "target_var": { "context_val": "condom" } }
+      },
+      {
+        "text": "用避孕套(老旧)来*玩*",
+        "topic": "talk_mon_corrupted_schoolboy_with_condom",
+        "condition": { "u_has_item": "condom_sealed_danger" },
+        "effect": [
+          { "set_string_var": "condom_sealed_danger", "target_var": { "context_val": "condom" } },
+          { "math": [ "_condom_break_chance", "=", "20" ] }
+        ]
+      },
+      {
+        "text": "直接*接触*",
+        "topic": "talk_mon_corrupted_schoolboy_without_condom",
+        "condition": { "math": [ "HENTAI_EXTEND_NAMAHAME_PET" ] }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "talk_mon_corrupted_schoolteacher_male",
+    "responses": [
+      {
+        "text": "用避孕套(老旧)来*玩*",
+        "topic": "talk_mon_corrupted_schoolteacher_male_with_condom",
+        "condition": { "u_has_item": "condom_sealed" },
+        "effect": { "set_string_var": "condom_sealed", "target_var": { "context_val": "condom" } }
+      },
+      {
+        "text": "用避孕套(老旧)来*玩*",
+        "topic": "talk_mon_corrupted_schoolteacher_male_with_condom",
+        "condition": { "u_has_item": "condom_sealed_danger" },
+        "effect": [
+          { "set_string_var": "condom_sealed_danger", "target_var": { "context_val": "condom" } },
+          { "math": [ "_condom_break_chance", "=", "20" ] }
+        ]
+      },
+      {
+        "text": "直接*接触*",
+        "topic": "talk_mon_corrupted_schoolteacher_male_without_condom",
+        "condition": { "math": [ "HENTAI_EXTEND_NAMAHAME_PET" ] }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": [
+      "talk_mon_lessor_succubi",
+      "talk_mon_succubi",
+      "talk_mon_succubi_sadist",
+      "talk_mon_succubi_somnophilia",
+      "talk_mon_succubi_exhibitionism",
+      "talk_mon_succubi_lactophilia",
+      "talk_mon_greater_succubi",
+      "talk_mon_lessor_incubi",
+      "talk_mon_incubi",
+      "talk_mon_incubi_sthenolagnia",
+      "talk_mon_incubi_phalloplas",
+      "talk_mon_incubi_hoplophilia",
+      "talk_mon_greater_incubi",
+      "talk_mon_corrupted_schoolgirl",
+      "talk_mon_corrupted_schoolteacher_female",
+      "talk_mon_corrupted_schoolboy",
+      "talk_mon_corrupted_schoolteacher_male"
+    ],
+    "dynamic_line": [
+      "*抚摸了你的<hentai_bp>。",
+      "*摸遍了你的<hentai_bp>。",
+      "*揉捏了你的<hentai_bp>。",
+      "*玩弄了你的<hentai_bp>。",
+      "*亲吻起你的<hentai_bp>。",
+      "*舔舐了你的<hentai_bp>。",
+      "*舔遍了你的<hentai_bp>。",
+      "*吮吸了你的<hentai_bp>。",
+      "*热气吹在你的<hentai_bp>。"
+    ],
+    "responses": [ { "text": "没什么。", "topic": "TALK_DONE" } ]
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "type": "profession",
+    "id": "pregnant",
+    "name": { "male": "孕妇", "female": "孕妇" },
+    "points": -2,
+    "description": "与心爱之人结合，孕育新生命，满怀期待等待分娩...本该幸福的日子转瞬间崩塌。如今与爱人天各一方，笨重的身躯行动不便，周遭之人都将我视为累赘。虽然已临产，却全然不知腹中胎儿是否健康、能否出生、还有阵痛发作该如何应对，这些全都没有头绪。唯一清楚的是，能守护这个孩子的，只剩我这副残躯。",
+    "items": {
+      "both": {
+        "entries": [
+          { "item": "jeans" },
+          { "item": "longshirt" },
+          { "item": "socks" },
+          { "item": "sneakers" },
+          { "item": "water_clean" },
+          { "item": "wristwatch" },
+          { "item": "purse" },
+          { "group": "charged_smart_phone" }
+        ]
+      },
+      "male": { "entries": [ { "item": "boxer_shorts" } ] },
+      "female": { "entries": [ { "item": "bra" }, { "item": "panties" } ] }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_PREGNANT_PROFESSION",
+    "eoc_type": "EVENT",
+    "required_event": "game_avatar_new",
+    "condition": {
+      "and": [
+        { "math": [ "_is_new_game" ] },
+        { "compare_string": [ "pregnant", { "context_val": "avatar_profession" } ] }
+      ]
+    },
+    "effect": {
+      "u_add_effect": "pregnant9",
+      "duration": "0 s"
+    }
+  }
+]

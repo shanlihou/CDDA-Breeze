@@ -1,0 +1,38 @@
+[
+  {
+    "id": "TALK_ANTHRO_PET",
+    "type": "talk_topic",
+    "dynamic_line": "这副身体...！发生了什么！？",
+    "responses": [
+      { "text": "使用血清(人类)。", "topic": "TALK_ANTHRO_PET_ITS_MY_TREAT" },
+      { "text": "等等，还是再考虑一下吧...", "topic": "TALK_DONE" }
+    ]
+  },
+  {
+    "id": "TALK_ANTHRO_PET_ITS_MY_TREAT",
+    "type": "talk_topic",
+    "dynamic_line": "虽然不太明白...那，接下来怎么办？",
+    "responses": [
+      {
+        "text": "很高兴能这么说，来，一起走吧。",
+        "success": { "effect": "follow", "opinion": { "trust": 5, "value": 5 }, "topic": "TALK_ANTHRO_PET_BE_FELLOW" }
+      },
+      {
+        "text": "你还是我的宠物，别忘了。过来，别让我久等，宠物。",
+        "success": { "effect": "follow", "opinion": { "fear": 5, "value": 5 }, "topic": "TALK_ANTHRO_PET_BADBOY" }
+      }
+    ]
+  },
+  {
+    "id": "TALK_ANTHRO_PET_BE_FELLOW",
+    "type": "talk_topic",
+    "dynamic_line": "好的，主人！",
+    "responses": [ { "text": "(对话结束)", "topic": "TALK_DONE" } ]
+  },
+  {
+    "id": "TALK_ANTHRO_PET_BADBOY",
+    "type": "talk_topic",
+    "dynamic_line": "好的，主人！",
+    "responses": [ { "text": "(对话结束)", "topic": "TALK_DONE" } ]
+  }
+]

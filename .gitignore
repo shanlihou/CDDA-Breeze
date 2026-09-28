@@ -73,6 +73,9 @@ Directory.Build.targets
 CMakeUserPresets.json
 out/
 
+# Windows build dependencies (downloaded / built by build_win.bat)
+/deps/
+
 # Visual Studio 2015
 /msvc-full-features/*db
 /msvc-full-features/ipch

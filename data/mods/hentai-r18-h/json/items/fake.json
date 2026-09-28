@@ -1,0 +1,28 @@
+[
+  {
+    "id": "d_cumshot",
+    "type": "ITEM",
+    "subtypes": [ "AMMO" ],
+    "name": "D_CUMSHOT",
+    "description": "用于怪物特殊攻击的物品。如果你看到了这个，那就出了问题。",
+    "weight": "40 g",
+    "volume": "250 ml",
+    "material": [ "flesh", "water" ],
+    "symbol": "~",
+    "color": "pink",
+    "count": 2,
+    "stack_size": 2,
+    "ammo_type": "40x46mm",
+    "range": 25,
+    "dispersion": 12000,
+    "recoil": 1000,
+    "effects": [ "CUSTOM_EXPLOSION", "NEVER_MISFIRES" ],
+    "explode_in_fire": false,
+    "explosion": {
+      "power": 30,
+      "distance_factor": 0.1,
+      "fire": false,
+      "shrapnel": { "casing_mass": 0.03, "fragment_mass": 0.01, "recovery": 100, "drop": "d_body_fluids" }
+    }
+  }
+]

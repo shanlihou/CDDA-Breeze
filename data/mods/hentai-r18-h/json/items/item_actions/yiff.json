@@ -1,0 +1,762 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "eoc_get_intimidation",
+    "condition": { "expects_vars": [ "rslt" ] },
+    "effect": [
+      { "math": [ "v_rslt", "=", "u_val('strength') * 2" ] },
+      {
+        "u_run_inv_eocs": "random",
+        "search_data": [ { "category": "guns", "wielded_only": true } ],
+        "true_eocs": {
+          "id": "eoc_get_intimidation_gun",
+          "effect": { "math": [ "v_rslt", "+=", "10" ] }
+        }
+      },
+      {
+        "u_run_inv_eocs": "random",
+        "search_data": [ { "wielded_only": true } ],
+        "true_eocs": {
+          "id": "eoc_get_intimidation_damage",
+          "condition": {
+            "//": [
+              "TODO: 武器の何れかのタイプのダメージが12以上なら+5",
+              "H版には取得手段がない, 開発版はmelee_damageで対応可能"
+            ],
+            "math": [ "0" ]
+          },
+          "effect": { "math": [ "v_rslt", "+=", "5" ] }
+        }
+      },
+      { "math": [ "v_rslt", "+=", "u_val('stim') > 20 ? 2 : 0" ] },
+      {
+        "if": { "u_has_effect": "drunk" },
+        "then": { "math": [ "v_rslt", "-=", "4" ] },
+        "//": [
+          "現在は更にエンチャントの効果を追加するが、EOCでの手段はない",
+          "元はエンチャントの効果を反映していない"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "yiff_actor_get_willing",
+    "condition": { "expects_vars": [ "var_willing", "var_with_love" ] },
+    "effect": {
+      "if": "npc_hostile",
+      "then": [
+        { "math": [ "v_var_willing", "=", "-100.0" ] },
+        { "math": [ "v_var_with_love", "=", "0" ] }
+      ],
+      "else": [
+        {
+          "//": "talk_skill(), 現在の代替は何だろう",
+          "math": [ "_trust", "=", "u_val('intelligence') + u_val('perception') + u_skill('speech') * 3" ]
+        },
+        { "math": [ "_trust", "+=", "n_val('npc_trust') * 2 + n_val('npc_value') - n_val('npc_anger') / 2.0" ] },
+        {
+          "run_eocs": "eoc_get_intimidation",
+          "variables": { "rslt": "tmp" }
+        },
+        { "math": [ "_fear", "=", "tmp + n_val('npc_fear') * 2 + u_val('owed') / 2.0" ] },
+        {
+          "if": { "npc_has_effect": "drunk" },
+          "then": [
+            { "math": [ "_trust", "*=", "1.2" ] },
+            { "math": [ "_fear", "*=", "0.8" ] }
+          ]
+        },
+        {
+          "if": { "npc_has_effect": "estrus" },
+          "then": [
+            { "math": [ "_trust", "*=", "3.0" ] },
+            { "math": [ "_fear", "/=", "3.0" ] }
+          ]
+        },
+        { "math": [ "v_var_willing", "=", "max( _trust, _fear )" ] },
+        { "math": [ "v_var_with_love", "=", "_trust >= _fear" ] },
+        { "math": [ "v_var_willing", "+=", "n_effect_intensity('corrupt')" ] },
+        {
+          "if": { "npc_has_trait": "VIRGIN" },
+          "then": { "math": [ "v_var_willing", "-=", "30" ] }
+        }
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "yiff_actor_use",
+    "condition": { "math": [ "1" ] },
+    "//": [
+      "指定した地点にプレイヤー/NPC/モンスターがいるか、何もいないかを確認",
+      "開発版ならもっと単純になる"
+    ],
+    "effect": [
+      {
+        "u_query_tile": "around",
+        "target_var": { "context_val": "pnt" },
+        "range": 1,
+        "message": "选择使用对象的方向"
+      },
+      { "math": [ "success_sex", "=", "0" ] },
+      
+      {
+        "if": { "npc_has_flag": "CONDOM_BREAK_20" },
+        "then": { "math": [ "_condom_break_chance", "=", "20" ] },
+        "else": { "math": [ "_condom_break_chance", "=", "0" ] }
+      },
+      
+      {
+        "run_eocs": "eoc_check_u_query_tile_target",
+        "variables": { "retv": "tmp", "pnt": { "context_val": "pnt" } }
+      },
+
+      {
+        "if": { "compare_string": [ "u", { "global_val": "tmp" } ] },
+        "then": [
+          {
+            "set_string_var": "<hentai_yiff_query_myself>",
+            "target_var": { "context_val": "msg" },
+            "parse_tags": true
+          },
+          {
+            "//": "自分に使う",
+            "if": { "u_query": { "context_val": "msg" }, "default": false },
+            "then": [
+              { "math": [ "success_sex", "=", "1" ] },
+              { "math": [ "_has_partner", "=", "0" ] },
+              { "math": [ "_using_condom", "=", "1" ] },
+              { "run_eocs": "start_ACT_HENTAI_PLAY_WITH" }
+            ]
+          }
+        ],
+        "else": {
+          "if": { "not": { "compare_string": [ "null", { "global_val": "tmp" } ] } },
+          "then": {
+            "run_eocs": {
+              "id": "yiff_actor_use_to_beta",
+              "effect": [
+                { "math": [ "_using_condom", "=", "1" ] },
+                {
+                  "if": "npc_is_npc",
+                  "then": [
+                    {
+                      "set_string_var": "<hentai_yiff_query_npc>",
+                      "target_var": { "context_val": "msg" },
+                      "parse_tags": true
+                    },
+                    {
+                      "//": "対象はNPC",
+                      "if": { "u_query": { "context_val": "msg" }, "default": false },
+                      "then": [
+                        {
+                          "set_string_var": "willing",
+                          "target_var": { "context_val": "var_willing" }
+                        },
+                        {
+                          "set_string_var": "sex_with_love",
+                          "target_var": { "context_val": "var_with_love" }
+                        },
+                        { "run_eocs": [ "yiff_actor_get_willing" ] },
+                        {
+                          "if": { "math": [ "willing", "<=", "0" ] },
+                          "then": { "message": "<hentai_yiff_great_fail>", "popup": true },
+                          "else": {
+                            "if": { "math": [ "willing", "<=", "25" ] },
+                            "then": { "message": "<hentai_yiff_fail>", "popup": true },
+                            "else": [
+                              {
+                                "//": "性交に成功！",
+                                "if": { "math": [ "sex_with_love" ] },
+                                "then": {
+                                  "if": { "math": [ "willing", ">", "50" ] },
+                                  "then": [
+                                    { "message": "<hentai_yiff_great_success_with_love>", "popup": true },
+                                    {
+                                      "set_string_var": "<hentai_yiff_query_no_dev>",
+                                      "target_var": { "context_val": "msg" },
+                                      "parse_tags": true
+                                    },
+                                    {
+                                      "//": "避妊具を使わない選択を出す",
+                                      "if": { "and": [
+                                          { "math": [ "rand(100)", "<=", "willing" ] },
+                                          { "u_query": { "context_val": "msg" }, "default": false }
+                                      ] },
+                                      "then": { "math": [ "_using_condom", "=", "0" ] }
+                                    }
+                                  ],
+                                  "else": { "message": "<hentai_yiff_success_with_love>", "popup": true }
+                                },
+                                "else":{
+                                  "if": { "math": [ "willing", ">", "50" ] },
+                                  "then": { "message": "<hentai_yiff_great_success_with_fear>", "popup": true },
+                                  "else": { "message": "<hentai_yiff_success_with_fear>", "popup": true }
+                                }
+                              },
+                              { "math": [ "success_sex", "=", "1" ] },
+                              { "math": [ "_has_partner", "=", "1" ] },
+                              { "run_eocs": "start_ACT_HENTAI_PLAY_WITH" }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "else": [
+                    {
+                      "set_string_var": "<hentai_yiff_query_monster>",
+                      "target_var": { "context_val": "msg" },
+                      "parse_tags": true
+                    },
+                    {
+                      "//": "対象はモンスター",
+                      "if": { "u_query": { "context_val": "msg" }, "default": false },
+                      "then": {
+                        "if": { "math": [ "n_val('friendly') == -1" ] },
+                        "then": {
+                          "if": { "npc_has_flag": "NO_YIFF" },
+                          "then": { "message": "不能和召唤出的梦魔玩。" },
+                          "else": [
+                            { "math": [ "success_sex", "=", "1" ] },
+                            {
+                              "if": { "math": [ "HENTAI_EXTEND_NAMAHAME_PET" ] },
+                              "then":[
+                                {
+                                  "set_string_var": "<hentai_yiff_query_no_dev_monster>",
+                                  "target_var": { "context_val": "msg" },
+                                  "parse_tags": true
+                                },
+                                {
+                                  "if": { "u_query": { "context_val": "msg" }, "default": false },
+                                  "then": { "math": [ "_using_condom", "=", "0" ] }
+                                }
+                              ]
+                            },
+                            { "math": [ "_has_partner", "=", "1" ] },
+                            { "run_eocs": "start_ACT_HENTAI_PLAY_WITH" }
+                          ]
+                        },
+                        "else": { "message": "This creature is not friendly!", "type": "info" }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            "beta_loc": { "context_val": "pnt" }
+          }
+        }
+      },
+      {
+        "if": { "math": [ "success_sex" ] },
+        "then": [
+          {
+            "//": "ここではglobal_valを参照する",
+            "if": { "math": [ "using_condom" ] },
+            "then": "npc_die"
+          }
+        ],
+        "else": { "u_message": "Never mind." }
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "hentai_play_with",
+    "name": "ACT_HENTAI_PALY_WITH中",
+    "description": "ACT_HENTAI_PLAY_WITH中",
+    "points": 0,
+    "valid": false,
+    "purifiable": false,
+    "player_display": false
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "start_ACT_HENTAI_PLAY_WITH",
+    "condition": { "expects_vars": [ "has_partner", "using_condom" ] },
+    
+    "//has_partner": "相手としてbeta talkerが存在する",
+    "//using_condom": "コンドーム使用",
+    "//condom_break_chance": "コンドーム破損確率",
+    "//opinion_changed": "セックスによる評価変更済み,会話用",
+    
+    "effect": [
+      { "u_lose_trait": "VIRGIN" },
+      { "math": [ "sex_with_npc", "=", "0" ] },
+      { "math": [ "sex_with_monster", "=", "0" ] },
+      { "u_lose_var": "yiff_partner_monster" },
+      { "u_lose_var": "sex_partner_pnt" },
+      { "math": [ "u_sex_with_cubi", "=", "0" ] },
+      
+      { "math": [ "using_condom", "=", "_using_condom" ] },
+      
+      { "math": [ "_duration", "=", "min(time('10 m') * u_val('strength'), time('3 h'))" ] },
+      
+      {
+        "if": { "math": [ "_opinion_changed" ] },
+        "then": { "math": [ "manually_sex_opinion_changed", "=", "1" ] },
+        "else": { "math": [ "manually_sex_opinion_changed", "=", "0" ] }
+      },
+
+      { "u_assign_activity": "ACT_WORKOUT_LIGHT", "duration": { "context_val": "duration" } },
+      { "u_add_trait": "hentai_play_with" },
+      { "math": [ "sex_morale_bonus", "=", "u_val('dexterity')" ] },
+      {
+        "if": { "math": [ "_has_partner" ] },
+        "then": [
+          { "npc_location_variable": { "u_val": "sex_partner_pnt" } },
+          {
+            "set_string_var": "<npc_name>",
+            "target_var": { "u_val": "yiff_partner_name" },
+            "parse_tags": true
+          },
+          {
+            "if": "npc_is_npc",
+            "then": [
+              { "npc_lose_trait": "VIRGIN" },
+              {
+                "//": [
+                  "オリジナルではNPCの動きを止めるためにset_move(-200)をしているみたい",
+                  "activityをassignしてしまう"
+                ],
+                "npc_assign_activity": "ACT_WORKOUT_LIGHT",
+                "duration": { "context_val": "duration" }
+              },
+              { "npc_add_trait": "hentai_play_with" },
+              { "math": [ "sex_morale_bonus", "=", "max(u_val('dexterity'), n_val('dexterity'))" ] },
+              {
+                "if": { "and": [
+                  { "math": [ "HENTAI_EXTEND_PREGNANCY_AVATAR" ] },
+                  { "math": [ "HENTAI_EXTEND_PREGNANCY_NPC" ] },
+                  { "math": [ "HENTAI_EXTEND_PREGNANCY_ANY" ] }
+                ] },
+                "then": {
+                  "if": { "one_in_chance": 2 },
+                  "then": [
+                    { "math": [ "u_pregnant_target", "=", "0" ] },
+                    { "math": [ "n_pregnant_target", "=", "1" ] }
+                  ],
+                  "else": [
+                    { "math": [ "u_pregnant_target", "=", "1" ] },
+                    { "math": [ "n_pregnant_target", "=", "0" ] }
+                  ]
+                },
+                "else": {
+                  "if": { "and": [
+                    { "math": [ "HENTAI_EXTEND_PREGNANCY_AVATAR" ] },
+                    { "or": [
+                      { "math": [ "HENTAI_EXTEND_PREGNANCY_ANY" ] },
+                      { "and": [ "u_female", "npc_male" ] }
+                    ] }
+                  ] },
+                  "then":[
+                    { "math": [ "u_pregnant_target", "=", "1" ] },
+                    { "math": [ "n_pregnant_target", "=", "0" ] }
+                  ],
+                  "else":{
+                    "if": { "and": [
+                      { "math": [ "HENTAI_EXTEND_PREGNANCY_NPC" ] },
+                      { "or": [
+                        { "math": [ "HENTAI_EXTEND_PREGNANCY_ANY" ] },
+                        { "and": [ "u_male", "npc_female" ] }
+                      ] }
+                    ] },
+                    "then": [
+                      { "math": [ "u_pregnant_target", "=", "0" ] },
+                      { "math": [ "n_pregnant_target", "=", "1" ] }
+                    ],
+                    "else": [
+                      { "math": [ "u_pregnant_target", "=", "0" ] },
+                      { "math": [ "n_pregnant_target", "=", "0" ] }
+                    ]
+                  }
+                }
+              },
+              { "math": [ "comdom_break", "=", "using_condom ? rand(99) < _condom_break_chance : 0" ] },
+              { "math": [ "sex_with_npc", "=", "1" ] }
+            ],
+            "else": [
+              { "math": [ "sex_with_monster", "=", "1" ] },
+              { "set_string_var": "tmp", "target_var": { "context_val": "rslt" } },
+              { "run_eocs": "eoc_get_cubi_fake_dex_beta" },
+              { "math": [ "sex_morale_bonus", "=", "max(u_val('dexterity'), tmp)" ] },
+              {
+                "run_eocs": "eoc_hentai_get_monster_id",
+                "variables": { "pnt": { "u_val": "sex_partner_pnt" } }
+              },
+              {
+                "set_string_var": { "global_val": "hentai_monster_id" },
+                "target_var": { "u_val": "yiff_partner_monster" }
+              },
+              {
+                "if": { "npc_has_species": "CUBI" },
+                "then": { "math": [ "u_sex_with_cubi", "=", "1" ] }
+              },
+              {
+                "//": [
+                  "ロボットが停止されている時の状態が動かなくする効果が",
+                  "あったので使う。何かの副作用があるかも。",
+                  "後から延長では上手く機能しない。",
+                  "疲労影響によって時間が延びるので最長時間付与し、",
+                  "終了時に解除する。",
+                  "なんらかの理由で移動してしまったら動かなくなる。",
+                  "開発版ならu_run_monster_eocsでどうにかできるが、",
+                  "呪文で解除し、最悪の場合は修正用の特質を与えて回避させる"
+                ],
+                "npc_add_effect": "worked_on",
+                "duration": { "math": [ "_duration * 2" ] }
+              },
+              { "npc_add_effect": "movingdoing", "duration": "10 m" },
+              {
+                "if": { "math": [ "HENTAI_EXTEND_CUBI_YIFF_PARROT" ] },
+                "then": [
+                  {
+                    "set_string_var": "<u_val:yiff_partner_monster>_hentai_play_start",
+                    "target_var": { "context_val": "speech_id" },
+                    "parse_tags": true
+                  },
+                  {
+                    "//": [
+                      "speech_idのグローバル変数を確認して",
+                      "スニペットspeech_idを表示する",
+                      "きちんとシンクロしていなければいけない"
+                    ],
+                    "if": { "math": [ "v_speech_id" ] },
+                    "then": { "message": { "context_val": "speech_id" }, "snippet": true, "type": "info" }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "hentai_play_with_do_turn",
+    "recurrence": "10 m",
+    "condition": { "u_has_trait": "hentai_play_with" },
+    "deactivate_condition": { "not": { "u_has_trait": "hentai_play_with" } },
+    "effect": [
+      { "u_message": "<hentai_movingdoing>" },
+      { "u_add_effect": "movingdoing", "duration": "10 m" },
+      {
+        "if": { "math": [ "sex_with_monster" ] },
+        "then": [
+          {
+            "run_eocs": "eoc_check_u_query_tile_target",
+            "variables": { "retv": "tmp", "pnt": { "u_val": "sex_partner_pnt" } }
+          },
+          {
+            "if": { "compare_string": [ "monster", { "global_val": "tmp" } ] },
+            "then": {
+              "run_eocs":{
+                "id": "hentai_play_with_do_turn_monster",
+                "effect": [
+                  { "npc_add_effect": "movingdoing", "duration": "10 m" },
+                  {
+                    "if": { "math": [ "HENTAI_EXTEND_CUBI_YIFF_PARROT" ] },
+                    "then": [
+                      {
+                        "set_string_var": "<u_val:yiff_partner_monster>_hentai_play_doing",
+                        "target_var": { "context_val": "speech_id" },
+                        "parse_tags": true
+                      },
+                      {
+                        "if": { "math": [ "v_speech_id" ] },
+                        "then": { "message": { "context_val": "speech_id" }, "snippet": true, "type": "info" }
+                      }
+                    ]
+                  }
+                ]
+              },
+              "beta_loc": { "u_val": "sex_partner_pnt" }
+            },
+            "else": [
+              {
+                "//": "モンスターがどこかいった！",
+                "math": [ "sex_with_monster", "=", "0" ]
+              },
+              { "u_assign_activity": "ACT_NULL", "duration": "0 s" },
+              {
+                "message": "<u_val:yiff_partner_name>が途中でどこかにいきました！",
+                "type": "info",
+                "popup": true
+              },
+              { "u_cast_spell": { "id": "SPELL_CANCEL_YIFF_WITH_PET" } },
+              { "u_lose_trait": "hentai_play_with" },
+              { "u_lose_effect": "movingdoing" },
+              {
+                "if": { "math": [ "using_condom" ] },
+                "then": { "u_spawn_item": "condom", "suppress_message": true }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "hentai_play_with_finish",
+    "eoc_type": "EVENT",
+    "required_event": "character_finished_activity",
+    "condition": { "and": [
+      { "compare_string": [ "ACT_WORKOUT_LIGHT", { "context_val": "activity" } ] },
+      { "u_has_trait": "hentai_play_with" }
+    ] },
+    "effect": [
+      { "u_lose_trait": "hentai_play_with" },
+      { "u_lose_effect": "movingdoing" },
+      {
+        "if": { "math": [ "sex_with_monster" ] },
+        "then": [
+          {
+            "//": "モンスターの状態を解除、いなくなっている可能性あり",
+            "run_eocs": "eoc_check_u_query_tile_target",
+            "variables": { "retv": "tmp", "pnt": { "u_val": "sex_partner_pnt" } }
+          },
+          {
+            "if": { "compare_string": [ "monster", { "global_val": "tmp" } ] },
+            "then": {
+              "run_eocs": "cancel_hentai_play_with_monster",
+              "beta_loc": { "u_val": "sex_partner_pnt" }
+            },
+            "else": { "u_cast_spell": { "id": "SPELL_CANCEL_YIFF_WITH_PET" } }
+          }
+        ]
+      },
+      {
+        "if": { "math": [ "_canceled" ] },
+        "then": {
+          "if": "u_is_avatar",
+          "then": [
+            {
+              "if": { "math": [ "using_condom" ] },
+              "then": { "u_spawn_item": "condom" }
+            },
+            {
+              "//": "相手のNPCもキャンセル",
+              "u_run_npc_eocs": [ {
+                "id": "cancel_npc_hentai_play_with_activity",
+                "condition": { "u_has_trait": "hentai_play_with" },
+                "//": [
+                  "revert_activityでもassign_activityでも",
+                  "character_finished_activityはトリガーされないので",
+                  "ここで特質削除する必要あり"
+                ],
+                "effect": [
+                  { "u_assign_activity": "ACT_NULL", "duration": "0 s" },
+                  { "u_lose_trait": "hentai_play_with" }
+                ]
+              } ],
+              "npc_range": 60,
+              "npc_must_see": false,
+              "local": true
+            }
+          ]
+        },
+        "else": [
+          { "u_message": "<hentai_play_with_finish>", "type": "good" },
+          { "math": [ "_morale_bonus", "=", "sex_morale_bonus * ( using_condom ? 1.0 : 1.5 ) * ( sex_with_npc ? 2.0 : 1.0 )" ] },
+          {
+            "u_add_morale": "morale_hentai_play_with_good",
+            "bonus": { "context_val": "morale_bonus" },
+            "//": "オリジナルは上限なし",
+            "max_bonus": 0,
+            "duration": "1 h",
+            "decay_start": "15 m"
+          },
+          {
+            "//": "統計処理",
+            "if": "u_is_avatar",
+            "then": [
+              {
+                "if": { "math": [ "sex_with_npc" ] },
+                "then": { "u_add_effect": "finished_hentai_play_with_npc", "duration": "1 s" },
+                "else": { 
+                  "if": { "math": [ "sex_with_monster" ] },
+                  "then": { "u_add_effect": "finished_hentai_play_with_monster", "duration": "1 s" },
+                  "else": { "u_add_effect": "finished_onani", "duration": "1 s" }
+                }
+              },
+              {
+                "//": [
+                  "u_var_changedイベントに依存しているのでmathは使えない",
+                  "開発版ではtrigger_eventを使う"
+                ],
+                "math": [ "reached_orgasm", "+=", "1" ]
+              }
+            ]
+          },
+          { "u_lose_effect": "lust" },
+          {
+            "//": "発情(悪魔)処理",
+            "if": { "u_has_trait": "ESTRUS_FIEND" },
+            "then": [
+              { "math": [ "_bonus", "=", "sex_morale_bonus * ( using_condom ? 1.0 : 2.0 ) * ( sex_with_npc + sex_with_monster ? 3.0 : 1.0 )" ] },
+              { "math": [ "u_vitamin('estrus_fiend')", "-=", "min(u_vitamin('estrus_fiend'), _bonus)" ] }
+            ]
+          },
+          {
+            "if": { "and": [
+              "u_is_npc",
+              { "not": { "math": [ "manually_sex_opinion_changed" ] } }
+            ] },
+            "then": {
+              "if": { "math": [ "sex_with_love" ] },
+              "then": [
+                { "math": [ "u_val('npc_trust')", "+=", "2" ] },
+                { "math": [ "u_val('npc_value')", "+=", "2" ] },
+                { "math": [ "u_val('npc_fear')", "-=", "1" ] },
+                { "math": [ "u_val('npc_anger')", "-=", "1" ] }
+              ],
+              "else": [
+                { "math": [ "u_val('npc_trust')", "-=", "2" ] },
+                { "math": [ "u_val('npc_fear')", "+=", "5" ] },
+                { "math": [ "u_val('npc_anger')", "+=", "1" ] }
+              ]
+            }
+          },
+          {
+            "if": { "and": [
+              { "math": [ "sex_with_monster" ] },
+              { "math": [ "HENTAI_EXTEND_CUBI_YIFF_PARROT" ] }
+            ] },
+            "then": [
+              {
+                "set_string_var": "<u_val:yiff_partner_monster>_hentai_play_finish",
+                "target_var": { "context_val": "speech_id" },
+                "parse_tags": true
+              },
+              {
+                "if": { "math": [ "v_speech_id" ] },
+                "then": { "message": { "context_val": "speech_id" }, "snippet": true, "type": "info" }
+              }
+            ]
+          },
+          {
+            "if": { "math": [ "condom_break" ] },
+            "then": { "u_message": "避孕套破了！", "type": "bad" }
+          },
+          { "math": [ "_fluids_count", "=", "1 + min(149, floor(rand(_morale_bonus) / 4.0))" ] },
+          {
+            "//": "コンドーム、体液処理",
+            "if": "u_is_avatar",
+            "then": {
+              "if": { "math": [ "using_condom ? condom_break : 1" ] },
+              "then": { "map_spawn_item": "h_body_fluids", "count": { "context_val": "fluids_count" } },
+              "else": {
+                "if": {
+                  "and": [
+                    { "math": [ "u_sex_with_cubi" ] },
+                    { "one_in_chance": 2 }
+                  ]
+                },
+                "then": { "u_spawn_item": "d_body_fluids", "container": "condom", "count": { "context_val": "fluids_count" } },
+                "else": { "u_spawn_item": "h_body_fluids", "container": "condom", "count": { "context_val": "fluids_count" } }
+              }
+            }
+          },
+          {
+            "if": { "and": [
+              { "math": [ "HENTAI_EXTEND_CREAMPIE_EX" ] },
+              { "one_in_chance": 2 }
+            ] },
+            "then": { "u_add_effect": "creampie_ex", "duration": "10 m" }
+          },
+          {
+            "//": "受精処理",
+            "if": { "and": [
+              { "math": [ "sex_with_npc" ] },
+              { "math": [ "u_pregnant_target" ] },
+              { "math": [ "using_condom ? condom_break : 1" ] },
+              { "not": { "u_has_effect": "contraception" } },
+              { "not": { "u_has_effect": "oc_pill", "intensity": 2 } },
+              { "math": [ "rand(99) < PREGNANCY_CHANCE * (u_effect_intensity('estrus') > 0 ? 5 : 1)" ] }
+            ] },
+            "then": {
+              "//": "経口避妊薬の効果",
+              "if": { "math": [ "u_vitamin('oc_pill')", "<", "rand(14)" ] },
+              "then": [ 
+                {
+                  "set_string_var": "<creampie_duration>",
+                  "target_var": { "context_val": "days" },
+                  "parse_tags": true
+                },
+                { "math": [ "_dur", "=", "_days * time('1 d')" ] },
+                { "u_add_effect": "creampie", "duration": { "context_val": "dur" } }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<creampie_duration>",
+    "//": [
+      "アフターピルによる避妊のために妊娠が確定するまでの期間を設定する",
+      "~24時間で妊娠阻止率95%, 25~48時間で85%, 48~72時間で58%",
+      "一方で~72時間で85%(これは全体として),72~時間で63%",
+      "120時間超ではデータが無い",
+      "直接1 dと書くと1秒になってしまう...開発版では修正されてるかも"
+    ],
+    "text": [
+      { "text": "1", "weight": 15 },
+      { "text": "2", "weight": 25 },
+      { "text": "3", "weight": 35 },
+      { "text": "5", "weight": 25 }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "cancel_hentai_play_with_monster",
+    "effect": [
+      { "npc_lose_effect": "worked_on" },
+      { "npc_lose_effect": "movingdoing" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_CANCEL_YIFF_WITH_PET",
+    "effect": [
+      { "message": "处理在做*舒服的事情*时，宠物出现被移动、瞬间移动、不动等状态的情况。请选择宠物。", "popup": true },
+      {
+        "u_query_tile": "anywhere",
+        "target_var": { "context_val": "pnt" },
+        "message": "选择移动宠物",
+        "z_level": true
+      },
+      {
+        "run_eocs": "eoc_check_u_query_tile_target",
+        "variables": { "retv": "tmp", "pnt": { "context_val": "pnt" } }
+      },
+      {
+        "if": { "compare_string": [ "monster", { "global_val": "tmp" } ] },
+        "then": {
+          "run_eocs": "cancel_hentai_play_with_monster",
+          "beta_loc": { "context_val": "pnt" }
+        }
+      }
+    ]
+  },
+  {
+    "id": "SPELL_CANCEL_YIFF_WITH_PET",
+    "type": "SPELL",
+    "name": "与宠物的做爱停止",
+    "description": "在做爱期间尽可能不要让宠物移动",
+    "base_casting_time": 0,
+    "effect": "remove_effect",
+    "effect_str": "worked_on",
+    "valid_targets": [ "ally" ],
+    "min_aoe": 60,
+    "max_aoe": 60,
+    "shape": "blast",
+    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX", "NO_FAIL" ]
+  }
+]

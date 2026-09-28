@@ -1,0 +1,136 @@
+[
+  {
+    "//": "開発版用の実装、H版では機能しません",
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "id": "_SEDUCE",
+    "cooldown": 1,
+    "damage_max_instance": [ { "damage_type": "pure", "amount": 0 } ],
+    "move_cost": 100,
+    "dodgeable": true,
+    "blockable": false,
+    "effects_require_dmg": false,
+    "effects": [ { "id": "lust", "duration": 4 } ],
+    "miss_msg_u": "%s向你伸出手，你躲开了！",
+    "miss_msg_npc": "%s向<npcname>伸出手，<npcname>躲开了！",
+    
+    "//0": "開発版ならeocが実行できる",
+    "//eoc": "EOC_SEDUCE_MELEE",
+    
+    "//1": "ここではスニペットを使えない",
+    "no_dmg_msg_npc": "",
+    "no_dmg_msg_u": ""
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SEDUCE_MELEE",
+    "effect": [
+      {
+        "if": "npc_is_avatar",
+        "then": { "message": "<seduce_msg_player_melee>" },
+        "else": { "message": "<seduce_msg_npc_melee>" }
+      },
+      {
+        "run_eocs": "gain_corrupt", "variables": { "duration": "100 t" },
+        "//alpha_talker": "npc"
+      },
+      { "math": [ "u_hp('ALL')", "+=", "HENTAI_EXTEND_SEDUCE_HEAL" ] },
+      {
+        "if": { "math": [ "HENTAI_EXTEND" ] },
+        "then": [
+          {
+            "if": { "and": [ "u_friend", "npc_friend" ] },
+            "then": [
+              { "run_eocs": [ "eoc_check_orgasm_beta" ] },
+              {
+                "if": "npc_is_avatar",
+                "then": [
+                  { "npc_location_variable": { "context_val": "pnt" } },
+                  { "map_spawn_item": "h_body_fluids", "loc": { "context_val": "pnt" } }
+                ]
+              },
+              { "npc_add_effect": "went_heaven", "duration": 60 }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "id": "SEDUCE",
+    "cooldown": 0,
+    "condition": { "and": [
+      { "math": [ "u_val('friendly')", "!=", "-1" ] },
+      { "or": [
+        { "not": { "math": [ "HENTAI_EXTEND_CUBI_WIFE_ONLY_HUMAN" ] } },
+        "npc_is_character"
+      ] }
+    ] }
+  },
+  {
+    "type": "SPELL",
+    "id": "spell_SEDUCE",
+    "name": { "str": "SEDUCE" },
+    "description": "誘惑用のスペル",
+    "valid_targets": [ "hostile", "ally" ],
+    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
+    "min_range": 1,
+    "max_range": 1,
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "base_casting_time": 100,
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_SEDUCE_SPELL"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SEDUCE_SPELL",
+    "effect": [
+      {
+        "if": "u_is_avatar",
+        "then": {
+          "if": "player_see_npc", 
+          "then": { "message": "<seduce_msg_player_spell>", "type": "mixed" },
+          "else": { "message": "<seduce_msg_player_spell_unknown>", "type": "mixed" }
+        },
+        "else": {
+          "if": "player_see_u",
+          "then": {
+            "if": "player_see_npc",
+            "then": { "message": "<seduce_msg_npc_spell>", "type": "mixed" },
+            "else": { "message": "<seduce_msg_npc_spell_unknown>", "type": "mixed" }
+          }
+        }
+      },
+      { "run_eocs": "gain_corrupt", "variables": { "duration": "50 t" } },
+      {
+        "run_eocs": "eoc_gain_lust_alpha",
+        "variables": { "rslt": "tmp", "val": "4" }
+      },
+      { "math": [ "n_hp('ALL')", "+=", "HENTAI_EXTEND_SEDUCE_HEAL" ] }
+    ]
+  },
+  {
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "id": "SEDUCE_FRIEND",
+    "cooldown": 0,
+    "condition": { "and": [
+      { "math": [ "u_val('friendly')", "==", "-1" ] },
+      { "or":[
+        { "u_has_effect": "cubi_allow_seduce_friendlyfire" },
+        { "and": [
+          "npc_is_avatar",
+          { "u_has_effect": "cubi_allow_seduce_player" }
+        ] }
+      ] },
+      { "or": [
+        { "not": "npc_is_character" },
+        { "math": [ "n_val('instant_thirst')", "<=", "240" ] }
+      ] }
+    ] }
+  }
+]

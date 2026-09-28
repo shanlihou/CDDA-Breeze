@@ -1,0 +1,173 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "SADIST_MUTATION_high_monster",
+    "eoc_type": "EVENT",
+    "required_event": "character_melee_attacks_monster",
+    "condition": {
+      "and":[
+        { "u_has_trait": "SADIST_MUTATION" },
+        { "math": [ "_hits" ] }
+      ]
+    },
+    "effect": { "u_add_effect": "SADIST_MUTATION_high", "duration": "10 s" }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "SADIST_MUTATION_high_character",
+    "eoc_type": "EVENT",
+    "required_event": "character_melee_attacks_character",
+    "condition": {
+      "and":[
+        { "u_has_trait": "SADIST_MUTATION" },
+        { "math": [ "_hits" ] }
+      ]
+    },
+    "effect": { "u_add_effect": "SADIST_MUTATION_high", "duration": "10 s" }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_EXHIBITIONISM_MORALE_CHANGE",
+    "recurrence": "10 m",
+    "condition": { "u_has_any_trait": [ "EXHIBITIONISM", "EXH_MUTATION" ] },
+    "deactivate_condition": { "not": { "u_has_any_trait": [ "EXHIBITIONISM", "EXH_MUTATION" ] } },
+    "//": [
+      "オーラ・肉体・プレート・ベルトは除外",
+      "胴衣服の中で最大被膜が40を境に-20~20の意欲"
+    ],
+    "effect": [
+      { "math": [ "hentai_torso_cover_max", "=", "0" ] },
+      {
+        "u_run_inv_eocs": "all",
+        "search_data": [ { "worn_only": true, "excluded_flags": [ "INTEGRATED", "PERSONAL", "AURA", "CANT_WEAR" ] } ],
+        "true_eocs": [
+          {
+            "id": "EOC_EXHIBITIONISM_MORALE_CHANGE_CHECK_COVER",
+            "condition": { "math": [ "n_coverage('torso') > 0" ] },
+            "effect": {
+              "if": { "or": [
+                { "npc_has_flag": "NORMAL" },
+                { "npc_has_flag": "OUTER" },
+                { "npc_has_flag": "SKINTIGHT" }
+              ] },
+              "then": { "math": [ "hentai_torso_cover_max", "=","max(hentai_torso_cover_max, n_coverage('torso'))" ] },
+              "else": {
+                "if": { "not": {
+                  "or": [
+                    { "npc_has_flag": "BELTED" },
+                    { "npc_has_flag": "WAIST" }
+                  ]
+                } },
+                "then": { "math": [ "hentai_torso_cover_max", "=","max(hentai_torso_cover_max, n_coverage('torso'))" ] }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "if": { "math": [ "hentai_torso_cover_max > 40" ] },
+        "then": [
+          {
+            "u_add_morale": "morale_exhibitionism_bad",
+            "bonus": { "math": [ "(40 - hentai_torso_cover_max) / 3" ] },
+            "max_bonus": -20,
+            "duration": "10 m",
+            "decay_start": "10 m"
+          },
+          { "u_lose_morale": "morale_exhibitionism_good" }
+        ],
+        "else": [
+          {
+            "if": { "u_has_trait": "EXH_MUTATION" },
+            "then": {
+              "u_add_morale": "morale_exhibitionism_good",
+              "bonus": { "math": [ "(40 - hentai_torso_cover_max) * 3 / 2" ] },
+              "max_bonus": 60,
+              "duration": "10 m",
+              "decay_start": "10 m"
+            },
+            "else":{
+              "u_add_morale": "morale_exhibitionism_good",
+              "bonus": { "math": [ "(40 - hentai_torso_cover_max) / 2" ] },
+              "max_bonus": 20,
+              "duration": "10 m",
+              "decay_start": "10 m"
+            }
+          },
+          { "u_lose_morale": "morale_exhibitionism_bad" }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_CALCULATE_MAX_POWER_PHALLO",
+    "//": [
+      "u_val('power')がmJで返すので2147483647mJ(~2148kJ)でオーバーフローする",
+      "CBM最大容量は50kJ刻みなのでオーバーフローした値から逆算できる",
+      " INT_MAX = 2147483647, UINT_MAX = 4294967295 ",
+      "値が1000000(1kJ)より大きいと精度を失うので1kJ単位で判別",
+      "lcm(32704, 1000000) / 32704 = 15625だが、EOCスタックが最大5000",
+      "最大ループは155回, 667866kJまで"
+    ],
+    "effect": [
+      { "math": [ "tmp_mod", "=", "u_val('power_max') % 1000000" ] },
+      { "math": [ "tmp_cycle", "=", "0" ] },
+      { "run_eocs": "EOC_CALCULATE_MAX_POWER_PHALLO_INNER" },
+      { "math": [ "u_power_max_phallo", "=", "tmp_mod == 0 ? floor(tmp_cycle * 4294.967296 + u_val('power_max') / 1000000.0) : 667900" ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_CALCULATE_MAX_POWER_PHALLO_INNER",
+    "condition": { "math": [ "tmp_mod != 0 ? ( tmp_cycle < 155 ) : 0" ] },
+    "effect": [
+      { "math": [ "tmp_cycle", "++" ] },
+      { "math": [ "tmp_mod" ,"=", "(tmp_mod - 32704) % 1000000" ] },
+      { "run_eocs": "EOC_CALCULATE_MAX_POWER_PHALLO_INNER" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_UPDATE_MAX_POWER_PHALLO_GAME_LOAD",
+    "eoc_type": "EVENT",
+    "required_event": "game_load",
+    "effect": { "run_eocs": "EOC_CALCULATE_MAX_POWER_PHALLO" }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_UPDATE_MAX_POWER_PHALLO_GAME_AVATAR_NEW",
+    "eoc_type": "EVENT",
+    "required_event": "game_avatar_new",
+    "effect": { "run_eocs": "EOC_CALCULATE_MAX_POWER_PHALLO" }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_UPDATE_MAX_POWER_PHALLO_INSTALLS_CBM",
+    "eoc_type": "EVENT",
+    "required_event": "installs_cbm",
+    "effect": { "run_eocs": "EOC_CALCULATE_MAX_POWER_PHALLO" }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_UPDATE_MAX_POWER_PHALLO_REMOVES_CBM",
+    "eoc_type": "EVENT",
+    "required_event": "removes_cbm",
+    "effect": { "run_eocs": "EOC_CALCULATE_MAX_POWER_PHALLO" }
+  },
+  {
+    "//": "マッサージ器でも解消",
+    "type": "effect_on_condition",
+    "id": "EOC_ACT_VIBE_ESTRUS_FIEND",
+    "eoc_type": "EVENT",
+    "required_event": "character_finished_activity",
+    "condition": {
+      "and": [
+        { "u_has_trait": "ESTRUS_FIEND" },
+        { "compare_string": [ "ACT_VIBE", { "context_val": "activity" } ] },
+        { "not": { "math": [ "_canceled" ] } }
+      ]
+    },
+    "effect": { "math": [ "u_vitamin('estrus_fiend')", "-=", "min(u_vitamin('estrus_fiend'), u_val('dexterity') * 2)" ] }
+  }
+]

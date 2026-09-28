@@ -1,0 +1,50 @@
+[
+  {
+    "//": "200コスト停止させる",
+    "//1": "開発版ならturn_costがある、ただし時間ベース",
+    
+    "type": "SPELL",
+    "id": "STOP_200_MOVES",
+    "name": { "str": "停止200" },
+    "description": "動作コストを200消費する",
+    "valid_targets": [ "self", "hostile", "ally" ],
+    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX", "NO_FAIL" ],
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "base_casting_time": 0,
+    "min_damage": -200,
+    "max_damage": -200,
+    "shape": "blast",
+    "effect": "mod_moves"
+  },
+  {
+    "type": "SPELL",
+    "id": "STOP_100_MOVES",
+    "name": { "str": "停止100" },
+    "description": "動作コストを100消費する",
+    "valid_targets": [ "self", "hostile", "ally" ],
+    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX", "NO_FAIL" ],
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "base_casting_time": 0,
+    "min_damage": -100,
+    "max_damage": -100,
+    "shape": "blast",
+    "effect": "mod_moves"
+  },
+  {
+    "type": "SPELL",
+    "id": "STOP_50_MOVES",
+    "name": { "str": "停止50" },
+    "description": "動作コストを50消費する",
+    "valid_targets": [ "self", "hostile", "ally" ],
+    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX", "NO_FAIL" ],
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "base_casting_time": 0,
+    "min_damage": -50,
+    "max_damage": -50,
+    "shape": "blast",
+    "effect": "mod_moves"
+  }
+]

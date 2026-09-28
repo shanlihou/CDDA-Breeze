@@ -1,0 +1,110 @@
+[
+  {
+    "id": "MISSION_ANTHRO_CANINE_1",
+    "type": "mission_definition",
+    "name": "找狗粮",
+    "goal": "MGOAL_FIND_ITEM",
+    "difficulty": 1,
+    "value": 10000,
+    "item": "dogfood",
+    "origins": [ "ORIGIN_SECONDARY" ],
+    "followup": "MISSION_ANTHRO_SHELTER",
+    "dialogue": {
+      "describe": "我有一件事想拜托你。能听我说吗？",
+      "offer": "你有多余的狗粮吗？自从我变成这样以后，虽然在吃人类的食物了，但与此同时也很怀念那个味道。",
+      "accepted": "谢谢你，主人！",
+      "rejected": "你要自己留着吗？哦...",
+      "advice": "手动制作应该是最快的方法吧？这种时候什么食材都可以。",
+      "inquire": "找到狗粮了吗？没关系，可以慢慢来。",
+      "success": "太好了！对对，就是这个味道，哦~这个香味...啊——！  ...我不是故意用这种姿势吃的...嗯...不管怎样，谢谢你，主人！",
+      "success_lie": "...主人，这个谎不管怎么说都有些牵强吧...",
+      "failure": "不行吗？哦..."
+    }
+  },
+  {
+    "id": "MISSION_ANTHRO_FELINE_1",
+    "type": "mission_definition",
+    "name": "找猫粮",
+    "goal": "MGOAL_FIND_ITEM",
+    "difficulty": 1,
+    "value": 10000,
+    "item": "catfood",
+    "origins": [ "ORIGIN_SECONDARY" ],
+    "followup": "MISSION_ANTHRO_SHELTER",
+    "dialogue": {
+      "describe": "我有一件事想拜托你。能听我说吗？",
+      "offer": "你有多余的猫粮吗？自从我变成这样以后，虽然在吃人类的食物了，但与此同时也很怀念那个味道。",
+      "accepted": "谢谢你，主人！",
+      "rejected": "你要自己留着吗？哦...",
+      "advice": "手动制作应该是最快的方法吧？这种时候什么食材都可以。",
+      "inquire": "找到猫粮了吗？没关系，可以慢慢来。",
+      "success": "太好了！对对，就是这个味道，哦~这个香味...啊——！  ...我不是故意用这种姿势吃的...嗯...不管怎样，谢谢你，主人！",
+      "success_lie": "....主人，这个谎不管怎么说都有些牵强吧...",
+      "failure": "不行吗？哦..."
+    }
+  },
+  {
+    "id": "MISSION_ANTHRO_SHELTER",
+    "type": "mission_definition",
+    "name": "去往动物收容所",
+    "goal": "MGOAL_GO_TO_TYPE",
+    "difficulty": 2,
+    "value": 150000,
+    "origins": [ "ORIGIN_SECONDARY" ],
+    "destination": "animalshelter",
+    "dialogue": {
+      "describe": "我有一件事想拜托你。能听我说吗？",
+      "offer": "那个，我们能顺便去一下动物收容所吗？我只是想知道，在变成这样之前的朋友还在不在那呢。",
+      "accepted": "谢谢你，主人！",
+      "rejected": "不行吗？哦...",
+      "advice": "因为动物收容所在城镇里，所以我们在去那里之前应该尽可能做好准备。",
+      "inquire": "还没到吗？",
+      "success": "谢谢你带我来这里，虽然与期待的不同，但是多亏了你，我现在感觉好多了。",
+      "success_lie": "...嗯，至少主人努力过了吧？对吧...？",
+      "failure": "不行吗？哦..."
+    }
+  },
+  {
+    "id": "MISSION_ANTHRO_URSINE_1",
+    "type": "mission_definition",
+    "name": "打劫蜂巢",
+    "goal": "MGOAL_GO_TO_TYPE",
+    "difficulty": 2,
+    "value": 80000,
+    "origins": [ "ORIGIN_SECONDARY" ],
+    "followup": "MISSION_ANTHRO_URSINE_2",
+    "destination": "hive",
+    "dialogue": {
+      "describe": "我有一件事想拜托你。能听我说吗？",
+      "offer": "如果所有这些昆虫都长得这么大，那就意味着它们的巢也应该同样很大...那就决定了，主人，我们去打劫蜂巢吧！",
+      "accepted": "谢谢你，主人！",
+      "rejected": "不行吗？哦...",
+      "advice": "我们应该事先做好准备，因为我们很可能会被一大群愤怒的大型蜜蜂攻击。",
+      "inquire": "还没到吗？",
+      "success": "谢谢你带我来这，主人！有这么多蜂蜜，我们还需要吃别的东西吗…哼哼。",
+      "success_lie": "....嗯，至少主人努力过了吧？对吧...？",
+      "failure": "不行吗？哦..."
+    }
+  },
+  {
+    "id": "MISSION_ANTHRO_URSINE_2",
+    "type": "mission_definition",
+    "name": "获取蜂皇肉排",
+    "goal": "MGOAL_FIND_ITEM",
+    "difficulty": 3,
+    "value": 80000,
+    "item": "royal_beef",
+    "origins": [ "ORIGIN_SECONDARY" ],
+    "dialogue": {
+      "describe": "我有一件事想拜托你。能听我说吗？",
+      "offer": "蜂皇肉排知道吗？那是在熟肉排上浇裹浓稠的蜂王浆的一种料理。我当然知道这种东西很是贵重，但只要一次就好，无论如何我也想尝尝看。",
+      "accepted": "谢谢你，主人！",
+      "rejected": "不行吗？也对，毕竟是相当昂贵的东西...",
+      "advice": "如果要找蜂王浆，那么蜂巢内必然会有吧？",
+      "inquire": "蜂皇肉排...",
+      "success": "噢，这是蜂皇肉排！...嗯...的确是很好吃，但是...和单独吃蜂王浆好像也没什么不同的样子...嗯...不管怎样，非常感谢，主人！！",
+      "success_lie": "....主人，这个谎不管怎么说都有些牵强吧...",
+      "failure": "不行吗？哦..."
+    }
+  }
+]

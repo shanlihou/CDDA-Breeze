@@ -1,0 +1,152 @@
+[
+  {
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "id": "MAGIC_GOATHEAD_DEMON",
+    "cooldown": 0
+  },
+  {
+    "type": "SPELL",
+    "id": "spell_MAGIC_GOATHEAD_DEMON",
+    "name": { "str": "MAGIC GOATHEAD DEMON" },
+    "description": "カウンターの制御&魔法陣（マゼンタ）の設置&モンスターの召喚",
+    "valid_targets": [ "hostile" ],
+    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
+    "min_range": 10,
+    "max_range": 10,
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "base_casting_time": 300,
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_MAGIC_GOATHEAD_DEMON"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MAGIC_GOATHEAD_DEMON",
+    "condition": { "math": [ "n_summon_mon_delay", ">=", "150" ] },
+    "effect": [
+      {
+        "if": { "one_in_chance": 4 },
+        "then": { "run_eocs": [ "EOC_MAGIC_GOATHEAD_DEMON_SUMMON" ] },
+        "else": [
+          { "u_location_variable": { "context_val": "circle_pnt" } },
+          {
+            "location_variable_adjust": { "context_val": "circle_pnt" },
+            "x_adjust": [ -1, 1 ],
+            "y_adjust": [ -1, 1 ]
+          },
+          {
+            "npc_cast_spell": { "id": "spell_MAGIC_GOATHEAD_DEMON_SET_CIRCLE" },
+            "loc": { "context_val": "circle_pnt" }
+          },
+          {
+            "//": "TODO: 本当に設置でき、見えた場合のみ表示",
+            "message": "<npc_name>在地面上画出了魔法阵！"
+          }
+        ]
+      },
+      { "math": [ "n_summon_mon_delay", "-=", "150" ] },
+      { "npc_cast_spell": { "id": "STOP_200_MOVES", "hit_self": true } }
+    ],
+    "false_effect": { "math": [ "n_summon_mon_delay", "+=", "100" ] }
+  },
+
+  {
+    "type": "SPELL",
+    "id": "spell_MAGIC_GOATHEAD_DEMON_SET_CIRCLE",
+    "name": { "str": "魔法阵（品红）设置" },
+    "description": "魔法阵（品红）设置",
+    "valid_targets": [ "ground" ],
+    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
+    "min_range": 1,
+    "max_range": 1,
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "base_casting_time": 0,
+    "shape": "blast",
+    "effect": "add_trap",
+    "effect_str": "tr_magic_circle_summon"
+  },
+  
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MAGIC_GOATHEAD_DEMON_SUMMON",
+    "//": "自身の周囲10タイル以内にあるtr_magic_circle_summonに召喚",
+    "//1": "開発版には*_map_run_eocsがある",
+    "effect": [
+      { "math": [ "_summon_iter", "=", "0" ] },
+      { "set_string_var": "", "target_var": { "global_val": "magic_goathead_demon_summon_point" } },
+      {
+        "npc_location_variable": { "global_val": "magic_goathead_demon_summon_point" },
+        "trap": "tr_magic_circle_summon",
+        "target_min_radius": 1,
+        "target_max_radius": 10,
+        "passable_only": true
+      },
+      {
+        "set_condition": "summon_success",
+        "condition": { "not": { "compare_string": [ "", { "global_val": "magic_goathead_demon_summon_point" } ] } }
+      },
+      { "run_eocs": "EOC_MAGIC_GOATHEAD_DEMON_SUMMON_INNER" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MAGIC_GOATHEAD_DEMON_SUMMON_INNER",
+    "condition": {
+      "and": [
+        { "get_condition": "summon_success" },
+        { "math": [ "_summon_iter < 441" ] }
+      ]
+    },
+    "effect": [
+      { "math": [ "_summon_iter", "++" ] },
+      {
+        "u_transform_radius": 0,
+        "ter_furn_transform": "remove_tr_magic_circle_summon",
+        "target_var": { "global_val": "magic_goathead_demon_summon_point" }
+      },
+      {
+        "u_spawn_monster": "GROUP_MAGIC_GOATHEAD_DEMON",
+        "group": true,
+        "real_count": 1,
+        "target_var": { "global_val": "magic_goathead_demon_summon_point" },
+        "min_radius": 0,
+        "max_radius": 0,
+        "spawn_message": "魔法阵中心有什么出现了！",
+        "spawn_message_plural": "魔法阵中心有什么出现了",
+        "true_eocs": {
+          "id": "EOC_MAGIC_GOATHEAD_DEMON_SUMMON_SICKNESS",
+          "//": "200コスト停止",
+          "effect": {
+            "run_eocs": {
+              "id": "EOC_MAGIC_GOATHEAD_DEMON_SUMMON_SICKNESS_INNER",
+              "effect": { "npc_cast_spell": { "id": "STOP_200_MOVES", "hit_self": true } }
+            },
+            "beta_loc": { "global_val": "magic_goathead_demon_summon_point" }
+          }
+        }
+      },
+      { "set_string_var": "", "target_var": { "global_val": "magic_goathead_demon_summon_point" } },
+      {
+        "npc_location_variable": { "global_val": "magic_goathead_demon_summon_point" },
+        "trap": "tr_magic_circle_summon",
+        "target_min_radius": 1,
+        "target_max_radius": 10,
+        "passable_only": true
+      },
+      { "run_eocs": "EOC_MAGIC_GOATHEAD_DEMON_SUMMON_INNER" }
+    ]
+  },
+  {
+    "type": "ter_furn_transform",
+    "id": "remove_tr_magic_circle_summon",
+    "trap": [
+      {
+        "result": "tr_null",
+        "valid_trap": [ "tr_magic_circle_summon" ]
+      }
+    ]
+  }
+]

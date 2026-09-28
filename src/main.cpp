@@ -215,9 +215,9 @@ int main( int argc, const char *argv[] )
     reset_floating_point_mode();
     flatbuffers::ClassicLocale::Get();
 
-#if defined(_WIN32) and defined(TILES)
+#if defined(_WIN32) && defined(TILES)
     const HANDLE std_output { GetStdHandle( STD_OUTPUT_HANDLE ) }, std_error { GetStdHandle( STD_ERROR_HANDLE ) };
-    if( std_output != INVALID_HANDLE_VALUE and std_error != INVALID_HANDLE_VALUE ) {
+    if( std_output != INVALID_HANDLE_VALUE && std_error != INVALID_HANDLE_VALUE ) {
         if( AttachConsole( ATTACH_PARENT_PROCESS ) ) {
             if( std_output == nullptr ) {
                 freopen_s( &CONOUT, "CONOUT$", "w", stdout );

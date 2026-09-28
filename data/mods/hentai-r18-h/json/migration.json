@@ -1,0 +1,30 @@
+[
+  {
+    "type": "mutation",
+    "id": "CANCEL_YIFF_WITH_PET",
+    "name": "与宠物的快乐中断",
+    "points": 0,
+    "description": "在与宠物的快乐中被中断，之后宠物不能动的时候请使用。",
+    "valid": false,
+    "purifiable": false,
+    "player_display": true,
+    "active": true,
+    "activated_eocs": [ "EOC_CANCEL_YIFF_WITH_PET" ]
+  },
+  {
+    "type": "effect_type",
+    "id": "contraception",
+    "name": [ "避孕" ],
+    "desc": [ "避孕药正在发挥作用，现在不管怎么享受都无所谓，大概吧。" ],
+    "show_in_info": false,
+    "max_intensity": 1,
+    "rating": "good",
+    "int_dur_factor": 14400
+  },
+  {
+    "type": "effect_type",
+    "id": "anthcream",
+    "show_in_info": false,
+    "removes_effects": [ "creampie" ]
+  }
+]

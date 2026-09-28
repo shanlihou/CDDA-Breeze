@@ -1,0 +1,269 @@
+[
+  {
+    "type": "effect_type",
+    "id": "lust",
+    "name": [ "性冲动" ],
+    "desc": [ "作为一个活着的生物，你能感受到到最基本、最原始的欲望。简而言之，你想来一发。" ],
+    "rating": "neutral",
+    "show_in_info": false,
+    "//": "intensityが100に達した時点で達する、という仕様にしよう",
+    "max_intensity": 100,
+    "int_dur_factor": 1,
+    "max_duration": 100,
+    "miss_messages": [ [ "你感觉到欲火焚身...", 5 ], [ "你拼命忍受性欲的折磨...", 5 ] ],
+    "base_mods": { "stamina_min": [ -0.1 ] },
+    "scaling_mods": { "stamina_min": [ -0.1 ] }
+  },
+  {
+    "type": "effect_type",
+    "id": "after_orgasm",
+    "name": [ "余韵" ],
+    "desc": [ "你沉浸在余韵之中。身体无法自由活动，无法思考。" ],
+    "rating": "bad",
+    "max_duration": "5 s",
+    "dur_add_perc": 0,
+    "base_mods": {
+      "stamina_amount": [ -500 ],
+      "str_mod": [ -2 ],
+      "dex_mod": [ -2 ],
+      "int_mod": [ -6 ],
+      "per_mod": [ -2 ] ,
+      "speed_mod": [ -20 ]
+    },
+    "miss_messages": [ [ "身体不听使唤！", 5 ] ],
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "ench_effects": [ { "effect": "sexual_sensitive", "intensity": 1 } ] 
+      }
+    ]
+  },
+  {
+    "type": "effect_type",
+    "id": "sexual_sensitive",
+    "name": [ "敏感" ],
+    "desc": [ "身体变得敏感。只需要稍微刺激一下瞬间就会高潮。" ],
+    "effect_dur_scaling": [ { "effect_id": "lust", "modifier": 2.0, "same_bp": false } ],
+    "flags": [ "SEXUAL_SENSITIVE" ]
+  },
+  {
+    "type": "effect_type",
+    "id": "corrupt",
+    "name": [ "脸红", "恍惚", "欲情", "心酔", "陶醉", "堕落" ],
+    "desc": [
+      "你被你的感官欲望所左右。性兴奋使你同时加强力量和敏锐感知，但也会让你一点一点地失去理智。",
+      "你正在被你的肉体欲望所影响。你的感知之外的所有属性都会受到惩罚。",
+      "你强烈的欲望正在逐渐取代你的思维。你的感知之外的所有属性都会受到惩罚。",
+      "你的思维已经被你的性欲所支配。你的感知之外的所有属性会受到很大惩罚。",
+      "你的思想已经被你的性欲所支配。...但这又如何？",
+      "你已经完全堕落。不过这听起来并没有想象中那么糟糕，对吧？"
+    ],
+    "show_in_info": false,
+    "max_intensity": 6,
+    "apply_message": "你开始兴奋了。",
+    "decay_messages": [
+      [ "兴奋稍微平息了。", "good" ]
+    ],
+    "remove_message": "你的欲望消散了。",
+    "miss_messages": [ [ "你被欲望所驱使...", 10 ] ],
+    "rating": "bad",
+    "int_dur_factor": 3600,
+    "max_duration": 172800,
+    "base_mods": {
+      "per_mod": [ 1 ],
+      "int_mod": [ -1 ]
+    },
+    "scaling_mods": {
+      "str_mod": [ -0.84 ],
+      "dex_mod": [ -0.84 ],
+      "per_mod": [ 0.84 ],
+      "int_mod": [ -2 ]
+    },
+    "enchantments": [
+      {
+        "condition": { "math": [ "u_effect_intensity('corrupt') == 1" ] },
+        "values": [ { "value": "STRENGTH", "add": 1 } ]
+      },
+      {
+        "condition":  { "u_has_effect": "corrupt", "intensity": 4 },
+        "ench_effects": [ { "effect": "sexual_sensitive", "intensity": 1 } ] 
+      }
+    ]
+  },
+  {
+    "type": "effect_type",
+    "id": "corrupt_attacked",
+    "//": "近接攻撃のcorruptを知性で回避可能にする効果",
+    "name": [ "" ],
+    "desc": [ "" ],
+    "show_in_info": false,
+    "enchantments": [ { "condition": "ALWAYS", "mutations": [ "CORRUPT_MUTATION" ]  } ]
+  },
+  {
+    "type": "effect_type",
+    "id": "magic_sleepy",
+    "name": [ "难以忍受的睡意", "不同寻常的睡意", "濒临入睡的边缘" ],
+    "desc": [ "你被一种神秘的睡意袭击了。这会导致你可能在某个时刻会失去知觉。" ],
+    "show_in_info": false,
+    "max_intensity": 3,
+    "apply_message": "你突然昏昏欲睡...",
+    "remove_message": "神秘的睡意消失了。",
+    "rating": "bad",
+    "int_dur_factor": 300,
+    "max_duration": 900,
+    "base_mods": {
+      "speed_mod": [ -5 ],
+      "str_mod": [ -1 ],
+      "dex_mod": [ -1 ],
+      "int_mod": [ -2 ],
+      "per_mod": [ -2 ],
+      "sleep_min": [ 10 ],
+      "sleep_max": [ 20 ],
+      "sleep_chance": [ 1 ],
+      "sleep_chance_bot": [ 100 ]
+    },
+    "scaling_mods": { "sleep_min": [ 10 ], "sleep_max": [ 20 ], "sleep_chance": [ 37 ] },
+    "immune_flags": [ "IMMUNE_MAGIC_SLEEPY" ]
+  },
+  {
+    "type": "effect_type",
+    "id": "estrus",
+    "name": [ "发情" ],
+    "desc": [ "发情中，怀孕概率增加500%。" ],
+    "show_in_info": false,
+    "rating": "mixed",
+    "apply_message": "身体发热，现在满脑子都是猥亵的妄想，似乎进入了发情期。"
+  },
+  {
+    "type": "effect_type",
+    "id": "creampie",
+    "dur_add_perc": 0
+  },
+  {
+    "type": "effect_type",
+    "id": "incubation",
+    "name": [ "产卵" ],
+    "desc": [ "腹中充斥着卵子。" ],
+    "show_in_info": true,
+    "max_intensity": 7,
+    "apply_message": "你怀孕了。",
+    "rating": "mixed",
+    "//": "現実時間でだいたい30週=210日。1ヶ月=だいたい30日ごとでintensityを分ける。",
+    "max_duration": 210,
+    "int_dur_factor": 30,
+    "int_decay_step": 0,
+    "base_mods": {},
+    "removes_effects": [ "creampie", "impregnated", "pregnantcy" ]
+  },
+  {
+    "//": "↓*気持ちいいこと*中のエフェクトタイル用のためだけのeffect。↓",
+    "type": "effect_type",
+    "id": "movingdoing",
+    "name": [ "*心情舒畅*" ],
+    "desc": [ "感觉*心情舒畅*。" ],
+    "show_in_info": true,
+    "max_intensity": 1,
+    "rating": "good"
+  },
+  {
+    "type": "effect_type",
+    "id": "magic_sleep_charge",
+    "name": [ "咏唱" ],
+    "desc": [ "咏唱中。" ],
+    "show_in_info": true,
+    "max_intensity": 3,
+    "int_dur_factor": 10,
+    "show_intensity": false,
+    "base_mods": { "int_mod": [ 1 ], "speed_mod": [ -10 ] }
+  },
+  {
+    "type": "effect_type",
+    "id": "mutagen_fiend",
+    "name": [ "变形(恶魔)", "变异(恶魔)", "突变(恶魔)" ],
+    "desc": [
+      "摄取了恶魔的突变物。",
+      "感到饥饿，任何食物都无法满足。",
+      "四处游荡的亡者、饥饿的兽群、天地异变、在大地上蠢动的异形姿态。这个世界就像…地狱，是的，地狱！多么美妙的声音！"
+    ],
+    "main_parts_only": true,
+    "max_intensity": 3,
+    "resist_traits": [ "THRESH_FIEND" ],
+    "base_mods": {
+      "hunger_min": [ 1 ],
+      "hunger_max": [ 3 ],
+      "hunger_tick": [ 500 ],
+      "hurt_min": [ 1 ],
+      "hurt_max": [ 2 ],
+      "hurt_chance": [ -22 ],
+      "hurt_tick": [ 75 ],
+      "per_mod": [ 1 ],
+      "pain_min": [ 1 ],
+      "pain_max": [ 2 ],
+      "pain_chance": [ 100 ],
+      "pain_tick": [ 75 ]
+    },
+    "scaling_mods": {
+      "hunger_tick": [ -200, -100 ],
+      "str_mod": [ 1 ],
+      "per_mod": [ 2 ],
+      "int_mod": [ -1 ],
+      "hurt_chance": [ 21, 0 ],
+      "pain_chance": [ -25 ]
+    },
+    "rating": "bad",
+    "blood_analysis_description": "Fiend Primer Contamination"
+  },
+  {
+    "type": "effect_type",
+    "id": "wife_u_cooldown",
+    "name": [ "wife_uクールダウン" ],
+    "desc": [ "モンスターのwife_uのクールダウン" ]
+  },
+  {
+    "type": "effect_type",
+    "//": "wife_uされている",
+    "id": "wife_u",
+    "name": [ "" ],
+    "desc": [ "" ],
+    "max_intensity": 2,
+    "max_duration": 10,
+    "show_in_info": false
+  },
+  {
+    "type": "effect_type",
+    "//": "wife_uしている",
+    "id": "wife_u_dominating",
+    "name": [ "" ],
+    "desc": [ "" ],
+    "max_duration": 10,
+    "show_in_info": false
+  },
+  {
+    "type": "effect_type",
+    "id": "disabled_wife_u"
+  },
+  {
+    "type": "effect_type",
+    "//": "hentai_play_with完了。statistics用。",
+    "id": "finished_hentai_play_with_npc",
+    "name": [ "" ],
+    "desc": [ "" ],
+    "show_in_info": false
+  },
+  {
+    "type": "effect_type",
+    "//": "hentai_play_with完了。statistics用。",
+    "id": "finished_hentai_play_with_monster",
+    "name": [ "" ],
+    "desc": [ "" ],
+    "show_in_info": false
+  },
+  {
+    "type": "effect_type",
+    "//": "hentai_play_with完了。statistics用。",
+    "id": "finished_onani",
+    "name": [ "" ],
+    "desc": [ "" ],
+    "show_in_info": false
+  }
+]

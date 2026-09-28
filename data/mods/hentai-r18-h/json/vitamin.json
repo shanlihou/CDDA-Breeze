@@ -1,0 +1,33 @@
+[
+  {
+    "id": "mutagen_fiend",
+    "type": "vitamin",
+    "vit_type": "counter",
+    "name": { "str": "诱变剂(恶魔)" },
+    "excess": "mutagen_fiend",
+    "min": 0,
+    "max": 2500,
+    "rate": "1 h",
+    "disease_excess": [ [ 100, 500 ], [ 501, 2199 ], [ 2200, 2500 ] ]
+  },
+  {
+    "//": "経口避妊薬",
+    "id": "oc_pill",
+    "type": "vitamin",
+    "vit_type": "counter",
+    "name": { "str": "避孕药" },
+    "min": 0,
+    "max": 63,
+    "rate": "1 d",
+    "flags": [ "NO_DISPLAY" ],
+    "//1": [
+      "28錠タイプにしたので毎日服用",
+      "服用開始から7日で効果が得られるが3日飲み忘れると確実ではなくなる",
+      "服用中止から1ヶ月で50%、2ヶ月で95%で月経が回復",
+      "月経を実装しないから単純に日数で考える",
+      "一錠で+2(日数経過で-1)される設定"
+    ],
+    "excess": "oc_pill",
+    "disease_excess": [ [ 1, 6 ], [ 7, 28 ] ]
+  }
+]

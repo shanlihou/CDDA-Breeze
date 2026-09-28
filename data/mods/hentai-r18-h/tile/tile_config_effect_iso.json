@@ -1,0 +1,33 @@
+{
+	"type": "mod_tileset",
+	"compatibility": [ "UNDEAD_PEOPLE_ISO" ],
+	"tile_info": [
+		{
+			"height": 32,
+			"width": 32
+		}
+	],
+	"tiles-new": [
+		{
+			"file": "tile/hentai_effect.png",
+      "sprite_width":32,
+      "sprite_height":32,
+      "sprite_offset_x": 8,
+      "sprite_offset_y": -8,
+			"tiles": [
+				{
+					"id": ["overlay_effect_lust", "overlay_effect_corrupt"],
+					"fg": 1
+				},
+				{
+					"id": ["overlay_effect_dominate", "overlay_effect_movingdoing"],
+					"fg": 2
+				},
+				{
+					"id": "overlay_effect_estrus",
+					"fg": 3
+				}
+			]
+		}
+	]
+}

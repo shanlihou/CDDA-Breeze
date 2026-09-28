@@ -1,0 +1,188 @@
+[
+  {
+    "id": "magic_sleep",
+    "type": "SPELL",
+    "name": "睡眠魔法",
+    "description": "睡眠魔法(モンスター用)",
+    "base_casting_time": 500,
+    "base_energy_cost": 100,
+    "energy_source": "MANA",
+    "spell_class": "NONE",
+    "difficulty": 1,
+    "effect": "attack",
+    "effect_str": "magic_sleepy",
+    "extra_effects": [ { "id": "remove_magic_sleep_charge", "hit_self": true } ],
+    "valid_targets": [ "hostile", "ally" ],
+    "max_level": 10,
+    "min_duration": 2000,
+    "max_duration": 2000,
+    "duration_increment": 0,
+    "min_range": 20,
+    "max_range": 20,
+    "range_increment": 0,
+    "shape": "blast",
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ]
+  },
+  {
+    "id": "magic_sleep_charge",
+    "type": "SPELL",
+    "name": "睡眠魔法(チャージ)",
+    "description": "睡眠魔法(モンスター用)",
+    "shape": "blast",
+    "base_casting_time": 150,
+    "effect": "attack",
+    "effect_str": "magic_sleep_charge",
+    "valid_targets": [ "self" ],
+    "min_range": 20,
+    "min_duration": 1000,
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ]
+  },
+  {
+    "id": "remove_magic_sleep_charge",
+    "type": "SPELL",
+    "name": "睡眠魔法(チャージ)リセット",
+    "description": "睡眠魔法(モンスター用)",
+    "shape": "blast",
+    "base_casting_time": 0,
+    "effect": "remove_effect",
+    "effect_str": "magic_sleep_charge",
+    "valid_targets": [ "self" ],
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ]
+  },
+  {
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "id": "MAGIC_SUCCUBI_SOMNO",
+    "condition": { "and": [
+      { "not": { "and": [
+        { "npc_has_effect": "sleep" },
+        { "u_has_effect": "wife_u_dominating" }
+      ] } },
+      { "or": [
+        { "not": { "math": [ "HENTAI_EXTEND_CUBI_WIFE_ONLY_HUMAN" ] } },
+        "npc_is_character"
+      ] },
+      { "or": [
+        { "not": { "u_has_effect": "pet" } },
+        { "or": [
+          { "math": [ "HENTAI_EXTEND_PET_CUBI_WIFE_ENEMY" ] },
+          "npc_is_character"
+        ] },
+        { "and": [
+          { "u_has_effect": "cubi_allow_seduce_player" },
+          "npc_is_avatar"
+        ] }
+      ] },
+      { "u_has_effect": "magic_sleep_charge", "intensity": 3 }
+    ] },
+    "cooldown": 3 
+  },
+  {
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "id": "MAGIC_SUCCUBI_SOMNO_CHARGE",
+    "condition": { "and": [
+      { "not": { "u_has_effect": "magic_sleep_charge", "intensity": 3 } },
+      { "math": [ "distance('u', 'npc') <= 20 " ] },
+      { "not": { "and": [
+        { "npc_has_effect": "sleep" },
+        { "u_has_effect": "wife_u_dominating" }
+      ] } },
+      { "or": [
+        { "not": { "math": [ "HENTAI_EXTEND_CUBI_WIFE_ONLY_HUMAN" ] } },
+        "npc_is_character"
+      ] },
+      { "or": [
+        { "not": { "u_has_effect": "pet" } },
+        { "or": [
+          { "math": [ "HENTAI_EXTEND_PET_CUBI_WIFE_ENEMY" ] },
+          "npc_is_character"
+        ] },
+        { "and": [
+          { "u_has_effect": "cubi_allow_seduce_player" },
+          "npc_is_avatar"
+        ] }
+      ] }
+    ] },
+    "cooldown": 3
+  },
+  {
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "id": "succubi_sadist_whip",
+    "cooldown": 5,
+    "move_cost": 100,
+    "range": 3,
+    "damage_max_instance": [ { "damage_type": "cut", "amount": 5 } ],
+    "effects": [ { "id": "stunned", "duration": 4 } ],
+    "effects_require_dmg": true,
+    "condition": { "not": { "u_has_effect": "cubi_allow_seduce_player" } },
+    "hit_dmg_u": "%1$s挥下了鞭子！",
+    "hit_dmg_npc": "%1$s挥下了鞭子！",
+    "miss_msg_u": "%1$s挥下了鞭子，但是你闪避了！",
+    "miss_msg_npc": "%1$s挥下了鞭子，但是<npcname>闪避了！",
+    "no_dmg_msg_u": "%1$s挥下了鞭子，但是被你的装甲弹开了！",
+    "no_dmg_msg_npc": "%1$s挥下了鞭子，但是被<npcname>的装甲弹开了！"
+  },
+  {
+    "type": "monster_attack",
+    "attack_type": "gun",
+    "id": "phallo_gun",
+    "cooldown": 20,
+    "move_cost": 500,
+    "targeting_cost": 100,
+    "gun_type": "m79",
+    "ammo_type": "d_cumshot",
+    "max_ammo": 2,
+    "fake_skills": [ [ "gun", 0 ], [ "launcher", 2 ] ],
+    "fake_dex": 8,
+    "fake_per": 8,
+    "require_targeting_player": true,
+    "targeting_sound": "「Hnggg...cum, cum, CUM!」",
+    "targeting_volume": 50,
+    "description": "咚！",
+    "ranges": [ [ 5, 25, "DEFAULT" ] ]
+  },
+  {
+    "type": "monster_attack",
+    "attack_type": "gun",
+    "id": "hoplo_gun1",
+    "cooldown": 5,
+    "move_cost": 1200,
+    "targeting_cost": 250,
+    "gun_type": "rifle_flintlock",
+    "ammo_type": "flintlock_ammo_magic",
+    "max_ammo": 6,
+    "fake_skills": [ [ "gun", 4 ], [ "rifle", 4 ] ],
+    "fake_dex": 8,
+    "fake_per": 12,
+    "require_targeting_player": true,
+    "//": "ウェーバーの「魔弾の射手」の一説から適当に抜き出し。「6発は必中、7発目は...」という意味。まあドイツ語はさっぱりだがな！",
+    "targeting_sound": "「Sechse treffen, sieben...」",
+    "targeting_volume": 30,
+    "description": "咚！",
+    "no_ammo_sound": "咔嚓！",
+    "ranges": [ [ 2, 12, "DEFAULT" ] ]
+  },
+  {
+    "type": "monster_attack",
+    "attack_type": "gun",
+    "id": "hoplo_gun2",
+    "cooldown": 2,
+    "move_cost": 1200,
+    "targeting_cost": 250,
+    "gun_type": "rifle_flintlock",
+    "ammo_type": "flintlock_ammo",
+    "max_ammo": 24,
+    "fake_skills": [ [ "gun", 2 ], [ "rifle", 2 ] ],
+    "fake_dex": 6,
+    "fake_per": 8,
+    "require_targeting_player": true,
+    "//": "ウェーバーの「魔弾の射手」の一説から適当に抜き出し。「ダイヤのクイーンの名にかけて撃て！は、は！」という意味。まあドイツ語はさっぱりだがな！",
+    "targeting_sound": "「Schiess in schellobers Namen! Ha, ha!」",
+    "targeting_volume": 40,
+    "description": "咚！",
+    "no_ammo_sound": "咔嚓！",
+    "ranges": [ [ 2, 12, "DEFAULT" ] ]
+  }
+]

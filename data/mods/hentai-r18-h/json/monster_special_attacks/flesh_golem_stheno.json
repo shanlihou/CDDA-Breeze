@@ -1,0 +1,64 @@
+[
+   {
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "id": "flesh_golem_stheno_claw",
+    "cooldown": 5,
+    "damage_max_instance": [ { "damage_type": "bash", "amount": 10 } ],
+    "min_mul": 0.5,
+    "max_mul": 1.0,
+    "move_cost": 100,
+    "range": 1,
+    "dodgeable": true,
+    "blockable": true,
+    "effects": [
+      { "id": "downed", "duration": 180, "chance": 16 }
+    ],
+    "hit_dmg_u": "The %1$s swings a massive claw at %2$s!",
+    "hit_dmg_npc": "The %1$s swings a massive claw at %2$s!",
+    "miss_msg_u": "%s挥舞起了强韧的爪子，你躲开了！",
+    "miss_msg_npc": "%s挥舞起了强韧的爪子，<npcname>躲开了！",
+    "no_dmg_msg_u": "The %1$s swings a massive claw at %2$s!",
+    "no_dmg_msg_npc": "The %1$s swings a massive claw at %2$s!",
+    "condition": { "not": { "u_has_effect": "cubi_allow_seduce_player" } }
+  },
+  {
+    "type": "monster_attack",
+    "id": "flesh_golem_stheno_roar",
+    "cooldown": 10,
+    "attack_type": "melee",
+    "condition": { "and": [
+      { "one_in_chance": 12 },
+      { "math": [ "distance('u', 'npc')", ">", "1" ] }
+    ] }
+  },
+  {
+    "type": "SPELL",
+    "id": "spell_flesh_golem_stheno_roar_dummy",
+    "name": "spell_flesh_golem_stheno_roar_dummy",
+    "description": "spell_flesh_golem_stheno_roar_dummy",
+    "effect": "attack",
+    "valid_targets": [ "hostile" ],
+    "base_casting_time": 200,
+    "min_range": 12,
+    "shape": "blast",
+    "extra_effects": [ { "id": "spell_flesh_golem_stheno_roar", "hit_self": true } ],
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ]
+  },
+  {
+    "type": "SPELL",
+    "id": "spell_flesh_golem_stheno_roar",
+    "name": "spell_flesh_golem_stheno_roar",
+    "description": "spell_flesh_golem_stheno_roar",
+    "valid_targets": [ "self" ],
+    "base_casting_time": 0,
+    "effect": "noise",
+    "sound_type": "alert",
+    "min_damage": 80,
+    "sound_description": "a terrifying roar!",
+    "sound_ambient": false,
+    "sound_id": "shout",
+    "sound_variant": "roar",
+    "shape": "blast"
+  }
+]

@@ -1,0 +1,171 @@
+[
+  {
+    "type": "mutation",
+    "id": "VIRGIN",
+    "name": "贞操",
+    "points": 0,
+    "description": "不管你大灾变之前有没有机会，你在与他人的交流中一直守护着贞操，但在世界变成这样的情况下它已经无关紧要了。",
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false
+  },
+  {
+    "type": "mutation",
+    "id": "SMALL_BREAST",
+    "//": "男でも特質が取れる？気にするな！",
+    "name": "贫乳",
+    "points": 0,
+    "visibility": 0,
+    "description": "\"胸不平何以平天下！\"……人的喜好各不相同，嗯，虽说不上是什么缺点，同时也算不上什么优点吧。",
+    "starting_trait": true,
+    "types": [ "BREAST_SIZE" ],
+    "category": [ "FISH", "LIZARD", "ELFA", "RAPTOR" ]
+  },
+  {
+    "type": "mutation",
+    "id": "BIG_BREAST",
+    "//": "男でも特質が取れる？気にするな！",
+    "name": "巨乳",
+    "points": 1,
+    "visibility": 2,
+    "ugliness": -2,
+    "description": "\"乳不巨何以聚人心！\"......人的喜好各不相同，但大部分男性都倾向于喜欢巨乳的女性，部分NPC也会对你有所好感。",
+    "starting_trait": true,
+    "types": [ "BREAST_SIZE" ],
+    "changes_to": [ "HUGE_BREAST" ],
+    "category": [ "CATTLE", "MEDICAL", "FIEND" ]
+  },
+  {
+    "type": "mutation",
+    "id": "MULTI_BREAST",
+    "name": "复乳",
+    "points": -1,
+    "visibility": 1,
+    "ugliness": 2,
+    "description": "\"买2赠1！\"......看起来让人有点不舒服，但起码不会影响你自己的动作。",
+    "category": [ "RAT", "BEAST", "URSINE", "FELINE", "LUPINE", "CATTLE", "CHIMERA" ]
+  },
+  {
+    "type": "mutation",
+    "id": "ESTRUS_LUPINE",
+    "name": "发情期（狼）",
+    "points": -2,
+    "description": "春季会有发情期。",
+    "mixed_effect": true,
+    "types": [ "ESTRUS" ],
+    "category": [ "LUPINE" ]
+  },
+  {
+    "type": "mutation",
+    "id": "ESTRUS_FELINE",
+    "name": "发情期（猫）",
+    "points": -2,
+    "description": "每年都会有几次发情期。",
+    "mixed_effect": true,
+    "types": [ "ESTRUS" ],
+    "category": [ "FELINE" ]
+  },
+  {
+    "type": "mutation",
+    "id": "ESTRUS_RABBIT",
+    "name": "発情期 (ウサギ)",
+    "points": -2,
+    "description": "頻繁に発情期がやってきます。",
+    "mixed_effect": true,
+    "types": [ "ESTRUS" ],
+    "category": [ "RABBIT" ]
+  },
+  {
+    "type": "mutation",
+    "id": "OVIPARITY_BIRD",
+    "name": "卵生（鸟）",
+    "points": -3,
+    "description": "在体内形成了蛋，即使是自然怀孕，也会以蛋的形式怀孕。同时即便没有怀孕，也会定期产蛋。(※未実装)",
+    "category": [ "BIRD" ],
+    "types": [ "OVIPARITY" ],
+    "threshreq": [ "THRESH_BIRD" ]
+  },
+  {
+    "type": "mutation",
+    "id": "OVIPARITY_LIZARD",
+    "name": "卵生 (爬虫)",
+    "points": -2,
+    "description": "在体内形成了蛋，即使是自然怀孕，也会以蛋的形式怀孕。(※未実装)",
+    "category": [ "LIZARD", "RAPTOR" ],
+    "types": [ "OVIPARITY" ],
+    "threshreq": [ "THRESH_LIZARD", "THRESH_RAPTOR" ]
+  },
+  {
+    "type": "mutation",
+    "id": "OVIPARITY_INSECT",
+    "name": "卵生 (昆虫)",
+    "points": -2,
+    "description": "在体内形成了蛋，即使是自然怀孕，也会以蛋的形式怀孕。(※未実装)",
+    "category": [ "INSECT", "SPIDER" ],
+    "types": [ "OVIPARITY" ],
+    "threshreq": [ "THRESH_INSECT", "THRESH_SPIDER" ]
+  },
+  {
+    "type": "mutation",
+    "id": "OVIPOSITOR",
+    "name": "输卵管 (昆虫)",
+    "points": 2,
+    "visibility": 6,
+    "ugliness": 3,
+    "description": "你的身体长出了一个新器官，如剑般锐利的输卵管从体内突出，刺入某件东西（或某人）。",
+    "prereqs": [ "OVIPARITY_INSECT" ],
+    "prereqs2": [ "TAIL_STING" ],
+    "category": [ "INSECT" ],
+    "types": [ "TAIL" ],
+    "restricts_gear": [ "leg_hip_l", "leg_hip_r" ],
+    "allowed_items": [ "ALLOWS_TAIL" ],
+    "allow_soft_gear": true,
+    "attacks": {
+      "attack_text_u": "你用产卵管刺穿了%s！",
+      "attack_text_npc": "%1$用产卵管刺穿了%2$s！",
+      "chance": 20,
+      "base_damage": { "damage_type": "stab", "amount": 20 }
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "TAIL_FIEND",
+    "name": "恶魔尾巴",
+    "points": 1,
+    "visibility": 4,
+    "ugliness": 4,
+    "description": "尖端长着黑桃型的头部，和恶魔一样的皮质的尾巴，几乎没有改善身体平衡的效果，同时也不能穿普通的腿部装备。",
+    "types": [ "TAIL" ],
+    "prereqs": [ "TAIL_LONG" ],
+    "category": [ "FIEND" ],
+    "restricts_gear": [ "leg_hip_l", "leg_hip_r" ],
+    "allowed_items": [ "ALLOWS_TAIL" ],
+    "allow_soft_gear": true
+  },
+  {
+    "type": "mutation",
+    "id": "THRESH_FIEND",
+    "name": "堕落",
+    "points": 1,
+    "description": "世界变成了地狱，那么，自己有什么理由不变成恶魔呢？",
+    "valid": false,
+    "purifiable": false,
+    "threshold": true
+  },
+  {
+    "type": "mutation",
+    "id": "CORRUPT_MUTATION",
+    "name": "corrupt变异",
+    "description": "corrupt变异",
+    "points": 0,
+    "player_display": false,
+    "valid": false,
+    "processed_eocs": [
+      {
+        "id": "EOC_CORRUPT_MUTATION",
+        "condition": { "math": [ "rand(19) + 1", ">", "u_val('intelligence')" ] },
+        "effect": { "u_add_effect": "corrupt", "duration": 11 }
+      }
+    ]
+  }
+]

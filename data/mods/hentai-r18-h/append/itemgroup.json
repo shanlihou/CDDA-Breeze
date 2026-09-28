@@ -1,0 +1,34 @@
+[
+  {
+    "type": "item_group",
+    "id": "bedroom",
+    "copy-from": "bedroom",
+    "extend": { "items": [ [ "breast_pump", 5 ] ] }
+  },
+  {
+    "type": "item_group",
+    "id": "livingroom",
+    "copy-from": "livingroom",
+    "extend": { "items": [ [ "breast_pump", 2 ] ] }
+  },
+  {
+    "type": "item_group",
+    "id": "everyday_gear",
+    "copy-from": "everyday_gear",
+    "extend": { "items": [ [ "breast_pump", 1 ] ] }
+  },
+  {
+    "type": "item_group",
+    "id": "default_zombie_items_bags_small",
+    "copy-from": "default_zombie_items_bags_small",
+    "subtype": "collection",
+    "extend": { "items": [ [ "breast_pump", 1 ] ] }
+  },
+  {
+    "type": "item_group",
+    "id": "SUS_fridge_stocked",
+    "copy-from": "SUS_fridge_stocked",
+    "subtype": "collection",
+    "extend": { "items": [ [ "breast_milk", 1 ] ] } 
+  }
+]

@@ -1,0 +1,59 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_ESTRUS_LUPINE",
+    "recurrence": [ "28 days", "42 days" ],
+    "condition": {
+      "and": [
+        { "u_has_trait": "ESTRUS_LUPINE" },
+        { "not": { "u_has_any_effect": [ "estrus", "pregnant1", "pregnant2", "pregnant3", "pregnant4", "pregnant5", "pregnant6", "pregnant7", "pregnant8", "pregnant9", "pregnant10", "labor_pain" ] } },
+        { "is_season": "winter" }
+      ]
+    },
+    "deactivate_condition": { "not": { "u_has_trait": "ESTRUS_LUPINE" } },
+    "effect": { "u_add_effect": "estrus", "duration": [ "14 days", "21 days" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_ESTRUS_FELINE",
+    "//": "発情休止は5~16日",
+    "recurrence": [ "20 days", "35 days" ],
+    "condition": {
+      "and": [
+        { "u_has_trait": "ESTRUS_FELINE" },
+        { "not": { "u_has_any_effect": [ "estrus", "pregnant1", "pregnant2", "pregnant3", "pregnant4", "pregnant5", "pregnant6", "pregnant7", "pregnant8", "pregnant9", "pregnant10", "labor_pain" ] } },
+        {
+          "or": [
+            { "is_season": "spring" },
+            { "is_season": "summer" }
+          ]
+        }
+      ]
+    },
+    "deactivate_condition": { "not": { "u_has_trait": "ESTRUS_FELINE" } },
+    "effect": { "u_add_effect": "estrus", "duration": [ "5 days", "15 days" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_ESTRUS_RABBIT",
+    "//": "発情期は1~2週間、休止は2,3日、野生は春から夏",
+    "recurrence": [ "10 days", "15 days" ],
+    "condition": {
+      "and": [
+        { "u_has_trait": "ESTRUS_RABIT" },
+        { "not": { "u_has_any_effect": [ "estrus", "pregnant1", "pregnant2", "pregnant3", "pregnant4", "pregnant5", "pregnant6", "pregnant7", "pregnant8", "pregnant9", "pregnant10", "labor_pain" ] } }
+      ]
+    },
+    "deactivate_condition": { "not": { "u_has_trait": "ESTRUS_RABBIT" } },
+    "effect": {
+      "if": {
+        "or": [
+          { "is_season": "spring" },
+          { "is_season": "summer" },
+          { "one_in_chance": 2 } 
+        ]
+      },
+      "then": { "u_add_effect": "estrus", "duration": [ "7 days", "14 days" ] }
+    }
+  }
+]
