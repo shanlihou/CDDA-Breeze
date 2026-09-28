@@ -349,6 +349,7 @@ enum action_id : int {
     /** Not an action, serves as count of enumerated actions */
     // 标记 添加actionCreateWorldBackup
     actionCreateWorldBackup,
+    ACTION_WebDAV云存档,
     ACTION_数据检索,
     ACTION_管理扩展按键,
     ACTION_网络功能,

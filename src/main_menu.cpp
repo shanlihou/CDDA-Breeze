@@ -47,6 +47,7 @@
 #include "translations.h"
 #include "ui_manager.h"
 #include "wcwidth.h"
+#include "webdav_backup.h"
 #include "worldfactory.h"
 
 enum class main_menu_opts : int {
@@ -488,6 +489,7 @@ void main_menu::init_strings()
     vWorldSubItems.emplace_back( pgettext( "Main Menu|World", "角色转为模板" ) );
     vWorldSubItems.emplace_back( pgettext( "Main Menu|World", "删除世界" ) );
     vWorldSubItems.emplace_back( pgettext( "Main Menu|World", "重置世界" ) );
+    vWorldSubItems.emplace_back( pgettext( "Main Menu|World", "WebDAV 云存档" ) );
 
     vWorldHotkeys.clear();
     for( const std::string &item : vWorldSubItems ) {
@@ -1110,7 +1112,7 @@ void main_menu::world_tab( const std::string &worldname )
     uilist mmenu( string_format( _( "Manage world \"%s\"" ), worldname ), {} );
     mmenu.border_color = c_white;
     int opt_val = 0;
-    std::array<char, 6> hotkeys = { 'm', 'e', 's', 't', 'd', 'r'};
+    std::array<char, 7> hotkeys = { 'm', 'e', 's', 't', 'd', 'r', 'w'};
     for( const std::string &it : vWorldSubItems ) {
         mmenu.entries.emplace_back( opt_val, true, hotkeys[opt_val],
                                     remove_color_tags( shortcut_text( c_white, it ) ) );
@@ -1189,6 +1191,9 @@ void main_menu::world_tab( const std::string &worldname )
             if( query_yn( _( "Remove all saves and regenerate world?" ) ) ) {
                 clear_world( false );
             }
+            break;
+        case 6: // WebDAV 云存档：备份 / 恢复
+            webdav::show_menu( false );
             break;
         default:
             break;

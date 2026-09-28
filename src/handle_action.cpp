@@ -101,6 +101,7 @@
 #include "vpart_range.h"
 #include "weather.h"
 #include "weather_type.h"
+#include "webdav_backup.h"
 #include "worldfactory.h"
 #include "monstergenerator.h"
 #include "item_factory.h"
@@ -5360,6 +5361,14 @@ bool game::do_regular_action(action_id& act, avatar& player_character,
 
 
         // 标记 添加备份世界的case
+    case ACTION_WebDAV云存档: {
+
+        webdav::show_menu(true);
+
+        break;
+
+    }
+
     case actionCreateWorldBackup: {
 
         if (query_yn("确定要备份当前世界吗?")) {
