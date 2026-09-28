@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}搜物品 - {{ q }}{% endblock %}
+
+{% block content %}
+<h1>🔍 物品搜索</h1>
+
+<form class="search-page-form" method="get">
+  <input name="q" type="text" placeholder="物品名 / 中文名 (例: wood axe, 木斧, 火炉)"
+         value="{{ q }}" autofocus>
+  <button type="submit">搜索</button>
+</form>
+
+{% if not q %}
+  <p class="hint">输入物品名片段 (英文 / 中文 / 中文别名 都行). 也支持
+    <code>comp bow</code> 这种多关键词 AND 匹配.</p>
+  <h2>常用搜索</h2>
+  <div class="chip-row">
+    <a class="chip" href="?q=木斧">木斧</a>
+    <a class="chip" href="?q=stone+axe">stone axe</a>
+    <a class="chip" href="?q=短弓">短弓</a>
+    <a class="chip" href="?q=手弩">手弩</a>
+    <a class="chip" href="?q=生理盐水">生理盐水</a>
+    <a class="chip" href="?q=打火机">打火机</a>
+    <a class="chip" href="?q=火炉">火炉</a>
+    <a class="chip" href="?q=冰箱">冰箱</a>
+    <a class="chip" href="?q=太阳能板">太阳能板</a>
+  </div>
+{% else %}
+  <p class="hint">共 {{ total }} 个匹配 (物品 {{ items | length }}, 家具/地形 {{ furns | length }})</p>
+
+  {% if not items and not furns %}
+    <p class="empty">(无匹配) · 试试英文名, 或更短的关键词</p>
+  {% endif %}
+
+  {% if furns %}
+  <section>
+    <h2>家具 / 地形 ({{ furns | length }})</h2>
+    <div class="result-grid">
+      {% for f in furns %}
+        <a class="result-card" href="{{ url_for('cdda_search.furniture_detail', item_id=f.id) }}">
+          <div class="result-type">{{ f.type }}</div>
+          <div class="result-name">{{ f.name }}</div>
+          <div class="result-id">{{ f.id }}</div>
+        </a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if items %}
+  <section>
+    <h2>物品 ({{ items | length }})</h2>
+    <div class="result-grid">
+      {% for it in items %}
+        <a class="result-card" href="{{ url_for('cdda_search.item_detail', item_id=it.id) }}">
+          <div class="result-type">{{ it.type }}</div>
+          <div class="result-name">
+            {{ it.name }}
+            {% if it.id in item_zh_names %}
+              <small class="zh">[{{ item_zh_names[it.id] }}]</small>
+            {% endif %}
+          </div>
+          <div class="result-id">{{ it.id }}</div>
+        </a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+{% endif %}
+
+<a class="back" href="{{ url_for('cdda_search.index') }}">← 返回首页</a>
+{% endblock %}

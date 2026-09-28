@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero">
+  <h1>CDDA Breeze 物品 / 配方 / 家具 查询</h1>
+  <p>基于 <code>data/json</code> 与 <code>lang/po/zh_CN.po</code> 离线构建, 支持中英文搜索与按主技能筛选.</p>
+</section>
+
+<section class="quick-search">
+  <h2>三个常用入口</h2>
+  <div class="entry-cards">
+    <a class="entry-card" href="{{ url_for('cdda_search.items') }}">
+      <div class="entry-icon">🔍</div>
+      <div class="entry-title">搜物品</div>
+      <div class="entry-desc">按物品名 / 中文名 / 别名搜索, 物品 + 家具 + 配方原料</div>
+    </a>
+    <a class="entry-card" href="{{ url_for('cdda_search.levelup') }}">
+      <div class="entry-icon">⬆</div>
+      <div class="entry-title">升级规划</div>
+      <div class="entry-desc">选技能 + 当前/目标级, 看每个配方能涨多少 XP, 升到下一级要多久</div>
+    </a>
+    <a class="entry-card" href="{{ url_for('cdda_search.browse') }}">
+      <div class="entry-icon">📂</div>
+      <div class="entry-title">技能浏览</div>
+      <div class="entry-desc">按主技能或熟练度 (锉工/锻造/...) 列出所有配方, 按难度分组</div>
+    </a>
+  </div>
+</section>
+
+<section class="stats">
+  <h2>索引统计</h2>
+  <table class="stats-table">
+    <tr><th>类别</th><th>数量</th></tr>
+    <tr><td>物品</td><td>{{ stats.items }}</td></tr>
+    <tr><td>家具 / 地形</td><td>{{ stats.furniture }}</td></tr>
+    <tr><td>配方条目</td><td>{{ stats.recipes }}</td></tr>
+    <tr><td>内置物品中文名</td><td>{{ stats.item_zh_count }}</td></tr>
+    <tr><td>内置家具中文名</td><td>{{ stats.furn_zh_count }}</td></tr>
+    <tr><td>PO 翻译条目 (zh_CN.po)</td><td>{{ stats.po_translations }}</td></tr>
+    <tr><td>技能种类</td><td>{{ stats.skill_count }}</td></tr>
+  </table>
+</section>
+{% endblock %}

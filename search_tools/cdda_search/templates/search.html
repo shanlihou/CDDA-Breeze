@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}{{ q }} - 搜索结果{% endblock %}
+
+{% block content %}
+<h1>搜索: {{ q }}</h1>
+<p class="hint">共 {{ total }} 个匹配 (物品 {{ items | length }}, 家具/地形 {{ furns | length }})</p>
+
+{% if not items and not furns %}
+  <p class="empty">(无匹配) · 试试英文名, 或更短的关键词</p>
+{% endif %}
+
+{% if furns %}
+<section>
+  <h2>家具 / 地形 ({{ furns | length }})</h2>
+  <div class="result-grid">
+    {% for f in furns %}
+      <a class="result-card" href="{{ url_for('cdda_search.furniture_detail', item_id=f.id) }}">
+        <div class="result-type">{{ f.type }}</div>
+        <div class="result-name">{{ f.name }}</div>
+        <div class="result-id">{{ f.id }}</div>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% if items %}
+<section>
+  <h2>物品 ({{ items | length }})</h2>
+  <div class="result-grid">
+    {% for it in items %}
+      <a class="result-card" href="{{ url_for('cdda_search.item_detail', item_id=it.id) }}">
+        <div class="result-type">{{ it.type }}</div>
+        <div class="result-name">{{ it.name }}</div>
+        <div class="result-id">{{ it.id }}</div>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+<a class="back" href="{{ url_for('cdda_search.index') }}">← 返回首页</a>
+{% endblock %}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{% block title %}CDDA 物品查询{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('cdda_search.static', filename='style.css') }}">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="{{ url_for('cdda_search.index') }}">CDDA 物品查询</a>
+    <nav class="topnav tabs">
+      <a href="{{ url_for('cdda_search.items') }}"
+         data-tab="items"
+         class="{% if active_tab == 'items' %}active{% endif %}">
+        🔍 搜物品
+      </a>
+      <a href="{{ url_for('cdda_search.levelup') }}"
+         data-tab="levelup"
+         class="{% if active_tab == 'levelup' %}active{% endif %}">
+        ⬆ 升级规划
+      </a>
+      <a href="{{ url_for('cdda_search.browse') }}"
+         data-tab="browse"
+         class="{% if active_tab == 'browse' %}active{% endif %}">
+        📂 技能浏览
+      </a>
+    </nav>
+    <form action="{{ url_for('cdda_search.items') }}" method="get" class="search-form">
+      <input name="q" type="text" placeholder="物品名 / 中文名 (例: wood axe, 木斧, 火炉)"
+             value="{{ request.args.get('q', '') }}"
+             autocomplete="off" autofocus>
+      <button type="submit">搜索</button>
+    </form>
+  </header>
+
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="footer">
+    <small>
+      CDDA Breeze 数据驱动 · 索引 {{ stats.items }} 物品
+      / {{ stats.furniture }} 家具地形
+      / {{ stats.recipes }} 配方
+      · 内置中文名 {{ stats.item_zh_count + stats.furn_zh_count }} 条
+      · PO 翻译 {{ stats.po_translations }} 条
+    </small>
+  </footer>
+</body>
+</html>

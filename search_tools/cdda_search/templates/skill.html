@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>
+  制作可获得 "{{ name }}" 经验 的配方
+  <small class="muted">主技能 id: {{ matched_ids | join(', ') }}</small>
+</h1>
+
+{% if not_found %}
+  <p class="empty">未知技能 "{{ name }}". <a href="{{ url_for('cdda_search.index') }}">回首页选技能</a></p>
+{% elif results | length == 0 %}
+  <p class="empty">主技能匹配 "{{ name }}" 的配方: 0 条</p>
+{% else %}
+  <p class="hint">共 {{ results | length }} 条, 按难度升序. 点链接看详情.</p>
+  <table class="recipe-table">
+    <thead>
+      <tr>
+        <th>#</th><th>难度</th><th>耗时</th><th>解锁</th><th>物品</th><th>id</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for it, r in results %}
+        <tr>
+          <td>{{ loop.index0 }}</td>
+          <td><strong>Lv.{{ r.difficulty if r.difficulty else '?' }}</strong></td>
+          <td><code>{{ r.time or '?' }}</code></td>
+          <td>
+            {% if r.autolearn %} <span class="tag auto">✓自动</span>
+            {% else %} <span class="tag book">书</span> {% endif %}
+          </td>
+          <td><a href="{{ url_for('cdda_search.recipe_detail', item_id=it.id, idx=loop.index0) }}">{{ it.name }}</a></td>
+          <td><code>{{ it.id }}</code></td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endif %}
+
+<a class="back" href="{{ url_for('cdda_search.index') }}">← 返回首页</a>
+{% endblock %}

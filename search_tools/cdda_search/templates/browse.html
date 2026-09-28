@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+
+{% block title %}{% if q %}{{ title_zh }} - 浏览{% else %}技能/熟练度浏览{% endif %}{% endblock %}
+
+{% block content %}
+<h1>
+  {% if q %}
+    {{ title_zh }}
+    <small class="muted">(共 {{ total }} 个配方)</small>
+  {% else %}
+    技能/熟练度浏览
+  {% endif %}
+</h1>
+
+<form class="browse-form" method="get">
+  <label>类型:
+    <select name="type">
+      <option value="skill" {% if btype == 'skill' %}selected{% endif %}>主技能</option>
+      <option value="proficiency" {% if btype == 'proficiency' %}selected{% endif %}>熟练度</option>
+    </select>
+  </label>
+  <label class="grow">名称:
+    <input name="q" type="text"
+           placeholder="{% if btype == 'proficiency' %}prof_blacksmithing / 锻造 / 锉工 / 金属加工{% else %}fabrication / 制造 / survival / 生存{% endif %}"
+           value="{{ q }}" list="browse-options" required>
+    <datalist id="browse-options">
+      {% if btype == 'proficiency' %}
+        {% for p in prof_names %}
+          <option value="{{ p }}">{{ p }}</option>
+        {% endfor %}
+      {% else %}
+        {% for sid, zh in skills %}
+          <option value="{{ sid }}">{{ zh }} ({{ sid }})</option>
+          <option value="{{ zh }}">{{ zh }} ({{ sid }})</option>
+        {% endfor %}
+      {% endif %}
+    </datalist>
+  </label>
+  <button type="submit">浏览</button>
+</form>
+
+{% if not no_query and not q %}
+  <p class="hint">从下拉选类型, 然后输入 (中英文 / id / 别名都支持, 会有自动补全). 列出所有该技能的配方.</p>
+{% endif %}
+
+{% if q and not total %}
+  <p class="empty">
+    没找到任何配方
+    {% if btype == 'proficiency' %}
+      包含熟练度 "{{ q }}"
+    {% else %}
+      主技能为 "{{ q }}" 的
+    {% endif %}
+    .
+  </p>
+{% endif %}
+
+{% if total %}
+  <p class="hint">
+    按 难度 分组, 同难度内按 时间 升序.
+    {% if btype == 'proficiency' %}
+      这些配方需要 <code>{{ q }}</code> 熟练度.
+    {% else %}
+      这些配方完成后获得 <code>{{ title_zh }}</code> 经验.
+    {% endif %}
+  </p>
+
+  {% for g in groups %}
+    <section class="diff-group">
+      <h2>
+        <span class="diff-badge lv{{ g.difficulty }}">Lv.{{ g.difficulty }}</span>
+        ({{ g.count }} 个配方)
+      </h2>
+      <div class="craft-list">
+        {% for it, r, xp_each in g['items'] %}
+          <div class="craft-card">
+            <div class="craft-header">
+              <div class="craft-num">{{ loop.index0 }}</div>
+              <div class="craft-body">
+                <div class="craft-title">
+                  <a href="{{ url_for('cdda_search.item_detail', item_id=it.id) }}">{{ it.name }}</a>
+                  <small class="muted">({{ it.id }})</small>
+                </div>
+                <div class="craft-meta">
+                  <span class="tag time">{{ r.time or '?' }}</span>
+                  {% if r.autolearn %}<span class="tag auto">✓自动</span>
+                  {% else %}<span class="tag book">书</span>{% endif %}
+                  {% if xp_each %}
+                    <span class="tag xp-each">单次 {{ xp_each }} XP</span>
+                  {% endif %}
+                </div>
+                {% if r.proficiencies %}
+                <div class="prof-line muted small">
+                  需要熟练度:
+                  {% for p in r.proficiencies %}
+                    <span class="prof-pill">{{ p.proficiency }}{% if not p.required %} (可选){% endif %}</span>
+                  {% endfor %}
+                </div>
+                {% endif %}
+              </div>
+            </div>
+            {% if r.components %}
+            <details class="craft-materials">
+              <summary>材料 ({{ r.components | length }} 组)</summary>
+              <ul>
+                {% for group in r.components %}
+                  <li>{% for n, q, f in group %}<span class="mat">{{ q }}× {{ n }}</span>{% if f == 'LIST' %} (任选){% endif %}{% if not loop.last %} <span class="muted">或</span> {% endif %}{% endfor %}</li>
+                {% endfor %}
+              </ul>
+              {% if r.qualities %}
+              <div class="craft-qualities">
+                <span class="muted">工具:</span>
+                {% for qid, lv in r.qualities %}<span class="mat">{{ qid }} Lv.{{ lv }}</span>{% endfor %}
+              </div>
+              {% endif %}
+            </details>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+  {% endfor %}
+{% endif %}
+
+<a class="back" href="{{ url_for('cdda_search.index') }}">← 返回首页</a>
+{% endblock %}

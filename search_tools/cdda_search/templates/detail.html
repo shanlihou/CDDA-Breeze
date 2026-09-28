@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}{% if zh_name %}{{ zh_name }} - {% endif %}{{ obj.name }}{% endblock %}
+
+{% block content %}
+{% if kind == "recipe" %}
+  <h1>
+    配方 #{{ idx }} for <a href="{{ url_for('cdda_search.item_detail', item_id=item_id) }}">{{ item_id }}</a>
+  </h1>
+{% else %}
+  <h1>
+    {{ obj.name }}
+    {% if zh_name %}<small class="zh">[{{ zh_name }}]</small>{% endif %}
+  </h1>
+  <p class="meta">
+    <span class="tag">{{ kind }}</span>
+    <code>{{ obj.id }}</code>
+    {% if obj.source_file %}<small class="muted">{{ obj.source_file }}</small>{% endif %}
+  </p>
+{% endif %}
+
+<pre class="detail-block">{{ text }}</pre>
+
+{% if recipes %}
+  <h2>其他配方 (共 {{ recipes | length }})</h2>
+  <div class="recipe-list">
+    {% for r in recipes %}
+      <a class="recipe-link" href="{{ url_for('cdda_search.recipe_detail', item_id=obj.id, idx=loop.index0) }}">
+        {{ "✓" if r.autolearn else "📖" }} Lv.{{ r.difficulty if r.difficulty else '?' }}
+        {{ r.time or '?' }} ·
+        skill: {{ r.skill_used or '?' }}
+      </a>
+    {% endfor %}
+  </div>
+{% endif %}
+
+<a class="back" href="javascript:history.back()">← 返回</a>
+{% endblock %}
