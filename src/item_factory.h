@@ -201,6 +201,9 @@ class Item_factory
         void load_magazine( const JsonObject &jo, const std::string &src );
         void load_battery( const JsonObject &jo, const std::string &src );
         void load_generic( const JsonObject &jo, const std::string &src );
+        // 0.H 兼容层：0.H 把物品定义合并成 { "type": "ITEM", "subtypes": [...] }，
+        // 由 subtypes 决定转发给上面哪个加载器。
+        void load_0h_item( const JsonObject &jo, const std::string &src );
         void load_bionic( const JsonObject &jo, const std::string &src );
         /*@}*/
 

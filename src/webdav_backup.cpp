@@ -22,6 +22,7 @@
 #include "color.h"
 #include "filesystem.h"
 #include "game.h"
+#include "options.h"
 #include "output.h"
 #include "path_info.h"
 #include "string_formatter.h"
@@ -113,28 +114,31 @@ std::string url_decode( const std::string &s )
     return out;
 }
 
-/// 备份目录的绝对 URL，末尾一定带 "/"
-std::string remote_base_url()
+/// 设置里的服务器地址，去掉误填的协议前缀与首尾空白
+std::string opt_host()
 {
-    std::string u = trim_str( webdav::WEBDAV_URL );
-    while( !u.empty() && u.back() == '/' ) {
-        u.pop_back();
+    std::string h = trim_str( get_option<std::string>( webdav::opt::HOST ) );
+    const std::string lower = to_lower( h );
+    if( starts_with( lower, "https://" ) ) {
+        h = h.substr( 8 );
+    } else if( starts_with( lower, "http://" ) ) {
+        h = h.substr( 7 );
     }
-    const std::string dir = webdav::WEBDAV_REMOTE_DIR;
-    for( size_t i = 0; i < dir.size(); ) {
-        size_t p = dir.find_first_of( "/\\", i );
-        if( p == std::string::npos ) {
-            p = dir.size();
-        }
-        const std::string seg = trim_str( dir.substr( i, p - i ) );
-        if( !seg.empty() ) {
-            u += "/";
-            u += url_encode( seg );
-        }
-        i = p + 1;
+    while( !h.empty() && h.back() == '/' ) {
+        h.pop_back();
     }
-    u += "/";
-    return u;
+    return trim_str( h );
+}
+
+/// 服务器根地址：scheme://host（末尾不带 "/"）；未配置时返回空串
+std::string base_url_from_options()
+{
+    const std::string host = opt_host();
+    if( host.empty() ) {
+        return std::string();
+    }
+    const bool https = get_option<bool>( webdav::opt::USE_HTTPS );
+    return std::string( https ? "https://" : "http://" ) + host;
 }
 
 /// 取 URL 的 scheme://host 部分
@@ -163,6 +167,16 @@ std::vector<std::string> split_dir( const std::string &path )
         i = p + 1;
     }
     return out;
+}
+
+/// 设置里的备份目录切成的各段，已剔除空段与 "." / ".."
+std::vector<std::string> path_segments_from_options()
+{
+    std::vector<std::string> segs = split_dir( get_option<std::string>( webdav::opt::PATH ) );
+    segs.erase( std::remove_if( segs.begin(), segs.end(), []( const std::string &s ) {
+        return s == "." || s == "..";
+    } ), segs.end() );
+    return segs;
 }
 
 std::string timestamp_str()
@@ -268,16 +282,14 @@ bool init_handle( easy_handle &eh, const std::string &url, std::string &err )
         curl_easy_setopt( eh.h, CURLOPT_SSL_VERIFYPEER, 0L );
         curl_easy_setopt( eh.h, CURLOPT_SSL_VERIFYHOST, 0L );
     }
-    const std::string user = webdav::WEBDAV_USER;
+    const std::string user = trim_str( get_option<std::string>( webdav::opt::USER ) );
     if( !user.empty() ) {
+        const std::string password = get_option<std::string>( webdav::opt::PASSWORD );
         curl_easy_setopt( eh.h, CURLOPT_USERNAME, user.c_str() );
-        curl_easy_setopt( eh.h, CURLOPT_PASSWORD, webdav::WEBDAV_PASSWORD );
-        long auth = CURLAUTH_ANY;
-        if( webdav::WEBDAV_AUTH_MODE == 1 ) {
-            auth = CURLAUTH_DIGEST;
-        } else if( webdav::WEBDAV_AUTH_MODE == 2 ) {
-            auth = CURLAUTH_BASIC;
-        }
+        curl_easy_setopt( eh.h, CURLOPT_PASSWORD, password.c_str() );
+        // 设置里只有「是否 Digest」一个开关：开 = 只用 Digest，关 = 只用 Basic
+        const long auth = get_option<bool>( webdav::opt::AUTH_DIGEST )
+                          ? CURLAUTH_DIGEST : CURLAUTH_BASIC;
         curl_easy_setopt( eh.h, CURLOPT_HTTPAUTH, auth );
     }
     // 部分 WebDAV 服务（nginx 之类）不支持 Expect: 100-continue，会导致 1 分钟卡顿
@@ -322,12 +334,11 @@ std::string describe( CURLcode res, long code )
 /// 逐级 MKCOL，失败也无所谓（目录通常已存在），由后续 PUT 兜底报错
 void ensure_remote_dir()
 {
-    std::string base = trim_str( webdav::WEBDAV_URL );
-    while( !base.empty() && base.back() == '/' ) {
-        base.pop_back();
+    std::string cur = base_url_from_options();
+    if( cur.empty() ) {
+        return;
     }
-    std::string cur = base;
-    for( const std::string &seg : split_dir( webdav::WEBDAV_REMOTE_DIR ) ) {
+    for( const std::string &seg : path_segments_from_options() ) {
         cur += "/" + url_encode( seg );
         std::string err;
         easy_handle eh;
@@ -586,6 +597,25 @@ bool run_with_spinner( const std::string &title, const work_fn &work, std::strin
 // ---------------------------------------------------------------------------
 namespace webdav
 {
+
+bool is_configured()
+{
+    return !opt_host().empty();
+}
+
+std::string remote_base_url()
+{
+    std::string u = base_url_from_options();
+    if( u.empty() ) {
+        return std::string();
+    }
+    for( const std::string &seg : path_segments_from_options() ) {
+        u += "/";
+        u += url_encode( seg );
+    }
+    u += "/";
+    return u;
+}
 
 bool test_connection( std::string &err )
 {
@@ -1015,6 +1045,16 @@ static std::string current_world_name()
     return std::string();
 }
 
+/// 没配置服务器时给个明确指引
+static bool require_config()
+{
+    if( webdav::is_configured() ) {
+        return true;
+    }
+    popup( _( "还没有配置 WebDAV 服务器。\n请在 设置 → WebDAV云存档 里填写服务器地址、备份目录、账号和密码。" ) );
+    return false;
+}
+
 static std::string pick_world_name()
 {
     const std::vector<std::string> names = world_generator->all_worldnames();
@@ -1035,6 +1075,9 @@ static std::string pick_world_name()
 
 static void do_test()
 {
+    if( !require_config() ) {
+        return;
+    }
     std::string err;
     const bool ok = run_with_spinner( _( "正在连接服务器" ), []( std::string & e ) {
         return webdav::test_connection( e );
@@ -1048,6 +1091,9 @@ static void do_test()
 
 static void do_backup( const bool in_game )
 {
+    if( !require_config() ) {
+        return;
+    }
     std::string world = current_world_name();
     if( world.empty() ) {
         world = pick_world_name();
@@ -1056,7 +1102,7 @@ static void do_backup( const bool in_game )
         popup( _( "没有找到可备份的世界。" ) );
         return;
     }
-    if( !query_yn( _( "把世界 \"%s\" 备份到云端？" ), world ) ) {
+    if( !query_yn( _( "把世界 \"%s\" 备份到云端？\n%s" ), world, webdav::remote_base_url() ) ) {
         return;
     }
     // 存档必须在主线程完成
@@ -1077,6 +1123,9 @@ static void do_backup( const bool in_game )
 
 static void do_restore( const bool in_game )
 {
+    if( !require_config() ) {
+        return;
+    }
     std::vector<remote_file> files;
     std::string err;
     if( !run_with_spinner( _( "正在获取云端备份列表" ), [&files]( std::string & e ) {
@@ -1147,6 +1196,9 @@ static void do_restore( const bool in_game )
 
 static void do_manage()
 {
+    if( !require_config() ) {
+        return;
+    }
     std::vector<remote_file> files;
     std::string err;
     if( !run_with_spinner( _( "正在获取云端备份列表" ), [&files]( std::string & e ) {
@@ -1193,15 +1245,21 @@ void show_menu( const bool in_game )
         C_TEST = 0,
         C_BACKUP,
         C_RESTORE,
-        C_MANAGE
+        C_MANAGE,
+        C_SETTINGS
     };
 
+    const bool ready = is_configured();
+
     uilist menu;
-    menu.text = _( "WebDAV 云存档" );
-    menu.addentry( C_TEST, true, '1', _( "测试服务器连接" ) );
-    menu.addentry( C_BACKUP, true, '2', _( "备份存档到云端" ) );
-    menu.addentry( C_RESTORE, true, '3', _( "从云端恢复存档" ) );
-    menu.addentry( C_MANAGE, true, '4', _( "管理云端备份（删除）" ) );
+    menu.text = ready
+                ? string_format( _( "WebDAV 云存档\n当前服务器：%s" ), remote_base_url() )
+                : _( "WebDAV 云存档\n还没有配置服务器，请先选择下面的“服务器设置”。" );
+    menu.addentry( C_TEST, ready, '1', _( "测试服务器连接" ) );
+    menu.addentry( C_BACKUP, ready, '2', _( "备份存档到云端" ) );
+    menu.addentry( C_RESTORE, ready, '3', _( "从云端恢复存档" ) );
+    menu.addentry( C_MANAGE, ready, '4', _( "管理云端备份（删除）" ) );
+    menu.addentry( C_SETTINGS, true, '5', _( "服务器设置（地址 / 账号 / 密码）" ) );
     menu.query();
 
     switch( menu.ret ) {
@@ -1216,6 +1274,10 @@ void show_menu( const bool in_game )
             break;
         case C_MANAGE:
             do_manage();
+            break;
+        case C_SETTINGS:
+            // 直接跳到设置界面，改完点返回即自动保存
+            get_options().show( in_game );
             break;
         default:
             break;

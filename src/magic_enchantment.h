@@ -114,6 +114,10 @@ enum class mod : int {
     ITEM_ATTACK_SPEED,
     CLIMATE_CONTROL_HEAT,
     CLIMATE_CONTROL_CHILL,
+    // 0.H 兼容层：0.H 新增的远程战斗相关附魔值
+    RANGE,                  // 远程武器射程加成
+    RANGED_DAMAGE,          // 远程伤害加成
+    AVOID_FRIENDRY_FIRE,    // 0.H 原文拼写即为 FRIENDRY（非笔误），表示射击时自动避开友军
     NUM_MOD
 };
 } // namespace enchant_vals

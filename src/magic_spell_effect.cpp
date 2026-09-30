@@ -58,6 +58,7 @@
 #include "ret_val.h"
 #include "rng.h"
 #include "string_formatter.h"
+#include "trap.h"
 #include "teleport.h"
 #include "timed_event.h"
 #include "translations.h"
@@ -1401,6 +1402,16 @@ void spell_effect::upgrade( const spell &sp, Creature &caster, const tripoint &t
             mon->allow_upgrade();
             mon->try_upgrade( false );
         }
+    }
+}
+
+// 0.H 兼容层：0.H 新增的法术效果，在目标格没有陷阱时放置 effect_data 指定的陷阱。
+void spell_effect::add_trap( const spell &sp, Creature &, const tripoint &target )
+{
+    class map &here = get_map();
+    const trap_id tr_id( sp.effect_data() );
+    if( here.tr_at( target ) == tr_null ) {
+        here.trap_set( target, tr_id );
     }
 }
 

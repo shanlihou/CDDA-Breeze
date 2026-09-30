@@ -185,6 +185,13 @@ void setupDebug( DebugOutput );
 /** Opposite of setupDebug, shuts the debugging system down. */
 void deinitDebug();
 
+/**
+ * 无头模式（--check-mods / --jsonverify 等命令行校验）：
+ * debugmsg 只写日志，不再弹出需要按键确认的错误窗口。
+ * 否则在已初始化界面的情况下，校验会被弹窗阻塞住。
+ */
+void set_headless_mode( bool enabled );
+
 // Function Declarations                                            {{{1
 // ---------------------------------------------------------------------
 /**

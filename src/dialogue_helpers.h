@@ -3,9 +3,11 @@
 #define CATA_SRC_DIALOGUE_HELPERS_H
 
 #include "global_vars.h"
+#include "math_exp.h"
 #include <optional>
 #include "rng.h"
 #include "type_id.h"
+#include <type_traits>
 
 struct dialogue;
 class npc;
@@ -83,6 +85,8 @@ struct talk_effect_fun_t {
         void set_npc_cbm_reserve_rule( const JsonObject &jo, const std::string &member );
         void set_npc_cbm_recharge_rule( const JsonObject &jo, const std::string &member );
         void set_location_variable( const JsonObject &jo, const std::string &member, bool is_npc );
+        // 0.H 兼容层：{"location_variable_adjust": {<var>}, "x_adjust": <int|[min,max]>, ...}
+        void set_location_variable_adjust( const JsonObject &jo, const std::string &member );
         void set_transform_radius( const JsonObject &jo, const std::string &member, bool is_npc );
         void set_transform_line( const JsonObject &jo, const std::string &member );
         void set_place_override( const JsonObject &jo, const std::string &member );
@@ -102,6 +106,20 @@ struct talk_effect_fun_t {
         void set_add_faction_trust( const JsonObject &jo, const std::string &member );
         void set_lose_faction_trust( const JsonObject &jo, const std::string &member );
         void set_arithmetic( const JsonObject &jo, const std::string &member, bool no_result );
+        // 0.H 兼容层：{"if":...,"then":...,"else":...} 条件效果
+        void set_math( const JsonObject &jo, const std::string &member );
+        void set_if_then_else( const JsonObject &jo );
+        // ---- 0.H 兼容层新增效果 ----
+        /** {"map_spawn_item": <itype>, "loc"|"target_var": <var>, "count": <n>, "container": <itype>} */
+        void set_map_spawn_item( const JsonObject &jo, const std::string &member );
+        /** {"run_eoc_selector": [<eoc id>...], "names": [...], "allow_cancel": bool} */
+        void set_run_eoc_selector( const JsonObject &jo, const std::string &member );
+        /** {"u_query_tile": "around"|"line_of_sight"|"anywhere", "target_var": <var>, "range": n, "message": str} */
+        void set_u_query_tile( const JsonObject &jo, const std::string &member, bool is_npc = false );
+        /** {"u_run_inv_eocs": "all"|"worn", "search_data": [...], "true_eocs": [...], "false_eocs": [...]} */
+        void set_run_inv_eocs( const JsonObject &jo, const std::string &member );
+        /** {"set_condition": <name>, "condition": {...}} */
+        void set_set_condition( const JsonObject &jo, const std::string &member );
         void set_set_string_var( const JsonObject &jo, const std::string &member );
         void set_custom_light_level( const JsonObject &jo, const std::string &member );
         void set_spawn_monster( const JsonObject &jo, const std::string &member, bool is_npc );
@@ -128,11 +146,23 @@ struct var_info {
     var_type type;
     std::string name;
     std::string default_val;
+    /** 0.H 兼容层：{"var_val": ...} —— name 是「持有真正变量名的那个变量」，需运行期再解一次引用。 */
+    bool indirect = false;
 };
 
 template<class T>
 static std::string read_var_value( const var_info &info, const T &d )
 {
+    // 0.H 兼容层：var_val 间接引用。先取出真正的变量名，再按外层作用域读取。
+    if( info.indirect ) {
+        var_info holder( var_type::context, info.name );
+        const std::string actual = read_var_value( holder, d );
+        if( actual.empty() ) {
+            return info.default_val;
+        }
+        var_info resolved( info.type, actual, info.default_val );
+        return read_var_value( resolved, d );
+    }
     std::string ret_val;
     global_variables &globvars = get_globals();
     switch( info.type ) {
@@ -150,6 +180,12 @@ static std::string read_var_value( const var_info &info, const T &d )
             break;
         case var_type::party:
             debugmsg( "Not implemented yet." );
+            break;
+        case var_type::context:
+            // 0.H 兼容层：context_val（实现在 condition.cpp，需要 dialogue 完整定义）
+            if constexpr( std::is_same<T, dialogue>::value ) {
+                ret_val = read_context_var( d, info.name );
+            }
             break;
         default:
             debugmsg( "Invalid type." );
@@ -198,6 +234,8 @@ struct int_or_var_part {
     std::optional<var_info> var_val;
     std::optional<int> default_val;
     std::optional<talk_effect_fun_t<T>> arithmetic_val;
+    /// 0.H 兼容层：{"math": [ ... ]} 作为数值来源
+    std::optional<math_exp> math_val;
     int evaluate( const T &d ) const {
         if( int_val.has_value() ) {
             return int_val.value();
@@ -227,6 +265,13 @@ struct int_or_var_part {
                 debugmsg( "No valid arithmetic value for int_or_var_part." );
                 return 0;
             }
+        } else if( math_val.has_value() ) {
+            if constexpr( std::is_same<T, dialogue>::value ) {
+                return static_cast<int>( math_val.value().evaluate( d ) );
+            } else {
+                debugmsg( "math 取值只支持 dialogue 上下文。" );
+                return 0;
+            }
         } else {
             return 0;
         }
@@ -253,6 +298,8 @@ struct duration_or_var_part {
     std::optional<var_info> var_val;
     std::optional<time_duration> default_val;
     std::optional<talk_effect_fun_t<T>> arithmetic_val;
+    /// 0.H 兼容层：{"math": [ ... ]} 作为时长来源（单位：回合）
+    std::optional<math_exp> math_val;
     time_duration evaluate( const T &d ) const {
         if( dur_val.has_value() ) {
             return dur_val.value();
@@ -284,6 +331,13 @@ struct duration_or_var_part {
                 return ret_val;
             } else {
                 debugmsg( "No valid arithmetic value for duration_or_var_part." );
+                return 0_seconds;
+            }
+        } else if( math_val.has_value() ) {
+            if constexpr( std::is_same<T, dialogue>::value ) {
+                return time_duration::from_turns( static_cast<int>( math_val.value().evaluate( d ) ) );
+            } else {
+                debugmsg( "math 取值只支持 dialogue 上下文。" );
                 return 0_seconds;
             }
         } else {

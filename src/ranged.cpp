@@ -1192,6 +1192,11 @@ int Character::fire_gun( const tripoint &target, int shots, item &gun )
         weakpoint_attack wp_attack;
         wp_attack.weapon = &gun;
         projectile proj = make_gun_projectile( gun );
+        // 0.H 兼容层：RANGED_DAMAGE 附魔值对远程伤害的加成
+        for( damage_unit &elem : proj.impact.damage_units ) {
+            elem.amount = enchantment_cache->modify_value( enchant_vals::mod::RANGED_DAMAGE,
+                          elem.amount );
+        }
         dispersion_sources dispersion = get_weapon_dispersion( gun );
         dispersion.add_range( recoil_total() );
         dispersion.add_spread( proj.shot_spread );
@@ -3456,6 +3461,12 @@ bool target_ui::prompt_friendlies_in_lof()
 {
     if( mode != TargetMode::Fire ) {
         debugmsg( "Not implemented" );
+        return true;
+    }
+
+    // 0.H 兼容层：AVOID_FRIENDRY_FIRE —— 拥有该附魔时不提示火线上的友军
+    // （语义为"射击会自动避开友军"，因此无需再询问）
+    if( you->enchantment_cache->get_value_add( enchant_vals::mod::AVOID_FRIENDRY_FIRE ) > 0 ) {
         return true;
     }
 

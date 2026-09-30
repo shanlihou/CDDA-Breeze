@@ -2,6 +2,7 @@
 #include "monstergenerator.h" // IWYU pragma: associated
 
 #include <algorithm>
+#include <cctype>
 #include <cstdlib>
 #include <limits>
 #include <new>
@@ -1124,8 +1125,45 @@ void mtype::load( const JsonObject &jo, const std::string &src )
     optional( jo, was_loaded, "burn_into", burn_into, string_id_reader<::mtype> {},
               mtype_id::NULL_ID() );
 
-    const auto flag_reader = enum_flags_reader<m_flag> { "monster flag" };
-    optional( jo, was_loaded, "flags", flags, flag_reader );
+    // 0.H 兼容层：0.H 起怪物 flag 是可动态声明的字符串（{"type":"monster_flag","id":...}），
+    // 而 0.G 的 m_flag 是固定枚举。这里手工解析 flags：能映射的置位，映射不了的收进
+    // json_flags，供 talker_monster::has_flag 使用（对应 0.H 的 "npc_has_flag" 查询）。
+    const auto apply_monster_flag = [this]( const std::string & flag, bool state ) {
+        const std::optional<m_flag> known = io::string_to_enum_optional<m_flag>( flag );
+        if( known.has_value() ) {
+            flags.set( known.value(), state );
+        } else if( state ) {
+            json_flags.insert( flag );
+        } else {
+            json_flags.erase( flag );
+        }
+    };
+    if( jo.has_array( "flags" ) ) {
+        flags.reset();
+        json_flags.clear();
+        for( const std::string &flag : jo.get_tags( "flags" ) ) {
+            apply_monster_flag( flag, true );
+        }
+    } else if( was_loaded ) {
+        if( jo.has_object( "extend" ) ) {
+            JsonObject tmp = jo.get_object( "extend" );
+            tmp.allow_omitted_members();
+            if( tmp.has_array( "flags" ) ) {
+                for( const std::string &flag : tmp.get_tags( "flags" ) ) {
+                    apply_monster_flag( flag, true );
+                }
+            }
+        }
+        if( jo.has_object( "delete" ) ) {
+            JsonObject tmp = jo.get_object( "delete" );
+            tmp.allow_omitted_members();
+            if( tmp.has_array( "flags" ) ) {
+                for( const std::string &flag : tmp.get_tags( "flags" ) ) {
+                    apply_monster_flag( flag, false );
+                }
+            }
+        }
+    }
     // Can't calculate yet - we want all flags first
     optional( jo, was_loaded, "bash_skill", bash_skill, -1 );
 
@@ -1242,7 +1280,16 @@ mtype_special_attack MonsterGenerator::create_actor( const JsonObject &obj,
     std::unique_ptr<mattack_actor> new_attack;
     if( attack_type == "monster_attack" ) {
         const std::string id = obj.get_string( "id" );
-        const auto &iter = attack_map.find( id );
+        auto iter = attack_map.find( id );
+        if( iter == attack_map.end() ) {
+            // 0.H 兼容层：0.H 起怪物攻击 id 统一改为小写，0.G 的内置攻击 id 全是大写，
+            // 因此这里再做一次全大写的回退匹配（精确匹配优先，不影响自定义小写 id）。
+            std::string upper = id;
+            for( char &c : upper ) {
+                c = static_cast<char>( std::toupper( static_cast<unsigned char>( c ) ) );
+            }
+            iter = attack_map.find( upper );
+        }
         if( iter == attack_map.end() ) {
             obj.throw_error_at( "type", "Monster attacks must specify type and/or id" );
         }

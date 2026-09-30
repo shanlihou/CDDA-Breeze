@@ -448,7 +448,12 @@ void MonsterGroupManager::LoadMonsterGroup( const JsonObject &jo )
     int freq_total = 0;
     std::pair<mtype_id, int> max_freq( { mon_null, 0 } );
 
-    g.name = mongroup_id( jo.get_string( "name" ) );
+    // 0.H 兼容层：0.H 的 monstergroup 用 "id" 指定组名，0.G 用 "name"
+    if( jo.has_string( "id" ) ) {
+        g.name = mongroup_id( jo.get_string( "id" ) );
+    } else {
+        g.name = mongroup_id( jo.get_string( "name" ) );
+    }
     bool extending = false;  //If already a group with that name, add to it instead of overwriting it
     if( monsterGroupMap.count( g.name ) != 0 && !jo.get_bool( "override", false ) ) {
         g = monsterGroupMap[g.name];

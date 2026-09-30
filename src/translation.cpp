@@ -120,13 +120,10 @@ void translation::deserialize( const JsonValue &jsin )
             // if plural form is enabled
             if( raw_pl ) {
                 raw_pl = cata::make_value<std::string>( raw );
-            } else {
-                try {
-                    jsobj.throw_error_at( "str_sp", "str_sp not supported here" );
-                } catch( const JsonError &e ) {
-                    debugmsg( "(json-error)\n%s", e.what() );
-                }
             }
+            // 0.H 兼容层：0.H 允许在「未开启复数形态」的位置（例如物品 name）也写 str_sp。
+            // 此时只取单数字符串即可；若之后调用 make_plural()，raw_pl 会自动回填为 raw，
+            // 语义上正好等价于 str_sp（单复数同形）。
         } else {
             // strings with plural forms are currently only simple names, and
             // need no text style check.
@@ -140,11 +137,8 @@ void translation::deserialize( const JsonValue &jsin )
                     raw_pl = cata::make_value<std::string>( suggested_pl.second );
                 }
             } else if( jsobj.has_member( "str_pl" ) ) {
-                try {
-                    jsobj.throw_error_at( "str_pl", "str_pl not supported here" );
-                } catch( const JsonError &e ) {
-                    debugmsg( "(json-error)\n%s", e.what() );
-                }
+                // 0.H 兼容层：0.H 允许在「未开启复数形态」的位置（例如物品 name）也写 str_pl。
+                // 此时复数形式用不上，静默忽略即可，不报错。
             }
         }
         needs_translation = true;

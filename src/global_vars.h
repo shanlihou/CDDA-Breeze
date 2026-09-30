@@ -11,6 +11,8 @@ enum class var_type : int {
     global,
     faction,
     party,
+    // 0.H 兼容层：context_val 变量作用域（跨 EOC 调用传递的临时上下文变量）
+    context,
     last
 };
 

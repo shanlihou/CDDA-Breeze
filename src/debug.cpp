@@ -492,6 +492,12 @@ struct repetition_folder {
 
 static repetition_folder rep_folder;
 static void output_repetitions( std::ostream &out );
+static bool headless_mode = false;
+
+void set_headless_mode( bool enabled )
+{
+    headless_mode = enabled;
+}
 
 void realDebugmsg( const char *filename, const char *line, const char *funcname,
                    const std::string &text )
@@ -522,6 +528,16 @@ void realDebugmsg( const char *filename, const char *line, const char *funcname,
 
     // Show excessive repetition prompt once per excessive set
     bool excess_repetition = rep_folder.repeat_count == repetition_folder::repetition_threshold;
+
+    // 无头模式：消息已经写进日志，这里直接返回，不要弹出需要按键的窗口
+    if( headless_mode ) {
+        // 无头模式（--jsonverify / --check-mods）不弹窗，但要把错误打印出来：
+        // 否则 debugmsg 级（非致命）的 JSON 问题会被完全吞掉，校验工具存在盲区。
+        std::fprintf( stderr, "DEBUG    : %s\n    (%s:%d,%s)\n", text.c_str(),
+                      filename, line ? atoi( line ) : 0, funcname );
+        std::fflush( stderr );
+        return;
+    }
 
     if( !catacurses::stdscr ) {
         buffered_prompts().push_back( {filename, line, funcname, text, false } );

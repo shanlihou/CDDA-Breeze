@@ -8,6 +8,7 @@
 #include <set>
 #include <string>
 #include <type_traits>
+#include <unordered_map>
 #include <utility>
 #include <vector>
 
@@ -131,6 +132,13 @@ struct talk_effect_t {
         void load_effect( const JsonObject &jo, const std::string &member_name );
         void parse_sub_effect( const JsonObject &jo );
         void parse_string_effect( const std::string &effect_id, const JsonObject &jo );
+        /**
+         * 0.H 兼容层：集中处理 0.H 专有效果键（if/then/else、math、map_spawn_item 等）。
+         * 单独抽成函数是因为 parse_sub_effect 的 if/else 链已经极长，
+         * 再往里面加分支会让 MSVC 触发 C1061「块嵌套太深」。
+         * @return 是否已消费该 JSON 对象。
+         */
+        bool parse_0h_sub_effect( const JsonObject &jo, talk_effect_fun_t<T> &fun );
 
         talk_effect_t() = default;
         explicit talk_effect_t( const JsonObject &, const std::string & );
@@ -189,6 +197,13 @@ struct dialogue {
 
         /** Missions that have been assigned by this npc to the player they currently speak to. */
         std::vector<mission *> missions_assigned;
+
+        /**
+         * 0.H 兼容层：context_val 变量。
+         * 由 run_eoc_with / run_eocs 的 "variables" 注入，或由效果/条件写入，
+         * 作用域是「一次 EOC 调用链」，因此用 mutable 以便在 const dialogue& 中写入。
+         */
+        mutable std::unordered_map<std::string, std::string> context_vars;
 
         talk_topic opt( dialogue_window &d_win, const talk_topic &topic );
         dialogue() = default;

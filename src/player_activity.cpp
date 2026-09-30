@@ -10,6 +10,7 @@
 #include "calendar.h"
 #include "character.h"
 #include "construction.h"
+#include "event_bus.h"
 #include "field.h"
 #include "game.h"
 #include "item.h"
@@ -389,6 +390,10 @@ void player_activity::do_turn( Character &you )
     if( *this && moves_left <= 0 ) {
         // Note: For some activities "finish" is a misnomer; that's why we explicitly check if the
         // type is ACT_NULL below.
+        // 0.H 兼容层：活动正常结束事件（mod 的 eoc_type: EVENT + required_event:
+        // character_finished_activity 依赖它）。用字符串承载活动 id。
+        get_event_bus().send<event_type::character_finished_activity>( you.getID(), type.str(),
+                false );
         if( actor ) {
             actor->finish( *this, you );
         } else {
@@ -421,6 +426,8 @@ void player_activity::canceled( Character &who )
     } else {
         activity_handlers::butcher_canceled( this, &who );
     }
+    // 0.H 兼容层：活动被取消事件（canceled = true）
+    get_event_bus().send<event_type::character_finished_activity>( who.getID(), type.str(), true );
 }
 
 float player_activity::exertion_level() const

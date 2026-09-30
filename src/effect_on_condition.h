@@ -8,6 +8,7 @@
 #include "calendar.h"
 #include "condition.h"
 #include "dialogue.h"
+#include "event.h"
 #include "json.h"
 #include <optional>
 #include "type_id.h"
@@ -23,6 +24,8 @@ enum eoc_type {
     OM_MOVE,
     PREVENT_DEATH,
     FALL_DAMAGE,
+    // 0.H 兼容层：由 event_bus 上的指定事件触发（配合 required_event）
+    EVENT,
     NUM_EOC_TYPES
 };
 struct effect_on_condition {
@@ -36,6 +39,8 @@ struct effect_on_condition {
         effect_on_condition_id id;
         std::vector<std::pair<effect_on_condition_id, mod_id>> src;
         eoc_type type;
+        /** 0.H 兼容层：eoc_type 为 EVENT 时，本 EOC 监听的事件类型 */
+        std::optional<event_type> required_event;
         std::function<bool( const dialogue & )> condition;
         std::function<bool( const dialogue & )> deactivate_condition;
         talk_effect_t<dialogue> true_effect;

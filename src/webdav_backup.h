@@ -10,54 +10,58 @@
  * 存档的 WebDAV 备份 / 恢复。
  *
  * 协议支持：
- *   - http 与 https（由 WEBDAV_URL 的 scheme 决定）
- *   - Basic 与 Digest 认证（WEBDAV_AUTH_MODE 选择），默认交给 libcurl 自动协商
+ *   - http 与 https（由「使用 HTTPS」设置决定）
+ *   - Basic 与 Digest 认证（由「使用 Digest 认证」设置决定）
  *   - 目录自动创建（MKCOL）、列表（PROPFIND）、上传（PUT）、下载（GET）、删除（DELETE）
+ *
+ * 服务器相关配置全部是游戏设置项，玩家在「设置 → WebDAV云存档」里自己填，
+ * 保存在 config/options.json，改完立刻生效，不需要重新编译。
  */
 namespace webdav
 {
 
 // ============================================================================
-//                          配 置 区（改完重新编译即可）
+//                 设 置 项 键 名（对应「设置 → WebDAV云存档」）
 // ============================================================================
 
-/// 服务器地址，http / https 都支持，末尾的 "/" 可有可无。
-/// 例：
-///   "https://dav.jianguoyun.com/dav/"   坚果云
-///   "https://192.168.1.10:5244/dav/"    自建 alist + https
-///   "http://192.168.1.10:5244/dav/"     自建 alist + http
-///   "http://127.0.0.1:8080/dav/"        局域网
-constexpr const char *WEBDAV_URL = "https://dav.jianguoyun.com/dav/";
-
+namespace opt
+{
+/// 服务器地址，不含协议，例如 dav.jianguoyun.com 或 192.168.1.10:5244
+constexpr const char *HOST = "WEBDAV_HOST";
+/// 服务器上的备份目录，例如 dav/CDDA_Breeze，留空表示根目录
+constexpr const char *PATH = "WEBDAV_PATH";
+/// 是否用 https（false = http）
+constexpr const char *USE_HTTPS = "WEBDAV_USE_HTTPS";
 /// 用户名，留空表示不发送认证信息
-constexpr const char *WEBDAV_USER = "your_account";
+constexpr const char *USER = "WEBDAV_USER";
+/// 密码
+constexpr const char *PASSWORD = "WEBDAV_PASSWORD";
+/// 是否用 Digest 认证（false = Basic）
+constexpr const char *AUTH_DIGEST = "WEBDAV_AUTH_DIGEST";
+} // namespace opt
 
-/// 密码（坚果云等请填"应用密码"而不是登录密码）
-constexpr const char *WEBDAV_PASSWORD = "your_password";
+// ---------------------------------------------------------------------------
+//                        内 部 参 数（一般不用改）
+// ---------------------------------------------------------------------------
 
-/// 服务器上的备份目录（相对 WEBDAV_URL），留空表示直接放在根目录。
-/// 程序会自动逐级创建，支持中文与多级目录，例如 "游戏存档/CDDA"。
-constexpr const char *WEBDAV_REMOTE_DIR = "CDDA_Breeze";
-
-/// 认证方式：
-///   0 = 自动：libcurl 自动协商，优先 Digest，其次 Basic（推荐，兼容性最好）
-///   1 = 只用 Digest
-///   2 = 只用 Basic
-constexpr int WEBDAV_AUTH_MODE = 0;
-
-/// https 是否校验服务器证书。自签名证书、局域网 IP 证书请保持 false。
-constexpr bool WEBDAV_VERIFY_SSL = false;
-
-/// 连接超时（秒）；传输超时（秒），0 表示不限制（大存档上传可能需要很久）
+/// 连接超时（秒）
 constexpr long WEBDAV_CONNECT_TIMEOUT = 15;
+/// 传输超时（秒），0 表示不限制（大存档上传可能需要很久）
 constexpr long WEBDAV_TRANSFER_TIMEOUT = 0;
-
+/// https 是否校验服务器证书。自签名证书、局域网 IP 证书保持 false
+constexpr bool WEBDAV_VERIFY_SSL = false;
 /// 云端最多保留的备份数量，超出后自动删除最旧的。0 = 不限
 constexpr int WEBDAV_MAX_KEEP = 0;
 
 // ============================================================================
 //                                 接 口
 // ============================================================================
+
+/// 是否已在设置里填好服务器地址
+bool is_configured();
+
+/// 由设置项拼出的备份目录 URL（末尾一定带 "/"）；未配置时返回空串
+std::string remote_base_url();
 
 /// 云端上的一个文件
 struct remote_file {

@@ -46,6 +46,7 @@
 #include "units.h"
 #include "vehicle.h"
 #include "vpart_position.h"
+#include "viewer.h"
 #include "widget.h"
 #include "worldfactory.h"
 
@@ -135,8 +136,24 @@ int_or_var_part<T> get_int_or_var_part( const JsonValue &jv, const std::string &
             talk_effect_fun_t<T> arith;
             arith.set_arithmetic( jo, "arithmetic", true );
             ret_val.arithmetic_val = arith;
+        } else if( jo.has_member( "math" ) ) {
+            // 0.H 兼容层：{"math": [...]} 作为数值来源
+            if constexpr( std::is_same<T, dialogue>::value ) {
+                ret_val.math_val = math_exp::from_json( jo.get_member( "math" ) );
+            } else {
+                jo.throw_error( "math 取值只支持 dialogue 上下文" );
+            }
         } else {
             ret_val.var_val = read_var_info( jo );
+            // 0.H 兼容层：变量取值没有显式 "default" 成员时，用加载器传入的
+            // default_val 兜底。0.H mod 大量使用无 default 的变量型 count/charges
+            // （如 {"context_val": "fluids_count"}），而 set_u_spawn_item 会在
+            // 加载期用一个空白 dialogue 预求值 count 以填充 likely_rewards，
+            // 此时变量必然不存在——不兜底就会刷「unused variable」debugmsg。
+            if( !jo.has_member( "default" ) && !jo.has_member( "default_str" ) &&
+                !jo.has_member( "default_time" ) ) {
+                ret_val.default_val = default_val;
+            }
         }
     } else if( required ) {
         jv.throw_error( "No valid value for " + member );
@@ -188,8 +205,21 @@ duration_or_var_part<T> get_duration_or_var_part( const JsonValue &jv, const std
             talk_effect_fun_t<T> arith;
             arith.set_arithmetic( jo, "arithmetic", true );
             ret_val.arithmetic_val = arith;
+        } else if( jo.has_member( "math" ) ) {
+            // 0.H 兼容层：{"math": [...]} 作为时长来源（单位：回合）
+            if constexpr( std::is_same<T, dialogue>::value ) {
+                ret_val.math_val = math_exp::from_json( jo.get_member( "math" ) );
+            } else {
+                jo.throw_error( "math 取值只支持 dialogue 上下文" );
+            }
         } else {
             ret_val.var_val = read_var_info( jo );
+            // 0.H 兼容层：同 get_int_or_var_part，无显式 default 时用加载器默认值兜底，
+            // 避免加载期/运行期刷「unused variable」debugmsg。
+            if( !jo.has_member( "default" ) && !jo.has_member( "default_str" ) &&
+                !jo.has_member( "default_time" ) ) {
+                ret_val.default_val = default_val;
+            }
         }
     } else if( required ) {
         jv.throw_error( "No valid value for " + member );
@@ -303,15 +333,68 @@ var_info read_var_info( const JsonObject &jo )
         if( name.empty() ) {
             name = get_talk_varname( jo, "party_val", false, empty );
         }
+    } else if( jo.has_member( "context_val" ) ) {
+        // 0.H 兼容层：context_val 直接用原始名字索引 dialogue::context_vars
+        type = var_type::context;
+        if( name.empty() ) {
+            name = jo.get_string( "context_val" );
+        }
+    } else if( jo.has_member( "var_val" ) ) {
+        // 0.H 兼容层：{"var_val": "X"} —— 间接变量引用。
+        // 依 0.H 语义：X 的前缀决定外层作用域，内层固定为 context_val。
+        // 即 {"var_val":"retv"} 表示「读 context 变量 retv 拿到名字 N，再按 N 在外层作用域取值」。
+        const std::string indirect = jo.get_string( "var_val" );
+        std::string inner_name = indirect;
+        if( indirect.compare( 0, 2, "g_" ) == 0 ) {
+            type = var_type::global;
+            inner_name = indirect.substr( 2 );
+        } else if( indirect.compare( 0, 2, "u_" ) == 0 ) {
+            type = var_type::u;
+            inner_name = indirect.substr( 2 );
+        } else if( indirect.compare( 0, 2, "n_" ) == 0 ) {
+            type = var_type::npc;
+            inner_name = indirect.substr( 2 );
+        } else if( indirect.compare( 0, 1, "_" ) == 0 ) {
+            type = var_type::context;
+            inner_name = indirect.substr( 1 );
+        } else {
+            type = var_type::global;
+        }
+        var_info ret( type, inner_name, default_val );
+        ret.indirect = true;
+        return ret;
     } else {
         jo.throw_error( "Invalid variable type." );
     }
     return var_info( type, name, default_val );
 }
 
-void write_var_value( var_type type, const std::string &name, talker *talk,
-                      const std::string &value )
+std::string read_context_var( const dialogue &d, const std::string &name )
 {
+    const auto iter = d.context_vars.find( name );
+    return iter == d.context_vars.end() ? std::string() : iter->second;
+}
+
+void write_context_var( const dialogue &d, const std::string &name, const std::string &value )
+{
+    d.context_vars[name] = value;
+}
+
+void write_var_value( var_type type, const std::string &name, talker *talk,
+                      const std::string &value, const dialogue *d, bool indirect )
+{
+    // 0.H 兼容层：{"var_val": ...} 间接引用（先取出真正的变量名再写）
+    if( indirect ) {
+        if( d == nullptr ) {
+            return;
+        }
+        const std::string actual = read_context_var( *d, name );
+        if( actual.empty() ) {
+            return;
+        }
+        write_var_value( type, actual, talk, value, d, false );
+        return;
+    }
     global_variables &globvars = get_globals();
     switch( type ) {
         case var_type::global:
@@ -320,6 +403,12 @@ void write_var_value( var_type type, const std::string &name, talker *talk,
         case var_type::u:
         case var_type::npc:
             talk->set_value( name, value );
+            break;
+        case var_type::context:
+            // 0.H 兼容层：context_val
+            if( d != nullptr ) {
+                write_context_var( *d, name, value );
+            }
             break;
         case var_type::faction:
             debugmsg( "Not implemented yet." );
@@ -661,6 +750,139 @@ void conditional_t<T>::set_has_effect( const JsonObject &jo, const std::string &
                               d ) );
         effect target = d.actor( is_npc )->get_effect( efftype_id( effect_id.evaluate( d ) ), bid );
         return !target.is_null() && intensity.evaluate( d ) <= target.get_intensity();
+    };
+}
+
+// ============================================================================
+// 0.H 兼容层新增条件
+// ============================================================================
+
+template<class T>
+void conditional_t<T>::set_is_avatar( bool is_npc )
+{
+    condition = [is_npc]( const T & d ) {
+        const Character *ch = d.actor( is_npc )->get_character();
+        return ch != nullptr && ch->is_avatar();
+    };
+}
+
+template<class T>
+void conditional_t<T>::set_is_character( bool is_npc )
+{
+    condition = [is_npc]( const T & d ) {
+        return d.actor( is_npc )->get_character() != nullptr;
+    };
+}
+
+template<class T>
+void conditional_t<T>::set_is_npc_actor( bool is_npc )
+{
+    condition = [is_npc]( const T & d ) {
+        return d.actor( is_npc )->get_npc() != nullptr;
+    };
+}
+
+template<class T>
+void conditional_t<T>::set_player_see( bool is_npc )
+{
+    condition = [is_npc]( const T & d ) {
+        const Creature *c = d.actor( is_npc )->get_creature();
+        if( c != nullptr ) {
+            return get_player_view().sees( *c );
+        }
+        return get_player_view().sees( d.actor( is_npc )->pos() );
+    };
+}
+
+template<class T>
+void conditional_t<T>::set_has_species( const JsonObject &jo, const std::string &member,
+                                        bool is_npc )
+{
+    str_or_var<T> species_to_check = get_str_or_var<T>( jo.get_member( member ), member, true );
+    condition = [species_to_check, is_npc]( const T & d ) {
+        const Creature *c = d.actor( is_npc )->get_creature();
+        return c != nullptr && c->in_species( species_id( species_to_check.evaluate( d ) ) );
+    };
+}
+
+template<class T>
+void conditional_t<T>::set_has_any_effect( const JsonObject &jo, const std::string &member,
+        bool is_npc )
+{
+    std::vector<str_or_var<T>> effects_to_check;
+    for( JsonValue jv : jo.get_array( member ) ) {
+        effects_to_check.emplace_back( get_str_or_var<T>( jv, member, true ) );
+    }
+    int_or_var<T> intensity = get_int_or_var<T>( jo, "intensity", false, -1 );
+    str_or_var<T> bp;
+    if( jo.has_member( "bodypart" ) ) {
+        bp = get_str_or_var<T>( jo.get_member( "bodypart" ), "bodypart", true );
+    } else {
+        bp.str_val = "";
+    }
+    condition = [effects_to_check, intensity, bp, is_npc]( const T & d ) {
+        bodypart_id bid = bp.evaluate( d ).empty() ? get_bp_from_str( d.reason ) :
+                          bodypart_id( bp.evaluate( d ) );
+        for( const str_or_var<T> &effect_id : effects_to_check ) {
+            effect target = d.actor( is_npc )->get_effect( efftype_id( effect_id.evaluate( d ) ), bid );
+            if( !target.is_null() && intensity.evaluate( d ) <= target.get_intensity() ) {
+                return true;
+            }
+        }
+        return false;
+    };
+}
+
+template<class T>
+void conditional_t<T>::set_expects_vars( const JsonObject &jo, const std::string &member )
+{
+    std::vector<std::string> vars = jo.get_string_array( member );
+    condition = [vars]( const T & d ) {
+        if constexpr( std::is_same<T, dialogue>::value ) {
+            for( const std::string &v : vars ) {
+                if( d.context_vars.find( v ) == d.context_vars.end() ) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        return false;
+    };
+}
+
+// 0.H 兼容层：set_condition / get_condition 的存储（按名字索引，进程内有效）
+static std::map<std::string, std::function<bool( const dialogue & )>> &dialogue_condition_store()
+{
+    static std::map<std::string, std::function<bool( const dialogue & )>> store;
+    return store;
+}
+
+void store_dialogue_condition( const std::string &name,
+                               const std::function<bool( const dialogue & )> &cond )
+{
+    dialogue_condition_store()[name] = cond;
+}
+
+bool run_stored_dialogue_condition( const std::string &name, const dialogue &d )
+{
+    const std::map<std::string, std::function<bool( const dialogue & )>> &store =
+                dialogue_condition_store();
+    const auto iter = store.find( name );
+    if( iter == store.end() || !iter->second ) {
+        return false;
+    }
+    return iter->second( d );
+}
+
+template<class T>
+void conditional_t<T>::set_get_condition( const JsonObject &jo, const std::string &member )
+{
+    const std::string name = jo.get_string( member );
+    condition = [name]( const T & d ) {
+        if constexpr( std::is_same<T, dialogue>::value ) {
+            return run_stored_dialogue_condition( name, d );
+        }
+        return false;
     };
 }
 
@@ -1521,7 +1743,20 @@ void conditional_t<T>::set_compare_int( const JsonObject &jo, const std::string 
 template<class T>
 std::function<int( const T & )> conditional_t<T>::get_get_int( const JsonObject &jo )
 {
-    if( jo.has_member( "const" ) ) {
+    // 0.H 兼容层：{"math": [ ... ]} 作为整数来源（switch 的判定值等）
+    if( jo.has_member( "math" ) ) {
+        if constexpr( std::is_same<T, dialogue>::value ) {
+            math_exp exp = math_exp::from_json( jo.get_member( "math" ) );
+            return [exp]( const T & d ) {
+                return static_cast<int>( exp.evaluate( d ) );
+            };
+        } else {
+            jo.throw_error( "math 取值只支持 dialogue 上下文" );
+            return []( const T & ) {
+                return 0;
+            };
+        }
+    } else if( jo.has_member( "const" ) ) {
         const int const_value = jo.get_int( "const" );
         return [const_value]( const T & ) {
             return const_value;
@@ -2229,7 +2464,7 @@ static int handle_min_max( const T &d, int input, std::optional<int_or_var_part<
 }
 
 template<class T>
-static std::function<void( const T &, int )> get_set_int( const JsonObject &jo,
+std::function<void( const T &, int )> get_set_int( const JsonObject &jo,
         const std::optional<int_or_var_part<T>> &min, const std::optional<int_or_var_part<T>> &max,
         bool temp_var )
 {
@@ -2354,9 +2589,13 @@ static std::function<void( const T &, int )> get_set_int( const JsonObject &jo,
             int_or_var<dialogue> empty;
             const std::string var_name = get_talk_varname( jo, "var_name", false, empty );
             return [is_npc, var_name, type, min, max]( const T & d, int input ) {
+                const dialogue *ctx = nullptr;
+                if constexpr( std::is_same<T, dialogue>::value ) {
+                    ctx = &d;
+                }
                 write_var_value( type, var_name, d.actor( is_npc ), std::to_string( handle_min_max<T>( d, input,
                                  min,
-                                 max ) ) );
+                                 max ) ), ctx );
             };
         } else if( checked_value == "time_since_var" ) {
             // This is a strange thing to want to adjust. But we allow it nevertheless.
@@ -3015,6 +3254,35 @@ conditional_t<T>::conditional_t( const JsonObject &jo )
             }
         }
     }
+    // 0.H 兼容层：{"math": [ ... ]} 作为条件
+    if( jo.has_member( "math" ) ) {
+        if constexpr( std::is_same<T, dialogue>::value ) {
+            math_exp exp = math_exp::from_json( jo.get_member( "math" ) );
+            found_sub_member = true;
+            condition = [exp]( const T & d ) {
+                return exp.evaluate_bool( d );
+            };
+        } else {
+            jo.throw_error( "math 条件只支持 dialogue 上下文" );
+        }
+        return;
+    }
+    // 0.H 兼容层：{"if": ..., "then": ..., "else": ...} 也可直接用作条件
+    // （then / else 本身都是条件，结果即 if 为真时取 then 的布尔值，否则取 else）
+    if( jo.has_member( "if" ) && !jo.has_member( "and" ) && !jo.has_member( "or" )
+            && !jo.has_member( "not" ) ) {
+        std::function<bool( const T & )> if_cond;
+        std::function<bool( const T & )> then_cond;
+        std::function<bool( const T & )> else_cond;
+        read_condition<T>( jo, "if", if_cond, false );
+        read_condition<T>( jo, "then", then_cond, false );
+        read_condition<T>( jo, "else", else_cond, false );
+        found_sub_member = true;
+        condition = [if_cond, then_cond, else_cond]( const T & d ) {
+            return if_cond( d ) ? then_cond( d ) : else_cond( d );
+        };
+        return;
+    }
     if( jo.has_member( "u_has_any_trait" ) ) {
         set_has_any_trait( jo, "u_has_any_trait" );
     } else if( jo.has_member( "npc_has_any_trait" ) ) {
@@ -3093,6 +3361,24 @@ conditional_t<T>::conditional_t( const JsonObject &jo )
         set_has_effect( jo, "u_has_effect" );
     } else if( jo.has_string( "npc_has_effect" ) ) {
         set_has_effect( jo, "npc_has_effect", is_npc );
+    } else if( jo.has_array( "u_has_any_effect" ) ) {
+        // 0.H 兼容层
+        set_has_any_effect( jo, "u_has_any_effect" );
+    } else if( jo.has_array( "npc_has_any_effect" ) ) {
+        // 0.H 兼容层
+        set_has_any_effect( jo, "npc_has_any_effect", is_npc );
+    } else if( jo.has_string( "u_has_species" ) ) {
+        // 0.H 兼容层
+        set_has_species( jo, "u_has_species" );
+    } else if( jo.has_string( "npc_has_species" ) ) {
+        // 0.H 兼容层
+        set_has_species( jo, "npc_has_species", is_npc );
+    } else if( jo.has_array( "expects_vars" ) ) {
+        // 0.H 兼容层
+        set_expects_vars( jo, "expects_vars" );
+    } else if( jo.has_string( "get_condition" ) ) {
+        // 0.H 兼容层
+        set_get_condition( jo, "get_condition" );
     } else if( jo.has_string( "u_need" ) ) {
         set_need( jo, "u_need" );
     } else if( jo.has_string( "npc_need" ) ) {
@@ -3369,6 +3655,30 @@ conditional_t<T>::conditional_t( const std::string &type )
         set_is_deaf();
     } else if( type == "npc_is_deaf" ) {
         set_is_deaf( is_npc );
+    } else if( type == "u_is_avatar" ) {
+        // 0.H 兼容层
+        set_is_avatar( false );
+    } else if( type == "npc_is_avatar" ) {
+        // 0.H 兼容层
+        set_is_avatar( true );
+    } else if( type == "u_is_character" ) {
+        // 0.H 兼容层
+        set_is_character( false );
+    } else if( type == "npc_is_character" ) {
+        // 0.H 兼容层
+        set_is_character( true );
+    } else if( type == "u_is_npc" ) {
+        // 0.H 兼容层
+        set_is_npc_actor( false );
+    } else if( type == "npc_is_npc" ) {
+        // 0.H 兼容层
+        set_is_npc_actor( true );
+    } else if( type == "player_see_u" ) {
+        // 0.H 兼容层
+        set_player_see( false );
+    } else if( type == "player_see_npc" ) {
+        // 0.H 兼容层
+        set_player_see( true );
     } else {
         condition = []( const T & ) {
             return false;
@@ -3379,6 +3689,10 @@ conditional_t<T>::conditional_t( const std::string &type )
 template struct conditional_t<dialogue>;
 template void read_condition<dialogue>( const JsonObject &jo, const std::string &member_name,
                                         std::function<bool( const dialogue & )> &condition, bool default_val );
+
+template std::function<void( const dialogue &, int )> get_set_int<dialogue>(
+    const JsonObject &jo, const std::optional<int_or_var_part<dialogue>> &min,
+    const std::optional<int_or_var_part<dialogue>> &max, bool temp_var );
 
 template duration_or_var<dialogue> get_duration_or_var( const JsonObject &jo, std::string member,
         bool required, time_duration default_val );

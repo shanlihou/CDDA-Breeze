@@ -80,6 +80,8 @@ enum class spell_flag : int {
     MUST_HAVE_CLASS_TO_LEARN, // you can't learn the spell unless you already have the class.
     SPAWN_WITH_DEATH_DROPS, // allow summoned monsters to drop their usual death drops
     NON_MAGICAL, // ignores spell resistance
+    NO_CORPSE_QUIET, // 0.H 兼容层：0.H 系数据用它表示"召唤物不留尸体且不播报死亡信息"；
+                     // 0.G 的召唤物默认就不留尸体，故此处仅作接受占位、不改变行为
     LAST
 };
 
@@ -743,6 +745,8 @@ void banishment( const spell &sp, Creature &caster, const tripoint &target );
 // revives a monster into some kind of zombie if the monster has the revives flag
 void revive( const spell &sp, Creature &caster, const tripoint &target );
 void upgrade( const spell &sp, Creature &caster, const tripoint &target );
+// 0.H 兼容层：在目标格放置 effect_data 指定的陷阱
+void add_trap( const spell &sp, Creature &caster, const tripoint &target );
 // causes guilt to the target as if it killed the caster
 void guilt( const spell &sp, Creature &caster, const tripoint &target );
 void remove_effect( const spell &sp, Creature &caster, const tripoint &target );
@@ -766,6 +770,7 @@ std::map<std::string, std::function<void( const spell &, Creature &, const tripo
 effect_map{
     { "pain_split", spell_effect::pain_split },
     { "attack", spell_effect::attack },
+    { "add_trap", spell_effect::add_trap },
     { "targeted_polymorph", spell_effect::targeted_polymorph },
     { "short_range_teleport", spell_effect::short_range_teleport },
     { "spawn_item", spell_effect::spawn_ethereal_item },

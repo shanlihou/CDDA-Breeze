@@ -131,6 +131,30 @@ if errorlevel 1 (
     goto :fail
 )
 
+REM ---------------------------------------------------------------------------
+REM VsDevCmd.bat 靠 reg.exe 探测 Windows SDK。若 reg.exe 被安全策略拦截，
+REM INCLUDE/LIB 里就不会有 ucrt/um，编译会报“无法打开包括文件: math.h”。
+REM 这里直接在磁盘上找一份可用的 SDK 手工补上。
+REM ---------------------------------------------------------------------------
+echo !INCLUDE! | find /i "ucrt" >nul 2>&1
+if errorlevel 1 (
+    set "WINSDK_ROOT=%ProgramFiles(x86)%\Windows Kits\10"
+    if not defined WindowsSdkDir set "WindowsSdkDir=!WINSDK_ROOT!\"
+    set "WINSDK_VER="
+    for /f "delims=" %%v in ('dir /b /ad /o-n "!WINSDK_ROOT!\Include" 2^>nul') do (
+        if not defined WINSDK_VER if exist "!WINSDK_ROOT!\Include\%%v\ucrt\stdio.h" set "WINSDK_VER=%%v"
+    )
+    if not defined WINSDK_VER (
+        echo   [错误] 未找到 Windows SDK（ucrt 头文件缺失），请安装 Windows 10 SDK
+        goto :fail
+    )
+    set "INCLUDE=!WINSDK_ROOT!\Include\!WINSDK_VER!\ucrt;!WINSDK_ROOT!\Include\!WINSDK_VER!\um;!WINSDK_ROOT!\Include\!WINSDK_VER!\shared;!WINSDK_ROOT!\Include\!WINSDK_VER!\winrt;!INCLUDE!"
+    set "LIB=!WINSDK_ROOT!\Lib\!WINSDK_VER!\ucrt\x64;!WINSDK_ROOT!\Lib\!WINSDK_VER!\um\x64;!LIB!"
+    set "PATH=!WINSDK_ROOT!\bin\!WINSDK_VER!\x64;!PATH!"
+    set "WindowsSDKVersion=!WINSDK_VER!\"
+    echo   [提示] 已手工补上 Windows SDK !WINSDK_VER!
+)
+
 echo.
 echo [3/6] 准备依赖（首次运行会下载并编译，之后自动跳过）
 call :prep_sdl SDL2 "SDL2-%SDL2_VER%" "https://github.com/libsdl-org/SDL/releases/download/release-%SDL2_VER%/SDL2-devel-%SDL2_VER%-VC.zip"

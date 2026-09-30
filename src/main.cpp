@@ -267,6 +267,24 @@ int main( int argc, const char *argv[] )
     // original parser.  Keep --jsonverify working because CI and developers rely on it.
     const bool json_verify = std::count( argv, argv + argc, std::string( "--jsonverify" ) ) > 0;
 
+    // Restored from upstream: --check-mods <id>[,<id>...] loads the (static + core + listed)
+    // mod data headlessly and reports any JSON errors, then exits.  Used to validate mods
+    // without having to create/load a world in the UI.
+    std::vector<mod_id> check_mods;
+    for( int i = 1; i < argc; ++i ) {
+        if( std::string( argv[i] ) == "--check-mods" && i + 1 < argc ) {
+            for( const std::string &m : string_split( argv[i + 1], ',' ) ) {
+                check_mods.emplace_back( m );
+            }
+            ++i;
+        }
+    }
+
+    // 这两个都是命令行无头校验入口：关掉需要按键确认的调试弹窗，否则会被卡住。
+    if( json_verify || !check_mods.empty() ) {
+        set_headless_mode( true );
+    }
+
     if( !dir_exist( PATH_INFO::datadir() ) ) {
         printf( "Fatal: Can't find data directory \"%s\"\nPlease ensure the current working directory is correct or specify data directory with --datadir.  Perhaps you meant to start \"cataclysm-launcher\"?\n",
                 PATH_INFO::datadir().c_str() );
@@ -376,6 +394,15 @@ int main( int argc, const char *argv[] )
         g->load_static_data();
         if( json_verify ) {
             exit_handler( 0 );
+        }
+        if( !check_mods.empty() ) {
+            loading_ui ui( false );
+            const bool ok = g->check_mod_data( check_mods, ui );
+            std::cout << "check-mods: " << ( ok ? "DONE" : "FAILED" ) << std::endl;
+            std::cout.flush();
+            // 直接退出：这里没有真正开始游戏，走常规 exit_handler 会触发一堆依赖世界的清理逻辑
+            std::fflush( stdout );
+            std::_Exit( ok ? 0 : 1 );
         }
     } catch( const std::exception &err ) {
         debugmsg( "%s", err.what() );

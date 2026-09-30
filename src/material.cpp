@@ -81,15 +81,53 @@ void material_type::load( const JsonObject &jsobj, const std::string & )
 {
     mandatory( jsobj, was_loaded, "name", _name );
 
-    mandatory( jsobj, was_loaded, "bash_resist", _bash_resist );
-    mandatory( jsobj, was_loaded, "cut_resist", _cut_resist );
-    mandatory( jsobj, was_loaded, "acid_resist", _acid_resist );
-    mandatory( jsobj, was_loaded, "fire_resist", _fire_resist );
-    mandatory( jsobj, was_loaded, "bullet_resist", _bullet_resist );
+    // 0.H 兼容层：0.H 把各类抗性收进 {"resist": { "bash": .., "cut": .., "bullet": ..,
+    // "acid": .., "heat": .., "electric": .. }}，键名是 damage_type_id；0.G 则要求顶层扁平
+    // 字段 bash_resist / cut_resist / ...。这里两种写法都接受。
+    if( jsobj.has_object( "resist" ) ) {
+        JsonObject jo = jsobj.get_object( "resist" );
+        jo.allow_omitted_members();
+        if( jo.has_member( "bash" ) ) {
+            _bash_resist = jo.get_float( "bash" );
+        }
+        if( jo.has_member( "cut" ) ) {
+            _cut_resist = jo.get_float( "cut" );
+        }
+        if( jo.has_member( "bullet" ) ) {
+            _bullet_resist = jo.get_float( "bullet" );
+        }
+        if( jo.has_member( "acid" ) ) {
+            _acid_resist = jo.get_float( "acid" );
+        }
+        if( jo.has_member( "heat" ) ) {
+            _fire_resist = jo.get_float( "heat" );
+        }
+        if( jo.has_member( "fire" ) ) {
+            _fire_resist = jo.get_float( "fire" );
+        }
+        if( jo.has_member( "electric" ) ) {
+            _elec_resist = jo.get_float( "electric" );
+        }
+        if( jo.has_member( "elec" ) ) {
+            _elec_resist = jo.get_float( "elec" );
+        }
+        if( jo.has_member( "cold" ) ) {
+            _cold_resist = jo.get_float( "cold" );
+        }
+        if( jo.has_member( "biological" ) ) {
+            _biologic_resist = jo.get_float( "biological" );
+        }
+    } else {
+        mandatory( jsobj, was_loaded, "bash_resist", _bash_resist );
+        mandatory( jsobj, was_loaded, "cut_resist", _cut_resist );
+        mandatory( jsobj, was_loaded, "acid_resist", _acid_resist );
+        mandatory( jsobj, was_loaded, "fire_resist", _fire_resist );
+        mandatory( jsobj, was_loaded, "bullet_resist", _bullet_resist );
+        optional( jsobj, was_loaded, "elec_resist", _elec_resist );
+        optional( jsobj, was_loaded, "biologic_resist", _biologic_resist );
+        optional( jsobj, was_loaded, "cold_resist", _cold_resist );
+    }
     optional( jsobj, was_loaded, "conductive", _conductive );
-    optional( jsobj, was_loaded, "elec_resist", _elec_resist );
-    optional( jsobj, was_loaded, "biologic_resist", _biologic_resist );
-    optional( jsobj, was_loaded, "cold_resist", _cold_resist );
     mandatory( jsobj, was_loaded, "chip_resist", _chip_resist );
     mandatory( jsobj, was_loaded, "density", _density );
 

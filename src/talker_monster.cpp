@@ -57,6 +57,13 @@ bool talker_monster::has_effect( const efftype_id &effect_id, const bodypart_id 
     return me_mon->has_effect( effect_id, bp );
 }
 
+bool talker_monster::has_flag( const json_character_flag &flag ) const
+{
+    // 0.H 兼容层：怪物 flag 在 0.H 里由 JSON 动态声明，0.G 的 m_flag 枚举装不下，
+    // 加载时收集在 mtype::json_flags 中，这里据此回答 npc_has_flag / u_has_flag 查询。
+    return me_mon != nullptr && me_mon->type != nullptr && me_mon->type->has_json_flag( flag.str() );
+}
+
 effect talker_monster::get_effect( const efftype_id &effect_id, const bodypart_id &bp ) const
 {
     return me_mon->get_effect( effect_id, bp );

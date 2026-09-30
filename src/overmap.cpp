@@ -832,7 +832,34 @@ void oter_type_t::load( const JsonObject &jo, const std::string &src )
     optional( jo, was_loaded, "sym", symbol, unicode_codepoint_from_symbol_reader, NULL_UNICODE );
 
     assign( jo, "name", name, strict );
-    assign( jo, "see_cost", see_cost, strict );
+    if( jo.has_string( "see_cost" ) ) {
+        // 0.H 兼容层：0.H 允许把 see_cost 写成符号名（如 "full_high"）。
+        // 数值与 0.G 的写法对应：核心学校里 "full_high" 对应的就是 5。
+        static const std::map<std::string, int> see_cost_names = {
+            { "none", 0 }, { "low", 1 }, { "high", 2 }, { "full_low", 4 }, { "full_high", 5 }
+        };
+        const std::string sc = jo.get_string( "see_cost" );
+        const auto it = see_cost_names.find( sc );
+        if( it != see_cost_names.end() ) {
+            see_cost = it->second;
+        } else {
+            // 纯数字字符串就按数值解析；无法识别时保持原值，不阻断加载
+            int parsed = 0;
+            bool ok = !sc.empty();
+            for( const char ch : sc ) {
+                if( ch < '0' || ch > '9' ) {
+                    ok = false;
+                    break;
+                }
+                parsed = parsed * 10 + ( ch - '0' );
+            }
+            if( ok ) {
+                see_cost = parsed;
+            }
+        }
+    } else {
+        assign( jo, "see_cost", see_cost, strict );
+    }
     assign( jo, "travel_cost", travel_cost, strict );
     assign( jo, "extras", extras, strict );
     assign( jo, "mondensity", mondensity, strict );

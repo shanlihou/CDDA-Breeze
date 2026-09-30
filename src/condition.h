@@ -4,6 +4,7 @@
 
 #include <functional>
 #include <iosfwd>
+#include <optional>
 #include <string>
 #include <unordered_set>
 
@@ -37,6 +38,9 @@ const std::unordered_set<std::string> complex_conds = { {
         "u_is_wearing", "npc_is_wearing", "u_has_item", "npc_has_item", "u_has_move_mode", "npc_has_move_mode",
         "u_has_items", "npc_has_items", "u_has_item_category", "npc_has_item_category",
         "u_has_bionics", "npc_has_bionics", "u_has_effect", "npc_has_effect", "u_need", "npc_need",
+        // 0.H 兼容层新增的条件键（必须登记在此白名单里，否则会被判为 unrecognized condition）
+        "u_has_any_effect", "npc_has_any_effect", "u_has_species", "npc_has_species",
+        "expects_vars", "get_condition",
         "u_at_om_location", "u_near_om_location", "npc_at_om_location", "npc_near_om_location",
         "npc_role_nearby", "npc_allies", "npc_allies_global", "npc_service",
         "u_has_cash", "u_are_owed", "u_query", "npc_query", "u_has_item_with_flag", "npc_has_item_with_flag",
@@ -50,7 +54,18 @@ const std::unordered_set<std::string> complex_conds = { {
         "u_has_worn_with_flag", "npc_has_worn_with_flag", "u_has_wielded_with_flag", "npc_has_wielded_with_flag",
         "u_has_pain", "npc_has_pain", "u_has_power", "npc_has_power", "u_has_focus", "npc_has_focus", "u_has_morale",
         "npc_has_morale", "u_is_on_terrain", "npc_is_on_terrain", "u_is_in_field", "npc_is_in_field", "compare_int",
-        "compare_string", "roll_contested" ,"u_joined_the_faction" ,"u_get_food_from_the_faction", "u_reported_work"
+        "compare_string", "roll_contested" ,"u_joined_the_faction" ,"u_get_food_from_the_faction", "u_reported_work",
+        // 0.H 兼容层新增的简单字符串条件
+        "u_is_avatar", "npc_is_avatar", "u_is_character", "npc_is_character",
+        "u_is_npc", "npc_is_npc", "player_see_u", "player_see_npc",
+        // 0.H 兼容层的 math 表达式条件 / 动态行条件
+        "math",
+        // 0.H 兼容层：以下键除了要在条件构造函数里实现分支，还必须登记进这张白名单。
+        // 因为构造函数结尾有一个 `if( !found_sub_member ) throw "unrecognized condition"`
+        // 的二次校验，只靠分支命中是不会通过的。
+        "u_has_any_effect", "npc_has_any_effect",
+        "u_has_species", "npc_has_species",
+        "expects_vars", "get_condition"
     }
 };
 } // namespace dialogue_data
@@ -91,8 +106,17 @@ duration_or_var_part<T> get_duration_or_var_part( const JsonValue &jv, const std
 template<class T>
 tripoint_abs_ms get_tripoint_from_var( std::optional<var_info> var, const T &d );
 var_info read_var_info( const JsonObject &jo );
+// d / indirect 为 0.H 兼容层新增：context_val 写入需要 dialogue，var_val 需要运行期解引用。
 void write_var_value( var_type type, const std::string &name, talker *talk,
-                      const std::string &value );
+                      const std::string &value, const dialogue *d = nullptr, bool indirect = false );
+// 0.H 兼容层：context_val 的读写。
+// 定义放在 condition.cpp 是因为需要 dialogue 的完整定义（dialogue_helpers.h 只前置声明了它）。
+std::string read_context_var( const dialogue &d, const std::string &name );
+void write_context_var( const dialogue &d, const std::string &name, const std::string &value );
+// 0.H 兼容层：set_condition / get_condition 共用的条件存储
+void store_dialogue_condition( const std::string &name,
+                               const std::function<bool( const dialogue & )> &cond );
+bool run_stored_dialogue_condition( const std::string &name, const dialogue &d );
 template<class T>
 std::string get_talk_varname( const JsonObject &jo, const std::string &member,
                               bool check_value, int_or_var<T> &default_val );
@@ -102,6 +126,13 @@ std::string get_talk_var_basename( const JsonObject &jo, const std::string &memb
 template<class T>
 void read_condition( const JsonObject &jo, const std::string &member_name,
                      std::function<bool( const T & )> &condition, bool default_val );
+
+// 把一个「取值名」对象（{"u_val": ...} / {"npc_val": ...} 等）编译成写入器。
+// 原本是 condition.cpp 里的内部函数，0.H 兼容层的 math 赋值需要复用它，故对外公开。
+template<class T>
+std::function<void( const T &, int )> get_set_int( const JsonObject &jo,
+        const std::optional<int_or_var_part<T>> &min, const std::optional<int_or_var_part<T>> &max,
+        bool temp_var = false );
 
 /**
  * A condition for a response spoken by the player.
@@ -155,6 +186,21 @@ struct conditional_t {
         void set_has_item_category( const JsonObject &jo, const std::string &member, bool is_npc = false );
         void set_has_bionics( const JsonObject &jo, const std::string &member, bool is_npc = false );
         void set_has_effect( const JsonObject &jo, const std::string &member, bool is_npc = false );
+        // ---- 0.H 兼容层新增条件 ----
+        // u_is_avatar / npc_is_avatar / u_is_character / npc_is_character / u_is_npc / npc_is_npc
+        void set_is_avatar( bool is_npc = false );
+        void set_is_character( bool is_npc = false );
+        void set_is_npc_actor( bool is_npc = false );
+        // player_see_u / player_see_npc：玩家视野内能否看到指定 talker
+        void set_player_see( bool is_npc = false );
+        // u_has_species / npc_has_species
+        void set_has_species( const JsonObject &jo, const std::string &member, bool is_npc = false );
+        // u_has_any_effect / npc_has_any_effect（数组形式，任一命中即真）
+        void set_has_any_effect( const JsonObject &jo, const std::string &member, bool is_npc = false );
+        // expects_vars：列出的 context_val 全部存在时为真
+        void set_expects_vars( const JsonObject &jo, const std::string &member );
+        // get_condition：运行由 set_condition 存下来的条件
+        void set_get_condition( const JsonObject &jo, const std::string &member );
         void set_need( const JsonObject &jo, const std::string &member, bool is_npc = false );
         void set_at_om_location( const JsonObject &jo, const std::string &member, bool is_npc = false );
         void set_near_om_location( const JsonObject &jo, const std::string &member, bool is_npc = false );

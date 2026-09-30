@@ -1362,6 +1362,31 @@ static const std::unordered_set<efftype_id> hardcoded_movement_impairing = {{
     }
 };
 
+// 0.H 兼容层：0.H 的 effect_type 允许把 apply_message / remove_message
+// 写成 [ [ "文本", "消息类型" ] ] 的数组形式。0.G 只保存单个 translation，
+// 这里取第一条的文本即可（消息类型在 0.G 没有对应的存储位置）。
+static void load_0h_effect_message( const JsonObject &jo, const std::string &member,
+                                    translation &out )
+{
+    if( jo.has_member( member ) && jo.get_member( member ).test_array() ) {
+        for( JsonValue entry : jo.get_member( member ).get_array() ) {
+            if( entry.test_array() ) {
+                for( JsonValue part : entry.get_array() ) {
+                    if( part.test_string() ) {
+                        out = translation::to_translation( part.get_string() );
+                        return;
+                    }
+                }
+            } else if( entry.test_string() ) {
+                out = translation::to_translation( entry.get_string() );
+                return;
+            }
+        }
+        return;
+    }
+    jo.read( member, out );
+}
+
 void load_effect_type( const JsonObject &jo )
 {
     effect_type new_etype;
@@ -1412,8 +1437,8 @@ void load_effect_type( const JsonObject &jo )
     } else {
         new_etype.rating = e_neutral;
     }
-    jo.read( "apply_message", new_etype.apply_message );
-    jo.read( "remove_message", new_etype.remove_message );
+    load_0h_effect_message( jo, "apply_message", new_etype.apply_message );
+    load_0h_effect_message( jo, "remove_message", new_etype.remove_message );
     optional( jo, false, "apply_memorial_log", new_etype.apply_memorial_log,
               text_style_check_reader() );
     optional( jo, false, "remove_memorial_log", new_etype.remove_memorial_log,

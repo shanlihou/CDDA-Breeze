@@ -57,6 +57,9 @@ class talker_monster: public talker
 
         // effects and values
         bool has_effect( const efftype_id &effect_id, const bodypart_id &bp ) const override;
+        // 0.H 兼容层：0.H 的怪物 flag 是 JSON 动态声明的字符串，让 npc_has_flag / u_has_flag
+        // 在怪物 talker 上也能命中这些自定义 flag
+        bool has_flag( const json_character_flag &flag ) const override;
         effect get_effect( const efftype_id &effect_id, const bodypart_id &bp ) const override;
         void add_effect( const efftype_id &new_effect, const time_duration &dur,
                          const std::string &bp, bool permanent, bool force, int intensity

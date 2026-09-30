@@ -251,6 +251,10 @@ struct mtype {
 
         enum_bitset<m_flag> flags;
 
+        // 0.H 兼容层：0.H 的怪物 flag 是 JSON 动态声明的字符串（{"type":"monster_flag"}），
+        // 0.G 的 m_flag 是固定枚举，无法表达的 flag 名字收集到这里。
+        std::set<std::string> json_flags;
+
         enum_bitset<mon_trigger> anger;
         enum_bitset<mon_trigger> fear;
         enum_bitset<mon_trigger> placate;
@@ -475,6 +479,8 @@ struct mtype {
         std::string nname( unsigned int quantity = 1 ) const;
         bool has_special_attack( const std::string &attack_name ) const;
         bool has_flag( m_flag flag ) const;
+        // 0.H 兼容层：查询 JSON 动态声明的怪物 flag
+        bool has_json_flag( const std::string &flag ) const;
         void set_flag( m_flag flag, bool state = true );
         bool made_of( const material_id &material ) const;
         bool made_of_any( const std::set<material_id> &materials ) const;

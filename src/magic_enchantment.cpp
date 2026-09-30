@@ -136,6 +136,9 @@ namespace io
             case enchant_vals::mod::ITEM_ATTACK_SPEED: return "ITEM_ATTACK_SPEED";
             case enchant_vals::mod::CLIMATE_CONTROL_HEAT: return "CLIMATE_CONTROL_HEAT";
             case enchant_vals::mod::CLIMATE_CONTROL_CHILL: return "CLIMATE_CONTROL_CHILL";
+            case enchant_vals::mod::RANGE: return "RANGE";
+            case enchant_vals::mod::RANGED_DAMAGE: return "RANGED_DAMAGE";
+            case enchant_vals::mod::AVOID_FRIENDRY_FIRE: return "AVOID_FRIENDRY_FIRE";
             case enchant_vals::mod::NUM_MOD: break;
         }
         cata_fatal( "Invalid enchant_vals::mod" );

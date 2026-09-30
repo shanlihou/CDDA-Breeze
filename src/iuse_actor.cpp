@@ -5662,7 +5662,12 @@ std::unique_ptr<iuse_actor> effect_on_conditons_actor::clone() const
 
 void effect_on_conditons_actor::load( const JsonObject &obj )
 {
-    description = obj.get_string( "description" );
+    // 0.H 兼容层：0.H 的菜单文字字段是 "menu_text"，0.G 的这个 actor 用 "description"
+    if( obj.has_string( "menu_text" ) ) {
+        description = obj.get_string( "menu_text" );
+    } else {
+        description = obj.get_string( "description" );
+    }
     for( JsonValue jv : obj.get_array( "effect_on_conditions" ) ) {
         eocs.emplace_back( effect_on_conditions::load_inline_eoc( jv, "" ) );
     }

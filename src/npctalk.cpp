@@ -754,6 +754,48 @@ static std::vector<effect_on_condition_id> load_eoc_vector( const JsonObject &jo
     return eocs;
 }
 
+// 0.H 兼容层：run_eocs 的条目除了 EOC id（字符串/内联定义）外，还可以是运行时求值的变量引用，
+// 例如 { "run_eocs": { "context_val": "eoc" } }（由调用方通过 variables 传入要执行的 EOC id）。
+struct eoc_entry {
+    std::optional<effect_on_condition_id> id;
+    std::optional<str_or_var<dialogue>> var;
+};
+
+static std::vector<eoc_entry> load_eoc_vector_id_and_var( const JsonObject &jo,
+        const std::string &member )
+{
+    std::vector<eoc_entry> entries;
+    const auto process_jv = [&entries]( const JsonValue & jv ) {
+        if( jv.test_object() ) {
+            const JsonObject jo_obj = jv.get_object();
+            static const std::vector<std::string> var_keys = { "u_val", "n_val", "global_val",
+                    "context_val", "var_val", "faction_val", "party_val"
+                                                             };
+            for( const std::string &k : var_keys ) {
+                if( jo_obj.has_member( k ) ) {
+                    eoc_entry entry;
+                    str_or_var<dialogue> sv;
+                    sv.var_val = read_var_info( jo_obj );
+                    entry.var = sv;
+                    entries.push_back( entry );
+                    return;
+                }
+            }
+        }
+        eoc_entry entry;
+        entry.id = effect_on_conditions::load_inline_eoc( jv, "" );
+        entries.push_back( entry );
+    };
+    if( jo.has_array( member ) ) {
+        for( JsonValue jv : jo.get_array( member ) ) {
+            process_jv( jv );
+        }
+    } else if( jo.has_member( member ) ) {
+        process_jv( jo.get_member( member ) );
+    }
+    return entries;
+}
+
 time_duration calc_skill_training_time( const npc &p, const skill_id &skill )
 {
     return calc_skill_training_time_char( p, get_player_character(), skill );
@@ -3695,7 +3737,7 @@ void talk_effect_fun_t<T>::set_location_variable( const JsonObject &jo, const st
 
     function = [iov_min_radius, iov_max_radius, var_name, outdoor_only, target_params,
                                 is_npc, type, iov_x_adjust, iov_y_adjust, iov_z_adjust, z_override, true_eocs,
-                    false_eocs]( const T & d ) {
+                    false_eocs, indirect = var.indirect]( const T & d ) {
         talker *target = d.actor( is_npc );
         tripoint talker_pos = get_map().getabs( target->pos() );
         tripoint target_pos = talker_pos;
@@ -3733,9 +3775,244 @@ void talk_effect_fun_t<T>::set_location_variable( const JsonObject &jo, const st
             target_pos = target_pos + tripoint( 0, 0,
                                                 iov_z_adjust.evaluate( d ) );
         }
-        write_var_value( type, var_name, d.actor( type == var_type::npc ), target_pos.to_string() );
+        const dialogue *ctx = nullptr;
+        if constexpr( std::is_same<T, dialogue>::value ) {
+            ctx = &d;
+        }
+        write_var_value( type, var_name, d.actor( type == var_type::npc ), target_pos.to_string(), ctx,
+                         indirect );
         run_eoc_vector( true_eocs, d );
     };
+}
+
+// 0.H 兼容层：调整已存在的位置变量的坐标。
+// {"location_variable_adjust": {"context_val": "p"}, "x_adjust": -10, "y_adjust": [-1, 1]}
+template<class T>
+void talk_effect_fun_t<T>::set_location_variable_adjust( const JsonObject &jo,
+        const std::string &member )
+{
+    var_info target_var = read_var_info( jo.get_object( member ) );
+    const auto get_adjust = []( const JsonObject &j, const std::string &name ) {
+        int_or_var<T> ret;
+        if( j.has_array( name ) ) {
+            JsonArray ja = j.get_array( name );
+            ret.pair = true;
+            ret.min.int_val = ja.get_int( 0 );
+            ret.max.int_val = ja.get_int( 1 );
+        } else if( j.has_member( name ) ) {
+            ret = get_int_or_var<T>( j, name, false, 0 );
+        }
+        return ret;
+    };
+    int_or_var<T> x_adjust = get_adjust( jo, "x_adjust" );
+    int_or_var<T> y_adjust = get_adjust( jo, "y_adjust" );
+    int_or_var<T> z_adjust = get_adjust( jo, "z_adjust" );
+    const bool overmap_tile = jo.get_bool( "overmap_tile", false );
+    function = [target_var, x_adjust, y_adjust, z_adjust, overmap_tile]( const T & d ) {
+        const std::string target_str = read_var_value( target_var, d );
+        if( target_str.empty() ) {
+            return;
+        }
+        tripoint_abs_ms target_pos( tripoint::from_string( target_str ) );
+        if( overmap_tile ) {
+            target_pos = target_pos + tripoint( x_adjust.evaluate( d ) * SEEX * 2,
+                                                y_adjust.evaluate( d ) * SEEY * 2,
+                                                z_adjust.evaluate( d ) * OVERMAP_HEIGHT );
+        } else {
+            target_pos = target_pos + tripoint( x_adjust.evaluate( d ), y_adjust.evaluate( d ),
+                                                z_adjust.evaluate( d ) );
+        }
+        const dialogue *ctx = nullptr;
+        if constexpr( std::is_same<T, dialogue>::value ) {
+            ctx = &d;
+        }
+        write_var_value( target_var.type, target_var.name,
+                         d.actor( target_var.type == var_type::npc ), target_pos.to_string(), ctx,
+                         target_var.indirect );
+    };
+}
+
+// ============================================================================
+// 0.H 兼容层新增效果
+// ============================================================================
+
+// {"map_spawn_item": <itype>, "loc"|"target_var": <var>, "count": <n>, "container": <itype>}
+template<class T>
+void talk_effect_fun_t<T>::set_map_spawn_item( const JsonObject &jo, const std::string &member )
+{
+    str_or_var<T> item_name = get_str_or_var<T>( jo.get_member( member ), member, true );
+    int_or_var<T> count = get_int_or_var<T>( jo, "count", false, 1 );
+    std::optional<var_info> loc;
+    if( jo.has_member( "loc" ) ) {
+        loc = read_var_info( jo.get_object( "loc" ) );
+    } else if( jo.has_member( "target_var" ) ) {
+        loc = read_var_info( jo.get_object( "target_var" ) );
+    }
+    str_or_var<T> container_name;
+    if( jo.has_member( "container" ) ) {
+        container_name = get_str_or_var<T>( jo.get_member( "container" ), "container", true );
+    } else {
+        container_name.str_val = "";
+    }
+    function = [item_name, count, loc, container_name]( const T & d ) {
+        tripoint_abs_ms target = get_map().getglobal( d.actor( false )->pos() );
+        if( loc.has_value() ) {
+            const std::string loc_str = read_var_value( loc.value(), d );
+            if( !loc_str.empty() ) {
+                target = tripoint_abs_ms( tripoint::from_string( loc_str ) );
+            }
+        }
+        const int n = count.evaluate( d );
+        const std::string cont = container_name.evaluate( d );
+        for( int i = 0; i < n; i++ ) {
+            const itype_id spawned_id( item_name.evaluate( d ) );
+            item spawned( spawned_id );
+            if( !cont.empty() ) {
+                const itype_id cont_id( cont );
+                item container( cont_id );
+                container.put_in( spawned, item_pocket::pocket_type::CONTAINER );
+                get_map().add_item_or_charges( get_map().getlocal( target ), container );
+            } else {
+                get_map().add_item_or_charges( get_map().getlocal( target ), spawned );
+            }
+        }
+    };
+}
+
+// {"run_eoc_selector": [<eoc id>...], "names": [...], "allow_cancel": bool}
+template<class T>
+void talk_effect_fun_t<T>::set_run_eoc_selector( const JsonObject &jo, const std::string &member )
+{
+    std::vector<effect_on_condition_id> eocs = load_eoc_vector( jo, member );
+    std::vector<str_or_var<T>> names;
+    for( JsonValue jv : jo.get_array( "names" ) ) {
+        names.emplace_back( get_str_or_var<T>( jv, "names", true ) );
+    }
+    const bool allow_cancel = jo.get_bool( "allow_cancel", false );
+    function = [eocs, names, allow_cancel]( const T & d ) {
+        uilist menu;
+        menu.allow_cancel = allow_cancel;
+        for( size_t i = 0; i < names.size(); i++ ) {
+            menu.addentry( static_cast<int>( i ), true, -1, names[i].evaluate( d ) );
+        }
+        menu.query();
+        if( menu.ret < 0 || static_cast<size_t>( menu.ret ) >= eocs.size() ) {
+            return;
+        }
+        dialogue newDialog = copy_dialogue( d );
+        if constexpr( std::is_same<T, dialogue>::value ) {
+            newDialog.context_vars = d.context_vars;
+        }
+        eocs[menu.ret]->activate( newDialog );
+    };
+}
+
+// {"u_query_tile": "around"|"line_of_sight"|"anywhere", "target_var": <var>, "range": n, "message": str}
+template<class T>
+void talk_effect_fun_t<T>::set_u_query_tile( const JsonObject &jo, const std::string &member,
+        bool is_npc )
+{
+    const std::string mode = jo.get_string( member );
+    ( void )is_npc;
+    var_info target_var = read_var_info( jo.get_object( "target_var" ) );
+    str_or_var<T> message = get_str_or_var<T>( jo.get_member( "message" ), "message", false, "" );
+    int_or_var<T> range = get_int_or_var<T>( jo, "range", false, 0 );
+    function = [mode, target_var, message, range]( const T & d ) {
+        std::optional<tripoint> picked;
+        if( mode == "around" && range.evaluate( d ) <= 1 ) {
+            picked = choose_adjacent( message.evaluate( d ) );
+        } else {
+            picked = g->look_around();
+        }
+        if( !picked.has_value() ) {
+            return;
+        }
+        const tripoint_abs_ms target_pos = get_map().getglobal( *picked );
+        const dialogue *ctx = nullptr;
+        if constexpr( std::is_same<T, dialogue>::value ) {
+            ctx = &d;
+        }
+        write_var_value( target_var.type, target_var.name,
+                         d.actor( target_var.type == var_type::npc ), target_pos.to_string(), ctx,
+                         target_var.indirect );
+    };
+}
+
+// {"u_run_inv_eocs": "all"|"worn", "search_data": [...], "true_eocs": [...], "false_eocs": [...]}
+template<class T>
+void talk_effect_fun_t<T>::set_run_inv_eocs( const JsonObject &jo, const std::string &member )
+{
+    const std::string input = jo.get_string( member );
+    std::vector<effect_on_condition_id> true_eocs = load_eoc_vector( jo, "true_eocs" );
+    std::vector<effect_on_condition_id> false_eocs = load_eoc_vector( jo, "false_eocs" );
+    bool worn_only = false;
+    std::vector<flag_id> excluded_flags;
+    if( jo.has_array( "search_data" ) ) {
+        for( JsonObject filter : jo.get_array( "search_data" ) ) {
+            worn_only = filter.get_bool( "worn_only", worn_only );
+            for( const std::string &f : filter.get_string_array( "excluded_flags" ) ) {
+                excluded_flags.emplace_back( f );
+            }
+        }
+    }
+    function = [input, true_eocs, false_eocs, worn_only, excluded_flags]( const T & d ) {
+        Character *ch = d.actor( false )->get_character();
+        if( ch == nullptr ) {
+            return;
+        }
+        std::vector<const item *> targets;
+        if( input == "worn" || worn_only ) {
+            ch->worn.inv_dump( targets );
+        } else {
+            for( const std::list<item> *stack : ch->inv->const_slice() ) {
+                for( const item &it : *stack ) {
+                    targets.push_back( &it );
+                }
+            }
+        }
+        for( const item *it : targets ) {
+            bool excluded = false;
+            for( const flag_id &f : excluded_flags ) {
+                if( it->has_flag( f ) ) {
+                    excluded = true;
+                    break;
+                }
+            }
+            if( excluded ) {
+                continue;
+            }
+            item_location loc( *ch, const_cast<item *>( it ) );
+            dialogue itemDialog( get_talker_for( static_cast<Creature *>( ch ) ),
+                                 get_talker_for( &loc ) );
+            if constexpr( std::is_same<T, dialogue>::value ) {
+                itemDialog.context_vars = d.context_vars;
+            }
+            if( true_eocs.empty() ) {
+                continue;
+            }
+            for( const effect_on_condition_id &eoc : true_eocs ) {
+                eoc->activate( itemDialog );
+            }
+        }
+        if( targets.empty() ) {
+            run_eoc_vector( false_eocs, d );
+        }
+    };
+}
+
+// {"set_condition": <name>, "condition": {...}}
+template<class T>
+void talk_effect_fun_t<T>::set_set_condition( const JsonObject &jo, const std::string &member )
+{
+    const std::string name = jo.get_string( member );
+    if constexpr( std::is_same<T, dialogue>::value ) {
+        std::function<bool( const dialogue & )> stored;
+        read_condition<dialogue>( jo, "condition", stored, false );
+        store_dialogue_condition( name, stored );
+        function = []( const T & ) {};
+    } else {
+        jo.throw_error( "set_condition 只支持 dialogue 上下文" );
+    }
 }
 
 template<class T>
@@ -4455,8 +4732,12 @@ void talk_effect_fun_t<T>::set_set_string_var( const JsonObject &jo, const std::
     var_info var = read_var_info( jo.get_member( "target_var" ) );
     function = [values, var]( const T & d ) {
         int index = rng( 0, values.size() - 1 );
+        const dialogue *ctx = nullptr;
+        if constexpr( std::is_same<T, dialogue>::value ) {
+            ctx = &d;
+        }
         write_var_value( var.type, var.name, d.actor( var.type == var_type::npc ),
-                         values[index].evaluate( d ) );
+                         values[index].evaluate( d ), ctx, var.indirect );
     };
 }
 
@@ -4677,14 +4958,99 @@ template<class T>
 void talk_effect_fun_t<T>::set_run_eocs( const JsonObject &jo,
         const std::string &member )
 {
-    std::vector<effect_on_condition_id> eocs = load_eoc_vector( jo, member );
-    if( eocs.empty() ) {
+    std::vector<eoc_entry> eoc_entries = load_eoc_vector_id_and_var( jo, member );
+    if( eoc_entries.empty() ) {
         jo.throw_error( "Invalid input for run_eocs" );
     }
-    function = [eocs]( const T & d ) {
+    // 0.H 兼容层：run_eocs 可带 "variables"，注入到被调用 EOC 的 context_val 作用域。
+    std::vector<std::pair<std::string, str_or_var<T>>> variables;
+    if( jo.has_object( "variables" ) ) {
+        for( JsonMember member_entry : jo.get_object( "variables" ) ) {
+            const std::string key = member_entry.name();
+            JsonValue value = member_entry;
+            if( value.test_int() ) {
+                str_or_var<T> sv;
+                sv.str_val = std::to_string( value.get_int() );
+                variables.emplace_back( key, sv );
+            } else if( value.test_float() ) {
+                str_or_var<T> sv;
+                sv.str_val = std::to_string( value.get_float() );
+                variables.emplace_back( key, sv );
+            } else {
+                variables.emplace_back( key, get_str_or_var<T>( value, key, true ) );
+            }
+        }
+    }
+    // 0.H 兼容层：alpha_loc / beta_loc —— 指定坐标，用该坐标上的生物充当对应 talker
+    std::optional<var_info> alpha_loc;
+    std::optional<var_info> beta_loc;
+    if( jo.has_member( "alpha_loc" ) ) {
+        alpha_loc = read_var_info( jo.get_object( "alpha_loc" ) );
+    }
+    if( jo.has_member( "beta_loc" ) ) {
+        beta_loc = read_var_info( jo.get_object( "beta_loc" ) );
+    }
+    function = [eoc_entries, variables, alpha_loc, beta_loc]( const T & d ) {
         dialogue newDialog = copy_dialogue( d );
-        for( const effect_on_condition_id &eoc : eocs ) {
-            eoc->activate( newDialog );
+        // 继承调用方已有的上下文，再叠加本次注入的变量（子作用域）
+        if constexpr( std::is_same<T, dialogue>::value ) {
+            if( alpha_loc.has_value() || beta_loc.has_value() ) {
+                const auto resolve_loc = [&d]( const std::optional<var_info> &loc ) -> std::unique_ptr<talker> {
+                    if( !loc.has_value() ) {
+                        return nullptr;
+                    }
+                    const std::string pos_str = read_var_value( loc.value(), d );
+                    if( pos_str.empty() ) {
+                        return nullptr;
+                    }
+                    Creature *c = get_creature_tracker().creature_at(
+                                      tripoint_abs_ms( tripoint::from_string( pos_str ) ) );
+                    return c != nullptr ? get_talker_for( c ) : nullptr;
+                };
+                const auto rebuild = [&d]( bool is_beta ) -> std::unique_ptr<talker> {
+                    talker *t = d.actor( is_beta );
+                    if( t == nullptr ) {
+                        return nullptr;
+                    }
+                    if( item_location *it = t->get_item() ) {
+                        return get_talker_for( it );
+                    }
+                    Creature *c = t->get_creature();
+                    return c != nullptr ? get_talker_for( c ) : nullptr;
+                };
+                std::unique_ptr<talker> a = resolve_loc( alpha_loc );
+                std::unique_ptr<talker> b = resolve_loc( beta_loc );
+                if( a == nullptr ) {
+                    a = rebuild( false );
+                }
+                if( b == nullptr ) {
+                    b = rebuild( true );
+                }
+                if( a != nullptr || b != nullptr ) {
+                    newDialog = dialogue( std::move( a ), std::move( b ) );
+                }
+            }
+            newDialog.context_vars = d.context_vars;
+            for( const std::pair<std::string, str_or_var<T>> &v : variables ) {
+                newDialog.context_vars[v.first] = v.second.evaluate( d );
+            }
+        }
+        for( const eoc_entry &entry : eoc_entries ) {
+            effect_on_condition_id eoc_id;
+            if( entry.id.has_value() ) {
+                eoc_id = entry.id.value();
+            } else if( entry.var.has_value() ) {
+                // 0.H 兼容层：运行时把变量求值为 EOC id
+                eoc_id = effect_on_condition_id( entry.var.value().evaluate( d ) );
+            }
+            if( eoc_id.is_null() ) {
+                continue;
+            }
+            if( !eoc_id.is_valid() ) {
+                debugmsg( "run_eocs: unknown effect_on_condition id \"%s\"", eoc_id.c_str() );
+                continue;
+            }
+            eoc_id->activate( newDialog );
         }
     };
 }
@@ -5392,20 +5758,117 @@ talk_effect_t<T>::talk_effect_t( const JsonObject &jo, const std::string &member
 }
 
 template<class T>
+void talk_effect_fun_t<T>::set_math( const JsonObject &jo, const std::string &member )
+{
+    // 0.H 兼容层：math 既可以只求值（真值判定 / 丢弃结果），也可以带赋值
+    if constexpr( std::is_same<T, dialogue>::value ) {
+        math_exp exp = math_exp::from_json( jo.get_member( member ) );
+        function = [exp]( const T & d ) {
+            exp.evaluate( d );
+        };
+    } else {
+        jo.throw_error( "math 效果只支持 dialogue 上下文" );
+    }
+}
+
+template<class T>
+void talk_effect_fun_t<T>::set_if_then_else( const JsonObject &jo )
+{
+    // 0.H 的 if / then / else，语义正好对应 0.G EOC 的 condition / effect / false_effect。
+    // 注意：0.H 的 "if" 既可以是条件对象，也可以是简单条件字符串（如 "u_is_avatar"），
+    // 所以这里走 read_condition（它同时支持字符串与对象两种形式）。
+    std::function<bool( const T & )> cond;
+    read_condition<T>( jo, "if", cond, false );
+    talk_effect_t<T> then_effect;
+    talk_effect_t<T> else_effect;
+    then_effect.load_effect( jo, "then" );
+    if( jo.has_member( "else" ) ) {
+        else_effect.load_effect( jo, "else" );
+    }
+    function = [cond, then_effect, else_effect]( const T & d ) {
+        const talk_effect_t<T> &eff = cond( d ) ? then_effect : else_effect;
+        for( const talk_effect_fun_t<T> &e : eff.effects ) {
+            e( d );
+        }
+    };
+}
+
+// 0.H 兼容层：{"message": ..., "type"/"popup"/"snippet"/...} 是 u_message 的简写。
+// 只有当对象里除 message 之外只剩下附属字段时才认定为简写，避免抢走带其它效果键的对象的优先级。
+static bool is_u_message_shorthand( const JsonObject &jo )
+{
+    static const std::unordered_set<std::string> companions = {
+        "message", "type", "popup", "snippet", "same_snippet", "sound",
+        "outdoor_only", "popup_w_interrupt_query", "interrupt_type", "//"
+    };
+    for( const JsonMember m : jo ) {
+        if( companions.find( m.name() ) == companions.end() ) {
+            return false;
+        }
+    }
+    return true;
+}
+
+template<class T>
+bool talk_effect_t<T>::parse_0h_sub_effect( const JsonObject &jo, talk_effect_fun_t<T> &fun )
+{
+    if( jo.has_member( "if" ) ) {
+        // 0.H 兼容层
+        fun.set_if_then_else( jo );
+    } else if( jo.has_member( "math" ) ) {
+        // 0.H 兼容层
+        fun.set_math( jo, "math" );
+    } else if( jo.has_member( "map_spawn_item" ) ) {
+        // 0.H 兼容层
+        fun.set_map_spawn_item( jo, "map_spawn_item" );
+    } else if( jo.has_member( "run_eoc_selector" ) ) {
+        // 0.H 兼容层
+        fun.set_run_eoc_selector( jo, "run_eoc_selector" );
+    } else if( jo.has_string( "u_query_tile" ) ) {
+        // 0.H 兼容层
+        fun.set_u_query_tile( jo, "u_query_tile", false );
+    } else if( jo.has_string( "npc_query_tile" ) ) {
+        // 0.H 兼容层
+        fun.set_u_query_tile( jo, "npc_query_tile", true );
+    } else if( jo.has_member( "u_run_inv_eocs" ) ) {
+        // 0.H 兼容层
+        fun.set_run_inv_eocs( jo, "u_run_inv_eocs" );
+    } else if( jo.has_member( "set_condition" ) ) {
+        // 0.H 兼容层
+        fun.set_set_condition( jo, "set_condition" );
+    } else if( jo.has_object( "location_variable_adjust" ) ) {
+        // 0.H 兼容层
+        fun.set_location_variable_adjust( jo, "location_variable_adjust" );
+    } else if( jo.has_member( "message" ) && is_u_message_shorthand( jo ) ) {
+        // 0.H 兼容层：message 简写（set_message 已支持 type/popup/snippet/... 全部附属字段）
+        fun.set_message( jo, "message" );
+    } else {
+        return false;
+    }
+    return true;
+}
+
+template<class T>
 void talk_effect_t<T>::parse_sub_effect( const JsonObject &jo )
 {
     talk_effect_fun_t<T> subeffect_fun;
     const bool is_npc = true;
+    // 0.H 兼容层：先尝试 0.H 专有效果键（单独成函数以避免 MSVC C1061）
+    if( parse_0h_sub_effect( jo, subeffect_fun ) ) {
+        set_effect( subeffect_fun );
+        return;
+    }
     if( jo.has_string( "companion_mission" ) ) {
         std::string role_id = jo.get_string( "companion_mission" );
         subeffect_fun.set_companion_mission( role_id );
-    } else if( jo.has_string( "u_add_effect" ) ) {
+    } else if( jo.has_member( "u_add_effect" ) ) {
+        // 0.H 兼容层：0.H 允许 {"u_add_effect": {"context_val": ...}}
         subeffect_fun.set_add_effect( jo, "u_add_effect" );
-    } else if( jo.has_string( "npc_add_effect" ) ) {
+    } else if( jo.has_member( "npc_add_effect" ) ) {
         subeffect_fun.set_add_effect( jo, "npc_add_effect", is_npc );
-    } else if( jo.has_string( "u_lose_effect" ) ) {
+    } else if( jo.has_member( "u_lose_effect" ) ) {
         subeffect_fun.set_remove_effect( jo, "u_lose_effect" );
-    } else if( jo.has_string( "npc_lose_effect" ) ) {
+    } else if( jo.has_member( "npc_lose_effect" ) ) {
         subeffect_fun.set_remove_effect( jo, "npc_lose_effect", is_npc );
     } else if( jo.has_string( "u_add_var" ) ) {
         subeffect_fun.set_add_var( jo, "u_add_var" );
@@ -5457,13 +5920,13 @@ void talk_effect_t<T>::parse_sub_effect( const JsonObject &jo )
         subeffect_fun.set_u_buy_item( jo, "u_buy_item" );
     } else if( jo.has_member( "u_spawn_item" ) ) {
         subeffect_fun.set_u_spawn_item( jo, "u_spawn_item" );
-    } else if( jo.has_string( "u_consume_item" ) ) {
+    } else if( jo.has_member( "u_consume_item" ) ) {
         subeffect_fun.set_consume_item( jo, "u_consume_item" );
-    } else if( jo.has_string( "npc_consume_item" ) ) {
+    } else if( jo.has_member( "npc_consume_item" ) ) {
         subeffect_fun.set_consume_item( jo, "npc_consume_item", is_npc );
-    } else if( jo.has_string( "u_remove_item_with" ) ) {
+    } else if( jo.has_member( "u_remove_item_with" ) ) {
         subeffect_fun.set_remove_item_with( jo, "u_remove_item_with" );
-    } else if( jo.has_string( "npc_remove_item_with" ) ) {
+    } else if( jo.has_member( "npc_remove_item_with" ) ) {
         subeffect_fun.set_remove_item_with( jo, "npc_remove_item_with", is_npc );
     }  else if( jo.has_member( "u_bulk_trade_accept" ) ) {
         subeffect_fun.set_bulk_trade_accept( jo, "u_bulk_trade_accept" );

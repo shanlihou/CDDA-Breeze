@@ -291,7 +291,9 @@ void Item_factory::finalize_pre( itype &obj )
     // Items always should have some volume.
     // TODO: handle possible exception software?
     if( obj.volume <= 0_ml ) {
-        if( is_physical( obj ) ) {
+        // 0.H 兼容层：只在 JSON 显式写了非正 volume 时才报错；从未指定 volume 的
+        // 裸定义（0.H 自引用 copy-from 常见）静默走 1ml 兜底，不刷 debugmsg。
+        if( is_physical( obj ) && obj.volume_explicit ) {
             debugmsg( "item %s has zero volume (if zero volume is intentional "
                       "you can suppress this error with the ZERO_WEIGHT "
                       "flag)\n", obj.id.str() );
@@ -1961,7 +1963,7 @@ void Item_factory::check_definitions() const
         if( type->weight < 0_gram ) {
             msg += "negative weight\n";
         }
-        if( type->weight == 0_gram && is_physical( *type ) ) {
+        if( type->weight == 0_gram && is_physical( *type ) && type->weight_explicit ) {
             msg += "zero weight (if zero weight is intentional you can "
                    "suppress this error with the ZERO_WEIGHT flag)\n";
         }
@@ -2433,6 +2435,14 @@ bool Item_factory::load_definition( const JsonObject &jo, const std::string &src
             def.looks_like = copy_from;
         }
         def.was_loaded = true;
+        return true;
+    }
+
+    // 0.H 兼容层：0.H 系 mod 用 { "id": "x", "copy-from": "x" } 表示「覆盖/扩展同 id 的
+    // 既有定义」；若该 id 此前从未定义过（首次出现即自引用），按全新定义处理，
+    // 而不是扔进 deferred 队列里等一个永远不会出现的模板（会被误判为循环依赖丢弃）。
+    if( jo.has_string( "id" ) && jo.get_string( "id" ) == copy_from.str() ) {
+        def = itype();
         return true;
     }
 
@@ -3027,11 +3037,15 @@ void islot_book::load( const JsonObject &jo )
     optional( jo, was_loaded, "max_level", level, 0 );
     optional( jo, was_loaded, "required_level", req, 0 );
     optional( jo, was_loaded, "fun", fun, 0 );
+    // 0.H 兼容层：0.H 把书籍的 fun / skill 改名为 read_fun / read_skill
+    optional( jo, was_loaded, "read_fun", fun, fun );
     optional( jo, was_loaded, "intelligence", intel, 0 );
 
     optional( jo, was_loaded, "time", time, 0_turns );
 
     optional( jo, was_loaded, "skill", skill, skill_id::NULL_ID() );
+    // 0.H 兼容层
+    optional( jo, was_loaded, "read_skill", skill, skill );
     optional( jo, was_loaded, "martial_art", martial_art, matype_id::NULL_ID() );
     optional( jo, was_loaded, "chapters", chapters, 0 );
     optional( jo, was_loaded, "proficiencies", proficiencies );
@@ -3382,6 +3396,61 @@ void Item_factory::load_generic( const JsonObject &jo, const std::string &src )
     itype def;
     if( load_definition( jo, src, def ) ) {
         load_basic_info( jo, def, src );
+    }
+}
+
+// 0.H 兼容层：0.H 把物品定义合并为 { "type": "ITEM", "subtypes": [ ... ] }，
+// 由 subtypes 列表决定实际语义。这里按优先级映射到 0.G 原有的各个加载器，
+// 使 0.H 系 mod 的 JSON 无需改写即可加载。
+void Item_factory::load_0h_item( const JsonObject &jo, const std::string &src )
+{
+    std::vector<std::string> subtypes;
+    if( jo.has_member( "subtypes" ) ) {
+        subtypes = jo.get_string_array( "subtypes" );
+    }
+    const auto has = [&subtypes]( const char *s ) {
+        for( const std::string &sub : subtypes ) {
+            if( sub == s ) {
+                return true;
+            }
+        }
+        return false;
+    };
+
+    if( has( "COMESTIBLE" ) ) {
+        load_comestible( jo, src );
+    } else if( has( "BOOK" ) ) {
+        load_book( jo, src );
+    } else if( has( "GUN" ) ) {
+        load_gun( jo, src );
+    } else if( has( "AMMO" ) ) {
+        load_ammo( jo, src );
+    } else if( has( "MAGAZINE" ) ) {
+        load_magazine( jo, src );
+    } else if( has( "GUNMOD" ) ) {
+        load_gunmod( jo, src );
+    } else if( has( "PET_ARMOR" ) ) {
+        load_pet_armor( jo, src );
+    } else if( has( "BIONIC_ITEM" ) ) {
+        load_bionic( jo, src );
+    } else if( has( "ENGINE" ) ) {
+        load_engine( jo, src );
+    } else if( has( "WHEEL" ) ) {
+        load_wheel( jo, src );
+    } else if( has( "BATTERY" ) ) {
+        load_battery( jo, src );
+    } else if( has( "ARMOR" ) && has( "TOOL" ) ) {
+        // 0.H 的 ARMOR+TOOL / TOOL+ARMOR 在 0.G 里对应 TOOL_ARMOR
+        load_tool_armor( jo, src );
+    } else if( has( "ARMOR" ) ) {
+        load_armor( jo, src );
+    } else if( has( "TOOL" ) ) {
+        load_tool( jo, src );
+    } else if( has( "TOOLMOD" ) ) {
+        load_toolmod( jo, src );
+    } else {
+        // 无 subtypes（通常是 copy-from 式改写）→ 交给通用加载器
+        load_generic( jo, src );
     }
 }
 
@@ -3847,9 +3916,15 @@ void Item_factory::load_basic_info( const JsonObject &jo, itype &def, const std:
     }
 
     assign( jo, "category", def.category_force, strict );
-    assign( jo, "weight", def.weight, strict, 0_gram );
+    // 0.H 兼容层：记录 volume/weight 是否被显式指定（assign 仅在成员存在时返回 true）。
+    // copy-from 时 def = base->second 会把标记一并继承，显式写 0 的仍会正常报错。
+    if( assign( jo, "weight", def.weight, strict, 0_gram ) ) {
+        def.weight_explicit = true;
+    }
     assign( jo, "integral_weight", def.integral_weight, strict, 0_gram );
-    assign( jo, "volume", def.volume );
+    if( assign( jo, "volume", def.volume ) ) {
+        def.volume_explicit = true;
+    }
     assign( jo, "longest_side", def.longest_side );
     assign( jo, "price", def.price, false, 0_cent );
     assign( jo, "price_postapoc", def.price_post, false, 0_cent );

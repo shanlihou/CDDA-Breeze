@@ -1,11 +1,17 @@
 #include "effect_on_condition.h"
 
+#include <map>
+#include <sstream>
+
 #include "avatar.h"
 #include "cata_utility.h"
 #include "character.h"
 #include "condition.h"
+#include "event_bus.h"
+#include "event_subscriber.h"
 #include "game.h"
 #include "generic_factory.h"
+#include "json.h"
 #include "scenario.h"
 #include "talker.h"
 #include "type_id.h"
@@ -25,6 +31,7 @@ namespace io
         case eoc_type::OM_MOVE: return "OM_MOVE";
         case eoc_type::PREVENT_DEATH: return "PREVENT_DEATH";
         case eoc_type::FALL_DAMAGE: return "FALL_DAMAGE";
+        case eoc_type::EVENT: return "EVENT";
         case eoc_type::NUM_EOC_TYPES: break;
         }
         cata_fatal( "Invalid eoc_type" );
@@ -36,6 +43,62 @@ namespace
 {
 generic_factory<effect_on_condition>
 effect_on_condition_factory( "effect_on_condition" );
+
+// 0.H 兼容层：EVENT 类型 EOC —— event_type -> 监听它的 EOC 列表
+std::map<event_type, std::vector<effect_on_condition_id>> event_eocs;
+
+bool eoc_subscriber_subscribed = false;
+
+class eoc_event_subscriber : public event_subscriber
+{
+    public:
+        void notify( const cata::event &e ) override {
+            const auto it = event_eocs.find( e.type() );
+            if( it == event_eocs.end() || it->second.empty() ) {
+                return;
+            }
+            // 事件关联的角色（game_* 之类的事件没有，退回玩家）
+            Character *ch = nullptr;
+            const cata_variant cv = e.get_variant_or_void( "character" );
+            if( cv.type() != cata_variant_type::void_ ) {
+                const character_id cid = cv.get<character_id>();
+                if( cid == get_avatar().getID() ) {
+                    ch = &get_avatar();
+                } else if( npc *who = g->find_npc( cid ) ) {
+                    ch = who;
+                }
+            }
+            if( ch == nullptr ) {
+                ch = &get_avatar();
+            }
+            dialogue d( get_talker_for( static_cast<Creature *>( ch ) ), nullptr );
+            // 事件数据作为上下文变量暴露（如 character_gains_effect 的 effect）
+            for( const std::pair<const std::string, cata_variant> &p : e.data() ) {
+                std::string val;
+                // 布尔值序列化成 "1"/"0"：math 引擎用 std::stod 读取上下文变量，
+                // 若写成 "true"/"false" 会解析失败退化成 0，导致永假。
+                if( p.second.type() == cata_variant_type::bool_ ) {
+                    val = p.second.get<bool>() ? "1" : "0";
+                } else if( p.second.type() == cata_variant_type::int_ ) {
+                    val = std::to_string( p.second.get<int>() );
+                } else {
+                    std::ostringstream ss;
+                    JsonOut jsout( ss );
+                    p.second.serialize( jsout );
+                    val = ss.str();
+                    if( val.size() >= 2 && val.front() == '"' && val.back() == '"' ) {
+                        val = val.substr( 1, val.size() - 2 );
+                    }
+                }
+                d.context_vars[p.first] = val;
+            }
+            for( const effect_on_condition_id &eoc : it->second ) {
+                eoc->activate( d );
+            }
+        }
+};
+
+eoc_event_subscriber eoc_subscriber_instance;
 } // namespace
 
 template<>
@@ -89,6 +152,20 @@ void effect_on_condition::load( const JsonObject &jo, const std::string & )
     optional( jo, was_loaded, "global", global, false );
     if( !global && run_for_npcs ) {
         jo.throw_error( "run_for_npcs should only be true for global effect_on_conditions." );
+    }
+    // 0.H 兼容层：EVENT 类型 EOC 监听的事件
+    if( jo.has_member( "required_event" ) ) {
+        const std::string ev_name = jo.get_string( "required_event" );
+        const std::optional<event_type> ev = io::string_to_enum_optional<event_type>( ev_name );
+        if( !ev.has_value() ) {
+            jo.throw_error_at( "required_event", "invalid event type \"" + ev_name + "\"" );
+        }
+        required_event = ev.value();
+        if( type != eoc_type::EVENT ) {
+            jo.throw_error( "\"required_event\" requires \"eoc_type\" of \"EVENT\"" );
+        }
+    } else if( type == eoc_type::EVENT ) {
+        jo.throw_error( "An event EOC requires a \"required_event\"" );
     }
 }
 
@@ -444,8 +521,17 @@ void effect_on_condition::finalize()
 void effect_on_conditions::finalize_all()
 {
     effect_on_condition_factory.finalize();
+    event_eocs.clear();
     for( const effect_on_condition &eoc : effect_on_condition_factory.get_all() ) {
         const_cast<effect_on_condition &>( eoc ).finalize();
+        if( eoc.type == eoc_type::EVENT && eoc.required_event.has_value() ) {
+            event_eocs[eoc.required_event.value()].push_back( eoc.id );
+        }
+    }
+    // 0.H 兼容层：订阅事件总线（重复 finalize 时避免重复订阅）
+    if( g != nullptr && !eoc_subscriber_subscribed ) {
+        get_event_bus().subscribe( &eoc_subscriber_instance );
+        eoc_subscriber_subscribed = true;
     }
 }
 

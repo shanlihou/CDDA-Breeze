@@ -39,6 +39,8 @@ enum class event_type : int {
     // fueling bionics
     character_consumes_item,
     character_eats_item,
+    // 0.H 兼容层：活动（activity）正常结束或被取消时触发
+    character_finished_activity,
     character_forgets_spell,
     character_gains_effect,
     character_gets_headshot,
@@ -85,10 +87,14 @@ enum class event_type : int {
     gains_addiction,
     gains_mutation,
     gains_skill_level,
+    // 0.H 兼容层：游戏/世界开始（mod 用来初始化全局常量）
+    game_begin,
     game_load,
     game_over,
     game_save,
     game_start,
+    // 0.H 兼容层：新角色（avatar）创建完成后触发
+    game_avatar_new,
     installs_cbm,
     installs_faulty_cbm,
     learns_martial_art,
@@ -171,7 +177,7 @@ struct event_spec_character_item {
     };
 };
 
-static_assert( static_cast<int>( event_type::num_event_types ) == 86,
+static_assert( static_cast<int>( event_type::num_event_types ) == 89,
                "This static_assert is to remind you to add a specialization for your new "
                "event_type below" );
 
@@ -262,6 +268,18 @@ struct event_spec<event_type::character_consumes_item> : event_spec_character_it
 
 template<>
 struct event_spec<event_type::character_eats_item> : event_spec_character_item {};
+
+// 0.H 兼容层：0.G 没有 activity_id 这个 cata_variant 类型，这里用字符串承载活动 id，
+// 事件数据注入 context var 后，mod 侧 { "context_val": "activity" } 比较的正是活动 id 字符串。
+template<>
+struct event_spec<event_type::character_finished_activity> {
+    static constexpr std::array<std::pair<const char *, cata_variant_type>, 3> fields = {{
+            { "character", cata_variant_type::character_id },
+            { "activity", cata_variant_type::string },
+            { "canceled", cata_variant_type::bool_ },
+        }
+    };
+};
 
 template<>
 struct event_spec<event_type::character_forgets_spell> {
@@ -555,6 +573,12 @@ struct event_spec<event_type::gains_skill_level> {
     };
 };
 
+// 0.H 兼容层：game_begin 无附加字段，仅作为「游戏开始」信号
+template<>
+struct event_spec<event_type::game_begin> {
+    static constexpr std::array<std::pair<const char *, cata_variant_type>, 0> fields = {};
+};
+
 template<>
 struct event_spec<event_type::game_load> {
     static constexpr std::array<std::pair<const char *, cata_variant_type>, 1> fields = {{
@@ -591,6 +615,20 @@ struct event_spec<event_type::game_start> {
             { "avatar_profession", cata_variant_type::profession_id },
             { "avatar_custom_profession", cata_variant_type::string },
             { "game_version", cata_variant_type::string },
+        }
+    };
+};
+
+template<>
+struct event_spec<event_type::game_avatar_new> {
+    static constexpr std::array<std::pair<const char *, cata_variant_type>, 7> fields = {{
+            { "is_new_game", cata_variant_type::bool_ },
+            { "is_debug", cata_variant_type::bool_ },
+            { "avatar_id", cata_variant_type::character_id },
+            { "avatar_name", cata_variant_type::string },
+            { "avatar_is_male", cata_variant_type::bool_ },
+            { "avatar_profession", cata_variant_type::profession_id },
+            { "avatar_custom_profession", cata_variant_type::string },
         }
     };
 };

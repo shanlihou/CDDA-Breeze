@@ -1070,6 +1070,11 @@ bool game::start_game()
 
     get_event_bus().send<event_type::game_start>( u.getID(), u.name, u.male, u.prof->ident(),
             u.custom_profession, getVersionString() );
+    // 0.H 兼容层：新角色创建完成事件（mod 用它给新角色补发特质/效果）
+    get_event_bus().send<event_type::game_avatar_new>( true, false, u.getID(), u.name, u.male,
+            u.prof->ident(), u.custom_profession );
+    // 0.H 兼容层：游戏开始事件（mod 用它初始化全局常量）
+    get_event_bus().send<event_type::game_begin>();
     time_played_at_last_load = std::chrono::seconds( 0 );
     time_of_last_load = std::chrono::steady_clock::now();
     tripoint_abs_omt abs_omt = u.global_omt_location();

@@ -371,6 +371,15 @@ void DynamicDataLoader::initialize()
     add( "BIONIC_ITEM", []( const JsonObject & jo, const std::string & src ) {
         item_controller->load_bionic( jo, src );
     } );
+    // 0.H 兼容层：0.H 的物品统一是 { "type": "ITEM", "subtypes": [...] }
+    add( "ITEM", []( const JsonObject & jo, const std::string & src ) {
+        item_controller->load_0h_item( jo, src );
+    } );
+    // 0.H 兼容层：{"type": "monster_flag", "id": ...} 只是声明一个怪物 flag 名，
+    // 0.G 里怪物 flag 本就是自由字符串，不需要登记表，这里仅接受该对象。
+    add( "monster_flag", []( const JsonObject & jo ) {
+        jo.get_string( "id" );
+    } );
 
     add( "ITEM_CATEGORY", &item_category::load_item_cat );
 

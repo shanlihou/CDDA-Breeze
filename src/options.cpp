@@ -216,7 +216,8 @@ options_manager::options_manager() :
     world_default_page_( "world_default", to_translation( "World Defaults" ) ),
     debug_page_( "debug", to_translation( "Debug" ) ),
     android_page_( "android", to_translation( "Android" ) ),
-    ai_page_("ai",to_translation("AI"))
+    ai_page_("ai",to_translation("AI")),
+    webdav_page_("webdav",to_translation("WebDAV云存档"))
 {
     pages_.emplace_back( general_page_ );
     pages_.emplace_back( interface_page_ );
@@ -231,6 +232,7 @@ options_manager::options_manager() :
     pages_.emplace_back( android_page_ );
 #endif
     pages_.emplace_back(ai_page_);
+    pages_.emplace_back(webdav_page_);
     enable_json( "DEFAULT_REGION" );
     // to allow class based init_data functions to add values to a 'string' type option, add:
     //   enable_json("OPTION_KEY_THAT_GETS_STRING_ENTRIES_ADDED_VIA_JSON");
@@ -1460,6 +1462,7 @@ void options_manager::init()
     add_options_debug();
     add_options_android();
     add_options_ai();
+    add_options_webdav();
 
     // MOD_CAMP_API_V3，记录本体设置架构。之后动态加入的模组设置不会进入这个集合，
     // 因而不会成为新世界的全局默认值，也不会写进主界面的 options.json。
@@ -3203,6 +3206,45 @@ void options_manager::add_options_ai() {
         to_translation("当此选项的值为 是 时，在与NPC对话时，AI会根据NPC的数据来生成立绘。当检测到填充后的提示词发生变化时，会以修改原图的方式更新立绘。"),
         false
     );
+}
+
+void options_manager::add_options_webdav()
+{
+    const auto add_empty_line = [&]() {
+        webdav_page_.items_.emplace_back();
+    };
+
+    add( "WEBDAV_HOST", "webdav", to_translation( "服务器地址" ),
+         to_translation( "WebDAV 服务器的域名或 IP，不要带 http:// 或 https://，端口用冒号跟在后面。\n"
+                         "例：dav.jianguoyun.com（坚果云）  或  192.168.1.10:5244（自建 alist）" ),
+         "", 100
+       );
+    add( "WEBDAV_PATH", "webdav", to_translation( "备份目录" ),
+         to_translation( "服务器上存放备份的目录，用 / 分级，程序会自动逐级创建。留空表示放在根目录。\n"
+                         "例：dav/CDDA_Breeze" ),
+         "", 100
+       );
+    add( "WEBDAV_USE_HTTPS", "webdav", to_translation( "使用 HTTPS" ),
+         to_translation( "当此选项的值为 是 时，用 https:// 连接服务器；为 否 时用 http://（明文传输，仅建议局域网自建服务使用）。" ),
+         true
+       );
+
+    add_empty_line();
+
+    add( "WEBDAV_USER", "webdav", to_translation( "用户名" ),
+         to_translation( "登录 WebDAV 的账号。留空表示不发送认证信息。" ),
+         "", 100
+       );
+    add( "WEBDAV_PASSWORD", "webdav", to_translation( "密码" ),
+         to_translation( "登录 WebDAV 的密码。坚果云等服务需要填“应用密码”而不是登录密码。\n"
+                         "注意：该密码以明文形式保存在 config/options.json 中。" ),
+         "", 100
+       );
+    add( "WEBDAV_AUTH_DIGEST", "webdav", to_translation( "使用 Digest 认证" ),
+         to_translation( "当此选项的值为 是 时，用 Digest 方式认证；为 否 时用 Basic。\n"
+                         "不确定就先用 否，如果提示认证失败（HTTP 401）再改成 是。" ),
+         false
+       );
 }
 
 // Helper method to isolate #ifdeffed tiles code.

@@ -12177,6 +12177,9 @@ int item::gun_range( const Character *p ) const
         ret += std::max( 0.0, ( p->get_str() - get_min_str() ) * 0.5 );
     }
 
+    // 0.H 兼容层：RANGE 附魔值对枪械射程的加成
+    ret = static_cast<int>( p->enchantment_cache->modify_value( enchant_vals::mod::RANGE, ret ) );
+
     return std::max( 0, ret );
 }
 

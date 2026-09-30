@@ -1359,6 +1359,12 @@ struct itype {
         // used for generic_factory for copy-from
         bool was_loaded = false;
 
+        // 0.H 兼容层：volume/weight 是否在 JSON 定义链（含 copy-from 基类）中被显式写过。
+        // 从未显式指定的裸定义（如 0.H 自引用 copy-from 产生的默认值 0）在
+        // finalize_pre / check_definitions 里静默走兜底，不再报 zero volume/weight debugmsg。
+        bool volume_explicit = false;
+        bool weight_explicit = false;
+
     private:
         /** Can item be combined with other identical items? */
         bool stackable_ = false;

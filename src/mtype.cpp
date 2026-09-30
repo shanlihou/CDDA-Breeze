@@ -94,6 +94,11 @@ bool mtype::has_flag( m_flag flag ) const
     return flags[flag];
 }
 
+bool mtype::has_json_flag( const std::string &flag ) const
+{
+    return json_flags.count( flag ) > 0;
+}
+
 void mtype::set_flag( m_flag flag, bool state )
 {
     flags.set( flag, state );
