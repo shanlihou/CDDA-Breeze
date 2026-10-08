@@ -70,6 +70,7 @@
 #include "veh_type.h"
 #include "veh_utils.h"
 #include "vehicle.h"
+#include "vehicle_blueprint.h"
 #include "vehicle_selector.h"
 #include "vpart_position.h"
 #include "vpart_range.h"
@@ -534,6 +535,8 @@ veh_interact::veh_interact( vehicle &veh, const point &p )
     main_context.register_action( "CHANGE_SHAPE" );
     main_context.register_action( "ASSIGN_CREW" );
     main_context.register_action( "RELABEL" );
+    main_context.register_action( "EXPORT_JSON" );
+    main_context.register_action( "IMPORT_JSON" );
     main_context.register_action( "PREV_TAB" );
     main_context.register_action( "NEXT_TAB" );
     main_context.register_action( "OVERVIEW_DOWN" );
@@ -832,6 +835,11 @@ void veh_interact::do_main_loop()
                     popup( _( "You cannot relabel this vehicle as it is owned by: %s." ), _( owner_fac->name ) );
                 }
             }
+        } else if( action == "EXPORT_JSON" ) {
+            do_export_json();
+        } else if( action == "IMPORT_JSON" ) {
+            // 恢复会把整车的部件换掉，界面里的部件指针会失效，必须立刻退出
+            finish = do_import_json();
         } else if( action == "FUEL_LIST_DOWN" ) {
             move_fuel_cursor( 1 );
         } else if( action == "FUEL_LIST_UP" ) {
@@ -2599,6 +2607,77 @@ void veh_interact::do_relabel()
     }
 }
 
+void veh_interact::do_export_json()
+{
+    std::string suggested = veh->name;
+    if( suggested.empty() ) {
+        suggested = _( "vehicle" );
+    }
+    // 文件名里不能带路径分隔符
+    for( char &c : suggested ) {
+        if( c == '/' || c == '\\' || c == ':' || c == '*' || c == '?' || c == '"' || c == '<' ||
+            c == '>' || c == '|' ) {
+            c = '_';
+        }
+    }
+
+    string_input_popup pop;
+    std::string name = pop
+                       .title( _( "Export vehicle as (without .json):" ) )
+                       .width( 40 )
+                       .text( suggested )
+                       .query_string();
+    if( !pop.confirmed() || name.empty() ) {
+        return;
+    }
+
+    if( vehicle_blueprint::export_to( *veh, name ) ) {
+        popup( _( "Vehicle exported to:\n%s" ), vehicle_blueprint::path_of( name ) );
+    } else {
+        popup( _( "Failed to export the vehicle.  Check that the game folder is writable." ) );
+    }
+}
+
+bool veh_interact::do_import_json()
+{
+    std::vector<std::string> files = vehicle_blueprint::list();
+    if( files.empty() ) {
+        popup( _( "No vehicle blueprints found in:\n%s" ), vehicle_blueprint::dir() );
+        return false;
+    }
+
+    uilist sel;
+    sel.text = _( "Restore which blueprint?  The current vehicle will be replaced in place." );
+    for( const std::string &f : files ) {
+        sel.addentry( -1, true, MENU_AUTOASSIGN, f );
+    }
+    sel.query();
+    if( sel.ret < 0 || sel.ret >= static_cast<int>( files.size() ) ) {
+        return false;
+    }
+    const std::string &name = files[sel.ret];
+
+    if( !query_yn( _( "Replace this vehicle with \"%s\"?  Its current parts and cargo are lost." ),
+                   name ) ) {
+        return false;
+    }
+
+    if( !vehicle_blueprint::import_from( *veh, name ) ) {
+        popup( _( "Failed to restore the vehicle.  The blueprint file may be corrupt." ) );
+        return false;
+    }
+
+    add_msg( _( "You restore the %s from a blueprint." ), veh->name );
+
+    // 部件全部被换掉了，界面里缓存的部件指针 / 光标索引全部失效，
+    // 这里只重置状态，由调用方负责退出主循环。
+    sel_cmd = ' ';
+    sel_vehicle_part = nullptr;
+    sel_vpart_info = nullptr;
+    cpart = -1;
+    return true;
+}
+
 std::pair<bool, std::string> veh_interact::calc_lift_requirements( const vpart_info
         &sel_vpart_info )
 {
@@ -3314,7 +3393,7 @@ void veh_interact::display_mode()
         // NOLINTNEXTLINE(cata-use-named-point-constants)
         print_colored_text( w_mode, point( 1, 0 ), title_col, title_col, title.value() );
     } else {
-        constexpr size_t action_cnt = 12;
+        constexpr size_t action_cnt = 14;
         const std::array<std::string, action_cnt> actions = { {
                 veh_act_desc( main_context, "INSTALL",
                               pgettext( "veh_interact", "install" ),
@@ -3349,6 +3428,12 @@ void veh_interact::display_mode()
                 veh_act_desc( main_context, "RELABEL",
                               pgettext( "veh_interact", "label" ),
                               cant_do( 'a' ) ),
+                veh_act_desc( main_context, "EXPORT_JSON",
+                              pgettext( "veh_interact", "export" ),
+                              task_reason::CAN_DO ),
+                veh_act_desc( main_context, "IMPORT_JSON",
+                              pgettext( "veh_interact", "restore" ),
+                              task_reason::CAN_DO ),
                 veh_act_desc( main_context, "QUIT",
                               pgettext( "veh_interact", "back" ),
                               task_reason::CAN_DO ),

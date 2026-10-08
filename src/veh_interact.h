@@ -169,6 +169,10 @@ class veh_interact
         void do_change_shape();
         void do_assign_crew();
         void do_relabel();
+        // 载具蓝图：把整辆车导出成 JSON / 从 JSON 原地恢复
+        void do_export_json();
+        // 从 JSON 蓝图原地恢复；成功恢复后返回 true，表示界面需要关闭
+        bool do_import_json();
         /*@}*/
 
         /**
