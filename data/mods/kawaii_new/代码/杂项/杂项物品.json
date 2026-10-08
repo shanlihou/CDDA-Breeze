@@ -1,0 +1,43 @@
+[
+  {
+    "id": "tool_ydscf",
+    "type": "TOOL",
+    "name": { "str": "移动式厨房" },
+    "description": "A&M制造的便携式炊具。因同时有着小巧和功能性，超高的成本也导致这种产品的数量稀缺。",
+    "weight": "600 g", "volume": "1 L", "price": "0 cent",
+    "melee_damage": { "bash": 6 },
+    "material": [ "steel" ],
+    "symbol": ";", "color": "brown",
+    "ammo": "battery",
+    "sub": "hotplate",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "watertight": true, "rigid": true,
+        "ammo_restriction": { "battery": 600 }
+      }
+    ],
+    "charges_per_use": 1,
+    "qualities": [ ["COOK",3],["BOIL",2],["CONTAIN",1],["CHEM",1] ],
+    "use_action": "HOTPLATE"
+  },
+  {
+    "id": "tool_UPS",
+    "type": "TOOL",
+    "name": { "str": "大容量UPS" },
+    "description": "一种A&M公司生产的UPS，比普通的UPS模块可以存储更多的电量",
+    "weight": "750 g", "volume": "2500 ml", "price": "0 cent",
+    "melee_damage": { "bash": 9 },
+    "material": [ "steel" ],
+    "symbol": ";", "color": "light_gray",
+    "ammo": "battery",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": { "battery": 2500 }
+      }
+    ],
+    "flags": [ "NO_UNLOAD","RECHARGE","IS_UPS" ]
+  }
+]

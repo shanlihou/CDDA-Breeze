@@ -1,0 +1,120 @@
+[
+  {
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "yuuri_flint",
+    "entries": [ { "item": "flintlock_ammo" } ]
+  },
+  {
+    "type": "profession",
+    "id": "yuuri",
+    "name": "尤莉",
+    "description": "好消息是，你的旅行并没有终结；坏消息是，你醒来后发现自己置身于另一个末世。除了你引以为傲的射击技巧和身体强度，你祖父曾经教你的一些手工技巧似乎在现在也能派上用场了。只是……这又是为了什么？来自《少女终末旅行》的mod角色。",
+    "points": 0,
+    "proficiencies": [ "prof_spotting" ],
+    "skills": [
+      { "level": 6, "name": "gun" },
+      { "level": 2, "name": "rifle" },
+      { "level": 2, "name": "melee" },
+      { "level": 1, "name": "stabbing" },
+      { "level": 1, "name": "dodge" },
+      { "level": 1, "name": "fabrication" },
+      { "level": 1, "name": "tailor" }
+    ],
+    "items": {
+      "both": {
+        "items": [
+          "pants_army",
+          "undershirt",
+          "jacket_army",
+          "helmet_army",
+          "gloves_liner",
+          "gloves_tactical",
+          "socks",
+          "boots_combat",
+          "308"
+        ],
+        "entries": [
+          { "item": "water_clean", "container-item": "canteen" },
+          { "item": "ear_plugs", "custom-flags": [ "no_auto_equip" ] },
+          { "item": "knife_combat", "container-item": "sheath" },
+          { "item": "kar99k", "ammo-item": "308", "charges": 5, "contents-item": [ "shoulder_strap", "rifle_scope" ] },
+          { "item": "引来千户的旧世界故事书", "container-item": "backpack_leather" }
+        ]
+      },
+      "male": [ "sports_bra", "boxer_shorts" ],
+      "female": [ "sports_bra", "boxer_shorts" ]
+    },
+    "vehicle": "sdkfz2",
+    "traits": [
+      "HUNGER",
+      "HATES_BOOKS",
+      "FAST_REFLEXES",
+      "TOUGH",
+      "OPTIMISTIC",
+      "PRETTY",
+      "hair_blond_long",
+      "SKIN_LIGHT",
+      "GOURMAND",
+      "QUICK"
+    ]
+  },
+  {
+    "type": "profession",
+    "id": "chito",
+    "name": "千户",
+    "description": "好消息是，你的旅行并没有终结；坏消息是，醒来后你发现自己置身于另一个末世。你博闻广识，车技精湛，但你觉得自己好像忘记了很重要的东西……你的半履带摩托后座上的体温是谁的？来自《少女终末旅行》的mod角色。",
+    "points": 0,
+    "proficiencies": [ "prof_gunsmithing_basic" ],
+    "skills": [
+      { "level": 1, "name": "gun" },
+      { "level": 1, "name": "melee" },
+      { "level": 3, "name": "fabrication" },
+      { "level": 1, "name": "electronics" },
+      { "level": 3, "name": "mechanics" },
+      { "level": 3, "name": "driving" }
+    ],
+    "items": {
+      "both": {
+        "items": [
+          "pants_army",
+          "undershirt",
+          "jacket_army",
+          "helmet_army",
+          "gloves_liner",
+          "gloves_tactical",
+          "socks",
+          "boots_combat",
+          "wristwatch"
+        ],
+        "entries": [
+          { "item": "water_clean", "container-item": "canteen" },
+          { "item": "wrench" },
+          { "item": "jack" },
+          { "item": "chito's_log" },
+          {
+            "item": "light_disposable_cell",
+            "ammo-item": "battery",
+            "charges": 300,
+            "container-item": "kanazawa's_camera"
+          },
+          { "item": "引来尤莉的肉罐头", "container-item": "backpack_leather" }
+        ]
+      },
+      "male": [ "sports_bra", "boxer_shorts" ],
+      "female": [ "sports_bra", "boxer_shorts" ]
+    },
+    "vehicle": "sdkfz2",
+    "traits": [
+      "GOODMEMORY",
+      "FASTREADER",
+      "LIGHTWEIGHT",
+      "LOVES_BOOKS",
+      "PRETTY",
+      "hair_black_long",
+      "SKIN_LIGHT",
+      "FASTLEARNER",
+      "WAKEFUL"
+    ]
+  }
+]

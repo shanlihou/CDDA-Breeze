@@ -1,0 +1,62 @@
+[
+  {
+    "type": "npc",
+    "id": "npc_yuuri",
+    "name_unique": "尤莉",
+    "class": "NC_yuuri",
+    "gender": "female",
+    "attitude": 3,
+    "mission": 0,
+    "faction": "no_faction",
+    "chat": "尤莉对话"
+  },
+  {
+    "id": "尤莉对话",
+    "type": "talk_topic",
+    "dynamic_line": "这是什么好吃的！(* w *)",
+    "responses": [
+      {
+        "text": "想吃吗？(^ - ^)",
+        "trial": { "type": "PERSUADE", "difficulty": 1000, "mod": [ [ "value", 2 ] ] },
+        "success": { "topic": "想吃~~~", "effect": "follow", "opinion": { "trust": 100, "value": 100 } },
+        "failure": { "topic": "想吃~~~", "effect": "follow", "opinion": { "trust": 99, "fear": 99 } }
+      }
+    ]
+  },
+  {
+    "id": "想吃~~~",
+    "type": "talk_topic",
+    "dynamic_line": "想吃~~~",
+    "responses": [ { "text": "给你^ ^", "topic": "TALK_FRIEND" } ]
+  },
+  {
+    "type": "npc",
+    "id": "npc_chito",
+    "name_unique": "千户",
+    "class": "NC_chito",
+    "gender": "female",
+    "attitude": 3,
+    "mission": 0,
+    "faction": "no_faction",
+    "chat": "千户对话"
+  },
+  {
+    "id": "千户对话",
+    "type": "talk_topic",
+    "dynamic_line": "这是什么书？(- v -)",
+    "responses": [
+      {
+        "text": "想看吗？(* w *)",
+        "trial": { "type": "PERSUADE", "difficulty": 1000, "mod": [ [ "value", 2 ] ] },
+        "success": { "topic": "想看~~~", "effect": "follow", "opinion": { "trust": 100, "value": 100 } },
+        "failure": { "topic": "想看~~~", "effect": "follow", "opinion": { "trust": 99, "fear": 99 } }
+      }
+    ]
+  },
+  {
+    "id": "想看~~~",
+    "type": "talk_topic",
+    "dynamic_line": "想看~~~",
+    "responses": [ { "text": "给你* *", "topic": "TALK_FRIEND" } ]
+  }
+]

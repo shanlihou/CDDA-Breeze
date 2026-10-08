@@ -1,0 +1,752 @@
+[
+  {
+    "type": "TOOL_ARMOR",
+    "category": "clothing",
+    "id": "maid_dress",
+    "name": {
+      "str": "维多利亚式女仆装",
+      "str_pl": "维多利亚式女仆装"
+    },
+    "weight": "800 g",
+    "color": "black",
+    "to_hit": 0,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "3 kg",
+        "max_item_length": "10 cm",
+        "moves": 75
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "3 kg",
+        "max_item_length": "10 cm",
+        "moves": 75
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "10 L",
+        "max_contains_weight": "10 kg",
+        "max_item_length": "30 cm",
+        "moves": 120
+      }
+    ],
+    "symbol": "[",
+    "description": "一套经典的女仆装，白色的围裙与褶边，以及一套黑色连体衣。围裙上缝有侧袋，因而可以存储一些东西，包括几把飞刀。由于穿它得搭配灯笼裤，你可以丝毫不尴尬地不穿内裤！",
+    "price": "50 USD",
+    "material": [
+      "cotton"
+    ],
+	"material_thickness": 4,
+    "environmental_protection": 1,
+    "volume": "4250 ml",
+    "warmth": 20,
+    "flags": [
+      "VARSIZE",
+      "SUPER_FANCY",
+      "POCKETS"
+    ],
+    "armor": [
+      {
+        "encumbrance": [
+          6,
+          10
+        ],
+        "coverage": 95,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "leg_l",
+          "leg_r"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "TOOL_ARMOR",
+    "category": "clothing",
+    "id": "maid_dress_french",
+    "name": {
+      "str": "法式女仆装",
+      "str_pl": "法式女仆装"
+    },
+    "weight": "100 g",
+    "color": "blue",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "2 L",
+        "max_contains_weight": "5 kg",
+        "max_item_length": "15 cm",
+        "moves": 120
+      }
+    ],
+    "symbol": "[",
+    "description": "现代风格的法式女仆装，黑色的围裙，配有白色褶边。大腿和肩部没有多少布料。",
+    "price": "50 USD",
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 1,
+    "volume": "250 ml",
+    "warmth": 5,
+    "flags": [
+      "VARSIZE",
+      "SUPER_FANCY"
+    ],
+    "armor": [
+      {
+        "encumbrance": [
+          5,
+          10
+        ],
+        "coverage": 70,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "leg_l",
+          "leg_r"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "TOOL_ARMOR",
+    "category": "clothing",
+    "id": "maid_dress_french_shoggoth",
+    "looks_like": "maid_dress_french",
+    "name": {
+      "str": "奇怪的法式女仆装",
+      "str_pl": "奇怪的法式女仆装"
+    },
+    "weight": "100 g",
+    "color": "blue",
+    "symbol": "[",
+    "description": "现代风格的法式女仆装，黑色的围裙，配有白色褶边。大腿和肩部没有多少布料。这件的样子有点不太对劲。",
+    "price": "50 USD",
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 1,
+    "volume": "250 ml",
+    "warmth": 20,
+    "flags": [
+      "VARSIZE",
+      "SUPER_FANCY",
+      "OVERSIZE",
+      "STURDY"
+    ],
+    "armor": [
+      {
+        "encumbrance": [
+          5,
+          10
+        ],
+        "coverage": 0,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "leg_l",
+          "leg_r"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "TOOL_ARMOR",
+    "id": "survivor_maid_dress",
+    "repairs_like": "lsurvivor_suit",
+    "category": "armor",
+    "name": {
+      "str": "幸存者维多利亚式女仆装",
+      "str_pl": "幸存者维多利亚式女仆装"
+    },
+    "weight": "2300 g",
+    "color": "black",
+    "symbol": "[",
+    "description": "维多利亚式女仆装，专为大灾变后的女仆量身打造，在群下附带了8个飞刀鞘。凯夫拉混合编织工艺提供了适度的保护，但也使它有点难以穿上。",
+    "price": "1100 USD",
+    "material": [
+      "kevlar_layered",
+      "cotton"
+    ],
+	"material_thickness": 4,
+    "environmental_protection": 5,
+    "volume": "10500 ml",
+    "warmth": 30,
+    "pocket_data": [
+      {
+        "magazine_well": "50 ml",
+        "holster": true,
+        "flag_restriction": [ "SHEATH_KNIFE" ],
+        "moves": 30,
+        "max_contains_volume": "100 ml",
+        "max_contains_weight": "1 kg",
+        "max_item_length": "10 cm"
+      },
+      {
+        "magazine_well": "50 ml",
+        "holster": true,
+        "flag_restriction": [ "SHEATH_KNIFE" ],
+        "moves": 30,
+        "max_contains_volume": "100 ml",
+        "max_contains_weight": "1 kg",
+        "max_item_length": "10 cm"
+      },
+      {
+        "magazine_well": "50 ml",
+        "holster": true,
+        "flag_restriction": [ "SHEATH_KNIFE" ],
+        "moves": 30,
+        "max_contains_volume": "100 ml",
+        "max_contains_weight": "1 kg",
+        "max_item_length": "10 cm"
+      },
+      {
+        "magazine_well": "50 ml",
+        "holster": true,
+        "flag_restriction": [ "SHEATH_KNIFE" ],
+        "moves": 30,
+        "max_contains_volume": "100 ml",
+        "max_contains_weight": "1 kg",
+        "max_item_length": "10 cm"
+      },
+      {
+        "magazine_well": "50 ml",
+        "holster": true,
+        "flag_restriction": [ "SHEATH_KNIFE" ],
+        "moves": 30,
+        "max_contains_volume": "100 ml",
+        "max_contains_weight": "1 kg",
+        "max_item_length": "10 cm"
+      },
+      {
+        "magazine_well": "50 ml",
+        "holster": true,
+        "flag_restriction": [ "SHEATH_KNIFE" ],
+        "moves": 30,
+        "max_contains_volume": "100 ml",
+        "max_contains_weight": "1 kg",
+        "max_item_length": "10 cm"
+      },
+      {
+        "magazine_well": "50 ml",
+        "holster": true,
+        "flag_restriction": [ "SHEATH_KNIFE" ],
+        "moves": 30,
+        "max_contains_volume": "100 ml",
+        "max_contains_weight": "1 kg",
+        "max_item_length": "10 cm"
+      },
+      {
+        "magazine_well": "50 ml",
+        "holster": true,
+        "flag_restriction": [ "SHEATH_KNIFE" ],
+        "moves": 30,
+        "max_contains_volume": "100 ml",
+        "max_contains_weight": "1 kg",
+        "max_item_length": "10 cm"
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "3 kg",
+        "max_item_length": "10 cm",
+        "moves": 75
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "3 kg",
+        "max_item_length": "10 cm",
+        "moves": 75
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "10 L",
+        "max_contains_weight": "10 kg",
+        "max_item_length": "30 cm",
+        "moves": 120
+      }
+    ],
+    "flags": [
+      "VARSIZE",
+      "WATERPROOF",
+      "RAINPROOF",
+      "STURDY",
+      "SUPER_FANCY",
+      "POCKETS"
+    ],
+    "armor": [
+      {
+        "encumbrance": [
+          8,
+          12
+        ],
+        "coverage": 100,
+        "covers": [
+          "leg_l",
+          "leg_r",
+          "head",
+          "torso",
+          "arm_l",
+          "arm_r"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "ARMOR",
+    "category": "clothing",
+    "id": "jokyu_fuku",
+    "name": {
+      "str": "和风女仆装",
+      "str_pl": "和风女仆装"
+    },
+    "weight": "1200 g",
+    "color": "brown",
+    "symbol": "[",
+    "description": "日本咖啡馆很久以前穿的女仆服。基本上是和服上围着一条白色围裙。",
+    "price": "50 USD",
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 4,
+    "environmental_protection": 1,
+    "volume": "5 L",
+    "warmth": 20,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "2 L",
+        "max_contains_weight": "5 kg",
+        "max_item_length": "15 cm",
+        "moves": 120
+      }
+    ],
+    "flags": [
+      "VARSIZE",
+      "SUPER_FANCY"
+    ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "DEXTERITY",
+              "add": 2
+            }
+          ]
+        }
+      ]
+    },
+    "armor": [
+      {
+        "encumbrance": [
+          9,
+          15
+        ],
+        "coverage": 95,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "leg_l",
+          "leg_r"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "ARMOR",
+    "category": "clothing",
+    "id": "stockings_lace",
+    "name": {
+      "str": "蕾丝吊带袜",
+      "str_pl": "蕾丝吊带袜"
+    },
+    "weight": "90 g",
+    "color": "white",
+    "symbol": "[",
+    "description": "一套纯白长袜配吊袜带和内裤，饰以优雅的花边。",
+    "price": 500,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 1,
+    "volume": "250 ml",
+    "warmth": 6,
+    "flags": [
+      "VARSIZE",
+      "SKINTIGHT",
+      "SUPER_FANCY"
+    ],
+    "armor": [
+      {
+        "coverage": 85,
+        "covers": [
+          "foot_l",
+          "foot_r",
+          "leg_l",
+          "leg_r"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "TOOL_ARMOR",
+    "category": "clothing",
+    "id": "tux",
+    "name": {
+      "str": "燕尾礼服"
+    },
+    "weight": "1587 g",
+    "color": "dark_gray",
+    "symbol": "[",
+    "description": "一套全身燕尾服。\n“在末日来临之时也要有绅士风范。”",
+    "price": "210 USD",
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 4,
+    "environmental_protection": 1,
+    "volume": "5500 ml",
+    "warmth": 30,
+    "flags": [
+      "VARSIZE",
+      "SUPER_FANCY"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "3 kg",
+        "max_item_length": "10 cm",
+        "moves": 75
+      }
+    ],
+    "armor": [
+      {
+        "encumbrance": 12,
+        "coverage": 95,
+        "covers": [
+          "leg_l",
+          "leg_r",
+          "torso",
+          "arm_l",
+          "arm_r"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "TOOL_ARMOR",
+    "id": "survivor_tux",
+    "repairs_like": "lsurvivor_suit",
+    "category": "armor",
+    "name": {
+      "str": "幸存者燕尾服"
+    },
+    "weight": "3050 g",
+    "color": "dark_gray",
+    "symbol": "[",
+    "description": "专为大灾变后的管家量身打造的晚礼服。凯夫拉混合编织工艺提供了适度的保护，但也使它有点难以穿上。",
+    "price": "1100 USD",
+    "material": [
+      "kevlar_layered",
+      "cotton"
+    ],
+    "material_thickness": 4,
+    "environmental_protection": 5,
+    "volume": "11250 ml",
+    "warmth": 30,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "3 kg",
+        "max_item_length": "10 cm",
+        "moves": 75
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "3 kg",
+        "max_item_length": "10 cm",
+        "moves": 75
+      }
+    ],
+    "flags": [
+      "VARSIZE",
+      "HOOD",
+      "WATERPROOF",
+      "RAINPROOF",
+      "STURDY",
+      "SUPER_FANCY"
+    ],
+    "armor": [
+      {
+        "encumbrance": [
+          9,
+          17
+        ],
+        "coverage": 100,
+        "covers": [
+          "leg_l",
+          "leg_r",
+          "head",
+          "torso",
+          "arm_l",
+          "arm_r"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "ARMOR",
+    "category": "clothing",
+    "id": "maid_cap",
+    "name": {
+      "str": "女仆帽"
+    },
+    "weight": "50 g",
+    "color": "white",
+    "symbol": "[",
+    "description": "女仆常用的一种有褶边的白色帽子。",
+    "price": "20 USD",
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 1,
+    "volume": "250 ml",
+    "warmth": 30,
+    "flags": [
+      "VARSIZE"
+    ],
+    "armor": [
+      {
+        "coverage": 60,
+        "covers": [
+          "head"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "ARMOR",
+    "category": "clothing",
+    "id": "maid_cap_shoggoth",
+    "name": {
+      "str": "奇怪的女仆头带"
+    },
+    "weight": "50 g",
+    "looks_like": "maid_cap",
+    "color": "white",
+    "symbol": "[",
+    "description": "女仆常用的白色褶边头带。这件的样子有点不太对劲。",
+    "price": "20 USD",
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 1,
+    "volume": "250 ml",
+    "warmth": 30,
+    "flags": [
+      "VARSIZE",
+      "STURDY",
+      "FANCY"
+    ],
+    "armor": [
+      {
+        "coverage": 0,
+        "covers": [
+          "head"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "ARMOR",
+    "category": "clothing",
+    "id": "cat_maid_cap",
+    "name": {
+      "str": "猫耳女仆帽"
+    },
+    "weight": "60 g",
+    "color": "white",
+    "symbol": "[",
+    "description": "女仆常用的一种有褶边的白色帽子。上面有两个看起来像猫耳朵的小突起。很可爱。",
+    "price": "20 USD",
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 1,
+    "volume": "250 ml",
+    "warmth": 30,
+    "flags": [
+      "VARSIZE",
+      "FANCY"
+    ],
+    "armor": [
+      {
+        "coverage": 60,
+        "covers": [
+          "head"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "ARMOR",
+    "category": "clothing",
+    "id": "petticoat",
+    "name": {
+      "str": "衬裙",
+      "str_pl": "衬裙"
+    },
+    "weight": "90 g",
+    "color": "white",
+    "symbol": "[",
+    "description": "一种通常穿在裙子下面的有褶边的内裤。",
+    "price": 500,
+    "material": [
+      "cotton"
+    ],
+	"material_thickness": 1,
+    "volume": "250 ml",
+    "flags": [
+      "SUPER_FANCY"
+    ],
+    "armor": [
+      {
+        "coverage": 100,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_hip_l",
+          "leg_hip_r"
+        ]
+      },
+      {
+        "coverage": 50,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_upper_l",
+          "leg_upper_r"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "ARMOR",
+    "category": "clothing",
+    "id": "panties_kemo",
+    "name": {
+      "str": "尾巴内裤",
+      "str_pl": "尾巴内裤"
+    },
+    "weight": "100 g",
+    "color": "white",
+    "symbol": "[",
+    "description": "为有尾巴的人准备的一种特殊内衣。虽然它非常薄，但它是你尊严的最后一道防线。",
+    "price": "50 USD",
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 1,
+    "volume": "250 ml",
+    "warmth": 5,
+    "flags": [
+      "VARSIZE",
+      "SKINTIGHT"
+    ],
+    "armor": [
+      {
+        "coverage": 15,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "ARMOR",
+    "id": "briefs_kemo",
+    "name": {
+      "str": "尾巴三角裤",
+      "str_pl": "尾巴三角裤"
+    },
+    "weight": "32 g",
+    "color": "white",
+    "symbol": "[",
+    "description": "为有尾巴的人准备的一种特殊内衣。这是在绅士和野兽之间的根本区别。",
+    "price": "10 USD",
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 1,
+    "volume": "250 ml",
+    "warmth": 5,
+    "flags": [
+      "VARSIZE",
+      "SKINTIGHT"
+    ],
+    "armor": [
+      {
+        "coverage": 15,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "maids_scarf",
+    "type": "TOOL_ARMOR",
+    "category": "clothing",
+    "symbol": "[",
+    "color": "light_gray",
+    "name": {
+      "str": "女仆围巾"
+    },
+    "description": "一条非常长且质地轻巧的围巾，可穿戴以覆盖嘴部保持温暖。因为特别加长的缘故，足以同时保暖脸部以及双手。如果太热了，使用它来围松些吧。",
+    "price": "15 USD",
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "weight": "120 g",
+    "volume": "1 L",
+    "to_hit": -3,
+    "flags": [
+      "POCKETS",
+      "OUTER",
+      "ALLOWS_NATURAL_ATTACKS"
+    ],
+    "warmth": 20,
+    "armor": [
+      {
+        "encumbrance": 0,
+        "coverage": 100,
+        "covers": [
+          "mouth"
+        ]
+      }
+    ]
+  }
+]

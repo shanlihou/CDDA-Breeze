@@ -1,0 +1,134 @@
+[
+  {
+    "type": "AMMO",
+    "id": "blob_gohan",
+    "category": "other",
+    "price": "0 cent",
+    "name": {
+      "str": "女仆的变形怪饲料"
+    },
+    "symbol": "=",
+    "color": "light_red",
+    "description": "为某种类型的变形怪做的饲料。这是一种由肉制成的蛋白质糊。",
+    "material": [
+      "flesh"
+    ],
+    "volume": "1 ml",
+    "weight": "1 g",
+    "ammo_type": "blob_gohan",
+    "count": 100,
+    "stack_size": 100
+  },
+  {
+    "type": "TOOL",
+    "category": "weapons",
+    "id": "destruction_otama",
+    "price": "90 USD",
+    "name": {
+      "str": "女仆的勺子"
+    },
+    "symbol": "/",
+    "color": "light_gray",
+    "description": "一种女仆真正生气时会使用的武器。真吓人！",
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "volume": "2 L",
+    "weight": "2000 g",
+    "cutting": 24,
+    "to_hit": 2,
+    "use_action": {
+      "type": "transform",
+      "target": "otama_act",
+      "target_charges": 2,
+      "active": true,
+      "msg": "你怒不可遏。"
+    }
+  },
+  {
+    "id": "otama_act",
+    "type": "TOOL",
+    "category": "weapons",
+    "symbol": "*",
+    "color": "light_gray",
+    "name": {
+      "str": "女仆的勺子"
+    },
+    "description": "这真是太过分了！你快要气炸了！",
+    "price": "0 cent",
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "weight": "600 g",
+    "volume": "2 L",
+    "cutting": 24,
+    "to_hit": 2,
+    "initial_charges": 2,
+    "max_charges": 2,
+    "turns_per_charge": 1,
+    "use_action": {
+      "type": "explosion",
+      "sound_volume": 1,
+      "sound_msg": "You are so furious that even the earth begins to rumble...",
+      "no_deactivate_msg": "This is an outrage! You're on the verge of exploding!",
+      "explosion": {
+        "power": 30,
+        "shrapnel": 20
+      }
+    }
+  },
+  {
+    "type": "AMMO",
+    "id": "maid_point",
+    "category": "other",
+    "price": "0 cent",
+    "name": {
+      "str": "女仆能量水晶",
+      "str_pl": "女仆能量水晶"
+    },
+    "symbol": "*",
+    "color": "light_red",
+    "description": "一块结晶化的激情。在某些类型的女仆工具中充当能量来源。",
+    "material": [
+      "maid"
+    ],
+    "volume": "3 ml",
+    "weight": "3 g",
+    "ammo_type": "maid_point",
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 0
+    },
+    "range": 0,
+    "dispersion": 0,
+    "recoil": 0,
+    "count": 100,
+    "stack_size": 100,
+    "effects": [
+      "NEVER_MISFIRES"
+    ]
+  },
+  {
+    "type": "AMMO",
+    "id": "maid_power",
+    "category": "other",
+    "price": "0 cent",
+    "name": {
+      "str": "女仆能量",
+      "str_pl": "女仆能量"
+    },
+    "symbol": "*",
+    "color": "light_red",
+    "description": "一块半结晶化的激情，尚未完全催化成可用的形式。",
+    "material": [
+      "maid"
+    ],
+    "volume": "3 ml",
+    "weight": "3 g",
+    "ammo_type": "maid_power",
+    "count": 15,
+    "stack_size": 15
+  }
+]

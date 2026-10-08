@@ -1,0 +1,327 @@
+[
+  {
+    "type": "mutation",
+    "id": "MAID_ALPHA",
+    "name": {
+      "str": "新人类女仆"
+    },
+    "points": 8,
+    "ugliness": -5,
+    "threshreq": [
+      "THRESH_ALPHA"
+    ],
+    "description": "对比人类的全方位进化让你确信，不存在比你更好的女仆了，绝对的。全属性+1，减少全身累赘25点",
+    "category": [
+      "MAID"
+    ],
+    "cancels": [
+      "MAID_DOJI1",
+      "MAID_DOJI2",
+      "MAID_DOJI3",
+	  "MAID_1",
+	  "MAID_2",
+	  "MAID_3"
+    ],
+    "passive_mods": {
+      "str_mod": 1,
+      "dex_mod": 1,
+      "int_mod": 1,
+      "per_mod": 1
+    },
+    "encumbrance_always": [
+      [
+        "torso",
+        -25
+      ],
+      [
+        "head",
+        -25
+      ],
+      [
+        "arm_l",
+        -25
+      ],
+      [
+        "arm_r",
+        -25
+      ],
+      [
+        "hand_l",
+        -25
+      ],
+      [
+        "hand_r",
+        -25
+      ],
+      [
+        "leg_l",
+        -25
+      ],
+      [
+        "leg_r",
+        -25
+      ],
+      [
+        "foot_l",
+        -25
+      ],
+      [
+        "foot_r",
+        -25
+      ]
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "MAID_FELINE",
+    "name": {
+      "str": "猫娘女仆"
+    },
+    "points": 8,
+    "ugliness": -5,
+    "threshreq": [
+      "THRESH_FELINE"
+    ],
+    "description": "你将你的猫类特性与女仆的本性结合起来，最优雅的女仆服务于最美好的主人。力量+2,敏捷+4，减少全身累赘15点",
+    "category": [
+      "MAID"
+    ],
+    "cancels": [
+      "MAID_DOJI1",
+      "MAID_DOJI2",
+      "MAID_DOJI3",
+	  "MAID_1",
+	  "MAID_2",
+	  "MAID_3"
+    ],
+    "passive_mods": {
+      "str_mod": 2,
+      "dex_mod": 4
+    },
+    "encumbrance_always": [
+      [
+        "torso",
+        -15
+      ],
+      [
+        "head",
+        -15
+      ],
+      [
+        "arm_l",
+        -15
+      ],
+      [
+        "arm_r",
+        -15
+      ],
+      [
+        "hand_l",
+        -15
+      ],
+      [
+        "hand_r",
+        -15
+      ],
+      [
+        "leg_l",
+        -15
+      ],
+      [
+        "leg_r",
+        -15
+      ],
+      [
+        "foot_l",
+        -15
+      ],
+      [
+        "foot_r",
+        -15
+      ]
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "MAID_LUPINE",
+    "name": {
+      "str": "狼娘女仆"
+    },
+    "points": 8,
+    "ugliness": -5,
+    "threshreq": [
+      "THRESH_LUPINE"
+    ],
+    "description": "你将你的狼类特性与女仆的本性结合起来，忠诚的女仆总是忠于伟大的主人。力量+4,敏捷+2，减少全身累赘15点",
+    "category": [
+      "MAID"
+    ],
+    "cancels": [
+      "MAID_DOJI1",
+      "MAID_DOJI2",
+      "MAID_DOJI3",
+	  "MAID_1",
+	  "MAID_2",
+	  "MAID_3"
+    ],
+    "passive_mods": {
+      "str_mod": 4,
+      "dex_mod": 2
+    },
+    "encumbrance_always": [
+      [
+        "torso",
+        -15
+      ],
+      [
+        "head",
+        -15
+      ],
+      [
+        "arm_l",
+        -15
+      ],
+      [
+        "arm_r",
+        -15
+      ],
+      [
+        "hand_l",
+        -15
+      ],
+      [
+        "hand_r",
+        -15
+      ],
+      [
+        "leg_l",
+        -15
+      ],
+      [
+        "leg_r",
+        -15
+      ],
+      [
+        "foot_l",
+        -15
+      ],
+      [
+        "foot_r",
+        -15
+      ]
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "MAID_BIRD",
+    "name": {
+      "str": "羽翼女仆"
+    },
+    "points": 8,
+    "ugliness": -5,
+    "threshreq": [
+      "THRESH_BIRD"
+    ],
+    "description": "你将你的鸟类特性与女仆的本性结合起来，你要将主人庇护在你温暖的羽翼下，让任何生物都不能伤害你的主人。敏捷+3,感知+3，减少全身累赘15点",
+    "category": [
+      "MAID"
+    ],
+    "cancels": [
+      "MAID_DOJI1",
+      "MAID_DOJI2",
+      "MAID_DOJI3",
+	  "MAID_1",
+	  "MAID_2",
+	  "MAID_3"
+    ],
+    "passive_mods": {
+      "dex_mod": 3,
+      "per_mod": 3
+    },
+    "encumbrance_always": [
+      [
+        "torso",
+        -15
+      ],
+      [
+        "head",
+        -15
+      ],
+      [
+        "arm_l",
+        -15
+      ],
+      [
+        "arm_r",
+        -15
+      ],
+      [
+        "hand_l",
+        -15
+      ],
+      [
+        "hand_r",
+        -15
+      ],
+      [
+        "leg_l",
+        -15
+      ],
+      [
+        "leg_r",
+        -15
+      ],
+      [
+        "foot_l",
+        -15
+      ],
+      [
+        "foot_r",
+        -15
+      ]
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "MAID_TEKELI_OTHER",
+    "name": {
+      "str": "修格斯转化"
+    },
+    "points": 10,
+    "description": "在发自内心的奉献精神的引导下，你的身体被转化成了更能侍奉主人的形式。全攻击抗性+5，高度强化恢复和治疗能力。————Tekeli-li！",
+    "prereqs": [
+	  "MAID_ALPHA",
+	  "MAID_FELINE",
+	  "MAID_LUPINE",
+	  "MAID_BIRD"
+    ],
+    "category": [
+      "MAID"
+    ],
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth",
+          "eyes"
+        ],
+        "bash": 5,
+        "cut": 5,
+        "stab": 5,
+        "bullet": 5,
+		"electric": 5
+      }
+    ],
+    "healing_awake": 2.50,
+    "healing_resting": 2.50
+  }
+]

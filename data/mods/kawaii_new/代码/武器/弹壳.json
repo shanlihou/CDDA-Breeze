@@ -1,0 +1,509 @@
+[
+  {
+    "id": "tool_sdcdj",
+    "type": "TOOL",
+    "name": { "str": "手动冲弹机" },
+    "description": "将铜或钢冲压成不同口径的弹壳\n需要原弹壳作为模板配合加热工具冲压弹壳",
+    "symbol": ";", "color": "dark_gray",
+    "weight": "8350 g", "volume": "800 ml", "longest_side": "50 cm",
+    "price": 15000, "price_postapoc": 3000,
+    "melee_damage": { "bash": 8 }, "to_hit": -3,
+    "material": [ "steel", "plastic" ]
+  },
+  //配方共存"id_suffix": "ammo",
+  {
+    "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
+    "result": "tool_sdcdj",
+    "category": "CC_萌化", "subcategory": "CSC_萌化_武器",
+    "skill_used": "fabrication", "difficulty": 8,
+    "time": "7 h",
+    "using": [ [ "blacksmithing_standard", 9 ], [ "steel_standard", 9 ] ],
+    "book_learn": [ [ "manual_shotgun", 2 ], [ "manual_rifle", 2 ], [ "manual_smg", 2 ], [ "manual_pistol", 3 ], [ "recipe_bullets", 2 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_metalworking" },
+      { "proficiency": "prof_blacksmithing" },
+      { "proficiency": "prof_toolsmithing" }
+    ],
+    "qualities": [ { "id": "GRIND", "level": 2 }, { "id": "WRENCH", "level": 1 } ],
+    "tools": [ [ [ "swage", -1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
+    "result": "tool_sdcdj",
+    "category": "CC_萌化", "subcategory": "CSC_萌化_武器",
+    "skill_used": "fabrication", "difficulty": 10,
+    "time": "7 h",
+    "using": [ [ "blacksmithing_standard", 9 ], [ "steel_standard", 9 ] ],
+    "book_learn": [ [ "manual_shotgun", 2 ], [ "manual_rifle", 2 ], [ "manual_smg", 2 ], [ "manual_pistol", 3 ], [ "recipe_bullets", 2 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_metalworking" },
+      { "proficiency": "prof_blacksmithing" },
+      { "proficiency": "prof_toolsmithing" }
+    ],
+    "qualities": [ { "id": "GRIND", "level": 2 }, { "id": "WRENCH", "level": 1 } ],
+    "tools": [ [ [ "swage", -1 ] ] ],
+    "components": [ [[ "copper", 10 ]] ]
+  },
+  //制造合集
+  {
+    "id": "弹壳",
+    "type": "nested_category",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_萌化", "subcategory": "CSC_萌化_武器",
+    "name": "弹壳",
+    "description": "弹壳的制造",
+    "skill_used": "gun",
+    "nested_category_data": [ "小弹壳", "中弹壳", "shot_hull", "410shot_hull" ],
+    "difficulty": 3
+  },
+  {
+    "id": "小弹壳",
+    "type": "nested_category",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_*", "subcategory": "CSC_*_NESTED",
+    "name": "小弹壳",
+    "description": "小弹壳的制造",
+    "skill_used": "gun",
+    "nested_category_data": [
+      "46mm_casing", "57mm_casing", "9mm_casing", "9x18mm_casing",
+      "10mm_casing", "22_casing_new", "32_casing", "38_casing", "38super_casing", "40_casing", "44_casing", "45_casing", "45colt_casing",
+      "357sig_casing", "357mag_casing", "380_casing", "454_casing", "460_casing", "500_casing"
+    ],
+    "difficulty": 4
+  },
+  {
+    "id": "中弹壳",
+    "type": "nested_category",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_*", "subcategory": "CSC_*_NESTED",
+    "name": "弹壳",
+    "description": "弹壳的制造",
+    "skill_used": "gun",
+    "nested_category_data": [
+      "30carbine_casing", "3006_casing", "4570_casing", "50_casing",
+      "223_casing", "270win_casing", "300_casing", "300blk_casing", "308_casing", "545_casing",
+      "700nx_casing", "762_casing", "762_25_casing", "762_51_casing", "762R_casing"
+    ],
+    "difficulty": 5
+  },
+  //小口径弹壳
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "46mm_casing",
+    "category": "CC_萌化", "subcategory": "CSC_ALL",
+    "skill_used": "fabrication", "difficulty": 4,
+    "skills_required": [["gun",4]],
+    "time": "5 m",
+    "autolearn": true,
+    "charges": 3,
+    "proficiencies": [ { "proficiency": "prof_metalworking" }, { "proficiency": "prof_redsmithing" } ],
+    "qualities": [ { "id": "ANVIL", "level": 1 }, { "id": "HAMMER", "level": 2 } ], 
+    "tools": [
+      [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ], [ [ "tool_sdcdj", -1 ] ], [ [ "46mm_casing", -1 ] ],
+      [ [ "forge", 10 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [ [[ "copper", 1 ]] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "57mm_casing", "copy-from": "46mm_casing", "charges": 3,
+    "qualities": [ { "id": "ANVIL", "level": 1 }, { "id": "HAMMER", "level": 2 } ],
+    "tools": [
+      [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ], [ [ "tool_sdcdj", -1 ] ], [ [ "57mm_casing", -1 ] ],
+      [ [ "forge", 10 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [ [[ "copper", 1 ]] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "9mm_casing", "copy-from": "46mm_casing", "charges": 2,
+    "qualities": [ { "id": "ANVIL", "level": 1 }, { "id": "HAMMER", "level": 2 } ],
+    "tools": [
+      [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ], [ [ "tool_sdcdj", -1 ] ], [ [ "9mm_casing", -1 ] ],
+      [ [ "forge", 10 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [ [[ "copper", 1 ]] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "9x18mm_casing", "copy-from": "46mm_casing", "charges": 2,
+    "qualities": [ { "id": "ANVIL", "level": 1 }, { "id": "HAMMER", "level": 2 } ],
+    "tools": [
+      [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ], [ [ "tool_sdcdj", -1 ] ], [ [ "9x18mm_casing", -1 ] ],
+      [ [ "forge", 10 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [ [[ "copper", 1 ]] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "10mm_casing", "copy-from": "46mm_casing", "charges": 2,
+    "qualities": [ { "id": "ANVIL", "level": 1 }, { "id": "HAMMER", "level": 2 } ],
+    "tools": [
+      [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ], [ [ "tool_sdcdj", -1 ] ], [ [ "10mm_casing", -1 ] ],
+      [ [ "forge", 10 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [ [[ "copper", 1 ]] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "22_casing_new", "copy-from": "46mm_casing", "charges": 1,
+    "qualities": [ { "id": "ANVIL", "level": 1 }, { "id": "HAMMER", "level": 2 } ],
+    "time": "5 m 30 s",
+    "tools": [
+      [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ], [ [ "tool_sdcdj", -1 ] ], [ [ "22_casing_new", -1 ], [ "22_casing", -1 ] ],
+      [ [ "forge", 10 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [ [[ "copper", 1 ]], [ [ "smpistol_primer", 1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "32_casing", "copy-from": "46mm_casing", "charges": 3,
+    "qualities": [ { "id": "ANVIL", "level": 1 }, { "id": "HAMMER", "level": 2 } ],
+    "tools": [
+      [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ], [ [ "tool_sdcdj", -1 ] ], [ [ "32_casing", -1 ] ],
+      [ [ "forge", 10 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [ [[ "copper", 1 ]] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "38_casing", "copy-from": "46mm_casing", "charges": 2,
+    "qualities": [ { "id": "ANVIL", "level": 1 }, { "id": "HAMMER", "level": 2 } ],
+    "tools": [
+      [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ], [ [ "tool_sdcdj", -1 ] ], [ [ "38_casing", -1 ] ],
+      [ [ "forge", 10 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [ [[ "copper", 1 ]] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "38super_casing", "copy-from": "46mm_casing", "charges": 2,
+    "qualities": [ { "id": "ANVIL", "level": 1 }, { "id": "HAMMER", "level": 2 } ],
+    "tools": [
+      [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ], [ [ "tool_sdcdj", -1 ] ], [ [ "38super_casing", -1 ] ],
+      [ [ "forge", 10 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [ [[ "copper", 1 ]] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "40_casing", "copy-from": "46mm_casing", "charges": 2,
+    "qualities": [ { "id": "ANVIL", "level": 1 }, { "id": "HAMMER", "level": 2 } ],
+    "tools": [
+      [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ], [ [ "tool_sdcdj", -1 ] ], [ [ "40_casing", -1 ] ],
+      [ [ "forge", 10 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [ [[ "copper", 1 ]] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "44_casing", "copy-from": "46mm_casing", "charges": 2,
+    "qualities": [ { "id": "ANVIL", "level": 1 }, { "id": "HAMMER", "level": 2 } ],
+    "tools": [
+      [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ], [ [ "tool_sdcdj", -1 ] ], [ [ "44_casing", -1 ] ],
+      [ [ "forge", 10 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [ [[ "copper", 1 ]] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "45_casing", "copy-from": "46mm_casing", "charges": 2,
+    "qualities": [ { "id": "ANVIL", "level": 1 }, { "id": "HAMMER", "level": 2 } ],
+    "tools": [
+      [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ], [ [ "tool_sdcdj", -1 ] ], [ [ "45_casing", -1 ] ],
+      [ [ "forge", 10 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [ [[ "copper", 1 ]] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "45colt_casing", "copy-from": "46mm_casing", "charges": 2,
+    "qualities": [ { "id": "ANVIL", "level": 1 }, { "id": "HAMMER", "level": 2 } ],
+    "tools": [
+      [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ], [ [ "tool_sdcdj", -1 ] ], [ [ "45colt_casing", -1 ] ],
+      [ [ "forge", 10 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [ [[ "copper", 1 ]] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "357sig_casing", "copy-from": "46mm_casing", "charges": 2,
+    "qualities": [ { "id": "ANVIL", "level": 1 }, { "id": "HAMMER", "level": 2 } ],
+    "tools": [
+      [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ], [ [ "tool_sdcdj", -1 ] ], [ [ "357sig_casing", -1 ] ],
+      [ [ "forge", 10 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [ [[ "copper", 1 ]] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "357mag_casing", "copy-from": "46mm_casing", "charges": 2,
+    "qualities": [ { "id": "ANVIL", "level": 1 }, { "id": "HAMMER", "level": 2 } ],
+    "tools": [
+      [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ], [ [ "tool_sdcdj", -1 ] ], [ [ "357mag_casing", -1 ] ],
+      [ [ "forge", 10 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [ [[ "copper", 1 ]] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "380_casing", "copy-from": "46mm_casing", "charges": 2,
+    "qualities": [ { "id": "ANVIL", "level": 1 }, { "id": "HAMMER", "level": 2 } ],
+    "tools": [
+      [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ], [ [ "tool_sdcdj", -1 ] ], [ [ "380_casing", -1 ] ],
+      [ [ "forge", 10 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [ [[ "copper", 1 ]] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "454_casing", "copy-from": "46mm_casing", "charges": 2,
+    "qualities": [ { "id": "ANVIL", "level": 1 }, { "id": "HAMMER", "level": 2 } ],
+    "tools": [
+      [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ], [ [ "tool_sdcdj", -1 ] ], [ [ "454_casing", -1 ] ],
+      [ [ "forge", 10 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [ [[ "copper", 1 ]] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "460_casing", "copy-from": "46mm_casing", "charges": 2,
+    "qualities": [ { "id": "ANVIL", "level": 1 }, { "id": "HAMMER", "level": 2 } ],
+    "tools": [
+      [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ], [ [ "tool_sdcdj", -1 ] ], [ [ "460_casing", -1 ] ],
+      [ [ "forge", 10 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [ [[ "copper", 1 ]] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "500_casing", "copy-from": "46mm_casing", "charges": 2,
+    "qualities": [ { "id": "ANVIL", "level": 1 }, { "id": "HAMMER", "level": 2 } ],
+    "tools": [
+      [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ], [ [ "tool_sdcdj", -1 ] ], [ [ "500_casing", -1 ] ],
+      [ [ "forge", 10 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [ [[ "copper", 1 ]] ]
+  },
+  //中口径弹壳
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "30carbine_casing",
+    "category": "CC_萌化", "subcategory": "CSC_ALL",
+    "skill_used": "fabrication", "difficulty": 5,
+    "skills_required": [["gun",5]],
+    "time": "9 m",
+    "autolearn": true,
+    "charges": 2,
+    "proficiencies": [ { "proficiency": "prof_metalworking" }, { "proficiency": "prof_redsmithing" } ],
+    "qualities": [ { "id": "ANVIL", "level": 1 }, { "id": "HAMMER", "level": 2 } ], 
+    "tools": [
+      [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ], [ [ "tool_sdcdj", -1 ] ], [ [ "30carbine_casing", -1 ] ],
+      [ [ "forge", 10 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [ [[ "copper", 1 ]] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "3006_casing", "copy-from": "30carbine_casing", "charges": 2,
+    "qualities": [ { "id": "ANVIL", "level": 1 }, { "id": "HAMMER", "level": 2 } ],
+    "tools": [
+      [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ], [ [ "tool_sdcdj", -1 ] ], [ [ "3006_casing", -1 ] ],
+      [ [ "forge", 10 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [ [[ "copper", 1 ]] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "4570_casing", "copy-from": "30carbine_casing", "charges": 3,
+    "qualities": [ { "id": "ANVIL", "level": 1 }, { "id": "HAMMER", "level": 2 } ],
+    "tools": [
+      [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ], [ [ "tool_sdcdj", -1 ] ], [ [ "4570_casing", -1 ] ],
+      [ [ "forge", 10 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [ [[ "copper", 1 ]] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "50_casing", "copy-from": "30carbine_casing", "charges": 1,
+    "qualities": [ { "id": "ANVIL", "level": 1 }, { "id": "HAMMER", "level": 2 } ],
+    "time": "11 m",
+    "tools": [
+      [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ], [ [ "tool_sdcdj", -1 ] ], [ [ "50_casing", -1 ] ],
+      [ [ "forge", 10 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [ [[ "copper", 2 ]] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "223_casing", "copy-from": "30carbine_casing", "charges": 3,
+    "qualities": [ { "id": "ANVIL", "level": 1 }, { "id": "HAMMER", "level": 2 } ],
+    "tools": [
+      [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ], [ [ "tool_sdcdj", -1 ] ], [ [ "223_casing", -1 ] ],
+      [ [ "forge", 10 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [ [[ "copper", 1 ]] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "270win_casing", "copy-from": "30carbine_casing", "charges": 2,
+    "qualities": [ { "id": "ANVIL", "level": 1 }, { "id": "HAMMER", "level": 2 } ],
+    "tools": [
+      [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ], [ [ "tool_sdcdj", -1 ] ], [ [ "270win_casing", -1 ] ],
+      [ [ "forge", 10 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [ [[ "copper", 1 ]] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "300_casing", "copy-from": "30carbine_casing", "charges": 2,
+    "qualities": [ { "id": "ANVIL", "level": 1 }, { "id": "HAMMER", "level": 2 } ],
+    "tools": [
+      [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ], [ [ "tool_sdcdj", -1 ] ], [ [ "300_casing", -1 ] ],
+      [ [ "forge", 10 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [ [[ "copper", 1 ]] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "300blk_casing", "copy-from": "30carbine_casing", "charges": 2,
+    "qualities": [ { "id": "ANVIL", "level": 1 }, { "id": "HAMMER", "level": 2 } ],
+    "tools": [
+      [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ], [ [ "tool_sdcdj", -1 ] ], [ [ "300blk_casing", -1 ] ],
+      [ [ "forge", 10 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [ [[ "copper", 1 ]] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "308_casing", "copy-from": "30carbine_casing", "charges": 2,
+    "qualities": [ { "id": "ANVIL", "level": 1 }, { "id": "HAMMER", "level": 2 } ],
+    "tools": [
+      [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ], [ [ "tool_sdcdj", -1 ] ], [ [ "308_casing", -1 ] ],
+      [ [ "forge", 10 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [ [[ "copper", 1 ]] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "545_casing", "copy-from": "30carbine_casing", "charges": 3,
+    "qualities": [ { "id": "ANVIL", "level": 1 }, { "id": "HAMMER", "level": 2 } ],
+    "tools": [
+      [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ], [ [ "tool_sdcdj", -1 ] ], [ [ "545_casing", -1 ] ],
+      [ [ "forge", 10 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [ [[ "copper", 1 ]] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "700nx_casing", "copy-from": "30carbine_casing", "charges": 1,
+    "qualities": [ { "id": "ANVIL", "level": 1 }, { "id": "HAMMER", "level": 2 } ],
+    "time": "11 m",
+    "tools": [
+      [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ], [ [ "tool_sdcdj", -1 ] ], [ [ "700nx_casing", -1 ] ],
+      [ [ "forge", 10 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [ [[ "copper", 2 ]] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "762_casing", "copy-from": "30carbine_casing", "charges": 2,
+    "qualities": [ { "id": "ANVIL", "level": 1 }, { "id": "HAMMER", "level": 2 } ],
+    "tools": [
+      [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ], [ [ "tool_sdcdj", -1 ] ], [ [ "762_casing", -1 ] ],
+      [ [ "forge", 10 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [ [[ "copper", 1 ]] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "762_25_casing", "copy-from": "30carbine_casing", "charges": 3,
+    "qualities": [ { "id": "ANVIL", "level": 1 }, { "id": "HAMMER", "level": 2 } ],
+    "tools": [
+      [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ], [ [ "tool_sdcdj", -1 ] ], [ [ "762_25_casing", -1 ] ],
+      [ [ "forge", 10 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [ [[ "copper", 1 ]] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "762_51_casing", "copy-from": "30carbine_casing", "charges": 2,
+    "qualities": [ { "id": "ANVIL", "level": 1 }, { "id": "HAMMER", "level": 2 } ],
+    "tools": [
+      [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ], [ [ "tool_sdcdj", -1 ] ], [ [ "762_51_casing", -1 ] ],
+      [ [ "forge", 10 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [ [[ "copper", 1 ]] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "762R_casing", "copy-from": "30carbine_casing", "charges": 2,
+    "qualities": [ { "id": "ANVIL", "level": 1 }, { "id": "HAMMER", "level": 2 } ],
+    "tools": [
+      [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ], [ [ "tool_sdcdj", -1 ] ], [ [ "762R_casing", -1 ] ],
+      [ [ "forge", 10 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [ [[ "copper", 1 ]] ]
+  },
+  //散弹弹壳
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "shot_hull",
+    "category": "CC_萌化", "subcategory": "CSC_ALL",
+    "skill_used": "fabrication", "difficulty": 3,
+    "skills_required": [["gun",3]],
+    "time": "10 m",
+    "autolearn": true,
+    "charges": 6,
+    "qualities": [ { "id": "CUT", "level": 2 } ],
+    "tools": [ [ [ "makeshift_vacuum_mold", 4 ], [ "vac_mold", 2 ] ], [ [ "surface_heat", 5, "LIST" ] ] ],
+    "proficiencies": [ { "proficiency": "prof_plasticworking" } ],
+    "components": [ [ [ "plastic_chunk", 1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "410shot_hull", "copy-from": "shot_hull", "charges": 6,
+    "qualities": [ { "id": "CUT", "level": 2 } ],
+    "tools": [ [ [ "makeshift_vacuum_mold", 4 ], [ "vac_mold", 2 ] ], [ [ "surface_heat", 5, "LIST" ] ] ],
+    "proficiencies": [ { "proficiency": "prof_plasticworking" } ],
+    "components": [ [ [ "plastic_chunk", 1 ] ] ]
+  }
+]

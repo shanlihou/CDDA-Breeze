@@ -1,0 +1,505 @@
+[
+  {
+    "id": "armor_pc_bai",
+    "type": "ARMOR",
+    "name": {
+      "str": "纯白内裤"
+    },
+    "description": "纯白色的内裤, 在夏天非常透气和舒适。",
+    "weight": "32 g",
+    "volume": "250 ml",
+    "price": 1000,
+    "price_postapoc": 50,
+    "material": [
+      "cotton"
+    ],
+    "symbol": "[",
+    "color": "white",
+    "warmth": 5,
+    "material_thickness": 0.1,
+    "flags": [
+      "VARSIZE",
+      "SKINTIGHT",
+      "FANCY"
+    ],
+    "armor": [
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_hip_l",
+          "leg_hip_r"
+        ],
+        "coverage": 75
+      }
+    ]
+  },
+  {
+    "id": "armor_xz_bai",
+    "type": "ARMOR",
+    "name": {
+      "str": "纯白胸罩"
+    },
+    "description": "纯白色的胸罩, 即使是在夏天也非常透气和舒适。",
+    "weight": "32 g",
+    "volume": "250 ml",
+    "price": 1000,
+    "price_postapoc": 50,
+    "material": [
+      "cotton"
+    ],
+    "symbol": "[",
+    "color": "white",
+    "warmth": 5,
+    "material_thickness": 0.1,
+    "flags": [
+      "VARSIZE",
+      "SKINTIGHT",
+      "FANCY"
+    ],
+    "armor": [
+      {
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_upper"
+        ],
+        "coverage": 25
+      }
+    ]
+  },
+  {
+    "id": "armor_pc_hei",
+    "copy-from": "armor_pc_bai",
+    "type": "ARMOR",
+    "name": {
+      "str": "黑色比基尼内裤"
+    },
+    "description": "一件黑色比基尼内裤。",
+    "color": "light_red",
+    "extend": {
+      "flags": [
+        "WATER_FRIENDLY"
+      ]
+    }
+  },
+  {
+    "id": "armor_xz_hei",
+    "copy-from": "armor_xz_bai",
+    "type": "ARMOR",
+    "name": {
+      "str": "黑色比基尼胸罩"
+    },
+    "description": "一件黑色比基尼内裤。",
+    "color": "light_red",
+    "extend": {
+      "flags": [
+        "WATER_FRIENDLY"
+      ]
+    }
+  },
+  {
+    "id": "armor_pc_fen",
+    "copy-from": "armor_pc_bai",
+    "type": "ARMOR",
+    "name": {
+      "str": "粉色条纹内裤"
+    },
+    "description": "有着粉色条纹的内裤。"
+  },
+  {
+    "id": "armor_xz_fen",
+    "copy-from": "armor_xz_bai",
+    "type": "ARMOR",
+    "name": {
+      "str": "粉色条纹胸罩"
+    },
+    "description": "有着粉色条纹的胸罩。"
+  },
+  {
+    "id": "armor_pc_lv",
+    "copy-from": "armor_pc_bai",
+    "type": "ARMOR",
+    "name": {
+      "str": "绿色条纹内裤"
+    },
+    "description": "有着绿色条纹的内裤。"
+  },
+  {
+    "id": "armor_xz_lv",
+    "copy-from": "armor_xz_bai",
+    "type": "ARMOR",
+    "name": {
+      "str": "绿色条纹胸罩"
+    },
+    "description": "有着绿色条纹的胸罩。"
+  },
+  {
+    "id": "armor_ssf_lan",
+    "type": "ARMOR",
+    "name": "可爱泳衣（蓝色）",
+    "description": "女学生穿的游衣。",
+    "weight": "200g",
+    "volume": "1 L",
+    "price": 5250,
+    "price_postapoc": 100,
+    "material": [
+      "neoprene",
+      "cotton"
+    ],
+    "symbol": "[",
+    "color": "blue",
+    "armor": [
+      {
+        "covers": [
+          "torso"
+        ],
+        "encumbrance": 6,
+        "coverage": 90
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_hip_l",
+          "leg_hip_r"
+        ],
+        "encumbrance": 0,
+        "coverage": 75
+      }
+    ],
+    "warmth": 30,
+    "material_thickness": 2,
+    "flags": [
+      "VARSIZE",
+      "SKINTIGHT",
+      "FANCY",
+      "WATER_FRIENDLY"
+    ]
+  },
+  {
+    "id": "armor_ssf_bai",
+    "copy-from": "armor_ssf_lan",
+    "type": "ARMOR",
+    "name": "可爱泳衣（白色）",
+    "color": "white"
+  },
+  {
+    "id": "内衣",
+    "type": "nested_category",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_萌化",
+    "subcategory": "CSC_萌化_衣服",
+    "name": "内衣",
+    "description": "内衣",
+    "skill_used": "tailor",
+    "nested_category_data": [
+      "胸罩",
+      "内裤",
+      "水手服"
+    ],
+    "difficulty": 0
+  },
+  {
+    "id": "胸罩",
+    "type": "nested_category",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_*",
+    "subcategory": "CSC_*_NESTED",
+    "name": "胸罩",
+    "description": "胸罩",
+    "skill_used": "tailor",
+    "nested_category_data": [
+      "armor_xz_bai",
+      "armor_xz_hei",
+      "armor_xz_fen",
+      "armor_xz_lv"
+    ],
+    "difficulty": 0
+  },
+  {
+    "id": "内裤",
+    "type": "nested_category",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_*",
+    "subcategory": "CSC_*_NESTED",
+    "name": "内裤",
+    "description": "内裤",
+    "skill_used": "tailor",
+    "nested_category_data": [
+      "armor_pc_bai",
+      "armor_pc_hei",
+      "armor_pc_fen",
+      "armor_pc_lv"
+    ],
+    "difficulty": 0
+  },
+  {
+    "id": "水手服",
+    "type": "nested_category",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_*",
+    "subcategory": "CSC_*_NESTED",
+    "name": "水手服",
+    "description": "水手服",
+    "skill_used": "tailor",
+    "nested_category_data": [
+      "armor_ssf_lan",
+      "armor_ssf_bai"
+    ],
+    "difficulty": 0
+  },
+  {
+    "result": "armor_xz_bai",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_萌化",
+    "subcategory": "CSC_ALL",
+    "skill_used": "tailor",
+    "difficulty": 2,
+    "time": "3 m",
+    "autolearn": true,
+    "flags": [
+      "NO_RESIZE"
+    ],
+    "using": [
+      [
+        "sewing_standard",
+        20
+      ]
+    ],
+    "components": [
+      [
+        [
+          "bra",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "result": "armor_xz_hei",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "copy-from": "armor_xz_bai",
+    "time": "2 m",
+    "using": [
+      [
+        "sewing_standard",
+        20
+      ]
+    ],
+    "components": [
+      [
+        [
+          "bra",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "result": "armor_xz_fen",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "copy-from": "armor_xz_bai",
+    "time": "2 m",
+    "using": [
+      [
+        "sewing_standard",
+        20
+      ]
+    ],
+    "components": [
+      [
+        [
+          "bra",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "result": "armor_xz_lv",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "copy-from": "armor_xz_bai",
+    "time": "2 m",
+    "using": [
+      [
+        "sewing_standard",
+        20
+      ]
+    ],
+    "components": [
+      [
+        [
+          "bra",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "result": "armor_pc_bai",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_萌化",
+    "subcategory": "CSC_ALL",
+    "skill_used": "tailor",
+    "difficulty": 2,
+    "time": "2 m",
+    "autolearn": true,
+    "flags": [
+      "NO_RESIZE"
+    ],
+    "using": [
+      [
+        "sewing_standard",
+        15
+      ]
+    ],
+    "components": [
+      [
+        [
+          "panties",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "result": "armor_pc_hei",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "copy-from": "armor_pc_bai",
+    "time": "2 m",
+    "using": [
+      [
+        "sewing_standard",
+        15
+      ]
+    ],
+    "components": [
+      [
+        [
+          "panties",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "result": "armor_pc_fen",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "copy-from": "armor_pc_bai",
+    "time": "2 m",
+    "using": [
+      [
+        "sewing_standard",
+        15
+      ]
+    ],
+    "components": [
+      [
+        [
+          "panties",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "result": "armor_pc_lv",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "copy-from": "armor_pc_bai",
+    "time": "2 m",
+    "using": [
+      [
+        "sewing_standard",
+        15
+      ]
+    ],
+    "components": [
+      [
+        [
+          "panties",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "result": "armor_ssf_lan",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_萌化",
+    "subcategory": "CSC_ALL",
+    "skill_used": "tailor",
+    "difficulty": 3,
+    "time": "7 h 30 m",
+    "autolearn": true,
+    "using": [
+      [
+        "sewing_standard",
+        40
+      ],
+      [
+        "fabric_standard_nostretch",
+        8
+      ],
+      [
+        "fabric_neoprene",
+        8
+      ]
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_elastics"
+      },
+      {
+        "proficiency": "prof_closures_waterproofing"
+      }
+    ],
+    "qualities": [
+      {
+        "id": "SEW_CURVED",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "result": "armor_ssf_bai",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "copy-from": "armor_ssf_lan",
+    "time": "7 h 30 m",
+    "using": [
+      [
+        "sewing_standard",
+        40
+      ],
+      [
+        "fabric_standard_nostretch",
+        8
+      ],
+      [
+        "fabric_neoprene",
+        8
+      ]
+    ],
+    "qualities": [
+      {
+        "id": "SEW_CURVED",
+        "level": 1
+      }
+    ]
+  }
+]

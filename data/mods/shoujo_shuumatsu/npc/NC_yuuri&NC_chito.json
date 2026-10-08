@@ -1,0 +1,77 @@
+[
+  {
+    "id": "NC_yuuri_worn",
+    "type": "item_group",
+    "subtype": "collection",
+    "entries": [
+      { "item": "pants_army" },
+      { "item": "undershirt" },
+      { "item": "jacket_army" },
+      { "item": "helmet_army" },
+      { "item": "gloves_liner" },
+      { "item": "gloves_tactical" },
+      { "item": "socks" },
+      { "item": "boots_combat" },
+      { "item": "backpack_leather" },
+      { "item": "water_clean", "container-item": "canteen" },
+      { "item": "ear_plugs", "custom-flags": [ "no_auto_equip" ] },
+      { "item": "knife_combat", "container-item": "sheath" }
+    ]
+  },
+  {
+    "id": "NC_yuuri_carry",
+    "type": "item_group",
+    "subtype": "collection",
+    "ammo": 100,
+    "entries": [ { "item": "protein_bar_evac", "count": [ 4, 8 ] } ]
+  },
+  {
+    "id": "NC_yuuri_weapon",
+    "type": "item_group",
+    "subtype": "collection",
+    "magazine": 100,
+    "ammo": 100,
+    "entries": [ { "item": "kar99k", "ammo-item": "308", "charges": 5, "contents-item": [ "shoulder_strap", "rifle_scope" ] } ]
+  },
+  {
+    "id": "NC_chito_worn",
+    "type": "item_group",
+    "subtype": "collection",
+    "entries": [
+      { "item": "pants_army" },
+      { "item": "undershirt" },
+      { "item": "jacket_army" },
+      { "item": "helmet_army" },
+      { "item": "gloves_liner" },
+      { "item": "gloves_tactical" },
+      { "item": "socks" },
+      { "item": "boots_combat" },
+      { "item": "backpack_leather" },
+      { "item": "wristwatch" }
+    ]
+  },
+  {
+    "id": "NC_chito_carry",
+    "type": "item_group",
+    "subtype": "collection",
+    "ammo": 100,
+    "entries": [
+      { "item": "water_clean", "container-item": "canteen" },
+      { "item": "wrench" },
+      { "item": "jack" },
+      { "item": "chito's_log" },
+      {
+        "item": "light_disposable_cell",
+        "ammo-item": "battery",
+        "charges": 300,
+        "container-item": "kanazawa's_camera"
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "没有武器",
+    "subtype": "distribution",
+    "entries": [ { "item": "q_staff", "prob": 0 } ]
+  }
+]

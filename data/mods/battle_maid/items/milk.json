@@ -1,0 +1,297 @@
+[
+  {
+    "id": "little_maid_R18_tane",
+    "type": "TOOL",
+    "category": "other",
+    "symbol": "m",
+    "color": "white",
+    "name": {
+      "str": "小女仆宠物（已怀孕）"
+    },
+    "description": "肚子越来越大的小女仆。她微微地脸红着，优雅地向你微笑。你可以在28天后给她挤奶。",
+    "price": "600 USD",
+    "material": [
+      "maid"
+    ],
+    "weight": "34000 g",
+    "volume": "10 L",
+    "use_action": {
+      "type": "delayed_transform",
+      "transform_age": 403200,
+      "not_ready_msg": "Her cheeks blush as you pet her head. She's not quite ready yet.",
+      "msg": "小女仆慈爱地揉着肚子。她很快就会开始产奶。",
+      "moves": 0,
+      "target": "little_maid_R18_milk",
+      "activity_level": "0"  
+    }
+  },
+  {
+    "id": "little_maid_R18_milk",
+    "type": "TOOL",
+    "category": "other",
+    "symbol": "m",
+    "color": "white",
+    "name": {
+      "str": "小女仆宠物（可挤奶）"
+    },
+    "description": "腹部和胸部肿胀得很厉害的小女仆。她用一双可怜兮兮的眼睛盯着你。你可以给她挤奶。",
+    "price": "600 USD",
+    "material": [
+      "maid"
+    ],
+    "weight": "36000 g",
+    "volume": "11250 ml"
+  },
+  {
+    "id": "little_maid_R18_milk2",
+    "type": "TOOL",
+    "category": "other",
+    "symbol": "m",
+    "color": "white",
+    "name": {
+      "str": "小女仆宠物（已挤奶）"
+    },
+    "description": "刚被挤过奶的小女仆。她脸上洋溢着满足的表情，皮肤闪闪发光。你可以在23小时后再给她挤奶。",
+    "price": "600 USD",
+    "material": [
+      "maid"
+    ],
+    "weight": "36000 g",
+    "volume": "11250 ml"
+  },
+  {
+    "type": "recipe",
+    "result": "little_maid_R18_tane",
+    "id_suffix": "from_little_maid_R18",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "fabrication",
+    "difficulty": 0,
+    "time": "60 m",
+    "flags": [
+      "BLIND_EASY"
+    ],
+    "reversible": false,
+    "autolearn": true,
+    "components": [
+      [
+        [
+          "little_maid_R18",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "maid_aphrodisiac",
+    "name": {
+      "str": "女仆的春药"
+    },
+    "weight": "322 g",
+    "color": "pink",
+    "addiction_type": "none",
+    "spoils_in": "0 hours",
+    "stim": 0,
+    "comestible_type": "DRINK",
+    "container": "bottle_plastic",
+    "symbol": "%",
+    "quench": 10,
+    "healthy": 1,
+    "addiction_potential": 0,
+    "nutrition": 10,
+    "description": "一种春药，如果你喝了它，能提高你的精力。如果你把它喂给一个小女仆，她就会下蛋。",
+    "price": 300,
+    "material": [
+      "veggy"
+    ],
+    "tool": "null",
+    "volume": "250 ml",
+    "phase": "liquid",
+    "charges": 1,
+    "fun": 20
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "maid_aphrodisiac",
+    "id_suffix": "from_apple",
+    "result_mult": 2,
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_DRINKS",
+    "skill_used": "cooking",
+    "difficulty": 4,
+    "time": "10 m",
+    "reversible": false,
+    "autolearn": true,
+    "qualities": [
+      {
+        "id": "CHEM",
+        "level": 1,
+        "amount": 1
+      }
+    ],
+    "tools": [
+      [
+        [
+          "hotplate",
+          6
+        ],
+        [
+          "char_smoker",
+          1
+        ],
+        [
+          "toolset",
+          6
+        ],
+        [
+          "surface_heat",
+          1,
+          "LIST"
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "apple",
+          1
+        ],
+        [
+          "pomegranate",
+          1
+        ],
+        [
+          "onion",
+          1
+        ],
+        [
+          "lettuce",
+          1
+        ],
+        [
+          "garlic",
+          1
+        ],
+        [
+          "pepper",
+          10
+        ]
+      ],
+      [
+        [
+          "honey_bottled",
+          1
+        ],
+        [
+          "honey_glassed",
+          1
+        ],
+        [
+          "honeycomb",
+          1
+        ]
+      ],
+      [
+        [
+          "water",
+          1
+        ],
+        [
+          "water_clean",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "NO_EXERCISE",
+    "result": "milk",
+    "id_suffix": "from_little_maid_R18_milk",
+    "result_mult": 3,
+    "byproducts": [
+      [
+        "little_maid_R18_milk2"
+      ]
+    ],
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_DRINKS",
+    "skill_used": "fabrication",
+    "difficulty": 0,
+    "time": "60 m",
+    "flags": [
+      "BLIND_EASY"
+    ],
+    "reversible": false,
+    "autolearn": true,
+    "components": [
+      [
+        [
+          "little_maid_R18_milk",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "NO_EXERCISE",
+    "result": "egg_bird",
+    "id_suffix": "from_maid_aphrodisiac",
+    "result_mult": 3,
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_OTHER",
+    "skill_used": "fabrication",
+    "difficulty": 0,
+    "time": "5 m",
+    "flags": [
+      "BLIND_EASY"
+    ],
+    "reversible": false,
+    "autolearn": true,
+    "tools": [
+      [
+        [
+          "little_maid_R18_milk",
+          -1
+        ],
+        [
+          "little_maid_R18_milk2",
+          -1
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "maid_aphrodisiac",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "futanari",
+    "name": {
+      "str": "雌雄同体"
+    },
+    "points": 0,
+    "description": "你的身体上存在着两种性别。",
+    "starting_trait": true,
+    "valid": false
+  },
+  {
+    "type": "mutation",
+    "id": "syokusyu",
+    "name": {
+      "str": "生殖触手"
+    },
+    "points": 0,
+    "description": "可用于繁殖的扭动触手正在你的体内生长。",
+    "starting_trait": true,
+    "valid": false
+  }
+]

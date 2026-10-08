@@ -1,0 +1,122 @@
+[
+  {
+    "id": "定制长弓",
+    "type": "nested_category",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_萌化", "subcategory": "CSC_萌化_武器",
+    "name": "定制长弓",
+    "description": "定制长弓的制造",
+    "skill_used": "fabrication",
+    "nested_category_data": [ "gun_mk1", "gun_mk2", "gun_mk3" ],
+    "difficulty": 0
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "gun_rsdg",
+    "category": "CC_萌化", "subcategory": "CSC_萌化_武器",
+    "skill_used": "fabrication",
+    "skills_required": [ "archery",6 ],
+    "difficulty": 5,
+    "time": "2 h",
+    "reversible": true,
+    "autolearn": true,
+    "qualities": [ { "id": "CUT","level": 1 } ],
+    "components": [
+      [ ["2x4",24] ],
+      [ ["stick",12] ],
+      [ ["cordage",6,"LIST"],["filament",800,"LIST"] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "gun_jycg",
+    "category": "CC_萌化", "subcategory": "CSC_萌化_武器",
+    "skill_used": "fabrication",
+    "skills_required": [ "survival", 1 ],
+    "time": "20 m",
+    "reversible": true,
+    "autolearn": true,
+    "qualities": [ { "id": "CUT", "level": 1 } ],
+    "components": [
+      [ ["stick",2], ["2x4",2] ],
+      [ ["cordage",2,"LIST"], ["filament",200,"LIST"] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "gun_mk1",
+    "category": "CC_萌化", "subcategory": "CSC_ALL",
+    "skill_used": "fabrication",
+    "skills_required": ["archery",1],
+    "difficulty": 1,
+    "time": "40 m",
+    "reversible": true,
+    "autolearn": true,
+    "qualities": [ { "id": "CUT", "level": 1 } ],
+    "components": [
+      [ ["stick",2], ["2x4",2] ],
+      [ ["cordage",2,"LIST"], ["filament",200,"LIST"] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "gun_mk2",
+    "category": "CC_萌化", "subcategory": "CSC_ALL",
+    "skill_used": "fabrication",
+    "skills_required": ["archery",3],
+    "difficulty": 2,
+    "time": "2 h",
+    "reversible": true,
+    "autolearn": true,
+    "qualities": [ { "id": "CUT", "level": 1 } ],
+    "components": [
+      [ [ "gun_mk1",1] ],
+      [ ["steel_chunk",6], ["scrap",18] ],
+      [ ["duct_tape",100 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "gun_mk3",
+    "category": "CC_萌化", "subcategory": "CSC_ALL",
+    "skill_used": "fabrication",
+    "skills_required": ["archery",5],
+    "difficulty": 3,
+    "time": "8 h",
+    "reversible": true,
+    "autolearn": true,
+    "qualities": [
+      { "id": "CUT", "level": 1 }
+    ],
+    "components": [
+      [ ["gun_mk2",1] ],
+      [ ["steel_chunk",12] ],
+      [ ["plastic_chunk",12] ],
+      [ ["duct_tape",150] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "gun_dg",
+    "category": "CC_萌化", "subcategory": "CSC_萌化_武器",
+    "skill_used": "fabrication",
+    "skills_required": [ "archery",3 ],
+    "difficulty": 1,
+    "time": "16 h",
+    "reversible": true,
+    "autolearn": true,
+    "qualities": [ { "id": "CUT","level": 1 } ],
+    "components": [
+      [ ["2x4",26] ],
+      [ ["steel_chunk",2], ["scrap",6] ],
+      [ ["nail",8] ],
+      [ ["duct_tape",100] ]
+    ]
+  }
+]

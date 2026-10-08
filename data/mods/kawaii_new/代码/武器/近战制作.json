@@ -1,0 +1,97 @@
+[
+  {
+    "id": "定制长矛",
+    "type": "nested_category",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_萌化", "subcategory": "CSC_萌化_武器",
+    "name": "定制长矛",
+    "description": "定制长矛的制造",
+    "skill_used": "fabrication",
+    "nested_category_data": [ "weapon_dzcm_v1", "weapon_dzcm_v2", "weapon_dzcm_v3" ],
+    "difficulty": 0
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "weapon_dzcm_v1",
+    "category": "CC_萌化", "subcategory": "CSC_ALL",
+    "skill_used": "fabrication",
+    "difficulty": 0,
+    "time": "30 m",
+    "autolearn": true,
+    "qualities": [ { "id": "HAMMER","level": 1 } ],
+    "components": [
+      [ ["steel_chunk",4] ],
+      [ ["pipe",1] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "weapon_dzcm_v2",
+    "category": "CC_萌化", "subcategory": "CSC_ALL",
+    "skill_used": "fabrication",
+    "difficulty": 3,
+    "time": "2 h",
+    "autolearn": true,
+    "qualities": [ { "id": "HAMMER","level": 2 } ],
+    "components": [
+      [ ["weapon_dzcm_v1",1] ],
+      [ ["steel_chunk",6] ],
+      [ ["duct_tape",100] ],
+      [ ["glass_shard",8] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "weapon_dzcm_v3",
+    "category": "CC_萌化", "subcategory": "CSC_ALL",
+    "skill_used": "fabrication",
+    "difficulty": 6,
+    "time": "9 h",
+    "autolearn": true,
+    "qualities": [
+      { "id": "ANVIL","level": 3 },
+      { "id": "HAMMER","level": 3 },
+      { "id": "CHISEL","level": 3 }
+    ],
+    "tools": [
+      [ ["tongs",-1] ],
+      [ ["swage",-1] ],
+      [ ["forge",200], ["oxy_torch",40] ]
+    ],
+    "components": [
+      [ ["weapon_dzcm_v2",1] ],
+      [ ["steel_chunk",12] ],
+      [ ["duct_tape",200] ],
+      [ ["glass_shard",8] ],
+      [ ["sheet_kevlar_layered",2] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "weapon_zdcd",
+    "category": "CC_萌化", "subcategory": "CSC_萌化_武器",
+    "skill_used": "fabrication",
+    "difficulty": 1,
+    "time": "100 s",
+    "reversible": true,
+    "autolearn": true,
+    "components": [ [ ["knife_steak",2] ] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "weapon_jydd",
+    "category": "CC_萌化", "subcategory": "CSC_萌化_武器",
+    "skill_used": "fabrication",
+    "difficulty": 3,
+    "time": "30 m",
+    "reversible": true,
+    "autolearn": true,
+    "qualities": [ {"id": "HAMMER","level": 2} ],
+    "components": [ [ ["steel_chunk",12] ] ]
+  }
+]

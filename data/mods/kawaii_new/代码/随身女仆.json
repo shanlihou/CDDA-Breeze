@@ -1,0 +1,52 @@
+[
+  {
+    "id": "npc_随身女仆",
+    "type": "AMMO",
+    "ammo_type": "NULL",
+    "name": { "str": "随身女仆" },
+    "description": "生成随身女仆",
+    "symbol": "N",
+    "color": "pink",
+    "phase": "liquid",
+    "drop_action": {
+      "type": "place_npc",
+      "npc_class_id": "npc_a0'0",
+      "summon_msg": "你的随身女仆从视线边缘走来",
+      "place_randomly": true,
+      "moves": 1
+    },
+    "flags": [ "ZERO_WEIGHT" ]
+  },
+  {
+    "id": "mon_npc",
+    "type": "MONSTER",
+    "name": "模糊处",
+    "description": "模糊的地方好像有人影...",
+    "default_faction": "factionless",
+    "species": [ "UNKNOWN" ],
+    "volume": "1 ml",
+    "weight": 1,
+    "hp": 1,
+    "speed": 333,
+    "symbol": "N",
+    "color": "cyan",
+    "aggression": -99,
+    "morale": 2,
+    "dodge": 0,
+    "harvest": "exempt",
+    "fear_triggers": [ "PLAYER_CLOSE" ],
+    "special_attacks": [ [ "DISAPPEAR", 0 ] ],
+    "death_function": { "message": "%s 有什么东西出现了！", "corpse_type": "NO_CORPSE" },
+    "death_drops": "mon_npc",
+    "flags": [ "FLIES", "NO_BREATHE", "NOT_HALLUCINATION", "HARDTOSHOOT" ]
+  },
+  {
+    "id": "mon_npc",
+    "type": "item_group",
+    "subtype": "distribution",
+    "entries": [
+      { "item": "npc_随身女仆", "prob": 50, "count": [ 1, 1 ] },
+      { "item": "npc_随身女仆", "prob": 50, "count": [ 1, 1 ] }
+    ]
+  }
+]

@@ -1,0 +1,69 @@
+[
+  {
+    "type": "GENERIC",
+    "id": "throwing_knife",
+    "copy-from": "throwing_knife",
+    "name": {
+      "str": "飞刀",
+      "str_pl": "飞刀"
+    },
+    "volume": "100 ml",
+    "weight": "300 g",
+    "thrown_damage": [ { "damage_type": "stab", "amount": 14 } ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "assassins_throwing_dagger",
+    "category": "weapons",
+    "price": "90 USD",
+    "name": {
+      "str": "刺客飞刀",
+      "str_pl": "刺客飞刀"
+    },
+    "symbol": "/",
+    "color": "light_gray",
+    "description": "一把灵活的刀刃，用于远程暗杀，但在别无选择时可作为一种简易的餐具。它非常轻巧，不会弄出声音，可以用于对付丧尸和一些用得到苹果的游戏。",
+    "material": [
+      "steel",
+      "leather"
+    ],
+    "volume": "100 ml",
+    "weight": "360 g",
+    "cutting": 21,
+    "to_hit": 2,
+    "flags": [
+      "STAB",
+      "SPEAR",
+      "SHEATH_KNIFE"
+    ],
+    "thrown_damage": [ { "damage_type": "stab", "amount": 24} ],
+    "qualities": [["CUT",1],["BUTCHER",10]],
+    "count": 4,
+    "stack_size": 4
+  },
+  {
+    "type": "GENERIC",
+    "id": "makeshift_throwing_knife",
+    "category": "weapons",
+    "price": "52 USD",
+    "name": {
+      "str": "简易飞刀"
+    },
+    "symbol": ";",
+    "color": "light_gray",
+    "description": "简易粗糙的飞刀，以一片打磨锋利的回收钢块，缠上布条制成。至少它的杀伤力比扔石头要高。",
+    "material": [
+      "steel"
+    ],
+    "volume": "100 ml",
+    "weight": "420 g",
+    "bashing": 3,
+    "cutting": 9,
+    "flags": [
+      "STAB",
+      "SHEATH_KNIFE"
+    ],
+    "thrown_damage": [ { "damage_type": "stab", "amount": 12 } ],
+    "count": 5
+  }
+]

@@ -1,0 +1,25 @@
+[
+  {
+    "type": "mod_tileset",
+    "compatibility": [
+      "Chibi_Ultica","UltimateCataclysm","MshockXottoplus",
+      "UNDEAD_PEOPLE","UNDEAD_PEOPLE_BASE","UNDEAD_PEOPLE_LEGACY",
+      "UlticaShell","MshockXottoplus12","MSX++DEAD_PEOPLE",
+      "MXplus12_for_cosmetics","MSXotto+"
+    ],
+    "tiles-new": [
+      {
+        "file": "贴图/武器/枪与配件.png",
+        "sprite_width": 32, "sprite_height": 32,
+        "sprite_offset_x": 0, "sprite_offset_y": 0,
+        "tiles": [
+          {"id": "overlay_worn_pj_csq", "fg": 1 },
+          {"id": "overlay_worn_pj_sights_cs", "fg": 2 },
+          {"id": "overlay_worn_pj_stock_cs", "fg": 3 },
+          {"id": "overlay_worn_pj_grip_cs", "fg": 4 },
+          {"id": "overlay_wielded_gun_csq", "fg": 9 }
+        ]
+      }
+    ]
+  }
+]

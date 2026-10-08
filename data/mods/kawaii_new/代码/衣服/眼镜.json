@@ -1,0 +1,353 @@
+[
+  {
+    "id": "armor_gkj",
+    "type": "TOOL_ARMOR",
+    "name": {"str": "高科技眼镜 （关）"},
+    "description": "这些先进的眼镜不仅能起到夜视以及红外扫描仪的作用，而且能防炫光，抵抗化学腐蚀，甚至它还能完全阻挡光线，让人可以在明亮的场所入睡。",
+    "symbol": "[","color": "cyan",
+    "weight": "90 g","volume": "250 ml",
+    "price": 92000,"price_postapoc": 3500,
+    "material": ["glass","plastic"],
+    "material_thickness": 1,
+    "environmental_protection": 1,
+    "warmth": 0,
+    "qualities": [["GLARE",1]],
+    "flags": ["WATER_FRIENDLY","FIRESTARTER","FANCY","FIX_NEARSIGHT","FIX_FARSIGHT","SUN_GLASSES","FLASH_PROTECTION"],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "flag_restriction": ["BATTERY_ULTRA_LIGHT"],
+        "default_magazine": "light_minus_battery_cell"
+      }
+    ],
+    "charges_per_use": 1,
+    "ammo": "battery",
+    "use_action": [
+      {
+        "type": "transform",
+        "menu_text": "切换视觉模式",
+        "msg": "你把眼镜切换成夜视模式。",
+        "target": "armor_gkj1",
+        "active": true,
+        "need_charges": 1,
+        "need_charges_msg": "%s没有足够的电源。"
+      },
+      {
+        "type": "firestarter",
+        "moves": 1000,
+        "moves_slow": 25000,
+        "need_sunlight": true
+      }
+    ],
+    "armor": [
+      { "coverage": 75,
+        "covers": ["eyes"],
+        "rigid_layer_only": true }
+    ]
+  },
+  
+  {
+    "id": "armor_gkj1",
+    "copy-from": "armor_gkj",
+    "type": "TOOL_ARMOR",
+    "name": {"str": "高科技眼镜 （夜视）"},
+    "flags": ["WATER_FRIENDLY","FANCY","FIX_NEARSIGHT","FIX_FARSIGHT","GNV_EFFECT","TRADER_AVOID"],
+    "power_draw": "10 W",
+    "revert_to": "armor_gkj",
+    "use_action": {
+      "type": "transform",
+      "menu_text": "切换视觉模式",
+      "msg": "你把眼镜切换成红外模式。",
+      "target": "armor_gkj2",
+      "active": true,
+      "need_charges": 1,
+      "need_charges_msg": "%s没有足够的电源。"
+    }
+  },
+  
+  {
+    "id": "armor_gkj2",
+    "copy-from": "armor_gkj",
+    "repairs_like": "armor_gkj",
+    "type": "TOOL_ARMOR",
+    "name": {"str": "高科技眼镜 （红外）"},
+    "flags": ["WATER_FRIENDLY","FANCY","FIX_NEARSIGHT","FIX_FARSIGHT","IR_EFFECT","TRADER_AVOID"],
+    "power_draw": "10 W",
+    "revert_to": "armor_gkj",
+    "use_action": {
+      "ammo_scale": 0,
+      "type": "transform",
+      "menu_text": "切换视觉模式",
+      "msg": "你把眼镜换成眼罩模式。",
+      "target": "armor_gkj3"
+    }
+  },
+  
+  {
+    "id": "armor_gkj3",
+    "copy-from": "armor_gkj",
+    "repairs_like": "armor_gkj",
+    "type": "TOOL_ARMOR",
+    "name": {"str": "高科技眼镜 （目盲）"},
+    "flags": ["WATER_FRIENDLY","FANCY","FIX_NEARSIGHT","FIX_FARSIGHT","BLIND","TRADER_AVOID"],
+    "use_action": {
+      "ammo_scale": 0,
+      "type": "transform",
+      "menu_text": "切换视觉模式",
+      "msg": "将眼镜恢复到默认模式。",
+      "target": "armor_gkj"
+    }
+  },
+  
+  {
+    "id": "armor_hei",
+    "type": "ARMOR",
+    "name": {"str": "黑色半框眼镜"},
+    "description": "一个带上这种眼镜的一个女仆，决不会错过一点灰尘，也不会放过任何主人健康上的迹象。（切换以调整位置）",
+    "weight": "30 g","volume": "250 ml",
+    "price": 27500,"price_postapoc": 5000,
+    "material": ["glass","plastic"],
+    "material_thickness": 1,
+    "environmental_protection": 1,
+    "warmth": 0,
+    "symbol": "[","color": "cyan",
+    "use_action": [
+      { "type": "transform",
+        "msg": "你放下眼镜",
+        "target": "armor_hei1",
+        "menu_text": "调整眼镜" },
+      { "type": "firestarter",
+        "moves": 1000,
+        "moves_slow": 25000,
+        "need_sunlight": true }
+    ],
+    "flags": ["WATER_FRIENDLY","FIRESTARTER","FANCY","FIX_NEARSIGHT","FIX_FARSIGHT","SKINTIGHT"],
+    "armor": [
+      { "coverage": 75,
+        "covers": ["eyes"],
+        "rigid_layer_only": true }
+    ]
+  },
+  {
+    "id": "armor_hei1",
+    "copy-from": "armor_hei",
+    "type": "ARMOR",
+    "name": {"str": "黑色半框眼镜"},
+    "description": "一个带上这种眼镜的一个女仆，决不会错过一点灰尘，也不会放过任何主人健康上的迹象。（切换以调整位置）",
+    "use_action": [
+      { "type": "transform",
+        "msg": "你举杯",
+        "target": "armor_hei",
+        "menu_text": "调整眼镜" },
+      { "type": "firestarter",
+        "moves": 1000,
+        "moves_slow": 25000,
+        "need_sunlight": true }
+    ]
+  },
+  
+  {
+    "id": "armor_q_hei",
+    "copy-from": "armor_hei",
+    "type": "ARMOR",
+    "name": {"str": "黑色全框眼镜"},
+    "description": "一个带上这种眼镜的一个女仆，决不会错过一点灰尘，也不会放过任何主人健康上的迹象。",
+    "use_action": [ ]
+  },
+  
+  {
+    "id": "armor_ho",
+    "copy-from": "armor_hei",
+    "type": "ARMOR",
+    "name": {"str": "红色半框眼镜"},
+    "description": "一个带上这种眼镜的一个女仆，决不会错过一点灰尘，也不会放过任何主人健康上的迹象。（切换以调整位置）",
+    "use_action": {
+      "type": "transform",
+      "msg": "你放下眼镜",
+      "target": "armor_ho1",
+      "menu_text": "调整眼镜"
+    }
+  },
+  
+  {
+    "id": "armor_ho1",
+    "copy-from": "armor_hei",
+    "type": "ARMOR",
+    "name": {"str": "红色半框眼镜"},
+    "description": "一个带上这种眼镜的一个女仆，决不会错过一点灰尘，也不会放过任何主人健康上的迹象。（切换以调整位置）",
+    "use_action": {
+      "type": "transform",
+      "msg": "你举杯",
+      "target": "armor_ho",
+      "menu_text": "调整眼镜"
+    }
+  },
+  
+  {
+    "id": "armor_q_ho",
+    "copy-from": "armor_hei",
+    "type": "ARMOR",
+    "name": {"str": "红色全框眼镜"},
+    "description": "一个带上这种眼镜的一个女仆，决不会错过一点灰尘，也不会放过任何主人健康上的迹象。",
+    "use_action": [ ]
+  },
+  
+  {
+    "id": "armor_huang",
+    "copy-from": "armor_hei",
+    "type": "ARMOR",
+    "name": {"str": "可爱的黄铜单片眼镜"},
+    "description": "一个带上这种眼镜的一个女仆，决不会错过一点灰尘，也不会放过任何主人健康上的迹象。",
+    "use_action": [ ]
+  },
+  
+  {
+    "id": "armor_huang1",
+    "copy-from": "armor_hei",
+    "type": "ARMOR",
+    "name": {"str": "可爱的带链黄铜单片眼镜"},
+    "description": "一个带上这种眼镜的一个女仆，决不会错过一点灰尘，也不会放过任何主人健康上的迹象。",
+    "use_action": [ ]
+  },
+  
+  {
+    "id": "眼镜",
+    "type": "nested_category",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_萌化", "subcategory": "CSC_萌化_衣服",
+    "name": "眼镜系列",
+    "description": "眼镜系列",
+    "skill_used": "tailor",
+    "nested_category_data": [ "xl_yj1", "armor_gkj" ],
+    "difficulty": 0
+  },
+  {
+    "id": "xl_yj1",
+    "type": "nested_category",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_*",
+    "subcategory": "CSC_*_NESTED",
+    "name": "眼镜",
+    "description": "眼镜",
+    "skill_used": "tailor",
+    "nested_category_data": [ "armor_hei", "armor_q_hei", "armor_ho", "armor_q_ho", "armor_huang", "armor_huang1" ],
+    "difficulty": 0
+  },
+  
+  {
+    "result": "armor_gkj",
+    "activity_level": "LIGHT_EXERCISE",
+    "type": "recipe",
+    "category": "CC_萌化","subcategory": "CSC_ALL",
+    "skill_used": "electronics",
+    "difficulty": 8,
+    "time": "3 h",
+    "autolearn": true,
+    "qualities": [{"id": "SCREW","level": 1}],
+    "proficiencies": [{"proficiency": "prof_plasticworking"}],
+    "using": [["plastic_molding",4]],
+    "tools": [
+      [
+        ["welder",56],
+        ["welder_crude",84],
+        ["soldering_iron",84],
+        ["toolset",84]
+      ]
+    ],
+    "components": [
+      [["goggles_ir",1]],
+      [["goggles_nv",1]],
+      [["armor_hei",1]]
+    ]
+  },
+  
+  {
+    "result": "armor_hei",
+    "activity_level": "LIGHT_EXERCISE",
+    "type": "recipe",
+    "category": "CC_萌化","subcategory": "CSC_ALL",
+    "skill_used": "fabrication",
+    "difficulty": 4,
+    "time": "45 m",
+    "autolearn": true,
+    "proficiencies": [{"proficiency": "prof_plasticworking"}],
+    "components": [
+      [
+        ["glasses_eye",1],
+        ["glasses_bifocal",1],
+        ["glasses_reading",1]
+      ]
+    ]
+  },
+  {
+    "result": "armor_q_hei",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "copy-from": "armor_hei",
+    "time": "45 m",
+    "components": [
+      [
+        ["glasses_eye",1],
+        ["glasses_bifocal",1],
+        ["glasses_reading",1]
+      ]
+    ]
+  },
+  {
+    "result": "armor_ho",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "copy-from": "armor_hei",
+    "time": "45 m",
+    "components": [
+      [
+        ["glasses_eye",1],
+        ["glasses_bifocal",1],
+        ["glasses_reading",1]
+      ]
+    ]
+  },
+  {
+    "result": "armor_q_ho",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "copy-from": "armor_hei",
+    "time": "45 m",
+    "components": [
+      [
+        ["glasses_eye",1],
+        ["glasses_bifocal",1],
+        ["glasses_reading",1]
+      ]
+    ]
+  },
+  {
+    "result": "armor_huang",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "copy-from": "armor_hei",
+    "time": "45 m",
+    "components": [
+      [
+        ["glasses_eye",1],
+        ["glasses_bifocal",1],
+        ["glasses_reading",1]
+      ]
+    ]
+  },
+  {
+    "result": "armor_huang1",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "copy-from": "armor_hei",
+    "time": "45 m",
+    "components": [
+      [
+        ["glasses_eye",1],
+        ["glasses_bifocal",1],
+        ["glasses_reading",1]
+      ]
+    ]
+  }
+]

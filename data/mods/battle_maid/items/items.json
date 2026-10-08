@@ -1,0 +1,101 @@
+[
+  {
+    "type": "COMESTIBLE",
+    "comestible_type": "FOOD",
+    "id": "shoggoth_heart",
+    "name": {
+      "str": "修格斯之心",
+      "str_pl": "修格斯之心"
+    },
+    "description": "一颗修格斯之心。你可以吃下它来掌握这种怪物的变形能力，也可以用它以另一种方式来“掌握”这种怪物。",
+    "weight": "4535 g",
+    "symbol": ")",
+    "healthy": -10,
+    "color": "dark_gray",
+    "price": "50 USD",
+    "material": [
+      "flesh"
+    ],
+    "volume": "1 L",
+    "fun": -25,
+    "vitamins": [
+      [
+        "mutagen_shoggoth",
+        300
+      ]
+    ]
+  },
+  {
+    "type": "COMESTIBLE",
+    "comestible_type": "FOOD",
+    "id": "shoggoth_heart_desiccated",
+    "name": {
+      "str": "脱水修格斯之心"
+    },
+    "weight": "1360 g",
+    "color": "black_red",
+    "symbol": ")",
+    "healthy": -1,
+    "calories": 217,
+    "description": "一个巨大的肉块——这是将一颗修格斯之心割开放血后所残存的部分。如果你实在是饿得发慌的话可以吃掉它，但是看上去*真的*很恶心。",
+    "price": 1000,
+    "price_postapoc": 25,
+    "material": [
+      "flesh"
+    ],
+    "use_action": [
+      "POISON"
+    ],
+    "volume": "250 ml",
+    "fun": -30
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "protein_milk",
+    "name": {
+      "str_sp": "高蛋白“牛奶”"
+    },
+    "weight": "258 g",
+    "color": "white",
+    "spoils_in": "1 d",
+    "container": "jug_plastic",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 10,
+    "healthy": 1,
+    "calories": 750,
+    "description": "浓稠的白色液体，富含蛋白质。这个特殊的份量比一般牛奶的大50倍，使它成为一个像样的，但又非常奇怪的食物。",
+    "price": 38,
+    "price_postapoc": 50,
+    "material": [
+      "milk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "vitamins": [
+      [
+        "vitC",
+        2
+      ]
+    ],
+    "fun": 0
+  },
+  {
+    "type": "GENERIC",
+    "id": "milk_serum",
+    "name": {
+      "str": "乳牛女仆血清",
+      "str_pl": "乳牛女仆血清"
+    },
+    "description": "一种诱变剂血清，用于将受试者转变成能产生大量牛奶的温顺仆人。与追随者交谈以使用。",
+    "weight": "250 g",
+    "symbol": "-",
+    "color": "dark_gray",
+    "price": "50 USD",
+    "volume": "150 ml",
+    "category": "tools"
+  }
+]
