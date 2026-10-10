@@ -423,11 +423,13 @@ endif ()
 
 add_subdirectory(src)
 add_subdirectory(data)
-if (NOT MSVC)
+# Breeze 分支移除了 src/chkjson，这里做存在性判断，避免配置阶段直接失败
+if (NOT MSVC AND EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/src/chkjson/CMakeLists.txt")
     add_subdirectory(src/chkjson)
 endif()
 
-if(TESTS)
+# 同理，tests 目录在本分支不随仓库分发
+if(TESTS AND EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/tests/CMakeLists.txt")
     add_subdirectory(tests)
 endif()
 
