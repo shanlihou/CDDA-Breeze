@@ -1194,47 +1194,149 @@ static void do_restore( const bool in_game )
     }
 }
 
+/// 管理界面的按键回调：空格勾选 / A 全选
+struct manage_cb : public uilist_callback {
+    std::vector<char> *marks = nullptr;
+    std::vector<std::string> *labels = nullptr;
+
+    /// 把勾选状态写回每一行的显示文本
+    void sync( uilist *menu ) {
+        for( size_t i = 0; i < menu->entries.size() && i < labels->size(); i++ ) {
+            menu->entries[i].txt = string_format( "[%s] %s",
+                                   ( *marks )[i] ? "X" : " ",
+                                   ( *labels )[i] );
+        }
+    }
+
+    bool key( const input_context &, const input_event &event, int entnum,
+              uilist *menu ) override {
+        const int ch = event.get_first_input();
+        // 空格：勾选 / 取消当前项
+        if( ch == ' ' ) {
+            if( entnum >= 0 && entnum < static_cast<int>( marks->size() ) ) {
+                ( *marks )[entnum] = ( *marks )[entnum] ? 0 : 1;
+                sync( menu );
+            }
+            return true;
+        }
+        // A：全选 / 全不选
+        if( ch == 'a' || ch == 'A' ) {
+            bool has_unmarked = false;
+            for( char m : *marks ) {
+                if( !m ) {
+                    has_unmarked = true;
+                    break;
+                }
+            }
+            std::fill( marks->begin(), marks->end(), has_unmarked ? 1 : 0 );
+            sync( menu );
+            return true;
+        }
+        return false;
+    }
+
+    void refresh( uilist *menu ) override {
+        sync( menu );
+    }
+};
+
+/// 管理云端备份：支持空格多选、批量删除，删完留在菜单里可以接着删
 static void do_manage()
 {
     if( !require_config() ) {
         return;
     }
-    std::vector<remote_file> files;
-    std::string err;
-    if( !run_with_spinner( _( "正在获取云端备份列表" ), [&files]( std::string & e ) {
-        return webdav::list_files( files, e );
-    }, err ) ) {
-        popup( _( "获取列表失败\n%s" ), err );
-        return;
-    }
-    if( files.empty() ) {
-        popup( _( "云端还没有任何备份。" ) );
-        return;
-    }
 
-    uilist m;
-    m.text = _( "选择一个备份进行删除" );
-    for( size_t i = 0; i < files.size(); i++ ) {
-        const remote_file &f = files[i];
-        std::string label = f.name;
-        if( f.size > 0 ) {
-            label += "  (" + human_size( f.size ) + ")";
+    while( true ) {
+        std::vector<remote_file> files;
+        std::string err;
+        if( !run_with_spinner( _( "正在获取云端备份列表" ), [&files]( std::string & e ) {
+            return webdav::list_files( files, e );
+        }, err ) ) {
+            popup( _( "获取列表失败\n%s" ), err );
+            return;
         }
-        m.addentry( static_cast<int>( i ), true, 0, label );
+        if( files.empty() ) {
+            popup( _( "云端已经没有备份了。" ) );
+            return;
+        }
+
+        std::vector<std::string> labels;
+        labels.reserve( files.size() );
+        for( const remote_file &f : files ) {
+            std::string label = f.name;
+            if( f.size > 0 ) {
+                label += "  (" + human_size( f.size ) + ")";
+            }
+            if( !f.mtime.empty() ) {
+                label += "  " + f.mtime;
+            }
+            labels.push_back( label );
+        }
+        std::vector<char> marks( files.size(), 0 );
+
+        manage_cb cb;
+        cb.marks = &marks;
+        cb.labels = &labels;
+
+        uilist m;
+        m.text = _( "管理云端备份\n空格：勾选 / 取消当前项    A：全选 / 全不选\n"
+                    "回车：删除所有勾选项（没勾选就删当前项）    ESC：返回上级菜单" );
+        // key 传 0 = 不分配字母热键，避免和上面的 A / 空格冲突
+        for( size_t i = 0; i < files.size(); i++ ) {
+            m.addentry( static_cast<int>( i ), true, 0, labels[i] );
+        }
+        m.callback = &cb;
+        m.query();
+        if( m.ret < 0 || static_cast<size_t>( m.ret ) >= files.size() ) {
+            return;    // ESC 取消
+        }
+
+        // 收集待删目标：有勾选就删勾选项，否则退化为删当前这一项
+        std::vector<std::string> targets;
+        for( size_t i = 0; i < marks.size(); i++ ) {
+            if( marks[i] ) {
+                targets.push_back( files[i].name );
+            }
+        }
+        if( targets.empty() ) {
+            targets.push_back( files[m.ret].name );
+        }
+
+        const size_t total = targets.size();
+        if( !query_yn( _( "确定删除 %d 个云端备份？此操作不可恢复。" ), static_cast<int>( total ) ) ) {
+            continue;    // 回到列表，不退出
+        }
+
+        std::vector<std::string> failed;
+        const bool ok = run_with_spinner( _( "正在删除云端备份" ),
+        [&targets, &failed]( std::string & e ) {
+            for( const std::string &name : targets ) {
+                std::string one_err;
+                if( !webdav::delete_file( name, one_err ) ) {
+                    failed.push_back( name + "：" + one_err );
+                }
+            }
+            if( !failed.empty() ) {
+                e = string_format( _( "%d 个删除失败" ), static_cast<int>( failed.size() ) );
+                return false;
+            }
+            return true;
+        }, err );
+
+        if( ok ) {
+            popup( _( "已删除 %d 个备份。" ), static_cast<int>( total ) );
+        } else {
+            std::string detail;
+            for( const std::string &f : failed ) {
+                detail += "\n" + f;
+            }
+            popup( string_format( _( "删除完成 %d 个，失败 %d 个：%s" ),
+                                  static_cast<int>( total - failed.size() ),
+                                  static_cast<int>( failed.size() ), detail ) );
+        }
+        // 继续下一轮：重新拉取列表，直到云端清空或按 ESC
     }
-    m.query();
-    if( m.ret < 0 || static_cast<size_t>( m.ret ) >= files.size() ) {
-        return;
-    }
-    const remote_file chosen = files[m.ret];
-    if( !query_yn( _( "确定删除云端备份 \"%s\"？" ), chosen.name ) ) {
-        return;
-    }
-    std::string derr;
-    const bool ok = run_with_spinner( _( "正在删除" ), [&chosen]( std::string & e ) {
-        return webdav::delete_file( chosen.name, e );
-    }, derr );
-    popup( ok ? _( "已删除。" ) : string_format( _( "删除失败\n%s" ), derr ) );
 }
 
 void show_menu( const bool in_game )
