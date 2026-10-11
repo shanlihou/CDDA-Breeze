@@ -1,2 +1,2 @@
 // NOLINT(cata-header-guard)
-#define VERSION "c846ea17"
+#define VERSION "70bdb505"
