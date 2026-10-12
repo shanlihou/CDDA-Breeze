@@ -1,0 +1,110 @@
+name: "Android APK 自动构建"
+
+# 触发条件：
+#   - 推送到 main 或 cdda_mine 分支时自动构建（用于“push 一个版本触发编译”）
+#   - 也可在 Actions 页面手动 workflow_dispatch 触发
+on:
+  push:
+    branches: [main, cdda_mine]
+  workflow_dispatch:
+
+concurrency:
+  group: android-build-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  build-android:
+    name: Build Android APK (arm64 debug)
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - name: 检出源码
+        uses: actions/checkout@v4
+        with:
+          # 需要完整历史，gradle 会通过 git describe 推导版本号
+          fetch-depth: 0
+
+      - name: Setup JDK 11 (Android Gradle Plugin 7.3 需要 JDK 11)
+        uses: actions/setup-java@v4
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+          cache: 'gradle'
+
+      - name: 预热 Gradle 依赖（含失败重试）
+        working-directory: ./android
+        env:
+          GRADLE_OPTS: >-
+            -Dorg.gradle.internal.http.connectionTimeout=120000
+            -Dorg.gradle.internal.http.socketTimeout=120000
+        run: |
+          set -euo pipefail
+          chmod +x gradlew
+          for attempt in 1 2 3; do
+            if ./gradlew --no-daemon help; then
+              exit 0
+            fi
+            if [[ "${attempt}" -eq 3 ]]; then
+              echo "Gradle 依赖解析失败。" >&2
+              exit 1
+            fi
+            echo "第 ${attempt} 次解析失败，重试..." >&2
+            sleep "$((attempt * 15))"
+          done
+
+      - name: 准备资源（data / gfx / 本地化 mo）
+        run: |
+          set -euo pipefail
+          # 游戏数据必须打进 assets 才能跑起来（与 release.yml 一致）
+          cp -r "${{ github.workspace }}/data" "${{ github.workspace }}/android/app/src/main/assets"
+          cp -r "${{ github.workspace }}/gfx" "${{ github.workspace }}/android/app/src/main/assets"
+          # localize=false 会跳过 gradle 内的 make localization，这里直接拷贝已提交的 zh_CN mo
+          mkdir -p "${{ github.workspace }}/android/app/src/main/assets/lang/mo"
+          cp -r "${{ github.workspace }}/lang/mo/." "${{ github.workspace }}/android/app/src/main/assets/lang/mo/"
+
+      - name: 接受 Android SDK 许可（若已接受则为空操作）
+        run: yes | sdkmanager --licenses >/dev/null 2>&1 || true
+        env:
+          ANDROID_SDK_ROOT: ${{ env.ANDROID_SDK_ROOT }}
+
+      - name: 清理旧的 native 构建产物
+        working-directory: ./android
+        run: |
+          rm -rf app/.cxx app/build/intermediates/cxx \
+                 app/build/intermediates/merged_native_libs \
+                 app/build/intermediates/stripped_native_libs
+          find app/libs -type f -name 'libmain.so' -delete 2>/dev/null || true
+
+      - name: 构建 APK（debug / arm64）
+        working-directory: ./android
+        env:
+          GRADLE_OPTS: >-
+            -Dorg.gradle.internal.http.connectionTimeout=120000
+            -Dorg.gradle.internal.http.socketTimeout=120000
+        run: |
+          set -euo pipefail
+          chmod +x gradlew
+          ./gradlew --no-daemon \
+            -Pj="$(nproc)" \
+            -Pabi_arm_32=false \
+            -Plocalize=false \
+            assembleStableDebug
+
+          APK_PATH="$(find ./app/build/outputs/apk/stable/debug -maxdepth 1 -type f -name '*.apk' -print -quit)"
+          if [[ -z "${APK_PATH}" ]]; then
+            echo "未生成 Android APK。" >&2
+            exit 1
+          fi
+          echo "APK_PATH=${APK_PATH}" >> "${GITHUB_ENV}"
+          echo "生成的 APK: ${APK_PATH}"
+
+      - name: 上传 APK 产物
+        uses: actions/upload-artifact@v4
+        with:
+          name: CDDA-Breeze-android-arm64-debug-${{ github.sha }}
+          path: ${{ env.APK_PATH }}
+          if-no-files-found: error
+          retention-days: 14

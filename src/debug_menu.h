@@ -96,6 +96,8 @@ enum class debug_menu_index : int {
     WRITE_TIMED_EVENTS,
     QUICKLOAD,
     EXPORT_OVERMAP_SPECIAL,
+    SEARCH_SAVE_ITEMS,
+    VIEW_ITEM_SEARCH_HISTORY,
     last
 };
 

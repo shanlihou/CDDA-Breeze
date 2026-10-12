@@ -230,6 +230,8 @@ std::string enum_to_string<debug_menu::debug_menu_index>( debug_menu::debug_menu
         case debug_menu::debug_menu_index::GENERATE_EFFECT_LIST: return "GENERATE_EFFECT_LIST";
         case debug_menu::debug_menu_index::ACTIVATE_EOC: return "ACTIVATE_EOC";
         case debug_menu::debug_menu_index::EXPORT_OVERMAP_SPECIAL: return "EXPORT_OVERMAP_SPECIAL";
+        case debug_menu::debug_menu_index::SEARCH_SAVE_ITEMS: return "SEARCH_SAVE_ITEMS";
+        case debug_menu::debug_menu_index::VIEW_ITEM_SEARCH_HISTORY: return "VIEW_ITEM_SEARCH_HISTORY";
         // *INDENT-ON*
         case debug_menu::debug_menu_index::last:
             break;
@@ -493,6 +495,10 @@ static int game_uilist()
         { uilist_entry( debug_menu_index::ACTIVATE_EOC, true, 'E', _( "Activate EOC" ) ) },
         { uilist_entry( debug_menu_index::QUIT_NOSAVE, true, 'Q', "退出到游戏开始界面")},
         { uilist_entry( debug_menu_index::QUICKLOAD, true, 'q', _( "Quickload" ) )  },
+        { uilist_entry( debug_menu_index::SEARCH_SAVE_ITEMS, true, 's',
+                        _( "Search save items (wildcard)" ) ) },
+        { uilist_entry( debug_menu_index::VIEW_ITEM_SEARCH_HISTORY, true, 'h',
+                        _( "View item search history" ) ) },
     };
 
     return uilist( _( "Game…" ), uilist_initializer );
@@ -2573,6 +2579,321 @@ static void debug_menu_force_temperature()
     }
 }
 
+// --- 存档物品通配符搜索：扫描地面/家具存储/载具货舱，结果本地缓存（最多 10 条历史）---
+
+struct item_search_hit {
+    std::string name;             // 物品显示名
+    std::string type_id;          // 物品类型 id
+    tripoint_abs_ms pos;          // 绝对坐标
+    std::string location;         // on ground / in furniture: X / in vehicle: X
+    std::vector<std::string> container_path; // 容器内递归路径（不含物品本身）
+};
+
+struct item_search_record {
+    int id = 0;
+    std::string pattern;
+    std::string world;
+    int generated_turn = 0;
+    std::vector<item_search_hit> hits;
+};
+
+static const std::string &item_search_dir()
+{
+    static const std::string dir = PATH_INFO::config_dir() + "item_search";
+    return dir;
+}
+
+static const std::string &item_search_history_path()
+{
+    static const std::string p = item_search_dir() + "/item_search_history.json";
+    return p;
+}
+
+// 对单个 item 调用 visit_items，命中通配符时记录（递归处理容器内物品）
+static void item_search_visit( item &it, const std::string &base_location,
+                               const tripoint_abs_ms &abs_pos,
+                               const std::string &pattern,
+                               std::vector<item_search_hit> &hits )
+{
+    std::unordered_map<item *, item *> parent_of;
+    it.visit_items( [&]( item *node, item *parent ) {
+        parent_of[node] = parent;
+        if( node && wildcard_match( node->display_name(), pattern ) ) {
+            // 由 node 沿 parent 链回溯，构造 容器 -> ... -> 物品 的路径
+            std::vector<std::string> chain;
+            for( item *cur = node; cur != nullptr; cur = parent_of[cur] ) {
+                chain.push_back( cur->display_name() );
+            }
+            std::reverse( chain.begin(), chain.end() );
+            // chain 末尾是被匹配的物品本身，其余为祖先容器
+            std::vector<std::string> cpath( chain.begin(), chain.end() - 1 );
+            hits.push_back( item_search_hit{ node->display_name(), node->typeId().str(),
+                                             abs_pos, base_location, cpath } );
+        }
+        return VisitResponse::NEXT;
+    } );
+}
+
+// 扫描已载入地图：地面/家具存储（i_at，已含放在家具上的物品）+ 载具货舱
+static void item_search_scan( const std::string &pattern,
+                              std::vector<item_search_hit> &hits )
+{
+    map &here = get_map();
+    // 已载入地图的全部 z 层；未实际载入的 z 层 i_at 返回空，扫描无害
+    const int zmin = -OVERMAP_DEPTH;
+    const int zmax = OVERMAP_HEIGHT;
+
+    // 1) 地面 / 家具存储物品（同一份 i_at 已包含放在家具上的物品）
+    for( int z = zmin; z <= zmax; ++z ) {
+        for( const tripoint &p : here.points_on_zlevel( z ) ) {
+            map_stack items = here.i_at( p );
+            if( items.empty() ) {
+                continue;
+            }
+            const std::string base = here.has_furn( p )
+                                     ? string_format( _( "in furniture: %s" ), here.name( p ) )
+                                     : _( "on ground" );
+            const tripoint_abs_ms abs_pos = here.getglobal( p );
+            for( item &it : items ) {
+                item_search_visit( it, base, abs_pos, pattern, hits );
+            }
+        }
+    }
+
+    // 2) 载具货舱物品
+    VehicleList vehs = here.get_vehicles();
+    for( wrapped_vehicle &wv : vehs ) {
+        vehicle &veh = *wv.v;
+        const std::string vbase = string_format( _( "in vehicle: %s" ), veh.name );
+        for( const vpart_reference &vp : veh.get_all_parts_with_fakes() ) {
+            vehicle_stack vitems = veh.get_items( vp.part_index() );
+            if( vitems.empty() ) {
+                continue;
+            }
+            const tripoint_abs_ms abs_pos = here.getglobal( vp.pos() );
+            for( item &it : vitems ) {
+                item_search_visit( it, vbase, abs_pos, pattern, hits );
+            }
+        }
+    }
+}
+
+// 把 hits 以 uilist 呈现（封顶 1000 行，其余见 JSON 历史）
+static void item_search_show_results( const std::string &title, const std::string &header,
+                                      const std::vector<item_search_hit> &hits )
+{
+    uilist result_menu;
+    result_menu.title = title;
+    result_menu.text = header;
+    const size_t shown = std::min( hits.size(), static_cast<size_t>( 1000 ) );
+    for( size_t i = 0; i < shown; ++i ) {
+        const item_search_hit &h = hits[i];
+        std::string where = h.location;
+        if( !h.container_path.empty() ) {
+            std::string chain;
+            for( size_t k = 0; k < h.container_path.size(); ++k ) {
+                if( k > 0 ) {
+                    chain += " > ";
+                }
+                chain += h.container_path[k];
+            }
+            where += " > " + chain;
+        }
+        result_menu.addentry( -1, true, -1,
+                              string_format( "%s @ (%d,%d,%d) %s", h.name, h.pos.x(), h.pos.y(),
+                                             h.pos.z(), where ) );
+    }
+    if( hits.size() > shown ) {
+        result_menu.addentry( -1, true, -1,
+                              string_format( _( "... and %d more (see JSON history)" ),
+                                             hits.size() - shown ) );
+    }
+    if( hits.empty() ) {
+        result_menu.addentry( -1, true, -1, _( "(no matches)" ) );
+    }
+    result_menu.query();
+}
+
+// 读取历史缓存（文件不存在/损坏时返回空）
+static std::vector<item_search_record> item_search_load_history()
+{
+    std::vector<item_search_record> records;
+    const std::string &path = item_search_history_path();
+    read_from_file( path, [&]( std::istream &in ) {
+        try {
+            TextJsonIn jsin( in );
+            TextJsonObject jo = jsin.get_object();
+            if( !jo.has_member( "history" ) ) {
+                return;
+            }
+            TextJsonArray arr = jo.get_array( "history" );
+            while( arr.has_more() ) {
+                TextJsonObject entry = arr.next_object();
+                item_search_record rec;
+                rec.id = entry.get_int( "id", 0 );
+                rec.pattern = entry.get_string( "pattern", "" );
+                rec.world = entry.get_string( "world", "" );
+                rec.generated_turn = entry.get_int( "generated_turn", 0 );
+                if( entry.has_member( "results" ) ) {
+                    TextJsonArray res = entry.get_array( "results" );
+                    while( res.has_more() ) {
+                        TextJsonObject r = res.next_object();
+                        item_search_hit h;
+                        h.name = r.get_string( "name", "" );
+                        h.type_id = r.get_string( "type", "" );
+                        h.location = r.get_string( "location", "" );
+                        if( r.has_member( "container_path" ) ) {
+                            TextJsonArray cp = r.get_array( "container_path" );
+                            while( cp.has_more() ) {
+                                h.container_path.push_back( cp.next_string() );
+                            }
+                        }
+                        if( r.has_member( "position" ) ) {
+                            TextJsonObject pos = r.get_object( "position" );
+                            h.pos = tripoint_abs_ms( pos.get_int( "x", 0 ), pos.get_int( "y", 0 ),
+                                                     pos.get_int( "z", 0 ) );
+                        }
+                        rec.hits.push_back( h );
+                    }
+                }
+                records.push_back( rec );
+            }
+        } catch( const std::exception & ) {
+            records.clear();
+        }
+    } );
+    return records;
+}
+
+// 写入历史缓存（最多保留 10 条，最新在前）
+static void item_search_save_history( std::vector<item_search_record> records )
+{
+    const size_t MAX_HISTORY = 10;
+    if( records.size() > MAX_HISTORY ) {
+        records.resize( MAX_HISTORY );
+    }
+    assure_dir_exist( item_search_dir() );
+    const std::string &path = item_search_history_path();
+    write_to_file( path, [&]( std::ostream &out ) {
+        JsonOut jsout( out, true );
+        jsout.start_object();
+        jsout.member( "history" );
+        jsout.start_array();
+        for( const item_search_record &rec : records ) {
+            jsout.start_object();
+            jsout.member( "id", rec.id );
+            jsout.member( "pattern", rec.pattern );
+            jsout.member( "world", rec.world );
+            jsout.member( "generated_turn", rec.generated_turn );
+            jsout.member( "count", static_cast<int>( rec.hits.size() ) );
+            jsout.member( "results" );
+            jsout.start_array();
+            for( const item_search_hit &h : rec.hits ) {
+                jsout.start_object();
+                jsout.member( "name", h.name );
+                jsout.member( "type", h.type_id );
+                jsout.member( "location", h.location );
+                jsout.member( "position" );
+                jsout.start_object();
+                jsout.member( "x", h.pos.x() );
+                jsout.member( "y", h.pos.y() );
+                jsout.member( "z", h.pos.z() );
+                jsout.end_object();
+                jsout.member( "container_path" );
+                jsout.start_array();
+                for( const std::string &c : h.container_path ) {
+                    jsout.write( c );
+                }
+                jsout.end_array();
+                jsout.end_object();
+            }
+            jsout.end_array();
+            jsout.end_object();
+        }
+        jsout.end_array();
+        jsout.end_object();
+    }, "item_search_history" );
+}
+
+static void debug_search_save_items()
+{
+    // 1. 让玩家输入通配符模式（glob 风格：* 匹配任意，大小写不敏感）
+    std::string pattern = "*";
+    string_input_popup pattern_popup;
+    pattern_popup
+        .title( _( "Search items by wildcard (e.g. *rifle*, m4a1, *ammo*). * matches anything." ) )
+        .width( 60 )
+        .edit( pattern );
+    if( pattern_popup.canceled() ) {
+        return;
+    }
+    if( pattern.empty() ) {
+        popup( _( "Empty pattern, abort." ) );
+        return;
+    }
+
+    // 2. 扫描地面 / 家具存储 / 载具货舱
+    std::vector<item_search_hit> hits;
+    item_search_scan( pattern, hits );
+
+    // 3. 写入历史缓存（最多 10 条，最新在前）
+    std::vector<item_search_record> history = item_search_load_history();
+    int next_id = 0;
+    for( const item_search_record &r : history ) {
+        next_id = std::max( next_id, r.id );
+    }
+    item_search_record rec;
+    rec.id = next_id + 1;
+    rec.pattern = pattern;
+    rec.world = get_avatar().get_save_id();
+    rec.generated_turn = to_turn<int>( calendar::turn );
+    rec.hits = hits;
+    history.insert( history.begin(), rec );
+    try {
+        item_search_save_history( history );
+    } catch( const std::exception &e ) {
+        popup( string_format( _( "Failed to write search cache: %s" ), e.what() ) );
+        return;
+    }
+
+    // 4. 在游戏内呈现本次结果
+    item_search_show_results(
+        _( "Item search results" ),
+        string_format( _( "Found %d match(es) for \"%s\". Saved to history (max 10)." ),
+                       hits.size(), pattern ),
+        hits );
+}
+
+static void debug_view_item_search_history()
+{
+    std::vector<item_search_record> history = item_search_load_history();
+    if( history.empty() ) {
+        popup( _( "No saved item-search history yet. Run a search first." ) );
+        return;
+    }
+    uilist menu;
+    menu.title = _( "Item search history (newest first)" );
+    menu.text = string_format( _( "%d saved search(es), up to 10 kept." ), history.size() );
+    for( size_t i = 0; i < history.size(); ++i ) {
+        const item_search_record &r = history[i];
+        menu.addentry( static_cast<int>( i ), true, -1,
+                       string_format( "#%d  \"%s\"  -> %d hit(s)  @ turn %d  (%s)",
+                                      r.id, r.pattern, static_cast<int>( r.hits.size() ),
+                                      r.generated_turn, r.world ) );
+    }
+    menu.query();
+    const int sel = menu.ret;
+    if( sel < 0 || static_cast<size_t>( sel ) >= history.size() ) {
+        return;
+    }
+    const item_search_record &rec = history[sel];
+    item_search_show_results(
+        string_format( _( "History #%d: \"%s\"" ), rec.id, rec.pattern ),
+        string_format( _( "%d hit(s) for \"%s\" (world %s, turn %d)" ),
+                       rec.hits.size(), rec.pattern, rec.world, rec.generated_turn ),
+        rec.hits );
+}
+
 void debug()
 {
     bool debug_menu_has_hotkey = hotkey_for_action( ACTION_DEBUG,
@@ -3167,6 +3488,12 @@ void debug()
         case debug_menu_index::QUICKLOAD:
             // 确认框已经移到 game::quickload() 内部，这里不要再问一次。
             g->quickload();
+            break;
+        case debug_menu_index::SEARCH_SAVE_ITEMS:
+            debug_search_save_items();
+            break;
+        case debug_menu_index::VIEW_ITEM_SEARCH_HISTORY:
+            debug_view_item_search_history();
             break;
         case debug_menu_index::EXPORT_OVERMAP_SPECIAL: {
             // 1. 让玩家选择两个点作为范围
