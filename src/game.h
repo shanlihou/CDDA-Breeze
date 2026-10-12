@@ -1035,6 +1035,8 @@ class game
     public:
         void quicksave();        // Saves the game without quitting
         void quickload();        // Loads the previously saved game if it exists
+        // 当前角色是否已有可供快速读取的存档点，菜单据此决定按钮是否可用
+        bool has_quickload_save() const;
         void disp_NPCs();        // Currently for debug use.  Lists global NPCs.
 
         void list_missions();       // Listed current, completed and failed missions (mission_ui.cpp)

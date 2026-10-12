@@ -291,6 +291,10 @@ void tutorial_game::pre_action( action_id &act )
             popup( _( "You're saving a tutorial - the tutorial world lacks certain features of normal worlds.  "
                       "Weird things might happen when you load this save.  You have been warned." ) );
             break;
+        case ACTION_QUICKLOAD:
+            popup( _( "You're loading a tutorial - the tutorial world lacks certain features of normal worlds.  "
+                      "Weird things might happen.  You have been warned." ) );
+            break;
         default:
             // Other actions are fine.
             break;

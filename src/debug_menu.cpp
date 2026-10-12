@@ -3165,10 +3165,8 @@ void debug()
             }
             break;
         case debug_menu_index::QUICKLOAD:
-            if( query_yn(
-                    _( "Quickload without saving?  This may cause issues such as duplicated or missing items and vehicles!" ) ) ) {
-                g->quickload();
-            }
+            // 确认框已经移到 game::quickload() 内部，这里不要再问一次。
+            g->quickload();
             break;
         case debug_menu_index::EXPORT_OVERMAP_SPECIAL: {
             // 1. 让玩家选择两个点作为范围

@@ -185,6 +185,13 @@ void defense_game::pre_action( action_id &act )
                 action_error_message = _( "You cannot save in defense mode!" );
             }
             break;
+        case ACTION_QUICKLOAD:
+            // 跟随 allow_save：防御模式默认禁止存档，自然也没有可读取的存档点；
+            // 若玩家在模式菜单里手动开启了存档，则读档也应一并放行。
+            if( !allow_save ) {
+                action_error_message = _( "You cannot load in defense mode!" );
+            }
+            break;
         case ACTION_MOVE_FORTH:
         case ACTION_MOVE_FORTH_RIGHT:
         case ACTION_MOVE_RIGHT:

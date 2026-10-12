@@ -875,13 +875,11 @@ action_id handle_action_menu()
             REGISTER_CATEGORY( _( "Craft" ) );
             REGISTER_CATEGORY( _( "Info" ) );
             REGISTER_CATEGORY( _( "Misc" ) );
-            if( hotkey_for_action( ACTION_QUICKSAVE, /*maximum_modifier_count=*/1 ).has_value() ) {
-                REGISTER_ACTION( ACTION_QUICKSAVE );
-            }
+            // 快速保存/读取无条件显示在动作菜单里：手机端主要靠这个菜单触发，
+            // 不能因为玩家删掉了默认键位就让入口消失。
+            REGISTER_ACTION( ACTION_QUICKSAVE );
             REGISTER_ACTION( ACTION_SAVE );
-            if( hotkey_for_action( ACTION_QUICKLOAD, /*maximum_modifier_count=*/1 ).has_value() ) {
-                REGISTER_ACTION( ACTION_QUICKLOAD );
-            }
+            REGISTER_ACTION( ACTION_QUICKLOAD );
             if( hotkey_for_action( ACTION_SUICIDE, /*maximum_modifier_count=*/1 ).has_value() ) {
                 REGISTER_ACTION( ACTION_SUICIDE );
             }
@@ -1105,6 +1103,10 @@ action_id handle_main_menu()
     REGISTER_ACTION( ACTION_WORLD_MODS );
     REGISTER_ACTION( ACTION_ACTIONMENU );
     REGISTER_ACTION( ACTION_QUICKSAVE );
+    // 当前角色还没有存档点时把「快速读档」置灰，避免玩家点了才被告知读不了
+    entries.emplace_back( ACTION_QUICKLOAD, g->has_quickload_save(),
+                          hotkey_for_action( ACTION_QUICKLOAD, /*maximum_modifier_count=*/1 ),
+                          ctxt.get_action_name( action_ident( ACTION_QUICKLOAD ) ) );
     // 标记 添加当前世界的选项
     REGISTER_ACTION( actionCreateWorldBackup );
     REGISTER_ACTION( ACTION_WebDAV云存档 );

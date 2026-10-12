@@ -2610,9 +2610,7 @@ input_context create_default_mode_input_context()
     ctxt.register_action( "whitelist_enemy" );
     ctxt.register_action( "workout" );
     ctxt.register_action( "quicksave" );
-#if !defined(RELEASE)
     ctxt.register_action( "quickload" );
-#endif
     ctxt.register_action( "SUICIDE" );
     ctxt.register_action( "player_data" );
     ctxt.register_action( "map" );
@@ -13256,6 +13254,13 @@ void game::quicksave()
     last_save_timestamp = now;
 }
 
+bool game::has_quickload_save() const
+{
+    const WORLD *active_world = world_generator->active_world;
+    return active_world != nullptr &&
+           active_world->save_exists( save_t::from_save_id( u.get_save_id() ) );
+}
+
 void game::quickload()
 {
     const WORLD *active_world = world_generator->active_world;
@@ -13265,22 +13270,32 @@ void game::quickload()
     std::string const world_name = active_world->world_name;
     std::string const &save_id = u.get_save_id();
 
-    if( active_world->save_exists( save_t::from_save_id( save_id ) ) ) {
-        if( moves_since_last_save != 0 ) { // See if we need to reload anything
-            moves_since_last_save = 0;
-            last_save_timestamp = std::time( nullptr );
-
-            u.moves = 0;
-            uquit = QUIT_NOSAVED;
-
-            main_menu::queued_world_to_load = world_name;
-            main_menu::queued_save_id_to_load = save_id;
-
-        }
-      
-    } else {
+    if( !has_quickload_save() ) {
         popup_getkey( _( "No saves for current character yet." ) );
+        return;
     }
+
+    // 距离上次存档还没有任何进展，读回去也没有意义。
+    // 原版这里是静默 return，玩家按下后毫无反应会以为功能坏了，这里给出明确提示。
+    if( moves_since_last_save == 0 ) {
+        popup_getkey( _( "Already at the latest save point - there is nothing to load." ) );
+        return;
+    }
+
+    // 读档会丢弃上次存档之后的全部进度，先确认一次，避免误触。
+    if( !query_yn( _( "Quickload without saving?  All progress since the last save will be lost.  "
+                      "This may cause issues such as duplicated or missing items and vehicles!" ) ) ) {
+        return;
+    }
+
+    moves_since_last_save = 0;
+    last_save_timestamp = std::time( nullptr );
+
+    u.moves = 0;
+    uquit = QUIT_NOSAVED;
+
+    main_menu::queued_world_to_load = world_name;
+    main_menu::queued_save_id_to_load = save_id;
 }
 
 void game::autosave()

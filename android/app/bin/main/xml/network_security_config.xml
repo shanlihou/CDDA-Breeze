@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!--
+      WebDAV 存档备份可能需要连接局域网里的 http 服务器，或使用自签名证书的 https
+      服务器，因此这里允许明文流量，并同时信任系统 CA 与用户 CA。
+    -->
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

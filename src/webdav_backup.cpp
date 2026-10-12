@@ -189,7 +189,9 @@ std::string timestamp_str()
     localtime_r( &t, &tm );
 #endif
     char buf[32];
-    std::strftime( buf, sizeof( buf ), "%Y%m%d-%H%M%S", &tm );
+    // 形如 2026-10-12_15-46-48：日期与时间都用分隔符分开，方便直接看出生成时刻；
+    // 同时各段定宽，文件名按字典序即等于时间先后（新的在前）。
+    std::strftime( buf, sizeof( buf ), "%Y-%m-%d_%H-%M-%S", &tm );
     return std::string( buf );
 }
 

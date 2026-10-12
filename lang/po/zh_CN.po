@@ -412319,7 +412319,7 @@ msgstr "快速保存"
 #. ~ Key binding name
 #: data/raw/keybindings.json
 msgid "Quickload"
-msgstr "快速读取"
+msgstr "快速读档"
 
 #. ~ Key binding name
 #: data/raw/keybindings.json
@@ -430852,6 +430852,18 @@ msgstr "正在存档，可能需要点时间。"
 msgid "No saves for current character yet."
 msgstr "当前角色尚无存档。"
 
+#: src/game.cpp:13274
+msgid "Already at the latest save point - there is nothing to load."
+msgstr "已经处于最新的存档点，无需读取。"
+
+#: src/game.cpp:13279
+msgid ""
+"Quickload without saving?  All progress since the last save will be lost.  "
+"This may cause issues such as duplicated or missing items and vehicles!"
+msgstr ""
+"不保存就直接读档？上次存档之后的所有进度都会丢失，还可能导致物品或载具重复、"
+"丢失等问题！"
+
 #: src/game.cpp:12360
 msgid "Your skill in parkour makes it easier to climb."
 msgstr "你的跑酷技巧使攀爬更容易。"
@@ -431671,6 +431683,10 @@ msgstr "你现在不需要睡觉！"
 msgid "You cannot save in defense mode!"
 msgstr "防御模式下无法保存游戏！"
 
+#: src/gamemode_defense.cpp:190
+msgid "You cannot load in defense mode!"
+msgstr "防御模式下无法读取游戏！"
+
 #: src/gamemode_defense.cpp:203
 #, c-format
 msgid "You cannot leave the %s behind!"
@@ -432054,6 +432070,14 @@ msgid ""
 "normal worlds.  Weird things might happen when you load this save.  You have"
 " been warned."
 msgstr "你在教学虚拟世界中存档了！- 教学世界不是真实世界，缺少许多关键功能。读取这个存档会发生不可测的问题。该怎么做你明白了吗？"
+
+#: src/gamemode_tutorial.cpp:295
+msgid ""
+"You're loading a tutorial - the tutorial world lacks certain features of "
+"normal worlds.  Weird things might happen.  You have been warned."
+msgstr ""
+"你在教学虚拟世界中读档了！- 教学世界不是真实世界，缺少许多关键功能。可能发生不可"
+"测的问题。该怎么做你明白了吗？"
 
 #: src/gates.cpp:264 src/vehicle_use.cpp:1218
 msgid "There's some buffoon in the way!"
