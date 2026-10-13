@@ -2817,13 +2817,15 @@ static void item_search_save_history( std::vector<item_search_record> records )
 
 static void debug_search_save_items();
 static void debug_view_item_search_history();
+static void debug_rescan_history_item();
 
 void open_item_search_menu()
 {
     uilist menu;
     menu.settext( _( "Item search (save)" ) );
     menu.addentry( 0, true, 's', _( "Search save items (wildcard)" ) );
-    menu.addentry( 1, true, 'h', _( "View item search history" ) );
+    menu.addentry( 1, true, 'h', _( "View item search history (cached)" ) );
+    menu.addentry( 2, true, 'r', _( "Re-run a history search (full live rescan)" ) );
     menu.query();
     switch( menu.ret ) {
         case 0:
@@ -2831,6 +2833,9 @@ void open_item_search_menu()
             break;
         case 1:
             debug_view_item_search_history();
+            break;
+        case 2:
+            debug_rescan_history_item();
             break;
         default:
             break;
@@ -2886,12 +2891,14 @@ static void debug_search_save_items()
         hits );
 }
 
-static void debug_view_item_search_history()
+// 从历史缓存列表里选一条记录，供"查看缓存"和"实时重扫"两种模式复用。
+// 列表展示与既有行为完全一致（最新在前），选取消/越界返回 nullopt。
+static std::optional<item_search_record> item_search_pick_from_history()
 {
     std::vector<item_search_record> history = item_search_load_history();
     if( history.empty() ) {
         popup( _( "No saved item-search history yet. Run a search first." ) );
-        return;
+        return std::nullopt;
     }
     uilist menu;
     menu.title = _( "Item search history (newest first)" );
@@ -2906,14 +2913,41 @@ static void debug_view_item_search_history()
     menu.query();
     const int sel = menu.ret;
     if( sel < 0 || static_cast<size_t>( sel ) >= history.size() ) {
+        return std::nullopt;
+    }
+    return history[sel];
+}
+
+// 既有行为：点击历史记录 -> 直接回放当时缓存的命中结果（不重新扫描）
+static void debug_view_item_search_history()
+{
+    std::optional<item_search_record> rec = item_search_pick_from_history();
+    if( !rec ) {
         return;
     }
-    const item_search_record &rec = history[sel];
     item_search_show_results(
-        string_format( _( "History #%d: \"%s\"" ), rec.id, rec.pattern ),
+        string_format( _( "History #%d: \"%s\"" ), rec->id, rec->pattern ),
         string_format( _( "%d hit(s) for \"%s\" (world %s, turn %d)" ),
-                       rec.hits.size(), rec.pattern, rec.world, rec.generated_turn ),
-        rec.hits );
+                       rec->hits.size(), rec->pattern, rec->world, rec->generated_turn ),
+        rec->hits );
+}
+
+// 新增：点击历史记录 -> 用其 pattern 重新对当前已载入地图做一次全量扫描，
+// 与"查看历史"的区别在于这里拿到的是实时结果，而非当初缓存的快照。
+static void debug_rescan_history_item()
+{
+    std::optional<item_search_record> rec = item_search_pick_from_history();
+    if( !rec ) {
+        return;
+    }
+    std::vector<item_search_hit> hits;
+    item_search_scan( rec->pattern, hits );
+    item_search_show_results(
+        string_format( _( "Re-scan \"%s\" (live)" ), rec->pattern ),
+        string_format( _( "Live re-scan of \"%s\" found %d match(es) in the loaded map. (Cached snapshot had %d.)" ),
+                       rec->pattern, static_cast<int>( hits.size() ),
+                       static_cast<int>( rec->hits.size() ) ),
+        hits );
 }
 
 void debug()
