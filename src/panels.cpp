@@ -370,10 +370,6 @@ static std::vector<window_panel> initialize_default_custom_panels( const widget 
     // Use defined width, or at least 16
     const int width = std::max( wgt._width, 16 );
 
-    // 玩家当前坐标面板（绝对坐标，与存档搜索结果对照）
-    ret.emplace_back( window_panel( draw_coords, "Coords", to_translation( "坐标" ),
-                                    2, width, true ) );
-
     // Show hint on configuration
     ret.emplace_back( window_panel( draw_custom_hint, "Hint", to_translation( "Hint" ),
                                     2, width, true ) );
@@ -391,6 +387,11 @@ static std::vector<window_panel> initialize_default_custom_panels( const widget 
 
     ret.emplace_back( window_panel( draw_mminimap, "Map", to_translation( "Map" ),
                                     -1, width, true, default_render, true ) );
+
+    // 玩家当前坐标面板（绝对坐标，与存档搜索结果对照）。
+    // 固定排在"地图(Map/小地图)"面板之后，即末奏侧边栏最底部，"地图的下面"。
+    ret.emplace_back( window_panel( draw_coords, "Coords", to_translation( "坐标" ),
+                                    2, width, true ) );
 
 
     return ret;
