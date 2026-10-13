@@ -1285,7 +1285,9 @@ void veh_interact::do_install()
             } );
         } else if( cat.get_id() == "_filter" ) {
             tab_filters.emplace_back( [&filter]( const vpart_info * p ) {
-                return lcmatch( p->name(), filter ) && obsolete_filter( p );
+                // 同时匹配中文显示名与英文 id（如 forge / washer），方便快速定位部件
+                return ( lcmatch( p->name(), filter ) || lcmatch( p->get_id().str(), filter ) ) &&
+                       obsolete_filter( p );
             } );
         } else {
             tab_filters.emplace_back( [ cat = cat.get_id()]( const vpart_info * p ) {
