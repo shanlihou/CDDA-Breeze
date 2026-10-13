@@ -96,8 +96,6 @@ enum class debug_menu_index : int {
     WRITE_TIMED_EVENTS,
     QUICKLOAD,
     EXPORT_OVERMAP_SPECIAL,
-    SEARCH_SAVE_ITEMS,
-    VIEW_ITEM_SEARCH_HISTORY,
     last
 };
 
@@ -110,6 +108,10 @@ void wishskill( Character *you, bool change_theory = false );
 void wishproficiency( Character *you );
 
 void debug();
+
+// 存档物品搜索（通配符）：打开子菜单选择「搜索」或「查看历史」。
+// 已从调试菜单迁移到游戏内主菜单（ESC）。
+void open_item_search_menu();
 
 /* Splits a string by @param delimiter and push_back's the elements into _Container */
 template<typename Container>

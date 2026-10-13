@@ -351,6 +351,7 @@ enum action_id : int {
     actionCreateWorldBackup,
     ACTION_WebDAV云存档,
     ACTION_数据检索,
+    ACTION_存档搜索,
     ACTION_管理扩展按键,
     ACTION_网络功能,
     ACTION_命令视野中的我方丧尸全部等待,

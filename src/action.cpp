@@ -421,6 +421,8 @@ std::string action_ident( action_id act )
             return "WebDAV 云存档";
         case ACTION_数据检索:
             return "数据检索";
+        case ACTION_存档搜索:
+            return "存档搜索";
         case ACTION_管理扩展按键:
             return "管理扩展按键";
         case ACTION_网络功能:
@@ -1085,6 +1087,7 @@ action_id handle_main_menu()
 
 
     REGISTER_ACTION(ACTION_数据检索);
+    REGISTER_ACTION(ACTION_存档搜索);
 
     REGISTER_ACTION( ACTION_HELP );
 

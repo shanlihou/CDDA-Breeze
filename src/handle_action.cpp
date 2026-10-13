@@ -5344,6 +5344,12 @@ bool game::do_regular_action(action_id& act, avatar& player_character,
 
 
         break;
+    case ACTION_存档搜索:
+
+        debug_menu::open_item_search_menu();
+
+
+        break;
 #if defined(__ANDROID__)
     case ACTION_管理扩展按键:
 

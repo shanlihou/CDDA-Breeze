@@ -323,6 +323,20 @@ static void draw_mminimap( const draw_args &args )
     wnoutrefresh( w );
 }
 
+// 玩家当前绝对坐标，与存档搜索（search_save_item）结果的坐标系一致，便于对照定位
+static void draw_coords( const draw_args &args )
+{
+    const catacurses::window &w = args._win;
+
+    werase( w );
+    const tripoint coord = get_map().getabs( args._ava.pos() );
+    mvwprintz( w, point_zero, c_white, _( "坐标" ) );
+    // NOLINTNEXTLINE(cata-use-named-point-constants)
+    mvwprintz( w, point( 0, 1 ), c_light_gray,
+               string_format( "X:%d Y:%d Z:%d", coord.x, coord.y, coord.z ) );
+    wnoutrefresh( w );
+}
+
 
 // ============
 // INITIALIZERS
@@ -355,6 +369,10 @@ static std::vector<window_panel> initialize_default_custom_panels( const widget 
 
     // Use defined width, or at least 16
     const int width = std::max( wgt._width, 16 );
+
+    // 玩家当前坐标面板（绝对坐标，与存档搜索结果对照）
+    ret.emplace_back( window_panel( draw_coords, "Coords", to_translation( "坐标" ),
+                                    2, width, true ) );
 
     // Show hint on configuration
     ret.emplace_back( window_panel( draw_custom_hint, "Hint", to_translation( "Hint" ),

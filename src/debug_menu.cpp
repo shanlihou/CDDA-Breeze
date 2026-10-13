@@ -230,8 +230,6 @@ std::string enum_to_string<debug_menu::debug_menu_index>( debug_menu::debug_menu
         case debug_menu::debug_menu_index::GENERATE_EFFECT_LIST: return "GENERATE_EFFECT_LIST";
         case debug_menu::debug_menu_index::ACTIVATE_EOC: return "ACTIVATE_EOC";
         case debug_menu::debug_menu_index::EXPORT_OVERMAP_SPECIAL: return "EXPORT_OVERMAP_SPECIAL";
-        case debug_menu::debug_menu_index::SEARCH_SAVE_ITEMS: return "SEARCH_SAVE_ITEMS";
-        case debug_menu::debug_menu_index::VIEW_ITEM_SEARCH_HISTORY: return "VIEW_ITEM_SEARCH_HISTORY";
         // *INDENT-ON*
         case debug_menu::debug_menu_index::last:
             break;
@@ -495,10 +493,6 @@ static int game_uilist()
         { uilist_entry( debug_menu_index::ACTIVATE_EOC, true, 'E', _( "Activate EOC" ) ) },
         { uilist_entry( debug_menu_index::QUIT_NOSAVE, true, 'Q', "退出到游戏开始界面")},
         { uilist_entry( debug_menu_index::QUICKLOAD, true, 'q', _( "Quickload" ) )  },
-        { uilist_entry( debug_menu_index::SEARCH_SAVE_ITEMS, true, 's',
-                        _( "Search save items (wildcard)" ) ) },
-        { uilist_entry( debug_menu_index::VIEW_ITEM_SEARCH_HISTORY, true, 'h',
-                        _( "View item search history" ) ) },
     };
 
     return uilist( _( "Game…" ), uilist_initializer );
@@ -2821,6 +2815,28 @@ static void item_search_save_history( std::vector<item_search_record> records )
     }, "item_search_history" );
 }
 
+static void debug_search_save_items();
+static void debug_view_item_search_history();
+
+void open_item_search_menu()
+{
+    uilist menu;
+    menu.settext( _( "Item search (save)" ) );
+    menu.addentry( 0, true, 's', _( "Search save items (wildcard)" ) );
+    menu.addentry( 1, true, 'h', _( "View item search history" ) );
+    menu.query();
+    switch( menu.ret ) {
+        case 0:
+            debug_search_save_items();
+            break;
+        case 1:
+            debug_view_item_search_history();
+            break;
+        default:
+            break;
+    }
+}
+
 static void debug_search_save_items()
 {
     // 1. 让玩家输入通配符模式（glob 风格：* 匹配任意，大小写不敏感）
@@ -3494,12 +3510,6 @@ void debug()
         case debug_menu_index::QUICKLOAD:
             // 确认框已经移到 game::quickload() 内部，这里不要再问一次。
             g->quickload();
-            break;
-        case debug_menu_index::SEARCH_SAVE_ITEMS:
-            debug_search_save_items();
-            break;
-        case debug_menu_index::VIEW_ITEM_SEARCH_HISTORY:
-            debug_view_item_search_history();
             break;
         case debug_menu_index::EXPORT_OVERMAP_SPECIAL: {
             // 1. 让玩家选择两个点作为范围
