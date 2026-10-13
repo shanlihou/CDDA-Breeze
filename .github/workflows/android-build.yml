@@ -93,9 +93,14 @@ jobs:
             -Plocalize=false \
             assembleStableDebug
 
-          APK_PATH="$(find ./app/build/outputs/apk/stable/debug -maxdepth 1 -type f -name '*.apk' -print -quit)"
+          # 注意：本步骤的 working-directory 是 android/，但后续 upload-artifact
+          # 步骤在仓库根目录执行，因此必须把绝对路径写进 GITHUB_ENV，
+          # 否则会出现 "No files were found with the provided path: ./app/build/..."。
+          APK_DIR="${PWD}/app/build/outputs/apk/stable/debug"
+          APK_PATH="$(find "${APK_DIR}" -maxdepth 1 -type f -name '*.apk' -print -quit)"
           if [[ -z "${APK_PATH}" ]]; then
-            echo "未生成 Android APK。" >&2
+            echo "未生成 Android APK，实际产物列表：" >&2
+            find "${PWD}/app/build/outputs" -type f -name '*.apk' >&2 || true
             exit 1
           fi
           echo "APK_PATH=${APK_PATH}" >> "${GITHUB_ENV}"
