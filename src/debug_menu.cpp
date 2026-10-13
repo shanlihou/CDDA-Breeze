@@ -2719,7 +2719,9 @@ static std::vector<item_search_record> item_search_load_history()
 {
     std::vector<item_search_record> records;
     const std::string &path = item_search_history_path();
-    read_from_file( path, [&]( std::istream &in ) {
+    // 首次运行历史文件尚不存在：read_from_file_optional 在文件缺失时静默返回 false，
+    // 不会像 read_from_file 那样抛 "opening file failed" 的 DEBUG
+    read_from_file_optional( path, [&]( std::istream &in ) {
         try {
             TextJsonIn jsin( in );
             TextJsonObject jo = jsin.get_object();
@@ -2729,6 +2731,10 @@ static std::vector<item_search_record> item_search_load_history()
             TextJsonArray arr = jo.get_array( "history" );
             while( arr.has_more() ) {
                 TextJsonObject entry = arr.next_object();
+                // 写入端额外附带了 "count"（= results.size()）作为冗余信息，读取端不需要；
+                // 若不显式允许，JsonObject 的 report_unvisited 会把未读的 "count" 当成
+                // "Invalid or misplaced field name" 报错。
+                entry.allow_omitted_members();
                 item_search_record rec;
                 rec.id = entry.get_int( "id", 0 );
                 rec.pattern = entry.get_string( "pattern", "" );
