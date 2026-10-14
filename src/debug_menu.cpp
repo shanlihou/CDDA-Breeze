@@ -2606,16 +2606,16 @@ static const std::string &item_search_history_path()
     return p;
 }
 
-// 对单个 item 调用 visit_items，命中通配符时记录（递归处理容器内物品）
+// 对单个 item 调用 visit_items，matcher 命中的节点即记录（递归处理容器内物品）
 static void item_search_visit( item &it, const std::string &base_location,
                                const tripoint_abs_ms &abs_pos,
-                               const std::string &pattern,
+                               const std::function<bool( const item & )> &match,
                                std::vector<item_search_hit> &hits )
 {
     std::unordered_map<item *, item *> parent_of;
     it.visit_items( [&]( item *node, item *parent ) {
         parent_of[node] = parent;
-        if( node && wildcard_match( node->display_name(), pattern ) ) {
+        if( node && match( *node ) ) {
             // 由 node 沿 parent 链回溯，构造 容器 -> ... -> 物品 的路径
             std::vector<std::string> chain;
             for( item *cur = node; cur != nullptr; cur = parent_of[cur] ) {
@@ -2631,8 +2631,26 @@ static void item_search_visit( item &it, const std::string &base_location,
     } );
 }
 
+// 通配符匹配器：按 display_name 做大小写不敏感 glob 匹配（* 任意，? 单字符）
+static std::function<bool( const item & )> make_wildcard_matcher( const std::string &pattern )
+{
+    return [pattern]( const item &it ) {
+        return wildcard_match( it.display_name(), pattern );
+    };
+}
+
+// 食物匹配器：可食用（is_comestible）且未腐烂（!rotten，即货架寿命尚未耗尽）。
+// 注意：rotten() 才是“已腐败”的确切判定（get_relative_rot() > 1.0）；
+// 即将腐败(is_going_bad)但未到 rotten 的仍算“未腐败”，一并纳入。
+static std::function<bool( const item & )> make_food_matcher()
+{
+    return []( const item &it ) {
+        return it.is_comestible() && !it.rotten();
+    };
+}
+
 // 扫描已载入地图：地面/家具存储（i_at，已含放在家具上的物品）+ 载具货舱
-static void item_search_scan( const std::string &pattern,
+static void item_search_scan( const std::function<bool( const item & )> &match,
                               std::vector<item_search_hit> &hits )
 {
     map &here = get_map();
@@ -2652,7 +2670,7 @@ static void item_search_scan( const std::string &pattern,
                                      : _( "on ground" );
             const tripoint_abs_ms abs_pos = here.getglobal( p );
             for( item &it : items ) {
-                item_search_visit( it, base, abs_pos, pattern, hits );
+                item_search_visit( it, base, abs_pos, match, hits );
             }
         }
     }
@@ -2669,7 +2687,7 @@ static void item_search_scan( const std::string &pattern,
             }
             const tripoint_abs_ms abs_pos = here.getglobal( vp.pos() );
             for( item &it : vitems ) {
-                item_search_visit( it, vbase, abs_pos, pattern, hits );
+                item_search_visit( it, vbase, abs_pos, match, hits );
             }
         }
     }
@@ -2822,6 +2840,7 @@ static void debug_search_save_items();
 static void debug_view_item_search_history();
 static void debug_rescan_history_item();
 static void debug_scan_entire_save();
+static void debug_scan_entire_save_food();
 
 void open_item_search_menu()
 {
@@ -2831,6 +2850,7 @@ void open_item_search_menu()
     menu.addentry( 1, true, 'h', _( "View item search history (cached)" ) );
     menu.addentry( 2, true, 'r', _( "Re-run a history search (full live rescan)" ) );
     menu.addentry( 3, true, 'f', _( "Scan ENTIRE save (full, with progress bar)" ) );
+    menu.addentry( 4, true, 'g', _( "Scan ENTIRE save for FRESH FOOD (non-spoiled)" ) );
     menu.query();
     switch( menu.ret ) {
         case 0:
@@ -2844,6 +2864,9 @@ void open_item_search_menu()
             break;
         case 3:
             debug_scan_entire_save();
+            break;
+        case 4:
+            debug_scan_entire_save_food();
             break;
         default:
             break;
@@ -2869,7 +2892,7 @@ static void debug_search_save_items()
 
     // 2. 扫描地面 / 家具存储 / 载具货舱
     std::vector<item_search_hit> hits;
-    item_search_scan( pattern, hits );
+    item_search_scan( make_wildcard_matcher( pattern ), hits );
 
     // 3. 写入历史缓存（最多 10 条，最新在前）
     std::vector<item_search_record> history = item_search_load_history();
@@ -2949,7 +2972,7 @@ static void debug_rescan_history_item()
         return;
     }
     std::vector<item_search_hit> hits;
-    item_search_scan( rec->pattern, hits );
+    item_search_scan( make_wildcard_matcher( rec->pattern ), hits );
     item_search_show_results(
         string_format( _( "Re-scan \"%s\" (live)" ), rec->pattern ),
         string_format( _( "Live re-scan of \"%s\" found %d match(es) in the loaded map. (Cached snapshot had %d.)" ),
@@ -2958,28 +2981,15 @@ static void debug_rescan_history_item()
         hits );
 }
 
-// 真扫整存档：枚举所有已落盘的 submap quad 文件（maps/<seg>/<ox>.<oy>.<oz>.map），
+// 真扫整存档核心：枚举所有已落盘的 submap quad 文件（maps/<seg>/<ox>.<oy>.<oz>.map），
 // 逐块加载并扫描地面/家具物品 + 载具货舱。与 item_search_scan（仅已载入地图）不同，
 // 这里真正遍历整个存档的每一格，带节流进度条，并支持以玩家为中心限定最大搜索范围
 // （0 = 扫全存档，慢可以等）。为避免整存档扫描时内存无限增长，定期释放已扫描的离载 submap。
-static void debug_scan_entire_save()
+// match 决定哪些物品算命中（通配符 / 食物 等），label 用于历史记录与结果展示。
+static void debug_scan_entire_save_core( const std::function<bool( const item & )> &match,
+                                        const std::string &label )
 {
-    // 1. 让玩家输入通配符模式
-    std::string pattern = "*";
-    string_input_popup pattern_popup;
-    pattern_popup
-        .title( _( "Scan ENTIRE save by wildcard (e.g. *rifle*, *ammo*). * matches anything." ) )
-        .width( 60 )
-        .edit( pattern );
-    if( pattern_popup.canceled() ) {
-        return;
-    }
-    if( pattern.empty() ) {
-        popup( _( "Empty pattern, abort." ) );
-        return;
-    }
-
-    // 2. 让玩家输入最大搜索范围（以玩家为中心的 overmap 数；0 = 扫全存档）
+    // 1. 让玩家输入最大搜索范围（以玩家为中心的 overmap 数；0 = 扫全存档）
     std::string range_str = "0";
     string_input_popup range_popup;
     range_popup
@@ -3068,7 +3078,7 @@ static void debug_scan_entire_save()
                                 : _( "on ground" );
                             const cata::colony<item> &stack = sm->get_items( tile );
                             for( item &it : stack ) {
-                                item_search_visit( it, base, abs_ms, pattern, hits );
+                                item_search_visit( it, base, abs_ms, match, hits );
                             }
                             ++tiles_scanned;
                         }
@@ -3087,7 +3097,7 @@ static void debug_scan_entire_save()
                             const tripoint gp = veh->global_part_pos3( vp.part_index() );
                             const tripoint_abs_ms vabs( gp.x, gp.y, gp.z );
                             for( item &it : vitems ) {
-                                item_search_visit( it, vbase, vabs, pattern, hits );
+                                item_search_visit( it, vbase, vabs, match, hits );
                             }
                         }
                     }
@@ -3122,7 +3132,7 @@ static void debug_scan_entire_save()
     }
     item_search_record rec;
     rec.id = next_id + 1;
-    rec.pattern = pattern;
+    rec.pattern = label;
     rec.world = get_avatar().get_save_id();
     rec.generated_turn = to_turn<int>( calendar::turn );
     rec.hits = hits;
@@ -3136,11 +3146,37 @@ static void debug_scan_entire_save()
 
     // 7. 呈现结果
     item_search_show_results(
-        _( "Full-save scan results" ),
+        string_format( _( "Full-save scan: %s" ), label ),
         string_format( _( "Scanned %lld submaps (%d quads) across the entire save, found %d match(es) for \"%s\". Saved to history (max 10)." ),
                        submaps_scanned, static_cast<int>( total ),
-                       static_cast<int>( hits.size() ), pattern ),
+                       static_cast<int>( hits.size() ), label ),
         hits );
+}
+
+// 现有 f：通配符全存档扫描（先让玩家输入模式）
+static void debug_scan_entire_save()
+{
+    std::string pattern = "*";
+    string_input_popup pattern_popup;
+    pattern_popup
+        .title( _( "Scan ENTIRE save by wildcard (e.g. *rifle*, *ammo*). * matches anything." ) )
+        .width( 60 )
+        .edit( pattern );
+    if( pattern_popup.canceled() ) {
+        return;
+    }
+    if( pattern.empty() ) {
+        popup( _( "Empty pattern, abort." ) );
+        return;
+    }
+    debug_scan_entire_save_core( make_wildcard_matcher( pattern ), pattern );
+}
+
+// 新增 g：全存档「新鲜食物（未腐败）」扫描。复用整存档扫描引擎，
+// 仅把命中判定换成 make_food_matcher()（is_comestible && !rotten）。无需输入模式。
+static void debug_scan_entire_save_food()
+{
+    debug_scan_entire_save_core( make_food_matcher(), _( "fresh food (non-spoiled)" ) );
 }
 
 void debug()
