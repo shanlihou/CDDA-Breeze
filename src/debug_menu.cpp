@@ -9,6 +9,7 @@
 #include <chrono>
 #include <csignal>
 #include <cstdlib>
+#include <cstdio>
 #include <functional>
 #include <iomanip> // IWYU pragma: keep
 #include <iostream>
@@ -89,7 +90,9 @@
 #include "output.h"
 #include "overmap.h"
 #include "overmap_ui.h"
+#include "mapbuffer.h"
 #include "overmapbuffer.h"
+#include "submap.h"
 #include "path_info.h" // IWYU pragma: keep
 #include "pimpl.h"
 #include "point.h"
@@ -2818,6 +2821,7 @@ static void item_search_save_history( std::vector<item_search_record> records )
 static void debug_search_save_items();
 static void debug_view_item_search_history();
 static void debug_rescan_history_item();
+static void debug_scan_entire_save();
 
 void open_item_search_menu()
 {
@@ -2826,6 +2830,7 @@ void open_item_search_menu()
     menu.addentry( 0, true, 's', _( "Search save items (wildcard)" ) );
     menu.addentry( 1, true, 'h', _( "View item search history (cached)" ) );
     menu.addentry( 2, true, 'r', _( "Re-run a history search (full live rescan)" ) );
+    menu.addentry( 3, true, 'f', _( "Scan ENTIRE save (full, with progress bar)" ) );
     menu.query();
     switch( menu.ret ) {
         case 0:
@@ -2836,6 +2841,9 @@ void open_item_search_menu()
             break;
         case 2:
             debug_rescan_history_item();
+            break;
+        case 3:
+            debug_scan_entire_save();
             break;
         default:
             break;
@@ -2947,6 +2955,191 @@ static void debug_rescan_history_item()
         string_format( _( "Live re-scan of \"%s\" found %d match(es) in the loaded map. (Cached snapshot had %d.)" ),
                        rec->pattern, static_cast<int>( hits.size() ),
                        static_cast<int>( rec->hits.size() ) ),
+        hits );
+}
+
+// 真扫整存档：枚举所有已落盘的 submap quad 文件（maps/<seg>/<ox>.<oy>.<oz>.map），
+// 逐块加载并扫描地面/家具物品 + 载具货舱。与 item_search_scan（仅已载入地图）不同，
+// 这里真正遍历整个存档的每一格，带节流进度条，并支持以玩家为中心限定最大搜索范围
+// （0 = 扫全存档，慢可以等）。为避免整存档扫描时内存无限增长，定期释放已扫描的离载 submap。
+static void debug_scan_entire_save()
+{
+    // 1. 让玩家输入通配符模式
+    std::string pattern = "*";
+    string_input_popup pattern_popup;
+    pattern_popup
+        .title( _( "Scan ENTIRE save by wildcard (e.g. *rifle*, *ammo*). * matches anything." ) )
+        .width( 60 )
+        .edit( pattern );
+    if( pattern_popup.canceled() ) {
+        return;
+    }
+    if( pattern.empty() ) {
+        popup( _( "Empty pattern, abort." ) );
+        return;
+    }
+
+    // 2. 让玩家输入最大搜索范围（以玩家为中心的 overmap 数；0 = 扫全存档）
+    std::string range_str = "0";
+    string_input_popup range_popup;
+    range_popup
+        .title( _( "Max search radius in overmap cells, centered on you.\n0 = scan the entire save (may be slow)." ) )
+        .width( 50 )
+        .edit( range_str );
+    if( range_popup.canceled() ) {
+        return;
+    }
+    int max_range_om = 0;
+    try {
+        max_range_om = std::max( 0, std::stoi( range_str ) );
+    } catch( const std::exception & ) {
+        max_range_om = 0;
+    }
+
+    // 3. 枚举存档里所有 submap quad 文件
+    const cata_path maps_dir = PATH_INFO::world_base_save_path_path() / "maps";
+    std::vector<cata_path> quad_files = get_files_from_path( ".map", maps_dir, true, false );
+    if( quad_files.empty() ) {
+        popup( _( "No saved map data found for this world." ) );
+        return;
+    }
+
+    // 玩家当前所在 overmap 坐标（用于范围过滤）
+    const tripoint_abs_ms player_abs( get_map().getabs( get_avatar().pos() ) );
+    const tripoint_abs_om player_om = project_to<coords::om>( player_abs );
+
+    // 4. 解析每个 quad 文件名，按范围过滤，统计真正要扫的总数
+    //    一个 quad 文件名为 "<ox>.<oy>.<oz>.map"，覆盖 omt 格 (ox,oy,oz) 的 2x2 = 4 个 submap
+    struct quad_entry {
+        int ox, oy, oz;
+    };
+    std::vector<quad_entry> quads;
+    quads.reserve( quad_files.size() );
+    for( const cata_path &qp : quad_files ) {
+        const std::string stem = qp.get_unrelative_path().stem().generic_string();
+        int ox = 0, oy = 0, oz = 0;
+        if( std::sscanf( stem.c_str(), "%d.%d.%d", &ox, &oy, &oz ) != 3 ) {
+            continue;
+        }
+        if( max_range_om > 0 ) {
+            const int qom_x = ox / OMAPX;
+            const int qom_y = oy / OMAPX;
+            if( std::abs( qom_x - player_om.x() ) > max_range_om ||
+                std::abs( qom_y - player_om.y() ) > max_range_om ) {
+                continue;
+            }
+        }
+        quads.push_back( { ox, oy, oz } );
+    }
+
+    if( quads.empty() ) {
+        popup( _( "No map data within the chosen search range." ) );
+        return;
+    }
+
+    // 5. 逐 quad 加载并扫描，带节流进度条
+    std::vector<item_search_hit> hits;
+    const size_t total = quads.size();
+    size_t done = 0;
+    long long submaps_scanned = 0;
+    long long tiles_scanned = 0;
+    {
+        static_popup popup;
+        std::chrono::steady_clock::time_point last_update = std::chrono::steady_clock::now();
+        static constexpr std::chrono::milliseconds update_interval( 200 );
+
+        for( const quad_entry &q : quads ) {
+            for( int sx = 0; sx < 2; ++sx ) {
+                for( int sy = 0; sy < 2; ++sy ) {
+                    const tripoint_abs_sm smc( 2 * q.ox + sx, 2 * q.oy + sy, q.oz );
+                    submap *sm = MAPBUFFER.lookup_submap( smc );
+                    if( sm == nullptr ) {
+                        continue;
+                    }
+                    // 该 submap 左上角的绝对地图方块坐标（含 z）
+                    const tripoint tl = sm_to_ms_copy( tripoint( smc.x(), smc.y(), smc.z() ) );
+                    for( int tx = 0; tx < SEEX; ++tx ) {
+                        for( int ty = 0; ty < SEEY; ++ty ) {
+                            const point tile( tx, ty );
+                            const tripoint_abs_ms abs_ms( tl.x + tx, tl.y + ty, tl.z );
+                            const furn_id fid = sm->get_furn( tile );
+                            const std::string base = fid
+                                ? string_format( _( "in furniture: %s" ), fid->name() )
+                                : _( "on ground" );
+                            const cata::colony<item> &stack = sm->get_items( tile );
+                            for( item &it : stack ) {
+                                item_search_visit( it, base, abs_ms, pattern, hits );
+                            }
+                            ++tiles_scanned;
+                        }
+                    }
+                    // 载具货舱物品（用非 const 引用以便拿到非 const 的 get_items 重载）
+                    for( std::unique_ptr<vehicle> &veh : sm->vehicles ) {
+                        if( !veh ) {
+                            continue;
+                        }
+                        const std::string vbase = string_format( _( "in vehicle: %s" ), veh->name );
+                        for( const vpart_reference &vp : veh->get_all_parts_with_fakes() ) {
+                            vehicle_stack vitems = veh->get_items( vp.part_index() );
+                            if( vitems.empty() ) {
+                                continue;
+                            }
+                            const tripoint gp = veh->global_part_pos3( vp.part_index() );
+                            const tripoint_abs_ms vabs( gp.x, gp.y, gp.z );
+                            for( item &it : vitems ) {
+                                item_search_visit( it, vbase, vabs, pattern, hits );
+                            }
+                        }
+                    }
+                    ++submaps_scanned;
+                }
+            }
+
+            ++done;
+            const std::chrono::steady_clock::time_point now = std::chrono::steady_clock::now();
+            if( last_update + update_interval < now ) {
+                popup.message( _( "Scanning save [%d/%d quads, %lld submaps, %lld tiles, %d hits]" ),
+                               static_cast<int>( done ), static_cast<int>( total ),
+                               submaps_scanned, tiles_scanned,
+                               static_cast<int>( hits.size() ) );
+                ui_manager::redraw();
+                refresh_display();
+                inp_mngr.pump_events();
+                last_update = now;
+            }
+            // 周期性释放已扫描的离载 submap，避免整存档扫描时内存无限增长
+            if( ( done & 0x1FF ) == 0 ) {
+                MAPBUFFER.clear_outside_reality_bubble();
+            }
+        }
+    } // static_popup 在此析构，进度条自动消失
+
+    // 6. 写出历史缓存（与既有搜索一致，最多 10 条，最新在前）
+    std::vector<item_search_record> history = item_search_load_history();
+    int next_id = 0;
+    for( const item_search_record &r : history ) {
+        next_id = std::max( next_id, r.id );
+    }
+    item_search_record rec;
+    rec.id = next_id + 1;
+    rec.pattern = pattern;
+    rec.world = get_avatar().get_save_id();
+    rec.generated_turn = to_turn<int>( calendar::turn );
+    rec.hits = hits;
+    history.insert( history.begin(), rec );
+    try {
+        item_search_save_history( history );
+    } catch( const std::exception &e ) {
+        popup( string_format( _( "Failed to write search cache: %s" ), e.what() ) );
+        return;
+    }
+
+    // 7. 呈现结果
+    item_search_show_results(
+        _( "Full-save scan results" ),
+        string_format( _( "Scanned %lld submaps (%d quads) across the entire save, found %d match(es) for \"%s\". Saved to history (max 10)." ),
+                       submaps_scanned, static_cast<int>( total ),
+                       static_cast<int>( hits.size() ), pattern ),
         hits );
 }
 
