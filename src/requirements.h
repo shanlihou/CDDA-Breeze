@@ -54,6 +54,9 @@ struct quality {
     static void load_static( const JsonObject &jo, const std::string &src );
 };
 
+// 返回全部已加载的工具品质（实现见 requirements.cpp）。供其它翻译单元枚举品质而无需暴露全局工厂。
+const std::vector<quality> &all_loaded_qualities();
+
 struct component {
     itype_id type = itype_id::NULL_ID();
     int count = 0;

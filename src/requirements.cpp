@@ -96,6 +96,11 @@ namespace
 generic_factory<quality> quality_factory( "tool quality" );
 } // namespace
 
+const std::vector<quality> &all_loaded_qualities()
+{
+    return quality_factory.get_all();
+}
+
 void quality::reset()
 {
     quality_factory.reset();

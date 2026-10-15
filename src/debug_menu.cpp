@@ -94,6 +94,7 @@
 #include "overmapbuffer.h"
 #include "submap.h"
 #include "path_info.h" // IWYU pragma: keep
+#include "requirements.h"   // quality, all_loaded_qualities()
 #include "pimpl.h"
 #include "point.h"
 #include "popup.h"
@@ -2841,6 +2842,19 @@ static void debug_view_item_search_history();
 static void debug_rescan_history_item();
 static void debug_scan_entire_save();
 static void debug_search_save_food();
+static void debug_search_save_by_quality();
+
+// 仅对 ASCII 字母做小写（UTF-8 多字节字节 >= 0x80 不受影响），用于英文品质 id 的不区分大小写匹配
+static std::string ascii_lower( const std::string &s )
+{
+    std::string r = s;
+    for( char &c : r ) {
+        if( c >= 'A' && c <= 'Z' ) {
+            c = static_cast<char>( c - 'A' + 'a' );
+        }
+    }
+    return r;
+}
 
 void open_item_search_menu()
 {
@@ -2851,6 +2865,7 @@ void open_item_search_menu()
     menu.addentry( 2, true, 'r', _( "Re-run a history search (full live rescan)" ) );
     menu.addentry( 3, true, 'f', _( "Scan ENTIRE save (full, with progress bar)" ) );
     menu.addentry( 4, true, 'g', _( "Search FRESH FOOD in loaded map (in-memory, fast)" ) );
+    menu.addentry( 5, true, 'q', _( "Search by tool FUNCTION / quality (in loaded map)" ) );
     menu.query();
     switch( menu.ret ) {
         case 0:
@@ -2867,6 +2882,9 @@ void open_item_search_menu()
             break;
         case 4:
             debug_search_save_food();
+            break;
+        case 5:
+            debug_search_save_by_quality();
             break;
         default:
             break;
@@ -3206,6 +3224,97 @@ static void debug_search_save_food()
         _( "Fresh food search results (loaded map)" ),
         string_format( _( "Found %d fresh, non-spoiled food item(s) in the loaded map. Saved to history (max 10)." ),
                        hits.size() ),
+        hits );
+}
+
+// 按"功能 / 工具品质"搜索已载入内存地图里的物品。例如输入"金属锯切"或"精工金属锯切"
+// 或英文 id（SAW_M / SAW_M_FINE）甚至部分串（"锯" 会同时匹配木材/金属/精工金属锯切），
+// 对所有品质名做子串匹配（英文 id 不区分大小写），然后把提供这些品质的物品列出来。
+// 仅扫现实泡内的地面 / 家具存储 / 载具货舱，与 s/g 同源、轻量、不扫整存档。
+static void debug_search_save_by_quality()
+{
+    // 1. 让玩家输入功能/品质子串
+    std::string input = "";
+    string_input_popup qpopup;
+    qpopup
+        .title( _( "Search items by tool FUNCTION / quality.\nExamples: 金属锯切, 精工金属锯切, 木材锯切, SAW_M, saw (substring match on quality name/id)." ) )
+        .width( 70 )
+        .edit( input );
+    if( qpopup.canceled() ) {
+        return;
+    }
+    if( input.empty() ) {
+        popup( _( "Empty input, abort." ) );
+        return;
+    }
+
+    // 2. 在所有已加载的工具品质里做子串匹配
+    const std::string needle = ascii_lower( input );
+    std::vector<quality_id> matched;
+    std::vector<std::string> matched_labels;
+    for( const quality &q : all_loaded_qualities() ) {
+        const std::string name = q.name.translated();
+        const std::string id = q.id.str();
+        if( ascii_lower( name ).find( needle ) != std::string::npos ||
+            ascii_lower( id ).find( needle ) != std::string::npos ) {
+            matched.push_back( q.id );
+            matched_labels.push_back( name );
+        }
+    }
+    if( matched.empty() ) {
+        popup( string_format( _( "No tool quality matches \"%s\". Try e.g. 金属锯切 / SAW_M / 锯." ),
+                              input ) );
+        return;
+    }
+
+    // 3. 构造命中判定：物品（或容器内物品）提供任一匹配品质即命中
+    std::function<bool( const item & )> match = [&matched]( const item &it ) -> bool {
+        for( const quality_id &qid : matched ) {
+            if( it.get_quality( qid ) > 0 ) {
+                return true;
+            }
+        }
+        return false;
+    };
+
+    // 4. 扫描已载入地图（地面 / 家具存储 / 载具货舱）
+    std::vector<item_search_hit> hits;
+    item_search_scan( match, hits );
+
+    // 5. 写入历史缓存（最多 10 条，最新在前）
+    std::vector<item_search_record> history = item_search_load_history();
+    int next_id = 0;
+    for( const item_search_record &r : history ) {
+        next_id = std::max( next_id, r.id );
+    }
+    item_search_record rec;
+    rec.id = next_id + 1;
+    rec.pattern = string_format( _( "function: %s" ), input );
+    rec.world = get_avatar().get_save_id();
+    rec.generated_turn = to_turn<int>( calendar::turn );
+    rec.hits = hits;
+    history.insert( history.begin(), rec );
+    try {
+        item_search_save_history( history );
+    } catch( const std::exception &e ) {
+        popup( string_format( _( "Failed to write search cache: %s" ), e.what() ) );
+        return;
+    }
+
+    // 6. 在游戏内呈现本次结果
+    std::string matched_label;
+    for( size_t i = 0; i < matched_labels.size(); ++i ) {
+        if( i > 0 ) {
+            matched_label += ", ";
+        }
+        matched_label += matched_labels[i];
+    }
+    item_search_show_results(
+        _( "Tool-function search results (loaded map)" ),
+        string_format( _( "Matched %d quality(ies): %s.\nFound %d item(s) providing them in the loaded map. Saved to history (max 10)." ),
+                       static_cast<int>( matched.size() ),
+                       matched_label,
+                       static_cast<int>( hits.size() ) ),
         hits );
 }
 
