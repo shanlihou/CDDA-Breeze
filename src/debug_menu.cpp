@@ -2840,7 +2840,7 @@ static void debug_search_save_items();
 static void debug_view_item_search_history();
 static void debug_rescan_history_item();
 static void debug_scan_entire_save();
-static void debug_scan_entire_save_food();
+static void debug_search_save_food();
 
 void open_item_search_menu()
 {
@@ -2850,7 +2850,7 @@ void open_item_search_menu()
     menu.addentry( 1, true, 'h', _( "View item search history (cached)" ) );
     menu.addentry( 2, true, 'r', _( "Re-run a history search (full live rescan)" ) );
     menu.addentry( 3, true, 'f', _( "Scan ENTIRE save (full, with progress bar)" ) );
-    menu.addentry( 4, true, 'g', _( "Scan ENTIRE save for FRESH FOOD (non-spoiled)" ) );
+    menu.addentry( 4, true, 'g', _( "Search FRESH FOOD in loaded map (in-memory, fast)" ) );
     menu.query();
     switch( menu.ret ) {
         case 0:
@@ -2866,7 +2866,7 @@ void open_item_search_menu()
             debug_scan_entire_save();
             break;
         case 4:
-            debug_scan_entire_save_food();
+            debug_search_save_food();
             break;
         default:
             break;
@@ -3172,11 +3172,41 @@ static void debug_scan_entire_save()
     debug_scan_entire_save_core( make_wildcard_matcher( pattern ), pattern );
 }
 
-// 新增 g：全存档「新鲜食物（未腐败）」扫描。复用整存档扫描引擎，
-// 仅把命中判定换成 make_food_matcher()（is_comestible && !rotten）。无需输入模式。
-static void debug_scan_entire_save_food()
+// 新增 g：搜索已载入内存地图里的「新鲜食物（未腐败）」。仅扫现实泡内的
+// 地面 / 家具存储 / 载具货舱，复用 item_search_scan + make_food_matcher()，
+// 与最早的 s（通配符搜内存）同源、轻量、不扫整存档。无需输入模式。
+static void debug_search_save_food()
 {
-    debug_scan_entire_save_core( make_food_matcher(), _( "fresh food (non-spoiled)" ) );
+    // 1. 扫描已载入地图（地面 / 家具存储 / 载具货舱），命中判定为"可食用且未腐败"
+    std::vector<item_search_hit> hits;
+    item_search_scan( make_food_matcher(), hits );
+
+    // 2. 写入历史缓存（最多 10 条，最新在前）
+    std::vector<item_search_record> history = item_search_load_history();
+    int next_id = 0;
+    for( const item_search_record &r : history ) {
+        next_id = std::max( next_id, r.id );
+    }
+    item_search_record rec;
+    rec.id = next_id + 1;
+    rec.pattern = _( "fresh food (non-spoiled)" );
+    rec.world = get_avatar().get_save_id();
+    rec.generated_turn = to_turn<int>( calendar::turn );
+    rec.hits = hits;
+    history.insert( history.begin(), rec );
+    try {
+        item_search_save_history( history );
+    } catch( const std::exception &e ) {
+        popup( string_format( _( "Failed to write search cache: %s" ), e.what() ) );
+        return;
+    }
+
+    // 3. 在游戏内呈现本次结果
+    item_search_show_results(
+        _( "Fresh food search results (loaded map)" ),
+        string_format( _( "Found %d fresh, non-spoiled food item(s) in the loaded map. Saved to history (max 10)." ),
+                       hits.size() ),
+        hits );
 }
 
 void debug()
