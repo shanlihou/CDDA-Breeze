@@ -2844,6 +2844,7 @@ static void debug_scan_entire_save();
 static void debug_search_save_food();
 static void debug_search_save_by_quality();
 static void debug_search_vehicles_by_part();
+static void debug_search_furniture();
 
 // 仅对 ASCII 字母做小写（UTF-8 多字节字节 >= 0x80 不受影响），用于英文品质 id 的不区分大小写匹配
 static std::string ascii_lower( const std::string &s )
@@ -2868,6 +2869,7 @@ void open_item_search_menu()
     menu.addentry( 4, true, 'g', _( "Search FRESH FOOD in loaded map (in-memory, fast)" ) );
     menu.addentry( 5, true, 'q', _( "Search by tool FUNCTION / quality (in loaded map)" ) );
     menu.addentry( 6, true, 'v', _( "Search VEHICLES by COMPONENT name (in loaded map)" ) );
+    menu.addentry( 7, true, 'e', _( "Search FURNITURE by name (in loaded map)" ) );
     menu.query();
     switch( menu.ret ) {
         case 0:
@@ -2890,6 +2892,9 @@ void open_item_search_menu()
             break;
         case 6:
             debug_search_vehicles_by_part();
+            break;
+        case 7:
+            debug_search_furniture();
             break;
         default:
             break;
@@ -3374,6 +3379,63 @@ static void debug_search_vehicles_by_part()
     item_search_show_results(
         _( "Vehicle component search results (loaded map)" ),
         string_format( _( "Found %d matching vehicle part(s) for \"%s\" in the loaded map." ),
+                       static_cast<int>( hits.size() ), input ),
+        hits );
+}
+
+// e：按家具名搜索（如 电冰箱 / 电脑 / 划船机 / fridge / computer）。
+// 仅扫已载入内存的地图（地面家具，所有已载入 z 层），对家具中文名与英文 id
+// 做子串匹配（英文不区分大小写），轻量、不扫整存档。
+static void debug_search_furniture()
+{
+    // 1. 让玩家输入家具名子串
+    std::string input = "";
+    string_input_popup fpopup;
+    fpopup
+        .title( _( "Search FURNITURE by name.\nExamples: 电冰箱, 电脑, 划船机, fridge, computer (substring match on furniture name/id)." ) )
+        .width( 70 )
+        .edit( input );
+    if( fpopup.canceled() ) {
+        return;
+    }
+    if( input.empty() ) {
+        popup( _( "Empty input, abort." ) );
+        return;
+    }
+
+    const std::string needle = ascii_lower( input );
+
+    // 2. 扫描已载入地图的全部 z 层上的家具（未实际载入的 z 层返回空，扫描无害）
+    map &here = get_map();
+    std::vector<item_search_hit> hits;
+    const int zmin = -OVERMAP_DEPTH;
+    const int zmax = OVERMAP_HEIGHT;
+    for( int z = zmin; z <= zmax; ++z ) {
+        for( const tripoint &p : here.points_on_zlevel( z ) ) {
+            if( !here.has_furn( p ) ) {
+                continue;
+            }
+            const furn_id furn = here.furn( p );
+            const std::string fname = furn->name();
+            const std::string fid = furn->id.str();
+            // 中文名或英文 id 任一命中即可
+            if( ascii_lower( fname ).find( needle ) == std::string::npos &&
+                ascii_lower( fid ).find( needle ) == std::string::npos ) {
+                continue;
+            }
+            item_search_hit hit;
+            hit.name = fname;
+            hit.type_id = fid;
+            hit.pos = here.getglobal( p );
+            hit.location = _( "furniture" );
+            hits.push_back( hit );
+        }
+    }
+
+    // 3. 呈现本次结果
+    item_search_show_results(
+        _( "Furniture search results (loaded map)" ),
+        string_format( _( "Found %d matching furniture for \"%s\" in the loaded map." ),
                        static_cast<int>( hits.size() ), input ),
         hits );
 }
