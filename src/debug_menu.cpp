@@ -2843,6 +2843,7 @@ static void debug_rescan_history_item();
 static void debug_scan_entire_save();
 static void debug_search_save_food();
 static void debug_search_save_by_quality();
+static void debug_search_vehicles_by_part();
 
 // 仅对 ASCII 字母做小写（UTF-8 多字节字节 >= 0x80 不受影响），用于英文品质 id 的不区分大小写匹配
 static std::string ascii_lower( const std::string &s )
@@ -2866,6 +2867,7 @@ void open_item_search_menu()
     menu.addentry( 3, true, 'f', _( "Scan ENTIRE save (full, with progress bar)" ) );
     menu.addentry( 4, true, 'g', _( "Search FRESH FOOD in loaded map (in-memory, fast)" ) );
     menu.addentry( 5, true, 'q', _( "Search by tool FUNCTION / quality (in loaded map)" ) );
+    menu.addentry( 6, true, 'v', _( "Search VEHICLES by COMPONENT name (in loaded map)" ) );
     menu.query();
     switch( menu.ret ) {
         case 0:
@@ -2885,6 +2887,9 @@ void open_item_search_menu()
             break;
         case 5:
             debug_search_save_by_quality();
+            break;
+        case 6:
+            debug_search_vehicles_by_part();
             break;
         default:
             break;
@@ -3315,6 +3320,61 @@ static void debug_search_save_by_quality()
                        static_cast<int>( matched.size() ),
                        matched_label,
                        static_cast<int>( hits.size() ) ),
+        hits );
+}
+
+// 按"载具组件（车辆部件）"名搜索已载入内存地图里的载具。
+// 输入组件名子串（如 车轮 / wheel / 引擎），对所有载具部件的中文部件名与英文 id 做子串匹配
+// （英文 id 不区分大小写），命中即列出该部件所属载具名、部件名与坐标。
+// 仅扫现实泡内的载具，轻量、不扫整存档。
+// 注意：不写入历史缓存——历史"实时重扫 r"是物品通配符重扫，语义与载具部件不匹配。
+static void debug_search_vehicles_by_part()
+{
+    // 1. 让玩家输入组件名子串
+    std::string input = "";
+    string_input_popup vpopup;
+    vpopup
+        .title( _( "Search VEHICLES by COMPONENT (vehicle part) name.\nExamples: 车轮, 引擎, wheel, engine (substring match on part name/id)." ) )
+        .width( 70 )
+        .edit( input );
+    if( vpopup.canceled() ) {
+        return;
+    }
+    if( input.empty() ) {
+        popup( _( "Empty input, abort." ) );
+        return;
+    }
+
+    const std::string needle = ascii_lower( input );
+
+    // 2. 扫描已载入地图里的所有载具及其部件
+    map &here = get_map();
+    std::vector<item_search_hit> hits;
+    for( wrapped_vehicle &wv : here.get_vehicles() ) {
+        vehicle &veh = *wv.v;
+        for( const vpart_reference &vp : veh.get_all_parts_with_fakes() ) {
+            const vpart_info &vpi = vp.info();
+            const std::string pname = vpi.name();
+            const std::string pid = vpi.get_id().str();
+            // 中文部件名或英文 id 任一命中即可
+            if( ascii_lower( pname ).find( needle ) == std::string::npos &&
+                ascii_lower( pid ).find( needle ) == std::string::npos ) {
+                continue;
+            }
+            item_search_hit hit;
+            hit.name = pname;
+            hit.type_id = pid;
+            hit.pos = here.getglobal( vp.pos() );
+            hit.location = string_format( _( "in vehicle: %s" ), veh.name );
+            hits.push_back( hit );
+        }
+    }
+
+    // 3. 呈现本次结果
+    item_search_show_results(
+        _( "Vehicle component search results (loaded map)" ),
+        string_format( _( "Found %d matching vehicle part(s) for \"%s\" in the loaded map." ),
+                       static_cast<int>( hits.size() ), input ),
         hits );
 }
 
