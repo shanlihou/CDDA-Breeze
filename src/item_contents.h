@@ -349,7 +349,14 @@ class item_contents
 
         // reads the items in the MOD pocket first
         void read_mods( const item_contents &read_input );
-        void combine( const item_contents &read_input, bool convert = false, bool into_bottom = false );
+        /**
+         * 把存档侧（read_input）的物品按口袋索引合并进当前口袋布局。
+         * @param owner_desc 容器物品的标识（通常是 itype_id），仅用于失败时 debugmsg 自报身份，
+         * 例如 "error: item 55gal_drum ... of fridge"。调用方（item::deserialize / item::convert）
+         * 传 typeId().str() 即可；留空则退化为 "unknown container"。
+         */
+        void combine( const item_contents &read_input, bool convert = false, bool into_bottom = false,
+                      const std::string &owner_desc = std::string() );
 
         void serialize( JsonOut &json ) const;
         void deserialize( const JsonObject &data );

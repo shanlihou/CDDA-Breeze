@@ -59,6 +59,11 @@ class main_menu
         bool new_character_tab();
         bool load_character_tab( const std::string &worldname );
         void world_tab( const std::string &worldname );
+        /**
+         * 载具蓝图导入：选一个存档、选一份蓝图，把那辆车生成在该角色身边并立刻存盘。
+         * 载具界面里做不到这件事——玩家站在车上时脚下一格必定被占。
+         */
+        void import_vehicle_tab( const std::string &worldname );
 
         /*
          * Load character templates from template folder

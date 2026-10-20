@@ -2840,7 +2840,8 @@ static void item_search_save_history( std::vector<item_search_record> records )
 static void debug_search_save_items();
 static void debug_view_item_search_history();
 static void debug_rescan_history_item();
-static void debug_scan_entire_save();
+static void debug_scan_entire_save_core( const std::function<bool( const item & )> &match,
+                                        const std::string &label );
 static void debug_search_save_food();
 static void debug_search_save_by_quality();
 static void debug_search_vehicles_by_part();
@@ -2858,18 +2859,43 @@ static std::string ascii_lower( const std::string &s )
     return r;
 }
 
+// 搜索范围：仅已载入内存的地图（快）或整个存档的所有 submap（慢，带进度条）。
+// 所有搜索入口（物品/食物/品质/载具部件/家具）都先让玩家选范围，再走对应扫描路径。
+enum class item_search_scope {
+    memory,
+    entire_save
+};
+
+// 让玩家选择本次搜索的范围。取消（ESC）返回 nullopt。
+static std::optional<item_search_scope> item_search_pick_scope()
+{
+    uilist menu;
+    menu.title = _( "Search scope" );
+    menu.text = _( "In-memory: only the currently loaded map (fast).\nEntire save: every submap saved on disk, with a progress bar (slow)." );
+    menu.addentry( 0, true, 'm', _( "In-memory (loaded map, fast)" ) );
+    menu.addentry( 1, true, 'a', _( "Entire save (all submaps, slow)" ) );
+    menu.query();
+    switch( menu.ret ) {
+        case 0:
+            return item_search_scope::memory;
+        case 1:
+            return item_search_scope::entire_save;
+        default:
+            return std::nullopt;
+    }
+}
+
 void open_item_search_menu()
 {
     uilist menu;
     menu.settext( _( "Item search (save)" ) );
-    menu.addentry( 0, true, 's', _( "Search save items (wildcard)" ) );
+    menu.addentry( 0, true, 's', _( "Search items by wildcard (choose scope: memory or entire save)" ) );
     menu.addentry( 1, true, 'h', _( "View item search history (cached)" ) );
-    menu.addentry( 2, true, 'r', _( "Re-run a history search (full live rescan)" ) );
-    menu.addentry( 3, true, 'f', _( "Scan ENTIRE save (full, with progress bar)" ) );
-    menu.addentry( 4, true, 'g', _( "Search FRESH FOOD in loaded map (in-memory, fast)" ) );
-    menu.addentry( 5, true, 'q', _( "Search by tool FUNCTION / quality (in loaded map)" ) );
-    menu.addentry( 6, true, 'v', _( "Search VEHICLES by COMPONENT name (in loaded map)" ) );
-    menu.addentry( 7, true, 'e', _( "Search FURNITURE by name (in loaded map)" ) );
+    menu.addentry( 2, true, 'r', _( "Re-run a history search (live rescan, choose scope)" ) );
+    menu.addentry( 3, true, 'g', _( "Search FRESH FOOD, non-spoiled (choose scope)" ) );
+    menu.addentry( 4, true, 'q', _( "Search by tool FUNCTION / quality (choose scope)" ) );
+    menu.addentry( 5, true, 'v', _( "Search VEHICLES by COMPONENT name (choose scope)" ) );
+    menu.addentry( 6, true, 'e', _( "Search FURNITURE by name (choose scope)" ) );
     menu.query();
     switch( menu.ret ) {
         case 0:
@@ -2882,18 +2908,15 @@ void open_item_search_menu()
             debug_rescan_history_item();
             break;
         case 3:
-            debug_scan_entire_save();
-            break;
-        case 4:
             debug_search_save_food();
             break;
-        case 5:
+        case 4:
             debug_search_save_by_quality();
             break;
-        case 6:
+        case 5:
             debug_search_vehicles_by_part();
             break;
-        case 7:
+        case 6:
             debug_search_furniture();
             break;
         default:
@@ -2918,11 +2941,22 @@ static void debug_search_save_items()
         return;
     }
 
-    // 2. 扫描地面 / 家具存储 / 载具货舱
+    // 2. 选择搜索范围：仅内存（已载入地图，快）或全量存档（慢，带进度条）
+    std::optional<item_search_scope> scope = item_search_pick_scope();
+    if( !scope ) {
+        return;
+    }
+    if( *scope == item_search_scope::entire_save ) {
+        // 全存档路径自己写历史缓存并呈现结果
+        debug_scan_entire_save_core( make_wildcard_matcher( pattern ), pattern );
+        return;
+    }
+
+    // 3. 扫描已载入地图（地面 / 家具存储 / 载具货舱）
     std::vector<item_search_hit> hits;
     item_search_scan( make_wildcard_matcher( pattern ), hits );
 
-    // 3. 写入历史缓存（最多 10 条，最新在前）
+    // 4. 写入历史缓存（最多 10 条，最新在前）
     std::vector<item_search_record> history = item_search_load_history();
     int next_id = 0;
     for( const item_search_record &r : history ) {
@@ -2942,9 +2976,9 @@ static void debug_search_save_items()
         return;
     }
 
-    // 4. 在游戏内呈现本次结果
+    // 5. 在游戏内呈现本次结果
     item_search_show_results(
-        _( "Item search results" ),
+        _( "Item search results (loaded map)" ),
         string_format( _( "Found %d match(es) for \"%s\". Saved to history (max 10)." ),
                        hits.size(), pattern ),
         hits );
@@ -2999,23 +3033,43 @@ static void debug_rescan_history_item()
     if( !rec ) {
         return;
     }
+    // 选择搜索范围：仅内存（已载入地图，快）或全量存档（慢，带进度条）
+    std::optional<item_search_scope> scope = item_search_pick_scope();
+    if( !scope ) {
+        return;
+    }
+    if( *scope == item_search_scope::entire_save ) {
+        // 全存档路径自己写历史缓存并呈现结果
+        debug_scan_entire_save_core( make_wildcard_matcher( rec->pattern ), rec->pattern );
+        return;
+    }
     std::vector<item_search_hit> hits;
     item_search_scan( make_wildcard_matcher( rec->pattern ), hits );
     item_search_show_results(
-        string_format( _( "Re-scan \"%s\" (live)" ), rec->pattern ),
+        string_format( _( "Re-scan \"%s\" (live, loaded map)" ), rec->pattern ),
         string_format( _( "Live re-scan of \"%s\" found %d match(es) in the loaded map. (Cached snapshot had %d.)" ),
                        rec->pattern, static_cast<int>( hits.size() ),
                        static_cast<int>( rec->hits.size() ) ),
         hits );
 }
 
-// 真扫整存档核心：枚举所有已落盘的 submap quad 文件（maps/<seg>/<ox>.<oy>.<oz>.map），
-// 逐块加载并扫描地面/家具物品 + 载具货舱。与 item_search_scan（仅已载入地图）不同，
-// 这里真正遍历整个存档的每一格，带节流进度条，并支持以玩家为中心限定最大搜索范围
-// （0 = 扫全存档，慢可以等）。为避免整存档扫描时内存无限增长，定期释放已扫描的离载 submap。
-// match 决定哪些物品算命中（通配符 / 食物 等），label 用于历史记录与结果展示。
-static void debug_scan_entire_save_core( const std::function<bool( const item & )> &match,
-                                        const std::string &label )
+// 全存档扫描统计
+struct full_save_scan_stats {
+    int quads = 0;         // 参与扫描的 quad 文件数
+    long long submaps = 0; // 实际扫过的 submap 数
+};
+
+// 全存档扫描核心（物品 / 载具部件 / 家具共用）：枚举所有已落盘的 submap quad 文件
+// （maps/<seg>/<ox>.<oy>.<oz>.map），逐块加载并对每个 submap 调用 per_submap 回调，
+// 带节流进度条，并支持以玩家为中心限定最大搜索范围（0 = 扫全存档，慢可以等）。
+// 为避免整存档扫描时内存无限增长，定期释放已扫描的离载 submap。
+// per_submap 回调签名: ( submap &sm, const tripoint &topleft )，topleft 为该 submap
+// 左上角的绝对地图方块坐标（含 z）。hits（可为 nullptr）仅用于进度条显示命中数。
+// 返回统计信息；范围输入取消 / 无数据可扫等前置失败时返回 nullopt。
+static std::optional<full_save_scan_stats> full_save_scan_submaps(
+    const std::string &title,
+    const std::vector<item_search_hit> *hits,
+    const std::function<void( submap &, const tripoint & )> &per_submap )
 {
     // 1. 让玩家输入最大搜索范围（以玩家为中心的 overmap 数；0 = 扫全存档）
     std::string range_str = "0";
@@ -3025,7 +3079,7 @@ static void debug_scan_entire_save_core( const std::function<bool( const item & 
         .width( 50 )
         .edit( range_str );
     if( range_popup.canceled() ) {
-        return;
+        return std::nullopt;
     }
     int max_range_om = 0;
     try {
@@ -3034,19 +3088,19 @@ static void debug_scan_entire_save_core( const std::function<bool( const item & 
         max_range_om = 0;
     }
 
-    // 3. 枚举存档里所有 submap quad 文件
+    // 2. 枚举存档里所有 submap quad 文件
     const cata_path maps_dir = PATH_INFO::world_base_save_path_path() / "maps";
     std::vector<cata_path> quad_files = get_files_from_path( ".map", maps_dir, true, false );
     if( quad_files.empty() ) {
         popup( _( "No saved map data found for this world." ) );
-        return;
+        return std::nullopt;
     }
 
     // 玩家当前所在 overmap 坐标（用于范围过滤）
     const tripoint_abs_ms player_abs( get_map().getabs( get_avatar().pos() ) );
     const tripoint_abs_om player_om = project_to<coords::om>( player_abs );
 
-    // 4. 解析每个 quad 文件名，按范围过滤，统计真正要扫的总数
+    // 3. 解析每个 quad 文件名，按范围过滤，统计真正要扫的总数
     //    一个 quad 文件名为 "<ox>.<oy>.<oz>.map"，覆盖 omt 格 (ox,oy,oz) 的 2x2 = 4 个 submap
     struct quad_entry {
         int ox, oy, oz;
@@ -3072,15 +3126,13 @@ static void debug_scan_entire_save_core( const std::function<bool( const item & 
 
     if( quads.empty() ) {
         popup( _( "No map data within the chosen search range." ) );
-        return;
+        return std::nullopt;
     }
 
-    // 5. 逐 quad 加载并扫描，带节流进度条
-    std::vector<item_search_hit> hits;
+    // 4. 逐 quad 加载并扫描，带节流进度条
+    full_save_scan_stats stats;
     const size_t total = quads.size();
     size_t done = 0;
-    long long submaps_scanned = 0;
-    long long tiles_scanned = 0;
     {
         static_popup popup;
         std::chrono::steady_clock::time_point last_update = std::chrono::steady_clock::now();
@@ -3096,50 +3148,23 @@ static void debug_scan_entire_save_core( const std::function<bool( const item & 
                     }
                     // 该 submap 左上角的绝对地图方块坐标（含 z）
                     const tripoint tl = sm_to_ms_copy( tripoint( smc.x(), smc.y(), smc.z() ) );
-                    for( int tx = 0; tx < SEEX; ++tx ) {
-                        for( int ty = 0; ty < SEEY; ++ty ) {
-                            const point tile( tx, ty );
-                            const tripoint_abs_ms abs_ms( tl.x + tx, tl.y + ty, tl.z );
-                            const furn_id fid = sm->get_furn( tile );
-                            const std::string base = fid
-                                ? string_format( _( "in furniture: %s" ), fid->name() )
-                                : _( "on ground" );
-                            const cata::colony<item> &stack = sm->get_items( tile );
-                            for( item &it : stack ) {
-                                item_search_visit( it, base, abs_ms, match, hits );
-                            }
-                            ++tiles_scanned;
-                        }
-                    }
-                    // 载具货舱物品（用非 const 引用以便拿到非 const 的 get_items 重载）
-                    for( std::unique_ptr<vehicle> &veh : sm->vehicles ) {
-                        if( !veh ) {
-                            continue;
-                        }
-                        const std::string vbase = string_format( _( "in vehicle: %s" ), veh->name );
-                        for( const vpart_reference &vp : veh->get_all_parts_with_fakes() ) {
-                            vehicle_stack vitems = veh->get_items( vp.part_index() );
-                            if( vitems.empty() ) {
-                                continue;
-                            }
-                            const tripoint gp = veh->global_part_pos3( vp.part_index() );
-                            const tripoint_abs_ms vabs( gp.x, gp.y, gp.z );
-                            for( item &it : vitems ) {
-                                item_search_visit( it, vbase, vabs, match, hits );
-                            }
-                        }
-                    }
-                    ++submaps_scanned;
+                    per_submap( *sm, tl );
+                    ++stats.submaps;
                 }
             }
 
             ++done;
             const std::chrono::steady_clock::time_point now = std::chrono::steady_clock::now();
             if( last_update + update_interval < now ) {
-                popup.message( _( "Scanning save [%d/%d quads, %lld submaps, %lld tiles, %d hits]" ),
-                               static_cast<int>( done ), static_cast<int>( total ),
-                               submaps_scanned, tiles_scanned,
-                               static_cast<int>( hits.size() ) );
+                if( hits ) {
+                    popup.message( "%s  [%d/%d quads, %lld submaps, %d hits]",
+                                   title.c_str(), static_cast<int>( done ), static_cast<int>( total ),
+                                   stats.submaps, static_cast<int>( hits->size() ) );
+                } else {
+                    popup.message( "%s  [%d/%d quads, %lld submaps]",
+                                   title.c_str(), static_cast<int>( done ), static_cast<int>( total ),
+                                   stats.submaps );
+                }
                 ui_manager::redraw();
                 refresh_display();
                 inp_mngr.pump_events();
@@ -3152,7 +3177,59 @@ static void debug_scan_entire_save_core( const std::function<bool( const item & 
         }
     } // static_popup 在此析构，进度条自动消失
 
-    // 6. 写出历史缓存（与既有搜索一致，最多 10 条，最新在前）
+    stats.quads = static_cast<int>( total );
+    return stats;
+}
+
+// 物品向全存档扫描（通配符 / 食物 / 功能品质 等匹配器通用）：
+// 复用 full_save_scan_submaps 逐块加载，扫描地面/家具物品 + 载具货舱。
+// match 决定哪些物品算命中，label 用于历史记录与结果展示。
+static void debug_scan_entire_save_core( const std::function<bool( const item & )> &match,
+                                        const std::string &label )
+{
+    std::vector<item_search_hit> hits;
+    auto stats = full_save_scan_submaps(
+                     string_format( _( "Scanning save: %s" ), label ), &hits,
+    [&]( submap &sm, const tripoint &tl ) {
+        // 地面 / 家具存储物品
+        for( int tx = 0; tx < SEEX; ++tx ) {
+            for( int ty = 0; ty < SEEY; ++ty ) {
+                const point tile( tx, ty );
+                const tripoint_abs_ms abs_ms( tl.x + tx, tl.y + ty, tl.z );
+                const furn_id fid = sm.get_furn( tile );
+                const std::string base = fid
+                                         ? string_format( _( "in furniture: %s" ), fid->name() )
+                                         : _( "on ground" );
+                const cata::colony<item> &stack = sm.get_items( tile );
+                for( item &it : stack ) {
+                    item_search_visit( it, base, abs_ms, match, hits );
+                }
+            }
+        }
+        // 载具货舱物品
+        for( std::unique_ptr<vehicle> &veh : sm.vehicles ) {
+            if( !veh ) {
+                continue;
+            }
+            const std::string vbase = string_format( _( "in vehicle: %s" ), veh->name );
+            for( const vpart_reference &vp : veh->get_all_parts_with_fakes() ) {
+                vehicle_stack vitems = veh->get_items( vp.part_index() );
+                if( vitems.empty() ) {
+                    continue;
+                }
+                const tripoint gp = veh->global_part_pos3( vp.part_index() );
+                const tripoint_abs_ms vabs( gp.x, gp.y, gp.z );
+                for( item &it : vitems ) {
+                    item_search_visit( it, vbase, vabs, match, hits );
+                }
+            }
+        }
+    } );
+    if( !stats ) {
+        return;
+    }
+
+    // 写出历史缓存（与既有搜索一致，最多 10 条，最新在前）
     std::vector<item_search_record> history = item_search_load_history();
     int next_id = 0;
     for( const item_search_record &r : history ) {
@@ -3172,44 +3249,127 @@ static void debug_scan_entire_save_core( const std::function<bool( const item & 
         return;
     }
 
-    // 7. 呈现结果
+    // 呈现结果
     item_search_show_results(
         string_format( _( "Full-save scan: %s" ), label ),
         string_format( _( "Scanned %lld submaps (%d quads) across the entire save, found %d match(es) for \"%s\". Saved to history (max 10)." ),
-                       submaps_scanned, static_cast<int>( total ),
+                       stats->submaps, stats->quads,
                        static_cast<int>( hits.size() ), label ),
         hits );
 }
 
-// 现有 f：通配符全存档扫描（先让玩家输入模式）
-static void debug_scan_entire_save()
+// 全存档扫描载具部件：逐 submap 遍历 sm.vehicles 的部件名/id 子串匹配
+// （英文 id 不区分大小写），命中即记录部件名、id、所属载具与坐标。
+// 与内存版 debug_search_vehicles_by_part 的匹配口径完全一致，只是扫描范围不同。
+// 不写入历史缓存（与内存版一致：历史"实时重扫 r"是物品通配符重扫，语义不匹配）。
+static void debug_scan_entire_save_vehicle_parts( const std::string &input )
 {
-    std::string pattern = "*";
-    string_input_popup pattern_popup;
-    pattern_popup
-        .title( _( "Scan ENTIRE save by wildcard (e.g. *rifle*, *ammo*). * matches anything." ) )
-        .width( 60 )
-        .edit( pattern );
-    if( pattern_popup.canceled() ) {
+    const std::string needle = ascii_lower( input );
+    std::vector<item_search_hit> hits;
+    auto stats = full_save_scan_submaps(
+                     string_format( _( "Scanning save: vehicle parts matching \"%s\"" ), input ), &hits,
+    [&]( submap &sm, const tripoint & ) {
+        for( std::unique_ptr<vehicle> &veh : sm.vehicles ) {
+            if( !veh ) {
+                continue;
+            }
+            for( const vpart_reference &vp : veh->get_all_parts_with_fakes() ) {
+                const vpart_info &vpi = vp.info();
+                const std::string pname = vpi.name();
+                const std::string pid = vpi.get_id().str();
+                // 中文部件名或英文 id 任一命中即可
+                if( ascii_lower( pname ).find( needle ) == std::string::npos &&
+                    ascii_lower( pid ).find( needle ) == std::string::npos ) {
+                    continue;
+                }
+                item_search_hit hit;
+                hit.name = pname;
+                hit.type_id = pid;
+                const tripoint gp = veh->global_part_pos3( vp.part_index() );
+                hit.pos = tripoint_abs_ms( gp.x, gp.y, gp.z );
+                hit.location = string_format( _( "in vehicle: %s" ), veh->name );
+                hits.push_back( hit );
+            }
+        }
+    } );
+    if( !stats ) {
         return;
     }
-    if( pattern.empty() ) {
-        popup( _( "Empty pattern, abort." ) );
-        return;
-    }
-    debug_scan_entire_save_core( make_wildcard_matcher( pattern ), pattern );
+
+    // 呈现本次结果
+    item_search_show_results(
+        _( "Vehicle component search results (entire save)" ),
+        string_format( _( "Scanned %lld submaps (%d quads) across the entire save, found %d matching vehicle part(s) for \"%s\"." ),
+                       stats->submaps, stats->quads, static_cast<int>( hits.size() ), input ),
+        hits );
 }
 
-// 新增 g：搜索已载入内存地图里的「新鲜食物（未腐败）」。仅扫现实泡内的
-// 地面 / 家具存储 / 载具货舱，复用 item_search_scan + make_food_matcher()，
-// 与最早的 s（通配符搜内存）同源、轻量、不扫整存档。无需输入模式。
+// 全存档扫描家具：逐 submap 遍历所有 tile 的 furn_id，对家具中文名与英文 id
+// 做子串匹配（英文不区分大小写）。与内存版 debug_search_furniture 的匹配口径一致，
+// 只是扫描范围不同。不写入历史缓存（与内存版一致）。
+static void debug_scan_entire_save_furniture( const std::string &input )
+{
+    const std::string needle = ascii_lower( input );
+    std::vector<item_search_hit> hits;
+    auto stats = full_save_scan_submaps(
+                     string_format( _( "Scanning save: furniture matching \"%s\"" ), input ), &hits,
+    [&]( submap &sm, const tripoint &tl ) {
+        for( int tx = 0; tx < SEEX; ++tx ) {
+            for( int ty = 0; ty < SEEY; ++ty ) {
+                const point tile( tx, ty );
+                const furn_id fid = sm.get_furn( tile );
+                if( !fid ) {
+                    continue;
+                }
+                const std::string fname = fid->name();
+                const std::string fidstr = fid->id.str();
+                // 中文名或英文 id 任一命中即可
+                if( ascii_lower( fname ).find( needle ) == std::string::npos &&
+                    ascii_lower( fidstr ).find( needle ) == std::string::npos ) {
+                    continue;
+                }
+                item_search_hit hit;
+                hit.name = fname;
+                hit.type_id = fidstr;
+                hit.pos = tripoint_abs_ms( tl.x + tx, tl.y + ty, tl.z );
+                hit.location = _( "furniture" );
+                hits.push_back( hit );
+            }
+        }
+    } );
+    if( !stats ) {
+        return;
+    }
+
+    // 呈现本次结果
+    item_search_show_results(
+        _( "Furniture search results (entire save)" ),
+        string_format( _( "Scanned %lld submaps (%d quads) across the entire save, found %d matching furniture for \"%s\"." ),
+                       stats->submaps, stats->quads, static_cast<int>( hits.size() ), input ),
+        hits );
+}
+
+// g：搜索「新鲜食物（未腐败）」。先让玩家选搜索范围：仅内存（已载入地图，
+// 复用 item_search_scan + make_food_matcher()，轻量）或全量存档（逐 submap 扫落盘数据，
+// 走 debug_scan_entire_save_core）。无需输入模式。
 static void debug_search_save_food()
 {
-    // 1. 扫描已载入地图（地面 / 家具存储 / 载具货舱），命中判定为"可食用且未腐败"
+    // 1. 选择搜索范围：仅内存（已载入地图，快）或全量存档（慢，带进度条）
+    std::optional<item_search_scope> scope = item_search_pick_scope();
+    if( !scope ) {
+        return;
+    }
+    if( *scope == item_search_scope::entire_save ) {
+        // 全存档路径自己写历史缓存并呈现结果
+        debug_scan_entire_save_core( make_food_matcher(), _( "fresh food (non-spoiled)" ) );
+        return;
+    }
+
+    // 2. 扫描已载入地图（地面 / 家具存储 / 载具货舱），命中判定为"可食用且未腐败"
     std::vector<item_search_hit> hits;
     item_search_scan( make_food_matcher(), hits );
 
-    // 2. 写入历史缓存（最多 10 条，最新在前）
+    // 3. 写入历史缓存（最多 10 条，最新在前）
     std::vector<item_search_record> history = item_search_load_history();
     int next_id = 0;
     for( const item_search_record &r : history ) {
@@ -3229,7 +3389,7 @@ static void debug_search_save_food()
         return;
     }
 
-    // 3. 在游戏内呈现本次结果
+    // 4. 在游戏内呈现本次结果
     item_search_show_results(
         _( "Fresh food search results (loaded map)" ),
         string_format( _( "Found %d fresh, non-spoiled food item(s) in the loaded map. Saved to history (max 10)." ),
@@ -3237,10 +3397,11 @@ static void debug_search_save_food()
         hits );
 }
 
-// 按"功能 / 工具品质"搜索已载入内存地图里的物品。例如输入"金属锯切"或"精工金属锯切"
+// 按"功能 / 工具品质"搜索物品。例如输入"金属锯切"或"精工金属锯切"
 // 或英文 id（SAW_M / SAW_M_FINE）甚至部分串（"锯" 会同时匹配木材/金属/精工金属锯切），
 // 对所有品质名做子串匹配（英文 id 不区分大小写），然后把提供这些品质的物品列出来。
-// 仅扫现实泡内的地面 / 家具存储 / 载具货舱，与 s/g 同源、轻量、不扫整存档。
+// 先让玩家选搜索范围：仅内存（已载入地图的地面 / 家具存储 / 载具货舱，轻量）
+// 或全量存档（逐 submap 扫落盘数据，走 debug_scan_entire_save_core）。
 static void debug_search_save_by_quality()
 {
     // 1. 让玩家输入功能/品质子串
@@ -3287,11 +3448,22 @@ static void debug_search_save_by_quality()
         return false;
     };
 
-    // 4. 扫描已载入地图（地面 / 家具存储 / 载具货舱）
+    // 4. 选择搜索范围：仅内存（已载入地图，快）或全量存档（慢，带进度条）
+    std::optional<item_search_scope> scope = item_search_pick_scope();
+    if( !scope ) {
+        return;
+    }
+    if( *scope == item_search_scope::entire_save ) {
+        // 全存档路径自己写历史缓存并呈现结果
+        debug_scan_entire_save_core( match, string_format( _( "function: %s" ), input ) );
+        return;
+    }
+
+    // 5. 扫描已载入地图（地面 / 家具存储 / 载具货舱）
     std::vector<item_search_hit> hits;
     item_search_scan( match, hits );
 
-    // 5. 写入历史缓存（最多 10 条，最新在前）
+    // 6. 写入历史缓存（最多 10 条，最新在前）
     std::vector<item_search_record> history = item_search_load_history();
     int next_id = 0;
     for( const item_search_record &r : history ) {
@@ -3311,7 +3483,7 @@ static void debug_search_save_by_quality()
         return;
     }
 
-    // 6. 在游戏内呈现本次结果
+    // 7. 在游戏内呈现本次结果
     std::string matched_label;
     for( size_t i = 0; i < matched_labels.size(); ++i ) {
         if( i > 0 ) {
@@ -3328,11 +3500,11 @@ static void debug_search_save_by_quality()
         hits );
 }
 
-// 按"载具组件（车辆部件）"名搜索已载入内存地图里的载具。
+// 按"载具组件（车辆部件）"名搜索载具。
 // 输入组件名子串（如 车轮 / wheel / 引擎），对所有载具部件的中文部件名与英文 id 做子串匹配
 // （英文 id 不区分大小写），命中即列出该部件所属载具名、部件名与坐标。
-// 仅扫现实泡内的载具，轻量、不扫整存档。
-// 注意：不写入历史缓存——历史"实时重扫 r"是物品通配符重扫，语义与载具部件不匹配。
+// 先让玩家选搜索范围：仅内存（已载入地图，轻量）或全量存档（逐 submap 扫落盘数据）。
+// 注意：两种范围都不写入历史缓存——历史"实时重扫 r"是物品通配符重扫，语义与载具部件不匹配。
 static void debug_search_vehicles_by_part()
 {
     // 1. 让玩家输入组件名子串
@@ -3350,9 +3522,19 @@ static void debug_search_vehicles_by_part()
         return;
     }
 
+    // 2. 选择搜索范围：仅内存（已载入地图，快）或全量存档（慢，带进度条）
+    std::optional<item_search_scope> scope = item_search_pick_scope();
+    if( !scope ) {
+        return;
+    }
+    if( *scope == item_search_scope::entire_save ) {
+        debug_scan_entire_save_vehicle_parts( input );
+        return;
+    }
+
     const std::string needle = ascii_lower( input );
 
-    // 2. 扫描已载入地图里的所有载具及其部件
+    // 3. 扫描已载入地图里的所有载具及其部件
     map &here = get_map();
     std::vector<item_search_hit> hits;
     for( wrapped_vehicle &wv : here.get_vehicles() ) {
@@ -3375,7 +3557,7 @@ static void debug_search_vehicles_by_part()
         }
     }
 
-    // 3. 呈现本次结果
+    // 4. 呈现本次结果
     item_search_show_results(
         _( "Vehicle component search results (loaded map)" ),
         string_format( _( "Found %d matching vehicle part(s) for \"%s\" in the loaded map." ),
@@ -3384,8 +3566,9 @@ static void debug_search_vehicles_by_part()
 }
 
 // e：按家具名搜索（如 电冰箱 / 电脑 / 划船机 / fridge / computer）。
-// 仅扫已载入内存的地图（地面家具，所有已载入 z 层），对家具中文名与英文 id
-// 做子串匹配（英文不区分大小写），轻量、不扫整存档。
+// 先让玩家选搜索范围：仅内存（已载入地图的地面家具，所有已载入 z 层，轻量）
+// 或全量存档（逐 submap 扫落盘数据）。两种范围都对家具中文名与英文 id
+// 做子串匹配（英文不区分大小写）。
 static void debug_search_furniture()
 {
     // 1. 让玩家输入家具名子串
@@ -3403,9 +3586,19 @@ static void debug_search_furniture()
         return;
     }
 
+    // 2. 选择搜索范围：仅内存（已载入地图，快）或全量存档（慢，带进度条）
+    std::optional<item_search_scope> scope = item_search_pick_scope();
+    if( !scope ) {
+        return;
+    }
+    if( *scope == item_search_scope::entire_save ) {
+        debug_scan_entire_save_furniture( input );
+        return;
+    }
+
     const std::string needle = ascii_lower( input );
 
-    // 2. 扫描已载入地图的全部 z 层上的家具（未实际载入的 z 层返回空，扫描无害）
+    // 3. 扫描已载入地图的全部 z 层上的家具（未实际载入的 z 层返回空，扫描无害）
     map &here = get_map();
     std::vector<item_search_hit> hits;
     const int zmin = -OVERMAP_DEPTH;
@@ -3432,7 +3625,7 @@ static void debug_search_furniture()
         }
     }
 
-    // 3. 呈现本次结果
+    // 4. 呈现本次结果
     item_search_show_results(
         _( "Furniture search results (loaded map)" ),
         string_format( _( "Found %d matching furniture for \"%s\" in the loaded map." ),

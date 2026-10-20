@@ -46,6 +46,8 @@
 #include "text_snippets.h"
 #include "translations.h"
 #include "ui_manager.h"
+#include "vehicle.h"
+#include "vehicle_blueprint.h"
 #include "wcwidth.h"
 #include "webdav_backup.h"
 #include "worldfactory.h"
@@ -490,6 +492,7 @@ void main_menu::init_strings()
     vWorldSubItems.emplace_back( pgettext( "Main Menu|World", "删除世界" ) );
     vWorldSubItems.emplace_back( pgettext( "Main Menu|World", "重置世界" ) );
     vWorldSubItems.emplace_back( pgettext( "Main Menu|World", "WebDAV 云存档" ) );
+    vWorldSubItems.emplace_back( pgettext( "Main Menu|World", "导入载具蓝图" ) );
 
     vWorldHotkeys.clear();
     for( const std::string &item : vWorldSubItems ) {
@@ -1101,6 +1104,98 @@ bool main_menu::load_character_tab( const std::string &worldname )
     return main_menu::load_game( worldname, savegames[opt_val] );
 }
 
+/**
+ * 先在角色脚下试，放不下再一圈圈往外找空地。
+ * add_vehicle_to_map() 失败时不会留下任何改动，所以可以放心地反复尝试。
+ */
+static vehicle *spawn_blueprint_near( const std::string &name, const tripoint &origin )
+{
+    if( vehicle *made = vehicle_blueprint::spawn_at( name, origin ) ) {
+        return made;
+    }
+    constexpr int max_radius = 3;
+    for( int r = 1; r <= max_radius; ++r ) {
+        std::vector<tripoint> ring;
+        for( int dx = -r; dx <= r; ++dx ) {
+            for( int dy = -r; dy <= r; ++dy ) {
+                // 只取这一圈的外环，不用 std::abs 免得各平台重载不一致
+                if( dx == r || dx == -r || dy == r || dy == -r ) {
+                    ring.emplace_back( origin + point( dx, dy ) );
+                }
+            }
+        }
+        std::sort( ring.begin(), ring.end(), [&origin]( const tripoint & a, const tripoint & b ) {
+            const int da = ( a.x - origin.x ) * ( a.x - origin.x ) + ( a.y - origin.y ) * ( a.y - origin.y );
+            const int db = ( b.x - origin.x ) * ( b.x - origin.x ) + ( b.y - origin.y ) * ( b.y - origin.y );
+            return da < db;
+        } );
+        for( const tripoint &p : ring ) {
+            if( vehicle *made = vehicle_blueprint::spawn_at( name, p ) ) {
+                return made;
+            }
+        }
+    }
+    return nullptr;
+}
+
+void main_menu::import_vehicle_tab( const std::string &worldname )
+{
+    // 蓝图目录为空就没必要读档了，先在这里挡掉
+    if( vehicle_blueprint::list().empty() ) {
+        on_error();
+        popup( _( "No vehicle blueprints found in:\n%s" ), vehicle_blueprint::dir() );
+        return;
+    }
+
+    // 先把存档读进来：蓝图要在真正加载好的地图里落位，之后再写回磁盘。
+    if( !load_character_tab( worldname ) ) {
+        return;
+    }
+
+    avatar &pc = get_avatar();
+    const std::string char_name = pc.name;
+    const std::vector<std::string> files = vehicle_blueprint::list();
+    std::string name;
+    vehicle *made = nullptr;
+    bool saved = false;
+
+    uilist sel( string_format( _( "Import which vehicle blueprint next to %s?" ), char_name ), {} );
+    sel.border_color = c_white;
+    sel.text = _( "A brand new vehicle is created next to the character and the save is written "
+                  "right away.  Make sure they are standing on open ground." );
+    for( const std::string &f : files ) {
+        sel.addentry( -1, true, MENU_AUTOASSIGN, f );
+    }
+    sel.query();
+    if( sel.ret >= 0 && sel.ret < static_cast<int>( files.size() ) ) {
+        name = files[sel.ret];
+        made = spawn_blueprint_near( name, pc.pos() );
+        if( made != nullptr ) {
+            saved = g->save();
+        }
+    }
+
+    // 和「角色转为模板」一样：把临时载入的世界状态清干净再回主菜单
+    pc = avatar();
+    MAPBUFFER.clear();
+    overmap_buffer.clear();
+
+    if( name.empty() ) {
+        return;
+    }
+    if( made == nullptr ) {
+        on_error();
+        popup( _( "Could not place \"%s\" near %s.  The blueprint may be corrupt, or there is no "
+                  "room there - the character may be standing in or right next to a vehicle." ),
+               name, char_name );
+    } else if( !saved ) {
+        on_error();
+        popup( _( "The vehicle was created, but the save failed." ) );
+    } else {
+        popup( _( "Imported \"%s\" next to %s." ), name, char_name );
+    }
+}
+
 void main_menu::world_tab( const std::string &worldname )
 {
     // Create world
@@ -1112,7 +1207,7 @@ void main_menu::world_tab( const std::string &worldname )
     uilist mmenu( string_format( _( "Manage world \"%s\"" ), worldname ), {} );
     mmenu.border_color = c_white;
     int opt_val = 0;
-    std::array<char, 7> hotkeys = { 'm', 'e', 's', 't', 'd', 'r', 'w'};
+    std::array<char, 8> hotkeys = { 'm', 'e', 's', 't', 'd', 'r', 'w', 'i'};
     for( const std::string &it : vWorldSubItems ) {
         mmenu.entries.emplace_back( opt_val, true, hotkeys[opt_val],
                                     remove_color_tags( shortcut_text( c_white, it ) ) );
@@ -1194,6 +1289,9 @@ void main_menu::world_tab( const std::string &worldname )
             break;
         case 6: // WebDAV 云存档：备份 / 恢复
             webdav::show_menu( false );
+            break;
+        case 7: // 载具蓝图导入：把车生成到某个角色身边
+            import_vehicle_tab( worldname );
             break;
         default:
             break;

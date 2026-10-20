@@ -169,10 +169,10 @@ class veh_interact
         void do_change_shape();
         void do_assign_crew();
         void do_relabel();
-        // 载具蓝图：把整辆车导出成 JSON / 从 JSON 原地恢复
+        // 载具蓝图：把整辆车导出成 JSON 蓝图文件。
+        // 导入（从蓝图生成新车）在主菜单的「世界」页里做——载具界面里玩家必然站在车上/车边，
+        // 脚下不可能有空地放新车。
         void do_export_json();
-        // 从 JSON 蓝图原地恢复；成功恢复后返回 true，表示界面需要关闭
-        bool do_import_json();
         /*@}*/
 
         /**

@@ -58,6 +58,7 @@ class computer;
 class field;
 class field_entry;
 class item_location;
+class JsonObject;
 class mapgendata;
 class monster;
 class optional_vpart_position;
@@ -1757,6 +1758,13 @@ class map
         vehicle *add_vehicle( const vproto_id &type, const point &p, const units::angle &dir,
                               int init_veh_fuel = -1, int init_veh_status = -1,
                               bool merge_wrecks = true, const std::string &faction = "", bool may_spawn_locked = true );
+        /**
+         * 用一段存档格式的载具 JSON（vehicle::serialize 的产物）在 p 处生成一辆**全新的**载具。
+         * 与 add_vehicle 走完全相同的落位 / 碰撞检查 / 缓存注册流程，但不去动任何已有的载具。
+         * p 为地图内局部坐标；朝向沿用蓝图里记录的方向。
+         * 返回 nullptr 表示：JSON 解析失败、蓝图没有部件，或者落点被占用（有水 / 有别的车）。
+         */
+        vehicle *add_vehicle_from_json( const JsonObject &vdata, const tripoint &p );
         // Light/transparency
         float light_transparency( const tripoint &p ) const;
         // Assumes 0,0 is light map center

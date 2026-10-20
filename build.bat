@@ -3,9 +3,11 @@ chcp 936 >nul 2>&1
 setlocal EnableDelayedExpansion
 title CDDA-Breeze APK Build
 
-REM ========================= ÅäÖÃÇø =========================
+REM ========================= ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ =========================
 set "SDK_DIR=D:\soft\android_sdk"
 set "NDK_VER=25.2.9519653"
+set "JDK_DIR="
+set "JMAJOR="
 set "JOBS=16"
 set "ABI_ARM32=false"
 set "ABI_ARM64=true"
@@ -22,6 +24,7 @@ if /i "%~1"=="release"   ( set "BUILD_TYPE=Release" & shift & goto :parse )
 if /i "%~1"=="debug"     ( set "BUILD_TYPE=Debug"   & shift & goto :parse )
 if /i "%~1"=="--sdk"     ( set "SDK_DIR=%~2"           & shift & shift & goto :parse )
 if /i "%~1"=="--ndk"     ( set "NDK_VER=%~2"           & shift & shift & goto :parse )
+if /i "%~1"=="--jdk"     ( set "JDK_DIR=%~2"           & shift & shift & goto :parse )
 if /i "%~1"=="--jobs"    ( set "JOBS=%~2"              & shift & shift & goto :parse )
 if /i "%~1"=="--version" ( set "VERSION_OVERRIDE=%~2"  & shift & shift & goto :parse )
 if /i "%~1"=="--clean"   ( set "DO_CLEAN=1"            & shift & goto :parse )
@@ -29,24 +32,24 @@ if /i "%~1"=="--abi32"   ( set "ABI_ARM32=true"        & shift & goto :parse )
 if /i "%~1"=="--no-pause" ( set "PAUSE_AT_END=0"       & shift & goto :parse )
 if /i "%~1"=="--help"    ( goto :usage )
 if /i "%~1"=="-h"        ( goto :usage )
-echo [´íÎó] Î´Öª²ÎÊý: %~1
+echo [ï¿½ï¿½ï¿½ï¿½] Î´Öªï¿½ï¿½ï¿½ï¿½: %~1
 goto :usage
 
 :usage
 echo.
-echo ÓÃ·¨: build.bat [release ^| debug] [Ñ¡Ïî]
+echo ï¿½Ã·ï¿½: build.bat [release ^| debug] [Ñ¡ï¿½ï¿½]
 echo.
-echo   release           ¹¹½¨ release °ü£¨Ä¬ÈÏ£¬ÓÃ²Ö¿â×Ô´øµÄ a.keystore Ç©Ãû£©
-echo   debug             ¹¹½¨ debug °ü
-echo   --sdk  ^<Â·¾¶^>    Ö¸¶¨ Android SDK Ä¿Â¼£¬Ä¬ÈÏ D:\soft\android_sdk
-echo   --ndk  ^<°æ±¾^>    Ö¸¶¨ NDK °æ±¾£¬Ä¬ÈÏ 25.2.9519653
-echo   --jobs ^<N^>       Ô­Éú±àÒë²¢ÐÐÈÎÎñÊý£¬Ä¬ÈÏ 16
-echo   --version ^<´®^>   ¸²¸Ç°æ±¾ºÅ£¬ÀýÈç CDDA-Breeze-12.7
-echo   --abi32           Í¬Ê±¹¹½¨ armeabi-v7a£¨»á¶àÅÜÒ»ÂÖÔ­Éú±àÒë£©
-echo   --clean           ¹¹½¨Ç°ÏÈÖ´ÐÐ gradlew clean
-echo   --no-pause        ½áÊøºó²»ÔÝÍ£
+echo   release           ï¿½ï¿½ï¿½ï¿½ release ï¿½ï¿½ï¿½ï¿½Ä¬ï¿½Ï£ï¿½ï¿½Ã²Ö¿ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ a.keystore Ç©ï¿½ï¿½ï¿½ï¿½
+echo   debug             ï¿½ï¿½ï¿½ï¿½ debug ï¿½ï¿½
+echo   --sdk  ^<Â·ï¿½ï¿½^>    Ö¸ï¿½ï¿½ Android SDK Ä¿Â¼ï¿½ï¿½Ä¬ï¿½ï¿½ D:\soft\android_sdk
+echo   --ndk  ^<ï¿½æ±¾^>    Ö¸ï¿½ï¿½ NDK ï¿½æ±¾ï¿½ï¿½Ä¬ï¿½ï¿½ 25.2.9519653
+echo   --jobs ^<N^>       Ô­ï¿½ï¿½ï¿½ï¿½ï¿½ë²¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½ 16
+echo   --version ^<ï¿½ï¿½^>   ï¿½ï¿½ï¿½Ç°æ±¾ï¿½Å£ï¿½ï¿½ï¿½ï¿½ï¿½ CDDA-Breeze-12.7
+echo   --abi32           Í¬Ê±ï¿½ï¿½ï¿½ï¿½ armeabi-v7aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ô­ï¿½ï¿½ï¿½ï¿½ï¿½ë£©
+echo   --clean           ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½Ö´ï¿½ï¿½ gradlew clean
+echo   --no-pause        ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£
 echo.
-echo Ê¾Àý:
+echo Ê¾ï¿½ï¿½:
 echo   build.bat
 echo   build.bat debug --jobs 20
 echo   build.bat --version CDDA-Breeze-12.7 --clean
@@ -59,50 +62,56 @@ set "ANDROID_DIR=%ROOT%android"
 
 echo.
 echo ============================================================
-echo   CDDA-Breeze Android APK ¹¹½¨
+echo   CDDA-Breeze Android APK ï¿½ï¿½ï¿½ï¿½
 echo ============================================================
-echo   ²Ö¿â¸ùÄ¿Â¼ : %ROOT%
+echo   ï¿½Ö¿ï¿½ï¿½Ä¿Â¼ : %ROOT%
 echo   SDK        : %SDK_DIR%
-echo   ¹¹½¨ÀàÐÍ   : %BUILD_TYPE%
-echo   ²¢ÐÐÈÎÎñÊý : %JOBS%
+echo   ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½   : %BUILD_TYPE%
+echo   ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : %JOBS%
 echo   ABI        : arm64-v8a=%ABI_ARM64%  armeabi-v7a=%ABI_ARM32%
 echo.
 
-REM ---------- ¼ì²é¹¤³Ì½á¹¹ ----------
+REM ---------- ï¿½ï¿½é¹¤ï¿½Ì½á¹¹ ----------
 if not exist "%ANDROID_DIR%\gradlew.bat" (
-    echo [´íÎó] ÕÒ²»µ½ %ANDROID_DIR%\gradlew.bat
-    echo        Çë°Ñ build.bat ·ÅÔÚ²Ö¿â¸ùÄ¿Â¼ÔÙÔËÐÐ¡£
+    echo [ï¿½ï¿½ï¿½ï¿½] ï¿½Ò²ï¿½ï¿½ï¿½ %ANDROID_DIR%\gradlew.bat
+    echo        ï¿½ï¿½ï¿½ build.bat ï¿½ï¿½ï¿½Ú²Ö¿ï¿½ï¿½Ä¿Â¼ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½
     exit /b 1
 )
 
-REM ---------- ¼ì²é Java ----------
+REM ---------- ï¿½ï¿½ï¿½ Java ----------
 if defined JAVA_HOME (
     if not exist "%JAVA_HOME%\bin\java.exe" (
-        echo [´íÎó] JAVA_HOME Ö¸ÏòµÄÎ»ÖÃÃ»ÓÐ java.exe: %JAVA_HOME%
-        echo        ±¾¹¤³ÌÐèÒª JDK 11 »ò 17£¬ÍÆ¼ö°²×° JDK 17 ²¢ÉèÖÃ JAVA_HOME¡£
+        echo [ï¿½ï¿½ï¿½ï¿½] JAVA_HOME Ö¸ï¿½ï¿½ï¿½Î»ï¿½ï¿½Ã»ï¿½ï¿½ java.exe: %JAVA_HOME%
+        echo        ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òª JDK 11 ï¿½ï¿½ 17ï¿½ï¿½ï¿½Æ¼ï¿½ï¿½ï¿½×° JDK 17 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ JAVA_HOMEï¿½ï¿½
         exit /b 1
     )
     echo   Java       : %JAVA_HOME%
 ) else (
     where java >nul 2>&1
     if errorlevel 1 (
-        echo [´íÎó] Î´ÕÒµ½ java£¬ÇÒÎ´ÉèÖÃ JAVA_HOME¡£
-        echo        ±¾¹¤³ÌÐèÒª JDK 11 »ò 17£¬ÍÆ¼ö°²×° JDK 17 ²¢ÉèÖÃ JAVA_HOME¡£
+        echo [ï¿½ï¿½ï¿½ï¿½] Î´ï¿½Òµï¿½ javaï¿½ï¿½ï¿½ï¿½Î´ï¿½ï¿½ï¿½ï¿½ JAVA_HOMEï¿½ï¿½
+        echo        ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òª JDK 11 ï¿½ï¿½ 17ï¿½ï¿½ï¿½Æ¼ï¿½ï¿½ï¿½×° JDK 17 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ JAVA_HOMEï¿½ï¿½
         exit /b 1
     )
-    echo   Java       : Ê¹ÓÃ PATH ÖÐµÄ java
+    echo   Java       : Ê¹ï¿½ï¿½ PATH ï¿½Ðµï¿½ java
 )
 
-REM ---------- ¼ì²é SDK ----------
+REM ---------- ï¿½ï¿½ï¿½ SDK ----------
+REM ---------- Resolve JDK: R8/D8 3.3.70 bundled with AGP 7.3.0 NPEs on JDK 21+ ----------
+call :resolve_jdk
+if errorlevel 1 exit /b 1
+set "JAVA_HOME=%JDK_DIR%"
+echo   Java(used) : %JDK_DIR%  ^(JDK %JMAJOR%^)
+
 if not exist "%SDK_DIR%\platform-tools" (
-    echo [´íÎó] SDK Â·¾¶ÎÞÐ§: %SDK_DIR%
-    echo        ÇëÐÞ¸Ä½Å±¾¶¥²¿µÄ SDK_DIR£¬»òÓÃ --sdk Ö¸¶¨ÕýÈ·Â·¾¶¡£
+    echo [ï¿½ï¿½ï¿½ï¿½] SDK Â·ï¿½ï¿½ï¿½ï¿½Ð§: %SDK_DIR%
+    echo        ï¿½ï¿½ï¿½Þ¸Ä½Å±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ SDK_DIRï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ --sdk Ö¸ï¿½ï¿½ï¿½ï¿½È·Â·ï¿½ï¿½ï¿½ï¿½
     exit /b 1
 )
 
-REM ---------- ¼ì²é NDK ----------
+REM ---------- ï¿½ï¿½ï¿½ NDK ----------
 if not exist "%SDK_DIR%\ndk\%NDK_VER%\ndk-build.cmd" (
-    echo [¾¯¸æ] Î´ÕÒµ½ NDK %NDK_VER%£¬³¢ÊÔ´ÓÒÑ°²×°°æ±¾ÖÐ×Ô¶¯Ñ¡Ôñ...
+    echo [ï¿½ï¿½ï¿½ï¿½] Î´ï¿½Òµï¿½ NDK %NDK_VER%ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½Ñ°ï¿½×°ï¿½æ±¾ï¿½ï¿½ï¿½Ô¶ï¿½Ñ¡ï¿½ï¿½...
     set "NDK_VER="
     for /f "delims=" %%d in ('dir /b /o-n "%SDK_DIR%\ndk" 2^>nul') do (
         if not defined NDK_VER (
@@ -110,16 +119,16 @@ if not exist "%SDK_DIR%\ndk\%NDK_VER%\ndk-build.cmd" (
         )
     )
     if not defined NDK_VER (
-        echo [´íÎó] SDK ÖÐÃ»ÓÐ¿ÉÓÃµÄ NDK¡£
-        echo        Çë°²×°ÏîÄ¿¹Ì¶¨°æ±¾: sdkmanager "ndk;25.2.9519653"
-        echo        »òÏÂÔØ android-ndk-r25c-windows.zip ½âÑ¹µ½ %SDK_DIR%\ndk\25.2.9519653
+        echo [ï¿½ï¿½ï¿½ï¿½] SDK ï¿½ï¿½Ã»ï¿½Ð¿ï¿½ï¿½Ãµï¿½ NDKï¿½ï¿½
+        echo        ï¿½ë°²×°ï¿½ï¿½Ä¿ï¿½Ì¶ï¿½ï¿½æ±¾: sdkmanager "ndk;25.2.9519653"
+        echo        ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ android-ndk-r25c-windows.zip ï¿½ï¿½Ñ¹ï¿½ï¿½ %SDK_DIR%\ndk\25.2.9519653
         exit /b 1
     )
-    echo         ÒÑ¸ÄÓÃ NDK !NDK_VER!
+    echo         ï¿½Ñ¸ï¿½ï¿½ï¿½ NDK !NDK_VER!
 )
 echo   NDK        : %NDK_VER%
 
-REM ---------- Éú³É±¾µØÅäÖÃ ----------
+REM ---------- ï¿½ï¿½ï¿½É±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ----------
 set "NEED_KS=0"
 if /i "%BUILD_TYPE%"=="Release" (
     if not exist "%ANDROID_DIR%\keystore.properties" set "NEED_KS=1"
@@ -127,28 +136,28 @@ if /i "%BUILD_TYPE%"=="Release" (
 call :write_local_props
 if "%NEED_KS%"=="1" call :write_keystore_props
 if "%NEED_KS%"=="1" (
-    echo   Ç©ÃûÅäÖÃ   : ÒÑÉú³É keystore.properties£¬Ê¹ÓÃ²Ö¿â×Ô´øµÄ a.keystore
+    echo   Ç©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½   : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ keystore.propertiesï¿½ï¿½Ê¹ï¿½Ã²Ö¿ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ a.keystore
 ) else (
-    if /i "%BUILD_TYPE%"=="Release" echo   Ç©ÃûÅäÖÃ   : ÑØÓÃÒÑÓÐ keystore.properties
+    if /i "%BUILD_TYPE%"=="Release" echo   Ç©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½   : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ keystore.properties
 )
 
-REM ---------- ¿ÉÑ¡ÇåÀí ----------
+REM ---------- ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ ----------
 if "%DO_CLEAN%"=="1" (
     echo.
-    echo Ö´ÐÐÇåÀí...
+    echo Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½...
     pushd "%ANDROID_DIR%"
     call gradlew.bat clean --console=plain
     popd
 )
 
-REM ---------- ¹¹½¨ ----------
+REM ---------- ï¿½ï¿½ï¿½ï¿½ ----------
 set "GRADLE_OPTS=-Dorg.gradle.internal.http.connectionTimeout=120000 -Dorg.gradle.internal.http.socketTimeout=120000 %GRADLE_OPTS%"
 set "GRADLE_ARGS=assemble%BUILD_TYPE% --console=plain -Poverride_ndkVersion=%NDK_VER% -Pabi_arm_32=%ABI_ARM32% -Pabi_arm_64=%ABI_ARM64%"
 if not "%VERSION_OVERRIDE%"=="" set "GRADLE_ARGS=%GRADLE_ARGS% -Poverride_version=%VERSION_OVERRIDE%"
 
 echo.
-echo ¿ªÊ¼¹¹½¨£¬Ê×´ÎÐèÒª±àÒë 385 ¸ö C++ ÎÄ¼þ£¬ÇëÄÍÐÄµÈ´ý...
-echo ÃüÁî: gradlew.bat %GRADLE_ARGS%
+echo ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ 385 ï¿½ï¿½ C++ ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÄµÈ´ï¿½...
+echo ï¿½ï¿½ï¿½ï¿½: gradlew.bat %GRADLE_ARGS%
 echo.
 pushd "%ANDROID_DIR%"
 call gradlew.bat %GRADLE_ARGS%
@@ -157,13 +166,13 @@ popd
 
 if not "%RC%"=="0" (
     echo.
-    echo [Ê§°Ü] Gradle ÍË³öÂë %RC%
-    echo        ÅÅ²éÊ±¿É¼Ó --stacktrace »ò --info ²é¿´ÏêÏ¸ÈÕÖ¾¡£
+    echo [Ê§ï¿½ï¿½] Gradle ï¿½Ë³ï¿½ï¿½ï¿½ %RC%
+    echo        ï¿½Å²ï¿½Ê±ï¿½É¼ï¿½ --stacktrace ï¿½ï¿½ --info ï¿½é¿´ï¿½ï¿½Ï¸ï¿½ï¿½Ö¾ï¿½ï¿½
     if "%PAUSE_AT_END%"=="1" pause
     exit /b %RC%
 )
 
-REM ---------- ÁÐ³ö²úÎï ----------
+REM ---------- ï¿½Ð³ï¿½ï¿½ï¿½ï¿½ï¿½ ----------
 if /i "%BUILD_TYPE%"=="Release" ( set "TYPE_DIR=release" ) else ( set "TYPE_DIR=debug" )
 set "OUT_DIR=%ANDROID_DIR%\app\build\outputs\apk\stable\%TYPE_DIR%"
 set "APK_COUNT=0"
@@ -171,37 +180,95 @@ set "APK="
 
 echo.
 echo ============================================================
-echo   ¹¹½¨³É¹¦
+echo   ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½
 echo ============================================================
 for /f "delims=" %%f in ('dir /b /s "%OUT_DIR%\*.apk" 2^>nul') do (
     set /a APK_COUNT+=1
     set "APK=%%f"
     echo.
     echo   [!APK_COUNT!] %%~nxf
-    echo       ´óÐ¡ : %%~zf ×Ö½Ú
-    echo       Â·¾¶ : %%f
+    echo       ï¿½ï¿½Ð¡ : %%~zf ï¿½Ö½ï¿½
+    echo       Â·ï¿½ï¿½ : %%f
 )
 echo.
-echo   Êä³öÄ¿Â¼ : %OUT_DIR%
+echo   ï¿½ï¿½ï¿½Ä¿Â¼ : %OUT_DIR%
 echo ============================================================
 
 if "%APK_COUNT%"=="0" (
     echo.
-    echo [Ê§°Ü] ¹¹½¨·µ»Ø³É¹¦£¬µ«Êä³öÄ¿Â¼ÏÂÃ»ÓÐÕÒµ½ APK¡£
+    echo [Ê§ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø³É¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿Â¼ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Òµï¿½ APKï¿½ï¿½
     if "%PAUSE_AT_END%"=="1" pause
     exit /b 1
 )
 
 echo.
-echo   °²×°µ½ÊÖ»ú: adb install -r "%APK%"
+echo   ï¿½ï¿½×°ï¿½ï¿½ï¿½Ö»ï¿½: adb install -r "%APK%"
 echo.
 if "%PAUSE_AT_END%"=="1" pause
 exit /b 0
 
-REM ========================= ×Ó¹ý³Ì =========================
+REM ========================= ï¿½Ó¹ï¿½ï¿½ï¿½ =========================
+REM ========================= Subroutines =========================
+
+REM Prints the JDK major version of %1 into JMAJOR
+:jdk_major
+set "JMAJOR="
+set "JVER="
+REM NOTE: do not pipe a quoted exe path inside for /f - cmd /c swallows the first
+REM pair of quotes and the command fails with "The filename ... is incorrect".
+"%~1\bin\java.exe" -version > "%TEMP%\cdda_jdkver.txt" 2>&1
+for /f "tokens=3" %%v in ('findstr /i "version" "%TEMP%\cdda_jdkver.txt"') do (
+    if not defined JVER set "JVER=%%~v"
+)
+if not defined JVER exit /b 0
+set "JM1="
+set "JM2="
+for /f "tokens=1,2 delims=." %%a in ("%JVER%") do ( set "JM1=%%a" & set "JM2=%%b" )
+if "%JM1%"=="1" ( set "JMAJOR=%JM2%" ) else ( set "JMAJOR=%JM1%" )
+exit /b 0
+
+REM Accepts %1 as a JDK home if it provides a usable java.exe in the 11..18 range
+:try_jdk
+if not "!JDK_DIR!"=="" exit /b 0
+if "%~1"=="" exit /b 0
+if not exist "%~1\bin\java.exe" exit /b 0
+call :jdk_major "%~1"
+if not defined JMAJOR exit /b 0
+if !JMAJOR! GEQ 21 exit /b 0
+if !JMAJOR! LSS 11 exit /b 0
+set "JDK_DIR=%~1"
+echo   JDK found  : %~1  ^(JDK %JMAJOR%^)
+exit /b 0
+
+REM Picks a JDK that AGP 7.3.0 / R8 3.3.70 can actually run on
+:resolve_jdk
+if not "!JDK_DIR!"=="" goto :jdk_validate
+if defined JAVA_HOME if exist "%JAVA_HOME%\bin\java.exe" set "JDK_DIR=%JAVA_HOME%"
+:jdk_validate
+if not "!JDK_DIR!"=="" (
+    if not exist "!JDK_DIR!\bin\java.exe" set "JDK_DIR="
+)
+if not "!JDK_DIR!"=="" (
+    call :jdk_major "!JDK_DIR!"
+    if defined JMAJOR if !JMAJOR! GEQ 21 (
+        echo   JDK reject : !JDK_DIR! ^(JDK !JMAJOR!^) - D8 dexing crashes on JDK 21+
+        set "JDK_DIR="
+    )
+)
+if not "!JDK_DIR!"=="" exit /b 0
+echo   Scanning for a compatible JDK ^(11 - 18^) ...
+for /d %%d in ("D:\soft\Java\*") do call :try_jdk "%%d"
+if not "!JDK_DIR!"=="" exit /b 0
+for /d %%d in ("C:\Program Files\Java\*") do call :try_jdk "%%d"
+if not "!JDK_DIR!"=="" exit /b 0
+echo [ERROR] No compatible JDK found.
+echo         AGP 7.3.0 needs JDK 11-18. JDK 21+ makes D8 throw NullPointerException
+echo         while dexing. Install JDK 17, or pass --jdk "<path>".
+exit /b 1
+
 :write_local_props
 set "SDK_PROP=%SDK_DIR:\=/%"
->  "%ANDROID_DIR%\local.properties" echo # ÓÉ build.bat ×Ô¶¯Éú³É£¬git ÒÑºöÂÔ´ËÎÄ¼þ£»¿ÉÊÖ¹¤ÐÞ¸Ä»òÉ¾³ýºóÖØÐÂÉú³É
+>  "%ANDROID_DIR%\local.properties" echo # ï¿½ï¿½ build.bat ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½É£ï¿½git ï¿½Ñºï¿½ï¿½Ô´ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½Þ¸Ä»ï¿½É¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 >> "%ANDROID_DIR%\local.properties" echo sdk.dir=%SDK_PROP%
 >> "%ANDROID_DIR%\local.properties" echo localize=%LOCALIZE%
 >> "%ANDROID_DIR%\local.properties" echo j=%JOBS%

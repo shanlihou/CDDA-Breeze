@@ -6561,6 +6561,80 @@ vehicle *map::add_vehicle( const vproto_id &type, const tripoint &p, const units
     return placed_vehicle;
 }
 
+vehicle *map::add_vehicle_from_json( const JsonObject &vdata, const tripoint &p )
+{
+    if( !inbounds( p ) ) {
+        dbg( D_WARNING ) << string_format( "Out of bounds add_vehicle_from_json p=%d,%d,%d", p.x,
+                                          p.y, p.z );
+        return nullptr;
+    }
+
+    // 先在一个完全独立的临时对象上反序列化：失败也只是丢掉这个临时对象，
+    // 不会把地图里任何一辆现存的载具弄成半损坏状态。
+    std::unique_ptr<vehicle> veh = std::make_unique<vehicle>();
+    try {
+        veh->deserialize( vdata );
+    } catch( const JsonError &err ) {
+        debugmsg( err.what() );
+        return nullptr;
+    }
+    if( !veh->has_any_parts() ) {
+        return nullptr;
+    }
+
+    // 落点由调用方决定。deserialize 里已经按蓝图自己的朝向 precalc 过了，
+    // 这里不要再 precalc / 改朝向，否则车身会走形。
+    tripoint p_ms = p;
+    veh->sm_pos = ms_to_sm_remain( p_ms );
+    veh->pos = p_ms.xy();
+
+    // 运行时状态归零：别把"正在飙车 / 被牵引 / 自动驾驶 / 正在坠落"的状态带过来
+    veh->velocity = 0;
+    veh->avg_velocity = 0;
+    veh->cruise_velocity = 0;
+    veh->vertical_velocity = 0;
+    veh->skidding = false;
+    veh->is_falling = false;
+    veh->engine_on = false;
+    veh->tracking_on = false;
+    veh->autopilot_on = false;
+    veh->is_autodriving = false;
+    veh->is_following = false;
+    veh->is_patrolling = false;
+    veh->is_AUTOPILOT_fly = false;
+    veh->of_turn_carry = 0.0f;
+    veh->last_turn = 0_degrees;
+    veh->turn_dir = veh->face.dir();
+    veh->last_update = calendar::turn;
+    // 蓝图里带着的牵引目标在别的存档里没有意义，直接断掉
+    veh->tow_data.other_towing_point = tripoint_min;
+
+    // merge_wrecks = false：落点被占就直接失败，不去和已有载具融合
+    std::unique_ptr<vehicle> placed_vehicle_up = add_vehicle_to_map( std::move( veh ), false );
+    vehicle *placed_vehicle = placed_vehicle_up.get();
+    if( placed_vehicle == nullptr ) {
+        return nullptr;
+    }
+
+    submap *place_on_submap = get_submap_at_grid( placed_vehicle->sm_pos );
+    if( place_on_submap == nullptr ) {
+        debugmsg( "Tried to add vehicle at (%d,%d,%d) but the submap is not loaded",
+                  placed_vehicle->sm_pos.x, placed_vehicle->sm_pos.y, placed_vehicle->sm_pos.z );
+        return nullptr;
+    }
+    place_on_submap->ensure_nonuniform();
+    place_on_submap->vehicles.push_back( std::move( placed_vehicle_up ) );
+    invalidate_max_populated_zlev( p.z );
+
+    level_cache &ch = get_cache( placed_vehicle->sm_pos.z );
+    ch.vehicle_list.insert( placed_vehicle );
+    add_vehicle_to_cache( placed_vehicle );
+
+    rebuild_vehicle_level_caches();
+    placed_vehicle->place_zones( *this );
+    return placed_vehicle;
+}
+
 /**
  * Takes a vehicle already created with new and attempts to place it on the map,
  * checking for collisions. If the vehicle can't be placed, returns NULL,

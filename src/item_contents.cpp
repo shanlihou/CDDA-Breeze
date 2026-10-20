@@ -555,8 +555,36 @@ void item_contents::read_mods( const item_contents &read_input )
     }
 }
 
+// pocket 类型名，仅用于调试信息自描述（与 io::enum_to_string<item_pocket::pocket_type> 拼写一致）
+static const char *item_pocket_type_name( item_pocket::pocket_type type )
+{
+    switch( type ) {
+        case item_pocket::pocket_type::CONTAINER:
+            return "CONTAINER";
+        case item_pocket::pocket_type::MAGAZINE:
+            return "MAGAZINE";
+        case item_pocket::pocket_type::MAGAZINE_WELL:
+            return "MAGAZINE_WELL";
+        case item_pocket::pocket_type::MOD:
+            return "MOD";
+        case item_pocket::pocket_type::CORPSE:
+            return "CORPSE";
+        case item_pocket::pocket_type::SOFTWARE:
+            return "SOFTWARE";
+        case item_pocket::pocket_type::EBOOK:
+            return "EBOOK";
+        case item_pocket::pocket_type::CABLE:
+            return "CABLE";
+        case item_pocket::pocket_type::MIGRATION:
+            return "MIGRATION";
+        case item_pocket::pocket_type::LAST:
+            break;
+    }
+    return "UNKNOWN";
+}
+
 void item_contents::combine( const item_contents &read_input, const bool convert,
-                             const bool into_bottom )
+                             const bool into_bottom, const std::string &owner_desc )
 {
     std::vector<item> uninserted_items;
     size_t pocket_index = 0;
@@ -600,13 +628,38 @@ void item_contents::combine( const item_contents &read_input, const bool convert
             auto current_pocket_iter = contents.begin();
             std::advance( current_pocket_iter, pocket_index );
 
+            // 失败时 debugmsg 的自描述上下文。
+            // 当前口袋来自物品类型的 JSON 定义（有 pocket_data）；存档侧口袋反序列化时不恢复
+            // data 指针，只能拿到 saved_type()。两者类型不一致说明口袋布局在存档与本次加载之间
+            // 发生过变化（版本升级 / mod 增删 / JSON 编辑），物品被按索引塞进了错误的口袋。
+            const pocket_data *cur_data = current_pocket_iter->get_pocket_data();
+            const item_pocket::pocket_type cur_pocket_type = cur_data
+                    ? cur_data->type : item_pocket::pocket_type::LAST;
+            const bool pocket_type_drift =
+                pocket.saved_type() != item_pocket::pocket_type::LAST &&
+                pocket.saved_type() != cur_pocket_type;
+
             for( const item *it : pocket.all_items_top() ) {
                 const ret_val<item_pocket::contain_code> inserted = current_pocket_iter->insert_item( *it,
                         into_bottom );
                 if( !inserted.success() ) {
                     uninserted_items.push_back( *it );
-                    debugmsg( "error: item %s cannot fit into pocket while loading: %s",
-                              it->typeId().str(), inserted.str() );
+                    debugmsg( "error: item %s (%s) cannot fit into pocket #%d (%s) of %s while loading: %s"
+                              " [pocket max_contains_volume %s, max_item_volume %s, remaining %s, holds %d item(s), saved pocket type %s%s]",
+                              it->typeId().str(), units::quantity_to_string( it->volume() ),
+                              static_cast<int>( pocket_index ),
+                              item_pocket_type_name( cur_pocket_type ),
+                              owner_desc.empty() ? "unknown container" : owner_desc,
+                              inserted.str(),
+                              cur_data ? units::quantity_to_string( cur_data->max_contains_volume() ) : "n/a",
+                              ( cur_data && cur_data->max_item_volume )
+                              ? units::quantity_to_string( *cur_data->max_item_volume ) : "unlimited",
+                              units::quantity_to_string( current_pocket_iter->remaining_volume() ),
+                              static_cast<int>( current_pocket_iter->size() ),
+                              item_pocket_type_name( pocket.saved_type() ),
+                              pocket_type_drift
+                              ? " -- POCKET TYPE DRIFT: pocket layout changed between save and load, "
+                                "item landed in the wrong pocket" : "" );
                 }
             }
 

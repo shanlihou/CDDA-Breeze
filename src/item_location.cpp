@@ -35,6 +35,23 @@
 #include "visitable.h"
 #include "vpart_position.h"
 
+static const char *item_location_type_name( item_location::type t )
+{
+    switch( t ) {
+        case item_location::type::invalid:
+            return "invalid";
+        case item_location::type::character:
+            return "character";
+        case item_location::type::map:
+            return "map";
+        case item_location::type::vehicle:
+            return "vehicle";
+        case item_location::type::container:
+            return "container";
+    }
+    return "unknown";
+}
+
 template <typename T>
 static int find_index( const T &sel, const item *obj )
 {
@@ -135,7 +152,8 @@ class item_location::impl
                 if( item *i = unpack( idx ) ) {
                     what = i->get_safe_reference();
                 } else {
-                    debugmsg( "item_location lost its target item during a save/load cycle" );
+                    debugmsg( "item_location lost its target item during a save/load cycle "
+                              "(type=%s, idx=%d)", item_location_type_name( where() ), idx );
                 }
                 needs_unpacking = false;
             }

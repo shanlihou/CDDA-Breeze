@@ -536,7 +536,6 @@ veh_interact::veh_interact( vehicle &veh, const point &p )
     main_context.register_action( "ASSIGN_CREW" );
     main_context.register_action( "RELABEL" );
     main_context.register_action( "EXPORT_JSON" );
-    main_context.register_action( "IMPORT_JSON" );
     main_context.register_action( "PREV_TAB" );
     main_context.register_action( "NEXT_TAB" );
     main_context.register_action( "OVERVIEW_DOWN" );
@@ -837,9 +836,6 @@ void veh_interact::do_main_loop()
             }
         } else if( action == "EXPORT_JSON" ) {
             do_export_json();
-        } else if( action == "IMPORT_JSON" ) {
-            // 恢复会把整车的部件换掉，界面里的部件指针会失效，必须立刻退出
-            finish = do_import_json();
         } else if( action == "FUEL_LIST_DOWN" ) {
             move_fuel_cursor( 1 );
         } else if( action == "FUEL_LIST_UP" ) {
@@ -2640,46 +2636,6 @@ void veh_interact::do_export_json()
     }
 }
 
-bool veh_interact::do_import_json()
-{
-    std::vector<std::string> files = vehicle_blueprint::list();
-    if( files.empty() ) {
-        popup( _( "No vehicle blueprints found in:\n%s" ), vehicle_blueprint::dir() );
-        return false;
-    }
-
-    uilist sel;
-    sel.text = _( "Restore which blueprint?  The current vehicle will be replaced in place." );
-    for( const std::string &f : files ) {
-        sel.addentry( -1, true, MENU_AUTOASSIGN, f );
-    }
-    sel.query();
-    if( sel.ret < 0 || sel.ret >= static_cast<int>( files.size() ) ) {
-        return false;
-    }
-    const std::string &name = files[sel.ret];
-
-    if( !query_yn( _( "Replace this vehicle with \"%s\"?  Its current parts and cargo are lost." ),
-                   name ) ) {
-        return false;
-    }
-
-    if( !vehicle_blueprint::import_from( *veh, name ) ) {
-        popup( _( "Failed to restore the vehicle.  The blueprint file may be corrupt." ) );
-        return false;
-    }
-
-    add_msg( _( "You restore the %s from a blueprint." ), veh->name );
-
-    // 部件全部被换掉了，界面里缓存的部件指针 / 光标索引全部失效，
-    // 这里只重置状态，由调用方负责退出主循环。
-    sel_cmd = ' ';
-    sel_vehicle_part = nullptr;
-    sel_vpart_info = nullptr;
-    cpart = -1;
-    return true;
-}
-
 std::pair<bool, std::string> veh_interact::calc_lift_requirements( const vpart_info
         &sel_vpart_info )
 {
@@ -3395,7 +3351,7 @@ void veh_interact::display_mode()
         // NOLINTNEXTLINE(cata-use-named-point-constants)
         print_colored_text( w_mode, point( 1, 0 ), title_col, title_col, title.value() );
     } else {
-        constexpr size_t action_cnt = 14;
+        constexpr size_t action_cnt = 13;
         const std::array<std::string, action_cnt> actions = { {
                 veh_act_desc( main_context, "INSTALL",
                               pgettext( "veh_interact", "install" ),
@@ -3432,9 +3388,6 @@ void veh_interact::display_mode()
                               cant_do( 'a' ) ),
                 veh_act_desc( main_context, "EXPORT_JSON",
                               pgettext( "veh_interact", "export" ),
-                              task_reason::CAN_DO ),
-                veh_act_desc( main_context, "IMPORT_JSON",
-                              pgettext( "veh_interact", "restore" ),
                               task_reason::CAN_DO ),
                 veh_act_desc( main_context, "QUIT",
                               pgettext( "veh_interact", "back" ),

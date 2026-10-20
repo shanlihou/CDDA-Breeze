@@ -608,7 +608,8 @@ item &item::convert( const itype_id &new_type )
         }
     }
     temp.update_modified_pockets();
-    temp.contents.combine( contents, true );
+    // 传入新类型的 typeId：万一 combine 失败，debugmsg 能直接点名是哪个容器
+    temp.contents.combine( contents, true, false, typeId().str() );
     contents = temp.contents;
     return *this;
 }
@@ -16033,5 +16034,6 @@ void item::favorite_settings_menu()
 
 void item::combine( const item_contents &read_input, bool convert )
 {
-    contents.combine( read_input, convert );
+    // 传入本物品的 typeId：万一 combine 失败，debugmsg 能直接点名是哪个容器
+    contents.combine( read_input, convert, false, typeId().str() );
 }

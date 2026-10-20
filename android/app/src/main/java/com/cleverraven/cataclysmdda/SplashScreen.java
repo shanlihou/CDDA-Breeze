@@ -33,6 +33,11 @@ import com.cleverraven.cataclysmdda.CataclysmDDA_Helpers;
 public class SplashScreen extends Activity {
     private static final String TAG = "Splash";
     private static final int INSTALL_DIALOG_ID = 0;
+    // Bump this whenever the bundled game data (assets: data/, gfx/, lang/) changes.
+    // versionName comes from `git describe` and versionCode is fixed per release, so a
+    // data-only edit produces an identical install key and devices keep running the
+    // previously extracted (stale) data. Incrementing this forces a re-extract.
+    private static final int DATA_REVISION = 3;
     private ProgressDialog installDialog;
 
     private AlertDialog accessibilityServicesAlert;
@@ -50,7 +55,7 @@ public class SplashScreen extends Activity {
             } else {
                 versionCode = pInfo.versionCode;
             }
-            return pInfo.versionName + ":" + versionCode;
+            return pInfo.versionName + ":" + versionCode + ":" + DATA_REVISION;
         } catch (Exception e) {
             e.printStackTrace();
             return "error";

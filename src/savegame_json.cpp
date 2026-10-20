@@ -3300,7 +3300,8 @@ void item::deserialize( const JsonObject &data )
 
         contents.read_mods( read_contents );
         update_modified_pockets();
-        contents.combine( read_contents, false, true );
+        // 传入本物品的 typeId：万一 combine 失败，debugmsg 能直接点名是哪个容器
+        contents.combine( read_contents, false, true, typeId().str() );
 
         if( data.has_object( "contents" ) ) {
             JsonObject tested = data.get_object( "contents" );
