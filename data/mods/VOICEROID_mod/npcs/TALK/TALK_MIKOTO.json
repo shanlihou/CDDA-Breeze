@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_MIKOTO_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"愚蠢的人类啊！",
+    "responses":[
+      { "text": "请加入我们(邀请加入队伍)", "topic": "TALK_MIKOTO_SAN_2" },
+      { "text": "可疑的家伙…", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_MIKOTO_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"没办法啊~只好答应啦",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

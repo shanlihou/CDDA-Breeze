@@ -1,0 +1,471 @@
+[
+  {
+    "id": "nec_alloy_trunk",
+    "type": "ARMOR",
+    "name": { "str": "合金行李箱" },
+    "description": "这是一个金属行李箱。 它不仅可以存放物品，而且足够坚固，可以用作盾牌。 当然也可以利用其本身的硬度与重量使其成为重型武器。。",
+    "weight": "2000 g",
+    "volume": "8000 ml",
+    "price": 21000,
+    "price_postapoc": 500,
+    "to_hit": -1,
+    "bashing": 28,
+    "material": [ "steel" ],
+    "symbol": "[",
+    "looks_like": "suitcase_m",
+    "color": "red",
+    "sided": true,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "max_contains_volume": "25 L",
+        "max_contains_weight": "50 kg",
+        "max_item_length": "90 cm",
+        "moves": 300
+      }
+    ],
+    "warmth": 5,
+    "techniques": [ "WBLOCK_1" ],
+    "flags": [ "WATER_FRIENDLY", "STURDY", "BELTED", "RESTRICT_HANDS", "DURABLE_MELEE", "TARDIS" ],
+    "armor": [
+      {
+        "material": [
+          { "type": "cotton", "covered_by_mat": 100, "thickness": 0 },
+          { "type": "steel", "covered_by_mat": 100, "thickness": 3 }
+        ],
+        "encumbrance": 30,
+        "coverage": 50,
+        "covers": [ "arm_l", "arm_r", "hand_l", "hand_r" ]
+      }
+    ]
+  },
+  {
+    "id": "nec_coffin",
+    "type": "ARMOR",
+    "name": { "str": "棺桶" },
+    "description": "是用长锁链卷起来的金属制棺材。虽然笨重，但是收纳量很多，如果你背在背上，它可以防止背面的攻击。",
+    "weight": "8 kg",
+    "volume": "12500 ml",
+    "price": "800 USD",
+    "to_hit": -2,
+    "bashing": 40,
+    "material": [ "steel", "wood" ],
+    "symbol": "[",
+    "color": "black",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "max_contains_volume": "150 L",
+        "max_contains_weight": "100 kg",
+        "max_item_length": "130 cm",
+        "moves": 500
+      }
+    ],
+    "warmth": 5,
+    "material_thickness": 3,
+    "techniques": [ "WBLOCK_1" ],
+    "flags": [ "WATER_FRIENDLY", "STURDY", "BELTED", "DURABLE_MELEE", "TARDIS" ],
+    "armor": [
+      { "encumbrance": 35, "coverage": 90, "covers": [ "torso" ], "specifically_covers": [ "torso_hanging_back" ] }
+    ]
+  },
+  {
+    "id": "nec_ribbon",
+    "type": "ARMOR",
+    "name": { "str": "缎带", "str_pl": "缎带" },
+    "description": "一条可爱的小丝带，由布料制成。 毫无疑问没有防御力可言，但在满目疮痍的世界里，这至少能对心灵起到一点的治愈作用。",
+    "weight": "50 g",
+    "volume": "0 ml",
+    "price": 100,
+    "material": [ "cotton" ],
+    "symbol": "[",
+    "color": "white",
+    "flags": [ "FANCY", "ZERO_WEIGHT" ]
+  },
+  {
+    "id": "nec_teddy",
+    "type": "ARMOR",
+    "name": { "str": "泰迪熊朋友" },
+    "description": "这是一个可爱的毛绒玩具，虽然保护不了你，但会支持你在旅途中那疲惫的心。",
+    "weight": "50 g",
+    "volume": "250 ml",
+    "price": "10 USD",
+    "material": [ "cotton" ],
+    "symbol": "[",
+    "color": "brown",
+    "flags": [ "BELTED" ,"PALS_SMALL" ],
+    "armor": [
+      {
+        "material": [
+          { "type": "cotton", "covered_by_mat": 100, "thickness": 1.0 }
+        ],
+        "encumbrance": 0,
+        "coverage": 50,
+        "covers": [ "torso" ],
+        "specifically_covers": [ "torso_waist" ]
+      }
+    ]
+  },
+  {
+    "id": "nec_gothic_dress",
+    "type": "ARMOR",
+    "name": { "str": "哥特式洛丽塔礼服" },
+    "description": "一条华丽的哥特式黑色长裙，饰有许多蕾丝、褶边和丝带。 看似华而不实累赘无比，但事实上穿着它并不会行动不便。",
+    "weight": "700 g",
+    "volume": "5 L",
+    "price": "400 USD",
+    "to_hit": -5,
+    "material": [ "cotton" ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "warmth": 20,
+        "material_thickness": 3,
+    "flags": [ "VARSIZE", "SUPER_FANCY" ],
+    "armor": [
+      {
+        "encumbrance": 20,
+        "coverage": 90,
+        "covers": [ "leg_l", "leg_r", "torso", "arm_l", "arm_r" ]
+      }
+    ]
+  },
+  {
+    "id": "nec_gothic_headdress",
+    "type": "ARMOR",
+    "name": { "str": "哥特式洛丽塔头饰" },
+    "description": "一种哥特式花边头饰。它有着吸引人目光的魅力。",
+    "weight": "200 g",
+    "volume": "1 L",
+    "price": "100 USD",
+    "material": [ "cotton" ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "warmth": 5,
+    "material_thickness": 1,
+    "flags": [ "FANCY" ],
+    "armor": [ { "encumbrance": 5, "coverage": 20, "covers": [ "head" ] } ]
+  },
+  {
+    "id": "nec_sgothic_dress",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": { "str": "幸存者哥特式洛丽塔连衣裙" },
+    "description": "是将性能方面改造为现代战术规格的哥特式礼服，经过凯夫拉面料加强具有很高的防御力，到处都附有各种口袋和枪套，同时保留了外部时尚的褶边和蕾丝。 大裙边为中型枪支提供了空间。 说到缺点，是的，要说缺点的话，有的人穿着可能会觉得胸闷吧。",
+    "weight": "5500 g",
+    "volume": "8500 ml",
+    "price": "1000 USD",
+    "material": [ "kevlar", "cotton" ],
+    "environmental_protection": 1,
+    "symbol": "[",
+    "color": "dark_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1000 ml",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "75 cm",
+        "moves": 100,
+        "description": "哥特式长袋"
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1000 ml",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "75 cm",
+        "moves": 100,
+        "description": "哥特式长口袋"
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "30 cm",
+        "moves": 80,
+        "description": "哥特式口袋"
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "30 cm",
+        "moves": 80,
+        "description": "哥特式口袋"
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg",
+        "max_item_length": "15 cm",
+        "moves": 50,
+        "description": "哥特式迷你口袋"
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg",
+        "max_item_length": "15 cm",
+        "moves": 50,
+        "description": "哥特式迷你口袋"
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg",
+        "max_item_length": "15 cm",
+        "moves": 50,
+        "description": "哥特式迷你口袋"
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg",
+        "max_item_length": "15 cm",
+        "moves": 50,
+        "description": "哥特式迷你口袋"
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "500 g",
+        "max_item_length": "5 cm",
+        "moves": 25,
+        "description": "带褶边的医疗袋"
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "1 kg",
+        "max_item_length": "30 cm",
+        "moves": 200,
+        "description": "带褶边的迷你水壶"
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "300 g",
+        "max_item_length": "6 cm",
+        "moves": 100,
+        "description": "缝纫工具盒"
+      },
+      {
+        "//": "carabiner pocket",
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "max_contains_volume": "1500 ml",
+        "max_contains_weight": "6 kg",
+        "max_item_length": "60 cm",
+        "min_item_length": "5 cm",
+        "moves": 150,
+        "extra_encumbrance": 2,
+        "ripoff": 2,
+        "description": "带缎带的登山扣带",
+        "activity_noise": { "volume": 8, "chance": 10 }
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1 kg",
+        "max_item_length": "30 cm",
+        "moves": 50,
+        "description": "带缎带的小刀鞘"
+      },
+      {
+        "magazine_well": "350 ml",
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "min_item_volume": "250 ml",
+        "max_contains_volume": "900 ml",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "30 cm",
+        "description": "哥特式皮套",
+        "moves": 50
+      },
+      {
+        "magazine_well": "200 ml",
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "min_item_volume": "100 ml",
+        "max_contains_volume": "400 ml",
+        "max_contains_weight": "1 kg",
+        "max_item_length": "20 cm",
+        "description": "哥特式迷你皮套",
+        "moves": 50
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "rigid": true,
+        "min_item_volume": "1500 ml",
+        "max_contains_volume": "6 L",
+        "max_contains_weight": "7 kg",
+        "max_item_length": "133 cm",
+        "description": "哥特式裙子皮套",
+        "moves": 150
+      }
+    ],
+    "warmth": 20,
+    "use_action": { "type": "holster" },
+    "flags": [ "VARSIZE", "SUPER_FANCY", "WATERPROOF", "RAINPROOF", "STURDY", "POCKETS", "TARDIS" ],
+    "armor": [
+      {
+        "//": "stats of a bullet proof vest",
+        "material": [
+          { "type": "cotton", "covered_by_mat": 100, "thickness": 1.0 },
+          { "type": "kevlar_layered", "covered_by_mat": 95, "thickness": 4.4 }
+        ],
+        "volume_encumber_modifier": 0.3,
+        "encumbrance": 10,
+        "coverage": 100,
+        "cover_vitals": 100,
+        "covers": [ "torso" ]
+      },
+      {
+        "material": [
+          { "type": "cotton", "covered_by_mat": 100, "thickness": 1.0 },
+          { "type": "kevlar_layered", "covered_by_mat": 95, "thickness": 4.4 }
+        ],
+        "encumbrance": 9,
+        "volume_encumber_modifier": 0,
+        "coverage": 100,
+        "cover_vitals": 90,
+        "covers": [ "arm_l", "arm_r","leg_l", "leg_r"  ]
+      }
+    ]
+ },
+  {
+    "id": "nec_panier",
+    "type": "ARMOR",
+    "category": "clothing",
+    "name": { "str": "裙撑" },
+    "weight": "200 g",
+    "color": "white",
+    "symbol": "[",
+    "description": "是为了使礼服看上去丰满而穿在长裙下面的一种内衣。因为放了钢丝，所以不容易变形。",
+    "price": 500,
+    "material": [ "cotton" ],
+    "warmth": 5,
+    "material_thickness": 1,
+    "volume": "250 ml",
+    "armor": [ { "encumbrance": 5, "coverage": 75, "covers": [ "leg_l", "leg_r" ] } ]
+  },
+    {
+    "id": "nec_mgothic_dress",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": { "str": "军装哥特式礼服" },
+    "description": "这是一款经过高度改造让其性能达到了军用级别的哥特式连衣裙，安装了防弹板插袋和多处附有 MOLLE 织带，保持哥特式蕾丝风格的同时兼具了强大的实用性。要说缺点的话，如果装上防弹板的话，就让人胸闷了呢。",
+    "looks_like": "nec_gothic_dress",
+    "weight": "4000 g",
+    "volume": "8500 ml",
+    "price": "1000 USD",
+    "material": [ "kevlar", "cotton" ],
+    "environmental_protection": 1,
+    "symbol": "[",
+    "color": "dark_gray",
+    "warmth": 15,
+    "use_action": [ { "type": "attach_molle", "size": 14 }, { "type": "detach_molle" } ],
+    "flags": [ "VARSIZE", "SUPER_FANCY", "WATERPROOF", "RAINPROOF", "STURDY", "POCKETS" ],
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "ablative": true,
+        "volume_encumber_modifier": 0,
+        "max_contains_volume": "2000 ml",
+        "max_contains_weight": "5 kg",
+        "max_item_length": "33 cm",
+        "moves": 1000,
+        "description": "胸部防弹板插袋",
+        "flag_restriction": [ "ABLATIVE_LARGE" ]
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "ablative": true,
+        "volume_encumber_modifier": 0,
+        "max_contains_volume": "2000 ml",
+        "max_contains_weight": "5 kg",
+        "max_item_length": "33 cm",
+        "moves": 1000,
+        "description": "腹部防弹板插袋",
+        "flag_restriction": [ "ABLATIVE_MEDIUM" ]
+      }
+    ],
+     "armor": [
+      {
+        "//": "stats of a bullet proof vest",
+        "material": [
+          { "type": "cotton", "covered_by_mat": 100, "thickness": 1.0 },
+          { "type": "kevlar_layered", "covered_by_mat": 95, "thickness": 4.4 }
+        ],
+        "volume_encumber_modifier": 0.3,
+        "encumbrance": 6,
+        "coverage": 100,
+        "cover_vitals": 100,
+        "covers": [ "torso" ]
+      },
+      {
+        "material": [
+          { "type": "cotton", "covered_by_mat": 100, "thickness": 1.0 },
+          { "type": "kevlar_layered", "covered_by_mat": 95, "thickness": 4.4 }
+        ],
+        "encumbrance": 9,
+        "volume_encumber_modifier": 0,
+        "coverage": 100,
+        "cover_vitals": 90,
+        "covers": [ "arm_l", "arm_r","leg_l", "leg_r"  ]
+      }
+    ]
+  },
+  {
+    "id": "nec_boots_sheath",
+    "copy-from": "boots",
+    "type": "ARMOR",
+    "name": "加料靴子",
+    "name_plural": "加料靴子",
+    "description": "带有锋利刀片的靴子。 如果配合适当的武术，可以造成强大的打击。",
+    "weight": "1260 g",
+    "to_hit": -1,
+    "bashing": 3,
+    "cutting": 5,
+    "material": [ "leather","steel" ],
+    "flags": [ "VARSIZE", "WATERPROOF", "STAB", "STURDY" ],
+    "armor": [
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [
+          "foot_ankle_r",
+          "foot_ankle_l",
+          "foot_heel_r",
+          "foot_heel_l",
+          "foot_arch_r",
+          "foot_arch_l"
+        ],
+        "material": [ { "type": "leather", "covered_by_mat": 100, "thickness": 2.5 } ],
+        "encumbrance": 12,
+        "coverage": 100
+      },
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_sole_r", "foot_sole_l" ],
+        "material": [
+          { "type": "leather", "covered_by_mat": 100, "thickness": 0.1 },
+          { "type": "rubber", "covered_by_mat": 100, "thickness": 6.0 }
+        ],
+        "coverage": 100
+      },
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [
+          "foot_toes_r",
+          "foot_toes_l"
+        ],
+        "material": [ { "type": "leather", "covered_by_mat": 100, "thickness": 2.5 },
+                      { "type": "steel", "covered_by_mat": 100, "thickness": 2 }  ],
+        "coverage": 100
+      }
+    ]
+  }
+]

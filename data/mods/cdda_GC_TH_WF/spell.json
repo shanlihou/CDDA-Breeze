@@ -1,0 +1,178 @@
+[
+    {
+        "id": "GC_WF_Harvest",
+        "type": "SPELL",
+        "name": {
+          "str": "收割 I"
+        },
+        "description": "你能够强制吸收一个怪物并以此治疗你自己。",
+        "valid_targets": ["hostile","ally"],
+        "flags": ["CONCENTRATE", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_FAIL"],
+        "effect": "banishment",
+        "shape": "blast",
+        "min_damage": 20,
+        "damage_increment": 10,
+        "max_damage": 120,
+        "min_range": 1,
+        "max_range": 1,
+        "base_energy_cost": 6000,
+        "difficulty": 5,
+        "max_level": 10,
+        "base_casting_time": 200,
+        "energy_source": "STAMINA",
+        "extra_effects": [
+          {
+            "id": "GC_WF_Harvest2"
+          }
+        ]
+    },
+    {
+      "id": "GC_WF_Harvest3",
+      "type": "SPELL",
+      "name": {
+        "str": "收割 II"
+      },
+      "description": "你能够强制吸收一个怪物并以此治疗你自己。",
+      "valid_targets": ["hostile","ally"],
+      "flags": ["CONCENTRATE", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_FAIL"],
+      "effect": "banishment",
+      "shape": "blast",
+      "min_damage": 20,
+      "damage_increment": 10,
+      "max_damage": 200,
+      "min_range": 1,
+      "max_range": 1,
+      "base_energy_cost": 8000,
+      "difficulty": 5,
+      "max_level": 20,
+      "base_casting_time": 150,
+      "energy_source": "STAMINA",
+      "extra_effects": [
+        {
+          "id": "GC_WF_Harvest2"
+        }
+      ]
+  },
+  {
+    "id": "GC_WF_Harvest4",
+    "type": "SPELL",
+    "name": {
+      "str": "收割 III"
+    },
+    "description": "你能够强制吸收一个怪物并以此治疗你自己。",
+    "valid_targets": ["hostile","ally"],
+    "flags": ["CONCENTRATE", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_FAIL"],
+    "effect": "banishment",
+    "shape": "blast",
+    "min_damage": 20,
+    "damage_increment": 10,
+    "max_damage": 300,
+    "min_range": 1,
+    "max_range": 1,
+    "base_energy_cost": 8000,
+    "difficulty": 5,
+    "max_level": 30,
+    "base_casting_time": 100,
+    "energy_source": "STAMINA",
+    "extra_effects": [
+      {
+        "id": "GC_WF_Harvest2"
+      }
+    ]
+},
+    {
+        "id": "GC_WF_Harvest2",
+        "type": "SPELL",
+        "name": {
+          "str": "harvest"
+        },
+        "description": "desc.",
+        "valid_targets": ["self"],
+        "min_damage": -15,
+        "max_damage": -60,
+        "min_range": 2,
+        "max_range": 2,
+        "min_aoe": 2,
+        "max_aoe": 2,
+        "damage_increment": -2,
+        "max_level": 30,
+        "effect": "attack",
+        "shape": "blast",
+        "flags": [
+          "SOMATIC",
+          "VERBAL",
+          "NO_LEGS",
+          "CONCENTRATE",
+          "MUST_HAVE_CLASS_TO_LEARN"
+        ],
+        "difficulty": 1
+    },
+    {
+      "id": "GC_WF_Crystallize",
+      "type": "SPELL",
+      "name": {
+        "str": "Crystallize"
+      },
+      "description": "You can cosume your life to produce a precious things.",
+      "valid_targets": ["self"],
+      "flags": ["PERMANENT", "CONCENTRATE", "NO_HANDS", "NO_LEGS", "NO_FAIL"],
+      "effect": "spawn_item",
+      "effect_str": "mutagen_TH_WF",
+      "shape": "blast",
+      "energy_source": "HP",
+      "base_casting_time": 6000,
+      "base_energy_cost": 120,
+      "max_level": 1,
+      "min_damage": 1,
+      "max_damage": 1,
+      "min_duration": 1,
+      "max_duration": 2,
+      "duration_increment": 1
+    },
+    {
+      "id": "GC_WF_Summon_monster1",
+      "type": "SPELL",
+      "name": {
+        "str": "Summon Brute Fungus"
+      },
+      "description": "Summon White Hulk",
+      "valid_targets": [ "ground" ],
+      "min_damage": 1,
+      "max_damage": 2,
+      "damage_increment": 0.4,
+      "max_level": 10,
+      "difficulty": 10,
+      "effect": "summon",
+      "effect_str": "TH_WF_mon_skeleton_brute_fungus",
+      "shape": "blast",
+      "energy_source": "HP",
+      "base_energy_cost": 30,
+      "base_casting_time": 250,
+      "min_range": 6,
+      "min_aoe": 2,
+      "max_aoe": 4,
+      "aoe_increment": 0.25,
+      "flags": ["CONCENTRATE", "NO_HANDS", "NO_LEGS", "NO_FAIL"],
+      "min_duration": 180000
+  },
+  {
+    "id": "TH_WF_mon_skeleton_brute_fungus",
+    "type": "MONSTER",
+    "name": {
+      "str": "fungal skeletal brute"
+    },
+    "description": "Fungi bloom from the crevices in the twisted bone growths that cover this creature.  Spores linger in the air around it.",
+    "copy-from": "mon_skeleton_brute_fungus",
+    "looks_like": "mon_skeleton_brute",
+    "hp": 75,
+    "special_attacks": [
+      [
+        "SMASH",
+        30
+      ]
+    ],
+    "death_function": {
+      "corpse_type": "NO_CORPSE"
+    }
+  }
+]

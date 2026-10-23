@@ -1,0 +1,86 @@
+[
+    
+  {
+    "id": "kpv150",
+    "type": "MAGAZINE",
+    "name": { "str": "KPV 150发弹链"},
+    "description":"一条KPV重机枪的150发弹链。",
+    "weight": "3000 g",
+    "volume": "5000 ml",
+    "price": 80000,
+    "price_postapoc": 10000,
+    "material": [ "steel" ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [ "145114" ],
+    "flags": [ "MAG_BULKY" ],
+"pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": false, "ammo_restriction": { "145114": 150 } } ]
+ 
+  },
+  {
+    "id": "m61500",
+    "type": "MAGAZINE",
+    "name": { "str": "M61 500发弹链"},
+    "description":"一条M61机炮的500发弹链。",
+    "weight": "10000 g",
+    "volume": "15000 ml",
+    "price": 800000,
+    "price_postapoc": 20000,
+    "material": [ "steel" ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [ "20102" ],
+    "flags": [ "MAG_BULKY" ],
+"pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": false, "ammo_restriction": { "20102": 500 } } ]
+ 
+  },
+  {
+    "id": "tts300",
+    "type": "MAGAZINE",
+    "name": { "str": ".22家立德TTS 300发弹鼓"},
+    "description":"一个能容纳300发.22口径子弹的弹鼓。它的代号是TTS300。",
+    "weight": "80 g",
+    "volume": "700 ml",
+    "price": 800000,
+    "price_postapoc": 20000,
+    "material": [ "plastic" ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [ "22" ],
+    "flags": [ "MAG_BULKY" ],
+"pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "22": 300 } } ]
+ 
+  },
+  {
+    "id": "tts30",
+    "type": "MAGAZINE",
+    "name": { "str": ".22家立德TTS 30发弹匣"},
+    "description":"一个奇怪地弯曲着的30发.22弹弹匣。它的代号是TTS30。",
+    "weight": "6 g",
+    "volume": "110 ml",
+    "price": 80000,
+    "price_postapoc": 2000,
+    "material": [ "plastic" ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [ "22" ],
+"pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "22": 30 } } ]
+ 
+  },
+  {
+    "id": "b408",
+    "type": "MAGAZINE",
+    "name": { "str": "40mm博福斯8发弹匣"},
+    "description":"很轻的聚合物弹匣，能容纳8发40x365mm炮弹。",
+    "weight": "200 g",
+    "volume": "18000 ml",
+    "price": 80000,
+    "price_postapoc": 2000,
+    "material": [ "plastic" ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [ "40365" ],
+"pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "40365": 8 } } ]
+ 
+  }
+  ]

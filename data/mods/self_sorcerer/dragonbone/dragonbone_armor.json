@@ -1,0 +1,225 @@
+[
+  {
+    "id": "ovo_dragon_bone_helmet",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "龙骨头盔",
+    "description": "更确切的说，应该叫龙骨片头盔。\n智力+1。",
+    "looks_like": "balclava",
+    "weight": "600 g",
+    "volume": "1800 ml",
+    "price": 50000,
+    "to_hit": -1,
+    "material": [ "black_dragon_hide", "ovo_dragon_bone" ],
+    "symbol": "[",
+    "color": "white",
+    "armor": [
+      {
+      	"covers": [ "head" ],
+      	"coverage": 100,
+      	"encumbrance": 24,
+      	"material": [
+	      	{ "type": "black_dragon_hide", "covered_by_mat": 100, "thickness": 1.0 },
+	      	{ "type": "ovo_dragon_bone", "covered_by_mat": 100, "thickness": 2.0 }
+      	]
+      }
+    ],
+    "warmth": 15,
+    "material_thickness": 3,
+    "environmental_protection": 3,
+    "techniques": [ "WBLOCK_1" ],
+    "flags": [ "VARSIZE", "WATERPROOF", "STURDY" ],
+    "melee_damage": { "bash": 10 },
+    "relic_data": { "passive_effects": [ { "has": "WORN", "condition": "ALWAYS", "values": [ { "value": "INTELLIGENCE", "add": 1 } ] } ] }
+  },
+  {
+    "id": "ovo_dragon_bone_suit",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "龙骨盔甲",
+    "description": "更确切的说，应该叫龙骨片盔甲。\n力量+1。",
+    "looks_like": "chainmail_suit",
+    "weight": "2400 g",
+    "volume": "7200 ml",
+    "price": 150000,
+    "to_hit": -3,
+    "material": [ "black_dragon_hide", "ovo_dragon_bone" ],
+    "symbol": "[",
+    "color": "white",
+    "warmth": 15,
+    "material_thickness": 4,
+    "environmental_protection": 3,
+    "flags": [ "VARSIZE", "WATERPROOF", "RAINPROOF", "STURDY", "OUTER" ],
+    "armor": [
+    	{
+    		"encumbrance": 22,
+    		"coverage": 100,
+    		"covers": [ "torso", "arm_l", "arm_r", "leg_l", "leg_r" ],
+      	"material": [
+	      	{ "type": "black_dragon_hide", "covered_by_mat": 100, "thickness": 1.0 },
+	      	{ "type": "ovo_dragon_bone", "covered_by_mat": 100, "thickness": 3.0 }
+      	]
+     	}
+    ],
+    "melee_damage": { "bash": 14 },
+    "relic_data": { "passive_effects": [ { "has": "WORN", "condition": "ALWAYS", "values": [ { "value": "STRENGTH", "add": 1 } ] } ] }
+  },
+  {
+    "id": "ovo_dragon_bone_gauntlets",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "龙骨护手",
+    "description": "更确切的说，应该叫龙骨片护手。\n感知+1。",
+    "looks_like": "chainmail_junk_hands",
+    "weight": "600 g",
+    "volume": "1800 ml",
+    "price": 60000,
+    "to_hit": 2,
+    "material": [ "black_dragon_hide", "ovo_dragon_bone" ],
+    "symbol": "[",
+    "color": "white",
+    "warmth": 10,
+    "material_thickness": 3,
+    "environmental_protection": 3,
+    "flags": [ "VARSIZE", "WATERPROOF", "STURDY" ],
+    "armor": [
+    	{
+    		"encumbrance": 14,
+    		"coverage": 100,
+    		"covers": [ "hand_l", "hand_r" ],
+      	"material": [
+	      	{ "type": "black_dragon_hide", "covered_by_mat": 100, "thickness": 1.5 },
+	      	{ "type": "ovo_dragon_bone", "covered_by_mat": 100, "thickness": 1.5 }
+      	]
+    	}
+    ],
+    "melee_damage": { "cut": 12 },
+    "relic_data": { "passive_effects": [ { "has": "WORN", "condition": "ALWAYS", "values": [ { "value": "PERCEPTION", "add": 1 } ] } ] }
+  },
+  {
+    "id": "ovo_dragon_bone_boots",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "龙骨靴",
+    "description": "更确切的说，应该叫龙骨片靴。\n敏捷+1。",
+    "looks_like": "chainmail_junk_feet",
+    "weight": "900 g",
+    "volume": "2700 ml",
+    "price": 40000,
+    "to_hit": 2,
+    "material": [ "black_dragon_hide", "ovo_dragon_bone" ],
+    "symbol": "[",
+    "color": "white",
+    "warmth": 15,
+    "material_thickness": 3,
+    "environmental_protection": 3,
+    "flags": [ "VARSIZE", "WATERPROOF", "STURDY" ],
+    "armor": [
+    	{
+    		"encumbrance": 24,
+    		"coverage": 100,
+    		"covers": [ "foot_l", "foot_r" ],
+      	"material": [
+	      	{ "type": "black_dragon_hide", "covered_by_mat": 100, "thickness": 1.0 },
+	      	{ "type": "ovo_dragon_bone", "covered_by_mat": 100, "thickness": 2.0 }
+      	]
+    	}
+    ],
+    "melee_damage": { "bash": 12 },
+    "relic_data": { "passive_effects": [ { "has": "WORN", "condition": "ALWAYS", "values": [ { "value": "DEXTERITY", "add": 1 } ] } ] }
+  },
+  {
+    "result": "ovo_dragon_bone_helmet",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ENCHANTED",
+    "subcategory": "CSC_ENCHANTED_ARMOR",
+    "skill_used": "tailor",
+    "difficulty": 5,
+    "autolearn": true,
+    "time": "10 h",
+    "qualities": [ { "id": "MANA_INFUSE", "level": 2 }, { "id": "CHISEL", "level": 2 } ],
+    "using": [ [ "sewing_standard", 300 ] ],
+    "tools": [ [ [ "ovo_dragon_bone_repairkit", -1 ], [ "ovo_dragon_bone_steel_repairkit", -1 ] ] ],
+    "proficiencies": [
+      { "proficiency": "prof_leatherworking_basic" },
+      { "proficiency": "prof_leatherworking" },
+      { "proficiency": "prof_leatherworking_dragon" },
+      { "proficiency": "ovo_dragon_bone_working_base" },
+      { "proficiency": "ovo_dragon_bone_working_plus" },
+      { "proficiency": "ovo_dragon_bone_working_master" }
+    ],
+    "components": [ [ [ "black_dragon_tanned_hide", 4 ] ], [ [ "ovo_dragon_bone_piece", 600 ] ] ]
+  },
+  {
+    "result": "ovo_dragon_bone_suit",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ENCHANTED",
+    "subcategory": "CSC_ENCHANTED_ARMOR",
+    "skill_used": "tailor",
+    "difficulty": 5,
+    "autolearn": true,
+    "time": "40 h",
+    "qualities": [ { "id": "MANA_INFUSE", "level": 2 }, { "id": "CHISEL", "level": 2 } ],
+    "using": [ [ "sewing_standard", 1200 ] ],
+    "tools": [ [ [ "ovo_dragon_bone_repairkit", -1 ], [ "ovo_dragon_bone_steel_repairkit", -1 ] ] ],
+    "proficiencies": [
+      { "proficiency": "prof_leatherworking_basic" },
+      { "proficiency": "prof_leatherworking" },
+      { "proficiency": "prof_leatherworking_dragon" },
+      { "proficiency": "ovo_dragon_bone_working_base" },
+      { "proficiency": "ovo_dragon_bone_working_plus" },
+      { "proficiency": "ovo_dragon_bone_working_master" }
+    ],
+    "components": [ [ [ "black_dragon_tanned_hide", 16 ] ], [ [ "ovo_dragon_bone_piece", 2400 ] ] ]
+  },
+  {
+    "result": "ovo_dragon_bone_gauntlets",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ENCHANTED",
+    "subcategory": "CSC_ENCHANTED_ARMOR",
+    "skill_used": "tailor",
+    "difficulty": 5,
+    "autolearn": true,
+    "time": "10 h",
+    "qualities": [ { "id": "MANA_INFUSE", "level": 2 }, { "id": "CHISEL", "level": 2 } ],
+    "using": [ [ "sewing_standard", 300 ] ],
+    "tools": [ [ [ "ovo_dragon_bone_repairkit", -1 ], [ "ovo_dragon_bone_steel_repairkit", -1 ] ] ],
+    "proficiencies": [
+      { "proficiency": "prof_leatherworking_basic" },
+      { "proficiency": "prof_articulation", "required": false, "time_multiplier": 2 },
+      { "proficiency": "prof_leatherworking" },
+      { "proficiency": "prof_leatherworking_dragon" },
+      { "proficiency": "ovo_dragon_bone_working_base" },
+      { "proficiency": "ovo_dragon_bone_working_plus" },
+      { "proficiency": "ovo_dragon_bone_working_master" }
+    ],
+    "components": [ [ [ "black_dragon_tanned_hide", 4 ] ], [ [ "ovo_dragon_bone_piece", 600 ] ] ]
+  },
+  {
+    "result": "ovo_dragon_bone_boots",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ENCHANTED",
+    "subcategory": "CSC_ENCHANTED_ARMOR",
+    "skill_used": "tailor",
+    "difficulty": 5,
+    "autolearn": true,
+    "time": "15 h",
+    "qualities": [ { "id": "MANA_INFUSE", "level": 2 }, { "id": "CHISEL", "level": 2 } ],
+    "using": [ [ "sewing_standard", 450 ] ],
+    "tools": [ [ [ "ovo_dragon_bone_repairkit", -1 ], [ "ovo_dragon_bone_steel_repairkit", -1 ] ] ],
+    "proficiencies": [
+      { "proficiency": "prof_leatherworking_basic" },
+      { "proficiency": "prof_cobbling" },
+      { "proficiency": "prof_leatherworking" },
+      { "proficiency": "prof_leatherworking_dragon" },
+      { "proficiency": "ovo_dragon_bone_working_base" },
+      { "proficiency": "ovo_dragon_bone_working_plus" },
+      { "proficiency": "ovo_dragon_bone_working_master" }
+    ],
+    "components": [ [ [ "black_dragon_tanned_hide", 6 ] ], [ [ "ovo_dragon_bone_piece", 900 ] ] ]
+  }
+]

@@ -1,0 +1,1446 @@
+[
+  {
+    "id": "spell_craft_sorcerer_lv5_ciyuanmen",
+    "type": "SPELL",
+    "name": "术士-Lv5-次元门",
+    "description": "在近距离内传送。",
+    "components": "spell_sorcerer_use_item_5",
+    "effect": "short_range_teleport",
+    "shape": "blast",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "TARGET_TELEPORT"
+    ],
+    "min_range": 16,
+    "max_level": 0,
+    "difficulty": 5,
+    "spell_class": "spell_craft_sorcerer_5",
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "base_energy_cost": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_dragon_fire",
+    "type": "SPELL",
+    "name": "术士-Lv5-龙息术（火）",
+    "description": "对锥形区域吐出火焰。",
+    "components": "spell_sorcerer_use_item_5",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "max_level": 0,
+    "min_damage": 90,
+    "max_damage": 272,
+    "min_range": 15,
+    "min_aoe": 45,
+    "spell_class": "spell_craft_sorcerer_5",
+    "base_casting_time": 300,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 5,
+    "damage_type": "heat"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_dragon_cold",
+    "type": "SPELL",
+    "name": "术士-Lv5-龙息术（冰）",
+    "description": "对锥形区域吐出寒冰。",
+    "components": "spell_sorcerer_use_item_5",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "max_level": 0,
+    "min_damage": 90,
+    "max_damage": 272,
+    "min_range": 15,
+    "min_aoe": 45,
+    "spell_class": "spell_craft_sorcerer_5",
+    "base_casting_time": 300,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 5,
+    "damage_type": "cold"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_dragon_electric",
+    "type": "SPELL",
+    "name": "术士-Lv5-龙息术（电）",
+    "description": "对直线区域吐出闪电。",
+    "components": "spell_sorcerer_use_item_5",
+    "effect": "attack",
+    "shape": "line",
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "max_level": 0,
+    "min_damage": 90,
+    "max_damage": 272,
+    "min_range": 15,
+    "min_aoe": 2,
+    "spell_class": "spell_craft_sorcerer_5",
+    "base_casting_time": 300,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 5,
+    "damage_type": "electric"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_dragon_bio",
+    "type": "SPELL",
+    "name": "术士-Lv5-龙息术（毒）",
+    "description": "对扇形区域吐出毒息。",
+    "components": "spell_sorcerer_use_item_5",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "max_level": 0,
+    "min_damage": 90,
+    "max_damage": 272,
+    "min_range": 8,
+    "min_aoe": 90,
+    "spell_class": "spell_craft_sorcerer_5",
+    "base_casting_time": 300,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 5,
+    "damage_type": "biological"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_dragon_acid",
+    "type": "SPELL",
+    "name": "术士-Lv5-龙息术（酸）",
+    "description": "对扇形区域吐出酸液。",
+    "components": "spell_sorcerer_use_item_5",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "max_level": 0,
+    "min_damage": 90,
+    "max_damage": 272,
+    "min_range": 8,
+    "min_aoe": 90,
+    "spell_class": "spell_craft_sorcerer_5",
+    "base_casting_time": 300,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 5,
+    "damage_type": "acid"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_weary",
+    "type": "SPELL",
+    "name": "术士-Lv5-疲乏波",
+    "description": "使范围内敌人疲乏，力量-4，敏捷-4，速度-20，持续20分钟+20x智力秒。",
+    "components": "spell_sorcerer_use_item_5",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "shape": "cone",
+    "effect_str": "effect_sorcerer_weary",
+    "damage_type": "pure",
+    "min_damage": 0,
+    "base_casting_time": 50,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_5",
+    "difficulty": 5,
+    "min_range": 15,
+    "min_aoe": 60,
+    "max_level": 0,
+    "base_energy_cost": 0,
+    "min_duration": 148000,
+    "max_duration": 148000
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_sorcerer_weary",
+    "name": [
+      "疲乏波"
+    ],
+    "desc": [
+      "你疲乏了。"
+    ],
+    "apply_message": "你疲乏了！",
+    "remove_message": "你不再疲乏。",
+    "max_intensity": 999,
+    "int_dur_factor": "5 m",
+    "rating": "bad",
+    "base_mods": {
+      "str_mod": [
+        -4
+      ],
+      "dex_mod": [
+        -4
+      ],
+      "speed_mod": [
+        -20
+      ]
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_invisibility",
+    "type": "SPELL",
+    "name": "术士-Lv5-持久隐形",
+    "description": "使你获得手持时隐身的物品，持续20分钟+20x智力秒。",
+    "components": "spell_sorcerer_use_item_5",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "spawn_item",
+    "effect_str": "sor_magic_invstone",
+    "min_damage": 1,
+    "max_damage": 1,
+    "shape": "blast",
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_5",
+    "difficulty": 5,
+    "max_level": 0,
+    "base_energy_cost": 0,
+    "min_duration": 148000,
+    "max_duration": 148000
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_magic_armor",
+    "type": "SPELL",
+    "name": "术士-Lv5-持久法师护甲",
+    "description": "使你被一道可以抵挡伤害的无形立场包裹，持续24小时+24x智力分钟。",
+    "components": "spell_sorcerer_use_item_5",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "spawn_item",
+    "effect_str": "sor_magic_armor",
+    "min_damage": 1,
+    "max_damage": 1,
+    "shape": "blast",
+    "affected_body_parts": [
+      "head",
+      "torso",
+      "leg_l",
+      "leg_r",
+      "arm_r",
+      "arm_l"
+    ],
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_5",
+    "difficulty": 5,
+    "max_level": 0,
+    "base_energy_cost": 0,
+    "min_duration": 10656000,
+    "max_duration": 10656000
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_life_bubble",
+    "type": "SPELL",
+    "name": "术士-Lv5-维生气泡",
+    "description": "使你的身体被一个充满空气的气泡包裹，让你可以免疫或抵抗外界的恶劣环境，持续12小时+12x智力分钟。",
+    "components": "spell_sorcerer_use_item_5",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "min_range": 8,
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_5",
+    "difficulty": 5,
+    "max_level": 0,
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "min_duration": 5328000,
+    "max_duration": 5328000,
+    "effect": "spawn_item",
+    "effect_str": "sorcerer_life_bubble"
+  },
+  {
+    "type": "effect_type",
+    "id": "sorcerer_life_bubble",
+    "name": [
+      "无效效果"
+    ],
+    "desc": [
+      "一个无效了的效果。"
+    ]
+  },
+  {
+    "id": "ench_sorcerer_life_bubble",
+    "type": "enchantment",
+    "has": "WORN",
+    "condition": "ALWAYS",
+    "mutations": [
+      "sor_gills"
+    ]
+  },
+  {
+    "id": "sorcerer_life_bubble",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str_sp": "维生气泡"
+    },
+    "description": "你可以在水下呼吸，并且抵抗外界的恶劣环境。",
+    "weight": "10 g",
+    "volume": "10 ml",
+    "material": [
+      "sor_magic_armor"
+    ],
+    "symbol": "0",
+    "color": "light_gray",
+    "warmth": 0,
+    "material_thickness": 0,
+    "environmental_protection": 100,
+    "flags": [
+      "AURA",
+      "SEMITANGIBLE",
+      "OVERSIZE",
+      "WATERPROOF",
+      "RAINPROOF",
+      "TRADER_AVOID",
+      "STURDY",
+      "NO_TAKEOFF"
+    ],
+    "armor": [
+      {
+        "covers": [
+          "torso",
+          "head",
+          "eyes",
+          "mouth",
+          "leg_l",
+          "leg_r",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "foot_l",
+          "foot_r"
+        ],
+        "coverage": 100,
+        "encumbrance": 0
+      }
+    ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "id": "ench_sorcerer_life_bubble"
+        },
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "CLIMATE_CONTROL_HEAT",
+              "add": 100
+            },
+            {
+              "value": "CLIMATE_CONTROL_CHILL",
+              "add": 100
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_summon_monster",
+    "type": "SPELL",
+    "name": "术士-Lv5-召唤怪物 V",
+    "description": "在目标范围内召唤1-3怪物5，或者2-5怪物4，或者3-7怪物3，持续10分钟。",
+    "components": "spell_sorcerer_use_item_5",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "WONDER"
+    ],
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 8,
+    "min_aoe": 3,
+    "spell_class": "spell_craft_sorcerer_5",
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "max_level": 0,
+    "min_duration": 60000,
+    "max_duration": 60000,
+    "difficulty": 5,
+    "base_energy_cost": 0,
+    "shape": "blast",
+    "effect": "attack",
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_lv5_summon_monster_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv5_summon_monster_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv5_summon_monster_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv5_summon_monster_2"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv5_summon_monster_2"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv5_summon_monster_3"
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_summon_monster_1",
+    "type": "SPELL",
+    "name": "术士-Lv5-召唤怪物5",
+    "description": "在目标范围内召唤1-3只怪物5，持续10分钟。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "message": "",
+    "min_damage": 1,
+    "max_damage": 3,
+    "min_range": 8,
+    "min_aoe": 3,
+    "spell_class": "spell_craft_sorcerer_5",
+    "base_casting_time": 0,
+    "energy_source": "NONE",
+    "max_level": 0,
+    "min_duration": 60000,
+    "max_duration": 60000,
+    "difficulty": 5,
+    "shape": "blast",
+    "effect": "summon",
+    "effect_str": "mon_sor_summon_5",
+    "base_energy_cost": 0
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_lv5_summon_monster_1",
+    "id": "spell_craft_sorcerer_lv5_summon_monster_2",
+    "type": "SPELL",
+    "name": "术士-Lv5-召唤怪物4",
+    "description": "在目标范围内召唤2-5只怪物4，持续10分钟。",
+    "effect_str": "mon_sor_summon_4",
+    "min_damage": 2,
+    "max_damage": 5,
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_lv5_summon_monster_1",
+    "id": "spell_craft_sorcerer_lv5_summon_monster_3",
+    "type": "SPELL",
+    "name": "术士-Lv5-召唤怪物3",
+    "description": "在目标范围内召唤3-7只怪物3，持续10分钟。",
+    "effect_str": "mon_sor_summon_3",
+    "min_damage": 3,
+    "max_damage": 7,
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_create_enchanted_item",
+    "type": "SPELL",
+    "name": "术士-Lv5-制造魔法装备 II",
+    "description": "制造一件随机部位的魔法装备。",
+    "components": "spell_sorcerer_use_enchanted_item_2",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "CONCENTRATE",
+      "PERMANENT"
+    ],
+    "effect": "spawn_item",
+    "effect_str": "sor_enchanted_item_rnd_2",
+    "min_damage": 1,
+    "max_damage": 1,
+    "shape": "blast",
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_5",
+    "difficulty": 10,
+    "max_level": 0,
+    "base_energy_cost": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_downed",
+    "type": "SPELL",
+    "name": "术士-Lv5-律令跌倒",
+    "description": "使目标倒地，无视阻挡。",
+    "components": "spell_sorcerer_use_item_5",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "NO_HANDS",
+      "NO_PROJECTILE"
+    ],
+    "min_range": 30,
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_5",
+    "difficulty": 5,
+    "max_level": 0,
+    "base_casting_time": 50,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack",
+    "effect_str": "downed"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_trans_dirt2pit",
+    "type": "SPELL",
+    "name": "术士-Lv5-化泥为坑",
+    "description": "将泥土、泥地、苔藓和草地变化为浅坑；将浅坑变化为深坑。",
+    "components": "spell_sorcerer_use_item_5",
+    "valid_targets": [
+      "hostile",
+      "ground",
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "damage_type": "pure",
+    "min_range": 30,
+    "min_aoe": 5,
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_5",
+    "difficulty": 5,
+    "max_level": 0,
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "ter_transform",
+    "effect_str": "trans_dirt2pit"
+  },
+  {
+    "type": "ter_furn_transform",
+    "id": "trans_dirt2pit",
+    "terrain": [
+      {
+        "result": "t_pit",
+        "valid_terrain": [
+          "t_puddle",
+          "t_puddle_underground",
+          "t_pit_shallow"
+        ],
+        "message": "浅坑变深了!"
+      },
+      {
+        "result": "t_pit_shallow",
+        "valid_terrain": [
+          "t_dirt",
+          "t_mud",
+          "t_moss",
+          "t_grass",
+          "t_grass_white",
+          "t_grass_long",
+          "t_grass_tall",
+          "t_grass_dead",
+          "t_grass_golf",
+          "t_grass_alien"
+        ],
+        "message": "地面变成了浅坑!"
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_trans_pit2dirt",
+    "type": "SPELL",
+    "name": "术士-Lv5-化坑为泥",
+    "description": "将深坑变化为浅坑；将浅坑变化为泥土。",
+    "components": "spell_sorcerer_use_item_5",
+    "valid_targets": [
+      "hostile",
+      "ground",
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "damage_type": "pure",
+    "min_range": 30,
+    "min_aoe": 5,
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_5",
+    "difficulty": 5,
+    "max_level": 0,
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "ter_transform",
+    "effect_str": "trans_pit2dirt"
+  },
+  {
+    "type": "ter_furn_transform",
+    "id": "trans_pit2dirt",
+    "terrain": [
+      {
+        "result": "t_dirt",
+        "valid_terrain": [
+          "t_puddle",
+          "t_puddle_underground",
+          "t_pit_shallow"
+        ],
+        "message": "浅坑变成了地面!"
+      },
+      {
+        "result": "t_pit_shallow",
+        "valid_terrain": [
+          "t_pit",
+          "t_pit_covered",
+          "t_pit_glass",
+          "t_pit_glass_covered",
+          "t_pit_spiked",
+          "t_pit_spiked_covered",
+          "t_pit_corpsed"
+        ],
+        "message": "深坑变浅了!"
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_create_food",
+    "type": "SPELL",
+    "name": "术士-Lv5-真实食物",
+    "description": "制造一些随机的真实食物供你食用。",
+    "components": "spell_sorcerer_use_item_5",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "PERMANENT",
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "spawn_item",
+    "effect_str": "sor_true_food",
+    "min_damage": 2,
+    "max_damage": 2,
+    "shape": "blast",
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_5",
+    "difficulty": 5,
+    "max_level": 0,
+    "base_energy_cost": 0
+  },
+  {
+    "id": "sor_true_food",
+    "name": "真实食物",
+    "description": "拆开它。",
+    "type": "GENERIC",
+    "symbol": "+",
+    "color": "white",
+    "price": 0,
+    "price_postapoc": 0,
+    "flags": [
+      "TRADER_AVOID"
+    ],
+    "weight": "250 g",
+    "volume": "250 ml",
+    "longest_side": "10 cm",
+    "material": [
+      "plastic"
+    ],
+    "relic_data": {},
+    "use_action": {
+      "type": "unpack",
+      "group": "sor_true_food_group"
+    }
+  },
+  {
+    "type": "item_group",
+    "id": "sor_true_food_group",
+    "items": [
+      [
+        "water_clean",
+        1
+      ],
+      [
+        "water_mineral",
+        1
+      ],
+      [
+        "oj",
+        1
+      ],
+      [
+        "pineapple_juice",
+        1
+      ],
+      [
+        "juice",
+        1
+      ],
+      [
+        "tomato_juice",
+        1
+      ],
+      [
+        "cranberry_juice",
+        1
+      ],
+      [
+        "sports_drink",
+        1
+      ],
+      [
+        "apple_cider",
+        1
+      ],
+      [
+        "lemonade",
+        1
+      ],
+      [
+        "energy_drink",
+        1
+      ],
+      [
+        "herbal_tea",
+        1
+      ],
+      [
+        "energy_drink_atomic",
+        1
+      ],
+      [
+        "cola",
+        1
+      ],
+      [
+        "colamdew",
+        1
+      ],
+      [
+        "creamsoda",
+        1
+      ],
+      [
+        "lemonlime",
+        1
+      ],
+      [
+        "orangesoda",
+        1
+      ],
+      [
+        "rootbeer",
+        1
+      ],
+      [
+        "crispycran",
+        1
+      ],
+      [
+        "purple_drink",
+        1
+      ],
+      [
+        "choc_drink",
+        1
+      ],
+      [
+        "milk",
+        1
+      ],
+      [
+        "milk_choc",
+        1
+      ],
+      [
+        "milk_UHT",
+        1
+      ],
+      [
+        "almond_milk",
+        1
+      ],
+      [
+        "soy_milk",
+        1
+      ],
+      [
+        "can_peach",
+        1
+      ],
+      [
+        "can_coconut",
+        1
+      ],
+      [
+        "yoghurt",
+        1
+      ],
+      [
+        "pudding",
+        1
+      ],
+      [
+        "V8",
+        1
+      ],
+      [
+        "foodplace_food",
+        1
+      ],
+      [
+        "lobster_canned",
+        1
+      ],
+      [
+        "canned_liver",
+        1
+      ],
+      [
+        "can_pineapple",
+        1
+      ],
+      [
+        "fish_canned",
+        1
+      ],
+      [
+        "can_chicken",
+        1
+      ],
+      [
+        "can_clams",
+        1
+      ],
+      [
+        "offal_canned",
+        1
+      ],
+      [
+        "can_beans",
+        1
+      ],
+      [
+        "meat_canned",
+        1
+      ],
+      [
+        "apple_canned",
+        1
+      ],
+      [
+        "can_tomato",
+        1
+      ],
+      [
+        "veggy_canned",
+        1
+      ],
+      [
+        "can_sardine",
+        1
+      ],
+      [
+        "can_salmon",
+        1
+      ],
+      [
+        "can_tuna",
+        1
+      ],
+      [
+        "fried_egg_sandwich",
+        1
+      ],
+      [
+        "deluxe_fried_egg_sandwich",
+        1
+      ],
+      [
+        "caviar_egg_sandwich",
+        1
+      ],
+      [
+        "sandwich_cheese_grilled",
+        1
+      ],
+      [
+        "sandwich_egg_salad",
+        1
+      ],
+      [
+        "sandwich_fairy",
+        1
+      ],
+      [
+        "sandwich_sauce",
+        1
+      ],
+      [
+        "blt",
+        1
+      ],
+      [
+        "sandwich_deluxe",
+        1
+      ],
+      [
+        "sandwich_reuben",
+        1
+      ],
+      [
+        "sandwich_veggy",
+        1
+      ],
+      [
+        "sandwich_veggy_cheese",
+        1
+      ],
+      [
+        "sandwich_cucumber",
+        1
+      ],
+      [
+        "sandwich_t",
+        1
+      ],
+      [
+        "sandwich_pb",
+        1
+      ],
+      [
+        "sandwich_pbj",
+        1
+      ],
+      [
+        "sandwich_pbh",
+        1
+      ],
+      [
+        "sandwich_pbm",
+        1
+      ],
+      [
+        "sandwich_jam",
+        1
+      ],
+      [
+        "sandwich_jam_butter",
+        1
+      ],
+      [
+        "sandwich_jam_cheese",
+        1
+      ],
+      [
+        "sandwich_cheese",
+        1
+      ],
+      [
+        "sandwich_honey",
+        1
+      ],
+      [
+        "cooked_dinner",
+        1
+      ],
+      [
+        "junk_burrito",
+        1
+      ],
+      [
+        "insta_salad",
+        1
+      ],
+      [
+        "pizza_veggy",
+        1
+      ],
+      [
+        "pizza_cheese",
+        1
+      ],
+      [
+        "pizza_meat",
+        1
+      ],
+      [
+        "pizza_supreme",
+        1
+      ],
+      [
+        "cheeseburger",
+        1
+      ],
+      [
+        "deluxe_cheeseburger",
+        1
+      ],
+      [
+        "hamburger",
+        1
+      ],
+      [
+        "tofu_rice",
+        1
+      ],
+      [
+        "fish_fried",
+        1
+      ],
+      [
+        "fish_sandwich",
+        1
+      ],
+      [
+        "lobster_cakes",
+        1
+      ],
+      [
+        "lobster_roll",
+        1
+      ],
+      [
+        "sloppyjoe",
+        1
+      ],
+      [
+        "corndogs_cooked",
+        1
+      ],
+      [
+        "corndogs_homemade",
+        1
+      ],
+      [
+        "hotdogs_campfire",
+        1
+      ],
+      [
+        "hotdogs_cooked",
+        1
+      ],
+      [
+        "hotdogs_newyork",
+        1
+      ],
+      [
+        "homemade_hotdogs",
+        1
+      ],
+      [
+        "chilidogs",
+        1
+      ],
+      [
+        "fries",
+        1
+      ],
+      [
+        "cheese_fries",
+        1
+      ],
+      [
+        "onion_rings",
+        1
+      ],
+      [
+        "bacon",
+        1
+      ],
+      [
+        "lunchmeat",
+        1
+      ],
+      [
+        "bologna",
+        1
+      ],
+      [
+        "fruit_leather",
+        1
+      ],
+      [
+        "protein_shake",
+        1
+      ],
+      [
+        "pie",
+        1
+      ],
+      [
+        "pie_veggy",
+        1
+      ],
+      [
+        "pie_meat",
+        1
+      ],
+      [
+        "pie_maple",
+        1
+      ],
+      [
+        "humble_pie",
+        1
+      ],
+      [
+        "waffles",
+        1
+      ],
+      [
+        "fruit_waffles",
+        1
+      ],
+      [
+        "choc_waffles",
+        1
+      ],
+      [
+        "gelatin_dessert_base",
+        1
+      ],
+      [
+        "gelatin_dessert_processed",
+        1
+      ],
+      [
+        "gelatin_dessert_homemade",
+        1
+      ],
+      [
+        "gelatin_dessert_fruit",
+        1
+      ],
+      [
+        "gelatin_dessert_vegan",
+        1
+      ],
+      [
+        "gelatin_dessert_vegan_fruit",
+        1
+      ],
+      [
+        "mre_asianbeef",
+        1
+      ],
+      [
+        "mre_bbqbeef",
+        1
+      ],
+      [
+        "mre_beef",
+        1
+      ],
+      [
+        "mre_beefstew",
+        1
+      ],
+      [
+        "mre_beeftaco",
+        1
+      ],
+      [
+        "mre_cheesetort",
+        1
+      ],
+      [
+        "mre_chicken",
+        1
+      ],
+      [
+        "mre_chickenburritobowl",
+        1
+      ],
+      [
+        "mre_chickennoodle",
+        1
+      ],
+      [
+        "mre_chickenpesto",
+        1
+      ],
+      [
+        "mre_chilibeans",
+        1
+      ],
+      [
+        "mre_chilimac",
+        1
+      ],
+      [
+        "mre_hashbrownbacon",
+        1
+      ],
+      [
+        "mre_hotdog",
+        1
+      ],
+      [
+        "mre_lemontuna",
+        1
+      ],
+      [
+        "mre_lobstermedley",
+        1
+      ],
+      [
+        "mre_macaronimarinara",
+        1
+      ],
+      [
+        "mre_maplesausage",
+        1
+      ],
+      [
+        "mre_meatball",
+        1
+      ],
+      [
+        "mre_mexicanchickenstew",
+        1
+      ],
+      [
+        "mre_mushroomfettuccine",
+        1
+      ],
+      [
+        "mre_pepperjackbeef",
+        1
+      ],
+      [
+        "mre_ratatouille",
+        1
+      ],
+      [
+        "mre_ravioli",
+        1
+      ],
+      [
+        "mre_sfettuccine",
+        1
+      ],
+      [
+        "mre_southwestbeef",
+        1
+      ],
+      [
+        "mre_spaghetti",
+        1
+      ],
+      [
+        "mre_pizza",
+        1
+      ],
+      [
+        "mre_cheesepizza",
+        1
+      ],
+      [
+        "mre_veggy",
+        1
+      ],
+      [
+        "chips",
+        1
+      ],
+      [
+        "chips2",
+        1
+      ],
+      [
+        "chips3",
+        1
+      ],
+      [
+        "pretzels",
+        1
+      ],
+      [
+        "jerky",
+        1
+      ],
+      [
+        "porkstick",
+        1
+      ],
+      [
+        "nachos",
+        1
+      ],
+      [
+        "chocpretzels",
+        1
+      ],
+      [
+        "popcorn",
+        1
+      ],
+      [
+        "popcorn2",
+        1
+      ],
+      [
+        "popcorn3",
+        1
+      ],
+      [
+        "cracklins",
+        1
+      ],
+      [
+        "fried_seeds",
+        1
+      ],
+      [
+        "hallula",
+        1
+      ],
+      [
+        "wastebread",
+        1
+      ],
+      [
+        "brioche",
+        1
+      ],
+      [
+        "toasterpastry",
+        1
+      ],
+      [
+        "homemade_toasterpastry",
+        1
+      ],
+      [
+        "cornbread",
+        1
+      ],
+      [
+        "bread_garlic",
+        1
+      ],
+      [
+        "sourdough_bread",
+        1
+      ],
+      [
+        "biscuit",
+        1
+      ],
+      [
+        "crackers",
+        1
+      ],
+      [
+        "brown_bread",
+        1
+      ],
+      [
+        "flatbread",
+        1
+      ],
+      [
+        "bread",
+        1
+      ]
+    ]
+  }
+]

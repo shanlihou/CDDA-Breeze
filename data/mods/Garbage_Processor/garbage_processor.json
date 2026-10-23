@@ -1,0 +1,140 @@
+[
+    {  "type": "GENERIC",
+    "id": "garbage_processor",
+    "name": {
+        "str": "垃圾处理机"
+    },
+    "description": "某位疯狂的幸存者结合了原子电池和空间传送技术所制造出来的用于处理垃圾和尸体的奇怪产品。放置为家具后使用。",
+    "weight": "50 kg",
+    "to_hit": -1,
+    "material": [
+        "plastic",
+        "steel"
+    ],
+    "volume": "300 L",
+    "longest_side": "150 cm",
+    "price": 9000,
+    "price_postapoc": 500,
+    "symbol": "G",
+    "color": "white",
+    "looks_like": "food_processor"
+    },
+
+    {
+        "type": "furniture",
+        "id": "f_garbage_processor",
+        "name": "垃圾处理机",
+        "description": "一台先进又落后的全自动机械，粗犷的外表下隐藏着实验性质的尖端科技，非常适合用来处理人类体型的尸体。",
+        "symbol": "G",
+        "color": "white",
+        "move_cost_mod": -1,
+        "required_str": 12,
+        "max_volume": "1000 L",
+        "looks_like": "t_machinery_heavy",
+        "flags": [ "CONTAINER", "PLACE_ITEM", "MOUNTABLE","OBSTACLE","DESTROY_ITEM","EASY_DECONSTRUCT"],
+        "deconstruct": { "items": [ { "item": "garbage_processor", "count": 1 } ] },
+        "bash": {
+          "str_min": 10,
+          "str_max": 45,
+          "sound": "crunch!",
+          "sound_fail": "whack!",
+          "items": [
+            { "item": "wire", "count": [ 1, 3 ] },
+            { "item": "pipe", "count": [ 1, 2 ] },
+            { "item": "chain", "prob": 60 },
+            { "item": "steel_lump", "count": [ 1, 2 ] },
+            { "item": "hose", "count": 1 },
+            { "item": "sheet_metal", "count": [ 1, 3 ] },
+            { "item": "steel_chunk", "count": [ 1, 3 ] },
+            { "item": "pipe_fittings", "count": [ 1, 3 ] },
+            { "item": "frame", "prob": 60 },
+            { "item": "motor", "prob": 30 },
+            { "item": "metal_tank", "prob": 30 },
+            { "item": "e_scrap", "count": [ 1, 4 ], "prob": 50 },
+            { "item": "circuit", "count": [ 1, 2 ], "prob": 50 },
+            { "item": "scrap", "count": [ 2, 5 ] },
+            { "item": "cable", "charges": [ 1, 15 ] }
+          ]
+        }
+      },
+
+      {
+        "type": "recipe",
+        "activity_level": "MODERATE_EXERCISE",
+        "result": "garbage_processor",
+        "category": "CC_OTHER",
+        "subcategory": "CSC_OTHER_TOOLS",
+        "skill_used": "fabrication",
+        "skills_required": [ "electronics", 5 ],
+        "difficulty": 5,
+        "time": "3 h",
+        "reversible": true,
+        "decomp_learn": 5,
+        "autolearn": true,
+        "qualities": [
+          { "id": "HAMMER", "level": 2 },
+          { "id": "SAW_M", "level": 1 },
+          { "id": "SCREW", "level": 1 },
+          { "id": "WRENCH", "level": 1 }
+        ],
+        "tools": [
+          [
+            [ "welder", 200 ],
+            [ "welding_kit", 200 ],
+            [ "welder_crude", 300 ],
+            [ "toolset", 300 ],
+            [ "soldering_iron", 300 ],
+            [ "oxy_torch", 40 ]
+          ]
+        ],
+        "proficiencies": [ 
+          { "proficiency": "prof_metalworking" }, 
+          { "proficiency": "prof_elec_soldering" },
+          { "proficiency": "prof_elec_circuits" }
+        ],
+        "components": [
+          [ [ "frame", 1 ] ],
+          [ [ "motor", 1 ] ],
+          [ [ "metal_tank",  1] ],
+          [ ["teleporter", 1 ] ],
+          [ [ "betavoltaic", 16 ] ],
+          [ [ "blade", 4 ] ],
+          [ [ "sheet_metal_small", 3 ] ],
+          [ [ "steel_lump", 4 ], [ "steel_chunk", 16 ], [ "scrap", 40 ] ],
+          [ [ "cable", 20 ] ],
+          [ [ "power_supply", 2 ] ],
+          [ [ "solder_wire", 50 ] ],
+          [ [ "amplifier", 2 ] ],
+          [ [ "circuit", 2 ] ],
+          [ [ "plastic_chunk", 5 ] ],
+          [ [ "small_lcd_screen", 2 ] ],
+          [ [ "processor", 1 ] ],
+          [ [ "medium_storage_battery", 1 ] ],
+          [ [ "RAM",  1] ],
+          [ [ "e_scrap", 5 ] ],
+          [ [ "pipe_fittings", 2 ] ],
+          [ [ "hose",  1] ],
+          [ [ "pipe",  4] ],
+          [ [ "chain", 1 ] ]
+        ]
+      },
+
+    {
+        "type": "construction",
+        "id": "f_garbage_processor",
+        "group": "place_garbage_processor",
+        "category": "FURN",
+        "required_skills": [ [ "fabrication", 0 ] ],
+        "time":  "10 s",
+        "components": [ [ [ "garbage_processor", 1 ] ] ],
+        "pre_special": "check_empty",
+        "post_terrain": "f_garbage_processor",
+        "activity_level": "LIGHT_EXERCISE"
+      },
+
+      {
+        "type": "construction_group",
+        "id": "place_garbage_processor",
+        "name": "放置垃圾处理机"
+      }
+]

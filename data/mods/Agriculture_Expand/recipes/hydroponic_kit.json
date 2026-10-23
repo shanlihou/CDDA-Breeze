@@ -1,0 +1,290 @@
+[
+	{
+		"type": "recipe",
+		"result": "hy_nutrient_solution_tank",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_水培：配件",
+		"skill_used": "fabrication",
+		"difficulty": 1,
+		"time": "5 s",
+		"autolearn": true,
+		"components": [
+			[ [ "jar_3l_glass", 1 ]]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "hy_nutrient_solution_circulating_device",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_水培：配件",
+		"skill_used": "mechanics",
+		"difficulty": 3,
+		"time": "5 m",
+		"autolearn": true,
+		"components": [
+			[ [ "well_pump", 1 ] ],
+			[ [ "hose", 2 ] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "hy_hydroponic_power_system",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_水培：配件",
+		"skill_used": "electronics",
+		"difficulty": 3,
+		"using": [ [ "soldering_standard", 5 ] ],
+		"time": "15 m",
+		"autolearn": true,
+		"components": [
+			[ [ "power_supply", 5 ] ],
+			[ [ "amplifier", 3 ] ],
+			[ [ "scrap", 6 ] ],
+			[ [ "solder_wire", 16 ] ],
+			[ [ "plut_cell", 1 ] ],
+			[ [ "cable", 15 ] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "hy_nutrition_supply_device",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_水培：配件",
+		"skill_used": "fabrication",
+		"difficulty": 2,
+		"time": "2 m",
+		"autolearn": true,
+		"components": [
+			[ [ "jar_3l_glass", 1 ] ],
+			[ [ "hy_nutrient_solution_circulating_device", 1 ] ],
+			[ [ "ph_meter", 1 ] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "hy_sunlamp",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_水培：配件",
+		"skill_used": "fabrication",
+		"difficulty": 2,
+		"time": "2 m",
+		"autolearn": true,
+		"components": [
+			[ [ "lightstrip_inactive", 10 ], [ "atomic_lamp", 1 ], [ "car_headlight", 1 ], [ "car_wide_headlight", 1 ], [ "directed_floodlight", 1 ], [ "floodlight", 1 ] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "hy_temperature_control_system",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_水培：配件",
+		"skill_used": "electronics",
+		"difficulty": 3,
+		"using": [ [ "soldering_standard", 5 ] ],
+		"time": "10 m",
+		"autolearn": true,
+		"components": [
+			[ [ "motor_micro", 1 ] ],
+			[ [ "thermometer", 1 ] ],
+			[ [ "scrap", 3 ] ],
+			[ [ "solder_wire", 10 ] ],
+			[ [ "element", 2 ] ],
+			[ [ "cable", 5 ] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "hy_aerator",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_水培：配件",
+		"skill_used": "electronics",
+		"difficulty": 3,
+		"time": "10 m",
+		"using": [ [ "soldering_standard", 5 ] ],
+		"tools": [ [ [ "mold_plastic", -1 ] ], [ [ "surface_heat", 30, "LIST" ] ] ],
+		"autolearn": true,
+		"components": [
+			[ [ "motor_micro", 1 ] ],
+			[ [ "pipe", 2 ] ],
+			[ [ "scrap", 3 ] ],
+			[ [ "solder_wire", 10 ] ],
+			[ [ "superglue", 2 ] ],
+			[ [ "plastic_chunk", 7 ] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "hy_hydroponic_tank_shell",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_水培：配件",
+		"skill_used": "fabrication",
+		"difficulty": 3,
+		"time": "60 m",
+		"tools": [ [ [ "mold_plastic", -1 ] ], [ [ "surface_heat", 30, "LIST" ] ] ],
+		"autolearn": true,
+		"components": [
+			[ [ "plastic_chunk", 8 ] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "hy_hydroponic_control_system",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_水培：配件",
+		"skill_used": "electronics",
+		"skills_required": [ [ "mechanics", 4 ], [ "computer", 4 ] ],
+		"reversible": true,
+		"autolearn": true,
+		"difficulty": 4,
+		"time": "90 m",
+		"using": [ [ "soldering_standard", 5 ] ],
+		"qualities": [
+			{ "id": "SCREW", "level": 1 },
+			{ "id": "SCREW_FINE", "level": 1 },
+			{ "id": "WRENCH", "level": 2 },
+			{ "id": "WRENCH_FINE", "level": 1 }
+		],
+		"components": [
+			[ [ "sensor_module", 1 ] ],
+			[ [ "RAM", 1 ] ],
+			[ [ "processor", 1 ] ],
+			[ [ "scrap", 2 ] ],
+			[ [ "e_scrap", 2 ] ],
+			[ [ "sheet_metal", 1 ] ],
+			[ [ "cable", 5 ] ],
+			[ [ "circuit", 2 ] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "hydroponic_kit_small_no_nutrition",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_水培：部署式水培",
+		"skill_used": "fabrication",
+		"skills_required": [ [ "mechanics", 4 ], [ "electronics", 4 ] ],
+		"reversible": true,
+		"autolearn": true,
+		"difficulty": 4,
+		"time": "30 m",
+		"using": [ [ "soldering_standard", 15 ] ],
+		"qualities": [
+			{ "id": "SCREW", "level": 1 },
+			{ "id": "SCREW_FINE", "level": 1 },
+			{ "id": "WRENCH", "level": 2 },
+			{ "id": "WRENCH_FINE", "level": 1 }
+		],
+		"components": [
+			[ [ "hy_hydroponic_control_system", 1 ] ],
+			[ [ "hy_hydroponic_tank_shell", 8 ] ],
+			[ [ "hy_aerator", 1 ] ],
+			[ [ "hy_temperature_control_system", 1 ] ],
+			[ [ "hy_sunlamp", 3 ] ],
+			[ [ "hy_nutrition_supply_device", 1 ] ],
+			[ [ "cable", 5 ] ],
+			[ [ "hy_hydroponic_power_system", 1 ] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "hydroponic_kit_small",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_水培：部署式水培",
+		"skill_used": "fabrication",
+		"autolearn": true,
+		"difficulty": 1,
+		"time": "2 m",
+		"components": [
+			[ [ "hydroponic_kit_small_no_nutrition", 1 ] ],
+			[ [ "fertilizer_commercial", 2 ], [ "fertilizer_liquid", 2 ] ],
+			[ [ "water", 10 ] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "hydroponic_kit_mid_no_nutrition",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_水培：部署式水培",
+		"skill_used": "fabrication",
+		"skills_required": [ [ "mechanics", 4 ], [ "electronics", 4 ] ],
+		"reversible": true,
+		"autolearn": true,
+		"difficulty": 4,
+		"time": "40 m",
+		"using": [ [ "soldering_standard", 15 ] ],
+		"qualities": [
+			{ "id": "SCREW", "level": 1 },
+			{ "id": "SCREW_FINE", "level": 1 },
+			{ "id": "WRENCH", "level": 2 },
+			{ "id": "WRENCH_FINE", "level": 1 }
+		],
+		"components": [
+			[ [ "hy_hydroponic_control_system", 1 ] ],
+			[ [ "hy_hydroponic_tank_shell", 16 ] ],
+			[ [ "hy_aerator", 1 ] ],
+			[ [ "hy_temperature_control_system", 1 ] ],
+			[ [ "hy_sunlamp", 5 ] ],
+			[ [ "hy_nutrition_supply_device", 2 ] ],
+			[ [ "cable", 8 ] ],
+			[ [ "hy_hydroponic_power_system", 1 ] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "hydroponic_kit_mid",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_水培：部署式水培",
+		"skill_used": "fabrication",
+		"autolearn": true,
+		"difficulty": 1,
+		"time": "2 m",
+		"components": [
+			[ [ "hydroponic_kit_mid_no_nutrition", 1 ] ],
+			[ [ "fertilizer_commercial", 4 ], [ "fertilizer_liquid", 4 ] ],
+			[ [ "water", 20 ] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "hydroponic_kit_large_no_nutrition",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_水培：部署式水培",
+		"skill_used": "fabrication",
+		"skills_required": [ [ "mechanics", 4 ], [ "electronics", 4 ] ],
+		"reversible": true,
+		"autolearn": true,
+		"difficulty": 4,
+		"time": "50 m",
+		"using": [ [ "soldering_standard", 20 ] ],
+		"qualities": [
+			{ "id": "SCREW", "level": 1 },
+			{ "id": "SCREW_FINE", "level": 1 },
+			{ "id": "WRENCH", "level": 2 },
+			{ "id": "WRENCH_FINE", "level": 1 }
+		],
+		"components": [
+			[ [ "hy_hydroponic_control_system", 1 ] ],
+			[ [ "hy_hydroponic_tank_shell", 24 ] ],
+			[ [ "hy_aerator", 2 ] ],
+			[ [ "hy_temperature_control_system", 2 ] ],
+			[ [ "hy_sunlamp", 7 ] ],
+			[ [ "hy_nutrition_supply_device", 3 ] ],
+			[ [ "cable", 10 ] ],
+			[ [ "hy_hydroponic_power_system", 2 ] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "hydroponic_kit_large",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_水培：部署式水培",
+		"skill_used": "fabrication",
+		"autolearn": true,
+		"difficulty": 1,
+		"time": "2 m",
+		"components": [
+			[ [ "hydroponic_kit_large_no_nutrition", 1 ] ],
+			[ [ "fertilizer_commercial", 6 ], [ "fertilizer_liquid", 6 ] ],
+			[ [ "water", 30 ] ]
+		]
+	}
+]

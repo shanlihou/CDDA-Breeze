@@ -1,0 +1,107 @@
+[
+  {
+    "id": "CC_mon_dog",
+    "type": "MONSTER",
+    "copy-from": "mon_wolf",
+    "name": { "str": "CC战狼" }, 
+    "looks_like": "mon_dog_gshepherd",
+    "description": "一匹驯养良好可以应对恶劣环境的战狼（其实就一个可骑乘的大狗狗）。\n经过培养可适应更加恶劣环境，繁育更快，食谱广泛，除了可以吃狗狗类食物，猫猫食物和常见家畜饲料都能喂，也可以啃倒下的怪物。体格更大（战马大小，装配马铠），负荷更大。\n也能吃素吃草充饥，总的来说就是更加好养活了。应该有不少人知道，有一个大草原存在能吃素吃草也很厉害的狼吧？（＾ｖ＾） ",
+    "default_faction": "dog",
+    "bodytype": "horse",
+    "categories": [ "WILDLIFE" ],
+    "species": [ "MAMMAL" ],
+    "volume": "500000 ml",
+    "weight": "1000 kg",
+    "harvest": "dog_with_skull_fur",
+    "dissect": "dissect_lupine_sample_single",
+    "hp": 1200, 
+    "regenerates": 50, 
+    "speed": 500, 
+    "aggression": -10,
+    "material": [ "flesh" ],
+    "symbol": "d",
+    "color": "light_gray",
+    "starting_ammo": { "milk_raw": 1600 }, 
+    "shearing": [ { "result": "wool_staple", "amount": 300 } ],
+    "morale": 100,
+    "mount_items": { "tied": "rope_30", "tack": "CC_harness", "armor": "CC_harness" },
+    "aggro_character": false,
+    "melee_skill": 6,
+    "melee_dice": 10,
+    "melee_dice_sides": 10,
+    "melee_damage": [ { "damage_type": "cut", "amount": 15 } ],
+    "dodge": 5,
+    "armor_bash": 30,
+    "armor_cut": 30,
+    "armor_bullet": 30,
+    "armor_elec": 30,
+    "bleed_rate": 0,
+    "vision_night": 10,
+    "death_drops": "mon_dog_death_drops",
+    "families": [ "prof_intro_biology", "prof_physiology" ],
+    "path_settings": { "max_dist": 10 },
+    "reproduction": { "baby_monster": "CC_mon_dog_pup", "baby_count": 2, "baby_timer": 90 },
+    "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
+    "biosignature": { "biosig_item": "feces_dog", "biosig_timer": 10 },
+    "anger_triggers": [ "HURT", "FRIEND_ATTACKED", "FRIEND_DIED" ], 
+    "placate_triggers": [ "PLAYER_CLOSE" ],
+    "special_attacks": [
+    [
+      "ABSORB_MEAT",
+      100
+    ],
+    [
+      "EAT_CROP",
+      100
+    ],
+    [
+      "EAT_FOOD",
+      100
+    ],
+    [
+      "LUNGE",
+      5
+    ],
+    [
+      "LONGSWIPE",
+      10
+    ]
+  ],
+    "petfood": {
+      "food": [ "CATTLEFOOD", "CATFOOD", "DOGFOOD" ],
+      "feed": "这只 %s 似乎很喜欢你！它让你抚摸它的头，看起来很友好。",
+      "pet": "当你抚摸它的头时，这只 %s 开心地摇着尾巴。"
+    },
+    "flags": [ "ANIMAL", "DOGFOOD", "CANPLAY", "GROUP_MORALE", "HEARS", "PET_MOUNTABLE", "HIT_AND_RUN", "KEENNOSE", "PATH_AVOID_DANGER_1", "SEES", "SMELLS", "SWARMS", "WARM", "MILKABLE", "SWIMS", "CLIMBS", "BADVENOM", "PARALYZEVENOM", "HARDTOSHOOT", "SHEARABLE", "CAN_OPEN_DOORS" ]
+  },
+  {
+    "id": "CC_mon_dog_pup",
+    "type": "MONSTER",
+    "copy-from": "CC_mon_dog",
+    "name": { "str": "CC战狼幼崽" },
+    "description": "CC战狼幼崽，一个小狗狗。特殊培育的优秀品种，能比普通宠物成长更快。",
+    "volume": "75000 ml",
+    "weight": "60 kg",
+    "hp": 600, 
+    "regenerates": 25, 
+    "speed": 250,
+    "aggression": -13,
+    "morale": 18,
+    "dodge": 1,
+    "armor_bash": 5,
+    "armor_cut": 5,
+    "armor_bullet": 5,
+    "armor_elec": 5,
+    "bleed_rate": 50,
+    "vision_night": 10,
+    "melee_skill": 2,
+    "melee_dice": 1,
+    "melee_dice_sides": 3,
+    "melee_damage": [ { "damage_type": "cut", "amount": 1 } ],
+    "harvest": "dog_small_with_skull",
+    "reproduction": { "baby_monster": "CC_mon_dog_pup", "baby_count": 2, "baby_timer": 90 },
+    "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
+    "upgrades": { "age_grow": 30, "into": "CC_mon_dog" },
+    "extend": { "flags": [ "NO_BREED" ] }
+  }
+]

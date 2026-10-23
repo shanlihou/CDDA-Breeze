@@ -13,18 +13,19 @@
         "sprite_width": 32, "sprite_height": 32,
         "sprite_offset_x": 0, "sprite_offset_y": -8,
         "tiles": [
-           {"id": "overlay_worn_qp_dd","animated": true,"fg": [
+        {"id": "qp_tsgh", "fg": 4 },
+           {"id": "overlay_worn_qp_dd","animated": true,"fg": [//等待
            {"weight": 5,"sprite": 20 }, {"weight": 5,"sprite": 21 }, {"weight": 5,"sprite": 23 },
            {"weight": 5,"sprite": 24 }, {"weight": 5,"sprite": 25 }, {"weight": 5,"sprite": 26 },
            {"weight":20,"sprite": 27 } ] },
-           {"id": "overlay_worn_qp_wh","animated": true,"fg": [
+           {"id": "overlay_worn_qp_wh","animated": true,"fg": [//问号
            {"weight": 5,"sprite": 20 }, {"weight": 5,"sprite": 21 }, {"weight": 5,"sprite": 23 },
            {"weight": 5,"sprite": 24 }, {"weight": 5,"sprite": 25 }, {"weight": 5,"sprite": 26 },
            {"weight": 5,"sprite": 27 },
            {"weight": 5,"sprite": 40 }, {"weight": 5,"sprite": 41 }, {"weight": 5,"sprite": 42 },
            {"weight": 5,"sprite": 43 }, {"weight": 5,"sprite": 44 }, {"weight": 5,"sprite": 45 },
            {"weight": 5,"sprite": 46 }, {"weight": 5,"sprite": 47 }, {"weight":99,"sprite": 48 } ] },
-           {"id": "overlay_worn_qp_gth","animated": true,"fg": [
+           {"id": "overlay_worn_qp_gth","animated": true,"fg": [//感叹号
            {"weight": 5,"sprite": 20 }, {"weight": 5,"sprite": 21 }, {"weight": 5,"sprite": 23 },
            {"weight": 5,"sprite": 24 }, {"weight": 5,"sprite": 25 }, {"weight": 5,"sprite": 26 },
            {"weight": 5,"sprite": 27 },
@@ -35,7 +36,7 @@
            {"weight": 5,"sprite": 72 }, {"weight":99,"sprite": 73 }, {"weight": 5,"sprite": 74 },
            {"weight": 5,"sprite": 75 }, {"weight": 5,"sprite": 76 }, {"weight": 5,"sprite": 77 },
            {"weight": 5,"sprite": 78 }, {"weight": 5,"sprite": 79 } ] },
-           {"id": "overlay_worn_qp_lh","animated": true,"fg": [
+           {"id": "overlay_worn_qp_lh","animated": true,"fg": [//流汗
            {"weight": 5,"sprite": 20 }, {"weight": 5,"sprite": 21 }, {"weight": 5,"sprite": 23 },
            {"weight": 5,"sprite": 24 }, {"weight": 5,"sprite": 25 }, {"weight": 5,"sprite": 26 },
            {"weight": 5,"sprite": 27 },
@@ -46,7 +47,7 @@
            {"weight": 5,"sprite": 92 }, {"weight": 5,"sprite": 93 }, {"weight": 5,"sprite": 94 },
            {"weight": 5,"sprite": 95 }, {"weight": 5,"sprite": 96 }, {"weight": 5,"sprite": 97 },
            {"weight": 5,"sprite": 98 }, {"weight":99,"sprite": 99 } ] },
-           {"id": "overlay_worn_qp_gglh","animated": true,"fg": [
+           {"id": "overlay_worn_qp_gglh","animated": true,"fg": [//尴尬脸红
            {"weight": 5,"sprite": 20 }, {"weight": 5,"sprite": 21 }, {"weight": 5,"sprite": 23 },
            {"weight": 5,"sprite": 24 }, {"weight": 5,"sprite": 25 }, {"weight": 5,"sprite": 26 },
            {"weight": 5,"sprite": 27 },
@@ -57,7 +58,7 @@
            {"weight": 5,"sprite": 112}, {"weight": 5,"sprite": 112}, {"weight": 5,"sprite": 114},
            {"weight": 5,"sprite": 115}, {"weight": 5,"sprite": 116}, {"weight": 5,"sprite": 117},
            {"weight":99,"sprite": 118} ] },
-           {"id": "overlay_worn_qp_ax","animated": true,"fg": [
+           {"id": "overlay_worn_qp_ax","animated": true,"fg": [//爱心
            {"weight": 5,"sprite": 120}, {"weight": 5,"sprite": 121}, {"weight": 5,"sprite": 122},
            {"weight": 5,"sprite": 123}, {"weight": 5,"sprite": 124}, {"weight": 5,"sprite": 125},
            {"weight": 5,"sprite": 126}, {"weight": 5,"sprite": 127}, {"weight": 5,"sprite": 128},
@@ -70,7 +71,7 @@
            {"weight": 5,"sprite": 126}, {"weight": 5,"sprite": 125}, {"weight": 5,"sprite": 124},
            {"weight": 5,"sprite": 123}, {"weight": 5,"sprite": 122}, {"weight": 5,"sprite": 121},
            {"weight": 5,"sprite": 120} ] },
-           {"id": "overlay_worn_qp_tsgh","animated": true,"fg": [
+           {"id": "overlay_worn_qp_tsgh","animated": true,"fg": [//天使光环
            {"weight": 5,"sprite": 140}, {"weight": 5,"sprite": 141}, {"weight": 5,"sprite": 142},
            {"weight": 5,"sprite": 143}, {"weight": 5,"sprite": 144}, {"weight": 5,"sprite": 145},
            {"weight": 5,"sprite": 146}, {"weight": 5,"sprite": 147}, {"weight": 5,"sprite": 148},
@@ -83,19 +84,19 @@
            {"weight": 5,"sprite": 147}, {"weight": 5,"sprite": 146}, {"weight": 5,"sprite": 145},
            {"weight": 5,"sprite": 144}, {"weight": 5,"sprite": 143}, {"weight": 5,"sprite": 142},
            {"weight": 5,"sprite": 141}, {"weight": 5,"sprite": 140} ] },
-           {"id": "overlay_worn_armor_jkm","animated": true,"fg": [
+           {"id": "overlay_worn_armor_jkm","animated": true,"fg": [//学生帽
            {"weight": 5,"sprite": 160}, {"weight": 5,"sprite": 161}, {"weight": 5,"sprite": 162},
            {"weight": 5,"sprite": 163}, {"weight": 5,"sprite": 164}, {"weight": 5,"sprite": 165},
            {"weight": 5,"sprite": 166}, {"weight":30,"sprite": 167}, {"weight": 5,"sprite": 166},
            {"weight": 5,"sprite": 165}, {"weight": 5,"sprite": 164}, {"weight": 5,"sprite": 163},
            {"weight": 5,"sprite": 162}, {"weight": 5,"sprite": 161} ] },
-           {"id": "overlay_worn_armor_wj","animated": true,"fg": [
+           {"id": "overlay_worn_armor_wj","animated": true,"fg": [//围巾拉起
            {"weight": 5,"sprite": 182}, {"weight": 5,"sprite": 183}, {"weight": 5,"sprite": 184},
            {"weight": 5,"sprite": 185}, {"weight": 5,"sprite": 186}, {"weight":20,"sprite": 187},
            {"weight": 5,"sprite": 186}, {"weight": 5,"sprite": 185}, {"weight": 5,"sprite": 184},
            {"weight": 5,"sprite": 183}, {"weight": 5,"sprite": 182}, {"weight": 5,"sprite": 181},
            {"weight":20,"sprite": 180}, {"weight": 5,"sprite": 181}, {"weight":99,"sprite": 182} ] },
-           {"id": "overlay_worn_armor_wj1","animated": true,"fg": [
+           {"id": "overlay_worn_armor_wj1","animated": true,"fg": [//围巾拉下
            {"weight": 5,"sprite": 202}, {"weight": 5,"sprite": 203}, {"weight": 5,"sprite": 204},
            {"weight": 5,"sprite": 205}, {"weight": 5,"sprite": 206}, {"weight":20,"sprite": 207},
            {"weight": 5,"sprite": 206}, {"weight": 5,"sprite": 205}, {"weight": 5,"sprite": 204},

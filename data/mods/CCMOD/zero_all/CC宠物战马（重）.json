@@ -1,0 +1,103 @@
+[
+  {
+    "id": "CC_mon_horse",
+    "type": "MONSTER",
+    "copy-from": "mon_horse",
+    "name": { "str": "CC战马（重）" }, 
+    "looks_like": "mon_goat",
+    "description": "一匹驯养良好可以应对恶劣环境的重战马（可骑乘）。\n经过培养可适应更加恶劣环境，繁育更快，食谱广泛，除了可以吃草和常见家畜饲料，猫猫狗狗饲料都能喂，也可以啃倒下的怪物。体格更大，力气大负荷更大。\n总的来说就是更加好养活了。",
+    "default_faction": "herbivore",
+    "bodytype": "horse",
+    "categories": [ "WILDLIFE" ],
+    "species": [ "MAMMAL" ],
+    "volume": "750000 ml",
+    "weight": "1500 kg",
+    "hp": 1200, 
+    "regenerates": 25, 
+    "speed": 500, 
+    "aggression": -10,
+    "material": [ "flesh" ],
+    "symbol": "H",
+    "color": "brown",
+    "starting_ammo": { "milk_raw": 1600 }, 
+    "shearing": [ { "result": "wool_staple", "amount": 300 } ], 
+    "morale": 100,
+    "mount_items": { "tied": "rope_30", "tack": "CC_harness", "armor": "CC_harness" },
+    "aggro_character": false,
+    "melee_skill": 6,
+    "melee_dice": 10,
+    "melee_dice_sides": 10,
+    "melee_damage": [ { "damage_type": "cut", "amount": 10 } ],
+    "dodge": 5,
+    "armor_bash": 30,
+    "armor_cut": 30,
+    "armor_bullet": 30,
+    "armor_elec": 30,
+    "bleed_rate": 0,
+    "vision_night": 10,
+    "anger_triggers": [ "FRIEND_ATTACKED" ], 
+    "placate_triggers": [ "PLAYER_CLOSE" ], 
+    "harvest": "horse_with_skull",
+    "dissect": "dissect_cattle_sample_small",
+    "families": [ "prof_intro_biology", "prof_physiology" ],
+    "reproduction": { "baby_monster": "CC_mon_horse_foal", "baby_count": 1, "baby_timer": 90 },
+    "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
+    "biosignature": { "biosig_item": "feces_manure", "biosig_timer": 10 },
+    "special_attacks": [
+    [
+      "ABSORB_MEAT",
+      100
+    ],
+    [
+      "EAT_CROP",
+      100
+    ],
+    [
+      "EAT_FOOD",
+      100
+    ],
+    [
+      "LUNGE",
+      5
+    ],
+    [
+      "FLESH_GOLEM",
+      10
+    ]
+  ],
+    "petfood": { "food": [ "CATTLEFOOD", "CATFOOD", "DOGFOOD" ], 
+    "feed": "这只 %s 似乎很喜欢你！它让你抚摸它的头，看起来很友好。",
+    "pet": "当你抚摸它的头时，这只 %s 开心地摇着尾巴。" },
+    "flags": [ "SEES", "HEARS", "SMELLS", "ANIMAL", "PET_MOUNTABLE", "PATH_AVOID_DANGER_1", "WARM", "MILKABLE", "CANPLAY", "HIT_AND_RUN", "SWIMS", "CLIMBS", "BADVENOM", "PARALYZEVENOM", "SHEARABLE", "HARDTOSHOOT" ]
+  }, 
+  {
+    "id": "CC_mon_horse_foal",
+    "type": "MONSTER", 
+    "copy-from": "CC_mon_horse",
+    "name": { "str": "CC战马幼崽（重）" },
+    "looks_like": "mon_goat_kid",
+    "description": "CC战马的幼崽，一个小马驹。特殊培育的优秀品种，能比普通宠物成长更快。",
+    "volume": "200000 ml",
+    "weight": "200 kg",
+    "hp": 600, 
+    "regenerates": 25, 
+    "speed": 250,
+    "aggression": -10,
+    "morale": 20,
+    "dodge": 1,
+    "armor_bash": 5,
+    "armor_cut": 5,
+    "armor_bullet": 5,
+    "armor_elec": 5,
+    "bleed_rate": 50,
+    "vision_night": 10,
+    "melee_skill": 3,
+    "melee_dice": 2,
+    "melee_dice_sides": 6,
+    "melee_damage": [ { "damage_type": "cut", "amount": 4 } ],
+    "reproduction": { "baby_monster": "CC_mon_horse_foal", "baby_count": 1, "baby_timer": 90 },
+    "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
+    "upgrades": { "age_grow": 30, "into": "CC_mon_horse" },
+    "extend": { "flags": [ "NO_BREED" ] }
+  }
+]

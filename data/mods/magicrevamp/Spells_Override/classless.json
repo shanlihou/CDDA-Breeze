@@ -1,0 +1,365 @@
+[
+  {
+    "id": "crystallize_mana",
+    "type": "SPELL",
+    "name": {
+      "str": "魔力结晶"
+    },
+    "description": "将魔力凝聚成固体结晶型态。",
+    "valid_targets": [
+      "self"
+    ],
+    "spell_class": "NONE",
+    "flags": [
+      "PERMANENT",
+      "NO_LEGS",
+      "CONCENTRATE"
+    ],
+    "difficulty": 3,
+    "min_damage": 1,
+    "max_damage": 1,
+    "duration_increment": 1,
+    "effect": "spawn_item",
+    "effect_str": "crystallized_mana",
+    "shape": "blast",
+    "energy_source": "MANA",
+    "base_energy_cost": 1000,
+    "final_energy_cost": 1000,
+    "base_casting_time": 720000,
+    "final_casting_time": 720000,
+    "extra_effects": [
+      {
+        "id": "mana_fatigue"
+      }
+    ]
+  },
+  {
+    "id": "mana_fatigue",
+    "type": "SPELL",
+    "name": {
+      "str": "魔力疲乏"
+    },
+    "description": "魔力结晶法术的副作用。",
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "attack",
+    "effect_str": "mana_fatigue",
+    "shape": "blast",
+    "max_level": 1,
+    "min_duration": 6000,
+    "max_duration": 6000,
+    "//": "actual fatigue gained is 1/100th duration, at 6000 you get 60 fatigue."
+  },
+  {
+    "id": "dark_sight",
+    "type": "SPELL",
+    "name": {
+      "str": "黑暗视觉"
+    },
+    "description": "给你在黑暗中视物的力量",
+    "message": "你的眼睛闪着绿色的光芒。现在你的目光可以穿透最深沉的阴影。",
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "attack",
+    "effect_str": "dark_sight",
+    "shape": "blast",
+    "min_range": 1,
+    "max_range": 1,
+    "base_casting_time": 100,
+    "base_energy_cost": 500,
+    "energy_source": "MANA",
+    "difficulty": 6,
+    "max_level": 30,
+    "min_duration": 100000,
+    "max_duration": 1500000,
+    "duration_increment": 2000
+  },
+  {
+    "id": "megablast",
+    "type": "SPELL",
+    "name": {
+      "str": "炽能冲击"
+    },
+    "description": "你经常想发射光波，就像小时候看过的动画片里那样，现在你可以了！",
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "effect": "attack",
+    "shape": "line",
+    "damage_type": "heat",
+    "base_casting_time": 200,
+    "base_energy_cost": 8000,
+    "energy_source": "STAMINA",
+    "spell_class": "NONE",
+    "flags": [
+      "LOUD",
+      "SOMATIC",
+      "VERBAL"
+    ],
+    "difficulty": 10,
+    "max_level": 30,
+    "min_damage": 30,
+    "max_damage": 150,
+    "damage_increment": 3.5,
+    "min_range": 3,
+    "max_range": 18,
+    "range_increment": 0.45,
+    "min_aoe": 1,
+    "max_aoe": 8,
+    "aoe_increment": 0.2
+  },
+  {
+    "id": "create_atomic_light",
+    "type": "SPELL",
+    "name": {
+      "str": "魔法阅读灯"
+    },
+    "description": "创造一盏神奇的魔法阅读灯。",
+    "valid_targets": [
+      "none"
+    ],
+    "min_range": 0,
+    "max_range": 0,
+    "min_damage": 1,
+    "max_damage": 1,
+    "effect": "spawn_item",
+    "effect_str": "magic_light",
+    "shape": "blast",
+    "energy_source": "MANA",
+    "flags": [
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "difficulty": 1,
+    "max_level": 30,
+    "base_casting_time": 1000,
+    "base_energy_cost": 200,
+    "min_duration": 100000,
+    "max_duration": 1500000,
+    "duration_increment": 45000
+  },
+  {
+    "id": "blinding_flash",
+    "type": "SPELL",
+    "name": {
+      "str": "致盲闪光"
+    },
+    "description": "爆发耀眼的光芒以致盲敌人，等级越高伤害越高。",
+    "effect": "attack",
+    "effect_str": "blind",
+    "shape": "blast",
+    "affected_body_parts": [
+      "eyes"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "max_level": 30,
+    "min_damage": 1,
+    "max_damage": 15,
+    "damage_increment": 0.5,
+    "min_aoe": 0,
+    "max_aoe": 5,
+    "aoe_increment": 0.15,
+    "min_range": 4,
+    "max_range": 24,
+    "range_increment": 0.6,
+    "min_duration": 1000,
+    "max_duration": 4500,
+    "duration_increment": 100,
+    "spell_class": "NONE",
+    "flags": [
+      "SOMATIC",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "base_casting_time": 200,
+    "base_energy_cost": 150,
+    "energy_source": "MANA",
+    "difficulty": 3,
+    "damage_type": "pure"
+  },
+  {
+    "id": "ethereal_grasp",
+    "type": "SPELL",
+    "name": {
+      "str": "幽影攫抓"
+    },
+    "description": "从地面伸出无数幽影手，减慢范围内的一切。等级越高，作用范围越大，作用时间越长。",
+    "effect": "attack",
+    "effect_str": "effect_ethereal_grasp",
+    "shape": "blast",
+    "affected_body_parts": [
+      "foot_l",
+      "foot_r"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "max_level": 30,
+    "min_damage": 10,
+    "max_damage": 45,
+    "damage_increment": 1,
+    "min_aoe": 2,
+    "max_aoe": 30,
+    "aoe_increment": 0.5,
+    "min_range": 5,
+    "max_range": 30,
+    "range_increment": 2,
+    "min_duration": 1000,
+    "max_duration": 7500,
+    "duration_increment": 200,
+    "spell_class": "NONE",
+    "flags": [
+      "SOMATIC",
+      "NO_PROJECTILE"
+    ],
+    "base_casting_time": 200,
+    "base_energy_cost": 400,
+    "energy_source": "MANA",
+    "difficulty": 3,
+    "damage_type": "bash"
+  },
+  {
+    "id": "obfuscated_body",
+    "type": "SPELL",
+    "name": {
+      "str": "朦胧术"
+    },
+    "description": "一个魔法光环扭曲了你身体周围的光线，增加了你在一个回合中所能闪避攻击的次数。",
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "spawn_item",
+    "effect_str": "obfuscating_aura",
+    "shape": "blast",
+    "energy_source": "MANA",
+    "spell_class": "NONE",
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS"
+    ],
+    "difficulty": 4,
+    "max_level": 22,
+    "base_casting_time": 200,
+    "base_energy_cost": 400,
+    "min_duration": 21000,
+    "max_duration": 135000,
+    "duration_increment": 4500
+  },
+  {
+    "id": "protection_aura",
+    "type": "SPELL",
+    "name": {
+      "str": "保护光环"
+    },
+    "description": "把你的整个身体包裹在一个神奇的光环里，保护你免受环境伤害。",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 1,
+    "max_damage": 1,
+    "effect": "spawn_item",
+    "effect_str": "protect_env",
+    "shape": "blast",
+    "energy_source": "MANA",
+    "difficulty": 1,
+    "max_level": 30,
+    "flags": [
+      "CONCENTRATE",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "base_casting_time": 350,
+    "base_energy_cost": 375,
+    "min_duration": 10000,
+    "max_duration": 75000,
+    "duration_increment": 3000
+  },
+  {
+    "id": "translocate_self",
+    "type": "SPELL",
+    "name": {
+      "str": "自我传送"
+    },
+    "description": "将使用者传送到一个已经开启的易位门。",
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "translocate",
+    "shape": "blast",
+    "difficulty": 15,
+    "max_level": 35,
+    "base_casting_time": 6000,
+    "base_energy_cost": 675,
+    "energy_source": "MANA",
+    "spell_class": "NONE"
+  },
+  {
+    "id": "acid_resistance",
+    "type": "SPELL",
+    "name": {
+      "str": "防酸术"
+    },
+    "description": "让施法者不受酸液侵蚀。",
+    "valid_targets": [
+      "none"
+    ],
+    "min_range": 0,
+    "max_range": 0,
+    "min_damage": 1,
+    "max_damage": 1,
+    "effect": "spawn_item",
+    "effect_str": "acid_res_aura",
+    "shape": "blast",
+    "energy_source": "MANA",
+    "spell_class": "NONE",
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS"
+    ],
+    "difficulty": 4,
+    "max_level": 22,
+    "base_casting_time": 200,
+    "base_energy_cost": 150,
+    "min_duration": 84000,
+    "max_duration": 540000,
+    "duration_increment": 18400,
+    "learn_spells": {
+      "acid_resistance_greater": 15
+    }
+  },
+  {
+    "id": "acid_resistance_greater",
+    "type": "SPELL",
+    "name": {
+      "str": "高等防酸术"
+    },
+    "description": "让施法者不受酸液侵蚀。",
+    "valid_targets": [
+      "none"
+    ],
+    "min_range": 0,
+    "max_range": 0,
+    "min_damage": 1,
+    "max_damage": 1,
+    "effect": "spawn_item",
+    "effect_str": "acid_res_aura_greater",
+    "shape": "blast",
+    "energy_source": "MANA",
+    "spell_class": "NONE",
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS"
+    ],
+    "difficulty": 7,
+    "max_level": 1,
+    "base_casting_time": 200,
+    "base_energy_cost": 250,
+    "min_duration": 180000
+  }
+]

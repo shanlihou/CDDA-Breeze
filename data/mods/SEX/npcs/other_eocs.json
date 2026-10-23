@@ -1,0 +1,40 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_healall",
+    "//": "Just a simple EOC to bring all your HP to full, while not addressing most other health factors.  Can only be used at home.",
+    "effect": 
+	[
+      {
+        "u_message": "Your body mends itself in the blink of an eye.  Underlying health issues may persist, but your structural integrity is restored."
+      },
+      { "u_set_hp": 1, "only_increase": true },
+      { "run_eocs": [ "EOC_healextras" ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_healextras",
+    "//": "Clears up various conditions beyond just your hp.  Should cover most diseases and infections, prevent extreme thirst and starvation, wipe pain, and even cure a few edge cases like being covered in acid.",
+    "effect": [
+      { "u_add_effect": "cureall", "duration": "1 s", "intensity": 1 },
+      { "u_add_effect": "panacea", "duration": "30 s", "intensity": 1 },
+      { "u_lose_effect": "corroding" },
+      { "u_lose_effect": "onfire" },
+      { "u_lose_effect": "dazed" },
+      { "u_lose_effect": "stunned" },
+      { "u_lose_effect": "venom_blind" },
+      { "u_lose_effect": "formication" },
+      { "u_lose_effect": "blisters" },
+      { "u_lose_effect": "frostbite" },
+      { "u_lose_effect": "frostbite_recovery" },
+      { "u_lose_effect": "wet" },
+      { "u_lose_effect": "slimed" },
+      { "u_lose_effect": "migo_atmosphere" },
+      { "u_lose_effect": "fetid_goop" },
+      { "u_lose_effect": "sap" },
+      { "u_lose_effect": "nausea" },
+      { "u_lose_effect": "bleed" }
+    ]
+  }
+]

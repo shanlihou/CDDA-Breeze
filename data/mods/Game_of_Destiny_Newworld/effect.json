@@ -1,0 +1,222 @@
+[
+  {
+    "type": "effect_type",
+    "id": "per_warsong_1",
+    "name": [ "战歌" ],
+    "desc": [ "歌曲渲染，战歌昂扬，驱散恐惧状态。" ],
+    "remove_message": "歌曲渲染的增强效果消退了。",
+    "blocks_effects": [ "fearparalyze" ],
+    "//": "自动包含<removes_effects>效果。",
+    "max_duration": "30 m",
+    "base_mods": { "str_mod": [ 2 ], "dex_mod": [ 2 ], "speed_mod": [ -5 ], "stamina_min": [ 3 ] }
+  },
+  {
+    "type": "effect_type",
+    "id": "per_warsong_2",
+    "name": [ "虎豹雷音" ],
+    "desc": [ "雷音振体，奋神蓄力，驱散恐惧、震慑、晕眩状态。" ],
+    "remove_message": "虎豹雷音的增强效果消退了。",
+    "blocks_effects": [ "fearparalyze", "stunned", "dazed" ],
+    "max_duration": "30 m",
+    "base_mods": { "str_mod": [ 4 ], "dex_mod": [ 4 ], "per_mod": [ -2 ], "speed_mod": [ -5 ], "stamina_min": [ 5 ] }
+  },
+  {
+    "type": "effect_type",
+    "id": "gundam1",
+    "name": [ "高功率模式" ],
+    "desc": [ "动力装甲强化模式。" ],
+    "remove_message": "动力装甲的强化效果结束。",
+    "max_duration": "30 m",
+    "base_mods": { "str_mod": [ 3 ], "dex_mod": [ 3 ], "speed_mod": [ 15 ] }
+  },
+  {
+    "type": "effect_type",
+    "id": "dex_speed_1",
+    "name": [ "神行术" ],
+    "remove_message": "加速效果结束，你回复到平时的速度感。",
+    "max_duration": "30 m",
+    "base_mods": { "dex_mod": [ 3 ], "speed_mod": [ 40 ] }
+  },
+  {
+    "type": "effect_type",
+    "id": "str_revange_1",
+    "name": [ "以血换血" ],
+    "desc": [ "提升力量、敏捷、速度，每30秒损失血量3~7。" ],
+    "remove_message": "复仇技能效果结束。",
+    "max_duration": "30 m",
+    "base_mods": { "str_mod": [ 4 ], "speed_mod": [ 15 ], "hurt_min": [ 3 ], "hurt_max": [ 7 ], "hurt_tick": [ 5 ] }
+  },
+  {
+    "type": "effect_type",
+    "id": "str_revange_2",
+    "name": [ "杀破狼" ],
+    "desc": [ "提升10点力量、敏捷、智力、感知、速度＋15。" ],
+    "remove_message": "复仇技能效果结束。",
+    "max_duration":"24 h",
+    "base_mods": { "str_mod": [ 10 ], "dex_mod": [ 10 ], "int_mod": [ 10 ], "per_mod": [ 10 ], "speed_mod": [ 15 ] }
+  },
+  {
+    "type": "effect_type",
+    "id": "medic_enhance",
+    "name": [ "熊魔药剂" ],
+    "removes_effects": [ "bleed" ],
+    "remove_message": "熊魔药剂的强化效果消退了。",
+    "max_duration": "30 m",
+    "base_mods": { "str_mod": [ 5 ], "dex_mod": [ 3 ], "speed_mod": [ 15 ], "stamina_min": [ 8 ] }
+  },
+  {
+    "type": "effect_type",
+    "id": "GOS_block_hot",
+    "name": [ "凝冰符" ],
+    "desc": [ "抵抗暑热。" ],
+    "remove_message": "凝冰符的效果消退，体感温度恢复正常。",
+    "removes_effects": [ "hot" ],
+    "max_duration": "30 m"
+  },
+  {
+    "type": "effect_type",
+    "id": "GOS_block_cold",
+    "name": [ "升阳符" ],
+    "desc": [ "抵抗寒冷。" ],
+    "remove_message": "升阳符的效果消退，体感温度恢复正常。",
+    "removes_effects": [ "cold", "frostbite" ],
+    "max_duration": "30 m"
+  },
+  {
+    "type": "effect_type",
+    "id": "book_fireblock",
+    "name": [ "烧烤宝典" ],
+    "desc": [ "免疫火焰造成的负面状态：「着火」与「水泡」。" ],
+    "removes_effects": [ "hot", "onfire", "blisters" ],
+    "remove_message": "烧烤宝典的防护效果消退了。",
+    "max_duration": "20 m"
+  },
+  {
+    "type": "effect_type",
+    "id": "book_acidblock",
+    "name": [ "酸灼宝典" ],
+    "desc": [ "免疫酸液腐蚀的负面状态。" ],
+    "removes_effects": [ "corroding" ],
+    "remove_message": "酸灼防护的效果消退了。",
+    "max_duration": "20 m"
+  },
+  {
+    "type": "effect_type",
+    "id": "book_shockblock",
+    "name": [ "电击宝典" ],
+    "desc": [ "免疫电击的负面状态。" ],
+    "removes_effects": [ "zapped" ],
+    "remove_message": "电击防护的效果消退了。",
+    "max_duration": "20 m"
+  },
+  {
+    "type": "effect_type",
+    "id": "Legend_light",
+    "name": [ "传说光辉" ],
+    "remove_message": "传说光辉的时效已到，光环效果消散。",
+    "max_duration": "30 m",
+    "base_mods": { "str_mod": [ 5 ], "dex_mod": [ 5 ], "int_mod": [ 5 ], "per_mod": [ 5 ], "speed_mod": [ 40 ], "stamina_min": [ 8 ] }
+  },
+  {
+    "type": "effect_type",
+    "id": "Neww_effect_warding",
+    "name": [ "灵力结界" ],
+    "desc": [ "防止各种异常影响。" ],
+    "remove_message": "灵力保护消失了。",     "rating": "bad",
+    "removes_effects": [
+      "darkness",
+      "rat",
+      "evil",
+      "attention",
+      "teleglow",
+      "amigara",
+      "taint",
+      "tindrift"
+    ],
+    "decay_messages": [ [ "增强你防护结界的灵力正在减弱。", "bad" ] ],
+    "max_duration": "180 m",
+    "max_intensity": 120,
+    "int_dur_factor": "1 m"
+  },
+  {
+    "type": "effect_type",
+    "id": "DT_effect_lysis",
+    "name": [ "融化", "溶解", "轻度解构" ],
+    "desc": [ "你正在缓慢溶化。", "你的身体开始溶解！", "你身体的小部分已经溶为液体，但并没有继续恶化。" ],
+    "decay_messages": [["你的身体正在恢复原型。", "good"]],
+    "remove_message": "你完全恢复原型了。",
+    "max_intensity": 20,
+    "int_dur_factor": "1 m",
+    "max_duration": "20 m",
+    "apply_message": "你感觉自己在缓慢融化。", "rating": "bad",
+    "base_mods": {
+    "hurt_amount": [ 2 ],
+    "hurt_tick": [ 30 ],
+    "pain_amount": [ 1 ],
+    "pain_tick": [ 20 ],
+    "speed_mod": [ -5 ]
+    },
+    "scaling_mods": {
+     "hurt_amount": [ 0.1 ],
+     "pain_amount": [ 0.1 ],
+     "speed_mod": [ -0.5 ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "DT_timeline_error",
+    "name": [ "过量决心", "时间线游离" ],
+    "desc": [ "你与现实的联系降低了，有些错误代码在你身旁闪烁，你不确定这是好是坏。", "错误代码在你身上闪烁，你与现实的联系大幅降低了，你不确定这是好是坏。" ],
+    "decay_messages": [["闪烁的代码正在消退，你与现实的连接加深了。", "good"]],
+    "remove_message": "你身上的代码完全消失了。",
+    "max_intensity": 2,
+    "max_duration": "600 h",
+    "int_dur_factor": "24 h",
+    "apply_message": "你偶然看到了一些闪烁的代码，看来有哪里出了问题。", "rating": "good",
+    "base_mods": {
+    "str_mod": [-2],
+    "dex_mod": [2],
+    "int_mod": [3],
+    "per_mod": [-3],
+    "speed_mod": [ 10 ]
+    },
+    "scaling_mods": { "str_mod": [-3], "dex_mod": [1], "int_mod": [3], "per_mod": [-2], "speed_mod": [ 15 ] }
+  },
+  {
+    "type": "effect_type",
+    "id": "DT_vitamin_error",
+    "name": [ "过量决心", "时间线游离" ],
+    "desc": [ "你与现实的联系降低了，有些错误代码在你身旁闪烁，你不确定这是好是坏。", "错误代码在你身上闪烁，你与现实的联系大幅降低了，你不确定这是好是坏。" ],
+    "decay_messages": [["闪烁的代码正在消退，你与现实的连接加深了。", "good"]],
+    "remove_message": "你身上的代码完全消失了。",
+    "max_intensity": 2,
+    "max_duration": "600 h",
+    "int_dur_factor": "24 h",
+    "apply_message": "你偶然看到了一些闪烁的代码，看来有哪里出了问题。", "rating": "good",
+    "base_mods": {
+    "str_mod": [-2],
+    "dex_mod": [2],
+    "int_mod": [3],
+    "per_mod": [-3],
+    "speed_mod": [ 10 ]
+    },
+    "scaling_mods": { "str_mod": [-2], "dex_mod": [1], "int_mod": [3], "per_mod": [-2], "speed_mod": [ 15 ] }
+    },
+    {
+    "type": "effect_type",
+    "id": "GS_ef_vampirism1",
+    "name": [ "赤血之锋" ],
+    "desc": [ "刀锋倾泻着敌人的鲜血，杀意重新编织着你的身躯。" ],
+    "max_intensity": 100,
+    "int_dur_factor": "2 m",
+    "apply_message": "杀意涌入你的脑海，随之而来的还有一种刺骨的温暖。", 
+    "rating": "good",
+    "base_mods": {
+    "hurt_min": [ -1 ],
+    "hurt_tick": [ 15 ],
+    "speed_mod": [ 10 ],
+    "pain_min": [ -2 ],
+    "pain_tick": [ 25 ]
+    }
+   }
+]

@@ -4,18 +4,10 @@
     "id": "npc_worn_a0'0",
     "subtype": "collection",
     "entries": [
-      {
-        "item": "armor_npts"
-      },
-      {
-        "item": "armor_wj"
-      },
-      {
-        "item": "armor_npz"
-      },
-      {
-        "item": "armor_jxpx"
-      }
+      { "item": "armor_npts" },
+      { "item": "armor_wj" },
+      { "item": "armor_npz" },
+      { "item": "armor_jxpx" }
     ]
   },
   {
@@ -23,646 +15,426 @@
     "id": "npc_carry_a0'0",
     "subtype": "collection",
     "entries": [
-      {
-        "item": "bandages",
-        "count": 5
-      }
+      { "item": "bandages", "count": 5 }
+      //NPC抽风不停的吃{ "item": "protein_bar_evac", "count": 10 }
     ]
   },
   {
     "type": "item_group",
     "id": "npc_weapon_a0'0",
     "subtype": "collection",
-    "entries": [
-      {
-        "item": "weapon_zdcd"
-      }
-    ]
+    "entries": [ { "item": "weapon_zdcd" } ]
   },
   {
     "type": "npc_class",
     "id": "npcc_a0'0",
-    "name": {
-      "str": "荥尘"
-    },
+    "name": { "str": "荥尘" },
     "job_description": "不清楚诶",
     "common": false,
     "traits": [
-      {
-        "trait": "skin_pf",
-        "variant": "bai"
-      },
-      {
-        "trait": "eye_yj",
-        "variant": "lan"
-      },
-      {
-        "trait": "hair_tf01",
-        "variant": "jin"
-      },
-      {
-        "trait": "BEAUTIFUL"
-      },
-      {
-        "trait": "WEAKSCENT"
-      },
-      {
-        "trait": "LIGHTSTEP"
-      }
+      { "trait": "skin_pf", "variant": "bai" },
+      { "trait": "eye_yj", "variant": "lan" },
+      { "trait": "hair_tf01", "variant": "jin" },
+      { "trait": "BEAUTIFUL" },
+      { "trait": "WEAKSCENT" },
+      { "trait": "LIGHTSTEP" }
     ],
-    "bonus_str": {
-      "rng": [
-        -2,
-        -4
-      ]
-    },
-    "bonus_dex": {
-      "rng": [
-        0,
-        2
-      ]
-    },
-    "bonus_int": {
-      "rng": [
-        3,
-        6
-      ]
-    },
-    "bonus_per": {
-      "rng": [
-        0,
-        2
-      ]
-    },
+    "bonus_str": { "rng": [ -2, -4 ] },
+    "bonus_dex": { "rng": [ 0, 2 ] },
+    "bonus_int": { "rng": [ 3, 6 ] },
+    "bonus_per": { "rng": [ 0, 2 ] },
     "skills": [
-      {
-        "skill": "ALL",
-        "level": {
-          "sum": [
-            {
-              "dice": [
-                3,
-                2
-              ]
-            },
-            {
-              "rng": [
-                0,
-                2
-              ]
-            }
-          ]
-        }
-      },
-      {
-        "skill": "gun",
-        "bonus": {
-          "rng": [
-            2,
-            4
-          ]
-        }
-      },
-      {
-        "skill": "rifle",
-        "bonus": {
-          "rng": [
-            2,
-            4
-          ]
-        }
-      },
-      {
-        "skill": "archery",
-        "bonus": {
-          "rng": [
-            2,
-            4
-          ]
-        }
-      },
-      {
-        "skill": "speech",
-        "bonus": {
-          "rng": [
-            0,
-            3
-          ]
-        }
-      }
+      { "skill": "ALL", "level": { "sum": [ { "dice": [ 3, 2 ] }, { "rng": [ 0, 2 ] } ] } },
+      { "skill": "gun", "bonus": { "rng": [ 2, 4 ] } },
+      { "skill": "rifle", "bonus": { "rng": [ 2, 4 ] } },
+      { "skill": "archery", "bonus": { "rng": [ 2, 4 ] } },
+      { "skill": "speech", "bonus": { "rng": [ 0, 3 ] } }
     ],
     "worn_override": "npc_worn_a0'0",
     "carry_override": "npc_carry_a0'0",
     "weapon_override": "npc_weapon_a0'0"
   },
+  
   {
     "type": "npc",
     "id": "npc_a0'0",
-    "name_unique": "女仆",
-    "name_suffix": "荥尘",
+    "name_unique": "女仆", "name_suffix": "荥尘",
     "gender": "female",
-    "age": 16,
-    "height": 155,
-    "str": 8,
-    "dex": 8,
-    "int": 8,
-    "per": 8,
-    "personality": {
-      "aggression": -4,
-      "bravery": 4,
-      "collector": 4,
-      "altruism": 4
-    },
+    "age": 16, "height": 155,
+    "str": 8, "dex": 8, "int": 8, "per": 8,
+    "personality": { "aggression": -4, "bravery": 4, "collector": 4, "altruism": 4 },
     "class": "npcc_a0'0",
     "attitude": 1,
     "mission": 0,
     "chat": "a0'0_00a",
     "faction": "no_faction",
-    "<hungry>": "<hungry_xing'chen>", 
-    "<thirsty>": "<thirsty_xing'chen>", 
-    "<camp_food_thanks>": "<camp_food_thanks_xing'chen>", 
-    "<camp_larder_empty>": "<camp_larder_empty_xing'chen>", 
-    "<camp_water_thanks>": "<camp_water_thanks_xing'chen>", 
-    "<warn_sleep>": "<warn_sleep_xing'chen>", 
-    "<yawn>": "<yawn_xing'chen>", 
-    "snip_give_cancel": "<snip_give_cancel_xing'chen>", 
-    "snip_give_carry": "<snip_give_carry_xing'chen>", 
-    "snip_give_nope": "<snip_give_nope_xing'chen>", 
-    "snip_give_carry_cant": "<snip_give_carry_cant_xing'chen>", 
-    "snip_give_carry_cant_few_space": "<snip_give_carry_cant_few_space_xing'chen>", 
-    "snip_give_carry_cant_no_space": "<snip_give_carry_cant_no_space_xing'chen>", 
-    "snip_give_carry_too_heavy": "<snip_give_carry_too_heavy_xing'chen>", 
-    "snip_give_dangerous": "<snip_give_dangerous_xing'chen>",
-    "snip_give_wield": "<snip_give_wield_xing'chen>", 
-    "snip_give_weapon_weak": "<snip_give_weapon_weak_xing'chen>", 
-    "snip_wear": "<snip_wear_xing'chen>",
-    "snip_bleeding": "<snip_bleeding_xing'chen>", 
-    "snip_bleeding_badly": "<snip_bleeding_badly_xing'chen>", 
-    "snip_lost_blood": "<snip_lost_blood_xing'chen>", 
-    "snip_wound_bite": "<snip_wound_bite_xing'chen>",
-    "snip_wound_infected": "<snip_wound_infected_xing'chen>", 
-    "snip_radakanetion_sickness": "<snip_radakanetion_sickness_xing'chen>",
-    "snip_consume_eat": "<snip_consume_eat_xing'chen>", 
-    "snip_consume_cant_accept": "<snip_consume_cant_accept_xing'chen>", 
-    "snip_consume_cant_consume": "<snip_consume_cant_consume_xing'chen>", 
-    "snip_consume_rotten": "<snip_consume_rotten_xing'chen>",
-    "snip_consume_med": "<snip_consume_med_xing'chen>", 
-    "snip_consume_use_med": "<snip_consume_use_med_xing'chen>", 
-    "snip_consume_need_item": "<snip_consume_need_item_xing'chen>", 
-    "snip_consume_nocharge": "<snip_consume_nocharge_xing'chen>", 
-    "<general_danger>": "<general_danger_xing'chen>", 
-    "<its_safe>": "<its_safe_xing'chen>", 
-    "<fire_in_the_hole>": "<fire_in_the_hole_xing'chen>", 
-    "<kill_npc>": "<kill_npc_xing'chen>", 
-    "<close_distance>": "<close_distance_xing'chen>", 
-    "<danger_close_distance>": "<danger_close_distance_xing'chen>", 
-    "<monster_warning>": "<monster_warning_xing'chen>", 
-    "<medium_distance>": "<medium_distance_xing'chen>",
-    "<far_distance>": "<far_distance_xing'chen>", 
-    "<run_away>": "<run_away_xing'chen>", 
-    "<cant_flee>": "<cant_flee_xing'chen>", 
-    "<fire_bad>": "<fire_bad_xing'chen>", 
-    "<let_me_pass>": "<let_me_pass_xing'chen>",
-    "<combat_noise_warning>": "<combat_noise_warning_xing'chen>", 
-    "<movement_noise_warning>": "<movement_noise_warning_xing'chen>", 
-    "<speech_warning>": "<speech_warning_xing'chen>", 
-    "<lets_talk>": "<lets_talk_xing'chen>", 
-    "<wait>": "<wait_xing'chen>", 
-    "<keep_up>": "<keep_up_xing'chen>", 
-    "<heal_self>": "<heal_self_xing'chen>", 
-    "snip_heal_player": "<snip_heal_player_xing'chen>",
-    "snip_pulp_zombie": "<snip_pulp_zombie_xing'chen>", 
-    "<acknowledged>": "<acknowledged_xing'chen>", 
-    "snip_bye": "<snip_bye_xing'chen>" 
+    
+    //npc需求
+    "<hungry>": "<hungry_xing'chen>",//npc饿了
+    "<thirsty>": "<thirsty_xing'chen>",//npc口渴
+    "<camp_food_thanks>": "<camp_food_thanks_xing'chen>",//吃营地食物
+    "<camp_larder_empty>": "<camp_larder_empty_xing'chen>",//营地没吃的
+    "<camp_water_thanks>": "<camp_water_thanks_xing'chen>",//喝营地井水
+    "<warn_sleep>": "<warn_sleep_xing'chen>",//npc准备睡觉
+    "<yawn>": "<yawn_xing'chen>",//npc因"尽可能保持清醒"规则想睡觉
+    // "<need_batteries>": "<need_batteries_xing'chen>",//npc的cbm没电了
+    // "<need_booze>": "<need_booze_xing'chen>",//npc的cbm电量低时有乙醇发电cbm
+    // "<need_fuel>": "<need_fuel_xing'chen>",//npc的cbm电量低时有燃料发电cbm
+    
+    
+    //给与物品
+    "snip_give_cancel": "<snip_give_cancel_xing'chen>",//你给npc物品但取消了
+    "snip_give_carry": "<snip_give_carry_xing'chen>",//你给npc物品，她拿走了
+    "snip_give_nope": "<snip_give_nope_xing'chen>",//你给npc物品，她无法接收
+    "snip_give_carry_cant": "<snip_give_carry_cant_xing'chen>",//你给npc物品，但她没空间了
+    "snip_give_carry_cant_few_space": "<snip_give_carry_cant_few_space_xing'chen>",//你给npc物品，她：“我只能存% %的东西了
+    "snip_give_carry_cant_no_space": "<snip_give_carry_cant_no_space_xing'chen>",//你给npc物品，…或存其他东西，但她没有空间
+    "snip_give_carry_too_heavy": "<snip_give_carry_too_heavy_xing'chen>",//你给npc物品，她拿不动因为太重
+    "snip_give_dangerous": "<snip_give_dangerous_xing'chen>",//你给npc物品，手雷？！
+    "snip_give_wield": "<snip_give_wield_xing'chen>",//你给npc武器
+    "snip_give_weapon_weak": "<snip_give_weapon_weak_xing'chen>",//你给npc武器，但比手里的弱
+    "snip_wear": "<snip_wear_xing'chen>",//你给npc衣服让她穿
+    //npc受伤
+    "snip_bleeding": "<snip_bleeding_xing'chen>",//npc出血
+    "snip_bleeding_badly": "<snip_bleeding_badly_xing'chen>",//npc大出血
+    "snip_lost_blood": "<snip_lost_blood_xing'chen>",//npc失血过多
+    "snip_wound_bite": "<snip_wound_bite_xing'chen>",//npc被咬伤
+    "snip_wound_infected": "<snip_wound_infected_xing'chen>",//npc的伤口感染了
+    "snip_radakanetion_sickness": "<snip_radakanetion_sickness_xing'chen>",//npc有辐射病
+    //给npc吃食物或药
+    "snip_consume_eat": "<snip_consume_eat_xing'chen>",//npc吃你给的食物
+    "snip_consume_cant_accept": "<snip_consume_cant_accept_xing'chen>",//npc没有接受你给的食物
+    "snip_consume_cant_consume": "<snip_consume_cant_consume_xing'chen>",//npc觉得你给的食物有点不能吃
+    "snip_consume_rotten": "<snip_consume_rotten_xing'chen>",//npc不吃你给的食物，因为腐烂了
+    "snip_consume_med": "<snip_consume_med_xing'chen>",//你给npc包扎
+    "snip_consume_use_med": "<snip_consume_use_med_xing'chen>",//你给npc用药，但用过了
+    "snip_consume_need_item": "<snip_consume_need_item_xing'chen>",//你给npc药但没有 %s （注射器等）
+    "snip_consume_nocharge": "<snip_consume_nocharge_xing'chen>",//你给了npc药但这看起来不是个好主意
+    
+    //友好npc
+    "<general_danger>": "<general_danger_xing'chen>",//友好npc：威胁升温
+    "<its_safe>": "<its_safe_xing'chen>",//友好npc：威胁降低
+    "<fire_in_the_hole>": "<fire_in_the_hole_xing'chen>",//友好npc警告手雷
+    "<kill_npc>": "<kill_npc_xing'chen>",//友好npc攻击敌对npc
+    "<close_distance>": "<close_distance_xing'chen>",//射击范围怪太近！
+    "<danger_close_distance>": "<danger_close_distance_xing'chen>",//近战范围怪太近！
+    
+    "<monster_warning>": "<monster_warning_xing'chen>",//友好npc警告怪
+    "<medium_distance>": "<medium_distance_xing'chen>",//近距离的威胁和monster_warning联动
+    "<far_distance>": "<far_distance_xing'chen>",//远距离的威胁和monster_warning联动
+    
+    
+    //敌对npc
+    // "<general_danger_h>": "<general_danger_h_xing'chen>",//敌对npc：威胁升温
+    // "<its_safe_h>": "<its_safe_h_xing'chen>",//敌对npc：威胁降低
+    // "<fire_in_the_hole_h>": "<fire_in_the_hole_h_xing'chen>",//敌对npc警告手雷
+    // "<kill_player_h>": "<kill_player_h_xing'chen>",//敌对npc攻击玩家
+    // "<kill_npc_h>": "<kill_npc_h_xing'chen>",//敌对npc攻击友好npc
+    // "<done_mugging>": "<done_mugging_xing'chen>",//敌对npc抢劫玩家
+    
+    // "<monster_warning_h>": "<monster_warning_h_xing'chen>",//敌对npc警告怪
+    
+    
+    //通用npc？
+    "<run_away>": "<run_away_xing'chen>",//npc跑离极度威胁
+    "<cant_flee>": "<cant_flee_xing'chen>",//被怪逼无路可跑
+    "<fire_bad>": "<fire_bad_xing'chen>",//npc跑离火灾
+    "<let_me_pass>": "<let_me_pass_xing'chen>",//npc需要越过另一个角色
+    
+    "<combat_noise_warning>": "<combat_noise_warning_xing'chen>",//npc听到战斗声音！
+    "<movement_noise_warning>": "<movement_noise_warning_xing'chen>",//npc听到了走路声
+    "<speech_warning>": "<speech_warning_xing'chen>",//npc听到了不知道的声音
+    
+    "<lets_talk>": "<lets_talk_xing'chen>",//npc第一次碰到角色想要交谈
+    // "<no_faction>": "<no_faction_xing'chen>",//npc无派系时问她派系
+    // "<im_leaving_you>": "<im_leaving_you_xing'chen>",//npc不喜欢玩家并离开阵营
+    // "<witnessed_thievery>": "<witnessed_thievery_xing'chen>",//npc看到玩家偷东西并警告
+    
+    //幻觉
+    // "<no_to_thorazine>": "<no_to_thorazine_xing'chen>",//幻觉npc希望你不要服用精神药物
+    // "<yes_to_lsd>": "<yes_to_lsd_xing'chen>",//幻觉npc鼓励玩家磕药延长幻觉
+    // "snip_give_to_hallucination": "<snip_give_to_hallucination_xing'chen>",//你给npc物品，但她是幻觉
+    
+    
+    //其他
+    "<wait>": "<wait_xing'chen>",//npc看不到玩家
+    "<keep_up>": "<keep_up_xing'chen>",//当npc领先玩家12格10回合后
+    
+    "<heal_self>": "<heal_self_xing'chen>",//npc治疗自己
+    "snip_heal_player": "<snip_heal_player_xing'chen>",//npc治疗你
+    "snip_pulp_zombie": "<snip_pulp_zombie_xing'chen>",//npc砸尸体
+    "<acknowledged>": "<acknowledged_xing'chen>",//npc表示确认
+    "snip_bye": "<snip_bye_xing'chen>"//结束对话后
   },
-  {
-    "type": "snippet",
-    "category": "<hungry_xing'chen>",
+  
+//npc需求
+  { "type": "snippet", "category": "<hungry_xing'chen>",
     "text": [
       "[饥饿]<u_name>大人...我饿到极限了...",
       "[饥饿]<u_name>大人...我需要些吃的",
       "[饥饿]好饿...(肚子叫)"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<thirsty_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<thirsty_xing'chen>",
     "text": [
       "[口渴]<u_name>大人，我好像有些脱水了",
       "[口渴]<u_name>大人...我好像看到绿洲了",
       "[口渴]好渴...(口干舌燥)"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<camp_food_thanks_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<camp_food_thanks_xing'chen>",
     "text": [
       "[营地](￣～￣)嚼！营地里的食物还不错诶",
       "[营地]<u_name>大人 这些都可以吃吗？嗯！那我吃了！"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<camp_larder_empty_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<camp_larder_empty_xing'chen>",
     "text": [
       "[营地]<u_name>大人，营地里好像没吃的了",
       "[营地]<u_name>大人，库里食物都吃完了耶，去找个地方进货吧"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<camp_water_thanks_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<camp_water_thanks_xing'chen>",
     "text": [
       "[营地]营地里这井啊，又大又圆，一喝就是仙品耶！",
       "[营地]甘甜可口的好水诶"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<warn_sleep_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<warn_sleep_xing'chen>",
     "text": [
       "[睡觉]好困诶，我去睡觉惹",
       "[睡觉]我想睡觉惹，我去躺一下"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<yawn_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<yawn_xing'chen>",
     "text": [
       "[保持清醒]我想去睡觉耶，可以嘛",
       "[保持清醒]（时不时闭着眼睛又睁开"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<snip_give_cancel_xing'chen>",
+  ] },
+//给与物品
+  { "type": "snippet", "category": "<snip_give_cancel_xing'chen>",
     "text": [
       "改主意了嘛"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<snip_give_carry_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<snip_give_carry_xing'chen>",
     "text": [
       "诶？给我的嘛，谢谢大人！"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<snip_give_nope_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<snip_give_nope_xing'chen>",
     "text": [
       "<u_name>大人 我装不下了诶"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<snip_give_carry_cant_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<snip_give_carry_cant_xing'chen>",
     "text": [
       "包有点小"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<snip_give_carry_cant_few_space_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<snip_give_carry_cant_few_space_xing'chen>",
     "text": [
       "只剩下%s %s的容量了耶"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<snip_give_carry_cant_no_space_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<snip_give_carry_cant_no_space_xing'chen>",
     "text": [
       "我拿不了诶没空间了"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<snip_give_carry_too_heavy_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<snip_give_carry_too_heavy_xing'chen>",
     "text": [
       "唔！这个是不是有点重",
       "我觉得这个好像不是我拿的动的诶"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<snip_give_dangerous_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<snip_give_dangerous_xing'chen>",
     "text": [
       "等等，<u_name>大人 这个东西是不是有点危险了诶？！"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<snip_give_wield_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<snip_give_wield_xing'chen>",
     "text": [
       "<u_name>大人 让我用这个嘛，知道惹"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<snip_give_weapon_weak_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<snip_give_weapon_weak_xing'chen>",
     "text": [
       "我现在手上的还不错耶，应该不用换了"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<snip_wear_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<snip_wear_xing'chen>",
     "text": [
       "嗯耶，<u_name>大人 我现在就穿上它"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<snip_bleeding_xing'chen>",
+  ] },
+//npc受伤
+  { "type": "snippet", "category": "<snip_bleeding_xing'chen>",
     "text": [
       "唔，我的 %s 流血了"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<snip_bleeding_badly_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<snip_bleeding_badly_xing'chen>",
     "text": [
       "我 %s 那里大出血了！止不住了！"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<snip_lost_blood_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<snip_lost_blood_xing'chen>",
     "text": [
       "<u_name>大人 我有点头晕๑_๑，有点失血太多了好像"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<snip_wound_bite_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<snip_wound_bite_xing'chen>",
     "text": [
       "我的 %s 被咬伤了，需要消一下毒耶"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<snip_wound_infected_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<snip_wound_infected_xing'chen>",
     "text": [
       "唔，我 %s 那里被感染了，<u_name>大人 没事的只是我可能需要抗生素之类的东西耶"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<snip_radakanetion_sickness_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<snip_radakanetion_sickness_xing'chen>",
     "text": [
       "<u_name>大人 我好像..(咳嗽)有一些不太好，可能是辐射病..."
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<snip_consume_eat_xing'chen>",
+  ] },
+//给npc吃食物或药
+  { "type": "snippet", "category": "<snip_consume_eat_xing'chen>",
     "text": [
       "谢谢<u_name>大人(嚼)"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<snip_consume_cant_accept_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<snip_consume_cant_accept_xing'chen>",
     "text": [
       "<u_name>大人 我觉得这个好像不适合吃下去"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<snip_consume_cant_consume_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<snip_consume_cant_consume_xing'chen>",
     "text": [
       "<u_name>大人 这个好像不好吃耶"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<snip_consume_rotten_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<snip_consume_rotten_xing'chen>",
     "text": [
       "<u_name>大人 这个已经腐烂了诶"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<snip_consume_med_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<snip_consume_med_xing'chen>",
     "text": [
       "<u_name>大人 谢谢你帮我包扎"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<snip_consume_use_med_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<snip_consume_use_med_xing'chen>",
     "text": [
       "谢谢我已经用过药惹"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<snip_consume_need_item_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<snip_consume_need_item_xing'chen>",
     "text": [
       "<u_name>大人 这个药好像需要 %s 诶"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<snip_consume_nocharge_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<snip_consume_nocharge_xing'chen>",
     "text": [
       "<u_name>大人 这个药好像不太适合用诶"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<general_danger_xing'chen>",
+  ] },
+//友好npc
+  { "type": "snippet", "category": "<general_danger_xing'chen>",
     "text": [
       "<u_name>大人 那个好像有点不妙"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<its_safe_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<its_safe_xing'chen>",
     "text": [
       "呼，最后一个诶",
       "赢了诶！"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<fire_in_the_hole_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<fire_in_the_hole_xing'chen>",
     "text": [
       "唔...有炸弹！",
       "<u_name>大人 有炸弹！",
       "大人 快趴下！",
       "炸弹！快离开哪<u_name>大人！"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<kill_npc_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<kill_npc_xing'chen>",
     "text": [
       "别跑呀！",
       "吃我一下！",
       "<u_name>大人 我们一起揍那个",
       "站在那里！"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<close_distance_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<close_distance_xing'chen>",
     "text": [
       "离射程太近了！",
       "靠近我们了！"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<danger_close_distance_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<danger_close_distance_xing'chen>",
     "text": [
       "注意！靠近过来了",
       "它靠近了！要是数量太多就不妙了"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<monster_warning_xing'chen>",
+  ] },
+  
+  { "type": "snippet", "category": "<monster_warning_xing'chen>",
     "text": [
       "看诶是",
       "诶那是...",
       "小心诶是"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<medium_distance_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<medium_distance_xing'chen>",
     "text": [
       "这么近的嘛！",
       "快贴脸了！"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<far_distance_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<far_distance_xing'chen>",
     "text": [
       "离我们很远诶",
       "离我们10公里甚至9公里远耶"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<run_away_xing'chen>",
+  ] },
+//通用npc？
+  { "type": "snippet", "category": "<run_away_xing'chen>",
     "text": [
       "大人 太危险了！快走！",
       "大人 情况不对诶！走！",
       "大人 诶？不对！快撤！"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<cant_flee_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<cant_flee_xing'chen>",
     "text": [
       "<u_name>大人 唔，没路了！",
       "<u_name>大人 没路了，要不拼了！"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<fire_bad_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<fire_bad_xing'chen>",
     "text": [
       "<u_name>大人 着火了诶！快走耶！",
       "<u_name>大人 有火耶！有水嘛！"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<let_me_pass_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<let_me_pass_xing'chen>",
     "text": [
       "诶请让一让",
       "我需要过去诶"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<combat_noise_warning_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<combat_noise_warning_xing'chen>",
     "text": [
       "<u_name>大人 附近好像有战斗的声音",
       "<u_name>大人 有打斗声出现"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<movement_noise_warning_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<movement_noise_warning_xing'chen>",
     "text": [
       "<u_name>大人 唔.. 这是",
       "<u_name>大人 附近貌似有东西发出"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<speech_warning_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<speech_warning_xing'chen>",
     "text": [
       "唔，什么声音，有人在哪里吗",
       "声音？有人吗？"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<lets_talk_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<lets_talk_xing'chen>",
     "text": [
       "<u_name>大人！我回来了！"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<wait_xing'chen>",
+  ] },
+//其他
+  { "type": "snippet", "category": "<wait_xing'chen>",
     "text": [
       "<u_name>大人！我看不见你了，你走的好快",
       "<u_name>大人！等等我——"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<keep_up_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<keep_up_xing'chen>",
     "text": [
       "<u_name>大人 请跟上——",
       "<u_name>大人 应该快到了——"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<heal_self_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<heal_self_xing'chen>",
     "text": [
       "<u_name>大人 我需要一些时间治疗自己",
       "<u_name>大人 请等我一下时间包扎"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<snip_heal_player_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<snip_heal_player_xing'chen>",
     "text": [
       "<u_name>大人 请停一下我帮你治疗一下",
       "<u_name>大人 请等一下你需要包扎"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<snip_pulp_zombie_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<snip_pulp_zombie_xing'chen>",
     "text": [
       "我来砸碎那一个，防止复活！",
       "恶灵！休想复活！"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<acknowledged_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<acknowledged_xing'chen>",
     "text": [
       "好的！<u_name>大人",
       "收到！"
-    ]
-  },
-  {
-    "type": "snippet",
-    "category": "<snip_bye_xing'chen>",
+  ] },
+  { "type": "snippet", "category": "<snip_bye_xing'chen>",
     "text": [
       "好的一会再说 <u_name>大人",
       "唔？嗯"
-    ]
-  }
+  ] }
 ]

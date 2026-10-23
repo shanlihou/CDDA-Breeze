@@ -1,0 +1,387 @@
+[
+  {
+    "id": "blood",
+    "type": "material",
+    "name": "血液",
+    "copy-from": "blood",
+    "extend": {
+      "vitamins": [
+        [
+          "impurity",
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "id": "bone",
+    "type": "material",
+    "name": "骨头",
+    "copy-from": "bone",
+    "extend": {
+      "vitamins": [
+        [
+          "impurity",
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "id": "cheese",
+    "type": "material",
+    "name": "奶酪",
+    "copy-from": "cured_meat",
+    "extend": {
+      "vitamins": [
+        [
+          "impurity",
+          0.5
+        ]
+      ]
+    }
+  },
+  {
+    "id": "cured_meat",
+    "type": "material",
+    "name": "腌制肉",
+    "copy-from": "cured_meat",
+    "extend": {
+      "vitamins": [
+        [
+          "impurity",
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "id": "egg",
+    "type": "material",
+    "name": "蛋",
+    "copy-from": "egg",
+    "extend": {
+      "vitamins": [
+        [
+          "impurity",
+          0.66
+        ]
+      ]
+    }
+  },
+  {
+    "id": "flesh",
+    "type": "material",
+    "name": "肉",
+    "copy-from": "flesh",
+    "extend": {
+      "vitamins": [
+        [
+          "impurity",
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "id": "fruit",
+    "type": "material",
+    "name": "水果",
+    "copy-from": "fruit",
+    "extend": {
+      "vitamins": [
+        [
+          "impurity",
+          0.1
+        ]
+      ]
+    }
+  },
+  {
+    "id": "hblood",
+    "type": "material",
+    "name": "人血",
+    "copy-from": "blood",
+    "extend": {
+      "vitamins": [
+        [
+          "impurity",
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "id": "hflesh",
+    "type": "material",
+    "name": "人肉",
+    "copy-from": "hflesh",
+    "extend": {
+      "vitamins": [
+        [
+          "impurity",
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "id": "honey",
+    "type": "material",
+    "name": "蜂蜜",
+    "copy-from": "honey",
+    "extend": {
+      "vitamins": [
+        [
+          "impurity",
+          0.1
+        ]
+      ]
+    }
+  },
+  {
+    "id": "ice_cream",
+    "type": "material",
+    "name": "冰淇淋",
+    "copy-from": "ice_cream",
+    "extend": {
+      "vitamins": [
+        [
+          "impurity",
+          0.5
+        ]
+      ]
+    }
+  },
+  {
+    "id": "iflesh",
+    "type": "material",
+    "name": "虫肉",
+    "copy-from": "iflesh",
+    "extend": {
+      "vitamins": [
+        [
+          "impurity",
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "id": "milk",
+    "type": "material",
+    "name": "乳制品",
+    "copy-from": "milk",
+    "extend": {
+      "vitamins": [
+        [
+          "impurity",
+          0.5
+        ]
+      ]
+    }
+  },
+  {
+    "id": "mushroom",
+    "type": "material",
+    "name": "蘑菇",
+    "copy-from": "mushroom",
+    "extend": {
+      "vitamins": [
+        [
+          "impurity",
+          0.2
+        ]
+      ]
+    },
+    "//": "Did you know fungi are closer to animals than to plants?"
+  },
+  {
+    "id": "veggy",
+    "type": "material",
+    "name": "植物性物质",
+    "copy-from": "veggy",
+    "extend": {
+      "vitamins": [
+        [
+          "impurity",
+          0.1
+        ]
+      ]
+    }
+  },
+  {
+    "id": "bean",
+    "type": "material",
+    "name": "豆类",
+    "copy-from": "bean",
+    "extend": {
+      "vitamins": [
+        [
+          "impurity",
+          0.1
+        ]
+      ]
+    }
+  },
+  {
+    "id": "dried_vegetable",
+    "type": "material",
+    "name": "干蔬菜",
+    "copy-from": "dried_vegetable",
+    "extend": {
+      "vitamins": [
+        [
+          "impurity",
+          0.1
+        ]
+      ]
+    }
+  },
+  {
+    "id": "garlic",
+    "type": "material",
+    "name": "大蒜",
+    "copy-from": "garlic",
+    "extend": {
+      "vitamins": [
+        [
+          "impurity",
+          0.1
+        ]
+      ]
+    }
+  },
+  {
+    "id": "nut",
+    "type": "material",
+    "name": "坚果",
+    "copy-from": "nut",
+    "extend": {
+      "vitamins": [
+        [
+          "impurity",
+          0.1
+        ]
+      ]
+    }
+  },
+  {
+    "id": "tomato",
+    "type": "material",
+    "name": "番茄",
+    "copy-from": "tomato",
+    "extend": {
+      "vitamins": [
+        [
+          "impurity",
+          0.1
+        ]
+      ]
+    }
+  },
+  {
+    "id": "wheat",
+    "type": "material",
+    "name": "小麦",
+    "copy-from": "wheat",
+    "extend": {
+      "vitamins": [
+        [
+          "impurity",
+          0.1
+        ]
+      ]
+    }
+  },
+  {
+    "id": "water",
+    "type": "material",
+    "name": "水",
+    "copy-from": "water",
+    "extend": {
+      "vitamins": [
+        [
+          "impurity",
+          0.01
+        ]
+      ]
+    }
+  },
+  {
+    "id": "processed_food",
+    "type": "material",
+    "name": "加工食品",
+    "copy-from": "processed_food",
+    "extend": {
+      "vitamins": [
+        [
+          "impurity",
+          0.5
+        ]
+      ]
+    }
+  },
+  {
+    "id": "magic_darkness",
+    "type": "material",
+    "name": "黑暗（魔法）",
+    "density": 1,
+    "specific_heat_liquid": 0.82,
+    "specific_heat_solid": 0.45,
+    "latent_heat": 334,
+    "edible": false,
+    "bash_resist": 9,
+    "cut_resist": 0,
+    "bullet_resist": 0,
+    "acid_resist": 0,
+    "fire_resist": 0,
+    "cold_resist": 0,
+    "chip_resist": 100,
+    "conductive": false,
+    "dmg_adj": [
+      "污损",
+      "沾污",
+      "浑浊",
+      "污染"
+    ],
+    "bash_dmg_verb": "受冲击",
+    "cut_dmg_verb": "被刮擦"
+  },
+  {
+    "id": "magic_fuel_mat",
+    "type": "material",
+    "name": "魔法燃料",
+    "copy-from": "pseudo_fuel",
+    "fuel_data": {
+      "energy": "45600 kJ",
+      "perpetual": true
+    }
+  },
+  {
+    "id": "magic_ice",
+    "type": "material",
+    "name": "冰（魔法）",
+    "density": 1,
+    "specific_heat_liquid": 0.82,
+    "specific_heat_solid": 0.45,
+    "latent_heat": 334,
+    "edible": false,
+    "bash_resist": 9,
+    "cut_resist": 0,
+    "bullet_resist": 0,
+    "acid_resist": 0,
+    "fire_resist": 999,
+    "cold_resist": 999,
+    "chip_resist": 100,
+    "conductive": false,
+    "dmg_adj": [
+      "污损",
+      "沾污",
+      "浑浊",
+      "污染"
+    ],
+    "bash_dmg_verb": "受冲击",
+    "cut_dmg_verb": "被刮擦"
+  }
+]

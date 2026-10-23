@@ -1,0 +1,778 @@
+[
+  {
+    "id": "museum_guns",
+    "type": "item_group",
+    "copy-from": "museum_guns",
+    "extend": {
+      "items": [
+        {
+          "item": "sor_ranged_rock_1",
+          "prob": 10,
+          "damage": [
+            2,
+            4
+          ]
+        },
+        {
+          "item": "sor_ranged_knife_1",
+          "prob": 10,
+          "damage": [
+            2,
+            4
+          ]
+        },
+        {
+          "item": "sor_ranged_javelin_1",
+          "prob": 10,
+          "damage": [
+            2,
+            4
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "antique_rare",
+    "type": "item_group",
+    "copy-from": "antique_rare",
+    "subtype": "distribution",
+    "extend": {
+      "entries": [
+        {
+          "item": "sor_ranged_rock_1",
+          "prob": 2
+        },
+        {
+          "item": "sor_ranged_knife_1",
+          "prob": 2
+        },
+        {
+          "item": "sor_ranged_javelin_1",
+          "prob": 2
+        }
+      ]
+    }
+  },
+  {
+    "type": "item_group",
+    "id": "pawn",
+    "copy-from": "pawn",
+    "extend": {
+      "items": [
+        [
+          "sor_ranged_rock_1",
+          1
+        ],
+        [
+          "sor_ranged_knife_1",
+          1
+        ],
+        [
+          "sor_ranged_javelin_1",
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "id": "sor_ranged_rock_1",
+    "name": "石头+1",
+    "description": "石头，但飞去来。\n远程伤害随力量上升。\n*不是用来丢的*",
+    "type": "GUN",
+    "category": "weapons",
+    "symbol": "*",
+    "color": "light_gray",
+    "price": 50000,
+    "price_postapoc": 50000,
+    "material": [
+      "stone"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "PRIMITIVE_RANGED_WEAPON",
+      "WATERPROOF_GUN",
+      "NO_TURRET",
+      "NEVER_JAMS",
+      "MAGIC_FOCUS"
+    ],
+    "weight": "657 g",
+    "volume": "250 ml",
+    "to_hit": -1,
+    "skill": "throw",
+    "dispersion": 100,
+    "durability": 9,
+    "loudness": 0,
+    "recoil": 0,
+    "range": 12,
+    "melee_damage": {
+      "bash": 7
+    },
+    "ranged_damage": {
+      "damage_type": "bash",
+      "amount": 7
+    },
+    "properties": [
+      [
+        "ranged_strength_pure_damage_reference",
+        "8"
+      ],
+      [
+        "ranged_strength_pure_damage_per_point",
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": "sor_ranged_rock_2",
+    "name": "石头+2",
+    "description": "石头，但飞去来。\n远程伤害随力量上升。\n*不是用来丢的*",
+    "type": "GUN",
+    "category": "weapons",
+    "symbol": "*",
+    "color": "light_gray",
+    "price": 100000,
+    "price_postapoc": 100000,
+    "material": [
+      "stone"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "PRIMITIVE_RANGED_WEAPON",
+      "WATERPROOF_GUN",
+      "NO_TURRET",
+      "NEVER_JAMS",
+      "MAGIC_FOCUS"
+    ],
+    "weight": "657 g",
+    "volume": "250 ml",
+    "to_hit": -1,
+    "skill": "throw",
+    "dispersion": 90,
+    "durability": 9,
+    "loudness": 0,
+    "recoil": 0,
+    "range": 14,
+    "melee_damage": {
+      "bash": 9
+    },
+    "ranged_damage": {
+      "damage_type": "bash",
+      "amount": 9
+    },
+    "properties": [
+      [
+        "ranged_strength_pure_damage_reference",
+        "8"
+      ],
+      [
+        "ranged_strength_pure_damage_per_point",
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": "sor_ranged_rock_3",
+    "name": "石头+3",
+    "description": "石头，但飞去来。\n远程伤害随力量上升。\n*不是用来丢的*",
+    "type": "GUN",
+    "category": "weapons",
+    "symbol": "*",
+    "color": "light_gray",
+    "price": 150000,
+    "price_postapoc": 150000,
+    "material": [
+      "stone"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "PRIMITIVE_RANGED_WEAPON",
+      "WATERPROOF_GUN",
+      "NO_TURRET",
+      "NEVER_JAMS",
+      "MAGIC_FOCUS"
+    ],
+    "weight": "657 g",
+    "volume": "250 ml",
+    "to_hit": -1,
+    "skill": "throw",
+    "dispersion": 80,
+    "durability": 9,
+    "loudness": 0,
+    "recoil": 0,
+    "range": 17,
+    "melee_damage": {
+      "bash": 12
+    },
+    "ranged_damage": {
+      "damage_type": "bash",
+      "amount": 12
+    },
+    "properties": [
+      [
+        "ranged_strength_pure_damage_reference",
+        "8"
+      ],
+      [
+        "ranged_strength_pure_damage_per_point",
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": "sor_ranged_rock_4",
+    "name": "石头+4",
+    "description": "石头，但飞去来。\n远程伤害随力量上升。\n*不是用来丢的*",
+    "type": "GUN",
+    "category": "weapons",
+    "symbol": "*",
+    "color": "light_gray",
+    "price": 250000,
+    "price_postapoc": 250000,
+    "material": [
+      "stone"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "PRIMITIVE_RANGED_WEAPON",
+      "WATERPROOF_GUN",
+      "NO_TURRET",
+      "NEVER_JAMS",
+      "MAGIC_FOCUS"
+    ],
+    "weight": "657 g",
+    "volume": "250 ml",
+    "to_hit": -1,
+    "skill": "throw",
+    "dispersion": 70,
+    "durability": 9,
+    "loudness": 0,
+    "recoil": 0,
+    "range": 21,
+    "melee_damage": {
+      "bash": 16
+    },
+    "ranged_damage": {
+      "damage_type": "bash",
+      "amount": 16
+    },
+    "properties": [
+      [
+        "ranged_strength_pure_damage_reference",
+        "8"
+      ],
+      [
+        "ranged_strength_pure_damage_per_point",
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": "sor_ranged_knife_1",
+    "name": "飞刀+1",
+    "description": "飞刀，但飞去来。\n远程伤害随敏捷上升。\n*不是用来丢的*",
+    "type": "GUN",
+    "category": "weapons",
+    "weapon_category": [
+      "KNIVES"
+    ],
+    "symbol": ";",
+    "color": "light_gray",
+    "price": 50000,
+    "price_postapoc": 50000,
+    "material": [
+      "steel"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "SHEATH_KNIFE",
+      "PRIMITIVE_RANGED_WEAPON",
+      "WATERPROOF_GUN",
+      "NO_TURRET",
+      "NEVER_JAMS",
+      "MAGIC_FOCUS"
+    ],
+    "weight": "460 g",
+    "volume": "100 ml",
+    "to_hit": -2,
+    "skill": "throw",
+    "dispersion": 100,
+    "durability": 9,
+    "loudness": 0,
+    "recoil": 0,
+    "range": 14,
+    "melee_damage": {
+      "bash": 1,
+      "stab": 10
+    },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 14
+    },
+    "properties": [
+      [
+        "ranged_strength_pure_damage_reference",
+        "8"
+      ],
+      [
+        "ranged_strength_pure_damage_per_point",
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": "sor_ranged_knife_2",
+    "name": "飞刀+2",
+    "description": "飞刀，但飞去来。\n远程伤害随敏捷上升。\n*不是用来丢的*",
+    "type": "GUN",
+    "category": "weapons",
+    "weapon_category": [
+      "KNIVES"
+    ],
+    "symbol": ";",
+    "color": "light_gray",
+    "price": 100000,
+    "price_postapoc": 100000,
+    "material": [
+      "steel"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "SHEATH_KNIFE",
+      "PRIMITIVE_RANGED_WEAPON",
+      "WATERPROOF_GUN",
+      "NO_TURRET",
+      "NEVER_JAMS",
+      "MAGIC_FOCUS"
+    ],
+    "weight": "460 g",
+    "volume": "100 ml",
+    "to_hit": -2,
+    "skill": "throw",
+    "dispersion": 90,
+    "durability": 9,
+    "loudness": 0,
+    "recoil": 0,
+    "range": 16,
+    "melee_damage": {
+      "bash": 1,
+      "stab": 12
+    },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 16
+    },
+    "properties": [
+      [
+        "ranged_strength_pure_damage_reference",
+        "8"
+      ],
+      [
+        "ranged_strength_pure_damage_per_point",
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": "sor_ranged_knife_3",
+    "name": "飞刀+3",
+    "description": "飞刀，但飞去来。\n远程伤害随敏捷上升。\n*不是用来丢的*",
+    "type": "GUN",
+    "category": "weapons",
+    "weapon_category": [
+      "KNIVES"
+    ],
+    "symbol": ";",
+    "color": "light_gray",
+    "price": 150000,
+    "price_postapoc": 150000,
+    "material": [
+      "steel"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "SHEATH_KNIFE",
+      "PRIMITIVE_RANGED_WEAPON",
+      "WATERPROOF_GUN",
+      "NO_TURRET",
+      "NEVER_JAMS",
+      "MAGIC_FOCUS"
+    ],
+    "weight": "460 g",
+    "volume": "100 ml",
+    "to_hit": -2,
+    "skill": "throw",
+    "dispersion": 80,
+    "durability": 9,
+    "loudness": 0,
+    "recoil": 0,
+    "range": 19,
+    "melee_damage": {
+      "bash": 2,
+      "stab": 15
+    },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 19
+    },
+    "properties": [
+      [
+        "ranged_strength_pure_damage_reference",
+        "8"
+      ],
+      [
+        "ranged_strength_pure_damage_per_point",
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": "sor_ranged_knife_4",
+    "name": "飞刀+4",
+    "description": "飞刀，但飞去来。\n远程伤害随敏捷上升。\n*不是用来丢的*",
+    "type": "GUN",
+    "category": "weapons",
+    "weapon_category": [
+      "KNIVES"
+    ],
+    "symbol": ";",
+    "color": "light_gray",
+    "price": 250000,
+    "price_postapoc": 250000,
+    "material": [
+      "steel"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "SHEATH_KNIFE",
+      "PRIMITIVE_RANGED_WEAPON",
+      "WATERPROOF_GUN",
+      "NO_TURRET",
+      "NEVER_JAMS",
+      "MAGIC_FOCUS"
+    ],
+    "weight": "460 g",
+    "volume": "100 ml",
+    "to_hit": -2,
+    "skill": "throw",
+    "dispersion": 70,
+    "durability": 9,
+    "loudness": 0,
+    "recoil": 0,
+    "range": 23,
+    "melee_damage": {
+      "bash": 3,
+      "stab": 19
+    },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 23
+    },
+    "properties": [
+      [
+        "ranged_strength_pure_damage_reference",
+        "8"
+      ],
+      [
+        "ranged_strength_pure_damage_per_point",
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": "sor_ranged_javelin_1",
+    "name": "标枪+1",
+    "description": "标枪，但飞去来。\n远程伤害随力量小幅上升，随敏捷中幅上升。\n*不是用来丢的*",
+    "type": "GUN",
+    "category": "weapons",
+    "weapon_category": [
+      "POLEARMS",
+      "SPEARS"
+    ],
+    "techniques": [
+      "WBLOCK_1"
+    ],
+    "symbol": "/",
+    "color": "light_gray",
+    "price": 50000,
+    "price_postapoc": 50000,
+    "material": [
+      "wood",
+      "iron"
+    ],
+    "qualities": [
+      [
+        "COOK",
+        1
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "SPEAR",
+      "NONCONDUCTIVE",
+      "SHEATH_SPEAR",
+      "JAVELIN",
+      "PRIMITIVE_RANGED_WEAPON",
+      "WATERPROOF_GUN",
+      "NO_TURRET",
+      "NEVER_JAMS",
+      "MAGIC_FOCUS"
+    ],
+    "weight": "960 g",
+    "volume": "1000 ml",
+    "longest_side": "140 cm",
+    "to_hit": -1,
+    "skill": "throw",
+    "dispersion": 100,
+    "durability": 9,
+    "loudness": 0,
+    "recoil": 0,
+    "range": 16,
+    "melee_damage": {
+      "bash": 5,
+      "stab": 19
+    },
+    "ranged_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 5
+      },
+      {
+        "damage_type": "stab",
+        "amount": 17
+      }
+    ],
+    "properties": [
+      [
+        "ranged_strength_pure_damage_reference",
+        "8"
+      ],
+      [
+        "ranged_strength_pure_damage_per_point",
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": "sor_ranged_javelin_2",
+    "name": "标枪+2",
+    "description": "标枪，但飞去来。\n远程伤害随力量小幅上升，随敏捷中幅上升。\n*不是用来丢的*",
+    "type": "GUN",
+    "category": "weapons",
+    "weapon_category": [
+      "POLEARMS",
+      "SPEARS"
+    ],
+    "techniques": [
+      "WBLOCK_1"
+    ],
+    "symbol": "/",
+    "color": "light_gray",
+    "price": 100000,
+    "price_postapoc": 100000,
+    "material": [
+      "wood",
+      "iron"
+    ],
+    "qualities": [
+      [
+        "COOK",
+        1
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "SPEAR",
+      "NONCONDUCTIVE",
+      "SHEATH_SPEAR",
+      "JAVELIN",
+      "PRIMITIVE_RANGED_WEAPON",
+      "WATERPROOF_GUN",
+      "NO_TURRET",
+      "NEVER_JAMS",
+      "MAGIC_FOCUS"
+    ],
+    "weight": "960 g",
+    "volume": "1000 ml",
+    "longest_side": "140 cm",
+    "to_hit": -1,
+    "skill": "throw",
+    "dispersion": 90,
+    "durability": 9,
+    "loudness": 0,
+    "recoil": 0,
+    "range": 18,
+    "melee_damage": {
+      "bash": 6,
+      "stab": 21
+    },
+    "ranged_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 6
+      },
+      {
+        "damage_type": "stab",
+        "amount": 19
+      }
+    ],
+    "properties": [
+      [
+        "ranged_strength_pure_damage_reference",
+        "8"
+      ],
+      [
+        "ranged_strength_pure_damage_per_point",
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": "sor_ranged_javelin_3",
+    "name": "标枪+3",
+    "description": "标枪，但飞去来。\n远程伤害随力量小幅上升，随敏捷中幅上升。\n*不是用来丢的*",
+    "type": "GUN",
+    "category": "weapons",
+    "weapon_category": [
+      "POLEARMS",
+      "SPEARS"
+    ],
+    "techniques": [
+      "WBLOCK_1"
+    ],
+    "symbol": "/",
+    "color": "light_gray",
+    "price": 150000,
+    "price_postapoc": 150000,
+    "material": [
+      "wood",
+      "iron"
+    ],
+    "qualities": [
+      [
+        "COOK",
+        1
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "SPEAR",
+      "NONCONDUCTIVE",
+      "SHEATH_SPEAR",
+      "JAVELIN",
+      "PRIMITIVE_RANGED_WEAPON",
+      "WATERPROOF_GUN",
+      "NO_TURRET",
+      "NEVER_JAMS",
+      "MAGIC_FOCUS"
+    ],
+    "weight": "960 g",
+    "volume": "1000 ml",
+    "longest_side": "140 cm",
+    "to_hit": -1,
+    "skill": "throw",
+    "dispersion": 80,
+    "durability": 9,
+    "loudness": 0,
+    "recoil": 0,
+    "range": 21,
+    "melee_damage": {
+      "bash": 7,
+      "stab": 24
+    },
+    "ranged_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 7
+      },
+      {
+        "damage_type": "stab",
+        "amount": 22
+      }
+    ],
+    "properties": [
+      [
+        "ranged_strength_pure_damage_reference",
+        "8"
+      ],
+      [
+        "ranged_strength_pure_damage_per_point",
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": "sor_ranged_javelin_4",
+    "name": "标枪+4",
+    "description": "标枪，但飞去来。\n远程伤害随力量小幅上升，随敏捷中幅上升。\n*不是用来丢的*",
+    "type": "GUN",
+    "category": "weapons",
+    "weapon_category": [
+      "POLEARMS",
+      "SPEARS"
+    ],
+    "techniques": [
+      "WBLOCK_1"
+    ],
+    "symbol": "/",
+    "color": "light_gray",
+    "price": 250000,
+    "price_postapoc": 250000,
+    "material": [
+      "wood",
+      "iron"
+    ],
+    "qualities": [
+      [
+        "COOK",
+        1
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "SPEAR",
+      "NONCONDUCTIVE",
+      "SHEATH_SPEAR",
+      "JAVELIN",
+      "PRIMITIVE_RANGED_WEAPON",
+      "WATERPROOF_GUN",
+      "NO_TURRET",
+      "NEVER_JAMS",
+      "MAGIC_FOCUS"
+    ],
+    "weight": "960 g",
+    "volume": "1000 ml",
+    "longest_side": "140 cm",
+    "to_hit": -1,
+    "skill": "throw",
+    "dispersion": 70,
+    "durability": 9,
+    "loudness": 0,
+    "recoil": 0,
+    "range": 25,
+    "melee_damage": {
+      "bash": 8,
+      "stab": 28
+    },
+    "ranged_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 8
+      },
+      {
+        "damage_type": "stab",
+        "amount": 26
+      }
+    ],
+    "properties": [
+      [
+        "ranged_strength_pure_damage_reference",
+        "8"
+      ],
+      [
+        "ranged_strength_pure_damage_per_point",
+        "1"
+      ]
+    ]
+  }
+]

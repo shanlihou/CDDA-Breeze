@@ -1,0 +1,176 @@
+[
+  {
+    "id": "CCdino_carrier_wooden",
+    "type": "GENERIC",
+    "subtypes": [ "TOOL" ],
+    "name": { "str": "CC宠物笼（精灵球）" },
+    "description": "能抓好多东西唉嘿~精灵球出击",
+    "weight": "150 g",
+    "volume": "1 L",
+    "price": "10 USD",
+    "price_postapoc": "1 USD",
+    "material": [ "wood" ],
+    "symbol": "#",
+    "color": "brown",
+    "properties": [
+    [
+      "creature_size_capacity",
+      "HUGE"
+    ]
+  ],
+  "use_action": [
+    "CAPTURE_MONSTER_ACT"
+  ],
+  "flags": [
+    "TRADER_AVOID"
+  ],
+    "looks_like": "pet_carrier",
+    "melee_damage": { "bash": 1, "cut": 1 }
+  },
+  {
+        "type" : "recipe",
+    "result": "CCdino_carrier_wooden",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC武器装备",
+    "skill_used": "survival",
+    "flags": [ "BLIND_EASY" ],
+    "time": "1second",
+    "reversible": true,
+    "autolearn": true,
+    "components": [ [ 
+    [ "CCMODcoin", 5 ],
+    [ "2x4", 4 ] 
+    ] ]
+  },
+  {
+    "type": "PET_ARMOR",
+    "subtypes": [ "PET_ARMOR" ], 
+    "id": "CC_harness",
+    "symbol": "[",
+    "color": "blue",
+    "name": { "str": "CC宠物护甲" },
+    "looks_like": "armor_larmor",
+    "description": "特殊强化材料做的高强度大号宠物护甲（马铠），可作为鞍具。",
+    "price": "300 USD",
+    "price_postapoc": "100 USD",
+    "material": [ "monolith", "cotton" ],
+    "weight": "1500 g",
+    "volume": "1500 ml",
+    "to_hit": -1,
+    "flags": [ "TARDIS", "IS_PET_ARMOR", "TACK" ],
+    "pet_bodytype": "horse",
+    "material_thickness": 0.4, 
+    "environmental_protection": 4, 
+    "max_pet_vol": "2000 L",
+    "min_pet_vol": "20 ml", 
+    "longest_side": "60 cm",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "watertight": true,
+        "rigid": true,
+        "spoil_multiplier": 0.001,
+        "weight_multiplier": 0.000,
+        "volume_multiplier": 0.000,
+        "max_contains_volume": "200000 ml",
+        "max_contains_weight": "3999 kg",
+        "max_item_length": "2000 cm",
+        "moves": 30
+        }
+    ],
+    "melee_damage": { "bash": 5 }
+  },
+  {
+        "type" : "recipe",
+    "result": "CC_harness",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC武器装备",
+    "skill_used": "survival",
+    "time": "1second",
+    "reversible": true,
+    "autolearn": true,
+    "components": [ [ [ "CCMODcoin", 130 ] ] ]
+  }, 
+  {
+        "type" : "recipe",
+    "result": "CC_mon_horse_book",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC武器装备",
+    "skill_used": "survival",
+    "time": "3 m",
+    "reversible": true,
+    "autolearn": true,
+    "components": [ [ [ "CCMODcoin", 400 ] ] ]
+  }, 
+  {
+        "type" : "recipe",
+    "result": "CC_mon_dog_book",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC武器装备",
+    "skill_used": "survival",
+    "time": "3 m",
+    "reversible": true,
+    "autolearn": true,
+    "components": [ [ [ "CCMODcoin", 400 ] ] ]
+  }, 
+ {
+   "id":"CC_mon_horse_book",
+   "type": "TOOL",
+   "looks_like": "textbook_chemistry",
+   "name":"CC宠物培养方案（战马）",
+   "description":"一套成熟的宠物战马培养方案。消耗大量资源时间以培养更加强大的宠物。总的来说就是宠物更加有用好养活了。",
+   "material":[ "paper", "cardboard" ],
+    "weight": "500 g",
+    "volume": "100 ml",
+    "price": "0 USD",
+    "price_postapoc": "0 USD",
+    "to_hit": -5,
+   "symbol":"E",
+   "color":"green",
+   "flags":[ "SINGLE_USE","TRADER_AVOID" ],
+   "use_action":[
+      { "type": "place_monster", 
+        "monster_id": "CC_mon_horse", 
+        "friendly_msg": "花费大量资源和时间培养出来的强大宠物战马。",
+        "place_randomly": false,
+        "difficulty": 0, 
+        "moves": 0,
+        "skills": [ "fabrication" ],
+        "is_pet": true }
+      ]
+ }, 
+ {
+   "id":"CC_mon_dog_book",
+   "type": "TOOL",
+   "looks_like": "textbook_chemistry",
+   "name":"CC宠物培养方案（战狼）",
+   "description":"一套成熟的宠物战狼培养方案。消耗大量资源时间以培养更加强大的宠物。总的来说就是宠物更加有用好养活了。",
+   "material":[ "paper", "cardboard" ],
+    "weight": "500 g",
+    "volume": "100 ml",
+    "price": "0 USD",
+    "price_postapoc": "0 USD",
+    "to_hit": -5,
+   "symbol":"E",
+   "color":"green",
+   "flags":[ "SINGLE_USE","TRADER_AVOID" ],
+   "use_action":[
+      { "type": "place_monster", 
+        "monster_id": "CC_mon_dog", 
+        "friendly_msg": "花费大量资源和时间培养出来的强大宠物战狼。",
+        "place_randomly": false,
+        "difficulty": 0, 
+        "moves": 0,
+        "skills": [ "fabrication" ],
+        "is_pet": true }
+      ]
+ }
+]

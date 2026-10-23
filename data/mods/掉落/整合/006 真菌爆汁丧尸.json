@@ -1,0 +1,32 @@
+[
+
+ {
+    "type": "item_group",
+    "id": "zhenghe_006",
+    "subtype": "collection",
+    "entries": [
+      {
+        "distribution": [
+          {
+            "item": "essence",
+            "prob": 50
+          },
+          {
+            "item": "essence_blood",
+            "prob": 50
+          }
+        ],
+        "prob":25
+      },{ "item": "destiny_copper", "count": [ 9,12 ] }
+    ]
+  },
+ {
+    "id": "mon_boomer_fungus",
+    "//": "真菌爆汁丧尸",
+    "copy-from": "mon_boomer_fungus",
+    "type": "MONSTER",
+    "death_drops": "zhenghe_006"
+  }
+ 
+
+]

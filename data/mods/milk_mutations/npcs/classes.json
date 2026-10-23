@@ -1,0 +1,191 @@
+[
+  {
+    "type": "npc_class",
+    "id": "NC_MILK_SLAVE",
+    "name": "母畜",
+    "job_description": "主人……该……该挤奶了……",
+    "common": false,
+    "bonus_str": {
+      "rng": [
+        2,
+        2
+      ]
+    },
+    "bonus_dex": {
+      "rng": [
+        2,
+        2
+      ]
+    },
+    "bonus_int": {
+      "rng": [
+        8,
+        8
+      ]
+    },
+    "bonus_per": {
+      "rng": [
+        8,
+        8
+      ]
+    },
+    "skills": [
+      {
+        "skill": "firstaid",
+        "level": {
+          "rng": [
+            10,
+            10
+          ]
+        }
+      },
+      {
+        "skill": "driving",
+        "level": {
+          "rng": [
+            5,
+            5
+          ]
+        }
+      },
+      {
+        "skill": "fabrication",
+        "level": {
+          "rng": [
+            10,
+            10
+          ]
+        }
+      },
+      {
+        "skill": "mechanics",
+        "level": {
+          "rng": [
+            5,
+            5
+          ]
+        }
+      },
+      {
+        "skill": "survival",
+        "level": {
+          "rng": [
+            5,
+            5
+          ]
+        }
+      },
+      {
+        "skill": "swimming",
+        "level": {
+          "rng": [
+            10,
+            10
+          ]
+        }
+      },
+      {
+        "skill": "traps",
+        "level": {
+          "rng": [
+            5,
+            5
+          ]
+        }
+      },
+      {
+        "skill": "cooking",
+        "level": {
+          "rng": [
+            10,
+            10
+          ]
+        }
+      },
+      {
+        "skill": "tailor",
+        "level": {
+          "rng": [
+            10,
+            10
+          ]
+        }
+      },
+      {
+        "skill": "electronics",
+        "level": {
+          "rng": [
+            5,
+            5
+          ]
+        }
+      },
+      {
+        "skill": "barter",
+        "level": {
+          "rng": [
+            10,
+            10
+          ]
+        }
+      },
+      {
+        "skill": "speech",
+        "level": {
+          "rng": [
+            10,
+            10
+          ]
+        }
+      }
+    ],
+    "worn_override": "NC_MILK_SLAVE_worn",
+    "carry_override": "NC_MILK_SLAVE_carry",
+    "traits": [
+      [
+        "hair_red_long",
+        100
+      ],
+      [
+        "eye_green",
+        100
+      ],
+      [
+        "SKIN_LIGHT",
+        100
+      ],
+      [
+        "THRESH_MILK",
+        100
+      ],
+      [
+        "BEAUTIFUL4",
+        100
+      ],
+      [
+        "SOFTSKIN",
+        100
+      ],
+      [
+        "MILKBR",
+        100
+      ],
+      [
+        "BTFT",
+        100
+      ],
+      [
+        "AMBR",
+        100
+      ],
+      [
+        "PADDED_FEET",
+        100
+      ],
+      [
+        "STRONG_LEGS",
+        100
+      ]
+    ]
+  }
+]

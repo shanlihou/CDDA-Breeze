@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_AOI_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"姐姐她...在哪里呢？",
+    "responses":[
+      { "text": "让我帮你一起找吧", "topic": "TALK_AOI_SAN_2" },
+      { "text": "不知道", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_AOI_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"谢谢！姐姐应该和我穿一样的衣服，所以应该很快就能找到她",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

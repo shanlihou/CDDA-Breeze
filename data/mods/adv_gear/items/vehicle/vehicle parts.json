@@ -1,0 +1,474 @@
+[
+  {
+    "abstract": "nanovp",
+    "type": "vehicle_part",
+    "name": "nanotech vehicle part",
+    "color": "light_gray",
+    "broken_color": "dark_gray",
+    "difficulty": 0,
+    "durability": 1500,
+    "item": "xl_nanite_cluster",
+    "description": "Seeing this is a bug - nanovp",
+    "requirements": {
+      "install": { "skills": [ [ "computer", 0 ] ], "time": 6000, "qualities": [ { "id": "NANO_PRO", "level": 1 } ] },
+      "removal": { "skills": [ [ "computer", 0 ] ], "qualities": [ { "id": "NANO_PRO", "level": 1 } ] },
+      "repair": { "skills": [ [ "computer", 0 ] ], "time": 6000, "qualities": [ { "id": "NANO_PRO", "level": 1 } ] }
+    },
+    "breaks_into" : [
+      {"item": "xl_nanite_cluster", "min": 1, "max": 1}
+    ],
+    "damage_reduction" : {
+      "all" : 200
+    }
+  },{
+    "abstract": "nanovp_fold",
+    "type": "vehicle_part",
+    "name": "nanotech vehicle part foldable",
+    "description": "Seeing this is a bug - nanovp_fold",
+    "copy-from": "nanovp",
+    "folded_volume": 8
+  },{
+    "type": "vehicle_part",
+    "id": "nano_door",
+    "name": "纳米车门",
+    "copy-from": "nanovp",
+    "symbol": "+",
+    "looks_like": "hdhatch",
+    "broken_symbol": "&",
+    "description": "这是一种非常耐用纳米材料们，还包含一个作为窗户的网格。。",
+    "location": "center",
+    "durability": 5000,
+    "folded_volume": 25,
+    "size": 200,
+    "flags": [ "AISLE", "CARGO", "OBSTACLE", "OPENABLE", "BOARDABLE", "WINDOW" ],
+    "damage_reduction" : {
+      "all" : 400
+    }
+  },{
+    "type": "vehicle_part",
+    "id": "nano_door_opaque",
+    "name": "nanotech iris",
+    "copy-from": "nano_door",
+    "looks_like": "hdhatch_opaque",
+    "description": "A highly durable iris composed of nanites, this blocks sight while also acting as a combination of door and armor.",
+    "location": "center",
+    "extend": { "flags": [ "OPAQUE" ] },
+    "delete": { "flags": [ "WINDOW" ] }
+  },{
+    "id": "nano_boat",
+    "type": "vehicle_part",
+    "name": "nanotech boat coating",
+    "copy-from": "nanovp_fold",
+    "description": "An outer coating of nanites that work together to seal out water while also providing another layer of protection.",
+    "location" : "under",
+    "looks_like": "metal_boat_hull",
+    "symbol": "H",
+    "broken_symbol": "#",
+    "flags" : ["FLOATS", "FOLDABLE"]
+  },{
+    "abstract": "nanovp_turret",
+    "type": "vehicle_part",
+    "name": "nanotech vehicle turret",
+    "copy-from": "nanovp_fold",
+    "symbol": "t",
+    "location": "on_roof",
+    "default_ammo": "metal_nanopowder",
+    "flags": [ "TURRET", "USE_TANKS" ]
+  },{
+    "id": "nano_turret_shredder",
+    "copy-from": "nanovp_turret",
+    "type": "vehicle_part",
+    "name": "车载纳米霰弹枪炮塔",
+    "description": "一种适于车辆使用的纳米技术旋翼炮塔。",
+    "breaks_into" : [
+      {"item": "nano_turret_shredder", "min": 1, "max": 1}
+    ],
+    "item": "nano_turret_shredder"
+  },{
+    "id": "nano_turret_pistol",
+    "copy-from": "nanovp_turret",
+    "type": "vehicle_part",
+    "name": "车载纳米手枪炮塔",
+    "description": "一种适于车辆使用的纳米技术手枪炮塔。",
+    "breaks_into" : [
+      {"item": "nano_turret_pistol", "min": 1, "max": 1}
+    ],
+    "item": "nano_turret_pistol"
+  },{
+    "id": "nano_turret_rifle",
+    "copy-from": "nanovp_turret",
+    "type": "vehicle_part",
+    "name": "车载纳米步枪炮塔",
+    "description": "一种适于车辆使用的纳米技术步枪炮塔。",
+    "breaks_into" : [
+      {"item": "nano_turret_rifle", "min": 1, "max": 1}
+    ],
+    "item": "nano_turret_rifle"
+  },{
+    "id": "nano_turret_smg",
+    "copy-from": "nanovp_turret",
+    "type": "vehicle_part",
+    "name": "车载纳米冲锋枪炮塔",
+    "description": "一种适于车辆使用的纳米技术冲锋枪炮塔。",
+    "breaks_into" : [
+      {"item": "nano_turret_smg", "min": 1, "max": 1}
+    ],
+    "item": "nano_turret_smg"
+  },{
+    "type": "vehicle_part",
+    "id": "nano_aisle",
+    "name": "纳米过道",
+    "looks_like": "aisle_horizontal",
+    "copy-from": "nanovp_fold",
+    "symbol": "H",
+    "broken_symbol": "#",
+    "description": "通道纳米技术通道，能够协助提升附近物体。",
+    "location": "center",
+    "size": 200,
+    "flags": [ "AISLE", "BOARDABLE", "FLAT_SURF", "CARGO", "COVERED" ],
+    "qualities": [ [ "LIFT", 40 ] ]
+  },{
+    "type": "vehicle_part",
+    "id": "nano_roof",
+    "name": "纳米车顶盖",
+    "copy-from": "nanovp_fold",
+    "symbol": "#",
+    "broken_symbol": "#",
+    "description": "一片纳米车顶盖,可以在顶部安装炮台.",
+    "location": "roof",
+    "flags": [ "ROOF", "TURRET_MOUNT", "FLAT_SURF" ]
+  },{
+    "type" : "vehicle_part",
+    "id" : "nt_solar_1",
+    "name" : "纳米太阳能板",
+    "copy-from": "nanovp_fold",
+    "looks_like": "reinforced_solar_panel",	
+    "symbol" : "#",
+    "color" : "yellow",
+    "broken_symbol" : "x",
+    "broken_color" : "light_gray",
+    "damage_modifier" : 10,
+    "description" : "纳米材料制作而成的天阳能电池板,可以非常高效的将太阳能转化为电能.",
+    "epower" : 5000,
+    "location" : "on_roof",
+    "flags" : ["SOLAR_PANEL", "FOLDABLE"]
+  },{
+    "type" : "vehicle_part",
+    "id" : "nt_armor_1",
+    "name" : "被动式纳米装甲板",
+    "copy-from": "nanovp_fold",
+    "symbol" : ")",
+    "color" : "green",
+    "broken_symbol" : ")",
+    "broken_color" : "light_gray",
+    "durability" : 15000,
+    "description" : "被动防御模式,用纳米材料制作而成的装甲板,周围被一群微型纳米机器人包围,形成一圈保护层,可以大幅吸收减少碰撞时的伤害.",
+    "damage_modifier" : 100,
+    "location" : "armor",
+    "flags" : ["ARMOR", "FOLDABLE"],
+    "damage_reduction" : {
+      "all" : 1600
+    }
+  },{
+    "type" : "vehicle_part",
+    "id" : "nt_armor_2",
+    "name" : "主动式纳米装甲板",
+    "copy-from": "nanovp_fold",
+    "symbol" : ")",
+    "color" : "green",
+    "broken_symbol" : ")",
+    "broken_color" : "light_gray",
+    "durability" : 10000,
+    "description" : "主动攻击模式,用纳米材料制作而成的装甲板,周围被一群微型纳米机器人包围,可以主动进攻碰撞的物品,利用高速切割碰撞而来的任何物品.",
+    "damage_modifier" : 1000,
+    "item" : "xl_nanite_ai",
+    "location" : "armor",
+    "flags" : ["ARMOR", "FOLDABLE"],
+    "breaks_into" : [
+        {"item": "xl_nanite_ai", "min": 1, "max": 1}
+    ],
+    "damage_reduction" : {
+      "all" : 500
+    }
+  },{
+    "id": "nt_fluid_tank_1",
+    "type": "vehicle_part",
+    "name": { "str": "纳米水箱 (2500L)" },
+    "item": "nano_container",
+    "location": "fuel_source",
+    "symbol": "O",
+    "broken_color": "red",
+    "durability": 3000,
+    "folded_volume": "2 L",
+    "description" : "利用复杂的纳米技术制作而成的压缩罐,可以将液体压缩到极致,方便存储大量液体.",
+    "categories": [ "movement" ],
+    "damage_modifier": 80,
+    "breaks_into": [
+      { "item": "nano_container", "count": [ 1, 1 ] }
+    ],
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 1 ] ],
+        "time": "45 m",
+        "using": [ [ "vehicle_wrench_2", 1 ], [ "drilling_standard", 40 ] ]
+      },
+      "removal": { "skills": [ [ "mechanics", 1 ] ], "time": "22 m", "qualities": [ { "id": "WRENCH", "level": 2 } ] },
+      "repair": { "skills": [ [ "mechanics", 1 ] ], "time": "22 m", "using": [ [ "repair_welding_standard", 1 ] ] }
+    },
+    "flags": [ "FLUIDTANK", "CARGO" ],
+    "damage_reduction": { "all": 28, "stab": 10 }
+  },{
+    "type" : "vehicle_part",
+    "id" : "nt_storage",
+    "name" : "纳米货仓",
+    "looks_like": "trunk_floor",	
+    "copy-from": "nanovp_fold",
+    "symbol" : "=",
+    "broken_symbol" : "#",
+    "description" : "它是一大块带有人工智能的纳米粒子，它会主动地伸出机械臂去抓取靠近它的物体，并尽可能地压缩存储它们。",
+    "size" : 5000,
+    "item" : "nano_storage",
+    "location" : "center",
+    "flags" : ["BOARDABLE", "CARGO", "FOLDABLE"],
+    "breaks_into" : [
+        {"item": "nano_storage", "count": [1, 1]}
+    ]
+  },{
+    "type" : "vehicle_part",
+    "id" : "nt_crafter",
+    "name" : "纳米工作台",
+    "looks_like": "workbench",
+    "copy-from": "nt_storage",
+    "description" : "人工智能核心打造的纳米材料工作台，它会主动的使用机械手臂帮助你完成各种制作工作。此外它还集成了很多制作工具。",
+    "size" : 3000,
+    "flags" : ["BOARDABLE", "KITCHEN", "CHEMLAB", "CRAFTRIG", "FORGE", "WELDRIG", "WATER_PURIFIER", "FAUCET", "CARGO", "FOLDABLE", "FLAT_SURF", "WORKBENCH"],
+    "workbench": { "multiplier": 2.5, "mass": 5000000, "volume": "750L" }
+  },{
+    "type" : "vehicle_part",
+    "id" : "nano_fridge",
+    "name" : "纳米冰箱",
+    "looks_like": "minifridge",
+    "copy-from": "nanovp_fold",
+    "symbol" : "=",
+    "broken_symbol" : "#",
+    "description" : "纳米技术制作而成的冰箱,可以使用电力来保持内部低温,使食物保持新鲜.",
+    "size" : 2000,
+    "location" : "center",
+    "flags" : ["OBSTACLE", "CARGO", "FRIDGE", "COVERED", "FOLDABLE"]
+  },{
+    "type" : "vehicle_part",
+    "id" : "nano_freezer",
+    "name" : "纳米冰柜",
+    "looks_like": "minifreezer",
+    "copy-from": "nano_fridge",
+    "description" : "纳米技术制作而成的冰柜,可以使用电力来制冷,可以将内部保持在冻结温度以下,可以用来冷冻食物。",
+    "flags" : ["OBSTACLE", "CARGO", "FREEZER", "COVERED", "FOLDABLE"]
+  },{
+    "type" : "vehicle_part",
+    "id" : "nanofactory_vehicle_1",
+    "name" : "安装纳米工厂 v1",
+    "copy-from": "nanovp",
+    "symbol" : "#",
+    "color" : "light_green",
+    "broken_symbol" : "0",
+    "broken_color" : "blue",
+    "damage_modifier" : 10,
+    "durability" : 2000,
+    "description" : "一台巨大且笨重的纳米工厂原型机V1,坐落在车架上,不知为何无法正常工作.",
+    "epower" : -1,
+    "bonus" : 600,
+    "item" : "nanofactory_1",
+    "location" : "center",
+    "flags" : ["RECHARGE", "FORGE", "CHEMLAB", "CRAFTRIG", "WELDRIG", "KITCHEN", "ENABLED_DRAINS_EPOWER", "WATER_PURIFIER", "FAUCET", "NOINSTALL"],
+    "tools": [
+      "anvil",
+      "can_sealer",
+      "crucible",
+      "mold_plastic",
+      "pastaextruder",
+      "polisher",
+      "press",
+      "puller",
+      "swage",
+      "tongs",
+      "hotplate",
+      "pot",
+      "welder",
+      "soldering_iron",
+      "vac_sealer",
+      "dehydrator",
+      "press",
+      "chemistry_set",
+      "forge",
+      "nanofactory_1"
+    ],
+    "breaks_into" : [
+      {"item": "nanofactory_1", "min": 1, "max": 1}
+    ]
+  },{
+    "type" : "vehicle_part",
+    "id" : "nanofactory_vehicle_2",
+    "name" : "安装纳米工厂 v2",
+    "copy-from": "nanovp",
+    "symbol" : "#",
+    "color" : "light_green",
+    "broken_symbol" : "0",
+    "broken_color" : "blue",
+    "damage_modifier" : 10,
+    "durability" : 2000,
+    "description" : "一台巨大且笨重的纳米工厂原型机V2,坐落在车架上,不知为何无法正常工作.",
+    "epower" : -1,
+    "bonus" : 600,
+    "item" : "nanofactory_2",
+    "location" : "center",
+    "flags" : ["RECHARGE", "FORGE", "CHEMLAB", "CRAFTRIG", "WELDRIG", "KITCHEN", "ENABLED_DRAINS_EPOWER", "WATER_PURIFIER", "FAUCET", "NOINSTALL"],
+    "tools": [
+      "anvil",
+      "can_sealer",
+      "crucible",
+      "mold_plastic",
+      "pastaextruder",
+      "polisher",
+      "press",
+      "puller",
+      "swage",
+      "tongs",
+      "hotplate",
+      "pot",
+      "welder",
+      "soldering_iron",
+      "vac_sealer",
+      "dehydrator",
+      "press",
+      "chemistry_set",
+      "forge",
+      "nanofactory_2"
+    ],
+    "breaks_into" : [
+      {"item": "nanofactory_2", "min": 1, "max": 1}
+    ]
+  },{
+    "id": "nanotech_battery",
+    "type": "vehicle_part",
+    "name": "纳米蓄电池",
+    "copy-from": "nanovp_fold",
+    "item": "nanotech_battery",
+    "location" : "fuel_source",
+    "fuel_type": "battery",
+    "symbol": "O",
+    "color": "yellow",
+    "broken_color": "red",
+    "description": "大量纳米粒子组成的蓄电池,可以存储超大容量电力.",
+    "damage_modifier": 50,
+    "flags" : [ "FOLDABLE", "RECHARGE"],
+    "breaks_into": [
+      { "item": "nanotech_battery", "count": [ 1, 1 ] }
+    ]
+  },{
+    "id": "nanotech_generator",
+    "type": "vehicle_part",
+    "name": "纳米发电机",
+    "copy-from": "nanovp_fold",
+    "item": "nanotech_generator",
+    "location": "engine_block",
+    "fuel_type": "null",
+    "power": 100,
+    "symbol": "O",
+    "color": "yellow",
+    "broken_color": "red",
+    "epower": 45000,
+    "description": "大量纳米粒子组成的机械发电机,为蓄电池提供电力支持",
+    "damage_modifier": 50,
+    "flags" : ["REACTOR", "PERPETUAL", "FOLDABLE", "CARGO"],
+    "breaks_into": [
+      { "item": "nanotech_generator", "count": [ 1, 1 ] }
+    ]
+  },{
+    "id": "nanotech_anima",
+    "copy-from": "engine_electric_large",
+    "type": "vehicle_part",
+    "name": "纳米引擎",
+    "proportional": { "energy_consumption": 3, "power": 120 },
+    "item": "xl_nanite_ai",
+    "difficulty": 0,
+    "durability": 5000,
+    "description": "大量微型纳米机器人组成的纳米引擎,可以提供大量机械动力,消耗电力产生动力来驱动车辆.",
+    "noise_factor": 1,
+    "damage_modifier": 80,
+    "folded_volume": 8,
+    "requirements": {
+      "install": { "skills": [ [ "computer", 0 ] ], "qualities": [ { "id": "NANO_PRO", "level": 1 } ] },
+      "removal": { "skills": [ [ "computer", 0 ] ], "qualities": [ { "id": "NANO_PRO", "level": 1 } ] },
+      "repair": { "skills": [ [ "computer", 0 ] ], "qualities": [ { "id": "NANO_PRO", "level": 1 } ] }
+    },
+    "damage_reduction" : {
+      "all" : 200
+    },
+    "flags" : [ "FOLDABLE", "ENGINE", "E_HEATER", "E_STARTS_INSTANTLY"],
+    "breaks_into": [
+      { "item": "xl_nanite_ai", "count": [ 1, 1 ] }
+    ]
+  },{
+    "id": "nanotech_crawler",
+    "type": "vehicle_part",
+    "name": "纳米履带",
+    "looks_like": "tread3",    
+    "copy-from": "nanovp_fold",
+    "item": "nano_crawler",
+    "symbol": "|",
+    "broken_symbol": "x",
+    "durability": 1500,
+    "description": "大量纳米材料制作的履带轮胎,可以穿越任何地形.",
+    "damage_modifier": 120,
+    "qualities": [ [ "SELF_JACK", 40 ] ],
+    "breaks_into": [
+      { "item": "nano_crawler", "count": [ 1, 1 ] }
+    ],
+    "rolling_resistance": 1.25,
+    "wheel_type": "off-road",
+    "contact_area": 3500,
+    "flags": [ "WHEEL", "MULTISQUARE", "TRACKED", "NO_JACK", "VARIABLE_SIZE", "FOLDABLE", "STABLE", "SELF_JACK" ]
+  },{
+    "type": "vehicle_part",
+    "id": "nanotech_control",
+    "name": "纳米载具控制器",
+    "copy-from": "nanovp_fold",
+    "looks_like": "seat",
+    "symbol": "#",
+    "damage_modifier": 20,
+    "bonus": 50,
+    "description": "大量纳米材料制作成的载具控制器,综合了控制系统、椅子及监控系统等.",
+    "item": "xl_nanite_ai",
+    "epower": -500,
+    "difficulty": 3,
+    "location": "center",
+    "flags": [ "REMOTE_CONTROLS", "CONTROLS", "FOLDABLE", "BED", "SEAT", "BOARDABLE", "BELTABLE", "CTRL_ELECTRONIC", "VISION", "CAMERA", "CAMERA_CONTROL", "ENABLED_DRAINS_EPOWER" ],
+    "breaks_into": [
+      { "item": "xl_nanite_ai", "count": [ 1, 1 ] }
+    ]
+  },{
+    "type": "vehicle_part",
+    "id": "nanotech_shockmesh",
+    "name": "纳米安全带",
+    "copy-from": "nanovp_fold",
+    "symbol": ",",
+    "damage_modifier": 10,
+    "description": "高强度纳米材料制作而成的安全带,可以将你牢牢的固定在座椅上.",
+    "bonus": 150,
+    "location": "on_seat",
+    "flags": [ "SEATBELT", "FOLDABLE" ]
+  },{
+    "type": "vehicle_part",
+    "id": "nanocam",
+    "name": "纳米摄像头",
+    "copy-from": "nanovp_fold",
+    "looks_like": "omnicam",
+    "symbol": "o",
+    "damage_modifier": 10,
+    "description": "加装了纳米护甲的保安摄像头,能够将拍摄的图像传输给监控控制系统.",
+    "bonus": 60,
+    "epower": -275,
+    "location": "on_roof",
+    "flags": [ "VISION", "CAMERA", "ENABLED_DRAINS_EPOWER" ]
+  }
+]

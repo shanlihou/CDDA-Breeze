@@ -1,0 +1,64 @@
+[
+  {
+    "id": "t3_mana_darkblast",
+    "type": "SPELL",
+    "name": {
+      "str": "黑暗冲击"
+    },
+    "description": "对目标区域施展一种易变的世俗魔法，然后爆炸，对周围的敌人造成<color_light_gray>点纯伤害</color>点。\n\n这是<color_white>三阶</color>法术。",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "base_energy_cost": 275,
+    "final_energy_cost": 550,
+    "energy_source": "MANA",
+    "spell_class": "VAMP_MANA_spellcaster",
+    "difficulty": 4,
+    "min_damage": 40,
+    "max_damage": 80,
+    "damage_increment": 2,
+    "max_level": 20,
+    "min_range": 6,
+    "max_range": 10,
+    "range_increment": 0.2,
+    "min_aoe": 3,
+    "max_aoe": 8,
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "base_casting_time": 300,
+    "damage_type": "pure"
+  },
+  {
+    "id": "t3_mana_manasurge",
+    "type": "SPELL",
+    "name": {
+      "str": "法力激增"
+    },
+    "description": "通过引导魔力来<color_yellow>增强</color>你的躯体。\n\n这是一个<color_white>三阶</color>咒语。",
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "v_spell_manasurge",
+    "base_energy_cost": 225,
+    "energy_source": "MANA",
+    "spell_class": "VAMP_MANA_spellcaster",
+    "difficulty": 3,
+    "max_level": 10,
+    "flags": [
+      "SOMATIC",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "min_duration": 3200,
+    "max_duration": 12800,
+    "base_casting_time": 600
+  }
+]

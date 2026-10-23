@@ -1,0 +1,622 @@
+[
+  {
+    "id": "cyyl_yh_jccjp_zd",
+    "type": "AMMO",
+    "material": [
+      "cyylcaizhi"
+    ],
+    "symbol": ";",
+    "color": "blue",
+    "name": {
+      "str": "尖刺型<永恒>能量"
+    },
+    "description": "一根收缩的能量刺,看起来随时都会分裂。",
+    "price": "1000 USD",
+    "price_postapoc": "1000 USD",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "ammo_type": "cyyl_jccjp_ammo",
+    "critical_multiplier": 2.4,
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 150,
+      "armor_penetration": 300
+    },
+    "range": 20,
+    "dispersion": 0,
+    "recoil": 0,
+    "count": 80,
+    "stack_size": 200,
+    "effects": [
+      "NOGIB",
+      "NEVER_MISFIRES"
+    ],
+    "flags": [
+      "TRADER_AVOID",
+      "NONCONDUCTIVE"
+    ]
+  },
+  {
+    "id": "cyyl_yh_jccjp_dj",
+    "type": "MAGAZINE",
+    "material": [
+      "cyylcaizhi"
+    ],
+    "symbol": "#",
+    "color": "blue",
+    "name": {
+      "str": "<永恒>能量弹匣(尖刺型)"
+    },
+    "description": "这根能量收集管里存放着几根收缩的危险能量刺。能量用完时需手动使用清空弹匣。(无法手动装填弹匣能量,清空能量会流失)",
+    "looks_like": "m107a1mag",
+    "price": "5000 USD",
+    "price_postapoc": "5000 USD",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "ammo_type": [
+      "cyyl_jccjp_ammo"
+    ],
+    "default_ammo": "cyyl_yh_jccjp_zd",
+    "capacity": 1000,
+    "count": 1000,
+    "reload_time": 0,
+    "flags": [
+      "TRADER_AVOID",
+      "NONCONDUCTIVE",
+      "MAG_COMPACT",
+      "NO_UNLOAD",
+      "NO_RELOAD"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "cyyl_jccjp_ammo": 1000
+        }
+      }
+    ],
+    "use_action": [
+      {
+        "type": "transform",
+        "menu_text": "清空并释放弹匣能量",
+        "target": "cyyl_yh_qx_dj_empty",
+        "active": false,
+        "msg": "你清空并释放了你的枪械弹匣能量。",
+        "moves": 150
+      }
+    ]
+  },
+
+  {
+    "id": "cyyl_yh_cjbq_zd",
+    "type": "AMMO",
+    "material": [
+      "cyylcaizhi"
+    ],
+    "symbol": ";",
+    "color": "blue",
+    "name": {
+      "str": "聚合型<永恒>能量"
+    },
+    "description": "一颗压缩的庞大能量球,多颗会聚集在一起,像史莱姆一样。",
+    "price": "1000 USD",
+    "price_postapoc": "1000 USD",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "ammo_type": "cyyl_cjbq_ammo",
+    "critical_multiplier": 2.8,
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 150,
+      "armor_penetration": 50
+    },
+    "range": 10,
+    "dispersion": 0,
+    "recoil": 0,
+    "count": 500,
+    "stack_size": 200,
+    "effects": [
+      "NOGIB",
+      "NEVER_MISFIRES"
+    ],
+    "flags": [
+      "TRADER_AVOID",
+      "NONCONDUCTIVE"
+    ]
+  },
+  {
+    "id": "cyyl_yh_cjbq_dj",
+    "type": "MAGAZINE",
+    "material": [
+      "cyylcaizhi"
+    ],
+    "symbol": "#",
+    "color": "blue",
+    "name": {
+      "str": "<永恒>能量弹匣(聚合型)"
+    },
+    "description": "这根能量收集管里存放着一堆压缩的庞大能量体。能量用完时需手动使用清空弹匣。(无法手动装填弹匣能量,清空能量会流失)",
+    "looks_like": "m107a1mag",
+    "price": "5000 USD",
+    "price_postapoc": "5000 USD",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "ammo_type": [
+      "cyyl_cjbq_ammo"
+    ],
+    "default_ammo": "cyyl_yh_cjbq_zd",
+    "capacity": 3000,
+    "count": 3000,
+    "reload_time": 0,
+    "flags": [
+      "TRADER_AVOID",
+      "NONCONDUCTIVE",
+      "MAG_COMPACT",
+      "NO_UNLOAD",
+      "NO_RELOAD"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "cyyl_cjbq_ammo": 3000
+        }
+      }
+    ],
+    "use_action": [
+      {
+        "type": "transform",
+        "menu_text": "清空并释放弹匣能量",
+        "target": "cyyl_yh_qx_dj_empty",
+        "active": false,
+        "msg": "你清空并释放了你的枪械弹匣能量。",
+        "moves": 150
+      }
+    ]
+  },
+
+  {
+    "id": "cyyl_yh_wq_zd",
+    "type": "AMMO",
+    "symbol": ";",
+    "color": "blue",
+    "name": { "str_sp": "武器能量" },
+    "description": "你需要充填你的弹匣能量。(你不应该看到这个物品)",
+    "ammo_type": "cyyl_wq_ammo",
+    "flags": [
+      "TRADER_AVOID",
+      "ZERO_WEIGHT"
+    ]
+  },
+  {
+    "id": "cyyl_yh_qx_dj_empty",
+    "type": "MAGAZINE",
+    "material": [
+      "cyylcaizhi"
+    ],
+    "symbol": "#",
+    "color": "blue",
+    "name": {
+      "str": "<永恒>能量弹匣(无)"
+    },
+    "description": "一根能量收集管,里面现在是空的。你需要工具充填制作能量弹匣。",
+    "looks_like": "m107a1mag",
+    "price": "50 USD",
+    "price_postapoc": "5 USD",
+    "weight": "20 g",
+    "volume": "500 ml",
+    "ammo_type": [
+      "cyyl_wq_ammo"
+    ],
+    "capacity": 1,
+    "reload_time": 5,
+    "flags": [
+      "TRADER_AVOID",
+      "NONCONDUCTIVE",
+      "MAG_COMPACT",
+      "NO_UNLOAD",
+      "NO_RELOAD"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "cyyl_wq_ammo": 1
+        }
+      }
+    ]
+  },
+
+
+
+
+  {
+    "id": "yh_qx_sz_copy",
+    "type": "GUN",
+    "material": [
+      "cyylcaizhi"
+    ],
+    "symbol": "(",
+    "color": "blue",
+    "name": { "str": "所有枪械(数值面板)" },
+    "description": "数据复制用(你不应该看到这个)",
+    "looks_like": "rm11b_sniper_rifle",
+    "price": "10000 USD",
+    "price_postapoc": "100 USD",
+    "weight": "6000 g",
+    "volume": "3500 ml",
+    "bashing": 5,
+    "cutting": 0,
+    "to_hit": 0,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 2
+    },
+    "skill": "rifle",
+    "durability": 10,
+    "dispersion": 0,
+    "sight_dispersion": 0,
+    "range": 15,
+    "recoil": 10,
+    "flags": [
+      "TRADER_AVOID",
+      "NONCONDUCTIVE",
+      "WATERPROOF_GUN",
+      "NEVER_JAMS"
+    ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "BURST",
+        "burst",
+        50,
+        "SIMULTANEOUS"
+      ],
+      [
+        "AUTO",
+        "auto",
+        100
+      ]
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        3
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ],
+      [
+        "sling",
+        1
+      ]
+    ]
+  },
+
+
+  {
+    "id": "cyyl_yh_cjbq",
+    "type": "GUN",
+    "copy-from": "yh_qx_sz_copy",
+    "name": { "str": "次元医疗<永恒>冲击步枪" },
+    "description": "发射能量波粉碎你的敌人。",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "skill": "rifle",
+    "range": 50,
+    "recoil": 0,
+    "ammo": [
+      "cyyl_cjbq_ammo"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "200 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "cyyl_yh_cjbq_dj"
+        ]
+      }
+    ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "BURST",
+        "burst",
+        10,
+        "SIMULTANEOUS"
+      ],
+      [
+        "AUTO",
+        "auto",
+        50
+      ]
+    ]
+  },
+
+  {
+    "id": "cyyl_yh_jccjp",
+    "type": "GUN",
+    "copy-from": "yh_qx_sz_copy",
+    "name": { "str": "次元医疗<永恒>荆刺长狙炮" },
+    "description": "威力巨大,足以杀死任何敌人。",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "skill": "rifle",
+    "range": 300,
+    "recoil": 0,
+    "ammo": [
+      "cyyl_jccjp_ammo"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "200 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "cyyl_yh_jccjp_dj"
+        ]
+      }
+    ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "BURST",
+        "burst",
+        2,
+        "SIMULTANEOUS"
+      ],
+      [
+        "AUTO",
+        "auto",
+        5
+      ]
+    ]
+  },
+
+
+  {
+    "id": "cyyl_yh_ntj",
+    "type": "GENERIC",
+    "material": [
+      "cyylcaizhi"
+    ],
+    "symbol": "{",
+    "color": "blue",
+    "name": {
+      "str": "次元医疗<永恒>拟态剑"
+    },
+    "description": "一把什么都能劈开的锋利长剑,使用可以拟态成别的武器。",
+    "looks_like": "broadsword",
+    "price": "100000 USD",
+    "price_postapoc": "100000 USD",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "category": "weapons",
+    "critical_multiplier": 2.5,
+    "cutting": 120,
+    "to_hit": 30,
+    "techniques": [
+      "WBLOCK_3",
+      "WIDE",
+      "SPIN",
+      "RAPID",
+      "PRECISE"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        2
+      ],
+      [
+        "BUTCHER",
+        20
+      ]
+    ],
+    "weapon_category": [
+      "JAPANESE_SWORDS",
+      "MEDIEVAL_SWORDS",
+      "MEDIUM_SWORDS",
+      "GREAT_SWORDS",
+      "LONG_SWORDS",
+      "FENCING_WEAPONRY"
+    ],
+    "flags": [
+      "TRADER_AVOID",
+      "UNBREAKABLE_MELEE",
+      "NONCONDUCTIVE",
+      "DURABLE_MELEE",
+      "SHEATH_KNIFE",
+      "SHEATH_SWORD",
+      "SHEATH_SPEAR"
+    ],
+    "use_action": [
+      {
+        "type": "transform",
+        "menu_text": "拟态矛形状",
+        "target": "cyyl_yh_ntm",
+        "active": false,
+        "msg": "你把武器拟态成了矛的形状。",
+        "moves": 150
+      }
+    ]
+  },
+  {
+    "id": "cyyl_yh_ntm",
+    "type": "GENERIC",
+    "material": [
+      "cyylcaizhi"
+    ],
+    "symbol": "{",
+    "color": "blue",
+    "name": {
+      "str": "次元医疗<永恒>拟态矛"
+    },
+    "description": "一杆有着尖锐矛头的长柄武器,使用可以拟态成别的武器。",
+    "looks_like": "pike",
+    "price": "100000 USD",
+    "price_postapoc": "100000 USD",
+    "weight": "2400 g",
+    "volume": "1620 ml",
+    "category": "weapons",
+    "critical_multiplier": 3,
+    "cutting": 100,
+    "to_hit": 10,
+    "techniques": [
+      "WBLOCK_3",
+      "WIDE",
+      "SPIN",
+      "RAPID",
+      "SWEEP",
+      "IMPALE"
+    ],
+    "qualities": [
+      [
+        "COOK",
+        1
+      ]
+    ],
+    "weapon_category": [
+      "POLEARMS",
+      "SPEARS"
+    ],
+    "flags": [
+      "TRADER_AVOID",
+      "UNBREAKABLE_MELEE",
+      "NONCONDUCTIVE",
+      "DURABLE_MELEE",
+      "SHEATH_KNIFE",
+      "SHEATH_SWORD",
+      "SHEATH_SPEAR",
+      "REACH_ATTACK",
+      "POLEARM",
+      "REACH3",
+      "SPEAR",
+      "STAB"
+    ],
+    "use_action": [
+      {
+        "type": "transform",
+        "menu_text": "拟态锤形状",
+        "target": "cyyl_yh_ntc",
+        "active": false,
+        "msg": "你把武器拟态成了锤的形状。",
+        "moves": 150
+      }
+    ]
+  },
+  {
+    "id": "cyyl_yh_ntc",
+    "type": "GENERIC",
+    "material": [
+      "cyylcaizhi"
+    ],
+    "symbol": "{",
+    "color": "blue",
+    "name": {
+      "str": "次元医疗<永恒>拟态锤"
+    },
+    "description": "一把可以粉碎敌人的大重锤,使用可以拟态成别的武器。",
+    "looks_like": "lucern_hammer",
+    "price": "100000 USD",
+    "price_postapoc": "100000 USD",
+    "weight": "12750 g",
+    "volume": "3750 ml",
+    "category": "weapons",
+    "critical_multiplier": 3,
+    "cutting": 150,
+    "bashing": 150,
+    "to_hit": 10,
+    "techniques": [
+      "WBLOCK_3",
+      "WIDE",
+      "SPIN",
+      "SWEEP",
+      "BRUTAL"
+    ],
+    "qualities": [
+      [
+        "HAMMER",
+        2
+      ]
+    ],
+    "weapon_category": [
+      "POLEARMS",
+      "HOOKING_WEAPONRY"
+    ],
+    "flags": [
+      "TRADER_AVOID",
+      "UNBREAKABLE_MELEE",
+      "NONCONDUCTIVE",
+      "DURABLE_MELEE",
+      "SHEATH_KNIFE",
+      "SHEATH_SWORD",
+      "SHEATH_SPEAR",
+      "REACH_ATTACK",
+      "POLEARM",
+      "STAB"
+    ],
+    "use_action": [
+      {
+        "type": "transform",
+        "menu_text": "拟态剑形状",
+        "target": "cyyl_yh_ntj",
+        "active": false,
+        "msg": "你把武器拟态成了剑的形状。",
+        "moves": 100
+      }
+    ]
+  }
+]

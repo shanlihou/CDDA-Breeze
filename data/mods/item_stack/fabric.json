@@ -1,0 +1,399 @@
+[
+  {
+    "id": "cotton_patchwork",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "stackable": true,
+    "name": {
+      "str": "cotton patch",
+      "str_pl": "cotton patches"
+    },
+    "description": "A 6 inch square cotton patch, suitable for use in repairing and tailoring of clothing.",
+    "weight": "5 g",
+    "volume": "6 ml",
+    "//": "This is calculated from medium weight cotton at 203 GSM, with a size of 6 inches square",
+    "price": 200,
+    "price_postapoc": 2,
+    "material": [
+      "cotton"
+    ],
+    "symbol": ",",
+    "color": "white",
+    "use_action": [
+      {
+        "type": "heal",
+        "move_cost": 200,
+        "used_up_item": {
+          "id": "cotton_patchwork",
+          "quantity": 1,
+          "flags": [
+            "FILTHY"
+          ]
+        }
+      },
+      "WASH_HARD_ITEMS"
+    ],
+    "flags": [
+      "NO_SALVAGE"
+    ]
+  },
+  {
+    "id": "bundle_rag",
+    "copy-from": "bundle_rag",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str": "bundle of rags", "str_pl": "bundles of rags" }
+  },
+  {
+    "id": "chitin_piece",
+    "copy-from": "chitin_piece",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str": "chunk of chitin", "str_pl": "chunks of chitin" }
+  },
+  {
+    "id": "acidchitin_piece",
+    "copy-from": "acidchitin_piece",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str": "chunk of biosilicified chitin", "str_pl": "chunks of biosilicified chitin" }
+  },
+  {
+    "id": "leather",
+    "copy-from": "leather",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str": "leather patch", "str_pl": "leather patches" }
+  },
+  {
+    "id": "fur",
+    "copy-from": "fur",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str": "fur patch", "str_pl": "fur patches" }
+  },
+  {
+    "id": "felt_patch",
+    "copy-from": "felt_patch",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str": "felt patch", "str_pl": "felt patches" }
+  },
+  {
+    "id": "nomex",
+    "copy-from": "nomex",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str": "Nomex patch", "str_pl": "Nomex patches" }
+  },
+  {
+    "id": "lycra_patch",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "stackable": true,
+    "name": {
+      "str": "Lycra patch",
+      "str_pl": "Lycra patches"
+    },
+    "description": "This is a 6 inch square patch of synthetic fabric blended with stretchy Lycra fibers.  It could be used to make flexible yet strong clothing.  Stylish, but bad for the environment; at least you're recycling it.",
+    "weight": "4 g",
+    "volume": "15 ml",
+    "//": "180GSM, .63mm thick",
+    "price": 0,
+    "price_postapoc": 10,
+    "material": [
+      "lycra"
+    ],
+    "symbol": ",",
+    "color": "light_blue",
+    "flags": [
+      "NO_SALVAGE"
+    ]
+  },
+  {
+    "id": "nylon",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "stackable": true,
+    "name": {
+      "str": "synthetic fabric patch",
+      "str_pl": "synthetic fabric patches"
+    },
+    "description": "This a 6 inch square patch of synthetic fabric.  Unlike you and other natural materials, it won't degrade much with age.  Maybe that's less of a bad thing now.",
+    "weight": "9 g",
+    "volume": "12 ml",
+    "//": ".5mm thick, 250GSM",
+    "price": 0,
+    "price_postapoc": 10,
+    "material": [
+      "nylon"
+    ],
+    "symbol": ",",
+    "color": "white",
+    "flags": [
+      "NO_SALVAGE"
+    ]
+  },
+  {
+    "id": "faux_fur",
+    "copy-from": "faux_fur",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str": "faux fur patch", "str_pl": "faux fur patches" }
+  },
+  {
+    "id": "neoprene",
+    "copy-from": "neoprene",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str": "neoprene patch", "str_pl": "neoprene patches" }
+  },
+  {
+    "id": "sheet_felt",
+    "copy-from": "sheet_felt",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str": "felt sheet" }
+  },
+  {
+    "id": "sheet_nomex",
+    "copy-from": "sheet_nomex",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str": "Nomex sheet" }
+  },
+  {
+    "id": "sheet_nylon",
+    "copy-from": "sheet_nylon",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str": "synthetic fabric sheet" }
+  },
+  {
+    "id": "sheet_lycra",
+    "copy-from": "sheet_lycra",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str": "Lycra sheet" }
+  },
+  {
+    "id": "sheet_cotton",
+    "copy-from": "sheet_cotton",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str": "cotton sheet" }
+  },
+  {
+    "id": "plastic_sheet_small",
+    "copy-from": "plastic_sheet_small",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str": "plastic sheet" }
+  },
+  {
+    "id": "plastic_sheet",
+    "copy-from": "plastic_sheet",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str": "large plastic sheet" }
+  },
+  {
+    "id": "sheet_kevlar",
+    "copy-from": "sheet_kevlar",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str": "Kevlar sheet" }
+  },
+  {
+    "id": "sheet_faux_fur",
+    "copy-from": "sheet_faux_fur",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str": "faux fur sheet" }
+  },
+  {
+    "id": "sheet_neoprene",
+    "copy-from": "sheet_neoprene",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str": "neoprene sheet" }
+  },
+  {
+    "id": "sheet_fur_patchwork",
+    "copy-from": "sheet_fur_patchwork",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str": "patchwork fur sheet" }
+  },
+  {
+    "id": "sheet_felt_patchwork",
+    "copy-from": "sheet_felt_patchwork",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str": "patchwork felt sheet" }
+  },
+  {
+    "id": "sheet_lycra_patchwork",
+    "copy-from": "sheet_lycra_patchwork",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str": "patchwork Lycra sheet" }
+  },
+  {
+    "id": "sheet_nomex_patchwork",
+    "copy-from": "sheet_nomex_patchwork",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str": "patchwork Nomex sheet" }
+  },
+  {
+    "id": "sheet_cotton_patchwork",
+    "copy-from": "sheet_cotton_patchwork",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str": "patchwork cotton sheet" }
+  },
+  {
+    "id": "sheet_nylon_patchwork",
+    "copy-from": "sheet_nylon_patchwork",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str": "patchwork synthetic fabric sheet" }
+  },
+  {
+    "id": "sheet_leather_patchwork",
+    "copy-from": "sheet_leather_patchwork",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str": "patchwork leather sheet" }
+  },
+  {
+    "id": "sheet_neoprene_patchwork",
+    "copy-from": "sheet_neoprene_patchwork",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str": "patchwork neoprene sheet" }
+  },
+  {
+    "id": "sheet_faux_fur_patchwork",
+    "copy-from": "sheet_faux_fur_patchwork",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str": "patchwork faux fur sheet" }
+  },
+  {
+    "id": "scrap_fur",
+    "copy-from": "scrap_fur",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str_sp": "fur scraps" }
+  },
+  {
+    "id": "scrap_felt",
+    "copy-from": "scrap_felt",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str_sp": "felt scraps" }
+  },
+  {
+    "id": "scrap_lycra",
+    "copy-from": "scrap_lycra",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str_sp": "Lycra scraps" }
+  },
+  {
+    "id": "scrap_nylon",
+    "copy-from": "scrap_nylon",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str_sp": "synthetic fabric scraps" }
+  },
+  {
+    "id": "scrap_nomex",
+    "copy-from": "scrap_nomex",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str_sp": "Nomex scraps" }
+  },
+  {
+    "id": "scrap_cotton",
+    "copy-from": "scrap_cotton",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str_sp": "cotton scraps" }
+  },
+  {
+    "id": "scrap_kevlar",
+    "copy-from": "scrap_kevlar",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str_sp": "Kevlar scraps" }
+  },
+  {
+    "id": "scrap_leather",
+    "copy-from": "scrap_leather",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str_sp": "leather scraps" }
+  },
+  {
+    "id": "scrap_neoprene",
+    "copy-from": "scrap_neoprene",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str_sp": "neoprene scraps" }
+  },
+  {
+    "id": "scrap_faux_fur",
+    "copy-from": "scrap_faux_fur",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str_sp": "faux fur scraps" }
+  },
+  {
+    "id": "sheet_kevlar_layered",
+    "type": "GENERIC",
+    "stackable": true,
+    "category": "spare_parts",
+    "name": {
+      "str": "layered Kevlar panel"
+    },
+    "description": "This is a small 16-layer thick Kevlar panel.  It could be used to craft or repair armor made of Kevlar.",
+    "weight": "428 g",
+    "volume": "818 ml",
+    "//": "12 inch by 24 inch sheets, 16 layers thick. Values actually nearly identically matched panels available for purchase. ",
+    "price": 15000,
+    "price_postapoc": 150,
+    "material": [
+      "kevlar_layered"
+    ],
+    "flags": [
+      "NO_SALVAGE"
+    ],
+    "symbol": ",",
+    "color": "green"
+  },
+  {
+    "id": "rigid_kevlar_plate",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "name": {
+      "str": "rigid Kevlar plate"
+    },
+    "description": "This is a compressed panel of Kevlar treated with epoxy or other adhesive.  It could be used to repair items made of Kevlar.",
+    "weight": "429 g",
+    "volume": "818 ml",
+    "//": "same as above but adding superglue. IRL this is how they are made, though using 2 part resin instead.",
+    "price": 1000,
+    "price_postapoc": 250,
+    "material": [
+      "kevlar_rigid"
+    ],
+    "flags": [
+      "NO_SALVAGE"
+    ],
+    "symbol": ",",
+    "color": "green"
+  }
+]

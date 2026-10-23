@@ -1,0 +1,73 @@
+WBLOCK_1	格挡
+WBLOCK_2	招架
+WBLOCK_3	挡住
+
+DEF_DISARM	缴械
+
+SPIN	额外伤害周围一圈
+
+WIDE	额外伤害目标左右
+
+IMPALE	额外伤害敌人后方
+
+BRUTAL	打晕1回合，击退1格
+
+RAPID	50%消耗66%伤害
+
+SWEEP	击倒2回合
+
+PRECISE	打晕2回合
+
+重量计算方法：
+基底：密度x3000
+握把：密度x100
+配重：密度x100
+普通：密度x500
+远距：密度x1500
+
+体积计算方法：
+基底：1000
+握把：100
+配重：100
+普通：200
+远距：600
+
+配重重量减少计算：
+(100-密度x10)%
+
+配重体积增加计算：
+(1000-配重重量)/20
+
+顶端重量减少计算：
+(配重重量+500)/1000
+
+伤害计算：
+基础伤害属性都为打击
+基础伤害X（6+远距离*2-劣势*2+钝击）+额外伤害
+
+材料	基础伤害	劣势伤害	特性		基底战技
+木	4	刺/切	免疫电击		WBLOCK_1，SWEEP
+骨	4	打/切	+2刺		WBLOCK_1，WIDE
+石	5	全	+2打，3/4重	WBLOCK_2，PRECISE
+橡胶	5	刺/切	+2打，免疫电击	WBLOCK_2，BRUTAL
+氯丁橡胶	5	刺/切	+2打，免疫电击	WBLOCK_2，DEF_DISARM
+粗钢	5		+2伤，1/4重	WBLOCK_2，WIDE，PRECISE
+钢	6		+2伤，1/4重，耐用	WBLOCK_2，SPIN，PRECISE
+回火碳钢	7		+2伤，1/4重，耐用	WBLOCK_3，SPIN，PRECISE
+宝石	7	打	+4切，1/2重，耐用	WBLOCK_2，WIDE，RAPID，PRECISE
+钻石	7	打	+4切，1/2重，耐用	WBLOCK_3，WIDE，RAPID，PRECISE
+超合金	8		+6伤，耐用	WBLOCK_3，WIDE，SPIN，PRECISE
+
+握把提供远程伤害：
+材料	弹容	类别
+木	1	弩  bolt
+骨	1	弩  bolt
+石	1	投掷  pebble  rock  sling-ready_grenade
+橡胶	1	箭矢  arrow
+氯丁橡胶	1	箭矢  arrow
+粗钢	8	手枪  9mm  357sig  357mag  40  10mm  44  45  454  500  8x40mm
+钢	6	霰弹  shot  410  20x66
+回火碳钢	10	步枪  223  300  300blk  308  762  762R  545x39  30carbine
+宝石	1	榴弹  40x46mm  40x53mm
+钻石	1	火箭弹  66mm  120mm  84x246mm  RPG-7  homebrew_rocket
+超合金	10	狙击  3006  270win  4570  50  700nx

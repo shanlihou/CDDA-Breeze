@@ -1,0 +1,62 @@
+[
+
+ {
+    "type": "item_group",
+    "id": "zhenghe_013",
+    "subtype": "collection",
+    "entries": [
+      {"item": "monster_tear",
+        "prob": 10
+      },
+      {"item": "essence_blood",
+        "prob": 15,
+        "count": [ 2 , 4 ]
+      },
+      {"group": "subway",
+        "prob": 40
+      },
+      {"group": "sewer",
+        "prob": 20
+      },
+      {"group": "trash",
+        "prob": 5
+      },
+      {"group": "bedroom",
+        "prob": 1
+      },
+      {"group": "dresser",
+        "prob": 5
+      },
+      {"group": "ammo",
+        "prob": 18
+      },
+      { "item": "destiny_copper", 
+         "count": [ 20, 25 ]
+      }
+    ]
+  },
+ {
+    "id": "mon_one_eye",
+    "copy-from": "mon_one_eye",
+    "extend": {
+      "categories": [
+        "CLASSIC"
+      ]
+    },
+    "type": "MONSTER",
+    "death_drops":{
+      "subtype": "collection",
+      "groups": [
+        [ "subway", 40 ],
+        [ "sewer", 20 ],
+        [ "trash", 5 ],
+        [ "bedroom", 1 ],
+        [ "dresser", 5 ],
+        [ "ammo", 18 ],
+        [ "zhenghe_013", 100 ]
+      ]
+      }
+  }
+ 
+
+]

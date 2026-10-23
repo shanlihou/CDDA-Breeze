@@ -1,0 +1,684 @@
+[
+  {
+    "id": "mon_skinwalker_twig",
+    "type": "MONSTER",
+    "name": {
+      "str": "皮行者",
+      "str_pl": "皮行者"
+    },
+    "description": "一只非自然的野兽。大致形状像四肢着地行走的人类，脸部被覆盖——不，是与动物头骨融合，背部生长着树枝状的黑色角，并锁定在半闭合的位置。异常细长的四肢末端是巨大且同样细长的带爪肢体。弓起的背部迫使头部向下，并覆盖着看似黑色树枝的东西。",
+    "volume": "65000 ml",
+    "weight": "50000 g",
+    "default_faction": "touhou_youkai_skinwalker",
+    "bodytype": "pig",
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "YOUKAI_SKINWALKER_TOUHOU"
+    ],
+    "harvest": "mammal_leather",
+    "hp": 90,
+    "speed": 165,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "ğ",
+    "color": "black",
+    "aggression": 99,
+    "morale": 35,
+    "melee_skill": 6,
+    "melee_dice": 3,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 2
+      }
+    ],
+    "dodge": 3,
+    "path_settings": {
+      "max_dist": 30
+    },
+    "tracking_distance": 25,
+    "vision_night": 35,
+    "anger_triggers": [
+      "HURT",
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK"
+    ],
+    "armor_bash": 2,
+    "armor_cut": 2,
+    "armor_bullet": 6,
+    "armor_stab": 2,
+    "special_attacks": [
+      [
+        "ABSORB_MEAT",
+        35
+      ],
+      [
+        "PARROT",
+        23
+      ],
+      [
+        "slash_3d3",
+        7
+      ],
+      {
+        "spell_data": {
+          "id": "scream_6d4"
+        },
+        "type": "spell",
+        "cooldown": 19
+      }
+    ],
+    "flags": [
+      "CLIMBS",
+      "GOODHEARING",
+      "KEENNOSE",
+      "KEEP_DISTANCE",
+      "PATH_AVOID_DANGER_1",
+      "SEES",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_skinwalker_wendigo",
+    "type": "MONSTER",
+    "name": {
+      "str": "温迪戈",
+      "str_pl": "温迪戈"
+    },
+    "description": "一个半人半鹿的存在。比成年人类更高，这个……实体直立行走，有时用异常长的手臂作为前腿。畸形的鹿角与食肉的、血淋淋的微笑一样血腥，它随机模仿人类的笑声和破碎的言语。你注意到胸腔缺少保护组织，上方露出骨瘦如柴的肋骨，下方是溢出的内脏。",
+    "volume": "95000 ml",
+    "weight": "85000 g",
+    "default_faction": "touhou_youkai_skinwalker",
+    "bodytype": "human",
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "YOUKAI_SKINWALKER_TOUHOU"
+    ],
+    "harvest": "mammal_leather",
+    "hp": 105,
+    "speed": 150,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "ğ",
+    "color": "brown",
+    "aggression": 99,
+    "morale": 35,
+    "melee_skill": 5,
+    "melee_dice": 3,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 3
+      }
+    ],
+    "dodge": 2,
+    "path_settings": {
+      "max_dist": 30
+    },
+    "tracking_distance": 25,
+    "vision_night": 35,
+    "anger_triggers": [
+      "HURT",
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK"
+    ],
+    "armor_bash": 2,
+    "armor_cut": 2,
+    "armor_bullet": 6,
+    "armor_stab": 2,
+    "special_attacks": [
+      [
+        "ABSORB_MEAT",
+        35
+      ],
+      [
+        "longswipe",
+        19
+      ],
+      [
+        "PARROT",
+        17
+      ],
+      [
+        "slash_3d3",
+        7
+      ],
+      {
+        "spell_data": {
+          "id": "skinwalker_scream_6d3"
+        },
+        "type": "spell",
+        "cooldown": 19
+      }
+    ],
+    "flags": [
+      "CAN_OPEN_DOORS",
+      "CLIMBS",
+      "GOODHEARING",
+      "KEENNOSE",
+      "KEEP_DISTANCE",
+      "PATH_AVOID_DANGER_1",
+      "SEES",
+      "STUMBLES",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_skinwalker_witch",
+    "type": "MONSTER",
+    "name": {
+      "str": "人类",
+      "str_pl": "人类"
+    },
+    "description": "一个活生生的人类。看起来有些邋遢，穿着原住民服装，上半身佩戴部落饰品，身上披着动物毛皮。",
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "default_faction": "touhou_youkai_skinwalker",
+    "bodytype": "human",
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "YOUKAI_SKINWALKER_TOUHOU"
+    ],
+    "harvest": "human",
+    "hp": 84,
+    "speed": 150,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "@",
+    "color": "brown",
+    "aggression": -11,
+    "morale": 50,
+    "melee_skill": 5,
+    "melee_dice": 4,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 2
+      }
+    ],
+    "dodge": 4,
+    "path_settings": {
+      "max_dist": 30
+    },
+    "tracking_distance": 25,
+    "vision_night": 35,
+    "anger_triggers": [
+      "HURT",
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK"
+    ],
+    "armor_bash": 1,
+    "armor_cut": 1,
+    "armor_bullet": 6,
+    "armor_stab": 1,
+    "special_attacks": [
+      [
+        "ABSORB_MEAT",
+        35
+      ],
+      {
+        "spell_data": {
+          "id": "scream_6d4"
+        },
+        "type": "spell",
+        "cooldown": 19
+      },
+      {
+        "spell_data": {
+          "id": "skinwalker_transform"
+        },
+        "type": "spell",
+        "cooldown": 3
+      }
+    ],
+    "death_drops": "skinwalker_witch_drops",
+    "flags": [
+      "CAN_OPEN_DOORS",
+      "CLIMBS",
+      "FILTHY",
+      "GOODHEARING",
+      "KEENNOSE",
+      "KEEP_DISTANCE",
+      "PATH_AVOID_DANGER_1",
+      "SEES",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_skinwalker_witch_bear",
+    "type": "MONSTER",
+    "name": {
+      "str": "皮行者",
+      "str_pl": "皮行者"
+    },
+    "description": "一个变形后的皮行者，呈现熊的形态。混合了人类和熊的解剖结构，它略显精瘦，直立行走，让肌肉发达的手臂自由活动。脸上露出食肉动物的微笑，却有着奇怪的人类眼睛。它仍然带着人类形态时的部落饰品。",
+    "volume": "120000 ml",
+    "weight": "120000 g",
+    "default_faction": "touhou_youkai_skinwalker",
+    "bodytype": "bear",
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "YOUKAI_SKINWALKER_TOUHOU"
+    ],
+    "harvest": "mammal_large_fur",
+    "hp": 133,
+    "speed": 150,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "B",
+    "color": "black",
+    "aggression": 99,
+    "morale": 44,
+    "melee_skill": 6,
+    "melee_dice": 3,
+    "melee_dice_sides": 8,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 3
+      }
+    ],
+    "dodge": 3,
+    "path_settings": {
+      "max_dist": 30
+    },
+    "tracking_distance": 25,
+    "vision_night": 35,
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK"
+    ],
+    "fear_triggers": [
+      "HURT"
+    ],
+    "armor_bash": 2,
+    "armor_cut": 1,
+    "armor_bullet": 6,
+    "armor_stab": 1,
+    "armor_elec": 2,
+    "special_attacks": [
+      [
+        "ABSORB_MEAT",
+        35
+      ],
+      [
+        "hug_11d3",
+        11
+      ],
+      [
+        "PARROT",
+        19
+      ],
+      [
+        "smash_10d3",
+        7
+      ],
+      {
+        "spell_data": {
+          "id": "skinwalker_roar_6d4"
+        },
+        "type": "spell",
+        "cooldown": 19
+      }
+    ],
+    "flags": [
+      "BASHES",
+      "CLIMBS",
+      "GOODHEARING",
+      "KEENNOSE",
+      "PATH_AVOID_DANGER_1",
+      "PUSH_MON",
+      "SEES",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_skinwalker_witch_cow",
+    "type": "MONSTER",
+    "name": {
+      "str": "皮行者",
+      "str_pl": "皮行者"
+    },
+    "description": "一个变形后的皮行者，呈现牛的形态。混合了人类和牛的解剖结构，它看起来消瘦，有蹄的腿支撑身体，而畸形的手则自由活动。犬齿露出嘴唇，大而隐约像人类的眼睛像大而锋利的角一样朝前。它仍然带着人类形态时的部落饰品。",
+    "volume": "225000 ml",
+    "weight": "225000 g",
+    "default_faction": "touhou_youkai_skinwalker",
+    "bodytype": "bear",
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "YOUKAI_SKINWALKER_TOUHOU"
+    ],
+    "harvest": "mammal_large_leather",
+    "hp": 133,
+    "speed": 165,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "C",
+    "color": "black",
+    "aggression": 99,
+    "morale": 44,
+    "melee_skill": 6,
+    "melee_dice": 4,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      }
+    ],
+    "dodge": 3,
+    "path_settings": {
+      "max_dist": 30
+    },
+    "tracking_distance": 25,
+    "vision_night": 35,
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK"
+    ],
+    "fear_triggers": [
+      "HURT"
+    ],
+    "armor_bash": 2,
+    "armor_cut": 1,
+    "armor_bullet": 6,
+    "armor_stab": 1,
+    "armor_elec": 2,
+    "special_attacks": [
+      [
+        "ABSORB_MEAT",
+        35
+      ],
+      [
+        "charge_8d3",
+        7
+      ],
+      [
+        "horn_7d3",
+        7
+      ],
+      [
+        "PARROT",
+        19
+      ],
+      {
+        "spell_data": {
+          "id": "skinwalker_roar_6d4"
+        },
+        "type": "spell",
+        "cooldown": 19
+      }
+    ],
+    "flags": [
+      "BASHES",
+      "HEARS",
+      "PATH_AVOID_DANGER_1",
+      "PUSH_MON",
+      "SEES",
+      "SMELLS",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_skinwalker_witch_deer",
+    "type": "MONSTER",
+    "name": {
+      "str": "皮行者",
+      "str_pl": "皮行者"
+    },
+    "description": "一个变形后的皮行者，呈现鹿的形态。混合了人类和鹿的解剖结构，它移动得相当快，有蹄的腿支撑身体，而手末端是过大的爪子。嘲讽的微笑露出大而锋利的牙齿，虐待狂般的目光搜寻着猎物。它仍然带着人类形态时的部落饰品。",
+    "volume": "95000 ml",
+    "weight": "85 kg",
+    "default_faction": "touhou_youkai_skinwalker",
+    "bodytype": "human",
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "YOUKAI_SKINWALKER_TOUHOU"
+    ],
+    "harvest": "mammal_large_fur",
+    "hp": 90,
+    "speed": 200,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "D",
+    "color": "black",
+    "aggression": 99,
+    "morale": 44,
+    "melee_skill": 6,
+    "melee_dice": 4,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 3
+      }
+    ],
+    "dodge": 3,
+    "path_settings": {
+      "max_dist": 30
+    },
+    "tracking_distance": 25,
+    "vision_night": 35,
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK"
+    ],
+    "fear_triggers": [
+      "HURT"
+    ],
+    "armor_bash": 2,
+    "armor_cut": 1,
+    "armor_bullet": 6,
+    "armor_stab": 1,
+    "armor_elec": 2,
+    "special_attacks": [
+      [
+        "ABSORB_MEAT",
+        35
+      ],
+      [
+        "claw_6d3",
+        5
+      ],
+      [
+        "PARROT",
+        19
+      ]
+    ],
+    "flags": [
+      "BASHES",
+      "CAN_OPEN_DOORS",
+      "GOODHEARING",
+      "PATH_AVOID_DANGER_1",
+      "PUSH_MON",
+      "SEES",
+      "SMELLS",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_skinwalker_witch_goat",
+    "type": "MONSTER",
+    "name": {
+      "str": "皮行者",
+      "str_pl": "皮行者"
+    },
+    "description": "一个变形后的皮行者，呈现山羊的形态。混合了人类和山羊的解剖结构，它看起来结实，粗壮的有蹄腿支撑身体，让人类形状的手自由活动。隐约像人类的脸有一对向后弯曲的角，加上整体外观，让它看起来相当恶魔化。它仍然带着人类形态时的部落饰品。",
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "default_faction": "touhou_youkai_skinwalker",
+    "bodytype": "human",
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "YOUKAI_SKINWALKER_TOUHOU"
+    ],
+    "harvest": "mammal_large_fur",
+    "hp": 100,
+    "speed": 165,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "g",
+    "color": "black",
+    "aggression": 99,
+    "morale": 44,
+    "melee_skill": 6,
+    "melee_dice": 5,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 2,
+        "armor_penetration": 2
+      }
+    ],
+    "dodge": 5,
+    "path_settings": {
+      "max_dist": 30
+    },
+    "tracking_distance": 25,
+    "vision_night": 35,
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK"
+    ],
+    "fear_triggers": [
+      "HURT"
+    ],
+    "armor_bash": 1,
+    "armor_cut": 1,
+    "armor_bullet": 6,
+    "special_attacks": [
+      [
+        "ABSORB_MEAT",
+        35
+      ],
+      [
+        "PARROT",
+        19
+      ],
+      {
+        "spell_data": {
+          "id": "skinwalker_curse_7d2"
+        },
+        "type": "spell",
+        "cooldown": 7
+      }
+    ],
+    "flags": [
+      "CAN_OPEN_DOORS",
+      "CLIMBS",
+      "HEARS",
+      "KEEP_DISTANCE",
+      "PATH_AVOID_DANGER_1",
+      "SEES",
+      "SMELLS",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_skinwalker_witch_wolf",
+    "type": "MONSTER",
+    "name": {
+      "str": "皮行者",
+      "str_pl": "皮行者"
+    },
+    "description": "一个变形后的皮行者，模仿狼的形态。混合了人类和狼的解剖结构，它看起来畸形，四肢异常长。尽管是双足姿势，它却以驼背的姿势行走，有时由任一前肢支撑。身体的一些部分似乎与覆盖它的毛皮融合在一起，给它一种超现实的外观。它仍然带着人类形态时的部落饰品。",
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "default_faction": "touhou_youkai_skinwalker",
+    "bodytype": "bear",
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "YOUKAI_SKINWALKER_TOUHOU"
+    ],
+    "harvest": "mammal_large_fur",
+    "hp": 100,
+    "speed": 165,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "w",
+    "color": "black",
+    "aggression": 99,
+    "morale": 44,
+    "melee_skill": 7,
+    "melee_dice": 6,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 3
+      }
+    ],
+    "dodge": 6,
+    "path_settings": {
+      "max_dist": 30
+    },
+    "tracking_distance": 25,
+    "vision_night": 35,
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK"
+    ],
+    "fear_triggers": [
+      "HURT"
+    ],
+    "armor_bash": 2,
+    "armor_cut": 1,
+    "armor_bullet": 6,
+    "special_attacks": [
+      [
+        "ABSORB_MEAT",
+        35
+      ],
+      [
+        "PARROT",
+        19
+      ],
+      [
+        "skinwalker_bite_9d2",
+        7
+      ],
+      {
+        "spell_data": {
+          "id": "skinwalker_roar_6d4"
+        },
+        "type": "spell",
+        "cooldown": 19
+      }
+    ],
+    "flags": [
+      "GOODHEARING",
+      "KEENNOSE",
+      "PATH_AVOID_DANGER_1",
+      "SEES",
+      "WARM"
+    ]
+  }
+]

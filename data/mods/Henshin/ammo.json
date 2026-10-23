@@ -1,0 +1,52 @@
+[
+  {
+    "type": "AMMO",
+    "id": "alien_energy_full",
+    "category": "spare_parts",
+	"name": { "str": "异界结晶", "str_pl": "异界结晶" },
+	"looks_like": "diamond",
+    "symbol": "*",
+    "color": "white",
+    "description": "来自异界、成分不明的白色结晶，可用于修理异界装备。",
+    "material": "alien_material",
+    "volume": "50 ml",
+    "weight": "110 g",
+    "ammo_type": "NULL",
+    "count": 1,
+	"stack_size" : 2
+  },
+  {
+    "type": "AMMO",
+    "id": "alien_energy_part",
+    "category": "spare_parts",
+	"name": { "str": "异界结晶碎片", "str_pl": "异界结晶碎片" },
+	"looks_like": "glass_shard",
+    "symbol": "*",
+    "color": "white",
+    "description": "异界生物融化时留下的白色结晶碎片，可合成为一整块异界结晶。",
+    "material": "alien_material",
+    "volume": "50 ml",
+    "weight": "30 g",
+    "ammo_type": "NULL",
+    "count": 1,
+	"stack_size" : 8
+  },
+  {
+    "id": "alien_energy_liquid",
+    "type": "AMMO",
+	"name": { "str": "液态异界能源", "str_pl": "液态异界能源" },
+	"looks_like": "chem_ethanol",
+    "description": "用异界结晶炼化出的液态能源，可为异界装备提供充能。",
+    "category": "fuel",
+    "volume": "50 ml",
+	"weight": "20 g",
+    "count": 5,
+    "stack_size": 10,
+    "phase": "liquid",
+    "container": "henshin_box",
+    "material": "alien_material",
+    "symbol": "~",
+    "color": "white",
+    "ammo_type": "alien_energy"
+  }
+]

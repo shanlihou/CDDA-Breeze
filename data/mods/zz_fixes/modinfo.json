@@ -1,0 +1,15 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "zz_fixes",
+    "name": "兼容修复补丁",
+    "authors": [
+      "DSHA"
+    ],
+    "description": "修本分支 mod 数据的加载报错：补缺失的 json_flag / tool_quality / 车辆部件 / 车辆组，合并被 mod 覆盖掉的配方子类别，修正过时的 requirement，并补几个缺失物品。其中物品是等效登记，名称带【占位】的是原版已删除、只能先挂着避免报错。加载顺序请放最后。",
+    "category": "misc",
+    "dependencies": [
+      "dda"
+    ]
+  }
+]

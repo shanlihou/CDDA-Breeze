@@ -1,0 +1,39 @@
+[
+	{
+		"id":"ncard_s2_r3_no_01",
+		"type":"GENERIC",
+		"copy-from":"ncard_base_r3",
+		"name":{"str": "<color_yellow>黄金卡片(召唤/No.20 入侵兵器(无人机))</color>","str_pl":"<color_yellow>黄金卡片(召唤/No.20 入侵兵器(无人机))</color>"},
+		"description":"<color_yellow>一张闪闪发光的卡片。可以从其他维度召唤出独特的生物。生物死亡后会重新出现此卡片，可以通过时间流逝或补充活力再次使用。</color>",
+		"symbol":"i",
+		"color":"yellow",
+		"use_action":[{ "type": "place_monster", "monster_id": "mon_ncard_s2_r3_no_01", "difficulty": 0, "moves": 200,"friendly_msg": "一个异次元的存在被召唤了出来。","place_randomly": true,"skills": [ "fabrication" ],"is_pet": true }],
+		"price":1
+	}
+,
+	{
+		"id":"ncard_s2_r3_no_02",
+		"type":"GENERIC",
+		"copy-from":"ncard_base_r3",
+		"name":{"str": "<color_yellow>黄金卡片(召唤/No.21 入侵兵器(射手))</color>","str_pl":"<color_yellow>黄金卡片(召唤/No.21 入侵兵器(射手))</color>"},
+		"description":"<color_yellow>一张闪闪发光的卡片。可以从其他维度召唤出独特的生物。生物死亡后会重新出现此卡片，可以通过时间流逝或补充活力再次使用。</color>",
+		"symbol":"i",
+		"color":"yellow",
+		"use_action":[{ "type": "place_monster", "monster_id": "mon_ncard_s2_r3_no_02", "difficulty": 0, "moves": 200,"friendly_msg": "一个异次元的存在被召唤了出来。","place_randomly": true,"skills": [ "fabrication" ],"is_pet": true }],
+		"price":1
+	}
+,
+	{
+		"id":"ncard_s2_r3_no_03",
+		"type":"GENERIC",
+		"copy-from":"ncard_base_r3",
+		"name":{"str": "<color_yellow>黄金卡片(召唤/No.22 入侵兵器(战士))</color>","str_pl":"<color_yellow>黄金卡片(召唤/No.22 入侵兵器(战士))</color>"},
+		"description":"<color_yellow>一张闪闪发光的卡片。可以从其他维度召唤出独特的生物。生物死亡后会重新出现此卡片，可以通过时间流逝或补充活力再次使用。</color>",
+		"symbol":"i",
+		"color":"yellow",
+		"use_action":[{ "type": "place_monster", "monster_id": "mon_ncard_s2_r3_no_03", "difficulty": 0, "moves": 200,"friendly_msg": "一个异次元的存在被召唤了出来。","place_randomly": true,"skills": [ "fabrication" ],"is_pet": true }],
+		"price":1
+	}
+
+
+]

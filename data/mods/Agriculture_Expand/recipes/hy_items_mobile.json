@@ -1,0 +1,146 @@
+[
+	{
+		"type": "recipe",
+		"result": "hy_mobile_simple_germination_box",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_水培：便携式水培",
+		"skill_used": "fabrication",
+		"difficulty": 1,
+		"autolearn": true,
+		"time": "20 s",
+		"components": [
+			[ [ "bowl_clay", 1 ], [ "ceramic_bowl", 1 ], [ "bowl_pewter", 1 ], [ "glass_bowl", 1 ], [ "plastic_plate", 1 ], [ "mess_tray", 1 ], [ "tin_plate", 1 ] ],
+			[ [ "toilet_paper", 2 ] ],
+			[ [ "bag_plastic", 1 ] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "hy_mobile_seedling_bowl",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_水培：便携式水培",
+		"skill_used": "fabrication",
+		"difficulty": 1,
+		"autolearn": true,
+		"time": "20 s",
+		"components": [
+			[ [ "bowl_clay", 1 ] ],
+			[ [ "toilet_paper", 2 ] ],
+			[ [ "bag_plastic", 1 ] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "hy_mobile_seedling_bowl",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_水培：便携式水培",
+		"skill_used": "fabrication",
+		"difficulty": 2,
+		"time": "10 m",
+		"autolearn": true,
+		"qualities": [ { "id": "CUT", "level": 1 } ],
+		"tools": [ [ [ "mold_plastic", -1 ] ], [ [ "surface_heat", 5, "LIST" ] ] ],
+		"components": [
+			[ [ "bottle_plastic", 1 ], [ "bottle_plastic_small", 2 ], [ "plastic_chunk", 4 ], [ "tumbler_plastic", 2 ], [ "plastic_plate", 2 ], [ "bottle_twoliter", 1 ], [ "cup_plastic_unsealed", 4 ] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "hy_mobile_seedling_bowl",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_水培：便携式水培",
+		"skill_used": "fabrication",
+		"difficulty": 2,
+		"time": "5 s",
+		"autolearn": true,
+		"components": [
+			[ [ "plastic_pot_flower", 1 ], [ "bowl_plastic", 2 ] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "hy_mobile_nursery_soil_huge",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_水培：便携式水培",
+		"skill_used": "fabrication",
+		"difficulty": 1,
+		"autolearn": true,
+		"time": "5 s",
+		"components": [
+			[ [ "material_sand", 10 ] ],
+			[ [ "material_soil", 1 ] ]
+		]
+	},
+	{
+		"result": "hy_mobile_nursery_soil_huge",
+		"type": "uncraft",
+		"time": "100 s",
+		"components": [
+			[ [ "hy_mobile_nursery_soil", 10 ] ]
+		]
+	},
+	
+	{
+		"type": "recipe",
+		"result": "hy_mobile_planting_basket_spongia",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_水培：便携式水培",
+		"skill_used": "fabrication",
+		"difficulty": 1,
+		"time": "5 m",
+		"autolearn": true,
+		"qualities": [ { "id": "CUT", "level": 1 } ],
+		"byproducts": [ [ "hy_mobile_planting_basket_spongia" ] ],
+		"components": [
+			[ [ "sponge", 1 ] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "hy_mobile_planting_basket",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_水培：便携式水培",
+		"skill_used": "fabrication",
+		"difficulty": 2,
+		"time": "10 m",
+		"autolearn": true,
+		"byproducts": [ [ "hy_mobile_planting_basket" ] ],
+		"qualities": [ { "id": "CUT", "level": 1 } ],
+		"tools": [ [ [ "mold_plastic", -1 ] ], [ [ "surface_heat", 5, "LIST" ] ] ],
+		"components": [
+			[ [ "bottle_plastic", 1 ], [ "bottle_plastic_small", 2 ], [ "plastic_chunk", 4 ], [ "tumbler_plastic", 2 ], [ "plastic_plate", 2 ], [ "bottle_twoliter", 1 ], [ "cup_plastic_unsealed", 4 ] ]
+		]
+	},
+	
+	
+	
+	{
+		"type": "recipe",
+		"result": "hy_mobile_adv_m",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_水培：便携式水培",
+		"skill_used": "fabrication",
+		"skills_required": [ [ "mechanics", 4 ], [ "electronics", 4 ] ],
+		"reversible": true,
+		"autolearn": true,
+		"difficulty": 3,
+		"time": "50 m",
+		"using": [ [ "soldering_standard", 20 ] ],
+		"qualities": [
+			{ "id": "SCREW", "level": 1 },
+			{ "id": "SCREW_FINE", "level": 1 },
+			{ "id": "WRENCH", "level": 2 },
+			{ "id": "WRENCH_FINE", "level": 1 }
+		],
+		"components": [
+			[ [ "hy_hydroponic_control_system", 1 ] ],
+			[ [ "hy_hydroponic_tank_shell", 10 ] ],
+			[ [ "hy_aerator", 2 ] ],
+			[ [ "hy_temperature_control_system", 2 ] ],
+			[ [ "hy_sunlamp", 2 ] ],
+			[ [ "hy_nutrition_supply_device", 2 ] ],
+			[ [ "cable", 10 ] ],
+			[ [ "hy_hydroponic_power_system", 2 ] ]
+		]
+	}
+]

@@ -1,0 +1,175 @@
+[
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "spell_scroll_sorcerer_0",
+    "components": [
+    	[
+    		[ "paper", 1 ],
+    		[ "napkin", 1 ],
+    		[ "cardboard", 1 ],
+    		[ "cured_hide", 1 ],
+    		[ "willowbark", 1 ],
+    		[ "birchbark", 1 ],
+    		[ "tanbark", 1 ],
+    		[ "meat_bark", 1 ],
+    		[ "alder_bark", 1 ],
+    		[ "meat_bark", 1 ],
+    		[ "wrapper_pr", 1 ]
+    	]
+    ],
+    "time": "7 d",
+    "skill_used": "spellcraft",
+    "difficulty": 10,
+    "category": "CC_ENCHANTED",
+    "subcategory": "CSC_ENCHANTED_OTHER",
+    "autolearn": false
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "spell_craft_is_sorcerer_potion",
+    "components": [
+    	[
+    		[ "mana_dust", 1 ]
+    	],
+    	[
+    		[ "mutagen_alpha", 1 ]
+    	],
+    	[
+    		[ "mana_infused_blood", 1 ]
+    	],
+    	[
+    		[ "slime_scrap", 1 ]
+    	],
+    	[
+    		[ "test_tube", 1 ]
+    	]
+    ],
+    "time": "10 h",
+    "skill_used": "spellcraft",
+    "difficulty": 7,
+	  "category": "CC_CHEM",
+	  "subcategory": "CSC_CHEM_MUTAGEN",
+	  "skills_required": [ "chemistry", 7 ],
+	  "tools": [ [ [ "surface_heat", 100, "LIST" ] ] ],
+    "autolearn": true
+  },
+  {
+    "id": "spell_craft_is_sorcerer_potion",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": "人工术士血脉转变药剂",
+    "description": "使你成为一名术士。\n需要消耗一些时间来使用。\n如果你已经是一名术士，它也会给你带来一些额外好处。",
+    "weight": "50 g",
+    "volume": "50 ml",
+    "longest_side": "15 cm",
+    "price": 10000,
+    "price_postapoc": 10000,
+    "material": [ "glass", "water" ],
+    "symbol": ")",
+    "color": "white",
+    "flags": [ "NO_AUTO_CONSUME", "NUTRIENT_OVERRIDE", "NONCONDUCTIVE", "MAGIC_FOCUS", "NO_INGEST", "EDIBLE_FROZEN" ],
+    "stack_size": 1,
+    "relic_data": { },
+    "use_action": {
+    	"type": "cast_spell",
+    	"spell_id": "spell_craft_is_sorcerer_take",
+    	"no_fail": true,
+    	"level": 0
+    }
+  },
+  {
+    "id": "spell_craft_is_sorcerer_take",
+    "type": "SPELL",
+    "name": "血脉转化",
+    "description": "",
+    "valid_targets": [ "self" ],
+    "flags": [ "NO_HANDS", "NO_LEGS", "NO_EXPLOSION_SFX", "SILENT", "MUTATE_TRAIT" ],
+    "effect": "attack",
+    "shape": "blast",
+    "base_casting_time": 60000,
+    "energy_source": "MANA",
+    "spell_class": "NONE",
+    "difficulty": 1,
+    "max_level": 0,
+    "base_energy_cost": 0,
+    "extra_effects": [
+    	{ "id": "spell_craft_is_sorcerer_take_1" }
+    ]
+  },
+  {
+    "id": "spell_craft_is_sorcerer_take_1",
+    "type": "SPELL",
+    "name": "血脉转化",
+    "description": "获得变异：人工术士血脉",
+    "valid_targets": [ "self" ],
+    "flags": [ "NO_HANDS", "NO_LEGS", "NO_EXPLOSION_SFX", "SILENT", "MUTATE_TRAIT" ],
+    "effect": "mutate",
+    "effect_str": "spell_craft_is_sorcerer_s",
+    "shape": "blast",
+    "base_casting_time": 0,
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "energy_source": "MANA",
+    "spell_class": "NONE",
+    "difficulty": 1,
+    "max_level": 0,
+    "base_energy_cost": 0
+  },
+  {
+    "type": "mutation",
+    "id": "spell_craft_is_sorcerer_s",
+    "name": { "str": "人工术士血脉" },
+    "points": 0,
+    "description": "你是一名术士。\n智力+4",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": false,
+    "enchantments": [ { "values": [ { "value": "INTELLIGENCE", "add": 4 } ] } ],
+    "spells_learned": [
+    	[ "spell_craft_sorcerer_scroll_0", 0 ]
+    ]
+  },
+  {
+    "type": "item_group",
+    "copy-from": "sewer",
+    "id": "sewer",
+    "extend": {
+    	"items": [ [ "spell_craft_is_sorcerer_potion", 2 ] ]
+    }
+  },
+  {
+    "type": "item_group",
+    "copy-from": "chem_school",
+    "id": "chem_school",
+    "subtype": "distribution",
+    "extend": {
+    	"entries": [ { "item": "spell_craft_is_sorcerer_potion", "prob": 1 } ]
+    }
+  },
+  {
+    "type": "item_group",
+    "copy-from": "science",
+    "id": "science",
+    "extend": {
+    	"items": [ [ "spell_craft_is_sorcerer_potion", 2 ] ]
+    }
+  },
+  {
+    "type": "item_group",
+    "copy-from": "mut_lab",
+    "id": "mut_lab",
+    "extend": {
+    	"items": [ [ "spell_craft_is_sorcerer_potion", 2 ] ]
+    }
+  },
+  {
+    "type": "item_group",
+    "copy-from": "mutagens",
+    "id": "mutagens",
+    "extend": {
+    	"items": [ [ "spell_craft_is_sorcerer_potion", 2 ] ]
+    }
+  }
+]

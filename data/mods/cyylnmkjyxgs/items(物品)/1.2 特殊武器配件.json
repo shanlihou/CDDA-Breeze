@@ -1,0 +1,468 @@
+[
+  {
+    "id": "cyyl_yh_zndg",
+    "type": "GUNMOD",
+    "material": [ "cyylcaizhi" ],
+    "symbol": ":",
+    "color": "blue",
+    "name": { "str": "<永恒>智能导轨" },
+    "description": "减少散布值,并加快精确瞄准的速度。",
+    "price": "5000 USD",
+    "price_postapoc": "500 USD",
+    "weight": "0 g",
+    "volume": "0 ml",
+    "location": "rail",
+    "mod_targets": [ "smg", "rifle", "pistol", "shotgun", "crossbow", "launcher" ],
+    "install_time": "1 m",
+    "dispersion_modifier": -1500,
+    "sight_dispersion": 0,
+    "field_of_view": 5000,
+    "aim_speed_modifier": 1000,
+    "min_skills": [
+      [ "weapon", 2 ],
+      [ "gun", 1 ]
+    ],
+    "flags": [
+      "NONCONDUCTIVE",
+      "ZERO_WEIGHT"
+    ]
+  },
+  {
+    "id": "gunmod_S",
+    "type": "GUNMOD",
+    "looks_like": "rail_mount",
+    "material": [ "steel" ],
+    "symbol": ":",
+    "color": "blue",
+    "name": { "str": "烈焰改装配件" },
+    "description": "让枪械发射的子弹拥有燃烧和烈焰喷射效果",
+    "price": "5000 USD",
+    "price_postapoc": "500 USD",
+    "weight": "0 g",
+    "volume": "0 ml",
+    "location": "mechanism",
+    "mod_targets": [ "smg", "rifle", "pistol", "shotgun", "crossbow", "launcher" ],
+    "install_time": "10 m",
+    "ammo_effects": [
+      "INCENDIARY",
+      "STREAM"
+    ],
+    "min_skills": [
+      [ "weapon", 2 ],
+      [ "mechanics", 2 ],
+      [ "gun", 2 ]
+    ],
+    "flags": [
+      "NONCONDUCTIVE",
+      "ZERO_WEIGHT",
+      "NEVER_JAMS",
+      "INSTALL_DIFFICULT"
+    ]
+  },
+  {
+    "id": "cyyl_yh_zsqkS",
+    "copy-from": "cyyl_yh_zsqk",
+    "looks_like": "cyyl_yh_zsqk",
+    "type": "GUNMOD",
+    "material": [ "cyylcaizhi" ],
+    "symbol": ":",
+    "color": "blue",
+    "name": { "str": "真伤枪口" },
+    "description": "以极致的速度压缩来升华枪械射击伤害。",
+    "price": "5000 USD",
+    "price_postapoc": "500 USD",
+    "weight": "0 g",
+    "volume": "0 ml",
+    "location": "mechanism",
+    "mod_targets": [ "rifle", "pistol", "shotgun", "smg", "crossbow", "launcher" ],
+    "install_time": "10 s",
+    "consume divisor": 840,
+    "damage_modifier": {
+      "damage_type": "pure",
+      "amount": 100,
+      "armor_penetration": 100
+    },
+    "min_skills": [
+      [ "weapon", 2 ]
+    ],
+    "flags": [
+      "NONCONDUCTIVE",
+      "ZERO_WEIGHT"
+    ]
+  },
+  {
+    "id": "cyyl_yh_tsydxyq",
+    "type": "GUNMOD",
+    "material": [ "cyylcaizhi" ],
+    "symbol": ":",
+    "color": "blue",
+    "name": { "str": "<永恒>特殊音段消音器" },
+    "description": "把射击的声音转变成特殊的音段,人耳识别不出,听说这声音只有死人才可以听到...",
+    "looks_like": "suppressor",
+    "price": "5000 USD",
+    "price_postapoc": "500 USD",
+    "weight": "0 g",
+    "volume": "0 ml",
+    "location": "muzzle",
+    "mod_targets": [ "rifle", "pistol", "shotgun", "smg", "crossbow", "launcher" ],
+    "install_time": "10 s",
+    "handling_modifier": 100,
+    "consume divisor": 840,
+    "loudness_modifier": -1500,
+    "min_skills": [
+      [ "weapon", 2 ]
+    ],
+    "flags": [
+      "NONCONDUCTIVE",
+      "ZERO_WEIGHT",
+      "CONSUMABLE"
+    ]
+  },
+  {
+    "id": "cyyl_yh_zsqk",
+    "type": "GUNMOD",
+    "material": [ "cyylcaizhi" ],
+    "symbol": ":",
+    "color": "blue",
+    "name": { "str": "<永恒>增伤枪口" },
+    "description": "再枪口里进行进一步的速度压缩来提升枪械的射击伤害。",
+    "looks_like": "suppressor",
+    "price": "5000 USD",
+    "price_postapoc": "500 USD",
+    "weight": "0 g",
+    "volume": "0 ml",
+    "location": "mechanism",
+    "mod_targets": [ "rifle", "pistol", "shotgun", "smg", "crossbow", "launcher" ],
+    "install_time": "10 s",
+    "consume divisor": 840,
+    "damage_modifier": {
+      "damage_type": "bullet",
+      "amount": 100,
+      "armor_penetration": 100
+    },
+    "min_skills": [
+      [ "weapon", 2 ]
+    ],
+    "flags": [
+      "NONCONDUCTIVE",
+      "ZERO_WEIGHT"
+    ]
+  },
+  {
+    "id": "cyyl_yh_qxsmkzj",
+    "type": "GUNMOD",
+    "material": [ "cyylcaizhi" ],
+    "symbol": ":",
+    "color": "blue",
+    "name": { "str": "<永恒>全息扫描扩展镜" },
+    "description": "可在镜头旁边安装的一个高级扩展电子镜(不会遮挡原来的镜头),可提升瞄准的速度和精度。",
+    "price": "5000 USD",
+    "price_postapoc": "500 USD",
+    "weight": "0 g",
+    "volume": "0 ml",
+    "location": "sights",
+    "mod_targets": [ "rifle", "pistol", "shotgun", "smg", "crossbow", "launcher" ],
+    "install_time": "1 m",
+    "sight_dispersion": 0,
+    "field_of_view": 5000,
+    "aim_speed_modifier": 5000,
+    "min_skills": [
+      [ "weapon", 2 ],
+      [ "gun", 2 ]
+    ],
+    "flags": [
+      "NONCONDUCTIVE",
+      "ZERO_WEIGHT",
+      "ZOOM"
+    ]
+  },
+  {
+    "id": "cyyl_yh_gysqg",
+    "type": "GUNMOD",
+    "material": [ "cyylcaizhi" ],
+    "symbol": ":",
+    "color": "blue",
+    "name": { "str": "<永恒>广域式枪管" },
+    "description": "射程完全性的提升,基本达到最大值,并减少一定的散布。",
+    "price": "5000 USD",
+    "price_postapoc": "500 USD",
+    "weight": "0 g",
+    "volume": "0 ml",
+    "location": "barrel",
+    "mod_targets": [ "rifle", "pistol", "smg", "crossbow", "launcher" ],
+    "install_time": "30 s",
+    "range_modifier": 500,
+    "dispersion_modifier": -1500,
+    "min_skills": [
+      [ "weapon", 3 ],
+      [ "gun", 1 ]
+    ],
+    "flags": [
+      "NONCONDUCTIVE",
+      "ZERO_WEIGHT"
+    ]
+  },
+  {
+    "id": "cyyl_yh_xyqt",
+    "type": "GUNMOD",
+    "material": [ "cyylcaizhi" ],
+    "symbol": ":",
+    "color": "blue",
+    "name": { "str": "<永恒>限压枪托" },
+    "description": "可以消减后坐力,让枪械更好使用。",
+    "price": "5000 USD",
+    "price_postapoc": "500 USD",
+    "weight": "0 g",
+    "volume": "0 ml",
+    "location": "stock",
+    "mod_targets": [ "rifle", "pistol", "shotgun", "smg", "crossbow", "launcher" ],
+    "install_time": "1 m",
+    "handling_modifier": 10000,
+    "min_skills": [
+      [ "weapon", 2 ],
+      [ "gun", 1 ]
+    ],
+    "flags": [
+      "NONCONDUCTIVE",
+      "ZERO_WEIGHT"
+    ]
+  },
+  {
+    "id": "cyyl_yh_xgslj",
+    "type": "GUNMOD",
+    "material": [ "cyylcaizhi" ],
+    "symbol": "/",
+    "color": "blue",
+    "name": { "str": "<永恒>下挂式链锯" },
+    "description": "随时使用的链锯,可以很快的切断敌人。",
+    "looks_like": "sword_bayonet",
+    "price": "5000 USD",
+    "price_postapoc": "500 USD",
+    "weight": "0 g",
+    "volume": "0 ml",
+    "bashing": 300,
+    "cutting": 300,
+    "to_hit": 1,
+    "location": "underbarrel",
+    "mod_targets": [ "rifle", "pistol", "shotgun", "smg", "crossbow", "launcher" ],
+    "install_time": "10 s",
+    "mode_modifier": [
+      [
+        "REACH",
+        "cutting",
+        2,
+        [ "MELEE", "REACH_ATTACK" ]
+      ]
+    ],
+    "techniques": [
+      "WBLOCK_2",
+      "RAPID"
+    ],
+    "qualities": [
+      [ "CUT", 100 ],
+      [ "BUTCHER", 100 ]
+    ],
+    "min_skills": [
+      [ "weapon", 2 ],
+      [ "melee", 2 ],
+      [ "gun", 1 ]
+    ],
+    "flags": [
+      "NONCONDUCTIVE",
+      "ZERO_WEIGHT",
+      "DURABLE_MELEE",
+      "SHEATH_KNIFE",
+      "SHEATH_SWORD",
+      "PUMP_RAIL_COMPATIBLE"
+    ]
+  },
+  {
+    "id": "cyyl_yh_kkzdgdz",
+    "type": "GUNMOD",
+    "material": [ "cyylcaizhi" ],
+    "symbol": ":",
+    "color": "blue",
+    "name": { "str": "<永恒>可扩展导轨底座" },
+    "description": "增加各个模组位置的数量。",
+    "price": "5000 USD",
+    "price_postapoc": "500 USD",
+    "weight": "0 g",
+    "volume": "0 ml",
+    "location": "mechanism",
+    "mod_targets": [ "rifle", "pistol", "shotgun", "smg", "crossbow", "launcher" ],
+    "install_time": "5 m",
+    "add_mod": [
+      [ "accessories", 10 ],
+      [ "stock", 10 ],
+      [ "muzzle", 10 ],
+      [ "sling", 10 ],
+      [ "rail", 10 ],
+      [ "sights", 10 ],
+      [ "underbarrel", 10 ],
+      [ "lens", 10 ],
+      [ "emitter", 10 ],
+      [ "grip mount", 10 ],
+      [ "grip", 10 ],
+      [ "mechanism", 10 ],
+      [ "rail mount", 10 ],
+      [ "sights mount", 10 ],
+      [ "underbarrel mount", 10 ],
+      [ "sling", 10 ],
+      [ "lens", 10 ],
+      [ "emitter", 10 ]
+    ],
+    "min_skills": [
+      [ "weapon", 3 ],
+      [ "gun", 2 ]
+    ],
+    "flags": [
+      "NONCONDUCTIVE",
+      "ZERO_WEIGHT",
+      "INSTALL_DIFFICULT"
+    ]
+  },
+
+
+
+
+
+
+
+
+
+  {
+    "id": "cyyl_small_boom",
+    "type": "ammo_effect",
+    "explosion": {
+      "power": 25,
+      "shrapnel": {
+        "casing_mass": 50,
+        "fragment_mass": 0.1
+      }
+    }
+  },
+
+  {
+    "id": "cyyl_yh_xxbzgzmk",
+    "type": "GUNMOD",
+    "material": [ "cyylcaizhi" ],
+    "symbol": ":",
+    "color": "blue",
+    "name": { "str": "<永恒>小型爆炸构造模块" },
+    "description": "让子弹拥有爆炸效果的模块,有5X5大小的爆炸范围(小心弹片,请保持10格以外的射击距离)。",
+    "price": "5000 USD",
+    "price_postapoc": "500 USD",
+    "weight": "0 g",
+    "volume": "0 ml",
+    "location": "mechanism",
+    "mod_targets": [ "smg", "rifle", "pistol", "shotgun", "crossbow", "launcher" ],
+    "install_time": "10 m",
+    "ammo_effects": [
+      "cyyl_small_boom"
+    ],
+    "min_skills": [
+      [ "weapon", 4 ],
+      [ "mechanics", 2 ],
+      [ "electronics", 2 ],
+      [ "gun", 2 ]
+    ],
+    "flags": [
+      "NONCONDUCTIVE",
+      "ZERO_WEIGHT",
+      "NEVER_JAMS",
+      "INSTALL_DIFFICULT"
+    ]
+  },
+  {
+    "id": "cyyl_yh_qhmlgzmk",
+    "type": "GUNMOD",
+    "material": [ "cyylcaizhi" ],
+    "symbol": ":",
+    "color": "blue",
+    "name": { "str": "<永恒>亲和魔力构造模块" },
+    "description": "让枪械有亲和魔力功能,使用魔法时也可以拿在手上。",
+    "price": "5000 USD",
+    "price_postapoc": "500 USD",
+    "weight": "0 g",
+    "volume": "0 ml",
+    "location": "mechanism",
+    "mod_targets": [ "smg", "rifle", "pistol", "shotgun", "crossbow", "launcher" ],
+    "install_time": "10 m",
+    "min_skills": [
+      [ "weapon", 4 ],
+      [ "mechanics", 2 ],
+      [ "electronics", 2 ],
+      [ "gun", 2 ]
+    ],
+    "flags": [
+      "NONCONDUCTIVE",
+      "ZERO_WEIGHT",
+      "MAGIC_FOCUS",
+      "NEVER_JAMS",
+      "INSTALL_DIFFICULT"
+    ]
+  },
+  {
+    "id": "cyyl_yh_dcmcgzmk",
+    "type": "GUNMOD",
+    "material": [ "cyylcaizhi" ],
+    "symbol": ":",
+    "color": "blue",
+    "name": { "str": "<永恒>电磁脉冲构造模块" },
+    "description": "让子弹拥有EMP效果的模块,可以使机械物体暂时瘫痪。",
+    "price": "5000 USD",
+    "price_postapoc": "500 USD",
+    "weight": "0 g",
+    "volume": "0 ml",
+    "location": "mechanism",
+    "mod_targets": [ "smg", "rifle", "pistol", "shotgun", "crossbow", "launcher" ],
+    "install_time": "10 m",
+    "ammo_effects": [
+      "EMP"
+    ],
+    "min_skills": [
+      [ "weapon", 4 ],
+      [ "mechanics", 2 ],
+      [ "electronics", 2 ],
+      [ "gun", 2 ]
+    ],
+    "flags": [
+      "NONCONDUCTIVE",
+      "ZERO_WEIGHT",
+      "NEVER_JAMS",
+      "INSTALL_DIFFICULT"
+    ]
+  },
+  {
+    "id": "cyyl_yh_dldjgzmk",
+    "type": "GUNMOD",
+    "material": [ "cyylcaizhi" ],
+    "symbol": ":",
+    "color": "blue",
+    "name": { "str": "<永恒>电力电击构造模块" },
+    "description": "让子弹拥有电力效果的模块,子弹再接触到敌人时,使之触电。",
+    "price": "5000 USD",
+    "price_postapoc": "500 USD",
+    "weight": "0 g",
+    "volume": "0 ml",
+    "location": "mechanism",
+    "mod_targets": [ "smg", "rifle", "pistol", "shotgun", "crossbow", "launcher" ],
+    "install_time": "10 m",
+    "ammo_effects": [
+      "LIGHTNING"
+    ],
+    "min_skills": [
+      [ "weapon", 4 ],
+      [ "mechanics", 2 ],
+      [ "electronics", 2 ],
+      [ "gun", 2 ]
+    ],
+    "flags": [
+      "NONCONDUCTIVE",
+      "ZERO_WEIGHT",
+      "NEVER_JAMS",
+      "INSTALL_DIFFICULT"
+    ]
+  }
+
+]

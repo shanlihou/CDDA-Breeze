@@ -1,0 +1,43 @@
+[
+  {
+    "id": "barrel_elongated_small",
+    "type": "GUNMOD",
+    "name": {
+      "str": "加长枪管（6.9 厘米）"
+    },
+    "description": "加长的枪管能提高精度并略微降低噪音，但代价是使武器更长，因而更加笨重。这一款专为小口径设计。",
+    "weight": "100 g",
+    "volume": "30 ml",
+    "longest_side": "94 mm",
+    "//": "Barrel increase of 69 mm, 2.5 cm screw-on",
+    "price": 12000,
+    "price_postapoc": 250,
+    "install_time": "5 s",
+    "material": [
+      "steel"
+    ],
+    "symbol": ":",
+    "color": "dark_gray",
+    "dispersion_modifier": -45,
+    "location": "barrel",
+    "loudness_modifier": -1,
+    "mod_targets": [
+      "pistol",
+      "smg"
+    ]
+  },
+  {
+    "id": "barrel_elongated_small2",
+    "type": "GUNMOD",
+    "name": {
+      "str": "加长枪管（17.1 厘米）"
+    },
+    "copy-from": "barrel_elongated_small",
+    "description": "加长的枪管能提高精度并略微降低噪音，但代价是使武器更长，因而更加笨重。这一款专为小口径设计。",
+    "weight": "305 g",
+    "volume": "30 ml",
+    "longest_side": "196 mm",
+    "//": "Barrel increase of 171 mm, 2.5 cm screw-on",
+    "dispersion_modifier": -75
+  }
+]

@@ -1,0 +1,57 @@
+[
+    {
+        "id": "VER_recipe",
+        "type": "BOOK",
+        "category": "manuals",
+        "name": {
+          "str": "VER配件与维护杂项说明书"
+        },
+        "description": "一本写着如何维护VER与制作配件与子弹等的说明书，它还记录了一位当年核爆特工的日记，其中包括复装子弹技巧",
+        "weight": "1454 g",
+        "volume": "1500 ml",
+        "price": 8000000,
+        "price_postapoc": 50000,
+        "material": [
+          "paper",
+          "plastic"
+        ],
+        "looks_like":"recipe_caseless",
+        "symbol": "?",
+        "color": "blue",
+        "skill": "fabrication",
+        "required_level": 6,
+        "max_level": 10,
+        "proficiencies": [
+          {
+            "proficiency": "prof_handloading",
+            "time_factor": 0.8,
+            "fail_factor": 0.5
+          }
+        ],
+        "intelligence": 12,
+        "time": "60 m"
+    },
+    {
+        "id": "VER_press",
+        "type": "TOOL",
+        "name": {
+          "str": "VER辅助制弹工具"
+        },
+        "description": "小型的VER辅助制弹工具，足够你进行VER的弹药制备。",
+        "weight": "5000 g",
+        "volume": "500 ml",
+        "longest_side": "30 cm",
+        "price": 10000,
+        "price_postapoc": 2000,
+        "to_hit": -2,
+        "material": [
+          "steel",
+          "plastic"
+        ],
+        "symbol": ";",
+        "color": "dark_gray",
+        "melee_damage": {
+          "bash": 6
+        }
+      }
+]

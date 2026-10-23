@@ -1,0 +1,232 @@
+[
+  {
+    "type": "effect_on_condition",
+    "//": "丧尸刷新的位置",
+    "id": "EOC_尸潮刷新位置_1",
+    "recurrence": 1,
+    "condition": {
+      "and": [
+        { "u_has_var": "开始记录艾特位置", "type": "time", "context": "time", "value": "true" },
+        { "not": { "u_has_var": "停止记录位置", "type": "time", "context": "time", "value": "true" } },
+        { "not": "is_day" },
+        { "u_has_var": "尸潮刷新", "type": "time", "context": "time", "value": "true" }
+      ]
+    },
+    "effect": [
+      {
+        "u_location_variable": { "global_val": "全局变量_尸潮刷新位置" },
+        "x_adjust": { "global_val": "x轴偏移", "default": 30 },
+        "y_adjust": { "global_val": "y轴偏移", "default": 30 },
+        "min_radius": 1,
+        "z_adjust": 0,
+        "z_override": true
+      },
+      { "u_add_var": "停止记录位置", "type": "time", "context": "time", "value": "true" },
+      { "u_add_var": "开始刷新尸潮", "type": "time", "context": "time", "value": "true" }
+    ]
+  },
+  
+  {
+    "type": "effect_on_condition",
+    "//": "刷丧尸",
+    "id": "EOC_尸潮刷新_1",
+    "condition": {
+      "and": [
+        { "not": { "u_has_var": "生成停止", "type": "time", "context": "time", "value": "true" } },
+        { "u_has_var": "开始刷新尸潮", "type": "time", "context": "time", "value": "true" },
+        { "not": "is_day" },
+        { "u_has_var": "尸潮刷新", "type": "time", "context": "time", "value": "true" }
+      ]
+    },
+    "recurrence": 1,
+    "effect": [
+      { "run_eocs": [ "EOC_循环尸潮刷新" ] },
+      { "u_add_var": "生成停止", "type": "time", "context": "time", "value": "true" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "//":"这个eoc是给上面那个eoc用的",
+    "id": "EOC_循环尸潮刷新",
+    "condition": {
+      "and": [
+        {
+          "compare_int": [ { "u_val": "var", "var_name": "丧尸数量_临时变量", "type": "int", "context": "int" }, "!=", { "const": 0 } ]
+        }
+      ]
+    },
+    "effect": [
+      {
+       "arithmetic": [ { "u_val": "var", "var_name": "丧尸数量_临时变量", "type": "int", "context": "int" }, "=", { "u_val": "var", "var_name": "丧尸数量_临时变量", "type": "int", "context": "int" }, "-", { "const": 1 } ]
+      },
+      {"run_eocs":["EOC_循环尸潮刷新", "EOC_一个月后尸潮刷丧尸浩克"]}
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "//":"60天后刷浩克尸潮，如果没满60天就刷普通丧尸，这个eoc是给上面那个eoc用的",
+    "id": "EOC_一个月后尸潮刷丧尸浩克",
+    "condition": {
+      "and": [
+        {
+          "compare_int": [ { "u_val": "var", "var_name": "丧尸数量", "type": "int", "context": "int" }, ">=", { "const": 60 } ]
+        }
+      ]
+    },
+    "effect": [
+      {
+        "u_spawn_monster": "GROUP_尸潮_60天后",
+        "group":true,
+        "real_count": 1,
+        "outdoor_only": true,
+        "min_radius": 1,
+        "target_var": { "global_val": "全局变量_尸潮刷新位置" }
+      }
+    ],
+    "false_effect": [
+      {
+        "u_spawn_monster": "GROUP_尸潮_60天前",
+        "group":true,
+        "real_count": 1,
+        "outdoor_only": true,
+        "min_radius": 1,
+        "target_var": { "global_val": "全局变量_尸潮刷新位置" }
+      }
+    ]
+  },
+  
+  {
+    "type": "effect_on_condition",
+    "//": "白天把所有变量清除掉",
+    "id": "EOC_白天清除变量_1",
+    "condition": { "and": [ "is_day" ] },
+    "recurrence": 1,
+    "effect": [
+      { "u_lose_var": "开始记录艾特位置", "type": "time", "context": "time" },
+      { "u_lose_var": "生成停止", "type": "time", "context": "time" },
+      { "u_lose_var": "停止记录位置", "type": "time", "context": "time" },
+      { "u_lose_var": "开始刷新尸潮", "type": "time", "context": "time" },
+      { "u_lose_var": "停止记录尸潮刷新间隔", "type": "time", "context": "time" },
+      { "u_lose_var": "尸潮刷新", "type": "time", "context": "time" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "//": "晚上计算尸潮刷新坐标和丧尸刷新数量",
+    "id": "EOC_计算偏移位置_1",
+    "condition": {
+      "and": [
+        { "not": { "u_has_var": "开始记录艾特位置", "type": "time", "context": "time", "value": "true" } },
+        { "not": "is_day" },
+        { "u_has_var": "尸潮刷新", "type": "time", "context": "time", "value": "true" }
+      ]
+    },
+    "recurrence": 1,
+    "effect": [
+      {
+        "weighted_list_eocs": [
+          [
+            {
+              "id": "eoc_x偏移位置",
+              "effect": [ { "arithmetic": [ { "global_val": "var", "var_name": "x轴偏移" }, "=", { "const": 27 }, "+", { "rand": 10 } ] } ]
+            },
+            { "const": 1 }
+          ],
+          [
+            {
+              "id": "eoc_x偏移位置_1",
+              "effect": [ { "arithmetic": [ { "global_val": "var", "var_name": "x轴偏移" }, "=", { "const": -27 }, "+", { "rand": -10 } ] } ]
+            },
+            { "const": 1 }
+          ]
+        ]
+      },
+      {
+        "weighted_list_eocs": [
+          [
+            {
+              "id": "eoc_y偏移位置",
+              "effect": [ { "arithmetic": [ { "global_val": "var", "var_name": "y轴偏移" }, "=", { "const": 27 }, "+", { "rand": 10 } ] } ]
+            },
+            { "const": 1 }
+          ],
+          [
+            {
+              "id": "eoc_y偏移位置_1",
+              "effect": [ { "arithmetic": [ { "global_val": "var", "var_name": "y轴偏移" }, "=", { "const": -27 }, "+", { "rand": -10 } ] } ]
+            },
+            { "const": 1 }
+          ]
+        ]
+      },
+      {
+        "run_eocs": [
+          {
+            "id": "EOC_尸潮上限_1",
+            "condition": {
+              "and": [
+                {
+                  "compare_int": [ { "u_val": "var", "var_name": "丧尸数量", "type": "int", "context": "int" }, "<", { "u_val": "var", "var_name": "尸潮上限", "type": "int", "context": "int" } ]
+                }
+              ]
+            },
+            "effect": [
+              {
+                "arithmetic": [ { "u_val": "var", "var_name": "丧尸数量", "type": "int", "context": "int" }, "+=", { "u_val": "var", "var_name": "每轮尸潮数量(叠加)", "type": "int", "context": "int" } ]
+              },
+              {
+                "arithmetic": [ { "u_val": "var", "var_name": "丧尸数量_临时变量", "type": "int", "context": "int" }, "=", { "u_val": "var", "var_name": "丧尸数量", "type": "int", "context": "int" } ]
+              }
+            ]
+          }
+        ]
+      },
+      { "u_add_var": "开始记录艾特位置", "type": "time", "context": "time", "value": "true" }
+    ]
+  },
+  
+  
+  {
+    "type": "effect_on_condition",
+    "//": "晚上变量赋值，这些变量用于判断",
+    "id": "EOC_设置尸潮刷新间隔_1",
+    "condition": {
+      "and": [
+        { "not": "is_day" },
+        {
+          "not": { "u_has_var": "停止记录尸潮刷新间隔", "type": "time", "context": "time", "value": "true" }
+        }
+      ]
+    },
+    "recurrence": 1,
+    "effect": [
+      {
+        "arithmetic": [ { "u_val": "var", "var_name": "当前天数", "type": "int", "context": "int" }, "+=", { "const": 1 } ]
+      },
+      { "run_eocs": [ "EOC_设置尸潮刷新间隔_2" ] },
+      { "u_add_var": "停止记录尸潮刷新间隔", "type": "time", "context": "time", "value": "true" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "//": "用于制空变量，给上一个eoc搭配的",
+    "id": "EOC_设置尸潮刷新间隔_2",
+    "condition": {
+      "and": [
+        {
+          "compare_int": [ { "u_val": "var", "var_name": "当前天数", "type": "int", "context": "int" }, "=", { "u_val": "var", "var_name": "间隔多少天", "type": "int", "context": "int" } ]
+        }
+      ]
+    },
+    "effect": [
+      {
+        "arithmetic": [
+          { "u_val": "var", "var_name": "当前天数", "type": "int", "context": "int" },
+          "=",
+          { "const": 0 }
+        ]
+      },
+      { "u_add_var": "尸潮刷新", "type": "time", "context": "time", "value": "true" }
+    ]
+  }
+]

@@ -1,0 +1,126 @@
+[
+  {
+    "type": "talk_topic",
+    "id": "TALK_SECRO_SCIENTIST1_main",
+    "dynamic_line": "… 哦… 有什么事吗？",
+    "responses": [
+      {
+        "text": "你在这里干什么？",
+        "topic": "TALK_SECRO_SCIENTIST1_what"
+      },
+      {
+        "text": "这是你的实验室吗？",
+        "topic": "TALK_SECRO_SCIENTIST1_where"
+      },
+      {
+        "text": "再见。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_SECRO_SCIENTIST1_what",
+    "dynamic_line": "我绝大部分时间都在研究血肉。",
+    "responses": [
+      {
+        "text": "血肉？所以你是个医生？",
+        "topic": "TALK_SECRO_SCIENTIST1_what_me"
+      },
+      {
+        "text": "…",
+        "topic": "TALK_SECRO_SCIENTIST1_main"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_SECRO_SCIENTIST1_what_me",
+    "dynamic_line": "哦，不完全是，而是科学家。肉是一种有机的类肉物质，设计用途广泛。简言之，它可以生长成各种结构的组织。它可以创造肌肉、骨骼、器官、腺体，甚至整个自给自足的微生物和宏生物体。",
+    "responses": [
+      {
+        "text": "我懂了。",
+        "topic": "TALK_SECRO_SCIENTIST1_main"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_SECRO_SCIENTIST1_where",
+    "dynamic_line": "我的实验室和家。很久以前我决定做一些有用的事情时，我创建了这个实验室。我相信，对干细胞、养殖肉和合成器官的研究将解决许多问题。",
+    "responses": [
+      {
+        "text": "听起来很有意思，你在想什么样的问题？",
+        "topic": "TALK_SECRO_SCIENTIST1_where_troubles"
+      },
+      {
+        "text": "你自己创造了整个实验室？",
+        "topic": "TALK_SECRO_SCIENTIST1_where_info"
+      },
+      {
+        "text": "…",
+        "topic": "TALK_SECRO_SCIENTIST1_main"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_SECRO_SCIENTIST1_where_troubles",
+    "dynamic_line": "没什么特别的。当时，我的研究目标是从高效的可食用肉类生产、为移植术生长器官、用干细胞进行各种治疗，最重要的是为我的生活和玩生活筹集资金。",
+    "responses": [
+      {
+        "text": "你自己创造了整个实验室？",
+        "topic": "TALK_SECRO_SCIENTIST1_where_info"
+      },
+      {
+        "text": "好的。",
+        "topic": "TALK_SECRO_SCIENTIST1_main"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_SECRO_SCIENTIST1_where_info",
+    "dynamic_line": "哦，是的，它花了很多年的时间来筹集资金，收集装备，并在这里建立起来。通过多年的研究，我领导了各种项目，并筹集了大量资金。后来，我不得不把这个地方紧紧地锁起来，永久地搬到其他地方去。",
+    "responses": [
+      {
+        "text": "相当了不起的成就，是什么迫使你从这里搬走的？",
+        "topic": "TALK_SECRO_SCIENTIST1_where_info_more"
+      },
+      {
+        "text": "听起来很有意思，你在想什么样的问题？",
+        "topic": "TALK_SECRO_SCIENTIST1_where_troubles"
+      },
+      {
+        "text": "…",
+        "topic": "TALK_SECRO_SCIENTIST1_main"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_SECRO_SCIENTIST1_where_info_more",
+    "dynamic_line": "我要么把我的研究转移到更安全的设施，要么对我的血肉研究失去控制。我对于上司凌驾于我之上评价我的工作很不高兴，这让我难以接受。但考虑到这一切的成果，我很高兴当时他们强迫我回去。",
+    "responses": [
+      {
+        "text": "所以别人手下工作并没有那么糟糕？",
+        "topic": "TALK_SECRO_SCIENTIST1_where_info_moar"
+      },
+      {
+        "text": "…",
+        "topic": "TALK_SECRO_SCIENTIST1_main"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_SECRO_SCIENTIST1_where_info_moar",
+    "dynamic_line": "哦，是的，只是当一切都下地狱的时候，我们出了点小事故。而不是我出了点小事故。",
+    "responses": [
+      {
+        "text": "我明白了……",
+        "topic": "TALK_SECRO_SCIENTIST1_main"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1032 @@
+[
+  {
+    "id": "style_celestial_brawling_iku",
+    "type": "martial_art",
+    "name": {
+      "str": "天界格斗（皇带鱼）"
+    },
+    "description": "在天界战斗与平常略有不同：因为无需从伤害中恢复，可以全力投入。此流派专注于将优雅与使用异域武器的风格相结合，并兼顾同等分量的蛮力。如同芭蕾，但致命。",
+    "initiate": [
+      "You relax yourself and prepare to enter combat.",
+      "%s 放松身体，然后准备战斗。"
+    ],
+    "arm_block": 1,
+    "nonstandard_block": 4,
+    "allow_all_weapons": true,
+    "static_buffs": [
+      {
+        "id": "buff_celestial_brawling_iku_static",
+        "name": "天界架势（皇带鱼）",
+        "description": "你的仪态使你轻松闪避来袭攻击。如同游鱼穿行，你的闪避提高而格挡几率降低。",
+        "unarmed_allowed": true,
+        "melee_allowed": true,
+        "bonus_dodges": 2,
+        "flat_bonuses": [
+          {
+            "stat": "block_effectiveness",
+            "scale": -1
+          }
+        ]
+      }
+    ],
+    "ondodge_buffs": [
+      {
+        "id": "buff_celestial_brawling_iku_ondodge",
+        "name": "天界良机",
+        "description": "闪避攻击使你能够重新定位并突破对手防御。物理攻击无视防御，其程度取决于你的敏捷与感知。",
+        "unarmed_allowed": true,
+        "melee_allowed": true,
+        "buff_duration": 2,
+        "max_stacks": 1,
+        "flat_bonuses": [
+          {
+            "stat": "arpen",
+            "type": "bash",
+            "scaling-stat": "dex",
+            "scale": 0.66
+          },
+          {
+            "stat": "arpen",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.66
+          },
+          {
+            "stat": "arpen",
+            "type": "stab",
+            "scaling-stat": "dex",
+            "scale": 0.66
+          },
+          {
+            "stat": "arpen",
+            "type": "bash",
+            "scaling-stat": "per",
+            "scale": 0.66
+          },
+          {
+            "stat": "arpen",
+            "type": "cut",
+            "scaling-stat": "per",
+            "scale": 0.66
+          },
+          {
+            "stat": "arpen",
+            "type": "stab",
+            "scaling-stat": "per",
+            "scale": 0.66
+          }
+        ]
+      }
+    ],
+    "oncrit_buffs": [
+      {
+        "id": "buff_celestial_brawling_iku_oncrit",
+        "name": "天界优雅",
+        "description": "对敌人造成暴击令人振奋，使你更容易闪避攻击。",
+        "unarmed_allowed": true,
+        "buff_duration": 4,
+        "max_stacks": 2,
+        "bonus_dodges": 1,
+        "flat_bonuses": [
+          {
+            "stat": "dodge",
+            "scale": 1
+          }
+        ]
+      }
+    ],
+    "onhit_buffs": [
+      {
+        "id": "buff_iku_onhit",
+        "name": "舞蹈连击",
+        "description": "允许在命中攻击后使用大地新月。",
+        "unarmed_allowed": false,
+        "unarmed_weapons_allowed": false,
+        "weapon_categories_allowed": [
+          "WHIPS"
+        ],
+        "buff_duration": 2,
+        "max_stacks": 1
+      }
+    ],
+    "onmove_buffs": [
+      {
+        "id": "buff_celestial_brawling_iku_onmove",
+        "name": "天界恩泽",
+        "description": "移动激励你，你移动得越多，暴击几率越高……",
+        "unarmed_allowed": true,
+        "buff_duration": 3,
+        "max_stacks": 5,
+        "flat_bonuses": [
+          {
+            "stat": "crit_chance",
+            "scale": 7
+          }
+        ]
+      },
+      {
+        "id": "buff_celestial_brawling_iku_onmove2",
+        "name": "天界恩泽（减益）",
+        "description": "……同时也会在之后立即降低你的物理伤害和闪避。削弱。",
+        "unarmed_allowed": true,
+        "buff_duration": 1,
+        "max_stacks": 10,
+        "flat_bonuses": [
+          {
+            "stat": "dodge",
+            "scale": -0.4
+          }
+        ],
+        "mult_bonuses": [
+          {
+            "stat": "damage",
+            "type": "bash",
+            "scale": 0.95
+          },
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scale": 0.95
+          },
+          {
+            "stat": "damage",
+            "type": "stab",
+            "scale": 0.95
+          }
+        ]
+      }
+    ],
+    "onpause_buffs": [
+      {
+        "id": "buff_celestial_brawling_iku_onpause",
+        "name": "闪电步",
+        "description": "将一部分储存的电荷“接地”到目标身上，使能量持续流动。",
+        "buff_duration": 2,
+        "max_stacks": 1,
+        "mult_bonuses": [
+          {
+            "stat": "damage",
+            "type": "bash",
+            "scale": 1.25
+          },
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scale": 1.25
+          },
+          {
+            "stat": "damage",
+            "type": "stab",
+            "scale": 1.25
+          },
+          {
+            "stat": "damage",
+            "type": "electric",
+            "scale": 1.5
+          }
+        ]
+      }
+    ],
+    "techniques": [
+      "tec_celestial_brawling_break_melee",
+      "tec_celestial_brawling_break_melee2",
+      "tec_celestial_brawling_break_unarmed",
+      "tec_celestial_brawling_break_unarmed2",
+      "tec_celestial_brawling_disarm_melee",
+      "tec_celestial_brawling_disarm_unarmed",
+      "tec_iku_earthen_crescent",
+      "tec_iku_palm",
+      "tec_iku_palm2",
+      "tec_iku_poke",
+      "tec_iku_poke2",
+      "tec_iku_rising",
+      "tec_iku_rising2",
+      "tec_iku_rising_drill",
+      "tec_iku_slap",
+      "tec_iku_slap_reverse",
+      "tec_iku_slap_elec",
+      "tec_iku_step"
+    ]
+  },
+  {
+    "id": "style_celestial_brawling_tenko",
+    "type": "martial_art",
+    "name": {
+      "str": "天界格斗（堕落）"
+    },
+    "description": "在天界战斗与平常略有不同：因为无需从伤害中恢复，可以全力投入。此流派简化了这一点，专注于过度使用武力，几乎没有，甚至完全没有适当的防御动作。反正你以前也不需要它们。",
+    "initiate": [
+      "You enter a combat stance and hope for an interesting fight.",
+      "%s 准备战斗。"
+    ],
+    "arm_block": 2,
+    "nonstandard_block": 2,
+    "allow_all_weapons": true,
+    "static_buffs": [
+      {
+        "id": "buff_celestial_brawling_tenko_static",
+        "name": "天界架势（堕落）",
+        "description": "你习惯于不计自身安危地造成尽可能多的伤害。稳如要石，你的命中几率提高，免疫投掷，闪避动作减少。",
+        "unarmed_allowed": true,
+        "melee_allowed": true,
+        "bonus_dodges": -1,
+        "throw_immune": true,
+        "flat_bonuses": [
+          {
+            "stat": "hit",
+            "scale": 1
+          }
+        ]
+      }
+    ],
+    "onhit_buffs": [
+      {
+        "id": "buff_celestial_brawling_tenko_onattack",
+        "name": "天界毁灭",
+        "description": "连续的进攻使你更好地感知战斗的流向，从而能——字面意义上地——突破防御。",
+        "unarmed_allowed": true,
+        "melee_allowed": true,
+        "buff_duration": 2,
+        "max_stacks": 8,
+        "mult_bonuses": [
+          {
+            "stat": "crit_chance",
+            "scaling-stat": "str",
+            "scale": 0.2
+          },
+          {
+            "stat": "crit_chance",
+            "scaling-stat": "dex",
+            "scale": 0.2
+          },
+          {
+            "stat": "crit_chance",
+            "scaling-stat": "per",
+            "scale": 0.2
+          },
+          {
+            "stat": "crit_chance",
+            "scaling-stat": "int",
+            "scale": 0.2
+          }
+        ],
+        "//": "Should tag a debuff on enemies"
+      }
+    ],
+    "oncrit_buffs": [
+      {
+        "id": "buff_celestial_brawling_tenko_oncrit",
+        "name": "感知领域",
+        "description": "某些攻击让你读取目标的灵魂。你更了解他们的行动……",
+        "unarmed_allowed": true,
+        "buff_duration": 6,
+        "max_stacks": 1,
+        "flat_bonuses": [
+          {
+            "stat": "hit",
+            "scale": 1
+          },
+          {
+            "stat": "arpen",
+            "type": "bash",
+            "scale": 8
+          },
+          {
+            "stat": "arpen",
+            "type": "cut",
+            "scale": 8
+          },
+          {
+            "stat": "arpen",
+            "type": "stab",
+            "scale": 8
+          }
+        ],
+        "//": "Arpen component should be a debuff on enemies"
+      },
+      {
+        "id": "buff_celestial_brawling_tenko_oncrit2",
+        "name": "非感知领域",
+        "description": "……这会干扰你自己的专注，使你在命中后无法立即重复有效攻击。",
+        "unarmed_allowed": true,
+        "buff_duration": 1,
+        "max_stacks": 1,
+        "flat_bonuses": [
+          {
+            "stat": "hit",
+            "scale": -1
+          },
+          {
+            "stat": "crit_chance",
+            "scale": -100
+          }
+        ],
+        "//": "Ideally, the onattack crit component should instead be completely removed when critting"
+      }
+    ],
+    "onpause_buffs": [
+      {
+        "id": "buff_celestial_brawling_tenko_onpause",
+        "name": "气质操纵",
+        "description": "进入强力架势，仿佛在嘲讽敌人。实际上，这就是你（喜欢）篡改周围气质的方式。防御动作受到妨碍，接下来的立即攻击的物理伤害大幅增加。",
+        "buff_duration": 1,
+        "max_stacks": 1,
+        "flat_bonuses": [
+          {
+            "stat": "dodge",
+            "scale": -1
+          },
+          {
+            "stat": "block",
+            "scale": -1
+          },
+          {
+            "stat": "hit",
+            "scale": 1
+          }
+        ],
+        "mult_bonuses": [
+          {
+            "stat": "damage",
+            "type": "bash",
+            "scale": 2
+          },
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scale": 2
+          },
+          {
+            "stat": "damage",
+            "type": "stab",
+            "scale": 2
+          }
+        ]
+      }
+    ],
+    "techniques": [
+      "tec_celestial_brawling_break_melee",
+      "tec_celestial_brawling_break_melee2",
+      "tec_celestial_brawling_break_unarmed",
+      "tec_celestial_brawling_break_unarmed2",
+      "tec_celestial_brawling_disarm_melee",
+      "tec_celestial_brawling_disarm_unarmed",
+      "tec_celestial_brawling_earthen_crescent",
+      "tec_tenko_backflip",
+      "tec_tenko_heaven_crescent",
+      "tec_tenko_kick",
+      "tec_tenko_kick2",
+      "tec_tenko_stomp"
+    ]
+  },
+  {
+    "id": "style_meiling",
+    "type": "martial_art",
+    "name": {
+      "str": "太极"
+    },
+    "description": "尽管太极常被视为一种身心锻炼方式，但它是一种正统的武术，专注于自卫。通过读取气，你能更多更好地格挡。格挡也会大幅增加反击伤害，而暂停一秒则能改善你对物理伤害的应对，并让你洞察敌人的弱点。",
+    "initiate": [
+      "你摆出了一个中正安舒的姿态，随时准备防御。",
+      "%s 摆出了一个中正安舒的姿态。"
+    ],
+    "learn_difficulty": 1,
+    "arm_block": 3,
+    "nonstandard_block": 1,
+    "static_buffs": [
+      {
+        "id": "buff_meiling_static",
+        "name": "太极架势（妖怪）",
+        "description": "你专注于防御一个位置并预测对手的攻击。这使你获得额外格挡，且这些格挡根据你的敏捷、智力和力量而提升，代价是降低闪避。",
+        "unarmed_allowed": true,
+        "unarmed_weapons_allowed": true,
+        "bonus_blocks": 2,
+        "flat_bonuses": [
+          {
+            "stat": "block",
+            "scaling-stat": "dex",
+            "scale": 0.5
+          },
+          {
+            "stat": "block",
+            "scaling-stat": "int",
+            "scale": 0.5
+          },
+          {
+            "stat": "block",
+            "scaling-stat": "str",
+            "scale": 0.75
+          },
+          {
+            "stat": "dodge",
+            "scale": -1.5
+          }
+        ]
+      }
+    ],
+    "onblock_buffs": [
+      {
+        "id": "buff_meiling_onblock",
+        "name": "发现破绽",
+        "description": "你务实的站位使你在格挡攻击后能迅速造成双倍伤害。同时，凭借识别和应对移动模式的能力，你获得额外命中。",
+        "unarmed_allowed": true,
+        "unarmed_weapons_allowed": true,
+        "buff_duration": 1,
+        "max_stacks": 1,
+        "mult_bonuses": [
+          {
+            "stat": "damage",
+            "type": "bash",
+            "scale": 2
+          },
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scale": 2
+          },
+          {
+            "stat": "damage",
+            "type": "stab",
+            "scale": 2
+          },
+          {
+            "stat": "movecost",
+            "scale": 0.85
+          }
+        ],
+        "flat_bonuses": [
+          {
+            "stat": "hit",
+            "scaling-stat": "dex",
+            "scale": 0.2
+          },
+          {
+            "stat": "hit",
+            "scaling-stat": "int",
+            "scale": 0.2
+          }
+        ]
+      },
+      {
+        "id": "buff_meiling_onblock2",
+        "name": "反击格挡",
+        "description": "允许在格挡攻击后使用“击退入侵者”和“不准进入”。",
+        "unarmed_allowed": true,
+        "unarmed_weapons_allowed": true,
+        "buff_duration": 2,
+        "max_stacks": 1
+      }
+    ],
+    "onpause_buffs": [
+      {
+        "id": "buff_meiling_onpause",
+        "name": "长城",
+        "description": "通过花一秒进入防御姿态，你准备好改变下一次敌人攻击的气。",
+        "unarmed_allowed": true,
+        "unarmed_weapons_allowed": true,
+        "buff_duration": 2,
+        "max_stacks": 1,
+        "bonus_blocks": 1,
+        "flat_bonuses": [
+          {
+            "stat": "block_effectiveness",
+            "scale": 1.5
+          },
+          {
+            "stat": "block",
+            "scaling-stat": "dex",
+            "scale": 0.75
+          },
+          {
+            "stat": "block",
+            "scaling-stat": "int",
+            "scale": 0.75
+          },
+          {
+            "stat": "block",
+            "scaling-stat": "str",
+            "scale": 0.25
+          }
+        ]
+      }
+    ],
+    "techniques": [
+      "tec_taichi_disarm",
+      "tec_meiling_down",
+      "tec_meiling_elbow",
+      "tec_meiling_kick",
+      "tec_meiling_palm",
+      "tec_meiling_pshoulder_strike",
+      "tec_meiling_qi_burst",
+      "tec_meiling_stomp"
+    ]
+  },
+  {
+    "id": "style_mokou",
+    "type": "martial_art",
+    "name": {
+      "str": "蓬莱武术"
+    },
+    "description": "妹红的武术流派是在数个世纪与对手战斗、杀戮和被杀中融汇总结而来.这种流派的战法残酷、肮脏但非常有效,无须顾及基本的自我保护,以最大化输出伤害为目的:你越是战斗,就越能造成伤害,但也越容易受到伤害.",
+    "initiate": [
+      "You prepare yourself to fight once more.",
+      "%s 再次准备战斗。"
+    ],
+    "learn_difficulty": 1,
+    "primary_skill": "melee",
+    "arm_block": 1,
+    "leg_block": 3,
+    "force_unarmed": true,
+    "static_buffs": [
+      {
+        "id": "buff_mokou_static",
+        "name": "战斗经验",
+        "description": "你知道攻击哪里、如何攻击，才能造成疼痛。",
+        "unarmed_allowed": true,
+        "flat_bonuses": [
+          {
+            "stat": "arpen",
+            "type": "bash",
+            "scale": 6
+          },
+          {
+            "stat": "arpen",
+            "type": "cut",
+            "scale": 6
+          },
+          {
+            "stat": "arpen",
+            "type": "stab",
+            "scale": 6
+          },
+          {
+            "stat": "arpen",
+            "type": "heat",
+            "scale": 8
+          },
+          {
+            "stat": "hit",
+            "scale": 1
+          }
+        ]
+      }
+    ],
+    "onhit_buffs": [
+      {
+        "id": "buff_mokou_onhit",
+        "name": "蓬莱亢奋",
+        "description": "你可以无休止地战斗数日……",
+        "unarmed_allowed": true,
+        "buff_duration": 4,
+        "max_stacks": 4,
+        "flat_bonuses": [
+          {
+            "stat": "speed",
+            "scale": 12.5
+          },
+          {
+            "stat": "hit",
+            "scale": 0.5
+          },
+          {
+            "stat": "dodge",
+            "scale": -0.25
+          }
+        ]
+      },
+      {
+        "id": "buff_mokou_onhit2",
+        "name": "蓬莱亢奋（减益）",
+        "description": "……唯一阻碍你的只有疼痛。",
+        "unarmed_allowed": true,
+        "buff_duration": 4,
+        "max_stacks": 4,
+        "flat_bonuses": [
+          {
+            "stat": "armor",
+            "type": "bash",
+            "scale": -0.25
+          },
+          {
+            "stat": "armor",
+            "type": "cut",
+            "scale": -0.25
+          },
+          {
+            "stat": "armor",
+            "type": "stab",
+            "scale": -0.25
+          }
+        ]
+      },
+      {
+        "id": "buff_mokou_onhit3",
+        "name": "蓬莱韵律",
+        "description": "不过，分享就是关怀。",
+        "unarmed_allowed": true,
+        "buff_duration": 4,
+        "max_stacks": 1,
+        "mult_bonuses": [
+          {
+            "stat": "damage",
+            "type": "bash",
+            "scale": 1.5
+          },
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scale": 1.2
+          },
+          {
+            "stat": "damage",
+            "type": "stab",
+            "scale": 1.2
+          },
+          {
+            "stat": "damage",
+            "type": "heat",
+            "scale": 1.1
+          }
+        ]
+      }
+    ],
+    "onblock_buffs": [
+      {
+        "id": "buff_mokou_onblock",
+        "name": "防御（减益）",
+        "description": "格挡攻击使你更接近敌人的位置，有好有坏。",
+        "unarmed_allowed": true,
+        "buff_duration": 2,
+        "max_stacks": 2,
+        "flat_bonuses": [
+          {
+            "stat": "armor",
+            "type": "bash",
+            "scale": -0.5
+          },
+          {
+            "stat": "armor",
+            "type": "cut",
+            "scale": -0.5
+          },
+          {
+            "stat": "armor",
+            "type": "stab",
+            "scale": -0.5
+          }
+        ]
+      },
+      {
+        "id": "buff_mokou_onblock2",
+        "name": "防御",
+        "description": "格挡攻击使你更接近敌人的位置，有好有坏。",
+        "unarmed_allowed": true,
+        "buff_duration": 1,
+        "max_stacks": 1,
+        "flat_bonuses": [
+          {
+            "stat": "movecost",
+            "scale": -15
+          },
+          {
+            "stat": "hit",
+            "scale": 1
+          }
+        ]
+      }
+    ],
+    "ondodge_buffs": [
+      {
+        "id": "buff_mokou_ondodge",
+        "name": "闪避",
+        "description": "闪避无关紧要，你没有什么可失去的。",
+        "unarmed_allowed": true,
+        "buff_duration": 3,
+        "max_stacks": 4,
+        "mult_bonuses": [
+          {
+            "stat": "armor",
+            "type": "bash",
+            "scale": -0.25
+          },
+          {
+            "stat": "armor",
+            "type": "cut",
+            "scale": -0.25
+          },
+          {
+            "stat": "armor",
+            "type": "stab",
+            "scale": -0.25
+          }
+        ]
+      }
+    ],
+    "onkill_buffs": [
+      {
+        "id": "buff_mokou_onkill",
+        "name": "无法企及之物",
+        "description": "生命是一种奇妙的东西：你可以轻易地从他人那里夺走，除了你怨恨的实际目标。一旦你开始行动，就更容易做到。",
+        "unarmed_allowed": true,
+        "buff_duration": 6,
+        "max_stacks": 4,
+        "flat_bonuses": [
+          {
+            "stat": "armor",
+            "type": "bash",
+            "scale": -0.5
+          },
+          {
+            "stat": "armor",
+            "type": "cut",
+            "scale": -0.5
+          },
+          {
+            "stat": "armor",
+            "type": "stab",
+            "scale": -0.5
+          },
+          {
+            "stat": "arpen",
+            "type": "bash",
+            "scale": 6
+          },
+          {
+            "stat": "arpen",
+            "type": "cut",
+            "scale": 6
+          },
+          {
+            "stat": "arpen",
+            "type": "stab",
+            "scale": 6
+          },
+          {
+            "stat": "arpen",
+            "type": "heat",
+            "scale": 25
+          },
+          {
+            "stat": "crit_chance",
+            "scale": 8
+          }
+        ],
+        "mult_bonuses": [
+          {
+            "stat": "damage",
+            "type": "bash",
+            "scale": 1.375
+          },
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scale": 1.2
+          },
+          {
+            "stat": "damage",
+            "type": "stab",
+            "scale": 1.2
+          },
+          {
+            "stat": "damage",
+            "type": "heat",
+            "scale": 1.1
+          }
+        ]
+      }
+    ],
+    "onpause_buffs": [
+      {
+        "id": "buff_mokou_onpause",
+        "name": "永恒中的一秒",
+        "description": "停下来一秒让你强烈的内在之火平静下来，不再吞噬一切。清空你的思绪，让它自我消耗。",
+        "buff_duration": 1,
+        "max_stacks": 4,
+        "bonus_blocks": 1,
+        "mult_bonuses": [
+          {
+            "stat": "block",
+            "scaling-stat": "str",
+            "scale": 0.4
+          },
+          {
+            "stat": "block",
+            "scaling-stat": "int",
+            "scale": 0.6
+          }
+        ]
+      }
+    ],
+    "techniques": [
+      "tec_brawl_disarm_melee",
+      "tec_taekwondo_strong",
+      "tec_mokou_fire_burst",
+      "tec_mokou_front_kick",
+      "tec_mokou_front_kick2",
+      "tec_mokou_kick",
+      "tec_mokou_kick2",
+      "tec_mokou_punch_down",
+      "tec_mokou_sommersault_kick",
+      "tec_mokou_liver_punch",
+      "tec_mokou_tackle",
+      "tec_mokou_talons",
+      "tec_mokou_talons2"
+    ]
+  },
+  {
+    "id": "style_youmu",
+    "type": "martial_art",
+    "name": {
+      "str": "半人半灵（半）训练"
+    },
+    "description": "妖梦的战斗风格，通过数十年的剑术训练习得，还有一些园艺方面的帮助。她有点*过于*专注，所以容易做得过火。",
+    "initiate": [
+      "You take a firm grasp of your weapon.",
+      "%s 牢牢抓住他们的武器。"
+    ],
+    "learn_difficulty": 1,
+    "primary_skill": "cutting",
+    "strictly_melee": true,
+    "weapon_category": [
+      "JAPANESE_SWORDS"
+    ],
+    "static_buffs": [
+      {
+        "id": "buff_youmu_static",
+        "name": "训练成果",
+        "description": "时刻准备着使你的所有身体相关技能略有提升。",
+        "unarmed_allowed": false,
+        "mult_bonuses": [
+          {
+            "stat": "hit",
+            "scale": 1.1
+          },
+          {
+            "stat": "crit_chance",
+            "scale": 1.1
+          },
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scale": 1.1
+          },
+          {
+            "stat": "speed",
+            "scale": 1.1
+          },
+          {
+            "stat": "armor",
+            "type": "bash",
+            "scale": 1.1
+          },
+          {
+            "stat": "armor",
+            "type": "cut",
+            "scale": 1.1
+          },
+          {
+            "stat": "armor",
+            "type": "stab",
+            "scale": 1.1
+          },
+          {
+            "stat": "block_effectiveness",
+            "scale": 1.1
+          },
+          {
+            "stat": "dodge",
+            "scale": 1.1
+          }
+        ]
+      }
+    ],
+    "onmove_buffs": [
+      {
+        "id": "buff_youmu_onmove",
+        "name": "半灵步",
+        "description": "像灵体一样大步行走（也像灵体一样攻击）。",
+        "unarmed_allowed": false,
+        "buff_duration": 1,
+        "max_stacks": 1,
+        "bonus_dodges": 3,
+        "mult_bonuses": [
+          {
+            "stat": "hit",
+            "scale": 0.5
+          },
+          {
+            "stat": "dodge",
+            "scale": 2
+          }
+        ]
+      }
+    ],
+    "onattack_buffs": [
+      {
+        "id": "buff_youmu_onattack",
+        "name": "空灵专注（伤害）",
+        "description": "将攻击导向最大化你斩击攻击的效果（代价是钝击和穿刺伤害）。",
+        "unarmed_allowed": false,
+        "buff_duration": 2,
+        "max_stacks": 3,
+        "flat_bonuses": [
+          {
+            "stat": "hit",
+            "scale": 0.667
+          },
+          {
+            "stat": "crit_chance",
+            "scale": 5
+          }
+        ],
+        "mult_bonuses": [
+          {
+            "stat": "damage",
+            "type": "bash",
+            "scale": 0.78
+          },
+          {
+            "stat": "damage",
+            "type": "stab",
+            "scale": 0.78
+          },
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scale": 1.1334
+          }
+        ]
+      }
+    ],
+    "onhit_buffs": [
+      {
+        "id": "buff_youmu_ohhit",
+        "name": "空灵专注（防御）",
+        "description": "虽然你的战斗架势让你更容易自然格挡来袭攻击，但你也降低了防御，容易被命中者伤害。",
+        "unarmed_allowed": false,
+        "buff_duration": 2,
+        "max_stacks": 3,
+        "bonus_blocks": 1,
+        "mult_bonuses": [
+          {
+            "stat": "armor",
+            "type": "bash",
+            "scale": 0.89
+          },
+          {
+            "stat": "armor",
+            "type": "cut",
+            "scale": 0.89
+          },
+          {
+            "stat": "armor",
+            "type": "stab",
+            "scale": 0.89
+          }
+        ]
+      }
+    ],
+    "onpause_buffs": [
+      {
+        "id": "buff_youmu_onpause",
+        "name": "半灵休憩",
+        "description": "暂停，清空思绪，为接下来做好准备，提高命中、攻击速度和移动速度。不过你听过“空”的概念吗？比听起来难得多，就像试着思考“无”。",
+        "unarmed_allowed": false,
+        "buff_duration": 1,
+        "max_stacks": 1,
+        "flat_bonuses": [
+          {
+            "stat": "crit_chance",
+            "scale": 10
+          }
+        ],
+        "mult_bonuses": [
+          {
+            "stat": "hit",
+            "scale": 2
+          },
+          {
+            "stat": "speed",
+            "scale": 1.33
+          },
+          {
+            "stat": "dodge",
+            "scale": 0.5
+          },
+          {
+            "stat": "movecost",
+            "scale": 0.33
+          }
+        ]
+      }
+    ],
+    "techniques": [
+      "tec_youmu_downward_slash",
+      "tec_youmu_high_slash",
+      "tec_youmu_hilt_nudge",
+      "tec_youmu_rising_fang",
+      "tec_youmu_stinger",
+      "tec_youmu_sweep"
+    ]
+  }
+]

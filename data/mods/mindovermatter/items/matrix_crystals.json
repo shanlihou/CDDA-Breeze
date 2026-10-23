@@ -1,0 +1,243 @@
+[
+  {
+    "type": "TOOL",
+    "id": "matrix_crystal_biokinesis",
+    "name": { "str_sp": "奇异水晶，粉色" },
+    "description": "一块外观奇异、出乎意料沉重的水晶，其深处发出微弱的粉光。握着它，你感到自己更有能力。",
+    "color": "pink",
+    "symbol": "+",
+    "volume": "10 ml",
+    "weight": "150 g",
+    "longest_side": "21 mm",
+    "material": [ "nether_crystal" ],
+    "looks-like": "art_crystal",
+    "flags": [ "SINGLE_USE" ],
+    "use_action": { "type": "effect_on_conditions", "description": "粉光在呼唤你。", "effect_on_conditions": [ "EOC_BIOKIN_MATRIX_AWAKENING" ] }
+  },
+  {
+    "type": "GENERIC",
+    "id": "matrix_crystal_biokin_dust",
+    "name": { "str_sp": "水晶粉尘，粉色" },
+    "description": "一小撮闪烁微弱粉色光芒的水晶粉尘。",
+    "color": "pink",
+    "symbol": "=",
+    "volume": "1 ml",
+    "weight": "15 g",
+    "material": [ "powder_nonflam" ],
+    "looks-like": "material_quicklime"
+  },
+  {
+    "type": "GENERIC",
+    "id": "matrix_crystal_biokin_dust_refined",
+    "name": { "str_sp": "精炼矩阵水晶粉末，粉色" },
+    "description": "浓缩的矩阵水晶粉末。即使在完全黑暗中也会闪烁粉光。",
+    "color": "pink",
+    "symbol": "=",
+    "volume": "1 ml",
+    "weight": "5 g",
+    "material": [ "powder_nonflam" ],
+    "looks-like": "material_quicklime"
+  },
+  {
+    "type": "TOOL",
+    "id": "matrix_crystal_clairsentience",
+    "name": { "str_sp": "奇异水晶，灰色" },
+    "copy-from": "matrix_crystal_biokinesis",
+    "description": "一块外观奇异、出乎意料沉重的水晶，其深处发出微弱的灰光。握着它，你感到自己更具洞察力。",
+    "color": "dark_gray",
+    "use_action": { "type": "effect_on_conditions", "description": "灰光在呼唤你。", "effect_on_conditions": [ "EOC_CLAIR_MATRIX_AWAKENING" ] }
+  },
+  {
+    "type": "GENERIC",
+    "id": "matrix_crystal_clair_dust",
+    "name": { "str_sp": "水晶粉尘，灰色" },
+    "copy-from": "matrix_crystal_biokin_dust",
+    "description": "一小撮闪烁微弱灰色光芒的水晶粉尘。",
+    "color": "dark_gray"
+  },
+  {
+    "type": "GENERIC",
+    "id": "matrix_crystal_clair_dust_refined",
+    "name": { "str_sp": "精炼矩阵水晶粉末，灰色" },
+    "description": "浓缩的矩阵水晶粉末。即使在完全黑暗中也会闪烁灰光。",
+    "copy-from": "matrix_crystal_biokin_dust_refined",
+    "color": "dark_gray"
+  },
+  {
+    "type": "TOOL",
+    "id": "matrix_crystal_pyrokinesis",
+    "name": { "str_sp": "奇异水晶，红色" },
+    "copy-from": "matrix_crystal_biokinesis",
+    "description": "一块外观奇异、出乎意料沉重的水晶，其深处发出微弱的红光。握着它，你感到灼热。",
+    "color": "red",
+    "use_action": { "type": "effect_on_conditions", "description": "红光在呼唤你。", "effect_on_conditions": [ "EOC_PYROKIN_MATRIX_AWAKENING" ] }
+  },
+  {
+    "type": "GENERIC",
+    "id": "matrix_crystal_pyrokin_dust",
+    "name": { "str_sp": "水晶粉尘，红色" },
+    "copy-from": "matrix_crystal_biokin_dust",
+    "description": "一小撮闪烁微弱红色光芒的水晶粉尘。",
+    "color": "red"
+  },
+  {
+    "type": "GENERIC",
+    "id": "matrix_crystal_pyrokin_dust_refined",
+    "name": { "str_sp": "精炼矩阵水晶粉末，红色" },
+    "description": "浓缩的矩阵水晶粉末。即使在完全黑暗中也会闪烁红光。",
+    "copy-from": "matrix_crystal_biokin_dust_refined",
+    "color": "red"
+  },
+  {
+    "type": "TOOL",
+    "id": "matrix_crystal_telekinesis",
+    "name": { "str_sp": "奇异水晶，黄色" },
+    "copy-from": "matrix_crystal_biokinesis",
+    "description": "一块外观奇异、出乎意料沉重的水晶，其深处发出微弱的黄光。握着它，你感到更轻盈。",
+    "color": "yellow",
+    "use_action": { "type": "effect_on_conditions", "description": "黄光在呼唤你。", "effect_on_conditions": [ "EOC_TELEKIN_MATRIX_AWAKENING" ] }
+  },
+  {
+    "type": "GENERIC",
+    "id": "matrix_crystal_telekin_dust",
+    "name": { "str_sp": "水晶粉尘，黄色" },
+    "copy-from": "matrix_crystal_biokin_dust",
+    "description": "一小撮闪烁微弱黄色光芒的水晶粉尘。",
+    "color": "yellow"
+  },
+  {
+    "type": "GENERIC",
+    "id": "matrix_crystal_telekin_dust_refined",
+    "name": { "str_sp": "精炼矩阵水晶粉末，黄色" },
+    "description": "浓缩的矩阵水晶粉末。即使在完全黑暗中也会闪烁黄光。",
+    "copy-from": "matrix_crystal_biokin_dust_refined",
+    "color": "yellow"
+  },
+  {
+    "type": "TOOL",
+    "id": "matrix_crystal_telepathy",
+    "name": { "str_sp": "奇异水晶，白色" },
+    "copy-from": "matrix_crystal_biokinesis",
+    "description": "一块外观奇异、出乎意料沉重的水晶，其深处发出微弱的白光。握着它，你感到沉思。",
+    "color": "white",
+    "use_action": { "type": "effect_on_conditions", "description": "白光在呼唤你。", "effect_on_conditions": [ "EOC_TEEP_MATRIX_AWAKENING" ] }
+  },
+  {
+    "type": "GENERIC",
+    "id": "matrix_crystal_telepath_dust",
+    "name": { "str_sp": "水晶粉尘，白色" },
+    "copy-from": "matrix_crystal_biokin_dust",
+    "description": "一小撮闪烁微弱白色光芒的水晶粉尘。",
+    "color": "white"
+  },
+  {
+    "type": "GENERIC",
+    "id": "matrix_crystal_telepath_dust_refined",
+    "name": { "str_sp": "精炼矩阵水晶粉末，白色" },
+    "description": "浓缩的矩阵水晶粉末。即使在完全黑暗中也会闪烁白光。",
+    "copy-from": "matrix_crystal_biokin_dust_refined",
+    "color": "white"
+  },
+  {
+    "type": "TOOL",
+    "id": "matrix_crystal_teleportation",
+    "name": { "str_sp": "奇异水晶，蓝色" },
+    "copy-from": "matrix_crystal_biokinesis",
+    "description": "一块外观奇异、出乎意料沉重的水晶，其深处发出微弱的蓝光。握着它，你感到更敏捷。",
+    "color": "blue",
+    "use_action": { "type": "effect_on_conditions", "description": "蓝光在呼唤你。", "effect_on_conditions": [ "EOC_TELEPORT_MATRIX_AWAKENING" ] }
+  },
+  {
+    "type": "GENERIC",
+    "id": "matrix_crystal_teleport_dust",
+    "name": { "str_sp": "水晶粉尘，蓝色" },
+    "copy-from": "matrix_crystal_biokin_dust",
+    "description": "一小撮闪烁微弱蓝色光芒的水晶粉尘。",
+    "color": "blue"
+  },
+  {
+    "type": "GENERIC",
+    "id": "matrix_crystal_teleport_dust_refined",
+    "name": { "str_sp": "精炼矩阵水晶，蓝色" },
+    "description": "浓缩的矩阵水晶粉末。即使在完全黑暗中也会闪烁蓝光。",
+    "copy-from": "matrix_crystal_biokin_dust_refined",
+    "color": "blue"
+  },
+  {
+    "type": "TOOL",
+    "id": "matrix_crystal_vitakinesis",
+    "name": { "str_sp": "奇异水晶，绿色" },
+    "copy-from": "matrix_crystal_biokinesis",
+    "description": "一块外观奇异、出乎意料沉重的水晶，其深处发出微弱的绿光。握着它，你感到更健康。",
+    "color": "green",
+    "use_action": { "type": "effect_on_conditions", "description": "绿光在呼唤你。", "effect_on_conditions": [ "EOC_VITAKIN_MATRIX_AWAKENING" ] }
+  },
+  {
+    "type": "GENERIC",
+    "id": "matrix_crystal_vitakin_dust",
+    "name": { "str_sp": "水晶粉尘，绿色" },
+    "copy-from": "matrix_crystal_biokin_dust",
+    "description": "一小撮闪烁微弱绿色光芒的水晶粉尘。",
+    "color": "green"
+  },
+  {
+    "type": "GENERIC",
+    "id": "matrix_crystal_vitakin_dust_refined",
+    "name": { "str_sp": "精炼矩阵水晶粉末，绿色" },
+    "description": "浓缩的矩阵水晶粉末。即使在完全黑暗中也会闪烁绿光。",
+    "copy-from": "matrix_crystal_biokin_dust_refined",
+    "color": "green"
+  },
+  {
+    "type": "TOOL",
+    "id": "matrix_crystal_drained",
+    "name": { "str_sp": "奇异水晶，黑色" },
+    "description": "一块外观奇异、出乎意料沉重的水晶。在完全黑暗中，可见其深处有微弱的光芒。",
+    "color": "black",
+    "symbol": "+",
+    "volume": "10 ml",
+    "weight": "150 g",
+    "longest_side": "21 mm",
+    "material": [ "nether_crystal" ],
+    "looks-like": "art_crystal",
+    "use_action": { "type": "effect_on_conditions", "description": "微光在呼唤你。", "effect_on_conditions": [ "EOC_DRAINED_MATRIX" ] }
+  },
+  {
+    "type": "GENERIC",
+    "id": "matrix_crystal_drained_dust",
+    "name": { "str_sp": "水晶粉尘，黑色" },
+    "copy-from": "matrix_crystal_biokin_dust",
+    "description": "一小撮似乎会吸收光线的水晶粉尘。",
+    "color": "black"
+  },
+  {
+    "type": "GENERIC",
+    "id": "matrix_crystal_drained_dust_refined",
+    "name": { "str_sp": "精炼矩阵水晶粉末，黑色" },
+    "description": "浓缩的矩阵水晶粉末。似乎能完全吸收任何照射到它的光线。",
+    "copy-from": "matrix_crystal_biokin_dust_refined",
+    "color": "black"
+  },
+  {
+    "type": "TOOL",
+    "id": "matrix_shard",
+    "symbol": ",",
+    "color": "white",
+    "name": { "str": "奇异水晶碎片" },
+    "category": "other",
+    "description": "一块非常沉重、奇异的结晶露头碎片。你可以把它当作武器，但最好戴上手套。",
+    "material": [ "nether_crystal" ],
+    "weight": "450 g",
+    "volume": "30 ml",
+    "cutting": 6,
+    "use_action": {
+      "type": "place_trap",
+      "trap": "tr_glass",
+      "moves": 150,
+      "practice": 2,
+      "done_message": "你小心地将碎片放在地上，等待路过的东西踩碎它们。"
+    },
+    "flags": [ "HURT_WHEN_WIELDED", "TRADER_AVOID" ],
+    "to_hit": -1
+  }
+]

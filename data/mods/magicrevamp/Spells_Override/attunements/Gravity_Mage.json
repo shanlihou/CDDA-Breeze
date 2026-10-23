@@ -1,0 +1,113 @@
+[
+  {
+    "id": "gravitymage_graviton_damage",
+    "type": "SPELL",
+    "name": {
+      "str": "引力子极化伤害"
+    },
+    "description": "处理引力子极化的部分伤害 - 如果你看到这个说明出了bug。",
+    "valid_targets": [
+      "self",
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "max_level": 43,
+    "min_damage": 25,
+    "max_damage": 71,
+    "damage_increment": 1,
+    "damage_type": "bash",
+    "min_aoe": 2,
+    "max_aoe": 8,
+    "aoe_increment": 0.2,
+    "min_range": 5,
+    "max_range": 20,
+    "range_increment": 0.5,
+    "flags": [
+      "LOUD"
+    ]
+  },
+  {
+    "id": "gravitymage_graviton",
+    "type": "SPELL",
+    "spell_class": "GRAVITY_MAGE",
+    "name": {
+      "str": "引力子极化"
+    },
+    "description": "操控万有引力，将其放大并导向你选择的点，甚至能穿过墙壁。能将物体吸到中心并造成钝击伤害。",
+    "valid_targets": [
+      "self",
+      "ally",
+      "hostile",
+      "ground",
+      "item",
+      "field"
+    ],
+    "effect": "area_pull",
+    "shape": "blast",
+    "base_casting_time": 600,
+    "base_energy_cost": 450,
+    "energy_source": "MANA",
+    "difficulty": 10,
+    "max_level": 43,
+    "min_damage": 25,
+    "max_damage": 68,
+    "damage_increment": 1,
+    "damage_type": "bash",
+    "min_aoe": 4,
+    "max_aoe": 12,
+    "aoe_increment": 0.2,
+    "min_range": 5,
+    "max_range": 23,
+    "range_increment": 0.5,
+    "extra_effects": [
+      {
+        "id": "gravitymage_graviton_damage"
+      },
+      {
+        "id": "gravitymage_graviton_centerdamage"
+      }
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "CONCENTRATE",
+      "NO_PROJECTILE",
+      "IGNORE_WALLS",
+      "LOUD"
+    ],
+    "sound_description": "a crack"
+  },
+  {
+    "id": "gravitymage_graviton_centerdamage",
+    "type": "SPELL",
+    "name": {
+      "str": "引力子极化中心伤害"
+    },
+    "description": "处理位于引力中心的额外伤害。",
+    "valid_targets": [
+      "self",
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "max_level": 43,
+    "min_damage": 35,
+    "max_damage": 128,
+    "damage_increment": 2,
+    "damage_type": "bash",
+    "min_aoe": 0,
+    "max_aoe": 2,
+    "aoe_increment": 0.06,
+    "min_range": 5,
+    "max_range": 20,
+    "range_increment": 0.5,
+    "flags": [
+      "LOUD"
+    ]
+  }
+]

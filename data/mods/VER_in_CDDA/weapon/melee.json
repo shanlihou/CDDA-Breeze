@@ -1,0 +1,70 @@
+[
+    {
+        "type": "GENERIC",
+        "id": "ver_witch_hands_wp",
+        "name": {
+          "str_sp": "女巫之爪"
+        },
+        "looks_like":"bagh_nakha",
+        "description": "hub特殊武装部门用取下来的Witch的双手经过特殊处理得到的武器，大概率造成额外出血效果，小概率造成眩晕效果\n“你小子给我表演拿手好戏是吧...不过这些有研究价值的奇奇怪怪的材料多来点，好处少不了你的”研究员Z的留言",
+        "weight": "92 g",
+        "volume": "30 ml",
+        "color": "dark_gray",
+        "symbol": "{",
+        "material": [
+          "flesh",
+          "superalloy",
+          "plastic"
+        ],
+        "to_hit": {
+          "grip": "weapon",
+          "length": "hand",
+          "surface": "any",
+          "balance": "good"
+        },
+        "flags": [
+          "DURABLE_MELEE"
+        ],
+        "weapon_category": [
+          "CLAWS"
+        ],
+        "price": 200000,
+        "price_postapoc": 22500,
+        "qualities": [
+          [
+            "CUT",
+            2
+          ],
+          [
+            "BUTCHER",
+            25
+          ]
+        ],
+        "bashing": 2,
+        "cutting":20,
+        "relic_data": {
+            "passive_effects": [
+                {
+                  "has": "WIELD",
+                  "condition": "ALWAYS",
+                  "hit_you_effect": [
+                    {
+                      "id": "ver_witch_hands_wp_bleed",
+                      "once_in": 2
+                    }
+                  ]
+                },
+                {
+                    "has": "WIELD",
+                    "condition": "ALWAYS",
+                    "hit_you_effect": [
+                      {
+                        "id": "ver_witch_hands_wp_stunned",
+                        "once_in": 4
+                      }
+                    ]
+                  }
+            ]
+        }
+    }
+]

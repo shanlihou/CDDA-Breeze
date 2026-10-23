@@ -1,0 +1,24 @@
+[
+  {
+    "type": "start_location",
+    "id": "cabin_isherwood_s",
+    "name": "林中小屋",
+    "terrain": [
+      "cabin_isherwood"
+    ]
+  },
+  {
+    "type": "scenario",
+    "id": "cabin_isherwood_start",
+    "name": "伊舍伍德农场",
+    "points": 0,
+    "description": "",
+    "start_name": "林中小屋",
+    "allowed_locs": [
+      "cabin_isherwood_s"
+    ],
+    "flags": [
+      "CHALLENGE"
+    ]
+  }
+]

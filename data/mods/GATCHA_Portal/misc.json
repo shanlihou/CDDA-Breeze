@@ -1,0 +1,581 @@
+[
+	{
+		"id":"ncard_base",
+		"type":"GENERIC",
+		"name":"base_card",
+		"description":"none",
+		"weight":"50 g",
+		"volume":"10 ml",
+		"material":[ "ncard_material_dimensionsteel" ],
+		"symbol":"i",
+		"color":"white",
+		"flags":[ "TRADER_AVOID" ],
+		"to_hit":-1
+	}
+,
+	{
+		"id":"ncard_base_r1",
+		"type":"GENERIC",
+		"copy-from":"ncard_base",
+		"name":"base_card_r1",
+		"description":"none",
+		"flags":[ "TRADER_AVOID","SINGLE_USE" ]
+	}
+,
+	{
+		"id":"ncard_base_r2",
+		"type":"GENERIC",
+		"copy-from":"ncard_base",
+		"name":"base_card_r2",
+		"description":"none",
+		"flags":[ "TRADER_AVOID","SINGLE_USE" ]
+	}
+,
+	{
+		"id":"ncard_base_r3",
+		"type":"GENERIC",
+		"copy-from":"ncard_base",
+		"name":"base_card_r3",
+		"description":"none",
+		"flags":[ "SINGLE_USE","UNBREAKABLE_MELEE","TRADER_AVOID","NO_REPAIR" ]
+	}
+,
+	{
+		"id":"ncard_base_r4",
+		"type":"GENERIC",
+		"copy-from":"ncard_base",
+		"name":"base_card_r4",
+		"description":"none",
+		"flags":[ "SINGLE_USE","UNBREAKABLE_MELEE","TRADER_AVOID","NO_REPAIR" ]
+	}
+,
+	{
+		"id":"card_call_crate_1",
+		"type":"TOOL",
+		"name":"传送门抽卡卷",
+		"description":"一张抽卡卷，上面画着奇怪的纹路和图案。如果你执意使用它的话，可能会发生一些奇妙的事情。请在以自身为中心的半径3米范围内没有任何东西时使用。要制作出它，你首先需要获得「异次元粉末收集器」。注：只会出1号至18号的卡片。",
+		"weight":"1 g",
+		"volume":"1 ml",
+		"material":[ "paper" ],
+		"symbol":"_",
+		"color":"light_gray",
+		"flags":[ "TRADER_AVOID","NO_UNLOAD","NO_RELOAD","UNBREAKABLE_MELEE" ],
+		"pocket_data":[ { "pocket_type": "MAGAZINE",  "ammo_restriction": { "ncard_misc_t": 1 } } ],
+		"use_action":{ "type": "cast_spell", "spell_id": "call_crate", "no_fail": true, "level": 0 },
+		"to_hit":-1,
+		"initial_charges":1,
+		"max_charges":1,
+		"charges_per_use":1
+	}
+,
+	{
+		"id":"card_call_crate_2",
+		"type":"TOOL",
+		"name":"传送门抽卡卷(10抽)",
+		"description":"一张抽卡卷，上面画着奇怪的纹路和图案。如果你执意使用它的话，可能会发生一些奇妙的事情。请在以自身为中心的半径3米范围内没有任何东西时使用。要制作出它，你首先需要获得「异次元粉末收集器」。注：只会出1号至18号的卡片。",
+		"weight":"1 g",
+		"volume":"1 ml",
+		"material":[ "paper" ],
+		"symbol":"_",
+		"color":"light_gray",
+		"flags":[ "TRADER_AVOID","NO_UNLOAD","NO_RELOAD","UNBREAKABLE_MELEE" ],
+		"pocket_data":[ { "pocket_type": "MAGAZINE",  "ammo_restriction": { "ncard_misc_t": 10 } } ],
+		"use_action":{ "type": "cast_spell", "spell_id": "call_crate", "no_fail": true, "level": 0 },
+		"to_hit":-1,
+		"initial_charges":10,
+		"max_charges":10,
+		"charges_per_use":1
+	}
+,
+	{
+		"id":"ncard_misc_powder_base",
+		"type":"AMMO",
+		"copy-from":"ash",
+		"name":"powder_base",
+		"//":"countは1を指定しておかないと製作で副産物が大量にできてしまうので注意",
+		"count":1,
+		"stack_size":100,
+		"flags":[ "TRADER_AVOID","ZERO_WEIGHT","UNBREAKABLE_MELEE" ]
+	}
+,
+	{
+		"id":"ncard_misc_powder_b",
+		"type":"ammunition_type",
+		"name":"powder_base",
+		"default":"ncard_misc_powder_angel"
+	}
+,
+	{
+		"id":"ncard_misc_powder_angel",
+		"type":"AMMO",
+		"copy-from":"ncard_misc_powder_base",
+		"name":{"str": "活力","str_pl":"活力"},
+		"description":"一种散发出微弱光芒的力量之源。",
+		"weight":0,
+		"volume":0,
+		"symbol":".",
+		"color":"light_red",
+		"flags":[ "TRADER_AVOID","ZERO_WEIGHT","UNBREAKABLE_MELEE" ],
+		"ammo_type":"ncard_misc_powder_a"
+	}
+,
+	{
+		"id":"ncard_misc_powder_a",
+		"type":"ammunition_type",
+		"name":"活力",
+		"default":"ncard_misc_powder_angel"
+	}
+,
+	{
+		"id":"ncard_misc_powder_dimension",
+		"type":"AMMO",
+		"copy-from":"ncard_misc_powder_base",
+		"name":"异次元粉末",
+		"description":"乍一看像是灰尘或尘土，但它体内拥有开启传送门的力量。使用「异次元粉末研磨机」等机器可以将粉末量提高五倍，但学习配方需要提高制造和电子学技能。",
+		"weight":0,
+		"volume":0,
+		"flags":[ "TRADER_AVOID","ZERO_WEIGHT","UNBREAKABLE_MELEE" ],
+		"ammo_type":"ncard_misc_powder_d"
+	}
+,
+	{
+		"id":"ncard_misc_powder_d",
+		"type":"ammunition_type",
+		"name":"异次元粉末",
+		"default":"ncard_misc_powder_dimension"
+	}
+,
+	{
+		"id":"ncard_misc_powder_dimension_pure",
+		"type":"AMMO",
+		"copy-from":"ncard_misc_powder_base",
+		"name":"异次元粉末(处理后)",
+		"description":"已经完全处理好的异次元粉末。太大或太脏的粉末已按照正确的方式分次处理，现在它可以用于制作了。",
+		"weight":0,
+		"volume":0,
+		"flags":[ "TRADER_AVOID","ZERO_WEIGHT","UNBREAKABLE_MELEE" ],
+		"ammo_type":"ncard_misc_powder_d_pure"
+	}
+,
+	{
+		"id":"ncard_misc_powder_d_pure",
+		"type":"ammunition_type",
+		"name":"异次元粉末(处理后)",
+		"default":"ncard_misc_powder_dimension_pure"
+	}
+,
+	{
+		"id":"ncard_misc_powder_dimension_washed",
+		"type":"AMMO",
+		"copy-from":"ncard_misc_powder_base",
+		"name":"异次元粉末(洗净后)",
+		"description":"经过清洗的异次元粉末。在用于制作之前，必须先将其研磨。",
+		"weight":0,
+		"volume":0,
+		"flags":[ "TRADER_AVOID","ZERO_WEIGHT","UNBREAKABLE_MELEE" ],
+		"ammo_type":"ncard_misc_powder_d_washed"
+	}
+,
+	{
+		"id":"ncard_misc_powder_dimension_washed_pure",
+		"type":"AMMO",
+		"copy-from":"ncard_misc_powder_base",
+		"name":"异次元粉末(洗净后･纯净)",
+		"description":"经过清洗的异次元粉末。在用于制作之前，必须先将其研磨。",
+		"flags":[ "TRADER_AVOID","ZERO_WEIGHT","UNBREAKABLE_MELEE" ],
+		"ammo_type":"ncard_misc_powder_d_washed"
+	}
+,
+	{
+		"id":"ncard_misc_powder_d_washed",
+		"type":"ammunition_type",
+		"name":"异次元粉末(洗净)",
+		"default":"ncard_misc_powder_dimension_washed"
+	}
+,
+	{
+		"id":"ncard_misc_powder_dimension_separated",
+		"type":"AMMO",
+		"copy-from":"ncard_misc_powder_base",
+		"name":"异次元粉末(分离后)",
+		"description":"经过杂质分离后的异次元粉末。在用于制作之前，必须对其进行清洗和研磨。",
+		"weight":0,
+		"volume":0,
+		"flags":[ "TRADER_AVOID","ZERO_WEIGHT","UNBREAKABLE_MELEE" ],
+		"ammo_type":"ncard_misc_powder_d_separated"
+	}
+,
+	{
+		"id":"ncard_misc_powder_dimension_separated_pure",
+		"type":"AMMO",
+		"copy-from":"ncard_misc_powder_base",
+		"name":"异次元粉末(分离后･纯净)",
+		"description":"经过杂质分离后的异次元粉末。在用于制作之前，必须对其进行清洗和研磨。",
+		"flags":[ "TRADER_AVOID","ZERO_WEIGHT","UNBREAKABLE_MELEE" ],
+		"ammo_type":"ncard_misc_powder_d_separated"
+	}
+,
+	{
+		"id":"ncard_misc_powder_d_separated",
+		"type":"ammunition_type",
+		"name":"异次元粉末(分离后)",
+		"default":"ncard_misc_powder_dimension_separated"
+	}
+,
+	{
+		"id":"ncard_misc_powder_dimension_crystalized",
+		"type":"AMMO",
+		"copy-from":"ncard_misc_powder_base",
+		"name":"异次元粉末(结晶生长)",
+		"description":"通过异次元粉末结晶装置结晶而成的粉末。在用于制作之前，必须对其进行分离，清洗和研磨。",
+		"weight":0,
+		"volume":0,
+		"flags":[ "TRADER_AVOID","ZERO_WEIGHT","UNBREAKABLE_MELEE" ],
+		"ammo_type":"ncard_misc_powder_d_crystalized"
+	}
+,
+	{
+		"id":"ncard_misc_powder_dimension_crystalized_pure",
+		"type":"AMMO",
+		"copy-from":"ncard_misc_powder_base",
+		"name":"异次元粉末(结晶生长･纯净)",
+		"description":"通过异次元粉末结晶装置结晶而成的粉末。在用于制作之前，必须对其进行分离，清洗和研磨。",
+		"flags":[ "TRADER_AVOID","ZERO_WEIGHT","UNBREAKABLE_MELEE" ],
+		"ammo_type":"ncard_misc_powder_d_crystalized"
+	}
+,
+	{
+		"id":"ncard_misc_powder_d_crystalized",
+		"type":"ammunition_type",
+		"name":"异次元粉末(结晶生长)",
+		"default":"ncard_misc_powder_dimension_crystalized"
+	}
+,
+	{
+		"id":"ncard_misc_powder_dimension_ash",
+		"type":"AMMO",
+		"copy-from":"ncard_misc_powder_base",
+		"name":"异次元灰烬",
+		"description":"加工异次元粉末之后剩下的副产品。虽然它看起来一文不值，但它可能隐藏着无限的力量。（PS：吃井道具，攒多了总能吃一个井）",
+		"weight":0,
+		"volume":0,
+		"flags":[ "TRADER_AVOID","ZERO_WEIGHT","UNBREAKABLE_MELEE" ],
+		"ammo_type":"ncard_misc_powder_d_a"
+	}
+,
+	{
+		"id":"ncard_misc_powder_d_a",
+		"type":"ammunition_type",
+		"name":"异次元灰烬",
+		"default":"ncard_misc_powder_dimension_ash"
+	}
+,
+	{
+		"id":"ncard_misc_powder_dimension_2",
+		"type":"AMMO",
+		"copy-from":"ncard_misc_powder_base",
+		"name":"异次元结晶",
+		"description":"加工异次元粉末之后剩下的副产品。",
+		"weight":0,
+		"volume":0,
+		"flags":[ "TRADER_AVOID","ZERO_WEIGHT","UNBREAKABLE_MELEE" ],
+		"ammo_type":"ncard_misc_powder_d_2"
+	}
+,
+	{
+		"id":"ncard_misc_powder_d_2",
+		"type":"ammunition_type",
+		"name":"异次元结晶",
+		"default":"ncard_misc_powder_dimension_2"
+	}
+,
+	{
+		"id":"ncard_misc_ticket",
+		"type":"AMMO",
+		"copy-from":"ncard_misc_powder_base",
+		"name":"票根",
+		"description":"这是一张票根。",
+		"weight":0,
+		"volume":0,
+		"flags":[ "TRADER_AVOID","ZERO_WEIGHT","UNBREAKABLE_MELEE" ],
+		"ammo_type":"ncard_misc_t"
+	}
+,
+	{
+		"id":"ncard_misc_t",
+		"type":"ammunition_type",
+		"name":"チケット",
+		"default":"ncard_misc_ticket"
+	}
+,
+	{
+		"id":"card_call_crate_full",
+		"type":"TOOL",
+		"name":"传送门抽卡卷旧版(10抽)",
+		"description":"一张抽卡卷，上面画着奇怪的纹路和图案。如果你执意使用它的话，可能会发生一些奇妙的事情。",
+		"weight":"7 g",
+		"volume":"1 ml",
+		"material":[ "paper" ],
+		"symbol":"_",
+		"color":"light_gray",
+		"flags":[ "TRADER_AVOID","UNBREAKABLE_MELEE" ],
+		"use_action":{ "type": "cast_spell", "spell_id": "call_crate_full", "no_fail": true, "level": 0 },
+		"to_hit":-1,
+		"initial_charges":10,
+		"max_charges":10,
+		"charges_per_use":1
+	}
+,
+	{
+		"id":"ncard_misc_crasher",
+		"type":"TOOL",
+		"looks_like":"i4_combustion",
+		"name":"异次元粉末研磨机",
+		"description":"一种研磨异次元粉末的工具。通过将大颗粒的粉末研磨的更细使可用于制造的粉末数量翻倍。需要消耗大量的汽油来运行。",
+		"weight":"20071 g",
+		"volume":"60 L",
+		"material":[ "steel" ],
+		"symbol":"M",
+		"color":"light_gray",
+		"flags":[ "TRADER_AVOID" ,"ALLOWS_REMOTE_USE" ],
+		"ammo":[ "gasoline" ],
+		"pocket_data":[ { "pocket_type": "MAGAZINE", "rigid": true, "watertight": true, "ammo_restriction": { "gasoline": 60000 } } ],
+		"to_hit":-1
+	}
+,
+	{
+		"id":"ncard_misc_crasher_d",
+		"type":"TOOL",
+		"looks_like":"i4_combustion",
+		"name":"异次元粉末研磨机(柴油发电)",
+		"description":"一种通过将大颗粒的异次元粉末研磨的更细的工具。使可用于制造的粉末数量翻倍。需要消耗大量的柴油或者JP-8燃油来运行。",
+		"weight":"20071 g",
+		"volume":"25 L",
+		"material":[ "steel" ],
+		"symbol":"M",
+		"color":"light_gray",
+		"flags":[ "TRADER_AVOID" ,"ALLOWS_REMOTE_USE" ],
+		"ammo":[ "diesel","jp8" ],
+		"pocket_data":[ { "pocket_type": "MAGAZINE", "rigid": true, "watertight": true, "ammo_restriction": { "diesel": 60000,"jp8": 60000 } } ],
+		"to_hit":-1
+	}
+,
+	{
+		"id":"ncard_misc_washer",
+		"type":"TOOL",
+		"looks_like":"i4_combustion",
+		"name":"异次元粉末洗净机",
+		"description":"一种用来洗去异次元粉末表面多余污垢的工具。使可用于制造的数量翻了三倍。在里面安装正确的蓄电池或安装在车辆中以使用车内的蓄电池，需要用此工具处理的异次元粉末必须得先研磨好。",
+		"weight":"20071 g",
+		"volume":"25 L",
+		"material":[ "steel" ],
+		"symbol":"M",
+		"color":"light_gray",
+		"flags":[ "TRADER_AVOID" ,"ALLOWS_REMOTE_USE" ],
+		"ammo":[ "battery" ],
+		"//":"マガジンは大きいサイズ を指定　小さいと車載時に装填している扱いにならないっぽい？",
+		"pocket_data":[{"pocket_type": "MAGAZINE_WELL","rigid": false,"item_restriction": [ "medium_storage_battery","storage_battery","large_storage_battery" ]}],
+		"to_hit":-1
+	}
+,
+	{
+		"id":"ncard_misc_centrifuge",
+		"type":"TOOL",
+		"looks_like":"i4_combustion",
+		"name":"异次元粉末分离机",
+		"description":"一种通过多道工序分离与异次元粉末混合杂质的工具。使可用于制造的数量翻了四倍。在里面安装正确的蓄电池或安装在车辆中使用车内的蓄电池。需要用此处理的异次元粉末必须要先清洗和研磨好。",
+		"weight":"20071 g",
+		"volume":"25 L",
+		"material":[ "steel" ],
+		"symbol":"M",
+		"color":"light_gray",
+		"flags":[ "TRADER_AVOID" ,"ALLOWS_REMOTE_USE" ],
+		"ammo":[ "battery" ],
+		"pocket_data":[{"pocket_type": "MAGAZINE_WELL","rigid": false,"item_restriction": [ "medium_storage_battery","storage_battery","large_storage_battery" ]}],
+		"to_hit":-1
+	}
+,
+	{
+		"id":"ncard_misc_growthmachine",
+		"type":"TOOL",
+		"looks_like":"i4_combustion",
+		"name":"异次元粉末结晶装置",
+		"description":"一种从液体中提取与异次元粉末相同的成分并让其结晶的装置。使可用于制造的数量增加了五倍。在里面安装正确的蓄电池或安装在车辆中使用车内的蓄电池。需要用此处理的异次元粉末必须要先分离、清洗、研磨好。",
+		"weight":"20071 g",
+		"volume":"25 L",
+		"material":[ "steel" ],
+		"symbol":"M",
+		"color":"light_gray",
+		"flags":[ "TRADER_AVOID" ,"ALLOWS_REMOTE_USE" ],
+		"ammo":[ "battery" ],
+		"pocket_data":[{"pocket_type": "MAGAZINE_WELL","rigid": false,"item_restriction": [ "medium_storage_battery","storage_battery","large_storage_battery" ]}],
+		"to_hit":-1
+	}
+,
+	{
+		"id":"ncard_misc_hammer_sledge",
+		"type":"GENERIC",
+		"copy-from":"hammer_sledge",
+		"name":"dummy_sledge",
+		"description":"none",
+		"weight":"1 g",
+		"volume":"5 ml",
+		"longest_side":"10 cm",
+		"flags":[ "TRADER_AVOID","NONCONDUCTIVE", "ALWAYS_TWOHAND","UNBREAKABLE_MELEE" ]
+	}
+,
+	{
+		"id":"ncard_misc_card_holder",
+		"type":"TOOL_ARMOR",
+		"copy-from":"ncard_base",
+		"name":{"str": "四次元卡片夹","str_pl":"四次元卡片夹"},
+		"description":"一张刻有十分锐利图案的卡片夹，特别吸引你的目光。你可以通过它来「捕捉」从卡片之中召唤出的友好生物，并同时保持其状态。",
+		"weight":"50 g",
+		"volume":"10 ml",
+		"material":[ "steel" ],
+		"symbol":"i",
+		"color":"light_gray",
+		"flags":[ "TRADER_AVOID","UNBREAKABLE_MELEE" ],
+		"use_action":[ "CAPTURE_MONSTER_ACT" ],
+		"properties":[ [ "creature_size_capacity", "TINY" ] ]
+	}
+,
+	{
+		"id":"ncard_misc_card_file",
+		"type":"TOOL_ARMOR",
+		"copy-from":"ncard_base",
+		"name":"四次元文件夹",
+		"description":"用于存放四次元卡片夹的文件夹，其本身的重量可以忽略不计。",
+		"weight":"50 g",
+		"volume":"10 ml",
+		"material":[ "steel" ],
+		"symbol":"i",
+		"color":"light_gray",
+		"flags":[ "TRADER_AVOID","UNBREAKABLE_MELEE" ]
+	}
+,
+	{
+		"id":"ncard_misc_dimension_hammer",
+		"type":"TOOL",
+		"copy-from":"hammer",
+		"name":"异次元金锤",
+		"description":"用于分解青铜/白银/黄金/彩虹卡片的工具。除非必须，否则请不要这样做。对于黄金和彩虹卡片，卡片本身必须处于可召唤状态才能分解。",
+		"material":[ "ncard_material_dimensionsteel" ],
+		"flags":[ "TRADER_AVOID","NONCONDUCTIVE", "ALWAYS_TWOHAND","UNBREAKABLE_MELEE" ]
+	}
+,
+    {
+		"id":"ncard_misc_powder_copper",
+		"type":"AMMO",
+		"looks_like":"protein_powder",
+		"copy-from":"ncard_misc_powder_base",
+		"name":"闪闪发光的青铜粉末",
+		"description":"从青铜卡片中分解出来的力量之源。可用于制作。",
+		"volume":"1 ml",
+		"color":"brown",
+		"flags":[ "TRADER_AVOID","ZERO_WEIGHT","UNBREAKABLE_MELEE" ],
+		"ammo_type":"ncard_misc_powder_c"
+	}
+,
+    {
+		"id":"ncard_misc_powder_c",
+		"type":"ammunition_type",
+		"name":"青铜粉末",
+		"default":"ncard_misc_powder_copper"
+	}
+,
+    {
+		"id":"ncard_misc_powder_sliver",
+		"type":"AMMO",
+		"looks_like":"flour",
+		"copy-from":"ncard_misc_powder_base",
+		"name":"闪闪发光的白银粉末",
+		"description":"从白银卡片中分解出来的力量之源。可用于制作。",
+		"volume":"1 ml",
+		"color":"white",
+		"flags":[ "TRADER_AVOID","ZERO_WEIGHT","UNBREAKABLE_MELEE" ],
+		"ammo_type":"ncard_misc_powder_s"
+	}
+,
+    {
+		"id":"ncard_misc_powder_s",
+		"type":"ammunition_type",
+		"name":"白银粉末",
+		"default":"ncard_misc_powder_sliver"
+	}
+,
+	{
+		"id":"ncard_misc_powder_gold",
+		"type":"AMMO",
+		"copy-from":"ncard_misc_powder_base",
+		"name":"闪闪发光的黄金粉末",
+		"description":"从黄金卡片中分解出来的力量之源。可用于制作。",
+		"volume":"1 ml",
+		"color":"yellow",
+		"flags":[ "TRADER_AVOID","ZERO_WEIGHT","UNBREAKABLE_MELEE" ],
+		"ammo_type":"ncard_misc_powder_g"
+	}
+,
+	{
+		"id":"ncard_misc_powder_g",
+		"type":"ammunition_type",
+		"name":"黄金粉末",
+		"default":"ncard_misc_powder_gold"
+	}
+,
+	{
+		"id":"ncard_misc_powder_rainbow",
+		"type":"AMMO",
+		"copy-from":"ncard_misc_powder_base",
+		"name":"闪闪发光的彩虹粉末",
+		"description":"从彩虹卡片中分解出来的力量之源。可用于制作。",
+		"volume":"1 ml",
+		"color":"light_cyan",
+		"flags":[ "TRADER_AVOID","ZERO_WEIGHT","UNBREAKABLE_MELEE" ],
+		"ammo_type":"ncard_misc_powder_r"
+	}
+,
+	{
+		"id":"ncard_misc_powder_r",
+		"type":"ammunition_type",
+		"name":"彩虹粉末",
+		"default":"ncard_misc_powder_rainbow"
+	}
+,
+	{
+		"id":"card_call_crate_3",
+		"type":"TOOL",
+		"name":"异次元抽卡卷(100抽)",
+		"description":"一张抽卡卷，上面画着奇怪的纹路和图案。如果你执意使用它的话，可能会发生一些奇妙的事情。请在以自身为中心的半径3米范围内没有任何东西时使用。要制作出它，你首先需要获得「次元粉末收集器」。注：只会出1号至18号的卡片。",
+		"weight":"1 g",
+		"volume":"1 ml",
+		"material":[ "paper" ],
+		"symbol":"_",
+		"color":"light_gray",
+		"flags":[ "TRADER_AVOID","NO_UNLOAD","NO_RELOAD","UNBREAKABLE_MELEE" ],
+		"pocket_data":[ { "pocket_type": "MAGAZINE",  "ammo_restriction": { "ncard_misc_t": 100 } } ],
+		"use_action":{ "type": "cast_spell", "spell_id": "call_crate", "no_fail": true, "level": 0 },
+		"to_hit":-1,
+		"initial_charges":100,
+		"max_charges":100,
+		"charges_per_use":1
+	}
+,
+	{
+		"id":"ncard_misc_coin_gold",
+		"type":"GENERIC",
+		"looks_like":"coin_gold",
+		"category":"currency",
+		"name":{"str": "传送门金币","str_pl":"传送门金币"},
+		"description":"一种似乎从传送门出来的奇特生物之间进行交易的货币。乍看之下，它似乎是用黄金打造的，但仔细一看，它居然会散发出七种颜色的光芒，闪闪发光。您可以每10000美元现金兑换一个。",
+		"weight":"31 g",
+		"volume":"1 ml",
+		"material":[ "ncard_material_dimensionsteel" ],
+		"symbol":"o",
+		"color":"yellow",
+		"flags":[ "TRADER_AVOID","UNBREAKABLE_MELEE" ],
+		"use_action":[ "COIN_FLIP" ]
+	}
+
+
+]

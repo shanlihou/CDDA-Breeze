@@ -1,0 +1,285 @@
+[
+  
+  {
+    "type": "technique",
+    "id": "tec_baji_punch",
+    "name": "马步撑锤",
+    "messages": [
+            "你前跨一步直接毫无花巧地以正拳击晕了 %s",
+            "<npcname> 前跨一步直接毫无花巧地以正拳击晕了 %s"
+        ],
+    "melee_allowed": false,
+    "unarmed_allowed" : true,
+    "unarmed_weapons_allowed": true,
+    "stun_dur": 1,
+    "mult_bonuses": [
+      { "stat": "damage", "type": "bash", "scale": 1.1 }
+    ],
+    "attack_vectors": [ "HAND" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_baji_crit_lite",
+    "name": "猛虎硬爬山",
+    "messages": [ "你发现了一个不容错过的空档，以一记猛虎硬爬山猛击击倒了 %s",
+            "<npcname> 发現了一个不容错过的空档，以一记猛虎硬爬山猛击击倒了 %s" ],
+    "skill_requirements": [ { "name": "unarmed", "level": 2 } ],
+    "melee_allowed": false,
+    "unarmed_allowed" : true,
+    "unarmed_weapons_allowed": true,
+    "crit_tec": true,
+    "weighting": 2,
+    "down_dur": 2,
+    "mult_bonuses": [ { "stat": "damage", "type": "bash", "scale": 1.5 } ],
+    "attack_vectors": [ "HAND" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_baji_counter_elbow_2",
+    "name": "外门顶肘",
+    "messages": [
+            "你抓住了空档，迅速地往前跨了一步，以外门顶肘狠狠地击晕了 %s",
+            "<npcname> 抓住了空档，迅速地往前跨了一步，以外门顶肘狠狠地击晕了 %s"
+        ],
+    "skill_requirements": [ { "name": "unarmed", "level": 3 } ],
+    "melee_allowed": true,
+    "unarmed_allowed" : true,
+    "unarmed_weapons_allowed": true,
+    "dodge_counter": true,
+    "stun_dur": 2,
+    "mult_bonuses": [
+      { "stat": "movecost", "scale": 0.5 },
+      { "stat": "damage", "type": "bash", "scale": 1.3 }
+    ],
+    "attack_vectors": [ "ELBOW" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_baji_counter_elbow",
+    "name": "里门顶肘",
+    "messages": [
+            "你瞅准时机，潜入內侧，以里门顶肘猛地击晕并击倒了 %s",
+            "<npcname> 瞅准时机，潜入內侧，以里门顶肘猛地击晕并击倒了 %s"
+        ],
+    "skill_requirements": [ { "name": "unarmed", "level": 5 } ],
+    "melee_allowed": true,
+    "unarmed_allowed" : true,
+    "unarmed_weapons_allowed": true,
+    "required_buffs_all": [ "buff_Bajiquan_ondodge" ],
+    "dodge_counter": true,
+    "weighting": 2,
+    "stun_dur": 2,
+    "down_dur": 2,
+    "mult_bonuses": [
+      { "stat": "movecost", "scale": 0.5 },
+      { "stat": "damage", "type": "bash", "scale": 1.5 }
+    ],
+    "attack_vectors": [ "ELBOW" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_baji_counter_back",
+    "name": "立地通天炮",
+    "messages": [ "你格档后顺势抓到了空档，转身用肩膀凶猛地击退并撞倒了 %s",
+            "<npcname> 格档后顺势抓到空档，迅速转身以肩膀击退并撞倒了 %s" ],
+    "skill_requirements": [ { "name": "unarmed", "level": 7 } ],
+    "melee_allowed": true,
+    "unarmed_allowed" : true,
+    "unarmed_weapons_allowed": true,
+    "required_buffs_all": [ "buff_Bajiquan_onblock" ],
+    "block_counter": true,
+    "weighting": 2,
+    "knockback_dist": 2,
+    "knockback_spread": 2,
+    "down_dur": 2,
+    "mult_bonuses": [ { "stat": "damage", "type": "bash", "scale": 1.5 } ],
+    "attack_vectors": [ "SHOULDER" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_baji_crit",
+    "name": "左右硬开门",
+    "messages": [ "你发现了一个稍纵即逝的绝佳机会，以一套连绵不绝的拳掌法震开了周遭的敌人，并将 %s击晕后击倒！",
+            "<npcname> 发现了一个稍纵即逝的绝佳机会，以一套连绵不绝的拳掌法震开了周遭的敌人，并将 %s击晕后击倒！" ],
+    "skill_requirements": [ { "name": "unarmed", "level": 7 } ],
+    "required_buffs_all": [ "buff_Bajiquan_onattack" ],
+    "melee_allowed": false,
+    "unarmed_allowed" : true,
+    "unarmed_weapons_allowed": true,
+    "crit_tec": true,
+    "weighting": 5,
+    "stun_dur": 3,
+    "down_dur": 3,
+    "aoe": "spin",
+    "knockback_dist": 1,
+    "knockback_spread": 1,
+    "mult_bonuses": [ { "stat": "damage", "type": "bash", "scale": 2.0 } ],
+    "attack_vectors": [ "HAND", "PALM", "ELBOW" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_baji_piercing",
+    "name": "扎枪",
+    "messages": [
+            "你迅速且朴实无华地一枪扎中了 %s",
+            "<npcname> 迅速且朴实无华地一枪扎中了 %s"
+        ],
+    "skill_requirements": [ { "name": "melee", "level": 2 } ],
+    "melee_allowed": true,
+    "unarmed_allowed" : false,
+    "unarmed_weapons_allowed": false,
+    "mult_bonuses": [
+      { "stat": "damage", "type": "bash", "scale": 1.1 },
+      { "stat": "damage", "type": "cut", "scale": 1.1 },
+      { "stat": "damage", "type": "stab", "scale": 1.1 }
+    ],
+    "attack_vectors": [ "WEAPON" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_baji_feint",
+    "messages": [ "你一個虚扎实放，假装刺出一枪", "<npcname> 虛握他手中的枪，刺向了 %s" ],
+    "name": "虛晃一枪",
+    "skill_requirements": [ { "name": "melee", "level": 3 } ],
+    "melee_allowed": true,
+    "unarmed_allowed" : true,
+    "unarmed_weapons_allowed": false,
+    "defensive": true,
+    "miss_recovery": true,
+    "attack_vectors": [ "WEAPON" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_baji_disarm",
+    "name": "霸王硬折疆",
+    "messages": [
+            "你熟练地运用枪、拳封闭捉拿、摆枪救护，解除了 %s 的武裝！",
+            "<npcname> 以拳、枪封闭捉拿、摆枪救护，解除了 %s 的武裝！"
+        ],
+    "skill_requirements": [ { "name": "melee", "level": 4 } ],
+    "melee_allowed": true,
+    "unarmed_allowed" : true,
+    "unarmed_weapons_allowed": false,
+    "disarms": true,
+    "grab_break": true,
+    "attack_vectors": [ "WEAPON" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_baji_illusion_hit",
+    "name": "云龙缠杆",
+    "messages": [
+            "你先前一枪缠住了 %s ，得势不饶人地又出一枪，击晕目标！",
+            "<npcname> 先前一枪缠住了 %s ，得势不饶人地又出一枪，击晕目标！"
+        ],
+    "skill_requirements": [ { "name": "melee", "level": 5 } ],
+    "required_buffs_all": [ "buff_Bajiquan_onattack" ],
+    "melee_allowed": true,
+    "unarmed_allowed" : false,
+    "unarmed_weapons_allowed": false,
+    "weighting": 2,
+    "stun_dur": 1,
+    "mult_bonuses": [
+      { "stat": "damage", "type": "bash", "scale": 1.3 },
+      { "stat": "damage", "type": "cut", "scale": 1.3 },
+      { "stat": "damage", "type": "stab", "scale": 1.3 }
+    ],
+    "attack_vectors": [ "WEAPON" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_baji_piercing_crit",
+    "name": "拔草寻蛇",
+    "messages": [
+            "你抖了个枪花并以意想不到的角度刺出了這一枪！ %s，击倒并击晕目标！",
+            "<npcname> 抖了個枪花并以意想不到的角度刺出了這一枪！ %s，击倒并击晕目标！"
+        ],
+    "skill_requirements": [ { "name": "melee", "level": 6 } ],
+    "melee_allowed": true,
+    "unarmed_allowed" : false,
+    "unarmed_weapons_allowed": false,
+    "crit_tec": true,
+    "weighting": 5,
+    "stun_dur": 3,
+    "down_dur": 3,
+    "mult_bonuses": [
+      { "stat": "damage", "type": "bash", "scale": 1.5 },
+      { "stat": "damage", "type": "cut", "scale": 1.5 },
+      { "stat": "damage", "type": "stab", "scale": 1.5 }
+    ],
+    "attack_vectors": [ "WEAPON" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_baji_stab_combination",
+    "name": "凤凰点头",
+    "messages": [
+            "你接续着上次攻击，长驱直入，迅速地再出枪刺中了 %s，击晕目标！",
+            "<npcname> 接续着上次攻击，长驱直入，迅速地再出枪刺中了 %s，击晕目标！"
+        ],
+    "skill_requirements": [ { "name": "melee", "level": 6 } ],
+    "required_buffs_all": [ "Bajiquan_spear_buff" ],
+    "melee_allowed": true,
+    "unarmed_allowed" : false,
+    "unarmed_weapons_allowed": false,
+    "weighting": 3,
+    "stun_dur": 2,
+    "mult_bonuses": [
+      { "stat": "damage", "type": "bash", "scale": 1.3 },
+      { "stat": "damage", "type": "cut", "scale": 1.3 },
+      { "stat": "damage", "type": "stab", "scale": 1.3 }
+    ],
+    "attack_vectors": [ "WEAPON" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_baji_stab_combination_2",
+    "name": "白蛇弄风",
+    "messages": [
+            "你跟进赶扎以令人眼花缭乱的速度连刺数枪，并瞅准要害猛地击中了 %s，，击倒目标！",
+            "<npcname> 跟进赶扎以令人眼花缭乱的速度连刺数枪，并瞅准要害猛地击中了 %s，击倒目标！"
+        ],
+    "skill_requirements": [ { "name": "melee", "level": 7 } ],
+    "required_buffs_all": [ "Bajiquan_spear_buff_2" ],
+    "melee_allowed": true,
+    "unarmed_allowed" : false,
+    "unarmed_weapons_allowed": false,
+    "stunned_target": true,
+    "weighting": 4,
+    "down_dur": 2,
+    "mult_bonuses": [
+      { "stat": "damage", "type": "bash", "scale": 1.5 },
+      { "stat": "damage", "type": "cut", "scale": 1.5 },
+      { "stat": "damage", "type": "stab", "scale": 1.5 }
+    ],
+    "attack_vectors": [ "WEAPON" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_baji_stab_combination_3",
+    "name": "苍龙摆尾",
+    "messages": [
+            "你发现了 %s 绝大的破绽并抓住了时机，迅速地使出致命一击，并趁势扫开了周遭所有敌人！击倒、击退、击晕目标！",
+            "<npcname> 发现了 %s 绝大的破绽并抓住了时机，迅速地使出致命一击，并趁势扫开了周遭所有敌人！击倒、击退、击晕目标！"
+        ],
+    "skill_requirements": [ { "name": "melee", "level": 8 } ],
+    "required_buffs_all": [ "Bajiquan_spear_buff_3" ],
+    "melee_allowed": true,
+    "unarmed_allowed" : false,
+    "unarmed_weapons_allowed": false,
+    "crit_tec": true,
+    "downed_target": true,
+    "weighting": 6,
+    "stun_dur": 3,
+    "down_dur": 3,
+    "aoe": "wide",
+    "knockback_dist": 3,
+    "knockback_spread": 3,
+    "mult_bonuses": [
+      { "stat": "damage", "type": "bash", "scale": 2.0 },
+      { "stat": "damage", "type": "cut", "scale": 2.0 },
+      { "stat": "damage", "type": "stab", "scale": 2.0 }
+    ],
+    "attack_vectors": [ "WEAPON" ]
+  }
+]

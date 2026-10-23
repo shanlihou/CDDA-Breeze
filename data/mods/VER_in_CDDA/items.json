@@ -1,0 +1,264 @@
+[
+    
+    {
+      "type": "GENERIC",
+      "category": "spare_parts",
+      "name": {
+        "str": "9x39mm弹壳"
+      },
+      "stackable": true,
+      "material": [
+        "brass"
+      ],
+      "symbol": "=",
+      "color": "yellow",
+      "id": "9x39_casing",
+      "description": "一个9x39mm子弹的弹壳",
+      "weight": "8 g",
+      "volume": "8ml"
+    },
+    {
+      "type": "TOOL",
+      "id": "VER_HUB_SPBOX",
+      "category": "other",
+      "name": {
+        "str": "HUB01特殊弹药补给箱",
+        "str_pl": "HUB01特殊弹药补给箱"
+      },
+      "looks_like": "robofac_hardcase",
+      "description": "特化武装与异界技术的研究部提供的特殊武器专用弹药箱，里面至少有1个装满的急冻射流步枪冷却剂罐，5个高压固态氢罐，1根重型钚电池，“我说不定会多放点东西进去”研究员Z。",
+      "weight": "6000 g",
+      "volume": "4 L",
+      "price": 0,
+      "price_postapoc": 0,
+      "to_hit": -1,
+      "use_action": {
+        "type": "unpack",
+        "group": "VER_HUB_SPBOX",
+        "filthy_volume_threshold": "10 L"
+      },
+      "material": [
+        "plastic",
+        "aluminum"
+      ],
+      "symbol": ";",
+      "color": "light_gray"
+    },
+    {
+      "id": "ver_blood_core_UPS_OFF",
+      "type": "TOOL",
+      "name": {
+        "str": "血肉能量核心UPS (关)"
+      },
+      "description": "这是一个结合了血肉核心制造出的统一化电源。与普通UPS相比对能量的利用率更加的高,使用营养膏作为",
+      "weight": "1000 g",
+      "volume": "3000 ml",
+      "price": 280000,
+      "price_postapoc": 2500,
+      "to_hit": -1,
+      "material": [
+        "aluminum",
+        "plastic",
+        "flesh"
+      ],
+      "symbol": ";",
+      "color": "light_gray",
+      "ammo": [
+        "nutritional_cream"
+      ],
+      "pocket_data": [
+        {
+          "pocket_type": "MAGAZINE",
+          "rigid": true,
+          "watertight": true,
+          "ammo_restriction": {
+            "nutritional_cream": 10000
+          }
+        }
+      ],
+      "fuel_efficiency": 1,
+      "charges_per_use": 1,
+      "use_action": {
+        "ammo_scale": 0,
+        "target": "ver_blood_core_UPS_ON",
+        "msg": "你打开了血肉核心UPS",
+        "active": true,
+        "need_charges": 1,
+        "need_charges_msg": "没有营养膏了",
+        "type": "transform"
+      },
+      "flags":[
+        "WATERPROOF",
+        "STURDY"
+      ],
+      "melee_damage": {
+        "bash": 8
+      }
+    },
+    {
+      "id": "ver_blood_core_UPS_ON",
+      "type": "TOOL",
+      "name": {
+        "str": "血肉能量核心UPS (开)"
+      },
+      "description": "这是一个结合了血肉核心制造出的统一化电源。与普通UPS相比对能量的利用率更加的高。你现在把它打开了",
+      "weight": "1000 g",
+      "volume": "3000 ml",
+      "price": 280000,
+      "price_postapoc": 2500,
+      "to_hit": -1,
+      "material": [
+        "aluminum",
+        "plastic",
+        "flesh"
+      ],
+      "symbol": ";",
+      "color": "light_gray",
+      "ammo": [
+        "nutritional_cream"
+      ],
+      "flags": [
+        "IS_UPS",
+        "WATERPROOF",
+        "STURDY"
+      ],
+      "pocket_data": [
+        {
+          "pocket_type": "MAGAZINE",
+          "rigid": true,
+          "watertight": true,
+          "ammo_restriction": {
+            "nutritional_cream": 10000
+          }
+        }
+      ],
+      "fuel_efficiency": 1,
+      "charges_per_use": 1,
+      "use_action": {
+        "ammo_scale": 0,
+        "target": "ver_blood_core_UPS_OFF",
+        "msg": "你关闭了血肉能量核心UPS",
+        "menu_text": "Turn off",
+        "type": "transform"
+      },
+      "melee_damage": {
+        "bash": 8
+      }
+    },
+    {
+      "id": "robofac_gun_smg_40",
+      "looks_like": "retool_ar15_300blk",
+      "//": "我寻思应该给HWP来个打.40S&W的枪管",
+      "weight": "600 g",
+      "volume": "600 ml",
+      "integral_volume": "250 ml",
+      "integral_weight": "500 g",
+      "integral_longest_side": "15 cm",
+      "longest_side": "40 cm",
+      "barrel_length": "432 mm",
+      "price": 50000,
+      "price_postapoc": 3500,
+      "type": "GUNMOD",
+      "material": [
+        "steel"
+      ],
+      "symbol": ":",
+      "color": "green",
+      "location": "bore",
+      "mod_targets": [
+        "robofac_gun"
+      ],
+      "name": {
+        "str_sp": "HWP 自卫型 (.40S&W)"
+      },
+      "mode_modifier": [
+        [
+          "DEFAULT",
+          "semi-auto",
+          1
+        ],
+        [
+          "BURST",
+          "burst",
+          4
+        ]
+      ],
+      "install_time": "1 m",
+      "ammo_modifier": [
+        "40"
+      ],
+      "min_skills": [
+        [
+          "weapon",
+          1
+        ]
+      ],
+      "handling_modifier": 2,
+      "loudness_modifier": -50,
+      "damage_modifier": {
+        "damage_type": "bullet",
+        "amount": 4
+      },
+      "range_modifier": 20,
+      "overwrite_min_cycle_recoil": 500,
+      "description": "一套Hub 01混合武器平台快拆改装套件。该版本为短枪管，金属上印着\".40S&W 单兵自卫型\"字样，还集成了消音器。"
+    },
+    {
+      "id": "robofac_gun_smg_45",
+      "looks_like": "retool_ar15_300blk",
+      "//": "我寻思应该给HWP来个打.45ACP的枪管",
+      "weight": "600 g",
+      "volume": "600 ml",
+      "integral_volume": "250 ml",
+      "integral_weight": "500 g",
+      "integral_longest_side": "15 cm",
+      "longest_side": "40 cm",
+      "barrel_length": "432 mm",
+      "price": 50000,
+      "price_postapoc": 3500,
+      "type": "GUNMOD",
+      "material": [
+        "steel"
+      ],
+      "symbol": ":",
+      "color": "green",
+      "location": "bore",
+      "mod_targets": [
+        "robofac_gun"
+      ],
+      "name": {
+        "str_sp": "HWP 自卫型 (.45ACP)"
+      },
+      "mode_modifier": [
+        [
+          "DEFAULT",
+          "semi-auto",
+          1
+        ],
+        [
+          "BURST",
+          "burst",
+          4
+        ]
+      ],
+      "install_time": "1 m",
+      "ammo_modifier": [
+        "45"
+      ],
+      "min_skills": [
+        [
+          "weapon",
+          1
+        ]
+      ],
+      "handling_modifier": 2,
+      "loudness_modifier": -50,
+      "damage_modifier": {
+        "damage_type": "bullet",
+        "amount": 4
+      },
+      "range_modifier": 20,
+      "overwrite_min_cycle_recoil": 500,
+      "description": "一套Hub 01混合武器平台快拆改装套件。该版本为短枪管，金属上印着\".45ACP 单兵自卫型\"字样，还集成了消音器。"
+    }
+]

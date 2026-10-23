@@ -1,0 +1,151 @@
+[
+  {
+    "id": "tailors_kit",
+    "type": "TOOL",
+    "copy-from": "tailors_kit",
+    "name": "tailor's kit",
+    "use_action": [
+      {
+        "type": "repair_item",
+        "item_action_type": "repair_fabric",
+        "materials": [
+          "cotton",
+          "leather",
+          "lycra",
+          "nylon",
+          "wool",
+          "fur",
+          "faux_fur",
+          "nomex",
+          "kevlar",
+          "kevlar_layered",
+          "neoprene",
+          "gutskin",
+          "canvas"
+        ],
+        "skill": "tailor",
+        "tool_quality": 1,
+        "cost_scaling": 0.1,
+        "move_cost": 500
+      },
+      {
+        "type": "sew_advanced",
+        "materials": [
+          "cotton",
+          "leather",
+          "lycra",
+          "nylon",
+          "wool",
+          "fur",
+          "faux_fur",
+          "nomex",
+          "kevlar",
+          "kevlar_layered",
+          "neoprene",
+          "gutskin",
+          "canvas",
+          "plastic",
+          "kevlar_rigid"
+        ],
+        "skill": "tailor",
+        "clothing_mods": [
+          "leather_padded",
+          "steel_padded",
+          "kevlar_padded",
+          "furred",
+          "wooled"
+        ]
+      }
+    ],
+    "flags": [ "ALLOWS_REMOTE_USE", "NO_UNLOAD" ]
+  },
+  {
+    "id": "mtailors_kit",
+    "type": "TOOL",
+    "copy-from": "tailors_kit",
+    "name": "enchanted tailor's kit",
+    "description": "This is a high quality, engraved steel kit with a variety of needles, some plastic spools for thread, some small scissors, even a small heating element for melting and joining plastic.  Use a tailor's kit to customize your clothing and armor.  This uses your tailoring skill.  It also contains one of those magic spiders that constantly, if slowly, makes new thread.",
+    "price": 100000,
+    "price_postapoc": "1700 USD",
+    "material": [ "steel" ],
+    "charges_per_use": 1,
+    "relic_data": { "charge_info": { "recharge_type": "periodic", "time": "1 h", "regenerate_ammo": true } },
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "thread": 1000 } } ],
+    "sub": "sewing_kit",
+    "use_action": [
+      {
+        "type": "repair_item",
+        "item_action_type": "repair_fabric",
+        "materials": [
+          "cotton",
+          "leather",
+          "lycra",
+          "nylon",
+          "wool",
+          "fur",
+          "faux_fur",
+          "nomex",
+          "kevlar",
+          "kevlar_layered",
+          "neoprene",
+          "gutskin",
+          "canvas",
+          "black_dragon_hide",
+          "demon_chitin"
+        ],
+        "skill": "tailor",
+        "tool_quality": 1,
+        "cost_scaling": 0.1,
+        "move_cost": 500
+      },
+      {
+        "type": "sew_advanced",
+        "materials": [
+          "cotton",
+          "leather",
+          "lycra",
+          "nylon",
+          "wool",
+          "fur",
+          "faux_fur",
+          "nomex",
+          "kevlar",
+          "kevlar_layered",
+          "neoprene",
+          "gutskin",
+          "canvas",
+          "plastic",
+          "kevlar_rigid",
+          "black_dragon_hide",
+          "demon_chitin"
+        ],
+        "skill": "tailor",
+        "clothing_mods": [
+          "leather_padded",
+          "steel_padded",
+          "kevlar_padded",
+          "furred",
+          "wooled",
+          "black_dragon_scale_padded",
+          "demon_chitin_piece_padded",
+          "black_dragon_tanned_hide_padded",
+          "peridot_padded",
+          "aquamarine_padded",
+          "pearl_padded",
+          "tourmaline_padded",
+          "garnet_padded",
+          "emerald_padded",
+          "amethyst_padded",
+          "alexandrite_padded",
+          "ruby_padded",
+          "sapphire_padded",
+          "blue_topaz_padded",
+          "opal_padded",
+          "citrine_padded",
+          "bulette_pearl_padded"
+        ]
+      }
+    ],
+    "flags": [ "ALLOWS_REMOTE_USE", "NO_UNLOAD" ]
+  }
+]

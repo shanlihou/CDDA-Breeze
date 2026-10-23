@@ -1,0 +1,403 @@
+[
+  {
+    "type": "BOOK",
+    "id": "spell_scroll_sorcerer_0",
+    "category": "manuals",
+    "name": { "str": "《术士基础卷轴-Lv0》", "str_pl": "《术士基础卷轴-Lv0》" },
+    "description": "教你如何成为一名0级术士",
+    "flags": [ "TRADER_AVOID", "MAGIC_FOCUS" ],
+    "price": 10,
+    "material": [ "paper" ],
+    "symbol": "?",
+    "color": "white",
+    "weight": "50 g",
+    "volume": "100 ml",
+    "use_action": { "type": "learn_spell",
+    	"spells": [
+    		"spell_craft_sorcerer_base_0"
+    	]
+    }
+  },
+  {
+    "type": "BOOK",
+    "copy-from": "spell_scroll_sorcerer_0",
+    "id": "spell_scroll_sorcerer_1",
+    "name": { "str": "《术士基础卷轴-Lv1》", "str_pl": "《术士基础卷轴-Lv1》" },
+    "description": "教你如何成为一名1级术士",
+    "use_action": { "type": "learn_spell",
+    	"spells": [
+    		"spell_craft_sorcerer_base_1"
+    	]
+    }
+  },
+  {
+    "type": "BOOK",
+    "copy-from": "spell_scroll_sorcerer_0",
+    "id": "spell_scroll_sorcerer_2",
+    "name": { "str": "《术士基础卷轴-Lv2》", "str_pl": "《术士基础卷轴-Lv2》" },
+    "description": "教你如何成为一名2级术士",
+    "use_action": { "type": "learn_spell",
+    	"spells": [
+    		"spell_craft_sorcerer_base_2"
+    	]
+    }
+  },
+  {
+    "type": "BOOK",
+    "copy-from": "spell_scroll_sorcerer_0",
+    "id": "spell_scroll_sorcerer_3",
+    "name": { "str": "《术士基础卷轴-Lv3》", "str_pl": "《术士基础卷轴-Lv3》" },
+    "description": "教你如何成为一名3级术士",
+    "use_action": { "type": "learn_spell",
+    	"spells": [
+    		"spell_craft_sorcerer_base_3"
+    	]
+    }
+  },
+  {
+    "type": "BOOK",
+    "copy-from": "spell_scroll_sorcerer_0",
+    "id": "spell_scroll_sorcerer_4",
+    "name": { "str": "《术士基础卷轴-Lv4》", "str_pl": "《术士基础卷轴-Lv4》" },
+    "description": "教你如何成为一名4级术士",
+    "use_action": { "type": "learn_spell",
+    	"spells": [
+    		"spell_craft_sorcerer_base_4"
+    	]
+    }
+  },
+  {
+    "type": "BOOK",
+    "copy-from": "spell_scroll_sorcerer_0",
+    "id": "spell_scroll_sorcerer_5",
+    "name": { "str": "《术士基础卷轴-Lv5》", "str_pl": "《术士基础卷轴-Lv5》" },
+    "description": "教你如何成为一名5级术士",
+    "use_action": { "type": "learn_spell",
+    	"spells": [
+    		"spell_craft_sorcerer_base_5"
+    	]
+    }
+  },
+  {
+    "type": "BOOK",
+    "copy-from": "spell_scroll_sorcerer_0",
+    "id": "spell_scroll_sorcerer_6",
+    "name": { "str": "《术士基础卷轴-Lv6》", "str_pl": "《术士基础卷轴-Lv6》" },
+    "description": "教你如何成为一名6级术士",
+    "use_action": { "type": "learn_spell",
+    	"spells": [
+    		"spell_craft_sorcerer_base_6"
+    	]
+    }
+  },
+  {
+    "type": "BOOK",
+    "copy-from": "spell_scroll_sorcerer_0",
+    "id": "spell_scroll_sorcerer_7",
+    "name": { "str": "《术士基础卷轴-Lv7》", "str_pl": "《术士基础卷轴-Lv7》" },
+    "description": "教你如何成为一名7级术士",
+    "use_action": { "type": "learn_spell",
+    	"spells": [
+    		"spell_craft_sorcerer_base_7"
+    	]
+    }
+  },
+  {
+    "type": "BOOK",
+    "copy-from": "spell_scroll_sorcerer_0",
+    "id": "spell_scroll_sorcerer_8",
+    "name": { "str": "《术士基础卷轴-Lv8》", "str_pl": "《术士基础卷轴-Lv8》" },
+    "description": "教你如何成为一名8级术士",
+    "use_action": { "type": "learn_spell",
+    	"spells": [
+    		"spell_craft_sorcerer_base_8"
+    	]
+    }
+  },
+  {
+    "type": "BOOK",
+    "copy-from": "spell_scroll_sorcerer_0",
+    "id": "spell_scroll_sorcerer_9",
+    "name": { "str": "《术士基础卷轴-Lv9》", "str_pl": "《术士基础卷轴-Lv9》" },
+    "description": "教你如何成为一名9级术士",
+    "use_action": { "type": "learn_spell",
+    	"spells": [
+    		"spell_craft_sorcerer_base_9"
+    	]
+    }
+  },
+  {
+    "type": "BOOK",
+    "copy-from": "spell_scroll_sorcerer_0",
+    "id": "spell_scroll_sorcerer_item_0",
+    "name": { "str": "《术士法术研习卷轴-Lv0》", "str_pl": "《术士法术研习卷轴-Lv0》" },
+    "description": "研习法术，提升能力。",
+    "use_action": { "type": "learn_spell",
+    	"spells": [
+    		"spell_craft_sorcerer_item_0",
+    	"spell_craft_sorcerer_lv0_acid",
+    	"spell_craft_sorcerer_lv0_cold",
+    	"spell_craft_sorcerer_lv0_electric",
+    	"spell_craft_sorcerer_lv0_heat",
+    	"spell_craft_sorcerer_lv0_light",
+    	"spell_craft_sorcerer_lv0_create_fire"
+    	]
+    }
+  },
+  {
+    "type": "BOOK",
+    "copy-from": "spell_scroll_sorcerer_0",
+    "id": "spell_scroll_sorcerer_item_1",
+    "name": { "str": "《术士法术研习卷轴-Lv1》", "str_pl": "《术士法术研习卷轴-Lv1》" },
+    "description": "研习法术，提升能力。\n并能获得魔法书库专长",
+    "use_action": { "type": "learn_spell",
+    	"spells": [
+    		"spell_craft_sorcerer_item_1",
+    	"spell_craft_sorcerer_lv1_missile",
+    	"spell_craft_sorcerer_lv1_burning_hands",
+    	"spell_craft_sorcerer_lv1_move",
+    	"spell_craft_sorcerer_lv1_magic_armor",
+    	"spell_craft_sorcerer_lv1_sludged",
+    	"spell_craft_sorcerer_lv1_create_water",
+    	"spell_craft_sorcerer_lv1_create_food",
+    	"spell_craft_sorcerer_lv1_air_bubble",
+    	"spell_craft_sorcerer_lv1_summon_monster",
+    	"spell_craft_sorcerer_lv1_summon_dummy",
+    	"spell_craft_sorcerer_lv1_door_open",
+    		"spell_craft_sorcerer_feat_bookstore"
+    	]
+    }
+  },
+  {
+    "type": "BOOK",
+    "copy-from": "spell_scroll_sorcerer_0",
+    "id": "spell_scroll_sorcerer_item_2",
+    "name": { "str": "《术士法术研习卷轴-Lv2》", "str_pl": "《术士法术研习卷轴-Lv2》" },
+    "description": "研习法术，提升能力。\n并能获得调制药剂专长",
+    "use_action": { "type": "learn_spell",
+    	"spells": [
+    		"spell_craft_sorcerer_item_2",
+    	"spell_craft_sorcerer_lv0_acid2",
+    	"spell_craft_sorcerer_lv0_cold2",
+    	"spell_craft_sorcerer_lv0_electric2",
+    	"spell_craft_sorcerer_lv0_heat2",
+    	"spell_craft_sorcerer_lv2_fire",
+    	"spell_craft_sorcerer_lv2_str",
+    	"spell_craft_sorcerer_lv2_dex",
+    	"spell_craft_sorcerer_lv2_int",
+    	"spell_craft_sorcerer_lv2_per",
+    	"spell_craft_sorcerer_lv2_sta",
+    	"spell_craft_sorcerer_lv2_sly",
+    	"spell_craft_sorcerer_lv2_armbull",
+    	"spell_craft_sorcerer_lv2_web",
+    	"spell_craft_sorcerer_lv2_invisibility",
+    	"spell_craft_sorcerer_lv2_lesser_restoration",
+    	"spell_craft_sorcerer_lv2_summon_monster",
+    	"spell_craft_sorcerer_lv2_long_fire",
+    	"spell_craft_sorcerer_lv2_icestone",
+    		"spell_craft_sorcerer_feat_brew_potion"
+    	]
+    }
+  },
+  {
+    "type": "BOOK",
+    "copy-from": "spell_scroll_sorcerer_0",
+    "id": "spell_scroll_sorcerer_item_3",
+    "name": { "str": "《术士法术研习卷轴-Lv3》", "str_pl": "《术士法术研习卷轴-Lv3》" },
+    "description": "研习法术，提升能力。\n并能获得抄写卷轴I专长",
+    "use_action": { "type": "learn_spell",
+    	"spells": [
+    		"spell_craft_sorcerer_item_3",
+    	"spell_craft_sorcerer_lv3_fireball",
+    	"spell_craft_sorcerer_lv3_lightning_bolt",
+    	"spell_craft_sorcerer_lv3_speedup",
+    	"spell_craft_sorcerer_lv3_speeddown",
+    	"spell_craft_sorcerer_lv3_light",
+    	"spell_craft_sorcerer_lv3_ciyuanmen",
+    	"spell_craft_sorcerer_lv3_team_food",
+    	"spell_craft_sorcerer_lv3_summon_monster",
+    	"spell_craft_sorcerer_lv3_create_enchanted_item",
+    	"spell_craft_sorcerer_lv3_door_open",
+    		"spell_craft_sorcerer_feat_scribe_scroll_1"
+    	]
+    }
+  },
+  {
+    "type": "BOOK",
+    "copy-from": "spell_scroll_sorcerer_0",
+    "id": "spell_scroll_sorcerer_item_4",
+    "name": { "str": "《术士法术研习卷轴-Lv4》", "str_pl": "《术士法术研习卷轴-Lv4》" },
+    "description": "研习法术，提升能力。\n并能获得魔法口袋专长",
+    "use_action": { "type": "learn_spell",
+    	"spells": [
+    		"spell_craft_sorcerer_item_4",
+    	"spell_craft_sorcerer_lv0_acid4",
+    	"spell_craft_sorcerer_lv0_cold4",
+    	"spell_craft_sorcerer_lv0_electric4",
+    	"spell_craft_sorcerer_lv0_heat4",
+    	"spell_craft_sorcerer_lv4_ice_storm",
+    	"spell_craft_sorcerer_lv4_stoneskin",
+    	"spell_craft_sorcerer_lv4_missile",
+    	"spell_craft_sorcerer_lv4_invisibility",
+    	"spell_craft_sorcerer_lv4_light",
+    	"spell_craft_sorcerer_lv4_restoration",
+    	"spell_craft_sorcerer_lv4_freedom_movement",
+    	"spell_craft_sorcerer_lv4_summon_monster",
+    	"spell_craft_sorcerer_lv4_jackhammer",
+    	"spell_craft_sorcerer_lv4_door_locked",
+    		"spell_craft_sorcerer_feat_magicbag"
+    	]
+    }
+  },
+  {
+    "type": "BOOK",
+    "copy-from": "spell_scroll_sorcerer_0",
+    "id": "spell_scroll_sorcerer_item_5",
+    "name": { "str": "《术士法术研习卷轴-Lv5》", "str_pl": "《术士法术研习卷轴-Lv5》" },
+    "description": "研习法术，提升能力。\n并能选择一项独特专长",
+    "use_action": { "type": "learn_spell",
+    	"spells": [
+    		"spell_craft_sorcerer_item_5",
+    	"spell_craft_sorcerer_lv5_ciyuanmen",
+    	"spell_craft_sorcerer_lv5_dragon_fire",
+    	"spell_craft_sorcerer_lv5_dragon_cold",
+    	"spell_craft_sorcerer_lv5_dragon_electric",
+    	"spell_craft_sorcerer_lv5_dragon_bio",
+    	"spell_craft_sorcerer_lv5_dragon_acid",
+    	"spell_craft_sorcerer_lv5_weary",
+    	"spell_craft_sorcerer_lv5_invisibility",
+    	"spell_craft_sorcerer_lv5_magic_armor",
+    	"spell_craft_sorcerer_lv5_life_bubble",
+    	"spell_craft_sorcerer_lv5_summon_monster",
+    	"spell_craft_sorcerer_lv5_create_enchanted_item",
+    	"spell_craft_sorcerer_lv5_downed",
+    	"spell_craft_sorcerer_lv5_trans_dirt2pit",
+    	"spell_craft_sorcerer_lv5_trans_pit2dirt",
+    	"spell_craft_sorcerer_lv5_create_food",
+    		"spell_craft_sorcerer_feat_fastcast",
+    		"spell_craft_sorcerer_feat_simcast",
+    		"spell_craft_sorcerer_feat_speed",
+    		"spell_craft_sorcerer_feat_int",
+    		"spell_craft_sorcerer_feat_armor",
+    		"spell_craft_sorcerer_feat_mana",
+    		"spell_craft_sorcerer_feat_regen"
+    	]
+    }
+  },
+  {
+    "type": "BOOK",
+    "copy-from": "spell_scroll_sorcerer_0",
+    "id": "spell_scroll_sorcerer_item_6",
+    "name": { "str": "《术士法术研习卷轴-Lv6》", "str_pl": "《术士法术研习卷轴-Lv6》" },
+    "description": "研习法术，提升能力。\n并能获得抄写卷轴II专长",
+    "use_action": { "type": "learn_spell",
+    	"spells": [
+    		"spell_craft_sorcerer_item_6",
+    	"spell_craft_sorcerer_lv0_acid6",
+    	"spell_craft_sorcerer_lv0_cold6",
+    	"spell_craft_sorcerer_lv0_electric6",
+    	"spell_craft_sorcerer_lv0_heat6",
+    	"spell_craft_sorcerer_lv6_shocking_lash_1",
+    	"spell_craft_sorcerer_lv6_iceball",
+    	"spell_craft_sorcerer_lv6_heal",
+    	"spell_craft_sorcerer_lv6_str",
+    	"spell_craft_sorcerer_lv6_dex",
+    	"spell_craft_sorcerer_lv6_int",
+    	"spell_craft_sorcerer_lv6_per",
+    	"spell_craft_sorcerer_lv6_sta",
+    	"spell_craft_sorcerer_lv6_sly",
+    	"spell_craft_sorcerer_lv6_magic_armor",
+    	"spell_craft_sorcerer_lv6_summon_monster",
+    	"spell_craft_sorcerer_lv6_kill_fungal",
+    		"spell_craft_sorcerer_feat_scribe_scroll_2"
+    	]
+    }
+  },
+  {
+    "type": "BOOK",
+    "copy-from": "spell_scroll_sorcerer_0",
+    "id": "spell_scroll_sorcerer_item_7",
+    "name": { "str": "《术士法术研习卷轴-Lv7》", "str_pl": "《术士法术研习卷轴-Lv7》" },
+    "description": "研习法术，提升能力。\n并能获得意念工具专长",
+    "use_action": { "type": "learn_spell",
+    	"spells": [
+    		"spell_craft_sorcerer_item_7",
+    	"spell_craft_sorcerer_lv7_kill",
+    	"spell_craft_sorcerer_lv7_exhausted",
+    	"spell_craft_sorcerer_lv7_armbull",
+    	"spell_craft_sorcerer_lv7_ciyuanmen",
+    	"spell_craft_sorcerer_lv7_rainbow",
+    	"spell_craft_sorcerer_lv7_greater_restoration",
+    	"spell_craft_sorcerer_lv7_summon_monster",
+    	"spell_craft_sorcerer_lv7_create_enchanted_item",
+    	"spell_craft_sorcerer_lv7_blind",
+    	"spell_craft_sorcerer_lv7_invisibility",
+    		"spell_craft_sorcerer_feat_lv7_tool"
+    	]
+    }
+  },
+  {
+    "type": "BOOK",
+    "copy-from": "spell_scroll_sorcerer_0",
+    "id": "spell_scroll_sorcerer_item_8",
+    "name": { "str": "《术士法术研习卷轴-Lv8》", "str_pl": "《术士法术研习卷轴-Lv8》" },
+    "description": "研习法术，提升能力。\n并能获得意念手臂专长",
+    "use_action": { "type": "learn_spell",
+    	"spells": [
+    		"spell_craft_sorcerer_item_8",
+    	"spell_craft_sorcerer_lv0_acid8",
+    	"spell_craft_sorcerer_lv0_cold8",
+    	"spell_craft_sorcerer_lv0_electric8",
+    	"spell_craft_sorcerer_lv0_heat8",
+    	"spell_craft_sorcerer_lv8_firestorm",
+    	"spell_craft_sorcerer_lv8_polar_ray",
+    	"spell_craft_sorcerer_lv8_missile",
+    	"spell_craft_sorcerer_lv8_summon_monster",
+    	"spell_craft_sorcerer_lv8_magic_armor",
+    	"spell_craft_sorcerer_lv8_stun",
+    	"spell_craft_sorcerer_lv8_jackhammer",
+    		"spell_craft_sorcerer_feat_lv8_craftspeed"
+    	]
+    }
+  },
+  {
+    "type": "BOOK",
+    "copy-from": "spell_scroll_sorcerer_0",
+    "id": "spell_scroll_sorcerer_item_9",
+    "name": { "str": "《术士法术研习卷轴-Lv9》", "str_pl": "《术士法术研习卷轴-Lv9》" },
+    "description": "研习法术，提升能力。\n并能获得抄写卷轴III专长，同时还能选择一项独特专长",
+    "use_action": { "type": "learn_spell",
+    	"spells": [
+    		"spell_craft_sorcerer_item_9",
+    	"spell_craft_sorcerer_lv9_time_stop",
+    	"spell_craft_sorcerer_lv9_kill",
+    	"spell_craft_sorcerer_lv9_invisibility",
+    	"spell_craft_sorcerer_lv9_fireball",
+    	"spell_craft_sorcerer_lv9_summon_monster",
+    	"spell_craft_sorcerer_lv9_create_enchanted_item",
+    		"spell_craft_sorcerer_feat_scribe_scroll_3",
+    		"spell_craft_sorcerer_feat_lv9_bag",
+    		"spell_craft_sorcerer_feat_lv9_element",
+    		"spell_craft_sorcerer_feat_lv9_spellbag"
+    	]
+    }
+  },
+  {
+    "copy-from": "homebooks",
+    "id": "homebooks",
+    "type": "item_group",
+    "subtype": "distribution",
+    "extend": {
+	    "entries": [
+      	{ "group": "spell_scroll_sorcerer_item", "prob": 1 }
+	    ]
+    }
+  },
+  {
+    "type": "item_group",
+    "id": "spell_scroll_sorcerer_item",
+    "items": [
+      [ "spell_scroll_sorcerer_0", 10 ]
+    ]
+  }
+]

@@ -1,0 +1,220 @@
+[
+  {
+    "id": "reisen_entanglement",
+    "type": "SPELL",
+    "name": "纠缠",
+    "description": "与目标生物交换位置。",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "ally",
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_range": 9,
+    "max_range": 9,
+    "max_level": 1,
+    "difficulty": -10,
+    "base_casting_time": 120,
+    "base_energy_cost": 200,
+    "energy_source": "MANA",
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "SILENT",
+      "SWAP_POS"
+    ]
+  },
+  {
+    "id": "reisen_optimism",
+    "type": "SPELL",
+    "name": "乐观",
+    "description": "回忆美好旧时光，想想半满的水杯。",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "ally",
+      "self"
+    ],
+    "effect": "attack",
+    "extra_effects": [
+      {
+        "id": "reisen_optimism2"
+      },
+      {
+        "id": "reisen_optimism3"
+      }
+    ],
+    "shape": "blast",
+    "damage_type": "pure",
+    "min_damage": 0,
+    "max_damage": -10,
+    "damage_increment": -1,
+    "min_range": 1,
+    "max_range": 1,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 900,
+    "final_casting_time": 2400,
+    "casting_time_increment": 150,
+    "base_energy_cost": 200,
+    "energy_source": "MANA",
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS",
+      "RANDOM_DURATION",
+      "SOMATIC",
+      "VERBAL"
+    ]
+  },
+  {
+    "id": "reisen_optimism2",
+    "type": "SPELL",
+    "name": "乐观（减轻疼痛）",
+    "description": "reisen_optimism 的减轻疼痛组件",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "ally",
+      "self"
+    ],
+    "effect": "recover_energy",
+    "effect_str": "PAIN",
+    "shape": "blast",
+    "damage_type": "pure",
+    "min_damage": 4,
+    "max_damage": 14,
+    "damage_increment": 1,
+    "min_range": 1,
+    "max_range": 1,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "flags": [
+      "CONCENTRATE",
+      "NO_EXPLOSION_SFX",
+      "NO_LEGS",
+      "SOMATIC"
+    ]
+  },
+  {
+    "id": "reisen_optimism3",
+    "type": "SPELL",
+    "name": "乐观（肢体伤害平衡）",
+    "description": "reisen_optimism 的肢体伤害平衡组件",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "ally",
+      "self"
+    ],
+    "effect": "pain_split",
+    "shape": "blast",
+    "damage_type": "pure",
+    "min_range": 1,
+    "max_range": 1,
+    "max_level": 1,
+    "difficulty": -10,
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "flags": [
+      "CONCENTRATE",
+      "NO_EXPLOSION_SFX",
+      "NO_LEGS",
+      "SOMATIC"
+    ]
+  },
+  {
+    "id": "reisen_probabilitynoise",
+    "type": "SPELL",
+    "name": "概率噪声",
+    "description": "短时间内混淆你的存在，提高闪避能力并使你更难被射中。",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "attack",
+    "effect_str": "reisen_pnoise",
+    "shape": "blast",
+    "min_duration": 977,
+    "max_duration": 3200,
+    "duration_increment": 223,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 100,
+    "base_energy_cost": 233,
+    "energy_source": "MANA",
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "SOMATIC"
+    ]
+  },
+  {
+    "id": "reisen_uncertaintybox",
+    "type": "SPELL",
+    "name": "不确定性之盒",
+    "description": "触发一次坍缩，使区域内任何生物随机传送走。这比听起来要不安全。",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "self"
+    ],
+    "effect": "attack",
+    "extra_effects": [
+      {
+        "id": "reisen_uncertaintybox2"
+      }
+    ],
+    "shape": "blast",
+    "min_range": 3,
+    "max_range": 8,
+    "range_increment": 0.5,
+    "min_aoe": 3,
+    "max_aoe": 3,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 150,
+    "base_energy_cost": 200,
+    "energy_source": "MANA",
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "SILENT",
+      "UNSAFE_TELEPORT"
+    ]
+  },
+  {
+    "id": "reisen_uncertaintybox2",
+    "type": "SPELL",
+    "name": "不确定性之盒",
+    "description": "reisen_uncertaintybox 的远距离传送组件",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "self"
+    ],
+    "effect": "short_range_teleport",
+    "shape": "blast",
+    "min_range": 8,
+    "max_range": 32,
+    "min_aoe": 2,
+    "max_aoe": 2,
+    "max_level": 1,
+    "difficulty": -10,
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "UNSAFE_TELEPORT"
+    ]
+  }
+]

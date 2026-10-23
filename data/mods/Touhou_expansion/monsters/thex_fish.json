@@ -1,0 +1,769 @@
+[
+  {
+    "id": "mon_coccosteus",
+    "type": "MONSTER",
+    "name": {
+      "str": "科科斯螈",
+      "str_pl": "科科斯螈"
+    },
+    "description": "看起来像邓氏鱼的幼体，这种鱼可能很小，但喙状颚的力量让它能从更大的猎物身上进食。希望这不包括你的手指。",
+    "volume": "2000 L",
+    "weight": "2500 g",
+    "default_faction": "touhou_fishancient_small",
+    "bodytype": "fish",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "FISH"
+    ],
+    "harvest": "fish_small",
+    "hp": 15,
+    "speed": 150,
+    "material": [
+      "flesh"
+    ],
+    "color": "brown",
+    "symbol": "f",
+    "aggression": 10,
+    "morale": 15,
+    "melee_skill": 5,
+    "melee_dice": 3,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 8
+      }
+    ],
+    "dodge": 4,
+    "armor_bash": 2,
+    "armor_cut": 2,
+    "armor_stab": 8,
+    "reproduction": {
+      "baby_egg": "egg_fishancient_small",
+      "baby_count": 4,
+      "baby_timer": 20
+    },
+    "baby_flags": [
+      "SPRING",
+      "SUMMER",
+      "AUTUMN",
+      "WINTER"
+    ],
+    "anger_triggers": [
+      "HURT",
+      "PLAYER_WEAK"
+    ],
+    "fear_triggers": [
+      "FRIEND_DIED",
+      "SOUND"
+    ],
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        50
+      ]
+    ],
+    "flags": [
+      "ANIMAL",
+      "AQUATIC",
+      "FISHABLE",
+      "SEES",
+      "SMELLS",
+      "SWIMS",
+      "WATER_CAMOUFLAGE"
+    ],
+    "//": "Based on Coccosteus sp.. No reproductive data."
+  },
+  {
+    "id": "mon_coccosteus_baby",
+    "type": "MONSTER",
+    "name": {
+      "str": "幼年科科斯螈",
+      "str_pl": "幼年科科斯螈"
+    },
+    "copy-from": "mon_coccosteus",
+    "description": "一种古老的幼鱼。",
+    "volume": "125 ml",
+    "weight": "150 g",
+    "hp": 5,
+    "speed": 160,
+    "aggression": 5,
+    "morale": 5,
+    "melee_skill": 3,
+    "melee_dice": 3,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 6
+      }
+    ],
+    "dodge": 5,
+    "armor_bash": 1,
+    "armor_cut": 1,
+    "armor_stab": 3,
+    "upgrades": {
+      "age_grow": 20,
+      "into": "mon_coccosteus"
+    },
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        35
+      ]
+    ],
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_dipterus",
+    "type": "MONSTER",
+    "name": {
+      "str": "双翼鱼",
+      "str_pl": "双翼鱼"
+    },
+    "description": "一种古老的肺鱼。如果不是因为没有牙齿，而是在嘴里有板状结构来处理食物，它本来没什么有趣的。",
+    "volume": "1200 L",
+    "weight": "1200 g",
+    "default_faction": "touhou_fishancient_small",
+    "bodytype": "fish",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "FISH"
+    ],
+    "harvest": "fish_small",
+    "hp": 8,
+    "speed": 150,
+    "material": [
+      "flesh"
+    ],
+    "color": "brown",
+    "symbol": "f",
+    "aggression": -15,
+    "morale": 15,
+    "melee_skill": 2,
+    "melee_dice": 2,
+    "melee_dice_sides": 2,
+    "dodge": 4,
+    "armor_bash": 2,
+    "reproduction": {
+      "baby_egg": "egg_fishancient_small",
+      "baby_count": 4,
+      "baby_timer": 20
+    },
+    "baby_flags": [
+      "SPRING",
+      "SUMMER",
+      "AUTUMN",
+      "WINTER"
+    ],
+    "fear_triggers": [
+      "HURT",
+      "PLAYER_CLOSE",
+      "SOUND"
+    ],
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        50
+      ]
+    ],
+    "flags": [
+      "ANIMAL",
+      "AQUATIC",
+      "FISHABLE",
+      "SEES",
+      "SMELLS",
+      "SWIMS",
+      "WATER_CAMOUFLAGE"
+    ],
+    "//": "Based on Dipterus sp.. No reproductive data."
+  },
+  {
+    "id": "mon_dipterus_baby",
+    "type": "MONSTER",
+    "name": {
+      "str": "幼年双翼鱼",
+      "str_pl": "幼年双翼鱼"
+    },
+    "copy-from": "mon_dipterus",
+    "description": "一种古老的幼鱼。",
+    "volume": "500 ml",
+    "weight": "500 g",
+    "hp": 3,
+    "speed": 175,
+    "aggression": -20,
+    "morale": 5,
+    "melee_skill": 1,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "dodge": 6,
+    "armor_bash": 0,
+    "upgrades": {
+      "age_grow": 20,
+      "into": "mon_dipterus"
+    },
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        35
+      ]
+    ],
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_dunkleosteus",
+    "type": "MONSTER",
+    "name": {
+      "str": "邓氏鱼",
+      "str_pl": "邓氏鱼"
+    },
+    "description": "一种巨大的、怪物般的盾皮鱼，看起来好像有人“改良”了大白鲨的设计，把它放大了一倍，在头部皮肤下加了装甲，给了它一个能压碎汽车的喙，更不用说那可怕的伪虎纹了。你绝对不想在游泳时让这东西擦过你的腿。",
+    "volume": "3750 L",
+    "weight": "4000 kg",
+    "default_faction": "touhou_dunkleosteus",
+    "bodytype": "fish",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "FISH"
+    ],
+    "harvest": "fish_large",
+    "hp": 400,
+    "speed": 155,
+    "material": [
+      "flesh"
+    ],
+    "color": "brown",
+    "symbol": "Ð",
+    "aggression": 25,
+    "morale": 65,
+    "melee_skill": 8,
+    "melee_dice": 4,
+    "melee_dice_sides": 11,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 22
+      }
+    ],
+    "dodge": 1,
+    "armor_bash": 4,
+    "armor_cut": 4,
+    "armor_stab": 12,
+    "reproduction": {
+      "baby_monster": "mon_dunkleosteus_baby",
+      "baby_count": 1,
+      "baby_timer": 30
+    },
+    "baby_flags": [
+      "SPRING",
+      "SUMMER",
+      "AUTUMN",
+      "WINTER"
+    ],
+    "anger_triggers": [
+      "HURT",
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK"
+    ],
+    "fear_triggers": [
+      "FRIEND_DIED"
+    ],
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        55
+      ]
+    ],
+    "flags": [
+      "ANIMAL",
+      "AQUATIC",
+      "SEES",
+      "SMELLS",
+      "SWIMS",
+      "WATER_CAMOUFLAGE"
+    ],
+    "//": "Dunkleosteus terrelli used as reference, calculated volume is an absurd 10 m3 so I'm staying with density of ~1"
+  },
+  {
+    "id": "mon_dunkleosteus_baby",
+    "type": "MONSTER",
+    "name": {
+      "str": "幼年鱼龙",
+      "str_pl": "幼年鱼龙"
+    },
+    "copy-from": "mon_dunkleosteus",
+    "description": "一只较小的邓氏鱼，在咬小鱼时几乎看起来很可爱。几乎。",
+    "volume": "200 L",
+    "weight": "200 kg",
+    "hp": 95,
+    "speed": 165,
+    "color": "blue",
+    "aggression": 35,
+    "morale": 45,
+    "melee_skill": 6,
+    "melee_dice": 4,
+    "melee_dice_sides": 5,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 17
+      }
+    ],
+    "dodge": 3,
+    "armor_bash": 2,
+    "armor_cut": 2,
+    "armor_stab": 8,
+    "upgrades": {
+      "age_grow": 30,
+      "into": "mon_dunkleosteus"
+    },
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        35
+      ]
+    ],
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_holoptychius",
+    "type": "MONSTER",
+    "name": {
+      "str": "全褶鱼",
+      "str_pl": "全褶鱼"
+    },
+    "description": "一种古老的鱼，你会把它误认为是现代的任何一种鱼。唯一明显的区别是鳃后有两根细长的鳍，看起来像微小的原始手臂。",
+    "volume": "7000 ml",
+    "weight": "7000 g",
+    "default_faction": "touhou_fishancient_small",
+    "bodytype": "fish",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "FISH"
+    ],
+    "harvest": "fish_small",
+    "hp": 15,
+    "speed": 155,
+    "material": [
+      "flesh"
+    ],
+    "color": "green",
+    "symbol": "f",
+    "aggression": 0,
+    "morale": 15,
+    "melee_skill": 2,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 1
+      }
+    ],
+    "dodge": 6,
+    "armor_bash": 1,
+    "armor_cut": 2,
+    "reproduction": {
+      "baby_egg": "egg_fishancient_small",
+      "baby_count": 4,
+      "baby_timer": 20
+    },
+    "baby_flags": [
+      "SPRING",
+      "SUMMER",
+      "AUTUMN",
+      "WINTER"
+    ],
+    "anger_triggers": [
+      "HURT",
+      "PLAYER_WEAK"
+    ],
+    "fear_triggers": [
+      "FRIEND_DIED",
+      "SOUND"
+    ],
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        50
+      ]
+    ],
+    "flags": [
+      "ANIMAL",
+      "AQUATIC",
+      "FISHABLE",
+      "SEES",
+      "SMELLS",
+      "SWIMS",
+      "WATER_CAMOUFLAGE"
+    ],
+    "//": "Based on Holoptychius sp.. No reproductive data."
+  },
+  {
+    "id": "mon_holoptychius_baby",
+    "type": "MONSTER",
+    "name": {
+      "str": "幼年全褶鱼",
+      "str_pl": "幼年全褶鱼"
+    },
+    "copy-from": "mon_holoptychius",
+    "description": "一种古老的幼鱼。",
+    "volume": "350 ml",
+    "weight": "300 g",
+    "hp": 5,
+    "speed": 165,
+    "aggression": 5,
+    "morale": 5,
+    "melee_skill": 1,
+    "melee_dice": 2,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 0
+      }
+    ],
+    "armor_cut": 0,
+    "upgrades": {
+      "age_grow": 20,
+      "into": "mon_holoptychius"
+    },
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        35
+      ]
+    ],
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_lamprey",
+    "type": "MONSTER",
+    "name": {
+      "str": "七鳃鳗",
+      "str_pl": "七鳃鳗"
+    },
+    "description": "这个丑陋的东西可能看起来像蛇或超大的虫子，但它只是一条长管状（在这种情况下不是赞美）的鱼，有着不显眼的鳍。它四处游动，等待像鱼的鱼经过附近，之后七鳃鳗会附着在上面以血为食。传说它对视力有好处。",
+    "volume": "420 ml",
+    "weight": "450 g",
+    "default_faction": "fish",
+    "bodytype": "snake",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "FISH"
+    ],
+    "harvest": "lamprey_harvest",
+    "hp": 2,
+    "speed": 150,
+    "material": [
+      "flesh"
+    ],
+    "color": "dark_gray",
+    "looks_like": "mon_rattlesnake",
+    "symbol": "s",
+    "aggression": -60,
+    "morale": 5,
+    "melee_skill": 2,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
+    "dodge": 6,
+    "armor_bash": 2,
+    "reproduction": {
+      "baby_egg": "egg_fish",
+      "baby_count": 16,
+      "baby_timer": 17
+    },
+    "baby_flags": [
+      "SPRING",
+      "SUMMER"
+    ],
+    "anger_triggers": [
+      "HURT"
+    ],
+    "fear_triggers": [
+      "SOUND"
+    ],
+    "flags": [
+      "ANIMAL",
+      "AQUATIC",
+      "FISHABLE",
+      "SEES",
+      "SMELLS",
+      "SWIMS",
+      "WATER_CAMOUFLAGE"
+    ],
+    "//": "Entosphenus tridentatus used as reference",
+    "//2": "Lampreys should be attached to random fish, instead of living freely among them. They should also die after reproducing"
+  },
+  {
+    "id": "mon_megamastax",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨口鱼",
+      "str_pl": "巨口鱼"
+    },
+    "description": "一种古老的鱼。头部有装甲，身体周围的鳞片似乎也硬化了。问题是，为什么一条在那个时代如此巨大的鱼需要这么多装甲？",
+    "volume": "60 L",
+    "weight": "60 kg",
+    "default_faction": "touhou_fishancient_medium",
+    "bodytype": "fish",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "FISH"
+    ],
+    "harvest": "fish_large",
+    "hp": 50,
+    "speed": 150,
+    "material": [
+      "flesh"
+    ],
+    "color": "blue",
+    "symbol": "ɸ",
+    "aggression": 0,
+    "morale": 15,
+    "melee_skill": 2,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 5
+      }
+    ],
+    "dodge": 4,
+    "armor_bash": 3,
+    "armor_cut": 6,
+    "armor_stab": 4,
+    "armor_bullet": 2,
+    "reproduction": {
+      "baby_egg": "egg_fishancient_medium",
+      "baby_count": 4,
+      "baby_timer": 20
+    },
+    "baby_flags": [
+      "SPRING",
+      "SUMMER",
+      "AUTUMN",
+      "WINTER"
+    ],
+    "anger_triggers": [
+      "HURT",
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK"
+    ],
+    "fear_triggers": [
+      "FRIEND_DIED",
+      "SOUND"
+    ],
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        50
+      ]
+    ],
+    "flags": [
+      "ANIMAL",
+      "AQUATIC",
+      "FISHABLE",
+      "SEES",
+      "SMELLS",
+      "SWIMS",
+      "WATER_CAMOUFLAGE"
+    ],
+    "//": "Based on Megamastax sp.. No reproductive data."
+  },
+  {
+    "id": "mon_megamastax_baby",
+    "type": "MONSTER",
+    "name": {
+      "str": "幼年巨口鱼",
+      "str_pl": "幼年巨口鱼"
+    },
+    "copy-from": "mon_megamastax",
+    "description": "一种古老的幼鱼。",
+    "volume": "600 ml",
+    "weight": "550 g",
+    "hp": 15,
+    "speed": 165,
+    "aggression": 3,
+    "morale": 5,
+    "melee_skill": 1,
+    "melee_dice": 2,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 3
+      }
+    ],
+    "dodge": 6,
+    "armor_bash": 1,
+    "armor_cut": 2,
+    "armor_stab": 2,
+    "armor_bullet": 0,
+    "upgrades": {
+      "age_grow": 20,
+      "into": "mon_megamastax"
+    },
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        35
+      ]
+    ],
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_saurichthys",
+    "type": "MONSTER",
+    "name": {
+      "str": "蜥鱼",
+      "str_pl": "蜥鱼"
+    },
+    "description": "制作中",
+    "volume": "8 L",
+    "weight": "10 kg",
+    "default_faction": "touhou_fishancient_medium",
+    "bodytype": "fish",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "FISH"
+    ],
+    "harvest": "fish_large",
+    "hp": 20,
+    "speed": 150,
+    "material": [
+      "flesh"
+    ],
+    "color": "blue",
+    "symbol": "l",
+    "aggression": -10,
+    "morale": 5,
+    "melee_skill": 2,
+    "melee_dice": 2,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
+    "dodge": 10,
+    "reproduction": {
+      "baby_egg": "egg_fishancient_medium",
+      "baby_count": 6,
+      "baby_timer": 24
+    },
+    "baby_flags": [
+      "SPRING",
+      "SUMMER",
+      "AUTUMN",
+      "WINTER"
+    ],
+    "anger_triggers": [
+      "HURT",
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK"
+    ],
+    "fear_triggers": [
+      "FRIEND_DIED",
+      "SOUND"
+    ],
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        40
+      ]
+    ],
+    "flags": [
+      "ANIMAL",
+      "AQUATIC",
+      "FISHABLE",
+      "SEES",
+      "SMELLS",
+      "SWIMS",
+      "WATER_CAMOUFLAGE"
+    ]
+  },
+  {
+    "id": "mon_saurichthys_baby",
+    "type": "MONSTER",
+    "name": {
+      "str": "幼年蜥鱼",
+      "str_pl": "幼年蜥鱼"
+    },
+    "copy-from": "mon_saurichthys",
+    "description": "一种古老的幼鱼。",
+    "volume": "200 ml",
+    "weight": "200 g",
+    "hp": 2,
+    "speed": 165,
+    "aggression": -5,
+    "morale": 5,
+    "melee_skill": 1,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 1
+      }
+    ],
+    "dodge": 8,
+    "upgrades": {
+      "age_grow": 28,
+      "into": "mon_saurichthys"
+    },
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        25
+      ]
+    ],
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  }
+]

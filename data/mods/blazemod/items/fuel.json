@@ -1,0 +1,52 @@
+[
+  {
+    "id": "bfeedfuel",
+    "type": "AMMO",
+    "category": "fuel",
+    "name": {
+      "str": "变形怪培养液",
+      "str_pl": "变形怪培养液"
+    },
+    "description": "液化的变形怪培养物，用于为某些特定的变形怪车辆部件供能。",
+    "weight": "1 g",
+    "volume": "200 ml",
+    "price": "40 cent",
+    "price_postapoc": 800,
+    "phase": "liquid",
+    "container": "jerrycan",
+    "material": [
+      "bfeedfuel"
+    ],
+    "symbol": "=",
+    "color": "red",
+    "count": 250,
+    "stack_size": 200,
+    "ammo_type": "bfeed",
+    "range": 4,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 5,
+      "armor_penetration": 5
+    }
+  },
+  {
+    "id": "bfeed",
+    "type": "AMMO",
+    "category": "fuel",
+    "name": {
+      "str_sp": "变形怪培养物"
+    },
+    "description": "包含了各种有机材料的混合物，提供变形怪健康成长所需要的所有营养。\n“可爱变形怪专用热销饲料。”",
+    "weight": "50 g",
+    "volume": "250 ml",
+    "to_hit": -3,
+    "bashing": 8,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "*",
+    "color": "red",
+    "count": 25,
+    "ammo_type": "bfeed"
+  }
+]

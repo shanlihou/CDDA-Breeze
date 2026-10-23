@@ -1,0 +1,44 @@
+[
+  {
+    "type": "ARMOR",
+    "id": "异界项链",
+    "copy-from": "plastic_bag_vac",
+    "material": [ "superalloy" ],
+    "looks_like": "platinum_necklace",
+    "color": "light_blue",
+    "description": "空间项链，被异界力量扭曲",
+    "weight_capacity_bonus": " 1000000kg",
+    "flags": [ "TARDIS", "OVERSIZE","WATER_FRIENDLY","AURA","SUPER_FANCY","ONLY_ONE","PSYSHIELD_PARTIAL","RAD_RESIST","PARTIAL_DEAF","STURDY","SLOWS_THIRST","SEMITANGIBLE","SUN_GLASSES","SWIM_GOGGLES","FIX_FARSIGHT","FIX_NEARSIGHT","PADDED","TWO_WAY_RADIO" ],
+    "use_action": {"type": "weigh_self",
+    "max_weight": "9999999 kg"},
+    "name": {
+      "str": "异界项链"
+    },
+     "armor_data": {
+      "armor": [
+        {
+          "encumbrance": 0,
+          "coverage": 1,
+          "covers": [ "head" ],
+          "specifically_covers": [ "head_nape" ],
+          "material": [ { "type": "superalloy", "covered_by_mat": 100, "thickness": 2.0 } ]
+        }
+      ]
+    },
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "watertight": true,
+        "rigid": true,
+        "spoil_multiplier": 0.001,
+        "weight_multiplier": 0.000,
+        "volume_multiplier": 0.000,
+        "max_contains_volume": "99999 ml",
+        "max_item_volume": "99999 ml",
+        "max_contains_weight": "99999 kg",
+        "max_item_length": "99999 cm",
+        "moves": 1
+        }
+    ]
+  }
+    ]

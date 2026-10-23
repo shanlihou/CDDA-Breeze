@@ -1,0 +1,219 @@
+[
+  {
+    "type": "effect_type",
+    "id": "effect_biokin_potion",
+    "name": [ "粉色药剂" ],
+    "desc": [ "你饮下了浓缩的矩阵水晶调制品。" ],
+    "apply_message": "",
+    "remove_message": "药剂的效果逐渐消退，取而代之的是一种令人虚弱无力之感。",
+    "rating": "good",
+    "max_duration": "30 hours",
+    "max_intensity": 1,
+    "base_mods": { "str_mod": [ 4 ], "dex_mod": [ 4 ], "speed_mod": [25] },
+    "flags": [ "BLEED_IMMUNE", "STEADY" ],
+    "enchantments": [
+      {
+        "values": [ 
+          { "value": "ARMOR_CUT", "add": -4 },
+          { "value": "ARMOR_BASH", "add": -6 },
+          { "value": "ARMOR_STAB", "add": -3 }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_biokin_potion_comedown",
+    "name": [ "粉色药剂后遗症" ],
+    "desc": [ "你正在承受饮用浓缩矩阵水晶调制品后的后遗症。" ],
+    "apply_message": "",
+    "remove_message": "药剂的后遗症终于消退了。",
+    "rating": "bad",
+    "max_duration": "55 hours",
+    "max_intensity": 1,
+    "base_mods": { "str_mod": [ -6 ], "dex_mod": [ -6 ], "speed_mod": [-40], "pain_chance_bot": [ 200 ], "pain_chance": [ 2, 1 ], "pain_min": [ 1 ], "pain_max_val": [ 10, 5 ] },
+    "enchantments": [ { "values": [ { "value": "ARMOR_BASH", "add": 4 } ] } ]
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_clair_potion",
+    "name": [ "灰色药剂" ],
+    "desc": [ "你饮下了浓缩的矩阵水晶调制品。" ],
+    "apply_message": "",
+    "remove_message": "药剂的效果逐渐消退，黑暗从视野边缘开始蔓延。",
+    "rating": "good",
+    "max_duration": "30 hours",    
+    "max_intensity": 1,
+    "base_mods": { "per_mod": [ 4 ] },
+    "flags": [ "SEESLEEP", "SUPER_HEARING", "IMMUNE_HEARING_DAMAGE" ], 
+    "enchantments": [ "enchant_clair_potion" ]
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_clair_potion_comedown",
+    "name": [ "灰色药剂后遗症" ],
+    "desc": [ "你正在承受饮用浓缩矩阵水晶调制品后的后遗症。" ],
+    "apply_message": "",
+    "remove_message": "药剂的后遗症终于消退了。",
+    "rating": "bad",
+    "max_duration": "55 hours",
+    "max_intensity": 1,
+    "base_mods": { "per_mod": [ -6 ], "pain_chance_bot": [ 200 ], "pain_chance": [ 2, 1 ], "pain_min": [ 1 ], "pain_max_val": [ 10, 5 ] },
+    "flags": [ "HYPEROPIC", "MYOPIC" ]
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_pyrokin_potion",
+    "name": [ "红色药剂" ],
+    "desc": [ "你饮下了浓缩的矩阵水晶调制品。" ],
+    "apply_message": "",
+    "remove_message": "药剂的效果逐渐消退，取而代之的是一股灼热感。",
+    "rating": "good",
+    "max_duration": "30 hours",
+    "max_intensity": 1,
+    "base_mods": { "speed_mod": [10] },
+    "flags": [ "HEATSINK" ],
+    "enchantments": [ "enchant_pyrokin_potion" ]
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_pyrokin_potion_comedown",
+    "name": [ "红色药剂后遗症" ],
+    "desc": [ "你正在承受饮用浓缩矩阵水晶调制品后的后遗症。" ],
+    "apply_message": "",
+    "remove_message": "药剂的后遗症终于消退了。",
+    "rating": "bad",
+    "max_duration": "55 hours",
+    "max_intensity": 1,
+    "flags": [ "COLDBLOOD" ],
+    "base_mods": { "pain_chance_bot": [ 200 ], "pain_chance": [ 2, 1 ], "pain_min": [ 1 ], "pain_max_val": [ 10, 5 ] },
+    "enchantments": [
+      {
+        "values": [ 
+          { "value": "LUMINATION", "add": 80 }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_telekin_potion",
+    "name": [ "黄色药剂" ],
+    "desc": [ "你饮下了浓缩的矩阵水晶调制品。" ],
+    "apply_message": "",
+    "remove_message": "药剂的效果逐渐消退，你突然感到有重物压在身上。",
+    "rating": "good",
+    "max_duration": "30 hours",    
+    "max_intensity": 1,
+    "base_mods": { "str_mod": [ 2 ] },
+    "flags": [ "DOWNED_RECOVERY" ], 
+    "enchantments": [ { "values": [ { "value": "CARRY_WEIGHT", "multiply": 1.25 } ] } ]
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_telekin_potion_comedown",
+    "name": [ "黄色药剂后遗症" ],
+    "desc": [ "你正在承受饮用浓缩矩阵水晶调制品后的后遗症。" ],
+    "apply_message": "",
+    "remove_message": "药剂的后遗症终于消退了。",
+    "rating": "bad",
+    "max_duration": "55 hours",
+    "max_intensity": 1,
+    "base_mods": { "str_mod": [ -2 ], "speed_mod": [-25], "pain_chance_bot": [ 200 ], "pain_chance": [ 2, 1 ], "pain_min": [ 1 ], "pain_max_val": [ 10, 5 ] },
+    "enchantments": [ { "values": [ { "value": "CARRY_WEIGHT", "multiply": 0.75 } ] } ]
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_telepath_potion",
+    "name": [ "白色药剂" ],
+    "//": "待我修改对话以适配灵能者时，需要同时考虑此效果。",
+    "desc": [ "你饮下了浓缩的矩阵水晶调制品。" ],
+    "apply_message": "",
+    "remove_message": "药剂的效果逐渐消退，你开始难以清晰地思考。",
+    "rating": "good",
+    "max_duration": "30 hours",    
+    "max_intensity": 1,
+    "flags": [ "TEEPSHIELD" ], 
+    "enchantments": [ 
+      { 
+        "values": [ 
+          { "value": "LEARNING_FOCUS", "add": 15 },
+          { "value": "SKILL_RUST_RESIST", "add": 100 }
+        ] 
+      } 
+    ]
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_teleport_potion_comedown",
+    "name": [ "白色药剂后遗症" ],
+    "desc": [ "你正在承受饮用浓缩矩阵水晶调制品后的后遗症。" ],
+    "apply_message": "",
+    "remove_message": "药剂的后遗症终于消退了。",
+    "rating": "bad",
+    "max_duration": "55 hours",
+    "max_intensity": 1,
+    "base_mods": { "int_mod": [-4], "pain_chance_bot": [ 200 ], "pain_chance": [ 2, 1 ], "pain_min": [ 1 ], "pain_max_val": [ 10, 5 ] },
+    "enchantments": [
+      { 
+        "values": [ 
+          { "value": "LEARNING_FOCUS", "add": -30 },
+          { "value": "READING_EXP", "add": -1 }
+        ] 
+      } 
+    ]
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_teleport_potion",
+    "name": [ "蓝色药剂" ],
+    "desc": [ "你饮下了浓缩的矩阵水晶调制品。" ],
+    "apply_message": "",
+    "remove_message": "药剂的效果逐渐消退，你突然感到一种拉伸感，仿佛有什么无形的东西在拉扯你。",
+    "rating": "good",
+    "max_duration": "30 hours",    
+    "max_intensity": 1,
+    "flags": [ "FEATHER_FALL" ], 
+    "enchantments": [ "enchant_teleport_potion" ]
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_teleport_potion_comedown",
+    "name": [ "蓝色药剂后遗症" ],
+    "desc": [ "你正在承受饮用浓缩矩阵水晶调制品后的后遗症。" ],
+    "apply_message": "",
+    "remove_message": "药剂的后遗症终于消退了。",
+    "rating": "bad",
+    "max_duration": "55 hours",
+    "max_intensity": 1,
+    "removes_effects": [ "DIMENSIONAL_ANCHOR" ],
+    "base_mods": { "speed_mod": [-15], "pain_chance_bot": [ 200 ], "pain_chance": [ 2, 1 ], "pain_min": [ 1 ], "pain_max_val": [ 10, 5 ] },
+    "enchantments": [ "enchant_teleport_potion_comedown" ]
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_vitakin_potion",
+    "name": [ "绿色药剂" ],
+    "desc": [ "你饮下了浓缩的矩阵水晶调制品。" ],
+    "apply_message": "",
+    "remove_message": "药剂的效果逐渐消退，你突然感到一阵眩晕，踉跄起来。",
+    "rating": "good",
+    "max_duration": "30 hours",  
+    "max_intensity": 1,
+    "base_mods": { "healing_rate": [ 4 ] },
+    "flags": [ "MEND_ALL", "PARAIMMUNE", "NO_DISEASE", "INFECTION_IMMUNE" ], 
+    "enchantments": [ { "values": [ { "value": "MAX_HP", "multiply": 0.2 } ] } ]
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_vitakin_potion_comedown",
+    "name": [ "绿色药剂后遗症" ],
+    "desc": [ "你正在承受饮用浓缩矩阵水晶调制品后的后遗症。" ],
+    "apply_message": "",
+    "remove_message": "药剂的后遗症终于消退了。",
+    "rating": "bad",
+    "max_duration": "55 hours",
+    "max_intensity": 1,
+    "base_mods": { "healing_rate": [ 0.3 ], "vomit_chance": [100], "vomit_tick": [ 180 ], "pain_chance_bot": [ 100 ], "pain_chance": [ 2, 1 ], "pain_min": [ 1 ], "pain_max_val": [ 10, 5 ] }
+  }
+]

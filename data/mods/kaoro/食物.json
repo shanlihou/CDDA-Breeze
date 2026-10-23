@@ -1,0 +1,43 @@
+[
+  {
+     "type": "COMESTIBLE",
+    "id": "kaoro",
+    "name": { "str_sp": "烤肉" },
+    "weight": "50 g",
+    "color": "red",
+    "spoils_in": "24 hours",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "healthy": -1,
+    "calories": 1000,
+    "description": "拿起铁签，叉上烤肉，撒上调料，拿起啤酒可乐，管他健不健康，大快朵颐吧。",
+    "price": 1000,
+    "price_postapoc": 1200,
+    "material": [ "flesh" ],
+    "volume": "175 ml",
+    "flags": [ "EATEN_HOT","NUTRIENT_OVERRIDE" ],
+    "fun": 5,
+    "vitamins": [ [ "vitC", 16 ], [ "calcium", 2 ],[ "vitB", 778 ], [ "iron", 69 ] ]
+    },
+    {
+     "type": "COMESTIBLE",
+    "id": "kaowuhuaro",
+    "name": { "str_sp": "烤五花肉" },
+    "weight": "50 g",
+    "color": "red",
+    "spoils_in": "24 hours",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "healthy": -1,
+    "calories": 2000,
+      "looks_like": "kaoro",
+    "description": "拿起铁签，叉上烤肉，撒上调料，拿起啤酒可乐，管他健不健康，大快朵颐吧。",
+    "price": 1000,
+    "price_postapoc": 1200,
+    "material": [ "flesh" ],
+    "volume": "175 ml",
+    "flags": [ "EATEN_HOT","NUTRIENT_OVERRIDE" ],
+    "fun": 10,
+    "vitamins": [ [ "vitC", 32 ], [ "calcium", 4 ],[ "vitB", 778 ], [ "iron", 69 ] ]
+  }
+]

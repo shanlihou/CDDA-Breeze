@@ -1,0 +1,170 @@
+[
+  {
+    "type": "profession",
+    "id": "secro_prof_vesselrecruit",
+    "name": "脉管装甲新兵",
+    "description": "<color_light_red>本专业设备处于在制品状态。使用风险自负！</color>\n你是一名新兵，任务是对装有必要仿生装置的生物有机动力装甲（脉管装甲）进行阿尔法实地测试。大灾难发生后，你和实验团队失去了联系。",
+    "points": 6,
+    "proficiencies": [
+      "prof_gunsmithing_basic"
+    ],
+    "traits": [
+      "SECRO_WEARING_FLESH_VESSEL"
+    ],
+    "skills": [
+      {
+        "level": 2,
+        "name": "gun"
+      },
+      {
+        "level": 1,
+        "name": "rifle"
+      },
+      {
+        "level": 2,
+        "name": "melee"
+      },
+      {
+        "level": 1,
+        "name": "stabbing"
+      },
+      {
+        "level": 1,
+        "name": "dodge"
+      }
+    ],
+    "CBMs": [
+      "bio_secro_fv",
+      "bio_secro_fv_core",
+      "bio_ups"
+    ],
+    "items": {
+      "both": {
+        "items": [
+          "secro_power_armor_flesh",
+          "secro_recipe_flesh_field",
+          "secro_flesh_backpack"
+        ],
+        "entries": [
+          {
+            "item": "secro_power_armor_flesh_bor",
+            "ammo-item": "secro_flesh",
+            "charges": 100
+          },
+          {
+            "item": "secro_flesh",
+            "count": 4
+          },
+          {
+            "group": "charged_cell_phone"
+          }
+        ]
+      }
+    },
+    "flags": [
+      "SCEN_ONLY"
+    ]
+  },
+  {
+    "type": "profession",
+    "id": "secro_prof_vesselrecruit_army",
+    "copy-from": "secro_prof_vesselrecruit",
+    "description": "<color_light_red>该职业的设备处于在制品状态。使用自担风险！</color> \n你被选中操作生物有机外骨骼“肉船”，并应该在那之后接受特殊训练，因为在适当的时候，基地已经被亡灵淹没了。据你所知，当你错过紧急撤离时，军事指挥部把你遗弃在这个鬼地方。"
+  },
+  {
+    "type": "profession",
+    "id": "secro_prof_vesselelite_army",
+    "name": "脉管装甲精英",
+    "description": "<color_light_red>本专业设备处于在制品状态。使用风险自负！</color>\n你是有史以来在训练和专业驾驭实验性外骨骼“脉管装甲”上最优秀的超级士兵之一。不幸的是，疫情已经发生到无法逃脱的地步。据你所知，当你错过紧急撤离时，军事指挥部把你遗弃在这个地狱里。",
+    "points": 10,
+    "proficiencies": [
+      "prof_gunsmithing_basic",
+      "prof_traps",
+      "prof_disarming"
+    ],
+    "traits": [
+      "SECRO_WEARING_FLESH_VESSEL"
+    ],
+    "skills": [
+      {
+        "level": 6,
+        "name": "gun"
+      },
+      {
+        "level": 4,
+        "name": "smg"
+      },
+      {
+        "level": 4,
+        "name": "rifle"
+      },
+      {
+        "level": 4,
+        "name": "cutting"
+      },
+      {
+        "level": 6,
+        "name": "melee"
+      },
+      {
+        "level": 3,
+        "name": "dodge"
+      },
+      {
+        "level": 3,
+        "name": "traps"
+      },
+      {
+        "level": 4,
+        "name": "firstaid"
+      },
+      {
+        "level": 1,
+        "name": "swimming"
+      },
+      {
+        "level": 4,
+        "name": "survival"
+      },
+      {
+        "level": 4,
+        "name": "secro_flesh_combat"
+      },
+      {
+        "level": 2,
+        "name": "secro_flesh_craft"
+      }
+    ],
+    "CBMs": [
+      "bio_secro_fv",
+      "bio_secro_fv_core",
+      "bio_ups"
+    ],
+    "items": {
+      "both": {
+        "items": [
+          "secro_power_armor_flesh",
+          "secro_recipe_flesh_field",
+          "secro_flesh_backpack"
+        ],
+        "entries": [
+          {
+            "item": "secro_power_armor_flesh_bor",
+            "ammo-item": "secro_flesh",
+            "charges": 250
+          },
+          {
+            "item": "secro_flesh",
+            "count": 6
+          },
+          {
+            "group": "charged_cell_phone"
+          }
+        ]
+      }
+    },
+    "flags": [
+      "SCEN_ONLY"
+    ]
+  }
+]

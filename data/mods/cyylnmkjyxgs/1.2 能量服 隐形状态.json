@@ -1,0 +1,242 @@
+[
+  {
+    "id": "c_cyyl_yh_nlf_yfxg_yxms1",
+    "//": "(隐形模式)装备的被动效果(附魔)的统筹,减少装备代码的词条长度。",
+    "type": "enchantment",
+    "has": "WORN",
+    "condition": "ALWAYS",
+    "values": [
+      {
+        "value": "BONUS_DODGE",
+        "add": 10
+      },
+      {
+        "value": "BONUS_BLOCK",
+        "add": 10
+      },
+      {
+        "value": "MELEE_DAMAGE",
+        "add": 10
+      },
+      {
+        "value": "BIONIC_POWER",
+        "add": 100000000
+      },
+      {
+        "value": "MAX_STAMINA",
+        "add": 10000
+      },
+      {
+        "value": "REGEN_STAMINA",
+        "add": 50
+      },
+      {
+        "value": "MAX_HP",
+        "add": 200
+      },
+      {
+        "value": "REGEN_HP",
+        "add": 2
+      },
+      {
+        "value": "SOCIAL_LIE",
+        "add": 10
+      },
+      {
+        "value": "SOCIAL_PERSUADE",
+        "add": 10
+      },
+      {
+        "value": "SOCIAL_INTIMIDATE",
+        "add": 10
+      },
+      {
+        "value": "HUNGER",
+        "add": -15
+      },
+      {
+        "value": "THIRST",
+        "add": -15
+      },
+      {
+        "value": "FATIGUE",
+        "add": -15
+      },
+      {
+        "value": "WEAPON_DISPERSION",
+        "add": -15
+      },
+      {
+        "value": "RECOIL_MODIFIER",
+        "add": -15
+      },
+      {
+        "value": "ATTACK_SPEED",
+        "add": -15
+      },
+      {
+        "value": "MOVE_COST",
+        "add": -15
+      },
+      {
+        "value": "METABOLISM",
+        "add": -15
+      },
+      {
+        "value": "CLIMATE_CONTROL_HEAT",
+        "add": 1000
+      },
+      {
+        "value": "CLIMATE_CONTROL_CHILL",
+        "add": 1000
+      },
+      { "value": "ARMOR_BASH", "add": -50 },
+      { "value": "ARMOR_CUT", "add": -50 },
+      { "value": "ARMOR_STAB", "add": -50 },
+      { "value": "ARMOR_BULLET", "add": -50 },
+      { "value": "ARMOR_HEAT", "add": -50 },
+      { "value": "ARMOR_COLD", "add": -50 },
+      { "value": "ARMOR_ELEC", "add": -50 },
+      { "value": "ARMOR_ACID", "add": -50 },
+      { "value": "ARMOR_BIO", "add": -50 }
+    ]
+  },
+  {
+    "id": "c_cyyl_yh_nlf_yfxg_yxms",
+    "//": "(隐形模式)装备的被动效果(附魔)的统筹,减少装备代码的词条长度。",
+    "type": "enchantment",
+    "has": "WORN",
+    "condition": "ALWAYS",
+    "values": [
+      {
+        "value": "BONUS_DODGE",
+        "multiply": 1
+      },
+      {
+        "value": "BONUS_BLOCK",
+        "multiply": 1
+      },
+      {
+        "value": "MELEE_DAMAGE",
+        "multiply": 1
+      },
+      {
+        "value": "BIONIC_POWER",
+        "multiply": 1
+      },
+      {
+        "value": "MAX_STAMINA",
+        "multiply": 1
+      },
+      {
+        "value": "REGEN_STAMINA",
+        "multiply": 1
+      },
+      {
+        "value": "MAX_HP",
+        "multiply": 1
+      },
+      {
+        "value": "REGEN_HP",
+        "multiply": 1
+      },
+      {
+        "value": "READING_EXP",
+        "multiply": 1
+      },
+      {
+        "value": "LEARNING_FOCUS",
+        "multiply": 1
+      },
+      {
+        "value": "SOCIAL_LIE",
+        "multiply": 1
+      },
+      {
+        "value": "SOCIAL_PERSUADE",
+        "multiply": 1
+      },
+      {
+        "value": "SOCIAL_INTIMIDATE",
+        "multiply": 1
+      },
+      {
+        "value": "HUNGER",
+        "multiply": -0.75
+      },
+      {
+        "value": "THIRST",
+        "multiply": -0.75
+      },
+      {
+        "value": "FATIGUE",
+        "multiply": -0.75
+      },
+      {
+        "value": "WEAPON_DISPERSION",
+        "multiply": -0.75
+      },
+      {
+        "value": "RECOIL_MODIFIER",
+        "multiply": -0.75
+      },
+      {
+        "value": "ATTACK_SPEED",
+        "multiply": -0.75
+      },
+      {
+        "value": "MOVE_COST",
+        "multiply": -0.75
+      },
+      {
+        "value": "METABOLISM",
+        "multiply": -0.75
+      },
+      {
+        "value": "CLIMATE_CONTROL_HEAT",
+        "multiply": 1
+      },
+      {
+        "value": "CLIMATE_CONTROL_CHILL",
+        "multiply": 1
+      },
+      {
+        "value": "ATTACK_NOISE",
+        "multiply": -1
+      },
+      {
+        "value": "FOOTSTEP_NOISE",
+        "multiply": -1
+      }
+    ],
+    "ench_effects": [
+      {
+        "effect": "nlf_yfxg_yxms_zt",
+        "intensity": 1
+      }
+    ]
+  },
+  {
+    "id": "nlf_yfxg_yxms_zt",
+    "type": "effect_type",
+    "name": [ "能量服效果(隐形模式)" ],
+    "desc": [ "你隐形了。闪避/格挡次数/近战伤害+10×2倍、生化能量+100KJ×2倍、生命/恢复速度+200/2×2倍、耐力/恢复速度+1000/200×2倍、社交三种选择概率+10×2倍、饥饿/口渴/疲劳/新陈代谢消耗-15-75%、攻击/移动消耗-15-75%、极端温度适应+1000×2倍、阅读经验/学习专注度×2倍、武器散布/后坐力-15-75%、脚步声/攻击噪音-100%、全属性+2×2倍、全伤害-50-50%。(不会被抓住和窒息)" ],
+    "apply_message": "<永恒>能量服(隐形模式)效果启动。",
+    "remove_message": "<永恒>能量服(隐形模式)效果停止。",
+    "rating": "good",
+    "base_mods": {
+      "str_mod": [ 2 ],
+      "dex_mod": [ 2 ],
+      "per_mod": [ 2 ],
+      "int_mod": [ 2 ],
+      "health_min": [ 10 ],
+      "speed_mod": [ 10 ],
+      "stamina_min": [ 60 ],
+      "pkill_tick": [ 3600 ],
+      "pkill_min": [ 10 ]
+    },
+    "flags": [ "INVISIBLE" ],
+    "removes_effects": [ "grabbed" ],
+    "enchantments": [ { "values": [ { "value": "ARMOR_BASH", "multiply": -0.5 }, { "value": "ARMOR_CUT", "multiply": -0.5 }, { "value": "ARMOR_STAB", "multiply": -0.5 }, { "value": "ARMOR_BULLET", "multiply": -0.5 }, { "value": "ARMOR_HEAT", "multiply": -0.5 }, { "value": "ARMOR_COLD", "multiply": -0.5 }, { "value": "ARMOR_ELEC", "multiply": -0.5 }, { "value": "ARMOR_ACID", "multiply": -0.5 }, { "value": "ARMOR_BIO", "multiply": -0.5 } ] } ]
+  }
+]

@@ -1,0 +1,420 @@
+[
+  {
+    "id": "stonefist",
+    "type": "SPELL",
+    "name": {
+      "str": "大地之拳"
+    },
+    "description": "召唤岩石包裹手臂和拳头，使你可以在近战战斗中用它来击打敌人和保护自己。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "LOUD"
+    ],
+    "min_damage": 1,
+    "max_damage": 1,
+    "effect": "spawn_item",
+    "effect_str": "stonefist",
+    "shape": "blast",
+    "spell_class": "EARTHSHAPER",
+    "energy_source": "MANA",
+    "difficulty": 2,
+    "max_level": 30,
+    "base_casting_time": 200,
+    "base_energy_cost": 100,
+    "min_duration": 10000,
+    "max_duration": 150000,
+    "duration_increment": 2000
+  },
+  {
+    "id": "seismic_stomp",
+    "type": "SPELL",
+    "name": {
+      "str": "战争践踏"
+    },
+    "description": "聚集魔力进入你的腿，重重跺脚，发出冲击波，把周围的敌人击倒在地。",
+    "effect": "attack",
+    "effect_str": "downed",
+    "shape": "blast",
+    "valid_targets": [
+      "hostile",
+      "ground",
+      "none"
+    ],
+    "flags": [
+      "SOMATIC",
+      "LOUD",
+      "NO_PROJECTILE"
+    ],
+    "max_level": 15,
+    "min_damage": 2,
+    "max_damage": 15,
+    "damage_increment": 0.8,
+    "min_aoe": 3,
+    "max_aoe": 18,
+    "aoe_increment": 1,
+    "min_duration": 1000,
+    "max_duration": 9000,
+    "duration_increment": 500,
+    "spell_class": "EARTHSHAPER",
+    "base_casting_time": 100,
+    "base_energy_cost": 250,
+    "energy_source": "MANA",
+    "difficulty": 2,
+    "damage_type": "bash"
+  },
+  {
+    "id": "recover_stamina",
+    "type": "SPELL",
+    "name": {
+      "str": "坚如磐石"
+    },
+    "description": "你专注于你下方的坚岩，从它们的经受时间考验的坚韧中获取力量。你将魔力转换成耐力。",
+    "effect": "recover_energy",
+    "effect_str": "STAMINA",
+    "shape": "blast",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "CONCENTRATE",
+      "SILENT"
+    ],
+    "min_damage": 1500,
+    "max_damage": 15000,
+    "damage_increment": 750,
+    "max_level": 18,
+    "spell_class": "EARTHSHAPER",
+    "base_casting_time": 500,
+    "final_casting_time": 198,
+    "casting_time_increment": -17,
+    "energy_source": "MANA",
+    "base_energy_cost": 150,
+    "energy_increment": 75,
+    "final_energy_cost": 1500,
+    "difficulty": 5
+  },
+  {
+    "id": "eshaper_shardspray",
+    "type": "SPELL",
+    "name": {
+      "str": "碎片喷射"
+    },
+    "description": "这法术扇形喷射出大量锋利的金属碎片，敌友不分的切碎它们路上的所有目标。",
+    "valid_targets": [
+      "hostile",
+      "ground",
+      "ally"
+    ],
+    "flags": [
+      "SOMATIC",
+      "LOUD"
+    ],
+    "components": "spell_components_shardspray",
+    "effect": "attack",
+    "shape": "cone",
+    "spell_class": "EARTHSHAPER",
+    "energy_source": "MANA",
+    "difficulty": 3,
+    "base_casting_time": 100,
+    "base_energy_cost": 100,
+    "max_level": 30,
+    "min_damage": 30,
+    "max_damage": 120,
+    "damage_increment": 2.5,
+    "damage_type": "cut",
+    "min_aoe": 25,
+    "max_aoe": 90,
+    "aoe_increment": 5,
+    "min_range": 3,
+    "max_range": 15,
+    "range_increment": 0.5,
+    "min_pierce": 0,
+    "max_pierce": 8,
+    "pierce_increment": 0.4
+  },
+  {
+    "id": "eshaper_piercing_bolt",
+    "type": "SPELL",
+    "name": {
+      "str": "穿刺箭"
+    },
+    "description": "这法术召唤并发射出一根能穿透敌人的铁条，射穿那些胆敢阻挡你的蠢货。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "LOUD"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "spell_class": "EARTHSHAPER",
+    "energy_source": "MANA",
+    "base_casting_time": 100,
+    "base_energy_cost": 115,
+    "difficulty": 2,
+    "max_level": 30,
+    "min_damage": 20,
+    "max_damage": 75,
+    "damage_increment": 3,
+    "damage_type": "stab",
+    "min_range": 8,
+    "max_range": 39,
+    "range_increment": 1.5
+  },
+  {
+    "id": "eshaper_shardstorm",
+    "type": "SPELL",
+    "name": {
+      "str": "碎片风暴"
+    },
+    "description": "向你四周的所有方向喷射剃刀般锋利的金属碎片。",
+    "valid_targets": [
+      "hostile",
+      "ally",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "LOUD"
+    ],
+    "min_damage": 20,
+    "max_damage": 90,
+    "damage_increment": 1.85,
+    "damage_type": "cut",
+    "min_aoe": 1,
+    "max_aoe": 9,
+    "aoe_increment": 0.25,
+    "base_energy_cost": 200,
+    "spell_class": "EARTHSHAPER",
+    "difficulty": 4,
+    "max_level": 30,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack"
+  },
+  {
+    "id": "eshaper_rockbolt",
+    "type": "SPELL",
+    "name": {
+      "str": "石之箭"
+    },
+    "description": "你召唤并发射出一个高速飞行的石弹。",
+    "valid_targets": [
+      "hostile",
+      "ally"
+    ],
+    "flags": [
+      "SOMATIC",
+      "LOUD"
+    ],
+    "min_damage": 5,
+    "damage_increment": 1.5,
+    "damage_type": "bash",
+    "max_damage": 39,
+    "min_range": 5,
+    "range_increment": 0.5,
+    "max_range": 23,
+    "base_energy_cost": 50,
+    "spell_class": "EARTHSHAPER",
+    "difficulty": 1,
+    "max_level": 30,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack"
+  },
+  {
+    "id": "move_earth",
+    "type": "SPELL",
+    "name": {
+      "str": "移土术"
+    },
+    "description": "你的精魂在身侧流转，而土地也随之变化。",
+    "valid_targets": [
+      "hostile",
+      "ally",
+      "ground",
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "LOUD",
+      "NO_PROJECTILE"
+    ],
+    "min_aoe": 1,
+    "max_aoe": 2,
+    "min_damage": 100,
+    "max_damage": 1,
+    "damage_increment": -5,
+    "aoe_increment": 0.25,
+    "base_energy_cost": 200,
+    "spell_class": "EARTHSHAPER",
+    "difficulty": 4,
+    "max_level": 20,
+    "min_range": 5,
+    "max_range": 5,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "ter_transform",
+    "effect_str": "move_earth"
+  },
+  {
+    "id": "create_rune_earthshaper",
+    "type": "SPELL",
+    "name": {
+      "str": "塑地者符文"
+    },
+    "description": "这仪式会创造出一块与塑地者共鸣的小石块。你可以将符文作为催化剂用于制造其它物品。",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 1,
+    "max_damage": 1,
+    "effect": "spawn_item",
+    "effect_str": "rune_earthshaper",
+    "shape": "blast",
+    "base_casting_time": 5000,
+    "base_energy_cost": 5,
+    "min_duration": 1,
+    "max_duration": 2,
+    "duration_increment": 1,
+    "difficulty": 0,
+    "max_level": 0,
+    "spell_class": "EARTHSHAPER",
+    "energy_source": "MANA",
+    "flags": [
+      "PERMANENT",
+      "NO_LEGS",
+      "CONCENTRATE"
+    ]
+  },
+  {
+    "id": "clairvoyance",
+    "type": "SPELL",
+    "name": {
+      "str": "透视"
+    },
+    "description": "你闭上双眼，大地随即向你透露了它的秘密。",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE"
+    ],
+    "max_level": 30,
+    "min_aoe": 4,
+    "max_aoe": 19,
+    "aoe_increment": 0.5,
+    "spell_class": "EARTHSHAPER",
+    "base_casting_time": 350,
+    "base_energy_cost": 750,
+    "energy_source": "MANA",
+    "difficulty": 4,
+    "field_id": "fd_clairvoyant",
+    "min_field_intensity": 1,
+    "max_field_intensity": 1
+  },
+  {
+    "id": "earthshaper_stoneskin",
+    "type": "SPELL",
+    "name": {
+      "str": "石肤术"
+    },
+    "description": "将你全身包覆在活化岩石构成的装甲中，累赘但防护森严。",
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "spawn_item",
+    "effect_str": "aura_stoneskin",
+    "shape": "blast",
+    "flags": [
+      "SOMATIC",
+      "LOUD"
+    ],
+    "spell_class": "EARTHSHAPER",
+    "energy_source": "MANA",
+    "difficulty": 4,
+    "base_casting_time": 200,
+    "base_energy_cost": 200,
+    "max_level": 30,
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_duration": 10000,
+    "max_duration": 150000,
+    "duration_increment": 2000
+  },
+  {
+    "id": "earthshaper_pillar",
+    "type": "SPELL",
+    "name": {
+      "str": "石柱术"
+    },
+    "description": "你用魔法将四周的泥土堆起，形成一根硬石柱。经验的累积将使施法更容易，并减少对周围区域的破坏。",
+    "valid_targets": [
+      "ground"
+    ],
+    "effect": "ter_transform",
+    "effect_str": "earthshaper_pillar",
+    "shape": "blast",
+    "extra_effects": [
+      {
+        "id": "earthshaper_pillar_side_effect"
+      }
+    ],
+    "flags": [
+      "SOMATIC",
+      "LOUD",
+      "NO_PROJECTILE"
+    ],
+    "spell_class": "EARTHSHAPER",
+    "energy_source": "MANA",
+    "difficulty": 3,
+    "base_casting_time": 30000,
+    "final_casting_time": 6000,
+    "casting_time_increment": -2400,
+    "base_energy_cost": 500,
+    "max_level": 10,
+    "min_range": 3,
+    "max_range": 6,
+    "range_increment": 0.3
+  },
+  {
+    "id": "earthshaper_pillar_side_effect",
+    "type": "SPELL",
+    "name": {
+      "str": "石柱冲击"
+    },
+    "description": "带来的钝击效果，等级降低伤害和AOE范围。",
+    "valid_targets": [
+      "ground"
+    ],
+    "effect": "bash",
+    "shape": "blast",
+    "flags": [
+      "IGNORE_WALLS",
+      "SILENT",
+      "NO_PROJECTILE"
+    ],
+    "max_level": 10,
+    "min_damage": 80,
+    "max_damage": 20,
+    "damage_increment": -6,
+    "min_aoe": 6,
+    "max_aoe": 1,
+    "aoe_increment": -0.5
+  }
+]

@@ -1,0 +1,35 @@
+[
+	{
+		"type": "COMESTIBLE",
+		"id": "fishery_egg_perch",
+		"name": { "str": "鱼卵（河鲈）" },
+		"copy-from": "fishery_egg",
+		"spoils_in": "10 days",
+		"description": "一些可以食用，也可以等他们孵化出小鱼的河鲈鱼卵。",
+		"rot_spawn": "FISHERY_GROUP_EGG_perch",
+		"rot_spawn_chance": 50
+	},
+	{
+		"name": "FISHERY_GROUP_EGG_perch",
+		"type": "monstergroup",
+		"default": "fishery_mon_perch_juvenile",
+		"monsters": [ ]
+	},
+	{
+		"id": "fishery_mon_perch_juvenile",
+		"type": "MONSTER",
+		"name": { "str": "河鲈鱼苗" },
+		"description": "一条河鲈幼鱼，过一段时间就会变成成鱼。",
+		"copy-from": "fishery_mon_juvenile",
+		"harvest": "fish_tiny",
+		"upgrades": { "age_grow": 20, "into": "mon_fish_perch" }
+	},
+	{
+		"id": "mon_fish_perch",
+		"type": "MONSTER",
+		"copy-from": "mon_fish_perch",
+		"name": { "str": "河鲈" },
+		"reproduction": { "baby_egg": "fishery_egg_perch", "baby_count": 10, "baby_timer": 20 },
+		"baby_flags": [ "SPRING" ]
+	}
+]

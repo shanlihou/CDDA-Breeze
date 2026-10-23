@@ -1,0 +1,1300 @@
+[
+  {
+    "type": "item_group",
+    "id": "charged_voiro_poipon8",
+    "subtype": "collection",
+    "entries": [ { "item": "voiro_poipon8", "ammo-item": "battery", "charges": 120 } ]
+  },
+  {
+    "type": "item_group",
+    "id": "charged_smart_phone",
+    "subtype": "collection",
+    "entries": [ { "item": "smart_phone", "ammo-item": "battery", "charges": 120 } ]
+  },
+  {
+    "//1": "月読アイ",
+    "//2": "ぬいぐるみと絵本で序盤から意欲維持が可能。むしろぬいぐるみを持ち続ける片手縛りプレイが出来る。",
+    "//3": "紹介文一行目 - ＡＨＳ公式ＨＰ、キャラクター紹介文より。",
+    
+    "type": "profession",
+    "ident": "voiro_tsukuyomi_ai",
+    "name": "绘本朗读家(月读爱)[VOIRO]",
+    "description": "「小爱的工作是发声读书。」\n君临VOICEROID界天下的5岁儿童。无数不再有人阅读的书籍被留在这里。 这个女孩似乎有一个会以某种方式拯救图书馆，即使可能失败。 那么，出发去寻找书籍吧！",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_AI" ],
+    "items": {
+      "both": {
+        "items": [
+          "voiro_hair_ai",
+          "panties",
+          "undershirt",
+          "voiro_socks_ai",
+          "voiro_shoes_ai",
+          "voiro_pumpkinpants_ai",
+          "voiro_smock_ai",
+          "voiro_schoolcap_ai",
+          "voiro_stuffed_bunny_ai",
+          "mbag",
+          "child_book",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_cell_phone" },
+          { "item": "light_disposable_cell", "ammo-item": "battery", "charges": 300, "container-item": "voiro_headset_ai" }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "月读翔太",
+    "//2": "金属バットを持たせたのはボイロ界一、影の薄い彼を優遇してあげたかったからです。リュックも食べ物も持たせてあげたい。",
+    "//3": "紹介文一行目 - ＡＨＳ公式ＨＰ、キャラクター紹介文より。",
+    
+    "type": "profession",
+    "ident": "voiro_tsukuyomi_shota",
+    "name": "和平守护者(月读翔太)[[VOIRO]",
+    "description": "「保护妹妹小爱是我的职责。」\n混乱的新英格兰充满危险！即使在这种情况下，无论是耕地的还是努力种植小麦维持生命的，各种各样的人依然在顽强地生存着。作为哥哥为担惊受怕的小爱守护这份和平。",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_SHOTA" ],
+    "items": {
+      "both": {
+        "items": [
+          "briefs",
+          "socks",
+          "voiro_sneakers_shota",
+          "voiro_shorts_denim_shota",
+          "voiro_arm_warmers_shota",
+          "voiro_sailor_outfit_shota",
+          "mbag",
+          "bat_metal",
+          "band_aid",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_cell_phone" },
+          { "item": "light_disposable_cell", "ammo-item": "battery", "charges": 300, "container-item": "voiro_headset_shota" }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "吉田・ジャスティス・カツヲ",
+    "//2": "着ぐるみとして参戦。「吉田ロイド」はこのmod最強の装備。電池(大/大容量)での最大稼働時間は約1時間と電池喰らいにした。原作ネタを踏襲し他のキャラが携帯やスマホを持つ中、ポイポンを持たせた。",
+    "//3": "紹介文一行目 - アニメ「秘密結社 鷹の爪」第一話冒頭のセリフより。",
+    
+    "type": "profession",
+    "ident": "voiro_yoshida_justice_katsuwo",
+    "name": "鹰爪团员(吉田)[VOIRO]",
+    "description": "「现在，母亲还好吗？」\n「对人类和地球友好的征服世界」的图谋邪恶的秘密结社“鹰爪团”引以为傲的岛根之星——吉田君，为了推销模仿他的人偶服，我只身前往美国。如果能找到回程的航班就好了。",
+    "points": 0,
+    "items": {
+      "male": [ "boxer_briefs" ],
+      "female": [ "bra", "panties" ],
+      "both": {
+        "items": [
+          "socks",
+          "undershirt",
+          "dress_shoes",
+          "suit",
+          "duffelbag",
+          "briefcase",
+          "manual_business",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_voiro_poipon8" },
+          { "item": "heavy_plus_battery_cell", "ammo-item": "battery", "charges": 1250, "container-item": "voiro_yoshidasuit" }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "弦卷真纪",
+    "//2": "特徴的なビーズの髪飾りはキャラの向きもあるけど、ドットの大きさ的に表現できないのでタイル無いです…。",
+    "//3": "紹介文一行目 - 公式設定の口癖より。「Music Maker MX2 Producer Edition 特別限定版 jamバンド」に入っている公式読本か、AHS公式サイトのjamバンドメンバー紹介ページ内にある、jamバンドWEB小説「フェスティバル・ジャム」最終話で確認できる。",
+    
+    "type": "profession",
+    "ident": "voiro_tsurumaki_maki",
+    "name": "乐队成员(弦卷真纪)[VOIRO]",
+    "description": "「要出发咯！」\n在和jam乐队的成员横跨美国巡回演出场所的途中卷入了大灾变，与乐队成员失散了。平常关键时刻有可以依靠的小加奈和机器人pepper在，所以一直过得轻便自然，现在只有心爱的乐器小野马是心灵的寄托。",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_MAKI" ],
+    "items": {
+      "both": {
+        "items": [
+          "voiro_hair_maki2",
+          "panties",
+          "bra",
+          "voiro_socks_maki",
+          "voiro_sneakers_maki",
+          "voiro_skirt_maki",
+          "voiro_corset_maki",
+          "voiro_shirt_maki",
+          "voiro_hair_maki",
+          "voiro_arm_covers_maki",
+          "voiro_headset_maki",
+          "voiro_ornament_bead",
+          "voiro_guitar_mustang",
+          "mbag",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_cell_phone" }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "结月缘",
+    "//2": "控えめなゆかりさん。持ち物は楽曲「世界はトマトに恋し過ぎ」「トマトとビール」「トマトジュースのうた」と、二次創作のニートゲーマー設定より。ゲーム機を持たせたので、意欲管理が楽になり過ぎるきらいがあるのでスマホは封印。",
+    "//3": "紹介文一行目 - 「ゆかりさん＝○○のプロ」二次創作ネタより。",
+    
+    "type": "profession",
+    "ident": "voiro_yuzuki_yukari",
+    "name": "游戏玩家(结月缘)[VOIRO]",
+    "description": "「大家好。在下正是游戏专家缘。」\n因为巡回演唱会(?)出发，搭档弦卷在那里后音讯全无。为了找她来到了波士顿。据说在这片土地上出现了吞噬一切的怪物。虽然游戏里是熟练的丧尸杀手，但是能应付这些怪物吗？",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_YUKARI" ],
+    "items": {
+      "both": {
+        "items": [
+          "panties",
+          "bra",
+          "voiro_socks_yukari",
+          "voiro_shoes_yukari",
+          "voiro_arm_covers_yukari",
+          "voiro_dress_yukari",
+          "voiro_hoodie_yukari",
+          "voiro_ornament_yukari",
+          "voiro_hair_yukari",
+          "silver_bracelet",
+          "mbag",
+          "beer",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_cell_phone" }, { "item": "irradiated_tomato", "charges": 2 },
+          { "item": "light_battery_cell", "charges": 100 , "container-item": "portable_game" }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "东北俊子",
+    "//2": "原作(ずんだホライズン、ずんちゃんといっしょ！)再現してはいけない女その１。銃弾を跳ね返すもち肌と対象をずんだ餅に変えるずんだアロー。そもそも再現が無理。公式ツイッターを所持しているorずん子の様に原作マンガ等でスマホを持っているキャラはスマホ持ち。",
+    "//3": "紹介文一行目 - 東北ずん子公式Twitter自己紹介文より。",
+    
+    "type": "profession",
+    "ident": "voiro_touhoku_junko",
+    "name": "传教士(东北俊子)[VOIRO]",
+    "description": "「梦想是在秋叶原开一家俊达主题咖啡馆！」\n来到美国的东北地区来传播俊达文化。虽然是比日本东北地区纬度更高的地方，但寒冷绝对无法阻挡对俊达的热爱！快开始推广俊达饼的精彩之旅吧！",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_ZUNKO" ],
+    "items": {
+      "both": {
+        "items": [
+          "voiro_hair_zunko2",
+          "panties",
+          "bra",
+          "tabi_gi",
+          "voiro_zouri_zunko",
+          "voiro_kimono_zunko",
+          "voiro_breastplate_zunko",
+          "voiro_aliceband_zunko",
+          "voiro_hair_zunko",
+          "voiro_zundamon",
+          "mbag",
+          "mortar_pestle",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_smart_phone" },
+          { "item": "quiver", "contents-item": "voiro_arrow_zunda", "charges": 3 },
+          { "item": "raw_edamame", "container-item": "can_food" },
+          { "item": "voiro_zundamochi", "container-item": "plastic_bag_vac" }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "さとうささら",
+    "//2": "専用装備がワンピースとパンプスのみ。シンプル！",
+    "//3": "紹介文一行目 - CeVIO公式ＨＰ、キャラクター紹介文より。",
+    
+    "type": "profession",
+    "ident": "voiro_sato_sasara",
+    "name": "拾荒者(冰淇淋)(佐藤莎莎拉)[VOIRO]",
+    "description": "「我是佐藤莎莎拉、来自东京的16岁烧酒！」\n和搭档梓梓弥一起旅行的时候，似乎有重大事件发生所以和搭档走散了。在疏散时无意中听到的关于冰淇淋猎人的流言。 继续这样下去，最喜欢的冰淇淋将会从美洲大陆灭绝！(牙膏味的冰激凌实在太难吃了)此时此刻，与蓝色猎人的战斗已经打响了！",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_SASARA" ],
+    "items": {
+      "both": {
+        "items": [
+          "voiro_hair_sasara2",
+          "panties",
+          "bra",
+          "voiro_shoes_sasara",
+          "voiro_dress_sasara",
+          "voiro_hair_sasara",
+          "mbag",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_smart_phone" },
+          { "item": "icecream", "container-item": "cup_plastic" }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "すずきつづみ",
+    "//2": "何色にでも染まれる女、すずきつづみ。全ての面においてプレーンで癖が無い。文学少女という事で「SF小説」を持っている。「SF小説」はチラシ等と同様に内容が入手する度に変わるアイテム。",
+    "//3": "紹介文一行目 - CeVIO公式ＨＰ、キャラクター紹介文より。",
+    
+    "type": "profession",
+    "ident": "voiro_suzuki_tsuzumi",
+    "name": "文学少女(铃木梓梓弥)[VOIRO]",
+    "description": "「所以我的脸上，有什么东西吗？(推眼镜)」\n和搭档莎莎拉一起去波士顿的唐人街旅行，寻找喜欢的中华包子。结果在路上失散了，现在是孤身一人。总之，先去图书馆看看吧？",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_TSUZUMI" ],
+    "items": {
+      "both": {
+        "items": [
+          "panties",
+          "bra",
+          "voiro_sandals_tsuzumi",
+          "voiro_hot_pants_tsuzumi",
+          "voiro_blouse_tsuzumi",
+          "voiro_aliceband_tsuzumi",
+          "mbag",
+          "novel_scifi",
+          "water_clean"
+
+        ],
+        "entries": [
+          { "group": "charged_smart_phone" }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "タカハシ",
+    "//2": "職業名はタカハシか近所のお兄さんか悩んだ。それ以外に正解が無い。",
+    "//3": "紹介文一行目 - CeVIO公式ＨＰ、ボイスサンプルより。紹介文ニ行目 - タカハシ+ラーメンの元ネタ達「fallout4」、「ブレードランナー」。",
+    
+    "type": "profession",
+    "ident": "voiro_takahashi",
+    "name": "邻居的大哥哥(高桥)[VOIRO]",
+    "description": "「喜欢的食物是拉面。」\n就这样被莎莎拉和梓梓弥无情丢下了，虽然试图追了上来，却被卷进了大灾变中。在避难所售卖拉面盛况空前，但现在人越来越少了，手头的拉面也所剩无几。这样的话就种小麦，让全美都知晓“能量面条”的威名吧！",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_TAKAHASHI" ],
+    "items": {
+      "both": {
+        "items": [
+          "boxer_shorts",
+          "socks",
+          "voiro_sneakers_takahashi",
+          "undershirt",
+          "voiro_pants_takahashi",
+          "voiro_dress_shirt_takahashi",
+          "voiro_jacket_takahashi",
+          "voiro_wrist_takahashi",
+          "mbag",
+          "soup_chicken",
+          "maple_candy",
+          "candy3",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_cell_phone" },
+          { "item": "noodles_fast", "container-item": "plastic_bag_vac" }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "琴葉茜",
+    "//2": "パンジャンmodは誰かが作るとして、エビフライはなんとか実装したよ。紹介文の巨大なエビはミ＝ゴ(茜ちゃんVSシリーズでよく食ってる)じゃなくて、レイザークロウor巨大ザリガニ。",
+    "//3": "紹介文一行目 - ネットスラング。たらちゃん(英国面)氏の「【Besiege】英国面に堕ちた茜ちゃんのパンジャンドラム縛りVOICEROID実況」シリーズの英国面に堕ちた茜ちゃんのセリフより。少なくとも「ｱｶﾈﾁｬﾝｶﾜｲｲﾔｯﾀｰ」よりは新しい言葉。",
+    
+    "type": "profession",
+    "ident": "voiro_kotonoha_akane",
+    "name": "炸虾猎人(琴叶茜)[VOIRO]",
+    "description": "「快来说小茜可爱吧？」\n听说有巨大的虾出没的传闻(无视避难劝告)，千里迢迢来到了这里。目的地是能捕获大虾的河流。制作能载入吉尼斯纪录的巨大炸虾吧！",
+    
+    "points": 0,
+    "traits": [ "VOIRO_BODY_AKANE" ],
+    "items": {
+      "both": {
+        "items": [
+          "voiro_hair_akane2",
+          "panties",
+          "bra",
+          "voiro_socks_akane",
+          "voiro_boots_akane",
+          "voiro_dress_sode_akane",
+          "voiro_dress_akane",
+          "voiro_ornament_akane",
+          "voiro_hair_akane",
+          "mbag",
+          "net",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_smart_phone" },
+          { "item": "voiro_ebi_fly", "container-item": "plastic_bag_vac" }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "琴葉葵",
+    "//2": "アイスは一括りに「アイスクリーム」ってなってるっぽいので、チョコミント単品は実装しないよ。",
+    "//3": "紹介文一行目 - 某スレッドの誤爆書き込み及び、ゆめうつつ氏製作MAD「葵ちゃんはチョコミントアイスエイヤッ↑(/＞_＜)/」より。",
+    
+    "type": "profession",
+    "ident": "voiro_kotonoha_aoi",
+    "name": "冰激凌猎人(琴叶葵)[VOIRO]",
+    "description": "「巧克力薄荷冰激凌↑(/>_<)/」\n连严戒态势都不管不顾的姐姐擅自前往无政府状态的美国，正是为了追捕姐姐而来的。顺便，在这个国家的冰淇淋融化之前保护它们，让巧克力薄荷冰激凌涂满整个美国！",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_AOI" ],
+    "items": {
+      "both": {
+        "items": [
+          "voiro_hair_aoi2",
+          "panties",
+          "bra",
+          "voiro_socks_aoi",
+          "voiro_boots_aoi",
+          "voiro_dress_sode_aoi",
+          "voiro_dress_aoi",
+          "voiro_ornament_aoi",
+          "voiro_hair_aoi",
+          "mbag",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_smart_phone" },
+          { "item": "icecream", "container-item": "cup_plastic" }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "ギャラ子",
+    "//2": "タイツ、ハイヒールと通常では製作できない装備をmodで製作可能にしてくれるニクいやつ。",
+    "//3": "紹介文一行目 - スポーツメーカー「ミズノ」とのタイアップCM曲「Happy Brand New Days」歌詞の冒頭より。紹介文二行目 - クマの独り言氏作「【セイカ＆ギャラ子】農場王に私はなる！【FarmingSimulator19】」シリーズネタ。",
+    
+    "type": "profession",
+    "ident": "voiro_galaco",
+    "name": "农民(Galaco)[VOIRO]",
+    "description": "「那道彩虹在呼唤我。」\n和京町精华一起，为了在最大农业产地的加利福尼亚州(精华町)做农业而来。在搞错西海岸和东海岸之前明明都很顺利的……不知为何现在是孤身一人。",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_GALACO" ],
+    "items": {
+      "both": {
+        "items": [
+          "voiro_hair_galaco2",
+          "panties",
+          "bra",
+          "voiro_tights_galaco",
+          "voiro_heels_galaco",
+          "voiro_dress_galaco",
+          "voiro_hair_galaco",
+          "voiro_crown_galaco",
+          "mbag",
+          "hoe",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_cell_phone" }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "OИE",
+    "//2": "ちょっとした公式設定も二次創作の部類も見当たらないのは何故？",
+    "//3": "紹介文一行目 - 公式デモソング「おねがいダーリン(OИEgai Darlin`)」(ナナホシ管弦楽団（不純異性交遊P）)歌詞中の合いの手より。紹介文二行目 - 7 days to die。",
+    
+    "type": "profession",
+    "ident": "voiro_one",
+    "name": "幸存者(OИE)[VOIRO]",
+    "description": "「确实是这样哦。」\n听说丧尸在位于亚利桑那州的人间天堂生存。这片区域已经布满了丧尸，一个有着钻头卷发的女孩也在横冲直撞。 看来这是就是目的地，没有任何问题。",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_ONE" ],
+    "items": {
+      "both": {
+        "items": [
+          "panties",
+          "bra",
+          "voiro_socks_one",
+          "voiro_boots_one",
+          "voiro_arm_covers_one",
+          "voiro_dress_one",
+          "voiro_hair_one",
+          "voiro_choker",
+          "mbag",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_smart_phone" }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "水奈瀬コウ",
+    "//2": "一人だけ紹介文が悲惨というか重すぎる気がする。ヘッドホンは首から提げてるイメージが強く、頭に被せたくなかったのでオミット。代わりにMP3プレイヤーを持たせた。",
+    "//3": "紹介文一行目 - ベクターＰＣショップ「VOICEROID+ 水奈瀬コウ EX ダウンロード版」機能説明ページ内のサンプルボイスより。",
+    
+    "type": "profession",
+    "ident": "voiro_minase_kou",
+    "name": "教师(水奈濑光)[VOIRO]",
+    "description": "「擅长的科目是国语，喜欢介绍有趣的谚语。」\n大灾变爆发的一周前，来到了佛蒙特州的一所小学任教。长假过后，原本应该照顾孩子们成长的教学楼结果化为了灰烬。有为妹妹而战的哥哥，也有寻找姐姐的和服少女。至少在这片土地上还闪烁着希望之光。",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_KOU" ],
+    "items": {
+      "both": {
+        "items": [
+          "boxer_shorts",
+          "socks",
+          "voiro_sneakers_kou",
+          "voiro_jeans_kou",
+          "dress_shirt",
+          "voiro_hoodie_kou",
+          "voiro_jacket_kou",
+          "voiro_glasses_kou",
+          "mbag",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_cell_phone" },
+          { "item": "light_battery_cell", "charges": 100 , "container-item": "mp3" }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "京町セイカ",
+    "//2": "原作(京町セイカ～未来からの使者～)再現してはいけない女その２。単純に未来の武器と装備がヤバイ。京町セイカは、世界をタイムパラドックスの脅威から守る未来の組織から、精華町に派遣された若きエージェントです。",
+    "//3": "紹介文一行目 - 京町セイカ公式サイト、トップ画像より。",
+    
+    "type": "profession",
+    "ident": "voiro_kyomachi_seika",
+    "name": "时空监查员(京町精华)[VOIRO]",
+    "description": "「紧急情况！」\n为了和Galaco一起种地，来到了美国，但接到在新英格兰观测到大规模奇点“spot”的紧急通知，于是立刻出动了。现在似乎是和Galaco失散了。",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_SEIKA", "VOIRO_PROF_STA" ],
+    "items": {
+      "both": {
+        "items": [
+          "panties",
+          "bra",
+          "voiro_socks_seika",
+          "voiro_boots_seika",
+          "voiro_dress_shirt_seika",
+          "voiro_skirt_seika",
+          "voiro_vest_seika",
+          "voiro_arm_covers_seika",
+          "voiro_glasses_seika",
+          "mbag",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_smart_phone" },
+          { "item": "light_battery_cell", "charges": 100 , "container-item": "voiro_stick_seika" },
+          { "item": "light_disposable_cell", "ammo-item": "battery", "charges": 300, "container-item": "voiro_headset_seika" }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "東北きりたん",
+    "//2": "きりたんmodから色々とコンバートしてきましたが、スタンドアローン化に伴ってきりたん砲は普通のグレラン砲になりました。",
+    "//3": "紹介文一行目 - 「VOICEROID+ 東北きりたん EX」exVOICEより。",
+    
+    "type": "profession",
+    "ident": "voiro_warui_touhoku_kiritan",
+    "name": "家里蹲(东北切蒲英)[VOIRO]",
+    "description": "「你这样对待一个小学五年级学生，就不觉得害臊吗？」\n期待着钓鳕鱼的波士顿动漫展结果泡汤了。虽然对于家里蹲来说，窝在避难所的生活也不坏，但是快要缺乏俊子能量了(切碳宁可失去游戏机，也不能失去俊子姐姐的大腿！)。那么，去寻找那个“卖俊达的少女”吧！",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_KIRITAN" ],
+    "items": {
+      "both": {
+        "items": [
+          "panties",
+          "voiro_sarashi",
+          "tabi_gi",
+          "voiro_zouri_kiritan",
+          "voiro_kimono_kiritan",
+          "voiro_randsel",
+          "voiro_hair_kiritan",
+          "voiro_knife_kiritan",
+          "mbag",
+          "mag_animecon",
+          "usb_drive",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_smart_phone" },
+          { "item": "voiro_kiritan_cannons", "ammo-item": "40x46mm_m433", "charges": 8 },
+          { "item": "ear_plugs", "custom-flags": [ "no_auto_equip" ] }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "IA",
+    "//2": "STEEP以外のネタとストーリーラインを思いつかなかったので、せめてもの気持ちでマイク持たせた。",
+    "//3": "紹介文一行目 - 「AIR」主題歌「鳥の詩」より(「IA -ARIA ON THE PLANETES-」には「鳥の詩」のデモが同梱されている)。紹介文二行目 - IZ氏作「続 たのしいあ【STEEP】」ネタ。ウィンタースポーツゲーム「STTEP」の舞台はアルプスだが改変。",
+    
+    "type": "profession",
+    "ident": "voiro_ia",
+    "name": "歌姬(IA)[VOIRO]",
+    "description": "「不停追着，追着 那消失在天空的飞机尾迹。」\n我原本计划和高桥一起去冬季运动圣地新罕布什尔州的雪山里进行翼装飞行，但是预约被取消了。 听说这里有在要塞里和丧尸战斗的小女孩，还有国家公园的守护者，但是我能做什么呢？ 至少让我们唱一首希望之歌(前面是鸟之诗的歌词)吧。",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_IA" ],
+    "items": {
+      "both": {
+        "items": [
+          "voiro_hair_ia2",
+          "panties",
+          "bra",
+          "voiro_socks_ia",
+          "voiro_boots_ia",
+          "voiro_dress_ia",
+          "voiro_choker",
+          "voiro_hair_ia",
+          "voiro_mic",
+          "mbag",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_smart_phone" }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "音街ウナ",
+    "//2": "専用装備のほぼ全てにギミックが仕込まれている。1人で実質3人分。",
+    "//3": "紹介文一行目 - 音街ウナTalk_EX ボイスマテリアルより。",
+    
+    "type": "profession",
+    "ident": "voiro_otomachi_una",
+    "name": "偶像(音街鳗)[VOIRO]",
+    "description": "「哈~工作终于结束了！」\n虽然约定在马萨诸塞湾和东北一起捕获鳕鱼和鲱鱼，不过因为工作取消了。虽然不知道东北现在在哪里，但是似乎看到了很多以前没见过的奇怪的东西。",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_UNA", "VOIRO_BODY_UNA_SPICY" ],
+    "items": {
+      "both": {
+        "items": [
+          "voiro_hair_una2",
+          "panties",
+          "bra",
+          "voiro_tights_una",
+          "voiro_boots_una",
+          "voiro_dress_una",
+          "voiro_bag_una",
+          "voiro_hair_una",
+          "voiro_hat_una",
+          "voiro_hair_una3",
+          "voiro_mic_una_spicy",
+          "voiro_majorbaton",
+          "mbag",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_smart_phone" },
+          { "item": "gloves_fingerless", "custom-flags": [ "no_auto_equip" ] }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "紲星灯",
+    "//2": "シャークネード(ALIEN MOD)があるからサメネタも入れたかったけど、大食い設定だけで文章ぱんぱんになった。フライトジャケットにタイツ、アームウォーマー装備と、気温対策が一番整っている状態でプレイ出来る優秀な子。",
+    "//3": "紹介文一行目 - 「紲星あかり exVOICE vol.1」より。",
+    
+    "type": "profession",
+    "ident": "voiro_kizuna_akari",
+    "name": "食物斗士(绁星灯)[VOIRO]",
+    "description": "「我吃我吃。」\n为了充分体验美国的饮食文化，在感恩节期间去了美国。从西海岸开始展开进攻，目标波士顿！龙虾！蛤蜊浓汤！还有碳烤生蚝！！！当然光吃海鲜可不够。英国传统的炖菜和烤菜也很有名呢！真期待明天啊！",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_AKARI" ],
+    "items": {
+      "both": {
+        "items": [
+          "voiro_hair_akari",
+          "panties",
+          "bra",
+          "voiro_tights_akari",
+          "voiro_shoes_akari",
+          "voiro_arm_warmers_akari",
+          "voiro_dress_akari",
+          "voiro_jacket_akari",
+          "voiro_ornament_akari",
+          "mbag",
+          "chili",
+          "spork",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_cell_phone" },
+          { "item": "onigiri", "container-item": "can_food" }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "桜乃そら",
+    "//2": "都市開発系動画(のサポート役)が多いですね。",
+    "//3": "紹介文一行目 - 「VOICEROID2 桜乃そら」紹介動画より。",
+    
+    "type": "profession",
+    "ident": "voiro_haruno_sora",
+    "name": "公园管理局人员(樱乃空)[VOIRO]",
+    "description": "「我叫樱乃空、是17岁。・・・・・喂喂☆(十七岁神教都懂吧)」\n为了重建项目，来到了美国白山山脉国家森林公园附近，那里仍然保留着美国的精彩户外活动。 最近，有很多坏人破坏建筑物，很困扰啊！",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_SORA" ],
+    "items": {
+      "both": {
+        "items": [
+          "voiro_hair_sora2",
+          "panties",
+          "bra",
+          "voiro_shoes_sora",
+          "voiro_dress_sora",
+          "voiro_shawl_sora",
+          "voiro_hair_sora",
+          "voiro_glasses_red",
+          "voiro_sorarobo",
+          "mbag",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_cell_phone" }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "東北イタコ",
+    "//2": "これと言ったものは持たせてないけど、可視化出来る背後霊と、狐に憑依される前の姿になれるアクティブ変異を2つ備えてる。",
+    "//3": "紹介文一行目 - 口癖の一つ。他に「にゃあ」「ちゅっ」等。",
+    
+    "type": "profession",
+    "ident": "voiro_touhoku_itako",
+    "name": "潮来巫女(东北伊达子)[VOIRO]",
+    "description": "「啾哇～。」\n原本打算搭上切蒲英的渔船，钓蓝鳍金枪鱼赚点钱，结果却失败了。虽然丧尸已经是具空壳，无法就对话做出反应，但在这样的世界里，也是非常需要潮来的力量的。",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_ITAKO", "VOIRO_NHK", "VOIRO_HAIGOREI_active" ],
+    "items": {
+      "both": {
+        "items": [
+          "voiro_hair_itako2",
+          "panties",
+          "voiro_sarashi",
+          "tabi_gi",
+          "voiro_zouri_itako",
+          "voiro_kimono_itako",
+          "voiro_hair_itako",
+          "mbag",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_smart_phone" }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "鳴花ヒメ",
+    "//2": "公式の想定年齢は11～12歳。精霊。男女不明。",
+    "//3": "紹介文一行目 - 「鳴花ヒメ・ミコト　ボイスパック」より。",
+    
+    "type": "profession",
+    "ident": "voiro_meika_hime",
+    "name": "梅之精灵(鸣花姬)[VOIRO]",
+    "description": "「哦！哦！哦！哦！哦！哦！」\n和尊还有flower三个人来到了新英格兰红叶最多的佛蒙特州游玩。这片土地上枫叶像熊熊燃烧的火焰，当然那一天燃烧着的远不只是枫叶。去寻找失散的两个人，即使不能修复梅树，也让植物们复苏吧！",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_HIME" ],
+    "items": {
+      "both": {
+        "items": [
+          "voiro_hair_hime2",
+          "voiro_fundoshi",
+          "voiro_socks_hime",
+          "voiro_boots_meikaers",
+          "voiro_dress_hime",
+          "voiro_hair_hime",
+          "voiro_aliceband_hime",
+          "mbag",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_smart_phone" }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "鳴花ミコト",
+    "//2": "公式の想定年齢は11～12歳。精霊。男女不明だが男の娘案を採用。ヒメとは1ドット、ヘソの位置が違う。",
+    "//3": "紹介文一行目 - 「スペシャルガール - れるりりfeat.鳴花ヒメ & ミコト」歌詞より。",
+    
+    "type": "profession",
+    "ident": "voiro_meika_mikoto",
+    "name": "梅之精灵(鸣花尊)[VOIRO]",
+    "description": "「啊 嗨咻！　嗨咻！」\n大灾变那天，当四处闲逛寻找消失的姬时，与flower也走散了。在避难所生活时不知为何只提供了年糕和拉面，已经吃腻了。现在物资也没有了，是时候去确认两个人的安危了。",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_MIKOTO" ],
+    "items": {
+      "both": {
+        "items": [
+          "voiro_hair_mikoto2",
+          "voiro_fundoshi",
+          "voiro_socks_mikoto",
+          "voiro_boots_meikaers",
+          "voiro_dress_mikoto",
+          "voiro_hair_mikoto",
+          "voiro_aliceband_mikoto",
+          "mbag",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_smart_phone" }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "如月ついな",
+    "//2": "自称、真の名を役追儺(えんのついな)。原作(鬼っ子ハンターついなちゃん)再現してはいけない女その３。ビームやフ○ンネルは使わせてはいけない。Tバック説、鬼退治の時はノーパンスパッツ説等が見受けられた。小一時間悩んだ結果、本能に従いパンツはオミットした。",
+    "//3": "紹介文一行目 - 『鬼っ子ハンターついなちゃん』プロローグ作品「ついな～Prelude～」のセリフより。",
+    
+    "type": "profession",
+    "ident": "voiro_kisaragi_tuina",
+    "name": "方相氏(如月追傩)[VOIRO]",
+    "description": "「我可是退治鬼怪的专家！」\n虽然不知道是鬼怪们干的还是大叔干的，但现在美国的形势很不妙啊！这样的话，用我的力量把大家集中起来驱逐鬼！大家一起来，方相氏追傩酱的捉鬼时间到了！",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_TUINA" ],
+    "items": {
+      "both": {
+        "items": [
+          "voiro_hair_tuina",
+          "voiro_sarashi",
+          "voiro_leggings_tuina",
+          "voiro_geta_tuina",
+          "voiro_costume_tuina",
+          "voiro_costume_sode_tuina",
+          "voiro_ornament_tuina",
+          "voiro_dickson",
+          "voiro_ehoumaki",
+          "voiro_shield_tuina",
+          "voiro_halberd_tuina",
+          "voiro_zenki_tuina",
+          "voiro_goki_tuina",
+          "mbag",
+          "band_aid",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_smart_phone" }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "のぞみ",
+    "//2": "かんたん！アフレコ(2019年9月27日発売)としては新人だが、AITalk(2012年1月10日提供開始)としてはゆかりさんの同期にあたる。ボイロの顔がゆかりさんなら、AITalkの顔がのぞみ姉さんと言っても過言では無い。実際に公式のAITalkの紹介等はのぞみ姉さんの立ち絵と声が使われている。",
+    "//3": "紹介文一行目 - 株式会社エーアイの「【音声合成エーアイPV】AITalk、ご存知ですか？」紹介PVより。",
+    
+    "type": "profession",
+    "ident": "voiro_nozomi",
+    "name": "OL(希)[VOIRO]",
+    "description": "「你知道语音合成的AITalk吗？」\n接到同期的小缘失踪的讯息后，和小葵她们一起来搜救了。所以首先应该以游戏厅为目标吗？",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_NOZOMI" ],
+    "items": {
+      "both": {
+        "items": [
+          "voiro_hair_nozomi",
+          "panties",
+          "bra",
+          "socks",
+          "voiro_loafers_nozomi",
+          "voiro_skirt_nozomi",
+          "voiro_blouse_nozomi",
+          "mbag",
+          "wristwatch",
+          "hairpin",
+          "barrette",
+          "purse",
+          "ref_lighter",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_cell_phone" },
+          { "group": "charged_flashlight" }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "伊織弓鶴",
+    "//2": "CeVIO以上に設定が無さ過ぎて辛み。",
+    "//3": "紹介文一行目 - 株式会社エーアイが提供するデモ音声のデフォルト説明文より。",
+    
+    "type": "profession",
+    "ident": "voiro_iori_yuzuru",
+    "name": "新人(伊织弓鹤)[VOIRO]",
+    "description": "「请在这里输入你喜欢的文本。」\n以新人研修的名义，一起参加了捕获双胞胎中红色的那只的作战。但是本来应该带我到这里来的蓝色那只也不知去了哪里，还有其他新人吗？也没有看到人影。捕获行动似乎遇到了困难。",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_YUZURU", "VOIRO_WAVEFORM_active" ],
+    "items": {
+      "both": {
+        "items": [
+          "boxer_briefs",
+          "socks",
+          "voiro_sneakers_yuzuru",
+          "voiro_pants_yuzuru",
+          "voiro_dress_shirt_yuzuru",
+          "voiro_ornament_yuzuru2",
+          "voiro_ornament_yuzuru",
+          "bindle",
+          "travelpack",
+          "ref_lighter",
+          "net",
+          "water_clean",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_smart_phone" },
+          { "item": "curry_veggy" },
+          { "item": "curry_veggy" },
+          { "item": "rice_cooked" },
+          { "item": "rice_cooked" },
+          { "item": "voiro_ebi_fly" },
+          { "item": "rope_30", "custom-flags": [ "no_auto_equip" ] }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "flower(v_flower)",
+    "//2": "設定の無いキャラクターなので、職業はイメージ優先で。",
+    "//3": "紹介文一行目 - セカンドアルバム「一期一会」のキャッチコピー。フォレストガンプのセリフが元ネタ？",
+    "//4": "紹介文二行目 - 車のナンバープレート→ニューハンプシャー州の標語。バーモント州からニューハンプシャー州に入った。",
+    
+    "type": "profession",
+    "ident": "voiro_v_flower",
+    "name": "朋克摇滚乐手(flower)[VOIRO]",
+    "description": "「生活就像一盒巧克力，直到打开它你才会知道其中是什么。」\n考虑到姬冒冒失失的习性，正在南下的情况下，我看到了停在路边的车辆上刻有的车牌上的文字。『自由地活着，或者死亡』。这是否是一种警告或者提示，我并不清楚，但我希望能抓住前者。",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_FLOWER" ],
+    "items": {
+      "both": {
+        "items": [
+          "boy_shorts",
+          "voiro_leg_warmers_flower",
+          "voiro_sandals_flower",
+          "voiro_hot_pants_flower",
+          "voiro_camisole_flower",
+          "voiro_jacket_flower",
+          "voiro_choker_flower",
+          "mbag",
+          "suitcase_l",
+          "ref_lighter",
+          "voiro_mic",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_smart_phone" }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "小春六花",
+    "//2": "ラキストンの起動時のメッセージはガンパレード・マーチ等の無名世界観ネタ。",
+    "//3": "紹介文一行目 - 「【小春六花】VOICEROID制作企画 音声サンプル」exVOICEより。",
+    
+    "type": "profession",
+    "ident": "voiro_koharu_rikka",
+    "name": "高中生(小春六花)[VOIRO]",
+    "description": "「マキちゃんの事か～～～ッ！」\n作为文化祭的表演，一个将被废弃的机器人被制作成了穿上Rakiston玩偶服的伙伴。虽然它是一个容易摔倒的角色，但现在它成为了我们求生的重要伙伴。",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_RIKKA" ],
+    "items": {
+      "both": {
+        "items": [
+          "voiro_hair_rikka",
+          "panties",
+          "bra",
+          "voiro_socks_rikka",
+          "voiro_sneakers_rikka",
+          "voiro_skirt_rikka",
+          "voiro_sweater_rikka",
+          "voiro_school_uniform_rikka",
+          "voiro_tie_ascot_rikka",
+          "voiro_hairpin_rikka",
+          "voiro_bag_rikka",
+          "water_clean",
+          "ZSG",
+          "mag_virtualsinger",
+          "bot_lakiston_hack"
+        ],
+        "entries": [
+          { "group": "charged_cell_phone" },
+          { "item": "voiro_hoodie_rikka", "custom-flags": [ "no_auto_equip" ] }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "ゆかミラン大尉",
+    "//2": "きゆみやま氏の二次創作ゆかりさん。持ち物ネタは楽曲「サヨナラチェーンソー」より。SAS大尉は元ネタの「CALL of DUTY4」のキャラクター、マクミラン大尉の所属。イギリス陸軍特殊部隊「SAS」。携帯&スマホが無い変わりに腕時計。",
+    "//3": "紹介文一行目 - 「ゆかりさん＝○○のプロ」を定着させた「【Minecraft】ゲリラクラフト 周囲に防衛線を築き地雷を張り巡らせるんだ」シリーズ⑮話冒頭、ゆかミラン大尉のセリフより。紹介文二行目 - マクミラン大尉のセリフネタ。",
+    
+    "type": "profession",
+    "ident": "voiro_captain_yukamillan",
+    "name": "SAS队员(大尉)(缘·米兰)[VOIRO]",
+    "description": "「大家好。 在下是缘，一名专业的丧尸生存专家。」\n七日杀、生存之道、消逝的光芒、僵尸回廊、僵尸德比2、僵尸毁灭工程、丧尸围城3、加拿大死亡之路、生化危机2重制版、迷雾生存、亿万僵尸、使命召唤:BO2 ORIGINS、僵尸部队三部曲…等等…还有我的世界。我猎杀了许多世界上的僵尸。。「standby……standby……GO！」一人就是一支军队的缘·米兰小姐正前往新英格兰!",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_YUKARI", "VOIRO_PROF_SAS" ],
+    "items": {
+      "both": {
+        "items": [
+          "panties",
+          "bra",
+          "voiro_socks_yukari",
+          "voiro_shoes_yukari",
+          "voiro_arm_covers_yukari",
+          "voiro_dress_yukari",
+          "voiro_hoodie_yukari",
+          "voiro_ornament_yukari",
+          "voiro_gobag_yukari",
+          "voiro_hair_yukari",
+          "silver_bracelet",
+          "wristwatch"
+        ],
+        "entries": [
+          { "item": "combatsaw_off", "charges": 450, "custom-flags": [ "no_auto_equip" ] },
+          { "item": "usp_45", "ammo-item": "45_acp", "charges": 12, "container-item": "holster" },
+          { "item": "legpouch_large", "contents-group": "army_mags_usp45" },
+          { "item": "m14mag", "ammo-item": "762_51", "charges": 20, "container-item": "chestrig" },
+          { "item": "M24", "ammo-item": "762_51", "charges": 20, "container-item": "survivor_vest" }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "悪い結月ゆかり",
+    "//2": "新島秋一氏による二次創作ゆかりさん。",
+    "//3": "紹介文 - ストラテジーゲーム「stellaris」によるボトムズコピペ改変。広大マラソン氏作「ステラリス（ver2.2.2以降）ゆかり様のライフワークは銀河征服」ネタ。",
+    
+    "type": "profession",
+    "ident": "voiro_warui_yuzuki_yukari",
+    "name": "异能生存体(病态的结月缘)[VOIRO]",
+    "description": "在《群星》的银河中，乌托邦和启示录这两个阵营组建彼此的军队，进行了持续100年的战争，现在已经没有人清楚战争的原因。在这场被称为「百年战争」的最后阶段，主人公结月ゆかり是乌托邦军队的一名士兵，却卷入了一次奇怪的袭击盟军基地的行动。在作战中，缘偶然目睹了被称为「素体」的乌托邦军队最高机密，因此成为军方追捕的目标，她在星球间的各个城镇、星球之间流浪着。在逃亡和战斗中，她逐渐揭开了阴谋的真相，并逐渐接近与自己的出生有关的更深层的谜团。",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_YUKARI_EVIL" ],
+    "items": {
+      "both": {
+        "items": [
+          "panties",
+          "bra",
+          "voiro_socks_yukari",
+          "voiro_shoes_yukari",
+          "voiro_arm_covers_yukari",
+          "voiro_dress_yukari",
+          "voiro_hoodie_yukari",
+          "voiro_ornament_yukari_evil",
+          "voiro_hair_yukari_evil",
+          "voiro_hair_yukari_evil2",
+          "silver_bracelet",
+          "silver_bracelet",
+          "voiro_belt_evil",
+          "mbag",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_cell_phone" }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "初音ミク",
+    "//2": "変異の有効化で弱音ハクにスタイルチェンジ！",
+    "//3": "紹介文一行目 - ika氏作詞作曲「みっくみくにしてあげる♪」タイトルにして歌詞のサビ。",
+    
+    "type": "profession",
+    "ident": "voiro_hatsune_miku",
+    "name": "电子歌姬(初音未来)[VOIRO]",
+    "description": "「把你mikumiku掉♪」\n在MIKU EXPO波士顿公演期间发生了生化危机。虽然禁止握手也禁止触摸，但是热情的粉丝还是涌了过来，真是令人困扰呢。是时候跳出屏幕，用大葱打倒那些不听话的坏人吧。",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_MIKU" ],
+    "items": {
+      "both": {
+        "items": [
+          "voiro_hair_miku",
+          "panties",
+          "bra",
+          "voiro_boots_miku",
+          "voiro_skirt_miku",
+          "voiro_sleeveless_miku",
+          "voiro_arm_covers_miku",
+          "voiro_headset_miku",
+          "voiro_negi",
+          "voiro_mic",
+          "mbag",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_cell_phone" }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "ずんだもん",
+    "//3": "紹介文一行目 - ずんだもんなのだ！",
+    
+    "type": "profession",
+    "ident": "voiro_zundamon",
+    "name": "俊达萌(俊达萌)[VOIRO]",
+    "description": "「我是俊达萌呐喏哒!」\n在东北家一起去新英格兰旅行中!但是和俊子还有伊达子失散了，周围居然有很多活着的尸体。在被丧尸们吃掉之前和东北家汇合吧喏哒！",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_ZUNDAMON","VOIRO_ZUNDAMON_KAMI_active","VOIRO_ZUNDAMON_MIMI_active" ],
+    "items": {
+      "both": {
+        "items": [
+          "panties",
+          "bra",
+          "voiro_sneakers_zundamon",
+          "voiro_overall_zundamon",
+          "voiro_dress_shirt_zundamon",
+          "socks",
+          "mbag",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_cell_phone" }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "四国めたん",
+    "//3": "紹介文一行目 - ふるさと女学院、高等部二年生、ずん子のクラスメイトの四国めたんですわ",
+    
+    "type": "profession",
+    "ident": "voiro_metan",
+    "name": "大小姐(四国玫碳)[VOIRO]",
+    "description": "去新英格兰流浪找饭吃!虽然完全找不到人，但是吃饭和睡觉的地方还是有的。",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_METAN" ],
+    "items": {
+      "both": {
+        "items": [
+          "panties",
+          "bra",
+          "voiro_dress_shoes_metan",
+          "voiro_tights_metan",
+          "voiro_dress_metan",
+          "voiro_hat_metan",
+          "voiro_spear_pipe_metan",
+          "mbag",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_cell_phone" }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "春日部つむぎ",
+    "//3": "紹介文一行目 - 春日部つくしの従妹という設定で、埼玉県の高校に通うハイパー埼玉ギャル。自分のことを「あーし」と呼びます",
+    
+    "type": "profession",
+    "ident": "voiro_tumugi",
+    "name": "辣妹(春日部䌷)[VOIRO]",
+    "description": "今天去新英格兰买衣服!但是，每家店都没有人，到处都是脸色不好的恶心大叔在周围徘徊。依靠埼玉辣妹的力量来克服吧！",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_TUMUGI", "VOIRO_BODY_TUMUGI_KAMI_active" ],
+    "items": {
+      "both": {
+        "items": [
+          "panties",
+          "bra",
+          "voiro_shirt_tumugi",
+          "voiro_skirt_tumugi",
+          "voiro_cardigan_tumugi",
+          "voiro_necktie_tumugi",
+          "voiro_socks_tumugi",
+          "voiro_shoes_tumugi",
+          "mbag",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_cell_phone" }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "雨晴はう",
+    "//3": "紹介文一行目 - 現役看護師の雨晴はう。趣味は食べ歩き",
+    
+    "type": "profession",
+    "ident": "voiro_hau",
+    "name": "护士(雨晴晴雨)[VOIRO]",
+    "description": "作为支援护理活动的一环，我来到了新英格兰，但是无论是城镇还是医院，都充斥着容颜苍白的奇怪的人们！护理对于这些丧尸到底有没有作用呢？",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_HAU" ],
+    "items": {
+      "both": {
+        "items": [
+          "panties",
+          "bra",
+          "voiro_hat_hau",
+          "voiro_nurse_clothes_hau",
+          "voiro_glove_hau",
+          "voiro_socks_hau",
+          "sneakers",
+          "stethoscope",
+          "mbag",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_cell_phone" }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "波音リツ",
+    "//3": "紹介文一行目 - 波音リツ:プロフィールとかまだ情報が少なくて難儀しております。",
+    
+    "type": "profession",
+    "ident": "voiro_rithu",
+    "name": "小律(波音律)[VOIRO]",
+    "description": "因为唱歌的工作来到新英格兰的小律，但是观众和工作人员都变成了丧尸，快到了走投无路的时候",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_RITHU" ],
+    "items": {
+      "both": {
+        "items": [
+          "panties",
+          "bra",
+          "voiro_hat_rithu",
+          "voiro_skirt_rithu",
+          "voiro_jacket_rithu",
+          "sneakers",
+          "mbag",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_cell_phone" }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "冥鳴ひまり",
+    "//3": "紹介文一行目 - 冥鳴ひまり、普段は死神である事を隠して人間界に紛れて暮らしており、その際の偽名は「北別府ひまり」というらしい",
+    
+    "type": "profession",
+    "ident": "voiro_himari",
+    "name": "死神(冥鸣日葵)[VOIRO]",
+    "description": "拥有「令诅咒的对象从身体的洞喷出血而死」的能力的死神。看来这个世界上有很多甘心死去的丧尸，我能好好履行死神的职责吗？",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_HIMARI" ],
+    "items": {
+      "both": {
+        "items": [
+          "panties",
+          "bra",
+          "voiro_hair_ornaments_himari",
+          "voiro_dress_himari",
+          "voiro_long_glove_himari",
+          "sneakers",
+          "mbag",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_cell_phone" }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "九州そら",
+    "//3": "紹介文一行目 - 九州そら、宇宙開発用の女子型アンドロイドで、量産されている。作中で主に活躍しているのは九州そら(mk-Ⅱ)",
+    
+    "type": "profession",
+    "ident": "voiro_sora",
+    "name": "女子型智能机器人(九州空)[VOIRO]",
+    "description": "和俊子同班的宇宙开发用的女子型智能机器人。为了收集宇宙中所有不可思议的数据，来到了新英格兰。这里有什么有趣的数据呢？",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_SORA_2" ],
+    "CBMs": [ "bio_cable", "bio_meteorologist", "bio_infrared", "bio_power_storage_mkII" ],
+    "items": {
+      "both": {
+        "items": [
+          "panties",
+          "bra",
+          "voiro_headring_sora",
+          "voiro_monocle_sora",
+          "voiro_suit_sora",
+          "voiro_boots_sora",
+          "voiro_solar_sora",
+          "mbag",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_cell_phone" },
+          { "item" : "jumper_cable" },
+          { "item": "light_plus_battery_cell", "ammo-item": "battery", "charges": 150, "container-item": "voiro_monocle_sora" }
+        ]
+      }
+    }
+  },
+  {
+    "//1": "モチノ・キョウコ",
+    "//3": "紹介文一行目 - モチノ・キョウコ、亡き祖父が遺した模型店に勤める、次期店長をめざす優しい女の子",
+    "//4": "アニメ・特撮・プラモデル・玩具・アメコミ系など様々なジャンルに興味を持ち、自分の好きなことを楽しく話すことも話されるのも好き",
+    "//5": "困っている人や頑張る人をほっとけない性格なのだが、それにより頼みごとを断りづらくトラブルに巻き込まれることも多い",
+    
+    "type": "profession",
+    "ident": "voiro_mochiko",
+    "name": "望野下届模型店店长(望野京子)[VOIRO]",
+    "description": "在已故祖父留下的模型店工作的善良女孩，立志成为下一任店长。 今天原定要参加在新英格兰举行的全球爱好秀，但是……会场出现了丧尸，引起了巨大的恐慌！ 虽然成功逃脱了，但是现在该怎么办呢？",
+    "points": 0,
+    "traits": [ "VOIRO_BODY_MOCHIKO","TAIL_FLUFFY_MOCHIKO" ],
+    "items": {
+      "both": {
+        "items": [
+          "panties",
+          "bra",
+          "voiro_hat_cotton_mochiko",
+          "voiro_goggles_mochiko",
+          "voiro_shirt_mochiko",
+          "voiro_arm_covers_mochiko",
+          "voiro_nanoskirt_mochiko",
+          "voiro_socks_mochiko",
+          "flip_flops",
+          "mbag",
+          "water_clean"
+        ],
+        "entries": [
+          { "group": "charged_cell_phone" }
+        ]
+      }
+    }
+  }
+]

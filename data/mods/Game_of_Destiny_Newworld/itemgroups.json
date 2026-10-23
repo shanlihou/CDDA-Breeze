@@ -1,0 +1,91 @@
+[
+  {
+   "type": "item_group",
+   "subtype": "distribution",
+   "id": "TAS_stone_group",
+   "entries": [
+    { "item": "TAS_npcstone1", "prob": 1 },
+    { "item": "TAS_npcstone2", "prob": 1 },
+    { "item": "TAS_npcstone3", "prob": 1 },
+    { "item": "TAS_npcstone4", "prob": 1 },
+    { "item": "TAS_npcstone5", "prob": 1 }
+   ]
+  },
+  {
+   "type": "item_group",
+   "subtype": "collection",
+   "id": "SWP_box_N",
+   "entries": [
+    { "item": "Punchcard", "prob": 100 },
+    { "group": "mon_zombie_survivor_death_drops", "prob": 5 },
+    { "group": "mon_zombie_technician_death_drops", "prob": 5 },
+    { "group": "mon_zombie_medical_death_drops", "prob": 5 },
+    { "group": "mon_zombie_military_pilot_death_drops", "prob": 5 },
+    { "group": "mon_zombie_medical_death_drops", "prob": 5 },
+    { "group": "mon_zombie_soldier_death_drops", "prob": 5 },
+    { "group": "mon_zombie_cop_death_drops", "prob": 5 },
+    { "group": "mon_zombie_sailor_death_drops", "prob": 5},
+    { "group": "feral_humans_death_drops_axe", "prob": 5 },
+    { "group": "feral_armored_death_drops_mace", "prob": 3 },
+    { "group": "feral_armored_death_drops_battleaxe", "prob": 3 },
+    { "group": "feral_fancy_death_drops_crossbow", "prob": 3 },
+    { "group": "feral_fancy_death_drops_rapier", "prob": 3 },
+    { "group": "feral_humans_death_drops_axe", "prob": 3 },
+    { "group": "feral_humans_death_drops_crowbar", "prob": 5 },
+    { "group": "feral_scientists_death_drops_scalpel", "prob": 5 }
+   ]
+  },
+  {
+   "type": "item_group",
+   "subtype": "collection",
+   "id": "SWP_box_R",
+   "entries": [
+    { "item": "NW_copper_card", "prob": 40 },
+    { "item": "TAS_npcstone1", "prob": 1 },
+    { "item": "TAS_npcstone2", "prob": 1 },
+    { "item": "TAS_npcstone3", "prob": 1 },
+    { "item": "TAS_npcstone4", "prob": 1 },
+    { "item": "TAS_npcstone5", "prob": 1 },
+    { "item": "GS_basic_str", "prob": 5 },
+    { "item": "GS_basic_dex", "prob": 5 },
+    { "item": "GS_basic_int", "prob": 5 },
+    { "item": "GS_basic_per", "prob": 5 },
+    { "group": "ammo_pistol_rare", "prob": 5, "count": 4 },
+    { "group": "ammo_rifle_rare", "prob": 5, "count": 4 },
+    { "group": "ammo_shotgun_rare", "prob": 5, "count": 4 },
+    { "group": "guns_pistol_rare", "prob": 5 },
+    { "group": "guns_rifle_rare", "prob": 5 },
+    { "group": "guns_shotgun_rare", "prob": 5 },
+    { "item": "GS_comestible_unspecialty_bandage", "prob": 5, "count": 4 },  
+    { "item": "DT_foodmt_hate", "prob": 5, "count": 5 },
+    { "item": "DT_foodmt_melted", "prob": 5, "count": 5 },
+    { "item": "super_fried_dough_twist", "prob": 5 }  
+   ]
+  },
+  {
+   "type": "item_group",
+   "subtype": "collection",
+   "id": "SWP_box_SR",
+   "entries": [
+    { "item": "NW_silver_card", "prob": 60 },
+    { "item": "DT_weapont_semisolid", "prob": 4 }
+    ]
+  },
+  {
+   "type": "item_group",
+   "subtype": "distribution",
+   "id": "SWP_box_SSR",   
+    "entries": [
+    { "item": "NW_gold_card", "prob": 80} ]
+  },
+  {
+   "type": "item_group",
+   "subtype": "collection",
+   "id": "SWP_box1",
+   "entries": [
+    { "group": "SWP_box_N", "prob": 100,"count": 10 },
+    { "group": "SWP_box_R", "prob": 100,"count": 4 },
+    { "group": "SWP_box_SR", "prob": 100 }
+   ]
+  }
+]

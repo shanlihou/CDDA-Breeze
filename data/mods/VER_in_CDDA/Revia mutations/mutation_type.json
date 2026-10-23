@@ -1,0 +1,43 @@
+[
+    {
+        "type": "mutation",
+        "id": "THRESH_Revia",
+        "name": {
+          "str": "雷维亚圣堂武士"
+        },
+        "points": 1,
+        "allowed_category": [
+            "Revia",
+            "Revia_pre"
+          ],
+        "description": "我的孩子，愿我的祝福在跨越世界后依然能让你强大————血神斯卡恩",
+        "valid": false,
+        "purifiable": false,
+        "threshold": true
+      },
+      {
+        "type": "mutation_category",
+        "id": "Revia_pre",
+        "name": "雷维亚.苍",
+        "threshold_mut":"THRESH_Revia",
+        "mutagen_message": "血纹符石加强了你与斯卡恩的联系，传递了她的轻抚。血祭血神，颅献斯卡恩，唯有战斗才能回报血神的爱与期望！",
+        "memorial_message": "血祭血神，颅献斯卡恩，唯有战斗才能回报血神的爱与期望！"
+
+      },
+      {
+        "type": "mutation_category",
+        "id": "Revia",
+        "name": "雷维亚.血",
+        "threshold_mut":"THRESH_Revia",
+        "mutagen_message": "血石加强了你与斯卡恩的联系，传递了她的拥抱。这使你坚定了决心！为斯卡恩献上更多的鲜血与颅骨！All hail Skarne！",
+        "memorial_message": "斯卡恩女神的拥抱使你坚定了决心！为斯卡恩献上更多的鲜血与颅骨！All hail Skarne！"
+      },
+      {
+        "type": "mutation_category",
+        "id": "Revia_tail",
+        "name": "雷维亚.血纹",
+        "threshold_mut":"THRESH_Revia",
+        "mutagen_message": "苍石建立了你与斯卡恩的联系，传递了她的祝福。",
+        "memorial_message": "看着血神淡淡消失的身影，你遗憾没能摸摸她的九根尾巴。"        
+      }
+]

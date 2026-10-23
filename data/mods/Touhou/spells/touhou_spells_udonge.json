@@ -1,0 +1,132 @@
+[
+  {
+    "id": "udonge_iblast",
+    "type": "SPELL",
+    "name": "幻影爆发",
+    "description": "将你的疯狂波长聚焦成汇聚光束，对路径上的所有敌人造成伤害。",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "line",
+    "min_damage": 26,
+    "max_damage": 160,
+    "damage_increment": 14,
+    "damage_type": "pure",
+    "min_range": 6,
+    "max_range": 12,
+    "range_increment": 0.6,
+    "field_id": "fd_laser",
+    "field_chance": 1,
+    "min_field_intensity": 1,
+    "max_field_intensity": 2,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 85,
+    "base_energy_cost": 133,
+    "energy_source": "MANA",
+    "flags": [
+      "CONCENTRATE",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "SILENT"
+    ]
+  },
+  {
+    "id": "udonge_waveinsight",
+    "type": "SPELL",
+    "name": "波长操纵（洞察）",
+    "description": "使你的脑波正常化，在激活期间提升你的脑力，同时消耗精神力。再次施放以关闭。",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "effect_on_condition",
+    "effect_str": "udonge_waveinsight_start",
+    "shape": "blast",
+    "max_level": 1,
+    "difficulty": -10,
+    "base_casting_time": 100,
+    "base_energy_cost": 50,
+    "energy_source": "MANA",
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ]
+  },
+  {
+    "id": "udonge_wavemfortitude",
+    "type": "SPELL",
+    "name": "波长操纵（精神坚韧）",
+    "description": "使你的脑波正常化，清除并抵抗现有的精神杂质，同时消耗精神力。再次施放以关闭。",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "effect_on_condition",
+    "effect_str": "udonge_wavemfortitude_start",
+    "shape": "blast",
+    "max_level": 1,
+    "difficulty": -10,
+    "base_casting_time": 100,
+    "base_energy_cost": 50,
+    "energy_source": "MANA",
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "//": "Udonge, like any other GYOKUTO_SPECIES , should in fact be immune to mental effects. However, this is more interactive"
+  },
+  {
+    "id": "udonge_waveperception",
+    "type": "SPELL",
+    "name": "波长操纵（感知）",
+    "description": "操纵传入的电磁波，短时间内提升你的感知，同时消耗精神力。再次施放以关闭。",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "effect_on_condition",
+    "effect_str": "udonge_waveperception_start",
+    "shape": "blast",
+    "max_level": 1,
+    "difficulty": -10,
+    "base_casting_time": 100,
+    "base_energy_cost": 50,
+    "energy_source": "MANA",
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ]
+  },
+  {
+    "id": "udonge_wavestealth",
+    "type": "SPELL",
+    "name": "波长操纵（潜行）",
+    "description": "操纵传出的电磁波，短时间内使自己隐形，同时消耗精神力。再次施放以关闭。",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "effect_on_condition",
+    "effect_str": "udonge_wavestealth_start",
+    "shape": "blast",
+    "max_level": 1,
+    "difficulty": -10,
+    "base_casting_time": 100,
+    "base_energy_cost": 50,
+    "energy_source": "MANA",
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "//": "Ideally, this should be a short ranged stealth, say 8 - 10 tiles only, with a change for her to not be detected past that point"
+  }
+]

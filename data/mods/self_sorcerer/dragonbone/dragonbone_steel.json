@@ -1,0 +1,2577 @@
+[
+  {
+    "type": "proficiency_category",
+    "id": "ovo_dragon_bone_steel_working",
+    "name": "龙钢制造",
+    "description": "制作龙钢制品的专业知识。"
+  },
+  {
+    "type": "proficiency",
+    "id": "ovo_dragon_bone_working_steel_base",
+    "category": "ovo_dragon_bone_steel_working",
+    "name": {
+      "str": "龙钢制造学徒"
+    },
+    "description": "强大材料的制作经验。",
+    "can_learn": true,
+    "default_time_multiplier": 1.2,
+    "default_skill_penalty": 0.2,
+    "time_to_learn": "24 h",
+    "default_fail_multiplier": 1.0
+  },
+  {
+    "type": "proficiency",
+    "id": "ovo_dragon_bone_working_steel_plus",
+    "category": "ovo_dragon_bone_steel_working",
+    "name": {
+      "str": "龙钢制造专家"
+    },
+    "description": "强大材料的制作经验。",
+    "can_learn": true,
+    "default_time_multiplier": 1.2,
+    "default_skill_penalty": 0.2,
+    "time_to_learn": "48 h",
+    "required_proficiencies": [
+      "ovo_dragon_bone_working_steel_base"
+    ],
+    "default_fail_multiplier": 1.0
+  },
+  {
+    "type": "proficiency",
+    "id": "ovo_dragon_bone_working_steel_master",
+    "category": "ovo_dragon_bone_steel_working",
+    "name": {
+      "str": "龙钢制造大师"
+    },
+    "description": "强大材料的制作经验。",
+    "can_learn": true,
+    "default_time_multiplier": 1.2,
+    "default_skill_penalty": 0.2,
+    "time_to_learn": "72 h",
+    "required_proficiencies": [
+      "ovo_dragon_bone_working_steel_plus"
+    ],
+    "default_fail_multiplier": 1.0
+  },
+  {
+    "type": "material",
+    "id": "ovo_dragon_bone_steel",
+    "name": "龙钢",
+    "density": 12.0,
+    "specific_heat_liquid": 0.44,
+    "specific_heat_solid": 0.33,
+    "latent_heat": 333,
+    "conductive": true,
+    "chip_resist": 33,
+    "repaired_with": "ovo_dragon_bone_steel_scrap",
+    "dmg_adj": [
+      "marked",
+      "dented",
+      "smashed",
+      "shattered"
+    ],
+    "bash_dmg_verb": "dented",
+    "cut_dmg_verb": "scratched",
+    "burn_products": [
+      [
+        "ovo_dragon_bone_steel_scrap",
+        0.5
+      ]
+    ],
+    "repair_difficulty": 10,
+    "bash_resist": 20,
+    "cut_resist": 24,
+    "acid_resist": 16,
+    "fire_resist": 12,
+    "bullet_resist": 16,
+    "electric_resist": 8
+  },
+  {
+    "type": "material",
+    "id": "ovo_dragon_bone_steel_glass",
+    "name": "龙钢玻璃",
+    "density": 10.0,
+    "specific_heat_liquid": 0.44,
+    "specific_heat_solid": 0.33,
+    "latent_heat": 333,
+    "conductive": true,
+    "chip_resist": 33,
+    "repaired_with": "ovo_dragon_bone_steel_scrap",
+    "dmg_adj": [
+      "marked",
+      "dented",
+      "smashed",
+      "shattered"
+    ],
+    "bash_dmg_verb": "dented",
+    "cut_dmg_verb": "scratched",
+    "burn_products": [
+      [
+        "ovo_dragon_bone_steel_scrap",
+        0.5
+      ]
+    ],
+    "repair_difficulty": 10,
+    "bash_resist": 15,
+    "cut_resist": 18,
+    "acid_resist": 12,
+    "fire_resist": 9,
+    "bullet_resist": 12,
+    "electric_resist": 8
+  },
+  {
+    "type": "ammunition_type",
+    "id": "ovo_dragon_bone_steel",
+    "name": "龙钢",
+    "default": "ovo_dragon_bone_steel"
+  },
+  {
+    "id": "ovo_dragon_bone_steel",
+    "type": "AMMO",
+    "category": "spare_parts",
+    "symbol": "]",
+    "color": "white",
+    "name": "龙钢锭",
+    "description": "龙血灌注的钢锭，可以用于制作强大的装备。",
+    "price": 100000,
+    "price_postapoc": 100000,
+    "to_hit": -1,
+    "melee_damage": {
+      "bash": 8
+    },
+    "weight": "1000 g",
+    "volume": "500 ml",
+    "count": 1,
+    "stack_size": 1,
+    "material": [
+      "ovo_dragon_bone_steel"
+    ],
+    "ammo_type": "ovo_dragon_bone_steel",
+    "flags": [
+      "NO_SALVAGE",
+      "MAGIC_FOCUS"
+    ],
+    "thrown_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 32
+      }
+    ],
+    "relic_data": {}
+  },
+  {
+    "id": "ovo_dragon_bone_steel_scrap",
+    "type": "AMMO",
+    "category": "spare_parts",
+    "symbol": "]",
+    "color": "white",
+    "name": "龙钢碎片",
+    "description": "分解为碎片的龙钢，主要用于修理，亦可作为投掷道具使用。\n作为投掷道具时额外造成8火焰/寒冷/电击/酸性伤害。",
+    "price": 10000,
+    "price_postapoc": 10000,
+    "to_hit": -1,
+    "melee_damage": {
+      "stab": 16
+    },
+    "weight": "100 g",
+    "volume": "50 ml",
+    "count": 1,
+    "stack_size": 1,
+    "material": [
+      "ovo_dragon_bone_steel"
+    ],
+    "ammo_type": "ovo_dragon_bone_steel",
+    "flags": [
+      "NO_SALVAGE",
+      "MAGIC_FOCUS"
+    ],
+    "thrown_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 16
+      },
+      {
+        "damage_type": "heat",
+        "amount": 8
+      },
+      {
+        "damage_type": "cold",
+        "amount": 8
+      },
+      {
+        "damage_type": "electric",
+        "amount": 8
+      },
+      {
+        "damage_type": "acid",
+        "amount": 8
+      }
+    ],
+    "relic_data": {}
+  },
+  {
+    "id": "ovo_dragon_bone_steel_repairkit",
+    "type": "TOOL",
+    "name": "龙钢修理包",
+    "description": "用来修理龙骨和龙钢制品。",
+    "weight": "400 g",
+    "volume": "400 ml",
+    "longest_side": "80 cm",
+    "price": 200,
+    "price_postapoc": 200,
+    "to_hit": 1,
+    "melee_damage": {
+      "bash": 32
+    },
+    "material": [
+      "ovo_dragon_bone_steel"
+    ],
+    "symbol": "|",
+    "color": "white",
+    "ammo": [
+      "ovo_dragon_bone_piece"
+    ],
+    "relic_data": {},
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "ovo_dragon_bone_piece": 500
+        }
+      }
+    ],
+    "charges_per_use": 1,
+    "use_action": [
+      {
+        "type": "repair_item",
+        "item_action_type": "repair_fabric",
+        "materials": [
+          "bone",
+          "ovo_dragon_bone",
+          "ovo_dragon_bone_steel",
+          "black_dragon_hide",
+          "black_dragon_scales"
+        ],
+        "skill": "fabrication",
+        "tool_quality": 5,
+        "cost_scaling": 0.1,
+        "move_cost": 1000
+      }
+    ],
+    "flags": [
+      "ALLOWS_REMOTE_USE",
+      "MAGIC_FOCUS"
+    ]
+  },
+  {
+    "result": "ovo_dragon_bone_steel_repairkit",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "fabrication",
+    "difficulty": 7,
+    "autolearn": true,
+    "time": "2 h",
+    "proficiencies": [
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_base"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_plus"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_master"
+      }
+    ],
+    "using": [
+      [
+        "forging_standard",
+        60
+      ]
+    ],
+    "components": [
+      [
+        [
+          "mana_dust",
+          20
+        ]
+      ],
+      [
+        [
+          "dragon_blood",
+          200
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_bone_repairkit",
+          1
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_bone_steel",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "result": "ovo_dragon_bone_steel",
+    "type": "uncraft",
+    "activity_level": "MODERATE_EXERCISE",
+    "time": "10 m",
+    "tools": [
+      [
+        [
+          "ovo_dragon_bone_steel_repairkit",
+          -1
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "ovo_dragon_bone_steel_scrap",
+          9
+        ]
+      ]
+    ]
+  },
+  {
+    "result": "ovo_dragon_bone_steel",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MATERIALS",
+    "id_suffix": "with_scrap",
+    "skill_used": "fabrication",
+    "difficulty": 7,
+    "autolearn": true,
+    "time": "10 m",
+    "tools": [
+      [
+        [
+          "ovo_dragon_bone_steel_repairkit",
+          10
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "ovo_dragon_bone_steel_scrap",
+          9
+        ]
+      ]
+    ]
+  },
+  {
+    "result": "ovo_dragon_bone_steel",
+    "result_mult": 9,
+    "byproducts": [
+      [
+        "dragon_essence",
+        9
+      ]
+    ],
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MATERIALS",
+    "skill_used": "fabrication",
+    "difficulty": 7,
+    "autolearn": true,
+    "time": "9 h",
+    "batch_time_factors": [
+      80,
+      2
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_base"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_plus"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_master"
+      }
+    ],
+    "using": [
+      [
+        "forging_standard",
+        120
+      ]
+    ],
+    "tools": [
+      [
+        [
+          "metalworking_tongs",
+          -1
+        ]
+      ],
+      [
+        [
+          "metal_tank",
+          -1
+        ]
+      ],
+      [
+        [
+          "casting_mold",
+          -1
+        ]
+      ]
+    ],
+    "qualities": [
+      {
+        "id": "MANA_INFUSE",
+        "level": 2
+      },
+      {
+        "id": "CONTAIN",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "steel_lump",
+          9
+        ],
+        [
+          "lc_steel_lump",
+          9
+        ],
+        [
+          "mc_steel_lump",
+          9
+        ],
+        [
+          "hc_steel_lump",
+          9
+        ],
+        [
+          "qt_steel_lump",
+          9
+        ],
+        [
+          "ch_steel_lump",
+          9
+        ]
+      ],
+      [
+        [
+          "mana_dust",
+          90
+        ]
+      ],
+      [
+        [
+          "dragon_blood",
+          900
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_heart_fire",
+          1
+        ],
+        [
+          "ovo_dragon_heart_ice",
+          1
+        ],
+        [
+          "ovo_dragon_heart_elect",
+          1
+        ],
+        [
+          "ovo_dragon_heart_black",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "id": "ovo_dragon_bone_steel_sword",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": "龙钢剑",
+    "description": "由龙钢锻造而成的武器。\n额外造成18火焰/寒冷/电击/酸性伤害。\n手持时四属性+4。",
+    "weapon_category": [
+      "MEDIUM_SWORDS",
+      "LONG_SWORDS",
+      "FENCING_WEAPONRY",
+      "GREAT_SWORDS",
+      "BATONS",
+      "QUARTERSTAVES"
+    ],
+    "weight": "1600 g",
+    "volume": "1600 ml",
+    "longest_side": "110 cm",
+    "price": 320000,
+    "price_postapoc": 320000,
+    "melee_damage": {
+      "cut": 36,
+      "bash": 36,
+      "stab": 36,
+      "heat": 18,
+      "cold": 18,
+      "electric": 18,
+      "acid": 18
+    },
+    "to_hit": 2,
+    "material": [
+      "ovo_dragon_bone_steel"
+    ],
+    "symbol": "/",
+    "color": "white",
+    "techniques": [
+      "WBLOCK_2",
+      "RAPID",
+      "WIDE",
+      "BRUTAL"
+    ],
+    "flags": [
+      "NONCONDUCTIVE",
+      "DURABLE_MELEE",
+      "CONDUCTIVE",
+      "MAGIC_FOCUS"
+    ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "STRENGTH",
+              "add": 4
+            },
+            {
+              "value": "DEXTERITY",
+              "add": 4
+            },
+            {
+              "value": "INTELLIGENCE",
+              "add": 4
+            },
+            {
+              "value": "PERCEPTION",
+              "add": 4
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "result": "ovo_dragon_bone_steel_sword",
+    "type": "recipe",
+    "byproducts": [
+      [
+        "ovo_dragon_bone_piece",
+        200
+      ],
+      [
+        "dragon_essence",
+        40
+      ]
+    ],
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_CUTTING",
+    "skill_used": "fabrication",
+    "difficulty": 7,
+    "autolearn": true,
+    "time": "36 h",
+    "proficiencies": [
+      {
+        "proficiency": "ovo_dragon_bone_working_base"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_plus"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_master"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_base"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_plus"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_master"
+      }
+    ],
+    "using": [
+      [
+        "forging_standard",
+        360
+      ]
+    ],
+    "tools": [
+      [
+        [
+          "metalworking_tongs",
+          -1
+        ]
+      ],
+      [
+        [
+          "metal_tank",
+          -1
+        ]
+      ],
+      [
+        [
+          "swage",
+          -1
+        ]
+      ]
+    ],
+    "qualities": [
+      {
+        "id": "MANA_INFUSE",
+        "level": 2
+      },
+      {
+        "id": "WELD",
+        "level": 2
+      },
+      {
+        "id": "ANVIL",
+        "level": 3
+      },
+      {
+        "id": "HAMMER",
+        "level": 3
+      }
+    ],
+    "components": [
+      [
+        [
+          "mana_dust",
+          120
+        ]
+      ],
+      [
+        [
+          "dragon_blood",
+          1200
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_bone_steel",
+          36
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_bone_sword_fire",
+          1
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_bone_sword_ice",
+          1
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_bone_sword_elect",
+          1
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_bone_sword_black",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "id": "ovo_dragon_bone_steel_bow",
+    "type": "GUN",
+    "symbol": "(",
+    "color": "white",
+    "name": "龙钢弓",
+    "description": "由龙钢打造成的弓，在任何情况下都能发挥充分的威力。\n附加真实伤害。\n手持时四属性+4。",
+    "price": 320000,
+    "price_postapoc": 320000,
+    "material": [
+      "ovo_dragon_bone_steel"
+    ],
+    "flags": [
+      "NONCONDUCTIVE",
+      "DURABLE_MELEE",
+      "FIRE_TWOHAND",
+      "RELOAD_AND_SHOOT",
+      "PRIMITIVE_RANGED_WEAPON",
+      "SHEATH_BOW",
+      "WATERPROOF_GUN",
+      "NEVER_JAMS",
+      "MAGIC_FOCUS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES"
+    ],
+    "weapon_category": [
+      "BATONS",
+      "QUARTERSTAVES",
+      "POLEARMS"
+    ],
+    "skill": "archery",
+    "min_strength": 16,
+    "ammo": [
+      "ovo_dragon_bone_arrow",
+      "arrow_orichalcum",
+      "arrow"
+    ],
+    "weight": "3000 g",
+    "volume": "3000 ml",
+    "longest_side": "220 cm",
+    "to_hit": 1,
+    "reload_noise_volume": 3,
+    "loudness": 10,
+    "ranged_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 24,
+        "armor_penetration": 12
+      },
+      {
+        "damage_type": "pure",
+        "amount": 48
+      }
+    ],
+    "range": 36,
+    "dispersion": 300,
+    "sight_dispersion": 500,
+    "durability": 8,
+    "clip_size": 1,
+    "valid_mod_locations": [
+      [
+        "underbarrel",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "stabilizer",
+        1
+      ],
+      [
+        "dampening",
+        1
+      ]
+    ],
+    "reload": 60,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "ovo_dragon_bone_arrow": 1,
+          "arrow_orichalcum": 1,
+          "arrow": 1
+        }
+      }
+    ],
+    "melee_damage": {
+      "bash": 36,
+      "stab": 36
+    },
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "STRENGTH",
+              "add": 4
+            },
+            {
+              "value": "DEXTERITY",
+              "add": 4
+            },
+            {
+              "value": "INTELLIGENCE",
+              "add": 4
+            },
+            {
+              "value": "PERCEPTION",
+              "add": 4
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "result": "ovo_dragon_bone_steel_bow",
+    "type": "recipe",
+    "byproducts": [
+      [
+        "ovo_dragon_bone_piece",
+        200
+      ],
+      [
+        "dragon_essence",
+        40
+      ]
+    ],
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_CUTTING",
+    "skill_used": "fabrication",
+    "difficulty": 7,
+    "autolearn": true,
+    "time": "36 h",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wiremaking"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_base"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_plus"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_master"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_base"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_plus"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_master"
+      }
+    ],
+    "using": [
+      [
+        "forging_standard",
+        360
+      ]
+    ],
+    "tools": [
+      [
+        [
+          "metal_tank",
+          -1
+        ]
+      ],
+      [
+        [
+          "metalworking_tongs",
+          -1
+        ]
+      ],
+      [
+        [
+          "swage",
+          -1
+        ]
+      ],
+      [
+        [
+          "wire_draw_machine",
+          360
+        ]
+      ]
+    ],
+    "qualities": [
+      {
+        "id": "MANA_INFUSE",
+        "level": 2
+      },
+      {
+        "id": "WELD",
+        "level": 2
+      },
+      {
+        "id": "ANVIL",
+        "level": 3
+      },
+      {
+        "id": "HAMMER",
+        "level": 3
+      }
+    ],
+    "components": [
+      [
+        [
+          "mana_dust",
+          120
+        ]
+      ],
+      [
+        [
+          "dragon_blood",
+          1200
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_bone_steel",
+          36
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_bone_bow_fire",
+          1
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_bone_bow_ice",
+          1
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_bone_bow_elect",
+          1
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_bone_bow_black",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "AMMO",
+    "id": "ovo_dragon_bone_steel_arrow",
+    "price": 1000,
+    "price_postapoc": 1000,
+    "longest_side": "80 cm",
+    "name": "龙钢箭矢",
+    "symbol": "=",
+    "color": "white",
+    "description": "由龙骨与龙钢混合打造的箭矢，比起龙骨箭矢威力更高。",
+    "material": [
+      "ovo_dragon_bone",
+      "ovo_dragon_bone_steel"
+    ],
+    "ammo_type": "ovo_dragon_bone_arrow",
+    "flags": [
+      "MAGIC_FOCUS"
+    ],
+    "weight": "80 g",
+    "volume": "160 ml",
+    "damage": {
+      "damage_type": "stab",
+      "amount": 54,
+      "armor_penetration": 27
+    },
+    "dispersion": 24,
+    "loudness": 0,
+    "range": 18,
+    "count": 10,
+    "stack_size": 10,
+    "critical_multiplier": 4,
+    "melee_damage": {
+      "stab": 18
+    },
+    "effects": [
+      "RECOVER_65"
+    ],
+    "relic_data": {}
+  },
+  {
+    "result": "ovo_dragon_bone_steel_arrow",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_AMMO",
+    "subcategory": "CSC_AMMO_ARROWS",
+    "skill_used": "fabrication",
+    "difficulty": 7,
+    "charges": 20,
+    "autolearn": true,
+    "time": "60 m",
+    "batch_time_factors": [
+      60,
+      2
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "ovo_dragon_bone_working_base"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_plus"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_master"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_base"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_plus"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_master"
+      }
+    ],
+    "qualities": [
+      {
+        "id": "MANA_INFUSE",
+        "level": 2
+      },
+      {
+        "id": "WELD",
+        "level": 2
+      },
+      {
+        "id": "ANVIL",
+        "level": 3
+      },
+      {
+        "id": "HAMMER",
+        "level": 3
+      }
+    ],
+    "using": [
+      [
+        "forging_standard",
+        100
+      ]
+    ],
+    "tools": [
+      [
+        [
+          "metal_tank",
+          -1
+        ]
+      ],
+      [
+        [
+          "metalworking_tongs",
+          -1
+        ]
+      ],
+      [
+        [
+          "chisel",
+          -1
+        ]
+      ],
+      [
+        [
+          "swage",
+          -1
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_bone_steel_repairkit",
+          -1
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "filament",
+          20,
+          "LIST"
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_bone_steel_scrap",
+          1
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_bone",
+          5
+        ],
+        [
+          "ovo_dragon_bone_piece",
+          100
+        ],
+        [
+          "ovo_dragon_bone_arrow",
+          20
+        ]
+      ],
+      [
+        [
+          "fletching",
+          2,
+          "LIST"
+        ]
+      ]
+    ]
+  },
+  {
+    "id": "ovo_dragon_bone_steel_helmet",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "龙钢头盔",
+    "description": "由龙钢制成的强力盔甲。\n智力+4。\n所受寒冷伤害减少20。\n低温抵抗。",
+    "looks_like": "helmet_barbute",
+    "weight": "2250 g",
+    "volume": "4500 ml",
+    "price": 500000,
+    "price_postapoc": 500000,
+    "to_hit": -1,
+    "material": [
+      "black_dragon_hide",
+      "ovo_dragon_bone_steel"
+    ],
+    "symbol": "[",
+    "color": "white",
+    "armor": [
+      {
+        "covers": [
+          "head"
+        ],
+        "coverage": 100,
+        "encumbrance": 20,
+        "material": [
+          {
+            "type": "black_dragon_hide",
+            "covered_by_mat": 100,
+            "thickness": 1.0
+          },
+          {
+            "type": "ovo_dragon_bone_steel",
+            "covered_by_mat": 100,
+            "thickness": 3.0
+          }
+        ]
+      },
+      {
+        "covers": [
+          "eyes"
+        ],
+        "coverage": 100,
+        "encumbrance": 8,
+        "layers": [
+          "OUTER"
+        ],
+        "material": [
+          {
+            "type": "black_dragon_hide",
+            "covered_by_mat": 60,
+            "thickness": 0.5
+          },
+          {
+            "type": "ovo_dragon_bone_steel_glass",
+            "covered_by_mat": 100,
+            "thickness": 1.0
+          }
+        ]
+      },
+      {
+        "covers": [
+          "mouth"
+        ],
+        "coverage": 100,
+        "encumbrance": 16,
+        "layers": [
+          "OUTER"
+        ],
+        "material": [
+          {
+            "type": "black_dragon_hide",
+            "covered_by_mat": 100,
+            "thickness": 0.5
+          },
+          {
+            "type": "ovo_dragon_bone_steel",
+            "covered_by_mat": 100,
+            "thickness": 1.0
+          }
+        ]
+      }
+    ],
+    "warmth": 15,
+    "material_thickness": 4,
+    "environmental_protection": 25,
+    "techniques": [
+      "WBLOCK_1"
+    ],
+    "flags": [
+      "VARSIZE",
+      "WATERPROOF",
+      "RAINPROOF",
+      "STURDY",
+      "SUN_GLASSES",
+      "PARTIAL_DEAF",
+      "MAGIC_FOCUS"
+    ],
+    "melee_damage": {
+      "bash": 10
+    },
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "INTELLIGENCE",
+              "add": 4
+            },
+            {
+              "value": "ARMOR_COLD",
+              "add": -20
+            },
+            {
+              "value": "CLIMATE_CONTROL_HEAT",
+              "add": 273
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "ovo_dragon_bone_steel_suit",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "龙钢盔甲",
+    "description": "由龙钢制成的强力盔甲。\n力量+4。\n所受火焰伤害减少20。\n高温抵抗。",
+    "looks_like": "armor_junk_lightplate",
+    "weight": "5400 g",
+    "volume": "10800 ml",
+    "price": 1500000,
+    "price_postapoc": 1500000,
+    "to_hit": -3,
+    "material": [
+      "black_dragon_hide",
+      "ovo_dragon_bone_steel"
+    ],
+    "symbol": "[",
+    "color": "white",
+    "warmth": 15,
+    "material_thickness": 6,
+    "environmental_protection": 25,
+    "flags": [
+      "VARSIZE",
+      "WATERPROOF",
+      "RAINPROOF",
+      "STURDY",
+      "OUTER",
+      "MAGIC_FOCUS"
+    ],
+    "armor": [
+      {
+        "encumbrance": 18,
+        "coverage": 100,
+        "covers": [
+          "torso"
+        ],
+        "material": [
+          {
+            "type": "black_dragon_hide",
+            "covered_by_mat": 100,
+            "thickness": 1.0
+          },
+          {
+            "type": "ovo_dragon_bone_steel",
+            "covered_by_mat": 100,
+            "thickness": 5.0
+          }
+        ]
+      },
+      {
+        "encumbrance": 14,
+        "coverage": 100,
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "material": [
+          {
+            "type": "black_dragon_hide",
+            "covered_by_mat": 100,
+            "thickness": 1.0
+          },
+          {
+            "type": "ovo_dragon_bone_steel",
+            "covered_by_mat": 100,
+            "thickness": 3.0
+          }
+        ]
+      },
+      {
+        "encumbrance": 16,
+        "coverage": 100,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "material": [
+          {
+            "type": "black_dragon_hide",
+            "covered_by_mat": 100,
+            "thickness": 1.0
+          },
+          {
+            "type": "ovo_dragon_bone_steel",
+            "covered_by_mat": 100,
+            "thickness": 4.0
+          }
+        ]
+      }
+    ],
+    "melee_damage": {
+      "bash": 14
+    },
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "STRENGTH",
+              "add": 4
+            },
+            {
+              "value": "ARMOR_HEAT",
+              "add": -20
+            },
+            {
+              "value": "CLIMATE_CONTROL_CHILL",
+              "add": 1534
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "ovo_dragon_bone_steel_gauntlets",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "龙钢护手",
+    "description": "由龙钢制成的强力盔甲。\n感知+4。\n所受酸性伤害减少20。",
+    "looks_like": "lc_mitten_gaunt",
+    "weight": "1800 g",
+    "volume": "3600 ml",
+    "price": 600000,
+    "price_postapoc": 600000,
+    "to_hit": 2,
+    "material": [
+      "black_dragon_hide",
+      "ovo_dragon_bone_steel"
+    ],
+    "symbol": "[",
+    "color": "white",
+    "warmth": 10,
+    "material_thickness": 4,
+    "environmental_protection": 25,
+    "flags": [
+      "VARSIZE",
+      "WATERPROOF",
+      "RAINPROOF",
+      "STURDY",
+      "MAGIC_FOCUS",
+      "GAS_PROOF",
+      "RAD_PROOF"
+    ],
+    "armor": [
+      {
+        "encumbrance": 12,
+        "coverage": 100,
+        "covers": [
+          "hand_l",
+          "hand_r"
+        ],
+        "material": [
+          {
+            "type": "black_dragon_hide",
+            "covered_by_mat": 100,
+            "thickness": 1.0
+          },
+          {
+            "type": "ovo_dragon_bone_steel",
+            "covered_by_mat": 100,
+            "thickness": 3.0
+          }
+        ]
+      }
+    ],
+    "melee_damage": {
+      "cut": 12
+    },
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "PERCEPTION",
+              "add": 4
+            },
+            {
+              "value": "ARMOR_ACID",
+              "add": -20
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "ovo_dragon_bone_steel_boots",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "龙钢靴",
+    "description": "由龙钢制成的强力盔甲。\n敏捷+4。\n所受电击伤害减少20。",
+    "looks_like": "lc_sabaton",
+    "weight": "1800 g",
+    "volume": "3600 ml",
+    "price": 400000,
+    "price_postapoc": 400000,
+    "to_hit": 2,
+    "material": [
+      "black_dragon_hide",
+      "ovo_dragon_bone_steel"
+    ],
+    "symbol": "[",
+    "color": "white",
+    "warmth": 15,
+    "material_thickness": 5,
+    "environmental_protection": 25,
+    "flags": [
+      "VARSIZE",
+      "WATERPROOF",
+      "RAINPROOF",
+      "STURDY",
+      "MAGIC_FOCUS",
+      "ELECTRIC_IMMUNE"
+    ],
+    "armor": [
+      {
+        "encumbrance": 22,
+        "coverage": 100,
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ],
+        "material": [
+          {
+            "type": "black_dragon_hide",
+            "covered_by_mat": 100,
+            "thickness": 1.0
+          },
+          {
+            "type": "ovo_dragon_bone_steel",
+            "covered_by_mat": 100,
+            "thickness": 4.0
+          }
+        ]
+      }
+    ],
+    "melee_damage": {
+      "bash": 12
+    },
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "DEXTERITY",
+              "add": 4
+            },
+            {
+              "value": "ARMOR_ELEC",
+              "add": -20
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "result": "ovo_dragon_bone_steel_helmet",
+    "byproducts": [
+      [
+        "ovo_dragon_bone_piece",
+        270
+      ],
+      [
+        "dragon_essence",
+        27
+      ]
+    ],
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ENCHANTED",
+    "subcategory": "CSC_ENCHANTED_ARMOR",
+    "skill_used": "tailor",
+    "difficulty": 7,
+    "autolearn": true,
+    "time": "45 h",
+    "qualities": [
+      {
+        "id": "MANA_INFUSE",
+        "level": 2
+      },
+      {
+        "id": "CHISEL",
+        "level": 3
+      },
+      {
+        "id": "WELD",
+        "level": 2
+      },
+      {
+        "id": "ANVIL",
+        "level": 3
+      },
+      {
+        "id": "HAMMER",
+        "level": 3
+      }
+    ],
+    "using": [
+      [
+        "forging_standard",
+        500
+      ]
+    ],
+    "tools": [
+      [
+        [
+          "metal_tank",
+          -1
+        ]
+      ],
+      [
+        [
+          "metalworking_tongs",
+          -1
+        ]
+      ],
+      [
+        [
+          "chisel",
+          -1
+        ]
+      ],
+      [
+        [
+          "swage",
+          -1
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_bone_steel_repairkit",
+          -1
+        ]
+      ]
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_leatherworking_basic"
+      },
+      {
+        "proficiency": "prof_leatherworking"
+      },
+      {
+        "proficiency": "prof_leatherworking_dragon"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_base"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_plus"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_master"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_base"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_plus"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_master"
+      }
+    ],
+    "components": [
+      [
+        [
+          "mana_dust",
+          450
+        ]
+      ],
+      [
+        [
+          "dragon_blood",
+          4500
+        ]
+      ],
+      [
+        [
+          "black_dragon_tanned_hide",
+          15
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_bone_helmet",
+          1
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_bone_steel",
+          45
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_heart_ice",
+          4
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_bone_steel_scrap",
+          2
+        ]
+      ],
+      [
+        [
+          "glass_shard",
+          8
+        ]
+      ]
+    ]
+  },
+  {
+    "result": "ovo_dragon_bone_steel_suit",
+    "byproducts": [
+      [
+        "ovo_dragon_bone_piece",
+        450
+      ],
+      [
+        "dragon_essence",
+        45
+      ]
+    ],
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ENCHANTED",
+    "subcategory": "CSC_ENCHANTED_ARMOR",
+    "skill_used": "tailor",
+    "difficulty": 7,
+    "autolearn": true,
+    "time": "108 h",
+    "qualities": [
+      {
+        "id": "MANA_INFUSE",
+        "level": 2
+      },
+      {
+        "id": "CHISEL",
+        "level": 3
+      },
+      {
+        "id": "WELD",
+        "level": 2
+      },
+      {
+        "id": "ANVIL",
+        "level": 3
+      },
+      {
+        "id": "HAMMER",
+        "level": 3
+      }
+    ],
+    "using": [
+      [
+        "forging_standard",
+        1200
+      ]
+    ],
+    "tools": [
+      [
+        [
+          "metal_tank",
+          -1
+        ]
+      ],
+      [
+        [
+          "metalworking_tongs",
+          -1
+        ]
+      ],
+      [
+        [
+          "chisel",
+          -1
+        ]
+      ],
+      [
+        [
+          "swage",
+          -1
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_bone_steel_repairkit",
+          -1
+        ]
+      ]
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_leatherworking_basic"
+      },
+      {
+        "proficiency": "prof_leatherworking"
+      },
+      {
+        "proficiency": "prof_leatherworking_dragon"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_base"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_plus"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_master"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_base"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_plus"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_master"
+      }
+    ],
+    "components": [
+      [
+        [
+          "mana_dust",
+          1080
+        ]
+      ],
+      [
+        [
+          "dragon_blood",
+          10800
+        ]
+      ],
+      [
+        [
+          "black_dragon_tanned_hide",
+          36
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_bone_suit",
+          1
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_bone_steel",
+          108
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_heart_fire",
+          4
+        ]
+      ]
+    ]
+  },
+  {
+    "result": "ovo_dragon_bone_steel_gauntlets",
+    "byproducts": [
+      [
+        "ovo_dragon_bone_piece",
+        180
+      ],
+      [
+        "dragon_essence",
+        18
+      ]
+    ],
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ENCHANTED",
+    "subcategory": "CSC_ENCHANTED_ARMOR",
+    "skill_used": "tailor",
+    "difficulty": 7,
+    "autolearn": true,
+    "time": "36 h",
+    "qualities": [
+      {
+        "id": "MANA_INFUSE",
+        "level": 2
+      },
+      {
+        "id": "CHISEL",
+        "level": 3
+      },
+      {
+        "id": "WELD",
+        "level": 2
+      },
+      {
+        "id": "ANVIL",
+        "level": 3
+      },
+      {
+        "id": "HAMMER",
+        "level": 3
+      }
+    ],
+    "using": [
+      [
+        "forging_standard",
+        400
+      ]
+    ],
+    "tools": [
+      [
+        [
+          "metal_tank",
+          -1
+        ]
+      ],
+      [
+        [
+          "metalworking_tongs",
+          -1
+        ]
+      ],
+      [
+        [
+          "chisel",
+          -1
+        ]
+      ],
+      [
+        [
+          "swage",
+          -1
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_bone_steel_repairkit",
+          -1
+        ]
+      ]
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_leatherworking_basic"
+      },
+      {
+        "proficiency": "prof_articulation",
+        "required": false,
+        "time_multiplier": 2
+      },
+      {
+        "proficiency": "prof_leatherworking"
+      },
+      {
+        "proficiency": "prof_leatherworking_dragon"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_base"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_plus"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_master"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_base"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_plus"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_master"
+      }
+    ],
+    "components": [
+      [
+        [
+          "mana_dust",
+          360
+        ]
+      ],
+      [
+        [
+          "dragon_blood",
+          3600
+        ]
+      ],
+      [
+        [
+          "black_dragon_tanned_hide",
+          12
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_bone_gauntlets",
+          1
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_bone_steel",
+          36
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_heart_black",
+          4
+        ]
+      ]
+    ]
+  },
+  {
+    "result": "ovo_dragon_bone_steel_boots",
+    "byproducts": [
+      [
+        "ovo_dragon_bone_piece",
+        360
+      ],
+      [
+        "dragon_essence",
+        36
+      ]
+    ],
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ENCHANTED",
+    "subcategory": "CSC_ENCHANTED_ARMOR",
+    "skill_used": "tailor",
+    "difficulty": 7,
+    "autolearn": true,
+    "time": "36 h",
+    "qualities": [
+      {
+        "id": "MANA_INFUSE",
+        "level": 2
+      },
+      {
+        "id": "CHISEL",
+        "level": 3
+      },
+      {
+        "id": "WELD",
+        "level": 2
+      },
+      {
+        "id": "ANVIL",
+        "level": 3
+      },
+      {
+        "id": "HAMMER",
+        "level": 3
+      }
+    ],
+    "using": [
+      [
+        "forging_standard",
+        400
+      ]
+    ],
+    "tools": [
+      [
+        [
+          "metal_tank",
+          -1
+        ]
+      ],
+      [
+        [
+          "metalworking_tongs",
+          -1
+        ]
+      ],
+      [
+        [
+          "chisel",
+          -1
+        ]
+      ],
+      [
+        [
+          "swage",
+          -1
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_bone_steel_repairkit",
+          -1
+        ]
+      ]
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_leatherworking_basic"
+      },
+      {
+        "proficiency": "prof_cobbling"
+      },
+      {
+        "proficiency": "prof_leatherworking"
+      },
+      {
+        "proficiency": "prof_leatherworking_dragon"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_base"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_plus"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_master"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_base"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_plus"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_master"
+      }
+    ],
+    "components": [
+      [
+        [
+          "mana_dust",
+          360
+        ]
+      ],
+      [
+        [
+          "dragon_blood",
+          3600
+        ]
+      ],
+      [
+        [
+          "black_dragon_tanned_hide",
+          12
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_bone_boots",
+          1
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_bone_steel",
+          36
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_heart_elect",
+          4
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "PET_ARMOR",
+    "id": "ovo_dragon_bone_steel_armor_horse",
+    "copy-from": "horse_armor",
+    "color": "white",
+    "name": "龙钢马铠",
+    "description": "一套龙钢材质的沉重但防御极高的盔甲，专门为保护马匹打造。你可以将这套马铠穿在一匹友好的马身上。",
+    "price": 50000,
+    "price_postapoc": 50000,
+    "material": [
+      {
+        "type": "black_dragon_hide",
+        "portion": 3
+      },
+      {
+        "type": "ovo_dragon_bone_steel",
+        "portion": 7
+      }
+    ],
+    "weight": "15 kg",
+    "volume": "150 L",
+    "flags": [
+      "IS_PET_ARMOR",
+      "MAGIC_FOCUS"
+    ],
+    "material_thickness": 5,
+    "environmental_protection": 20
+  },
+  {
+    "type": "PET_ARMOR",
+    "id": "ovo_dragon_bone_steel_armor_cow",
+    "copy-from": "cow_armor",
+    "color": "white",
+    "name": "龙钢牛铠",
+    "description": "一套龙钢材质的沉重但防御极高的盔甲，最初用于斗牛时的保护。你可以将这套牛铠穿在一头友好的牛身上。",
+    "price": 60000,
+    "price_postapoc": 60000,
+    "material": [
+      {
+        "type": "black_dragon_hide",
+        "portion": 3
+      },
+      {
+        "type": "ovo_dragon_bone_steel",
+        "portion": 7
+      }
+    ],
+    "weight": "18 kg",
+    "volume": "180 L",
+    "flags": [
+      "IS_PET_ARMOR",
+      "MAGIC_FOCUS"
+    ],
+    "material_thickness": 6,
+    "environmental_protection": 20
+  },
+  {
+    "type": "PET_ARMOR",
+    "id": "ovo_dragon_bone_steel_harness_dog",
+    "copy-from": "kevlar_harness",
+    "color": "white",
+    "name": "龙钢犬具",
+    "description": "一套龙钢材质的沉重但防御极高的犬具，保护狗的侧面和颈部。你可以将这套犬具穿在一匹友好的狗身上。",
+    "price": 40000,
+    "price_postapoc": 40000,
+    "material": [
+      {
+        "type": "black_dragon_hide",
+        "portion": 3
+      },
+      {
+        "type": "ovo_dragon_bone_steel",
+        "portion": 7
+      }
+    ],
+    "weight": "2250 g",
+    "volume": "4500 ml",
+    "flags": [
+      "IS_PET_ARMOR",
+      "MAGIC_FOCUS"
+    ],
+    "material_thickness": 4,
+    "environmental_protection": 20
+  },
+  {
+    "result": "ovo_dragon_bone_steel_armor_horse",
+    "byproducts": [
+      [
+        "dragon_essence",
+        5
+      ]
+    ],
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ANIMALS",
+    "subcategory": "CSC_ANIMALS_EQUINE ARMOR",
+    "skill_used": "tailor",
+    "difficulty": 7,
+    "autolearn": true,
+    "time": "36 h",
+    "qualities": [
+      {
+        "id": "MANA_INFUSE",
+        "level": 2
+      },
+      {
+        "id": "CHISEL",
+        "level": 3
+      },
+      {
+        "id": "WELD",
+        "level": 2
+      },
+      {
+        "id": "ANVIL",
+        "level": 3
+      },
+      {
+        "id": "HAMMER",
+        "level": 3
+      }
+    ],
+    "using": [
+      [
+        "forging_standard",
+        360
+      ]
+    ],
+    "tools": [
+      [
+        [
+          "metal_tank",
+          -1
+        ]
+      ],
+      [
+        [
+          "metalworking_tongs",
+          -1
+        ]
+      ],
+      [
+        [
+          "chisel",
+          -1
+        ]
+      ],
+      [
+        [
+          "swage",
+          -1
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_bone_steel_repairkit",
+          -1
+        ]
+      ]
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_leatherworking_basic"
+      },
+      {
+        "proficiency": "prof_leatherworking"
+      },
+      {
+        "proficiency": "prof_leatherworking_dragon"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_base"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_plus"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_master"
+      }
+    ],
+    "components": [
+      [
+        [
+          "mana_dust",
+          360
+        ]
+      ],
+      [
+        [
+          "dragon_blood",
+          3600
+        ]
+      ],
+      [
+        [
+          "black_dragon_tanned_hide",
+          36
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_bone_steel",
+          36
+        ]
+      ]
+    ]
+  },
+  {
+    "result": "ovo_dragon_bone_steel_armor_cow",
+    "byproducts": [
+      [
+        "dragon_essence",
+        6
+      ]
+    ],
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ANIMALS",
+    "subcategory": "CSC_ALL",
+    "skill_used": "tailor",
+    "difficulty": 7,
+    "autolearn": true,
+    "time": "54 h",
+    "qualities": [
+      {
+        "id": "MANA_INFUSE",
+        "level": 2
+      },
+      {
+        "id": "CHISEL",
+        "level": 3
+      },
+      {
+        "id": "WELD",
+        "level": 2
+      },
+      {
+        "id": "ANVIL",
+        "level": 3
+      },
+      {
+        "id": "HAMMER",
+        "level": 3
+      }
+    ],
+    "using": [
+      [
+        "forging_standard",
+        540
+      ]
+    ],
+    "tools": [
+      [
+        [
+          "metal_tank",
+          -1
+        ]
+      ],
+      [
+        [
+          "metalworking_tongs",
+          -1
+        ]
+      ],
+      [
+        [
+          "chisel",
+          -1
+        ]
+      ],
+      [
+        [
+          "swage",
+          -1
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_bone_steel_repairkit",
+          -1
+        ]
+      ]
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_leatherworking_basic"
+      },
+      {
+        "proficiency": "prof_leatherworking"
+      },
+      {
+        "proficiency": "prof_leatherworking_dragon"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_base"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_plus"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_master"
+      }
+    ],
+    "components": [
+      [
+        [
+          "mana_dust",
+          540
+        ]
+      ],
+      [
+        [
+          "dragon_blood",
+          5400
+        ]
+      ],
+      [
+        [
+          "black_dragon_tanned_hide",
+          54
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_bone_steel",
+          54
+        ]
+      ]
+    ]
+  },
+  {
+    "result": "ovo_dragon_bone_steel_harness_dog",
+    "byproducts": [
+      [
+        "dragon_essence",
+        4
+      ]
+    ],
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ANIMALS",
+    "subcategory": "CSC_ANIMALS_CANINE ARMOR",
+    "skill_used": "tailor",
+    "difficulty": 7,
+    "autolearn": true,
+    "time": "18 h",
+    "qualities": [
+      {
+        "id": "MANA_INFUSE",
+        "level": 2
+      },
+      {
+        "id": "CHISEL",
+        "level": 3
+      },
+      {
+        "id": "WELD",
+        "level": 2
+      },
+      {
+        "id": "ANVIL",
+        "level": 3
+      },
+      {
+        "id": "HAMMER",
+        "level": 3
+      }
+    ],
+    "using": [
+      [
+        "forging_standard",
+        180
+      ]
+    ],
+    "tools": [
+      [
+        [
+          "metal_tank",
+          -1
+        ]
+      ],
+      [
+        [
+          "metalworking_tongs",
+          -1
+        ]
+      ],
+      [
+        [
+          "chisel",
+          -1
+        ]
+      ],
+      [
+        [
+          "swage",
+          -1
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_bone_steel_repairkit",
+          -1
+        ]
+      ]
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_leatherworking_basic"
+      },
+      {
+        "proficiency": "prof_leatherworking"
+      },
+      {
+        "proficiency": "prof_leatherworking_dragon"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_base"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_plus"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_steel_master"
+      }
+    ],
+    "components": [
+      [
+        [
+          "mana_dust",
+          90
+        ]
+      ],
+      [
+        [
+          "dragon_blood",
+          900
+        ]
+      ],
+      [
+        [
+          "black_dragon_tanned_hide",
+          9
+        ]
+      ],
+      [
+        [
+          "ovo_dragon_bone_steel",
+          18
+        ]
+      ]
+    ]
+  }
+]

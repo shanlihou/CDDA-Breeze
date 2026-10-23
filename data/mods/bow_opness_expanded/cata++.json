@@ -1,0 +1,71 @@
+[
+  {
+    "id": "survbow",
+    "type": "GUN",
+    "symbol": "(",
+    "color": "brown",
+    "looks_like": "compositebow",
+    "name": {
+      "str": "幸存者战斗弓"
+    },
+    "description": "定制的弓，弓臂加固以弥补它的可拆卸设计。弓的尖端有自制刀片使这把弓在近距离接触敌人时成为有效的近战武器。激活它来折叠武器，更容易储存。",
+    "price": "880 USD",
+    "price_postapoc": "88 USD",
+    "material": [
+      "wood",
+      "steel"
+    ],
+    "flags": [
+      "WATERPROOF_GUN",
+      "NEVER_JAMS",
+      "FIRE_TWOHAND",
+      "STR_DRAW",
+      "RELOAD_AND_SHOOT",
+      "PRIMITIVE_RANGED_WEAPON",
+      "DURABLE_MELEE"
+    ],
+    "techniques": [
+      "RAPID",
+      "WBLOCK_2",
+      "PRECISE"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES"
+    ],
+    "skill": "archery",
+    "min_strength": 6,
+    "ammo": [
+      "arrow"
+    ],
+    "weight": "1144 g",
+    "volume": "2250 ml",
+    "longest_side": "150 cm",
+    "bashing": 10,
+    "cutting": 18,
+    "reload_noise_volume": 4,
+    "loudness": 10,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 16,
+      "armor_penetration": 1
+    },
+    "range": 10,
+    "dispersion": 1250,
+    "durability": 6,
+    "clip_size": 1,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "arrow": 1
+        }
+      }
+    ],
+    "use_action": {
+      "type": "transform",
+      "msg": "你把战斗弓折叠成它的拆卸形态。",
+      "target": "survbowstored",
+      "ammo_scale": 0
+    }
+  }
+]

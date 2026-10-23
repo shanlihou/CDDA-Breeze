@@ -1,0 +1,145 @@
+[
+  {
+    "id": "lampad_torch",
+    "type": "TOOL",
+    "name": {
+      "str": "冥火火把",
+      "str_pl": "冥火火把"
+    },
+    "description": "一根由某种诡异木头制成的棍子，仅仅握着它就让你感到不安。一端似乎烧焦了，表明它过去曾被点燃过。",
+    "volume": "500 ml",
+    "weight": "500 g",
+    "longest_side": "25 cm",
+    "price_postapoc": 25000,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "solid",
+      "length": "short",
+      "surface": "any"
+    },
+    "bashing": 7,
+    "material": [
+      "wood"
+    ],
+    "symbol": "/",
+    "looks_like": "torch",
+    "color": "brown",
+    "charges_per_use": 1,
+    "techniques": [
+      "WBLOCK_1"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "battery": 20
+        }
+      }
+    ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "mutations": [
+            "lampad_torch_off_mut"
+          ]
+        }
+      ],
+      "charge_info": {
+        "regenerate_ammo": true,
+        "recharge_type": "periodic",
+        "time": "3 m"
+      }
+    },
+    "use_action": [
+      {
+        "target": "lampad_torch_lit",
+        "type": "transform",
+        "msg": "你点燃了火把。",
+        "menu_text": "点燃火把",
+        "active": true,
+        "need_fire": 1
+      }
+    ],
+    "flags": [
+      "BURNOUT",
+      "NO_RELOAD",
+      "NO_UNLOAD"
+    ]
+  },
+  {
+    "id": "lampad_torch_lit",
+    "type": "TOOL",
+    "name": {
+      "str": "冥火火把（点燃）",
+      "str_pl": "冥火火把（点燃）"
+    },
+    "description": "一根由某种诡异木头制成的棍子，仅仅握着它就让你感到愤怒。它当前被点燃，舞动的火焰！你脑海中有什么东西，集中……至少黑暗  回来˙ ",
+    "volume": "500 ml",
+    "weight": "500 g",
+    "longest_side": "25 cm",
+    "price_postapoc": 25000,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "solid",
+      "length": "short",
+      "surface": "any"
+    },
+    "bashing": 7,
+    "material": [
+      "wood"
+    ],
+    "symbol": "/",
+    "looks_like": "torch",
+    "color": "brown",
+    "max_charges": 20,
+    "turns_per_charge": 300,
+    "revert_to": "lampad_torch",
+    "techniques": [
+      "WBLOCK_1"
+    ],
+    "charges_per_use": 1,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "battery": 20
+        }
+      }
+    ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "mutations": [
+            "lampad_torch_lit_mut"
+          ]
+        }
+      ]
+    },
+    "use_action": [
+      {
+        "type": "firestarter",
+        "moves": 100
+      },
+      {
+        "target": "lampad_torch",
+        "type": "transform",
+        "msg": "火把熄灭了……",
+        "menu_text": "熄灭",
+        "active": false
+      }
+    ],
+    "flags": [
+      "BURNOUT",
+      "FIRE",
+      "FLAMING",
+      "LIGHT_40",
+      "NO_RELOAD",
+      "NO_UNLOAD",
+      "TRADER_AVOID"
+    ]
+  }
+]

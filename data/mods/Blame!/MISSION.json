@@ -1,0 +1,23 @@
+[
+  {
+    "id": "MISSION_Security_Guard",
+    "type": "mission_definition",
+    "name": { "str": "寻找网络球连接终端" },
+    "description": "无法与网络连接……\n检测到网络球连接终端信号……\n \n5L2g6Kej5byA5LqG77yM54S26ICM5bm25rKh5pyJ5LuA5LmI77yM5oiR5b6I5YG35oeS77yM5oqx5q2J44CC=46esaB\n...\n坐标解码完成。\n当前任务：重连网络",
+    "goal": "MGOAL_CONDITION",
+    "goal_condition": { "u_has_item": "Cyberball_connect_terminal_Damaged" },
+    "difficulty": 6,
+    "value": 0,
+    "start": {
+      "assign_mission_target": { "om_terrain": "ws_giant_sinkhole_2", "search_range": 1500, "min_distance": 1000 },
+      "update_mapgen": {
+        "place_item": [ { "item": "Cyberball_connect_terminal","x": 10, "y": 10, "target": true } ]
+      }
+    },
+    "end": {
+      "effect": [{ "u_message": "网络失联......","popup": true }
+      ]
+    },
+    "origins": [ "ORIGIN_GAME_START" ]
+  }
+]

@@ -1,0 +1,690 @@
+[
+ {
+  "type": "COMESTIBLE",
+  "abstract": "fishery_egg",
+  "name": {
+   "str": "鱼蛋模板"
+  },
+  "color": "white",
+  "spoils_in": "5 days",
+  "comestible_type": "FOOD",
+  "symbol": "o",
+  "quench": 4,
+  "healthy": 1,
+  "calories": 10,
+  "description": "一些可以食用，也可以等他们孵化出小鱼的鱼卵。【正常情况下，你不应该看到这个物品。】",
+  "price": 44,
+  "material": "egg",
+  "volume": "10 ml",
+  "weight": "10 g",
+  "fun": -5,
+  "flags": [
+   "FREEZERBURN",
+   "RAW"
+  ],
+  "vitamins": [
+   [
+    "vitA",
+    9
+   ],
+   [
+    "calcium",
+    3
+   ],
+   [
+    "iron",
+    4
+   ],
+   [
+    "vitB",
+    21
+   ]
+  ],
+  "rot_spawn_chance": 50
+ },
+ {
+  "abstract": "fishery_mon_juvenile",
+  "type": "MONSTER",
+  "name": {
+   "str": "幼鱼模板"
+  },
+  "description": "一条幼鱼。【正常情况下，你不应该看到这个生物。】",
+  "default_faction": "fish",
+  "bodytype": "fish",
+  "categories": [
+   "WILDLIFE"
+  ],
+  "species": [
+   "FISH"
+  ],
+  "volume": "75 ml",
+  "weight": "100 g",
+  "hp": 1,
+  "speed": 150,
+  "looks_like": "mon_fish_tiny",
+  "dodge": 5,
+  "material": [
+   "flesh"
+  ],
+  "symbol": "f",
+  "color": "white",
+  "aggression": -99,
+  "morale": 100,
+  "melee_dice": 1,
+  "melee_dice_sides": 1,
+  "melee_cut": 0,
+  "luminance": 0,
+  "fear_triggers": [
+   "PLAYER_CLOSE",
+   "SOUND"
+  ],
+  "death_function": {
+   "corpse_type": "NORMAL"
+  },
+  "flags": [
+   "FISHABLE",
+   "SEES",
+   "SMELLS",
+   "WARM",
+   "SWIMS",
+   "AQUATIC"
+  ]
+ },
+ {
+  "type": "furniture",
+  "id": "fishery_mobile_fishpond",
+  "name": "鱼池",
+  "description": "由防水尼龙布（防水帆布）制作的可拆卸式水池，可以用来养鱼。",
+  "symbol": "^",
+  "color": "light_blue",
+  "move_cost_mod": 1,
+  "required_str": 12,
+  "looks_like": "t_pontoon_dp",
+  "flags": [
+   "TRANSPARENT",
+   "LIQUID",
+   "SWIMMABLE",
+   "FISHABLE"
+  ],
+  "bash": {
+   "str_min": 1,
+   "str_max": 8,
+   "sound": "rrrrip!",
+   "sound_fail": "slap!",
+   "sound_vol": 8,
+   "collapse_radius": 5,
+   "tent_centers": [
+    "fishery_mobile_fishpond_centre"
+   ],
+   "items": [
+    {
+     "item": "water_fished",
+     "count": [
+      0,
+      1
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "type": "furniture",
+  "id": "fishery_mobile_fishpond_centre",
+  "name": "鱼池",
+  "description": "由防水尼龙布（防水帆布）制作的可拆卸式水池，可以用来养鱼。",
+  "symbol": "^",
+  "color": "light_blue",
+  "move_cost_mod": 1,
+  "required_str": 12,
+  "looks_like": "t_pontoon_dp",
+  "examine_action": "portable_structure",
+  "deployed_item": "fishery_mobile_fishponds_folded",
+  "flags": [
+   "TRANSPARENT",
+   "LIQUID",
+   "SWIMMABLE",
+   "FISHABLE"
+  ],
+  "bash": {
+   "str_min": 1,
+   "str_max": 8,
+   "sound": "rrrrip!",
+   "sound_fail": "slap!",
+   "sound_vol": 8,
+   "collapse_radius": 5,
+   "items": [
+    {
+     "item": "fishery_mobile_fishponds_folded_broken"
+    }
+   ],
+   "tent_centers": [
+    "fishery_mobile_fishpond_centre"
+   ]
+  }
+ },
+ {
+  "id": "fishery_mobile_fishponds_folded",
+  "type": "TOOL",
+  "name": {
+   "str": "折叠的鱼池",
+   "str_pl": "折叠的鱼池"
+  },
+  "description": "折叠的鱼池",
+  "weight": "500 g",
+  "volume": "200 ml",
+  "symbol": "?",
+  "color": "pink",
+  "use_action": {
+   "type": "deploy_furn",
+   "furn_type": "f_fishery_mobile_fishpond_pre"
+  }
+ },
+ {
+  "id": "fishery_mobile_fishponds_folded_broken",
+  "type": "GENERIC",
+  "name": {
+   "str": "折叠的鱼池（损坏）",
+   "str_pl": "折叠的鱼池（损坏）"
+  },
+  "description": "一个损坏的折叠鱼池，需要塑料薄膜或者防水帆布雨罩来修复。",
+  "weight": "500 g",
+  "volume": "200 ml",
+  "symbol": "?",
+  "color": "pink"
+ },
+ {
+  "type": "furniture",
+  "id": "f_fishery_mobile_fishpond_pre",
+  "name": "准备注水的鱼池",
+  "looks_like": "f_bathtub",
+  "description": "准备注水的鱼池.",
+  "symbol": "x",
+  "color": "white",
+  "move_cost_mod": 2,
+  "required_str": 0,
+  "bash": {
+   "str_min": 0,
+   "str_max": 0,
+   "items": []
+  },
+  "flags": [
+   "PLACE_ITEM",
+   "TRANSPARENT",
+   "EASY_DECONSTRUCT",
+   "NOCOLLIDE"
+  ],
+  "workbench": {
+   "multiplier": 0.7,
+   "mass": 1000000,
+   "volume": "1000L"
+  }
+ },
+ {
+  "type": "construction_group",
+  "id": "AE_Fishery_FishPond",
+  "name": "农业拓展-渔业-鱼池注水"
+ },
+ {
+  "id": "fishery_mobile_waterfilling",
+  "type": "construction",
+  "group": "AE_Fishery_FishPond",
+  "category": "OTHER",
+  "required_skills": [
+   [
+    "fabrication",
+    2
+   ]
+  ],
+  "time": "180 m",
+  "using": [],
+  "qualities": [],
+  "components": [
+   [
+    [
+     "water",
+     100000
+    ]
+   ]
+  ],
+  "pre_note": "鱼池需要注水",
+  "pre_terrain": "f_fishery_mobile_fishpond_pre",
+  "post_terrain": "f_fishery_mobile_fishpond_post"
+ },
+ {
+  "type": "furniture",
+  "id": "f_fishery_mobile_fishpond_post",
+  "name": "注满水的鱼池",
+  "description": "注满水的鱼池,按e展开.",
+  "symbol": "#",
+  "bgcolor": "light_gray",
+  "move_cost_mod": 2,
+  "coverage": 40,
+  "required_str": -1,
+  "deployed_item": "fishery_mobile_fishpond_trigger",
+  "examine_action": "portable_structure",
+  "looks_like": "f_bathtub",
+  "bash": {
+   "str_min": 16,
+   "str_max": 50,
+   "sound": "metal screeching!",
+   "sound_fail": "clang!",
+   "items": [
+    {
+     "item": "scrap",
+     "count": [
+      4,
+      8
+     ]
+    },
+    {
+     "item": "pipe",
+     "count": [
+      1,
+      3
+     ]
+    },
+    {
+     "item": "sheet_metal_small",
+     "count": [
+      4,
+      8
+     ]
+    }
+   ]
+  },
+  "workbench": {
+   "multiplier": 1.05,
+   "mass": 100000,
+   "volume": "35 L"
+  }
+ },
+ {
+  "id": "fishery_mobile_fishpond_trigger",
+  "type": "TOOL",
+  "name": {
+   "str": "鱼池",
+   "str_pl": "鱼池"
+  },
+  "description": "展开触发器。【一般情况下你不应该看到这个物品，如果看到此物品，请按D键丢向一个拥有足够空地的方向】",
+  "weight": "50000 g",
+  "volume": "100000 ml",
+  "symbol": "?",
+  "color": "pink",
+  "drop_action": {
+   "type": "deploy_tent",
+   "radius": 5,
+   "broken_type": "broketent",
+   "floor_center": "fishery_mobile_fishpond_centre",
+   "wall": "fishery_mobile_fishpond",
+   "floor": "fishery_mobile_fishpond",
+   "door_closed": "fishery_mobile_fishpond",
+   "door_opened": "fishery_mobile_fishpond"
+  }
+ },
+ {
+  "id": "fishery_mobile_fishingnets_folding",
+  "type": "TOOL",
+  "name": {
+   "str": "渔网网箱（折叠）",
+   "str_pl": "渔网网箱（折叠）"
+  },
+  "description": "一堆叠起来的渔网网箱，可以展开作为渔网捕鱼或者网箱养鱼。",
+  "weight": "9071 g",
+  "volume": "21500 ml",
+  "looks_like": "net",
+  "price": 35000,
+  "to_hit": -5,
+  "bashing": 10,
+  "material": "aluminum",
+  "symbol": "0",
+  "color": "light_gray"
+ },
+ {
+  "id": "fishery_mobile_fishingnets_pieces",
+  "type": "GENERIC",
+  "name": {
+   "str": "渔网碎片",
+   "str_pl": "渔网碎片"
+  },
+  "description": "渔网的一部分，可以用来制作完整的渔网网箱，或者安装在渔网网箱上以改变其形状。",
+  "weight": "1000 g",
+  "volume": "1000 ml",
+  "looks_like": "fd_web",
+  "symbol": "#",
+  "color": "light_gray"
+ },
+ {
+  "id": "fishery_mobile_fishingnet",
+  "name": "网箱",
+  "type": "vehicle_part",
+  "flags": [
+   "OBSTACLE",
+   "FLOATS",
+   "FOLDABLE"
+  ],
+  "symbol": "T",
+  "item": "fishery_mobile_fishingnets_pieces",
+  "folded_volume": 1,
+  "looks_like": "fd_web",
+  "durability": 15,
+  "location": "structure",
+  "color": "light_gray"
+ },
+ {
+  "type": "vehicle",
+  "id": "fishery_mobile_fishingnets",
+  "name": "渔网网箱",
+  "blueprint": [
+   [
+    "O-- --O"
+   ],
+   [
+    "|     |"
+   ],
+   [
+    "|     |"
+   ],
+   [
+    "O-----O"
+   ]
+  ],
+  "parts": [
+   {
+    "x": 0,
+    "y": 0,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": 1,
+    "y": 0,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": 2,
+    "y": 0,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": 3,
+    "y": 0,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": 4,
+    "y": 0,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": 4,
+    "y": 1,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": 4,
+    "y": 2,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": 4,
+    "y": 3,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": 4,
+    "y": 4,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": 4,
+    "y": 5,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": 4,
+    "y": 6,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": 4,
+    "y": 7,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": 4,
+    "y": 8,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": 4,
+    "y": 9,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": 4,
+    "y": 10,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": 3,
+    "y": 10,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": 2,
+    "y": 10,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": 1,
+    "y": 10,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": 0,
+    "y": 10,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": -1,
+    "y": 10,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": -2,
+    "y": 10,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": -3,
+    "y": 10,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": -4,
+    "y": 10,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": -5,
+    "y": 10,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": -6,
+    "y": 10,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": -6,
+    "y": 9,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": -6,
+    "y": 8,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": -6,
+    "y": 7,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": -6,
+    "y": 6,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": -6,
+    "y": 5,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": -6,
+    "y": 4,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": -6,
+    "y": 3,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": -6,
+    "y": 2,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": -6,
+    "y": 1,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": -6,
+    "y": 0,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": -5,
+    "y": 0,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": -4,
+    "y": 0,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": -3,
+    "y": 0,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   },
+   {
+    "x": -2,
+    "y": 0,
+    "parts": [
+     "fishery_mobile_fishingnet"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "water_fished",
+  "type": "COMESTIBLE",
+  "comestible_type": "DRINK",
+  "category": "food",
+  "name": {
+   "str": "带有鱼腥味的脏水",
+   "str_pl": "带有鱼腥味的脏水"
+  },
+  "description": "混合有鱼屎和黏液的脏水，不光看起来令人作呕，闻起来也是让人印象深刻。",
+  "weight": 250,
+  "volume": 1,
+  "price": 50,
+  "symbol": "~",
+  "looks_like": "water_sewage",
+  "color": "blue",
+  "phase": "liquid",
+  "quench": 50,
+  "flags": [
+   "EATEN_COLD"
+  ],
+  "use_action": "BLECH_BECAUSE_UNCLEAN"
+ }
+]

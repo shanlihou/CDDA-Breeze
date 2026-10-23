@@ -1,0 +1,61 @@
+[
+  {
+    "type": "material",
+    "id": "sex_fluid",
+    "name": "性体液",
+    "copy-from": "blood"
+  },
+  {
+    "type": "material",
+    "id": "silica_gel",
+    "name": "硅胶",
+    "density": 10,
+    "specific_heat_liquid": 1.8,
+    "specific_heat_solid": 1.8,
+    "latent_heat": 50,
+    "bash_resist": 19,
+    "cut_resist": 5,
+    "bullet_resist": 15,
+    "acid_resist": 12,
+    "fire_resist": 4,
+    "elec_resist": 20,
+    "chip_resist": 6,
+    "repaired_with": "silica_gel_chunk",
+    "salvaged_into": "silica_gel_chunk",
+    "dmg_adj": [
+      "刮花",
+      "划破",
+      "裂纹",
+      "破碎"
+    ],
+    "bash_dmg_verb": "凹损",
+    "cut_dmg_verb": "穿孔",
+    "burn_products": [
+      [
+        "silica_gel_chunk",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "silica_gel_chunk",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "name": {
+      "str": "硅胶块"
+    },
+    "description": "这是一块破碎的硅胶块。它看起来像人的躯体。摸起来有点温暖舒适。",
+    "weight": "70 g",
+    "volume": "250 ml",
+    "price": 0,
+    "price_postapoc": 0,
+    "material": [
+      "silica_gel"
+    ],
+    "symbol": ",",
+    "color": "light_gray",
+    "flags": [
+      "NO_SALVAGE"
+    ]
+  }
+]

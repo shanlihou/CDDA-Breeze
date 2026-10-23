@@ -1,0 +1,92 @@
+[
+  {
+    "id": "lunar_module_1",
+    "type": "GUNMOD",
+    "name": {
+      "str": "月神模块（霰弹转换）"
+    },
+    "description": "一种用于某些 LDC 武器的特殊模块。它是一小块弯曲、看起来柔软、摸起来温热的金属材料。似乎只要接触武器的特定位置就能将其安装上去。此模块会改变弹药特性，使其以类似霰弹弹丸的方式发挥作用，但会略微降低造成的伤害。",
+    "weight": "600 g",
+    "volume": "300 ml",
+    "price_postapoc": 1000,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "none",
+      "length": "hand",
+      "surface": "line"
+    },
+    "bashing": 4,
+    "material": [
+      "plastic",
+      "steel"
+    ],
+    "symbol": ":",
+    "ammo_effects": [
+      "SHOT"
+    ],
+    "color": "light_gray",
+    "damage_modifier": {
+      "damage_type": "bullet",
+      "amount": -4,
+      "armor_penetration": -2
+    },
+    "install_time": "15 s",
+    "location": "lunar module",
+    "min_skills": [
+      [
+        "weapon",
+        2
+      ]
+    ],
+    "mod_targets": [
+      "rifle",
+      "smg"
+    ]
+  },
+  {
+    "id": "lunar_module_2",
+    "type": "GUNMOD",
+    "name": {
+      "str": "月神模块（等离子）"
+    },
+    "description": "一种用于某些 LDC 武器的特殊模块。它是一小块弯曲、看起来柔软、摸起来温热的金属材料。似乎只要接触武器的特定位置就能将其安装上去。此模块会将弹丸的某些部分过热转化为等离子体，提高伤害，但会降低精准度和有效射程。",
+    "weight": "600 g",
+    "volume": "300 ml",
+    "price_postapoc": 1000,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "none",
+      "length": "hand",
+      "surface": "line"
+    },
+    "bashing": 4,
+    "material": [
+      "plastic",
+      "steel"
+    ],
+    "symbol": ":",
+    "ammo_effects": [
+      "PLASMA"
+    ],
+    "color": "light_gray",
+    "damage_modifier": {
+      "damage_type": "heat",
+      "amount": 12,
+      "armor_penetration": 12
+    },
+    "dispersion_modifier": 20,
+    "install_time": "15 s",
+    "location": "lunar module",
+    "min_skills": [
+      [
+        "weapon",
+        2
+      ]
+    ],
+    "mod_targets": [
+      "rifle",
+      "smg"
+    ],
+    "range_multiplier": 0.8
+  }
+]

@@ -1,0 +1,82 @@
+[
+ {
+   "id": "DT_heart_container",
+   "looks_like": "box_tea",
+   "type": "MAGAZINE",
+   "name": { "str": "心形容器" },
+   "description": "一个透明的心形容器，看上去没有什么特别的地方。内部空间似乎比外部空间更大，你可以用它来收纳决心类物质。",
+   "weight": "320 g",
+   "volume": "1100 ml",
+   "longest_side": "12 cm",
+   "price": 15000,
+   "price_postapoc": 10000,
+   "material": [ "plastic", "steel", "DT_dt" ],
+   "symbol": "D",
+   "color": "light_gray",
+   "ammo_type": [
+    "DT_ammo_water",
+    "DT_ammo_semi_solid",
+    "DT_ammo_hate"
+    ],
+   "flags": [
+    "DT_items",
+    "TARDIS"
+    ],
+   "pocket_data": [
+    {
+     "pocket_type": "MAGAZINE",
+     "rigid": true,
+     "watertight": true,
+     "ammo_restriction": {
+      "DT_ammo_water": 50,
+      "DT_ammo_hate": 50,
+      "DT_ammo_semi_solid": 25
+      }
+     }
+    ]
+  }, 
+ {
+   "id": "DT_frisk_soul",
+   "looks_like": "black_box",
+   "type": "MAGAZINE",
+   "name": { "str": "某人的灵魂" },
+   "description": "一个大概半个拳头大小的透明心形容器，内部有一些残留的红色物质，似乎曾经装过什么东西。",
+   "weight": "335 g",
+   "volume": "200 ml",
+   "longest_side": "5 cm",
+   "price": 1500000,
+   "price_postapoc": 75000,
+   "material": [ "DT_dt", "NW_soul"],
+   "symbol": "D",
+   "color": "light_gray",
+   "ammo_type": [ "DT_ammo_my_dt" ],
+   "flags": [ "DT_items", "TARDIS" ],
+   "capacity": 100,
+   "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "DT_ammo_my_dt": 100 } } ]
+ },
+ {
+  "id": "NW_Nbox",
+  "type": "GENERIC",
+  "category": "container",
+  "name": { "str": "非常普通的储物盒", "str_pl": "一堆普通储物盒" },
+  "looks_like": "toolbox_empty",
+  "description": "一个非常普通的储物盒，可以适应任何需要储物的环境。\n\n“成本低廉，效果强大，是你找不到更好的储物工具时的首选。”\n然而早已没人记得，被冠以普通之名的它也是一件超凡物品。",
+  "weight": "400 g",
+  "volume": "51 L",
+  "longest_side": "51 cm",
+  "material": [ "steel", "super_mt" ],
+  "symbol": ")",
+  "color": "light_gray",
+  "price": 1000,
+  "price_postapoc": 5000,
+  "pocket_data": [
+   {
+    "pocket_type": "CONTAINER",
+    "rigid": true,
+    "max_contains_volume": "50 L",
+    "max_contains_weight": "500 kg",
+    "max_item_length": "50 cm"
+   }
+  ]
+ }
+]

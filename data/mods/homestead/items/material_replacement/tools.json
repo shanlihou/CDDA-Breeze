@@ -1,0 +1,69 @@
+[
+  {
+    "//": "电烙铁｜0.G原生烧灼止血+全材质修复",
+    "type": "TOOL",
+    "id": "soldering_iron",
+    "copy-from": "soldering_iron",
+    "name": {
+      "str": "电烙铁"
+    },
+    "use_action": [
+      {
+        "type": "heal",
+        "target": "self",
+        "effect": "cauterize_wound",
+        "time": 300,
+        "move_cost": 300,
+        "pain": 15,
+        "chance": 90
+      },
+      {
+        "type": "repair_item",
+        "item_action_type": "repair_metal",
+        "materials": [
+          "plastic",
+          "rubber",
+          "lead",
+          "tin",
+          "zinc"
+        ],
+        "skill": "fabrication",
+        "cost_scaling": 0.1,
+        "move_cost": 1500
+      }
+    ]
+  },
+  {
+    "//": "高级扩展工具套｜全材质兼容无报错",
+    "type": "TOOL",
+    "id": "toolset_extended",
+    "copy-from": "toolset_extended",
+    "name": {
+      "str": "军手扩展工具组"
+    },
+    "use_action": [
+      "HAMMER",
+      "CROWBAR",
+      {
+        "type": "repair_item",
+        "item_action_type": "repair_metal",
+        "materials": [
+          "kevlar",
+          "plastic",
+          "rubber",
+          "iron",
+          "steel",
+          "hardsteel",
+          "aluminum",
+          "titanium",
+          "copper",
+          "silver",
+          "gold"
+        ],
+        "skill": "mechanics",
+        "cost_scaling": 0.1,
+        "move_cost": 1000
+      }
+    ]
+  }
+]

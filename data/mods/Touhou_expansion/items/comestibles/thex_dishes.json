@@ -1,0 +1,1240 @@
+[
+  {
+    "id": "aa_blank",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "空白",
+      "str_pl": "空白"
+    },
+    "copy-from": "flesh",
+    "description": "这不应生成",
+    "volume": "1 ml",
+    "weight": "1 g",
+    "price_postapoc": 1,
+    "calories": 1,
+    "color": "light_gray",
+    "spoils_in": "12 hours",
+    "vitamins": [
+      [
+        "calcium",
+        1
+      ],
+      [
+        "iron",
+        1
+      ],
+      [
+        "vitA",
+        1
+      ],
+      [
+        "vitB",
+        1
+      ],
+      [
+        "vitC",
+        1
+      ]
+    ],
+    "flags": [
+      "RAW"
+    ]
+  },
+  {
+    "id": "ab_blank",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "空白",
+      "str_pl": "空白"
+    },
+    "copy-from": "flesh",
+    "description": "这也不应生成",
+    "volume": "1 ml",
+    "weight": "1 g",
+    "price_postapoc": 1,
+    "calories": 1,
+    "color": "light_gray",
+    "spoils_in": "12 hours",
+    "vitamins": [
+      [
+        "calcium",
+        1
+      ],
+      [
+        "iron",
+        1
+      ],
+      [
+        "vitA",
+        1
+      ],
+      [
+        "vitB",
+        1
+      ],
+      [
+        "vitC",
+        1
+      ]
+    ],
+    "flags": [
+      "RAW"
+    ]
+  },
+  {
+    "id": "anko",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "红豆沙"
+    },
+    "description": "甜豆沙，由煮烂捣碎的豆子制成。",
+    "volume": "250 ml",
+    "weight": "200 g",
+    "price": 80,
+    "price_postapoc": 75,
+    "material": [
+      "fruit"
+    ],
+    "symbol": "~",
+    "color": "brown",
+    "calories": 30,
+    "charges": 8,
+    "phase": "liquid",
+    "comestible_type": "DRINK",
+    "container": "jar_3l_glass_sealed",
+    "fun": 9,
+    "sealed": true,
+    "spoils_in": "10 days",
+    "flags": [
+      "USE_EAT_VERB"
+    ]
+  },
+  {
+    "id": "bird_leg_roasted",
+    "type": "COMESTIBLE",
+    "name": {
+      "str_sp": "烤鸟腿"
+    },
+    "copy-from": "bird_meat",
+    "description": "在火上烤过的鸟腿。",
+    "proportional": {
+      "price": 1.5,
+      "price_postapoc": 1.5,
+      "calories": 1.33
+    },
+    "fun": 4,
+    "color": "white",
+    "spoils_in": "2 days",
+    "stack_size": 4,
+    "parasites": 0,
+    "flags": [
+      "EATEN_HOT"
+    ]
+  },
+  {
+    "id": "bird_pie",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "鸟肉派"
+    },
+    "description": "简单的鸟肉派。",
+    "volume": "1 L",
+    "weight": "650 g",
+    "price": 1200,
+    "price_postapoc": 1800,
+    "material": [
+      "flesh",
+      "wheat"
+    ],
+    "primary_material": "flesh",
+    "symbol": "%",
+    "color": "brown",
+    "calories": 476,
+    "charges": 4,
+    "comestible_type": "FOOD",
+    "container": "box_small",
+    "fun": 7,
+    "spoils_in": "4 days",
+    "quench": 2,
+    "flags": [
+      "EATEN_HOT"
+    ]
+  },
+  {
+    "id": "bird_pie_pot",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "鸟肉锅派"
+    },
+    "copy-from": "bird_pie",
+    "description": "充满鸟肉和蔬菜的锅派。饱腹、营养又美味。",
+    "volume": "1300 ml",
+    "weight": "850 g",
+    "price": 1350,
+    "price_postapoc": 2000,
+    "material": [
+      "flesh",
+      "wheat",
+      "veggy"
+    ],
+    "primary_material": "flesh",
+    "symbol": "%",
+    "color": "brown",
+    "calories": 700,
+    "charges": 6,
+    "comestible_type": "FOOD",
+    "container": "box_small",
+    "fun": 6,
+    "spoils_in": "4 days",
+    "quench": 3,
+    "flags": [
+      "EATEN_HOT"
+    ]
+  },
+  {
+    "id": "bird_soup",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "鸟肉汤"
+    },
+    "description": "美味的鸟肉汤。",
+    "volume": "320 ml",
+    "weight": "320 g",
+    "price": 365,
+    "price_postapoc": 85,
+    "material": [
+      "flesh",
+      "veggy"
+    ],
+    "primary_material": "flesh",
+    "symbol": "~",
+    "color": "red",
+    "looks_like": "water",
+    "calories": 257,
+    "charges": 2,
+    "phase": "liquid",
+    "comestible_type": "DRINK",
+    "container": "can_medium",
+    "fun": 6,
+    "spoils_in": "5 days",
+    "quench": 8,
+    "flags": [
+      "EATEN_HOT",
+      "USE_EAT_VERB"
+    ]
+  },
+  {
+    "id": "caesar_salad",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "凯撒沙拉"
+    },
+    "description": "生菜和烤面包沙拉，撒上奶酪和调料。",
+    "volume": "250 ml",
+    "weight": "227 g",
+    "price": 350,
+    "price_postapoc": 100,
+    "material": [
+      "veggy",
+      "wheat"
+    ],
+    "primary_material": "veggy",
+    "color": "green",
+    "symbol": "%",
+    "looks_like": "veggy_salad",
+    "calories": 350,
+    "comestible_type": "FOOD",
+    "container": "bowl_plastic",
+    "fun": 3,
+    "quench": 12,
+    "spoils_in": "5 days 20 hours",
+    "vitamins": [
+      [
+        "calcium",
+        6
+      ],
+      [
+        "iron",
+        10
+      ],
+      [
+        "vitC",
+        30
+      ]
+    ],
+    "flags": [
+      "FREEZERBURN"
+    ]
+  },
+  {
+    "id": "cheeseburger_bird",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "鸟肉芝士汉堡"
+    },
+    "description": "夹有碎肉和奶酪以及调味品的汉堡。大灾变前一种简单的无牛肉替代品。",
+    "volume": "300 ml",
+    "weight": "333 g",
+    "price": 1000,
+    "price_postapoc": 250,
+    "material": [
+      "flesh",
+      "wheat",
+      "milk"
+    ],
+    "primary_material": "processed_food",
+    "symbol": "%",
+    "looks_like": "cheeseburger",
+    "color": "brown",
+    "calories": 380,
+    "comestible_type": "FOOD",
+    "container": "wrapper",
+    "fun": 5,
+    "spoils_in": "1 day 12 hours",
+    "vitamins": [
+      [
+        "calcium",
+        57
+      ],
+      [
+        "iron",
+        65
+      ],
+      [
+        "vitC",
+        1
+      ]
+    ],
+    "flags": [
+      "EATEN_HOT",
+      "ALLERGEN_MILK"
+    ]
+  },
+  {
+    "id": "cheeseburger_bird_wheat_free",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "无小麦鸟肉芝士汉堡"
+    },
+    "description": "无小麦的鸟肉碎肉和奶酪以及调味品的三明治。大灾变前一种简单的无牛肉替代品。",
+    "volume": "300 ml",
+    "weight": "333 g",
+    "price": 1000,
+    "price_postapoc": 250,
+    "material": [
+      "flesh",
+      "veggy",
+      "milk"
+    ],
+    "primary_material": "processed_food",
+    "symbol": "%",
+    "looks_like": "cheeseburger_wheat_free",
+    "color": "brown",
+    "calories": 380,
+    "comestible_type": "FOOD",
+    "container": "wrapper",
+    "fun": 5,
+    "spoils_in": "1 day 12 hours",
+    "vitamins": [
+      [
+        "calcium",
+        57
+      ],
+      [
+        "iron",
+        65
+      ],
+      [
+        "vitC",
+        1
+      ]
+    ],
+    "flags": [
+      "EATEN_HOT",
+      "ALLERGEN_MILK"
+    ]
+  },
+  {
+    "id": "dango_anko",
+    "type": "COMESTIBLE",
+    "name": {
+      "str_sp": "红豆沙团子"
+    },
+    "description": "甜米粉团子，串起来并覆盖甜豆沙。",
+    "volume": "125 ml",
+    "weight": "110 g",
+    "price": 1300,
+    "price_postapoc": 2000,
+    "material": [
+      "fruit",
+      "wheat",
+      "wood"
+    ],
+    "primary_material": "wheat",
+    "symbol": "%",
+    "color": "white",
+    "charges": 3,
+    "calories": 250,
+    "comestible_type": "FOOD",
+    "fun": 7,
+    "spoils_in": "2 days",
+    "vitamins": [
+      [
+        "calcium",
+        4
+      ],
+      [
+        "iron",
+        4
+      ]
+    ],
+    "flags": [
+      "EATEN_HOT"
+    ]
+  },
+  {
+    "id": "dango_mitarashi",
+    "type": "COMESTIBLE",
+    "name": {
+      "str_sp": "御手洗团子"
+    },
+    "description": "甜米粉团子，串起来并覆盖甜酱油。",
+    "volume": "125 ml",
+    "weight": "110 g",
+    "price": 1300,
+    "price_postapoc": 2000,
+    "material": [
+      "wheat",
+      "wood"
+    ],
+    "primary_material": "wheat",
+    "symbol": "%",
+    "color": "white",
+    "charges": 3,
+    "calories": 200,
+    "comestible_type": "FOOD",
+    "fun": 7,
+    "spoils_in": "2 days",
+    "vitamins": [
+      [
+        "calcium",
+        4
+      ],
+      [
+        "iron",
+        4
+      ]
+    ],
+    "flags": [
+      "EATEN_HOT"
+    ]
+  },
+  {
+    "id": "deluxe_cheeseburger_bird",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "豪华鸟肉芝士汉堡"
+    },
+    "copy-from": "cheeseburger_bird",
+    "description": "一个鸟肉芝士生菜堡，对于牛肉过敏或者阿三来说是一顿完美的餐食",
+    "volume": "350 ml",
+    "weight": "380 g",
+    "price_postapoc": 300,
+    "material": [
+      "flesh",
+      "wheat",
+      "milk",
+      "veggy",
+      "tomato"
+    ],
+    "primary_material": "processed_food",
+    "calories": 500,
+    "fun": 7,
+    "vitamins": [
+      [
+        "calcium",
+        60
+      ],
+      [
+        "iron",
+        65
+      ],
+      [
+        "vitC",
+        30
+      ]
+    ]
+  },
+  {
+    "id": "deluxe_cheeseburger_bird_wheat_free",
+    "type": "COMESTIBLE",
+    "copy-from": "cheeseburger_bird_wheat_free",
+    "name": {
+      "str": "豪华无小麦芝士汉堡"
+    },
+    "description": "无小麦的鸟肉芝士汉堡，含有更多蔬菜和调味品。一种无牛肉的美味替代品。",
+    "volume": "350 ml",
+    "weight": "380 g",
+    "price_postapoc": 300,
+    "material": [
+      "flesh",
+      "milk",
+      "veggy",
+      "tomato"
+    ],
+    "primary_material": "processed_food",
+    "calories": 500,
+    "fun": 7,
+    "vitamins": [
+      [
+        "calcium",
+        60
+      ],
+      [
+        "iron",
+        65
+      ],
+      [
+        "vitC",
+        30
+      ]
+    ]
+  },
+  {
+    "id": "dorayaki",
+    "type": "COMESTIBLE",
+    "name": {
+      "str_sp": "铜锣烧"
+    },
+    "description": "一种小吃，甜馅夹在两个煎饼之间。可能会吸引穿越时空的无耳机器猫。",
+    "volume": "250 ml",
+    "weight": "200 g",
+    "price": 900,
+    "price_postapoc": 2000,
+    "material": [
+      "wheat"
+    ],
+    "symbol": "%",
+    "color": "brown",
+    "charges": 1,
+    "calories": 400,
+    "comestible_type": "FOOD",
+    "fun": 7,
+    "spoils_in": "4 days",
+    "vitamins": [
+      [
+        "calcium",
+        4
+      ],
+      [
+        "iron",
+        4
+      ]
+    ],
+    "flags": [
+      "EATEN_HOT",
+      "EATEN_COLD"
+    ]
+  },
+  {
+    "id": "hamburger_bird",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "鸟肉汉堡"
+    },
+    "description": "夹有碎鸟肉和调味品的汉堡。",
+    "volume": "300 ml",
+    "weight": "300 g",
+    "price": 700,
+    "price_postapoc": 180,
+    "material": [
+      "flesh",
+      "wheat"
+    ],
+    "primary_material": "processed_food",
+    "symbol": "%",
+    "color": "brown",
+    "looks_like": "hamburger",
+    "calories": 258,
+    "comestible_type": "FOOD",
+    "container": "wrapper",
+    "fun": 4,
+    "spoils_in": "1 day 12 hours",
+    "vitamins": [
+      [
+        "calcium",
+        57
+      ],
+      [
+        "iron",
+        65
+      ],
+      [
+        "vitC",
+        1
+      ]
+    ],
+    "flags": [
+      "EATEN_HOT"
+    ]
+  },
+  {
+    "id": "hamburger_bird_wheat_free",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "无小麦鸟肉汉堡"
+    },
+    "description": "无小麦的碎鸟肉和调味品的三明治。",
+    "volume": "300 ml",
+    "weight": "300 g",
+    "price": 700,
+    "price_postapoc": 180,
+    "material": [
+      "flesh",
+      "veggy"
+    ],
+    "primary_material": "processed_food",
+    "symbol": "%",
+    "color": "brown",
+    "looks_like": "hamburger_wheat_free",
+    "calories": 258,
+    "comestible_type": "FOOD",
+    "container": "wrapper",
+    "fun": 4,
+    "spoils_in": "1 day 12 hours",
+    "vitamins": [
+      [
+        "calcium",
+        57
+      ],
+      [
+        "iron",
+        65
+      ],
+      [
+        "vitC",
+        1
+      ]
+    ],
+    "flags": [
+      "EATEN_HOT"
+    ]
+  },
+  {
+    "id": "karaage",
+    "type": "COMESTIBLE",
+    "name": {
+      "str_sp": "日式炸鸡"
+    },
+    "description": "日式炸鸡。由鸟肉制成，美味得令人上瘾。",
+    "volume": "800 ml",
+    "weight": "650 g",
+    "price": 3500,
+    "price_postapoc": 650,
+    "material": [
+      "flesh",
+      "junk"
+    ],
+    "primary_material": "flesh",
+    "symbol": "%",
+    "color": "yellow",
+    "charges": 4,
+    "stack_size": 4,
+    "comestible_type": "FOOD",
+    "fun": 16,
+    "healthy": 1,
+    "quench": -6,
+    "spoils_in": "2 days",
+    "flags": [
+      "EATEN_HOT"
+    ]
+  },
+  {
+    "id": "manju",
+    "type": "COMESTIBLE",
+    "name": {
+      "str_sp": "馒头"
+    },
+    "description": "一个甜包子，填充甜豆沙。",
+    "volume": "500 ml",
+    "weight": "465 g",
+    "price": 2000,
+    "price_postapoc": 6000,
+    "material": [
+      "wheat"
+    ],
+    "symbol": "%",
+    "color": "white",
+    "charges": 1,
+    "calories": 350,
+    "comestible_type": "FOOD",
+    "container": "box_small",
+    "fun": 6,
+    "spoils_in": "8 days",
+    "vitamins": [
+      [
+        "calcium",
+        4
+      ],
+      [
+        "iron",
+        4
+      ]
+    ],
+    "flags": [
+      "EATEN_HOT",
+      "EATEN_COLD"
+    ]
+  },
+  {
+    "id": "milanesa",
+    "type": "COMESTIBLE",
+    "name": {
+      "str_sp": "米兰尼斯"
+    },
+    "description": "薄肉片，裹上鸡蛋和面包糠，油炸而成。",
+    "volume": "500 ml",
+    "weight": "500 g",
+    "price": 2000,
+    "price_postapoc": 4000,
+    "material": [
+      "flesh",
+      "junk"
+    ],
+    "primary_material": "junk",
+    "symbol": "%",
+    "color": "brown",
+    "charges": 2,
+    "comestible_type": "FOOD",
+    "fun": 14,
+    "healthy": 1,
+    "quench": -6,
+    "spoils_in": "2 days",
+    "flags": [
+      "EATEN_HOT"
+    ]
+  },
+  {
+    "id": "oyakodon",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "亲子丼"
+    },
+    "description": "鸡肉和鸡蛋一起烹制，盖在米饭上。它代表父母和孩子……忽略食用部分。",
+    "volume": "320 ml",
+    "weight": "320 g",
+    "price": 365,
+    "price_postapoc": 85,
+    "material": [
+      "flesh",
+      "veggy"
+    ],
+    "primary_material": "flesh",
+    "symbol": "~",
+    "color": "yellow",
+    "charges": 2,
+    "calories": 450,
+    "comestible_type": "FOOD",
+    "container": "box_small",
+    "fun": 6,
+    "healthy": 4,
+    "quench": 3,
+    "spoils_in": "3 days",
+    "flags": [
+      "EATEN_HOT"
+    ]
+  },
+  {
+    "id": "paella",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "海鲜饭"
+    },
+    "description": "一种以米饭为基础的精致菜肴，包含不同种类的肉类和几种海鲜，通常在同一锅中烹制并上桌。",
+    "volume": "1000 ml",
+    "weight": "960 g",
+    "price": 20000,
+    "price_postapoc": 35000,
+    "material": [
+      "flesh",
+      "veggy"
+    ],
+    "primary_material": "flesh",
+    "symbol": "~",
+    "color": "yellow",
+    "charges": 4,
+    "calories": 450,
+    "comestible_type": "FOOD",
+    "container": "box_small",
+    "fun": 16,
+    "healthy": 8,
+    "quench": 4,
+    "spoils_in": "2 days",
+    "flags": [
+      "EATEN_HOT"
+    ]
+  },
+  {
+    "id": "satsumaimo_baked",
+    "type": "COMESTIBLE",
+    "name": {
+      "str_sp": "烤萨摩芋"
+    },
+    "description": "烤整颗萨摩芋。热气腾腾，略带甜味，真可谓是女神的恩赐。",
+    "volume": "300 ml",
+    "weight": "150 g",
+    "price": 50,
+    "price_postapoc": 5,
+    "material": [
+      "fruit"
+    ],
+    "symbol": "%",
+    "color": "red",
+    "stack_size": 2,
+    "calories": 190,
+    "comestible_type": "FOOD",
+    "fun": 4,
+    "healthy": 2,
+    "spoils_in": "3 days 12 hours",
+    "quench": 0,
+    "vitamins": [
+      [
+        "calcium",
+        6
+      ],
+      [
+        "iron",
+        6
+      ],
+      [
+        "vitA",
+        35
+      ],
+      [
+        "vitC",
+        4
+      ]
+    ]
+  },
+  {
+    "id": "satsumaimo_chips",
+    "type": "COMESTIBLE",
+    "name": {
+      "str_sp": "萨摩芋片"
+    },
+    "copy-from": "satsumaimo_chips_thick",
+    "description": "薄切油炸萨摩芋。香脆可口。",
+    "fun": 8
+  },
+  {
+    "id": "satsumaimo_chips_thick",
+    "type": "COMESTIBLE",
+    "name": {
+      "str_sp": "萨摩芋片（厚切）"
+    },
+    "copy-from": "chips",
+    "description": "圆片切的油炸萨摩芋。这些相对较厚，所以不脆，但仍然美味。",
+    "volume": "325 ml",
+    "weight": "150 g",
+    "price": 180,
+    "price_postapoc": 200,
+    "material": [
+      "junk"
+    ],
+    "symbol": "%",
+    "color": "yellow",
+    "charges": 3,
+    "calories": 220,
+    "comestible_type": "FOOD",
+    "fun": 4,
+    "healthy": -1,
+    "quench": -2,
+    "spoils_in": "3 days",
+    "vitamins": [
+      [
+        "calcium",
+        2
+      ],
+      [
+        "iron",
+        2
+      ],
+      [
+        "vitA",
+        11
+      ],
+      [
+        "vitC",
+        1
+      ]
+    ],
+    "flags": [
+      "EDIBLE_FROZEN"
+    ]
+  },
+  {
+    "id": "satsumaimo_french_cheese_fries",
+    "type": "COMESTIBLE",
+    "name": {
+      "str_sp": "萨摩芋芝士薯条"
+    },
+    "description": "切成条状的油炸萨摩芋，上面覆盖着美味的奶酪。",
+    "volume": "400 ml",
+    "weight": "275 g",
+    "price": 190,
+    "price_postapoc": 150,
+    "material": [
+      "junk",
+      "milk"
+    ],
+    "primary_material": "junk",
+    "symbol": "%",
+    "color": "yellow",
+    "charges": 4,
+    "calories": 340,
+    "comestible_type": "FOOD",
+    "fun": 8,
+    "healthy": -1,
+    "spoils_in": "3 days",
+    "flags": [
+      "EATEN_HOT"
+    ]
+  },
+  {
+    "id": "satsumaimo_french_fries",
+    "type": "COMESTIBLE",
+    "name": {
+      "str_sp": "萨摩芋薯条"
+    },
+    "copy-from": "fries",
+    "description": "切成条状深炸的萨摩芋，撒上一点盐。香脆可口。",
+    "volume": "350 ml",
+    "weight": "150 g",
+    "price": 180,
+    "price_postapoc": 200,
+    "material": [
+      "junk"
+    ],
+    "symbol": "%",
+    "color": "yellow",
+    "charges": 3,
+    "calories": 220,
+    "comestible_type": "FOOD",
+    "fun": 8,
+    "healthy": -1,
+    "quench": -2,
+    "spoils_in": "3 days",
+    "vitamins": [
+      [
+        "calcium",
+        2
+      ],
+      [
+        "iron",
+        2
+      ],
+      [
+        "vitA",
+        11
+      ],
+      [
+        "vitC",
+        1
+      ]
+    ],
+    "flags": [
+      "EATEN_HOT"
+    ]
+  },
+  {
+    "id": "satsumaimo_pie",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "萨摩芋派"
+    },
+    "description": "由捣碎的甜土豆制成的蓬松柔软的派。秋天的颜色。",
+    "volume": "2 L",
+    "weight": "189 g",
+    "price": 800,
+    "price_postapoc": 1200,
+    "material": [
+      "wheat",
+      "veggy"
+    ],
+    "primary_material": "veggy",
+    "symbol": "%",
+    "color": "yellow",
+    "charges": 3,
+    "calories": 1800,
+    "comestible_type": "FOOD",
+    "container": "box_small",
+    "fun": 7,
+    "healthy": 1,
+    "quench": 1,
+    "spoils_in": "3 days",
+    "flags": [
+      "EATEN_HOT"
+    ]
+  },
+  {
+    "id": "shrimplike_fried_bayou",
+    "type": "COMESTIBLE",
+    "name": {
+      "str_sp": "河口风格炸虾"
+    },
+    "description": "美味的炸虾（类）肉，用卡真风格烹制。",
+    "volume": "740 ml",
+    "weight": "650 g",
+    "price": 6000,
+    "price_postapoc": 12000,
+    "material": [
+      "flesh",
+      "junk"
+    ],
+    "primary_material": "junk",
+    "symbol": "%",
+    "color": "brown",
+    "charges": 4,
+    "comestible_type": "FOOD",
+    "fun": 20,
+    "healthy": 0,
+    "quench": -6,
+    "spoils_in": "2 days",
+    "flags": [
+      "EATEN_HOT"
+    ]
+  },
+  {
+    "id": "sweet_bun",
+    "type": "COMESTIBLE",
+    "name": {
+      "str_sp": "甜面包"
+    },
+    "description": "一个甜面包。",
+    "volume": "480 ml",
+    "weight": "225 g",
+    "price": 1500,
+    "price_postapoc": 3000,
+    "material": [
+      "wheat"
+    ],
+    "symbol": "%",
+    "color": "brown",
+    "charges": 1,
+    "calories": 200,
+    "comestible_type": "FOOD",
+    "container": "can_medium",
+    "fun": 6,
+    "spoils_in": "8 days",
+    "vitamins": [
+      [
+        "calcium",
+        4
+      ],
+      [
+        "iron",
+        4
+      ]
+    ],
+    "flags": [
+      "EATEN_HOT",
+      "EATEN_COLD"
+    ]
+  },
+  {
+    "id": "sweet_bun_jam",
+    "type": "COMESTIBLE",
+    "name": {
+      "str_sp": "甜果酱面包"
+    },
+    "copy-from": "manju",
+    "description": "一个填充果酱的甜面包。",
+    "flags": [
+      "EATEN_HOT",
+      "EATEN_COLD"
+    ]
+  },
+  {
+    "id": "taiyaki",
+    "type": "COMESTIBLE",
+    "name": {
+      "str_sp": "鲷鱼烧"
+    },
+    "description": "一种鱼形小吃，通常填充红豆沙，如今也有卡仕达、巧克力、奶酪或红薯馅。",
+    "volume": "320 ml",
+    "weight": "280 g",
+    "price": 2500,
+    "price_postapoc": 2000,
+    "material": [
+      "wheat"
+    ],
+    "symbol": "%",
+    "color": "yellow",
+    "charges": 1,
+    "calories": 250,
+    "comestible_type": "FOOD",
+    "fun": 7,
+    "spoils_in": "4 days",
+    "vitamins": [
+      [
+        "calcium",
+        4
+      ],
+      [
+        "iron",
+        4
+      ]
+    ],
+    "flags": [
+      "EATEN_HOT",
+      "EATEN_COLD"
+    ]
+  },
+  {
+    "id": "yakiniku_deluxe",
+    "type": "COMESTIBLE",
+    "name": {
+      "str_sp": "日式烧肉"
+    },
+    "description": "串烧的肉和蔬菜，覆盖甜咸酱汁，在火上烤制。",
+    "copy-from": "yakiniku_humble",
+    "volume": "250 ml",
+    "weight": "300 g",
+    "proportional": {
+      "price": 1.33,
+      "price_postapoc": 1.33,
+      "calories": 1.5,
+      "fun": 1.5
+    },
+    "healthy": 2,
+    "flags": [
+      "EATEN_HOT"
+    ]
+  },
+  {
+    "id": "yakiniku_humble",
+    "type": "COMESTIBLE",
+    "name": {
+      "str_sp": "基础烧肉"
+    },
+    "description": "在火上烤制的串烧肉。",
+    "volume": "150 ml",
+    "weight": "250 g",
+    "price": 190,
+    "price_postapoc": 150,
+    "material": [
+      "flesh",
+      "wood"
+    ],
+    "primary_material": "flesh",
+    "symbol": "%",
+    "color": "red",
+    "charges": 2,
+    "calories": 400,
+    "comestible_type": "FOOD",
+    "fun": 8,
+    "healthy": 1,
+    "spoils_in": "3 days",
+    "flags": [
+      "EATEN_HOT"
+    ]
+  },
+  {
+    "id": "yakitori_deluxe",
+    "type": "COMESTIBLE",
+    "name": {
+      "str_sp": "日式烧肉"
+    },
+    "description": "串烧的鸟肉和蔬菜，覆盖甜咸酱汁，在火上烤制。",
+    "copy-from": "yakitori_humble",
+    "volume": "250 ml",
+    "weight": "300 g",
+    "proportional": {
+      "price": 1.33,
+      "price_postapoc": 1.33,
+      "calories": 1.5,
+      "fun": 1.5
+    },
+    "healthy": 2,
+    "flags": [
+      "EATEN_HOT"
+    ]
+  },
+  {
+    "id": "yakitori_humble",
+    "type": "COMESTIBLE",
+    "name": {
+      "str_sp": "基础烧鸟"
+    },
+    "description": "在火上烤制的串烧鸟肉。",
+    "volume": "150 ml",
+    "weight": "250 g",
+    "price": 190,
+    "price_postapoc": 150,
+    "material": [
+      "flesh",
+      "wood"
+    ],
+    "primary_material": "flesh",
+    "symbol": "%",
+    "color": "red",
+    "charges": 2,
+    "calories": 400,
+    "comestible_type": "FOOD",
+    "fun": 8,
+    "healthy": 1,
+    "spoils_in": "3 days",
+    "flags": [
+      "EATEN_HOT"
+    ]
+  },
+  {
+    "id": "yakiyatsumeunagi_deluxe",
+    "type": "COMESTIBLE",
+    "name": {
+      "str_sp": "烤七鳃鳗"
+    },
+    "description": "串烧的七鳃鳗和蔬菜，覆盖甜咸酱汁，在火上烤制。",
+    "copy-from": "yakiyatsumeunagi_humble",
+    "volume": "250 ml",
+    "weight": "300 g",
+    "proportional": {
+      "price": 1.33,
+      "price_postapoc": 1.33,
+      "calories": 1.5,
+      "fun": 1.5
+    },
+    "healthy": 2,
+    "flags": [
+      "EATEN_HOT"
+    ]
+  },
+  {
+    "id": "yakiyatsumeunagi_humble",
+    "type": "COMESTIBLE",
+    "name": {
+      "str_sp": "基础烤七鳃鳗"
+    },
+    "description": "在火上烤制的串烧七鳃鳗。",
+    "volume": "150 ml",
+    "weight": "250 g",
+    "price": 190,
+    "price_postapoc": 150,
+    "material": [
+      "flesh",
+      "wood"
+    ],
+    "primary_material": "flesh",
+    "symbol": "%",
+    "color": "red",
+    "charges": 2,
+    "calories": 400,
+    "comestible_type": "FOOD",
+    "fun": 8,
+    "healthy": 1,
+    "spoils_in": "3 days",
+    "flags": [
+      "EATEN_HOT"
+    ]
+  }
+]

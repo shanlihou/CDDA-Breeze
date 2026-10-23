@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_MAKI_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"喂，那儿的人！有看到小缘吗？",
+    "responses":[
+      { "text": "我可以和你一起找她！", "topic": "TALK_MAKI_SAN_2" },
+      { "text": "嗯？", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_MAKI_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"请多关照♪不知道小缘到底在哪里呢",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

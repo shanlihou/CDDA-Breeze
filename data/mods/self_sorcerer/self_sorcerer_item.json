@@ -1,0 +1,103 @@
+[
+  {
+    "type": "ammunition_type",
+    "id": "sorcerer_item",
+    "name": "法术位",
+    "default": "spell_sorcerer_item_0"
+  },
+  {
+    "type": "material",
+    "id": "sorcerer_item",
+    "name": "法术位",
+    "copy-from": "stone"
+  },
+  {
+    "type": "AMMO",
+    "id": "spell_sorcerer_item_0",
+    "price": 0,
+    "name": { "str_sp": "术士-法术位-Lv0" },
+    "symbol": "=",
+    "color": "yellow",
+    "description": "释放对应等级的术士法术用。",
+    "flags": [ "TRADER_AVOID", "MAGIC_FOCUS" ],
+    "weight": "1 mg",
+    "volume": "1 ml",
+    "ammo_type": "sorcerer_item",
+    "material": [ "sorcerer_item" ],
+    "count": 1,
+    "looks_like": "battery",
+    "damage": { "damage_type": "pure", "constant_damage_multiplier": 0.125 }
+  },
+  {
+    "type": "AMMO",
+    "copy-from": "spell_sorcerer_item_0",
+    "id": "spell_sorcerer_item_1",
+    "name": { "str_sp": "术士-法术位-Lv1" },
+    "description": "释放对应等级的术士法术用。",
+    "damage": { "damage_type": "pure", "constant_damage_multiplier": 0.5 }
+  },
+  {
+    "type": "AMMO",
+    "copy-from": "spell_sorcerer_item_0",
+    "id": "spell_sorcerer_item_2",
+    "name": { "str_sp": "术士-法术位-Lv2" },
+    "description": "释放对应等级的术士法术用。",
+    "damage": { "damage_type": "pure", "constant_damage_multiplier": 1.125 }
+  },
+  {
+    "type": "AMMO",
+    "copy-from": "spell_sorcerer_item_0",
+    "id": "spell_sorcerer_item_3",
+    "name": { "str_sp": "术士-法术位-Lv3" },
+    "description": "释放对应等级的术士法术用。",
+    "damage": { "damage_type": "pure", "constant_damage_multiplier": 2.0 }
+  },
+  {
+    "type": "AMMO",
+    "copy-from": "spell_sorcerer_item_0",
+    "id": "spell_sorcerer_item_4",
+    "name": { "str_sp": "术士-法术位-Lv4" },
+    "description": "释放对应等级的术士法术用。",
+    "damage": { "damage_type": "pure", "constant_damage_multiplier": 3.125 }
+  },
+  {
+    "type": "AMMO",
+    "copy-from": "spell_sorcerer_item_0",
+    "id": "spell_sorcerer_item_5",
+    "name": { "str_sp": "术士-法术位-Lv5" },
+    "description": "释放对应等级的术士法术用。",
+    "damage": { "damage_type": "pure", "constant_damage_multiplier": 4.5 }
+  },
+  {
+    "type": "AMMO",
+    "copy-from": "spell_sorcerer_item_0",
+    "id": "spell_sorcerer_item_6",
+    "name": { "str_sp": "术士-法术位-Lv6" },
+    "description": "释放对应等级的术士法术用。",
+    "damage": { "damage_type": "pure", "constant_damage_multiplier": 6.125 }
+  },
+  {
+    "type": "AMMO",
+    "copy-from": "spell_sorcerer_item_0",
+    "id": "spell_sorcerer_item_7",
+    "name": { "str_sp": "术士-法术位-Lv7" },
+    "description": "释放对应等级的术士法术用。",
+    "damage": { "damage_type": "pure", "constant_damage_multiplier": 8.0 }
+  },
+  {
+    "type": "AMMO",
+    "copy-from": "spell_sorcerer_item_0",
+    "id": "spell_sorcerer_item_8",
+    "name": { "str_sp": "术士-法术位-Lv8" },
+    "description": "释放对应等级的术士法术用。",
+    "damage": { "damage_type": "pure", "constant_damage_multiplier": 10.125 }
+  },
+  {
+    "type": "AMMO",
+    "copy-from": "spell_sorcerer_item_0",
+    "id": "spell_sorcerer_item_9",
+    "name": { "str_sp": "术士-法术位-Lv9" },
+    "description": "释放对应等级的术士法术用。",
+    "damage": { "damage_type": "pure", "constant_damage_multiplier": 12.5 }
+  }
+]

@@ -1,0 +1,21 @@
+[
+  {
+    "id": "grenade_inferno_explosion",
+    "type": "SPELL",
+    "name": "[Ψ]地狱火手雷爆炸",
+    "description": "地狱火手雷产生的爆炸。如果你自己施放这个法术，100%会死。",
+    "valid_targets": [ "hostile", "ground" ],
+    "skill": "metaphysics",
+    "flags": [ "LOUD", "NO_PROJECTILE", "IGNITE_FLAMMABLE", "RANDOM_DAMAGE", "NO_HANDS", "RANDOM_AOE", "NO_LEGS" ],
+    "effect": "attack",
+    "shape": "blast",
+    "damage_type": "heat",
+    "difficulty": 1,
+    "max_level": 1,
+    "min_damage": 50,
+    "max_damage": 150,
+    "min_range": 0,
+    "min_aoe": 6,
+    "max_aoe": 9
+  }
+]

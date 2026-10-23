@@ -1,0 +1,86 @@
+[
+  {
+    "type": "mutation",
+    "id": "X孢子强化:速度",
+    "name": { "str": "X孢子强化:速度" },
+    "points": 3,
+    "description": "X孢子强化了你的迅捷，速度加快1倍，步行速度减半",
+    "passive_mods": { "dex_mod": 3 },
+    "enchantments": [ { "condition": "ALWAYS", "values": [ { "value": "SPEED", "multiply": 1 } ] } ],
+    "movecost_flatground_modifier": 0.5
+  },
+  {
+    "type": "mutation",
+    "id": "X孢子强化:体魄",
+    "name": { "str": "X孢子强化:体魄" },
+    "points": 1,
+    "description": "X孢子强化了你的肌肉和迅捷，你的力量+10，同时过度膨胀的肌肉也给你造成行动上的不便，全身累赘+10",
+    "encumbrance_always": [
+      [ "hand_l", 5 ],
+      [ "hand_r", 5 ],
+      [ "head", 5 ],
+      [ "eyes", 5 ],
+      [ "mouth", 5 ],
+      [ "torso", 5 ],
+      [ "arm_l", 5 ],
+      [ "arm_r", 5 ],
+      [ "leg_l", 5 ],
+      [ "leg_r", 5 ],
+      [ "foot_l", 5 ],
+      [ "foot_r", 5 ]
+    ],
+    "passive_mods": { "str_mod": 10 }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "X孢子强化:速度",
+    "effect": [ { "u_add_trait": "X孢子强化:速度" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "X孢子强化:体魄",
+    "effect": [ { "u_add_trait": "X孢子强化:体魄" } ]
+  },
+  {
+    "id": "X孢子强化:速度",
+    "type": "TOOL",
+    "name": { "str": "X孢子强化:速度" },
+    "description": "X孢子强化阶段，X孢子会对人体的速度和步行速度强化，<color_yellow>速度加快1倍，步行速度减半</color>",
+    "weight": "10 g",
+    "volume": "10 ml",
+    "price": 10,
+    "price_postapoc": 0,
+    "to_hit": -3,
+    "bashing": 8,
+    "material": [ "flesh" ],
+    "symbol": ";",
+    "color": "light_green",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "description": "X孢子强化阶段，X孢子会对人体的速度和步行速度强化，<color_yellow>速度加快1倍，步行速度减半</color>",
+      "effect_on_conditions": [ "X孢子强化:速度" ]
+    },
+    "flags": [ "SINGLE_USE" ]
+  },
+  {
+    "id": "X孢子强化:体魄",
+    "type": "TOOL",
+    "name": { "str": "X孢子强化:体魄" },
+    "description": "X孢子强化阶段，X孢子强化了你的肌肉和迅捷，同时过度膨胀的肌肉也给你造成行动上的不便，<color_yellow>你的力量+10，全身累赘+10</color>",
+    "weight": "10 g",
+    "volume": "10 ml",
+    "price": 10,
+    "price_postapoc": 0,
+    "to_hit": -3,
+    "bashing": 8,
+    "material": [ "flesh" ],
+    "symbol": ";",
+    "color": "light_green",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "description": "X孢子强化阶段，X孢子强化了你的肌肉和迅捷，同时过度膨胀的肌肉也给你造成行动上的不便，<color_yellow>你的力量+10，全身累赘+10</color>",
+      "effect_on_conditions": [ "X孢子强化:体魄" ]
+    },
+    "flags": [ "SINGLE_USE" ]
+  }
+]

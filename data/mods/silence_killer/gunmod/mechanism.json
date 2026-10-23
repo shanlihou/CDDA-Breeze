@@ -1,0 +1,22 @@
+  { 
+    "id": "noise_reduced_bolt",
+    "type": "GUNMOD",
+    "name": { "str": "降噪枪机" },
+    "description": "一套改装件，减少内部机械组件碰撞产生的噪音.",
+    "weight": "120 g",
+    "volume": "250 ml",
+    "integral_volume": "0 ml",
+    "integral_weight": "0 g",
+    "price": "15 USD",
+    "price_postapoc": "5 USD",
+    "material": [ "steel" ],
+    "symbol": ":",
+    "color": "dark_gray",
+    "location": "mechanism",
+    "mod_targets": [ "smg", "rifle", "pistol", "shotgun", "launcher" ],
+    "install_time": "30 m",
+    "dispersion_modifier": +5,
+    "min_skills": [ [ "weapon", 4 ], [ "mechanics", 3 ], [ "gun", 2 ] ],
+    "loudness_modifier": -25,
+    "flags": [ "IRREMOVABLE" ]
+  }

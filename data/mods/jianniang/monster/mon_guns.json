@@ -1,0 +1,26 @@
+[
+  {
+    "id": "sairen_DD_pao",
+    "type": "GUN",
+    "copy-from": "fake_item",
+    "name": {
+      "str": "塞壬DD炮"
+    },
+    "description": "一个塞壬量产型「Pawn」所用的炮。",
+    "flags": [
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES"
+    ],
+    "skill": "rifle",
+    "durability": 10,
+    "range": 30,
+    "dispersion": 1000,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 20,
+      "armor_penetration": 8
+    }
+  }
+  ]

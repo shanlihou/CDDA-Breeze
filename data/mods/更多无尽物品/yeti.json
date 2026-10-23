@@ -1,0 +1,656 @@
+[
+    {
+        "id": "endless coffee",
+        "type": "GENERIC",
+        "copy-from": "ceramic_mug",
+        "category": "tools",
+        "name": {
+            "str": "无尽的咖啡杯"
+        },
+        "pocket_data": [
+            {
+                "max_contains_volume": "500 ml",
+                "max_contains_weight": "1 kg",
+                "watertight": true,
+                "open_container": true,
+                "rigid": true
+            }
+        ],
+        "description": "这杯子里的咖啡似乎无穷无尽，但很不错，不是吗？",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "coffee",
+            "msg": "你举起杯子，里面不知何时又充满了咖啡，真不错！",
+            "container": "endless coffee",
+            "target_charges": 2,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless coffee_2",
+        "type": "GENERIC",
+        "copy-from": "ceramic_mug",
+        "category": "tools",
+        "name": {
+            "str": "无尽的咖啡杯（甜咖啡）"
+        },
+        "pocket_data": [
+            {
+                "max_contains_volume": "500 ml",
+                "max_contains_weight": "1 kg",
+                "watertight": true,
+                "open_container": true,
+                "rigid": true
+            }
+        ],
+        "description": "这杯子里的咖啡似乎无穷无尽，并且还是甜咖啡诶！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "coffee_sweetened",
+            "msg": "你举起杯子，里面不知何时又充满了咖啡，真不错！",
+            "container": "endless coffee_2",
+            "target_charges": 2,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless coffee_3",
+        "type": "GENERIC",
+        "copy-from": "ceramic_mug",
+        "category": "tools",
+        "name": {
+            "str": "无尽的咖啡杯（牛奶咖啡）"
+        },
+        "pocket_data": [
+            {
+                "max_contains_volume": "500 ml",
+                "max_contains_weight": "1 kg",
+                "watertight": true,
+                "open_container": true,
+                "rigid": true
+            }
+        ],
+        "description": "这杯子里的咖啡似乎无穷无尽，并且里面也充斥着牛奶的香味！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "milk_coffee",
+            "msg": "你举起杯子，里面不知何时又充满了咖啡，真不错！",
+            "container": "endless coffee_3",
+            "target_charges": 2,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless coffee_4",
+        "type": "GENERIC",
+        "copy-from": "ceramic_mug",
+        "category": "tools",
+        "name": {
+            "str": "无尽的咖啡杯（爱尔兰咖啡）"
+        },
+        "pocket_data": [
+            {
+                "max_contains_volume": "500 ml",
+                "max_contains_weight": "1 kg",
+                "watertight": true,
+                "open_container": true,
+                "rigid": true
+            }
+        ],
+        "description": "这杯子里的咖啡似乎无穷无尽，里面混杂着酒味以及牛奶味！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "irish_coffee",
+            "msg": "你举起杯子，里面不知何时又充满了咖啡，真不错！",
+            "container": "endless coffee_4",
+            "target_charges": 2,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless coffee_5",
+        "type": "GENERIC",
+        "copy-from": "ceramic_mug",
+        "category": "tools",
+        "name": {
+            "str": "无尽的咖啡杯（甜牛奶咖啡）"
+        },
+        "pocket_data": [
+            {
+                "max_contains_volume": "500 ml",
+                "max_contains_weight": "1 kg",
+                "watertight": true,
+                "open_container": true,
+                "rigid": true
+            }
+        ],
+        "description": "这杯子里的咖啡似乎无穷无尽，里面还加着牛奶和甜味剂，真是一个不错的选择！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "milk_coffee_sweetened",
+            "msg": "你举起杯子，里面不知何时又充满了咖啡，真不错！",
+            "container": "endless coffee_5",
+            "target_charges": 2,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless plastic bottle",
+        "type": "GENERIC",
+        "copy-from": "bottle_plastic",
+        "category": "tools",
+        "name": {
+            "str": "无尽的塑料瓶（橙汁）"
+        },
+        "description": "平平无奇的塑料瓶竟然能够冒出无穷无尽的橙汁，这真是太棒了！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "oj",
+            "msg": "你打开瓶子，里面早已经充满了橙汁，真不错！",
+            "container": "endless plastic bottle",
+            "target_charges": 2,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless plastic bottle_1",
+        "type": "GENERIC",
+        "copy-from": "bottle_plastic",
+        "category": "tools",
+        "name": {
+            "str": "无尽的塑料瓶（果汁）"
+        },
+        "description": "平平无奇的塑料瓶竟然能够冒出无穷无尽的果汁，这真是太棒了！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "juice",
+            "msg": "你打开瓶子，里面早已经充满了果汁，真不错！",
+            "container": "endless plastic bottle_1",
+            "target_charges": 4,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless plastic bottle_2",
+        "type": "GENERIC",
+        "copy-from": "bottle_plastic",
+        "category": "tools",
+        "name": {
+            "str": "无尽的塑料瓶（菠萝汁）"
+        },
+        "description": "平平无奇的塑料瓶竟然能够冒出无穷无尽的菠萝汁，这真是太棒了！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "pineapple_juice",
+            "msg": "你打开瓶子，里面早已经充满了菠萝汁，真不错！",
+            "container": "endless plastic bottle_2",
+            "target_charges": 4,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless plastic bottle_3",
+        "type": "GENERIC",
+        "copy-from": "bottle_plastic",
+        "category": "tools",
+        "name": {
+            "str": "无尽的塑料瓶（番茄汁）"
+        },
+        "description": "平平无奇的塑料瓶竟然能够冒出无穷无尽的番茄汁，这真是太棒了！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "tomato_juice",
+            "msg": "你打开瓶子，里面早已经充满了番茄汁，真不错！",
+            "container": "endless plastic bottle_3",
+            "target_charges": 2,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless plastic bottle_4",
+        "type": "GENERIC",
+        "copy-from": "bottle_plastic",
+        "category": "tools",
+        "name": {
+            "str": "无尽的塑料瓶（苹果汁）"
+        },
+        "description": "平平无奇的塑料瓶竟然能够冒出无穷无尽的苹果汁，这真是太棒了！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "apple_cider",
+            "msg": "你打开瓶子，里面早已经充满了苹果汁，真不错！",
+            "container": "endless plastic bottle_4",
+            "target_charges": 2,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless plastic bottle_5",
+        "type": "GENERIC",
+        "copy-from": "bottle_plastic",
+        "category": "tools",
+        "name": {
+            "str": "无尽的塑料瓶(v8蔬菜汁) "
+        },
+        "description": "平平无奇的塑料瓶竟然能够冒出无穷无尽的蔬菜汁，这真是太棒了！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "V8",
+            "msg": "你打开瓶子，里面早已经充满了蔬菜汁，真不错！",
+            "container": "endless plastic bottle_5",
+            "target_charges": 2,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless plastic bottle_6",
+        "type": "GENERIC",
+        "copy-from": "bottle_plastic",
+        "category": "tools",
+        "name": {
+            "str": "无尽的塑料瓶(柠檬水) "
+        },
+        "description": "平平无奇的塑料瓶竟然能够冒出无穷无尽的柠檬水，这真是太棒了！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "lemonade",
+            "msg": "你打开瓶子，里面早已经充满了柠檬水，真不错！",
+            "container": "endless plastic bottle_6",
+            "target_charges": 2,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless plastic bottle_7",
+        "type": "GENERIC",
+        "copy-from": "bottle_plastic",
+        "category": "tools",
+        "name": {
+            "str": "无尽的塑料瓶(蔓越莓果汁) "
+        },
+        "description": "平平无奇的塑料瓶竟然能够冒出无穷无尽的蔓越莓果汁，这真是太棒了！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "cranberry_juice",
+            "msg": "你打开瓶子，里面早已经充满了蔓越莓果汁，真不错！",
+            "container": "endless plastic bottle_7",
+            "target_charges": 2,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless plastic bottle_8",
+        "type": "GENERIC",
+        "copy-from": "bottle_plastic",
+        "category": "tools",
+        "name": {
+            "str": "无尽的塑料瓶(柏林汽水) "
+        },
+        "description": "平平无奇的塑料瓶竟然能够冒出无穷无尽的柏林汽水，这真是太棒了！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "spezi",
+            "msg": "你打开瓶子，里面早已经充满了柏林汽水，真不错！",
+            "container": "endless plastic bottle_8",
+            "target_charges": 2,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless plastic bottle_9",
+        "type": "GENERIC",
+        "copy-from": "bottle_plastic",
+        "category": "tools",
+        "name": {
+            "str": "无尽的塑料瓶(葡萄汽水) "
+        },
+        "description": "平平无奇的塑料瓶竟然能够冒出无穷无尽的葡萄汽水，这真是太棒了！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "purple_drink",
+            "msg": "你打开瓶子，里面早已经充满了葡萄汽水，真不错！",
+            "container": "endless plastic bottle_9",
+            "target_charges": 2,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless plastic bottle_10",
+        "type": "GENERIC",
+        "copy-from": "bottle_plastic",
+        "category": "tools",
+        "name": {
+            "str": "无尽的塑料瓶(奶油汽水) "
+        },
+        "description": "平平无奇的塑料瓶竟然能够冒出无穷无尽的奶油汽水，这真是太棒了！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "creamsoda",
+            "msg": "你打开瓶子，里面早已经充满了奶油汽水，真不错！",
+            "container": "endless plastic bottle_10",
+            "target_charges": 2,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless plastic bottle_11",
+        "type": "GENERIC",
+        "copy-from": "bottle_plastic",
+        "category": "tools",
+        "name": {
+            "str": "无尽的塑料瓶(橙子汽水) "
+        },
+        "description": "平平无奇的塑料瓶竟然能够冒出无穷无尽的橙子汽水，这真是太棒了！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "orangesoda",
+            "msg": "你打开瓶子，里面早已经充满了橙子汽水，真不错！",
+            "container": "endless plastic bottle_11",
+            "target_charges": 2,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless plastic bottle_12",
+        "type": "GENERIC",
+        "copy-from": "bottle_plastic",
+        "category": "tools",
+        "name": {
+            "str": "无尽的塑料瓶(柠檬汽水) "
+        },
+        "description": "平平无奇的塑料瓶竟然能够冒出无穷无尽的柠檬汽水，这真是太棒了！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "lemonlime",
+            "msg": "你打开瓶子，里面早已经充满了柠檬汽水，真不错！",
+            "container": "endless plastic bottle_12",
+            "target_charges": 2,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless container_1",
+        "type": "GENERIC",
+        "copy-from": "carton_milk",
+        "category": "tools",
+        "name": {
+            "str": "无尽的牛奶盒"
+        },
+        "description": "牛奶盒里面的牛奶似乎无穷无尽，太棒了！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "milk",
+            "msg": "你打开盒子，里面早已经充满了牛奶，真不错！",
+            "container": "endless container_1",
+            "target_charges": 8,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless container_2",
+        "type": "GENERIC",
+        "copy-from": "carton_milk",
+        "category": "tools",
+        "name": {
+            "str": "无尽的牛奶盒(甜牛奶)"
+        },
+        "description": "牛奶盒里面的牛奶似乎无穷无尽，而且还是甜牛奶，太棒了！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "sweet_milk",
+            "msg": "你打开盒子，里面早已经充满了甜牛奶，真不错！",
+            "container": "endless container_2",
+            "target_charges": 8,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless gallon jug",
+        "type": "GENERIC",
+        "copy-from": "jug_plastic",
+        "category": "tools",
+        "name": {
+            "str": "无尽的加仑壶(奶茶)"
+        },
+        "description": "加仑壶里面似乎有着无穷无尽的奶茶，不过为什么是加仑壶啊？",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "milk_tea",
+            "msg": "你打开瓶子，里面早已经充满了奶茶，真不错！",
+            "container": "endless gallon jug",
+            "target_charges": 15,
+            "moves": 50,
+            "type": "transform"
+        }
+    }
+]

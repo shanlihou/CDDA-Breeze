@@ -1,0 +1,61 @@
+[
+    {
+        "type": "AMMO",
+        "id": "hydrogen_can",
+        "price": 4000,
+        "price_postapoc": 20000,
+        "name": {
+          "str": "高压固态氢罐"
+        },
+        "symbol": "=",
+        "color": "light_gray",
+        "description": "一大罐几乎被加压固态的氢气。用合适的设备可以将其加热成等离子态发射出去。",
+        "material": [
+          "hydrogen_cell"
+        ],
+        "volume": "500 ml",
+        "weight": "160 g",
+        "ammo_type": "hydrogen_can",
+        "damage": {
+          "damage_type": "heat",
+          "amount": 30,
+          "armor_penetration": 10
+        },
+        "shot_damage": {
+            "damage_type": "bullet",
+            "amount": 30,
+            "armor_penetration": 10
+          },
+        "projectile_count": 3,
+        "shot_spread": 300,
+        "range": 14,
+        "count": 5,
+        "flags": [
+          "UNRECOVERABLE"
+        ]
+      },
+      {
+        "type": "AMMO",
+        "id": "coolant",
+        "price": 4000,
+        "price_postapoc": 10000,
+        "name": {
+          "str": "急冻射流步枪用冷却剂"
+        },
+        "symbol": "=",
+        "color": "light_gray",
+        "description": "你只能猜测这种液体是低温高压液氮混合物，绝不会想打开它来一探究竟，据说不是用作喷射物而是对小型冰冻传送门的稳定剂",
+        "volume": "10 ml",
+        "weight": "12 g",
+        "ammo_type": "coolant",
+        "damage": {
+          "damage_type": "cold",
+          "amount": 1
+        },
+        "range": 1,
+        "count": 50,
+        "flags": [
+          "UNRECOVERABLE"
+        ]
+      }
+]

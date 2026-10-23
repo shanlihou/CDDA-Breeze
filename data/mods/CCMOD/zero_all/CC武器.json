@@ -1,0 +1,308 @@
+[
+{
+    "id": "CCpebble_mk3",
+    "type": "GUN",
+    "subtypes": [ "AMMO" ],
+    "name": {
+      "str": "CC大地刺骨卵石"
+    },
+    "description": "来自大地的力量，卵石 - Mark III，你已经见过骷髅巨兽了，对吧？嗯，这基本上是它的微型版本—融合了变形怪糊的骨涂层。出于某些原因，当你将这种古怪的融合物涂覆上普通的卵石时，它表现得相当好。-技术源自变形怪系列载具",
+    "weight": "16 g",
+    "volume": "250 ml",
+    "price": "1 USD",
+    "skill": "rifle",
+    "min_strength": 7,
+    "melee_damage": {
+      "bash": 1
+    },
+    "material": [
+      "bone"
+    ],
+    "symbol": "=",
+    "color": "dark_gray",
+    "count": 40,
+    "ammo_type": "pebble",
+    "range": 15,
+    "damage": {
+      "damage_type": "bash",
+      "amount": 28,
+      "armor_penetration": 24
+    },
+    "dispersion": 12,
+    "loudness": 0,
+    "effects": [
+      "NEVER_MISFIRES"
+    ]
+  },
+  {
+        "type" : "recipe",
+    "result": "CCpebble_mk3",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC武器装备",
+    "skill_used": "survival",
+    "time": "1second",
+    "reversible": true,
+    "autolearn": true,
+    "components": [
+      [
+        [ "material_soil", 1 ]
+      ],
+      [
+        [
+          "bone",
+          5
+        ],
+        [
+          "bone_human",
+          5
+        ],
+        [
+          "bone_tainted",
+          5
+        ]
+      ],
+      [
+        [
+          "pebble",
+          75
+        ]
+      ]
+    ]
+  },
+  {
+    "id": "CCcompcrossbow",
+    "looks_like": "crossbow",
+    "type": "GUN",
+    "subtypes": [ "GUN" ],
+    "symbol": "(",
+    "color": "green",
+    "name": { "str": "CCK23大地狙击弩" },
+    "reload_noise_volume": 4,
+    "description": "来自大地的力量. 强大多能的连弩",
+    "//": "27in Carbon fiber compound crossbow at 17in draw with 20in, 197J, 175 lbs draw, 0.636 Slugs with 300grain quarrels.",
+    "price": "200 USD",
+    "material": [ "steel", "plastic" ],
+    "flags": [ "PRIMITIVE_RANGED_WEAPON", "DURABLE_MELEE"],
+    "skill": "rifle",
+    "min_strength": 7,
+    "ammo": [ "pebble", "bolt", "arrow" ],
+    "ammo_effects": [ "NEVER_MISFIRES", "BEANBAG", "BLINDS_EYES", "SHOT" ],
+    "weight": "3000 g",
+    "volume": "1750 ml",
+    "longest_side": "69 cm",
+    "price_postapoc": "60 USD",
+    "to_hit": 3,
+    "ranged_damage": { "damage_type": "stab", "amount": 28, "armor_penetration": 24 },
+    "range": 22,
+    "loudness": 9,
+    "dispersion": 325,
+    "durability": 9,
+    "clip_size": 10,
+    "reload": 1200,
+    "valid_mod_locations": [
+      [ "grip", 1 ],
+      [ "mechanism", 4 ],
+      [ "rail", 1 ],
+      [ "sights", 1 ],
+      [ "sling", 1 ],
+      [ "stock", 1 ],
+      [ "underbarrel", 1 ],
+      [ "dampening", 1 ]
+    ],
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "arrow": 8,"pebble": 8, "bolt": 8 } } ],
+    "melee_damage": { "bash": 72 }
+  },
+      {
+        "type" : "recipe",
+    "result": "CCcompcrossbow",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC武器装备",
+    "skill_used": "survival",
+    "time": "100second",
+    "reversible": true,
+    "autolearn": true,
+    "components": [ [ [ "CCMODcoin", 230 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "molotov",
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC武器装备",
+    "skill_used": "fabrication",
+    "skills_required": [ "archery", 3 ],
+    "difficulty": 3,
+    "time": "1second",
+    "book_learn": [ [ "recipe_arrows", 5 ] ],
+    "qualities": [ { "id": "CUT", "level": 2 } ],
+    "reversible": true,
+    "autolearn": true,
+    "components": [
+      [ [ "material_soil", 1 ] ],
+      [ [ "splinter", 1, "NO_RECOVER" ] ],
+      [
+        [ "lamp_oil", 50, "NO_RECOVER" ],
+        [ "motor_oil", 50, "NO_RECOVER" ],
+        [ "crude_lamp_oil", 50, "NO_RECOVER" ],
+        [ "red_phosphorous", 50, "NO_RECOVER" ],
+        [ "chem_black_powder", 50, "NO_RECOVER" ],
+        [ "incendiary", 10, "NO_RECOVER" ],
+        [ "chem_ethanol", 100, "NO_RECOVER" ],
+        [ "denat_alcohol", 100, "NO_RECOVER" ],
+        [ "methed_alcohol", 100, "NO_RECOVER" ],
+        [ "gasoline", 250, "NO_RECOVER" ],
+        [ "diesel", 250, "NO_RECOVER" ],
+        [ "biodiesel", 250, "NO_RECOVER" ]
+      ]
+    ]
+  },
+  {
+    "type": "AMMO",
+    "subtypes": [ "AMMO" ],
+    "id": "CCarrow_fire_hardened_fletched",
+    "name": { "str": "CC大地狙击箭矢" }, 
+    "looks_like": "arrow_wood",
+    "symbol": "=",
+    "color": "green",
+    "description": "来自大地的力量，坚固且锋锐。",
+    "material": [ { "type": "wood", "portion": 81 }, { "type": "steel", "portion": 19 } ],
+    "volume": "40 ml",
+    "longest_side": "40 mm",
+    "price": "10 USD",
+    "price_postapoc": "1 USD",
+    "weight": "27 g",
+    "ammo_type": "arrow",
+    "damage": { "damage_type": "stab", "amount": 20, "constant_damage_multiplier": 2, "armor_penetration": 30 },
+    "range": 40,
+    "dispersion": 4,
+    "loudness": 0,
+    "critical_multiplier": 2,
+    "effects": [ "RECOVER_80" ],
+    "melee_damage": { "bash": 28 }
+  },
+    {
+        "type" : "recipe",
+    "result": "CCarrow_fire_hardened_fletched",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC武器装备",
+    "skill_used": "survival",
+    "time": "1second",
+    "reversible": true,
+    "autolearn": true,
+    "components": [ [
+        [ "arrow_fire_hardened_fletched", 10 ],
+        [ "CCMODcoin", 2 ]
+      ] ]
+  },
+  {
+    "type": "AMMO",
+    "subtypes": [ "AMMO" ],
+    "id": "CCbolt_wood_bodkin",
+    "name": { "str": "CC大地狙击弩矢" }, 
+    "looks_like": "bolt_wood",
+    "symbol": "=",
+    "color": "green",
+    "description": "来自大地的力量，坚固且锋锐。",
+    "material": [ { "type": "wood", "portion": 81 }, { "type": "steel", "portion": 19 } ],
+    "volume": "40 ml",
+    "longest_side": "40 mm",
+    "price": "10 USD",
+    "price_postapoc": "1 USD",
+    "weight": "27 g",
+    "ammo_type": "bolt",
+    "damage": { "damage_type": "stab", "amount": 20, "constant_damage_multiplier": 2, "armor_penetration": 30 },
+    "range": 40,
+    "dispersion": 4,
+    "loudness": 0,
+    "critical_multiplier": 2,
+    "effects": [ "RECOVER_80" ],
+    "melee_damage": { "bash": 28 }
+  },
+    {
+        "type" : "recipe",
+    "result": "CCbolt_wood_bodkin",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC武器装备",
+    "skill_used": "survival",
+    "time": "1second",
+    "reversible": true,
+    "autolearn": true,
+    "components": [ [
+        [ "bolt_crude", 10 ],
+        [ "CCMODcoin", 2 ]
+      ] ]
+  },
+  {
+    "id": "CCshot_00",
+    "copy-from": "shot_00",
+    "type": "AMMO",
+    "looks_like": "reloaded_shot_dragon",
+    "subtypes": [ "AMMO" ],
+    "name": { "str_sp": "CC穿甲猎鹿弹" },
+    "description": "CC一种高能穿甲猎鹿弹，其高穿透性弥补了其价格不菲的缺点，通常针对用于装甲重甲等单位。",
+    "price": "500 USD",
+    "price_postapoc": "50 USD",
+    "range": 60,
+    "ammo_type": "shot",
+    "casing": "shot_hull",
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 90,
+      "armor_penetration": 45
+      },
+    "shot_damage": {
+      "damage_type": "pure",
+      "amount": 20,
+      "armor_penetration": 25
+      },
+    "projectile_count": 4,
+    "shot_spread": 150,
+    "recoil": 1500,
+    "loudness": 50,
+    "effects": [ "COOKOFF", "SHOT" ]
+  },
+  {
+    "type" : "recipe",
+    "result": "CCshot_00",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC武器装备",
+    "skill_used": "survival",
+    "time": "1second",
+    "reversible": true,
+    "autolearn": true,
+    "components": [ [
+        [ "CCMODcoin", 10 ]
+      ] ]
+  },
+  {
+  "result": "CCshot_00",
+  "id_suffix": "CCshot_00_1",
+  "type": "recipe",
+  "activity_level": "LIGHT_EXERCISE",
+  "category": "CC_AMMO",
+  "subcategory": "CSC_AMMO_SHOT",
+  "skill_used": "fabrication",
+  "difficulty": 2,
+  "skills_required": [ "gun", 1 ],
+  "autolearn": true,
+  "time": "2 m",
+  "batch_time_factors": [ 80, 2 ],
+  "book_learn": [ [ "recipe_bullets", 5 ], [ "manual_shotgun", 5 ] ],
+  "charges": 1,
+  "using": [ [ "ammo_shot", 1 ], [ "ammo_bullet", 4 ] ],
+  "proficiencies": [ { "proficiency": "prof_handloading" } ],
+  "tools": [ [ [ "press", -1 ] ] ],
+  "components": [ [ [ "gunpowder", 24 ], [ "gunpowder_pistol", 24 ], [ "gunpowder_shotgun", 24 ] ], [ [ "steel_lump", 1 ], [ "steel_chunk", 4 ] ] ]
+  }
+]

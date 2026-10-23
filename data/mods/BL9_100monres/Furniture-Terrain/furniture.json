@@ -1,0 +1,8358 @@
+[
+  {
+    "type": "furniture",
+    "id": "f_BL9_long_torch",
+    "looks_like": "torch_lit",
+    "name": "加长火炬",
+    "description": "长木棍上燃烧的火炬",
+    "symbol": ".",
+    "color": "yellow",
+    "move_cost_mod": 1,
+    "required_str": -1,
+    "light_emitted": 375,
+    "flags": [
+      "TRANSPARENT",
+      "FLAMMABLE_ASH",
+      "SUPPORTS_ROOF",
+      "COLLAPSES",
+      "INDOORS",
+      "FLAT",
+      "ROAD",
+      "MINEABLE",
+      "MOUNTABLE",
+      "PLACE_ITEM"
+    ],
+    "bash": {
+      "sound": "SMASH!",
+      "str_min": 7,
+      "str_max": 18,
+      "str_min_supported": 18,
+      "items": [
+        {
+          "item": "splinter",
+          "count": [
+            2,
+            3
+          ]
+        },
+        {
+          "item": "stick",
+          "count": [
+            1,
+            2
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_big_bell",
+    "name": "大钟",
+    "description": "这是一个大钟，可能是用来举行一些奇怪的仪式的",
+    "symbol": ".",
+    "color": "yellow",
+    "move_cost_mod": 2,
+    "required_str": -1,
+    "light_emitted": 0,
+    "flags": [
+      "TRANSPARENT",
+      "FLAMMABLE_HARD",
+      "SUPPORTS_ROOF",
+      "COLLAPSES",
+      "INDOORS",
+      "FLAT",
+      "ROAD",
+      "MINEABLE"
+    ],
+    "bash": {
+      "sound": "CLANG!",
+      "str_min": 50,
+      "str_max": 285,
+      "str_min_supported": 100,
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            2,
+            4
+          ]
+        },
+        {
+          "item": "steel_chunk",
+          "count": [
+            1,
+            3
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_floor_olight",
+    "looks_like": "t_thconc_floor_olight",
+    "name": "工业顶灯",
+    "description": "天花板上挂着一盏非常明亮的工业灯",
+    "symbol": "0",
+    "color": "light_cyan",
+    "move_cost_mod": 1,
+    "required_str": -1,
+    "light_emitted": 375,
+    "flags": [
+      "TRANSPARENT",
+      "FLAMMABLE_ASH",
+      "SUPPORTS_ROOF",
+      "COLLAPSES",
+      "INDOORS",
+      "FLAT",
+      "ROAD",
+      "MINEABLE",
+      "MOUNTABLE",
+      "PLACE_ITEM"
+    ],
+    "bash": {
+      "str_min": 2,
+      "str_max": 38,
+      "sound": "ker-rash!",
+      "sound_fail": "plunk.",
+      "sound_vol": 16,
+      "sound_fail_vol": 12,
+      "items": [
+        {
+          "item": "glass_shard",
+          "count": [
+            7,
+            15
+          ]
+        },
+        {
+          "item": "scrap",
+          "count": [
+            0,
+            1
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_lava",
+    "looks_like": "t_lava",
+    "name": "奇怪的熔岩",
+    "description": "一种极热的发光液体，由熔融的岩石和/或金属。少比原版还要致命所以凯文不会喜欢这个",
+    "symbol": ".",
+    "color": "red",
+    "move_cost_mod": 1,
+    "required_str": -1,
+    "light_emitted": 375,
+    "emissions": [
+      "emit_gud_lava"
+    ],
+    "flags": [
+      "TRANSPARENT",
+      "EMITTER"
+    ]
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_acid",
+    "looks_like": "t_BL9uniqmazing_liq_limegreen",
+    "name": "奇怪的酸",
+    "description": "一种极为腐蚀性的发光液体，由奇怪的几乎不可溶解的外来物或寄生物组成有机体。更多比原版还要致命所以凯文可能会喜欢这个",
+    "symbol": ".",
+    "color": "green",
+    "move_cost_mod": 1,
+    "required_str": -1,
+    "light_emitted": 375,
+    "emissions": [
+      "emit_gud_lava"
+    ],
+    "flags": [
+      "TRANSPARENT",
+      "EMITTER"
+    ]
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_teleport",
+    "looks_like": "tr_telepad",
+    "name": "传送门",
+    "move_cost_mod": 0,
+    "symbol": "X",
+    "description": "传送门",
+    "color": "light_gray",
+    "required_str": 25,
+    "light_emitted": 375,
+    "flags": [
+      "TRANSLOCATOR",
+      "MOUNTABLE",
+      "ALLOW_FIELD_EFFECT"
+    ],
+    "examine_action": "translocator"
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_glowing_tendril",
+    "looks_like": "f_alien_tendril",
+    "name": "发光卷须",
+    "description": "从地板上长出的一根柳条状卷须，轻轻地来回摆动。一道亮光从里面溢出。",
+    "symbol": "i",
+    "color": "blue",
+    "move_cost_mod": 4,
+    "coverage": 10,
+    "light_emitted": 215,
+    "required_str": -1,
+    "flags": [
+      "TRANSPARENT"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 20,
+      "sound": "splorch!",
+      "sound_fail": "whump!",
+      "furn_set": "f_alien_scar",
+      "items": [
+        {
+          "item": "fetid_goop",
+          "count": [
+            3,
+            5
+          ],
+          "prob": 100
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alien_anemone",
+    "looks_like": "f_alien_anemone",
+    "name": "飘动海葵",
+    "description": "一个肉质的白色生物从地面突起，一串卷须从肉质中伸出。它看起来几乎和海葵一模一样，甚至像在水里一样轻轻地摆动。",
+    "symbol": "V",
+    "color": "white",
+    "move_cost_mod": 6,
+    "coverage": 30,
+    "required_str": -1,
+    "light_emitted": 3,
+    "flags": [
+      "TRANSPARENT"
+    ],
+    "bash": {
+      "str_min": 13,
+      "str_max": 26,
+      "sound": "splorch!",
+      "sound_fail": "whump!",
+      "furn_set": "f_alien_scar",
+      "items": [
+        {
+          "item": "fetid_goop",
+          "count": [
+            3,
+            7
+          ],
+          "prob": 100
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alien_gasper",
+    "looks_like": "f_alien_gasper",
+    "name": "肉质钟乳石",
+    "description": "这是一块肉绿色的钟乳石，有着像海星一样的厚皮，从地面延伸到天空。在中心是一系列有点像嘴的港口，似乎从那里喷出一股恶臭气体。",
+    "symbol": "{",
+    "color": "green",
+    "move_cost_mod": 6,
+    "coverage": 40,
+    "required_str": -1,
+    "flags": [
+      "TRANSPARENT"
+    ],
+    "bash": {
+      "str_min": 30,
+      "str_max": 60,
+      "sound": "splorch!",
+      "sound_fail": "whump!",
+      "furn_set": "f_alien_scar",
+      "items": [
+        {
+          "item": "fetid_goop",
+          "count": [
+            15,
+            25
+          ],
+          "prob": 100
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9tree_walnut",
+    "name": "核桃树",
+    "description": "一棵巨大的树木，分类学上属于胡桃属。靠近看时可以发现一些还没被摘掉的核桃。你可以用合适的工具砍倒它。",
+    "symbol": "7",
+    "color": [
+      "green",
+      "green",
+      "yellow_yellow",
+      "brown"
+    ],
+    "move_cost_mod": -1,
+    "required_str": -1,
+    "coverage": 80,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT"
+    ],
+    "examine_action": "harvest_furn",
+    "looks_like": "t_tree_walnut",
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "autumn"
+        ],
+        "id": "walnut_harv"
+      }
+    ],
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "items": [
+        {
+          "item": "stick_long",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9tree_blackjack",
+    "name": "马利兰德栎树",
+    "description": "一种栎属落叶乔木，树皮裂成长方形的黑色板，中间有狭窄的橙色裂缝。如果你仔细观察这棵树，你可以把树皮剥下来。你可以用合适的工具把它砍倒。",
+    "symbol": "7",
+    "color": "brown",
+    "move_cost_mod": -1,
+    "required_str": -1,
+    "coverage": 80,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT"
+    ],
+    "examine_action": "harvest_furn",
+    "looks_like": "t_tree_blackjack",
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "spring",
+          "summer",
+          "autumn",
+          "winter"
+        ],
+        "id": "blackjack_harv"
+      }
+    ],
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "items": [
+        {
+          "item": "stick",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9tree_chestnut",
+    "name": "栗树",
+    "description": "一棵巨大的树木，分类学上属于栗属。靠近看时可以发现一些还没被摘掉的栗子。你可以用合适的工具砍倒它。",
+    "symbol": "7",
+    "color": [
+      "green",
+      "green",
+      "green_yellow",
+      "brown"
+    ],
+    "move_cost_mod": -1,
+    "required_str": -1,
+    "coverage": 80,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT"
+    ],
+    "examine_action": "harvest_furn",
+    "looks_like": "t_tree_chestnut",
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "autumn"
+        ],
+        "id": "chestnut_harv"
+      }
+    ],
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "items": [
+        {
+          "item": "stick_long",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9tree_beech",
+    "name": "榉树",
+    "description": "一棵巨大的树木，分类学上属于山毛榉属。靠近看时可以发现一些还没被摘掉的榉实。你可以用合适的工具砍倒它。",
+    "symbol": "7",
+    "color": [
+      "green",
+      "green",
+      "black_green",
+      "brown"
+    ],
+    "move_cost_mod": -1,
+    "required_str": -1,
+    "coverage": 80,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT"
+    ],
+    "examine_action": "harvest_furn",
+    "looks_like": "t_tree_beech",
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "autumn"
+        ],
+        "id": "beech_harv"
+      }
+    ],
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "items": [
+        {
+          "item": "stick_long",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9tree_hazelnut",
+    "name": "榛树",
+    "description": "一棵粗矮的树木，分类学上属于榛属。靠近看时可以发现一些还没被摘掉的榛子。你可以用合适的工具砍倒它。",
+    "symbol": "7",
+    "color": [
+      "green",
+      "green",
+      "light_green_yellow",
+      "brown"
+    ],
+    "move_cost_mod": -1,
+    "required_str": -1,
+    "coverage": 80,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT"
+    ],
+    "examine_action": "harvest_furn",
+    "looks_like": "t_tree_hazelnut",
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "autumn"
+        ],
+        "id": "hazelnut_harv"
+      }
+    ],
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "items": [
+        {
+          "item": "stick_long",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9tree",
+    "name": "橡树",
+    "description": "一棵体型巨大的落叶树，分类学上属于栎属，在新英格兰地区四处可见。如果你仔细观察，你会发现一些还没有被松鼠摘取的橡实。你可以用合适的工具砍倒它。",
+    "symbol": "7",
+    "color": [
+      "green",
+      "green",
+      "brown_green",
+      "brown"
+    ],
+    "//": "barren in winter",
+    "move_cost_mod": -1,
+    "required_str": -1,
+    "coverage": 80,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT"
+    ],
+    "examine_action": "harvest_furn",
+    "looks_like": "t_tree",
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "autumn"
+        ],
+        "id": "oak_harv"
+      }
+    ],
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "items": [
+        {
+          "item": "stick_long",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9tree_cottonwood",
+    "name": "棉白杨树",
+    "looks_like": "t_tree_cottonwood",
+    "description": "一棵体型巨大的树，分类学上属于杨属，在新英格兰地区四处可见。你可以用合适的工具砍倒它。",
+    "symbol": "7",
+    "color": [
+      "green",
+      "green",
+      "green",
+      "brown"
+    ],
+    "//": "Do something cool with this and have it spread cotton around the area or something.",
+    "move_cost_mod": -1,
+    "required_str": -1,
+    "coverage": 80,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT"
+    ],
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "items": [
+        {
+          "item": "stick_long",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9tree_elm",
+    "name": "榆树",
+    "looks_like": "t_tree_elm",
+    "description": "一棵体型巨大的树，分类学上属于榆属，在新英格兰地区四处可见。你可以用合适的工具砍倒它。",
+    "symbol": "7",
+    "color": [
+      "green",
+      "green",
+      "green",
+      "brown"
+    ],
+    "move_cost_mod": -1,
+    "required_str": -1,
+    "coverage": 80,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT"
+    ],
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "items": [
+        {
+          "item": "stick_long",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9tree_apple",
+    "name": "苹果树",
+    "looks_like": "t_tree_apple",
+    "description": "一棵在秋天能够结出苹果果实的树，分类学上属于苹果属。如果你顺着枝干仔细观察的话，就可以找到几个成熟的苹果。你可以用合适的工具砍倒它。",
+    "symbol": "7",
+    "color": [
+      "light_green",
+      "light_green",
+      "red_green",
+      "brown"
+    ],
+    "//": "barren in winter, fruits in autumn",
+    "move_cost_mod": -1,
+    "required_str": -1,
+    "coverage": 80,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT"
+    ],
+    "examine_action": "harvest_furn_nectar",
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "autumn"
+        ],
+        "id": "apple_harv"
+      }
+    ],
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "items": [
+        {
+          "item": "stick_long",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9tree_pear",
+    "name": "梨树",
+    "looks_like": "t_tree_pear",
+    "description": "一棵在秋天能够结出梨子果实的树，分类学上属于梨属。如果你顺着枝干仔细观察的话，就可以找到几个成熟的梨子。你可以用合适的工具砍倒它。",
+    "symbol": "7",
+    "color": [
+      "light_green",
+      "light_green",
+      "light_green_green",
+      "brown"
+    ],
+    "//": "barren in winter, fruits in autumn",
+    "move_cost_mod": -1,
+    "required_str": -1,
+    "coverage": 80,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT"
+    ],
+    "examine_action": "harvest_furn_nectar",
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "autumn"
+        ],
+        "id": "pear_harv"
+      }
+    ],
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "items": [
+        {
+          "item": "stick_long",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9tree_coffee",
+    "name": "咖啡树",
+    "description": "一棵在秋天能够结出皂荚和叶子的北美皂荚树，俗称肯塔基咖啡树，分类学上属于豆科皂荚属，皂荚可以烘烤成咖啡豆的替代品，而叶子可以酿酒。如果你顺着枝干仔细观察的话，就可以找到成熟的皂荚。你可以用合适的工具砍倒它。",
+    "symbol": "7",
+    "color": [
+      "light_green",
+      "light_green",
+      "light_green_green",
+      "brown"
+    ],
+    "//": "barren in winter, fruits in autumn",
+    "move_cost_mod": -1,
+    "required_str": -1,
+    "coverage": 80,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT"
+    ],
+    "looks_like": "t_tree_coffee",
+    "examine_action": "harvest_furn_nectar",
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "autumn"
+        ],
+        "id": "coffee_harv"
+      }
+    ],
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "items": [
+        {
+          "item": "stick_long",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9tree_cherry",
+    "name": "樱桃树",
+    "looks_like": "t_tree_cherry",
+    "description": "一棵在夏天能够结出樱桃果实的树，分类学上属于樱桃属，在新英格兰地区土生土长。如果你顺着枝干仔细观察的话，就可以找到一些成熟的樱桃。你可以用合适的工具砍倒它。",
+    "symbol": "7",
+    "color": [
+      "light_green",
+      "red_green",
+      "light_green",
+      "brown"
+    ],
+    "//": "barren in winter, fruits in summer",
+    "move_cost_mod": -1,
+    "required_str": -1,
+    "coverage": 80,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT"
+    ],
+    "examine_action": "harvest_furn_nectar",
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "summer"
+        ],
+        "id": "cherry_harv"
+      }
+    ],
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "items": [
+        {
+          "item": "stick_long",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9tree_juniper",
+    "name": "杜松子树",
+    "looks_like": "t_tree_juniper",
+    "description": "生长在新英格兰的“刺柏属”物种之一，杜松子从开花算起需生长两到三年。第二年为绿色浆果，最后，才生出广为人知的蓝色种类。如果你仔细检查树叶，你可能会找到一些可用的果簇。你可以用合适的工具砍倒它。",
+    "symbol": "7",
+    "color": [
+      "light_green",
+      "light_green",
+      "blue_green",
+      "brown"
+    ],
+    "//": "Can be picked at any point in the third year assuming the berries have turned blue. But it takes a long time to regrow.",
+    "move_cost_mod": -1,
+    "required_str": -1,
+    "coverage": 80,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT"
+    ],
+    "examine_action": "harvest_furn_nectar",
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "autumn"
+        ],
+        "id": "juniper_harv"
+      }
+    ],
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "items": [
+        {
+          "item": "stick_long",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9tree_peach",
+    "name": "桃子树",
+    "looks_like": "t_tree_peach",
+    "description": "一棵在夏天能够结出桃子果实的树，分类学上属于樱桃属，在新英格兰地区土生土长。如果你顺着枝干仔细观察的话，就可以找到一些成熟的桃子。你可以用合适的工具砍倒它。",
+    "symbol": "7",
+    "color": [
+      "light_green",
+      "light_red_green",
+      "light_green",
+      "brown"
+    ],
+    "//": "barren in winter, fruits in summer",
+    "move_cost_mod": -1,
+    "required_str": -1,
+    "coverage": 80,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT"
+    ],
+    "examine_action": "harvest_furn_nectar",
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "summer"
+        ],
+        "id": "peach_harv"
+      }
+    ],
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "items": [
+        {
+          "item": "stick_long",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9tree_apricot",
+    "name": "杏树",
+    "looks_like": "t_tree_apricot",
+    "description": "一棵在夏天能够结出杏子果实的树，分类学上属于樱桃属，移植自其他地区，很难在本地找到。如果你顺着枝干仔细观察的话，就可以找到一些成熟的杏子。你可以用合适的工具砍倒它。",
+    "symbol": "7",
+    "color": [
+      "light_green",
+      "light_red_green",
+      "light_green",
+      "brown"
+    ],
+    "//": "barren in winter, fruits in summer",
+    "move_cost_mod": -1,
+    "required_str": -1,
+    "coverage": 80,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT"
+    ],
+    "examine_action": "harvest_furn_nectar",
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "summer"
+        ],
+        "id": "apricot_harv"
+      }
+    ],
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "items": [
+        {
+          "item": "stick_long",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9tree_plum",
+    "name": "李子树",
+    "looks_like": "t_tree_plum",
+    "description": "一棵在夏天能够结出李子果实的树，分类学上属于樱桃属，在新英格兰地区土生土长。如果你顺着枝干仔细观察的话，就可以找到一些成熟的李子。你可以用合适的工具砍倒它。",
+    "symbol": "7",
+    "color": [
+      "light_green",
+      "magenta_green",
+      "light_green",
+      "brown"
+    ],
+    "//": "barren in winter, fruits in summer",
+    "move_cost_mod": -1,
+    "required_str": -1,
+    "coverage": 80,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT"
+    ],
+    "examine_action": "harvest_furn_nectar",
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "summer"
+        ],
+        "id": "plum_harv"
+      }
+    ],
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "items": [
+        {
+          "item": "stick_long",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9tree_mulberry",
+    "name": "桑树",
+    "description": "一棵在夏天能够结出桑椹果实的树，分类学上属于桑属。你可以用合适的工具砍倒它。",
+    "symbol": "7",
+    "color": [
+      "light_green",
+      "red_green",
+      "light_green",
+      "brown"
+    ],
+    "//": "barren in winter, fruits in summer",
+    "move_cost_mod": -1,
+    "required_str": -1,
+    "coverage": 80,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT"
+    ],
+    "examine_action": "harvest_furn_nectar",
+    "looks_like": "t_tree_mulberry",
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "summer"
+        ],
+        "id": "mulberry_harv"
+      }
+    ],
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "items": [
+        {
+          "item": "stick_long",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9tree_elderberry",
+    "name": "接骨木",
+    "description": "一棵在夏天能够结出接骨木果果实的树，分类学上属于接骨木属。你可以用合适的工具砍倒它。",
+    "symbol": "7",
+    "color": [
+      "light_green",
+      "red_green",
+      "light_green",
+      "brown"
+    ],
+    "//": "barren in winter, fruits in summer",
+    "move_cost_mod": -1,
+    "required_str": -1,
+    "coverage": 80,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT"
+    ],
+    "examine_action": "harvest_furn_nectar",
+    "looks_like": "t_tree_elderberry",
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "summer"
+        ],
+        "id": "elderberry_harv"
+      }
+    ],
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "items": [
+        {
+          "item": "stick_long",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9tree_pine",
+    "name": "松树",
+    "looks_like": "t_tree_pine",
+    "description": "一棵高耸入云的针叶树，分类学上属于松属，在新英格兰地区主要由刚松、北美红松、北美乔松组成。如果你仔细观察的话，你可以在这上面找到粘稠的松香和尚未收获的松塔。你可以用合适的工具砍倒它。",
+    "symbol": "4",
+    "color": "green",
+    "move_cost_mod": -1,
+    "required_str": -1,
+    "coverage": 80,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT"
+    ],
+    "examine_action": "harvest_furn",
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "spring",
+          "summer",
+          "autumn",
+          "winter"
+        ],
+        "id": "pine_harv"
+      }
+    ],
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "items": [
+        {
+          "item": "stick_long",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9tree_birch",
+    "name": "桦树",
+    "looks_like": "t_tree_birch",
+    "description": "一棵高大的落叶树，分类学上属于桦属，在新英格兰地区主要由北美黄桦、北美白桦、北美灰桦组成。如果你仔细观察的话，你可以撕下一些成熟的桦树皮。你可以用合适的工具砍倒它。",
+    "symbol": "7",
+    "color": "white",
+    "//": "barren in winter, harvestable all year round",
+    "move_cost_mod": -1,
+    "required_str": -1,
+    "coverage": 80,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT"
+    ],
+    "examine_action": "harvest_furn",
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "spring",
+          "summer",
+          "autumn",
+          "winter"
+        ],
+        "id": "birch_harv"
+      }
+    ],
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "items": [
+        {
+          "item": "stick_long",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9tree_willow",
+    "name": "柳树",
+    "looks_like": "t_tree_willow",
+    "description": "又高又壮的柳属落叶树，叶子长而薄，如窗帘一般垂下。可以撕下一些树皮。也可以用合适的工具砍倒它。",
+    "symbol": "4",
+    "color": [
+      "light_green",
+      "light_green",
+      "light_green",
+      "brown"
+    ],
+    "//": "barren in winter, harvestable all year round",
+    "move_cost_mod": -1,
+    "required_str": -1,
+    "coverage": 80,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT"
+    ],
+    "examine_action": "harvest_furn",
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "spring",
+          "summer",
+          "autumn",
+          "winter"
+        ],
+        "id": "willow_harv"
+      }
+    ],
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "items": [
+        {
+          "item": "stick_long",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9tree_maple",
+    "name": "枫树",
+    "looks_like": "t_tree_maple",
+    "description": "槭属的大型落叶树。长着手掌形状的奇异叶子。轻轻敲击即可收获枫树糖浆。可以用合适的工具砍倒它。",
+    "symbol": "7",
+    "color": [
+      "red",
+      "light_green",
+      "light_green",
+      "red"
+    ],
+    "move_cost_mod": -1,
+    "required_str": -1,
+    "coverage": 80,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT"
+    ],
+    "examine_action": "tree_maple",
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "items": [
+        {
+          "item": "stick_long",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9tree_maple_tapped",
+    "name": "枫树",
+    "looks_like": "t_tree_maple_tapped",
+    "description": "槭属的大型落叶树。长着手掌形状的奇异叶子。将树木插管楔入树干，就能收获枫树糖浆。可以用合适的工具砍倒它。",
+    "symbol": "7",
+    "color": [
+      "red",
+      "light_green",
+      "light_green",
+      "red"
+    ],
+    "move_cost_mod": -1,
+    "required_str": -1,
+    "coverage": 80,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "SEALED",
+      "PLACE_ITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT",
+      "LIQUIDCONT"
+    ],
+    "examine_action": "tree_maple_tapped",
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "items": [
+        {
+          "item": "stick_long",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9tree_hickory",
+    "name": "山核桃树",
+    "looks_like": "t_tree_hickory",
+    "description": "山核桃属的高大落叶树。仔细搜索可以获得山核桃。可以用合适的工具砍倒它。",
+    "symbol": "7",
+    "color": [
+      "light_green",
+      "light_green",
+      "i_light_green",
+      "brown"
+    ],
+    "//": "barren in winter, harvestable in autumn",
+    "move_cost_mod": -1,
+    "required_str": -1,
+    "coverage": 80,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT"
+    ],
+    "examine_action": "harvest_furn",
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "autumn"
+        ],
+        "id": "hickory_harv"
+      }
+    ],
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "items": [
+        {
+          "item": "stick_long",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9tree_pistachio",
+    "name": "开心果树",
+    "description": "黄连木属的落叶树。它不是本地原生，而是人工栽培的。仔细搜索可以收获开心果。可以用合适的工具砍倒它。",
+    "looks_like": "t_tree_pistachio",
+    "//": "Pistachio tree is not a local native and is only used in specific locations like orchards and gardens.",
+    "symbol": "7",
+    "color": [
+      "light_green",
+      "light_green",
+      "brown_green",
+      "brown"
+    ],
+    "move_cost_mod": -1,
+    "required_str": -1,
+    "coverage": 80,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT"
+    ],
+    "examine_action": "harvest_furn",
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "autumn"
+        ],
+        "id": "pistachio_harv"
+      }
+    ],
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "items": [
+        {
+          "item": "stick_long",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9tree_almond",
+    "name": "扁桃树",
+    "description": "李属的落叶树。它不是本地原生，而是人工栽培的。仔细搜索可以收获新鲜扁桃仁。可以用合适的工具砍倒它。",
+    "looks_like": "t_tree_almond",
+    "//": "Almond tree is not a local native and is only used in specific locations like orchards and gardens.",
+    "symbol": "7",
+    "color": [
+      "light_green",
+      "light_green",
+      "brown_green",
+      "brown"
+    ],
+    "move_cost_mod": -1,
+    "required_str": -1,
+    "coverage": 80,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT"
+    ],
+    "examine_action": "harvest_furn",
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "autumn"
+        ],
+        "id": "almond_harv"
+      }
+    ],
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "items": [
+        {
+          "item": "stick_long",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9tree_pecan",
+    "name": "美洲山核桃树",
+    "looks_like": "t_tree_pecan",
+    "description": "山核桃属的高大落叶树。仔细搜索可以获得美洲山核桃。可以用合适的工具砍倒它。",
+    "//": "Pecan tree is not a local native and is only used in specific locations like orchards and gardens.",
+    "symbol": "7",
+    "color": [
+      "light_green",
+      "light_green",
+      "brown_green",
+      "brown"
+    ],
+    "move_cost_mod": -1,
+    "required_str": -1,
+    "coverage": 80,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT"
+    ],
+    "examine_action": "harvest_furn",
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "autumn"
+        ],
+        "id": "pecan_harv"
+      }
+    ],
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "items": [
+        {
+          "item": "stick_long",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9underbrush",
+    "name": "灌木丛",
+    "looks_like": "t_underbrush",
+    "description": "四散在森林中的小型植物和灌木。一个有敏锐观察力的采集者能从中找到各种食用植物，橡实，蛋和蘑菇。",
+    "symbol": "#",
+    "color": "light_green",
+    "move_cost_mod": 1,
+    "required_str": -1,
+    "coverage": 40,
+    "flags": [
+      "TRANSPARENT",
+      "DIGGABLE",
+      "CONTAINER",
+      "FLAMMABLE_ASH",
+      "THIN_OBSTACLE",
+      "PLACE_ITEM",
+      "SHRUB",
+      "SHORT"
+    ],
+    "examine_action": "shrub_wildveggies",
+    "bash": {
+      "str_min": 4,
+      "str_max": 30,
+      "sound": "crunch.",
+      "sound_fail": "brush.",
+      "items": [
+        {
+          "item": "withered",
+          "prob": 50,
+          "count": [
+            1,
+            2
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9shrub",
+    "looks_like": "t_shrub",
+    "name": "灌木",
+    "description": "一丛小灌木。",
+    "symbol": "#",
+    "color": "green",
+    "move_cost_mod": 1,
+    "required_str": -1,
+    "coverage": 40,
+    "flags": [
+      "TRANSPARENT",
+      "CONTAINER",
+      "FLAMMABLE_ASH",
+      "THIN_OBSTACLE",
+      "PLACE_ITEM",
+      "SHRUB",
+      "SHORT"
+    ],
+    "bash": {
+      "str_min": 4,
+      "str_max": 30,
+      "sound": "crunch.",
+      "sound_fail": "brush.",
+      "items": [
+        {
+          "item": "withered",
+          "prob": 50,
+          "count": [
+            1,
+            2
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9shrub_peanut",
+    "name": "花生丛",
+    "looks_like": "t_shrub_peanut",
+    "description": "一小丛长着香脆花生的灌木丛。",
+    "//": "Peanut bushes are not a local native so this is for use in specific locations like farms and gardens.",
+    "symbol": "#",
+    "color": "brown_green",
+    "move_cost_mod": 1,
+    "required_str": -1,
+    "coverage": 40,
+    "flags": [
+      "TRANSPARENT",
+      "CONTAINER",
+      "FLAMMABLE_ASH",
+      "THIN_OBSTACLE",
+      "SHRUB",
+      "SHORT"
+    ],
+    "examine_action": "harvest_furn_nectar",
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "autumn"
+        ],
+        "id": "shrub_peanut_harv"
+      }
+    ],
+    "bash": {
+      "str_min": 4,
+      "str_max": 60,
+      "sound": "crunch.",
+      "sound_fail": "brush.",
+      "items": [
+        {
+          "item": "withered",
+          "prob": 50,
+          "count": [
+            1,
+            2
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9shrub_blueberry",
+    "name": "蓝莓丛",
+    "looks_like": "t_shrub_blueberry",
+    "description": "一小丛长着香甜蓝莓的灌木丛。",
+    "symbol": "#",
+    "color": "light_blue_green",
+    "move_cost_mod": 1,
+    "required_str": -1,
+    "coverage": 40,
+    "flags": [
+      "TRANSPARENT",
+      "CONTAINER",
+      "FLAMMABLE_ASH",
+      "THIN_OBSTACLE",
+      "SHRUB",
+      "SHORT"
+    ],
+    "examine_action": "harvest_furn_nectar",
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "summer"
+        ],
+        "id": "shrub_blueberry_harv"
+      }
+    ],
+    "bash": {
+      "str_min": 4,
+      "str_max": 60,
+      "sound": "crunch.",
+      "sound_fail": "brush.",
+      "items": [
+        {
+          "item": "withered",
+          "prob": 50,
+          "count": [
+            1,
+            2
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9shrub_strawberry",
+    "name": "草莓丛",
+    "looks_like": "t_shrub_strawberry",
+    "description": "一小丛长着多汁草莓的灌木丛。",
+    "symbol": "#",
+    "color": "light_red_green",
+    "move_cost_mod": 1,
+    "required_str": -1,
+    "coverage": 40,
+    "flags": [
+      "TRANSPARENT",
+      "CONTAINER",
+      "FLAMMABLE_ASH",
+      "THIN_OBSTACLE",
+      "SHRUB",
+      "SHORT"
+    ],
+    "examine_action": "harvest_furn_nectar",
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "summer"
+        ],
+        "id": "shrub_strawberry_harv"
+      }
+    ],
+    "bash": {
+      "str_min": 4,
+      "str_max": 60,
+      "sound": "crunch.",
+      "sound_fail": "brush.",
+      "items": [
+        {
+          "item": "withered",
+          "prob": 50,
+          "count": [
+            1,
+            2
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9shrub_blackberry",
+    "name": "黑莓丛",
+    "description": "一小丛长着美味黑莓的灌木丛。当心上面的刺！",
+    "symbol": "#",
+    "color": "black_green",
+    "move_cost_mod": 1,
+    "required_str": -1,
+    "coverage": 40,
+    "flags": [
+      "TRANSPARENT",
+      "CONTAINER",
+      "FLAMMABLE_ASH",
+      "THIN_OBSTACLE",
+      "SHRUB",
+      "SHORT",
+      "SHARP"
+    ],
+    "examine_action": "harvest_furn_nectar",
+    "looks_like": "t_shrub_blackberry",
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "summer"
+        ],
+        "id": "shrub_blackberry_harv"
+      }
+    ],
+    "bash": {
+      "str_min": 4,
+      "str_max": 60,
+      "sound": "crunch.",
+      "sound_fail": "brush.",
+      "items": [
+        {
+          "item": "withered",
+          "prob": 50,
+          "count": [
+            1,
+            2
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9shrub_huckleberry",
+    "name": "越橘丛",
+    "description": "一小丛长着香甜越橘的灌木丛。经常被误认为蓝莓。",
+    "symbol": "#",
+    "color": "light_blue_green",
+    "move_cost_mod": 1,
+    "required_str": -1,
+    "coverage": 40,
+    "flags": [
+      "TRANSPARENT",
+      "CONTAINER",
+      "FLAMMABLE_ASH",
+      "THIN_OBSTACLE",
+      "SHRUB",
+      "SHORT"
+    ],
+    "examine_action": "harvest_furn_nectar",
+    "looks_like": "t_shrub_huckleberry",
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "summer"
+        ],
+        "id": "shrub_huckleberry_harv"
+      }
+    ],
+    "bash": {
+      "str_min": 4,
+      "str_max": 60,
+      "sound": "crunch.",
+      "sound_fail": "brush.",
+      "items": [
+        {
+          "item": "withered",
+          "prob": 50,
+          "count": [
+            1,
+            2
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9shrub_raspberry",
+    "name": "树莓丛",
+    "description": "一小丛长着美味树莓的灌木丛。当心上面的刺！",
+    "symbol": "#",
+    "color": "light_red_green",
+    "move_cost_mod": 1,
+    "required_str": -1,
+    "coverage": 40,
+    "flags": [
+      "TRANSPARENT",
+      "CONTAINER",
+      "FLAMMABLE_ASH",
+      "THIN_OBSTACLE",
+      "SHRUB",
+      "SHORT",
+      "SHARP"
+    ],
+    "examine_action": "harvest_furn_nectar",
+    "looks_like": "t_shrub_raspberry",
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "summer"
+        ],
+        "id": "shrub_raspberry_harv"
+      }
+    ],
+    "bash": {
+      "str_min": 4,
+      "str_max": 60,
+      "sound": "crunch.",
+      "sound_fail": "brush.",
+      "items": [
+        {
+          "item": "withered",
+          "prob": 50,
+          "count": [
+            1,
+            2
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9shrub_grape",
+    "name": "葡萄丛",
+    "description": "一丛爬满了葡萄藤的灌木。",
+    "symbol": "#",
+    "color": "light_green_green",
+    "move_cost_mod": 1,
+    "required_str": -1,
+    "coverage": 40,
+    "flags": [
+      "TRANSPARENT",
+      "CONTAINER",
+      "FLAMMABLE_ASH",
+      "THIN_OBSTACLE",
+      "SHRUB",
+      "SHORT"
+    ],
+    "examine_action": "harvest_furn_nectar",
+    "looks_like": "t_shrub_grape",
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "summer"
+        ],
+        "id": "shrub_grape_harv"
+      }
+    ],
+    "bash": {
+      "str_min": 4,
+      "str_max": 60,
+      "sound": "crunch.",
+      "sound_fail": "brush.",
+      "items": [
+        {
+          "item": "withered",
+          "prob": 50,
+          "count": [
+            1,
+            2
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9shrub_rose",
+    "name": "玫瑰丛",
+    "description": "一大丛长着美丽红玫瑰的灌木丛，要是有个约会就好了。当心上面的刺！",
+    "symbol": "#",
+    "color": "light_red_green",
+    "move_cost_mod": 1,
+    "required_str": -1,
+    "coverage": 40,
+    "flags": [
+      "TRANSPARENT",
+      "CONTAINER",
+      "FLAMMABLE_ASH",
+      "THIN_OBSTACLE",
+      "SHRUB",
+      "SHORT",
+      "SHARP"
+    ],
+    "examine_action": "harvest_furn_nectar",
+    "looks_like": "t_shrub_rose",
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "autumn"
+        ],
+        "id": "shrub_rose_harv"
+      }
+    ],
+    "//": "Insert rose (flower) harvest in summer once flowers have a use (same for other generic flowers).",
+    "bash": {
+      "str_min": 4,
+      "str_max": 60,
+      "sound": "crunch.",
+      "sound_fail": "brush.",
+      "items": [
+        {
+          "item": "withered",
+          "prob": 50,
+          "count": [
+            1,
+            2
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9shrub_hydrangea",
+    "name": "绣球花丛",
+    "description": "一大丛长着芳香的蓝色绣球花的灌木丛。",
+    "symbol": "#",
+    "color": "light_blue",
+    "move_cost_mod": 1,
+    "required_str": -1,
+    "coverage": 40,
+    "flags": [
+      "TRANSPARENT",
+      "CONTAINER",
+      "FLAMMABLE_ASH",
+      "THIN_OBSTACLE",
+      "SHRUB",
+      "SHORT"
+    ],
+    "examine_action": "harvest_furn_nectar",
+    "looks_like": "t_shrub_hydrangea",
+    "//": "Insert hydrangea harvest in autumn once flowers have a use (same for other generic flowers).",
+    "bash": {
+      "str_min": 4,
+      "str_max": 60,
+      "sound": "crunch.",
+      "sound_fail": "brush.",
+      "items": [
+        {
+          "item": "withered",
+          "prob": 50,
+          "count": [
+            1,
+            2
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9shrub_lilac",
+    "name": "丁香花丛",
+    "description": "一大丛长着鲜亮粉紫色丁香花的灌木丛。",
+    "symbol": "#",
+    "color": "magenta",
+    "move_cost_mod": 1,
+    "required_str": -1,
+    "coverage": 40,
+    "flags": [
+      "TRANSPARENT",
+      "CONTAINER",
+      "FLAMMABLE_ASH",
+      "THIN_OBSTACLE",
+      "SHRUB",
+      "SHORT"
+    ],
+    "examine_action": "harvest_furn_nectar",
+    "looks_like": "t_shrub_lilac",
+    "//": "Insert lilac harvest once flowers have a use (same for other generic flowers).",
+    "bash": {
+      "str_min": 4,
+      "str_max": 60,
+      "sound": "crunch.",
+      "sound_fail": "brush.",
+      "items": [
+        {
+          "item": "withered",
+          "prob": 50,
+          "count": [
+            1,
+            2
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alien_antenna1",
+    "name": "异常BL9天线",
+    "looks_like": "t_radio_tower",
+    "description": "这个奇怪的装置看起来像是一些拼凑起来的发射器或接收器天线，连接在这个奇怪的设施里的其他电器上",
+    "symbol": "d",
+    "color": "light_gray",
+    "move_cost_mod": 2,
+    "coverage": 30,
+    "required_str": 11,
+    "flags": [
+      "NOITEM",
+      "BLOCKSDOOR"
+    ],
+    "bash": {
+      "str_min": 30,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            8,
+            12
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "pipe_fittings",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "sheet_metal",
+          "count": [
+            1,
+            2
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "antenna",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "processor",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "motor",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "cable",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "scrap_copper",
+          "count": [
+            2,
+            10
+          ]
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            8,
+            12
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "pipe_fittings",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "sheet_metal",
+          "count": [
+            1,
+            2
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "antenna",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "processor",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "motor",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "cable",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "scrap_copper",
+          "count": [
+            2,
+            10
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alien_machinery1",
+    "name": "反常电子机械",
+    "looks_like": "f_server_stack",
+    "description": "看起来怪异的电子部件全部连接在一起形成了某种奇怪的外星机器，它看起来有点拼凑在一起，但相当复杂，假设你正确地理解了这一机制，它似乎被用来生产某种东西，或者被调到是具有类似目的的其他机器组合的一部分",
+    "symbol": "E",
+    "color": "light_gray",
+    "move_cost_mod": -1,
+    "coverage": 70,
+    "required_str": -1,
+    "max_volume": "1500 L",
+    "flags": [
+      "MOUNTABLE",
+      "BLOCKSDOOR"
+    ],
+    "bash": {
+      "str_min": 60,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        {
+          "item": "wire",
+          "count": [
+            1,
+            3
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            1,
+            2
+          ]
+        },
+        {
+          "item": "steel_chunk",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "bearing",
+          "charges": [
+            2,
+            6
+          ]
+        },
+        {
+          "item": "motor",
+          "prob": 40
+        },
+        {
+          "item": "processor",
+          "count": 1
+        },
+        {
+          "item": "RAM",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "cable",
+          "charges": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "small_lcd_screen",
+          "count": 1
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            5,
+            10
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            3,
+            8
+          ]
+        },
+        {
+          "item": "power_supply",
+          "count": [
+            1,
+            3
+          ]
+        },
+        {
+          "item": "amplifier",
+          "count": [
+            1,
+            3
+          ]
+        },
+        {
+          "item": "plastic_chunk",
+          "count": [
+            2,
+            8
+          ]
+        },
+        {
+          "item": "scrap",
+          "count": [
+            1,
+            5
+          ]
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "wire",
+          "count": [
+            1,
+            3
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            1,
+            2
+          ]
+        },
+        {
+          "item": "steel_chunk",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "bearing",
+          "charges": [
+            2,
+            6
+          ]
+        },
+        {
+          "item": "motor",
+          "prob": 40
+        },
+        {
+          "item": "processor",
+          "count": 1
+        },
+        {
+          "item": "RAM",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "cable",
+          "charges": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "small_lcd_screen",
+          "count": 1
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            5,
+            10
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            3,
+            8
+          ]
+        },
+        {
+          "item": "power_supply",
+          "count": [
+            1,
+            3
+          ]
+        },
+        {
+          "item": "amplifier",
+          "count": [
+            1,
+            3
+          ]
+        },
+        {
+          "item": "plastic_chunk",
+          "count": [
+            2,
+            8
+          ]
+        },
+        {
+          "item": "scrap",
+          "count": [
+            1,
+            5
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alien_scanner1",
+    "name": "异常扫描器",
+    "looks_like": "t_machinery_light",
+    "description": "一个正在缓缓旋转的抛物形碟形天线，上面雕刻着一大块无法辨认的符号图案，可能是某种电路图案，或者是某种宗教咒语。它安装在一个相当普通的电动机上，看上去完全不匹配。",
+    "symbol": "W",
+    "color": "light_gray",
+    "move_cost_mod": 2,
+    "coverage": 30,
+    "required_str": 11,
+    "flags": [
+      "TRANSPARENT",
+      "NOITEM",
+      "BLOCKSDOOR"
+    ],
+    "bash": {
+      "str_min": 30,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            8,
+            12
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "scrap_copper",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "processor",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "motor",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "cable",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "antenna",
+          "count": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            8,
+            12
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "scrap_copper",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "processor",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "motor",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "cable",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "antenna",
+          "count": [
+            0,
+            1
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alien_light1",
+    "name": "异常效用光",
+    "looks_like": "t_utility_light",
+    "description": "灯泡发出一种非常不愉快的光，它的一些部分有一个弯曲的外观，好像金属生长在实验室里，但总的来说，这不是一个特别不寻常的光领域。",
+    "symbol": "T",
+    "color": "light_gray",
+    "move_cost_mod": 3,
+    "coverage": 30,
+    "required_str": 6,
+    "light_emitted": 20,
+    "flags": [
+      "TRANSPARENT",
+      "NOITEM",
+      "BLOCKSDOOR"
+    ],
+    "bash": {
+      "str_min": 20,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            8,
+            12
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "scrap_copper",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "amplifier",
+          "count": [
+            0,
+            5
+          ]
+        },
+        {
+          "item": "power_supply",
+          "count": [
+            0,
+            1
+          ]
+        },
+        {
+          "item": "cable",
+          "count": [
+            0,
+            5
+          ]
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            8,
+            12
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "scrap_copper",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "amplifier",
+          "count": [
+            0,
+            5
+          ]
+        },
+        {
+          "item": "power_supply",
+          "count": [
+            0,
+            1
+          ]
+        },
+        {
+          "item": "cable",
+          "count": [
+            0,
+            5
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alien_charger1",
+    "name": "异常个人充电站",
+    "looks_like": "t_machinery_heavy",
+    "description": "这是一种外星的“加油”或充电装置，这是一个定制形状的近垂直展位，设计用来安装重金属框架，并将其连接到中央电源和营养源。",
+    "symbol": "0",
+    "color": "light_gray",
+    "move_cost_mod": -1,
+    "coverage": 80,
+    "required_str": 14,
+    "flags": [
+      "TRANSPARENT",
+      "NOITEM",
+      "BLOCKSDOOR"
+    ],
+    "bash": {
+      "str_min": 40,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "cable",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "sheet_metal",
+          "count": [
+            0,
+            1
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            4,
+            8
+          ]
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            2,
+            6
+          ]
+        },
+        {
+          "item": "metal_tank_little",
+          "count": [
+            0,
+            1
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            0,
+            4
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            2,
+            5
+          ]
+        },
+        {
+          "item": "amplifier",
+          "count": [
+            2,
+            5
+          ]
+        },
+        {
+          "item": "power_supply",
+          "count": [
+            2,
+            8
+          ]
+        },
+        {
+          "item": "RAM",
+          "count": [
+            2,
+            5
+          ]
+        },
+        {
+          "item": "processor",
+          "count": [
+            1,
+            3
+          ]
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "cable",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "sheet_metal",
+          "count": [
+            0,
+            1
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            4,
+            8
+          ]
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            2,
+            6
+          ]
+        },
+        {
+          "item": "metal_tank_little",
+          "count": [
+            0,
+            1
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            0,
+            4
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            2,
+            5
+          ]
+        },
+        {
+          "item": "amplifier",
+          "count": [
+            2,
+            5
+          ]
+        },
+        {
+          "item": "power_supply",
+          "count": [
+            2,
+            8
+          ]
+        },
+        {
+          "item": "RAM",
+          "count": [
+            2,
+            5
+          ]
+        },
+        {
+          "item": "processor",
+          "count": [
+            1,
+            3
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alien_generator1",
+    "name": "异常发电机",
+    "looks_like": "t_plut_generator",
+    "description": "一个巨大的装置，利用内部某种奇怪的外来矿物溶解所产生的电力，考虑到这台机器内部发生的过程的危险，它被隔离得非常好，只有轻微的嗡嗡声表明它目前处于活动状态",
+    "symbol": "U",
+    "color": "light_gray",
+    "move_cost_mod": -1,
+    "coverage": 80,
+    "required_str": 14,
+    "flags": [
+      "NOITEM",
+      "BLOCKSDOOR"
+    ],
+    "bash": {
+      "str_min": 90,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        {
+          "item": "RAM",
+          "count": [
+            4,
+            8
+          ]
+        },
+        {
+          "item": "cable",
+          "charges": [
+            8,
+            16
+          ]
+        },
+        {
+          "item": "small_lcd_screen",
+          "count": [
+            2,
+            4
+          ]
+        },
+        {
+          "item": "large_lcd_screen",
+          "count": 1
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            12,
+            24
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            6,
+            10
+          ]
+        },
+        {
+          "item": "power_supply",
+          "count": [
+            4,
+            8
+          ]
+        },
+        {
+          "item": "amplifier",
+          "count": [
+            3,
+            6
+          ]
+        },
+        {
+          "item": "processor",
+          "charges": [
+            2,
+            8
+          ]
+        },
+        {
+          "item": "scrap",
+          "count": [
+            8,
+            16
+          ]
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "RAM",
+          "count": [
+            4,
+            8
+          ]
+        },
+        {
+          "item": "cable",
+          "charges": [
+            8,
+            16
+          ]
+        },
+        {
+          "item": "small_lcd_screen",
+          "count": [
+            2,
+            4
+          ]
+        },
+        {
+          "item": "large_lcd_screen",
+          "count": 1
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            12,
+            24
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            6,
+            10
+          ]
+        },
+        {
+          "item": "power_supply",
+          "count": [
+            4,
+            8
+          ]
+        },
+        {
+          "item": "amplifier",
+          "count": [
+            3,
+            6
+          ]
+        },
+        {
+          "item": "processor",
+          "charges": [
+            2,
+            8
+          ]
+        },
+        {
+          "item": "scrap",
+          "count": [
+            8,
+            16
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alienprinter_small1",
+    "name": "异常电路打印机",
+    "looks_like": "t_machinery_electronic",
+    "description": "这台高高的装置上面有个由各种管道和喷嘴组成的网格。根据放在输出料斗中的那堆产品来看，它看起来像是一台用来打印复杂电子元件的3D打印机。",
+    "symbol": "U",
+    "color": "light_gray",
+    "move_cost_mod": -1,
+    "coverage": 80,
+    "required_str": 14,
+    "flags": [
+      "TRANSPARENT",
+      "NOITEM",
+      "BLOCKSDOOR"
+    ],
+    "bash": {
+      "str_min": 90,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            20,
+            120
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            10,
+            20
+          ]
+        },
+        {
+          "item": "pipe_fittings",
+          "count": [
+            2,
+            4
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            10,
+            30
+          ]
+        },
+        {
+          "item": "scrap_copper",
+          "count": [
+            20,
+            40
+          ]
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            20,
+            40
+          ]
+        },
+        {
+          "item": "RAM",
+          "count": [
+            0,
+            5
+          ]
+        },
+        {
+          "item": "motor",
+          "count": [
+            0,
+            6
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            4
+          ]
+        },
+        {
+          "item": "processor",
+          "count": [
+            0,
+            5
+          ]
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            20,
+            120
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            10,
+            20
+          ]
+        },
+        {
+          "item": "pipe_fittings",
+          "count": [
+            2,
+            4
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            10,
+            30
+          ]
+        },
+        {
+          "item": "scrap_copper",
+          "count": [
+            20,
+            40
+          ]
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            20,
+            40
+          ]
+        },
+        {
+          "item": "RAM",
+          "count": [
+            0,
+            5
+          ]
+        },
+        {
+          "item": "motor",
+          "count": [
+            0,
+            6
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            4
+          ]
+        },
+        {
+          "item": "processor",
+          "count": [
+            0,
+            5
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alien_console1",
+    "name": "异常计算机面板",
+    "symbol": "&",
+    "description": "在显示屏上可以看到一个相对较小的计算机面板、完全怪异的界面和完全无法辨认的“文本”墙，在黑暗中以鲜艳的颜色闪烁",
+    "color": "red",
+    "looks_like": "f_console",
+    "move_cost_mod": -1,
+    "coverage": 50,
+    "light_emitted": 20,
+    "required_str": 14,
+    "flags": [
+      "BLOCKSDOOR",
+      "NOITEM"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 150,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "items": [
+        {
+          "item": "processor",
+          "prob": 25
+        },
+        {
+          "item": "RAM",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "cable",
+          "charges": [
+            1,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "small_lcd_screen",
+          "prob": 25
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            1,
+            4
+          ],
+          "prob": 50
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "power_supply",
+          "prob": 25
+        },
+        {
+          "item": "amplifier",
+          "prob": 25
+        },
+        {
+          "item": "plastic_chunk",
+          "count": [
+            4,
+            10
+          ],
+          "prob": 50
+        },
+        {
+          "item": "scrap",
+          "count": [
+            2,
+            6
+          ],
+          "prob": 50
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "processor",
+          "prob": 25
+        },
+        {
+          "item": "RAM",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "cable",
+          "charges": [
+            1,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "small_lcd_screen",
+          "prob": 25
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            1,
+            4
+          ],
+          "prob": 50
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "power_supply",
+          "prob": 25
+        },
+        {
+          "item": "amplifier",
+          "prob": 25
+        },
+        {
+          "item": "plastic_chunk",
+          "count": [
+            4,
+            10
+          ],
+          "prob": 50
+        },
+        {
+          "item": "scrap",
+          "count": [
+            2,
+            6
+          ],
+          "prob": 50
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alien_converter1",
+    "name": "反常变换器",
+    "description": "令人惊讶的光滑的机器存在的确切目的是未知的，但采取一个疯狂的猜测，它似乎是能够转换成其他类型的外来物质的某些类型，确切的物理或化学过程涉及是一个纯粹的谜",
+    "symbol": "&",
+    "color": "cyan",
+    "looks_like": "f_console",
+    "move_cost_mod": -1,
+    "coverage": 50,
+    "required_str": 16,
+    "flags": [
+      "BLOCKSDOOR",
+      "NOITEM"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 150,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "items": [
+        {
+          "item": "processor",
+          "prob": 25
+        },
+        {
+          "item": "RAM",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "cable",
+          "charges": [
+            1,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "small_lcd_screen",
+          "prob": 25
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            1,
+            4
+          ],
+          "prob": 50
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "power_supply",
+          "prob": 25
+        },
+        {
+          "item": "amplifier",
+          "prob": 25
+        },
+        {
+          "item": "plastic_chunk",
+          "count": [
+            4,
+            10
+          ],
+          "prob": 50
+        },
+        {
+          "item": "scrap",
+          "count": [
+            2,
+            6
+          ],
+          "prob": 50
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "processor",
+          "prob": 25
+        },
+        {
+          "item": "RAM",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "cable",
+          "charges": [
+            1,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "small_lcd_screen",
+          "prob": 25
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            1,
+            4
+          ],
+          "prob": 50
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "power_supply",
+          "prob": 25
+        },
+        {
+          "item": "amplifier",
+          "prob": 25
+        },
+        {
+          "item": "plastic_chunk",
+          "count": [
+            4,
+            10
+          ],
+          "prob": 50
+        },
+        {
+          "item": "scrap",
+          "count": [
+            2,
+            6
+          ],
+          "prob": 50
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alien_antenna2",
+    "name": "异常BL9天线",
+    "looks_like": "t_radio_tower",
+    "description": "这个奇怪的装置看起来像是一些拼凑起来的发射器或接收器天线，连接在这个奇怪的设施里的其他电器上",
+    "symbol": "d",
+    "color": "light_gray",
+    "move_cost_mod": 2,
+    "coverage": 30,
+    "required_str": 11,
+    "flags": [
+      "NOITEM",
+      "BLOCKSDOOR"
+    ],
+    "bash": {
+      "str_min": 30,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            8,
+            12
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "pipe_fittings",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "sheet_metal",
+          "count": [
+            1,
+            2
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "antenna",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "processor",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "motor",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "cable",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "scrap_copper",
+          "count": [
+            2,
+            10
+          ]
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            8,
+            12
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "pipe_fittings",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "sheet_metal",
+          "count": [
+            1,
+            2
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "antenna",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "processor",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "motor",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "cable",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "scrap_copper",
+          "count": [
+            2,
+            10
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alien_machinery2",
+    "name": "反常电子机械",
+    "looks_like": "f_server_stack",
+    "description": "看起来怪异的电子部件全部连接在一起形成了某种奇怪的外星机器，它看起来有点拼凑在一起，但相当复杂，假设你正确地理解了这一机制，它似乎被用来生产某种东西，或者被调到是具有类似目的的其他机器组合的一部分",
+    "symbol": "E",
+    "color": "light_gray",
+    "move_cost_mod": -1,
+    "coverage": 70,
+    "required_str": -1,
+    "max_volume": "1500 L",
+    "flags": [
+      "MOUNTABLE",
+      "BLOCKSDOOR"
+    ],
+    "bash": {
+      "str_min": 60,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        {
+          "item": "wire",
+          "count": [
+            1,
+            3
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            1,
+            2
+          ]
+        },
+        {
+          "item": "steel_chunk",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "bearing",
+          "charges": [
+            2,
+            6
+          ]
+        },
+        {
+          "item": "motor",
+          "prob": 40
+        },
+        {
+          "item": "processor",
+          "count": 1
+        },
+        {
+          "item": "RAM",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "cable",
+          "charges": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "small_lcd_screen",
+          "count": 1
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            5,
+            10
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            3,
+            8
+          ]
+        },
+        {
+          "item": "power_supply",
+          "count": [
+            1,
+            3
+          ]
+        },
+        {
+          "item": "amplifier",
+          "count": [
+            1,
+            3
+          ]
+        },
+        {
+          "item": "plastic_chunk",
+          "count": [
+            2,
+            8
+          ]
+        },
+        {
+          "item": "scrap",
+          "count": [
+            1,
+            5
+          ]
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "wire",
+          "count": [
+            1,
+            3
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            1,
+            2
+          ]
+        },
+        {
+          "item": "steel_chunk",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "bearing",
+          "charges": [
+            2,
+            6
+          ]
+        },
+        {
+          "item": "motor",
+          "prob": 40
+        },
+        {
+          "item": "processor",
+          "count": 1
+        },
+        {
+          "item": "RAM",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "cable",
+          "charges": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "small_lcd_screen",
+          "count": 1
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            5,
+            10
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            3,
+            8
+          ]
+        },
+        {
+          "item": "power_supply",
+          "count": [
+            1,
+            3
+          ]
+        },
+        {
+          "item": "amplifier",
+          "count": [
+            1,
+            3
+          ]
+        },
+        {
+          "item": "plastic_chunk",
+          "count": [
+            2,
+            8
+          ]
+        },
+        {
+          "item": "scrap",
+          "count": [
+            1,
+            5
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alien_scanner2",
+    "name": "异常扫描器",
+    "looks_like": "t_machinery_light",
+    "description": "一个正在缓缓旋转的抛物形碟形天线，上面雕刻着一大块无法辨认的符号图案，可能是某种电路图案，或者是某种宗教咒语。它安装在一个相当普通的电动机上，看上去完全不匹配。",
+    "symbol": "W",
+    "color": "light_gray",
+    "move_cost_mod": 2,
+    "coverage": 30,
+    "required_str": 11,
+    "flags": [
+      "TRANSPARENT",
+      "NOITEM",
+      "BLOCKSDOOR"
+    ],
+    "bash": {
+      "str_min": 30,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            8,
+            12
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "scrap_copper",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "processor",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "motor",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "cable",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "antenna",
+          "count": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            8,
+            12
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "scrap_copper",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "processor",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "motor",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "cable",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "antenna",
+          "count": [
+            0,
+            1
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alien_light2",
+    "name": "异常效用光",
+    "looks_like": "t_utility_light",
+    "description": "灯泡发出一种非常不愉快的光，它的一些部分有一个弯曲的外观，好像金属生长在实验室里，但总的来说，这不是一个特别不寻常的光领域。",
+    "symbol": "T",
+    "color": "light_gray",
+    "move_cost_mod": 3,
+    "coverage": 30,
+    "required_str": 6,
+    "light_emitted": 20,
+    "flags": [
+      "TRANSPARENT",
+      "NOITEM",
+      "BLOCKSDOOR"
+    ],
+    "bash": {
+      "str_min": 20,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            8,
+            12
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "scrap_copper",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "amplifier",
+          "count": [
+            0,
+            5
+          ]
+        },
+        {
+          "item": "power_supply",
+          "count": [
+            0,
+            1
+          ]
+        },
+        {
+          "item": "cable",
+          "count": [
+            0,
+            5
+          ]
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            8,
+            12
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "scrap_copper",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "amplifier",
+          "count": [
+            0,
+            5
+          ]
+        },
+        {
+          "item": "power_supply",
+          "count": [
+            0,
+            1
+          ]
+        },
+        {
+          "item": "cable",
+          "count": [
+            0,
+            5
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alien_charger2",
+    "name": "异常个人充电站",
+    "looks_like": "t_machinery_heavy",
+    "description": "这是一种外星的“加油”或充电装置，这是一个定制形状的近垂直展位，设计用来安装重金属框架，并将其连接到中央电源和营养源。",
+    "symbol": "0",
+    "color": "light_gray",
+    "move_cost_mod": -1,
+    "coverage": 80,
+    "required_str": 14,
+    "flags": [
+      "TRANSPARENT",
+      "NOITEM",
+      "BLOCKSDOOR"
+    ],
+    "bash": {
+      "str_min": 40,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "cable",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "sheet_metal",
+          "count": [
+            0,
+            1
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            4,
+            8
+          ]
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            2,
+            6
+          ]
+        },
+        {
+          "item": "metal_tank_little",
+          "count": [
+            0,
+            1
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            0,
+            4
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            2,
+            5
+          ]
+        },
+        {
+          "item": "amplifier",
+          "count": [
+            2,
+            5
+          ]
+        },
+        {
+          "item": "power_supply",
+          "count": [
+            2,
+            8
+          ]
+        },
+        {
+          "item": "RAM",
+          "count": [
+            2,
+            5
+          ]
+        },
+        {
+          "item": "processor",
+          "count": [
+            1,
+            3
+          ]
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "cable",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "sheet_metal",
+          "count": [
+            0,
+            1
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            4,
+            8
+          ]
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            2,
+            6
+          ]
+        },
+        {
+          "item": "metal_tank_little",
+          "count": [
+            0,
+            1
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            0,
+            4
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            2,
+            5
+          ]
+        },
+        {
+          "item": "amplifier",
+          "count": [
+            2,
+            5
+          ]
+        },
+        {
+          "item": "power_supply",
+          "count": [
+            2,
+            8
+          ]
+        },
+        {
+          "item": "RAM",
+          "count": [
+            2,
+            5
+          ]
+        },
+        {
+          "item": "processor",
+          "count": [
+            1,
+            3
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alien_generator2",
+    "name": "异常发电机",
+    "looks_like": "t_plut_generator",
+    "description": "一个巨大的装置，利用内部某种奇怪的外来矿物溶解所产生的电力，考虑到这台机器内部发生的过程的危险，它被隔离得非常好，只有轻微的嗡嗡声表明它目前处于活动状态",
+    "symbol": "U",
+    "color": "light_gray",
+    "move_cost_mod": -1,
+    "coverage": 80,
+    "required_str": 14,
+    "flags": [
+      "NOITEM",
+      "BLOCKSDOOR"
+    ],
+    "bash": {
+      "str_min": 90,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        {
+          "item": "RAM",
+          "count": [
+            4,
+            8
+          ]
+        },
+        {
+          "item": "cable",
+          "charges": [
+            8,
+            16
+          ]
+        },
+        {
+          "item": "small_lcd_screen",
+          "count": [
+            2,
+            4
+          ]
+        },
+        {
+          "item": "large_lcd_screen",
+          "count": 1
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            12,
+            24
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            6,
+            10
+          ]
+        },
+        {
+          "item": "power_supply",
+          "count": [
+            4,
+            8
+          ]
+        },
+        {
+          "item": "amplifier",
+          "count": [
+            3,
+            6
+          ]
+        },
+        {
+          "item": "processor",
+          "charges": [
+            2,
+            8
+          ]
+        },
+        {
+          "item": "scrap",
+          "count": [
+            8,
+            16
+          ]
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "RAM",
+          "count": [
+            4,
+            8
+          ]
+        },
+        {
+          "item": "cable",
+          "charges": [
+            8,
+            16
+          ]
+        },
+        {
+          "item": "small_lcd_screen",
+          "count": [
+            2,
+            4
+          ]
+        },
+        {
+          "item": "large_lcd_screen",
+          "count": 1
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            12,
+            24
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            6,
+            10
+          ]
+        },
+        {
+          "item": "power_supply",
+          "count": [
+            4,
+            8
+          ]
+        },
+        {
+          "item": "amplifier",
+          "count": [
+            3,
+            6
+          ]
+        },
+        {
+          "item": "processor",
+          "charges": [
+            2,
+            8
+          ]
+        },
+        {
+          "item": "scrap",
+          "count": [
+            8,
+            16
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alienprinter_small2",
+    "name": "异常电路打印机",
+    "looks_like": "t_machinery_electronic",
+    "description": "这台高高的装置上面有个由各种管道和喷嘴组成的网格。根据放在输出料斗中的那堆产品来看，它看起来像是一台用来打印复杂电子元件的3D打印机。",
+    "symbol": "U",
+    "color": "light_gray",
+    "move_cost_mod": -1,
+    "coverage": 80,
+    "required_str": 14,
+    "flags": [
+      "TRANSPARENT",
+      "NOITEM",
+      "BLOCKSDOOR"
+    ],
+    "bash": {
+      "str_min": 90,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            20,
+            120
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            10,
+            20
+          ]
+        },
+        {
+          "item": "pipe_fittings",
+          "count": [
+            2,
+            4
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            10,
+            30
+          ]
+        },
+        {
+          "item": "scrap_copper",
+          "count": [
+            20,
+            40
+          ]
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            20,
+            40
+          ]
+        },
+        {
+          "item": "RAM",
+          "count": [
+            0,
+            5
+          ]
+        },
+        {
+          "item": "motor",
+          "count": [
+            0,
+            6
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            4
+          ]
+        },
+        {
+          "item": "processor",
+          "count": [
+            0,
+            5
+          ]
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            20,
+            120
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            10,
+            20
+          ]
+        },
+        {
+          "item": "pipe_fittings",
+          "count": [
+            2,
+            4
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            10,
+            30
+          ]
+        },
+        {
+          "item": "scrap_copper",
+          "count": [
+            20,
+            40
+          ]
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            20,
+            40
+          ]
+        },
+        {
+          "item": "RAM",
+          "count": [
+            0,
+            5
+          ]
+        },
+        {
+          "item": "motor",
+          "count": [
+            0,
+            6
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            4
+          ]
+        },
+        {
+          "item": "processor",
+          "count": [
+            0,
+            5
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alien_console2",
+    "name": "异常计算机面板",
+    "symbol": "&",
+    "description": "在显示屏上可以看到一个相对较小的计算机面板、完全怪异的界面和完全无法辨认的“文本”墙，在黑暗中以鲜艳的颜色闪烁",
+    "color": "red",
+    "looks_like": "f_console",
+    "move_cost_mod": -1,
+    "coverage": 50,
+    "light_emitted": 20,
+    "required_str": 14,
+    "flags": [
+      "BLOCKSDOOR",
+      "NOITEM"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 150,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "items": [
+        {
+          "item": "processor",
+          "prob": 25
+        },
+        {
+          "item": "RAM",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "cable",
+          "charges": [
+            1,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "small_lcd_screen",
+          "prob": 25
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            1,
+            4
+          ],
+          "prob": 50
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "power_supply",
+          "prob": 25
+        },
+        {
+          "item": "amplifier",
+          "prob": 25
+        },
+        {
+          "item": "plastic_chunk",
+          "count": [
+            4,
+            10
+          ],
+          "prob": 50
+        },
+        {
+          "item": "scrap",
+          "count": [
+            2,
+            6
+          ],
+          "prob": 50
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "processor",
+          "prob": 25
+        },
+        {
+          "item": "RAM",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "cable",
+          "charges": [
+            1,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "small_lcd_screen",
+          "prob": 25
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            1,
+            4
+          ],
+          "prob": 50
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "power_supply",
+          "prob": 25
+        },
+        {
+          "item": "amplifier",
+          "prob": 25
+        },
+        {
+          "item": "plastic_chunk",
+          "count": [
+            4,
+            10
+          ],
+          "prob": 50
+        },
+        {
+          "item": "scrap",
+          "count": [
+            2,
+            6
+          ],
+          "prob": 50
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alien_converter2",
+    "name": "反常变换器",
+    "description": "令人惊讶的光滑的机器存在的确切目的是未知的，但采取一个疯狂的猜测，它似乎是能够转换成其他类型的外来物质的某些类型，确切的物理或化学过程涉及是一个纯粹的谜",
+    "symbol": "&",
+    "color": "cyan",
+    "looks_like": "f_console",
+    "move_cost_mod": -1,
+    "coverage": 50,
+    "required_str": 16,
+    "flags": [
+      "BLOCKSDOOR",
+      "NOITEM"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 150,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "items": [
+        {
+          "item": "processor",
+          "prob": 25
+        },
+        {
+          "item": "RAM",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "cable",
+          "charges": [
+            1,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "small_lcd_screen",
+          "prob": 25
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            1,
+            4
+          ],
+          "prob": 50
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "power_supply",
+          "prob": 25
+        },
+        {
+          "item": "amplifier",
+          "prob": 25
+        },
+        {
+          "item": "plastic_chunk",
+          "count": [
+            4,
+            10
+          ],
+          "prob": 50
+        },
+        {
+          "item": "scrap",
+          "count": [
+            2,
+            6
+          ],
+          "prob": 50
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "processor",
+          "prob": 25
+        },
+        {
+          "item": "RAM",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "cable",
+          "charges": [
+            1,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "small_lcd_screen",
+          "prob": 25
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            1,
+            4
+          ],
+          "prob": 50
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "power_supply",
+          "prob": 25
+        },
+        {
+          "item": "amplifier",
+          "prob": 25
+        },
+        {
+          "item": "plastic_chunk",
+          "count": [
+            4,
+            10
+          ],
+          "prob": 50
+        },
+        {
+          "item": "scrap",
+          "count": [
+            2,
+            6
+          ],
+          "prob": 50
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alien_antenna3",
+    "name": "异常BL9天线",
+    "looks_like": "t_radio_tower",
+    "description": "这个奇怪的装置看起来像是一些拼凑起来的发射器或接收器天线，连接在这个奇怪的设施里的其他电器上",
+    "symbol": "d",
+    "color": "light_gray",
+    "move_cost_mod": 2,
+    "coverage": 30,
+    "required_str": 11,
+    "flags": [
+      "NOITEM",
+      "BLOCKSDOOR"
+    ],
+    "bash": {
+      "str_min": 30,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            8,
+            12
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "pipe_fittings",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "sheet_metal",
+          "count": [
+            1,
+            2
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "antenna",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "processor",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "motor",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "cable",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "scrap_copper",
+          "count": [
+            2,
+            10
+          ]
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            8,
+            12
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "pipe_fittings",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "sheet_metal",
+          "count": [
+            1,
+            2
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "antenna",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "processor",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "motor",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "cable",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "scrap_copper",
+          "count": [
+            2,
+            10
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alien_machinery3",
+    "name": "反常电子机械",
+    "looks_like": "f_server_stack",
+    "description": "看起来怪异的电子部件全部连接在一起形成了某种奇怪的外星机器，它看起来有点拼凑在一起，但相当复杂，假设你正确地理解了这一机制，它似乎被用来生产某种东西，或者被调到是具有类似目的的其他机器组合的一部分",
+    "symbol": "E",
+    "color": "light_gray",
+    "move_cost_mod": -1,
+    "coverage": 70,
+    "required_str": -1,
+    "max_volume": "1500 L",
+    "flags": [
+      "MOUNTABLE",
+      "BLOCKSDOOR"
+    ],
+    "bash": {
+      "str_min": 60,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        {
+          "item": "wire",
+          "count": [
+            1,
+            3
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            1,
+            2
+          ]
+        },
+        {
+          "item": "steel_chunk",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "bearing",
+          "charges": [
+            2,
+            6
+          ]
+        },
+        {
+          "item": "motor",
+          "prob": 40
+        },
+        {
+          "item": "processor",
+          "count": 1
+        },
+        {
+          "item": "RAM",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "cable",
+          "charges": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "small_lcd_screen",
+          "count": 1
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            5,
+            10
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            3,
+            8
+          ]
+        },
+        {
+          "item": "power_supply",
+          "count": [
+            1,
+            3
+          ]
+        },
+        {
+          "item": "amplifier",
+          "count": [
+            1,
+            3
+          ]
+        },
+        {
+          "item": "plastic_chunk",
+          "count": [
+            2,
+            8
+          ]
+        },
+        {
+          "item": "scrap",
+          "count": [
+            1,
+            5
+          ]
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "wire",
+          "count": [
+            1,
+            3
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            1,
+            2
+          ]
+        },
+        {
+          "item": "steel_chunk",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "bearing",
+          "charges": [
+            2,
+            6
+          ]
+        },
+        {
+          "item": "motor",
+          "prob": 40
+        },
+        {
+          "item": "processor",
+          "count": 1
+        },
+        {
+          "item": "RAM",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "cable",
+          "charges": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "small_lcd_screen",
+          "count": 1
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            5,
+            10
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            3,
+            8
+          ]
+        },
+        {
+          "item": "power_supply",
+          "count": [
+            1,
+            3
+          ]
+        },
+        {
+          "item": "amplifier",
+          "count": [
+            1,
+            3
+          ]
+        },
+        {
+          "item": "plastic_chunk",
+          "count": [
+            2,
+            8
+          ]
+        },
+        {
+          "item": "scrap",
+          "count": [
+            1,
+            5
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alien_scanner3",
+    "name": "异常扫描器",
+    "looks_like": "t_machinery_light",
+    "description": "一个正在缓缓旋转的抛物形碟形天线，上面雕刻着一大块无法辨认的符号图案，可能是某种电路图案，或者是某种宗教咒语。它安装在一个相当普通的电动机上，看上去完全不匹配。",
+    "symbol": "W",
+    "color": "light_gray",
+    "move_cost_mod": 2,
+    "coverage": 30,
+    "required_str": 11,
+    "flags": [
+      "TRANSPARENT",
+      "NOITEM",
+      "BLOCKSDOOR"
+    ],
+    "bash": {
+      "str_min": 30,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            8,
+            12
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "scrap_copper",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "processor",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "motor",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "cable",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "antenna",
+          "count": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            8,
+            12
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "scrap_copper",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "processor",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "motor",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "cable",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "antenna",
+          "count": [
+            0,
+            1
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alien_light3",
+    "name": "异常效用光",
+    "looks_like": "t_utility_light",
+    "description": "灯泡发出一种非常不愉快的光，它的一些部分有一个弯曲的外观，好像金属生长在实验室里，但总的来说，这不是一个特别不寻常的光领域。",
+    "symbol": "T",
+    "color": "light_gray",
+    "move_cost_mod": 3,
+    "coverage": 30,
+    "required_str": 6,
+    "light_emitted": 20,
+    "flags": [
+      "TRANSPARENT",
+      "NOITEM",
+      "BLOCKSDOOR"
+    ],
+    "bash": {
+      "str_min": 20,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            8,
+            12
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "scrap_copper",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "amplifier",
+          "count": [
+            0,
+            5
+          ]
+        },
+        {
+          "item": "power_supply",
+          "count": [
+            0,
+            1
+          ]
+        },
+        {
+          "item": "cable",
+          "count": [
+            0,
+            5
+          ]
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            8,
+            12
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "scrap_copper",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "amplifier",
+          "count": [
+            0,
+            5
+          ]
+        },
+        {
+          "item": "power_supply",
+          "count": [
+            0,
+            1
+          ]
+        },
+        {
+          "item": "cable",
+          "count": [
+            0,
+            5
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alien_charger3",
+    "name": "异常个人充电站",
+    "looks_like": "t_machinery_heavy",
+    "description": "这是一种外星的“加油”或充电装置，这是一个定制形状的近垂直展位，设计用来安装重金属框架，并将其连接到中央电源和营养源。",
+    "symbol": "0",
+    "color": "light_gray",
+    "move_cost_mod": -1,
+    "coverage": 80,
+    "required_str": 14,
+    "flags": [
+      "TRANSPARENT",
+      "NOITEM",
+      "BLOCKSDOOR"
+    ],
+    "bash": {
+      "str_min": 40,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "cable",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "sheet_metal",
+          "count": [
+            0,
+            1
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            4,
+            8
+          ]
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            2,
+            6
+          ]
+        },
+        {
+          "item": "metal_tank_little",
+          "count": [
+            0,
+            1
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            0,
+            4
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            2,
+            5
+          ]
+        },
+        {
+          "item": "amplifier",
+          "count": [
+            2,
+            5
+          ]
+        },
+        {
+          "item": "power_supply",
+          "count": [
+            2,
+            8
+          ]
+        },
+        {
+          "item": "RAM",
+          "count": [
+            2,
+            5
+          ]
+        },
+        {
+          "item": "processor",
+          "count": [
+            1,
+            3
+          ]
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "cable",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "sheet_metal",
+          "count": [
+            0,
+            1
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            4,
+            8
+          ]
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            2,
+            6
+          ]
+        },
+        {
+          "item": "metal_tank_little",
+          "count": [
+            0,
+            1
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            0,
+            4
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            2,
+            5
+          ]
+        },
+        {
+          "item": "amplifier",
+          "count": [
+            2,
+            5
+          ]
+        },
+        {
+          "item": "power_supply",
+          "count": [
+            2,
+            8
+          ]
+        },
+        {
+          "item": "RAM",
+          "count": [
+            2,
+            5
+          ]
+        },
+        {
+          "item": "processor",
+          "count": [
+            1,
+            3
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alien_generator3",
+    "name": "异常发电机",
+    "looks_like": "t_plut_generator",
+    "description": "一个巨大的装置，利用内部某种奇怪的外来矿物溶解所产生的电力，考虑到这台机器内部发生的过程的危险，它被隔离得非常好，只有轻微的嗡嗡声表明它目前处于活动状态",
+    "symbol": "U",
+    "color": "light_gray",
+    "move_cost_mod": -1,
+    "coverage": 80,
+    "required_str": 14,
+    "flags": [
+      "NOITEM",
+      "BLOCKSDOOR"
+    ],
+    "bash": {
+      "str_min": 90,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        {
+          "item": "RAM",
+          "count": [
+            4,
+            8
+          ]
+        },
+        {
+          "item": "cable",
+          "charges": [
+            8,
+            16
+          ]
+        },
+        {
+          "item": "small_lcd_screen",
+          "count": [
+            2,
+            4
+          ]
+        },
+        {
+          "item": "large_lcd_screen",
+          "count": 1
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            12,
+            24
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            6,
+            10
+          ]
+        },
+        {
+          "item": "power_supply",
+          "count": [
+            4,
+            8
+          ]
+        },
+        {
+          "item": "amplifier",
+          "count": [
+            3,
+            6
+          ]
+        },
+        {
+          "item": "processor",
+          "charges": [
+            2,
+            8
+          ]
+        },
+        {
+          "item": "scrap",
+          "count": [
+            8,
+            16
+          ]
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "RAM",
+          "count": [
+            4,
+            8
+          ]
+        },
+        {
+          "item": "cable",
+          "charges": [
+            8,
+            16
+          ]
+        },
+        {
+          "item": "small_lcd_screen",
+          "count": [
+            2,
+            4
+          ]
+        },
+        {
+          "item": "large_lcd_screen",
+          "count": 1
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            12,
+            24
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            6,
+            10
+          ]
+        },
+        {
+          "item": "power_supply",
+          "count": [
+            4,
+            8
+          ]
+        },
+        {
+          "item": "amplifier",
+          "count": [
+            3,
+            6
+          ]
+        },
+        {
+          "item": "processor",
+          "charges": [
+            2,
+            8
+          ]
+        },
+        {
+          "item": "scrap",
+          "count": [
+            8,
+            16
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alienprinter_small3",
+    "name": "异常电路打印机",
+    "looks_like": "t_machinery_electronic",
+    "description": "这台高高的装置上面有个由各种管道和喷嘴组成的网格。根据放在输出料斗中的那堆产品来看，它看起来像是一台用来打印复杂电子元件的3D打印机。",
+    "symbol": "U",
+    "color": "light_gray",
+    "move_cost_mod": -1,
+    "coverage": 80,
+    "required_str": 14,
+    "flags": [
+      "TRANSPARENT",
+      "NOITEM",
+      "BLOCKSDOOR"
+    ],
+    "bash": {
+      "str_min": 90,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            20,
+            120
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            10,
+            20
+          ]
+        },
+        {
+          "item": "pipe_fittings",
+          "count": [
+            2,
+            4
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            10,
+            30
+          ]
+        },
+        {
+          "item": "scrap_copper",
+          "count": [
+            20,
+            40
+          ]
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            20,
+            40
+          ]
+        },
+        {
+          "item": "RAM",
+          "count": [
+            0,
+            5
+          ]
+        },
+        {
+          "item": "motor",
+          "count": [
+            0,
+            6
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            4
+          ]
+        },
+        {
+          "item": "processor",
+          "count": [
+            0,
+            5
+          ]
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            20,
+            120
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            10,
+            20
+          ]
+        },
+        {
+          "item": "pipe_fittings",
+          "count": [
+            2,
+            4
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            10,
+            30
+          ]
+        },
+        {
+          "item": "scrap_copper",
+          "count": [
+            20,
+            40
+          ]
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            20,
+            40
+          ]
+        },
+        {
+          "item": "RAM",
+          "count": [
+            0,
+            5
+          ]
+        },
+        {
+          "item": "motor",
+          "count": [
+            0,
+            6
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            4
+          ]
+        },
+        {
+          "item": "processor",
+          "count": [
+            0,
+            5
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alien_console3",
+    "name": "异常计算机面板",
+    "symbol": "&",
+    "description": "在显示屏上可以看到一个相对较小的计算机面板、完全怪异的界面和完全无法辨认的“文本”墙，在黑暗中以鲜艳的颜色闪烁",
+    "color": "red",
+    "looks_like": "f_console",
+    "move_cost_mod": -1,
+    "coverage": 50,
+    "light_emitted": 20,
+    "required_str": 14,
+    "flags": [
+      "BLOCKSDOOR",
+      "NOITEM"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 150,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "items": [
+        {
+          "item": "processor",
+          "prob": 25
+        },
+        {
+          "item": "RAM",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "cable",
+          "charges": [
+            1,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "small_lcd_screen",
+          "prob": 25
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            1,
+            4
+          ],
+          "prob": 50
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "power_supply",
+          "prob": 25
+        },
+        {
+          "item": "amplifier",
+          "prob": 25
+        },
+        {
+          "item": "plastic_chunk",
+          "count": [
+            4,
+            10
+          ],
+          "prob": 50
+        },
+        {
+          "item": "scrap",
+          "count": [
+            2,
+            6
+          ],
+          "prob": 50
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "processor",
+          "prob": 25
+        },
+        {
+          "item": "RAM",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "cable",
+          "charges": [
+            1,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "small_lcd_screen",
+          "prob": 25
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            1,
+            4
+          ],
+          "prob": 50
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "power_supply",
+          "prob": 25
+        },
+        {
+          "item": "amplifier",
+          "prob": 25
+        },
+        {
+          "item": "plastic_chunk",
+          "count": [
+            4,
+            10
+          ],
+          "prob": 50
+        },
+        {
+          "item": "scrap",
+          "count": [
+            2,
+            6
+          ],
+          "prob": 50
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alien_converter3",
+    "name": "反常变换器",
+    "description": "令人惊讶的光滑的机器存在的确切目的是未知的，但采取一个疯狂的猜测，它似乎是能够转换成其他类型的外来物质的某些类型，确切的物理或化学过程涉及是一个纯粹的谜",
+    "symbol": "&",
+    "color": "cyan",
+    "looks_like": "f_console",
+    "move_cost_mod": -1,
+    "coverage": 50,
+    "required_str": 16,
+    "flags": [
+      "BLOCKSDOOR",
+      "NOITEM"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 150,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "items": [
+        {
+          "item": "processor",
+          "prob": 25
+        },
+        {
+          "item": "RAM",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "cable",
+          "charges": [
+            1,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "small_lcd_screen",
+          "prob": 25
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            1,
+            4
+          ],
+          "prob": 50
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "power_supply",
+          "prob": 25
+        },
+        {
+          "item": "amplifier",
+          "prob": 25
+        },
+        {
+          "item": "plastic_chunk",
+          "count": [
+            4,
+            10
+          ],
+          "prob": 50
+        },
+        {
+          "item": "scrap",
+          "count": [
+            2,
+            6
+          ],
+          "prob": 50
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "processor",
+          "prob": 25
+        },
+        {
+          "item": "RAM",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "cable",
+          "charges": [
+            1,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "small_lcd_screen",
+          "prob": 25
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            1,
+            4
+          ],
+          "prob": 50
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "power_supply",
+          "prob": 25
+        },
+        {
+          "item": "amplifier",
+          "prob": 25
+        },
+        {
+          "item": "plastic_chunk",
+          "count": [
+            4,
+            10
+          ],
+          "prob": 50
+        },
+        {
+          "item": "scrap",
+          "count": [
+            2,
+            6
+          ],
+          "prob": 50
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alien_antenna4",
+    "name": "异常BL9天线",
+    "looks_like": "t_radio_tower",
+    "description": "这个奇怪的装置看起来像是一些拼凑起来的发射器或接收器天线，连接在这个奇怪的设施里的其他电器上",
+    "symbol": "d",
+    "color": "light_gray",
+    "move_cost_mod": 2,
+    "coverage": 30,
+    "required_str": 11,
+    "flags": [
+      "NOITEM",
+      "BLOCKSDOOR"
+    ],
+    "bash": {
+      "str_min": 30,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            8,
+            12
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "pipe_fittings",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "sheet_metal",
+          "count": [
+            1,
+            2
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "antenna",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "processor",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "motor",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "cable",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "scrap_copper",
+          "count": [
+            2,
+            10
+          ]
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            8,
+            12
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "pipe_fittings",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "sheet_metal",
+          "count": [
+            1,
+            2
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "antenna",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "processor",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "motor",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "cable",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "scrap_copper",
+          "count": [
+            2,
+            10
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alien_machinery4",
+    "name": "反常电子机械",
+    "looks_like": "f_server_stack",
+    "description": "看起来怪异的电子部件全部连接在一起形成了某种奇怪的外星机器，它看起来有点拼凑在一起，但相当复杂，假设你正确地理解了这一机制，它似乎被用来生产某种东西，或者被调到是具有类似目的的其他机器组合的一部分",
+    "symbol": "E",
+    "color": "light_gray",
+    "move_cost_mod": -1,
+    "coverage": 70,
+    "required_str": -1,
+    "max_volume": "1500 L",
+    "flags": [
+      "MOUNTABLE",
+      "BLOCKSDOOR"
+    ],
+    "bash": {
+      "str_min": 60,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        {
+          "item": "wire",
+          "count": [
+            1,
+            3
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            1,
+            2
+          ]
+        },
+        {
+          "item": "steel_chunk",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "bearing",
+          "charges": [
+            2,
+            6
+          ]
+        },
+        {
+          "item": "motor",
+          "prob": 40
+        },
+        {
+          "item": "processor",
+          "count": 1
+        },
+        {
+          "item": "RAM",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "cable",
+          "charges": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "small_lcd_screen",
+          "count": 1
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            5,
+            10
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            3,
+            8
+          ]
+        },
+        {
+          "item": "power_supply",
+          "count": [
+            1,
+            3
+          ]
+        },
+        {
+          "item": "amplifier",
+          "count": [
+            1,
+            3
+          ]
+        },
+        {
+          "item": "plastic_chunk",
+          "count": [
+            2,
+            8
+          ]
+        },
+        {
+          "item": "scrap",
+          "count": [
+            1,
+            5
+          ]
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "wire",
+          "count": [
+            1,
+            3
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            1,
+            2
+          ]
+        },
+        {
+          "item": "steel_chunk",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "bearing",
+          "charges": [
+            2,
+            6
+          ]
+        },
+        {
+          "item": "motor",
+          "prob": 40
+        },
+        {
+          "item": "processor",
+          "count": 1
+        },
+        {
+          "item": "RAM",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "cable",
+          "charges": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "small_lcd_screen",
+          "count": 1
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            5,
+            10
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            3,
+            8
+          ]
+        },
+        {
+          "item": "power_supply",
+          "count": [
+            1,
+            3
+          ]
+        },
+        {
+          "item": "amplifier",
+          "count": [
+            1,
+            3
+          ]
+        },
+        {
+          "item": "plastic_chunk",
+          "count": [
+            2,
+            8
+          ]
+        },
+        {
+          "item": "scrap",
+          "count": [
+            1,
+            5
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alien_scanner4",
+    "name": "异常扫描器",
+    "looks_like": "t_machinery_light",
+    "description": "一个正在缓缓旋转的抛物形碟形天线，上面雕刻着一大块无法辨认的符号图案，可能是某种电路图案，或者是某种宗教咒语。它安装在一个相当普通的电动机上，看上去完全不匹配。",
+    "symbol": "W",
+    "color": "light_gray",
+    "move_cost_mod": 2,
+    "coverage": 30,
+    "required_str": 11,
+    "flags": [
+      "TRANSPARENT",
+      "NOITEM",
+      "BLOCKSDOOR"
+    ],
+    "bash": {
+      "str_min": 30,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            8,
+            12
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "scrap_copper",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "processor",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "motor",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "cable",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "antenna",
+          "count": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            8,
+            12
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "scrap_copper",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "processor",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "motor",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "cable",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "antenna",
+          "count": [
+            0,
+            1
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alien_light4",
+    "name": "异常效用光",
+    "looks_like": "t_utility_light",
+    "description": "灯泡发出一种非常不愉快的光，它的一些部分有一个弯曲的外观，好像金属生长在实验室里，但总的来说，这不是一个特别不寻常的光领域。",
+    "symbol": "T",
+    "color": "light_gray",
+    "move_cost_mod": 3,
+    "coverage": 30,
+    "required_str": 6,
+    "light_emitted": 20,
+    "flags": [
+      "TRANSPARENT",
+      "NOITEM",
+      "BLOCKSDOOR"
+    ],
+    "bash": {
+      "str_min": 20,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            8,
+            12
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "scrap_copper",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "amplifier",
+          "count": [
+            0,
+            5
+          ]
+        },
+        {
+          "item": "power_supply",
+          "count": [
+            0,
+            1
+          ]
+        },
+        {
+          "item": "cable",
+          "count": [
+            0,
+            5
+          ]
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            8,
+            12
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            0,
+            3
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "scrap_copper",
+          "count": [
+            2,
+            10
+          ]
+        },
+        {
+          "item": "amplifier",
+          "count": [
+            0,
+            5
+          ]
+        },
+        {
+          "item": "power_supply",
+          "count": [
+            0,
+            1
+          ]
+        },
+        {
+          "item": "cable",
+          "count": [
+            0,
+            5
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alien_charger4",
+    "name": "异常个人充电站",
+    "looks_like": "t_machinery_heavy",
+    "description": "这是一种外星的“加油”或充电装置，这是一个定制形状的近垂直展位，设计用来安装重金属框架，并将其连接到中央电源和营养源。",
+    "symbol": "0",
+    "color": "light_gray",
+    "move_cost_mod": -1,
+    "coverage": 80,
+    "required_str": 14,
+    "flags": [
+      "TRANSPARENT",
+      "NOITEM",
+      "BLOCKSDOOR"
+    ],
+    "bash": {
+      "str_min": 40,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "cable",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "sheet_metal",
+          "count": [
+            0,
+            1
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            4,
+            8
+          ]
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            2,
+            6
+          ]
+        },
+        {
+          "item": "metal_tank_little",
+          "count": [
+            0,
+            1
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            0,
+            4
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            2,
+            5
+          ]
+        },
+        {
+          "item": "amplifier",
+          "count": [
+            2,
+            5
+          ]
+        },
+        {
+          "item": "power_supply",
+          "count": [
+            2,
+            8
+          ]
+        },
+        {
+          "item": "RAM",
+          "count": [
+            2,
+            5
+          ]
+        },
+        {
+          "item": "processor",
+          "count": [
+            1,
+            3
+          ]
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "cable",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "sheet_metal",
+          "count": [
+            0,
+            1
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            4,
+            8
+          ]
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            2,
+            6
+          ]
+        },
+        {
+          "item": "metal_tank_little",
+          "count": [
+            0,
+            1
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            0,
+            4
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            2,
+            5
+          ]
+        },
+        {
+          "item": "amplifier",
+          "count": [
+            2,
+            5
+          ]
+        },
+        {
+          "item": "power_supply",
+          "count": [
+            2,
+            8
+          ]
+        },
+        {
+          "item": "RAM",
+          "count": [
+            2,
+            5
+          ]
+        },
+        {
+          "item": "processor",
+          "count": [
+            1,
+            3
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alien_generator4",
+    "name": "异常发电机",
+    "looks_like": "t_plut_generator",
+    "description": "一个巨大的装置，利用内部某种奇怪的外来矿物溶解所产生的电力，考虑到这台机器内部发生的过程的危险，它被隔离得非常好，只有轻微的嗡嗡声表明它目前处于活动状态",
+    "symbol": "U",
+    "color": "light_gray",
+    "move_cost_mod": -1,
+    "coverage": 80,
+    "required_str": 14,
+    "flags": [
+      "NOITEM",
+      "BLOCKSDOOR"
+    ],
+    "bash": {
+      "str_min": 90,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        {
+          "item": "RAM",
+          "count": [
+            4,
+            8
+          ]
+        },
+        {
+          "item": "cable",
+          "charges": [
+            8,
+            16
+          ]
+        },
+        {
+          "item": "small_lcd_screen",
+          "count": [
+            2,
+            4
+          ]
+        },
+        {
+          "item": "large_lcd_screen",
+          "count": 1
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            12,
+            24
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            6,
+            10
+          ]
+        },
+        {
+          "item": "power_supply",
+          "count": [
+            4,
+            8
+          ]
+        },
+        {
+          "item": "amplifier",
+          "count": [
+            3,
+            6
+          ]
+        },
+        {
+          "item": "processor",
+          "charges": [
+            2,
+            8
+          ]
+        },
+        {
+          "item": "scrap",
+          "count": [
+            8,
+            16
+          ]
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "RAM",
+          "count": [
+            4,
+            8
+          ]
+        },
+        {
+          "item": "cable",
+          "charges": [
+            8,
+            16
+          ]
+        },
+        {
+          "item": "small_lcd_screen",
+          "count": [
+            2,
+            4
+          ]
+        },
+        {
+          "item": "large_lcd_screen",
+          "count": 1
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            12,
+            24
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            6,
+            10
+          ]
+        },
+        {
+          "item": "power_supply",
+          "count": [
+            4,
+            8
+          ]
+        },
+        {
+          "item": "amplifier",
+          "count": [
+            3,
+            6
+          ]
+        },
+        {
+          "item": "processor",
+          "charges": [
+            2,
+            8
+          ]
+        },
+        {
+          "item": "scrap",
+          "count": [
+            8,
+            16
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alienprinter_small4",
+    "name": "异常电路打印机",
+    "looks_like": "t_machinery_electronic",
+    "description": "这台高高的装置上面有个由各种管道和喷嘴组成的网格。根据放在输出料斗中的那堆产品来看，它看起来像是一台用来打印复杂电子元件的3D打印机。",
+    "symbol": "U",
+    "color": "light_gray",
+    "move_cost_mod": -1,
+    "coverage": 80,
+    "required_str": 14,
+    "flags": [
+      "TRANSPARENT",
+      "NOITEM",
+      "BLOCKSDOOR"
+    ],
+    "bash": {
+      "str_min": 90,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            20,
+            120
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            10,
+            20
+          ]
+        },
+        {
+          "item": "pipe_fittings",
+          "count": [
+            2,
+            4
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            10,
+            30
+          ]
+        },
+        {
+          "item": "scrap_copper",
+          "count": [
+            20,
+            40
+          ]
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            20,
+            40
+          ]
+        },
+        {
+          "item": "RAM",
+          "count": [
+            0,
+            5
+          ]
+        },
+        {
+          "item": "motor",
+          "count": [
+            0,
+            6
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            4
+          ]
+        },
+        {
+          "item": "processor",
+          "count": [
+            0,
+            5
+          ]
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            20,
+            120
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            10,
+            20
+          ]
+        },
+        {
+          "item": "pipe_fittings",
+          "count": [
+            2,
+            4
+          ]
+        },
+        {
+          "item": "sheet_metal_small",
+          "count": [
+            10,
+            30
+          ]
+        },
+        {
+          "item": "scrap_copper",
+          "count": [
+            20,
+            40
+          ]
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            20,
+            40
+          ]
+        },
+        {
+          "item": "RAM",
+          "count": [
+            0,
+            5
+          ]
+        },
+        {
+          "item": "motor",
+          "count": [
+            0,
+            6
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            4
+          ]
+        },
+        {
+          "item": "processor",
+          "count": [
+            0,
+            5
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alien_console4",
+    "name": "异常计算机面板",
+    "symbol": "&",
+    "description": "在显示屏上可以看到一个相对较小的计算机面板、完全怪异的界面和完全无法辨认的“文本”墙，在黑暗中以鲜艳的颜色闪烁",
+    "color": "red",
+    "looks_like": "f_console",
+    "move_cost_mod": -1,
+    "coverage": 50,
+    "light_emitted": 20,
+    "required_str": 14,
+    "flags": [
+      "BLOCKSDOOR",
+      "NOITEM"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 150,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "items": [
+        {
+          "item": "processor",
+          "prob": 25
+        },
+        {
+          "item": "RAM",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "cable",
+          "charges": [
+            1,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "small_lcd_screen",
+          "prob": 25
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            1,
+            4
+          ],
+          "prob": 50
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "power_supply",
+          "prob": 25
+        },
+        {
+          "item": "amplifier",
+          "prob": 25
+        },
+        {
+          "item": "plastic_chunk",
+          "count": [
+            4,
+            10
+          ],
+          "prob": 50
+        },
+        {
+          "item": "scrap",
+          "count": [
+            2,
+            6
+          ],
+          "prob": 50
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "processor",
+          "prob": 25
+        },
+        {
+          "item": "RAM",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "cable",
+          "charges": [
+            1,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "small_lcd_screen",
+          "prob": 25
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            1,
+            4
+          ],
+          "prob": 50
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "power_supply",
+          "prob": 25
+        },
+        {
+          "item": "amplifier",
+          "prob": 25
+        },
+        {
+          "item": "plastic_chunk",
+          "count": [
+            4,
+            10
+          ],
+          "prob": 50
+        },
+        {
+          "item": "scrap",
+          "count": [
+            2,
+            6
+          ],
+          "prob": 50
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_BL9_alien_converter4",
+    "name": "反常变换器",
+    "description": "令人惊讶的光滑的机器存在的确切目的是未知的，但采取一个疯狂的猜测，它似乎是能够转换成其他类型的外来物质的某些类型，确切的物理或化学过程涉及是一个纯粹的谜",
+    "symbol": "&",
+    "color": "cyan",
+    "looks_like": "f_console",
+    "move_cost_mod": -1,
+    "coverage": 50,
+    "required_str": 16,
+    "flags": [
+      "BLOCKSDOOR",
+      "NOITEM"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 150,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "items": [
+        {
+          "item": "processor",
+          "prob": 25
+        },
+        {
+          "item": "RAM",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "cable",
+          "charges": [
+            1,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "small_lcd_screen",
+          "prob": 25
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            1,
+            4
+          ],
+          "prob": 50
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "power_supply",
+          "prob": 25
+        },
+        {
+          "item": "amplifier",
+          "prob": 25
+        },
+        {
+          "item": "plastic_chunk",
+          "count": [
+            4,
+            10
+          ],
+          "prob": 50
+        },
+        {
+          "item": "scrap",
+          "count": [
+            2,
+            6
+          ],
+          "prob": 50
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "processor",
+          "prob": 25
+        },
+        {
+          "item": "RAM",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "cable",
+          "charges": [
+            1,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "small_lcd_screen",
+          "prob": 25
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            1,
+            4
+          ],
+          "prob": 50
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "power_supply",
+          "prob": 25
+        },
+        {
+          "item": "amplifier",
+          "prob": 25
+        },
+        {
+          "item": "plastic_chunk",
+          "count": [
+            4,
+            10
+          ],
+          "prob": 50
+        },
+        {
+          "item": "scrap",
+          "count": [
+            2,
+            6
+          ],
+          "prob": 50
+        }
+      ]
+    }
+  }
+]

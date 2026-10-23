@@ -1,0 +1,357 @@
+[
+ {
+  "copy-from": "survivor_belt_notools",
+  "type": "ARMOR",
+  "id": "survivor_belt_notools",
+  "name": {
+   "str": "幸存者腰带"
+  },
+  "encumbrance": 1,
+  "pocket_data": [
+   {
+    "pocket_type": "CONTAINER",
+    "min_item_volume": "0 ml",
+    "max_contains_volume": "1250 ml",
+    "max_contains_weight": "1500 g",
+    "moves": 3,
+    "flag_restriction": [
+     "SHEATH_KNIFE",
+     "SHEATH_SWORD",
+     "BELT_CLIP"
+    ]
+   }
+  ],
+  "use_action": {
+   "type": "holster",
+   "holster_prompt": "收刀",
+   "holster_msg": "你将%s收鞘"
+  }
+ },
+ {
+  "copy-from": "noise_emitter_on",
+  "id": "noise_emitter_on",
+  "type": "TOOL",
+  "name": {
+   "str": "噪音发生器（开）"
+  },
+  "turns_per_charge": 4
+ },
+ {
+  "copy-from": "q_staff",
+  "id": "q_staff",
+  "name": {
+   "str": "武术长棍"
+  },
+  "type": "GENERIC",
+  "extend": {
+   "flags": [
+    "REACH_ATTACK"
+   ]
+  }
+ },
+ {
+  "copy-from": "i_staff",
+  "type": "GENERIC",
+  "id": "i_staff",
+  "name": {
+   "str": "镔铁棍"
+  },
+  "extend": {
+   "flags": [
+    "REACH_ATTACK"
+   ]
+  }
+ },
+ {
+  "copy-from": "shock_staff",
+  "id": "shock_staff",
+  "type": "TOOL",
+  "name": {
+   "str": "电棍"
+  },
+  "extend": {
+   "flags": [
+    "REACH_ATTACK"
+   ]
+  }
+ },
+ {
+  "copy-from": "headgear",
+  "type": "ARMOR",
+  "id": "headgear",
+  "name": {
+   "str": "格斗头盔"
+  },
+  "extend": {
+   "flags": [
+    "ALLOWS_NATURAL_ATTACKS"
+   ]
+  }
+ },
+ {
+  "id": "lobotomizer",
+  "type": "TOOL",
+  "symbol": "/",
+  "color": "dark_gray",
+  "name": {
+   "str": "开瓢器"
+  },
+  "description": "这是一个手工锻造的可折叠工具——磨尖一把带有伸缩柄的铲子，然后在铲头下面焊上双刃斧。它可以当铲子用，也可以用来劈碎丧尸的脑袋。",
+  "price": "250 USD",
+  "material": [
+   "steel"
+  ],
+  "weight": "2722 g",
+  "volume": "1750 ml",
+  "bashing": 13,
+  "cutting": 26,
+  "techniques": [
+   "BRUTAL"
+  ],
+  "to_hit": -1,
+  "qualities": [
+   [
+    "DIG",
+    2
+   ],
+   [
+    "AXE",
+    2
+   ],
+   [
+    "CUT",
+    1
+   ],
+   [
+    "BUTCHER",
+    -11
+   ]
+  ]
+ },
+ {
+  "copy-from": "diveknife",
+  "id": "diveknife",
+  "type": "TOOL",
+  "name": {
+   "str": "潜水匕首",
+   "str_pl": "潜水匕首"
+  },
+  "use_action": [
+   "CROWBAR"
+  ]
+ },
+ {
+  "copy-from": "halberd",
+  "id": "halberd",
+  "type": "GENERIC",
+  "name": {
+   "str": "战戟"
+  },
+  "techniques": [
+   "SWEEP"
+  ]
+ },
+ {
+  "copy-from": "naginata",
+  "id": "naginata",
+  "type": "GENERIC",
+  "name": {
+   "str": "薙刀"
+  },
+  "techniques": [
+   "SWEEP",
+   "RAPID"
+  ]
+ },
+ {
+  "copy-from": "glaive",
+  "id": "glaive",
+  "type": "GENERIC",
+  "name": {
+   "str": "长柄刀"
+  },
+  "techniques": [
+   "BRUTAL"
+  ]
+ },
+ {
+  "copy-from": "battleaxe",
+  "id": "battleaxe",
+  "type": "TOOL",
+  "name": {
+   "str": "战斧"
+  },
+  "techniques": [
+   "BRUTAL",
+   "WBLOCK_1"
+  ]
+ },
+ {
+  "copy-from": "broadsword",
+  "id": "broadsword",
+  "type": "TOOL",
+  "name": {
+   "str": "阔剑"
+  },
+  "techniques": "SWEEP",
+  "bashing": 12,
+  "cutting": 31
+ },
+ {
+  "copy-from": "zweifire_on",
+  "id": "zweifire_on",
+  "//": "All of this is SUPPOSED to be in German.",
+  "type": "TOOL",
+  "name": {
+   "str": "焰光终结者（开）",
+   "str_pl": "火焰之剑（开）"
+  },
+  "techniques": "SPIN"
+ },
+ {
+  "copy-from": "broadfire_off",
+  "id": "broadfire_off",
+  "type": "TOOL",
+  "name": {
+   "str": "御火者（关）",
+   "str_pl": "火种（关闭）"
+  },
+  "techniques": "SWEEP",
+  "bashing": 12,
+  "cutting": 31
+ },
+ {
+  "copy-from": "broadfire_on",
+  "id": "broadfire_on",
+  "type": "TOOL",
+  "name": {
+   "str": "御火者（开）",
+   "str_pl": "御火者（开）"
+  },
+  "techniques": [
+   "SWEEP",
+   "WIDE"
+  ],
+  "bashing": 12,
+  "cutting": 31
+ },
+ {
+  "copy-from": "katana",
+  "id": "katana",
+  "type": "TOOL",
+  "name": {
+   "str": "武士刀"
+  },
+  "bashing": 4,
+  "cutting": 35
+ },
+ {
+  "copy-from": "firekatana_off",
+  "id": "firekatana_off",
+  "type": "TOOL",
+  "name": {
+   "str": "升阳刀（关）",
+   "str_pl": "升阳刀（关）"
+  },
+  "bashing": 4,
+  "cutting": 35
+ },
+ {
+  "copy-from": "firekatana_on",
+  "id": "firekatana_on",
+  "type": "TOOL",
+  "name": {
+   "str": "升阳刀（开）",
+   "str_pl": "升阳刀（开）"
+  },
+  "techniques": [
+   "RAPID",
+   "WIDE"
+  ],
+  "bashing": 4,
+  "cutting": 35
+ },
+ {
+  "copy-from": "firemachete_on",
+  "id": "firemachete_on",
+  "type": "TOOL",
+  "name": {
+   "str": "No. 9（开）",
+   "str_pl": "No. 9（开）"
+  },
+  "techniques": [
+   "WBLOCK_1",
+   "WIDE"
+  ]
+ },
+ {
+  "copy-from": "torch_lit",
+  "id": "torch_lit",
+  "type": "TOOL",
+  "name": {
+   "str": "火把（点燃）",
+   "str_pl": "火把（点燃）"
+  },
+  "techniques": [
+   "WIDE"
+  ]
+ },
+ {
+  "copy-from": "battletorch_lit",
+  "id": "battletorch_lit",
+  "type": "TOOL",
+  "name": {
+   "str": "路易维尔屠杀者（点燃）",
+   "str_pl": "路易维尔屠杀者（点燃）"
+  },
+  "techniques": [
+   "WIDE"
+  ]
+ },
+ {
+  "copy-from": "bagh_nakha",
+  "type": "GENERIC",
+  "id": "bagh_nakha",
+  "name": {
+   "str": "虎爪",
+   "str_pl": "虎爪"
+  },
+  "techniques": [
+   "RAPID",
+   "GRAB",
+   "VORPAL"
+  ],
+  "bashing": 1,
+  "cutting": 6,
+  "flags": [
+   "UNARMED_WEAPON",
+   "DURABLE_MELEE"
+  ]
+ },
+ {
+  "copy-from": "bio_claws_weapon",
+  "type": "GENERIC",
+  "id": "bio_claws_weapon",
+  "name": {
+   "str": "生化合金爪",
+   "str_pl": "生化合金爪"
+  },
+  "techniques": [
+   "WBLOCK_2"
+  ],
+  "bashing": 18,
+  "cutting": 12
+ },
+ {
+  "copy-from": "bio_blade_weapon",
+  "type": "GENERIC",
+  "id": "bio_blade_weapon",
+  "name": {
+   "str": "单分子刀刃"
+  },
+  "techniques": [
+   "RAPID"
+  ],
+  "cutting": 36
+ }
+]

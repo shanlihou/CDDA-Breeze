@@ -1,0 +1,119 @@
+[
+    {
+        "id": "mon_zombie_hulk",
+        "type": "MONSTER",
+        "copy-from":"mon_zombie_hulk",
+        "upgrades": {
+            "half_life": 16,
+            "into_group": "GROUP_ZOMBIE_HULK_UPGRADE"
+          }
+    },
+    {
+        "id": "mon_zombie_nullfield",
+        "type": "MONSTER",
+        "copy-from":"mon_zombie_nullfield",
+        "upgrades": {
+            "half_life": 16,
+            "into_group": "GROUP_ZOMBIE_ELEC_HULK_UPGRADE"
+          }
+    },
+    {
+        "id": "mon_zombie_brute_shocker",
+        "type": "MONSTER",
+        "copy-from":"mon_zombie_brute_shocker",
+        "upgrades": {
+            "half_life": 16,
+            "into_group": "GROUP_ZOMBIE_ELEC_HULK_UPGRADE_2"
+          }
+    },
+    {
+        "id": "mon_skeleton_electric",
+        "type": "MONSTER",
+        "copy-from":"mon_skeleton_electric",
+        "upgrades": {
+            "half_life": 16,
+            "into_group": "GROUP_ZOMBIE_ELEC_HULK_UPGRADE_3"
+          }
+    },
+    {
+        "id": "mon_zombie_armored",
+        "type": "MONSTER",
+        "copy-from":"mon_zombie_armored",
+        "upgrades": {
+            "half_life": 16,
+            "into_group": "GROUP_ZOMBIE_ARMORED_HULK_UPGRADE"
+          }
+    },
+    {
+        "id": "mon_zombie_hammer_hands",
+        "type": "MONSTER",
+        "copy-from":"mon_zombie_hammer_hands",
+        "upgrades": {
+            "half_life": 16,
+            "into_group": "GROUP_ZOMBIE_IRON_HULK_UPGRADE"
+          }
+    },
+    {
+        "id": "mon_zombie_urchin",
+        "type": "MONSTER",
+        "copy-from":"mon_zombie_urchin",
+        "upgrades": {
+            "half_life": 16,
+            "into_group": "GROUP_ZOMBIE_IRON_HULK_UPGRADE_2"
+          }
+    },
+    {
+        "id": "mon_zombie_shell",
+        "type": "MONSTER",
+        "copy-from":"mon_zombie_shell",
+        "upgrades": {
+            "half_life": 16,
+            "into_group": "GROUP_ZOMBIE_IRON_HULK_UPGRADE_3"
+          }
+    },
+    {
+        "id": "mon_zombie_plated",
+        "type": "MONSTER",
+        "copy-from":"mon_zombie_plated",
+        "upgrades": {
+            "half_life": 16,
+            "into_group": "GROUP_ZOMBIE_IRON_HULK_UPGRADE_4"
+          }
+    },
+    {
+        "id": "mon_zombie_master",
+        "type": "MONSTER",
+        "copy-from":"mon_zombie_master",
+        "upgrades": {
+            "half_life": 16,
+            "into_group": "GROUP_ZOMBIE_HARD_HULK_UPGRADE"
+          }
+    },
+    {
+        "id": "mon_zombie_soldier_blackops_2",
+        "type": "MONSTER",
+        "copy-from":"mon_zombie_soldier_blackops_2",
+        "upgrades": {
+            "half_life": 42,
+            "into": "ver_mon_zombie_soldier_blackops_hulk"
+          }
+    },
+    {
+        "id": "mon_zombie_predator",
+        "type": "MONSTER",
+        "copy-from":"mon_zombie_predator",
+        "upgrades": {
+            "half_life": 32,
+            "into_group": "GROUP_ZOMBIE_PREY_HULK_UPGRADE"
+          }
+    },
+    {
+        "id": "mon_zombie_grappler",
+        "type": "MONSTER",
+        "copy-from":"mon_zombie_grappler",
+        "upgrades": {
+            "half_life": 32,
+            "into_group": "GROUP_ZOMBIE_GRAB_HULK_UPGRADE"
+          }
+    }
+]

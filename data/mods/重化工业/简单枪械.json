@@ -1,0 +1,1526 @@
+[
+  {
+    "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
+    "result": "sten",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_RANGED",
+    "skill_used": "fabrication",
+    "skills_required": [
+      [
+        "traps",
+        1
+      ],
+      [
+        "smg",
+        3
+      ]
+    ],
+    "difficulty": 6,
+    "time": "14 h",
+    "reversible": true,
+    "autolearn": true,
+    "proficiencies": [
+      {
+        "proficiency": "prof_gunsmithing_basic"
+      },
+      {
+        "proficiency": "prof_gunsmithing_improv"
+      }
+    ],
+    "using": [
+      [
+        "welding_standard",
+        50
+      ],
+      [
+        "blacksmithing_standard",
+        8
+      ],
+      [
+        "steel_standard",
+        2
+      ]
+    ],
+    "qualities": [
+      {
+        "id": "HAMMER",
+        "level": 3
+      },
+      {
+        "id": "SAW_M",
+        "level": 2
+      },
+      {
+        "id": "SAW_M_FINE",
+        "level": 1
+      },
+      {
+        "id": "SCREW_FINE",
+        "level": 1
+      }
+    ],
+    "tools": [
+      [
+        [
+          "swage",
+          -1
+        ]
+      ],
+      [
+        [
+          "hotcut",
+          -1
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "pipe",
+          2
+        ]
+      ],
+      [
+        [
+          "improve_sights",
+          1
+        ]
+      ],
+      [
+        [
+          "rebar",
+          1
+        ],
+        [
+          "steel_chunk",
+          2
+        ]
+      ],
+      [
+        [
+          "sheet_metal_small",
+          4
+        ]
+      ],
+      [
+        [
+          "spring",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
+    "result": "sten",
+    "id_suffix": "chongya_gongyi",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_RANGED",
+    "skill_used": "fabrication",
+    "skills_required": [
+      [
+        "traps",
+        1
+      ],
+      [
+        "smg",
+        3
+      ]
+    ],
+    "difficulty": 4,
+    "time": "8 h",
+    "batch_time_factors": [
+      80,
+      4
+    ],
+    "reversible": true,
+    "autolearn": true,
+    "proficiencies": [
+      {
+        "proficiency": "prof_gunsmithing_basic"
+      },
+      {
+        "proficiency": "prof_gunsmithing_improv"
+      }
+    ],
+    "using": [
+      [
+        "welding_standard",
+        50
+      ],
+      [
+        "blacksmithing_standard",
+        8
+      ],
+      [
+        "chongya",
+        6
+      ],
+      [
+        "steel_standard",
+        2
+      ]
+    ],
+    "qualities": [
+      {
+        "id": "HAMMER",
+        "level": 3
+      },
+      {
+        "id": "SAW_M",
+        "level": 2
+      },
+      {
+        "id": "SAW_M_FINE",
+        "level": 1
+      },
+      {
+        "id": "SCREW_FINE",
+        "level": 1
+      }
+    ],
+    "tools": [
+      [
+        [
+          "swage",
+          -1
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "pipe",
+          2
+        ]
+      ],
+      [
+        [
+          "improve_sights",
+          1
+        ]
+      ],
+      [
+        [
+          "rebar",
+          1
+        ],
+        [
+          "steel_chunk",
+          2
+        ]
+      ],
+      [
+        [
+          "sheet_metal_small",
+          4
+        ]
+      ],
+      [
+        [
+          "spring",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "result": "ak_waike",
+    "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_MODS",
+    "skill_used": "fabrication",
+    "difficulty": 3,
+    "skills_required": [
+      [
+        "rifle",
+        3
+      ]
+    ],
+    "book_learn": [
+      [
+        "manual_rifle",
+        2
+      ]
+    ],
+    "time": "30 m",
+    "batch_time_factors": [
+      20,
+      4
+    ],
+    "autolearn": true,
+    "using": [
+      [
+        "chongya",
+        12
+      ],
+      [
+        "forging_standard",
+        12
+      ]
+    ],
+    "tools": [
+      [
+        [
+          "swage",
+          -1
+        ]
+      ]
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_metalworking"
+      },
+      {
+        "proficiency": "prof_blacksmithing"
+      }
+    ],
+    "components": [
+      [
+        [
+          "sheet_metal",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "ak_waike",
+    "name": {
+      "str_sp": "AK冲压枪身"
+    },
+    "description": "AK类步枪的外壳，铸造它们的成本很低，但是你要是想搞到冲压用的设备可就麻烦了。不过你要是想量产步枪，这似乎是唯一可行的选择。",
+    "weight": "1 kg",
+    "longest_side": "37 cm",
+    "to_hit": -2,
+    "color": "dark_gray",
+    "symbol": "]",
+    "material": [
+      "steel"
+    ],
+    "volume": "1 L",
+    "price": 6000
+  },
+  {
+    "result": "ak_qiangtuo",
+    "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_MODS",
+    "skill_used": "fabrication",
+    "difficulty": 3,
+    "skills_required": [
+      [
+        "rifle",
+        3
+      ]
+    ],
+    "book_learn": [
+      [
+        "manual_rifle",
+        2
+      ]
+    ],
+    "time": "120 m",
+    "proficiencies": [
+      {
+        "proficiency": "prof_carving"
+      },
+      {
+        "proficiency": "prof_carpentry_basic"
+      }
+    ],
+    "qualities": [
+      {
+        "id": "HAMMER",
+        "level": 2
+      },
+      {
+        "id": "SAW_W",
+        "level": 2
+      },
+      {
+        "id": "CHISEL_WOOD",
+        "level": 1
+      },
+      {
+        "id": "CUT",
+        "level": 2
+      }
+    ],
+    "components": [
+      [
+        [
+          "2x4",
+          1
+        ]
+      ],
+      [
+        [
+          "any_tallow",
+          2,
+          "LIST"
+        ],
+        [
+          "cooking_oil",
+          16
+        ],
+        [
+          "cooking_oil2",
+          16
+        ],
+        [
+          "lamp_oil",
+          250
+        ],
+        [
+          "motor_oil",
+          250
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "ak_qiangtuo",
+    "name": {
+      "str_sp": "AK枪托护木"
+    },
+    "description": "AK类步枪的枪托以及护木，当然其实也包含了握把，总而言之，这是一位爱好者一点一点手工将它雕刻出来的。",
+    "weight": "680 g",
+    "longest_side": "30 cm",
+    "to_hit": -2,
+    "color": "brown",
+    "symbol": "]",
+    "material": [
+      "steel"
+    ],
+    "volume": "900 ml",
+    "price": 6000
+  },
+  {
+    "result": "ak_qiangji",
+    "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_MODS",
+    "skill_used": "fabrication",
+    "difficulty": 10,
+    "skills_required": [
+      [
+        "rifle",
+        4
+      ],
+      [
+        "mechanics",
+        8
+      ]
+    ],
+    "book_learn": [
+      [
+        "manual_rifle",
+        8
+      ]
+    ],
+    "time": "11 h 20 m",
+    "batch_time_factors": [
+      50,
+      4
+    ],
+    "autolearn": true,
+    "using": [
+      [
+        "chongya",
+        4
+      ],
+      [
+        "forging_standard",
+        2
+      ],
+      [
+        "steel_tiny",
+        2
+      ]
+    ],
+    "qualities": [
+      {
+        "id": "HAMMER",
+        "level": 3
+      },
+      {
+        "id": "HAMMER_FINE",
+        "level": 1
+      },
+      {
+        "id": "SAW_M_FINE",
+        "level": 1
+      },
+      {
+        "id": "SCREW_FINE",
+        "level": 1
+      },
+      {
+        "id": "CHISEL",
+        "level": 3
+      }
+    ],
+    "tools": [
+      [
+        [
+          "swage",
+          -1
+        ]
+      ],
+      [
+        [
+          "hotcut",
+          -1
+        ]
+      ]
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_metalworking"
+      },
+      {
+        "proficiency": "prof_blacksmithing"
+      },
+      {
+        "proficiency": "prof_gunsmithing_basic"
+      },
+      {
+        "proficiency": "prof_gunsmithing_improv"
+      }
+    ],
+    "components": [
+      [
+        [
+          "spring",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "ak_qiangji",
+    "name": {
+      "str_sp": "AK枪机组"
+    },
+    "description": "AK类步枪的枪机组，绝大多数大一点的零件都是冲压并再进行手工处理调整制成，只有最小号的三四个零件是手工制作的。你可以想象到如果不借助机械化设备的话制作这些琐碎的零件能折磨你几个星期。",
+    "weight": "300 g",
+    "longest_side": "6 cm",
+    "to_hit": -2,
+    "color": "dark_gray",
+    "symbol": "*",
+    "material": [
+      "steel"
+    ],
+    "volume": "250 ml",
+    "price": 6000
+  },
+  {
+    "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
+    "result": "ak47",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_RANGED",
+    "skill_used": "fabrication",
+    "skills_required": [
+      [
+        "traps",
+        1
+      ],
+      [
+        "rifle",
+        4
+      ]
+    ],
+    "difficulty": 9,
+    "time": "8 h",
+    "reversible": true,
+    "autolearn": true,
+    "proficiencies": [
+      {
+        "proficiency": "prof_gunsmithing_basic"
+      },
+      {
+        "proficiency": "prof_gunsmithing_improv"
+      }
+    ],
+    "using": [
+      [
+        "welding_standard",
+        10
+      ]
+    ],
+    "qualities": [
+      {
+        "id": "HAMMER",
+        "level": 3
+      },
+      {
+        "id": "HAMMER_FINE",
+        "level": 1
+      },
+      {
+        "id": "SAW_M_FINE",
+        "level": 1
+      },
+      {
+        "id": "SCREW_FINE",
+        "level": 1
+      },
+      {
+        "id": "THREAD_TAP",
+        "level": 2
+      }
+    ],
+    "components": [
+      [
+        [
+          "pipe",
+          2
+        ]
+      ],
+      [
+        [
+          "ak_qiangji",
+          1
+        ]
+      ],
+      [
+        [
+          "ak_qiangtuo",
+          1
+        ]
+      ],
+      [
+        [
+          "ak_waike",
+          1
+        ]
+      ],
+      [
+        [
+          "improve_sights",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "result": "akmag10",
+    "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_MAGAZINES",
+    "skill_used": "fabrication",
+    "difficulty": 3,
+    "skills_required": [
+      [
+        "rifle",
+        3
+      ]
+    ],
+    "book_learn": [
+      [
+        "manual_rifle",
+        2
+      ]
+    ],
+    "time": "5 m",
+    "autolearn": true,
+    "using": [
+      [
+        "chongya",
+        1
+      ],
+      [
+        "forging_standard",
+        1
+      ]
+    ],
+    "tools": [
+      [
+        [
+          "swage",
+          -1
+        ]
+      ]
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_metalworking"
+      },
+      {
+        "proficiency": "prof_blacksmithing"
+      }
+    ],
+    "components": [
+      [
+        [
+          "sheet_metal_small",
+          2
+        ]
+      ],
+      [
+        [
+          "spring",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "result": "akmag20",
+    "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_MAGAZINES",
+    "skill_used": "fabrication",
+    "difficulty": 3,
+    "skills_required": [
+      [
+        "rifle",
+        3
+      ]
+    ],
+    "book_learn": [
+      [
+        "manual_rifle",
+        2
+      ]
+    ],
+    "time": "5 m",
+    "autolearn": true,
+    "using": [
+      [
+        "chongya",
+        1
+      ],
+      [
+        "forging_standard",
+        1
+      ]
+    ],
+    "tools": [
+      [
+        [
+          "swage",
+          -1
+        ]
+      ]
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_metalworking"
+      },
+      {
+        "proficiency": "prof_blacksmithing"
+      }
+    ],
+    "components": [
+      [
+        [
+          "sheet_metal_small",
+          2
+        ]
+      ],
+      [
+        [
+          "spring",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "result": "akmag30",
+    "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_MAGAZINES",
+    "skill_used": "fabrication",
+    "difficulty": 3,
+    "skills_required": [
+      [
+        "rifle",
+        3
+      ]
+    ],
+    "book_learn": [
+      [
+        "manual_rifle",
+        2
+      ]
+    ],
+    "time": "5 m",
+    "autolearn": true,
+    "using": [
+      [
+        "chongya",
+        1
+      ],
+      [
+        "forging_standard",
+        1
+      ]
+    ],
+    "tools": [
+      [
+        [
+          "swage",
+          -1
+        ]
+      ]
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_metalworking"
+      },
+      {
+        "proficiency": "prof_blacksmithing"
+      }
+    ],
+    "components": [
+      [
+        [
+          "sheet_metal_small",
+          2
+        ]
+      ],
+      [
+        [
+          "spring",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "result": "akmag40",
+    "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_MAGAZINES",
+    "skill_used": "fabrication",
+    "difficulty": 3,
+    "skills_required": [
+      [
+        "rifle",
+        3
+      ]
+    ],
+    "book_learn": [
+      [
+        "manual_rifle",
+        2
+      ]
+    ],
+    "time": "5 m",
+    "autolearn": true,
+    "using": [
+      [
+        "chongya",
+        1
+      ],
+      [
+        "forging_standard",
+        2
+      ]
+    ],
+    "tools": [
+      [
+        [
+          "swage",
+          -1
+        ]
+      ]
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_metalworking"
+      },
+      {
+        "proficiency": "prof_blacksmithing"
+      }
+    ],
+    "components": [
+      [
+        [
+          "sheet_metal_small",
+          3
+        ]
+      ],
+      [
+        [
+          "spring",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
+    "result": "colt_army",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_RANGED",
+    "skill_used": "fabrication",
+    "skills_required": [
+      [
+        "traps",
+        2
+      ],
+      [
+        "gun",
+        3
+      ]
+    ],
+    "difficulty": 6,
+    "time": "8 h",
+    "reversible": true,
+    "book_learn": [
+      [
+        "manual_pistol",
+        5
+      ]
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_gunsmithing_basic"
+      },
+      {
+        "proficiency": "prof_gunsmithing_improv"
+      },
+      {
+        "proficiency": "prof_gunsmithing_revolver"
+      }
+    ],
+    "using": [
+      [
+        "blacksmithing_standard",
+        8
+      ],
+      [
+        "chongya",
+        6
+      ],
+      [
+        "steel_standard",
+        1
+      ]
+    ],
+    "qualities": [
+      {
+        "id": "HAMMER",
+        "level": 3
+      },
+      {
+        "id": "SAW_M",
+        "level": 2
+      },
+      {
+        "id": "SAW_M_FINE",
+        "level": 1
+      },
+      {
+        "id": "SCREW_FINE",
+        "level": 1
+      },
+      {
+        "id": "THREAD_TAP",
+        "level": 2
+      }
+    ],
+    "tools": [
+      [
+        [
+          "swage",
+          -1
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "pipe",
+          1
+        ]
+      ],
+      [
+        [
+          "improve_sights",
+          1
+        ]
+      ],
+      [
+        [
+          "spring",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "result": "humu",
+    "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_MODS",
+    "skill_used": "fabrication",
+    "difficulty": 3,
+    "skills_required": [
+      [
+        "rifle",
+        3
+      ]
+    ],
+    "autolearn": true,
+    "time": "120 m",
+    "proficiencies": [
+      {
+        "proficiency": "prof_carving"
+      },
+      {
+        "proficiency": "prof_carpentry_basic"
+      }
+    ],
+    "qualities": [
+      {
+        "id": "HAMMER",
+        "level": 2
+      },
+      {
+        "id": "SAW_W",
+        "level": 2
+      },
+      {
+        "id": "CHISEL_WOOD",
+        "level": 1
+      },
+      {
+        "id": "CUT",
+        "level": 2
+      }
+    ],
+    "components": [
+      [
+        [
+          "2x4",
+          2
+        ]
+      ],
+      [
+        [
+          "any_tallow",
+          4,
+          "LIST"
+        ],
+        [
+          "cooking_oil",
+          32
+        ],
+        [
+          "cooking_oil2",
+          32
+        ],
+        [
+          "lamp_oil",
+          500
+        ],
+        [
+          "motor_oil",
+          500
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "humu",
+    "name": {
+      "str_sp": "长步枪枪身"
+    },
+    "description": "20世纪初步枪的木制枪身的半成品。话虽如此，整体的外形已经雕琢出来了，用于枪械制造的话只需要稍加调整。当然，遇到什么危险你也完全可以把它当做不用担心损坏的普通步枪的枪托打人。",
+    "weight": "1170 g",
+    "longest_side": "122 cm",
+    "color": "brown",
+    "symbol": "]",
+    "material": [
+      "steel"
+    ],
+    "melee_damage": {
+      "bash": 13
+    },
+    "volume": "900 ml",
+    "price": 6000
+  },
+  {
+    "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
+    "result": "mosin91_30",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_RANGED",
+    "skill_used": "fabrication",
+    "skills_required": [
+      [
+        "traps",
+        1
+      ],
+      [
+        "rifle",
+        4
+      ]
+    ],
+    "difficulty": 9,
+    "time": "2 d 23 h",
+    "reversible": true,
+    "book_learn": [
+      [
+        "manual_rifle",
+        7
+      ]
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_metalworking"
+      },
+      {
+        "proficiency": "prof_blacksmithing"
+      },
+      {
+        "proficiency": "prof_gunsmithing_basic"
+      },
+      {
+        "proficiency": "prof_gunsmithing_improv"
+      }
+    ],
+    "using": [
+      [
+        "forging_standard",
+        4
+      ],
+      [
+        "steel_standard",
+        1
+      ]
+    ],
+    "qualities": [
+      {
+        "id": "HAMMER",
+        "level": 3
+      },
+      {
+        "id": "HAMMER_FINE",
+        "level": 1
+      },
+      {
+        "id": "SAW_M_FINE",
+        "level": 1
+      },
+      {
+        "id": "SCREW_FINE",
+        "level": 1
+      },
+      {
+        "id": "THREAD_TAP",
+        "level": 2
+      }
+    ],
+    "tools": [
+      [
+        [
+          "swage",
+          -1
+        ]
+      ],
+      [
+        [
+          "hotcut",
+          -1
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "pipe",
+          2
+        ]
+      ],
+      [
+        [
+          "humu",
+          1
+        ]
+      ],
+      [
+        [
+          "spring",
+          1
+        ]
+      ],
+      [
+        [
+          "improve_sights",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
+    "result": "mosin91_30",
+    "id_suffix": "chongya_gongyi1",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_RANGED",
+    "skill_used": "fabrication",
+    "skills_required": [
+      [
+        "traps",
+        1
+      ],
+      [
+        "rifle",
+        4
+      ]
+    ],
+    "difficulty": 9,
+    "time": "18 h",
+    "reversible": true,
+    "book_learn": [
+      [
+        "manual_rifle",
+        7
+      ]
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_metalworking"
+      },
+      {
+        "proficiency": "prof_blacksmithing"
+      },
+      {
+        "proficiency": "prof_gunsmithing_basic"
+      },
+      {
+        "proficiency": "prof_gunsmithing_improv"
+      }
+    ],
+    "using": [
+      [
+        "forging_standard",
+        4
+      ],
+      [
+        "steel_standard",
+        1
+      ],
+      [
+        "chongya",
+        4
+      ]
+    ],
+    "qualities": [
+      {
+        "id": "HAMMER",
+        "level": 3
+      },
+      {
+        "id": "HAMMER_FINE",
+        "level": 1
+      },
+      {
+        "id": "SAW_M_FINE",
+        "level": 1
+      },
+      {
+        "id": "SCREW_FINE",
+        "level": 1
+      },
+      {
+        "id": "THREAD_TAP",
+        "level": 2
+      }
+    ],
+    "tools": [
+      [
+        [
+          "swage",
+          -1
+        ]
+      ],
+      [
+        [
+          "hotcut",
+          -1
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "pipe",
+          2
+        ]
+      ],
+      [
+        [
+          "humu",
+          1
+        ]
+      ],
+      [
+        [
+          "spring",
+          1
+        ]
+      ],
+      [
+        [
+          "improve_sights",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
+    "result": "m1903",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_RANGED",
+    "skill_used": "fabrication",
+    "skills_required": [
+      [
+        "traps",
+        1
+      ],
+      [
+        "rifle",
+        4
+      ]
+    ],
+    "difficulty": 9,
+    "time": "2 d 23 h",
+    "reversible": true,
+    "book_learn": [
+      [
+        "manual_rifle",
+        7
+      ]
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_metalworking"
+      },
+      {
+        "proficiency": "prof_blacksmithing"
+      },
+      {
+        "proficiency": "prof_gunsmithing_basic"
+      },
+      {
+        "proficiency": "prof_gunsmithing_improv"
+      }
+    ],
+    "using": [
+      [
+        "forging_standard",
+        4
+      ],
+      [
+        "steel_standard",
+        1
+      ]
+    ],
+    "qualities": [
+      {
+        "id": "HAMMER",
+        "level": 3
+      },
+      {
+        "id": "HAMMER_FINE",
+        "level": 1
+      },
+      {
+        "id": "SAW_M_FINE",
+        "level": 1
+      },
+      {
+        "id": "SCREW_FINE",
+        "level": 1
+      },
+      {
+        "id": "THREAD_TAP",
+        "level": 2
+      }
+    ],
+    "tools": [
+      [
+        [
+          "swage",
+          -1
+        ]
+      ],
+      [
+        [
+          "hotcut",
+          -1
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "pipe",
+          2
+        ]
+      ],
+      [
+        [
+          "humu",
+          1
+        ]
+      ],
+      [
+        [
+          "spring",
+          1
+        ]
+      ],
+      [
+        [
+          "improve_sights",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
+    "result": "m1903",
+    "id_suffix": "chongya_gongyi2",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_RANGED",
+    "skill_used": "fabrication",
+    "skills_required": [
+      [
+        "traps",
+        1
+      ],
+      [
+        "rifle",
+        4
+      ]
+    ],
+    "difficulty": 9,
+    "time": "18 h",
+    "reversible": true,
+    "book_learn": [
+      [
+        "manual_rifle",
+        7
+      ]
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_metalworking"
+      },
+      {
+        "proficiency": "prof_blacksmithing"
+      },
+      {
+        "proficiency": "prof_gunsmithing_basic"
+      },
+      {
+        "proficiency": "prof_gunsmithing_improv"
+      }
+    ],
+    "using": [
+      [
+        "forging_standard",
+        4
+      ],
+      [
+        "steel_standard",
+        1
+      ],
+      [
+        "chongya",
+        4
+      ]
+    ],
+    "qualities": [
+      {
+        "id": "HAMMER",
+        "level": 3
+      },
+      {
+        "id": "HAMMER_FINE",
+        "level": 1
+      },
+      {
+        "id": "SAW_M_FINE",
+        "level": 1
+      },
+      {
+        "id": "SCREW_FINE",
+        "level": 1
+      },
+      {
+        "id": "THREAD_TAP",
+        "level": 2
+      }
+    ],
+    "tools": [
+      [
+        [
+          "swage",
+          -1
+        ]
+      ],
+      [
+        [
+          "hotcut",
+          -1
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "pipe",
+          2
+        ]
+      ],
+      [
+        [
+          "humu",
+          1
+        ]
+      ],
+      [
+        [
+          "spring",
+          1
+        ]
+      ],
+      [
+        [
+          "improve_sights",
+          1
+        ]
+      ]
+    ]
+  }
+]

@@ -1,0 +1,36 @@
+[
+
+ {
+    "type": "item_group",
+    "id": "zhenghe_007",
+    "//": "暗龙",
+    "subtype": "collection",
+    "entries": [
+    {"item": "wyrmskin_piece",
+    "prob": 90
+    },
+    { "item": "graboid_fang",
+    "prob": 30
+    },
+    {"item": "essence_blood",
+    "prob": 25,
+    "count": [ 8, 16 ]
+    },
+      { "item": "destiny_copper", "count": [ 20, 25 ] }
+    ]
+  },
+ {
+    "id": "mon_dark_wyrm",
+    "//": "暗龙",
+    "copy-from": "mon_dark_wyrm",
+    "extend": {
+      "categories": [
+        "CLASSIC"
+      ]
+    },
+    "type": "MONSTER",
+    "death_drops": "zhenghe_007"
+  }
+ 
+
+]

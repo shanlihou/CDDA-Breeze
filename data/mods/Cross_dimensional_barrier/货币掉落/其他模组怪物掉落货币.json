@@ -1,0 +1,53 @@
+[
+  {
+		"type" : "item_group",
+		"subtype": "collection",
+		"comment": "永恒Boss专属掉落",
+		"id": "Boss_YH_1",
+		"entries":
+			[
+				{ "item": "cyyl_fenmo", "count": [ 3, 9 ] },
+				{ "item": "cyyl_jyhb", "count": [ 50, 150 ] }
+			]
+  },
+  {
+		"type" : "MONSTER",
+		"id" : "mon_uafv_xm246e1",
+		"copy-from" : "mon_uafv_xm246e1",
+		"death_drops": 
+		{
+			"subtype": "collection",
+			"groups": [
+				[ "space_gold_drops7", 100 ],
+				[ "space_silver_drops6", 100 ]
+			]
+		}
+	},
+	{
+		"type" : "MONSTER",
+		"id" : "Boss_YH",
+		"copy-from" : "Boss_YH",
+		"death_drops": 
+		{
+			"subtype": "collection",
+			"groups": [
+				[ "space_gold_drops7", 100 ],
+				[ "space_silver_drops6", 100 ],
+				[ "Boss_YH_1", 100 ]
+			]
+		}
+	},
+	{
+		"type" : "MONSTER",
+		"id" : "hulk_weapon",
+		"copy-from" : "hulk_weapon",
+		"death_drops": 
+		{
+			"subtype": "collection",
+			"groups": [
+				[ "space_gold_drops7", 100 ],
+				[ "space_silver_drops6", 100 ]
+			]
+		}
+	}
+]

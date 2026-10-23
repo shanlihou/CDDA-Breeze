@@ -1,0 +1,176 @@
+[
+  {  
+  "type": "GUN",
+  "reload_noise_volume": 10,
+  "handling": 20,
+  "name": {
+    "str": "VER"
+  },
+  "symbol": "(",
+  "color": "dark_gray",
+  "ranged_damage": {
+    "damage_type": "bullet",
+    "amount": 15
+  },
+  "copy-from": "rifle_auto",
+  "skill": "rifle",
+  "valid_mod_locations": [
+    [
+      "barrel",
+      1
+    ],
+    [
+      "bore",
+      1
+    ],
+    [
+      "brass catcher",
+      1
+    ],
+    [
+      "grip",
+      1
+    ],
+    [
+      "mechanism",
+      4
+    ],
+    [
+      "magazine",
+      1
+    ],
+    [
+      "muzzle",
+      1
+    ],
+    [
+      "rail",
+      2
+    ],
+    [
+      "sights",
+      2
+    ],
+    [
+      "sling",
+      1
+    ],
+    [
+      "stock",
+      1
+    ],
+    [
+      "stock accessory",
+      2
+    ],
+    [
+      "underbarrel",
+      3
+    ]
+  ],
+  "weapon_category": [
+    "AUTOMATIC_RIFLES"
+  ],
+  "id": "VER_railgun_version",
+  "looks_like": "rm11b_sniper_rifle",
+  "description": "一把原型来自某个世界苏联在核战前研究出的射手步枪。该世界在统一重建后高斯武器技术空前发展，为了纪念一位为统一立下大功不断奔走的核爆特工，他/她的爱枪，VER，经过重新设计后得到了高斯改造，据说只有做出巨大贡献之人才能被授予此枪。该枪由一个你有生之年肯定用不完燃料的快中子微型核反应堆供能，不过放心，辐射防护做的很好（如果你没把这把枪砸坏的话）。这把枪的部分改造蓝图和原型图在该世界遭遇传送门事件后被流亡族获得，进行一定的技术逆向后，由于进行轻量化改造仍然过于沉重，仅进行少量生产。",
+  "weight": "20000 g",
+  "volume": "8000 ml",
+  "longest_side": "1200 mm",
+  "barrel_length": "800 mm",
+  "price": 21000000,
+  "price_postapoc": 4000000,
+  "to_hit": 3,
+  "material": [
+    "steel",
+    "superalloy",
+    "plastic",
+    "hyperweave_on"
+  ],
+  "ammo": [
+    "VER_6x49"
+  ],
+  "dispersion": 40,
+  "durability": 10,
+  "modes": [
+    [
+      "DEFAULT",
+      "semi-auto",
+      1
+    ],
+    [
+      "BURST",
+      "三连发",
+      3
+    ],
+    [
+      "AUTO",
+      "auto",
+      5
+    ]
+  ],
+  "pocket_data": [
+    {
+      "pocket_type": "MAGAZINE_WELL",
+      "item_restriction": [
+        "VERMAG_30rd",
+        "VERMAG_60rd",
+        "VERMAG_150rd"
+      ]
+    }
+  ],
+  "use_action": {
+    "type": "transform",
+    "menu_text": "开始超载",
+    "msg": "你开启了 %s 的超载模式！！！",
+    "target": "VER_railgun_version_on",
+    "active": true
+  },
+  "ammo_effects":["LARGE_BEANBAG"],
+  "bashing": 30,
+  "flags":[
+    "DURABLE_MELEE",
+    "LEAK_DAM",
+    "RADIOACTIVE",
+    "WATERPROOF_GUN",
+    "NEVER_JAMS",
+    "NON_FOULING",
+    "NEEDS_NO_LUBE",
+    "TRADER_AVOID"
+  ]
+},
+{
+  "id": "VER_railgun_version_on",
+  "type":"GUN",
+  "name":{
+    "str":"VER(超载)"
+  },
+  "copy-from":"VER_railgun_version",
+  "use_action": {
+    "type": "transform",
+    "menu_text": "退出超载",
+    "msg": "你关闭了 %s 的超载模式.",
+    "target": "VER_railgun_version"
+  },
+  "ranged_damage": {
+    "damage_type": "bullet",
+    "amount": 65,
+    "armor_penetration": 20
+  },
+  "flags":[
+    "USE_UPS",
+    "DURABLE_MELEE",
+    "RADIOACTIVE",
+    "WATERPROOF_GUN",
+    "NEVER_JAMS",
+    "NON_FOULING",
+    "NEEDS_NO_LUBE",
+    "TRADER_AVOID",
+    "LEAK_ALWAYS"
+  ],
+  "description":"你开启了VER的超载模式，为了避免超载反应堆导致爆炸，冷却系统的生化保护功能下线,开始全功率散热\nVER在被流亡族改造前常驻的激光发射器与热熔等离子发生器开始运作，你需要消耗较多额外能量来维持VER的射击\n注意：超载模式下不会散热！\n辐射开始泄露了,没有防护就不要多开！\n高爆弹在这个模式下不推荐浪费，使用其他弹药来狂欢吧！！！\n不过你能开几发呢？贪心不可为！",
+  "ups_charges": 500,
+  
+  "ammo_effects":["JET","LASER","INCENDIARY","PLASMA","PLASMA_BUBBLE","DRAW_PLASMA_BEAM","DRAW_LASER_BEAM","HEAVY_HIT"]
+}
+]

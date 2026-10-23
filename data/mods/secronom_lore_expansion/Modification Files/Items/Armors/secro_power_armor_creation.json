@@ -1,0 +1,159 @@
+[
+  {
+    "id": "secro_power_armor_flesh_created_fite_bspear",
+    "type": "GENERIC",
+    "symbol": "/",
+    "color": "red",
+    "name": {
+      "str": "<color_light_red>战士造物</color>-骨矛"
+    },
+    "description": "利用肌肉的多功能细胞重建而成。这种生物有机长矛顶端有一个带刺的骨头，而其余的是由肉织带和纤维制成的。",
+    "price": "0 cent",
+    "price_postapoc": "0 cent",
+    "to_hit": 3,
+    "material": [
+      "flesh",
+      "bone"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "TRADER_AVOID",
+      "REACH_ATTACK",
+      "SHEATH_SPEAR",
+      "ALWAYS_TWOHAND"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "WIDE",
+      "SWEEP"
+    ],
+    "weight": "2785 g",
+    "volume": "3325 ml",
+    "bashing": 8,
+    "cutting": 20,
+    "qualities": [
+      [
+        "COOK",
+        1
+      ],
+      [
+        "BUTCHER",
+        -100
+      ]
+    ]
+  },
+  {
+    "id": "secro_power_armor_flesh_created_gun_bonerifle",
+    "type": "GUN",
+    "reload_noise_volume": 3,
+    "symbol": "(",
+    "color": "red",
+    "name": {
+      "str": "<color_light_blue>神枪手造物</color>-骨步枪"
+    },
+    "description": "利用肉体的多功能细胞重建而成。这种生物有机步枪向目标发射针状骨弹。它没有触发机制，步枪只响应用户的命令。一旦它接收到输入，它就会在弹膛中产生肌腱冲击，以高速将子弹穿过它的长筒。\n\n激活执行：\n <color_cyan> <color_pink>[表单] </color>补充- <color_yellow> 800移动/ <color_light_red> 5 hp（随机）\n<color_white> *你创建的骨步枪命令血管通过处理用户的肉来形成一堆骨针。</color>",
+    "price": "0 cent",
+    "price_postapoc": "0 cent",
+    "material": [
+      "flesh",
+      "bone"
+    ],
+    "flags": [
+      "TRADER_AVOID",
+      "NEVER_JAMS",
+      "NON-FOULING",
+      "NO_UNLOAD"
+    ],
+    "skill": "rifle",
+    "ammo": "secro_flesh_boneneedle",
+    "weight": "2830 g",
+    "volume": "4325 ml",
+    "bashing": 10,
+    "range": 15,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 18
+    },
+    "dispersion": 150,
+    "durability": 10,
+    "clip_size": 8,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "secro_flesh_boneneedle": 8
+        }
+      }
+    ],
+    "reload": 75,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "secro_power_armor_flesh_created_gun_bonerifle_ammo_give",
+      "no_fail": true,
+      "need_wielding": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "secro_power_armor_flesh_created_jugg_bpick",
+    "type": "TOOL",
+    "name": {
+      "str": "<color_yellow>巨像造物</color> - 骨镐"
+    },
+    "description": "利用肌肉的多功能细胞重建而成。这种生物有机鹤嘴锄头上有一块高度压缩的骨头，柄上有一块钙化的肉。",
+    "weight": "4125 g",
+    "volume": "2 L",
+    "price": "0 cent",
+    "price_postapoc": "0 cent",
+    "bashing": 10,
+    "cutting": 6,
+    "material": [
+      "flesh",
+      "bone"
+    ],
+    "symbol": "/",
+    "color": "red",
+    "use_action": "PICKAXE",
+    "techniques": [
+      "WBLOCK_1"
+    ],
+    "flags": [
+      "TRADER_AVOID",
+      "SPEAR",
+      "DURABLE_MELEE",
+      "DIG_TOOL",
+      "SHEATH_AXE"
+    ]
+  },
+  {
+    "id": "secro_power_armor_flesh_biolight",
+    "type": "ARMOR",
+    "category": "tools",
+    "name": {
+      "str": "生物发光叶"
+    },
+    "description": "从你的肩膀突出的是小的、形状奇怪的、寿命短暂的叶子，散发出强烈的光。可以超脱。",
+    "weight": "20 g",
+    "volume": "100 ml",
+    "material": [
+      "secro_flesh_reinforced"
+    ],
+    "symbol": "i",
+    "color": "white",
+    "flags": [
+      "PERSONAL",
+      "OVERSIZE",
+      "TRADER_AVOID",
+      "LIGHT_50",
+      "SEMITANGIBLE"
+    ],
+    "armor": [
+      {
+        "covers": [
+          "torso"
+        ]
+      }
+    ]
+  }
+]

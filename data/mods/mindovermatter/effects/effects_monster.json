@@ -1,0 +1,42 @@
+[
+	{
+		"type": "effect_type",
+		"id": "effect_riftwalker_teleport",
+		"name": [ "维度不稳定" ],
+		"desc": [ "你感觉自己几乎不属于这个世界。" ],
+		"apply_message": "",
+		"remove_message": "随着一阵震动，你感觉自己又变得坚实了。",
+		"rating": "bad",
+		"enchantments": [ "enchant_riftwalker_teleport" ],
+		"immune_flags": [ "TELESTOP", "DIMENSIONAL_ANCHOR" ]
+	},
+	{
+		"type": "effect_type",
+		"id": "effect_vitakinetic_health_down",
+		"name": [ "感到不适" ],
+		"desc": [ "你感到虚弱和颤抖。" ],
+		"apply_message": "",
+		"remove_message": "虚弱感逐渐消退。",
+		"rating": "bad",
+		"max_duration": "12 hours",
+		"base_mods": { "str_mod": [ -2 ],  "h_mod_min": [ -2 ], "h_mod_chance": [ 1 ], "h_mod_chance_bot": [ 5 ], "h_mod_tick": [ 600 ], "healing_rate": [ 0.75 ]  }
+	},
+	{
+		"type": "effect_type",
+		"id": "effect_vitakinetic_healing_down",
+		"name": [ "感到非常不适" ],
+		"desc": [ "你感到疲惫和颤抖。" ],
+		"apply_message": "",
+		"remove_message": "虚弱感逐渐消退。",
+		"rating": "bad",
+		"max_duration": "18 hours",
+		"base_mods": { "str_mod": [ -2 ],  "h_mod_min": [ -2 ], "h_mod_chance": [ 1 ], "h_mod_chance_bot": [ 4 ], "h_mod_tick": [ 500 ], "healing_rate": [ 0.5 ]  },
+		"vitamins": [
+			{
+				"vitamin": "iron",
+				"rate": [ [-10, -10] ],
+				"tick": [ "1 m" ]
+			}
+		]
+	}
+]

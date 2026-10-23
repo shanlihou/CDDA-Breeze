@@ -1,0 +1,368 @@
+[
+  {
+    "id": "mon_tsukumogami_seat_airplane_1",
+    "type": "MONSTER",
+    "name": {
+      "str": "活化的座椅",
+      "str_pl": "活化的座椅"
+    },
+    "description": "一个廉价的折叠软航空座椅，配有一套搭扣安全带，像狗一样移动",
+    "volume": "14560 ml",
+    "weight": "24356 g",
+    "default_faction": "touhou_youkai_neutral",
+    "bodytype": "dog",
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "TSUKUMOGAMI_TOUHOU"
+    ],
+    "harvest": "tsukumogami_seat_airplane_harvest",
+    "hp": 60,
+    "speed": 90,
+    "material": [
+      "cotton",
+      "steel"
+    ],
+    "symbol": "H",
+    "looks_like": "f_chair",
+    "color": "light_gray",
+    "aggression": 0,
+    "morale": 20,
+    "melee_skill": 2,
+    "melee_dice": 2,
+    "melee_dice_sides": 6,
+    "dodge": 1,
+    "vision_day": 20,
+    "vision_night": 25,
+    "path_settings": {
+      "max_dist": 20
+    },
+    "anger_triggers": [
+      "FRIEND_DIED",
+      "HURT",
+      "PLAYER_CLOSE",
+      "STALK"
+    ],
+    "flags": [
+      "HEARS",
+      "NOHEAD",
+      "PATH_AVOID_FALL",
+      "PATH_AVOID_FIRE",
+      "SEES"
+    ]
+  },
+  {
+    "id": "mon_tsukumogami_armchair_1",
+    "type": "MONSTER",
+    "name": {
+      "str": "活化的扶手椅",
+      "str_pl": "活化的扶手椅"
+    },
+    "description": "一张简单的带扶手的软垫椅。它看起来很急切。",
+    "volume": "13000 ml",
+    "weight": "8000 g",
+    "default_faction": "touhou_youkai_neutral",
+    "bodytype": "dog",
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "TSUKUMOGAMI_TOUHOU"
+    ],
+    "harvest": "tsukumogami_seat_armchair_harvest",
+    "hp": 40,
+    "speed": 105,
+    "material": [
+      "wood"
+    ],
+    "symbol": "#",
+    "looks_like": "f_armchair",
+    "color": "brown",
+    "aggression": 0,
+    "morale": 15,
+    "melee_skill": 3,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "dodge": 2,
+    "vision_day": 20,
+    "vision_night": 25,
+    "path_settings": {
+      "max_dist": 20
+    },
+    "anger_triggers": [
+      "FRIEND_DIED",
+      "HURT",
+      "PLAYER_CLOSE",
+      "STALK"
+    ],
+    "flags": [
+      "HEARS",
+      "NOHEAD",
+      "PATH_AVOID_FALL",
+      "PATH_AVOID_FIRE",
+      "SEES"
+    ]
+  },
+  {
+    "id": "mon_tsukumogami_seat_chair_1",
+    "type": "MONSTER",
+    "name": {
+      "str": "活化的椅子",
+      "str_pl": "活化的椅子"
+    },
+    "description": "一张简单的木椅，有四条腿、一个座位和一个靠背。它抽动着四处移动。",
+    "volume": "19600 ml",
+    "weight": "10432 g",
+    "default_faction": "touhou_youkai_neutral",
+    "bodytype": "dog",
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "TSUKUMOGAMI_TOUHOU"
+    ],
+    "harvest": "tsukumogami_seat_chair_harvest",
+    "hp": 40,
+    "speed": 105,
+    "material": [
+      "wood"
+    ],
+    "symbol": "#",
+    "looks_like": "f_chair",
+    "color": "brown",
+    "aggression": 0,
+    "morale": 15,
+    "melee_skill": 3,
+    "melee_dice": 2,
+    "melee_dice_sides": 5,
+    "dodge": 2,
+    "vision_day": 20,
+    "vision_night": 25,
+    "path_settings": {
+      "max_dist": 20
+    },
+    "anger_triggers": [
+      "FRIEND_DIED",
+      "HURT",
+      "PLAYER_CLOSE",
+      "STALK"
+    ],
+    "flags": [
+      "HEARS",
+      "NOHEAD",
+      "PATH_AVOID_FALL",
+      "PATH_AVOID_FIRE",
+      "SEES"
+    ]
+  },
+  {
+    "id": "mon_tsukumogami_seat_stool_1",
+    "type": "MONSTER",
+    "name": {
+      "str": "活化的凳子",
+      "str_pl": "活化的凳子"
+    },
+    "description": "一个活化的木凳。它发出嘎嘎声，并做出短促的跳跃，夹杂着看起来僵硬的动作。",
+    "volume": "14700 ml",
+    "weight": "7824 g",
+    "default_faction": "touhou_youkai_neutral",
+    "bodytype": "dog",
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "TSUKUMOGAMI_TOUHOU"
+    ],
+    "harvest": "tsukumogami_seat_stool_harvest",
+    "hp": 30,
+    "speed": 100,
+    "material": [
+      "wood"
+    ],
+    "symbol": "#",
+    "looks_like": "f_stool",
+    "color": "brown",
+    "aggression": 0,
+    "morale": 15,
+    "melee_skill": 2,
+    "melee_dice": 2,
+    "melee_dice_sides": 5,
+    "dodge": 2,
+    "vision_day": 20,
+    "vision_night": 25,
+    "path_settings": {
+      "max_dist": 20
+    },
+    "anger_triggers": [
+      "FRIEND_DIED",
+      "HURT",
+      "PLAYER_CLOSE",
+      "STALK"
+    ],
+    "flags": [
+      "HEARS",
+      "NOHEAD",
+      "PATH_AVOID_FALL",
+      "PATH_AVOID_FIRE",
+      "SEES"
+    ]
+  },
+  {
+    "id": "mon_tsukumogami_table_1",
+    "type": "MONSTER",
+    "name": {
+      "str": "活化的桌子",
+      "str_pl": "活化的桌子"
+    },
+    "description": "一张活化的木椅。每次你瞥它一眼，它似乎都会轻微移动。",
+    "volume": "35000 ml",
+    "weight": "22500 g",
+    "default_faction": "touhou_youkai_neutral",
+    "bodytype": "dog",
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "TSUKUMOGAMI_TOUHOU"
+    ],
+    "harvest": "tsukumogami_table_harvest",
+    "hp": 55,
+    "speed": 110,
+    "material": [
+      "wood"
+    ],
+    "symbol": "#",
+    "looks_like": "f_table",
+    "color": "red",
+    "aggression": 0,
+    "morale": 25,
+    "melee_skill": 3,
+    "melee_dice": 2,
+    "melee_dice_sides": 6,
+    "dodge": 2,
+    "vision_day": 20,
+    "vision_night": 25,
+    "path_settings": {
+      "max_dist": 20
+    },
+    "anger_triggers": [
+      "FRIEND_DIED",
+      "HURT",
+      "PLAYER_CLOSE",
+      "STALK"
+    ],
+    "flags": [
+      "HEARS",
+      "LOUDMOVES",
+      "NOHEAD",
+      "PATH_AVOID_FALL",
+      "PATH_AVOID_FIRE",
+      "SEES"
+    ]
+  },
+  {
+    "id": "mon_tsukumogami_talking_doll_1",
+    "type": "MONSTER",
+    "name": {
+      "str": "活化的玩偶",
+      "str_pl": "活化的玩偶"
+    },
+    "description": "这是一个会说话的玩偶，本来是给孩子们玩的。你很确定它不应该那样移动。",
+    "volume": "750 ml",
+    "weight": "907 g",
+    "default_faction": "touhou_youkai_neutral",
+    "bodytype": "human",
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "TSUKUMOGAMI_TOUHOU"
+    ],
+    "harvest": "tsukumogami_talking_doll_harvest",
+    "hp": 20,
+    "speed": 115,
+    "material": [
+      "cotton",
+      "plastic"
+    ],
+    "symbol": "|",
+    "looks_like": "talking_doll",
+    "color": "pink",
+    "aggression": 0,
+    "morale": 20,
+    "melee_skill": 4,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "dodge": 3,
+    "vision_day": 20,
+    "vision_night": 25,
+    "path_settings": {
+      "max_dist": 20
+    },
+    "anger_triggers": [
+      "FRIEND_DIED",
+      "HURT",
+      "PLAYER_CLOSE",
+      "STALK"
+    ],
+    "flags": [
+      "HEARS",
+      "PATH_AVOID_FALL",
+      "PATH_AVOID_FIRE",
+      "SEES"
+    ]
+  },
+  {
+    "id": "mon_tsukumogami_talking_doll_2",
+    "type": "MONSTER",
+    "name": {
+      "str": "被附身的玩偶",
+      "str_pl": "被附身的玩偶"
+    },
+    "description": "这是一个会说话的玩偶，本来是给孩子们玩的。这个玩偶有些不对劲。",
+    "volume": "750 ml",
+    "weight": "907 g",
+    "default_faction": "touhou_youkai_neutral",
+    "bodytype": "human",
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "TSUKUMOGAMI_TOUHOU"
+    ],
+    "harvest": "tsukumogami_talking_doll_harvest",
+    "hp": 20,
+    "speed": 155,
+    "material": [
+      "cotton",
+      "plastic"
+    ],
+    "symbol": "|",
+    "looks_like": "creepy_doll",
+    "color": "pink",
+    "aggression": 0,
+    "morale": 20,
+    "melee_skill": 4,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "dodge": 4,
+    "vision_day": 20,
+    "vision_night": 25,
+    "path_settings": {
+      "max_dist": 20
+    },
+    "anger_triggers": [
+      "FRIEND_DIED",
+      "HURT",
+      "PLAYER_CLOSE",
+      "STALK"
+    ],
+    "flags": [
+      "HEARS",
+      "PATH_AVOID_FALL",
+      "PATH_AVOID_FIRE",
+      "SEES"
+    ]
+  }
+]

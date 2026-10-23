@@ -1,0 +1,26 @@
+[
+  {
+    "id":"TALK_MOCHIKO_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"你是什么家伙？不是会是丧尸吧？",
+    "responses":[
+      { "text": "啊，不是丧尸，这里很危险，最好一起行动", "topic": "TALK_MOCHIKO_SAN_2" },
+      { "text": "…（无视）", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "//1": "１年目スタートだと年齢が+2になってしまってるので暫定対応として年齢-2を指定",
+    "id":"TALK_MOCHIKO_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"嗯，的确是现在看起来比较好呢...请多关照",
+    "responses":[ 
+      { "text": "…",
+        "effect": [
+          "follow", { "npc_first_topic": "    TALK_FRIEND" },
+          { "arithmetic": [ { "npc_val": "age" }, "=", { "const": 13 } ] }
+        ],
+        "topic": "TALK_DONE"
+      }
+    ] 
+  }
+] 

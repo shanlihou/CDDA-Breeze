@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_ZUNKO_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"哎呀，这样的地方有人来可真少见呢，来尝尝俊达饼吧？",
+    "responses":[
+      { "text": "那我就开动了(邀请加入队伍)", "topic": "TALK_ZUNKO_SAN_2" },
+      { "text": "俊达饼有点…", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_ZUNKO_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"呵呵呵，如果你喜欢的话，那我就每天给你做俊达饼哦♪",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

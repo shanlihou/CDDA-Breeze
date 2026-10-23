@@ -1,0 +1,195 @@
+[
+  {
+    "type": "talk_topic",
+    "id": "TALK_GUNSMITH_SERVICES",
+    "responses": [
+      {
+        "text": "我想买一块悬赏积分手表。[10 美元]",
+        "condition": { "not": { "u_has_item": "bounty_point_watch" } },
+        "effect": { "u_buy_item": "bounty_point_watch", "count": 1, "cost": 1000 },
+        "topic": "TALK_GUNSMITH_SERVICES"
+      },
+      {
+        "text": "结算一下悬赏积分。",
+        "condition": { "u_has_item": "bounty_point_watch" },
+        "topic": "TALK_BOUNTY_WATCH_REDEEM"
+      }
+    ],
+    "//": "同名 talk_topic 会把回复追加到 Jay 原有的 TALK_GUNSMITH_SERVICES 菜单，不会覆盖原版对白。"
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_BOUNTY_WATCH_REDEEM",
+    "dynamic_line": "Jay 检查了手表的身份签名。\n\n当前可兑换积分：<u_val:number_bounty_watch_points> 点。\n兑换比例：1 点 = 0.50 美元，仅计入 Jay 欠你的交易信用。",
+    "responses": [
+      {
+        "text": "兑换 10 点。[获得 5 美元信用]",
+        "condition": {
+          "compare_int": [
+            { "u_val": "var", "var_name": "points", "type": "number", "context": "bounty_watch", "default": 0 },
+            ">=",
+            { "const": 10 }
+          ]
+        },
+        "effect": [
+          { "arithmetic": [ { "u_val": "owed" }, "+=", { "const": 500 } ] },
+          {
+            "arithmetic": [
+              { "u_val": "var", "var_name": "points", "type": "number", "context": "bounty_watch" },
+              "-=",
+              { "const": 10 }
+            ]
+          },
+          {
+            "arithmetic": [
+              { "u_val": "var", "var_name": "last_redeemed_points", "type": "number", "context": "bounty_watch" },
+              "=",
+              { "const": 10 }
+            ]
+          },
+          {
+            "arithmetic": [
+              { "u_val": "var", "var_name": "last_redeemed_cents", "type": "number", "context": "bounty_watch" },
+              "=",
+              { "const": 500 }
+            ]
+          }
+        ],
+        "topic": "TALK_BOUNTY_WATCH_REDEEM_DONE"
+      },
+      {
+        "text": "兑换 50 点。[获得 25 美元信用]",
+        "condition": {
+          "compare_int": [
+            { "u_val": "var", "var_name": "points", "type": "number", "context": "bounty_watch", "default": 0 },
+            ">=",
+            { "const": 50 }
+          ]
+        },
+        "effect": [
+          { "arithmetic": [ { "u_val": "owed" }, "+=", { "const": 2500 } ] },
+          {
+            "arithmetic": [
+              { "u_val": "var", "var_name": "points", "type": "number", "context": "bounty_watch" },
+              "-=",
+              { "const": 50 }
+            ]
+          },
+          {
+            "arithmetic": [
+              { "u_val": "var", "var_name": "last_redeemed_points", "type": "number", "context": "bounty_watch" },
+              "=",
+              { "const": 50 }
+            ]
+          },
+          {
+            "arithmetic": [
+              { "u_val": "var", "var_name": "last_redeemed_cents", "type": "number", "context": "bounty_watch" },
+              "=",
+              { "const": 2500 }
+            ]
+          }
+        ],
+        "topic": "TALK_BOUNTY_WATCH_REDEEM_DONE"
+      },
+      {
+        "text": "兑换 100 点。[获得 50 美元信用]",
+        "condition": {
+          "compare_int": [
+            { "u_val": "var", "var_name": "points", "type": "number", "context": "bounty_watch", "default": 0 },
+            ">=",
+            { "const": 100 }
+          ]
+        },
+        "effect": [
+          { "arithmetic": [ { "u_val": "owed" }, "+=", { "const": 5000 } ] },
+          {
+            "arithmetic": [
+              { "u_val": "var", "var_name": "points", "type": "number", "context": "bounty_watch" },
+              "-=",
+              { "const": 100 }
+            ]
+          },
+          {
+            "arithmetic": [
+              { "u_val": "var", "var_name": "last_redeemed_points", "type": "number", "context": "bounty_watch" },
+              "=",
+              { "const": 100 }
+            ]
+          },
+          {
+            "arithmetic": [
+              { "u_val": "var", "var_name": "last_redeemed_cents", "type": "number", "context": "bounty_watch" },
+              "=",
+              { "const": 5000 }
+            ]
+          }
+        ],
+        "topic": "TALK_BOUNTY_WATCH_REDEEM_DONE"
+      },
+      {
+        "text": "兑换全部积分。",
+        "condition": {
+          "compare_int": [
+            { "u_val": "var", "var_name": "points", "type": "number", "context": "bounty_watch", "default": 0 },
+            ">=",
+            { "const": 1 }
+          ]
+        },
+        "effect": [
+          {
+            "arithmetic": [
+              { "u_val": "var", "var_name": "last_redeemed_points", "type": "number", "context": "bounty_watch" },
+              "=",
+              { "u_val": "var", "var_name": "points", "type": "number", "context": "bounty_watch", "default": 0 }
+            ]
+          },
+          {
+            "arithmetic": [
+              { "u_val": "var", "var_name": "last_redeemed_cents", "type": "number", "context": "bounty_watch" },
+              "=",
+              { "u_val": "var", "var_name": "points", "type": "number", "context": "bounty_watch", "default": 0 },
+              "*",
+              { "const": 50 }
+            ]
+          },
+          {
+            "arithmetic": [
+              { "u_val": "owed" },
+              "+=",
+              { "u_val": "var", "var_name": "last_redeemed_cents", "type": "number", "context": "bounty_watch", "default": 0 }
+            ]
+          },
+          {
+            "arithmetic": [
+              { "u_val": "var", "var_name": "points", "type": "number", "context": "bounty_watch" },
+              "=",
+              { "const": 0 }
+            ]
+          }
+        ],
+        "topic": "TALK_BOUNTY_WATCH_REDEEM_DONE"
+      },
+      { "text": "先不结算。", "topic": "TALK_GUNSMITH_SERVICES" }
+    ],
+    "//": "固定档位便于操作；全部兑换会先保存本次积分和信用数值，再清空账户。游戏货币的内部单位为美分。"
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_BOUNTY_WATCH_REDEEM_DONE",
+    "dynamic_line": "认证通过。我已经收走 <u_val:number_bounty_watch_last_redeemed_points> 点积分，并给你的账户增加了 <u_val:number_bounty_watch_last_redeemed_cents> 美分信用。现在可以直接在正常交易界面里使用。",
+    "responses": [
+      { "text": "打开交易界面。", "effect": "start_trade", "topic": "TALK_GUNSMITH_SERVICES" },
+      { "text": "继续结算积分。", "topic": "TALK_BOUNTY_WATCH_REDEEM" },
+      { "text": "以后再说。", "topic": "TALK_GUNSMITH_SERVICES" }
+    ],
+    "//": "owed 是当前 NPC 独立保存的欠款，因此这些信用只属于 Jay，不会在其他商人处通用。"
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_BOUNTY_WATCH_DISPLAY",
+    "dynamic_line": "悬赏积分账户\n\n当前积分：<u_val:number_bounty_watch_points> 点\n可兑换价值：<u_val:number_bounty_watch_display_credit_cents> 美分\n兑换商人：枪匠 Jay Ruckers\n\n只有佩戴手表期间由你取得、并被原版计入 kill_xp 的击杀才会记录。",
+    "responses": [ { "text": "关闭显示。", "topic": "TALK_DONE" } ],
+    "//": "这是激活手表后打开的只读界面。0.G 的对话标签可直接显示角色变量。"
+  }
+]

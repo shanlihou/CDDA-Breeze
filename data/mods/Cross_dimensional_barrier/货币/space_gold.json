@@ -1,0 +1,22 @@
+[
+	{
+		"type" : "ammunition_type",
+		"id" : "space_gold_type",
+		"name" : "次元金币",
+		"default" : "space_gold"
+	},{
+		"type" : "AMMO",
+		"id" : "space_gold",
+		"category" : "space_currency",
+		"name" : "次元金币",
+		"name_plural" : "次元金币",
+		"symbol" : "$",
+		"color" : "yellow",
+		"weight": "0 g",
+		"volume": "0 ml",
+		"description" : "大灾变来临之后，这玩意儿才出现了，作为等价物进行交易，比空间银币有更高的价值。",
+		"material" : "space_material",
+		"flags": [ "ZERO_WEIGHT" ],
+		"ammo_type" : "space_gold_type"
+	}
+]

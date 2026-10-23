@@ -1,0 +1,130 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_trait_sex_love",
+    "condition": {
+      "and": [
+        {
+          "u_has_trait": "SEX_LOVE"
+        },
+        {
+          "not":{
+            "u_has_effect": "u_trait_sex_love"
+          }
+        }
+      ]
+    },
+    "effect": [
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "desire_level", "type": "int", "context": "欲望指数" },
+          "+=",
+          { "const": 1000 }
+        ]
+      },
+      {
+        "u_add_effect":"u_trait_sex_love",
+        "duration": "PERMANENT" 
+      },
+      {
+        "run_eocs":["EOC_desire_debugs"]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_trait_sex_love-back",
+    "condition": {
+      "and": [
+        {
+          "u_has_effect": "u_trait_sex_love" 
+        },
+        {
+          "not":{
+            "u_has_trait": "SEX_LOVE"
+          }
+        }
+      ]
+    },
+    "effect": [
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "desire_level", "type": "int", "context": "欲望指数" },
+          "-=",
+          { "const": 1000 }
+        ]
+      },
+      {
+        "u_lose_effect":"u_trait_sex_love",
+        "duration": "PERMANENT" 
+      },
+      {
+        "run_eocs":["EOC_desire_debugs"]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_trait_sex_0",
+    "condition": {
+      "and": [
+        {
+          "u_has_trait": "SEX_0"
+        },
+        {
+          "not":{
+            "u_has_effect": "u_trait_sex_0"
+          }
+        }
+      ]
+    },
+    "effect": [
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "desire_level", "type": "int", "context": "欲望指数" },
+          "-=",
+          { "const": 300 }
+        ]
+      },
+      {
+        "u_add_effect":"u_trait_sex_0",
+        "duration": "PERMANENT" 
+      },
+      {
+        "run_eocs":["EOC_desire_debugs"]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_trait_sex_0-back",
+    "condition": {
+      "and": [
+        {
+          "u_has_effect": "u_trait_sex_0" 
+        },
+        {
+          "not":{
+            "u_has_trait": "SEX_0"
+          }
+        }
+      ]
+    },
+    "effect": [
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "desire_level", "type": "int", "context": "欲望指数" },
+          "+=",
+          { "const": 300 }
+        ]
+      },
+      {
+        "u_lose_effect":"u_trait_sex_0",
+        "duration": "PERMANENT" 
+      },
+      {
+        "run_eocs":["EOC_desire_debugs"]
+      }
+    ]
+  }
+]

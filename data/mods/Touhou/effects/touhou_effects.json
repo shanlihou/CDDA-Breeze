@@ -1,0 +1,868 @@
+[
+  {
+    "id": "bloodthirst_low",
+    "type": "effect_type",
+    "name": [
+      "血之渴望（轻度）"
+    ],
+    "desc": [
+      "你已经有一段时间没有吸食人血了。你感到轻微的不适，但并不严重。"
+    ],
+    "rating": "good"
+  },
+  {
+    "id": "bloodthirst_medium",
+    "type": "effect_type",
+    "name": [
+      "血之渴望（中度）"
+    ],
+    "desc": [
+      "你渴了。它开始让你感到痛苦。"
+    ],
+    "rating": "mixed",
+    "apply_message": "你渴望鲜血。",
+    "base_mods": {
+      "pain_amount": [
+        1,
+        2
+      ],
+      "pain_chance": [
+        8000,
+        16000
+      ],
+      "speed_mod": [
+        -10
+      ]
+    }
+  },
+  {
+    "id": "bloodthirst_high",
+    "type": "effect_type",
+    "name": [
+      "血之渴望（重度）"
+    ],
+    "desc": [
+      "你非常渴。你再也无法掩饰：你需要喝血。"
+    ],
+    "rating": "bad",
+    "apply_message": "你非常渴望鲜血。",
+    "base_mods": {
+      "pain_amount": [
+        1,
+        5
+      ],
+      "pain_chance": [
+        4000,
+        8000
+      ],
+      "dex_mod": [
+        -1
+      ],
+      "int_mod": [
+        -1
+      ],
+      "per_mod": [
+        -1
+      ],
+      "str_mod": [
+        -1
+      ],
+      "speed_mod": [
+        -20
+      ]
+    }
+  },
+  {
+    "id": "bloodthirst_veryhigh",
+    "type": "effect_type",
+    "name": [
+      "血之渴望（极重）"
+    ],
+    "desc": [
+      "你正在认真考虑在户外小睡。"
+    ],
+    "rating": "bad",
+    "apply_message": "你渴望鲜血。",
+    "base_mods": {
+      "pain_amount": [
+        2,
+        5
+      ],
+      "pain_chance": [
+        2000,
+        4000
+      ],
+      "dex_mod": [
+        -2
+      ],
+      "int_mod": [
+        -2
+      ],
+      "per_mod": [
+        -2
+      ],
+      "str_mod": [
+        -2
+      ],
+      "speed_mod": [
+        -30
+      ]
+    }
+  },
+  {
+    "id": "cure_disease",
+    "type": "effect_type",
+    "removes_effects": [
+      "bloodworms",
+      "brainworms",
+      "common_cold",
+      "dermatik",
+      "flu",
+      "foodpoison",
+      "fungus",
+      "infected",
+      "paincysts",
+      "rat_bite_fever",
+      "rat",
+      "spores",
+      "tapeworm",
+      "tetanus",
+      "toxin_buildup"
+    ],
+    "//": "Mostly infectious diseases, not sure if 'non-living' things like poison (proteins) should go here"
+  },
+  {
+    "id": "dash_levitation",
+    "type": "effect_type",
+    "name": [
+      "冲刺（效果）"
+    ],
+    "desc": [
+      " "
+    ],
+    "rating": "good",
+    "show_in_info": false,
+    "flags": [
+      "LEVITATION"
+    ]
+  },
+  {
+    "id": "icy_pyrexia",
+    "type": "effect_type",
+    "name": [
+      "冰冷发热（效果）"
+    ],
+    "desc": [
+      "你的四肢感到冰冷僵硬。移动速度降低。"
+    ],
+    "base_mods": {
+      "dex_mod": [
+        -4
+      ],
+      "speed_mod": [
+        -17
+      ]
+    },
+    "max_intensity": 1,
+    "max_effective_intensity": 1
+  },
+  {
+    "id": "immolate_light",
+    "type": "effect_type",
+    "name": [
+      "焚身（轻）"
+    ],
+    "desc": [
+      "kaenbyou_immolate 的照明效果"
+    ],
+    "rating": "bad",
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [
+          {
+            "value": "LUMINATION",
+            "add": 36
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "scarlet_plague",
+    "type": "effect_type",
+    "name": [
+      "猩红瘟疫（效果）"
+    ],
+    "desc": [
+      "你感到虚弱麻木。你的攻击更弱了。"
+    ],
+    "base_mods": {
+      "bash_mod": [
+        -2
+      ],
+      "cut_mod": [
+        -2
+      ],
+      "hit_mod": [
+        -1
+      ],
+      "str_mod": [
+        -2
+      ]
+    },
+    "max_intensity": 1,
+    "max_effective_intensity": 1
+  },
+  {
+    "id": "smoke",
+    "type": "effect_type",
+    "name": [
+      {
+        "ctxt": "inhaled",
+        "str": "烟雾"
+      }
+    ],
+    "desc": [
+      "你吸进入了大量浓烟。"
+    ],
+    "apply_message": "你吸入了大量浓烟。",
+    "rating": "bad",
+    "miss_messages": [
+      [
+        "你的肺被浓烟呛得很难受。",
+        1
+      ]
+    ],
+    "harmful_cough": true,
+    "max_duration": "10 m",
+    "base_mods": {
+      "str_mod": [
+        -1
+      ],
+      "dex_mod": [
+        -1
+      ],
+      "cough_chance": [
+        10
+      ]
+    },
+    "show_in_info": true,
+    "immunity_flags": [
+      "PROF_MOKOU"
+    ],
+    "//": "Exactly the same flag, only adds immunity for Mokou"
+  },
+  {
+    "id": "unscontrained_rot",
+    "type": "effect_type",
+    "name": [
+      "不受约束的腐烂（效果）"
+    ],
+    "desc": [
+      "你的内脏正在迅速腐烂！"
+    ],
+    "max_intensity": 1,
+    "max_effective_intensity": 1
+  },
+  {
+    "id": "aya_levitation",
+    "type": "effect_type",
+    "name": [
+      "鸦翼（飞行）（效果）"
+    ],
+    "desc": [
+      "允许你飞跃栏杆。并且增加你的移动速度。"
+    ],
+    "rating": "good",
+    "show_in_info": false,
+    "base_mods": {
+      "speed_mod": [
+        33
+      ]
+    },
+    "flags": [
+      "LEVITATION"
+    ],
+    "//": "~1.66 total movement speed, up from ~1.33 movement speed from base Aya"
+  },
+  {
+    "id": "aya_mspeed",
+    "type": "effect_type",
+    "name": [
+      "当日截稿 (加速)"
+    ],
+    "desc": [
+      "移动速度增加。"
+    ],
+    "apply_message": "你的移动速度大幅增加。",
+    "remove_message": "你再次恢复正常移动。",
+    "rating": "good",
+    "base_mods": {
+      "speed_mod": [
+        200
+      ]
+    }
+  },
+  {
+    "id": "mokou_resurrectcleanse",
+    "type": "effect_type",
+    "name": [
+      "复活"
+    ],
+    "desc": [
+      "你的新身体正在适应现实。"
+    ],
+    "apply_message": "你感觉自己仿佛重生了一般。",
+    "remove_message": "你恢复正常。",
+    "rating": "good",
+    "removes_effects": [
+      "adrenaline",
+      "adrenaline_mycus",
+      "amigara",
+      "anemia",
+      "antibiotic",
+      "antibiotic_visible",
+      "antifungal",
+      "asthma",
+      "attention",
+      "bad_food_ennui",
+      "badpoison",
+      "bandaged",
+      "bite",
+      "bleed",
+      "blind",
+      "blisters",
+      "bloodworms",
+      "beartrap",
+      "boomered",
+      "brainworms",
+      "chafing",
+      "cig",
+      "cold",
+      "common_cold",
+      "contacts",
+      "corroding",
+      "cough_suppress",
+      "crushed",
+      "cureall",
+      "darkness",
+      "datura",
+      "dazed",
+      "deaf",
+      "depressants",
+      "dermatik",
+      "disabled",
+      "disinfected",
+      "disrupted_sleep",
+      "downed",
+      "drunk",
+      "emp",
+      "evil",
+      "fearparalyze",
+      "fetid_goop",
+      "flu",
+      "flushot",
+      "formication",
+      "foodpoison",
+      "frenzy",
+      "frostbite",
+      "frostbite_recovery",
+      "fungus",
+      "genetics_damaged",
+      "glare",
+      "glowing",
+      "glowy_led",
+      "got_checked",
+      "grabbed",
+      "grabbing",
+      "hallu",
+      "hallucination_attacks",
+      "happy",
+      "heating_bionic",
+      "high",
+      "hot",
+      "hot_speed",
+      "hunger_blank",
+      "hunger_engorged",
+      "hunger_famished",
+      "hunger_full",
+      "hunger_hungry",
+      "hunger_near_starving",
+      "hunger_satisfied",
+      "hunger_starving",
+      "hunger_very_hungry",
+      "hypervitaminosis",
+      "hypovolemia",
+      "incorporeal",
+      "infected",
+      "invisibility",
+      "iodine",
+      "irradiated",
+      "jetinjector",
+      "lack_sleep",
+      "laserlocked",
+      "lying_down",
+      "masked_scent",
+      "melatonin",
+      "mending",
+      "meth",
+      "migo_atmosphere",
+      "motor_seizure",
+      "music",
+      "mutagen",
+      "mutagen_alpha",
+      "mutagen_batrachian",
+      "mutagen_beast",
+      "mutagen_bird",
+      "mutagen_cattle",
+      "mutagen_cephalopod",
+      "mutagen_chimera",
+      "mutagen_elfa",
+      "mutagen_feline",
+      "mutagen_fish",
+      "mutagen_gastropod",
+      "mutagen_human",
+      "mutagen_insect",
+      "mutagen_lizard",
+      "mutagen_lupine",
+      "mutagen_medical",
+      "mutagen_mouse",
+      "mutagen_plant",
+      "mutagen_raptor",
+      "mutagen_rabbit",
+      "mutagen_rat",
+      "mutagen_slime",
+      "mutagen_spider",
+      "mutagen_troglobite",
+      "mutagen_ursine",
+      "mutagen_chelator",
+      "mutagenic_slurry",
+      "narcosis",
+      "narrow_viewpoint",
+      "nausea",
+      "nightmares",
+      "onfire",
+      "paincysts",
+      "panacea",
+      "paralyzepoison",
+      "pblue",
+      "pd_dex_bad",
+      "pd_int_bad",
+      "pd_per_bad",
+      "pd_str_bad",
+      "pd_rejection",
+      "pkill",
+      "pkill1",
+      "pkill2",
+      "pkill3",
+      "pkill_l",
+      "pkill_wintergreen",
+      "pkill_wintergreen_oil",
+      "playing_instrument",
+      "poison",
+      "prophylactic_antivenom",
+      "rat",
+      "rat_bite_fever",
+      "raising",
+      "recover",
+      "redcells_anemia",
+      "relax_gas",
+      "sad",
+      "sap",
+      "scurvy",
+      "sensor_stun",
+      "shakes",
+      "sleep",
+      "sleep_deprived",
+      "slept_through_alarm",
+      "slimed",
+      "slowed_time",
+      "sludged",
+      "smoke",
+      "snow_glare",
+      "spores",
+      "staggered",
+      "stim",
+      "stim_overdose",
+      "stimpack",
+      "strengthened_gravity",
+      "strengthened_inertia",
+      "strong_antibiotic",
+      "strong_antibiotic_visible",
+      "stung",
+      "stunned",
+      "supercharged",
+      "taint",
+      "tapeworm",
+      "teargas",
+      "teleglow",
+      "tetanus",
+      "tindrift",
+      "took_antiasthmatic",
+      "took_anticonvulsant_visible",
+      "took_flumed",
+      "took_prozac",
+      "took_prozac_bad",
+      "took_prozac_visible",
+      "took_thorazine",
+      "took_thorazine_bad",
+      "took_thorazine_visible",
+      "took_xanax",
+      "took_xanax_visible",
+      "toxin_buildup",
+      "tpollen",
+      "tummy_tablet",
+      "under_operation",
+      "valium",
+      "venom_blind",
+      "venom_dmg",
+      "venom_weaken",
+      "venom_pain",
+      "visuals",
+      "warped_viewpoint",
+      "was_laserlocked",
+      "weak_antibiotic",
+      "weak_antibiotic_visible",
+      "weakened_gravity",
+      "weakened_inertia",
+      "weary_0",
+      "weary_1",
+      "weary_2",
+      "weary_3",
+      "weary_4",
+      "weary_5",
+      "weary_6",
+      "weary_7",
+      "weary_8",
+      "webbed",
+      "weed_high",
+      "wet",
+      "winded",
+      "zapped"
+    ],
+    "//": "This should be analogous 'reset' her body, removing any and all effects. Things like bionics would be removed, too"
+  },
+  {
+    "id": "mokou_resurrectpain",
+    "type": "effect_type",
+    "name": [
+      "复活之痛"
+    ],
+    "desc": [
+      "死亡是痛苦的，它超越了肉体的替换。你会在一段时间内感受到它。"
+    ],
+    "remove_message": "你的复活之痛已经停止，至少暂时如此。",
+    "rating": "bad",
+    "base_mods": {
+      "pain_amount": [
+        11
+      ]
+    },
+    "scaling_mods": {
+      "pain_amount": [
+        11
+      ]
+    }
+  },
+  {
+    "id": "reisen_pnoise",
+    "type": "effect_type",
+    "name": [
+      "概率噪声（效果）"
+    ],
+    "desc": [
+      "就好像你的碰撞箱被相位化了一样。"
+    ],
+    "apply_message": "你看到自己变得半透明！",
+    "remove_message": "你恢复正常。",
+    "rating": "good",
+    "base_mods": {
+      "dodge_mod": [
+        4
+      ],
+      "bash_mod": [
+        2
+      ],
+      "cut_mod": [
+        2
+      ]
+    },
+    "removes_effects": [
+      "beartrap",
+      "downed",
+      "fetid_goop",
+      "frenzy",
+      "frostbite",
+      "grabbed",
+      "grabbing",
+      "hot_speed",
+      "paralyzepoison",
+      "sap",
+      "slimed",
+      "sludged",
+      "staggered",
+      "supercharged",
+      "teargas",
+      "webbed",
+      "zapped"
+    ],
+    "//": "Should remove all 'external' or imposed effects, focused on movement speed effects"
+  },
+  {
+    "id": "remi_levitation",
+    "type": "effect_type",
+    "name": [
+      "蝙蝠翅膀（飞行）（效果）"
+    ],
+    "desc": [
+      "允许你飞跃栏杆。并且增加你的移动速度。"
+    ],
+    "rating": "good",
+    "show_in_info": false,
+    "base_mods": {
+      "speed_mod": [
+        25
+      ]
+    },
+    "flags": [
+      "LEVITATION"
+    ],
+    "//": "~1.5 total movement speed, up from the 1.25x movement speed from base vampires"
+  },
+  {
+    "id": "sakuya_contraction_effect",
+    "type": "effect_type",
+    "name": [
+      "时间收缩（效果）"
+    ],
+    "desc": [
+      "你的个人气泡正在膨胀。"
+    ],
+    "apply_message": "世界似乎在你周围加速！",
+    "remove_message": "时间再次正常流动。",
+    "rating": "bad",
+    "base_mods": {
+      "speed_mod": [
+        -50
+      ]
+    }
+  },
+  {
+    "id": "sakuya_dilation_effect",
+    "type": "effect_type",
+    "name": [
+      "时间膨胀（效果）"
+    ],
+    "desc": [
+      "你的个人气泡正在膨胀。"
+    ],
+    "apply_message": "你开始以超人速度移动。",
+    "remove_message": "你再次正常移动。",
+    "rating": "good",
+    "base_mods": {
+      "dex_mod": [
+        1
+      ],
+      "speed_mod": [
+        65
+      ]
+    }
+  },
+  {
+    "id": "sakuya_maidsecret_effect",
+    "type": "effect_type",
+    "name": [
+      "女仆的秘密（效果）"
+    ],
+    "desc": [
+      "你专注……"
+    ],
+    "apply_message": "你集中精神以延伸你的能力……",
+    "rating": "good",
+    "base_mods": {
+      "speed_mod": [
+        35
+      ]
+    }
+  },
+  {
+    "id": "sakuya_quickrest_effect",
+    "type": "effect_type",
+    "name": [
+      "时间收缩（效果）"
+    ],
+    "desc": [
+      "sakuya_quickrest 的测试效果"
+    ],
+    "apply_message": "你利用你的能力快速休息。",
+    "remove_message": "你的快速休息结束了",
+    "rating": "good",
+    "base_mods": {
+      "fatigue_amount": [
+        -100
+      ],
+      "pkill_amount": [
+        1
+      ],
+      "stamina_amount": [
+        1000
+      ],
+      "stim_amount": [
+        2
+      ]
+    }
+  },
+  {
+    "id": "sakuya_timestop_effect",
+    "type": "effect_type",
+    "name": [
+      "时间停止（效果）"
+    ],
+    "desc": [
+      "sakuya_timestop 的测试效果"
+    ],
+    "apply_message": "时间冻结了。仿佛整个世界都停止了。",
+    "remove_message": "于是，时间再次流动。",
+    "rating": "good",
+    "base_mods": {
+      "speed_mod": [
+        35
+      ]
+    }
+  },
+  {
+    "id": "seiga_mspeed",
+    "type": "effect_type",
+    "name": [
+      "隐士行走（速度）"
+    ],
+    "desc": [
+      "移动速度增加。"
+    ],
+    "apply_message": "你的移动速度略微增加。",
+    "remove_message": "你再次正常移动。",
+    "rating": "good",
+    "base_mods": {
+      "speed_mod": [
+        35
+      ]
+    }
+  },
+  {
+    "id": "udonge_insight",
+    "type": "effect_type",
+    "name": [
+      "波长操纵（洞察）"
+    ],
+    "desc": [
+      "你集中精神……"
+    ],
+    "apply_message": "思维过程变得专注。",
+    "remove_message": "你放松思绪。",
+    "rating": "good",
+    "base_mods": {
+      "int_mod": [
+        2
+      ],
+      "pkill_amount": [
+        -1
+      ],
+      "stim_amount": [
+        2
+      ]
+    },
+    "removes_effects": [
+      "udonge_mfortitude",
+      "udonge_perception",
+      "udonge_stealth"
+    ]
+  },
+  {
+    "id": "udonge_mfortitude",
+    "type": "effect_type",
+    "name": [
+      "波长操纵（精神坚韧）"
+    ],
+    "desc": [
+      "你清除外部干扰，使脑波恢复到基础状态。"
+    ],
+    "apply_message": "你进入类似正念的状态。",
+    "remove_message": "你放松思绪。",
+    "rating": "good",
+    "removes_effects": [
+      "fearparalyze",
+      "taint",
+      "tindrift",
+      "visuals",
+      "udonge_insight",
+      "udonge_perception",
+      "udonge_stealth"
+    ]
+  },
+  {
+    "id": "udonge_perception",
+    "type": "effect_type",
+    "name": [
+      "波长操纵（感知）"
+    ],
+    "desc": [
+      "感知大大提高。"
+    ],
+    "apply_message": "你驾驭穿梭于世界之间的阴影。",
+    "remove_message": "你的视力恢复正常。",
+    "rating": "good",
+    "base_mods": {
+      "per_mod": [
+        2
+      ]
+    },
+    "removes_effects": [
+      "udonge_insight",
+      "udonge_mfortitude",
+      "udonge_stealth"
+    ],
+    "flags": [
+      "INFRARED",
+      "NIGHT_VISION",
+      "SUPER_HEARING"
+    ]
+  },
+  {
+    "id": "udonge_stealth",
+    "type": "effect_type",
+    "name": [
+      "波长操纵（潜行）"
+    ],
+    "desc": [
+      "让周围的人察觉不到你。"
+    ],
+    "apply_message": "你的波长变得极小，使你隐形。",
+    "remove_message": "你再次变得可被察觉。",
+    "rating": "good",
+    "removes_effects": [
+      "udonge_insight",
+      "udonge_mfortitude",
+      "udonge_perception"
+    ],
+    "flags": [
+      "INVISIBLE",
+      "NO_SCENT"
+    ]
+  },
+  {
+    "id": "utsuho_levitation",
+    "type": "effect_type",
+    "name": [
+      "地狱鸦翅膀（飞行）（效果）"
+    ],
+    "desc": [
+      "允许你飞跃栏杆。"
+    ],
+    "rating": "good",
+    "show_in_info": false,
+    "flags": [
+      "LEVITATION"
+    ]
+  }
+]

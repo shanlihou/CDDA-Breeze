@@ -1,0 +1,125 @@
+[
+  {
+    "type": "effect_type",
+    "id": "psionic_overload",
+    "name": [
+      "头痛",
+      "头痛",
+      "头痛",
+      "严重头痛",
+      "严重头痛",
+      "剧烈头痛",
+      "剧烈头痛",
+      "极度头痛",
+      "极度头痛",
+      "纯粹痛苦"
+    ],
+    "desc": [
+      "你的头在砰砰作响，感到不适。",
+      "你的头在砰砰作响，感到不适。",
+      "你的头在砰砰作响，感到不适。",
+      "你的头阵阵抽痛，视线难以聚焦。",
+      "你的头阵阵抽痛，视线难以聚焦。",
+      "头痛欲裂，几乎无法思考。",
+      "头痛欲裂，几乎无法思考。",
+      "你的头颅仿佛要炸开一般。",
+      "你的头颅仿佛要炸开一般。",
+      "这痛苦已成为世上唯一重要之事。"
+    ],
+    "rating": "bad",
+    "int_add_val": 1,
+    "max_intensity": 10,
+    "max_duration": "24 hours",
+    "base_mods": { "per_mod": [ -2 ], "int_mod": [ -2 ], "pain_chance": [ 10 ], "pain_min": [ 2 ], "pain_max": [ 3 ], "pain_max_val": [ 50 ], "vomit_chance": [ 25 ], "hurt_chance": [ -10 ], "hurt_amount": [ 0 ], "hurt_tick": [ 200 ] },
+    "scaling_mods": { "per_mod": [ -1.2 ], "int_mod": [ -0.6 ], "pain_min": [ 1 ], "pain_max": [ 4 ], "pain_max_val": [ 30 ], "vomit_chance": [ -2 ], "hurt_chance": [ 8 ], "hurt_amount": [ 2, 1 ], "hurt_tick": [ -15 ] }
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_biokin_overload",
+    "name": [ "虚弱" ],
+    "desc": [ "你的肌肉和协调能力受损。" ],
+    "apply_message": "你的肌肉因虚弱而颤抖！",
+    "remove_message": "新的力量涌遍全身！",
+    "rating": "bad",
+    "max_intensity": 10,
+    "base_mods": { "str_mod": [ -2 ], "dex_mod": [ -2 ] },
+    "scaling_mods": { "str_mod": [ -1.2 ], "dex_mod": [ -1.2 ] }
+  },
+  {
+    "type": "effect_type",
+    "id": "blind_clair_overload",
+    "//": "此效果及以下效果存在，以防止超感知者利用自身能力治愈失控的力量。",
+    "name": [ "失明" ],
+    "desc": [ "黑暗遮蔽了你的视线。" ],
+    "removes_effects": [ "glare", "snow_glare", "darkness" ],
+    "apply_message": "你失明了！",
+    "remove_message": "你的视力恢复了！",
+    "rating": "bad",
+    "show_in_info": true,
+    "flags": [ "BLIND" ]
+  },
+  {
+    "type": "effect_type",
+    "id": "deaf_clair_overload",
+    "name": [ "耳聋" ],
+    "desc": [ "你什么也听不见。" ],
+    "apply_message": "所有声音都被隔绝！",
+    "remove_message": "你又能听见了！",
+    "rating": "bad",
+    "max_intensity": 3,
+    "int_dur_factor": "100 s",
+    "flags": [ "DEAF" ]
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_pyrokin_overload",
+    "name": [ "发热" ],
+    "desc": [ "你感觉过热。" ],
+    "apply_message": "",
+    "remove_message": "空气现在感觉凉爽多了。",
+    "rating": "bad",
+    "base_mods": { "per_mod": [ -2 ], "health_min": [ -1 ], "health_chance": [ 25 ] },
+    "enchantments": [ "enchant_pyrokin_fever" ]
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_portal_storm_teleport",
+    "name": [ "维度不稳定" ],
+    "desc": [ "你感觉自己几乎不属于这个世界。" ],
+    "//": "重复条目，以便传送者在传送门风暴期间被传送。",
+    "apply_message": "",
+    "remove_message": "随着一阵震动，你感觉自己又变得坚实了。",
+    "rating": "bad",
+    "enchantments": [ "enchant_riftwalker_teleport" ]
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_telekin_overload",
+    "name": [ "压迫感" ],
+    "desc": [ "一切都变得沉重无比。" ],
+    "apply_message": "空气本身仿佛在压迫着你！",
+    "remove_message": "那股压迫感消失了。",
+    "rating": "bad",
+    "max_intensity": 10,
+    "enchantments": [
+      {
+        "values": [
+          { "value": "CARRY_WEIGHT", "multiply": 0.75 },
+          { "value": "MOVE_COST", "multiply": 1.5 }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_vitakin_overload",
+    "name": [ "衰竭" ],
+    "desc": [ "你的肌肉和协调能力受损。" ],
+    "apply_message": "你感觉糟透了！",
+    "remove_message": "你感觉没有那么糟了！",
+    "rating": "bad",
+    "max_intensity": 10,
+    "base_mods": { "fatigue_tick": [ 300 ], "fatigue_min": [ 1 ], "health_min": [ -1 ], "health_tick": [ 400 ] },
+    "scaling_mods": { "fatigue_min": [ 1 ], "health_min": [ -1 ] }
+  }
+]

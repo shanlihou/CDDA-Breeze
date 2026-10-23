@@ -1,0 +1,88 @@
+[
+	{
+		"type": "recipe",
+		"result": "fertilizer_liquid",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_堆肥",
+		"skill_used": "survival",
+		"difficulty": 2,
+		"autolearn": true,
+		"time": "60 s",
+		"tools": [
+			[ [ "gradcylinder", -1 ], [ "beaker", -1 ] ]
+		],
+		"components": [
+			[ [ "compost_brew_fermentation_products_liquid", 1 ] ],
+			[ [ "water", 2 ], ["water_clean", 2] ]
+		]
+	},
+	{
+		"result": "compost_brew_fermentation_products_solid",
+		"type": "uncraft",
+		"time": "300 s",
+		"components": [
+			[ [ "fertilizer_commercial", 10 ] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "compost_brew_waste",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_堆肥",
+		"skill_used": "survival",
+		"difficulty": 3,
+		"autolearn": true,
+		"time": "180 s",
+		"activity_level": "LIGHT_EXERCISE",
+		"batch_time_factors": [75, 5],
+		"reversible": false, 
+		"using": [
+			[ "compost_req_compostable_materials", 1 ]
+		],
+		"components": [
+			[ [ "compost_effective_microorganisms_unit", 2 ] ],
+			[ [ "water", 98 ], [ "water_clean", 98 ] ]
+		]
+	},
+	{
+		"result": "compost_bokashi_barrel_fullliquid",
+		"type": "uncraft",
+		"time": "60 s",
+		"components": [
+			[ [ "compost_bokashi_barrel_composting2", 1 ] ],
+			[ [ "fertilizer_liquid", 5] ]
+		]
+	},
+	{
+		"result": "compost_bokashi_barrel_full",
+		"type": "uncraft",
+		"time": "60 s",
+		"components": [
+			[ [ "compost_bokashi_barrel_empty", 1 ] ],
+			[ [ "compost_effective_microorganisms_unit", 4 ] ],
+			[ [ "fertilizer_commercial", 5] ],
+			[ [ "fertilizer_liquid", 5] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "compost_bokashi_barrel_empty",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_堆肥",
+		"skill_used": "fabrication",
+		"difficulty": 3,
+		"autolearn": true,
+		"time": "3600 s",
+		"activity_level": "MODERATE_EXERCISE",
+		"batch_time_factors": [25, 5],
+		"qualities": [ { "id": "HAMMER", "level": 1 }, { "id": "CUT", "level": 1 }, { "id": "SAW_M", "level": 1 }, { "id": "DRILL", "level": 1 }, { "id": "FILE", "level": 1 } ],
+		"reversible": false, 
+		"components": [
+			[ [ "keg", 1 ], [ "keg_steel", 1 ], [ "metal_tank", 1 ] ],
+			[ [ "sheet_metal_small", 1 ], [ "plastic_plate", 1 ], [ "plastic_shopping_bag", 2 ], [ "bag_plastic", 3 ], [ "plastic_sheet", 1 ] ],
+			[ [ "water_faucet", 1 ], [ "bottle_plastic_small", 1 ], [ "bottle_plastic", 1 ], [ "bottle_folding", 1 ], [ "bottle_twoliter", 1 ] ],
+			[ [ "bone_glue", 1 ], [ "latex", 1 ], [ "neoprene", 1 ], [ "duct_tape", 1 ], [ "superglue", 1 ], [ "chunk_rubber", 1 ] ]
+		]
+	}
+
+]

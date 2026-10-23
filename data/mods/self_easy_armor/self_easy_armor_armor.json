@@ -1,0 +1,5363 @@
+[
+  {
+    "id": "self_easy_armor_1_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-木头头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。\n增加生命4。",
+    "weight": "1500 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "wood", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 7 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 4 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "MAX_HP", "add": 4 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_1_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-木头胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。\n增加生命4。",
+    "weight": "3840 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "wood", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 10 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 5 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "MAX_HP", "add": 4 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_1_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-木头护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。\n增加生命4。",
+    "weight": "2940 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "wood", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 9 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "MAX_HP", "add": 4 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_1_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-木头护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。\n增加生命4。",
+    "weight": "960 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "wood", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 6 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "MAX_HP", "add": 4 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_1_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-木头靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。\n增加生命4。",
+    "weight": "960 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "wood", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 6 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 9,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "MAX_HP", "add": 4 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_2_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-皮革头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。",
+    "weight": "1000 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "leather", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 4 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 2 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 2 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_2_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-皮革胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。",
+    "weight": "2560 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "leather", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 7 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_2_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-皮革护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。",
+    "weight": "1960 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "leather", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 6 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_2_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-皮革护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。",
+    "weight": "640 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "leather", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 3 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_2_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-皮革靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。\n增加1躲闪次数。",
+    "weight": "640 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "leather", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 3 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 9,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "BONUS_DODGE", "add": 1 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_3_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-铁头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。",
+    "weight": "1967 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "iron", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 10 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 5 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 5 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_3_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-铁胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。\n降低8%物理伤害。",
+    "weight": "5036 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "iron", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 16 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 8 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "ARMOR_CUT", "multiply": -0.08 },
+            { "value": "ARMOR_BASH", "multiply": -0.08 },
+            { "value": "ARMOR_STAB", "multiply": -0.08 },
+            { "value": "ARMOR_BULLET", "multiply": -0.08 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_3_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-铁护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。\n降低8%物理伤害。",
+    "weight": "3905 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "iron", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 14 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "ARMOR_CUT", "multiply": -0.08 },
+            { "value": "ARMOR_BASH", "multiply": -0.08 },
+            { "value": "ARMOR_STAB", "multiply": -0.08 },
+            { "value": "ARMOR_BULLET", "multiply": -0.08 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_3_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-铁护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。",
+    "weight": "1259 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "iron", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 8 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_3_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-铁靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。",
+    "weight": "1259 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "iron", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 8 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_4_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-金头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。\n增加5%魔力。",
+    "weight": "4800 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "gold", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 10 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 5 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 5 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "FANCY", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "MAX_MANA", "multiply": 0.05 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_4_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-金胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。\n增加5%魔力。",
+    "weight": "12288 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "gold", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 16 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 8 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "FANCY", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "MAX_MANA", "multiply": 0.05 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_4_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-金护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。\n增加5%魔力。",
+    "weight": "9408 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "gold", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 14 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "FANCY", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "MAX_MANA", "multiply": 0.05 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_4_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-金护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。\n增加5%魔力。",
+    "weight": "3072 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "gold", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 8 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "FANCY", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "MAX_MANA", "multiply": 0.05 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_4_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-金靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。\n增加5%魔力。",
+    "weight": "3072 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "gold", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 8 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 15,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "FANCY", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "MAX_MANA", "multiply": 0.05 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_5_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-钻石头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。\n增加生命10。",
+    "weight": "1487 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "diamond", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 7 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 4 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "FANCY", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "MAX_HP", "add": 10 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_5_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-钻石胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。\n增加生命10。",
+    "weight": "3808 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "diamond", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 10 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 5 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "FANCY", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "MAX_HP", "add": 10 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_5_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-钻石护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。\n增加生命10。",
+    "weight": "2915 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "diamond", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 9 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "FANCY", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "MAX_HP", "add": 10 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_5_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-钻石护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。\n增加生命10。",
+    "weight": "952 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "diamond", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 6 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "FANCY", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "MAX_HP", "add": 10 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_5_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-钻石靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。\n增加生命10。",
+    "weight": "952 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "diamond", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 6 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 15,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "FANCY", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "MAX_HP", "add": 10 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_6_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-铝头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。\n增加5%+100魔力。",
+    "weight": "675 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "aluminum", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 10 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 5 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 5 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "MAX_MANA", "multiply": 0.05 },
+            { "value": "MAX_MANA", "add": 100 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_6_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-铝胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。",
+    "weight": "1728 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "aluminum", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 16 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 8 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_6_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-铝护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。",
+    "weight": "1323 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "aluminum", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 14 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_6_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-铝护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。\n增加5%+100魔力。",
+    "weight": "432 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "aluminum", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 8 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "MAX_MANA", "multiply": 0.05 },
+            { "value": "MAX_MANA", "add": 100 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_6_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-铝靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。",
+    "weight": "432 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "aluminum", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 8 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 9,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_7_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-骨头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。\n调节体温+-3。",
+    "weight": "2250 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "bone", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 7 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 4 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "CLIMATE_CONTROL_HEAT", "add": 3 },
+    				{ "value": "CLIMATE_CONTROL_CHILL", "add": 3 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_7_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-骨胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。\n调节体温+-3。",
+    "weight": "5760 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "bone", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 10 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 5 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "CLIMATE_CONTROL_HEAT", "add": 3 },
+    				{ "value": "CLIMATE_CONTROL_CHILL", "add": 3 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_7_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-骨护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。\n调节体温+-3。",
+    "weight": "4410 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "bone", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 9 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "CLIMATE_CONTROL_HEAT", "add": 3 },
+    				{ "value": "CLIMATE_CONTROL_CHILL", "add": 3 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_7_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-骨护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。\n调节体温+-3。",
+    "weight": "1440 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "bone", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 6 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "CLIMATE_CONTROL_HEAT", "add": 3 },
+    				{ "value": "CLIMATE_CONTROL_CHILL", "add": 3 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_7_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-骨靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。\n调节体温+-3。",
+    "weight": "1440 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "bone", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 6 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 12,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "CLIMATE_CONTROL_HEAT", "add": 3 },
+    				{ "value": "CLIMATE_CONTROL_CHILL", "add": 3 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_8_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-铜头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。\n增加生命4%+4。",
+    "weight": "2240 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "copper", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 10 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 5 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 5 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "MAX_HP", "multiply": 0.04 },
+            { "value": "MAX_HP", "add": 4 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_8_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-铜胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。\n增加生命4%+4。",
+    "weight": "5734 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "copper", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 16 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 8 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "MAX_HP", "multiply": 0.04 },
+            { "value": "MAX_HP", "add": 4 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_8_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-铜护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。\n增加生命4%+4。",
+    "weight": "4390 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "copper", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 14 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "MAX_HP", "multiply": 0.04 },
+            { "value": "MAX_HP", "add": 4 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_8_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-铜护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。\n增加生命4%+4。",
+    "weight": "1433 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "copper", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 8 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "MAX_HP", "multiply": 0.04 },
+            { "value": "MAX_HP", "add": 4 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_8_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-铜靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。\n增加生命4%+4。",
+    "weight": "1433 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "copper", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 8 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "MAX_HP", "multiply": 0.04 },
+            { "value": "MAX_HP", "add": 4 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_9_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-硬纸板头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。",
+    "weight": "1000 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "cardboard", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 5 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 3 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 3 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER" ]
+  },
+  {
+    "id": "self_easy_armor_9_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-硬纸板胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。",
+    "weight": "2560 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "cardboard", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 8 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER" ]
+  },
+  {
+    "id": "self_easy_armor_9_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-硬纸板护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。",
+    "weight": "1960 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "cardboard", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 7 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER" ]
+  },
+  {
+    "id": "self_easy_armor_9_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-硬纸板护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。",
+    "weight": "640 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "cardboard", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER" ]
+  },
+  {
+    "id": "self_easy_armor_9_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-硬纸板靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。\n速度+5%。",
+    "weight": "640 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "cardboard", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 6,
+    "flags": [ "STURDY", "VARSIZE", "OUTER" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "SPEED", "multiply": 0.05 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_10_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-陶瓷头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。\n调节体温+-20。",
+    "weight": "7500 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "ceramic", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 7 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 4 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "CLIMATE_CONTROL_HEAT", "add": 20 },
+    				{ "value": "CLIMATE_CONTROL_CHILL", "add": 20 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_10_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-陶瓷胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。\n调节体温+-20。",
+    "weight": "19200 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "ceramic", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 10 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 5 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "CLIMATE_CONTROL_HEAT", "add": 20 },
+    				{ "value": "CLIMATE_CONTROL_CHILL", "add": 20 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_10_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-陶瓷护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。\n调节体温+-20。",
+    "weight": "14700 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "ceramic", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 9 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "CLIMATE_CONTROL_HEAT", "add": 20 },
+    				{ "value": "CLIMATE_CONTROL_CHILL", "add": 20 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_10_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-陶瓷护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。\n调节体温+-20。",
+    "weight": "4800 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "ceramic", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 6 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "CLIMATE_CONTROL_HEAT", "add": 20 },
+    				{ "value": "CLIMATE_CONTROL_CHILL", "add": 20 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_10_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-陶瓷靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。\n调节体温+-20。",
+    "weight": "4800 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "ceramic", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 6 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 15,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "CLIMATE_CONTROL_HEAT", "add": 20 },
+    				{ "value": "CLIMATE_CONTROL_CHILL", "add": 20 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_11_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-铅头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。",
+    "weight": "2800 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "lead", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 10 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 5 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 5 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "RAD_RESIST", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_11_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-铅胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。\n降低8%非物理伤害。",
+    "weight": "7168 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "lead", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 16 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 8 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "RAD_RESIST", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "ARMOR_ACID", "multiply": -0.08 },
+            { "value": "ARMOR_BIO", "multiply": -0.08 },
+            { "value": "ARMOR_COLD", "multiply": -0.08 },
+            { "value": "ARMOR_ELEC", "multiply": -0.08 },
+            { "value": "ARMOR_HEAT", "multiply": -0.08 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_11_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-铅护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。\n降低8%非物理伤害。",
+    "weight": "5488 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "lead", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 14 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "RAD_RESIST", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "ARMOR_ACID", "multiply": -0.08 },
+            { "value": "ARMOR_BIO", "multiply": -0.08 },
+            { "value": "ARMOR_COLD", "multiply": -0.08 },
+            { "value": "ARMOR_ELEC", "multiply": -0.08 },
+            { "value": "ARMOR_HEAT", "multiply": -0.08 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_11_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-铅护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。",
+    "weight": "1792 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "lead", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 8 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "RAD_RESIST", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_11_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-铅靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。",
+    "weight": "1792 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "lead", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 8 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 13,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "RAD_RESIST", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_12_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-塑料头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。",
+    "weight": "2625 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "plastic", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 7 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 4 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_12_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-塑料胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。\n降低5%伤害。",
+    "weight": "6720 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "plastic", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 10 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 5 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+            { "value": "ARMOR_CUT", "multiply": -0.05 },
+            { "value": "ARMOR_BASH", "multiply": -0.05 },
+            { "value": "ARMOR_STAB", "multiply": -0.05 },
+            { "value": "ARMOR_BULLET", "multiply": -0.05 },
+            { "value": "ARMOR_ACID", "multiply": -0.05 },
+            { "value": "ARMOR_BIO", "multiply": -0.05 },
+            { "value": "ARMOR_COLD", "multiply": -0.05 },
+            { "value": "ARMOR_ELEC", "multiply": -0.05 },
+            { "value": "ARMOR_HEAT", "multiply": -0.05 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_12_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-塑料护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。",
+    "weight": "5145 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "plastic", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 9 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_12_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-塑料护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。",
+    "weight": "1680 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "plastic", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 6 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_12_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-塑料靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。",
+    "weight": "1680 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "plastic", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 6 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 14,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_13_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-银头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。\n增加500魔力。",
+    "weight": "2600 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "silver", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 10 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 5 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 5 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "FANCY", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "MAX_MANA", "add": 500 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_13_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-银胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。",
+    "weight": "6656 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "silver", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 16 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 8 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "FANCY", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_13_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-银护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。",
+    "weight": "5096 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "silver", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 14 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "FANCY", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_13_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-银护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。",
+    "weight": "1664 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "silver", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 8 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "FANCY", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_13_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-银靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。",
+    "weight": "1664 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "silver", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 8 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 15,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "FANCY", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_14_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-铂金头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。\n降低2伤害。",
+    "weight": "5400 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "platinum", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 10 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 5 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 5 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "FANCY", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "ARMOR_CUT", "add": -2 },
+            { "value": "ARMOR_BASH", "add": -2 },
+            { "value": "ARMOR_STAB", "add": -2 },
+            { "value": "ARMOR_BULLET", "add": -2 },
+            { "value": "ARMOR_ACID", "add": -2 },
+            { "value": "ARMOR_BIO", "add": -2 },
+            { "value": "ARMOR_COLD", "add": -2 },
+            { "value": "ARMOR_ELEC", "add": -2 },
+            { "value": "ARMOR_HEAT", "add": -2 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_14_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-铂金胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。\n降低2伤害。",
+    "weight": "13824 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "platinum", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 16 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 8 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "FANCY", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "ARMOR_CUT", "add": -2 },
+            { "value": "ARMOR_BASH", "add": -2 },
+            { "value": "ARMOR_STAB", "add": -2 },
+            { "value": "ARMOR_BULLET", "add": -2 },
+            { "value": "ARMOR_ACID", "add": -2 },
+            { "value": "ARMOR_BIO", "add": -2 },
+            { "value": "ARMOR_COLD", "add": -2 },
+            { "value": "ARMOR_ELEC", "add": -2 },
+            { "value": "ARMOR_HEAT", "add": -2 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_14_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-铂金护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。\n降低2伤害。",
+    "weight": "10584 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "platinum", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 14 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "FANCY", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "ARMOR_CUT", "add": -2 },
+            { "value": "ARMOR_BASH", "add": -2 },
+            { "value": "ARMOR_STAB", "add": -2 },
+            { "value": "ARMOR_BULLET", "add": -2 },
+            { "value": "ARMOR_ACID", "add": -2 },
+            { "value": "ARMOR_BIO", "add": -2 },
+            { "value": "ARMOR_COLD", "add": -2 },
+            { "value": "ARMOR_ELEC", "add": -2 },
+            { "value": "ARMOR_HEAT", "add": -2 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_14_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-铂金护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。\n降低2伤害。",
+    "weight": "3456 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "platinum", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 8 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "FANCY", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "ARMOR_CUT", "add": -2 },
+            { "value": "ARMOR_BASH", "add": -2 },
+            { "value": "ARMOR_STAB", "add": -2 },
+            { "value": "ARMOR_BULLET", "add": -2 },
+            { "value": "ARMOR_ACID", "add": -2 },
+            { "value": "ARMOR_BIO", "add": -2 },
+            { "value": "ARMOR_COLD", "add": -2 },
+            { "value": "ARMOR_ELEC", "add": -2 },
+            { "value": "ARMOR_HEAT", "add": -2 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_14_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-铂金靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。\n降低2伤害。",
+    "weight": "3456 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "platinum", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 8 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 15,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "FANCY", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "ARMOR_CUT", "add": -2 },
+            { "value": "ARMOR_BASH", "add": -2 },
+            { "value": "ARMOR_STAB", "add": -2 },
+            { "value": "ARMOR_BULLET", "add": -2 },
+            { "value": "ARMOR_ACID", "add": -2 },
+            { "value": "ARMOR_BIO", "add": -2 },
+            { "value": "ARMOR_COLD", "add": -2 },
+            { "value": "ARMOR_ELEC", "add": -2 },
+            { "value": "ARMOR_HEAT", "add": -2 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_15_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-石头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。",
+    "weight": "6570 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "stone", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 7 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 4 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_15_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-石胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。\n增加10kg负重。",
+    "weight": "16819 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "stone", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 10 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 5 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "CARRY_WEIGHT", "add": 10000 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_15_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-石护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。\n增加10kg负重。",
+    "weight": "12877 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "stone", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 9 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "CARRY_WEIGHT", "add": 10000 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_15_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-石护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。",
+    "weight": "4205 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "stone", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 6 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_15_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-石靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。\n增加10kg负重。",
+    "weight": "4205 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "stone", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 6 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 13,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "CARRY_WEIGHT", "add": 10000 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_16_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-锡头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。\n增加2感知。",
+    "weight": "1820 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "tin", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 10 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 5 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 5 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "PERCEPTION", "add": 2 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_16_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-锡胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。",
+    "weight": "4659 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "tin", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 16 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 8 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_16_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-锡护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。",
+    "weight": "3567 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "tin", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 14 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_16_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-锡护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。",
+    "weight": "1164 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "tin", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 8 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_16_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-锡靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。",
+    "weight": "1164 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "tin", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 8 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 7,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_17_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-青铜头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。\n增加耐力10%。",
+    "weight": "2200 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "bronze", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 10 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 5 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 5 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "MAX_STAMINA", "multiply": 0.1 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_17_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-青铜胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。\n增加耐力10%。",
+    "weight": "5632 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "bronze", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 16 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 8 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "MAX_STAMINA", "multiply": 0.1 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_17_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-青铜护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。\n增加耐力10%。",
+    "weight": "4312 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "bronze", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 14 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "MAX_STAMINA", "multiply": 0.1 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_17_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-青铜护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。",
+    "weight": "1408 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "bronze", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 8 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_17_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-青铜靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。",
+    "weight": "1408 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "bronze", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 8 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 6,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_18_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-橡胶头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。",
+    "weight": "2250 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "rubber", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 5 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 3 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 3 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_18_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-橡胶胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。",
+    "weight": "5760 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "rubber", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 8 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_18_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-橡胶护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。",
+    "weight": "4410 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "rubber", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 7 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_18_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-橡胶护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。\n增加1格挡次数。",
+    "weight": "1440 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "rubber", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "BONUS_BLOCK", "add": 1 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_18_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-橡胶靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。",
+    "weight": "1440 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "rubber", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_19_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-植物头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。",
+    "weight": "800 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "dry_plant", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 4 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 2 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 2 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_19_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-植物胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。",
+    "weight": "2048 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "dry_plant", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 7 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_19_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-植物护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。",
+    "weight": "1568 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "dry_plant", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 6 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_19_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-植物护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。",
+    "weight": "512 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "dry_plant", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 3 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_19_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-植物靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。\n降低移动消耗-5%。",
+    "weight": "512 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "dry_plant", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 3 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 6,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "MOVE_COST", "multiply": -0.05 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_20_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-化纤头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。\n再生魔力+10%。",
+    "weight": "2500 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "nylon", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 4 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 2 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 2 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "REGEN_MANA", "multiply": 0.1 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_20_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-化纤胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。\n再生魔力+10%。",
+    "weight": "6400 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "nylon", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 7 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "REGEN_MANA", "multiply": 0.1 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_20_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-化纤护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。",
+    "weight": "4900 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "nylon", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 6 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER" ]
+  },
+  {
+    "id": "self_easy_armor_20_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-化纤护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。\n再生魔力+10%。",
+    "weight": "1600 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "nylon", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 3 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "REGEN_MANA", "multiply": 0.1 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_20_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-化纤靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。",
+    "weight": "1600 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "nylon", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 3 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 14,
+    "flags": [ "STURDY", "VARSIZE", "OUTER" ]
+  },
+  {
+    "id": "self_easy_armor_21_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-锌头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。\n增加耐力1000。",
+    "weight": "1785 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "zinc", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 10 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 5 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 5 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "MAX_STAMINA", "add": 1000 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_21_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-锌胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。\n增加耐力1000。",
+    "weight": "4569 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "zinc", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 16 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 8 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "MAX_STAMINA", "add": 1000 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_21_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-锌护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。\n增加耐力1000。",
+    "weight": "3498 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "zinc", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 14 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "MAX_STAMINA", "add": 1000 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_21_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-锌护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。",
+    "weight": "1142 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "zinc", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 8 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_21_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-锌靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。",
+    "weight": "1142 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "zinc", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 8 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 9,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_22_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-外星树脂头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。\n增加1智力。",
+    "weight": "700 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "alien_resin", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 5 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 3 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 3 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "INTELLIGENCE", "add": 1 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_22_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-外星树脂胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。\n增加1力量。",
+    "weight": "1792 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "alien_resin", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 8 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "STRENGTH", "add": 1 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_22_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-外星树脂护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。\n增加1敏捷。",
+    "weight": "1372 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "alien_resin", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 7 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "DEXTERITY", "add": 1 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_22_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-外星树脂护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。\n增加1感知。",
+    "weight": "448 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "alien_resin", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "PERCEPTION", "add": 1 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_22_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-外星树脂靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。",
+    "weight": "448 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "alien_resin", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 25,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_23_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-硅化甲壳头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。",
+    "weight": "1110 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "acidchitin", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 7 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 4 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_23_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-硅化甲壳胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。",
+    "weight": "2841 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "acidchitin", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 10 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 5 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_23_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-硅化甲壳护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。\n增加2力量。",
+    "weight": "2175 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "acidchitin", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 9 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "STRENGTH", "add": 2 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_23_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-硅化甲壳护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。",
+    "weight": "710 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "acidchitin", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 6 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_23_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-硅化甲壳靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。",
+    "weight": "710 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "acidchitin", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 6 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 21,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_24_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-甲壳头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。",
+    "weight": "890 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "chitin", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 7 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 4 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_24_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-甲壳胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。",
+    "weight": "2278 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "chitin", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 10 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 5 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_24_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-甲壳护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。",
+    "weight": "1744 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "chitin", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 9 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_24_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-甲壳护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。\n增加2力量。",
+    "weight": "570 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "chitin", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 6 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "STRENGTH", "add": 2 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_24_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-甲壳靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。",
+    "weight": "570 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "chitin", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 6 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 11,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_25_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-黏土头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。",
+    "weight": "5300 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "clay", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 7 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 4 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_25_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-黏土胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。\n增加20kg负重。",
+    "weight": "13568 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "clay", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 10 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 5 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "CARRY_WEIGHT", "add": 20000 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_25_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-黏土护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。\n增加20kg负重。",
+    "weight": "10388 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "clay", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 9 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "CARRY_WEIGHT", "add": 20000 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_25_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-黏土护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。",
+    "weight": "3392 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "clay", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 6 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_25_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-黏土靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。\n增加20kg负重。",
+    "weight": "3392 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "clay", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 6 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 11,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "CARRY_WEIGHT", "add": 20000 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_26_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-棉布头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。\n增加2智力。",
+    "weight": "4165 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "cotton", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 4 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 2 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 2 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "INTELLIGENCE", "add": 2 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_26_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-棉布胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。",
+    "weight": "10662 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "cotton", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 7 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER" ]
+  },
+  {
+    "id": "self_easy_armor_26_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-棉布护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。",
+    "weight": "8163 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "cotton", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 6 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER" ]
+  },
+  {
+    "id": "self_easy_armor_26_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-棉布护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。",
+    "weight": "2665 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "cotton", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 3 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER" ]
+  },
+  {
+    "id": "self_easy_armor_26_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-棉布靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。",
+    "weight": "2665 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "cotton", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 3 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER" ]
+  },
+  {
+    "id": "self_easy_armor_27_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-宝石头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。\n增加生命10%。",
+    "weight": "7275 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "gemstone", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 7 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 4 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "FANCY", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "MAX_HP", "multiply": 0.1 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_27_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-宝石胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。\n增加生命10%。",
+    "weight": "18624 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "gemstone", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 10 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 5 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "FANCY", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "MAX_HP", "multiply": 0.1 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_27_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-宝石护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。\n增加生命10%。",
+    "weight": "14259 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "gemstone", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 9 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "FANCY", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "MAX_HP", "multiply": 0.1 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_27_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-宝石护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。\n增加生命10%。",
+    "weight": "4656 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "gemstone", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 6 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "FANCY", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "MAX_HP", "multiply": 0.1 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_27_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-宝石靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。\n增加生命10%。",
+    "weight": "4656 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "gemstone", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 6 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 15,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "FANCY", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "MAX_HP", "multiply": 0.1 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_28_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-毛皮头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。",
+    "weight": "1140 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "fur", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 4 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 2 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 2 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_28_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-毛皮胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。",
+    "weight": "2918 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "fur", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 7 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_28_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-毛皮护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。\n增加2敏捷。",
+    "weight": "2234 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "fur", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 6 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "DEXTERITY", "add": 2 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_28_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-毛皮护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。",
+    "weight": "730 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "fur", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 3 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_28_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-毛皮靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。",
+    "weight": "730 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "fur", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 3 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_29_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-人造毛皮头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。\n再生魔力+25%。",
+    "weight": "555 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "faux_fur", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 4 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 2 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 2 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "REGEN_MANA", "multiply": 0.25 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_29_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-人造毛皮胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。\n再生魔力+25%。",
+    "weight": "1420 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "faux_fur", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 7 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "REGEN_MANA", "multiply": 0.25 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_29_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-人造毛皮护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。\n再生魔力+25%。",
+    "weight": "1088 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "faux_fur", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 6 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "REGEN_MANA", "multiply": 0.25 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_29_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-人造毛皮护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。",
+    "weight": "355 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "faux_fur", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 3 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_29_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-人造毛皮靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。",
+    "weight": "355 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "faux_fur", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 3 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 9,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_30_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-凯夫拉头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。",
+    "weight": "4165 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "kevlar", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 5 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 3 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 3 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_30_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-凯夫拉胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。\n体力再生+25%。",
+    "weight": "10662 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "kevlar", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 8 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+    				{ "value": "REGEN_STAMINA", "multiply": 0.25 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_30_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-凯夫拉护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。\n体力再生+25%。",
+    "weight": "8163 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "kevlar", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 7 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+    				{ "value": "REGEN_STAMINA", "multiply": 0.25 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_30_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-凯夫拉护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。",
+    "weight": "2665 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "kevlar", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_30_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-凯夫拉靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。\n体力再生+25%。",
+    "weight": "2665 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "kevlar", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+    				{ "value": "REGEN_STAMINA", "multiply": 0.25 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_31_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-多层凯夫拉头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。",
+    "weight": "3332 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "kevlar_layered", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 5 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 3 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 3 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_31_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-多层凯夫拉胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。\n体力再生+25%。",
+    "weight": "8531 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "kevlar_layered", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 8 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+    				{ "value": "REGEN_STAMINA", "multiply": 0.25 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_31_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-多层凯夫拉护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。\n体力再生+25%。",
+    "weight": "6531 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "kevlar_layered", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 7 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+    				{ "value": "REGEN_STAMINA", "multiply": 0.25 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_31_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-多层凯夫拉护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。",
+    "weight": "2132 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "kevlar_layered", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_31_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-多层凯夫拉靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。\n体力再生+25%。",
+    "weight": "2132 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "kevlar_layered", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+    				{ "value": "REGEN_STAMINA", "multiply": 0.25 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_32_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-硬凯夫拉头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。",
+    "weight": "2500 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "kevlar_rigid", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 5 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 3 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 3 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_32_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-硬凯夫拉胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。\n体力再生+25%。",
+    "weight": "6400 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "kevlar_rigid", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 8 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+    				{ "value": "REGEN_STAMINA", "multiply": 0.25 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_32_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-硬凯夫拉护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。\n体力再生+25%。",
+    "weight": "4900 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "kevlar_rigid", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 7 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+    				{ "value": "REGEN_STAMINA", "multiply": 0.25 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_32_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-硬凯夫拉护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。",
+    "weight": "1600 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "kevlar_rigid", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_32_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-硬凯夫拉靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。\n体力再生+25%。",
+    "weight": "1600 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "kevlar_rigid", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+    				{ "value": "REGEN_STAMINA", "multiply": 0.25 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_33_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-氨纶头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。",
+    "weight": "2500 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "lycra", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 4 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 2 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 2 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_33_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-氨纶胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。",
+    "weight": "6400 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "lycra", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 7 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_33_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-氨纶护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。\n速度+5。",
+    "weight": "4900 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "lycra", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 6 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "SPEED", "add": 5 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_33_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-氨纶护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。",
+    "weight": "1600 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "lycra", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 3 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_33_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-氨纶靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。",
+    "weight": "1600 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "lycra", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 3 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 14,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_34_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-氯丁橡胶头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。",
+    "weight": "5000 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "neoprene", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 5 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 3 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 3 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_34_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-氯丁橡胶胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。",
+    "weight": "12800 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "neoprene", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 8 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_34_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-氯丁橡胶护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。",
+    "weight": "9800 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "neoprene", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 7 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_34_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-氯丁橡胶护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。\n增加1格挡次数。",
+    "weight": "3200 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "neoprene", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "BONUS_BLOCK", "add": 1 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_34_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-氯丁橡胶靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。",
+    "weight": "3200 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "neoprene", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 6,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_35_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-芳纶头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。\n再生魔力+50%。",
+    "weight": "4165 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "nomex", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 4 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 2 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 2 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+            { "value": "REGEN_MANA", "multiply": 0.5 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_35_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-芳纶胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。",
+    "weight": "10662 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "nomex", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 7 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_35_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-芳纶护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。",
+    "weight": "8163 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "nomex", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 6 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_35_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-芳纶护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。\n再生魔力+50%。",
+    "weight": "2665 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "nomex", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 3 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+            { "value": "REGEN_MANA", "multiply": 0.5 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_35_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-芳纶靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。",
+    "weight": "2665 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "nomex", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 3 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_36_a",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_a",
+    "category": "armor",
+    "name": "基底-纸头盔",
+    "looks_like": "helmet_barbute",
+    "description": "一件由处理过的材料制成的头盔。",
+    "weight": "1500 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ { "type": "paper", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 4 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 2 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 2 }
+    ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "environmental_protection": 3,
+    "flags": [ "STURDY", "VARSIZE", "OUTER" ]
+  },
+  {
+    "id": "self_easy_armor_36_b",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_b",
+    "category": "armor",
+    "name": "基底-纸胸甲",
+    "looks_like": "armor_junk_lightplate",
+    "description": "一件由处理过的材料制成的胸甲。\n攻击消耗-5%。",
+    "weight": "3840 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ { "type": "paper", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 7 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 4 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "STURDY", "VARSIZE", "OUTER" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "ATTACK_SPEED", "multiply": -0.05 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_36_c",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_c",
+    "category": "armor",
+    "name": "基底-纸护腿",
+    "looks_like": "legguard_lightplate",
+    "description": "一件由处理过的材料制成的护腿。",
+    "weight": "2940 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ { "type": "paper", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 6 }
+    ],
+    "warmth": 0,
+    "material_thickness": 3,
+    "environmental_protection": 8,
+    "flags": [ "STURDY", "VARSIZE", "OUTER" ]
+  },
+  {
+    "id": "self_easy_armor_36_d",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_d",
+    "category": "armor",
+    "name": "基底-纸护手",
+    "looks_like": "lc_mitten_gaunt",
+    "description": "一双由处理过的材料制成的护手。\n攻击消耗-2%。",
+    "weight": "960 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "paper", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 3 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 5,
+    "flags": [ "STURDY", "VARSIZE", "OUTER" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "ATTACK_SPEED", "multiply": -0.02 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_36_e",
+    "type": "ARMOR",
+    "copy-from": "self_easy_armor_base_e",
+    "category": "armor",
+    "name": "基底-纸靴子",
+    "looks_like": "lc_sabaton",
+    "description": "一双由处理过的材料制成的靴子。",
+    "weight": "960 g",
+    "volume": "2000 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ { "type": "paper", "portion": 100 }, { "type": "yessoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 3 }
+    ],
+    "warmth": 0,
+    "material_thickness": 1,
+    "environmental_protection": 6,
+    "flags": [ "STURDY", "VARSIZE", "OUTER" ]
+  }
+]

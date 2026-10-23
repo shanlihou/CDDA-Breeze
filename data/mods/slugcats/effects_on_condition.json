@@ -1,0 +1,41 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "rain_averse",
+    "recurrence": 10,
+    "global": true,
+    "condition": {
+      "and": [
+        {
+          "or": [
+            { "u_has_trait": "THRESH_SLUGCAT_NAT" },
+            { "u_has_trait": "THRESH_SLUGCAT" }
+          ]
+        },
+        {
+          "or": [
+            { "is_weather": "rain" },
+            { "is_weather": "light_drizzle" },
+            { "is_weather": "drizzle" },
+            { "is_weather": "rainstorm" },
+            { "is_weather": "thunder" },
+            { "is_weather": "lightning" }
+          ]
+        },
+        "u_is_outside",
+        { "one_in_chance": 1 }
+      ]
+    },
+    "effect": [
+      { "u_message": "雨水会把你冲走的！你需要找到庇护所，而且要快！", "type": "bad" },
+      {
+        "u_add_morale": "morale_feeling_bad",
+        "bonus": -10,
+        "max_bonus": -100,
+        "duration": "60 minutes",
+        "decay_start": "60 minutes"
+      },
+      { "u_add_effect": "rain_aversion", "intensity": 2, "duration": "60 minutes" }
+    ]
+  }
+]

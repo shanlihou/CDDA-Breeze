@@ -1,0 +1,184 @@
+[
+  {
+    "type": "mutation",
+    "id": "强化力量",
+    "name": { "str": "强化力量" },
+    "points": 0,
+    "description": "你的力量得到了强化+8",
+    "types": [ "STR" ],
+    "passive_mods": { "str_mod": 8 }
+  },
+  {
+    "type": "mutation",
+    "id": "强化敏捷",
+    "name": { "str": "强化敏捷" },
+    "points": 0,
+    "description": "你的力量得到了强化+8",
+    "types": [ "DEX" ],
+    "passive_mods": { "dex_mod": 8 }
+  },
+  {
+    "type": "mutation",
+    "id": "强化智力",
+    "name": { "str": "强化智力" },
+    "points": 0,
+    "description": "你的力量得到了强化+8",
+    "types": [ "INT" ],
+    "passive_mods": { "int_mod": 8 }
+  },
+  {
+    "type": "mutation",
+    "id": "强化感知",
+    "name": { "str": "强化感知" },
+    "points": 0,
+    "description": "你的力量得到了强化+8",
+    "types": [ "PER" ],
+    "passive_mods": { "per_mod": 8 }
+  },
+  {
+    "type": "mutation",
+    "id": "毒素免疫",
+    "name": { "str": "毒素免疫" },
+    "points": 0,
+    "description": "你的消化系统免疫所有形式的毒素，可以大嚼大咽有毒食物",
+    "types": [ "CONSTITUTION" ],
+    "vitamins_absorb_multi": [ [ "all", [ [ "mutant_toxin", 0 ] ] ] ]
+  },
+  {
+    "type": "mutation",
+    "id": "丧尸生命",
+    "name": { "str": "丧尸生命" },
+    "points": 0,
+    "description": "你的生命力丧尸化后，得到了大量提升,是原先的2倍",
+    "social_modifiers": { "intimidate": 4 },
+    "hp_modifier": 2
+  },
+  {
+    "type": "mutation",
+    "id": "生化大脑",
+    "name": { "str": "生化大脑" },
+    "points": 0,
+    "description": "你的记忆力超群，几乎不会遗忘技能",
+    "types": [ "MEMORY" ],
+    "skill_rust_multiplier": 0.01,
+    "overmap_sight": 10,
+    "hearing_modifier": 1.5,
+    "cancels": [ "FORGETFUL" ]
+  },
+  {
+    "type": "mutation",
+    "id": "丧尸再生",
+    "name": { "str": "丧尸再生" },
+    "points": 0,
+    "purifiable": false,
+    "description": "你已经超越人类，只需要稍作喘息，哪怕断肢也会恢复如初",
+    "healing_awake": 500.0,
+    "healing_resting": 500.0,
+    "mending_modifier": 1000.0,
+    "flags": [ "MEND_ALL" ]
+  },
+  {
+    "type": "mutation",
+    "id": "温度适应",
+    "name": { "str": "温度适应" },
+    "points": 0,
+    "description": "你对环境气温的耐受能力远超人类，在寒冬或酷暑也能不受影响",
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [ { "value": "CLIMATE_CONTROL_CHILL", "add": 500 }, { "value": "CLIMATE_CONTROL_HEAT", "add": 500 } ]
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "超少睡眠",
+    "name": { "str": "超少睡眠" },
+    "points": 0,
+    "description": "你很少需要睡眠，除了偶尔",
+    "types": [ "SLEEP" ],
+    "fatigue_modifier": -0.8,
+    "fatigue_regen_modifier": 0.8
+  },
+  {
+    "type": "mutation",
+    "id": "强化体质",
+    "name": { "str": "强化体质" },
+    "points": 0,
+    "description": "你的耐力相对比人类来说几乎无限，移动速度增加，耐力恢复速度增加,反应速度也增加了几乎一倍",
+    "cardio_multiplier": 4,
+    "stamina_regen_modifier": 6,
+    "movecost_flatground_modifier": 0.3,
+    "movecost_obstacle_modifier": 0.3,
+    "metabolism_modifier": -0.9,
+    "noise_modifier": 0.2,
+    "weight_capacity_modifier": 3.0,
+    "stomach_size_multiplier": 2.0,
+    "vitamin_rates": [ [ "instability", 7200 ] ],
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [ { "value": "HUNGER", "multiply": -0.9 }, { "value": "THIRST", "multiply": -1.0 }, { "value": "SLEEPY", "add": 40 } ]
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "强化内部组织",
+    "name": { "str": "强化内部组织" },
+    "points": 0,
+    "visibility": 3,
+    "ugliness": 2,
+    "description": "你的身体组织强度得到了极大强化，可以抵御一般的武器攻击",
+    "types": [ "SKIN" ],
+    "integrated_armor": [ "强化内部组织" ],
+    "wet_protection": [
+      { "part": "head", "ignored": 50 },
+      { "part": "leg_l", "ignored": 50 },
+      { "part": "leg_r", "ignored": 50 },
+      { "part": "foot_l", "ignored": 50 },
+      { "part": "foot_r", "ignored": 50 },
+      { "part": "arm_l", "ignored": 50 },
+      { "part": "arm_r", "ignored": 50 },
+      { "part": "hand_l", "ignored": 50 },
+      { "part": "hand_r", "ignored": 50 },
+      { "part": "torso", "ignored": 50 }
+    ]
+  },
+  {
+    "id": "强化内部组织",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": { "str": "强化内部组织" },
+    "description": "This skin is much better.  You could get used to this one.",
+    "weight": "1 kg",
+    "volume": "200 ml",
+    "price": 0,
+    "price_postapoc": 0,
+    "material": [ "leather_arthropod" ],
+    "symbol": "x",
+    "color": "green",
+    "warmth": 2,
+    "environmental_protection": 10,
+    "flags": [
+      "INTEGRATED",
+      "ALLOWS_NATURAL_ATTACKS",
+      "UNBREAKABLE",
+      "PERSONAL",
+      "WATER_FRIENDLY",
+      "ELECTRIC_IMMUNE",
+      "RAD_PROOF",
+      "PADDED",
+      "GAS_PROOF",
+      "SUN_GLASSES"
+    ],
+    "armor": [
+      {
+        "material": [ { "type": "leather_arthropod", "covered_by_mat": 100, "thickness": 5 } ],
+        "covers": [ "hand_l", "hand_r", "foot_l", "foot_r", "leg_l", "leg_r", "arm_l", "arm_r", "torso", "head", "eyes", "mouth" ],
+        "coverage": 100,
+        "encumbrance": -5
+      }
+    ]
+  }
+]

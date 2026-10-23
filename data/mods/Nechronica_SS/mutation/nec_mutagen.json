@@ -1,0 +1,28 @@
+[
+  {
+    "id": "iv_mutagen_necromancy",
+    "copy-from": "iv_mutagen_flavor",
+    "type": "COMESTIBLE",
+    "name": { "str": "突变引物(尸人)" },
+    "description": "一种黑乎乎的，黏糊糊的浓缩诱变剂。如果你要使用它，你将需要一个注射器...。",
+    "color": "dark_gray",
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你注射了突变引物(尸人)。",
+      "tools_needed": { "syringe": -1 },
+      "vitamins": [ [ "mutagen_necromancy", 450, 550 ] ]
+    }
+
+  },
+  {
+    "id": "mutagen_necromancy",
+    "copy-from": "mutagen_flavor",
+    "type": "COMESTIBLE",
+    "name": { "str": "诱变剂(尸人)" },
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "摄取了尸人的诱变剂。",
+      "vitamins": [ [ "mutagen_necromancy", 175 ], [ "mutagen", 125 ] ]
+    }
+  }
+]

@@ -1,0 +1,303 @@
+[
+  {
+    "id": "刺舌",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": { "str": "刺舌" },
+    "description": "一根覆盖着骨质尖刺的肉舌，后方使用肉须紧紧缠绕着使用者的手臂，可以隔着几米刺向敌人。不使用的时候可以蜷缩起来以方便携带",
+    "weight": "1300 g",
+    "volume": "3500 ml",
+    "longest_side": "50 cm",
+    "price": 0,
+    "price_postapoc": 0,
+    "bashing": 12,
+    "cutting": 30,
+    "to_hit": { "grip": "solid", "length": "long", "surface": "point", "balance": "neutral" },
+    "material": [ "compositeskeleton", "livemeat", "strongtendons", "acidresistantstomachwall" ],
+    "symbol": "/",
+    "color": "brown",
+    "techniques": [ "WBLOCK_2", "PRECISE" ],
+    "flags": [ "STAB", "DURABLE_MELEE", "UNBREAKABLE_MELEE" ],
+    "weapon_category": [ "POLEARMS" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ACTIVE",
+          "values": [ { "value": "ATTACK_SPEED", "add": -140 }, { "value": "DEXTERITY", "add": 10 } ],
+          "mutations": [ "HUNGER", "DEFORMED2" ]
+        }
+      ]
+    },
+    "ammo": [ "活性营养质" ],
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "watertight": true, "ammo_restriction": { "活性营养质": 100 } } ],
+    "use_action": {
+      "type": "transform",
+      "msg": "刺舌展开",
+      "target": "刺舌_on",
+      "active": true,
+      "need_charges": 1,
+      "need_charges_msg": "活性营养质不足."
+    }
+  },
+  {
+    "id": "刺舌_on",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": { "str": "刺舌（血肉展开）" },
+    "description": "一根覆盖着骨质尖刺的肉舌，后方使用肉须紧紧缠绕着使用者的手臂，可以隔着几米刺向敌人。它已经完全伸展开来，解除了限制",
+    "weight": "1300 g",
+    "volume": "5000 ml",
+    "longest_side": "300 cm",
+    "price": 0,
+    "price_postapoc": 0,
+    "bashing": 40,
+    "cutting": 120,
+    "to_hit": { "grip": "solid", "length": "long", "surface": "point", "balance": "neutral" },
+    "material": [ "compositeskeleton", "livemeat", "strongtendons", "acidresistantstomachwall" ],
+    "symbol": "/",
+    "color": "brown",
+    "techniques": [ "WBLOCK_2", "PRECISE" ],
+    "flags": [ "STAB", "DURABLE_MELEE", "SPEAR", "REACH_ATTACK", "REACH3", "UNBREAKABLE_MELEE", "POWERED" ],
+    "weapon_category": [ "POLEARMS" ],
+    "ammo": [ "活性营养质" ],
+    "turns_per_charge": 4,
+    "charges_per_use": 0,
+    "revert_to": "刺舌",
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "watertight": true, "ammo_restriction": { "活性营养质": 100 } } ],
+    "use_action": { "type": "transform", "menu_text": "Turn off", "msg": "刺舌已经收缩", "target": "刺舌" }
+  },
+  {
+    "type": "TOOL",
+    "id": "震荡腔",
+    "name": { "str": "震荡腔" },
+    "description": "一柄长柄武器，前段是一个骨肉共鸣腔，能够发出极强的共鸣震动",
+    "weight": "4250 g",
+    "color": "brown",
+    "symbol": "/",
+    "material": [ "compositeskeleton", "livemeat", "strongtendons", "acidresistantstomachwall" ],
+    "flags": [ "ALWAYS_TWOHAND", "DURABLE_MELEE", "REACH_ATTACK", "UNBREAKABLE_MELEE" ],
+    "techniques": [ "BRUTAL", "WIDE", "SWEEP", "WBLOCK_2", "PRECISE" ],
+    "volume": "6250 ml",
+    "longest_side": "80 cm",
+    "bashing": 120,
+    "to_hit": { "grip": "weapon", "length": "long", "surface": "any", "balance": "uneven" },
+    "price": 0,
+    "price_postapoc": 0,
+    "qualities": [ [ "HAMMER", 10 ] ],
+    "weapon_category": [ "POLEARMS", "HOOKING_WEAPONRY", "GREAT_HAMMERS" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ACTIVE",
+          "values": [ { "value": "ATTACK_SPEED", "add": -100 }, { "value": "DEXTERITY", "add": 10 } ],
+          "mutations": [ "HUNGER", "DEFORMED2" ]
+        }
+      ]
+    },
+    "ammo": [ "活性营养质" ],
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "watertight": true, "ammo_restriction": { "活性营养质": 100 } } ],
+    "use_action": {
+      "type": "transform",
+      "msg": "震荡腔展开",
+      "target": "震荡腔_on",
+      "active": true,
+      "need_charges": 1,
+      "need_charges_msg": "活性营养质不足."
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "震荡腔_on",
+    "name": { "str": "震荡腔（血肉展开）" },
+    "description": "一柄长柄武器，前段是一个骨肉共鸣腔，能够发出极强的共鸣震动，它已经完全展开，振动波的威力十分巨大",
+    "weight": "4250 g",
+    "color": "brown",
+    "symbol": "/",
+    "material": [ "compositeskeleton", "livemeat", "strongtendons", "acidresistantstomachwall" ],
+    "flags": [ "ALWAYS_TWOHAND", "DURABLE_MELEE", "REACH_ATTACK", "UNBREAKABLE_MELEE", "REACH3" ],
+    "techniques": [ "BRUTAL", "WIDE", "SWEEP", "WBLOCK_2", "PRECISE" ],
+    "volume": "10000 ml",
+    "longest_side": "320 cm",
+    "bashing": 260,
+    "to_hit": { "grip": "weapon", "length": "long", "surface": "any", "balance": "uneven" },
+    "price": 0,
+    "price_postapoc": 0,
+    "qualities": [ [ "HAMMER", 10 ] ],
+    "weapon_category": [ "POLEARMS", "HOOKING_WEAPONRY", "GREAT_HAMMERS" ],
+    "ammo": [ "活性营养质" ],
+    "turns_per_charge": 4,
+    "charges_per_use": 0,
+    "revert_to": "震荡腔",
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "watertight": true, "ammo_restriction": { "活性营养质": 100 } } ],
+    "use_action": { "type": "transform", "menu_text": "Turn off", "msg": "震荡腔已经收缩", "target": "震荡腔" }
+  },
+  {
+    "id": "骨齿发射器",
+    "type": "GUN",
+    "symbol": "(",
+    "color": "red",
+    "name": { "str": "骨齿发射器" },
+    "description": "用人类的视角来看，这是一把没有扳机的血肉手枪，其有一根绷紧的弹性组织，可以把骨齿高速弹射出去",
+    "price": 0,
+    "price_postapoc": 0,
+    "material": [ "livemeat", "strongtendons" ],
+    "ammo_effects": [ "NEVER_MISFIRES", "NON_FOULING" ],
+    "flags": [ "NEVER_JAMS", "NON_FOULING", "UNBREAKABLE_MELEE", "NEEDS_NO_LUBE" ],
+    "skill": "pistol",
+    "weight": "850 g",
+    "volume": "500 ml",
+    "longest_side": "29 cm",
+    "bashing": 8,
+    "to_hit": 3,
+    "ranged_damage": { "damage_type": "stab", "amount": 16, "armor_penetration": 12 },
+    "range": 23,
+    "dispersion": 0,
+    "recoil": 2,
+    "durability": 8,
+    "modes": [ [ "DEFAULT", "semi", 1 ], [ "BURST", "2-rd. burst", 2 ] ],
+    "valid_mod_locations": [ [ "accessories", 1 ], [ "sling", 1 ] ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "values": [ { "value": "PERCEPTION", "add": 4 } ],
+          "mutations": [ "HUNGER", "DEFORMED2" ]
+        }
+      ]
+    },
+    "ammo": [ "骨齿" ],
+    "pocket_data": [
+      {
+        "magazine_well": "100 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "item_restriction": [ "骨齿生发组织（小型）", "骨齿生发组织（中型）", "骨齿生发组织（大型）" ]
+      }
+    ]
+  },
+  {
+    "id": "长射骨齿发射器",
+    "type": "GUN",
+    "symbol": "(",
+    "looks_like": "flesh_rifle",
+    "color": "red",
+    "name": { "str": "长射骨齿发射器" },
+    "description": "骨齿发射器的改良版本，加装了多条肉舌组成的强健肌肉弹射组织，可以以更高的速度把骨齿弹射出去",
+    "price": 0,
+    "price_postapoc": 0,
+    "material": [ "livemeat", "strongtendons" ],
+    "ammo_effects": [ "NEVER_MISFIRES", "NON_FOULING" ],
+    "flags": [ "NEVER_JAMS", "NON_FOULING", "UNBREAKABLE_MELEE", "NEEDS_NO_LUBE" ],
+    "skill": "rifle",
+    "weight": "1800 g",
+    "volume": "2500 ml",
+    "longest_side": "70 cm",
+    "bashing": 8,
+    "to_hit": 3,
+    "ranged_damage": { "damage_type": "stab", "amount": 40, "armor_penetration": 22 },
+    "range": 44,
+    "dispersion": 0,
+    "recoil": 5,
+    "durability": 8,
+    "modes": [ [ "DEFAULT", "semi", 1 ], [ "BURST", "2-rd. burst", 2 ], [ "AUTO", "high auto", 10 ] ],
+    "valid_mod_locations": [ [ "accessories", 1 ], [ "sling", 1 ] ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "values": [ { "value": "PERCEPTION", "add": 8 } ],
+          "mutations": [ "HUNGER", "DEFORMED2" ]
+        }
+      ]
+    },
+    "ammo": [ "骨齿" ],
+    "pocket_data": [
+      {
+        "magazine_well": "100 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "item_restriction": [ "骨齿生发组织（小型）", "骨齿生发组织（中型）", "骨齿生发组织（大型）" ]
+      }
+    ]
+  },
+  {
+    "id": "爆质骨齿发射器",
+    "type": "GUN",
+    "symbol": "(",
+    "color": "red",
+    "name": { "str": "爆质骨齿发射器" },
+    "description": "一把发射爆质骨齿的发射器，威力巨大，很可能会伤害到使用者",
+    "price": 0,
+    "price_postapoc": 0,
+    "material": [ "livemeat", "strongtendons", "compositeskeleton", "acidresistantstomachwall" ],
+    "ammo_effects": [ "NEVER_MISFIRES", "FRAG" ],
+    "flags": [ "NEVER_JAMS", "NON_FOULING", "UNBREAKABLE_MELEE", "NEEDS_NO_LUBE" ],
+    "skill": "rifle",
+    "weight": "8850 g",
+    "volume": "7500 ml",
+    "longest_side": "129 cm",
+    "bashing": 8,
+    "to_hit": 3,
+    "ranged_damage": { "damage_type": "stab", "amount": 8, "armor_penetration": 1 },
+    "range": 35,
+    "dispersion": 10,
+    "recoil": 2,
+    "durability": 8,
+    "modes": [ [ "DEFAULT", "semi", 1 ] ],
+    "valid_mod_locations": [ [ "accessories", 1 ], [ "sling", 1 ] ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "values": [ { "value": "PERCEPTION", "add": 4 } ],
+          "mutations": [ "HUNGER", "DEFORMED2" ]
+        }
+      ]
+    },
+    "ammo": [ "爆质骨齿" ],
+    "pocket_data": [
+      { "magazine_well": "500 ml", "pocket_type": "MAGAZINE_WELL", "item_restriction": [ "环形爆质骨齿供养肉囊" ] }
+    ]
+  },
+  {
+    "id": "酸解发射器",
+    "type": "GUN",
+    "symbol": "(",
+    "color": "red",
+    "name": { "str": "酸解发射器" },
+    "description": "一把发射酸解气的发射器，很可能会伤害到使用者",
+    "price": 0,
+    "price_postapoc": 0,
+    "material": [ "livemeat", "strongtendons", "compositeskeleton", "acidresistantstomachwall" ],
+    "ammo_effects": [ "NEVER_MISFIRES", "酸解气" ],
+    "flags": [ "NEVER_JAMS", "NON_FOULING", "UNBREAKABLE_MELEE", "NEEDS_NO_LUBE" ],
+    "skill": "rifle",
+    "weight": "8850 g",
+    "volume": "7500 ml",
+    "longest_side": "129 cm",
+    "bashing": 8,
+    "to_hit": 3,
+    "ranged_damage": { "damage_type": "stab", "amount": 8, "armor_penetration": 1 },
+    "range": 35,
+    "dispersion": 10,
+    "recoil": 2,
+    "durability": 8,
+    "modes": [ [ "DEFAULT", "semi", 1 ] ],
+    "valid_mod_locations": [ [ "accessories", 1 ], [ "sling", 1 ] ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "values": [ { "value": "PERCEPTION", "add": 4 } ],
+          "mutations": [ "HUNGER", "DEFORMED2" ]
+        }
+      ]
+    },
+    "ammo": [ "酸解浓缩质" ],
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "watertight": true, "ammo_restriction": { "酸解浓缩质": 50 } } ]
+  }
+]

@@ -1,0 +1,142 @@
+[
+  {
+    "id": "mon_ezou_wolf",
+    "type": "MONSTER",
+    "name": {
+      "str": "虾夷狼",
+      "str_pl": "虾夷狼"
+    },
+    "copy-from": "mon_wolf",
+    "description": "一种狡猾的群居掠食者，曾在日本列岛的北部岛屿上灭绝。这种动物在古代日本既受尊崇又被畏惧，在19世纪和20世纪初遭受了有组织的灭绝运动。体型与北美狼相似，在灾变前，两者被认为是近亲，如果不是仅因地理而分隔的同一物种的话。",
+    "volume": "27000 ml",
+    "weight": "27000 g",
+    "default_faction": "wolf",
+    "bodytype": "dog",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "harvest": "mammal_fur",
+    "hp": 40,
+    "speed": 165,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "w",
+    "color": "light_gray",
+    "morale": 20,
+    "melee_skill": 7,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      }
+    ],
+    "dodge": 4,
+    "armor_bash": 2,
+    "armor_cut": 2,
+    "armor_bullet": 2,
+    "vision_night": 5,
+    "path_settings": {
+      "max_dist": 10
+    },
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "FRIEND_DIED",
+      "HURT",
+      "STALK"
+    ],
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        100
+      ]
+    ],
+    "flags": [
+      "ANIMAL",
+      "HEARS",
+      "KEENNOSE",
+      "PATH_AVOID_DANGER_1",
+      "SEES",
+      "SMELLS",
+      "WARM"
+    ],
+    "//": "Generic Ezou wolf. Basically a North American wolf that got stuck in Hokkaido, however these seemed to ignore humans except under arduous circumstances. Probably only the youkai version should spawn as they're a higher risk for the player"
+  },
+  {
+    "id": "mon_honshuu_wolf",
+    "type": "MONSTER",
+    "name": {
+      "str": "本州狼",
+      "str_pl": "本州狼"
+    },
+    "copy-from": "mon_wolf",
+    "description": "一种狡猾的群居掠食者，曾在日本列岛的三个南部岛屿上灭绝。这种动物在古代日本曾受尊崇，却在现代承受了人类活动的后果，更不用说19世纪和20世纪初的积极迫害了。体型比北美狼小，但无论如何它仍然是狼。",
+    "volume": "20000 ml",
+    "weight": "20000 g",
+    "default_faction": "wolf",
+    "bodytype": "dog",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "harvest": "mammal_fur",
+    "hp": 32,
+    "speed": 165,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "w",
+    "color": "brown",
+    "morale": 20,
+    "melee_skill": 7,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 3
+      }
+    ],
+    "dodge": 4,
+    "armor_bash": 1,
+    "armor_cut": 1,
+    "vision_night": 5,
+    "path_settings": {
+      "max_dist": 10
+    },
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "FRIEND_DIED",
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK",
+      "STALK"
+    ],
+    "fear_triggers": [
+      "HURT"
+    ],
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        100
+      ]
+    ],
+    "flags": [
+      "ANIMAL",
+      "GROUP_MORALE",
+      "HEARS",
+      "KEENNOSE",
+      "PATH_AVOID_DANGER_1",
+      "SEES",
+      "SMELLS",
+      "WARM"
+    ],
+    "//": "Generic Japanese non-Ezou wolf. Probably only the youkai version should spawn as they're a higher risk for the player"
+  }
+]

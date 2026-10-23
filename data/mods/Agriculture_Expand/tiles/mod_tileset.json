@@ -1,0 +1,74 @@
+[
+	{
+		"type": "mod_tileset",
+		"compatibility": [
+			"Chibi_Ultica",
+			"UltimateCataclysm",
+			"MshockXottoplus",
+			"UNDEAD_PEOPLE",
+			"UNDEAD_PEOPLE_BASE",
+			"UNDEAD_PEOPLE_LEGACY",
+			"UlticaShell",
+			"MshockXottoplus12",
+			"MSX++DEAD_PEOPLE",
+			"MXplus12_for_cosmetics",
+			"MshockRealXotto"
+		],
+		"tiles-new": [
+			{
+				"file": "tiles/hy_mobile.png",
+				"sprite_width":32,
+				"sprite_height":32,
+				"sprite_offset_x": 0,
+				"sprite_offset_y": 0,
+				"tiles": [
+					{ "id": "hy_mobile_adv_m_folded", "fg": 0, "rotates": false },
+					{ "id": "hy_mobile_adv_m", "fg": 1, "rotates": false },
+					{ "id": "hy_mobile_adv_m_seedling", "fg": 2, "rotates": false },
+					{ "id": "hy_mobile_adv_m_mature", "fg": 3, "rotates": false },
+					{ "id": "hy_mobile_adv_m_harvest", "fg": 4, "rotates": false }
+				]
+			},
+			{
+				"file": "tiles/apiculture.png",
+				"sprite_width":32,
+				"sprite_height":48,
+				"sprite_offset_x": 0,
+				"sprite_offset_y":-16,
+				"tiles": [
+					{ "id": "apiculture_beehive_normal_new_empty", "fg": 5, "rotates": false },
+					{ "id": "f_apiculture_beehive_normal_new_empty", "fg": 5, "rotates": false },
+					{ "id": "apiculture_beehive_normal_new", "fg": 5, "rotates": false },
+					{ "id": "f_apiculture_beehive_normal_new", "fg": 5, "rotates": false },
+					{ "id": "apiculture_beehive_normal_hibernate_new", "fg": 5, "rotates": false },
+					{ "id": "apiculture_beehive_normal_little", "fg": 5, "rotates": false },
+					{ "id": "f_apiculture_beehive_normal_little", "fg": 5, "rotates": false },
+					{ "id": "apiculture_beehive_normal_plentiful", "fg": 6, "rotates": false },
+					{ "id": "f_apiculture_beehive_normal_plentiful", "fg": 6, "rotates": false },
+					{ "id": "apiculture_beehive_normal_enormous", "fg": 6, "rotates": false },
+					{ "id": "f_apiculture_beehive_normal_enormous", "fg": 6, "rotates": false },
+					{ "id": "f_apiculture_beehive_normal_maximal", "fg": 7, "rotates": false },
+					{ "id": "f_apiculture_beehive_normal_dirty", "fg": 5, "rotates": false },
+					{ "id": "apiculture_beehive_normal_hibernate_dirty", "fg": 5, "rotates": false }
+				]
+			},
+			{
+				"file": "tiles/compost.png",
+				"sprite_width":32,
+				"sprite_height":32,
+				"sprite_offset_x": 0,
+				"sprite_offset_y": 0,
+				"tiles": [
+					{ "id": "compost_effective_microorganisms_unit", "fg": 8, "rotates": false },
+					{ "id": "compost_brew_waste", "fg": 9, "rotates": false },
+					{ "id": "compost_brew_fermentation_products_liquid", "fg": 10, "rotates": false },
+					{ "id": "compost_bokashi_barrel_empty", "fg": 11, "rotates": false },
+					{ "id": "compost_bokashi_barrel_composting1", "fg": 12, "rotates": false },
+					{ "id": "compost_bokashi_barrel_fullliquid", "fg": 13, "rotates": false },
+					{ "id": "compost_bokashi_barrel_composting2", "fg": 14, "rotates": false },
+					{ "id": "compost_bokashi_barrel_full", "fg": 15, "rotates": false }
+				]
+			}
+		]
+	}
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "type": "effect_type",
+    "id": "酸解气",
+    "name": [ "酸解气" ],
+    "desc": [ "你的身体在分解" ],
+    "miss_messages": [ [ "你的身体在分解", 1 ] ],
+    "rating": "bad",
+    "pain_sizing": true,
+    "hurt_sizing": true,
+    "main_parts_only": true,
+    "base_mods": {
+      "per_mod": [ -2, -1 ],
+      "dex_mod": [ -1, -1 ],
+      "str_mod": [ -2, 0 ],
+      "pain_min": [ 4 ],
+      "pain_chance": [ 1, 2 ],
+      "hurt_min": [ 20 ],
+      "hurt_chance": [ 1, 2 ]
+    },
+    "show_in_info": true,
+    "blood_analysis_description": "身体分解"
+  }
+]

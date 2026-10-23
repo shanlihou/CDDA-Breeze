@@ -1,0 +1,184 @@
+[
+  {
+    "type": "recipe",
+    "result": "GS_wp_str2_glove",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_武装",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "GS_str", 3 ], [ "melee", 0 ] ],
+    "difficulty": 3,
+    "time": "2 h",
+    "autolearn": true,
+    "components": [
+     [ [ "GS_basic_str", 2 ] ],
+     [["nomex_gloves", 1], ["fire_gauntlets", 1], [ "gloves_cut_resistant", 1], ["gloves_tactical", 1]]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "GS_wp_str3_glove",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_武装",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "GS_str", 4 ], [ "melee", 2 ] ],
+    "difficulty": 5,
+    "time": "4 h",
+    "autolearn": true,
+    "proficiencies": [
+   {"proficiency": "prof_metalworking"},
+   {"proficiency": "prof_blacksmithing"},
+   {"proficiency": "prof_toolsmithing"}],
+  "using": [["blacksmithing_standard",4]],
+  "components": [
+  [["steel_chunk",1],["scrap",5]],
+  [["GS_wp_str2_glove", 1]],
+  [["GS_basic_str", 2]]
+ ]
+  },
+  {
+    "type": "recipe",
+    "result": "GS_wp_str4_glove",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_武装",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "GS_str", 8 ], [ "melee", 4 ] ],
+    "difficulty": 7,
+    "time": "7 h",
+    "autolearn": true,
+    "using": [["blacksmithing_standard",5],["steel_standard",2]],
+  "proficiencies": [
+   {"proficiency": "prof_metalworking"},
+   {"proficiency": "prof_blacksmithing"},
+   {"proficiency": "prof_articulation"}
+  ],
+    "components": [ [ [ "GS_wp_str3_glove", 1 ] ], [ [ "GS_basic_str", 3 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "GS_wp_str5_glove",
+    "byproducts": [ [ "GS_wp_str5_glove_holster" ] ],
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_武装",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "GS_str", 10 ], [ "melee", 6 ] ],
+    "difficulty": 9,
+    "time": "10 h",
+    "autolearn": true,
+    "proficiencies": [
+    {"proficiency": "prof_metalworking"},{"proficiency": "prof_blacksmithing"},{"proficiency": "prof_bladesmith"},{"proficiency": "prof_elec_soldering"},{"proficiency": "prof_electromagnetics"},{"proficiency":"prof_elec_semiconductors"}],
+  "using": [["blacksmithing_standard",8],["steel_standard",4]],
+  "qualities": [{"id": "GRIND","level": 2}],
+  "tools": [[["hotcut",-1]]],
+    "components": [
+     [["GS_wp_str4_glove",1]],[[ "GS_basic_str",4]],[["amplifier",8]],[["power_supply",12]],[["cable",200]],[["battery_ups", 1]],[["UPS_off",1]]
+   ]
+  },
+  {
+    "type": "recipe",
+    "result": "GS_wp_str2_reveager_spear",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_武装",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "GS_str", 4 ], [ "GS_dex", 4 ], [ "melee", 3 ] ],
+    "difficulty": 4,
+    "time": "2 h",
+    "autolearn": true,
+    "qualities": [{"id": "CUT","level": 2},{"id": "HAMMER","level": 1}],
+  "tools": [[["surface_heat",20,"LIST"]]],
+  "proficiencies": [
+    {"proficiency": "prof_metalworking"},
+    {"proficiency": "prof_redsmithing"},
+    {"proficiency": "prof_carving","fail_multiplier": 1}],
+  "components": [[["spear_shaft",1]],[["copper",800]],[["GS_basic_str",2]],[["GS_basic_dex", 2]]]
+  },
+  {
+    "type": "recipe",
+    "result": "GS_wp_str4_reveager_spear",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_武装",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "GS_str", 8 ], [ "GS_dex", 8 ], [ "melee", 5 ] ],
+    "difficulty": 8,
+    "time": "8 h",
+    "autolearn": true,
+    "proficiencies": [
+     {"proficiency": "prof_metalworking"},{"proficiency": "prof_blacksmithing"},{"proficiency": "prof_bladesmith"},{"proficiency": "prof_carving","time_multiplier": 1.5,"fail_multiplier": 1},{"proficiency": "prof_quenching"}],
+  "using": [["blacksmithing_standard",12],["mc_steel_standard",6]],
+  "qualities": [{"id": "GRIND","level": 2}],
+  "tools": [[["tongs",-1]],[["hotcut",-1],["drift",-1]],[["metal_tank",-1]],[["water",-120],["water_clean",-120]]],
+    "components": [ [ [ "GS_wp_str2_reveager_spear", 1 ] ], [ [ "GS_basic_str", 2 ] ], [ [ "GS_basic_dex", 2 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "GS_wp_str3_katana_bloodly",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_武装",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "GS_str", 4 ], [ "GS_per", 4 ], [ "melee", 3 ] ],
+    "difficulty": 5,
+    "time": "6 h",
+    "autolearn": true,
+    "proficiencies": [
+    {"proficiency": "prof_food_prep"},{"proficiency": "prof_metalworking"},{"proficiency": "prof_carving","time_multiplier": 1.2,"fail_multiplier": 1},{"proficiency": "prof_welding_basic"},{"proficiency": "prof_welding"}],
+  "using": [["welding_standard",20]],
+  "tools": [[["angle_grinder",50]],[["pot_canning",-1],["pot_canning_clay",-1]]],
+  "qualities": [{"id": "HAMMER","level": 3},{"id": "SAW_M","level": 2}],
+    "components": [[["GS_basic_str",2]],[["GS_basic_per",2]],[["edible_blood",75,"LIST"]],[["water_clean",50]]]
+  },
+  {
+    "type": "recipe",
+    "result": "GS_wp_str5_katana_Muramasa",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_武装",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "GS_str", 8 ], [ "GS_per", 8 ], [ "melee", 5 ] ],
+    "difficulty": 8,
+    "time": "16 h",
+    "autolearn": true,
+    "proficiencies": [
+     {"proficiency": "prof_metalworking"},{"proficiency": "prof_blacksmithing"},{"proficiency": "prof_bladesmith"},{"proficiency": "prof_carving"},{"proficiency": "prof_quenching"},{"proficiency":"prof_intro_biology"},{"proficiency":"prof_organic_chemistry"},{"proficiency":"prof_biochemistry"}],
+     "using": [["blacksmithing_standard",20],["mc_steel_standard",8],["mutagen_production_standard",30]],
+  "qualities": [{"id": "ANVIL","level": 3},{"id": "HAMMER","level": 3},{"id": "GRIND","level": 2},{"id": "DISTILL","level": 2},{"id":"CHEM","level": 3}],
+  "tools": [[["tongs",-1]],[["hotcut",-1]],[["metal_tank",-1]],[["water",-120],["water_clean",-120]],[["pot_canning",-1],["pot_canning_clay",-1]],[["closed_loop_extractor_small",-1]]],
+    "components": [[["GS_wp_str3_katana_bloodly",1]],[["GS_basic_str",2]],[["GS_basic_per",2]],[["blood",200]]]
+  },
+  {
+    "type": "recipe",
+    "result": "GS_wp_merit2_sword_dispel",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_武装",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "GS_per", 4 ], [ "speech", 6 ] ],
+    "difficulty": 4,
+    "time": "3 h",
+    "book_learn": [["GS_book_merit2",0],["GS_book_merit3",0]],
+    "using": [["bronzesmithing_tools",2]],
+    "tools": [[["surface_heat", 30, "LIST"]],[["casting_mold",-1]]],
+    "components": [[[ "destiny_silver",1]],[[ "merit",30]],[["neww_reiki",200]]]
+  },
+  {
+    "type": "recipe",
+    "result": "GS_wp_merit3_emperor_sword",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_武装",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "GS_per", 6 ], [ "speech", 10 ] ],
+    "difficulty": 8,
+    "time": "9 h",
+    "book_learn": [ [ "GS_book_merit3", 0 ] ],
+    "using": [["bronzesmithing_tools",4]],
+    "qualities": [{"id": "CHISEL", "level": 3}],
+    "tools": [[[ "tongs", -1]],[["anvil", -1]],[["swage", -1]],[["forge", 200],["oxy_torch", 40]],[["soul_refining_furnace1",-1]]],
+    "components": [[["GS_wp_merit2_sword_dispel",1]], [["destiny_silver", 2]],[["merit", 60]],[["neww_reiki",900]],[["gold_small",500]]]
+  }
+]

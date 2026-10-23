@@ -1,0 +1,31 @@
+[
+
+ {
+    "type": "item_group",
+    "id": "zhenghe_009",
+    "//": "",
+    "subtype": "collection",
+    "entries": [
+      {"group": "arcana_hunt_random"
+      },
+      {"item": "essence_blood",
+      "count": [ 2, 4 ]
+      },
+      { "item": "destiny_silver" }, { "item": "destiny_copper", "count": [ 1, 50 ] } 
+    ]
+  },
+ {
+    "id": "mon_jabberwock",
+    "//": "伽布沃克",
+    "copy-from": "mon_jabberwock",
+    "extend": {
+      "categories": [
+        "CLASSIC"
+      ]
+    },
+    "type": "MONSTER",
+    "death_drops": "zhenghe_009"
+  }
+ 
+
+]

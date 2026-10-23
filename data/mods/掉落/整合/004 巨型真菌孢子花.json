@@ -1,0 +1,37 @@
+[
+ {
+    "type": "item_group",
+    "id": "zhenghe_004",
+    "subtype": "collection",
+    "entries": [
+      {
+        "distribution": [
+          {
+            "item": "inflorescent_root",
+            "prob": 50
+          },
+          {
+            "item": "dermatik_sting",
+            "prob": 50
+          }
+        ]
+      },
+      {
+        "item": "essence",
+        "count": [
+          2,
+          5
+        ]
+      },{ "item": "destiny_silver", "count": [ 2, 2 ] }, { "item": "destiny_copper", "count": [ 1, 399 ] } 
+    ]
+  },
+  
+  {
+    "id": "mon_fungaloid_seeder",
+    "//": "巨型真菌孢子花",
+    "copy-from": "mon_fungaloid_seeder",
+		"type":"MONSTER",
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_fungaloid_seeder_death_drops02", 100 ], [ "zhenghe_004", 100 ] ] }
+}
+
+]

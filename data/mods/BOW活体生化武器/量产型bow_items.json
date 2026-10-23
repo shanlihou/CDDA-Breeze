@@ -1,0 +1,65 @@
+[
+  {
+    "id": "人型BOW（休眠中）",
+    "type": "TOOL",
+    "name": "人型BOW（休眠中）",
+    "description": "休眠中的量产人型BOW，用于军事和工业生产，如有需求最好大规模培养，按a键激活以释放它",
+    "weight": "68 kg",
+    "volume": "62 L",
+    "price": 100000,
+    "price_postapoc": 50000,
+    "to_hit": -3,
+    "bashing": 8,
+    "material": "flesh",
+    "symbol": ";",
+    "color": "green",
+    "use_action": {
+      "type": "place_npc",
+      "npc_class_id": "人型BOW",
+      "summon_msg": "人型BOW已苏醒",
+      "place_randomly": false,
+      "moves": 50
+    },
+    "flags": [ "SINGLE_USE" ]
+  },
+  {
+    "id": "人型胚胎",
+    "type": "TOOL",
+    "name": "人型胚胎",
+    "description": "具备了逐步形态的人型胚胎，可以用于后续制造各种BOW",
+    "weight": "3 kg",
+    "volume": "1 L",
+    "price": 100000,
+    "price_postapoc": 50000,
+    "to_hit": -3,
+    "bashing": 8,
+    "material": "flesh",
+    "symbol": ";",
+    "color": "green"
+  },
+  {
+    "id": "人型胚胎（成长中）",
+    "type": "GENERIC",
+    "category": "food",
+    "name": { "str": "人型胚胎（成长中）" },
+    "description": "人型胚胎（成长中），一个畸形的半大的胚胎，它看起来在逐渐成长，如有需求最好大规模培养，成长时间为15天，时间到后按a键激活变成人形胚胎，可以用于后续的bow制作",
+    "weight": "1 kg",
+    "volume": "1 L",
+    "price": 100000,
+    "price_postapoc": 50000,
+    "to_hit": -3,
+    "bashing": 8,
+    "material": [ "flesh" ],
+    "symbol": "%",
+    "color": "white",
+    "use_action": {
+      "target": "人型胚胎",
+      "msg": "胚胎已成长成型",
+      "moves": 50,
+      "type": "delayed_transform",
+      "transform_age": 1296000,
+      "not_ready_msg": "胚胎还在成长中",
+      "//": "它共计需要15天时间完成成长"
+    }
+  }
+]

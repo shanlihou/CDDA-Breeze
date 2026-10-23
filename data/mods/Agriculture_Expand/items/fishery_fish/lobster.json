@@ -1,0 +1,35 @@
+[
+	{
+		"type": "COMESTIBLE",
+		"id": "fishery_egg_lobster",
+		"name": { "str": "鱼卵（龙虾）" },
+		"copy-from": "fishery_egg",
+		"spoils_in": "10 days",
+		"description": "一些可以食用，也可以等他们孵化出小鱼的龙虾鱼卵。",
+		"rot_spawn": "FISHERY_GROUP_EGG_lobster",
+		"rot_spawn_chance": 50
+	},
+	{
+		"name": "FISHERY_GROUP_EGG_lobster",
+		"type": "monstergroup",
+		"default": "fishery_mon_lobster_juvenile",
+		"monsters": [ ]
+	},
+	{
+		"id": "fishery_mon_lobster_juvenile",
+		"type": "MONSTER",
+		"name": { "str": "龙虾鱼苗" },
+		"description": "一条龙虾幼鱼，过一段时间就会变成成鱼。",
+		"copy-from": "fishery_mon_juvenile",
+		"harvest": "fish_tiny",
+		"upgrades": { "age_grow": 20, "into": "mon_fish_lobster" }
+	},
+	{
+		"id": "mon_fish_lobster",
+		"type": "MONSTER",
+		"copy-from": "mon_fish_lobster",
+		"name": { "str": "龙虾" },
+		"reproduction": { "baby_egg": "fishery_egg_lobster", "baby_count": 10, "baby_timer": 20 },
+		"baby_flags": [ "SPRING", "SUMMER" ]
+	}
+]

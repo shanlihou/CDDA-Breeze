@@ -1,0 +1,89 @@
+[
+  {
+    "type": "SPELL",
+    "id": "secro_power_armor_mechlink",
+    "name": {
+      "str": "机械套装链接"
+    },
+    "description": "你的肉体容器将自己与实验机械“肉体”连接起来。这不会绕过军事身份检查。",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_FAIL"
+    ],
+    "valid_targets": [
+      "ally",
+      "hostile"
+    ],
+    "targeted_monster_ids": [
+      "mon_secro_fleshmech_unlink"
+    ],
+    "min_damage": 1000,
+    "max_damage": 1000,
+    "min_range": 1,
+    "max_range": 1,
+    "effect": "targeted_polymorph",
+    "shape": "blast",
+    "spell_class": "NONE",
+    "effect_str": "mon_secro_fleshmech"
+  },
+  {
+    "id": "secro_power_armor_fleshmend",
+    "type": "SPELL",
+    "name": {
+      "str": "血肉修补"
+    },
+    "description": "肉核内部的肉编织者开始使用大量的仿生能量和储存的卡路里来修复你的身体。立即停止/阻止进一步出血，每10秒治疗2点生命值，每次激活最多12点生命值。",
+    "message": "",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_FAIL"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "spell_class": "SECRO_BIONIC_FLESH_CORE",
+    "effect_str": "secro_power_armor_fleshmend_ing",
+    "affected_body_parts": [
+      "head",
+      "torso",
+      "arm_r",
+      "arm_l",
+      "leg_r",
+      "leg_l"
+    ],
+    "energy_source": "BIONIC",
+    "base_energy_cost": 300,
+    "min_duration": 6000
+  },
+  {
+    "type": "SPELL",
+    "id": "secro_power_armor_flesh_biolight_give",
+    "name": {
+      "str": "形素"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那就读读这个:\n“通过把它作为一件物品来改变套装。”",
+    "message": "",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_FAIL"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "spawn_item",
+    "shape": "blast",
+    "effect_str": "secro_power_armor_flesh_biolight",
+    "min_duration": 60000
+  }
+]

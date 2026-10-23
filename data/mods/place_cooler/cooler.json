@@ -1,0 +1,31 @@
+[
+    {
+        "type": "construction",
+        "id": "app_cooler",
+        "group": "place_cooler",
+        "category": "APPLIANCE",
+        "required_skills": [ [ "fabrication", 0 ] ],
+        "time": "5 m",
+        "components": [ [ [ "mountable_cooler", 1 ] ] ],
+        "pre_special": "check_empty",
+        "post_special": "done_appliance"
+      },
+
+      {
+        "type": "construction_group",
+        "id": "place_cooler",
+        "name": "放置车载冷却器"
+      },
+
+      {
+        "type": "vehicle_part",
+        "id": "ap_cooler",
+        "name": { "str": "空间冷却器" },
+        "location": "structure",
+        "item": "mountable_cooler",
+        "flags": [ "CTRL_ELECTRONIC", "ENABLED_DRAINS_EPOWER", "COOLER", "APPLIANCE" ],
+        "copy-from": "mountable_cooler",
+        "exhaust":[]
+      }
+
+]

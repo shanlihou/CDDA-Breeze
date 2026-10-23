@@ -1,0 +1,173 @@
+[
+  {
+    "type": "talk_topic",
+    "id": "TALK_SG_hibernate",
+    "dynamic_line":"&请选择休眠时间\n确保休眠位置的安全性！\n临时中断请按5中止休眠！\n中断后请手动退出休眠状态！",
+    "responses": [
+     { 
+        "text": "休眠定时-3小时", 
+        "topic": "TALK_DONE",
+		"condition": { "not": { "u_has_effect": "SG_hibernate_clos" } },
+        "effect": { "run_eocs": "bio_SG_hibernate_3h" }
+      },
+     { 
+        "text": "休眠定时-6小时", 
+        "topic": "TALK_DONE",
+		"condition": { "not": { "u_has_effect": "SG_hibernate_clos" } },
+        "effect": { "run_eocs": "bio_SG_hibernate_6h" }
+      },
+     { 
+        "text": "休眠定时-12小时", 
+        "topic": "TALK_DONE",
+		"condition": { "not": { "u_has_effect": "SG_hibernate_clos" } },
+        "effect": { "run_eocs": "bio_SG_hibernate_12h" }
+      },
+     { 
+        "text": "休眠定时-24小时", 
+        "topic": "TALK_DONE",
+		"condition": { "not": { "u_has_effect": "SG_hibernate_clos" } },
+        "effect": { "run_eocs": "bio_SG_hibernate_1d" }
+      },
+     { 
+        "text": "休眠定时-5天", 
+        "topic": "TALK_DONE",
+		"condition": { "not": { "u_has_effect": "SG_hibernate_clos" } },
+        "effect": { "run_eocs": "bio_SG_hibernate_5d" }
+      },
+     { 
+        "text": "休眠定时-15天", 
+        "topic": "TALK_DONE",
+		"condition": { "not": { "u_has_effect": "SG_hibernate_clos" } },
+        "effect": { "run_eocs": "bio_SG_hibernate_15d" }
+      },
+     { 
+        "text": "休眠定时-30天", 
+        "topic": "TALK_DONE",
+		"condition": { "not": { "u_has_effect": "SG_hibernate_clos" } },
+        "effect": { "run_eocs": "bio_SG_hibernate_30d" }
+      },
+     { 
+        "text": "休眠定时-90天", 
+        "topic": "TALK_DONE",
+		"condition": { "not": { "u_has_effect": "SG_hibernate_clos" } },
+        "effect": { "run_eocs": "bio_SG_hibernate_90d" }
+      },
+     { 
+        "text": "休眠定时-180天", 
+        "topic": "TALK_DONE",
+		"condition": { "not": { "u_has_effect": "SG_hibernate_clos" } },
+        "effect": { "run_eocs": "bio_SG_hibernate_180d" }
+      },
+     { 
+        "text": "休眠定时-360天", 
+        "topic": "TALK_DONE",
+		"condition": { "not": { "u_has_effect": "SG_hibernate_clos" } },
+        "effect": { "run_eocs": "bio_SG_hibernate_360d" }
+      },
+     { 
+        "text": "休眠定时-1080天（约3年）", 
+        "topic": "TALK_DONE",
+		"condition": { "not": { "u_has_effect": "SG_hibernate_clos" } },
+        "effect": { "run_eocs": "bio_SG_hibernate_1080d" }
+      },
+     { 
+        "text": "休眠定时-10800天（约30年）", 
+        "topic": "TALK_DONE",
+		"condition": { "not": { "u_has_effect": "SG_hibernate_clos" } },
+        "effect": { "run_eocs": "bio_SG_hibernate_10800d" }
+      },
+     { 
+        "text": "紧急休眠中止!", 
+        "topic": "TALK_DONE",
+        "effect": { "run_eocs": "bio_SG_hibernate_close" }
+      },
+     {
+       "text": "退出界面",
+       "topic": "TALK_DONE"
+     }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_Cyberball",
+    "dynamic_line":"&未能连接网络球！\n系统断线————————\n尝试重连中…………\n连接失败......",
+    "responses": [
+     { 
+       "text": "再次重连",
+       "topic": "TALK_Cyberball_2",
+		"condition": {
+		"and": [
+		{"u_has_bionics": "bio_arcthitecture" },
+		{"u_has_bionics": "bio_Security_Guard" }
+		 ]
+		}
+     },
+     { 
+       "text": "断开连接",
+       "topic": "TALK_DONE"
+     }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_Cyberball_2",
+    "dynamic_line":"&错误！\n无法检测到网络球连接！\n系统诊断中……\n连接地址已丢失！\n进入离线模式！\n请验证身份识别号！",
+    "responses": [
+     { 
+       "text": "识别身份验证",
+       "topic": "TALK_Cyberball_3",
+		"condition": {
+		"and": [
+		{"u_has_bionics": "bio_arcthitecture" },
+		{"u_has_bionics": "bio_Security_Guard" }
+		 ]
+		}
+     },
+     { 
+       "text": "断开连接",
+       "topic": "TALK_DONE"
+     }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_Cyberball_3",
+    "dynamic_line":"&身份验证成功！\n高级警卫65********S36，欢迎使用离线网络球终端！\n请选择服务！",
+    "responses": [
+     { 
+       "text": "读取储存资料",
+       "topic": "TALK_Cyberball_4",
+		"condition": {
+		"and": [
+		{"u_has_bionics": "bio_arcthitecture" },
+		{"u_has_bionics": "bio_Security_Guard" }
+		 ]
+		}
+     },
+     { 
+       "text": "断开连接",
+       "topic": "TALK_DONE"
+     }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_Cyberball_4",
+    "dynamic_line":"&权限允许！\n正在读取内部信息……\n1%……2%……3%……\n滋——\n硬件错误！\n滋——\n硬件错误！\n呲呲呲……\n读取失败……\n资料-呲-取完-滋……-$ÿĀ□□-锟斤拷-烫烫烫-\n————————吱",
+    "speaker_effect": {
+		"condition": {
+		"and": [
+		{"u_has_bionics": "bio_arcthitecture" },
+		{"u_has_bionics": "bio_Security_Guard" }
+		 ]
+		},
+      "effect": { "run_eocs": "Cyberball_over_eoc" }
+	},
+    "responses": [
+     { 
+       "text": "断开连接",
+       "topic": "TALK_DONE"
+     }
+    ]
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "type": "profession",
+    "ident": "Henshin_Chosen_One",
+    "name": { "male": "被选中者", "female": "被选中者" },
+    "description": "在作为一名假面骑士爱好者的你为自己陷入如此不幸的境遇却仍然没有假面骑士前来相助而悲叹之时，从摔落在地的公文包中掉出的一条无论怎么看都是正版货的奇异腰带映入了你的眼帘。看来你在不幸的同时也是幸运的，是时候让那些死不掉的家伙明白什么是路过的假面骑士了。",
+    "points": 5,
+    "items": { 
+	  "both": {
+		"entries": [
+		  { "item": "briefcase", "custom-flags": [ "auto_wield" ], "contents-item": [ "henshin_belt_false" ] }
+		]
+	  },
+	  "male": [ "longshirt", "boxer_shorts", "socks", "hat_ball", "hoodie", "jeans", "sneakers" ],
+      "female": [ "bra", "panties", "garter_belt", "stockings", "hat_ball", "hoodie", "skirt", "sneakers" ]
+	}
+  },{
+    "type": "profession",
+    "ident": "Henshin_Loster",
+    "name": { "male": "记忆丧失者", "female": "记忆丧失者" },
+    "description": "你睁开双眼，发现自己正“一丝不挂”地躺在自己毫无印象的地方。你感觉自己忘记了非常重要的事情，但可能对于现在的你来说，更重要的是想办法在这个陌生的世界里活下去。",
+    "points": 10,
+	"traits": [ "PROF_HENSHIN" ],
+    "items": { 
+	  "both": {
+		"entries": [
+		  { "item": "briefcase", "custom-flags": [ "auto_wield" ], "contents-item": [ "henshin_belt_false", "henshin_smartphone", "henshin_power_knuckles" ] }
+		]
+	  }
+	},
+    "flags": [ "SCEN_ONLY" ],
+    "missions": [ "MISSION_HENSHIN_LOSTER" ]
+  },{
+    "type": "profession",
+    "ident": "Henshin_Loster_true",
+    "name": { "male": "一无所有者", "female": "一无所有女" },
+    "description": "意识恢复，你悲痛地发现自己身上连块遮羞布都没有。关于醒来之前自己在做什么的记忆暧昧不清，你也无暇回想。毕竟，你看，那些没死透的家伙正邀请你也成为他们中的一员呢。",
+    "points": -4,
+	"items": { 
+	  "both": [  ]
+	},
+    "flags": [ "SCEN_ONLY" ]
+  }
+]

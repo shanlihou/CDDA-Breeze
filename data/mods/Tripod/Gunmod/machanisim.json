@@ -1,0 +1,22 @@
+[  {
+    "id": "hydraulic_buffer_system",
+    "type": "GUNMOD",
+    "name": { "str": "hydraulic buffer system" },
+    "description": "重机枪自带地液压缓冲系统，有效地降低后座力.",
+    "weight": "0 g",
+    "volume": "0 ml",
+    "price": 68000,
+    "price_postapoc": 750,
+    "install_time": "1 m",
+    "to_hit": -1,
+    "bashing": 10,
+    "material": [ "steel" ],
+    "symbol": ":",
+    "color": "brown",
+    "location": "mechanism",
+    "mod_targets": [ "rifle", "launcher"],
+    "handling_modifier": 45,
+    "min_skills": [ [ "weapon", 4] ],
+    "flags": ["IRREMOVABLE"]
+  }
+]

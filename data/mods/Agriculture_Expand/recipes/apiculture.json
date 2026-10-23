@@ -1,0 +1,306 @@
+[
+	{
+		"result": "apiculture_comb_honey",
+		"type": "uncraft",
+		"time": "60 s",
+		"components": [
+			[ [ "honeycomb", 2 ] ]
+		]
+	},
+	
+	
+	
+	
+	{
+		"type": "recipe",
+		"result": "apiculture_honeyextractor",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_养蜂",
+		"skill_used": "mechanics",
+		"difficulty": 2,
+		"autolearn": true,
+		"time": "7200 s",
+		"qualities": [
+			{ "id": "CUT", "level": 1 },
+			{ "id": "HAMMER", "level": 1 }
+		],
+		"components": [
+			[ [ "wood_panel", 4 ] ],
+			[ [ "2x4", 4 ] ],
+			[ [ "nail", 12 ] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "apiculture_honeyextractor",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_养蜂",
+		"skill_used": "mechanics",
+		"skills_required": [ [ "fabrication", 2 ] ],
+		"difficulty": 3,
+		"time": "2 h 30 m",
+		"autolearn": true,
+		"using": [ [ "soldering_standard", 25 ], [ "welding_standard", 20 ] ],
+		"qualities": [
+			{ "id": "HAMMER", "level": 2 },
+			{ "id": "SAW_M", "level": 1 },
+			{ "id": "SCREW", "level": 1 },
+			{ "id": "WRENCH", "level": 1 }
+		],
+		"components": [
+			[ [ "steel_lump", 3 ], [ "steel_chunk", 9 ], [ "scrap", 36 ] ],
+			[ [ "metal_tank", 1 ] ],
+			[ [ "pipe", 1 ] ],
+			[ [ "2x4", 1 ] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "honey_bottled",
+		"id_suffix": "from_apiculture_comb",
+		"charges": 25,
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_养蜂",
+		"skill_used": "fabrication",
+		"difficulty": 2,
+		"autolearn": true,
+		"time": "300 s",
+		"qualities": [
+			{ "id": "CUT", "level": 1 },
+			{ "id": "HONEY_EXTRACT", "level": 1 }
+		],
+		"components": [
+			[ [ "apiculture_comb_honey", 1 ] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "honey_bottled",
+		"charges": 6,
+		"category": "CC_FOOD",
+		"subcategory": "CSC_FOOD_OTHER",
+		"skill_used": "cooking",
+		"difficulty": 1,
+		"time": "10 m",
+		"autolearn": true,
+		"qualities": [ { "id": "CUT", "level": 1 } ],
+		"tools": [ [ [ "rag", -1 ] ] ],
+		"components": [ [ [ "honeycomb", 1 ] ] ]
+	},
+	
+	{
+		"type": "recipe",
+		"result": "apiculture_outercover",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_养蜂",
+		"skill_used": "fabrication",
+		"difficulty": 2,
+		"autolearn": true,
+		"time": "900 s",
+		"qualities": [
+			{ "id": "CUT", "level": 1 },
+			{ "id": "HAMMER", "level": 1 }
+		],
+		"components": [
+			[ [ "wood_panel", 2 ] ],
+			[ [ "nail", 8 ] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "apiculture_innercover",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_养蜂",
+		"skill_used": "fabrication",
+		"difficulty": 2,
+		"autolearn": true,
+		"time": "900 s",
+		"qualities": [
+			{ "id": "CUT", "level": 1 },
+			{ "id": "HAMMER", "level": 1 }
+		],
+		"components": [
+			[ [ "wood_panel", 1 ] ],
+			[ [ "2x4", 4 ] ],
+			[ [ "nail", 4 ] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "apiculture_honeysuper",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_养蜂",
+		"skill_used": "fabrication",
+		"difficulty": 2,
+		"autolearn": true,
+		"time": "1200 s",
+		"qualities": [
+			{ "id": "CUT", "level": 1 },
+			{ "id": "HAMMER", "level": 1 }
+		],
+		"components": [
+			[ [ "wood_panel", 4 ] ],
+			[ [ "2x4", 4 ] ],
+			[ [ "nail", 12 ] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "apiculture_queenexcluder",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_养蜂",
+		"skill_used": "fabrication",
+		"difficulty": 3,
+		"autolearn": true,
+		"time": "900 s",
+		"qualities": [
+			{ "id": "CUT", "level": 1 },
+			{ "id": "HAMMER", "level": 1 },
+			{ "id": "CHISEL", "level": 3 }
+		],
+		"components": [
+			[ [ "wood_panel", 1 ] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "apiculture_hivebody",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_养蜂",
+		"skill_used": "fabrication",
+		"difficulty": 2,
+		"autolearn": true,
+		"time": "1200 s",
+		"qualities": [
+			{ "id": "CUT", "level": 1 },
+			{ "id": "HAMMER", "level": 1 }
+		],
+		"components": [
+			[ [ "wood_panel", 4 ] ],
+			[ [ "2x4", 4 ] ],
+			[ [ "nail", 12 ] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "apiculture_entrancereducer",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_养蜂",
+		"skill_used": "fabrication",
+		"difficulty": 2,
+		"autolearn": true,
+		"time": "300 s",
+		"qualities": [
+			{ "id": "CUT", "level": 1 },
+			{ "id": "HAMMER", "level": 1 },
+			{ "id": "CHISEL", "level": 3 }
+		],
+		"components": [
+			[ [ "2x4", 1 ] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "apiculture_bottomboard",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_养蜂",
+		"skill_used": "fabrication",
+		"difficulty": 2,
+		"autolearn": true,
+		"time": "900 s",
+		"qualities": [
+			{ "id": "CUT", "level": 1 },
+			{ "id": "HAMMER", "level": 1 }
+		],
+		"components": [
+			[ [ "wood_panel", 1 ] ],
+			[ [ "2x4", 3 ] ],
+			[ [ "nail", 3 ] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "apiculture_combframe",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_养蜂",
+		"skill_used": "fabrication",
+		"difficulty": 3,
+		"autolearn": true,
+		"time": "900 s",
+		"qualities": [
+			{ "id": "CUT", "level": 1 },
+			{ "id": "HAMMER", "level": 1 },
+			{ "id": "CHISEL", "level": 3 }
+		],
+		"components": [
+			[ [ "2x4", 4 ] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "apiculture_combframe_artificialhoneycomb",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_养蜂",
+		"skill_used": "fabrication",
+		"difficulty": 3,
+		"autolearn": true,
+		"time": "1800 s",
+		"qualities": [
+			{ "id": "CUT", "level": 1 },
+			{ "id": "HAMMER", "level": 1 },
+			{ "id": "CHISEL", "level": 3 }
+		],
+		"components": [
+			[ [ "apiculture_combframe", 1 ] ],
+			[ [ "wax", 3 ] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "apiculture_beehive_normal_new_empty",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_养蜂",
+		"skill_used": "fabrication",
+		"difficulty": 1,
+		"autolearn": true,
+		"time": "600 s",
+		"components": [
+			[ [ "apiculture_outercover", 1 ] ],
+			[ [ "apiculture_innercover", 1 ] ],
+			[ [ "apiculture_honeysuper", 1 ] ],
+			[ [ "apiculture_queenexcluder", 1 ] ],
+			[ [ "apiculture_hivebody", 1 ] ],
+			[ [ "apiculture_entrancereducer", 1 ] ] ,
+			[ [ "apiculture_bottomboard", 1 ] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "apiculture_combframe_swarm",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_养蜂",
+		"skill_used": "fabrication",
+		"difficulty": 2,
+		"autolearn": true,
+		"time": "300 s",
+		"components": [
+			[ [ "apiculture_swarm", 1 ] ],
+			[ [ "apiculture_combframe_artificialhoneycomb", 1 ] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "apiculture_beehive_normal_new",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_养蜂",
+		"skill_used": "fabrication",
+		"difficulty": 1,
+		"autolearn": true,
+		"time": "900 s",
+		"components": [
+			[ [ "apiculture_combframe_swarm", 1 ] ],
+			[ [ "apiculture_combframe", 19 ] ],
+			[ [ "apiculture_beehive_normal_new_empty", 1 ] ]
+		]
+	}
+]

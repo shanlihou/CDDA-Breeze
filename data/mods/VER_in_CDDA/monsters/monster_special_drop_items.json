@@ -1,0 +1,703 @@
+[
+    {
+        "id": "power_armor_heavy_bloodmeat_repaired",
+        "type": "TOOL_ARMOR",
+        "category": "armor",
+        "name": {
+          "str": "血肉修复坦克服"
+        },
+        "description": "它是从死去的无赖战士身上硬扒扒下来的“坦克服”，如果还能这么称呼这件被血肉修复后的产物，姑且这么称呼它“血肉修复坦克服”吧。“吞噬了部分碳钢和凯夫拉的血肉与超织物混合的新材料竟比原超织物更加强大...”",
+        "weight": "80 kg",
+        "volume": "130 L",
+        "price": 11500000,
+        "price_postapoc": 80000,
+        "to_hit": 1,
+        "material": [
+            "qt_steel",
+            "blood_hyperweave_off",
+            "kevlar_rigid"
+          ],
+        "armor":[
+            {
+                "material": [
+                    {
+                      "type": "qt_steel",
+                      "covered_by_mat": 100,
+                      "thickness": 5
+                    },
+                    {
+                      "type": "kevlar_rigid",
+                      "covered_by_mat": 100,
+                      "thickness": 3
+                    },
+                    {
+                      "type": "blood_hyperweave_off",
+                      "covered_by_mat": 100,
+                      "thickness": 8
+                    }
+                  ],
+                  "encumbrance": 80,
+                  "coverage": 100,
+                  "covers": [
+                    "torso",
+                    "arm_l",
+                    "arm_r",
+                    "hand_l",
+                    "hand_r",
+                    "leg_l",
+                    "leg_r",
+                    "foot_l",
+                    "foot_r"
+                  ]
+            }
+        ],
+        "symbol": "[",
+        "looks_like": "power_armor_basic",
+        "color": "dark_gray",
+        "relic_data": {
+          "passive_effects": [
+            {
+              "has": "WORN",
+              "condition": "ACTIVE",
+              "values": [
+                {
+                  "value": "CLIMATE_CONTROL_HEAT",
+                  "add": 50
+                },
+                {
+                  "value": "CLIMATE_CONTROL_CHILL",
+                  "add": 50
+                }
+              ]
+            }
+          ]
+        },
+        "pocket_data": [
+          {
+            "pocket_type": "CONTAINER",
+            "rigid": true,
+            "max_contains_volume": "6 L",
+            "max_contains_weight": "30 kg",
+            "description": "Compartment for an UPS.",
+            "moves": 200
+          },
+          {
+            "pocket_type": "CONTAINER",
+            "rigid": true,
+            "max_contains_volume": "1500 ml",
+            "max_contains_weight": "4 kg",
+            "max_item_length": "600 mm",
+            "holster": true,
+            "flag_restriction": [
+              "MAG_COMPACT",
+              "MAG_BULKY"
+            ],
+            "description": "Spring-loaded clamp.",
+            "moves": 60
+          },
+          {
+            "pocket_type": "CONTAINER",
+            "rigid": true,
+            "max_contains_volume": "1500 ml",
+            "max_contains_weight": "4 kg",
+            "max_item_length": "600 mm",
+            "holster": true,
+            "flag_restriction": [
+              "MAG_COMPACT",
+              "MAG_BULKY"
+            ],
+            "description": "Spring-loaded clamp.",
+            "moves": 60
+          },
+          {
+            "pocket_type": "CONTAINER",
+            "rigid": true,
+            "max_contains_volume": "1500 ml",
+            "max_contains_weight": "4 kg",
+            "max_item_length": "600 mm",
+            "holster": true,
+            "flag_restriction": [
+              "MAG_COMPACT",
+              "MAG_BULKY"
+            ],
+            "description": "Spring-loaded clamp.",
+            "moves": 60
+          },
+          {
+            "pocket_type": "CONTAINER",
+            "rigid": true,
+            "max_contains_volume": "1500 ml",
+            "max_contains_weight": "4 kg",
+            "max_item_length": "600 mm",
+            "holster": true,
+            "flag_restriction": [
+              "MAG_COMPACT",
+              "MAG_BULKY"
+            ],
+            "description": "Spring-loaded clamp.",
+            "moves": 60
+          },
+          {
+            "pocket_type": "CONTAINER",
+            "rigid": true,
+            "max_contains_volume": "3000 ml",
+            "max_contains_weight": "4 kg",
+            "description": "Compartment for grenades.",
+            "moves": 40,
+            "flag_restriction": [
+              "GRENADE"
+            ]
+          },
+          {
+            "pocket_type": "CONTAINER",
+            "rigid": true,
+            "max_contains_volume": "12 L",
+            "max_contains_weight": "20000 g",
+            "max_item_length": "154 cm",
+            "description": "Integrated rifle case.",
+            "moves": 100
+          }
+        ],
+        "warmth": 60,
+        "power_armor": true,
+        "environmental_protection": 16,
+        "ammo": "battery",
+        "use_action": {
+            "type": "transform",
+            "msg": "The %s engages.",
+            "target": "power_armor_heavy_bloodmeat_repaired_on",
+            "active": true
+          },
+        "flags": [
+          "WATERPROOF",
+          "STURDY",
+          "ELECTRIC_IMMUNE",
+          "COMBAT_TOGGLEABLE",
+          "UNBREAKABLE_MELEE"
+        ],
+        "melee_damage": {
+          "bash": 15
+        }
+      
+    },
+    {
+        "id": "power_armor_heavy_bloodmeat_repaired_on",
+        "type": "TOOL_ARMOR",
+        "category": "armor",
+        "name": {
+          "str": "血肉修复坦克服(启动)"
+        },
+        "description": "它是从死去的无赖战士身上硬扒扒下来的“坦克服”，如果还能这么称呼这件被血肉修复后的产物，姑且这么称呼它“血肉修复坦克服”吧。“吞噬了部分碳钢和凯夫拉的血肉与超织物混合的新材料竟比原超织物更加强大...”它已经开启，以坦克服2.5倍的耗能不断地消耗能量。激活它来关闭。",
+        "weight": "80 kg",
+        "volume": "130 L",
+        "price": 11500000,
+        "price_postapoc": 80000,
+        "to_hit": 1,
+        "material": [
+            "qt_steel",
+            "blood_hyperweave_on",
+            "kevlar_rigid"
+          ],
+        "armor":[
+            {
+                "material": [
+                    {
+                      "type": "qt_steel",
+                      "covered_by_mat": 100,
+                      "thickness": 5
+                    },
+                    {
+                      "type": "kevlar_rigid",
+                      "covered_by_mat": 100,
+                      "thickness": 3
+                    },
+                    {
+                      "type": "blood_hyperweave_on",
+                      "covered_by_mat": 100,
+                      "thickness": 8
+                    }
+                  ],
+                  "encumbrance": 20,
+                  "coverage": 100,
+                  "covers": [
+                    "torso",
+                    "arm_l",
+                    "arm_r",
+                    "hand_l",
+                    "hand_r",
+                    "leg_l",
+                    "leg_r",
+                    "foot_l",
+                    "foot_r"
+                  ]
+            }
+        ],
+        "symbol": "[",
+        "looks_like": "power_armor_heavy",
+        "color": "dark_gray",
+        "relic_data": {
+          "passive_effects": [
+            {
+              "has": "WORN",
+              "condition": "ACTIVE",
+              "values": [
+                {
+                  "value": "CLIMATE_CONTROL_HEAT",
+                  "add": 50
+                },
+                {
+                  "value": "CLIMATE_CONTROL_CHILL",
+                  "add": 50
+                }
+              ]
+            }
+          ]
+        },
+        "pocket_data": [
+          {
+            "pocket_type": "CONTAINER",
+            "rigid": true,
+            "max_contains_volume": "6 L",
+            "max_contains_weight": "30 kg",
+            "description": "Compartment for an UPS.",
+            "moves": 200
+          },
+          {
+            "pocket_type": "CONTAINER",
+            "rigid": true,
+            "max_contains_volume": "1500 ml",
+            "max_contains_weight": "4 kg",
+            "max_item_length": "600 mm",
+            "holster": true,
+            "flag_restriction": [
+              "MAG_COMPACT",
+              "MAG_BULKY"
+            ],
+            "description": "Spring-loaded clamp.",
+            "moves": 60
+          },
+          {
+            "pocket_type": "CONTAINER",
+            "rigid": true,
+            "max_contains_volume": "1500 ml",
+            "max_contains_weight": "4 kg",
+            "max_item_length": "600 mm",
+            "holster": true,
+            "flag_restriction": [
+              "MAG_COMPACT",
+              "MAG_BULKY"
+            ],
+            "description": "Spring-loaded clamp.",
+            "moves": 60
+          },
+          {
+            "pocket_type": "CONTAINER",
+            "rigid": true,
+            "max_contains_volume": "1500 ml",
+            "max_contains_weight": "4 kg",
+            "max_item_length": "600 mm",
+            "holster": true,
+            "flag_restriction": [
+              "MAG_COMPACT",
+              "MAG_BULKY"
+            ],
+            "description": "Spring-loaded clamp.",
+            "moves": 60
+          },
+          {
+            "pocket_type": "CONTAINER",
+            "rigid": true,
+            "max_contains_volume": "1500 ml",
+            "max_contains_weight": "4 kg",
+            "max_item_length": "600 mm",
+            "holster": true,
+            "flag_restriction": [
+              "MAG_COMPACT",
+              "MAG_BULKY"
+            ],
+            "description": "Spring-loaded clamp.",
+            "moves": 60
+          },
+          {
+            "pocket_type": "CONTAINER",
+            "rigid": true,
+            "max_contains_volume": "3000 ml",
+            "max_contains_weight": "4 kg",
+            "description": "Compartment for grenades.",
+            "moves": 40,
+            "flag_restriction": [
+              "GRENADE"
+            ]
+          },
+          {
+            "pocket_type": "CONTAINER",
+            "rigid": true,
+            "max_contains_volume": "12 L",
+            "max_contains_weight": "20000 g",
+            "max_item_length": "154 cm",
+            "description": "Integrated rifle case.",
+            "moves": 100
+          }
+        ],
+        "warmth": 60,
+        "power_armor": true,
+        "environmental_protection": 16,
+        "ammo": "battery",
+        "use_action": {
+          "type": "transform",
+          "menu_text": "Turn off",
+          "msg": "The %s armor disengages.",
+          "target": "power_armor_heavy_bloodmeat_repaired"
+        },
+        "flags": [
+          "USE_UPS",
+          "WATERPROOF",
+          "STURDY",
+          "ELECTRIC_IMMUNE",
+          "TRADER_AVOID",
+          "COMBAT_TOGGLEABLE",
+          "UNBREAKABLE_MELEE",
+          "DIMENSIONAL_ANCHOR",
+          "PORTAL_PROOF"
+        ],
+        "melee_damage": {
+          "bash": 10
+        },
+        "power_draw": "10 kW",
+        "revert_to": "power_armor_heavy_bloodmeat_repaired",
+        "weight_capacity_bonus": "80 kg"
+        
+    },
+    {
+      "id": "power_armor_helmet_heavy_bloodmeat_repaired",
+      "type": "TOOL_ARMOR",
+      "category": "armor",
+      "name": {
+        "str": "血肉修复重型环境防护头盔"
+      },
+      "description": "一个从无赖战士身上硬扒扒下来的“危险环境防护作战头盔”，如果还能这么称呼这件被血肉修复后的产物，姑且这么称呼它“血肉修复重型环境防护头盔”吧。吞噬了部分碳钢和凯夫拉的血肉与超织物混合的新材料竟比原超织物更加强大...",
+      "weight": "8000 g",
+      "volume": "7 L",
+      "price": 3750000,
+      "price_postapoc": 10000,
+      "to_hit": 1,
+      "material": [
+        "qt_steel",
+        "blood_hyperweave_off",
+        "kevlar_rigid"
+      ],
+      "symbol": "[",
+      "looks_like": "power_armor_helmet_basic",
+      "color": "dark_gray",
+      "warmth": 60,
+      "power_armor": true,
+      "environmental_protection": 16,
+      "qualities": [
+        [
+          "GLARE",
+          1
+        ]
+      ],
+      "ammo": "battery",
+      "use_action": {
+        "type": "transform",
+        "menu_text": "Turn on",
+        "msg": "The %s engages.",
+        "target": "power_armor_helmet_heavy_bloodmeat_repaired_on",
+        "active": true
+      },
+      "flags": [
+        "WATCH",
+        "WATERPROOF",
+        "STURDY",
+        "PARTIAL_DEAF",
+        "THERMOMETER",
+        "SUN_GLASSES",
+        "COMBAT_TOGGLEABLE"
+      ],
+      "armor": [
+        {
+          "material": [
+            {
+              "type": "qt_steel",
+              "covered_by_mat": 100,
+              "thickness": 5
+            },
+            {
+              "type": "kevlar_rigid",
+              "covered_by_mat": 100,
+              "thickness": 3
+            },
+            {
+              "type": "blood_hyperweave_on",
+              "covered_by_mat": 100,
+              "thickness": 8
+            }
+          ],
+          "encumbrance": 80,
+          "coverage": 100,
+          "covers": [
+            "head",
+            "eyes",
+            "mouth"
+          ]
+        }
+      ],
+      "melee_damage": {
+        "bash": 10
+      }
+    },
+    {
+      "id": "power_armor_helmet_heavy_bloodmeat_repaired_on",
+      "type": "TOOL_ARMOR",
+      "category": "armor",
+      "name": {
+        "str": "血肉修复重型环境防护头盔 （开启）"
+      },
+      "description": "一个从无赖战士身上硬扒扒下来的“危险环境防护作战头盔”，如果还能这么称呼这件被血肉修复后的产物，姑且这么称呼它“血肉修复重型环境防护头盔”吧。吞噬了部分碳钢和凯夫拉的血肉与超织物混合的新材料竟比原超织物更加强大...它已经开启，以正常重型环境防护头盔2.5倍的耗能不断地消耗能量。激活它来关闭。",
+      "weight": "8000 g",
+      "volume": "7 L",
+      "price": 3750000,
+      "price_postapoc": 10000,
+      "to_hit": 1,
+      "material": [
+        "qt_steel",
+        "blood_hyperweave_on",
+        "kevlar_rigid"
+      ],
+      "symbol": "[",
+      "looks_like": "power_armor_helmet_heavy",
+      "color": "dark_gray",
+      "warmth": 60,
+      "power_armor": true,
+      "material_thickness": 16,
+      "environmental_protection": 16,
+      "qualities": [
+        [
+          "GLARE",
+          1
+        ]
+      ],
+      "ammo": "battery",
+      "use_action": {
+        "type": "transform",
+        "menu_text": "Turn off",
+        "msg": "The %s disengages.",
+        "target": "power_armor_helmet_heavy"
+      },
+      "flags": [
+        "WATCH",
+        "WATERPROOF",
+        "STURDY",
+        "PARTIAL_DEAF",
+        "THERMOMETER",
+        "SUN_GLASSES",
+        "COMBAT_TOGGLEABLE",
+        "USE_UPS"
+      ],
+      "armor": [
+        {
+          "encumbrance": 20,
+          "coverage": 100,
+          "covers": [
+            "head",
+            "eyes",
+            "mouth"
+          ]
+        }
+      ],
+      "melee_damage": {
+        "bash": 1
+      },
+      "copy-from": "power_armor_helmet_heavy_bloodmeat_repaired",
+      "power_draw": "1088 mW",
+      "revert_to": "power_armor_helmet_heavy_bloodmeat_repaired"
+    },
+    {
+      "id":"ver_broken_A7_bloodmeat_repaired",
+      "name":"血肉修复 A7 激光步枪",
+      "type":"GUN",
+      "looks_like":"laser_rifle",
+      "description":"曾被无赖战士持有的用血肉修复的A7，你从它的手上抢下后仍然能够使用，虽然武器上的血肉让你感到不适，但是...它不会过热。这些生物组织以你未知的方式完善了这把武器的过热系统，代价是更高的耗能和更大的散布以及更近的射程，好消息是威力也增强了一些，大概是带着无赖战士的对你的祝福（？）",
+      "dispersion":300,
+      "durability": 8,
+      "range":25,
+      "to_hit": -1,
+        "material": [
+          "steel",
+          "plastic",
+          "flesh"
+        ],
+        "symbol": "(",
+        "color": "yellow",
+        "skill": "rifle",
+        "weight": "2950 g",
+        "volume": "3 L",
+        "longest_side": "900 mm",
+        "price": 1600000,
+        "price_postapoc": 7500,
+      "ranged_damage": {
+        "damage_type": "heat",
+        "amount": 28,
+        "armor_penetration": 4
+      },
+      "modes": [
+        [
+          "DEFAULT",
+          "semi-auto",
+          1
+        ],
+        [
+          "AUTO",
+          "auto",
+          4
+        ]
+      ],
+      "loudness": 12,
+      "ups_charges": 50,
+      "reload": 0,
+      "valid_mod_locations": [
+        [
+          "accessories",
+          4
+        ],
+        [
+          "emitter",
+          1
+        ],
+        [
+          "grip",
+          1
+        ],
+        [
+          "lens",
+          1
+        ],
+        [
+          "rail",
+          1
+        ],
+        [
+          "sights",
+          1
+        ],
+        [
+          "sling",
+          1
+        ],
+        [
+          "stock",
+          1
+        ],
+        [
+          "stock accessory",
+          1
+        ],
+        [
+          "underbarrel",
+          1
+        ]
+      ],
+      "ammo_effects": [
+        "LASER",
+        "INCENDIARY"
+      ],
+      "flags": [
+        "NEVER_JAMS",
+        "NO_UNLOAD",
+        "NON_FOULING",
+        "NEEDS_NO_LUBE"
+      ]
+    },
+    {
+      "type": "GENERIC",
+      "id": "ver_blood_core",
+      "symbol": ",",
+      "looks_like":"pool_ball",
+      "color": "red",
+      "name": {
+        "str": "血肉能量核心"
+      },
+      "category": "artifacts",
+      "description": "无赖战士能量核心器官中的核心，似乎有什么特殊用处",
+      "price": 3000000,
+      "price_postapoc": 40000,
+      "material": [
+        "flesh"
+      ],
+      "weight": "600 g",
+      "volume": "300 ml"
+    },
+    {
+      "type": "GENERIC",
+      "id": "ver_elec_core",
+      "symbol": ",",
+      "looks_like":"pool_ball",
+      "color": "blue",
+      "name": {
+        "str": "电磁能量核心"
+      },
+      "category": "artifacts",
+      "description": "磁暴突击者的能量核心器官中的核心，似乎有什么特殊用处\n（PS：暂时还没想到xD）",
+      "price": 3000000,
+      "price_postapoc": 30000,
+      "material": [
+        "flesh"
+      ],
+      "weight": "600 g",
+      "volume": "300 ml"
+    },
+    {
+      "type": "COMESTIBLE",
+      "id": "ver_zombie_master_supermee_left_core",
+      "symbol": ",",
+      "looks_like":"pool_ball",
+      "color": "yellow",
+      "name": {
+        "str": "神秘的核心"
+      },
+      "comestible_type": "MED",
+      "category": "artifacts",
+      "healthy": 50,
+      "description": "主宰浩克偶尔留下的特殊物品，似乎可以激活？",
+      "price": 3000000,
+      "price_postapoc": 50000,
+      "material": [
+        "flesh"
+      ],
+      "use_action": {
+        "type": "consume_drug",
+        "activation_message": "一股神奇的力量降临到了你的身上",
+        "effects": [{"id":"mon_zombie_master_supermee_summon_trigger_2","duration":"2 s"} ,{"id":"heal_p1","duration":"60 s"}],
+        "damage_over_time": [
+          {
+            "damage_type": "pure",
+            "duration": "5 s",
+            "amount": -5,
+            "bodyparts": [ "torso", "head", "arm_l", "leg_l", "arm_r", "leg_r" ]
+          }
+        ]
+      },
+      "weight": "100 g",
+      "volume": "100 ml"
+    },
+    {
+      "type": "GENERIC",
+      "id": "ver_witch_hands",
+      "symbol": ",",
+      "looks_like":"bagh_nakha",
+      "color": "blue",
+      "name": {
+        "str": "Witch的爪子"
+      },
+      "category": "artifacts",
+      "description": "你对Witch使用了拿手好戏，拿到了Yamato（阎魔刀）（划掉）\nWitch在进化中异化的双手你觉得取下来似乎能做成武器，也许可以找hub特殊武器部门问问？",
+      "price": 3000000,
+      "price_postapoc": 30000,
+      "material": [
+        "flesh"
+      ],
+      "weight": "750 g",
+      "volume": "400 ml"
+    }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_SEIKA_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"哎呀，真少见有人会来到这种地方呢…你有酒吗？",
+    "responses":[
+      { "text": "有的哦(邀请加入队伍)", "topic": "TALK_SEIKA_SAN_2" },
+      { "text": "いいや、ないよ", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_SEIKA_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"太好了！又有酒喝了。",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

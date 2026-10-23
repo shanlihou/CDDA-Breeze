@@ -1,0 +1,2131 @@
+[
+  {
+    "id": "aresfmg_unfolded",
+    "type": "GUN",
+    "name": {
+      "str": "ARES FMG",
+      "str_pl": "ARES FMG"
+    },
+    "description": "一把非常紧凑的展开状态冲锋枪。由钢材制成，随时可以射击。",
+    "volume": "1200 ml",
+    "weight": "2090 g",
+    "longest_side": "503 mm",
+    "//": "Estimated dimensions unfolded: 40*500*40 mm body + 40*200*40 mm handle",
+    "price": 40000,
+    "price_postapoc": 1500,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "solid",
+      "length": "short",
+      "surface": "point"
+    },
+    "bashing": 10,
+    "material": [
+      "steel"
+    ],
+    "symbol": "[",
+    "looks_like": "uzi",
+    "color": "dark_gray",
+    "ammo": [
+      "9mm"
+    ],
+    "skill": "smg",
+    "dispersion": 360,
+    "durability": 6,
+    "reload_noise_volume": 10,
+    "blackpowder_tolerance": 24,
+    "min_cycle_recoil": 450,
+    "modes": [
+      [
+        "DEFAULT",
+        "burst",
+        4
+      ]
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "sights mount",
+        1
+      ]
+    ],
+    "//2": "stock: folding stock, adjustable stock; stock mount: stock mount; stock accessory: cheeck pad, butt hook",
+    "faults": [
+      "fault_gun_blackpowder",
+      "fault_gun_dirt",
+      "fault_gun_chamber_spent"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "item_restriction": [
+          "uzimag_20rd",
+          "uzimag_25rd",
+          "uzimag",
+          "mp40mag_32rd"
+        ]
+      }
+    ],
+    "use_action": {
+      "target": "aresfmg_folded",
+      "type": "transform",
+      "msg": "你折叠了武器。",
+      "menu_text": "折叠武器",
+      "moves": 100
+    }
+  },
+  {
+    "id": "aresfmg_folded",
+    "type": "GUN",
+    "name": {
+      "str": "ARES FMG（折叠）",
+      "str_pl": "ARES FMG（折叠）"
+    },
+    "description": "一把非常紧凑的折叠状态冲锋枪。由钢材制成，形状像盒子，紧凑到可以放进口袋。",
+    "volume": "1000 ml",
+    "weight": "2090 g",
+    "longest_side": "250 mm",
+    "//": "Estimated dimensions folded: 100*250*40 mm",
+    "price": 40000,
+    "price_postapoc": 1500,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "solid",
+      "length": "hand",
+      "surface": "point"
+    },
+    "bashing": 10,
+    "material": [
+      "steel"
+    ],
+    "symbol": "[",
+    "looks_like": "radio",
+    "color": "dark_gray",
+    "ammo": [
+      "9mm"
+    ],
+    "skill": "smg",
+    "dispersion": 360,
+    "durability": 6,
+    "reload_noise_volume": 10,
+    "blackpowder_tolerance": 24,
+    "min_cycle_recoil": 450,
+    "modes": [
+      [
+        "DEFAULT",
+        "folded",
+        0,
+        [
+          "MELEE"
+        ]
+      ]
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "sights mount",
+        1
+      ]
+    ],
+    "faults": [
+      "fault_gun_blackpowder",
+      "fault_gun_dirt",
+      "fault_gun_chamber_spent"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "item_restriction": [
+          "uzimag_20rd",
+          "uzimag_25rd",
+          "uzimag",
+          "mp40mag_32rd"
+        ]
+      }
+    ],
+    "use_action": {
+      "target": "aresfmg_unfolded",
+      "type": "transform",
+      "msg": "你展开了武器。",
+      "menu_text": "展开武器",
+      "moves": 100
+    }
+  },
+  {
+    "id": "ceamm1",
+    "type": "GUN",
+    "name": {
+      "str": "CEAM Mòdele 1"
+    },
+    "copy-from": "rifle_auto",
+    "description": "一种延迟反冲式原型突击步枪。CEAM Modèle 1 是从 StG 45(M) 发展而来，同样使用 7.92x33mm Kurz 弹药。后来改为 .30 卡宾枪弹，但该武器从未部署，因经济原因开发被取消。",
+    "volume": "2200 ml",
+    "weight": "4330 g",
+    "longest_side": "905 cm",
+    "price_postapoc": 3900,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "solid",
+      "length": "short",
+      "surface": "point"
+    },
+    "bashing": 11,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "color": "light_gray",
+    "looks_like": "hk_g3",
+    "ammo": [
+      "792x33"
+    ],
+    "built_in_mods": [
+      "bipod_ceamm1",
+      "stock_ceamm1_unfolded"
+    ],
+    "dispersion": 150,
+    "durability": 8,
+    "min_cycle_recoil": 2400,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        5
+      ]
+    ],
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": 0
+    },
+    "variant_type": "gun",
+    "variants": [
+      {
+        "id": "ceamm_49",
+        "name": {
+          "str": "CEAM Mòdele 1949"
+        },
+        "description": "一种延迟反冲式原型突击步枪。CEAM Modèle 1949 是第二个 CEAM 原型，从 StG 45(M) 发展而来。该武器从未部署，因经济原因开发被取消。",
+        "weight": 1
+      },
+      {
+        "id": "ceamm_ii",
+        "name": {
+          "str": "CEAM Mòdele II"
+        },
+        "description": "一种延迟反冲式原型突击步枪。CEAM Modèle II 是第三个 CEAM 原型，从 StG 45(M) 发展而来。该武器从未部署，因经济原因开发被取消。",
+        "weight": 1
+      },
+      {
+        "id": "ceamm_50",
+        "name": {
+          "str": "CEAM Mòdele 1950"
+        },
+        "description": "一种延迟反冲式原型突击步枪。CEAM Modèle 1950 是最后一个 CEAM 原型，从 StG 45(M) 发展而来。该武器从未部署，因经济原因开发被取消。",
+        "weight": 1
+      }
+    ],
+    "valid_mod_locations": [
+      [
+        "barrel",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "stock accessory",
+        1
+      ],
+      [
+        "stock mount",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "item_restriction": [
+          "stg44mag25",
+          "stg44mag30"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "idw",
+    "type": "GUN",
+    "name": {
+      "str": "IDW",
+      "str_pl": "IDW"
+    },
+    "copy-from": "smg_base",
+    "description": "一个从未见天日的原型，90年代的 IDW（本可以）是世界上最最小的冲锋枪。由机加工钢材制成，武器比看起来更重。使用 9mm 帕拉贝鲁姆弹，本应高度可定制，允许安装枪托、瞄准具、枪管甚至两脚架等附件。它还配备了电子控制机制，可调节射速以自动限制后坐力。",
+    "volume": "650 ml",
+    "weight": "2150 g",
+    "longest_side": "276 mm",
+    "price": 125000,
+    "price_postapoc": 2750,
+    "to_hit": {
+      "balance": "good",
+      "grip": "weapon",
+      "length": "hand",
+      "surface": "any"
+    },
+    "bashing": 10,
+    "material": [
+      "plastic",
+      "steel"
+    ],
+    "symbol": "(",
+    "looks_like": "tec9",
+    "color": "dark_gray",
+    "ammo": [
+      "9mm"
+    ],
+    "dispersion": 360,
+    "durability": 7,
+    "min_cycle_recoil": 600,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        4
+      ]
+    ],
+    "skill": "smg",
+    "reload_noise_volume": 8,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "stock accessory",
+        1
+      ],
+      [
+        "stock mount",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "faults": [
+      "fault_gun_blackpowder",
+      "fault_gun_dirt",
+      "fault_gun_chamber_spent"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "item_restriction": [
+          "idwmag20",
+          "idwmag28",
+          "idwmag32"
+        ]
+      }
+    ],
+    "weapon_category": [
+      "AUTOMATIC_PISTOLS"
+    ],
+    "//": "This is a hybrid between the finished PDW prototype and the manufactured IDW",
+    "//2": "Data obtained from http //firearmsworld.net/britain/phidw/idw.htm . Some values are approximates, such as the volume."
+  },
+  {
+    "id": "kar98",
+    "type": "GUN",
+    "name": {
+      "str": "Karabiner 98 kurz",
+      "str_pl": "Karabiner 98 kurz"
+    },
+    "copy-from": "rifle_manual",
+    "description": "一把著名的栓动、内置弹仓步枪。源自 Standardmodell 和 Gewehr 98，Kar98 继承了成熟且更优化的毛瑟枪机，采用卡宾枪设计，完全符合 1919 年凡尔赛条约。",
+    "volume": "2800 ml",
+    "weight": "3700 g",
+    "longest_side": "1110 mm",
+    "price": 14330,
+    "price_postapoc": 3500,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "solid",
+      "length": "long",
+      "surface": "point"
+    },
+    "bashing": 12,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "symbol": "(",
+    "looks_like": "mosin91_30",
+    "color": "brown",
+    "ammo": [
+      "792x57"
+    ],
+    "barrel_volume": "100 ml",
+    "blackpowder_tolerance": 45,
+    "dispersion": 90,
+    "//": "This supposedly has between 2 and 4 moa, but that's way too much compared to the mosin91_30 value",
+    "durability": 9,
+    "clip_size": 5,
+    "range": 2,
+    "variant_type": "gun",
+    "variants": [
+      {
+        "id": "kar98_krieg",
+        "name": {
+          "str": "Karabiner 98k Kriegsmodell"
+        },
+        "description": "一把著名的栓动、内置弹仓步枪。Kriegsmodell 在原版基础上进行了一些更新，如移除刺刀座、简化毛瑟枪机以及其他细微改动。",
+        "weight": 1
+      }
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        3
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "grip mount",
+        1
+      ],
+      [
+        "mechanism",
+        2
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "stock mount",
+        1
+      ],
+      [
+        "stock accessory",
+        2
+      ],
+      [
+        "underbarrel mount",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "792x57": 5
+        },
+        "allowed_speedloaders": [
+          "792x57_clip"
+        ]
+      }
+    ],
+    "flags": [
+      "RELOAD_ONE"
+    ]
+  },
+  {
+    "id": "m76",
+    "type": "GUN",
+    "name": {
+      "str": "M76 Zastava",
+      "str_pl": "M76 Zastava"
+    },
+    "copy-from": "svd",
+    "description": "一把导气式、半自动塞尔维亚 DMR，基于苏联 SVD-63。为满足（当时新颖的）角色而创建，作为其精神前身，首次部署于南斯拉夫战争期间。然而与 SVD 不同，M76 实际上基于 AK 设计，经过大改以适配更大的 7.92x57mm 毛瑟弹。",
+    "volume": "3000 ml",
+    "weight": "4600 g",
+    "longest_side": "1135 mm",
+    "price": 19000,
+    "price_postapoc": 3000,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "solid",
+      "length": "long",
+      "surface": "point"
+    },
+    "bashing": 11,
+    "material": [
+      "plastic",
+      "steel",
+      "wood"
+    ],
+    "looks_like": "svd",
+    "color": "brown",
+    "ammo": [
+      "792x57"
+    ],
+    "barrel_volume": "325 ml",
+    "built_in_mods": [
+      "onm76_scope"
+    ],
+    "dispersion": 100,
+    "//": "Accuracy is typically around 1.5 MOA, which is good for a Kalashnikov design and entirely acceptable for the designated marksman role. ",
+    "//2": "The dispersion at 900 m (984 yd) is described as 50 × 50 cm (19.7 × 19.7 in), which is ≈ 2.2 MOA.",
+    "durability": 9,
+    "min_cycle_recoil": 1350,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ]
+    ],
+    "reload": 500,
+    "reload_noise_volume": 8,
+    "variant_type": "gun",
+    "variants": [
+      {
+        "id": "m76_lkp76",
+        "name": {
+          "str": "LKP 76"
+        },
+        "description": "一把导气式、半自动塞尔维亚 DMR，基于苏联 SVD-63。为满足（当时新颖的）角色而创建，作为其精神前身，首次部署于南斯拉夫战争期间。然而与 SVD 不同，M76 实际上基于 AK 设计，经过大改以适配更大的 7.92x57mm 毛瑟弹。这是运动步枪变体。",
+        "weight": 1
+      },
+      {
+        "id": "m76_yugo",
+        "name": {
+          "str": "Yugo M76"
+        },
+        "description": "一把导气式、半自动 DMR，基于塞尔维亚 M76 Zastava。这是一个变体，本地组装，使用新的现代零件。",
+        "weight": 1
+      }
+    ],
+    "valid_mod_locations": [
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "stock accessory",
+        2
+      ],
+      [
+        "underbarrel mount",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "item_restriction": [
+          "m76mag10"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ots48",
+    "type": "GUN",
+    "name": {
+      "str": "OTs-48",
+      "str_pl": "OTs-48"
+    },
+    "copy-from": "rifle_manual",
+    "description": "一把可靠的老枪，按 00 年代标准现代化，利用了 1891/30 的剩余库存。该武器在原版基础上进行了多项升级和改动：现代枪托、内置两脚架、枪机更换、侧轨瞄准具、木质贴腮板以及内置消焰器。OTs-48 作为狩猎武器出售。",
+    "volume": "3500 ml",
+    "weight": "5139 g",
+    "longest_side": "1241 mm",
+    "price": 34000,
+    "price_postapoc": 3500,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "solid",
+      "length": "long",
+      "surface": "point"
+    },
+    "bashing": 11,
+    "material": [
+      "plastic",
+      "steel",
+      "wood"
+    ],
+    "looks_like": "mosin91_30",
+    "color": "brown",
+    "ammo": [
+      "762R"
+    ],
+    "barrel_volume": "200 ml",
+    "blackpowder_tolerance": 45,
+    "built_in_mods": [
+      "bipod",
+      "stock_mount"
+    ],
+    "dispersion": 60,
+    "durability": 10,
+    "clip_size": 5,
+    "range": 3,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ],
+      [
+        "grip mount",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "stock mount",
+        1
+      ],
+      [
+        "stock accessory",
+        2
+      ],
+      [
+        "underbarrel mount",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "762R": 5
+        },
+        "allowed_speedloaders": [
+          "762R_clip"
+        ]
+      }
+    ],
+    "flags": [
+      "RELOAD_ONE"
+    ]
+  },
+  {
+    "id": "ots48k",
+    "type": "GUN",
+    "name": {
+      "str": "OTs-48K",
+      "str_pl": "OTs-48K"
+    },
+    "copy-from": "rifle_manual",
+    "description": "一把可靠的老枪，按 00 年代标准现代化，利用了 1891/30 的剩余库存。该武器在原版基础上进行了多项升级和改动：现代枪托、无托式枪机布局、定制手枪握把、侧轨瞄准具、木质贴腮板以及用于两脚架的下挂安装座。OTs-48K 仅按订单出售给军方。",
+    "volume": "3200 ml",
+    "weight": "4639 g",
+    "longest_side": "850 mm",
+    "//2": "relatively small dimensions of 1,000x250x70 mm",
+    "price_postapoc": 3500,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "solid",
+      "length": "short",
+      "surface": "point"
+    },
+    "bashing": 11,
+    "material": [
+      "plastic",
+      "steel",
+      "wood"
+    ],
+    "looks_like": "mosin91_30",
+    "color": "brown",
+    "ammo": [
+      "762R"
+    ],
+    "barrel_volume": "200 ml",
+    "blackpowder_tolerance": 45,
+    "built_in_mods": [
+      "stock_mount"
+    ],
+    "clip_size": 5,
+    "dispersion": 70,
+    "durability": 10,
+    "range": 2,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ],
+      [
+        "grip mount",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "stock mount",
+        1
+      ],
+      [
+        "stock accessory",
+        2
+      ],
+      [
+        "underbarrel mount",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "762R": 5
+        },
+        "allowed_speedloaders": [
+          "762R_clip"
+        ]
+      }
+    ],
+    "flags": [
+      "RELOAD_ONE"
+    ],
+    "//3": "There's basically no reliable data about these, so most is copied over from the mosin91_30 "
+  },
+  {
+    "id": "pgm_hecate",
+    "type": "GUN",
+    "name": {
+      "str": "PGM Hécate II",
+      "str_pl": "PGM Hécate II"
+    },
+    "copy-from": "rifle_manual",
+    "description": "一把导气式、栓动狙击和反器材步枪。1994 年测试用于南斯拉夫战争，修订版改为适配 .50 BMG 弹药，因此得名 II。它配备了内置枪口制退器，极大降低了强大弹药的后坐力，枪管采用特殊合金，可显著提高寿命至数千发，枪托和握把采用木质饰面。",
+    "volume": "7200 ml",
+    "weight": "13800 g",
+    "longest_side": "1380 mm",
+    "price": 1483300,
+    "price_postapoc": 12000,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "solid",
+      "length": "long",
+      "surface": "point"
+    },
+    "bashing": 12,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "looks_like": "m107a1",
+    "color": "dark_gray",
+    "ammo": [
+      "50"
+    ],
+    "built_in_mods": [
+      "muzzle_pgm",
+      "scrome_scope"
+    ],
+    "dispersion": 5,
+    "//2": "Supposedly it has sub-moa groups at 1700 meters with very good ammo",
+    "durability": 10,
+    "min_cycle_recoil": 3500,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ]
+    ],
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": -5
+    },
+    "reload": 450,
+    "reload_noise_volume": 8,
+    "valid_mod_locations": [
+      [
+        "barrel",
+        1
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock accessory",
+        2
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "item_restriction": [
+          "pgmmag7"
+        ]
+      }
+    ],
+    "flags": [
+      "NEVER_JAMS"
+    ]
+  },
+  {
+    "id": "pieper_m1893",
+    "type": "GUN",
+    "name": {
+      "str": "Pieper M1893",
+      "str_pl": "Pieper M1893"
+    },
+    "copy-from": "rifle_revolver",
+    "description": "一把双动左轮卡宾枪。其动作系统可手动待击，弹巢可装九发。木质枪托和木质护木的重量大大增加了后坐力控制。顶带上刻有“EJERCITO MEXICANO”，机匣末端签有“H. PIEPER Bte LIEGE”。",
+    "volume": "3100 ml",
+    "weight": "2950 g",
+    "longest_side": "927 mm",
+    "price": 47900,
+    "price_postapoc": 2500,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "solid",
+      "length": "long",
+      "surface": "point"
+    },
+    "bashing": 12,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "symbol": "(",
+    "looks_like": "mosin91_30",
+    "color": "brown",
+    "ammo": [
+      "765x53"
+    ],
+    "dispersion": 105,
+    "durability": 9,
+    "blackpowder_tolerance": 52,
+    "clip_size": 9,
+    "range": 2,
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": 0
+    },
+    "reload_noise_volume": 10,
+    "faults": [
+      "fault_gun_blackpowder",
+      "fault_gun_dirt"
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        1
+      ],
+      [
+        "magazine",
+        1
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        2
+      ],
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "stock accessory",
+        2
+      ],
+      [
+        "stock mount",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "765x53": 9
+        }
+      }
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "RELOAD_EJECT",
+      "RELOAD_ONE"
+    ]
+  },
+  {
+    "id": "sig550",
+    "type": "GUN",
+    "name": {
+      "str": "SIG 550",
+      "str_pl": "SIG 550"
+    },
+    "copy-from": "rifle_auto",
+    "description": "也称为 SG 550，这是一种为瑞士军方设计的选射自动步枪。这是 550 系列的旧型号，更重更笨重。",
+    "volume": "3200 ml",
+    "weight": "4100 g",
+    "longest_side": "998 mm",
+    "price": 320000,
+    "price_postapoc": 6000,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "solid",
+      "length": "long",
+      "surface": "point"
+    },
+    "bashing": 11,
+    "material": [
+      "plastic",
+      "steel"
+    ],
+    "looks_like": "ar15",
+    "ammo": [
+      "223"
+    ],
+    "built_in_mods": [
+      "folding_stock"
+    ],
+    "dispersion": 155,
+    "//2": "I don't understand where these dispersion values come from. For reference, M16 has 10 shot group dispersion of 32 cm @ 300 m (calculated ~3.84 moa), AK-47 has 10 shot dispersion of 44 cm @ 300 m (calculated ~5.28 moa)), AK-74 has a R50 of 24 cm @ 300 m ( 24*2*0.937 ≈ 45 cm = 5.4 moa). But, both M16 and AK-74 have 150 dispersion in C:DDA. To make things worse (for me), SIG 550 has a R50 of 14 cm @ 300 m ( 14*2*0.937 ≈ 26.2 cm = 3.14 moa), which is LOWER than M16 but dispersion for the SIG 553 is 180 in C:DDA. M4A1 has a 24 in grouping at 300 yards = 8 moa, but 180 dispersion in C:DDA too",
+    "//3": "1 moa = 3 in @ 300 yd = 7.62 cm in @ 274.3 m = 8.33 cm @ 300 m ",
+    "//4": "I'm assuming *total* 3.5 moa = 210, 3 moa = 180, 2.5 moa = 150, 2 moa = 120, 1.5 moa = 90, 1 moa = 60. For most cases, anyways.",
+    "durability": 9,
+    "min_cycle_recoil": 1350,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "BURST",
+        "3 rd.",
+        3
+      ],
+      [
+        "AUTO",
+        "auto",
+        5
+      ]
+    ],
+    "reload": 420,
+    "reload_noise_volume": 10,
+    "valid_mod_locations": [
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "stock mount",
+        1
+      ],
+      [
+        "underbarrel mount",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "item_restriction": [
+          "sig550mag5",
+          "sig550mag10",
+          "sig550mag20",
+          "sig550mag30",
+          "stanag5",
+          "stanag10",
+          "stanag20",
+          "stanag30",
+          "stanag40",
+          "stanag50",
+          "stanag60",
+          "survivor223mag"
+        ]
+      }
+    ],
+    "weapon_category": [
+      "AUTOMATIC_RIFLES"
+    ]
+  },
+  {
+    "id": "sig550_sniper",
+    "type": "GUN",
+    "name": {
+      "str": "SIG 550-1",
+      "str_pl": "SIG 550-1"
+    },
+    "copy-from": "sig550",
+    "description": "也称为 SG 550-1，这是一种为瑞士军方设计的选射自动步枪。此版本配有内置贴腮板、人体工学手枪握把，并附带 SUSAT 瞄准镜。",
+    "built_in_mods": [
+      "cheek_pad",
+      "folding_stock",
+      "pistol_grip",
+      "susat_scope2"
+    ],
+    "dispersion": 145,
+    "valid_mod_locations": [
+      [
+        "grip",
+        1
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "stock mount",
+        1
+      ],
+      [
+        "underbarrel mount",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "spanish_m1893",
+    "type": "GUN",
+    "name": {
+      "str_sp": "西班牙 1983 型步枪"
+    },
+    "copy-from": "rifle_manual",
+    "description": "一种内置弹仓的栓动步枪，在19世纪末为了西班牙军队研制，该步枪迅速定型并用于多场前线战役，其可靠的质量与成功，给设计g98与m1903春田步枪一种新的思路",
+    "volume": "3120 ml",
+    "weight": "3991 g",
+    "longest_side": "1220 mm",
+    "price": 110000,
+    "price_postapoc": 3000,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "solid",
+      "length": "long",
+      "surface": "point"
+    },
+    "bashing": 12,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "symbol": "(",
+    "looks_like": "mosin91_30",
+    "color": "brown",
+    "ammo": [
+      "765x53"
+    ],
+    "barrel_volume": "75 ml",
+    "blackpowder_tolerance": 45,
+    "dispersion": 90,
+    "//": "3.25 in (8.255 cm) grouping at 100 yd (91.44 m) ~ 3.25 moa",
+    "//2": "That's too much so I'm setting it at the same value of the mosin91_30 ",
+    "durability": 9,
+    "clip_size": 5,
+    "range": 3,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        3
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "grip mount",
+        1
+      ],
+      [
+        "mechanism",
+        2
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "stock mount",
+        1
+      ],
+      [
+        "stock accessory",
+        2
+      ],
+      [
+        "underbarrel mount",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "765x53": 5
+        }
+      }
+    ],
+    "flags": [
+      "RELOAD_ONE"
+    ]
+  },
+  {
+    "id": "sr3mp",
+    "type": "GUN",
+    "name": {
+      "str": "SR-3MP",
+      "str_pl": "SR-3MP"
+    },
+    "copy-from": "rifle_auto",
+    "description": "SR-3MP 是一种导气式、紧凑型亚音速突击步枪。属于“spetsialnaya”系列，包括 VSK-94 和 VSS 等武器。SR-3MP 旨在作为 AS Val 的紧凑替代品：更短，没有内置消音器，并配有折叠枪托，该武器适用于隐蔽携带和城市战斗。使用 9x39mm 弹药。",
+    "volume": "1600 ml",
+    "weight": "2100 g",
+    "longest_side": "675 mm",
+    "price": 38000,
+    "price_postapoc": 6000,
+    "to_hit": {
+      "balance": "good",
+      "grip": "solid",
+      "length": "short",
+      "surface": "point"
+    },
+    "bashing": 9,
+    "material": [
+      "plastic",
+      "steel"
+    ],
+    "looks_like": "vss",
+    "color": "black",
+    "ammo": [
+      "9x39"
+    ],
+    "built_in_mods": [
+      "stock_asval_unfolded",
+      "vertical_foregrip"
+    ],
+    "dispersion": 90,
+    "durability": 9,
+    "loudness": 22,
+    "min_cycle_recoil": 1350,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        4
+      ]
+    ],
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": 2
+    },
+    "//": "9x39 damage is too low, so I'm increasing it a bit here and with the ammo",
+    "reload": 330,
+    "reload_noise_volume": 4,
+    "variant_type": "gun",
+    "variants": [
+      {
+        "id": "sr3m",
+        "name": {
+          "str": "SR-3M"
+        },
+        "description": "SR-3M 是一种导气式、紧凑型亚音速突击步枪。属于“spetsialnaya”系列，包括 VSK-94 和 VSS 等武器。SR-3M 是 SR-3MP 的旧型号，缺少额外的导轨。使用 9x39mm 弹药。",
+        "weight": 1
+      }
+    ],
+    "valid_mod_locations": [
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "item_restriction": [
+          "9x39mag10",
+          "9x39mag20",
+          "9x39mag30"
+        ]
+      }
+    ],
+    "weapon_category": [
+      "AUTOMATIC_RIFLES"
+    ]
+  },
+  {
+    "id": "stg44",
+    "type": "GUN",
+    "name": {
+      "str": "StG 44",
+      "str_pl": "StG 44"
+    },
+    "copy-from": "ak47",
+    "//": "Ironic",
+    "description": "Sturmgewehr 44 或 Maschinenpistole 43（取决于问谁）是最早被创造的“突击步枪”之一，也是第一个成功的。导气式、选射，使用中间型 7.92x33mm Kurz 弹药，目标是为士兵提供足够的中距离交战火力。永恒的经典，你会成为大灾变后呼吸着的武器收藏家羡慕的对象。",
+    "volume": "2200 ml",
+    "weight": "4600 g",
+    "longest_side": "94 cm",
+    "price": 290000,
+    "price_postapoc": 4000,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "solid",
+      "length": "long",
+      "surface": "point"
+    },
+    "bashing": 11,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "color": "dark_gray",
+    "looks_like": "ak47",
+    "ammo": [
+      "792x33"
+    ],
+    "dispersion": 160,
+    "//2": "though the report accepted that its accuracy was 'excellent for a weapon of its type' ",
+    "//3": "Assuming this means more than less 3 moa due being an early 'assault rifle', and modern 'assault rifles' having ~3 moa",
+    "durability": 8,
+    "min_cycle_recoil": 2100,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        5
+      ]
+    ],
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": 1
+    },
+    "valid_mod_locations": [
+      [
+        "barrel",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "stock accessory",
+        2
+      ],
+      [
+        "stock mount",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "item_restriction": [
+          "stg44mag25",
+          "stg44mag30"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "svd",
+    "type": "GUN",
+    "name": {
+      "str": "SVD-63",
+      "str_pl": "SVD-63"
+    },
+    "copy-from": "rifle_semi",
+    "description": "一把著名的半自动、导气式、苏联时代 DMR，使用老而可靠的 7.62x54mmR，枪托形状极易辨认。全球广泛使用超过半个世纪，拥有足够的实战测试证明其可靠性和有效性。",
+    "volume": "3200 ml",
+    "weight": "4300 g",
+    "longest_side": "1225 mm",
+    "price": 220000,
+    "price_postapoc": 3000,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "solid",
+      "length": "long",
+      "surface": "point"
+    },
+    "bashing": 11,
+    "material": [
+      "plastic",
+      "steel",
+      "wood"
+    ],
+    "looks_like": "mosin91_30",
+    "color": "brown",
+    "ammo": [
+      "762R"
+    ],
+    "built_in_mods": [
+      "pso1_scope"
+    ],
+    "dispersion": 120,
+    "//": "When using standard grade 57-N-323S cartridges, the accuracy of the SVD is reduced to 2.21 MOA extreme vertical spread. The extreme vertical spreads for the SVD are established by shooting 5-shot groups at 300 m range.",
+    "durability": 9,
+    "min_cycle_recoil": 1200,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ]
+    ],
+    "reload": 450,
+    "reload_noise_volume": 8,
+    "variant_type": "gun",
+    "variants": [
+      {
+        "id": "svd_tiger",
+        "name": {
+          "str": "SVD Tiger"
+        },
+        "description": "一把著名的半自动、导气式、苏联时代 DMR，使用老而可靠的 7.62x54mmR，枪托形状极易辨认。这是民用全长枪管变体，符合国家枪支法。",
+        "color": "dark_gray",
+        "weight": 1
+      }
+    ],
+    "valid_mod_locations": [
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock accessory",
+        2
+      ],
+      [
+        "underbarrel mount",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "item_restriction": [
+          "svdmag10",
+          "svdmag20"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "thompson_contender",
+    "type": "GUN",
+    "name": {
+      "str": "汤普森 Contender"
+    },
+    "copy-from": "pistol_base",
+    "description": "一把中撅式单发手枪，高度客制化，市场面向那些喜欢鼓捣枪的军迷，枪管可以被简单的替换成其他口径的枪管，击锤也可以在边缘击打和中心击打两种模式中切换且扳机力度也可调节，重如反器材步枪或轻如运动手枪（不错的末日武器，有效解决有子弹没枪的问题）",
+    "weight": "2060 g",
+    "volume": "1066 ml",
+    "longest_side": "444 mm",
+    "price": 120000,
+    "price_postapoc": 1000,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "weapon",
+      "length": "short",
+      "surface": "point"
+    },
+    "bashing": 8,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "looks_like": "glock_17",
+    "color": "brown",
+    "ammo": [
+      "3006"
+    ],
+    "built_in_mods": [
+      "retool_thompson_contender_3006"
+    ],
+    "range": 1,
+    "dispersion": 290,
+    "//": "The CCI Velocitor is a hunting load that often demonstrates good accuracy. A three shot 25-yard group yielded a 1.5-inch group. Moving to the unplated CCI SGB (Small Game Bullet) the Contender exhibited a 1.25-inch group. The CCI Mini Mag, a great hunting load with good all around performance, was good for 1.1 inches.",
+    "//2": "18 - 13.2 in grouping at 300 yards ~ 6 - 4.4 moa",
+    "durability": 7,
+    "barrel_volume": "75 ml",
+    "blackpowder_tolerance": 72,
+    "clip_size": 1,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        2
+      ],
+      [
+        "sights mount",
+        1
+      ],
+      [
+        "underbarrel mount",
+        1
+      ]
+    ],
+    "faults": [
+      "fault_gun_blackpowder",
+      "fault_gun_dirt"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "3006": 1
+        }
+      }
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "RELOAD_EJECT",
+      "RELOAD_ONE"
+    ]
+  },
+  {
+    "id": "tkb002_p",
+    "type": "GUN",
+    "name": {
+      "str": "TKB-022P No 2",
+      "str_pl": "TKB-022P No 2"
+    },
+    "copy-from": "tkb002_pm",
+    "description": "一把复古未来风格的导气式无托突击步枪，采用胶木外壳。创建于 60 年代初，旨在作为 AKM 的更小、便携的替代品。一些问题，如重心偏移、胶木的耐用性和激进的外观，足以导致其被拒绝。",
+    "volume": "1800 ml",
+    "weight": "2500 g",
+    "longest_side": "635 mm",
+    "price_postapoc": 4000,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "solid",
+      "length": "short",
+      "surface": "point"
+    },
+    "looks_like": "ak47",
+    "ammo": [
+      "762"
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ],
+      [
+        "mechanism",
+        2
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock accessory",
+        2
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "item_restriction": [
+          "akmag10",
+          "akmag20",
+          "akmag30",
+          "akmag40"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tkb002_pm",
+    "type": "GUN",
+    "name": {
+      "str": "TKB-022PM No 2",
+      "str_pl": "TKB-022PM No 2"
+    },
+    "copy-from": "ak47",
+    "description": "一把复古未来风格的导气式无托突击步枪。创建于 60 年代初，采用胶木外壳，旨在作为 AKM 的更小、便携的替代品。一些问题，如重心（因弹匣位置过于靠后而偏移）、胶木的耐用性和激进的外观，足以导致其被拒绝。",
+    "volume": "1650 ml",
+    "weight": "2340 g",
+    "longest_side": "525 mm",
+    "price_postapoc": 4000,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "solid",
+      "length": "short",
+      "surface": "point"
+    },
+    "bashing": 10,
+    "material": [
+      "plastic",
+      "steel"
+    ],
+    "symbol": "(",
+    "looks_like": "fn_p90",
+    "color": "red",
+    "ammo": [
+      "762"
+    ],
+    "dispersion": 180,
+    "durability": 8,
+    "min_cycle_recoil": 1832,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        4
+      ]
+    ],
+    "reload_noise_volume": 10,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ],
+      [
+        "mechanism",
+        2
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock accessory",
+        2
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "item_restriction": [
+          "akmag10",
+          "akmag20",
+          "akmag30",
+          "akmag40"
+        ]
+      }
+    ],
+    "//": "Hybrid between fn_p90 and ak47. Values I couldn't find, like dispersion, ammo, etc were copied from the ak47"
+  },
+  {
+    "id": "vss",
+    "type": "GUN",
+    "name": {
+      "str": "VSS Vintorez",
+      "str_pl": "VSS Vintorez"
+    },
+    "copy-from": "rifle_auto",
+    "description": "VSS 是一种紧凑型亚音速苏联 DMR，配备内置消音器和 PSO-1 瞄准镜。与 AS Val 和 OTs-14“Groza”等其他“spetsialnaya”系列苏联时代武器一起设计，以取代 AK-74 等通用武器。讽刺的是，Vintorez 也缺乏定位：它可用于潜行行动、marksman 步枪、伪冲锋枪和通用“突击武器”。唯一的缺点是相对较低的有效射程和明显的弹道下降，两者都是由于 9x39mm 的特性。",
+    "volume": "2000 ml",
+    "weight": "2040 g",
+    "longest_side": "694 mm",
+    "price": 19000,
+    "price_postapoc": 3000,
+    "to_hit": {
+      "balance": "good",
+      "grip": "solid",
+      "length": "long",
+      "surface": "point"
+    },
+    "bashing": 9,
+    "material": [
+      "plastic",
+      "steel",
+      "wood"
+    ],
+    "looks_like": "ak47",
+    "color": "brown",
+    "ammo": [
+      "9x39"
+    ],
+    "built_in_mods": [
+      "pso1_scope2",
+      "suppressor_vss2"
+    ],
+    "dispersion": 60,
+    "//": "We did not have the facilities at this time to measure group size, although we understand that the accuracy is excellent out to 150 meters and our observation indicated 1-2 MOA.",
+    "//2": "Assuming *total* 1.5 moa with 9x39mm SP-5",
+    "durability": 8,
+    "loudness": 22,
+    "min_cycle_recoil": 1350,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        4
+      ]
+    ],
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": 2
+    },
+    "//3": "9x39 damage is too low, so I'm increasing it a bit here and with the ammo",
+    "//4": "Ideally, the VSS should instead have increased crit chance and higher crit dmg modifier, to emulate the late-game scaling with proficiency",
+    "reload": 330,
+    "reload_noise_volume": 4,
+    "valid_mod_locations": [
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock accessory",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "item_restriction": [
+          "9x39mag10",
+          "9x39mag20",
+          "9x39mag30"
+        ]
+      }
+    ],
+    "weapon_category": [
+      "AUTOMATIC_RIFLES"
+    ]
+  },
+  {
+    "id": "wa2000",
+    "type": "GUN",
+    "name": {
+      "str_sp": "瓦尔特 WA 2000"
+    },
+    "copy-from": "rifle_semi",
+    "description": "一把导气式、半自动无托狙击步枪。该武器围绕可靠性和精度设计，具有浮动枪管、无托设计以减小总尺寸、无机械瞄具、集成的半消焰器半补偿器附件以及可调后坐力缓冲系统。有史以来最稀有的武器之一。",
+    "volume": "4600 ml",
+    "weight": "6950 g",
+    "longest_side": "905 mm",
+    "price": 7500000,
+    "price_postapoc": 6500,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "solid",
+      "length": "short",
+      "surface": "point"
+    },
+    "bashing": 12,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "looks_like": "m1a",
+    "symbol": "(",
+    "color": "brown",
+    "ammo": [
+      "300"
+    ],
+    "dispersion": 15,
+    "//": "Supposedly, this had 0.5 moa!",
+    "durability": 6,
+    "min_cycle_recoil": 2100,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "BURST",
+        "2 rd.",
+        2
+      ]
+    ],
+    "barrel_volume": "275 ml",
+    "variant_type": "gun",
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "grip mount",
+        1
+      ],
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "stock mount",
+        1
+      ],
+      [
+        "stock accessory",
+        2
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "item_restriction": [
+          "wa2000mag6",
+          "wa2000mag10"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "wa2000_2",
+    "type": "GUN",
+    "name": {
+      "str_sp": "瓦尔特 WA 2000"
+    },
+    "copy-from": "wa2000",
+    "material": [
+      "plastic",
+      "steel"
+    ],
+    "looks_like": "wa2000",
+    "color": "black",
+    "//": "Polymer version, the variants field doesn't support material replacement"
+  }
+]

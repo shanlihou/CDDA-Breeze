@@ -1,0 +1,63 @@
+[
+  {
+    "type": "BIONIC_ITEM",
+    "category": "bionics",
+    "name": { "str": "军用人形骨架" },
+    "weight": "3000 g",
+    "volume": "2500 ml",
+    "bashing": 12,
+    "material": [ "steel", "plastic" ],
+    "symbol": ":",
+    "color": "yellow",
+    "price_postapoc": 1500,
+    "use_action": [ "install_bionic" ],
+    "flags": [ "CBM", "BIONIC_NPC_USABLE" ],
+    "is_upgrade": false,
+    "faults": [ "fault_bionic_salvaged" ],
+    "copy-from": "bionic_general_npc_usable",
+    "id": "bio_skeleton",
+    "looks_like": "bio_int_enhancer",
+    "description": "军用人形骨架",
+    "price": 1000000,
+    "difficulty": 6,
+    "installation_data": "AID_bio_weight"
+  },
+  {
+    "id": "bio_skeleton",
+    "type": "bionic",
+    "name": { "str": "军用人形骨架" },
+    "description": "军用人形骨架",
+    "occupied_bodyparts": [ [ "torso", 8 ], [ "arm_l", 3 ], [ "arm_r", 3 ], [ "leg_l", 3 ], [ "leg_r", 3 ], [ "foot_l", 1 ], [ "foot_r", 1 ] ],
+    "enchantments": [
+      {
+        "condition": "ACTIVE",
+        "skills": [ { "value": "dodge", "add": 30 } ],
+        "values": [ { "value": "STRENGTH", "add": 10 } ]
+      }
+    ],
+    "act_cost": "1 J",
+    "react_cost": "1 J",
+    "time": "1 s",
+    "weight_capacity_bonus": "20 kg",
+    "flags": [ "BIONIC_NPC_USABLE", "BIONIC_TOGGLED" ],
+    "mutation_conflicts": [
+      "AMORPHOUS",
+      "BENDY2",
+      "BENDY3",
+      "LARGE",
+      "LARGE_OK",
+      "HUGE",
+      "HUGE_OK",
+      "SMALL",
+      "SMALL2",
+      "SMALL_OK",
+      "ARM_TENTACLES",
+      "ARM_TENTACLES_4",
+      "ARM_TENTACLES_8",
+      "GASTROPOD_FOOT",
+      "GASTROPOD_BALANCE",
+      "LEG_TENTACLES",
+      "LEG_TENT_BRACE"
+    ]
+  }
+]

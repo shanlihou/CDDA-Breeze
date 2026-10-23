@@ -1,0 +1,28 @@
+[
+  {
+    "@备注": "涓流充能CBM",
+    "result": "bio_trickle",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_CBM",
+    "skill_used": "electronics",
+    "difficulty": 6,
+    "time": "20 m",
+    "reversible": true,
+    "autolearn": true,
+	"qualities": [
+	  { "id": "CUT", "level": 2 },
+      { "id": "HAMMER", "level": 2 },
+      { "id": "SAW_M", "level": 1 },
+      { "id": "WRENCH", "level": 1 },
+      { "id": "SCREW", "level": 1 }
+    ],
+    "using": [ [ "soldering_standard", 20 ] ],
+    "components": [
+	  [ [ "power_supply", 1 ] ],
+	  [ [ "betavoltaic", 1 ] ], 
+	  [ [ "bionics_core_charge", 1 ] ] 
+    ]
+  }
+]

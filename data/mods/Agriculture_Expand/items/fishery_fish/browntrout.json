@@ -1,0 +1,35 @@
+[
+	{
+		"type": "COMESTIBLE",
+		"id": "fishery_egg_browntrout",
+		"name": { "str": "鱼卵（褐鳟）" },
+		"copy-from": "fishery_egg",
+		"spoils_in": "10 days",
+		"description": "一些可以食用，也可以等他们孵化出小鱼的褐鳟鱼卵。",
+		"rot_spawn": "FISHERY_GROUP_EGG_browntrout",
+		"rot_spawn_chance": 50
+	},
+	{
+		"name": "FISHERY_GROUP_EGG_browntrout",
+		"type": "monstergroup",
+		"default": "fishery_mon_browntrout_juvenile",
+		"monsters": [ ]
+	},
+	{
+		"id": "fishery_mon_browntrout_juvenile",
+		"type": "MONSTER",
+		"name": { "str": "褐鳟鱼苗" },
+		"description": "一条褐鳟幼鱼，过一段时间就会变成成鱼。",
+		"copy-from": "fishery_mon_juvenile",
+		"harvest": "fish_tiny",
+		"upgrades": { "age_grow": 20, "into": "mon_fish_brown_trout" }
+	},
+	{
+		"id": "mon_fish_brown_trout",
+		"type": "MONSTER",
+		"copy-from": "mon_fish_brown_trout",
+		"name": { "str": "褐鳟" },
+		"reproduction": { "baby_egg": "fishery_egg_browntrout", "baby_count": 10, "baby_timer": 20 },
+		"baby_flags": [ "AUTUMN" ]
+	}
+]

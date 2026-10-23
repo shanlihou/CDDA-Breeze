@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_KIRITAN_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"我是俊子姐姐探测一级的切蒲英",
+    "responses":[
+      { "text": "成为伙伴吧", "topic": "TALK_KIRITAN_SAN_2" },
+      { "text": "可疑的家伙…", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_KIRITAN_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"耶～呼。啊，请找到俊子姐姐吧，俊子能量现在不足了哦",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

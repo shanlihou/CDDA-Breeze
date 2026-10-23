@@ -1,0 +1,135 @@
+[
+  {
+    "type": "SPELL",
+    "id": "ice_clave",
+    "name": {
+      "str": "寒冰之钥"
+    },
+    "description": "驭使源于冰川的万夫莫当之力造成严重的破坏。",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "extra_effects": [
+      {
+        "id": "ice_clave_blunt"
+      }
+    ],
+    "flags": [
+      "LOUD",
+      "NO_HANDS"
+    ],
+    "min_damage": 30,
+    "max_damage": 116,
+    "damage_increment": 2,
+    "min_range": 3,
+    "max_range": 8,
+    "range_increment": 0.12,
+    "min_aoe": 30,
+    "max_aoe": 120,
+    "aoe_increment": 2.6,
+    "base_energy_cost": 400,
+    "spell_class": "GLACIER_MAGE",
+    "energy_source": "MANA",
+    "damage_type": "cold",
+    "difficulty": 3,
+    "max_level": 43,
+    "base_casting_time": 350
+  },
+  {
+    "type": "SPELL",
+    "id": "ice_clave_blunt",
+    "name": {
+      "str": "寒冰之钥"
+    },
+    "description": "寒冰之钥法术的钝击伤害效果",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "min_damage": 30,
+    "max_damage": 116,
+    "damage_increment": 2,
+    "min_range": 3,
+    "max_range": 8,
+    "range_increment": 0.12,
+    "min_aoe": 30,
+    "max_aoe": 138,
+    "aoe_increment": 2.6,
+    "spell_class": "GLACIER_MAGE",
+    "energy_source": "MANA",
+    "damage_type": "bash",
+    "max_level": 43
+  },
+  {
+    "id": "frozen_winds",
+    "type": "SPELL",
+    "name": {
+      "str": "凛冽狂风"
+    },
+    "description": "一阵比大地上任何山顶的都冷的风，从你指间盘旋而出，破坏、推动着途径的一切。",
+    "effect": "attack",
+    "shape": "line",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "NO_LEGS",
+      "LOUD",
+      "MUST_HAVE_CLASS_TO_LEARN"
+    ],
+    "extra_effects": [
+      {
+        "id": "frozen_winds_push"
+      }
+    ],
+    "max_level": 43,
+    "min_damage": 25,
+    "max_damage": 116,
+    "damage_increment": 2,
+    "min_aoe": 3,
+    "max_aoe": 7,
+    "aoe_increment": 0.1,
+    "min_range": 12,
+    "max_range": 28,
+    "range_increment": 0.5,
+    "base_casting_time": 230,
+    "base_energy_cost": 285,
+    "spell_class": "GLACIER_MAGE",
+    "energy_source": "MANA",
+    "difficulty": 3,
+    "sound_description": "a whoosh",
+    "damage_type": "cold"
+  },
+  {
+    "id": "frozen_winds_push",
+    "type": "SPELL",
+    "name": {
+      "str": "凛冽狂风击退效果"
+    },
+    "description": "这是凛冽狂风法术的击退效果。",
+    "effect": "directed_push",
+    "shape": "line",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "max_level": 43,
+    "min_damage": 3,
+    "max_damage": 6,
+    "damage_increment": 0.07,
+    "min_aoe": 3,
+    "max_aoe": 7,
+    "aoe_increment": 0.1,
+    "min_range": 12,
+    "max_range": 28,
+    "range_increment": 0.5,
+    "spell_class": "GLACIER_MAGE"
+  }
+]

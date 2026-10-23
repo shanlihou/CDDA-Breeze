@@ -1,0 +1,713 @@
+[
+	{
+		"type": "TOOL",
+		"abstract": "apiculture_beehive",
+		"name": { "str": "蜂箱", "str_pl": "蜂箱" },
+		"description": "一个物品形式的标准蜂箱，可以激活放置在地上使其内部的蜂群繁衍。【正常情况下，你不应该看到这个物品。】",
+		"symbol": "#",
+		"color": "brown",
+		"price": 50000,
+		"weight": "25000 g",
+		"volume": "114878 ml",
+		"//": "巢箱+继箱（长宽高）:0.51*0.425*0.53==0.1148775m3",
+		"to_hit": -4,
+		"bashing": 3,
+		"material": [ "wood", "flesh" ]
+	},
+	{
+		"abstract": "apiculture_beehive_trigger",
+		"type": "TOOL",
+		"name": { "str": "蜂箱放置触发器" },
+		"description": "用来自动触发生成蜂箱家具的触发器。【正常情况下，你不应该看到这个物品。】",
+		"weight": "25000 g",
+		"volume": "114878 ml",
+		"price": 50000,
+		"to_hit": -4,
+		"bashing": 3,
+		"material": [ "wood" ],
+		"flags": [ "NO_UNLOAD", "TRADER_AVOID", "MISSION_ITEM" ]
+	},
+	{
+		"abstract": "apiculture_beehive_normal",
+		"type": "TOOL",
+		"name": { "str": "含有蜜蜂的蜂箱（物品）" },
+		"description": "一个内部有蜜蜂的蜂箱（物品）。【正常情况下，你不应该看到这个物品。】",
+		"weight": "38000 g",
+		"volume": "114878 ml",
+		"price": 50000,
+		"to_hit": -4,
+		"bashing": 3,
+		"material": [ "wood", "flesh" ],
+		"flags": [ "TRADER_AVOID" ]
+	},
+	{
+		"type": "furniture",
+		"abstract": "f_apiculture_beehive",
+		"name": "蜂箱",
+		"description": "一个标准蜂箱，可以最多放置20个木制巢框，容纳几万只蜜蜂。【正常情况下，你不应该看到这个物品。】",
+		"symbol": "^",
+		"color": "brown",
+		"move_cost_mod": 1,
+		"required_str": -1,
+		"flags": [ "FLAT", "PLANT", "SEALED", "TRANSPARENT", "CONTAINER", "TINY", "DONT_REMOVE_ROTTEN", "GROWTH_SEED" ]
+	},
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	{
+		"type": "GENERIC",
+		"id": "apiculture_comb_honey",
+		"name": { "str": "巢脾（蜂蜜）", "str_pl": "巢脾（蜂蜜）" },
+		"weight": "3000 g",
+		"volume": "2500 ml",
+		"color": "yellow",
+		"symbol": "%",
+		"description": "一整块巢脾。可以通过制造菜单获取蜂蜜以减少损耗，或者通过激活来简单拆解以获得蜂巢块，只是产量较少。",
+		"price": 3500,
+		"material": "honey",
+		"use_action": "DISASSEMBLE"
+	},
+	{
+		"id": "apiculture_honeyextractor",
+		"type": "TOOL",
+		"name": { "str": "手摇摇蜜机", "str_pl": "手摇摇蜜机" },
+		"description": "一个原理很简单但却很有效的手摇摇蜜机，可以比较彻底地将蜂蜜从巢脾取出。",
+		"weight": "10000 g",
+		"volume": "60000 ml",
+		"price": 700,
+		"to_hit": 1,
+		"bashing": 9,
+		"material": [ "steel", "wood" ],
+		"symbol": ";",
+		"color": "brown",
+		"qualities": [ [ "HONEY_EXTRACT", 3 ] ],
+		"flags": [ "NONCONDUCTIVE" ]
+	},
+	
+	
+	
+	
+	
+	{
+		"id": "apiculture_beehive_normal_new_empty",
+		"type": "TOOL",
+		"copy-from": "apiculture_beehive",
+		"name": { "str": "空的新蜂箱", "str_pl": "空的新蜂箱" },
+		"description": "一个新的标准蜂箱，内部空空如也，可以最多放置20个木制巢框，容纳几万只蜜蜂。",
+		"symbol": "#",
+		"color": "brown",
+		"use_action": {
+			"type": "deploy_furn",
+			"furn_type": "f_apiculture_beehive_normal_new_empty"
+		}
+	},
+	{
+		"type": "furniture",
+		"id": "f_apiculture_beehive_normal_new_empty",
+		"name": "空的新蜂箱",
+		"description": "一个新的标准蜂箱，内部空空如也，可以最多放置20个木制巢框，容纳几万只蜜蜂。",
+		"symbol": "#",
+		"color": "yellow",
+		"move_cost_mod": 1,
+		"required_str": 5,
+		"floor_bedding_warmth": -1000,
+		"bonus_fire_warmth_feet": 1000,
+		"deployed_item": "apiculture_beehive_normal_new_empty",
+		"examine_action": "deployed_furniture",
+		"flags": [ "FLAMMABLE_ASH", "MOUNTABLE" ],
+		"deconstruct": { "items": [ { "item": "apiculture_beehive_normal_new_empty", "count": 1 } ] }
+	},
+	
+	
+	
+	
+	
+	{
+		"id": "apiculture_box_swarm",
+		"type": "GENERIC",
+		"name": { "str": "装有活的蜂群样本的保管盒", "str_pl": "装有活的蜂群样本的保管盒" },
+		"description": "在实验室找到的因为没有变异而被收集研究的蜂群，现在保存在一个有食物供给的保管盒里。",
+		"volume": "300 ml",
+		"weight": "500 g",
+		"symbol": "&",
+		"looks_like": "rack_test_tube",
+		"color": "brown",
+		"price": 120,
+		"use_action": {
+			"target": "apiculture_swarm",
+			"active": true,
+			"target_charges": 7200,
+			"type": "transform"
+		}
+	},
+	{
+		"id": "apiculture_swarm",
+		"type": "TOOL",
+		"name": { "str": "含有蜂王的蜂群", "str_pl": "含有蜂王的蜂群" },
+		"description": "一个含有蜂王的蜂群，如果你在2小时之内没有将其安置在一个带有巢础的巢框上，它们就会离开寻找其他合适的筑巢地。",
+		"volume": "300 ml",
+		"weight": "500 g",
+		"symbol": "&",
+		"color": "brown",
+		"price": 120,
+		"initial_charges": 7200,
+		"max_charges": 7200,
+		"turns_per_charge": 1,
+		"flags": [ "TRADER_AVOID" ],
+		"revert_to": "apiculture_swarm_escape"
+	},
+	{
+		"type": "COMESTIBLE",
+		"id": "apiculture_swarm_escape",
+		"name": { "str": "零星的蜜蜂", "str_pl": "零星的蜜蜂" },
+		"weight": "50 g",
+		"color": "brown",
+		"spoils_in": "1 seconds",
+		"comestible_type": "FOOD",
+		"symbol": "&",
+		"quench": 1,
+		"calories": 30,
+		"description": "蜂群逃蜂后剩下的零零星星的蜜蜂，你要是想学贝爷，可以直接生吃。",
+		"price": 44,
+		"material": "flesh",
+		"volume": "30 ml",
+		"fun": -8,
+		"flags": [ "FREEZERBURN", "RAW" ],
+		"vitamins": [ [ "vitA", 9 ], [ "calcium", 3 ], [ "iron", 4 ], [ "vitB", 21 ] ]
+	},
+	{
+		"id": "apiculture_combframe_swarm",
+		"type": "GENERIC",
+		"name": { "str": "含有蜂群的巢框", "str_pl": "含有蜂群的巢框" },
+		"description": "新生蜂群正跟着蜂王待在一个有人造巢础的巢框上，接下来就要把它放入蜂箱了。",
+		"material": "wood",
+		"volume": "500 ml",
+		"weight": "800 g",
+		"symbol": "D",
+		"color": "brown",
+		"price": 12000
+	},
+	{
+		"id": "apiculture_combframe_plantable",
+		"copy-from": "seed",
+		"type": "COMESTIBLE",
+		"name": { "str": "含有蜂群的巢框", "str_pl": "含有蜂群的巢框" },
+		"description": "一个含有蜂群的蜂巢巢框。【正常情况下，你不应该看到这个物品。】",
+		"material": [ "wood", "flesh" ],
+		"volume": "1000 ml",
+		"weight": "2000 g",
+		"symbol": "D",
+		"color": "brown",
+		"price": 120,
+		"flags": [ "TRADER_AVOID", "MISSION_ITEM" ],
+		"seed_data": {
+			"plant_name": "蜂巢",
+			"seeds": false,
+			"fruit": "apiculture_comb_honey",
+			"byproducts": [
+				"wax",
+				"wax",
+				"wax",
+				"apiculture_swarm",
+				"royal_jelly",
+				"royal_jelly"
+			],
+			"grow": "30 days"
+		}
+	},
+	{
+		"id": "apiculture_beehive_normal_new",
+		"copy-from": "apiculture_beehive_normal",
+		"type": "TOOL",
+		"name": { "str": "含有少量蜜蜂的新蜂箱", "str_pl": "含有少量蜜蜂的新蜂箱" },
+		"description": "一个崭新的蜂箱，需要在气候不那么严酷的情况下过箱帮助蜂群适应新蜂箱以避免蜂群出现逃蜂。一个标准蜂箱，可以最多放置20个木制巢框，容纳几万只蜜蜂。",
+		"symbol": "#",
+		"color": "yellow",
+		"use_action": {
+			"type": "deploy_furn",
+			"furn_type": "f_apiculture_beehive_normal_new"
+		}
+	},
+	{
+		"type": "furniture",
+		"id": "f_apiculture_beehive_normal_new",
+		"name": "含有少量蜜蜂的新蜂箱",
+		"description": "请按e在春夏秋季让蜜蜂过箱获得“含有少量蜜蜂的蜂箱”，冬天则会获得“含有过冬蜂群的新蜂箱”。一个崭新的蜂箱，需要在气候不那么严酷的情况下过箱帮助蜂群适应新蜂箱以避免蜂群出现逃蜂。一个标准蜂箱，可以最多放置20个木制巢框，容纳几万只蜜蜂。",
+		"symbol": "#",
+		"color": "yellow",
+		"move_cost_mod": 0,
+		"required_str": -1,
+		"flags": [ "FLAMMABLE_ASH", "ORGANIC" ],
+		"examine_action": "harvest_furn",
+		"harvest_by_season":[
+			{
+				"seasons": [ "spring", "summer", "autumn" ],
+				"id": "apiculture_har_beehive_normal_little"
+			},
+			{
+				"seasons": [ "winter" ],
+				"id": "apiculture_har_beehive_normal_hibernate_new"
+			}
+		],
+		"deconstruct": { "items": [ { "item": "apiculture_beehive_normal_new", "count": 1 } ] }
+	},
+	{
+		"id": "apiculture_har_beehive_normal_little",
+		"type": "harvest",
+		"entries": [ { "drop": "apiculture_beehive_normal_little", "base_num": [ 1, 1 ] } ]
+	},
+	{
+		"id": "apiculture_har_beehive_normal_hibernate_new",
+		"type": "harvest",
+		"entries": [ { "drop": "apiculture_beehive_normal_hibernate_new", "base_num": [ 1, 1 ] } ]
+	},
+	{
+		"id": "apiculture_beehive_normal_hibernate_new",
+		"copy-from": "apiculture_beehive_normal",
+		"type": "TOOL",
+		"name": { "str": "含有过冬蜂群的新蜂箱", "str_pl": "含有过冬蜂群的新蜂箱" },
+		"description": "蜂箱很新，过冬的蜂群正在里面休憩，需要在气候不那么严酷的情况下过箱帮助蜂群适应新蜂箱以避免蜂群出现逃蜂。一个标准蜂箱，可以最多放置20个木制巢框，容纳几万只蜜蜂。",
+		"symbol": "#",
+		"color": "brown",
+		"use_action": {
+			"type": "deploy_furn",
+			"furn_type": "f_apiculture_beehive_normal_new"
+		}
+	},
+	
+	
+	
+	
+	
+	{
+		"type": "TOOL",
+		"id": "apiculture_beehive_normal_little",
+		"copy-from": "apiculture_beehive_normal",
+		"name": { "str": "含有少量蜜蜂的蜂箱", "str_pl": "含有少量蜜蜂的蜂箱" },
+		"description": "一个标准蜂箱，可以按a放置在地上使其内部的蜂群繁衍。",
+		"symbol": "#",
+		"color": "brown",
+		"price": 50000,
+		"material": [ "wood", "flesh" ],
+		"use_action": [
+			{
+				"type": "place_monster",
+				"monster_id": "apiculture_mon_trigger_frightenedbeeswarm_little",
+				"place_randomly": false,
+				"friendly_msg": "你把含有蜂群的蜂箱放到了地上，蜂箱被零星受惊的蜜蜂包围着。",
+				"difficulty": 0,
+				"moves": 600
+			}
+		]
+	},
+	{
+		"id": "apiculture_mon_trigger_frightenedbeeswarm_little",
+		"type": "MONSTER",
+		"name": "零星受惊的蜜蜂",
+		"description": ".",
+		"default_faction": "factionless",
+		"species": [ "UNKNOWN" ],
+		"volume": "1 ml",
+		"weight": "1 g",
+		"hp": 1,
+		"speed": 1,
+		"symbol": "#",
+		"color": "cyan",
+		"aggression": -99,
+		"bodytype": "pig",
+		"morale": -50,
+		"luminance": 0,
+		"dodge": 0,
+		"harvest": "exempt",
+		"special_attacks": [ [ "DISAPPEAR", 0 ] ],
+		"death_function": { "corpse_type": "BROKEN" },
+		"death_drops": "apiculture_ig_beehive_normal_little",
+		"flags": [ "FLIES", "NO_BREATHE", "NOT_HALLUCINATION", "HARDTOSHOOT", "ELECTRONIC" ]
+	},
+	{
+		"id": "broken_apiculture_mon_trigger_frightenedbeeswarm_little",
+		"copy-from": "seed",
+		"type": "COMESTIBLE",
+		"name": { "str": "含有蜂群的巢框", "str_pl": "含有蜂群的巢框" },
+		"description": "一个含有蜂群的蜂巢巢框。【正常情况下，你不应该看到这个物品。】",
+		"material": [ "wood", "flesh" ],
+		"volume": "1000 ml",
+		"weight": "2000 g",
+		"symbol": "D",
+		"color": "brown",
+		"price": 120,
+		"flags": [ "TRADER_AVOID", "MISSION_ITEM" ],
+		"seed_data": {
+			"plant_name": "蜂巢",
+			"seeds": false,
+			"fruit": "apiculture_comb_honey",
+			"byproducts": [
+				"wax",
+				"wax",
+				"wax",
+				"apiculture_swarm",
+				"royal_jelly",
+				"royal_jelly"
+			],
+			"grow": "30 days"
+		}
+	},
+	{
+		"id": "apiculture_ig_beehive_normal_little",
+		"type": "item_group",
+		"subtype": "collection",
+		"entries": [
+			{ "item": "apiculture_beehive_trigger_normal_little", "prob": 100 , "count": [ 1, 1 ]  }
+		]
+	},
+	{
+		"id": "apiculture_beehive_trigger_normal_little",
+		"copy-from": "apiculture_beehive_trigger",
+		"type": "TOOL",
+		"name": { "str": "含有少量蜜蜂的蜂箱触发器", "str_pl": "含有少量蜜蜂的蜂箱触发器" },
+		"description": "用来自动触发生成含有少量蜜蜂的蜂箱家具的触发器。【正常情况下，你不应该看到这个物品。如果你看到了这个物品，请将其与“含有蜂群的巢框”一同丢向某个方向，注意要同时丢，不按照使用方法使用所造成的bug恕不负责。】",
+		"symbol": "#",
+		"color": "brown",
+		"drop_action": {
+			"type": "deploy_furn",
+			"furn_type": "f_apiculture_beehive_normal_little"
+		}
+	},
+	{
+		"type": "furniture",
+		"id": "f_apiculture_beehive_normal_little",
+		"name": "含有少量蜜蜂的蜂箱",
+		"description": "里面的蜂群看起来才刚刚起步，为数不多的蜜蜂正在进进出出。一个标准蜂箱，可以最多放置20个木制巢框，容纳几万只蜜蜂。",
+		"flags": [ "PLANT", "SEALED", "CONTAINER", "DONT_REMOVE_ROTTEN", "GROWTH_SEED" ],
+		"copy-from": "f_apiculture_beehive",
+		"symbol": "^",
+		"color": "brown",
+		"plant_data": { "transform": "f_apiculture_beehive_normal_plentiful", "base": "f_apiculture_beehive" },
+		"bash": {
+			"str_min": 1,
+			"str_max": 8,
+			"sound": "蜜蜂因为拆除蜂箱受到惊扰而胡乱飞舞的声音",
+			"sound_fail": "因为拆除蜂箱而暂时变得十分愤怒的蜜蜂进攻你的声音，赶紧放弃了拆除",
+			"sound_vol": 8,
+			"items": [
+				{ "item": "apiculture_beehive_normal_little" }
+			]
+		}
+	},
+	
+	
+
+	
+	
+	{
+		"type": "TOOL",
+		"id": "apiculture_beehive_normal_plentiful",
+		"copy-from": "apiculture_beehive_normal",
+		"name": { "str": "含有大量蜜蜂的蜂箱", "str_pl": "含有大量蜜蜂的蜂箱" },
+		"description": "一个标准蜂箱，可以按a放置在地上使其内部的蜂群繁衍。",
+		"symbol": "#",
+		"color": "brown",
+		"price": 50000,
+		"weight": "48000 g",
+		"volume": "114878 ml",
+		"material": [ "wood", "flesh" ],
+		"use_action": {
+			"type": "place_monster",
+			"monster_id": "apiculture_mon_trigger_frightenedbeeswarm_plentiful",
+			"place_randomly": false,
+			"friendly_msg": "你把含有蜂群的蜂箱放到了地上，蜂箱被小团受惊的蜜蜂包围着。",
+			"difficulty": 0,
+			"moves": 600
+		}
+	},
+	{
+		"id": "apiculture_mon_trigger_frightenedbeeswarm_plentiful",
+		"type": "MONSTER",
+		"name": "小团受惊的蜜蜂",
+		"description": ".",
+		"default_faction": "factionless",
+		"species": [ "UNKNOWN" ],
+		"volume": "1 ml",
+		"weight": "1 g",
+		"hp": 1,
+		"speed": 1,
+		"symbol": "#",
+		"color": "cyan",
+		"aggression": -99,
+		"bodytype": "pig",
+		"morale": -50,
+		"luminance": 0,
+		"dodge": 0,
+		"harvest": "exempt",
+		"special_attacks": [ [ "DISAPPEAR", 0 ] ],
+		"death_function": { "corpse_type": "BROKEN" },
+		"death_drops": "apiculture_ig_beehive_normal_plentiful",
+		"flags": [ "FLIES", "NO_BREATHE", "NOT_HALLUCINATION", "HARDTOSHOOT", "ELECTRONIC" ]
+	},
+	{
+		"id": "broken_apiculture_mon_trigger_frightenedbeeswarm_plentiful",
+		"copy-from": "seed",
+		"type": "COMESTIBLE",
+		"name": { "str": "含有蜂群的巢框", "str_pl": "含有蜂群的巢框" },
+		"description": "一个含有蜂群的蜂巢巢框。【正常情况下，你不应该看到这个物品。】",
+		"material": [ "wood", "flesh" ],
+		"volume": "1000 ml",
+		"weight": "2000 g",
+		"symbol": "D",
+		"color": "brown",
+		"price": 120,
+		"flags": [ "TRADER_AVOID", "MISSION_ITEM" ],
+		"seed_data": {
+			"plant_name": "蜂巢",
+			"seeds": false,
+			"fruit": "apiculture_comb_honey",
+			"byproducts": [
+				"wax",
+				"wax",
+				"wax",
+				"apiculture_swarm",
+				"royal_jelly",
+				"royal_jelly"
+			],
+			"grow": "30 days"
+		}
+	},
+	{
+		"id": "apiculture_ig_beehive_normal_plentiful",
+		"type": "item_group",
+		"subtype": "collection",
+		"entries": [
+			{ "item": "apiculture_beehive_trigger_normal_plentiful", "prob": 100 , "count": [ 1, 1 ]  }
+		]
+	},
+	{
+		"id": "apiculture_beehive_trigger_normal_plentiful",
+		"copy-from": "apiculture_beehive_trigger",
+		"type": "TOOL",
+		"name": { "str": "含有大量蜜蜂的蜂箱触发器", "str_pl": "含有大量蜜蜂的蜂箱触发器" },
+		"description": "用来自动触发生成含有大量蜜蜂的蜂箱家具的触发器。【正常情况下，你不应该看到这个物品。如果你看到了这个物品，请将其与“含有蜂群的巢框”一同丢向某个方向，注意要同时丢，不按照使用方法使用所造成的bug恕不负责。】",
+		"symbol": "#",
+		"color": "brown",
+		"drop_action": {
+			"type": "deploy_furn",
+			"furn_type": "f_apiculture_beehive_normal_plentiful"
+		}
+	},
+	{
+		"type": "furniture",
+		"id": "f_apiculture_beehive_normal_plentiful",
+		"name": "含有大量蜜蜂的蜂箱",
+		"description": "蜂群已经发展到了较大数量，零星负责守卫的工蜂正在蜂箱外晃晃悠悠地巡逻。一个标准蜂箱，可以最多放置20个木制巢框，容纳几万只蜜蜂。",
+		"flags": [ "PLANT", "SEALED", "CONTAINER", "DONT_REMOVE_ROTTEN", "GROWTH_SEEDLING" ],
+		"copy-from": "f_apiculture_beehive",
+		"symbol": "^",
+		"color": "brown",
+		"plant_data": { "transform": "f_apiculture_beehive_normal_enormous", "base": "f_apiculture_beehive" },
+		"bash": {
+			"str_min": 1,
+			"str_max": 8,
+			"sound": "蜜蜂因为拆除蜂箱受到惊扰而胡乱飞舞的声音",
+			"sound_fail": "因为拆除蜂箱而暂时变得十分愤怒的蜜蜂进攻你的声音，赶紧放弃了拆除",
+			"sound_vol": 8,
+			"items": [
+				{ "item": "apiculture_beehive_normal_little" },
+				{ "item": "apiculture_comb_honey", "count": [ 3, 5 ] }
+			]
+		}
+	},
+	
+	
+	
+	
+
+	{
+		"type": "TOOL",
+		"id": "apiculture_beehive_normal_enormous",
+		"copy-from": "apiculture_beehive_normal",
+		"name": { "str": "含有巨量蜜蜂的蜂箱", "str_pl": "含有巨量蜜蜂的蜂箱" },
+		"description": "一个标准蜂箱，可以按a放置在地上使其内部的蜂群繁衍。",
+		"symbol": "#",
+		"color": "brown",
+		"price": 50000,
+		"weight": "58000 g",
+		"volume": "114878 ml",
+		"material": [ "wood", "flesh" ],
+		"use_action": {
+			"type": "place_monster",
+			"monster_id": "apiculture_mon_trigger_frightenedbeeswarm_enormous",
+			"place_randomly": false,
+			"friendly_msg": "你把含有蜂群的蜂箱放到了地上，蜂箱被大团受惊的蜜蜂包围着。",
+			"difficulty": 0,
+			"moves": 600
+		}
+	},
+	{
+		"id": "apiculture_mon_trigger_frightenedbeeswarm_enormous",
+		"type": "MONSTER",
+		"name": "大团受惊的蜜蜂",
+		"description": ".",
+		"default_faction": "factionless",
+		"species": [ "UNKNOWN" ],
+		"volume": "1 ml",
+		"weight": "1 g",
+		"hp": 1,
+		"speed": 1,
+		"symbol": "#",
+		"color": "cyan",
+		"aggression": -99,
+		"bodytype": "pig",
+		"morale": -50,
+		"luminance": 0,
+		"dodge": 0,
+		"harvest": "exempt",
+		"special_attacks": [ [ "DISAPPEAR", 0 ] ],
+		"death_function": { "corpse_type": "BROKEN" },
+		"death_drops": "apiculture_ig_beehive_normal_enormous",
+		"flags": [ "FLIES", "NO_BREATHE", "NOT_HALLUCINATION", "HARDTOSHOOT", "ELECTRONIC" ]
+	},
+	{
+		"id": "broken_apiculture_mon_trigger_frightenedbeeswarm_enormous",
+		"copy-from": "seed",
+		"type": "COMESTIBLE",
+		"name": { "str": "含有蜂群的巢框", "str_pl": "含有蜂群的巢框" },
+		"description": "一个含有蜂群的蜂巢巢框。【正常情况下，你不应该看到这个物品。】",
+		"material": [ "wood", "flesh" ],
+		"volume": "1000 ml",
+		"weight": "2000 g",
+		"symbol": "D",
+		"color": "brown",
+		"price": 120,
+		"flags": [ "TRADER_AVOID", "MISSION_ITEM" ],
+		"seed_data": {
+			"plant_name": "蜂巢",
+			"seeds": false,
+			"fruit": "apiculture_comb_honey",
+			"byproducts": [
+				"wax",
+				"wax",
+				"wax",
+				"apiculture_swarm",
+				"royal_jelly",
+				"royal_jelly"
+			],
+			"grow": "30 days"
+		}
+	},
+	{
+		"id": "apiculture_ig_beehive_normal_enormous",
+		"type": "item_group",
+		"subtype": "collection",
+		"entries": [
+			{ "item": "apiculture_beehive_trigger_normal_enormous", "prob": 100 , "count": [ 1, 1 ]  }
+		]
+	},
+	{
+		"id": "apiculture_beehive_trigger_normal_enormous",
+		"copy-from": "apiculture_beehive_trigger",
+		"type": "TOOL",
+		"name": { "str": "含有巨量蜜蜂的蜂箱触发器", "str_pl": "含有巨量蜜蜂的蜂箱触发器" },
+		"description": "用来自动触发生成含有巨量蜜蜂的蜂箱家具的触发器。【正常情况下，你不应该看到这个物品。如果你看到了这个物品，请将其与“含有蜂群的巢框”一同丢向某个方向，注意要同时丢，注意要同时丢，不按照使用方法使用所造成的bug恕不负责。】",
+		"symbol": "#",
+		"color": "brown",
+		"drop_action": {
+			"type": "deploy_furn",
+			"furn_type": "f_apiculture_beehive_normal_enormous"
+		}
+	},
+	{
+		"type": "furniture",
+		"id": "f_apiculture_beehive_normal_enormous",
+		"name": "含有巨量蜜蜂的蜂箱",
+		"description": "蜂群已经快发展到蜂箱所能容纳的极限，蜜蜂的居住空间已经相当逼仄，王台已经竖起，即将准备分蜂并收获蜂王浆和蜂蜜。一个标准蜂箱，可以最多放置20个木制巢框，容纳几万只蜜蜂。",
+		"flags": [ "PLANT", "SEALED", "CONTAINER", "DONT_REMOVE_ROTTEN", "GROWTH_MATURE" ],
+		"copy-from": "f_apiculture_beehive",
+		"symbol": "^",
+		"color": "brown",
+		"plant_data": { "transform": "f_apiculture_beehive_normal_maximal", "base": "f_apiculture_beehive" },
+		"bash": {
+			"str_min": 1,
+			"str_max": 8,
+			"sound": "蜜蜂因为拆除蜂箱受到惊扰而胡乱飞舞的声音",
+			"sound_fail": "因为拆除蜂箱而暂时变得十分愤怒的蜜蜂进攻你的声音，赶紧放弃了拆除",
+			"sound_vol": 8,
+			"items": [
+				{ "item": "apiculture_beehive_normal_plentiful" },
+				{ "item": "apiculture_comb_honey", "count": [ 5, 7 ] }
+			]
+		}
+	},
+	
+	
+	
+	
+
+	{
+		"type": "furniture",
+		"id": "f_apiculture_beehive_normal_maximal",
+		"name": "蜂群数量达到上限的蜂箱",
+		"description": "蜂群已经发展到蜂箱所能容纳的极限，蜜蜂的居住空间已经极其逼仄，新蜂王已经出现，收获以获得蜂王浆、蜂蜜以及新蜂群。一个标准蜂箱，可以最多放置20个木制巢框，容纳几万只蜜蜂。",
+		"flags": [ "PLANT", "SEALED", "CONTAINER", "NOITEM", "DONT_REMOVE_ROTTEN", "GROWTH_HARVEST" ],
+		"copy-from": "f_apiculture_beehive",
+		"examine_action": "aggie_plant",
+		"symbol": "^",
+		"color": "brown",
+		"plant_data": { "transform": "f_apiculture_beehive_normal_dirty", "base": "f_apiculture_beehive", "harvest_multiplier": 1 }
+	},
+	
+	
+	
+	
+	
+	{
+		"type": "furniture",
+		"id": "f_apiculture_beehive_normal_dirty",
+		"name": "肮脏的蜂箱",
+		"description": "在春夏秋季请按e清扫获得“含有大量蜜蜂的蜂箱”并放置，冬天请按s以获得“含有过冬蜂群的脏蜂箱”。刚刚分蜂的蜂箱，有点脏，你需要在气候温和的时候稍微清扫一下它。一个标准蜂箱，可以最多放置20个木制巢框，容纳几万只蜜蜂。",
+		"symbol": "#",
+		"color": "brown",
+		"move_cost_mod": 0,
+		"required_str": 6,
+		"flags": [ "FLAMMABLE_ASH", "ORGANIC" ],
+		"examine_action": "harvest_furn",
+		"harvest_by_season":[
+			{
+				"seasons": [ "spring", "summer", "autumn" ],
+				"id": "apiculture_har_beehive_normal_dirty"
+			},
+			{
+				"seasons": [ "winter" ],
+				"id": "apiculture_beehive_normal_hibernate_dirty"
+			}
+		]
+	},
+	{
+		"id": "apiculture_har_beehive_normal_dirty",
+		"type": "harvest",
+		"entries": [ { "drop": "apiculture_beehive_normal_plentiful", "base_num": [ 1, 1 ] } ]
+	},
+	{
+		"id": "apiculture_beehive_normal_hibernate_dirty",
+		"type": "harvest",
+		"entries": [ { "drop": "apiculture_beehive_normal_hibernate_dirty", "base_num": [ 1, 1 ] } ]
+	},
+	{
+		"id": "apiculture_beehive_normal_hibernate_dirty",
+		"copy-from": "apiculture_beehive_normal",
+		"type": "TOOL",
+		"name": { "str": "含有过冬蜂群的脏蜂箱", "str_pl": "含有过冬蜂群的脏蜂箱" },
+		"description": "蜂箱看起来旧旧的，过冬的蜂群正在里面休憩，需要在气候不那么严酷的情况下清扫一下蜂箱以避免蜂群收到病虫害的侵袭。一个标准蜂箱，可以最多放置20个木制巢框，容纳几万只蜜蜂。",
+		"symbol": "#",
+		"color": "brown",
+		"use_action": {
+			"type": "deploy_furn",
+			"furn_type": "f_apiculture_beehive_normal_dirty"
+		}
+	}
+]

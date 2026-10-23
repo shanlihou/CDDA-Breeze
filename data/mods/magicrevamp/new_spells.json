@@ -1,0 +1,248 @@
+[
+  {
+    "id": "sonic_extra",
+    "type": "SPELL",
+    "name": {
+      "str": "Sonic Extra"
+    },
+    "description": "调试用法术",
+    "valid_targets": [
+      "ground"
+    ],
+    "effect": "ter_transform",
+    "shape": "blast",
+    "flags": [
+      "SILENT",
+      "NO_PROJECTILE"
+    ],
+    "message": "",
+    "effect_str": "sonic_pulse",
+    "max_level": 20,
+    "min_damage": 12,
+    "max_damage": 4,
+    "damage_increment": -0.4,
+    "min_aoe": 8,
+    "max_aoe": 30,
+    "aoe_increment": 1.4
+  },
+  {
+    "id": "sonic_demolition_pulse",
+    "type": "SPELL",
+    "name": {
+      "str": "Sonic Demolition Pulse"
+    },
+    "description": "This adds the actual effect of yeeting terrain in range.",
+    "valid_targets": [
+      "ground"
+    ],
+    "extra_effects": [
+      {
+        "id": "sonic_extra",
+        "hit_self": false,
+        "max_level": 10
+      }
+    ],
+    "message": "",
+    "effect": "bash",
+    "shape": "blast",
+    "max_level": 20,
+    "min_damage": 180,
+    "max_damage": 295,
+    "damage_increment": 3.1,
+    "min_aoe": 1,
+    "max_aoe": 12,
+    "aoe_increment": 1.2
+  },
+  {
+    "id": "sonic_blast_pulse",
+    "type": "SPELL",
+    "name": {
+      "str": "Sonic Blast Pulse"
+    },
+    "description": "This adds the actual effect of yeeting terrain in range.",
+    "valid_targets": [
+      "ground"
+    ],
+    "extra_effects": [
+      {
+        "id": "sonic_extra",
+        "hit_self": false,
+        "max_level": 10
+      }
+    ],
+    "message": "",
+    "effect": "bash",
+    "shape": "blast",
+    "max_level": 20,
+    "min_damage": 125,
+    "max_damage": 210,
+    "damage_increment": 4.1,
+    "min_aoe": 1,
+    "max_aoe": 7,
+    "aoe_increment": 1.2
+  },
+  {
+    "id": "sonic_spike",
+    "type": "SPELL",
+    "name": {
+      "str": "Sonic Spike"
+    },
+    "description": "This splits of the AoE into beefy and stupid beefy depending on distance.",
+    "message": "",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SILENT",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE"
+    ],
+    "effect_str": "blind",
+    "min_damage": 25,
+    "max_damage": 200,
+    "damage_increment": 8.75,
+    "min_aoe": 2,
+    "max_aoe": 6,
+    "aoe_increment": 0.2,
+    "max_level": 20,
+    "min_duration": 2000,
+    "max_duration": 20000,
+    "duration_increment": 900
+  },
+  {
+    "id": "sonic_demolition",
+    "type": "SPELL",
+    "name": {
+      "str": "音波爆破"
+    },
+    "description": "音波爆破\n使用这个法术将释放一个毁灭性、破坏性的音波爆炸，造成大地震并粉碎距离内的一切。靠的足够近的东西将会受到双倍伤害。",
+    "message": "施放这个法术时，你在恐惧中颤抖，但你设法完全掌控了它，并释放出音波能量的全部力量",
+    "effect": "attack",
+    "shape": "blast",
+    "extra_effects": [
+      {
+        "id": "sonic_spike",
+        "hit_self": false,
+        "max_level": 20
+      },
+      {
+        "id": "sonic_demolition_pulse",
+        "hit_self": false,
+        "max_level": 20
+      }
+    ],
+    "valid_targets": [
+      "ground"
+    ],
+    "spell_class": "NONE",
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS",
+      "IGNORE_WALLS",
+      "SILENT",
+      "NO_PROJECTILE"
+    ],
+    "effect_str": "stunned",
+    "min_damage": 95,
+    "max_damage": 275,
+    "damage_increment": 7.5,
+    "min_aoe": 1,
+    "max_aoe": 12,
+    "aoe_increment": 1.2,
+    "max_level": 20,
+    "difficulty": 5,
+    "skill": "magic",
+    "base_casting_time": 550,
+    "final_casting_time": 275,
+    "casting_time_increment": -13.75,
+    "energy_source": "MANA",
+    "base_energy_cost": 630,
+    "final_energy_cost": 300,
+    "energy_increment": -16.5,
+    "min_duration": 2000,
+    "max_duration": 20000,
+    "duration_increment": 900
+  },
+  {
+    "id": "sonic_blast",
+    "type": "SPELL",
+    "name": {
+      "str": "音爆"
+    },
+    "description": "音爆\n使用这个法术将释放一次极具破坏力的音爆，粉碎范围内的所有东西。如果距离足够近，将会造成双倍伤害。",
+    "message": "你设法完全掌控爆炸的力量并释放出音波的力量",
+    "effect": "attack",
+    "shape": "blast",
+    "extra_effects": [
+      {
+        "id": "sonic_spike",
+        "hit_self": false,
+        "max_level": 20
+      },
+      {
+        "id": "sonic_blast_pulse",
+        "hit_self": false,
+        "max_level": 20
+      }
+    ],
+    "valid_targets": [
+      "ground"
+    ],
+    "spell_class": "NONE",
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS",
+      "IGNORE_WALLS",
+      "SILENT",
+      "NO_PROJECTILE"
+    ],
+    "effect_str": "stunned",
+    "min_damage": 65,
+    "max_damage": 160,
+    "damage_increment": 5.15,
+    "min_aoe": 1,
+    "max_aoe": 7,
+    "aoe_increment": 1.2,
+    "max_level": 20,
+    "difficulty": 4,
+    "skill": "magic",
+    "base_casting_time": 550,
+    "final_casting_time": 275,
+    "casting_time_increment": -6.75,
+    "energy_source": "MANA",
+    "base_energy_cost": 315,
+    "final_energy_cost": 150,
+    "energy_increment": -8.5,
+    "min_duration": 2000,
+    "max_duration": 20000,
+    "duration_increment": 900
+  },
+  {
+    "id": "sonic_push",
+    "type": "SPELL",
+    "name": {
+      "str": "音波冲击"
+    },
+    "description": "一股强大的力推开了怪物。",
+    "message": "你周围的空气把附近的怪物推开了！",
+    "effect": "area_push",
+    "shape": "blast",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "min_range": 5,
+    "max_range": 15,
+    "range_increment": 2.5,
+    "min_aoe": 3,
+    "max_aoe": 10,
+    "aoe_increment": 1,
+    "max_level": 20,
+    "difficulty": 3,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 215
+  }
+]

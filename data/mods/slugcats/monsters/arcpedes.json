@@ -1,0 +1,127 @@
+[
+  {
+    "id": "mon_arcpede_small",
+    "type": "MONSTER",
+    "name": { "str": "幼年电蜈蚣" },
+    "copy-from": "mon_centipede_small",
+    "description": "一条半米长的浅橙色蜈蚣，在灌木丛中快速爬行。它大概不会认为你是合适的猎物，但要小心它的电击。",
+    "color": "light_red",
+    "special_attacks": [
+      {
+        "type": "bite",
+        "attack_upper": false,
+        "cooldown": 10,
+        "move_cost": 115,
+        "damage_max_instance": [ { "damage_type": "stab", "amount": 2, "armor_penetration": 8 } ],
+        "min_mul": 3,
+        "max_mul": 5.4,
+        "forbidden_effects_any": [ "maimed_mandible" ]
+      },
+      [ "TAZER", 10 ]
+    ],
+    "special_when_hit": [ "ZAPBACK", 100 ],
+    "zombify_into": "mon_meat_cocoon_tiny",
+    "flags": [ "CLIMBS", "SEES", "SMELLS", "KEENNOSE", "HEARS", "GOODHEARING", "PATH_AVOID_FIRE" ],
+    "fear_triggers": [ "HURT" ]
+  },
+  {
+    "id": "mon_arcpede",
+    "type": "MONSTER",
+    "name": { "str": "电蜈蚣" },
+    "copy-from": "mon_centipede_giant",
+    "description": "一条约两米长的浅橙色蜈蚣，在灌木丛中快速爬行。噼啪作响的颚肢和巨大的体型清楚表明，它认为大多数东西——包括人类和蛞蝓猫——都是合适的猎物。",
+    "color": "light_red",
+    "melee_skill": 3,
+    "melee_dice": 2,
+    "melee_dice_sides": 8,
+    "dodge": 2,
+    "armor_bash": 6,
+    "armor_cut": 6,
+    "armor_stab": 6,
+    "armor_bullet": 6,
+    "special_attacks": [
+      {
+        "type": "bite",
+        "attack_upper": false,
+        "cooldown": 10,
+        "move_cost": 115,
+        "damage_max_instance": [ { "damage_type": "stab", "amount": 2, "armor_penetration": 8 } ],
+        "min_mul": 3,
+        "max_mul": 5.4,
+        "forbidden_effects_any": [ "maimed_mandible" ]
+      },
+      [ "TAZER", 10 ]
+    ],
+    "special_when_hit": [ "ZAPBACK", 100 ],
+    "zombify_into": "mon_meat_cocoon_med",
+    "flags": [ "CLIMBS", "SEES", "SMELLS", "KEENNOSE", "HEARS", "GOODHEARING", "PATH_AVOID_FIRE" ],
+    "fear_triggers": [ "HURT" ]
+  },
+  {
+    "id": "mon_centiwing",
+    "type": "MONSTER",
+    "name": { "str": "飞蜈蚣" },
+    "copy-from": "mon_centipede_giant",
+    "description": "一条约两米长的绿色蜈蚣。它胆小且容易逃跑，凭借两对看似脆弱的红色翅膀在空中疾飞。",
+    "melee_skill": 2,
+    "melee_dice": 2,
+    "melee_dice_sides": 8,
+    "dodge": 2,
+    "armor_bash": 6,
+    "armor_cut": 6,
+    "armor_stab": 6,
+    "armor_bullet": 6,
+    "special_attacks": [
+      {
+        "type": "bite",
+        "attack_upper": false,
+        "cooldown": 10,
+        "move_cost": 115,
+        "damage_max_instance": [ { "damage_type": "stab", "amount": 2, "armor_penetration": 8 } ],
+        "min_mul": 3,
+        "max_mul": 5.4,
+        "forbidden_effects_any": [ "maimed_mandible" ]
+      },
+      [ "TAZER", 10 ]
+    ],
+    "zombify_into": "mon_meat_cocoon_med",
+    "special_when_hit": [ "ZAPBACK", 100 ],
+    "flags": [ "CLIMBS", "SEES", "SMELLS", "KEENNOSE", "HEARS", "GOODHEARING", "PATH_AVOID_FIRE", "FLIES" ],
+    "fear_triggers": [ "HURT" ]
+  },
+  {
+    "id": "mon_centipede_red",
+    "type": "MONSTER",
+    "name": { "str": "红蜈蚣" },
+    "copy-from": "mon_centipede_giant",
+    "description": "一条约两米长的暗红色蜈蚣，在灌木丛中快速爬行。它以惊人的速度移动，似乎专门猎杀和自己一样敏捷灵活的猎物。你真的不想去验证自己能否应付得了它。",
+    "color": "light_red",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 5,
+    "melee_dice": 5,
+    "melee_dice_sides": 5,
+    "dodge": 2,
+    "armor_bash": 10,
+    "armor_cut": 20,
+    "armor_stab": 30,
+    "armor_bullet": 20,
+    "special_attacks": [
+      {
+        "type": "bite",
+        "attack_upper": false,
+        "cooldown": 10,
+        "move_cost": 115,
+        "damage_max_instance": [ { "damage_type": "stab", "amount": 2, "armor_penetration": 8 } ],
+        "min_mul": 3,
+        "max_mul": 5.4,
+        "forbidden_effects_any": [ "maimed_mandible" ]
+      },
+      [ "TAZER", 10 ]
+    ],
+    "special_when_hit": [ "ZAPBACK", 100 ],
+    "zombify_into": "mon_meat_cocoon_med",
+    "flags": [ "CLIMBS", "SEES", "SMELLS", "KEENNOSE", "HEARS", "GOODHEARING", "PATH_AVOID_FIRE" ],
+    "fear_triggers": [ "HURT" ]
+  }
+]

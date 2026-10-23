@@ -1,0 +1,39 @@
+[
+  {
+    "id": "wpccd",
+    "type": "GENERIC",
+    "category": "container",
+    "name": {
+      "str": "物品储存袋"
+    },
+    "looks_like": "bag_plastic",
+    "description": "这是一个物品储存袋，用来区分材料.",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "price": 0,
+    "price_postapoc": 13,
+    "material": [
+      "plastic"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "watertight": true,
+        "max_contains_volume": "999999999 ml",
+        "max_contains_weight": "999999999 g",
+        "max_item_length": "999999999 cm",
+        "spoil_multiplier": 0.0,
+        "weight_multiplier": 0.000,
+        "volume_multiplier": 0.000,
+        "moves": 1
+      }
+    ],
+    "symbol": ")",
+    "color": "light_gray",
+    "flags": [
+      "COLLAPSE_CONTENTS",
+      "TARDIS"
+    ],
+    "copy-from": "bag_zipper"
+  }
+]

@@ -1,0 +1,33 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "辐照植物嫩茎",
+    "name": "辐照植物嫩茎",
+    "authors": [ "阿巴巴" ],
+    "description": "增加了植物嫩茎的辐照版本",
+    "category": "items",
+    "dependencies": [ "dda" ]
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "irradiated_veggy",
+    "copy-from": "veggy",
+    "name": { "str": "辐照植物嫩茎" },
+    "description": "经过辐照消毒的植物嫩茎",
+    "proportional": { "price": 2.0 },
+    "spoils_in": "0 hours",
+    "container": "bag_plastic",
+    "extend": { "flags": [ "RAD_STERILIZED_EDIBLE_FOREVER" ] }
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "veggy",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_SNACK",
+    "skill_used": "cooking",
+    "time": "0 m",
+    "autolearn": true,
+    "components": [ [ [ "irradiated_veggy", 1 ] ] ]
+  }
+]

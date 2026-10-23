@@ -1,0 +1,119 @@
+[
+    {
+        "type": "material",
+        "id": "blood_hyperweave_off",
+        "name": "血肉超织物（惰性）",
+        "density": 10,
+        "breathability": "MOISTURE_WICKING",
+        "specific_heat_liquid": 1,
+        "specific_heat_solid": 1,
+        "latent_heat": 333,
+        "chip_resist": 20,
+        "soft": true,
+        "dmg_adj": [
+          "chipped",
+          "cracked",
+          "split",
+          "broken"
+        ],
+        "bash_dmg_verb": "cracked",
+        "cut_dmg_verb": "cut",
+        "bash_resist": 3.3,
+        "cut_resist": 5.5,
+        "bullet_resist": 6.6,
+        "acid_resist": 11,
+        "fire_resist": 11
+      },
+      {
+        "type": "material",
+        "id": "blood_hyperweave_on",
+        "name": "血肉超织物（充能）",
+        "density": 25,
+        "breathability": "MOISTURE_WICKING",
+        "specific_heat_liquid": 1,
+        "specific_heat_solid": 1,
+        "latent_heat": 333,
+        "chip_resist": 20,
+        "soft": true,
+        "dmg_adj": [
+          "chipped",
+          "cracked",
+          "split",
+          "broken"
+        ],
+        "bash_dmg_verb": "cracked",
+        "cut_dmg_verb": "cut",
+        "bash_resist": 6.6,
+        "cut_resist": 11,
+        "bullet_resist": 13.2,
+        "acid_resist": 12,
+        "fire_resist": 12
+      },
+      {
+        "type": "material",
+        "id": "nutritional_cream",
+        "name": "营养膏",
+        "//": "Neta环世界的营养膏",
+        "density": 1.1,
+        "specific_heat_liquid": 3.7,
+        "specific_heat_solid": 2.15,
+        "latent_heat": 260,
+        "edible": true,
+        "rotting": true,
+        "conductive": true,
+        "chip_resist": 4,
+        "dmg_adj": [
+          "bruised",
+          "mutilated",
+          "badly mutilated",
+          "thoroughly mutilated"
+        ],
+        "bash_dmg_verb": "bruised",
+        "cut_dmg_verb": "sliced",
+        "vitamins": [
+          [
+            "calcium",
+            0.1
+          ],
+          [
+            "iron",
+            1.3
+          ]
+        ],
+        "burn_data": [
+          {
+            "fuel": 0.05,
+            "smoke": 1,
+            "burn": 0.001,
+            "volume_per_turn": "200 ml"
+          },
+          {
+            "fuel": 0.1,
+            "smoke": 3,
+            "burn": 0.002,
+            "volume_per_turn": "500 ml"
+          },
+          {
+            "fuel": 0.2,
+            "smoke": 10,
+            "burn": 0.004,
+            "volume_per_turn": "1 L"
+          }
+        ],
+        "burn_products": [
+          [
+            "corpse_ash",
+            0.035
+          ]
+        ],
+        "soft": true,
+        "bash_resist": 1,
+        "cut_resist": 1,
+        "bullet_resist": 1,
+        "acid_resist": 1,
+        "fire_resist": 1,
+        "fuel_data": {
+          "energy": "10000 kJ"
+        }
+      }
+]

@@ -1,0 +1,722 @@
+[
+	{
+		"id": "antivirals_s",
+		"type": "COMESTIBLE",
+		"comestible_type": "MED",
+		"name": {
+			"str_sp": "强效抗病毒药"
+		},
+		"description": "一种用于彻底治愈某种病毒感染的实验性药物，强力有效的同时却也带来了痛苦的副作用，请在确保安全的环境下谨慎使用。\n“你不会想要在对抗体内‘丧尸’的同时还要跟体外的丧尸搏斗的，对吧？”",
+		"weight": "1 g",
+		"volume": "25 ml",
+		"price": 50000,
+		"price_postapoc": 100000,
+		"charges": 1,
+		"stack_size": 100,
+		"symbol": "!",
+		"color": "light_green",
+		"container": "bottle_plastic_pill_prescription",
+		"use_action": {
+			"type": "effect_on_conditions",
+			"description": "彻底治愈某些病毒的感染。",
+			"effect_on_conditions": [
+				"EOC_CURE_ANTIVIRAL"
+			]
+		},
+		"flags": [
+			"NPC_SAFE",
+			"IRREPLACEABLE_CONSUMABLE",
+			"WATER_DISSOLVE",
+			"EDIBLE_FROZEN"
+		]
+	},
+	{
+		"type": "effect_on_condition",
+		"id": "EOC_CURE_ANTIVIRAL",
+		"//11": "服用了强效抗病毒药物，清除感染状态，并添加长达12小时的负面效果。这会清空免疫计数器",
+		"effect": [
+			{
+				"u_lose_effect": "antivirals"
+			},
+			{
+				"u_lose_effect": "zombie_virus"
+			},
+			{
+				"u_add_effect": "effect_cure_side_effects",
+				"duration": "12 hours"
+			},
+			{
+				"u_add_effect": "effect_cure_side_effects_2",
+				"duration": "6 hours",
+				"target_part": "head"
+			},
+			{
+				"u_add_effect": "effect_cure_side_effects_2",
+				"duration": "8 hours",
+				"target_part": "torso"
+			},
+			{
+				"u_add_effect": "deaf",
+				"duration": "4 hours",
+				"intensity": 1
+			},
+			{
+				"u_add_effect": "venom_blind",
+				"duration": "2 hours",
+				"intensity": 1
+			},
+			{
+				"arithmetic": [
+					{
+						"u_val": "var",
+						"var_name": "antivitals_Time"
+					},
+					"=",
+					{
+						"const": 0
+					}
+				]
+			}
+		]
+	},
+	{
+		"type": "effect_type",
+		"id": "effect_cure_side_effects",
+		"//12": "副作用效果1",
+		"name": [
+			"激进疗法"
+		],
+		"part_descs": false,
+		"desc": [
+			"你服用了某种据称能彻底治愈感染的药物，或许它真的能够非常强力地消灭体内的致命病毒，但不得不承认，它对你身体的破坏也同样强力。"
+		],
+		"rating": "mixed",
+		"removes_effects": [
+			"zombie_virus",
+			"antivirals"
+		],
+		"base_mods": {
+			"thirst_amount": [
+				2
+			],
+			"thirst_min": [
+				5
+			],
+			"thirst_tick": [
+				60
+			],
+			"thirst_chance": [
+				50
+			],
+			"hunger_min": [
+				2
+			],
+			"hunger_tick": [
+				60
+			],
+			"pain_tick": [
+				60
+			],
+			"pain_min": [
+				1
+			],
+			"pain_max": [
+				3
+			],
+			"pain_max_val": [
+				30
+			]
+		},
+		"blood_analysis_description": "Antivirals"
+	},
+	{
+		"type": "effect_type",
+		"id": "effect_cure_side_effects_2",
+		"//13": "强效抗病毒药的副作用2，会造成伤害和出汗",
+		"part_descs": false,
+		"name": [
+			"不良反应"
+		],
+		"desc": [
+			"强效抗病毒药在攻击病毒的同时，也在攻击你的肉体本身。"
+		],
+		"rating": "bad",
+		"base_mods": {
+			"hurt_tick": [
+				60
+			],
+			"hurt_min": [
+				0
+			],
+			"hurt_max": [
+				2
+			],
+			"hurt_chance": [
+				10
+			],
+			"perspiration_min": [
+				1
+			],
+			"perspiration_max": [
+				5
+			],
+			"perspiration_tick": [
+				60
+			],
+			"perspiration_chance": [
+				25
+			]
+		},
+		"blood_analysis_description": "Stimulants"
+	},
+	{
+		"id": "SUS_bathroom_medicine",
+		"type": "item_group",
+		"subtype": "collection",
+		"copy-from": "SUS_bathroom_medicine",
+		"extend": {
+			"entries": [
+				{
+					"item": "antivirals_s",
+					"prob": 1,
+					"charges-min": 1,
+					"charges-max": 1,
+					"container-item": "bottle_plastic_small"
+				}
+			]
+		}
+	},
+	{
+		"id": "drugs_rare",
+		"type": "item_group",
+		"copy-from": "drugs_rare",
+		"extend": {
+			"items": [
+				[
+					"antivirals_s",
+					10
+				]
+			]
+		}
+	},
+	{
+		"type": "item_group",
+		"id": "softdrugs",
+		"copy-from": "softdrugs",
+		"extend": {
+			"items": [
+				{
+					"item": "antivirals_s",
+					"prob": 1,
+					"charges": [
+						1,
+						1
+					]
+				}
+			]
+		}
+	},
+	{
+		"type": "item_group",
+		"id": "stash_drugs",
+		"copy-from": "stash_drugs",
+		"extend": {
+			"items": [
+				{
+					"item": "antivirals_s",
+					"prob": 1,
+					"charges": [
+						1,
+						1
+					]
+				}
+			]
+		}
+	},
+	{
+		"type": "item_group",
+		"id": "rare",
+		"subtype": "distribution",
+		"copy-from": "rare",
+		"extend": {
+			"entries": [
+				{
+					"item": "antivirals_s",
+					"prob": 2,
+					"charges": [
+						1,
+						1
+					]
+				}
+			]
+		}
+	},
+	{
+		"type": "item_group",
+		"id": "science",
+		"copy-from": "science",
+		"extend": {
+			"items": [
+				{
+					"item": "antivirals_s",
+					"prob": 1,
+					"charges": [
+						1,
+						1
+					]
+				}
+			]
+		}
+	},
+	{
+		"id": "vet_hardrug",
+		"type": "item_group",
+		"copy-from": "vet_hardrug",
+		"extend": {
+			"items": [
+				{
+					"item": "antivirals_s",
+					"prob": 4,
+					"charges": [
+						1,
+						1
+					]
+				}
+			]
+		}
+	},
+	{
+		"type": "item_group",
+		"id": "hospital_lab",
+		"copy-from": "hospital_lab",
+		"extend": {
+			"items": [
+				[
+					"antivirals_s",
+					1
+				]
+			]
+		}
+	},
+	{
+		"type": "item_group",
+		"id": "hospital_bed",
+		"copy-from": "hospital_bed",
+		"extend": {
+			"items": [
+				[
+					"antivirals_s",
+					1
+				]
+			]
+		}
+	},
+	{
+		"type": "item_group",
+		"id": "survivorzed_extra",
+		"copy-from": "survivorzed_extra",
+		"extend": {
+			"items": [
+				{
+					"item": "antivirals_s",
+					"prob": 1,
+					"charges": [
+						0,
+						1
+					]
+				}
+			]
+		}
+	},
+	{
+		"type": "item_group",
+		"id": "behindcounter",
+		"subtype": "distribution",
+		"copy-from": "behindcounter",
+		"extend": {
+			"entries": [
+				{
+					"item": "antivirals_s",
+					"prob": 1,
+					"charges": [
+						1,
+						1
+					]
+				}
+			]
+		}
+	},
+	{
+		"id": "GeneTherapy_antivirals_shot",
+		"//1": "物品",
+		"type": "COMESTIBLE",
+		"comestible_type": "MED",
+		"name": {
+			"str": "基因药物注射剂"
+		},
+		"description": "这个项目是由███、███和███开发的一种实验性抗逆转录基因药物，用途是治愈和免疫丧尸‘病毒’造成的感染。",
+		"weight": "12 g",
+		"volume": "10ml",
+		"price": 10000,
+		"price_postapoc": 3000,
+		"material": [
+			"plastic"
+		],
+		"symbol": "!",
+		"color": "blue",
+		"looks_like": "flu_shot",
+		"use_action": {
+			"type": "effect_on_conditions",
+			"description": "治愈并免疫致命丧尸病毒。",
+			"effect_on_conditions": [
+				"EOC_GENETHERAPY_ANTIVIRAL"
+			]
+		},
+		"flags": [
+			"NO_INGEST",
+			"NPC_SAFE",
+			"IRREPLACEABLE_CONSUMABLE"
+		]
+	},
+	{
+		"id": "virology_lab_fridge",
+		"//2": "物品组1",
+		"type": "item_group",
+		"copy-from": "virology_lab_fridge",
+		"extend": {
+			"items": [
+				[
+					"antivirals_s",
+					10
+				],
+				[
+					"GeneTherapy_antivirals_shot",
+					2
+				]
+			]
+		}
+	},
+	{
+		"id": "drugs_misc",
+		"//3": "物品组2",
+		"type": "item_group",
+		"copy-from": "drugs_misc",
+		"extend": {
+			"items": [
+				[
+					"antivirals_s",
+					10
+				],
+				[
+					"GeneTherapy_antivirals_shot",
+					2
+				]
+			]
+		}
+	},
+	{
+		"id": "harddrugs",
+		"//4": "物品组3",
+		"type": "item_group",
+		"copy-from": "harddrugs",
+		"extend": {
+			"items": [
+				{
+					"item": "GeneTherapy_antivirals_shot",
+					"prob": 1
+				},
+				{
+					"item": "antivirals_s",
+					"prob": 5,
+					"charges": [
+						0,
+						1
+					]
+				}
+			]
+		}
+	},
+	{
+		"type": "recipe",
+		"//5": "合成配方",
+		"activity_level": "LIGHT_EXERCISE",
+		"result": "purifier",
+		"category": "CC_CHEM",
+		"subcategory": "CSC_CHEM_DRUGS",
+		"skill_used": "chemistry",
+		"difficulty": 7,
+		"skills_required": [
+			"firstaid",
+			2
+		],
+		"time": "1 h",
+		"batch_time_factors": [
+			80,
+			20
+		],
+		"book_learn": [
+			[
+				"record_patient",
+				7
+			],
+			[
+				"recipe_maiar",
+				6
+			],
+			[
+				"recipe_labchem",
+				5
+			]
+		],
+		"proficiencies": [
+			{
+				"proficiency": "prof_intro_chemistry"
+			},
+			{
+				"proficiency": "prof_inorganic_chemistry"
+			},
+			{
+				"proficiency": "prof_organic_chemistry"
+			},
+			{
+				"proficiency": "prof_biochemistry"
+			},
+			{
+				"proficiency": "prof_intro_chem_synth"
+			},
+			{
+				"proficiency": "prof_chem_synth"
+			}
+		],
+		"using": [
+			[
+				"mutagen_production_standard",
+				25
+			]
+		],
+		"//": "requires more human samples than comparable mutagen as you are trying to identify specific differences from your mutated anatomy than from baseline humans.",
+		"components": [
+			[
+				[
+					"mutagen",
+					2
+				]
+			],
+			[
+				[
+					"bleach",
+					3
+				],
+				[
+					"oxy_powder",
+					300
+				]
+			],
+			[
+				[
+					"antivirals",
+					5
+				],
+				[
+					"meat_tainted",
+					1
+				]
+			],
+			[
+				[
+					"ammonia_liquid",
+					2
+				],
+				[
+					"lye_powder",
+					200
+				]
+			]
+		],
+		"flags": [
+			"SECRET"
+		]
+	},
+	{
+		"type": "effect_on_condition",
+		"id": "EOC_GENETHERAPY_ANTIVIRAL",
+		"//6": "基因药物注射剂，清除感染状态，并添加永久的免疫效果。",
+		"effect": [
+			{
+				"u_lose_effect": "antivirals"
+			},
+			{
+				"u_lose_effect": "zombie_virus"
+			},
+			{
+				"u_add_effect": "effect_genetherapy_antivitals",
+				"duration": "PERMANENT"
+			}
+		]
+	},
+	{
+		"type": "effect_type",
+		"id": "effect_genetherapy_antivitals",
+		"//7": "永久免疫效果",
+		"name": [
+			"免疫者"
+		],
+		"part_descs": false,
+		"desc": [
+			"你终于获得了对丧尸病毒的免疫能力，你再也不用担心自己会死于丧尸病毒了——不过，细菌真菌或者其他病原体造成的伤口感染还是得留意一下。"
+		],
+		"rating": "good",
+		"removes_effects": [
+			"zombie_virus",
+			"antivirals"
+		],
+		"blood_analysis_description": "Antivirals"
+	},
+	{
+		"type": "effect_on_condition",
+		"id": "EOC_IMMUNITY_ANTIVIRAL",
+		"//15": "自身免疫力提升完成，清除感染状态，并添加长达一周的免疫效果。",
+		"effect": [
+			{
+				"u_lose_effect": "antivirals"
+			},
+			{
+				"u_lose_effect": "zombie_virus"
+			},
+			{
+				"u_add_effect": "effect_immunity_antivitals",
+				"duration": "168 h"
+			}
+		]
+	},
+	{
+		"type": "effect_type",
+		"id": "effect_immunity_antivitals",
+		"//14": "短期免疫效果",
+		"name": [
+			"抵抗者"
+		],
+		"part_descs": false,
+		"desc": [
+			"漫长的斗争之后，你终于战胜了致命病毒，并获得了短期的免疫力。"
+		],
+		"rating": "good",
+		"removes_effects": [
+			"zombie_virus",
+			"antivirals"
+		],
+		"blood_analysis_description": "Antivirals"
+	},
+	{
+		"type": "effect_on_condition",
+		"id": "EOC_antivitals_Timer",
+		"//8": "通过长期服用药物获得免疫的计时器",
+		"effect": [
+			{
+				"set_string_var": {
+					"u_val": "antivitals_Time",
+					"type": "int",
+					"context": "免疫计数器",
+					"default": 0
+				},
+				"target_var": {
+					"u_val": "antivitals_Time"
+				}
+			}
+		]
+	},
+	{
+		"type": "effect_on_condition",
+		"id": "EOC_antivitals_Timer_B",
+		"//9": "对坚持依靠药物和自身免疫力对抗丧尸病毒的天数计数器",
+		"recurrence": "24 h",
+		"condition": {
+			"or": [
+				{
+					"u_has_effect": "antivirals"
+				},
+				{
+					"u_has_trait": "zombie_virus"
+				}
+			]
+		},
+		"deactivate_condition": {
+			"or": [
+				{
+					"u_has_effect": "effect_genetherapy_antivitals"
+				}
+			]
+		},
+		"effect": [
+			{
+				"arithmetic": [
+					{
+						"u_val": "var",
+						"var_name": "antivitals_Time"
+					},
+					"+=",
+					{
+						"const": 1
+					}
+				],
+				"max": 30
+			}
+		]
+	},
+	{
+		"type": "effect_on_condition",
+		"id": "EOC_antivitals_Timer_C",
+		"//10": "30天后获得了免疫能力，并赋予相应效果。下一次感染时，将缩短10天的免疫自愈所需时间。",
+		"recurrence": "1 h",
+		"condition": {
+			"and": [
+				{
+					"or": [
+						{
+							"u_has_effect": "antivirals"
+						},
+						{
+							"u_has_trait": "zombie_virus"
+						}
+					]
+				},
+				{
+					"compare_int": [
+						{
+							"u_val": "var",
+							"var_name": "antivitals_Time"
+						},
+						">=",
+						{
+							"const": 30
+						}
+					]
+				}
+			]
+		},
+		"deactivate_condition": {
+			"or": [
+				{
+					"u_has_effect": "effect_genetherapy_antivitals"
+				}
+			]
+		},
+		"effect": [
+			{
+				"run_eocs": "EOC_IMMUNITY_ANTIVIRAL"
+			},
+			{
+				"arithmetic": [
+					{
+						"u_val": "var",
+						"var_name": "antivitals_Time"
+					},
+					"=",
+					{
+						"const": 10
+					}
+				]
+			}
+		]
+	}
+]

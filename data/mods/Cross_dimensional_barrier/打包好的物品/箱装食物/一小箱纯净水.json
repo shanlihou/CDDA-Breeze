@@ -1,0 +1,22 @@
+[
+{
+    "id": "cysd_yxxcjs",
+    "type": "ARMOR",
+    "name": "一小箱纯净水",
+    "description": "一个小箱子装着一些纯净水。",
+    "weight": "180 g",
+    "volume": "1450 ml",
+    "price": 100,
+    "to_hit": 5,
+    "material": [ "cotton", "plastic" ],
+    "symbol": "[",
+    "looks_like": "box_large",
+    "color": "green",
+    "covers": [ "ARMS" ],
+    "coverage": 1,
+    "encumbrance": 1,
+    "warmth": 1,
+    "material_thickness": 3,
+    "use_action": { "type": "unpack", "group": "cysd_yxxcjs", "filthy_volume_threshold": "10 L" }
+  }
+]

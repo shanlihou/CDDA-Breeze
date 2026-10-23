@@ -1,0 +1,48 @@
+[
+  {
+    "id": "pyrokinetic_lamp_on",
+    "type": "GENERIC",
+    "category": "tools",
+    "name": { "str": "永恒矩阵灯" },
+    "description": "这款灯采用矩阵技术驱动，无需任何外部电源即可发出淡红色的光芒，并且能永远如此——至少能持续一段不确定的漫长时间。激活可合上灯盖。",
+    "weight": "1438 g",
+    "volume": "1 L",
+    "price": 175000,
+    "price_postapoc": 4000,
+    "to_hit": -2,
+    "bashing": 8,
+    "material": [ "plastic", "aluminum", "nether_crystal" ],
+    "symbol": ",",
+    "color": "red",
+    "use_action": { 
+      "type": "transform",
+      "target": "pyrokinetic_lamp", 
+      "msg": "你合上了灯盖。", 
+      "menu_text": "合上盖子" },
+    "flags": [ "LIGHT_80", "LEAK_DAM", "ALLOWS_REMOTE_USE" ]
+  },
+  {
+    "id": "pyrokinetic_lamp",
+    "type": "GENERIC",
+    "category": "tools",
+    "name": { "str": "永恒矩阵灯（合盖）", "str_pl": "永恒矩阵灯（合盖）" },
+    "description": "这款灯采用矩阵技术驱动，无需任何外部电源即可发出淡红色的光芒，并且能永远如此——至少能持续一段不确定的漫长时间。激活可打开灯盖。",
+    "weight": "1438 g",
+    "volume": "1 L",
+    "price": 175000,
+    "price_postapoc": 4000,
+    "to_hit": -2,
+    "bashing": 8,
+    "material": [ "plastic", "aluminum", "nether_crystal" ],
+    "symbol": ",",
+    "color": "red",
+    "use_action": {     
+      "type": "transform",
+      "target": "pyrokinetic_lamp_on",
+      "active": true,
+      "msg": "你打开了灯盖。",
+      "menu_text": "打开盖子"
+    },
+    "flags": [ "LEAK_DAM", "DURABLE_MELEE", "ALLOWS_REMOTE_USE" ]
+  }
+]

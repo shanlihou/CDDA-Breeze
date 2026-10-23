@@ -1,0 +1,127 @@
+[
+  {
+    "//1": "説明文は新型ポイポン5の物だが、ワイヤレス充電機能があるのはポイポン8からなので8にした。",
+    "//2": "MP3はハードコーティングされているらしく機能しなかったので破棄。変わりに説明通り地図を入れた。",
+    "id": "voiro_poipon8",
+    "copy-from": "smart_phone",
+    "type": "TOOL",
+    "name": "poypon 8[voiro]",
+    "description": "轻薄，精致的设计。超高速无线连接还有丰富齐全的应用程序。能够显示精细的地图、计算繁琐的家庭收支，甚至征服世界。以惊人的速度，随心所欲地做你想做的一切。poypon 8就是最好的搭档。",
+    "use_action": [
+      {
+        "target": "voiro_poipon8_flashlight",
+        "msg": "You activate the flashlight app.",
+        "menu_text": "Turn on flashlight",
+        "active": true,
+        "need_charges": 5,
+        "need_charges_msg": "The smartphone's charge is too low.",
+        "type": "transform"
+      },
+      "CAMERA",
+      "MP3"
+      ]
+  },
+  {
+    "id": "voiro_poipon8_flashlight",
+    "copy-from": "voiro_poipon8",
+    "type": "TOOL",
+    "name": "poypon 8(手电筒)[voiro]",
+    "power_draw": 500,
+    "revert_to": "voiro_poipon8",
+    "use_action": {
+      "target": "voiro_poipon8",
+      "msg": "You deactivate the flashlight app.",
+      "menu_text": "Turn off flashlight",
+      "type": "transform"
+    },
+    "flags": [ "LIGHT_20", "CHARGEDIM", "TRADER_AVOID" ]
+  },
+  {
+    "id": "voiro_mic",
+    "type": "TOOL",
+    "name": "麦克风[voiro]",
+    "description": "市面上常见的麦克风。即使伴奏者从这个世界上消失了，歌唱依然是一种文化。让你的声音响彻世界吧！虽然也能像钝器一样使用，但是不会对丧尸构成威胁吧。",
+    "weight": "280 g",
+    "volume": "250 ml",
+    "price": 10000,
+    "bashing": 6,
+    "material": [ "plastic", "iron" ],
+    "symbol": "-",
+    "color": "dark_gray",
+    "max_charges": 1,
+    "initial_charges": 1,
+    "use_action": {
+      "type": "musical_instrument",
+      "speed_penalty": 10,
+      "volume": 20,
+      "fun": 2,
+      "fun_bonus": 2,
+      "description_frequency": 20,
+      "player_descriptions": [
+        "清澈地谱写着雄伟的叙事诗。",
+        "用温柔的声音谱写甜蜜的爱情故事。",
+        "激昂的歌声以撕裂般的声音回荡在四周。",
+        "用平静的声音唱着令人怀念的民谣。",
+        "用变得快乐的声音唱着女高音的歌。",
+        "悲壮感溢出的歌的悲伤的声音被编织在周围。",
+        "用力地唱着振奋人心的歌。",
+        "安静而真挚地唱着镇魂歌。",
+        "让人精神振奋的歌声在周围回荡。"
+      ]
+    }
+  },
+  {
+    "id": "voiro_mic_una_spicy",
+    "copy-from": "voiro_mic",
+    "type": "TOOL",
+    "name": "麦克风(音街鳗Spicy)[voiro]",
+    "description": "带有雷电图案的麦克风。即使伴奏者从这个世界上消失了，歌唱依然是一种文化。让你的声音响彻世界吧！虽然也能像钝器一样使用，但是不会对丧尸构成威胁吧。"
+  },
+  {
+    "id": "band_aid",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": "创可贴[voiro]",
+    "description": "用于应付轻伤的创可贴。可以稍稍恢复伤口。",
+    "weight": "2 g",
+    "volume": "20 ml",
+    "price": 100,
+    "material": "cotton",
+    "symbol": "!",
+    "color": "white",
+    "charges": 5,
+    "stack_size": 5,
+    "flags": [ "NO_INGEST" ],
+    "use_action": { "type": "heal", "bandages_power": 2, "bleed": 2, "move_cost": 100 }
+  },
+  {
+    "id": "voiro_majorbaton",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": "指挥棒(音街鳗Sugar)[voiro]",
+    "description": "是marching乐队中的鼓手major(指挥)所持的指挥棒。音街鳗样式的尖端和球两端都像宝石一样。",
+    "weight": "742 g",
+    "volume": "1250 ml",
+    "price": 20000,
+    "to_hit": 2,
+    "bashing": 6,
+    "material": [ "plastic", "aluminum" ],
+    "symbol": "/",
+    "color": "blue",
+    "flags": [ "NONCONDUCTIVE" ]
+  },
+  {
+    "id": "voiro_solar_sora",
+    "type": "ARMOR",
+    "copy-from": "solarpack",
+    "name": "折叠太阳能板(九州宇宙)[voiro]",
+    "description": "发电用的太阳能板。你可以用它来给自己充电。据说它可以代替翅膀。使用后可以展开进入充电模式。"
+  },
+  {
+    "id": "voiro_solar_sora_on",
+    "type": "ARMOR",
+    "copy-from": "solarpack_on",
+    "name": "折叠太阳能板(九州宇宙(展开)[voiro]",
+    "description": "发电用的太阳能板。你可以用它来给自己充电。传言说它可以代替翅膀。使用后可以折叠收回。"
+  }
+]

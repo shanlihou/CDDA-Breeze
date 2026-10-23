@@ -1,0 +1,332 @@
+[
+  {
+    "id": "mon_zombie_succumbvampire",
+    "type": "MONSTER",
+    "name": {
+      "str": "屈从的吸血鬼"
+    },
+    "description": "这个高贵的生物已经被它眼睛上渗出的黑色液体吞没了。依然行走在激情之中，它对鲜血的渴望已经被鲜肉所取代。现在，噩梦的全能力量变成了毁灭的容器。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE"
+    ],
+    "bodytype": "human",
+    "hp": 555,
+    "speed": 150,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "V",
+    "color": "light_gray_red",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 10,
+    "melee_dice": 6,
+    "melee_dice_sides": 6,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 6
+      }
+    ],
+    "dodge": 5,
+    "harvest": "exempt",
+    "armor_bash": 2,
+    "armor_cut": 12,
+    "armor_bullet": 8,
+    "vision_day": 50,
+    "vision_night": 20,
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 7
+      },
+      [
+        "GRAB",
+        7
+      ]
+    ],
+    "death_drops": "succumbvampire",
+    "death_function": {
+      "message": "The %s disappears.",
+      "corpse_type": "NO_CORPSE"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "CAN_OPEN_DOORS"
+    ]
+  },
+  {
+    "id": "mon_zombie_succumbvampire_sinker",
+    "type": "MONSTER",
+    "name": {
+      "str": "流浪堕落者"
+    },
+    "description": "它笼罩在黑色神秘的薄雾中，每一步都在无声地移动，而猎物却看不见它。这是一个擅长鞭打和猛击的吸血鬼。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE"
+    ],
+    "bodytype": "human",
+    "hp": 480,
+    "speed": 165,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "V",
+    "color": "light_gray_red",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 10,
+    "melee_dice": 2,
+    "melee_dice_sides": 6,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 8
+      }
+    ],
+    "dodge": 6,
+    "harvest": "exempt",
+    "armor_bash": 1,
+    "armor_cut": 10,
+    "armor_bullet": 6,
+    "vision_day": 50,
+    "vision_night": 20,
+    "special_attacks": [
+      [
+        "BRANDISH",
+        22
+      ],
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "v_sink_bstrike"
+        },
+        "cooldown": 28
+      }
+    ],
+    "looks_like": "mon_zombie_succumbvampire",
+    "death_drops": "succumbvampire",
+    "death_function": {
+      "message": "The %s disappears.",
+      "corpse_type": "NO_CORPSE"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "NIGHT_INVISIBILITY",
+      "CAN_OPEN_DOORS"
+    ]
+  },
+  {
+    "id": "mon_zombie_succumbvampire_warlock",
+    "type": "MONSTER",
+    "name": {
+      "str": "邪恶的术士"
+    },
+    "description": "一个充满怨恨的吸血鬼，双手抽搐着，仿佛掌握着魔法手工艺的知识。它的眼睛陷入深深的空虚，表达出了单纯而又可怕的生存欲望。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE"
+    ],
+    "bodytype": "human",
+    "hp": 585,
+    "speed": 130,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "V",
+    "color": "light_gray_red",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 8,
+    "melee_dice": 4,
+    "melee_dice_sides": 6,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      }
+    ],
+    "dodge": 3,
+    "harvest": "exempt",
+    "armor_bash": 4,
+    "armor_cut": 10,
+    "armor_bullet": 6,
+    "vision_day": 50,
+    "vision_night": 20,
+    "special_attacks": [
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "v_warlock_innate_strike"
+        },
+        "cooldown": 16
+      },
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "v_warlock_stun"
+        },
+        "cooldown": 36
+      }
+    ],
+    "looks_like": "mon_zombie_succumbvampire",
+    "death_drops": "succumbvampire",
+    "death_function": {
+      "message": "The %s disappears.",
+      "corpse_type": "NO_CORPSE"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "CAN_OPEN_DOORS"
+    ]
+  },
+  {
+    "id": "mon_zombie_succumbvampire_conjurer",
+    "type": "MONSTER",
+    "name": {
+      "str": "亵渎术士"
+    },
+    "description": "一个黑暗的邪教徒，隐藏在它那欺骗性的空白外观之后。双手狡黠地摇曳着，时不时地在黑色的光环中跳动，表现出了对于古代世俗艺术的强烈的熟悉感。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE"
+    ],
+    "bodytype": "human",
+    "hp": 520,
+    "speed": 120,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "V",
+    "color": "light_gray_red",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 8,
+    "melee_dice": 4,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      }
+    ],
+    "dodge": 3,
+    "harvest": "exempt",
+    "armor_bash": 2,
+    "armor_cut": 12,
+    "armor_bullet": 8,
+    "vision_day": 50,
+    "vision_night": 20,
+    "special_attacks": [
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "v_profane_fire"
+        },
+        "cooldown": 14
+      },
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "v_profane_hellfire"
+        },
+        "cooldown": 74
+      }
+    ],
+    "looks_like": "mon_zombie_succumbvampire",
+    "death_drops": "succumbvampire",
+    "death_function": {
+      "message": "The %s disappears.",
+      "corpse_type": "NO_CORPSE"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "CAN_OPEN_DOORS"
+    ]
+  },
+  {
+    "//": "A support class. It heals nearby allies and deals aoe damage to enemies.",
+    "id": "mon_zombie_succumbvampire_hemomancer",
+    "type": "MONSTER",
+    "name": {
+      "str": "血魔法师"
+    },
+    "description": "疯狂，但是又极具技艺，血魔法是一种最古老的的巫术形式。一个吸血鬼从附近的生物吸取并操纵生命来施展复杂的魔法。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE"
+    ],
+    "bodytype": "human",
+    "hp": 820,
+    "speed": 115,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "V",
+    "color": "light_gray_red",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 6,
+    "melee_dice": 4,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
+    "dodge": 2,
+    "harvest": "exempt",
+    "armor_bash": 12,
+    "armor_cut": 22,
+    "armor_bullet": 16,
+    "vision_day": 50,
+    "vision_night": 20,
+    "special_attacks": [
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "v_hemo_transfusion"
+        },
+        "cooldown": 24
+      }
+    ],
+    "looks_like": "mon_zombie_succumbvampire",
+    "death_drops": "succumbvampire",
+    "death_function": {
+      "message": "The %s disappears.",
+      "corpse_type": "NO_CORPSE"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "CAN_OPEN_DOORS"
+    ]
+  }
+]

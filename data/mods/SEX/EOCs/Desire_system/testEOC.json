@@ -1,0 +1,71 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_desire_check",
+    "copy-from": "EOC_desire_define",
+    "effect": 
+    [ 
+      {
+        "set_string_var": { "u_val": "pleasant", "type": "int", "context": "快感", "default": 0 },
+        "target_var": { "u_val": "pleasant" }
+      },
+      {
+        "set_string_var": { "u_val": "pleasant_rate", "type": "int", "context": "快感获得速率", "default": 0 },
+        "target_var": { "u_val": "pleasant_rate" }
+      },
+      { "u_message": "你现在欲望为<u_val:desire> / <u_val:desire_level>,快感为<u_val:pleasant>，快感获得速度为<u_val:pleasant_rate>。","popup": true }
+	]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_desire_check_2",
+    "effect": 
+    [
+      {
+        "switch": { "u_val": "var", "var_name": "desire_level", "type": "int", "context": "欲望指数", "default": 0 },
+        "cases":[
+          {
+            "case": 0,
+            "effect": { "u_message": "你是一个纯白如纸的人，就像这张纸一样白。","popup": true }
+          },
+          {
+            "case": 250,
+            "effect": { "u_message": "你是一个纯洁的人，至少比大多数人纯洁。","popup": true }
+          },
+          {
+            "case": 500,
+            "effect": { "u_message": "你是一个正常的人，性欲只偶尔烦恼你。","popup": true }
+          },
+          {
+            "case": 750,
+            "effect": { "u_message": "你是一个性欲旺盛的人，不过仍然不至于影响你的正常生活。","popup": true }
+          },
+          {
+            "case": 1000,
+            "effect": { "u_message": "你是一个淫荡的人，你真的没有性瘾吗？","popup": true }
+          },
+          {
+            "case": 2000,
+            "effect": { "u_message": "显然，这张纸不足以反馈你的性欲。你该反思一下自己了。","popup": true }
+          }
+        ]
+      }
+      
+      
+	]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_desire_change_0",
+    "effect": 
+    [ 
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "desire", "type": "int", "context": "欲望" },
+          "=",
+          { "const": 0 }
+        ]
+      }
+	]
+  }
+]

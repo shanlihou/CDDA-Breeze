@@ -1,0 +1,247 @@
+[
+  {
+    "type": "COMESTIBLE",
+    "id": "soup_ketchup",
+    "name": {
+      "str": "番茄羹"
+    },
+    "weight": "257 g",
+    "color": "red",
+    "spoils_in": "6 days 16 hours",
+    "container": "can_food",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 15,
+    "healthy": 1,
+    "calories": 90,
+    "description": "有番茄的味道，但其实只是番茄酱。",
+    "price": "4 USD",
+    "price_postapoc": "1 USD",
+    "material": [
+      "tomato"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_HOT",
+      "USE_EAT_VERB"
+    ],
+    "vitamins": [
+      [
+        "vitA",
+        7
+      ],
+      [
+        "vitC",
+        10
+      ],
+      [
+        "calcium",
+        1
+      ],
+      [
+        "iron",
+        4
+      ]
+    ],
+    "fun": 1
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "soup_hotdog",
+    "name": {
+      "str": "热狗汤"
+    },
+    "weight": "350 g",
+    "color": "red",
+    "spoils_in": "6 days 16 hours",
+    "container": "can_food",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 15,
+    "healthy": 1,
+    "calories": 350,
+    "description": "有热狗的味道，但其实只有番茄酱和香肠。很能充饥。",
+    "price": "4 USD",
+    "price_postapoc": "1 USD",
+    "material": [
+      "tomato",
+      "flesh"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_HOT",
+      "USE_EAT_VERB"
+    ],
+    "vitamins": [
+      [
+        "vitA",
+        7
+      ],
+      [
+        "vitC",
+        10
+      ],
+      [
+        "calcium",
+        1
+      ],
+      [
+        "iron",
+        4
+      ]
+    ],
+    "fun": 5
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "eggs_glassed",
+    "name": {
+      "str": "皮蛋"
+    },
+    "//": "https://imgur.com/gallery/M4G4HMd",
+    "weight": "350 g",
+    "color": "red",
+    "spoils_in": "730 days 0 hours",
+    "container": "can_food",
+    "comestible_type": "FOOD",
+    "symbol": "o",
+    "quench": 0,
+    "healthy": 1,
+    "calories": 350,
+    "description": "石灰水制成的皮蛋，可永久保存",
+    "price": "4 USD",
+    "price_postapoc": "1 USD",
+    "material": [
+      "flesh"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_HOT",
+      "USE_EAT_VERB"
+    ],
+    "vitamins": [
+      [
+        "vitA",
+        7
+      ],
+      [
+        "vitC",
+        10
+      ],
+      [
+        "calcium",
+        1
+      ],
+      [
+        "iron",
+        4
+      ]
+    ],
+    "fun": 0
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "omelette",
+    "name": {
+      "str": "蛋饼"
+    },
+    "weight": "300 g",
+    "copy-from": "egg_chicken",
+    "color": "yellow",
+    "spoils_in": "2 days",
+    "symbol": "%",
+    "description": "美味的炒蛋配上香料。",
+    "price": "4 USD",
+    "price_postapoc": "2 USD",
+    "material": [
+      "egg"
+    ],
+    "volume": "250 ml",
+    "charges": 2,
+    "flags": [
+      "EATEN_HOT",
+      "FREEZERBURN"
+    ],
+    "fun": 5
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "omelette_deluxe",
+    "name": {
+      "str": "豪华蛋饼"
+    },
+    "weight": "350 g",
+    "copy-from": "egg_chicken",
+    "color": "yellow",
+    "spoils_in": "2 days",
+    "symbol": "%",
+    "description": "由炒蛋和融化奶酪制成的美食",
+    "price": "4 USD",
+    "price_postapoc": "2 USD",
+    "material": [
+      "egg",
+      "cheese"
+    ],
+    "volume": "250 ml",
+    "charges": 2,
+    "flags": [
+      "EATEN_HOT",
+      "FREEZERBURN"
+    ],
+    "fun": 8
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "french_toast_fruity",
+    "name": {
+      "str": "果味法式吐司"
+    },
+    "weight": "350 g",
+    "copy-from": "johnnycake",
+    "color": "yellow",
+    "spoils_in": "2 days",
+    "symbol": "%",
+    "description": "这种美味的吐司面包又名可怜骑士(Poor Knight)，用软鸡蛋浸泡的面包在铁板上炸制而成，并加入了糖和水果。",
+    "price": "4 USD",
+    "price_postapoc": "2 USD",
+    "material": [
+      "wheat",
+      "fruit"
+    ],
+    "volume": "250 ml",
+    "charges": 2,
+    "flags": [
+      "EATEN_HOT",
+      "FREEZERBURN"
+    ],
+    "fun": 10
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "garlic_bread",
+    "name": {
+      "str": "蒜蓉面包"
+    },
+    "weight": "350 g",
+    "copy-from": "johnnycake",
+    "color": "green",
+    "spoils_in": "2 days",
+    "symbol": "%",
+    "description": "一种美味的烤面包片。将软黄油和压碎的蒜蓉注入面包中，加入调味料，在铁板上炸制而成。吸血鬼猎人监制。",
+    "price": "4 USD",
+    "price_postapoc": "2 USD",
+    "material": [
+      "wheat",
+      "veggy"
+    ],
+    "volume": "250 ml",
+    "charges": 2,
+    "flags": [
+      "EATEN_HOT"
+    ],
+    "fun": 10
+  }
+]

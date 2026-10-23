@@ -1,0 +1,1395 @@
+[
+  {
+    "id": "frostie_trunk",
+    "type": "vehicle_part",
+    "name": {
+      "str": "变形怪冷藏箱"
+    },
+    "item": "frostie",
+    "location": "center",
+    "symbol": "H",
+    "broken_symbol": "#",
+    "color": "light_blue",
+    "broken_color": "light_blue",
+    "durability": 100,
+    "epower": 0,
+    "size": "400 L",
+    "damage_modifier": 80,
+    "folded_volume": "250 ml",
+    "breaks_into": [
+      {
+        "item": "frostiegrow"
+      }
+    ],
+    "description": "一只活的处于极寒状态的变形怪变成的载具部件。它会让存放在体内的物品保持冰凉状态，降低食物腐败速度。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "CARGO",
+      "OBSTACLE",
+      "FRIDGE",
+      "COVERED"
+    ]
+  },
+  {
+    "id": "frostie_windshield",
+    "type": "vehicle_part",
+    "name": {
+      "str": "变形怪冰川挡风玻璃"
+    },
+    "item": "frostie",
+    "location": "center",
+    "symbol": "\"",
+    "broken_symbol": "0",
+    "color": "light_blue",
+    "broken_color": "light_blue",
+    "durability": 500,
+    "damage_modifier": 80,
+    "folded_volume": "1000 ml",
+    "breaks_into": [
+      {
+        "item": "frostiegrow"
+      }
+    ],
+    "description": "一只活的处于极寒状态的变形怪变成的载具部件。它全身透明，能够透过它看到车外。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "OVER",
+      "WINDSHIELD",
+      "OBSTACLE",
+      "WINDOW"
+    ]
+  },
+  {
+    "id": "frostie_boat_hull",
+    "type": "vehicle_part",
+    "name": {
+      "str": "变形怪冰川船体"
+    },
+    "item": "frostie",
+    "location": "under",
+    "symbol": "o",
+    "broken_symbol": "x",
+    "color": "light_blue",
+    "broken_color": "light_blue",
+    "durability": 500,
+    "damage_modifier": 200,
+    "folded_volume": "1000 ml",
+    "breaks_into": [
+      {
+        "item": "frostiegrow"
+      }
+    ],
+    "description": "一只活的处于极寒状态的变形怪变成的船壳。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "FLOATS",
+      "EXTRA_DRAG",
+      "SHARP",
+      "TRACKED"
+    ]
+  },
+  {
+    "id": "gloople_amalgam",
+    "type": "vehicle_part",
+    "name": {
+      "str": "凝胶车铲"
+    },
+    "item": "gloople",
+    "location": "under",
+    "symbol": "R",
+    "broken_symbol": ";",
+    "color": "light_green",
+    "broken_color": "light_green",
+    "durability": 250,
+    "size": "300 L",
+    "damage_modifier": 10,
+    "folded_volume": "250 ml",
+    "description": "一只活的变形怪变成的车铲。在载具控制菜单中控制开关。开启时，将其所经过位置的散落物品收集进货舱内。",
+    "breaks_into": [
+      {
+        "item": "glooplegrow"
+      }
+    ],
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "SCOOP",
+      "CARGO"
+    ]
+  },
+  {
+    "id": "gloople_belt",
+    "type": "vehicle_part",
+    "name": {
+      "str": "凝胶安全带"
+    },
+    "item": "gloople",
+    "location": "on_seat",
+    "symbol": ",",
+    "broken_symbol": ",",
+    "color": "light_green",
+    "broken_color": "light_green",
+    "durability": 250,
+    "bonus": 25,
+    "damage_modifier": 10,
+    "folded_volume": "250 ml",
+    "description": "一只活的变形怪变成的安全带。",
+    "breaks_into": [
+      {
+        "item": "glooplegrow"
+      }
+    ],
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "SEATBELT"
+    ]
+  },
+  {
+    "id": "gloople_tank",
+    "type": "vehicle_part",
+    "name": {
+      "str": "变形怪油箱（10升）"
+    },
+    "item": "gloople_tank",
+    "location": "fuel_source",
+    "symbol": "O",
+    "broken_symbol": "#",
+    "color": "light_green",
+    "broken_color": "light_green",
+    "durability": 250,
+    "damage_modifier": 10,
+    "folded_volume": "5 L",
+    "breaks_into": [
+      {
+        "item": "glooplegrow"
+      }
+    ],
+    "description": "一只活的变形怪变成的水箱。装入车辆引擎所对应消耗的燃料后，引擎启动时将会自动从对应的水箱内抽取燃料。装入水或其他液体后，可以在车辆水龙头处获取对应液体。你也可以使用一根橡胶软管从水箱中抽取液体。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "FLUIDTANK"
+    ]
+  },
+  {
+    "id": "gloople_tank_large",
+    "type": "vehicle_part",
+    "copy-from": "gloople_tank",
+    "name": {
+      "str": "凝胶油箱（60升）"
+    },
+    "item": "gloople_tank_large",
+    "folded_volume": "60 L"
+  },
+  {
+    "id": "gloople_plate",
+    "type": "vehicle_part",
+    "name": {
+      "str": "凝胶装甲板"
+    },
+    "item": "gloople",
+    "location": "armor",
+    "symbol": "X",
+    "broken_symbol": "*",
+    "color": "light_green",
+    "broken_color": "light_green",
+    "durability": 250,
+    "damage_modifier": 10,
+    "folded_volume": "250 ml",
+    "breaks_into": [
+      {
+        "item": "glooplegrow"
+      }
+    ],
+    "description": "一只活的变形怪变成的装甲板。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "ARMOR"
+    ]
+  },
+  {
+    "id": "gloople_roof",
+    "type": "vehicle_part",
+    "name": {
+      "str": "凝胶车顶盖"
+    },
+    "item": "gloople",
+    "location": "roof",
+    "symbol": "#",
+    "broken_symbol": "#",
+    "color": "light_green",
+    "broken_color": "light_green",
+    "durability": 250,
+    "damage_modifier": 10,
+    "folded_volume": "250 ml",
+    "breaks_into": [
+      {
+        "item": "glooplegrow"
+      }
+    ],
+    "description": "一只活的变形怪变成的车顶。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "ROOF"
+    ]
+  },
+  {
+    "id": "gloople_seat",
+    "type": "vehicle_part",
+    "name": {
+      "str": "凝胶座椅"
+    },
+    "item": "gloople",
+    "location": "center",
+    "symbol": "#",
+    "broken_symbol": "*",
+    "color": "light_green",
+    "broken_color": "light_green",
+    "durability": 250,
+    "damage_modifier": 10,
+    "folded_volume": "250 ml",
+    "breaks_into": [
+      {
+        "item": "glooplegrow"
+      }
+    ],
+    "description": "一只活的变形怪变成的座椅。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "SEAT",
+      "BED",
+      "BOARDABLE",
+      "BELTABLE"
+    ]
+  },
+  {
+    "id": "gloople_trunk",
+    "type": "vehicle_part",
+    "name": {
+      "str": "凝胶容器"
+    },
+    "item": "gloople",
+    "location": "center",
+    "symbol": "H",
+    "broken_symbol": "#",
+    "color": "light_green",
+    "broken_color": "light_green",
+    "durability": 250,
+    "size": "400 L",
+    "damage_modifier": 10,
+    "folded_volume": "250 ml",
+    "breaks_into": [
+      {
+        "item": "glooplegrow"
+      }
+    ],
+    "description": "一只活的变形怪变成的货舱。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "CARGO",
+      "COVERED"
+    ]
+  },
+  {
+    "id": "gloople_trunk_u",
+    "type": "vehicle_part",
+    "copy-from": "gloople_trunk",
+    "name": {
+      "str": "凝胶储存箱（车底）"
+    },
+    "location": "under"
+  },
+  {
+    "id": "gloopleaisle_aisle",
+    "type": "vehicle_part",
+    "name": {
+      "str": "凝胶过道"
+    },
+    "item": "gloople",
+    "location": "center",
+    "standard_symbols": true,
+    "color": "light_green",
+    "broken_color": "light_green",
+    "durability": 250,
+    "damage_modifier": 10,
+    "folded_volume": "250 ml",
+    "description": "一只活的变形怪变成的过道。",
+    "breaks_into": [
+      {
+        "item": "glooplegrow"
+      }
+    ],
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "AISLE",
+      "BOARDABLE"
+    ]
+  },
+  {
+    "id": "gloopledoor",
+    "type": "vehicle_part",
+    "name": {
+      "str": "凝胶舱门"
+    },
+    "item": "gloople",
+    "location": "center",
+    "symbol": "+",
+    "broken_symbol": "&",
+    "color": "light_green",
+    "broken_color": "light_green",
+    "durability": 250,
+    "damage_modifier": 10,
+    "folded_volume": "250 ml",
+    "breaks_into": [
+      {
+        "item": "glooplegrow"
+      }
+    ],
+    "description": "一只活的变形怪变成的车门。即使关上门你也可以透过其上的薄膜来观察。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "OBSTACLE",
+      "OPENABLE",
+      "BOARDABLE",
+      "WINDOW"
+    ]
+  },
+  {
+    "id": "gloopledoor_opaque",
+    "type": "vehicle_part",
+    "name": {
+      "str": "不透明凝胶舱门"
+    },
+    "item": "gloople",
+    "location": "center",
+    "symbol": "+",
+    "broken_symbol": "&",
+    "color": "light_green",
+    "broken_color": "light_green",
+    "durability": 250,
+    "damage_modifier": 10,
+    "folded_volume": "250 ml",
+    "breaks_into": [
+      {
+        "item": "glooplegrow"
+      }
+    ],
+    "description": "一只活的变形怪变成的车门。它是实心的，所以关上门时你不能透过它来观察。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "OBSTACLE",
+      "OPAQUE",
+      "OPENABLE",
+      "BOARDABLE"
+    ]
+  },
+  {
+    "id": "gray_amalgam",
+    "type": "vehicle_part",
+    "name": {
+      "str": "灰色车铲"
+    },
+    "item": "gray",
+    "location": "under",
+    "symbol": "R",
+    "broken_symbol": ";",
+    "color": "light_gray",
+    "broken_color": "light_gray",
+    "durability": 1000,
+    "epower": 0,
+    "size": "800 L",
+    "damage_modifier": 10,
+    "folded_volume": "250 ml",
+    "breaks_into": [
+      {
+        "item": "graygrow"
+      }
+    ],
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "description": "一只活的变形怪变成的车铲。在载具控制菜单中控制开关。开启时，将其所经过位置的散落物品收集进货舱内。",
+    "flags": [
+      "SCOOP",
+      "CARGO"
+    ]
+  },
+  {
+    "id": "gray_belt",
+    "type": "vehicle_part",
+    "name": {
+      "str": "灰色安全带"
+    },
+    "item": "gray",
+    "location": "on_seat",
+    "symbol": ",",
+    "broken_symbol": ",",
+    "color": "light_gray",
+    "broken_color": "light_gray",
+    "durability": 1000,
+    "bonus": 50,
+    "damage_modifier": 10,
+    "folded_volume": "250 ml",
+    "description": "一只活的变形怪变成的安全带。",
+    "breaks_into": [
+      {
+        "item": "graygrow"
+      }
+    ],
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "SEATBELT"
+    ]
+  },
+  {
+    "id": "gray_tank",
+    "type": "vehicle_part",
+    "name": {
+      "str": "茧形油箱（30升）"
+    },
+    "item": "gray_tank",
+    "location": "fuel_source",
+    "symbol": "O",
+    "broken_symbol": "#",
+    "color": "light_gray",
+    "broken_color": "light_gray",
+    "durability": 1000,
+    "damage_modifier": 10,
+    "folded_volume": "10 L",
+    "breaks_into": [
+      {
+        "item": "graygrow"
+      }
+    ],
+    "description": "一只活的变形怪变成的水箱。装入车辆引擎所对应消耗的燃料后，引擎启动时将会自动从对应的水箱内抽取燃料。装入水或其他液体后，可以在车辆水龙头处获取对应液体。你也可以使用一根橡胶软管从水箱中抽取液体。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "FLUIDTANK"
+    ]
+  },
+  {
+    "id": "gray_tank_large",
+    "type": "vehicle_part",
+    "copy-from": "gray_tank",
+    "name": {
+      "str": "灰色油箱（100升）"
+    },
+    "item": "gray_tank_large",
+    "folded_volume": "100 L"
+  },
+  {
+    "id": "gray_plate",
+    "type": "vehicle_part",
+    "name": {
+      "str": "灰色加强件"
+    },
+    "item": "gray",
+    "location": "armor",
+    "symbol": "X",
+    "broken_symbol": "*",
+    "color": "light_gray",
+    "broken_color": "light_gray",
+    "durability": 1000,
+    "damage_modifier": 10,
+    "folded_volume": "250 ml",
+    "description": "一只活的变形怪变成的装甲板。",
+    "breaks_into": [
+      {
+        "item": "graygrow"
+      }
+    ],
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "ARMOR"
+    ]
+  },
+  {
+    "id": "gray_roof",
+    "type": "vehicle_part",
+    "name": {
+      "str": "灰色车顶盖"
+    },
+    "item": "gray",
+    "location": "roof",
+    "symbol": "#",
+    "broken_symbol": "#",
+    "color": "light_gray",
+    "broken_color": "light_gray",
+    "durability": 1000,
+    "damage_modifier": 10,
+    "folded_volume": "250 ml",
+    "breaks_into": [
+      {
+        "item": "graygrow"
+      }
+    ],
+    "description": "一只活的变形怪变成的车顶。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "ROOF"
+    ]
+  },
+  {
+    "id": "gray_seat",
+    "type": "vehicle_part",
+    "name": {
+      "str": "灰色座椅"
+    },
+    "item": "gray",
+    "location": "center",
+    "symbol": "#",
+    "broken_symbol": "*",
+    "color": "light_gray",
+    "broken_color": "light_gray",
+    "durability": 1000,
+    "damage_modifier": 10,
+    "folded_volume": "250 ml",
+    "breaks_into": [
+      {
+        "item": "graygrow"
+      }
+    ],
+    "description": "一只活的变形怪变成的座椅。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "SEAT",
+      "BED",
+      "BOARDABLE",
+      "BELTABLE"
+    ]
+  },
+  {
+    "id": "gray_trunk",
+    "type": "vehicle_part",
+    "name": {
+      "str": "灰色容器"
+    },
+    "item": "gray",
+    "location": "center",
+    "symbol": "H",
+    "broken_symbol": "#",
+    "color": "light_gray",
+    "broken_color": "light_gray",
+    "durability": 1000,
+    "size": "1000 L",
+    "damage_modifier": 10,
+    "folded_volume": "250 ml",
+    "breaks_into": [
+      {
+        "item": "graygrow"
+      }
+    ],
+    "description": "一只活的变形怪变成的货舱。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "CARGO",
+      "COVERED"
+    ]
+  },
+  {
+    "id": "gray_trunk_u",
+    "type": "vehicle_part",
+    "copy-from": "gray_trunk",
+    "name": {
+      "str": "灰色储存箱（车底）"
+    },
+    "location": "under"
+  },
+  {
+    "id": "grayaisle_aisle",
+    "type": "vehicle_part",
+    "name": {
+      "str": "灰色过道"
+    },
+    "item": "gray",
+    "location": "center",
+    "standard_symbols": true,
+    "color": "light_gray",
+    "broken_color": "light_gray",
+    "durability": 1000,
+    "damage_modifier": 10,
+    "folded_volume": "250 ml",
+    "description": "一只活的变形怪变成的过道。",
+    "breaks_into": [
+      {
+        "item": "graygrow"
+      }
+    ],
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "AISLE",
+      "BOARDABLE"
+    ]
+  },
+  {
+    "id": "graydoor",
+    "type": "vehicle_part",
+    "name": {
+      "str": "灰色舱门"
+    },
+    "item": "gray",
+    "location": "center",
+    "symbol": "+",
+    "broken_symbol": "&",
+    "color": "light_gray",
+    "broken_color": "light_gray",
+    "durability": 1000,
+    "damage_modifier": 10,
+    "folded_volume": "250 ml",
+    "breaks_into": [
+      {
+        "item": "graygrow"
+      }
+    ],
+    "description": "一只活的变形怪变成的车门。即使关上门你也可以透过其上的薄膜来观察。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "OBSTACLE",
+      "OPENABLE",
+      "BOARDABLE",
+      "WINDOW"
+    ]
+  },
+  {
+    "id": "graydoor_opaque",
+    "type": "vehicle_part",
+    "name": {
+      "str": "不透明灰色舱门"
+    },
+    "item": "gray",
+    "location": "center",
+    "symbol": "+",
+    "broken_symbol": "&",
+    "color": "light_gray",
+    "broken_color": "light_gray",
+    "durability": 1000,
+    "damage_modifier": 10,
+    "folded_volume": "250 ml",
+    "breaks_into": [
+      {
+        "item": "graygrow"
+      }
+    ],
+    "description": "一只活的变形怪变成的车门。它是实心的，所以关上门时你不能透过它来观察。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "OBSTACLE",
+      "OPAQUE",
+      "OPENABLE",
+      "BOARDABLE"
+    ]
+  },
+  {
+    "id": "grinder",
+    "type": "vehicle_part",
+    "name": {
+      "str": "变形怪压路机"
+    },
+    "item": "grinder",
+    "location": "structure",
+    "symbol": "O",
+    "broken_symbol": "#",
+    "color": "brown",
+    "broken_color": "brown",
+    "durability": 2500,
+    "damage_modifier": 250,
+    "folded_volume": "250 ml",
+    "breaks_into": [
+      {
+        "item": "gray"
+      }
+    ],
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "rolling_resistance": 6,
+    "wheel_type": "rigid",
+    "contact_area": 500,
+    "flags": [
+      "WHEEL",
+      "PROTRUSION",
+      "STABLE",
+      "TRACKED"
+    ]
+  },
+  {
+    "id": "oozle_amalgam",
+    "type": "vehicle_part",
+    "name": {
+      "str": "软泥车铲"
+    },
+    "item": "oozle",
+    "location": "under",
+    "symbol": "R",
+    "broken_symbol": ";",
+    "color": "green",
+    "broken_color": "green",
+    "durability": 600,
+    "epower": 0,
+    "size": "400 L",
+    "damage_modifier": 10,
+    "folded_volume": "250 ml",
+    "breaks_into": [
+      {
+        "item": "oozlegrow"
+      }
+    ],
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "description": "一只活的变形怪变成的车铲。在载具控制菜单中控制开关。开启时，将其所经过位置的散落物品收集进货舱内。",
+    "flags": [
+      "SCOOP",
+      "CARGO"
+    ]
+  },
+  {
+    "id": "oozle_belt",
+    "type": "vehicle_part",
+    "name": {
+      "str": "软泥安全带"
+    },
+    "item": "oozle",
+    "location": "on_seat",
+    "symbol": ",",
+    "broken_symbol": ",",
+    "color": "green",
+    "broken_color": "green",
+    "durability": 500,
+    "bonus": 35,
+    "damage_modifier": 10,
+    "folded_volume": "250 ml",
+    "description": "一只活的变形怪变成的安全带。",
+    "breaks_into": [
+      {
+        "item": "oozlegrow"
+      }
+    ],
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "SEATBELT"
+    ]
+  },
+  {
+    "id": "oozle_tank",
+    "type": "vehicle_part",
+    "name": {
+      "str": "变形怪油箱（20升）"
+    },
+    "item": "oozle_tank",
+    "location": "fuel_source",
+    "symbol": "O",
+    "broken_symbol": "#",
+    "color": "green",
+    "broken_color": "green",
+    "durability": 500,
+    "damage_modifier": 10,
+    "folded_volume": "7500 ml",
+    "breaks_into": [
+      {
+        "item": "oozlegrow"
+      }
+    ],
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "description": "一只活的变形怪变成的水箱。装入车辆引擎所对应消耗的燃料后，引擎启动时将会自动从对应的水箱内抽取燃料。装入水或其他液体后，可以在车辆水龙头处获取对应液体。你也可以使用一根橡胶软管从水箱中抽取液体。",
+    "flags": [
+      "FLUIDTANK"
+    ]
+  },
+  {
+    "id": "oozle_tank_large",
+    "type": "vehicle_part",
+    "copy-from": "oozle_tank",
+    "name": {
+      "str": "软泥油箱（80升）"
+    },
+    "item": "oozle_tank_large",
+    "folded_volume": "80 L"
+  },
+  {
+    "id": "oozle_plate",
+    "type": "vehicle_part",
+    "name": {
+      "str": "软泥加强件"
+    },
+    "item": "oozle",
+    "location": "armor",
+    "symbol": "X",
+    "broken_symbol": "*",
+    "color": "green",
+    "broken_color": "green",
+    "durability": 500,
+    "damage_modifier": 10,
+    "folded_volume": "250 ml",
+    "breaks_into": [
+      {
+        "item": "oozlegrow"
+      }
+    ],
+    "description": "一只活的变形怪变成的装甲板。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "ARMOR"
+    ]
+  },
+  {
+    "id": "oozle_roof",
+    "type": "vehicle_part",
+    "name": {
+      "str": "软泥车顶盖"
+    },
+    "item": "oozle",
+    "location": "roof",
+    "symbol": "#",
+    "broken_symbol": "#",
+    "color": "green",
+    "broken_color": "light_green",
+    "durability": 500,
+    "damage_modifier": 10,
+    "folded_volume": "250 ml",
+    "breaks_into": [
+      {
+        "item": "oozlegrow"
+      }
+    ],
+    "description": "一只活的变形怪变成的车顶。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "ROOF"
+    ]
+  },
+  {
+    "id": "oozle_seat",
+    "type": "vehicle_part",
+    "name": {
+      "str": "软泥座椅"
+    },
+    "item": "oozle",
+    "location": "center",
+    "symbol": "#",
+    "broken_symbol": "*",
+    "color": "green",
+    "broken_color": "green",
+    "durability": 500,
+    "damage_modifier": 10,
+    "folded_volume": "250 ml",
+    "breaks_into": [
+      {
+        "item": "oozlegrow"
+      }
+    ],
+    "description": "一只活的变形怪变成的座椅。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "SEAT",
+      "BED",
+      "BOARDABLE",
+      "BELTABLE"
+    ]
+  },
+  {
+    "id": "oozle_trunk",
+    "type": "vehicle_part",
+    "name": {
+      "str": "软泥容器"
+    },
+    "item": "oozle",
+    "location": "center",
+    "symbol": "H",
+    "broken_symbol": "#",
+    "color": "green",
+    "broken_color": "green",
+    "durability": 500,
+    "size": "800 L",
+    "damage_modifier": 10,
+    "folded_volume": "250 ml",
+    "breaks_into": [
+      {
+        "item": "oozlegrow"
+      }
+    ],
+    "description": "一只活的变形怪变成的货舱。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "CARGO",
+      "COVERED"
+    ]
+  },
+  {
+    "id": "oozle_trunk_u",
+    "type": "vehicle_part",
+    "copy-from": "oozle_trunk",
+    "name": {
+      "str": "软泥储存箱（车底）"
+    },
+    "location": "under"
+  },
+  {
+    "id": "oozleaisle_aisle",
+    "type": "vehicle_part",
+    "name": {
+      "str": "软泥过道"
+    },
+    "item": "oozle",
+    "location": "center",
+    "standard_symbols": true,
+    "color": "green",
+    "broken_color": "green",
+    "durability": 500,
+    "damage_modifier": 10,
+    "folded_volume": "250 ml",
+    "breaks_into": [
+      {
+        "item": "oozlegrow"
+      }
+    ],
+    "description": "一只活的变形怪变成的过道。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "AISLE",
+      "BOARDABLE"
+    ]
+  },
+  {
+    "id": "oozledoor",
+    "type": "vehicle_part",
+    "name": {
+      "str": "软泥舱门"
+    },
+    "item": "oozle",
+    "location": "center",
+    "symbol": "+",
+    "broken_symbol": "&",
+    "color": "green",
+    "broken_color": "green",
+    "durability": 500,
+    "damage_modifier": 10,
+    "folded_volume": "250 ml",
+    "breaks_into": [
+      {
+        "item": "oozlegrow"
+      }
+    ],
+    "description": "一只活的变形怪变成的车门。即使关上门你也可以透过其上的薄膜来观察。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "OBSTACLE",
+      "OPENABLE",
+      "BOARDABLE",
+      "WINDOW"
+    ]
+  },
+  {
+    "id": "oozledoor_opaque",
+    "type": "vehicle_part",
+    "name": {
+      "str": "不透明软泥舱门"
+    },
+    "item": "oozle",
+    "location": "center",
+    "symbol": "+",
+    "broken_symbol": "&",
+    "color": "green",
+    "broken_color": "green",
+    "durability": 500,
+    "damage_modifier": 10,
+    "folded_volume": "250 ml",
+    "breaks_into": [
+      {
+        "item": "oozlegrow"
+      }
+    ],
+    "description": "一只活的变形怪变成的车门。它是实心的，所以关上门时你不能透过它来观察。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "OBSTACLE",
+      "OPAQUE",
+      "OPENABLE",
+      "BOARDABLE"
+    ]
+  },
+  {
+    "id": "queen",
+    "type": "vehicle_part",
+    "name": {
+      "str": "无定形核心"
+    },
+    "item": "queen",
+    "location": "center",
+    "fuel_type": "bfeedfuel",
+    "symbol": "O",
+    "broken_symbol": "#",
+    "color": "red",
+    "broken_color": "red",
+    "durability": 1000,
+    "power": 223800,
+    "energy_consumption": "600000 W",
+    "m2c": 65,
+    "noise_factor": 5,
+    "epower": -1,
+    "damage_modifier": 10,
+    "folded_volume": "250 ml",
+    "breaks_into": [
+      {
+        "item": "queengrow"
+      }
+    ],
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "description": "一坨形状不定的物质，变形怪载具的活着的心脏和大脑。",
+    "flags": [
+      "BOARDABLE",
+      "BELTABLE",
+      "ENGINE",
+      "CONTROLS",
+      "CTRL_ELECTRONIC",
+      "SEAT",
+      "BED",
+      "E_ALTERNATOR",
+      "E_STARTS_INSTANTLY",
+      "E_HIGHER_SKILL",
+      "TURRET_MOUNT"
+    ]
+  }
+]

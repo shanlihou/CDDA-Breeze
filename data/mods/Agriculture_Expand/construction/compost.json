@@ -1,0 +1,158 @@
+[
+	
+	{
+		"type": "construction_group",
+		"id": "compost_cg_filling_garbage",
+		"name": "向堆肥箱添加堆肥原料"
+	},
+	{
+		"type": "construction_group",
+		"id": "compost_cg_flipped_garbage",
+		"name": "翻动堆肥"
+	},
+	{
+		"type": "construction_group",
+		"id": "compost_cg_filling_flipped_garbage",
+		"name": "向堆肥箱添加堆肥原料并翻动"
+	},
+
+
+
+	{
+		"type": "construction",
+		"id": "compost_constr_filling_garbage_little_phase_I",
+		"group": "compost_cg_filling_garbage",
+		"category": "FARM_WOOD",
+		"difficulty": 0,
+		"time": "20 m",
+		"byproducts": [],
+		"components": [
+			[ [ "compost_brew_waste", 30 ] ]
+		],
+		"qualities": [
+			[
+				{
+					"id": "DIG",
+					"level": 2
+				}
+			]
+		],
+		"pre_terrain": "f_compost_composting_bins_empty",
+		"post_flags": [ "keep_items" ],
+		"post_terrain": "f_compost_composting_bins_little_phase_I"
+	},
+	{
+		"type": "construction",
+		"id": "compost_constr_filling_garbage_full_phase_I",
+		"group": "compost_cg_filling_garbage",
+		"category": "FARM_WOOD",
+		"difficulty": 0,
+		"time": "20 m",
+		"byproducts": [],
+		"components": [
+			[ [ "compost_brew_waste", 30 ] ]
+		],
+		"qualities": [
+			[
+				{
+					"id": "DIG",
+					"level": 2
+				}
+			]
+		],
+		"pre_terrain": "f_compost_composting_bins_little_phase_I",
+		"post_flags": [ "keep_items" ],
+		"post_terrain": "f_compost_composting_bins_full_phase_I"
+	},
+
+
+	{
+		"type": "construction",
+		"id": "compost_constr_filling_flipped_garbage_full_phase_II",
+		"group": "compost_cg_filling_flipped_garbage",
+		"category": "FARM_WOOD",
+		"difficulty": 0,
+		"time": "50 m",
+		"byproducts": [],
+		"components": [
+			[ [ "compost_brew_waste", 30 ] ]
+		],
+		"qualities": [
+			[
+				{
+					"id": "DIG",
+					"level": 2
+				}
+			]
+		],
+		"pre_terrain": "f_compost_composting_bins_little_phase_II",
+		"post_flags": [ "keep_items" ],
+		"post_terrain": "f_compost_composting_bins_full_phase_II_flipped"
+	},
+	{
+		"type": "construction",
+		"id": "compost_constr_filling_flipped_garbage_full_phase_II_flipped",
+		"group": "compost_cg_filling_flipped_garbage",
+		"category": "FARM_WOOD",
+		"difficulty": 0,
+		"time": "50 m",
+		"byproducts": [],
+		"components": [
+			[ [ "compost_brew_waste", 30 ] ]
+		],
+		"qualities": [
+			[
+				{
+					"id": "DIG",
+					"level": 2
+				}
+			]
+		],
+		"pre_terrain": "f_compost_composting_bins_little_phase_II_flipped",
+		"post_flags": [ "keep_items" ],
+		"post_terrain": "f_compost_composting_bins_full_phase_II_flipped"
+	},
+
+
+
+	{
+		"type": "construction",
+		"id": "compost_constr_filling_garbage_little_phase_II_flipped",
+		"group": "compost_cg_flipped_garbage",
+		"category": "FARM_WOOD",
+		"difficulty": 0,
+		"time": "20 m",
+		"byproducts": [],
+		"qualities": [
+			[
+				{
+					"id": "DIG",
+					"level": 2
+				}
+			]
+		],
+		"pre_terrain": "f_compost_composting_bins_little_phase_II",
+		"post_flags": [ "keep_items" ],
+		"post_terrain": "f_compost_composting_bins_little_phase_II_flipped"
+	},
+	{
+		"type": "construction",
+		"id": "compost_constr_filling_garbage_full_phase_II_flipped",
+		"group": "compost_cg_flipped_garbage",
+		"category": "FARM_WOOD",
+		"difficulty": 0,
+		"time": "30 m",
+		"byproducts": [],
+		"qualities": [
+			[
+				{
+					"id": "DIG",
+					"level": 2
+				}
+			]
+		],
+		"pre_terrain": "f_compost_composting_bins_full_phase_II",
+		"post_flags": [ "keep_items" ],
+		"post_terrain": "f_compost_composting_bins_full_phase_II_flipped"
+	}
+]

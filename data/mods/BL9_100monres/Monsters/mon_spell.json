@@ -1,0 +1,3176 @@
+[
+  {
+    "id": "blazingtest",
+    "type": "SPELL",
+    "name": {
+      "str": "燃烧！！！"
+    },
+    "description": "放火烧世界！！",
+    "message": "",
+    "flags": [
+      "SILENT",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "self",
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_aoe": 29,
+    "max_aoe": 29,
+    "field_id": "fd_fire",
+    "field_chance": 3,
+    "min_field_intensity": 2,
+    "max_field_intensity": 3
+  },
+  {
+    "id": "stairs_creation",
+    "type": "SPELL",
+    "name": {
+      "str": "出现楼梯"
+    },
+    "description": "楼梯出现了，哈哈！！！",
+    "message": "<color_light_green>口合 口合\n 楼梯～楼梯～<color_red>快出现～</color></color>",
+    "flags": [
+      "SILENT",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "effect": "ter_transform",
+    "shape": "blast",
+    "effect_str": "stairstransform",
+    "min_aoe": 30,
+    "max_aoe": 30,
+    "base_casting_time": -1
+  },
+  {
+    "id": "buildinggoesboomhahafunny_boom",
+    "type": "SPELL",
+    "name": {
+      "str": "加油！"
+    },
+    "description": "哈哈！！！",
+    "message": "<color_light_green>口合 口合\n建筑通通<color_red>炸！光！光！</color></color>",
+    "flags": [
+      "SILENT",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "effect": "ter_transform",
+    "shape": "blast",
+    "extra_effects": [
+      {
+        "id": "blazingtest",
+        "hit_self": false
+      },
+      {
+        "id": "stairs_creation",
+        "hit_self": false
+      }
+    ],
+    "effect_str": "boomthebuilding",
+    "min_aoe": 29,
+    "max_aoe": 29,
+    "base_casting_time": -1
+  },
+  {
+    "id": "BL9_item_herb_stun",
+    "type": "SPELL",
+    "name": {
+      "str": "药草眩晕"
+    },
+    "description": "草药使你头晕目眩",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "herb_stun",
+    "min_duration": 25000,
+    "max_duration": 25000
+  },
+  {
+    "id": "BL9_pain_relieve",
+    "type": "SPELL",
+    "name": {
+      "str": "减轻疼痛"
+    },
+    "description": "药草解除你的痛苦！",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 65,
+    "max_damage": 65,
+    "effect": "recover_energy",
+    "shape": "blast",
+    "effect_str": "PAIN",
+    "min_duration": 1,
+    "max_duration": 1
+  },
+  {
+    "id": "BL9_item_mild_curing_herb",
+    "type": "SPELL",
+    "name": {
+      "str": "温和的草药治疗"
+    },
+    "description": "温和的治愈感谢温和的草药",
+    "message": "你吃了药草，伤口就稍微愈合了！",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "effect_str": "herb_cleanse",
+    "min_damage": -20,
+    "max_damage": -20,
+    "effect": "attack",
+    "shape": "blast",
+    "extra_effects": [
+      {
+        "id": "BL9_item_herb_stun",
+        "hit_self": true
+      },
+      {
+        "id": "BL9_pain_relieve",
+        "hit_self": true
+      }
+    ],
+    "min_duration": 1,
+    "max_duration": 1
+  },
+  {
+    "id": "BL9_item_medium_curing_herb",
+    "type": "SPELL",
+    "name": {
+      "str": "中草药治疗"
+    },
+    "description": "中度愈合感谢中度治疗草药",
+    "message": "你吃了这个药草，一定程度上你感觉好了！",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "effect_str": "herb_cleanse",
+    "min_damage": -35,
+    "max_damage": -35,
+    "effect": "attack",
+    "shape": "blast",
+    "extra_effects": [
+      {
+        "id": "BL9_item_herb_stun",
+        "hit_self": true
+      },
+      {
+        "id": "BL9_pain_relieve",
+        "hit_self": true
+      }
+    ],
+    "min_duration": 1,
+    "max_duration": 1
+  },
+  {
+    "id": "BL9_item_strong_curing_herb",
+    "type": "SPELL",
+    "name": {
+      "str": "强疗草"
+    },
+    "description": "强大的治愈感谢强大的治愈药草",
+    "message": "你吃了这个药草，你感觉很好的治愈了！",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "effect_str": "herb_cleanse",
+    "min_damage": -45,
+    "max_damage": -45,
+    "effect": "attack",
+    "shape": "blast",
+    "extra_effects": [
+      {
+        "id": "BL9_item_herb_stun",
+        "hit_self": true
+      },
+      {
+        "id": "BL9_pain_relieve",
+        "hit_self": true
+      }
+    ],
+    "min_duration": 1,
+    "max_duration": 1
+  },
+  {
+    "id": "BL9_teleport_spell",
+    "type": "SPELL",
+    "name": {
+      "str": "秘密传送"
+    },
+    "description": "传送用户到一个调谐门。",
+    "message": "你传送到调谐门！",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "effect": "translocate",
+    "shape": "blast"
+  },
+  {
+    "//": "Let's push the charger back from the player. This does work SOMETIMES, and this'll prevent the glitch to occur.",
+    "id": "mon_charge_push",
+    "type": "SPELL",
+    "name": {
+      "str": "住手"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这个：\n‘施法者停在目标旁边。’",
+    "effect": "area_push",
+    "shape": "blast",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "min_aoe": 1,
+    "max_aoe": 1
+  },
+  {
+    "id": "boulder_throw",
+    "type": "SPELL",
+    "name": {
+      "str": "投石"
+    },
+    "description": "怪物施法的。如果你看到了这个，那么读这个吧：\n'施法者击中弱点，施法3回合眩晕效果",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "head",
+      "arm_l",
+      "torso",
+      "leg_r"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "effect_str": "stunned",
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 16,
+    "max_damage": 18,
+    "min_range": 7,
+    "max_range": 20,
+    "min_duration": 325,
+    "max_duration": 325,
+    "damage_type": "bash"
+  },
+  {
+    "id": "mon_giant_charge",
+    "type": "SPELL",
+    "name": {
+      "str": "冲啊！"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就改读这一条：\n“施法者获得冲力，提高移动速度，命中几率和冲击伤害。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "charge_giant_momentum",
+    "min_aoe": 20,
+    "max_aoe": 20,
+    "min_duration": 100,
+    "max_duration": 100,
+    "field_id": "fd_charger_stun",
+    "min_field_intensity": 1,
+    "max_field_intensity": 1
+  },
+  {
+    "id": "mon_giant_charge_pull",
+    "type": "SPELL",
+    "name": {
+      "str": "冲锋"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就读这个：\n'施法者冲向目标。这是在15到25次之间随机铸造的",
+    "effect": "area_pull",
+    "shape": "blast",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "extra_effects": [
+      {
+        "id": "mon_giant_charge"
+      },
+      {
+        "id": "mon_charge_push"
+      }
+    ],
+    "min_aoe": 13,
+    "max_aoe": 13
+  },
+  {
+    "type": "SPELL",
+    "id": "mon_giant_charge_target_random",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到这个，那么读这个吧：\n'施法者锁定目标的视线，然后施法一个咒语",
+    "extra_effects": [
+      {
+        "id": "mon_giant_charge_pull"
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "WONDER",
+      "RANDOM_DAMAGE"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "secro_magic_target",
+    "min_damage": 25,
+    "max_damage": 35,
+    "min_range": 13,
+    "max_range": 13,
+    "min_duration": 1,
+    "max_duration": 1
+  },
+  {
+    "type": "SPELL",
+    "id": "mon_giant_random",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到这个，那么读这个吧：\n'施法者锁定目标的视线，然后施法",
+    "extra_effects": [
+      {
+        "id": "mon_giant_charge_target_random"
+      },
+      {
+        "id": "boulder_throw"
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "WONDER",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "ground"
+    ],
+    "min_damage": 1,
+    "max_damage": 1,
+    "effect": "attack",
+    "shape": "blast",
+    "min_range": 6,
+    "max_range": 6
+  },
+  {
+    "id": "mon_clawer_charge",
+    "type": "SPELL",
+    "name": {
+      "str": "冲啊！"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就改读这一条：\n“施法者获得冲力，提高移动速度，命中几率和冲击伤害。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "charge_clawer_momentum",
+    "min_aoe": 8,
+    "max_aoe": 8,
+    "min_duration": 100,
+    "max_duration": 100,
+    "field_id": "fd_charger_stun",
+    "min_field_intensity": 1,
+    "max_field_intensity": 1
+  },
+  {
+    "id": "mon_clawer_charge_pull",
+    "type": "SPELL",
+    "name": {
+      "str": "冲锋"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就读这个：\n'施法者冲向目标。这是随机铸造20至30次",
+    "effect": "area_pull",
+    "shape": "blast",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "extra_effects": [
+      {
+        "id": "mon_clawer_charge"
+      },
+      {
+        "id": "mon_charge_push"
+      }
+    ],
+    "min_aoe": 15,
+    "max_aoe": 15
+  },
+  {
+    "type": "SPELL",
+    "id": "mon_clawer_charge_target_random",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到这个，那么读这个吧：\n'施法者锁定目标的视线，然后施法一个咒语",
+    "extra_effects": [
+      {
+        "id": "mon_clawer_charge_pull"
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "WONDER",
+      "RANDOM_DAMAGE"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "secro_magic_target",
+    "min_damage": 20,
+    "max_damage": 25,
+    "min_range": 8,
+    "max_range": 8,
+    "min_duration": 1,
+    "max_duration": 1
+  },
+  {
+    "id": "scrawler_acidbarf",
+    "type": "SPELL",
+    "name": {
+      "str": "酸棒"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这个：\n“施法者向目标吐出，造成酸伤害。”",
+    "affected_body_parts": [
+      "head",
+      "arm_l",
+      "arm_r",
+      "torso"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 9,
+    "max_damage": 10,
+    "min_range": 3,
+    "max_range": 3,
+    "damage_type": "acid"
+  },
+  {
+    "id": "BL9_1_violentwrithe",
+    "type": "SPELL",
+    "name": {
+      "str": "剧烈的扭动"
+    },
+    "description": "怪物施法的。如果你看到的是这个，那么读这个吧：\n'在一次准确的斜切之后，施法者的刃状卷须在运动中变得更加狂野，随机划过空中，对所有受影响的目标造成切割伤害",
+    "affected_body_parts": [
+      "head",
+      "torso"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_TARGET",
+      "RANDOM_DAMAGE"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "effect": "attack",
+    "shape": "cone",
+    "min_damage": 8,
+    "max_damage": 10,
+    "min_range": 2,
+    "max_range": 2,
+    "min_aoe": 90,
+    "max_aoe": 90,
+    "damage_type": "cut"
+  },
+  {
+    "id": "BL9_1_horizontalslash",
+    "type": "SPELL",
+    "name": {
+      "str": "水平斜杠"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就改读这一条：\n'施法者将它的叶片卷须刷向圆锥体中的目标，造成切割伤害。'",
+    "affected_body_parts": [
+      "head",
+      "arm_l",
+      "arm_r",
+      "torso"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "extra_effects": [
+      {
+        "id": "BL9_1_violentwrithe"
+      }
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "cone",
+    "min_damage": 8,
+    "max_damage": 10,
+    "min_range": 2,
+    "max_range": 2,
+    "min_aoe": 50,
+    "max_aoe": 50,
+    "damage_type": "cut"
+  },
+  {
+    "id": "BL9_3_acidbarf",
+    "type": "SPELL",
+    "name": {
+      "str": "酸棒"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这个：\n“施法者向目标吐出，造成酸伤害。”",
+    "affected_body_parts": [
+      "head",
+      "arm_l",
+      "arm_r",
+      "torso"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 8,
+    "max_damage": 10,
+    "min_range": 2,
+    "max_range": 2,
+    "damage_type": "acid"
+  },
+  {
+    "id": "twisted_one_tentwhip",
+    "type": "SPELL",
+    "name": {
+      "str": "触手鞭"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改为读这个：\n“施法者的触须拍打目标，造成重击伤害。”",
+    "affected_body_parts": [
+      "head",
+      "arm_l",
+      "arm_r",
+      "torso"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 22,
+    "max_damage": 27,
+    "min_range": 4,
+    "max_range": 4,
+    "damage_type": "bash"
+  },
+  {
+    "id": "BL9_1evo_violentwrithe",
+    "type": "SPELL",
+    "name": {
+      "str": "剧烈的扭动"
+    },
+    "description": "怪物施法的。如果你看到的是这个，那么读这个吧：\n'在一次准确的斜切之后，施法者的刃状卷须在运动中变得更加狂野，随机划过空中，对所有受影响的目标造成切割伤害",
+    "affected_body_parts": [
+      "head",
+      "torso"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_TARGET",
+      "RANDOM_DAMAGE"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "effect": "attack",
+    "shape": "cone",
+    "min_damage": 8,
+    "max_damage": 10,
+    "min_range": 2,
+    "max_range": 2,
+    "min_aoe": 90,
+    "max_aoe": 90,
+    "damage_type": "cut"
+  },
+  {
+    "id": "BL9_1evo_horizontalslash",
+    "type": "SPELL",
+    "name": {
+      "str": "水平斜杠"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就改读这一条：\n'施法者将它的叶片卷须刷向圆锥体中的目标，造成切割伤害。'",
+    "affected_body_parts": [
+      "head",
+      "arm_l",
+      "arm_r",
+      "torso"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "extra_effects": [
+      {
+        "id": "BL9_1_violentwrithe"
+      }
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "cone",
+    "min_damage": 8,
+    "max_damage": 10,
+    "min_range": 2,
+    "max_range": 2,
+    "min_aoe": 50,
+    "max_aoe": 50,
+    "damage_type": "cut"
+  },
+  {
+    "id": "BL9_3evo_acidbarf",
+    "type": "SPELL",
+    "name": {
+      "str": "酸棒"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这个：\n“施法者向目标吐出，造成酸伤害。”",
+    "affected_body_parts": [
+      "head",
+      "arm_l",
+      "arm_r",
+      "torso"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 14,
+    "max_damage": 16,
+    "min_range": 2,
+    "max_range": 2,
+    "damage_type": "acid"
+  },
+  {
+    "id": "scrawlerevo_acidbarf",
+    "type": "SPELL",
+    "name": {
+      "str": "酸棒"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这个：\n“施法者向目标吐出，造成酸伤害。”",
+    "affected_body_parts": [
+      "head",
+      "arm_l",
+      "arm_r",
+      "torso"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 9,
+    "max_damage": 10,
+    "min_range": 3,
+    "max_range": 3,
+    "damage_type": "acid"
+  },
+  {
+    "id": "chimera_mutated_pincerpinch",
+    "type": "SPELL",
+    "name": {
+      "str": "钳夹"
+    },
+    "description": "怪物施法的。如果你看到的是这个，那么读一读这个：\n“施法者的触角用钳子末端击中目标，造成割伤伤害。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "head",
+      "torso"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 45,
+    "max_damage": 48,
+    "min_range": 5,
+    "max_range": 5,
+    "damage_type": "cut"
+  },
+  {
+    "id": "merc_leaping_slash",
+    "type": "SPELL",
+    "name": {
+      "str": "跳跃式斜杠"
+    },
+    "description": "怪物施法的。如果你看到的是这个，那么读这个吧：\n'施法者向目标跳跃，用手臂上的刀刃砍伤目标，造成很高的切割伤害，然后施法者跳回原来的位置'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "head",
+      "arm_l",
+      "arm_r",
+      "torso"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 38,
+    "max_damage": 42,
+    "min_range": 7,
+    "max_range": 7,
+    "damage_type": "cut"
+  },
+  {
+    "id": "vile_one_mandiblecrunch",
+    "type": "SPELL",
+    "name": {
+      "str": "下颌紧缩"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改为读这个：\n'施法者的头伸向目标，咬他们造成很高的切割伤害'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "head",
+      "arm_l",
+      "arm_r",
+      "torso",
+      "leg_l",
+      "leg_r"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 65,
+    "max_damage": 68,
+    "min_range": 4,
+    "max_range": 4,
+    "damage_type": "cut"
+  },
+  {
+    "id": "argan_psi_orbs",
+    "type": "SPELL",
+    "name": {
+      "str": "阿甘诺德灵能球体"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那么请阅读这一条：\n'施法者召唤一个明亮的紫色火焰球雨在他们的目标'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "head",
+      "arm_l",
+      "arm_r",
+      "torso",
+      "leg_l",
+      "leg_r"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "cone",
+    "min_damage": 22,
+    "max_damage": 26,
+    "min_range": 1,
+    "max_range": 25,
+    "min_aoe": 10,
+    "max_aoe": 15,
+    "damage_type": "stab"
+  },
+  {
+    "id": "argan_warr_strike",
+    "type": "SPELL",
+    "name": {
+      "str": "阿甘诺德战士攻击"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那么请阅读这一条：\n'施法者找到目标的弱点并优雅地击中它'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "torso"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 22,
+    "max_damage": 24,
+    "min_range": 1,
+    "max_range": 3,
+    "damage_type": "stab"
+  },
+  {
+    "id": "argan_ranger_shot",
+    "type": "SPELL",
+    "name": {
+      "str": "阿甘诺德游侠射击"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就改读这一条：\n'施法者精确瞄准并向他们的目标发射了一个沉重的紫色等离子弹'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "torso"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 23,
+    "max_damage": 26,
+    "min_range": 3,
+    "max_range": 15,
+    "damage_type": "stab"
+  },
+  {
+    "id": "argan_amalg_orb",
+    "type": "SPELL",
+    "name": {
+      "str": "阿甘诺德拼合球"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就读这一条吧：\n'施法者召唤一个明亮的巨大紫色爆炸球体对准目标'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "head",
+      "arm_l",
+      "arm_r",
+      "torso",
+      "leg_l",
+      "leg_r"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 25,
+    "max_damage": 35,
+    "min_range": 1,
+    "max_range": 25,
+    "min_aoe": 10,
+    "max_aoe": 15,
+    "damage_type": "stab"
+  },
+  {
+    "id": "argan_amalg_lasers",
+    "type": "SPELL",
+    "name": {
+      "str": "氩化物混汞激光器"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那么读这一条：\n'施法者在他们的目标上召唤出明亮的紫色奇怪的激光光'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "head",
+      "arm_l",
+      "arm_r",
+      "torso",
+      "leg_l",
+      "leg_r"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "cone",
+    "min_damage": 32,
+    "max_damage": 42,
+    "min_range": 1,
+    "max_range": 25,
+    "min_aoe": 10,
+    "max_aoe": 15,
+    "damage_type": "stab"
+  },
+  {
+    "id": "wanzel_psi_vortex",
+    "type": "SPELL",
+    "name": {
+      "str": "万泽尔提姆灵能漩涡"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那么请阅读这一条：\n'施法者在他们的目标上召唤一个小的亮绿色漩涡，变成一个爆炸'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "head",
+      "arm_l",
+      "arm_r",
+      "torso",
+      "leg_l",
+      "leg_r"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "cone",
+    "min_damage": 25,
+    "max_damage": 29,
+    "min_range": 1,
+    "max_range": 25,
+    "min_aoe": 10,
+    "max_aoe": 15,
+    "damage_type": "stab"
+  },
+  {
+    "id": "wanzel_warr_strike",
+    "type": "SPELL",
+    "name": {
+      "str": "万泽尔提姆战士突击"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这个：\n'施法者找到目标的弱点并猛烈地攻击它'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "torso"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 25,
+    "max_damage": 27,
+    "min_range": 1,
+    "max_range": 3,
+    "damage_type": "cut"
+  },
+  {
+    "id": "wanzel_ranger_shot",
+    "type": "SPELL",
+    "name": {
+      "str": "万泽尔提姆游侠射击"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就改读这一条：\n‘施法者精确瞄准，向目标发射一发重绿色等离子弹’",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "torso"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 26,
+    "max_damage": 29,
+    "min_range": 3,
+    "max_range": 15,
+    "damage_type": "stab"
+  },
+  {
+    "id": "wanzel_amalg_orb",
+    "type": "SPELL",
+    "name": {
+      "str": "万泽尔提姆融合球"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那么读这一条：\n'施法者召唤一个明亮的巨大绿色爆炸球在他们的目标'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "head",
+      "arm_l",
+      "arm_r",
+      "torso",
+      "leg_l",
+      "leg_r"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 28,
+    "max_damage": 39,
+    "min_range": 1,
+    "max_range": 25,
+    "min_aoe": 10,
+    "max_aoe": 15,
+    "damage_type": "stab"
+  },
+  {
+    "id": "wanzel_amalg_lasers",
+    "type": "SPELL",
+    "name": {
+      "str": "万泽尔提姆融合激光"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就读这一条吧：\n“施法者在他们的目标上召唤出奇怪的绿光”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "head",
+      "arm_l",
+      "arm_r",
+      "torso",
+      "leg_l",
+      "leg_r"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "cone",
+    "min_damage": 36,
+    "max_damage": 46,
+    "min_range": 1,
+    "max_range": 25,
+    "min_aoe": 10,
+    "max_aoe": 15,
+    "damage_type": "stab"
+  },
+  {
+    "id": "davran_psi_nebula",
+    "type": "SPELL",
+    "name": {
+      "str": "达夫兰尼德灵能星云"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那么请阅读这一条：\n'施法者召唤出一个明亮的蓝蓝色星云，在到达目标时剧烈爆炸'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "head",
+      "arm_l",
+      "arm_r",
+      "torso",
+      "leg_l",
+      "leg_r"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "cone",
+    "min_damage": 28,
+    "max_damage": 33,
+    "min_range": 1,
+    "max_range": 25,
+    "min_aoe": 10,
+    "max_aoe": 15,
+    "damage_type": "stab"
+  },
+  {
+    "id": "davran_warr_strike",
+    "type": "SPELL",
+    "name": {
+      "str": "达夫兰尼德战士突击"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就读一下这个：\n'施法者找到了目标的弱点，几乎以外科手术的精度切割它'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "torso"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 28,
+    "max_damage": 31,
+    "min_range": 1,
+    "max_range": 3,
+    "damage_type": "cut"
+  },
+  {
+    "id": "davran_ranger_shot",
+    "type": "SPELL",
+    "name": {
+      "str": "达夫兰尼德游侠射击"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那么请阅读这一条：\n'施法者精确瞄准并向目标发射一枚重蓝色等离子弹'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "torso"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 29,
+    "max_damage": 33,
+    "min_range": 3,
+    "max_range": 15,
+    "damage_type": "stab"
+  },
+  {
+    "id": "davran_amalg_orb",
+    "type": "SPELL",
+    "name": {
+      "str": "达夫兰尼德拼合球"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那么请阅读这一条：\n'施法者召唤一个明亮的巨大的蓝蓝色爆炸球在他们的目标'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "head",
+      "arm_l",
+      "arm_r",
+      "torso",
+      "leg_l",
+      "leg_r"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 32,
+    "max_damage": 43,
+    "min_range": 1,
+    "max_range": 25,
+    "min_aoe": 10,
+    "max_aoe": 15,
+    "damage_type": "stab"
+  },
+  {
+    "id": "davran_amalg_lasers",
+    "type": "SPELL",
+    "name": {
+      "str": "达夫兰尼德混汞激光器"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就读这一条吧：\n'施法者在他们的目标上召唤出明亮的蓝色奇怪的激光束'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "head",
+      "arm_l",
+      "arm_r",
+      "torso",
+      "leg_l",
+      "leg_r"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "cone",
+    "min_damage": 41,
+    "max_damage": 52,
+    "min_range": 1,
+    "max_range": 25,
+    "min_aoe": 10,
+    "max_aoe": 15,
+    "damage_type": "stab"
+  },
+  {
+    "id": "salden_psi_ray",
+    "type": "SPELL",
+    "name": {
+      "str": "萨尔德尼姆灵能射线"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就读这一条吧：\n'施法者召唤出一道明亮的太阳橙色光线，到达目标时会猛烈爆炸'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "head",
+      "arm_l",
+      "arm_r",
+      "torso",
+      "leg_l",
+      "leg_r"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "cone",
+    "min_damage": 33,
+    "max_damage": 37,
+    "min_range": 1,
+    "max_range": 25,
+    "min_aoe": 10,
+    "max_aoe": 15,
+    "damage_type": "stab"
+  },
+  {
+    "id": "salden_warr_strike",
+    "type": "SPELL",
+    "name": {
+      "str": "萨尔德尼姆战士攻击"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这篇：\n'施法者找到目标的弱点并全力撕碎它'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "torso"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 32,
+    "max_damage": 35,
+    "min_range": 1,
+    "max_range": 3,
+    "damage_type": "cut"
+  },
+  {
+    "id": "salden_ranger_shot",
+    "type": "SPELL",
+    "name": {
+      "str": "萨尔德尼姆游侠射击"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就读一读这篇：\n“施法者精确瞄准并向目标发射了一枚重的太阳橙等离子体”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "torso"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 33,
+    "max_damage": 37,
+    "min_range": 3,
+    "max_range": 15,
+    "damage_type": "stab"
+  },
+  {
+    "id": "salden_amalg_orb",
+    "type": "SPELL",
+    "name": {
+      "str": "萨尔德尼姆融合球"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那么请阅读这一条：\n'施法者召唤一个明亮的巨大的太阳橙爆炸球在他们的目标'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "head",
+      "arm_l",
+      "arm_r",
+      "torso",
+      "leg_l",
+      "leg_r"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 37,
+    "max_damage": 49,
+    "min_range": 1,
+    "max_range": 25,
+    "min_aoe": 10,
+    "max_aoe": 15,
+    "damage_type": "stab"
+  },
+  {
+    "id": "salden_amalg_lasers",
+    "type": "SPELL",
+    "name": {
+      "str": "萨尔德尼姆融合激光"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就读这一条吧：\n“施法者在他们的目标上召唤出明亮的太阳橙色的奇怪激光”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "head",
+      "arm_l",
+      "arm_r",
+      "torso",
+      "leg_l",
+      "leg_r"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "cone",
+    "min_damage": 47,
+    "max_damage": 59,
+    "min_range": 1,
+    "max_range": 25,
+    "min_aoe": 10,
+    "max_aoe": 15,
+    "damage_type": "stab"
+  },
+  {
+    "id": "BL9_laser_melee_effect",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9激光近战目标发射"
+    },
+    "description": "由物品施法。如果你看到了这个，那就改读这篇：\n'物品会在目标处疯狂地发射蒸发的BL9的集中射线'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "head",
+      "arm_l",
+      "arm_r",
+      "torso",
+      "leg_l",
+      "leg_r"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 24,
+    "max_damage": 25,
+    "min_range": 3,
+    "max_range": 5,
+    "min_aoe": 3,
+    "max_aoe": 3,
+    "damage_type": "heat"
+  },
+  {
+    "id": "BL9_plasma_melee_effect",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9等离子体靶向发射"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那就读读这个：\n“物品向他们的目标疯狂发射极度加热的电离气化BL9”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "head",
+      "arm_l",
+      "arm_r",
+      "torso",
+      "leg_l",
+      "leg_r"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 24,
+    "max_damage": 25,
+    "min_range": 3,
+    "max_range": 5,
+    "min_aoe": 3,
+    "max_aoe": 3,
+    "damage_type": "heat"
+  },
+  {
+    "id": "BL9_electric_melee_effect",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9电靶向发射"
+    },
+    "description": "由物品施法。如果你看到了这个，那就改读这篇：\n'物品在目标处疯狂地发射BL9的带电弧线'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "head",
+      "arm_l",
+      "arm_r",
+      "torso",
+      "leg_l",
+      "leg_r"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 24,
+    "max_damage": 25,
+    "min_range": 3,
+    "max_range": 5,
+    "min_aoe": 3,
+    "max_aoe": 3,
+    "damage_type": "electric"
+  },
+  {
+    "id": "BL9_acid_melee_effect",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9酸靶向排放"
+    },
+    "description": "由物品施法。如果你看到了这个，那就改读这篇：\n'物品在目标处释放出极具腐蚀性的BL9流'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "head",
+      "arm_l",
+      "arm_r",
+      "torso",
+      "leg_l",
+      "leg_r"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 24,
+    "max_damage": 25,
+    "min_range": 3,
+    "max_range": 5,
+    "min_aoe": 3,
+    "max_aoe": 3,
+    "damage_type": "acid"
+  },
+  {
+    "id": "BL9_laser_melee_mk2_effect",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9激光近战目标发射MK ii"
+    },
+    "description": "由物品施法。如果你看到了这个，那就改读这篇：\n'物品会在目标处疯狂地发射蒸发的BL9的集中射线'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "head",
+      "arm_l",
+      "arm_r",
+      "torso",
+      "leg_l",
+      "leg_r"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 36,
+    "max_damage": 38,
+    "min_range": 3,
+    "max_range": 5,
+    "min_aoe": 3,
+    "max_aoe": 3,
+    "damage_type": "heat"
+  },
+  {
+    "id": "BL9_plasma_melee_mk2_effect",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9等离子体靶向发射MKⅡ"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那就读读这个：\n“物品向他们的目标疯狂发射极度加热的电离气化BL9”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "head",
+      "arm_l",
+      "arm_r",
+      "torso",
+      "leg_l",
+      "leg_r"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 36,
+    "max_damage": 38,
+    "min_range": 3,
+    "max_range": 5,
+    "min_aoe": 3,
+    "max_aoe": 3,
+    "damage_type": "heat"
+  },
+  {
+    "id": "BL9_electric_melee_mk2_effect",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9电靶向发射MK ii"
+    },
+    "description": "由物品施法。如果你看到了这个，那就改读这篇：\n'物品在目标处疯狂地发射BL9的带电弧线'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "head",
+      "arm_l",
+      "arm_r",
+      "torso",
+      "leg_l",
+      "leg_r"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 36,
+    "max_damage": 38,
+    "min_range": 3,
+    "max_range": 5,
+    "min_aoe": 3,
+    "max_aoe": 3,
+    "damage_type": "electric"
+  },
+  {
+    "id": "BL9_acid_melee_mk2_effect",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9酸靶向排放MK ii"
+    },
+    "description": "由物品施法。如果你看到了这个，那就改读这篇：\n'物品在目标处释放出极具腐蚀性的BL9流'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "head",
+      "arm_l",
+      "arm_r",
+      "torso",
+      "leg_l",
+      "leg_r"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 36,
+    "max_damage": 38,
+    "min_range": 3,
+    "max_range": 5,
+    "min_aoe": 3,
+    "max_aoe": 3,
+    "damage_type": "acid"
+  },
+  {
+    "id": "BL9_laser_melee_mk3_effect",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9激光近战目标发射MK iii"
+    },
+    "description": "由物品施法。如果你看到了这个，那就改读这篇：\n'物品会在目标处疯狂地发射蒸发的BL9的集中射线'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "head",
+      "arm_l",
+      "arm_r",
+      "torso",
+      "leg_l",
+      "leg_r"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 48,
+    "max_damage": 49,
+    "min_range": 3,
+    "max_range": 5,
+    "min_aoe": 3,
+    "max_aoe": 3,
+    "damage_type": "heat"
+  },
+  {
+    "id": "BL9_plasma_melee_mk3_effect",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9等离子体靶向发射MKⅢ"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那就读读这个：\n“物品向他们的目标疯狂发射极度加热的电离气化BL9”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "head",
+      "arm_l",
+      "arm_r",
+      "torso",
+      "leg_l",
+      "leg_r"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 48,
+    "max_damage": 49,
+    "min_range": 3,
+    "max_range": 5,
+    "min_aoe": 3,
+    "max_aoe": 3,
+    "damage_type": "heat"
+  },
+  {
+    "id": "BL9_electric_melee_mk3_effect",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9电靶向发射MK iii"
+    },
+    "description": "由物品施法。如果你看到了这个，那就改读这篇：\n'物品在目标处疯狂地发射BL9的带电弧线'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "head",
+      "arm_l",
+      "arm_r",
+      "torso",
+      "leg_l",
+      "leg_r"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 48,
+    "max_damage": 49,
+    "min_range": 3,
+    "max_range": 5,
+    "min_aoe": 3,
+    "max_aoe": 3,
+    "damage_type": "electric"
+  },
+  {
+    "id": "BL9_acid_melee_mk3_effect",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9酸靶向排放MK iii"
+    },
+    "description": "由物品施法。如果你看到了这个，那就改读这篇：\n'物品在目标处释放出极具腐蚀性的BL9流'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "affected_body_parts": [
+      "head",
+      "arm_l",
+      "arm_r",
+      "torso",
+      "leg_l",
+      "leg_r"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 48,
+    "max_damage": 49,
+    "min_range": 3,
+    "max_range": 5,
+    "min_aoe": 3,
+    "max_aoe": 3,
+    "damage_type": "acid"
+  },
+  {
+    "id": "BL9_mutation_artifact_action1",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_STR1",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action2",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_STR_ENDURANCE1",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action3",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_STR_TENTACLESTAB1",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action4",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_STR_TENTACLEHIT1",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action5",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_STR_ARMOREDSKIN1",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action6",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_STR2",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action7",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_STR_ENDURANCE2",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action8",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_STR_TENTACLESTAB2",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action9",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_STR_TENTACLEHIT2",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action10",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_STR_ARMOREDSKIN2",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action11",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_STR3",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action12",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_STR_ENDURANCE3",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action13",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_STR_TENTACLESTAB3",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action14",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_STR_TENTACLEHIT3",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action15",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_STR_ARMOREDSKIN3",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action16",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_DEX1",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action17",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_DEX_ENERGETICNESS1",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action18",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_DEX_DEFTNESS1",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action19",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_DEX_AGILITY1",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action20",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_DEX2",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action21",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_DEX_ENERGETICNESS2",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action22",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_DEX_DEFTNESS2",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action23",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_DEX_AGILITY2",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action24",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_DEX3",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action25",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_DEX_ENERGETICNESS3",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action26",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_DEX_DEFTNESS3",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action27",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_DEX_AGILITY3",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action28",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_HP1",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action29",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_HP_REGEN1",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action30",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_HP_WAKEFUL_MIND1",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action31",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_HP_AMPLIFIED_METABOLISM1",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action32",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_HP2",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action33",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_HP_REGEN2",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action34",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_HP_WAKEFUL_MIND2",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action35",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_HP_AMPLIFIED_METABOLISM2",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action36",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_HP3",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action37",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_HP_REGEN3",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action38",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_HP_WAKEFUL_MIND3",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action39",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_HP_AMPLIFIED_METABOLISM3",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action40",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_PER1",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action41",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_PER_ELEVATEDSENSE1",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action42",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_PER_STEALTHAURA1",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action43",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_PER2",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action44",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_PER_ELEVATEDSENSE2",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action45",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_PER_STEALTHAURA2",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action46",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_PER3",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action47",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_PER_ELEVATEDSENSE3",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action48",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_PER_STEALTHAURA3",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action49",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_INT1",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action50",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_INT_APTITUDE1",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action51",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_INT2",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action52",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_INT_APTITUDE2",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action53",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_INT3",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  },
+  {
+    "id": "BL9_mutation_artifact_action54",
+    "type": "SPELL",
+    "name": {
+      "str": "BL9人工产物突变"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个：\n“神器的激活提供了相应的变异。”",
+    "message": "激活神器会给你一个增强你力量的突变！",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "BL9_INT_APTITUDE3",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+  }
+]

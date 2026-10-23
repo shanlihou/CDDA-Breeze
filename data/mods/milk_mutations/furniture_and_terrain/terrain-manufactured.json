@@ -1,0 +1,119 @@
+[
+  {
+    "type": "terrain",
+    "id": "t_salt_water_pump",
+    "name": "盐水泵",
+    "looks_like": "t_water_pump",
+    "description": "A water pump connected to a pipe supplying it with salt water.  Not good to drink, but it has other uses.",
+    "symbol": "&",
+    "color": "light_gray",
+    "move_cost": 6,
+    "coverage": 40,
+    "connects_to": "WATER",
+    "flags": [
+      "TRANSPARENT",
+	  "SALT_WATER",
+      "THIN_OBSTACLE"
+    ],
+    "deconstruct": {
+      "ter_set": "t_covered_well",
+      "items": [
+        {
+          "item": "well_pump",
+          "count": 1
+        },
+        {
+          "item": "pipe",
+          "count": [
+            1,
+            6
+          ]
+        }
+      ]
+    },
+    "bash": {
+      "str_min": 15,
+      "str_max": 80,
+      "sound": "whack!",
+      "sound_fail": "thunk.",
+      "ter_set": "t_dirt",
+      "items": [
+        {
+          "item": "steel_chunk",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "scrap",
+          "count": [
+            3,
+            6
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            0,
+            2
+          ]
+        }
+      ]
+    },
+    "examine_action": "water_source"
+  },
+  {
+    "type": "terrain",
+    "id": "t_covered_salt_water_well",
+    "name": "covered salt water well",
+    "description": "A deep well, collecting salt water from a surrounding swamp.  You won't be able to get any water unless you add some mechanism for drawing it up to the surface.",
+    "symbol": "#",
+    "color": "dark_gray",
+    "looks_like": "t_covered_well",
+    "move_cost": 2,
+    "coverage": 40,
+    "flags": [
+      "TRANSPARENT",
+      "FLAT",
+      "MINEABLE"
+    ],
+    "bash": {
+      "str_min": 80,
+      "str_max": 300,
+      "sound": "crash!",
+      "sound_fail": "whump!",
+      "ter_set": "t_pit",
+      "items": [
+        {
+          "item": "rock",
+          "count": [
+            8,
+            18
+          ]
+        },
+        {
+          "item": "2x4",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "nail",
+          "charges": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            1,
+            2
+          ]
+        }
+      ]
+    }
+  }
+]

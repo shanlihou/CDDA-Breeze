@@ -1,0 +1,745 @@
+[
+  {
+    "id": "secro_flesh_ammo_pouch",
+    "type": "ARMOR",
+    "name": {
+      "str": "子弹袋",
+      "str_pl": "子弹袋"
+    },
+    "description": "一个小袋子，可以用来存储大多数的小型弹药，但是装不下火箭弹。使用它来存储弹药。",
+    "weight": "613 g",
+    "volume": "500 ml",
+    "to_hit": 1,
+    "bashing": 1,
+    "material": [
+      "secro_flesh_artificial"
+    ],
+    "valid_mods": [
+      "secro_flesh_reinforced_coat"
+    ],
+    "symbol": "[",
+    "looks_like": "leather_pouch",
+    "color": "red",
+    "pocket_data": [
+      {
+        "ammo_restriction": {
+          "22": 60,
+          "32": 60,
+          "38": 60,
+          "40": 60,
+          "44": 60,
+          "45": 60,
+          "46": 60,
+          "50": 60,
+          "57": 60,
+          "223": 60,
+          "300": 60,
+          "308": 60,
+          "380": 60,
+          "454": 60,
+          "460": 60,
+          "500": 60,
+          "762": 60,
+          "3006": 60,
+          "4570": 60,
+          "pebble": 60,
+          "700nx": 60,
+          "BB": 60,
+          "410shot": 60,
+          "shot": 60,
+          "9mm": 60,
+          "357sig": 60,
+          "9x18": 60,
+          "10mm": 60,
+          "45colt": 60,
+          "545x39": 60,
+          "270win": 60,
+          "12mm": 60,
+          "8x40mm": 60,
+          "20x66mm": 60,
+          "5x50": 60,
+          "stimpack_ammo": 60,
+          "ampoule": 60,
+          "762x25": 60,
+          "flintlock": 60,
+          "36paper": 60,
+          "44paper": 60,
+          "762R": 60,
+          "paintball": 60
+        },
+        "moves": 35
+      }
+    ],
+    "flags": [
+      "BELTED",
+      "OVERSIZE",
+      "WATER_FRIENDLY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 5,
+        "coverage": 10,
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_waist"
+        ],
+        "material": [
+          "secro_flesh_artificial"
+        ],
+        "material_thickness": 1
+      }
+    ]
+  },
+  {
+    "id": "secro_flesh_ammo_satchel",
+    "type": "ARMOR",
+    "name": {
+      "str": "弹匣包（腰）"
+    },
+    "description": "一个绑在腰上的肉质弹匣包。可装一个大型弹匣，保证能随手取用。",
+    "weight": "225 g",
+    "volume": "500 ml",
+    "material": [
+      "secro_flesh_artificial"
+    ],
+    "valid_mods": [
+      "secro_flesh_reinforced_coat"
+    ],
+    "symbol": "[",
+    "looks_like": "ragpouch",
+    "color": "red",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_item_length": "300 mm",
+        "max_contains_volume": "1500 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 40,
+        "flag_restriction": [
+          "MAG_COMPACT",
+          "MAG_BULKY"
+        ]
+      }
+    ],
+    "use_action": {
+      "type": "holster",
+      "holster_prompt": "存储弹药",
+      "holster_msg": "你收好了%s。"
+    },
+    "flags": [
+      "WATER_FRIENDLY",
+      "BELTED"
+    ],
+    "armor": [
+      {
+        "encumbrance": 4,
+        "coverage": 20,
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_waist"
+        ],
+        "material": [
+          "secro_flesh_artificial"
+        ],
+        "material_thickness": 1
+      }
+    ]
+  },
+  {
+    "id": "secro_flesh_chestpouch",
+    "type": "ARMOR",
+    "name": {
+      "str": "弹匣包（胸）",
+      "str_pl": "弹匣包（胸）"
+    },
+    "description": "一个绑在胸口上的肉质弹匣包。可装一个弹匣，保证能随手取用。",
+    "weight": "175 g",
+    "volume": "250 ml",
+    "material": [
+      "secro_flesh_artificial"
+    ],
+    "valid_mods": [
+      "secro_flesh_reinforced_coat"
+    ],
+    "symbol": "[",
+    "looks_like": "ragpouch",
+    "color": "red",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_item_length": "240 mm",
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 40,
+        "flag_restriction": [
+          "MAG_COMPACT"
+        ]
+      }
+    ],
+    "use_action": {
+      "type": "holster",
+      "holster_prompt": "存储弹药",
+      "holster_msg": "你收好了%s。"
+    },
+    "flags": [
+      "WATER_FRIENDLY",
+      "BELTED"
+    ],
+    "armor": [
+      {
+        "coverage": 15,
+        "covers": [
+          "torso"
+        ],
+        "material": [
+          "secro_flesh_artificial"
+        ],
+        "material_thickness": 1
+      }
+    ]
+  },
+  {
+    "id": "secro_flesh_chestrig",
+    "type": "ARMOR",
+    "name": {
+      "str_sp": "携行具"
+    },
+    "description": "这是一种在越南战争期间开始流行的携行具。这种携行具都很朴素，通常是由三个或以上的袋子组成的简单装备，用带子固定在你的胸前。这个携行具能容纳四个弹匣。",
+    "weight": "531 g",
+    "volume": "500 ml",
+    "material": [
+      "secro_flesh_artificial"
+    ],
+    "valid_mods": [
+      "secro_flesh_reinforced_coat"
+    ],
+    "symbol": "[",
+    "looks_like": "tool_belt",
+    "color": "red",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_item_length": "240 mm",
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 40,
+        "flag_restriction": [
+          "MAG_COMPACT"
+        ]
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_item_length": "240 mm",
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 40,
+        "flag_restriction": [
+          "MAG_COMPACT"
+        ]
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_item_length": "240 mm",
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 40,
+        "flag_restriction": [
+          "MAG_COMPACT"
+        ]
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_item_length": "240 mm",
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 40,
+        "flag_restriction": [
+          "MAG_COMPACT"
+        ]
+      }
+    ],
+    "use_action": {
+      "type": "holster",
+      "holster_prompt": "存储弹药",
+      "holster_msg": "你收好了%s。"
+    },
+    "flags": [
+      "WATER_FRIENDLY",
+      "BELTED"
+    ],
+    "armor": [
+      {
+        "coverage": 15,
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_waist"
+        ],
+        "material": [
+          "secro_flesh_artificial"
+        ],
+        "material_thickness": 1
+      }
+    ]
+  },
+  {
+    "id": "secro_flesh_xl_chestrig",
+    "type": "ARMOR",
+    "copy-from": "secro_flesh_chestrig",
+    "name": {
+      "str": "军用携行具（XL）"
+    },
+    "description": "这是一种在越南战争期间开始流行的携行具。这种携行具都很朴素，通常是由三个或以上的袋子组成的简单装备，用带子固定在你的胸前。这个携行具能容纳四个弹匣。比人类尺寸稍大。",
+    "proportional": {
+      "weight": 1.25,
+      "volume": 1.13
+    },
+    "flags": [
+      "WATER_FRIENDLY",
+      "BELTED",
+      "OVERSIZE"
+    ]
+  },
+  {
+    "id": "secro_flesh_javelin_bag",
+    "type": "ARMOR",
+    "name": {
+      "str": "标枪包"
+    },
+    "description": "一个开口的中世纪款式标枪包，易于存取标枪。",
+    "weight": "750 g",
+    "volume": "1250 ml",
+    "material": [
+      "secro_flesh_artificial"
+    ],
+    "valid_mods": [
+      "secro_flesh_reinforced_coat"
+    ],
+    "symbol": "[",
+    "looks_like": "quiver",
+    "color": "red",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "min_item_volume": "250 ml",
+        "max_contains_volume": "1250 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 30,
+        "flag_restriction": [
+          "JAVELIN"
+        ],
+        "max_item_length": "150 cm"
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "min_item_volume": "250 ml",
+        "max_contains_volume": "1250 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 30,
+        "flag_restriction": [
+          "JAVELIN"
+        ],
+        "max_item_length": "150 cm"
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "min_item_volume": "250 ml",
+        "max_contains_volume": "1250 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 30,
+        "flag_restriction": [
+          "JAVELIN"
+        ],
+        "max_item_length": "150 cm"
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "min_item_volume": "250 ml",
+        "max_contains_volume": "1250 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 30,
+        "flag_restriction": [
+          "JAVELIN"
+        ],
+        "max_item_length": "150 cm"
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "min_item_volume": "250 ml",
+        "max_contains_volume": "1250 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 30,
+        "flag_restriction": [
+          "JAVELIN"
+        ],
+        "max_item_length": "150 cm"
+      }
+    ],
+    "use_action": {
+      "type": "holster",
+      "holster_prompt": "存储标枪",
+      "holster_msg": "你收好了%s。"
+    },
+    "flags": [
+      "WATER_FRIENDLY",
+      "OVERSIZE",
+      "BELTED"
+    ],
+    "armor": [
+      {
+        "encumbrance": 10,
+        "coverage": 30,
+        "covers": [
+          "torso"
+        ],
+        "material": [
+          "secro_flesh_artificial"
+        ],
+        "material_thickness": 1
+      }
+    ]
+  },
+  {
+    "id": "secro_flesh_legpouch",
+    "type": "ARMOR",
+    "name": {
+      "str": "弹匣包（脚）",
+      "str_pl": "弹匣包（脚）"
+    },
+    "description": "一个小的肉质弹药袋，可以绑在你的脚踝和举行一个小弹夹在手附近。",
+    "volume": "250 ml",
+    "weight": "75 g",
+    "material": [
+      "secro_flesh_artificial"
+    ],
+    "valid_mods": [
+      "secro_flesh_reinforced_coat"
+    ],
+    "symbol": "[",
+    "looks_like": "ragpouch",
+    "color": "red",
+    "sided": true,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_item_length": "240 mm",
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 40,
+        "flag_restriction": [
+          "MAG_COMPACT"
+        ]
+      }
+    ],
+    "use_action": {
+      "type": "holster",
+      "holster_prompt": "存储弹药",
+      "holster_msg": "你收好了%s。"
+    },
+    "flags": [
+      "WATER_FRIENDLY",
+      "BELTED",
+      "OVERSIZE",
+      "ALLOWS_NATURAL_ATTACKS"
+    ],
+    "armor": [
+      {
+        "encumbrance": 1,
+        "coverage": 5,
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ],
+        "specifically_covers": [
+          "foot_ankle_l",
+          "foot_ankle_r"
+        ],
+        "material": [
+          "secro_flesh_artificial"
+        ],
+        "material_thickness": 1,
+        "layers": [
+          "BELTED"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "ARMOR",
+    "id": "secro_flesh_legpouch_large",
+    "name": {
+      "str": "弹匣包（腿）",
+      "str_pl": "弹匣包（腿）"
+    },
+    "description": "一个绑在腿上的肉质弹匣包，能够装下两个弹匣，保证弹药随手取用。",
+    "weight": "150 g",
+    "volume": "250 ml",
+    "material": [
+      "secro_flesh_artificial"
+    ],
+    "valid_mods": [
+      "secro_flesh_reinforced_coat"
+    ],
+    "symbol": "[",
+    "looks_like": "ammo_satchel",
+    "color": "red",
+    "sided": true,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_item_length": "240 mm",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 40,
+        "flag_restriction": [
+          "MAG_COMPACT"
+        ]
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_item_length": "240 mm",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 40,
+        "flag_restriction": [
+          "MAG_COMPACT"
+        ]
+      }
+    ],
+    "use_action": {
+      "type": "holster",
+      "holster_prompt": "存储弹药",
+      "holster_msg": "你收好了%s。"
+    },
+    "flags": [
+      "WATER_FRIENDLY",
+      "BELTED"
+    ],
+    "armor": [
+      {
+        "coverage": 15,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "material": [
+          "secro_flesh_artificial"
+        ],
+        "material_thickness": 1
+      }
+    ]
+  },
+  {
+    "id": "secro_flesh_quiver",
+    "type": "ARMOR",
+    "name": {
+      "str": "箭筒"
+    },
+    "description": "一个可佩戴在腰部、可容纳20支箭的肉质箭筒。使用它以存储箭支或弩矢。",
+    "weight": "325 g",
+    "volume": "500 ml",
+    "bashing": 2,
+    "material": [
+      "secro_flesh_artificial"
+    ],
+    "valid_mods": [
+      "secro_flesh_reinforced_coat"
+    ],
+    "symbol": "[",
+    "looks_like": "bscabbard",
+    "color": "red",
+    "sided": true,
+    "pocket_data": [
+      {
+        "ammo_restriction": {
+          "arrow": 20,
+          "bolt": 20
+        },
+        "moves": 20
+      }
+    ],
+    "flags": [
+      "BELTED",
+      "OVERSIZE",
+      "WATER_FRIENDLY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 3,
+        "coverage": 10,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "torso_waist"
+        ],
+        "material": [
+          "secro_flesh_artificial"
+        ],
+        "material_thickness": 1
+      }
+    ]
+  },
+  {
+    "id": "secro_flesh_quiver_large",
+    "type": "ARMOR",
+    "name": {
+      "str": "大箭筒"
+    },
+    "description": "背上戴的一种大的肉质箭袋，可以装60支箭或箭栓。历史上使用马弓箭手，而不是脚弓箭手，但他们都没有战斗丧尸。使用insert存储箭头或霰弹。",
+    "weight": "1150 g",
+    "volume": "1500 ml",
+    "bashing": 4,
+    "material": [
+      "secro_flesh_artificial"
+    ],
+    "valid_mods": [
+      "secro_flesh_reinforced_coat"
+    ],
+    "symbol": "[",
+    "looks_like": "quiver",
+    "color": "red",
+    "pocket_data": [
+      {
+        "ammo_restriction": {
+          "arrow": 60,
+          "bolt": 60
+        },
+        "moves": 20
+      }
+    ],
+    "flags": [
+      "BELTED",
+      "OVERSIZE",
+      "WATER_FRIENDLY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 3,
+        "coverage": 15,
+        "covers": [
+          "torso"
+        ],
+        "material": [
+          "secro_flesh_artificial"
+        ],
+        "material_thickness": 1
+      }
+    ]
+  },
+  {
+    "id": "secro_flesh_tacvest",
+    "type": "ARMOR",
+    "name": {
+      "str": "战术背心"
+    },
+    "description": "这款轻便的背心可以让你携带的弹药均匀舒适地分布在你的躯干上。它们很受执法部门的欢迎，但不如加入了凯夫拉纤维的战术背心。这种背心重量轻、易于携带，拥有许多口袋并且可以存放四个弹匣。",
+    "weight": "750 g",
+    "volume": "1250 ml",
+    "looks_like": "vest",
+    "material": [
+      "secro_flesh_artificial"
+    ],
+    "valid_mods": [
+      "secro_flesh_reinforced_coat"
+    ],
+    "symbol": "[",
+    "color": "red",
+    "use_action": {
+      "type": "holster",
+      "holster_prompt": "存储弹药",
+      "holster_msg": "你收好了%s。"
+    },
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_item_length": "300 mm",
+        "min_item_volume": "250 ml",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "2 kg",
+        "flag_restriction": [
+          "MAG_COMPACT",
+          "MAG_BULKY"
+        ],
+        "moves": 60
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_item_length": "300 mm",
+        "min_item_volume": "250 ml",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "2 kg",
+        "flag_restriction": [
+          "MAG_COMPACT",
+          "MAG_BULKY"
+        ],
+        "moves": 60
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_item_length": "300 mm",
+        "min_item_volume": "250 ml",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "2 kg",
+        "flag_restriction": [
+          "MAG_COMPACT",
+          "MAG_BULKY"
+        ],
+        "moves": 60
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_item_length": "300 mm",
+        "min_item_volume": "250 ml",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "2 kg",
+        "flag_restriction": [
+          "MAG_COMPACT",
+          "MAG_BULKY"
+        ],
+        "moves": 60
+      }
+    ],
+    "flags": [
+      "WATER_FRIENDLY",
+      "BELTED"
+    ],
+    "armor": [
+      {
+        "encumbrance": 2,
+        "coverage": 20,
+        "covers": [
+          "torso"
+        ],
+        "material": [
+          "secro_flesh_artificial"
+        ],
+        "material_thickness": 1
+      }
+    ]
+  },
+  {
+    "id": "secro_flesh_xl_tacvest",
+    "type": "ARMOR",
+    "copy-from": "secro_flesh_tacvest",
+    "name": {
+      "str": "战术背心（XL）"
+    },
+    "description": "这款轻便的背心可以让你携带的弹药均匀舒适地分布在你的躯干上。它们很受执法部门的欢迎，但不如加入了凯夫拉纤维的战术背心。这种背心尺寸较大、易于携带，拥有许多口袋并且可以存放四个弹匣。",
+    "proportional": {
+      "weight": 1.25,
+      "volume": 1.13
+    },
+    "flags": [
+      "WATER_FRIENDLY",
+      "BELTED",
+      "OVERSIZE"
+    ]
+  }
+]

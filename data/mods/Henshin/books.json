@@ -1,0 +1,38 @@
+[
+	{
+		"type":"BOOK",
+		"id":"henshin_book",
+		"name": { "str": "异界纪录", "str_pl": "异界纪录" },
+		"looks_like": "recipe_alpha",
+		"description":"一本写满了奇异文字的书，只有当你集中精力的时候才能勉强读懂其中的意思。尽管你不知为何能够突然将其写出，但参透其中知识看起来似乎需要更高的境界。",
+		"weight": "500 g",
+    	"volume": "500 ml",
+		"price":0,
+		"material":"paper",
+		"symbol":"?",
+		"color":"blue",
+		"skill":"fabrication",
+		"required_level":5,
+		"max_level":7,
+		"intelligence":12,
+		"time": "30 m",
+		"fun": -1
+	},
+	{
+		"id":"manual_henshin",
+		"copy_from":"book_martial",
+		"type":"BOOK",
+		"name": { "str": "假面骑士列传", "str_pl": "假面骑士列传" },
+		"looks_like": "manual_electronics",
+		"description":"记载有在异界背负“假面骑士”之名者的英雄事迹的手抄本，通读此本可以参悟异界骑士所使用的战斗技艺。",
+		"symbol":"?",
+		"color":"red",
+		"material":["paper"],
+		"weight": "250 g",
+    	"volume": "250 ml",
+		"price":0,
+		"intelligence":10,
+		"time":30,
+		"use_action":"MA_MANUAL"
+	}
+]

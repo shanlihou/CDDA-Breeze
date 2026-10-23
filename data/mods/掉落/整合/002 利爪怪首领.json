@@ -1,0 +1,50 @@
+[
+
+ {
+    "type": "item_group",
+    "id": "zhenghe_002",
+    "//": "利爪怪首领",
+    "subtype": "collection",
+    "entries": [
+      {
+        "distribution": [
+          {
+            "item": "iron_thorn",
+            "prob": 25
+          },
+          {
+            "item": "iridescent_plate",
+            "prob": 75
+          }
+        ]
+      },
+      {
+        "item": "essence_blood",
+        "count": [
+          7,
+          14
+        ]
+      },
+      {
+       "item": "destiny_copper", 
+        "count": [
+          1,
+          50
+        ]
+      }, 
+    {
+       "item": "destiny_silver" 
+       }
+    ]
+  },
+ {
+    "id": "mon_alpha_razorclaw",
+    "//": "利爪怪首领",
+    "copy-from": "mon_alpha_razorclaw",
+    "hp": 180,
+    "type": "MONSTER",
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_alpha_razorclaw_death_drops02", 100 ], [ "zhenghe_002", 100 ] ] }
+  }
+ 
+
+]

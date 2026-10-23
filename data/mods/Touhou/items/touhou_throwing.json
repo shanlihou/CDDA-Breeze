@@ -1,0 +1,51 @@
+[
+  {
+    "id": "silver_knife",
+    "type": "GENERIC",
+    "category": "weapons",
+    "name": {
+      "str": "银色匕首",
+      "str_pl": "银色匕首"
+    },
+    "description": "用于投掷的双刃小刀。加强刀柄经过油漆处理。尽管刀刃是银做的，但它还是很锋利。",
+    "weight": "400 g",
+    "volume": "200 ml",
+    "longest_side": "20 cm",
+    "price": 52000,
+    "price_postapoc": 5200,
+    "to_hit": {
+      "balance": "good",
+      "grip": "weapon",
+      "length": "hand",
+      "surface": "point"
+    },
+    "bashing": 1,
+    "cutting": 8,
+    "material": [
+      {
+        "type": "silver"
+      },
+      {
+        "type": "steel",
+        "portion": 9
+      }
+    ],
+    "symbol": ";",
+    "looks_like": "throwing_knife",
+    "color": "light_gray",
+    "thrown_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 16
+      }
+    ],
+    "weapon_category": [
+      "KNIVES"
+    ],
+    "flags": [
+      "SHEATH_KNIFE",
+      "STAB",
+      "STURDY"
+    ]
+  }
+]

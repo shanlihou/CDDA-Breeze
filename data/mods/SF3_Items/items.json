@@ -1,0 +1,142 @@
+[
+   {
+    "id": "power_armor_spearsling",
+    "type": "ARMOR",
+    "name": { "str": "外骨骼用长矛背带" },
+    "description": "一根系在外骨骼上的皮带子，可以拴住长矛，解放双手。小心别卡在门框上。激活它来收拔武器。",
+    "weight": "160 g",
+    "volume": "500 ml",
+    "price": 5200,
+    "price_postapoc": 250,
+    "to_hit": -1,
+    "material": [ "leather" ],
+    "symbol": "[",
+	"power_armor": true,
+    "looks_like": "bscabbard",
+    "color": "brown",
+	"coverage": 5,
+    "material_thickness": 1,
+	"encumbrance": 2,
+    "pocket_data": [
+      {
+        "holster": true,
+        "moves": 30,
+        "flag_restriction": [ "SHEATH_SPEAR" ],
+        "max_contains_volume": "4000 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "200 cm"
+      }
+    ],
+    "use_action": { "type": "holster", "holster_prompt": "收起长矛", "holster_msg": "你套好 %s。" },
+    "flags": [ "BELTED", "OVERSIZE", "ALLOWS_NATURAL_ATTACKS", "WATER_FRIENDLY", "ONLY_ONE" ,"IS_UPS" ]
+   },
+   {
+    "result": "power_armor_spearsling",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ARMOR",
+    "subcategory": "CSC_ARMOR_STORAGE",
+    "skill_used": "tailor",
+    "difficulty": 3,
+    "skills_required": [ "melee", 1 ],
+    "time": "45 m",
+    "autolearn": true,
+    "reversible": true,
+    "using": [ [ "tailoring_cotton_patchwork", 2 ] ],
+    "proficiencies": [ { "proficiency": "prof_closures" } ],
+    "components": [ [ [ "strap_large", 1, "LIST" ] ], [ [ "clasps", 1, "LIST" ] ] ]
+  },
+  {
+    "id": "power_armor_dimensional_anchor",
+    "type": "TOOL_ARMOR",
+    "category": "clothing",
+    "symbol": "[",
+	"power_armor": true,
+    "color": "light_gray",
+    "name": { "str": "外骨骼用五点式空间锚" },
+    "looks_like": "chestguard_hard",
+    "description": "A featureless, disc-shaped device mounted on a harness.  The words \"X.E.D.R.A\" and \"5-point anchor\" are inscribed on its front and back.",
+    "price": 150000,
+    "price_postapoc": 8000,
+    "material": [ "ceramic", "kevlar" ],
+    "weight": "1250 g",
+    "volume": "4500 ml",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "rigid": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [ "medium_atomic_battery_cell" ]
+      }
+    ],
+    "ammo": "battery",
+    "use_action": {
+      "type": "transform",
+      "msg": "A LED light in the %s flickers on.",
+      "target": "power_armor_dimensional_anchor_on",
+      "active": true,
+      "need_charges": 1,
+      "need_charges_msg": "It seems like this device needs power."
+    },
+    "encumbrance": 2,
+    "material_thickness": 2,
+    "flags": [ "OVERSIZE", "BELTED" ]
+  },
+  {
+    "id": "power_armor_dimensional_anchor_on",
+    "copy-from": "power_armor_dimensional_anchor",
+    "repairs_like": "power_armor_dimensional_anchor",
+    "type": "TOOL_ARMOR",
+    "name": { "str": "外骨骼用五点式空间锚（开）", "str_pl": "外骨骼用五点式空间锚（开）" },
+    "looks_like": "chestguard_hard",
+    "description": "The harness' shoulder mounted LED glows with a soft green hue.  There's no further indication of anything happening.",
+    "turns_per_charge": 100,
+    "revert_to": "power_armor_dimensional_anchor",
+    "use_action": {
+      "type": "transform",
+      "menu_text": "Turn off",
+      "msg": "The %s LED light flickers off.",
+      "target": "power_armor_dimensional_anchor"
+    },
+    "flags": [ "DIMENSIONAL_ANCHOR", "OVERSIZE", "BELTED" ]
+  },
+  {
+    "result": "power_armor_dimensional_anchor",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+	"autolearn": true,
+    "skill_used": "tailor",
+    "difficulty": 3,
+    "time": "20 m",
+    "qualities": [ { "id": "SEW", "level": 1 } ],
+    "components": [ [ [ "dimensional_anchor", 1 ], ["rope_6", 1] ] ]
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "seed_poppy",
+    "copy-from": "seed",
+    "name": { "str_sp": "变异罂粟种子" },
+	"looks_like": "seed",
+    "color": "green",
+    "description": "一些变异罂粟种子。",
+    "seed_data": { "plant_name": "变异罂粟花", "fruit": "poppy_bud", "byproducts": [ "withered" ], "grow": "91 days" }
+  },
+  {
+    "result": "seed_poppy",
+    "type": "recipe",
+    "activity_level": "NO_EXERCISE",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_SEEDS",
+    "skill_used": "survival",
+    "difficulty": 2,
+    "time": "5 m",
+    "autolearn": true,
+    "qualities": [ { "id": "CUT", "level": 1 } ],
+    "components": [ [ [ "poppy_bud", 1 ] ] ],
+    "flags": [ "ALLOW_ROTTEN" ]
+  }
+]

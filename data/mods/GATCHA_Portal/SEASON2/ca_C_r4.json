@@ -1,0 +1,18 @@
+[
+	{
+		"id":"ncard_s2_r4_no_01_C",
+		"type":"GENERIC",
+		"copy-from":"ncard_base_r4",
+		"name":{"str": "彩虹卡片(召唤/No.19 入侵兵器(扫荡)(恢复中))","str_pl":"彩虹卡片(召唤/No.19 入侵兵器(扫荡)(恢复中))"},
+		"description":"<color_light_cyan>这是一张神圣的，闪耀的卡片。可以从其他维度召唤出更高级，独特的生物。生物死亡后会重新出现此卡片，可以通过时间流逝或补充活力再次使用。</color>",
+		"symbol":"i",
+		"color":"light_cyan",
+		"flags":[ "UNBREAKABLE_MELEE","TRADER_AVOID","NO_UNLOAD" ],
+		"use_action":{"target": "ncard_s2_r4_no_01","msg": "卡片已可以使用。","need_charges": 210,"need_charges_msg": "卡片还没有恢复好。","menu_text":"复活","type": "transform"},
+		"relic_data":{ "charge_info": { "recharge_type": "periodic", "time": "4 h 48 m", "regenerate_ammo": true } },
+		"pocket_data":[ { "pocket_type": "MAGAZINE", "ammo_restriction": { "ncard_misc_powder_a": 210 } } ],
+		"price":1
+	}
+
+
+]

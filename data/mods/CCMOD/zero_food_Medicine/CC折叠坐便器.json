@@ -1,0 +1,56 @@
+[
+  {
+        "type" : "recipe",
+    "result": "CCingf_toilet",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC食品医疗",
+    "skill_used": "survival",
+    "time": "1second",
+    "autolearn": true,
+    "components": [ [ [ "CCMODcoin", 40 ] ] ]
+  },
+  {
+    "id": "CCingf_toilet",
+    "type": "TOOL",
+    "subtypes": [ "TOOL" ],
+    "category": "tool",
+    "name": { "str": "CC折叠坐便器" },
+    "description": "和原版一样，但可以折叠便携的坐便器，建造选项简单家具收回。（坐便器x 储液器√ 屠宰放血槽√）",
+    "looks_like": "scorecard",
+    "weight": "400 g",
+    "volume": "200 ml",
+    "price": "200 USD",
+    "price_postapoc": "100 USD",
+    "material": [ "steel" ],
+    "symbol": "=",
+    "color": "light_gray",
+    "use_action": { "type": "deploy_furn", "furn_type": "CCf_toilet" }
+  },
+  {
+    "type": "furniture",
+    "id": "CCf_toilet",
+    "name": "CC折叠坐便器",
+    "looks_like": "f_toilet",
+    "symbol": "o",
+    "color": "white",
+    "description": "和原版一样，但可以折叠便携的坐便器，建造选项简单家具收回。（坐便器x 储液器√ 屠宰放血槽√）",
+    "move_cost_mod": 2,
+    "coverage": 30,
+    "required_str": -1,
+    "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "MOUNTABLE", "LIQUIDCONT", "TOILET_WATER", "EASY_DECONSTRUCT" ],
+    "examine_action": "finite_water_source",
+    "deployed_item": "CCingf_toilet",
+    "deconstruct": { "items": [ { "item": "CCingf_toilet", "count": 1 } ] },
+    "bash": {
+      "str_min": 8,
+      "str_max": 30,
+      "sound": "porcelain breaking!",
+      "sound_fail": "whunk!",
+      "items": [
+        { "item": "CCingf_toilet", "count": 1 }
+      ]
+    }
+  }
+]

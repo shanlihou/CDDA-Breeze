@@ -1,0 +1,90 @@
+[
+  {
+    "type": "recipe",
+    "activity_level": "ACTIVE_EXERCISE",
+    "result": "链锯剑",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "mechanics",
+    "difficulty": 8,
+    "skills_required": [ "chemistry", 6 ],
+    "time": "6 h",
+    "reversible": true,
+    "decomp_learn": 4,
+    "autolearn": true,
+    "using": [ [ "welding_standard", 500 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_metalworking" },
+      { "proficiency": "prof_welding_basic", "fail_multiplier": 6.0 },
+      { "proficiency": "prof_welding" }
+    ],
+    "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "SCREW", "level": 1 }, { "id": "WRENCH", "level": 1 } ],
+    "components": [ [ [ "chainsaw_off", 1 ] ], [ [ "plut_cell", 5 ] ], [ [ "nanomaterial", 10 ] ], [ [ "mil_plate", 3 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "ACTIVE_EXERCISE",
+    "result": "锯刃链锯剑",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "mechanics",
+    "difficulty": 9,
+    "skills_required": [ "chemistry", 9 ],
+    "time": "12 h",
+    "reversible": true,
+    "decomp_learn": 4,
+    "autolearn": true,
+    "using": [ [ "welding_standard", 1500 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_metalworking" },
+      { "proficiency": "prof_welding_basic", "fail_multiplier": 6.0 },
+      { "proficiency": "prof_welding" }
+    ],
+    "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "SCREW", "level": 1 }, { "id": "WRENCH", "level": 1 } ],
+    "components": [ [ [ "chainsaw_off", 4 ] ], [ [ "plut_cell", 10 ] ], [ [ "nanomaterial", 20 ] ], [ [ "mil_plate", 8 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "ACTIVE_EXERCISE",
+    "result": "爆弹枪",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "mechanics",
+    "difficulty": 7,
+    "skills_required": [ "chemistry", 7 ],
+    "time": "6 h",
+    "reversible": true,
+    "decomp_learn": 4,
+    "autolearn": true,
+    "using": [ [ "welding_standard", 1500 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_metalworking" },
+      { "proficiency": "prof_welding_basic", "fail_multiplier": 6.0 },
+      { "proficiency": "prof_welding" }
+    ],
+    "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "SCREW", "level": 1 }, { "id": "WRENCH", "level": 1 } ],
+    "components": [ [ [ "plut_cell", 3 ] ], [ [ "nanomaterial", 10 ] ], [ [ "mil_plate", 1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "ACTIVE_EXERCISE",
+    "result": "大型爆弹枪",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "mechanics",
+    "difficulty": 9,
+    "skills_required": [ "chemistry", 9 ],
+    "time": "12 h",
+    "reversible": true,
+    "decomp_learn": 4,
+    "autolearn": true,
+    "using": [ [ "welding_standard", 1500 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_metalworking" },
+      { "proficiency": "prof_welding_basic", "fail_multiplier": 6.0 },
+      { "proficiency": "prof_welding" }
+    ],
+    "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "SCREW", "level": 1 }, { "id": "WRENCH", "level": 1 } ],
+    "components": [ [ [ "plut_cell", 6 ] ], [ [ "nanomaterial", 15 ] ], [ [ "mil_plate", 2 ] ] ]
+  }
+]

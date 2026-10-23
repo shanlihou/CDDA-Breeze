@@ -1,0 +1,146 @@
+[  
+  {
+    "type": "vehicle_part",
+    "id": "30mm_plating",
+    "name": { "str": "30mm装甲板" },
+    "symbol": ")",
+    "color": "cyan",
+    "broken_symbol": ")",
+    "broken_color": "cyan",
+    "durability": 5600,
+    "item": "30mm_steel_plate",
+    "location": "armor",
+    "requirements": {
+      "install": { "skills": [ [ "mechanics", 6 ] ], "time": "60 m", "using": [ [ "welding_standard", 20 ] ] },
+      "removal": { "skills": [ [ "mechanics", 2 ] ], "time": "30 m", "using": [ [ "vehicle_weld_removal", 10 ] ] },
+      "repair": { "skills": [ [ "mechanics", 4 ] ], "time": "60 m", "using": [ [ "welding_standard", 20 ] ] }
+    },
+    "flags": [ "ARMOR" ],
+    "breaks_into": [
+      { "item": "steel_lump", "count": [ 40, 60 ] },
+      { "item": "steel_chunk", "count": [ 40, 60 ] },
+      { "item": "scrap", "count": [ 40, 60 ] }
+    ],
+    "damage_reduction": { "all": 256 }
+  },
+  {
+    "type": "vehicle_part",
+    "id": "30mm_plating_hardening_steel",
+    "name": { "str": "30mm硬化装甲板" },
+    "symbol": ")",
+    "color": "cyan",
+    "broken_symbol": ")",
+    "broken_color": "cyan",
+    "durability": 5600,
+    "item": "30mm_lcement_steel",
+    "location": "armor",
+    "requirements": {
+      "install": { "skills": [ [ "mechanics", 6 ] ], "time": "60 m", "using": [ [ "welding_standard", 20 ] ] },
+      "removal": { "skills": [ [ "mechanics", 2 ] ], "time": "30 m", "using": [ [ "vehicle_weld_removal", 10 ] ] },
+      "repair": { "skills": [ [ "mechanics", 4 ] ], "time": "60 m", "using": [ [ "welding_standard", 20 ] ] }
+    },
+    "flags": [ "ARMOR" ],
+    "breaks_into": [
+      { "item": "steel_lump", "count": [ 40, 60 ] },
+      { "item": "steel_chunk", "count": [ 40, 60 ] },
+      { "item": "scrap", "count": [ 40, 60 ] }
+    ],
+    "damage_reduction": { "all": 358 }
+  },
+  {
+    "type": "vehicle_part",
+    "id": "50mm_plating",
+    "name": { "str": "50mm装甲板" },
+    "symbol": ")",
+    "color": "cyan",
+    "broken_symbol": ")",
+    "broken_color": "cyan",
+    "durability": 9560,
+    "item": "50mm_steel_plate",
+    "location": "armor",
+    "requirements": {
+      "install": { "skills": [ [ "mechanics", 7 ] ], "time": "60 m", "using": [ [ "welding_standard", 40 ] ] },
+      "removal": { "skills": [ [ "mechanics", 4 ] ], "time": "30 m", "using": [ [ "vehicle_weld_removal", 20 ] ] },
+      "repair": { "skills": [ [ "mechanics", 5 ] ], "time": "60 m", "using": [ [ "welding_standard", 30 ] ] }
+    },
+    "flags": [ "ARMOR" ],
+    "breaks_into": [
+      { "item": "steel_lump", "count": [ 80, 100 ] },
+      { "item": "steel_chunk", "count": [ 80, 100 ] },
+      { "item": "scrap", "count": [ 80, 100 ] }
+    ],
+    "damage_reduction": { "all": 427 }
+  },
+  {
+    "type": "vehicle_part",
+    "id": "50mm_plating_hardening_steel",
+    "name": { "str": "50mm硬化装甲板" },
+    "symbol": ")",
+    "color": "cyan",
+    "broken_symbol": ")",
+    "broken_color": "cyan",
+    "durability": 9560,
+    "item": "50mm_lcement_steel",
+    "location": "armor",
+    "requirements": {
+      "install": { "skills": [ [ "mechanics", 7 ] ], "time": "90 m", "using": [ [ "welding_standard", 40 ] ] },
+      "removal": { "skills": [ [ "mechanics", 4 ] ], "time": "45 m", "using": [ [ "vehicle_weld_removal", 20 ] ] },
+      "repair": { "skills": [ [ "mechanics", 5 ] ], "time": "90 m", "using": [ [ "welding_standard", 30 ] ] }
+    },
+    "flags": [ "ARMOR" ],
+    "breaks_into": [
+      { "item": "steel_lump", "count": [ 80, 100 ] },
+      { "item": "steel_chunk", "count": [ 80, 100 ] },
+      { "item": "scrap", "count": [ 80, 100 ] }
+    ],
+    "damage_reduction": { "all": 597 }
+  },
+  {
+    "type": "vehicle_part",
+    "id": "100mm_plating",
+    "name": { "str": "100mm装甲板" },
+    "symbol": ")",
+    "color": "cyan",
+    "broken_symbol": ")",
+    "broken_color": "cyan",
+    "durability": 18640,
+    "item": "100mm_steel_plate",
+    "location": "armor",
+    "requirements": {
+      "install": { "skills": [ [ "mechanics", 8 ] ], "time": "2 h", "using": [ [ "welding_standard", 80 ] ] },
+      "removal": { "skills": [ [ "mechanics", 4 ] ], "time": "1 h", "using": [ [ "vehicle_weld_removal", 40 ] ] },
+      "repair": { "skills": [ [ "mechanics", 6 ] ], "time": "2 h", "using": [ [ "welding_standard", 60 ] ] }
+    },
+    "flags": [ "ARMOR" ],
+    "breaks_into": [
+      { "item": "steel_lump", "count": [ 160, 200 ] },
+      { "item": "steel_chunk", "count": [ 160, 200 ] },
+      { "item": "scrap", "count": [ 160, 200 ] }
+    ],
+    "damage_reduction": { "all": 853 }
+  },
+  {
+    "type": "vehicle_part",
+    "id": "100mm_plating_hardening_steel",
+    "name": { "str": "100mm硬化装甲板" },
+    "symbol": ")",
+    "color": "cyan",
+    "broken_symbol": ")",
+    "broken_color": "cyan",
+    "durability": 18640,
+    "item": "100mm_lcement_steel",
+    "location": "armor",
+    "requirements": {
+      "install": { "skills": [ [ "mechanics", 8 ] ], "time": "2 h", "using": [ [ "welding_standard", 80 ] ] },
+      "removal": { "skills": [ [ "mechanics", 4 ] ], "time": "1 h", "using": [ [ "vehicle_weld_removal", 40 ] ] },
+      "repair": { "skills": [ [ "mechanics", 6 ] ], "time": "2 h", "using": [ [ "welding_standard", 60 ] ] }
+    },
+    "flags": [ "ARMOR" ],
+    "breaks_into": [
+      { "item": "steel_lump", "count": [ 160, 200 ] },
+      { "item": "steel_chunk", "count": [ 160, 200 ] },
+      { "item": "scrap", "count": [ 160, 200 ] }
+    ],
+    "damage_reduction": { "all": 1195 }
+  }
+]

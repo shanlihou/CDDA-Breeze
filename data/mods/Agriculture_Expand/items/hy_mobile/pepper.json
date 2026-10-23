@@ -1,0 +1,292 @@
+[	
+	{
+		"//": "催芽流程",
+		"type": "GENERIC",
+		"id": "hy_mobile_germination_box_active_5_pepper",
+		"name": { "str": "正在运行的水培催芽机（5辣椒）", "str_pl": "正在运行的水培催芽机（5辣椒）" },
+		"description": "水培催芽机正在运行催芽操作。在实验室找到的水培催芽机，没有具体商标或标志来识别生产厂家，但说明书显示它可以达到99.9%的催芽成功率。",
+		"copy-from": "hy_mobile_germination_box_active",
+		"use_action": {
+			"type": "delayed_transform",
+			"menu_text": "查看催芽情况",
+			"transform_age": 86400,
+			"not_ready_msg": "别急,催芽还没有完成，请等待一段时间后激活本物品。",
+			"msg": "辣椒种子催芽流程已经结束，你可以激活物品以获得发芽的种子。",
+			"moves": 200,
+			"target": "hy_mobile_germination_box_done_5_pepper"
+		}
+	},
+	{
+		"//": "催芽流程",
+		"type": "GENERIC",
+		"id": "hy_mobile_germination_box_active_10_pepper",
+		"name": { "str": "正在运行的水培催芽机（10辣椒）", "str_pl": "正在运行的水培催芽机（10辣椒）" },
+		"description": "水培催芽机正在运行催芽操作。在实验室找到的水培催芽机，没有具体商标或标志来识别生产厂家，但说明书显示它可以达到99.9%的催芽成功率。",
+		"copy-from": "hy_mobile_germination_box_active",
+		"use_action": {
+			"type": "delayed_transform",
+			"menu_text": "查看催芽情况",
+			"transform_age": 86400,
+			"not_ready_msg": "别急,催芽还没有完成，请等待一段时间后激活本物品。",
+			"msg": "辣椒种子催芽流程已经结束，你可以激活物品以获得发芽的种子。",
+			"moves": 200,
+			"target": "hy_mobile_germination_box_done_10_pepper"
+		}
+	},
+	{
+		"//": "催芽流程",
+		"type": "GENERIC",
+		"id": "hy_mobile_germination_box_active_20_pepper",
+		"name": { "str": "正在运行的水培催芽机（20辣椒）", "str_pl": "正在运行的水培催芽机（20辣椒）" },
+		"description": "水培催芽机正在运行催芽操作。在实验室找到的水培催芽机，没有具体商标或标志来识别生产厂家，但说明书显示它可以达到99.9%的催芽成功率。",
+		"copy-from": "hy_mobile_germination_box_active",
+		"use_action": {
+			"type": "delayed_transform",
+			"menu_text": "查看催芽情况",
+			"transform_age": 86400,
+			"not_ready_msg": "别急,催芽还没有完成，请等待一段时间后激活本物品。",
+			"msg": "辣椒种子催芽流程已经结束，你可以激活物品以获得发芽的种子。",
+			"moves": 200,
+			"target": "hy_mobile_germination_box_done_20_pepper"
+		}
+	},
+	{
+		"//": "催芽流程",
+		"type": "GENERIC",
+		"id": "hy_mobile_germination_box_active_50_pepper",
+		"name": { "str": "正在运行的水培催芽机（50辣椒）", "str_pl": "正在运行的水培催芽机（50辣椒）" },
+		"description": "水培催芽机正在运行催芽操作。在实验室找到的水培催芽机，没有具体商标或标志来识别生产厂家，但说明书显示它可以达到99.9%的催芽成功率。",
+		"copy-from": "hy_mobile_germination_box_active",
+		"use_action": {
+			"type": "delayed_transform",
+			"menu_text": "查看催芽情况",
+			"transform_age": 86400,
+			"not_ready_msg": "别急,催芽还没有完成，请等待一段时间后激活本物品。",
+			"msg": "辣椒种子催芽流程已经结束，你可以激活物品以获得发芽的种子。",
+			"moves": 200,
+			"target": "hy_mobile_germination_box_done_50_pepper"
+		}
+	},
+	{
+		"//": "催芽流程",
+		"type": "GENERIC",
+		"id": "hy_mobile_germination_box_done_5_pepper",
+		"name": { "str": "催芽完毕的水培催芽机（5辣椒）", "str_pl": "催芽完毕的水培催芽机（5辣椒）" },
+		"description": "水培催芽机已经完成了辣椒种子催芽操作，可以激活或者拆解以获得发芽的种子。在实验室找到的水培催芽机，没有具体商标或标志来识别生产厂家，但说明书显示它可以达到99.9%的催芽成功率。",
+		"copy-from": "hy_mobile_germination_box_done",
+		"use_action": "DISASSEMBLE"
+	},
+	{
+		"//": "催芽流程",
+		"type": "GENERIC",
+		"id": "hy_mobile_germination_box_done_10_pepper",
+		"name": { "str": "催芽完毕的水培催芽机（10辣椒）", "str_pl": "催芽完毕的水培催芽机（10辣椒）" },
+		"description": "水培催芽机已经完成了辣椒种子催芽操作，可以激活或者拆解以获得发芽的种子。在实验室找到的水培催芽机，没有具体商标或标志来识别生产厂家，但说明书显示它可以达到99.9%的催芽成功率。",
+		"copy-from": "hy_mobile_germination_box_done",
+		"use_action": "DISASSEMBLE"
+	},
+	{
+		"//": "催芽流程",
+		"type": "GENERIC",
+		"id": "hy_mobile_germination_box_done_20_pepper",
+		"name": { "str": "催芽完毕的水培催芽机（20辣椒）", "str_pl": "催芽完毕的水培催芽机（20辣椒）" },
+		"description": "水培催芽机已经完成了辣椒种子催芽操作，可以激活或者拆解以获得发芽的种子。在实验室找到的水培催芽机，没有具体商标或标志来识别生产厂家，但说明书显示它可以达到99.9%的催芽成功率。",
+		"copy-from": "hy_mobile_germination_box_done",
+		"use_action": "DISASSEMBLE"
+	},
+	{
+		"//": "催芽流程",
+		"type": "GENERIC",
+		"id": "hy_mobile_germination_box_done_50_pepper",
+		"name": { "str": "催芽完毕的水培催芽机（50辣椒）", "str_pl": "催芽完毕的水培催芽机（50辣椒）" },
+		"description": "水培催芽机已经完成了辣椒种子催芽操作，可以激活或者拆解以获得发芽的种子。在实验室找到的水培催芽机，没有具体商标或标志来识别生产厂家，但说明书显示它可以达到99.9%的催芽成功率。",
+		"copy-from": "hy_mobile_germination_box_done",
+		"use_action": "DISASSEMBLE"
+	},
+	{
+		"//": "催芽流程",
+		"type": "GENERIC",
+		"id": "hy_mobile_simple_germination_box_active_10_pepper",
+		"name": { "str": "正在催芽中的简易水培催芽皿（10辣椒）", "str_pl": "正在催芽中的简易水培催芽皿（10辣椒）" },
+		"description": "透过塑料袋，你能看到种子发芽过程中的实时状态。从书里学到的由一张纸巾和一个碗（盘）合成的简易催芽器皿，据说催芽成功率高达90%。",
+		"copy-from": "hy_mobile_simple_germination_box_active",
+		"use_action": {
+			"type": "delayed_transform",
+			"menu_text": "查看催芽情况",
+			"transform_age": 86400,
+			"not_ready_msg": "别急,催芽还没有完成，请等待一段时间后激活本物品。",
+			"msg": "辣椒种子催芽流程已经结束，你可以激活物品以获得发芽的种子。",
+			"moves": 200,
+			"target": "hy_mobile_simple_germination_box_done_10_pepper"
+		}
+	},
+	{
+		"//": "催芽流程",
+		"type": "GENERIC",
+		"id": "hy_mobile_simple_germination_box_done_10_pepper",
+		"name": { "str": "催芽完毕的简易水培催芽皿（10辣椒）", "str_pl": "催芽完毕的简易水培催芽皿（10辣椒）" },
+		"description": "透过塑料袋，你能看到种子已经发芽，但有零星的种子并没有反应。从书里学到的由一张纸巾和一个碗（盘）合成的简易催芽器皿，据说催芽成功率高达90%。",
+		"copy-from": "hy_mobile_simple_germination_box_done",
+		"use_action": "DISASSEMBLE"
+	},
+	
+	
+	{
+		"//": "催芽流程",
+		"type": "TOOL",
+		"id": "hy_mobile_germinated_seed_pepper",
+		"name": { "str": "发芽的种子（辣椒）", "str_pl": "发芽的种子（辣椒）" },
+		"description": "一颗刚刚发芽的辣椒种子。",
+		"copy-from": "hy_mobile_germinated_seed",
+		"revert_to": "hy_mobile_germinated_seed_pepper",
+		"use_action": {
+			"type": "transform",
+			"menu_text": "将发芽的种子放入育苗钵",
+			"msg": "已将发芽种子装填进入育苗钵，请继续装填育苗土。",
+			"moves": 200,
+			"active": true,
+			"need_charges": 1,
+			"need_charges_msg": "请装填育苗钵。",
+			"target": "hy_mobile_seedling_bowl_has_seed_pepper"
+		}
+	},
+	
+	
+	{
+		"//": "育苗流程",
+		"type": "TOOL",
+		"id": "hy_mobile_seedling_bowl_has_seed_pepper",
+		"name": { "str": "含有发芽种子的育苗钵（辣椒）", "str_pl": "含有发芽种子的育苗钵（辣椒）" },
+		"description": "一个水培育苗过程中需要用到的育苗钵。辣椒种子已经放入育苗钵，请填充育苗土。",
+		"copy-from": "hy_mobile_seedling_bowl_has_seed",
+		"revert_to": "hy_mobile_seedling_bowl_has_seed_pepper",
+		"use_action": {
+			"type": "transform",
+			"menu_text": "装填育苗土",
+			"msg": "已装填育苗土，请等待育苗阶段完成。",
+			"moves": 200,
+			"need_charges": 1,
+			"need_charges_msg": "请装填育苗土。",
+			"target": "hy_mobile_seedling_bowl_in_the_nursery_pepper"
+		}
+	},
+	{
+		"//": "育苗流程",
+		"type": "GENERIC",
+		"id": "hy_mobile_seedling_bowl_in_the_nursery_pepper",
+		"name": { "str": "正在育苗的育苗钵（辣椒）", "str_pl": "正在育苗的育苗钵（辣椒）" },
+		"description": "一个水培育苗过程中需要用到的育苗钵。种子和育苗土已经装填进育苗钵，请等待育苗完成。",
+		"copy-from": "hy_mobile_seedling_bowl_in_the_nursery",
+		"use_action": {
+			"type": "delayed_transform",
+			"menu_text": "查看育苗情况",
+			"transform_age": 259200,
+			"not_ready_msg": "别急,育苗还没有完成，请等待一段时间后激活本物品。",
+			"msg": "辣椒种子育苗流程已经结束，你可以激活物品以获得植株幼苗。",
+			"moves": 200,
+			"target": "hy_mobile_seedling_bowl_seedling_pepper"
+		}
+	},
+	{
+		"//": "育苗流程",
+		"type": "GENERIC",
+		"id": "hy_mobile_seedling_bowl_seedling_pepper",
+		"name": { "str": "育苗完成的育苗钵（辣椒）", "str_pl": "育苗完成的育苗钵（辣椒）" },
+		"description": "一个水培育苗过程中需要用到的育苗钵。育苗阶段结束，请激活或拆解物品以获得植株幼苗。",
+		"copy-from": "hy_mobile_seedling_bowl_seedling",
+		"use_action": "DISASSEMBLE"
+	},
+	{
+		"//": "育苗流程",
+		"type": "TOOL",
+		"id": "hy_mobile_seedling_pepper",
+		"name": { "str": "植株幼苗（辣椒）", "str_pl": "植株幼苗（辣椒）" },
+		"description": "一株植物幼苗。",
+		"copy-from": "hy_mobile_seedling",
+		"revert_to": "hy_mobile_seedling_pepper",
+		"use_action": {
+			"type": "transform",
+			"menu_text": "将幼苗套入海绵中",
+			"msg": "已将植株幼苗装填进入定植篮海绵，请继续装填定植篮。",
+			"moves": 200,
+			"active": true,
+			"need_charges": 1,
+			"need_charges_msg": "请装填定植篮海绵。",
+			"target": "hy_mobile_planting_basket_spongia_seedling_pepper"
+		}
+	},
+	
+	
+	{
+		"//": "定植流程",
+		"type": "TOOL",
+		"id": "hy_mobile_planting_basket_spongia_seedling_pepper",
+		"name": { "str": "被海绵固定的植株幼苗（辣椒）", "str_pl": "被海绵固定的植株幼苗（辣椒）" },
+		"description": "一株被海绵固定的植物幼苗。",
+		"copy-from": "hy_mobile_planting_basket_spongia_seedling",
+		"revert_to": "hy_mobile_planting_basket_spongia_seedling_pepper",
+		"use_action": {
+			"type": "transform",
+			"menu_text": "将幼苗放入定植篮固定",
+			"msg": "已将植株幼苗装填进入定植篮，请将其与便携式水培箱以配方形式合成。",
+			"moves": 200,
+			"need_charges": 1,
+			"need_charges_msg": "请装填定植篮。",
+			"target": "hy_mobile_planting_basket_seedling_pepper"
+		}
+	},
+	{
+		"//": "定植流程",
+		"type": "GENERIC",
+		"id": "hy_mobile_planting_basket_seedling_pepper",
+		"name": { "str": "装有植株幼苗的定植篮（辣椒）", "str_pl": "装有植株幼苗的定植篮（辣椒）" },
+		"description": "一株被海绵和定植篮固定的植物幼苗。",
+		"copy-from": "hy_mobile_planting_basket_seedling"
+	},
+	
+	
+	{
+		"//": "水培流程",
+		"type": "TOOL",
+		"id": "hy_mobile_adv_m_seedling_pepper",
+		"name": { "str": "单层便携式水培箱（辣椒幼苗）", "str_pl": "单层便携式水培箱（辣椒幼苗）" },
+		"description": "这是一个只能容纳<color_red>10株</color>植物的水培箱，内部植株目前正处于幼苗阶段。",
+		"copy-from": "hy_mobile_adv_m_seedling",
+		"looks_like": "hy_mobile_adv_m_seedling",
+		"use_action": {
+			"type": "delayed_transform",
+			"menu_text": "查看植株生长情况",
+			"transform_age": 1296000,
+			"not_ready_msg": "别急,植株还没进入下一阶段的生长周期。",
+			"msg": "辣椒已经成长到下一阶段，请耐心等待至收获。",
+			"moves": 200,
+			"target": "hy_mobile_adv_m_mature_pepper"
+		}
+	},
+	{
+		"type": "TOOL",
+		"id": "hy_mobile_adv_m_mature_pepper",
+		"name": { "str": "单层便携式水培箱（成熟的辣椒植株）", "str_pl": "单层便携式水培箱（成熟的辣椒植株）" },
+		"description": "这是一个只能容纳<color_red>10株</color>植物的水培箱，内部植株目前正处于成熟但不可收获阶段。",
+		"copy-from": "hy_mobile_adv_m_mature",
+		"looks_like": "hy_mobile_adv_m_mature",
+		"use_action": {
+			"type": "delayed_transform",
+			"menu_text": "查看植株生长情况",
+			"transform_age": 1296000,
+			"not_ready_msg": "别急,植株还没进入下一阶段的生长周期。",
+			"msg": "辣椒已经成长到下一阶段，请继续耐心等待至收获。",
+			"moves": 200,
+			"target": "hy_mobile_adv_m_harvest_pepper"
+		}
+	},
+	{
+		"type": "GENERIC",
+		"id": "hy_mobile_adv_m_harvest_pepper",
+		"name": { "str": "单层便携式水培箱（可收获的辣椒植株）", "str_pl": "单层便携式水培箱（可收获的辣椒植株）" },
+		"description": "这是一个只能容纳<color_red>10株</color>植物的水培箱，目前正处于收获阶段，请激活或者拆卸此物品以获得作物。",
+		"copy-from": "hy_mobile_adv_m_harvest",
+		"looks_like": "hy_mobile_adv_m_harvest",
+		"use_action": "DISASSEMBLE"
+	}
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "id": "ibm5100",
+    "type": "TOOL",
+    "category": "tools",
+    "name": {
+      "str": "IBM 5100",
+      "str_pl": "IBMs 5100"
+    },
+    "description": "现在，要是你有一台时间机器就好了……",
+    "volume": "99 L",
+    "weight": "25000 g",
+    "longest_side": "61 cm",
+    "//": "Estimated size from pictures: 21 x 12 x 24 inches",
+    "price": 500000,
+    "price_postapoc": 5000,
+    "to_hit": {
+      "balance": "clumsy",
+      "grip": "none",
+      "length": "short",
+      "surface": "any"
+    },
+    "material": [
+      "plastic",
+      "aluminum"
+    ],
+    "symbol": ",",
+    "color": "light_gray",
+    "bashing": 8,
+    "use_action": [
+      {
+        "target": "ibm5100_lit",
+        "type": "transform",
+        "msg": "你打开了电脑。",
+        "menu_text": "开启",
+        "active": true
+      }
+    ],
+    "flags": [
+      "WATCH",
+      "WATER_BREAK"
+    ]
+  },
+  {
+    "id": "ibm5100_lit",
+    "type": "TOOL",
+    "name": {
+      "str": "IBM 5100（开启）",
+      "str_pl": "IBM 5100（开启）"
+    },
+    "copy-from": "ibm5100",
+    "description": "尽管没有连接到电源插座，这个设备却能开机。真奇怪……",
+    "use_action": [
+      {
+        "target": "ibm5100",
+        "type": "transform",
+        "msg": "你关闭了电脑。",
+        "menu_text": "关闭"
+      }
+    ],
+    "flags": [
+      "LIGHT_20",
+      "TRADER_AVOID",
+      "WATCH",
+      "WATER_BREAK"
+    ]
+  }
+]

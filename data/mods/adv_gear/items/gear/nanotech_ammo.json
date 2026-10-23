@@ -1,0 +1,222 @@
+[
+  {
+    "id": "metal_nanopowder",
+    "type": "AMMO",
+    "symbol": ";",
+    "color": "green",
+    "name": {
+      "str": "纳米金属粉末"
+    },
+    "description": "利用纳米技术制作的金属粉末,可以用于制造特殊的纳米炮台.",
+    "price": 100,
+    "material": [
+      "steel"
+    ],
+    "ammo_type": "metal_nanopowder",
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 5,
+      "armor_penetration": 2
+    },
+    "range": 12,
+    "dispersion": 0,
+    "recoil": 0,
+    "count": 100,
+    "stack_size": 10,
+     //"phase": "liquid",     //液体形态
+    "weight": 20,
+    "volume": 1,
+    "effects": [
+      "NOGIB",
+      "NEVER_MISFIRES",
+      "SHOT"
+    ],
+    "flags": [
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "nanite_ammo",
+    "type": "AMMO",
+    "symbol": ";",
+    "color": "green",
+    "name": {
+      "str": "纳米子弹"
+    },
+    "description": "一批拥有生产说明的纳米子弹原料",
+    "price": 12000,
+    "material": "steel",
+    "ammo_type": "nanite_ammo",
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 5,
+      "armor_penetration": 2
+    },
+    "range": 12,
+    "dispersion": 0,
+    "recoil": 0,
+    "loudness": 0,
+    "count": 1000,
+    "stack_size": 200,
+    "weight": 1,
+    "volume": "200ml",
+    "effects": [
+      "NOGIB",
+      "NEVER_MISFIRES"
+    ],
+    "flags": [
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "nanite_dart",
+    "type": "AMMO",
+    "symbol": ";",
+    "color": "green",
+    "name": {
+      "str": "单分子飞镖原料"
+    },
+    "description": "一批拥有生产说明的单分子飞镖原料",
+    "price": 12000,
+    "material": "steel",
+    "ammo_type": "nanite_ammo",
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 5,
+      "armor_penetration": 2
+    },
+    "range": 12,
+    "dispersion": 0,
+    "recoil": 0,
+    "loudness": 0,
+    "count": 1000,
+    "stack_size": 200,
+    "weight": 1,
+    "volume": "200ml",
+    "effects": [
+      "NOGIB",
+      "NEVER_MISFIRES"
+    ],
+    "flags": [
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "nanite_blade",
+    "type": "AMMO",
+    "symbol": ";",
+    "color": "green",
+    "name": {
+      "str": "单分子刀刃原料"
+    },
+    "description": "一批拥有生产说明的单分子刀刃原料.",
+    "price": 12000,
+    "material": "steel",
+    "ammo_type": "nanite_ammo",
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 35,
+      "armor_penetration": 2
+    },
+    "range": 6,
+    "dispersion": 40,
+    "recoil": 10,
+    "loudness": 2,
+    "count": 250,
+    "stack_size": 50,
+    "//": "Intended to be used in small bursts",
+    "weight": 4,
+    "volume": "200ml",
+    "effects": [
+      "NEVER_MISFIRES"
+    ],
+    "flags": [
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "nanite_wire",
+    "type": "AMMO",
+    "symbol": ";",
+    "color": "green",
+    "name": {
+      "str": "单分子金属丝原料"
+    },
+    "description": "一批拥有生产说明的单分子金属丝原料,警告:这是致命的.",
+    "price": 12000,
+    "material": "steel",
+    "ammo_type": "nanite_ammo",
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 1,
+      "armor_penetration": 1
+    },
+    "range": 0,
+    "dispersion": 50,
+    "recoil": 120,
+    "loudness": 5,
+    "count": 50,
+    "stack_size": 50,
+    "//": "Intended to be used in individual shots",
+    "weight": 20,
+    "volume": 1,
+    "effects": [
+      "NEVER_MISFIRES",
+      "CUSTOM_EXPLOSION"
+    ],
+    "explode_in_fire": false,
+    "explosion": {
+      "power": 2,
+      "distance_factor": 0.01,
+      "shrapnel": {
+        "casing_mass": 2,
+        "fragment_mass": 0.01
+      }
+    },
+    "flags": [
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "nanite_deathcloud",
+    "type": "AMMO",
+    "symbol": ";",
+    "color": "green",
+    "name": {
+      "str": "单分子金属丝原料"
+    },
+    "description": "用于生产一大团单分子金属丝的原料,警告:这是致命的.",
+    "price": 12000,
+    "material": "steel",
+    "ammo_type": "nanite_ammo",
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 0
+    },
+    "range": 0,
+    "dispersion": 150,
+    "recoil": 0,
+    "loudness": 5,
+    "count": 5,
+    "stack_size": 5,
+    "//": "Intended to be used in individual shots",
+    "weight": 200,
+    "volume": 1,
+    "effects": [
+      "NEVER_MISFIRES",
+      "CUSTOM_EXPLOSION"
+    ],
+    "explode_in_fire": false,
+    "explosion": {
+      "power": 140,
+      "distance_factor": 0.01,
+      "shrapnel": {
+        "casing_mass": 250,
+        "fragment_mass": 0.15
+      }
+    },
+    "flags": [
+      "TRADER_AVOID"
+    ]
+  }
+]

@@ -1,0 +1,51 @@
+[
+  {
+    "type": "material",
+    "id": "arcthitecture",
+    "name": "构造体",
+    "density": 99,
+    "specific_heat_liquid": 1,
+    "specific_heat_solid": 1,
+    "latent_heat": 3000,
+    "reinforces": true,
+    "bash_resist": 99,
+    "cut_resist": 99,
+    "bullet_resist": 99,
+    "acid_resist": 99,
+    "fire_resist": 99,
+    "elec_resist": 99,
+    "chip_resist": 99,
+    "wind_resist": 99,
+    "repaired_with": "arcthitecture_particulate",
+    "dmg_adj": [ "裂纹", "碎裂", "损坏", "粉碎" ],
+    "bash_dmg_verb": "碎裂",
+    "cut_dmg_verb": "刮花",
+    "fuel_data": {
+      "energy": "60000 kJ",
+      "explosion_data": { "chance_hot": 13, "chance_cold": 13, "factor": 1, "size_factor": 1 }
+    }
+  },
+  {
+    "type": "material",
+    "id": "s_arcthitecture",
+    "name": "超构造体",
+    "density": 999,
+    "specific_heat_liquid": 10,
+    "specific_heat_solid": 10,
+    "latent_heat": 30000,
+    "breathability": "SECOND_SKIN",
+    "soft": true,
+    "reinforces": true,
+    "bash_resist": 999,
+    "cut_resist": 999,
+    "bullet_resist": 999,
+    "acid_resist": 999,
+    "fire_resist": 999,
+    "elec_resist": 999,
+    "chip_resist": 999,
+    "wind_resist": 99,
+    "dmg_adj": [ "裂纹", "碎裂", "损坏", "粉碎" ],
+    "bash_dmg_verb": "碎裂",
+    "cut_dmg_verb": "刮花"
+  }
+]

@@ -1,0 +1,351 @@
+[
+
+
+
+  {
+    "//1": "米·戈奴役者",
+    "type": "MONSTER",
+    "id": "mon_mi_go_slaver",
+    "copy-from": "mon_mi_go_slaver",
+    "extend": {
+      "categories": [
+        "CLASSIC"
+      ]
+    },
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_mi_go_slaver_death_drops", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "米·戈外科医生",
+    "type": "MONSTER",
+    "id": "mon_mi_go_surgeon",
+    "copy-from": "mon_mi_go_surgeon",
+    "extend": {
+      "categories": [
+        "CLASSIC"
+      ]
+    },
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_mi_go_surgeon_death_drops", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "米·戈守卫",
+    "type": "MONSTER",
+    "id": "mon_mi_go_guard",
+    "copy-from": "mon_mi_go_guard",
+    "extend": {
+      "categories": [
+        "CLASSIC"
+      ]
+    },
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_mi_go_guard_death_drops", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "米·戈战士",
+    "type": "MONSTER",
+    "id": "mon_mi_go_myrmidon",
+    "copy-from": "mon_mi_go_myrmidon",
+    "extend": {
+      "categories": [
+        "CLASSIC"
+      ]
+    },
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_mi_go_myrmidon_death_drops", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "米·戈侦查兵",
+    "type": "MONSTER",
+    "id": "mon_mi_go_scout",
+    "copy-from": "mon_mi_go_scout",
+    "extend": {
+      "categories": [
+        "CLASSIC"
+      ]
+    },
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_mi_go_scout_death_drops", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "苍白人体",
+    "type": "MONSTER",
+    "id": "mon_blank",
+    "copy-from": "mon_blank",
+    "extend": {
+      "categories": [
+        "CLASSIC"
+      ]
+    },
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_blank_death_drops", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "呼吸者",
+    "type": "MONSTER",
+    "id": "mon_breather",
+    "copy-from": "mon_breather",
+    "extend": {
+      "categories": [
+        "CLASSIC"
+      ]
+    },
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_breather_death_drops", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "呼吸者2",
+    "type": "MONSTER",
+    "id": "mon_breather_hub",
+    "copy-from": "mon_breather_hub",
+    "extend": {
+      "categories": [
+        "CLASSIC"
+      ]
+    },
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_breather_hub_death_drops", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "狗",
+    "type": "MONSTER",
+    "id": "mon_dog_thing",
+    "copy-from": "mon_dog_thing",
+    "extend": {
+      "categories": [
+        "CLASSIC"
+      ]
+    },
+    "death_drops": { "subtype": "collection", "groups": [ [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "隐形猎手",
+    "type": "MONSTER",
+    "id": "mon_unseen_hunter",
+    "copy-from": "mon_unseen_hunter",
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_unseen_hunter_death_drops", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "延达罗斯猎犬",
+    "type": "MONSTER",
+    "id": "mon_hound_tindalos",
+    "copy-from": "mon_hound_tindalos",
+    "extend": {
+      "flags": [
+        "COLDPROOF"
+      ],
+      "categories": [
+        "CLASSIC"
+      ]
+    },
+    "death_drops": { "subtype": "collection", "groups": [ [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "延达罗斯猎犬2",
+    "type": "MONSTER",
+    "id": "mon_hound_tindalos_afterimage",
+    "copy-from": "mon_hound_tindalos_afterimage",
+    "extend": {
+      "flags": [
+        "COLDPROOF"
+      ],
+      "categories": [
+        "CLASSIC"
+      ]
+    },
+    "death_drops": { "subtype": "collection", "groups": [ [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "幽灵",
+    "type": "MONSTER",
+    "id": "mon_shadow",
+    "copy-from": "mon_shadow",
+    "extend": {
+      "flags": [
+        "COLDPROOF"
+      ],
+      "categories": [
+        "CLASSIC"
+      ]
+    },
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "cold",
+        "amount": 3
+      }
+    ],
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_shadow_death_drops", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "幽灵蛇",
+    "type": "MONSTER",
+    "id": "mon_shadow_snake",
+    "copy-from": "mon_shadow_snake",
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "cold",
+        "amount": 6
+      }
+    ],
+    "extend": {
+      "flags": [
+        "COLDPROOF"
+      ],
+      "categories": [
+        "CLASSIC"
+      ]
+    },
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_shadow_snake_death_drops", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "漩涡",
+    "type": "MONSTER",
+    "id": "mon_vortex",
+    "copy-from": "mon_vortex",
+    "aggression": 5,
+    "//": "FFS why are they harmless",
+    "melee_skill": 6,
+    "melee_dice": 1,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "electric",
+        "amount": 5
+      }
+    ],
+    "vision_day": 5,
+    "vision_night": 5,
+    "anger_triggers": [
+      "STALK",
+      "HURT",
+      "FRIEND_ATTACKED"
+    ],
+    "placate_triggers": [
+      "PLAYER_WEAK"
+    ],
+    "extend": {
+      "flags": [
+        "SEES"
+      ],
+      "categories": [
+        "CLASSIC"
+      ]
+    },
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_vortex_death_drops", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "幻形怪",
+    "type": "MONSTER",
+    "id": "mon_shifting_mass",
+    "copy-from": "mon_shifting_mass",
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_shifting_mass_death_drops", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "无法之形",
+    "type": "MONSTER",
+    "id": "mon_impossible_shape",
+    "copy-from": "mon_impossible_shape",
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_impossible_shape_death_drops", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "空空如也",
+    "type": "MONSTER",
+    "id": "mon_absence",
+    "copy-from": "mon_absence",
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_absence_death_drops", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "巨型附肢",
+    "type": "MONSTER",
+    "id": "mon_giant_appendage",
+    "copy-from": "mon_giant_appendage",
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_giant_appendage_death_drops", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "往昔回忆",
+    "type": "MONSTER",
+    "id": "mon_memory",
+    "copy-from": "mon_memory",
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_memory_death_drops", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "裂隙蜂群",
+    "type": "MONSTER",
+    "id": "mon_swarm_structure",
+    "copy-from": "mon_swarm_structure",
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_swarm_structure_death_drops", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "幻形利刃",
+    "type": "MONSTER",
+    "id": "mon_twisting_blade",
+    "copy-from": "mon_twisting_blade",
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_twisting_blade_death_drops", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "不明材料块",
+    "type": "MONSTER",
+    "id": "mon_archunk_weak",
+    "copy-from": "mon_archunk_weak",
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_archunk_weak_death_drops", 100 ], [ "ps_artifact_weak", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "不明材料块（搏动中）",
+    "type": "MONSTER",
+    "id": "mon_archunk_medium",
+    "copy-from": "mon_archunk_medium",
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_archunk_medium_death_drops", 100 ], [ "ps_artifact_medium", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "不明材料块（共鸣中）",
+    "type": "MONSTER",
+    "id": "mon_archunk_strong",
+    "copy-from": "mon_archunk_strong",
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_archunk_strong_death_drops", 100 ], [ "ps_artifact_strong", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "人",
+    "type": "MONSTER",
+    "id": "mon_hallucinator",
+    "copy-from": "mon_hallucinator",
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_hallucinator_death_drops", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "罪恶",
+    "type": "MONSTER",
+    "id": "mon_guilt",
+    "copy-from": "mon_guilt",
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_guilt_death_drops", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "怠惰",
+    "type": "MONSTER",
+    "id": "mon_sloth",
+    "copy-from": "mon_sloth",
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_sloth_death_drops", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  }
+
+
+]

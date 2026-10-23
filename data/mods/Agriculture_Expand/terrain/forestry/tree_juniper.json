@@ -1,0 +1,67 @@
+[
+	{
+		"type": "terrain",
+		"id": "forestry_t_tree_juniper_fertilized",
+		"name": "已经施过肥的杜松子树",
+		"copy-from": "t_tree_juniper",
+		"symbol": "7",
+		"color": [ "light_green", "light_green", "blue_green", "brown" ],
+		"examine_action": "harvest_ter",
+		"looks_like": "t_tree_juniper",
+		"harvest_by_season": [
+			{
+				"seasons": [ "autumn" ],
+				"id": "forestry_fertilized_juniper_harv"
+			}
+		]
+	},
+	{
+		"id": "forestry_fertilized_juniper_harv",
+		"type": "harvest",
+		"entries": [ { "drop": "juniper", "base_num": [ 18, 36 ], "scale_num": [ 0.1, 0.7 ] } ]
+	},
+
+	{
+		"type": "terrain",
+		"id": "forestry_t_tree_juniper_pruned",
+		"name": "已经修剪过的杜松子树",
+		"copy-from": "t_tree_juniper",
+		"symbol": "7",
+		"color": [ "light_green", "light_green", "blue_green", "brown" ],
+		"examine_action": "harvest_ter",
+		"looks_like": "t_tree_juniper",
+		"harvest_by_season": [
+			{
+				"seasons": [ "autumn" ],
+				"id": "forestry_pruned_juniper_harv"
+			}
+		]
+	},
+	{
+		"id": "forestry_pruned_juniper_harv",
+		"type": "harvest",
+		"entries": [ { "drop": "juniper", "base_num": [ 13, 26 ], "scale_num": [ 0, 0.6 ] } ]
+	},
+
+	{
+		"type": "terrain",
+		"id": "forestry_t_tree_juniper_fertilized_pruned",
+		"name": "施过肥并修剪过的杜松子树",
+		"copy-from": "t_tree_juniper",
+		"symbol": "7",
+		"color": [ "light_green", "light_green", "blue_green", "brown" ],
+		"examine_action": "harvest_ter",
+		"looks_like": "t_tree_juniper",
+		"harvest_by_season": [
+			{
+				"seasons": [ "autumn" ],
+				"id": "forestry_fertilized_pruned_juniper_harv"
+			}
+		]
+	},
+	{
+		"id": "forestry_fertilized_pruned_juniper_harv",
+		"type": "harvest",
+		"entries": [ { "drop": "juniper", "base_num": [ 30, 60 ], "scale_num": [ 0.2, 0.8 ] } ]
+	}
+]

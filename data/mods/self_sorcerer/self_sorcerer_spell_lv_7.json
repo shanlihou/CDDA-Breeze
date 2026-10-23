@@ -1,0 +1,853 @@
+[
+  {
+    "id": "spell_craft_sorcerer_lv7_kill",
+    "type": "SPELL",
+    "name": "术士-Lv7-死亡之指",
+    "description": "对目标造成真实伤害。",
+    "components": "spell_sorcerer_use_item_7",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "min_damage": 257,
+    "max_damage": 516,
+    "damage_type": "pure",
+    "min_range": 15,
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_7",
+    "difficulty": 7,
+    "max_level": 0,
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv7_exhausted",
+    "type": "SPELL",
+    "name": "术士-Lv7-力竭波",
+    "description": "使范围内敌人力竭，力量-8，敏捷-8，速度-50，持续20分钟+20x智力秒。",
+    "components": "spell_sorcerer_use_item_7",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "shape": "cone",
+    "effect_str": "effect_sorcerer_exhausted",
+    "damage_type": "pure",
+    "min_damage": 0,
+    "base_casting_time": 50,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_7",
+    "difficulty": 7,
+    "min_range": 15,
+    "min_aoe": 60,
+    "max_level": 0,
+    "base_energy_cost": 0,
+    "min_duration": 148000,
+    "max_duration": 148000
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_sorcerer_exhausted",
+    "name": [
+      "力竭波"
+    ],
+    "desc": [
+      "你力竭了。"
+    ],
+    "apply_message": "你力竭了！",
+    "remove_message": "你不再力竭。",
+    "max_intensity": 999,
+    "int_dur_factor": "5 m",
+    "rating": "bad",
+    "base_mods": {
+      "str_mod": [
+        -8
+      ],
+      "dex_mod": [
+        -8
+      ],
+      "speed_mod": [
+        -50
+      ]
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv7_armbull",
+    "type": "SPELL",
+    "name": "术士-Lv7-高等防护箭矢",
+    "description": "使目标获得对箭矢或子弹的强力抗性，持续20分钟+20x智力秒。",
+    "components": "spell_sorcerer_use_item_7",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "min_range": 8,
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_7",
+    "difficulty": 7,
+    "max_level": 0,
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack",
+    "effect_str": "sorcerer_lv7_armbull",
+    "min_duration": 148000,
+    "max_duration": 148000
+  },
+  {
+    "id": "sorcerer_lv7_armbull",
+    "type": "effect_type",
+    "name": [
+      "高等防护箭矢"
+    ],
+    "desc": [
+      "抵抗箭矢，或者子弹？"
+    ],
+    "apply_message": "你的身体好像可以弹开子弹。",
+    "remove_message": "子弹不再从你的身上划开。",
+    "max_intensity": 999,
+    "int_dur_factor": "5 m",
+    "rating": "good",
+    "enchantments": [
+      {
+        "values": [
+          {
+            "value": "ARMOR_BULLET",
+            "add": -50
+          },
+          {
+            "value": "ARMOR_STAB",
+            "add": -50
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv7_ciyuanmen",
+    "type": "SPELL",
+    "name": "术士-Lv7-高等次元门",
+    "description": "在中距离内传送。",
+    "components": "spell_sorcerer_use_item_7",
+    "effect": "short_range_teleport",
+    "shape": "blast",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "TARGET_TELEPORT"
+    ],
+    "min_range": 32,
+    "max_level": 0,
+    "difficulty": 7,
+    "spell_class": "spell_craft_sorcerer_7",
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "base_energy_cost": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv7_rainbow",
+    "type": "SPELL",
+    "name": "术士-Lv7-虹光喷射",
+    "description": "在目标范围造成随机效果。",
+    "components": "spell_sorcerer_use_item_7",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "WONDER",
+      "RANDOM_DAMAGE"
+    ],
+    "max_level": 0,
+    "min_damage": 1,
+    "max_damage": 7,
+    "min_range": 30,
+    "min_aoe": 30,
+    "spell_class": "spell_craft_sorcerer_7",
+    "base_casting_time": 300,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 7,
+    "damage_type": "pure",
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_lv7_rainbow_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv7_rainbow_2"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv7_rainbow_3"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv7_rainbow_4"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv7_rainbow_5"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv7_rainbow_6"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv7_rainbow_7"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv7_rainbow_8"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv7_rainbow_9"
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv7_rainbow_1",
+    "type": "SPELL",
+    "name": "术士-Lv7-虹光喷射（减速）",
+    "description": "在目标范围造成随机效果。",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "message": "",
+    "max_level": 0,
+    "min_range": 30,
+    "min_aoe": 30,
+    "effect_str": "effect_sorcerer_slow",
+    "min_duration": 74000,
+    "max_duration": 74000,
+    "spell_class": "spell_craft_sorcerer_7",
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 7,
+    "damage_type": "pure"
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_sorcerer_slow",
+    "name": [
+      "减速"
+    ],
+    "desc": [
+      "你减速了。"
+    ],
+    "apply_message": "你的速度降低了！",
+    "remove_message": "你的速度恢复了。",
+    "max_intensity": 999,
+    "int_dur_factor": "5 m",
+    "rating": "bad",
+    "base_mods": {
+      "speed_mod": [
+        -50
+      ]
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv7_rainbow_2",
+    "type": "SPELL",
+    "name": "术士-Lv7-虹光喷射（火）",
+    "description": "在目标范围造成随机效果。",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "RANDOM_DAMAGE"
+    ],
+    "message": "",
+    "max_level": 0,
+    "min_damage": 28,
+    "max_damage": 89,
+    "min_range": 30,
+    "min_aoe": 30,
+    "spell_class": "spell_craft_sorcerer_7",
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 7,
+    "damage_type": "heat"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv7_rainbow_3",
+    "type": "SPELL",
+    "name": "术士-Lv7-虹光喷射（冰）",
+    "description": "在目标范围造成随机效果。",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "RANDOM_DAMAGE"
+    ],
+    "message": "",
+    "max_level": 0,
+    "min_damage": 43,
+    "max_damage": 74,
+    "min_range": 30,
+    "min_aoe": 30,
+    "spell_class": "spell_craft_sorcerer_7",
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 7,
+    "damage_type": "cold"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv7_rainbow_4",
+    "type": "SPELL",
+    "name": "术士-Lv7-虹光喷射（电）",
+    "description": "在目标范围造成随机效果。",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "RANDOM_DAMAGE"
+    ],
+    "message": "",
+    "max_level": 0,
+    "min_damage": 4,
+    "max_damage": 113,
+    "min_range": 30,
+    "min_aoe": 30,
+    "spell_class": "spell_craft_sorcerer_7",
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 7,
+    "damage_type": "electric"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv7_rainbow_5",
+    "type": "SPELL",
+    "name": "术士-Lv7-虹光喷射（酸）",
+    "description": "在目标范围造成随机效果。",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "RANDOM_DAMAGE"
+    ],
+    "message": "",
+    "max_level": 0,
+    "min_damage": 10,
+    "max_damage": 10,
+    "min_dot": 10,
+    "max_dot": 10,
+    "min_duration": 640,
+    "max_duration": 640,
+    "min_range": 30,
+    "min_aoe": 30,
+    "spell_class": "spell_craft_sorcerer_7",
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 7,
+    "damage_type": "acid"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv7_rainbow_6",
+    "type": "SPELL",
+    "name": "术士-Lv7-虹光喷射（生化）",
+    "description": "在目标范围造成随机效果。",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "RANDOM_DAMAGE"
+    ],
+    "message": "",
+    "max_level": 0,
+    "min_damage": 5,
+    "max_damage": 5,
+    "min_dot": 5,
+    "max_dot": 5,
+    "min_duration": 1280,
+    "max_duration": 1280,
+    "min_range": 30,
+    "min_aoe": 30,
+    "spell_class": "spell_craft_sorcerer_7",
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 7,
+    "damage_type": "biological"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv7_rainbow_7",
+    "type": "SPELL",
+    "name": "术士-Lv7-虹光喷射（即死判断）",
+    "description": "在目标范围造成随机效果。",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "WONDER",
+      "NO_EXPLOSION_SFX"
+    ],
+    "message": "",
+    "max_level": 0,
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 30,
+    "min_aoe": 30,
+    "spell_class": "spell_craft_sorcerer_7",
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 7,
+    "damage_type": "pure",
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_lv7_rainbow_7_no"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv7_rainbow_7_no"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv7_rainbow_7_no"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv7_rainbow_7_no"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv7_rainbow_7_no"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv7_rainbow_7_no"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv7_rainbow_7_no"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv7_rainbow_7_no"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv7_rainbow_7_no"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv7_rainbow_7_no"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv7_rainbow_7_die"
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv7_rainbow_7_no",
+    "type": "SPELL",
+    "name": "术士-Lv7-虹光喷射（失败）",
+    "description": "在目标范围造成随机效果。",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "message": "",
+    "max_level": 0,
+    "min_damage": 94,
+    "max_damage": 94,
+    "min_range": 30,
+    "min_aoe": 30,
+    "spell_class": "spell_craft_sorcerer_7",
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 7,
+    "damage_type": "pure"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv7_rainbow_7_die",
+    "type": "SPELL",
+    "name": "术士-Lv7-虹光喷射（即死）",
+    "description": "在目标范围造成随机效果。",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "PERCENTAGE_DAMAGE"
+    ],
+    "message": "",
+    "max_level": 0,
+    "min_damage": 100,
+    "max_damage": 100,
+    "min_range": 30,
+    "min_aoe": 30,
+    "spell_class": "spell_craft_sorcerer_7",
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 7,
+    "damage_type": "pure"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv7_rainbow_8",
+    "type": "SPELL",
+    "name": "术士-Lv7-虹光喷射（切割）",
+    "description": "在目标范围造成随机效果。",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "message": "",
+    "max_level": 0,
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_dot": 1,
+    "max_dot": 1,
+    "min_duration": 6400,
+    "max_duration": 6400,
+    "min_range": 30,
+    "min_aoe": 30,
+    "spell_class": "spell_craft_sorcerer_7",
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 7,
+    "damage_type": "cut"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv7_rainbow_9",
+    "type": "SPELL",
+    "name": "术士-Lv7-虹光喷射（蛛网）",
+    "description": "在目标范围造成随机效果。",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "hostile"
+    ],
+    "message": "",
+    "max_level": 0,
+    "min_range": 30,
+    "min_aoe": 30,
+    "field_id": "fd_web",
+    "field_chance": 1,
+    "min_field_intensity": 10,
+    "max_field_intensity": 10,
+    "spell_class": "spell_craft_sorcerer_7",
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 7,
+    "damage_type": "cut"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv7_greater_restoration",
+    "type": "SPELL",
+    "name": "术士-Lv7-高等复原术",
+    "description": "如同万能药，但比那还要好。",
+    "components": "spell_sorcerer_use_item_7",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "min_range": 8,
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_7",
+    "difficulty": 7,
+    "max_level": 0,
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack",
+    "effect_str": "sorcerer_gre_res"
+  },
+  {
+    "type": "effect_type",
+    "id": "sorcerer_gre_res",
+    "removes_effects": [
+      "bite",
+      "bleed",
+      "winded",
+      "fungus",
+      "dermatik",
+      "bloodworms",
+      "paincysts",
+      "brainworms",
+      "tapeworm",
+      "blind",
+      "poison",
+      "venom_dmg",
+      "venom_weaken",
+      "stung",
+      "badpoison",
+      "foodpoison",
+      "paralyzepoison",
+      "tetanus",
+      "rat_bite_fever",
+      "infected",
+      "asthma",
+      "common_cold",
+      "flu",
+      "taint",
+      "visuals"
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv7_summon_monster",
+    "type": "SPELL",
+    "name": "术士-Lv7-召唤怪物 VII",
+    "description": "在目标范围内召唤1-3怪物7，或者2-5怪物6，或者3-7怪物5，持续10分钟。",
+    "components": "spell_sorcerer_use_item_7",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "WONDER"
+    ],
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 7,
+    "min_aoe": 3,
+    "spell_class": "spell_craft_sorcerer_7",
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "max_level": 0,
+    "min_duration": 60000,
+    "max_duration": 60000,
+    "difficulty": 7,
+    "base_energy_cost": 0,
+    "shape": "blast",
+    "effect": "attack",
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_lv7_summon_monster_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv7_summon_monster_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv7_summon_monster_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv7_summon_monster_2"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv7_summon_monster_2"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv7_summon_monster_3"
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv7_summon_monster_1",
+    "type": "SPELL",
+    "name": "术士-Lv7-召唤怪物7",
+    "description": "在目标范围内召唤1-3只怪物7，持续10分钟。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "message": "",
+    "min_damage": 1,
+    "max_damage": 3,
+    "min_range": 8,
+    "min_aoe": 3,
+    "spell_class": "spell_craft_sorcerer_7",
+    "base_casting_time": 0,
+    "energy_source": "MANA",
+    "max_level": 0,
+    "min_duration": 60000,
+    "max_duration": 60000,
+    "difficulty": 7,
+    "base_energy_cost": 0,
+    "shape": "blast",
+    "effect": "summon",
+    "effect_str": "mon_sor_summon_7"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_lv7_summon_monster_1",
+    "id": "spell_craft_sorcerer_lv7_summon_monster_2",
+    "type": "SPELL",
+    "name": "术士-Lv7-召唤怪物6",
+    "description": "在目标范围内召唤2-5只怪物6，持续10分钟。",
+    "effect_str": "mon_sor_summon_6",
+    "min_damage": 2,
+    "max_damage": 5,
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_lv7_summon_monster_1",
+    "id": "spell_craft_sorcerer_lv7_summon_monster_3",
+    "type": "SPELL",
+    "name": "术士-Lv7-召唤怪物5",
+    "description": "在目标范围内召唤3-7只怪物5，持续10分钟。",
+    "effect_str": "mon_sor_summon_5",
+    "min_damage": 3,
+    "max_damage": 7,
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv7_create_enchanted_item",
+    "type": "SPELL",
+    "name": "术士-Lv7-制造魔法装备 III",
+    "description": "制造一件随机部位的魔法装备。",
+    "components": "spell_sorcerer_use_enchanted_item_3",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "CONCENTRATE",
+      "PERMANENT"
+    ],
+    "effect": "spawn_item",
+    "effect_str": "sor_enchanted_item_rnd_3",
+    "min_damage": 1,
+    "max_damage": 1,
+    "shape": "blast",
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_7",
+    "difficulty": 14,
+    "max_level": 0,
+    "base_energy_cost": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv7_blind",
+    "type": "SPELL",
+    "name": "术士-Lv7-律令目盲",
+    "description": "使目标目盲，持续5分钟+5x智力秒至20分钟+20x智力秒，无视阻挡。",
+    "components": "spell_sorcerer_use_item_7",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "NO_HANDS",
+      "RANDOM_DURATION",
+      "NO_PROJECTILE"
+    ],
+    "min_range": 30,
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_7",
+    "difficulty": 7,
+    "max_level": 0,
+    "base_casting_time": 50,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack",
+    "effect_str": "sor_magic_blind",
+    "min_duration": 37000,
+    "max_duration": 148000
+  },
+  {
+    "id": "sor_magic_blind",
+    "type": "effect_type",
+    "name": [
+      "被致盲"
+    ],
+    "desc": [
+      "被致盲"
+    ],
+    "apply_message": "看不见了。",
+    "remove_message": "看得见了。",
+    "max_intensity": 999,
+    "int_dur_factor": "5 m",
+    "rating": "bad",
+    "base_mods": {
+      "speed_mod": [
+        -10
+      ]
+    },
+    "flags": [
+      "BLIND"
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv7_invisibility",
+    "type": "SPELL",
+    "name": "术士-Lv7-高等隐形",
+    "description": "你获得隐形，持续5分钟+5x智力秒。",
+    "components": "spell_sorcerer_use_item_7",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "effect_str": "effect_sorcerer_invisibility",
+    "shape": "blast",
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_7",
+    "difficulty": 7,
+    "max_level": 0,
+    "base_energy_cost": 0,
+    "min_duration": 37000,
+    "max_duration": 37000
+  }
+]

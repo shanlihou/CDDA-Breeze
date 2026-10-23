@@ -1,0 +1,2048 @@
+[
+{
+  "type": "GUN",
+  "reload_noise_volume": 10,
+  "//": "this is the default handling for anything with a stock",
+  "handling": 20,
+  "name": {
+    "str": "Mk47 Mutant"
+  },
+  "symbol": "(",
+  "color": "light_gray",
+  "faults": [
+    "fault_gun_blackpowder",
+    "fault_gun_dirt",
+    "fault_gun_chamber_spent"
+  ],
+  "ranged_damage": {
+    "damage_type": "bullet",
+    "amount": 0
+  },
+  "copy-from": "rifle_semi",
+  "skill": "rifle",
+  "valid_mod_locations": [
+    [
+      "brass catcher",
+      1
+    ],
+    [
+      "grip",
+      1
+    ],
+    [
+      "mechanism",
+      4
+    ],
+    [
+      "barrel",
+      1
+    ],
+    [
+      "muzzle",
+      1
+    ],
+    [
+      "rail",
+      2
+    ],
+    [
+      "sights",
+      1
+    ],
+    [
+      "sling",
+      1
+    ],
+    [
+      "stock",
+      1
+    ],
+    [
+      "stock accessory",
+      2
+    ],
+    [
+      "underbarrel",
+      3
+    ]
+  ],
+  "weapon_category": [
+    "AUTOMATIC_RIFLES"
+  ],
+  "id": "mk47",
+  "description": "The CMMG Mk47 Mutant is an American rifle, natively chambered for 7.62x39mm ammo.  Features a characteristic free-floating handguard, with a similar action mechanism to the AR-15, repurposed for the bigger, more potent ammo.",
+  "weight": "2540 g",
+  "volume": "2300 ml",
+  "longest_side": "930 mm",
+  "price": 170000,
+  "price_postapoc": 4000,
+  "to_hit": {
+    "balance": "neutral",
+    "grip": "solid",
+    "length": "long",
+    "surface": "point"
+  },
+  "bashing": 12,
+  "material": [
+    "plastic",
+    "steel"
+  ],
+  "looks_like": "ar15",
+  "ammo": [
+    "762"
+  ],
+  "built_in_mods": [
+    "pistol_grip"
+  ],
+  "dispersion": 115,
+  "durability": 7,
+  "loudness": 9,
+  "min_cycle_recoil": 1700,
+  "reload": 420,
+  "pocket_data": [
+    {
+      "pocket_type": "MAGAZINE_WELL",
+      "item_restriction": [
+        "akmag10",
+        "akmag20",
+        "akmag30",
+        "akmag40",
+        "akdrum75",
+        "akdrum100"
+      ]
+    }
+  ]
+},
+{
+  "type": "GUN",
+  "reload_noise_volume": 10,
+  "//": "this is the default handling for anything with a stock",
+  "handling": 20,
+  "name": {
+    "str": "AR-10"
+  },
+  "symbol": "(",
+  "color": "dark_gray",
+  "faults": [
+    "fault_gun_blackpowder",
+    "fault_gun_dirt",
+    "fault_gun_chamber_spent"
+  ],
+  "ranged_damage": {
+    "damage_type": "bullet"
+  },
+  "copy-from": "rifle_semi",
+  "skill": "rifle",
+  "valid_mod_locations": [
+    [
+      "accessories",
+      4
+    ],
+    [
+      "barrel",
+      1
+    ],
+    [
+      "bore",
+      1
+    ],
+    [
+      "brass catcher",
+      1
+    ],
+    [
+      "grip",
+      1
+    ],
+    [
+      "mechanism",
+      4
+    ],
+    [
+      "magazine",
+      1
+    ],
+    [
+      "muzzle",
+      1
+    ],
+    [
+      "rail",
+      2
+    ],
+    [
+      "sights",
+      1
+    ],
+    [
+      "sling",
+      1
+    ],
+    [
+      "stock",
+      1
+    ],
+    [
+      "stock accessory",
+      2
+    ],
+    [
+      "underbarrel",
+      1
+    ]
+  ],
+  "weapon_category": [
+    "AUTOMATIC_RIFLES"
+  ],
+  "id": "ar10",
+  "looks_like": "ar15",
+  "description": "Somewhat similar to the later AR-15, the AR-10 is a gas-operated, rotating bolt rifle chambered for 7.62x51mm rounds.",
+  "weight": "3290 g",
+  "volume": "4250 ml",
+  "longest_side": "1050 mm",
+  "price": 120000,
+  "price_postapoc": 5500,
+  "to_hit": -1,
+  "bashing": 12,
+  "material": [
+    "steel",
+    "plastic"
+  ],
+  "ammo": [
+    "308"
+  ],
+  "dispersion": 145,
+  "durability": 7,
+  "min_cycle_recoil": 2700,
+  "pocket_data": [
+    {
+      "pocket_type": "MAGAZINE_WELL",
+      "item_restriction": [
+        "ar10mag_20rd",
+        "ar10_makeshiftmag"
+      ]
+    }
+  ]
+},
+{
+  "type": "GUN",
+  "reload_noise_volume": 10,
+  "//": "This is the unfolded version of the weapon. Folded, it's 597 mm",
+  "handling": 20,
+  "name": {
+    "str": "SIG MCX Rattler SBR"
+  },
+  "symbol": "(",
+  "color": "dark_gray",
+  "faults": [
+    "fault_gun_blackpowder",
+    "fault_gun_dirt",
+    "fault_gun_chamber_spent"
+  ],
+  "ranged_damage": {
+    "damage_type": "bullet",
+    "amount": 0
+  },
+  "copy-from": "rifle_semi",
+  "skill": "rifle",
+  "valid_mod_locations": [
+    [
+      "barrel",
+      1
+    ],
+    [
+      "accessories",
+      4
+    ],
+    [
+      "brass catcher",
+      1
+    ],
+    [
+      "grip",
+      1
+    ],
+    [
+      "mechanism",
+      4
+    ],
+    [
+      "magazine",
+      1
+    ],
+    [
+      "muzzle",
+      1
+    ],
+    [
+      "rail",
+      1
+    ],
+    [
+      "sights",
+      1
+    ],
+    [
+      "sling",
+      1
+    ],
+    [
+      "stock",
+      1
+    ]
+  ],
+  "weapon_category": [
+    "AUTOMATIC_RIFLES"
+  ],
+  "id": "sig_mcx_rattler_sbr",
+  "looks_like": "ar15",
+  "description": "This is a short-barreled, gas-operated rifle, with a 5.5 inch barrel, built-in thin folding stock, and full rail mount on the upper receiver.  This particular one is a select-fire military version.",
+  "weight": "2590 g",
+  "volume": "2850 ml",
+  "longest_side": "775 mm",
+  "price": 271900,
+  "price_postapoc": 3500,
+  "ammo": [
+    "300blk"
+  ],
+  "dispersion": 120,
+  "durability": 8,
+  "min_cycle_recoil": 1700,
+  "modes": [
+    [
+      "DEFAULT",
+      "semi-auto",
+      1
+    ],
+    [
+      "AUTO",
+      "auto",
+      4
+    ]
+  ],
+  "built_in_mods": [
+    "folding_stock"
+  ],
+  "pocket_data": [
+    {
+      "pocket_type": "MAGAZINE_WELL",
+      "item_restriction": [
+        "stanag30",
+        "stanag5",
+        "stanag5ranger",
+        "stanag10",
+        "stanag10ranger",
+        "stanag20",
+        "stanag20ranger",
+        "stanag30ranger",
+        "stanag40",
+        "stanag50",
+        "stanag60",
+        "stanag60drum",
+        "stanag90",
+        "stanag100",
+        "stanag100drum",
+        "stanag150",
+        "survivor223mag"
+      ]
+    }
+  ]
+},
+{
+  "id": "TDI",
+  "looks_like": "hk_mp5",
+  "type": "GUN",
+  "reload_noise_volume": 10,
+  "//": [
+    "Yes, I know it's not really a glock smg.",
+    "It takes glock magazines, and it's own special one that I am also renaming to a glock magazine",
+    "so, I'm calling it a glock smg."
+  ],
+  "name": {
+    "str": "Glock SMG"
+  },
+  "description": "A submachine gun chambered in .45 ACP, accepting Glock magazines.",
+  "variant_type": "gun",
+  "variants": [
+    {
+      "id": "TDI",
+      "name": {
+        "str": "Vector SMG .45"
+      },
+      "description": "The Vector SMG is a delayed blowback submachine gun with a unique, in-line design that places both the shooter's hand and shoulder in line with the bore axis, reducing muzzle climb during bursts.  This one is chambered in .45 ACP.",
+      "weight": 1
+    }
+  ],
+  "weight": "3100 g",
+  "volume": "4248 ml",
+  "longest_side": "611 mm",
+  "price": 310000,
+  "price_postapoc": 3500,
+  "to_hit": -2,
+  "bashing": 9,
+  "material": [
+    "steel",
+    "plastic"
+  ],
+  "symbol": "(",
+  "color": "dark_gray",
+  "ammo": [
+    "45"
+  ],
+  "skill": "smg",
+  "dispersion": 280,
+  "durability": 7,
+  "min_cycle_recoil": 540,
+  "modes": [
+    [
+      "DEFAULT",
+      "semi-auto",
+      1
+    ],
+    [
+      "BURST",
+      "连发",
+      2
+    ],
+    [
+      "AUTO",
+      "auto",
+      6
+    ]
+  ],
+  "valid_mod_locations": [
+    [
+      "accessories",
+      3
+    ],
+    [
+      "barrel",
+      1
+    ],
+    [
+      "bore",
+      1
+    ],
+    [
+      "brass catcher",
+      1
+    ],
+    [
+      "grip mount",
+      1
+    ],
+    [
+      "mechanism",
+      4
+    ],
+    [
+      "muzzle",
+      1
+    ],
+    [
+      "rail",
+      1
+    ],
+    [
+      "sights",
+      1
+    ],
+    [
+      "sling",
+      1
+    ],
+    [
+      "stock",
+      1
+    ],
+    [
+      "underbarrel",
+      1
+    ]
+  ],
+  "faults": [
+    "fault_gun_blackpowder",
+    "fault_gun_dirt",
+    "fault_gun_chamber_spent"
+  ],
+  "default_mods": [
+    "folding_stock"
+  ],
+  "pocket_data": [
+    {
+      "pocket_type": "MAGAZINE_WELL",
+      "item_restriction": [
+        "tdi_mag",
+        "glock_21mag",
+        "glock_21mag26"
+      ]
+    }
+  ]
+},
+{
+  "type": "GUN",
+  "reload_noise_volume": 10,
+  "//": "this is the default handling for anything with a stock",
+  "handling": 20,
+  "name": {
+    "str": "M249"
+  },
+  "symbol": "(",
+  "color": "dark_gray",
+  "faults": [
+    "fault_gun_blackpowder",
+    "fault_gun_dirt",
+    "fault_gun_chamber_spent"
+  ],
+  "ranged_damage": {
+    "damage_type": "bullet",
+    "amount": 0
+  },
+  "copy-from": "rifle_auto",
+  "skill": "rifle",
+  "valid_mod_locations": [
+    [
+      "accessories",
+      4
+    ],
+    [
+      "barrel",
+      1
+    ],
+    [
+      "bore",
+      1
+    ],
+    [
+      "brass catcher",
+      1
+    ],
+    [
+      "grip",
+      1
+    ],
+    [
+      "mechanism",
+      4
+    ],
+    [
+      "muzzle",
+      1
+    ],
+    [
+      "rail",
+      1
+    ],
+    [
+      "sights",
+      1
+    ],
+    [
+      "sling",
+      1
+    ],
+    [
+      "stock",
+      1
+    ],
+    [
+      "stock accessory",
+      2
+    ]
+  ],
+  "weapon_category": [
+    "AUTOMATIC_RIFLES"
+  ],
+  "id": "m249",
+  "looks_like": "ar15",
+  "description": "The M249 is a mountable machine gun used by the US military and SWAT teams.  Quite inaccurate and difficult to control, the M249 is designed to fire many rounds very quickly.",
+  "ascii_picture": "m249_saw",
+  "weight": "7500 g",
+  "volume": "10610 ml",
+  "longest_side": "1035 mm",
+  "price": 750000,
+  "price_postapoc": 8000,
+  "to_hit": -1,
+  "bashing": 12,
+  "material": [
+    "steel",
+    "plastic"
+  ],
+  "ammo": [
+    "223"
+  ],
+  "dispersion": 30,
+  "durability": 7,
+  "min_cycle_recoil": 1350,
+  "reload": 400,
+  "modes": [
+    [
+      "DEFAULT",
+      "burst",
+      4
+    ]
+  ],
+  "built_in_mods": [
+    "bipod"
+  ],
+  "pocket_data": [
+    {
+      "pocket_type": "MAGAZINE_WELL",
+      "item_restriction": [
+        "belt223",
+        "stanag30",
+        "stanag5",
+        "stanag5ranger",
+        "stanag10",
+        "stanag10ranger",
+        "stanag20",
+        "stanag20ranger",
+        "stanag30ranger",
+        "stanag40",
+        "stanag40ranger",
+        "stanag50",
+        "stanag60",
+        "stanag60drum",
+        "stanag90",
+        "stanag100",
+        "stanag100drum",
+        "stanag150",
+        "survivor223mag"
+      ]
+    }
+  ]
+},
+{
+  "type": "GUN",
+  "reload_noise_volume": 10,
+  "//": "this is the default handling for anything with a stock",
+  "handling": 20,
+  "name": {
+    "str": "M240"
+  },
+  "symbol": "(",
+  "color": "dark_gray",
+  "faults": [
+    "fault_gun_blackpowder",
+    "fault_gun_dirt",
+    "fault_gun_chamber_spent"
+  ],
+  "ranged_damage": {
+    "damage_type": "bullet",
+    "amount": 0
+  },
+  "copy-from": "rifle_auto",
+  "skill": "rifle",
+  "valid_mod_locations": [
+    [
+      "accessories",
+      4
+    ],
+    [
+      "barrel",
+      1
+    ],
+    [
+      "bore",
+      1
+    ],
+    [
+      "brass catcher",
+      1
+    ],
+    [
+      "grip",
+      1
+    ],
+    [
+      "mechanism",
+      4
+    ],
+    [
+      "muzzle",
+      1
+    ],
+    [
+      "rail",
+      1
+    ],
+    [
+      "sights",
+      1
+    ],
+    [
+      "sling",
+      1
+    ],
+    [
+      "stock",
+      1
+    ],
+    [
+      "stock accessory",
+      2
+    ]
+  ],
+  "weapon_category": [
+    "AUTOMATIC_RIFLES"
+  ],
+  "id": "m240",
+  "looks_like": "ar15",
+  "description": "The M240 is a medium machine gun used by the US military, replacing the older M60.  Quite inaccurate and difficult to control, the M240 is designed to fire many rounds very quickly.",
+  "ascii_picture": "m240",
+  "weight": "12500 g",
+  "volume": "11780 ml",
+  "longest_side": "1260 mm",
+  "price": 1000000,
+  "price_postapoc": 7500,
+  "to_hit": -1,
+  "bashing": 13,
+  "material": [
+    "steel",
+    "plastic"
+  ],
+  "ammo": [
+    "308"
+  ],
+  "dispersion": 195,
+  "durability": 9,
+  "min_cycle_recoil": 2700,
+  "reload": 400,
+  "modes": [
+    [
+      "DEFAULT",
+      "burst",
+      4
+    ]
+  ],
+  "built_in_mods": [
+    "bipod"
+  ],
+  "pocket_data": [
+    {
+      "pocket_type": "MAGAZINE_WELL",
+      "item_restriction": [
+        "belt308"
+      ]
+    }
+  ]
+},
+{
+  "type": "GUN",
+  "reload_noise_volume": 10,
+  "//": "Groups all 'H&K416' related rifles together, alongside the SCAR-L due to its similar properties. Used M27 due to it being the most popular of the four in the US.",
+  "handling": 20,
+  "name": {
+    "str": "M27 assault rifle"
+  },
+  "symbol": "(",
+  "color": "dark_gray",
+  "faults": [
+    "fault_gun_blackpowder",
+    "fault_gun_dirt",
+    "fault_gun_chamber_spent"
+  ],
+  "ranged_damage": {
+    "damage_type": "bullet"
+  },
+  "copy-from": "rifle_auto",
+  "skill": "rifle",
+  "valid_mod_locations": [
+    [
+      "accessories",
+      4
+    ],
+    [
+      "barrel",
+      1
+    ],
+    [
+      "bore",
+      1
+    ],
+    [
+      "brass catcher",
+      1
+    ],
+    [
+      "grip",
+      1
+    ],
+    [
+      "mechanism",
+      4
+    ],
+    [
+      "magazine",
+      1
+    ],
+    [
+      "muzzle",
+      1
+    ],
+    [
+      "rail",
+      3
+    ],
+    [
+      "sights",
+      1
+    ],
+    [
+      "sling",
+      1
+    ],
+    [
+      "stock",
+      1
+    ],
+    [
+      "stock accessory",
+      2
+    ],
+    [
+      "underbarrel",
+      2
+    ]
+  ],
+  "weapon_category": [
+    "AUTOMATIC_RIFLES"
+  ],
+  "id": "m27_assault_rifle",
+  "looks_like": "ar15",
+  "description": "Designed to replace the M4 Carbine, the M27 assault rifle features most of the former's strengths, while being considerably more durable.  It is chambered in 5.56x45mm and accepts STANAG magazines.",
+  "weight": "3490 g",
+  "volume": "4957 ml",
+  "longest_side": "798 mm",
+  "price": 540000,
+  "price_postapoc": 2250,
+  "variant_type": "gun",
+  "variants": [
+    {
+      "id": "h&k416a5",
+      "name": {
+        "str": "H&K416 A5"
+      },
+      "description": "Designed to replace the M4A1, the Heckler and Koch 416A5 features most of the former's strengths, while being considerably more durable."
+    },
+    {
+      "id": "m27iar",
+      "name": {
+        "str": "M27 IAR"
+      },
+      "description": "A H&K416 carbine outfitted with a heavier barrel to enable higher amounts of suppressive fire while retaining a good degree of mobility.",
+      "ascii_picture": "m27_iar",
+      "weight": 1
+    },
+    {
+      "id": "m38dmr",
+      "name": {
+        "str": "M38 DMR"
+      },
+      "description": "The M38 Designated Marksman Rifle is an M27 IAR, itself derived from a H&K416, selected for accuracy, and outfitted with a variable power scope and a QDSS suppressor."
+    },
+    {
+      "id": "scar_l",
+      "name": {
+        "str": "FN SCAR-L"
+      },
+      "description": "A highly accurate and modular assault rifle specially designed for the United States Special Operations Command.  The 'L' in its name stands for light, as it uses the lightweight .223 round.",
+      "ascii_picture": "scar-L"
+    }
+  ],
+  "to_hit": -1,
+  "bashing": 12,
+  "material": [
+    "steel",
+    "plastic"
+  ],
+  "ammo": [
+    "223"
+  ],
+  "dispersion": 10,
+  "durability": 8,
+  "min_cycle_recoil": 1350,
+  "modes": [
+    [
+      "DEFAULT",
+      "semi-auto",
+      1
+    ],
+    [
+      "AUTO",
+      "auto",
+      4
+    ]
+  ],
+  "pocket_data": [
+    {
+      "pocket_type": "MAGAZINE_WELL",
+      "item_restriction": [
+        "stanag30",
+        "stanag5",
+        "stanag5ranger",
+        "stanag10",
+        "stanag10ranger",
+        "stanag20",
+        "stanag20ranger",
+        "stanag30ranger",
+        "stanag40",
+        "stanag40ranger",
+        "stanag50",
+        "stanag60",
+        "stanag60drum",
+        "stanag90",
+        "stanag100",
+        "stanag100drum",
+        "stanag150",
+        "survivor223mag"
+      ]
+    }
+  ]
+},
+{
+  "type": "GUN",
+  "reload_noise_volume": 10,
+  "//": "Groups all 'H&K416' related rifles together, alongside the SCAR-L due to its similar properties. Used M27 due to it being the most popular of the four in the US.",
+  "handling": 20,
+  "name": {
+    "str_sp": "FN SCAR-H"
+  },
+  "symbol": "(",
+  "color": "dark_gray",
+  "faults": [
+    "fault_gun_blackpowder",
+    "fault_gun_dirt",
+    "fault_gun_chamber_spent"
+  ],
+  "ranged_damage": {
+    "damage_type": "bullet"
+  },
+  "skill": "rifle",
+  "valid_mod_locations": [
+    [
+      "accessories",
+      4
+    ],
+    [
+      "barrel",
+      1
+    ],
+    [
+      "bore",
+      1
+    ],
+    [
+      "brass catcher",
+      1
+    ],
+    [
+      "grip",
+      1
+    ],
+    [
+      "mechanism",
+      4
+    ],
+    [
+      "magazine",
+      1
+    ],
+    [
+      "muzzle",
+      1
+    ],
+    [
+      "rail",
+      3
+    ],
+    [
+      "sights",
+      1
+    ],
+    [
+      "sling",
+      1
+    ],
+    [
+      "stock",
+      1
+    ],
+    [
+      "stock accessory",
+      2
+    ],
+    [
+      "underbarrel",
+      2
+    ]
+  ],
+  "weapon_category": [
+    "AUTOMATIC_RIFLES"
+  ],
+  "id": "scar_h",
+  "looks_like": "ar15",
+  "description": "A highly accurate and modular battle rifle specially designed for the United States Special Operations Command.  The 'H' in its name stands for heavy, as it uses the powerful .308 round.",
+  "weight": "3630 g",
+  "volume": "5427 ml",
+  "longest_side": "906 mm",
+  "price": 540000,
+  "price_postapoc": 2250,
+  "variant_type": "gun",
+  "to_hit": -1,
+  "bashing": 12,
+  "material": [
+    "steel",
+    "plastic"
+  ],
+  "ammo": [
+    "308"
+  ],
+    "built_in_mods": [
+    "scar_bars"
+  ],
+  "dispersion": 175,
+  "durability": 8,
+  "min_cycle_recoil": 2700,
+  "modes": [
+    [
+      "DEFAULT",
+      "semi-auto",
+      1
+    ],
+    [
+      "AUTO",
+      "auto",
+      4
+    ]
+  ],
+  "pocket_data": [
+    {
+      "pocket_type": "MAGAZINE_WELL",
+      "item_restriction": [
+        "scarhmag",
+        "scarhbigmag",
+        "scarhmag_30rd",
+        "scarh_makeshiftmag"
+      ]
+    }
+  ],
+  "ascii_picture": "scar-H"
+},
+{
+  "type": "GUN",
+  "reload_noise_volume": 10,
+  "//": "this is the default handling for anything with a stock",
+  "handling": 20,
+  "name": {
+    "str": "AKM"
+  },
+  "symbol": "(",
+  "color": "brown",
+  "faults": [
+    "fault_gun_blackpowder",
+    "fault_gun_dirt",
+    "fault_gun_chamber_spent"
+  ],
+  "ranged_damage": {
+    "damage_type": "bullet",
+    "amount": 0
+  },
+  "copy-from": "rifle_auto",
+  "skill": "rifle",
+  "valid_mod_locations": [
+    [
+      "accessories",
+      4
+    ],
+    [
+      "barrel",
+      1
+    ],
+    [
+      "bore",
+      1
+    ],
+    [
+      "brass catcher",
+      1
+    ],
+    [
+      "grip",
+      1
+    ],
+    [
+      "mechanism",
+      4
+    ],
+    [
+      "muzzle",
+      2
+    ],
+    [
+      "rail mount",
+      1
+    ],
+    [
+      "sights mount",
+      1
+    ],
+    [
+      "sling",
+      1
+    ],
+    [
+      "stock mount",
+      1
+    ],
+    [
+      "stock accessory",
+      2
+    ],
+    [
+      "underbarrel mount",
+      1
+    ]
+  ],
+  "weapon_category": [
+    "AUTOMATIC_RIFLES"
+  ],
+  "id": "ak47",
+  "looks_like": "ar15",
+  "description": "One of the most recognizable assault rifles ever made, the AKM is renowned for its durability even under the worst conditions.",
+  "weight": "3402 g",
+  "volume": "2167 ml",
+  "longest_side": "87 cm",
+  "price": 290000,
+  "price_postapoc": 4000,
+  "to_hit": -1,
+  "bashing": 12,
+  "material": [
+    "steel",
+    "wood"
+  ],
+  "ammo": [
+    "762"
+  ],
+    "built_in_mods": [
+    "AK_muzzle"
+  ],
+  "dispersion": 145,
+  "durability": 9,
+  "min_cycle_recoil": 1832,
+  "modes": [
+    [
+      "DEFAULT",
+      "semi-auto",
+      1
+    ],
+    [
+      "AUTO",
+      "auto",
+      4
+    ]
+  ],
+  "pocket_data": [
+    {
+      "pocket_type": "MAGAZINE_WELL",
+      "item_restriction": [
+        "akmag30",
+        "akmag10",
+        "akmag20",
+        "akmag40",
+        "akdrum75",
+        "akmag100",
+        "akdrum100"
+      ]
+    }
+  ]
+},
+{
+  "type": "GUN",
+  "reload_noise_volume": 10,
+  "//": "AKs likewise aren't commercially traded in the US, plus this is newer.",
+  "handling": 20,
+  "name": {
+    "str": "AK-74M"
+  },
+  "symbol": "(",
+  "color": "brown",
+  "faults": [
+    "fault_gun_blackpowder",
+    "fault_gun_dirt",
+    "fault_gun_chamber_spent"
+  ],
+  "ranged_damage": {
+    "damage_type": "bullet",
+    "amount": 0
+  },
+  "copy-from": "rifle_auto",
+  "skill": "rifle",
+  "valid_mod_locations": [
+    [
+      "accessories",
+      4
+    ],
+    [
+      "barrel",
+      1
+    ],
+    [
+      "bore",
+      1
+    ],
+    [
+      "brass catcher",
+      1
+    ],
+    [
+      "grip",
+      1
+    ],
+    [
+      "mechanism",
+      4
+    ],
+    [
+      "muzzle",
+      1
+    ],
+    [
+      "rail mount",
+      1
+    ],
+    [
+      "sights mount",
+      1
+    ],
+    [
+      "sling",
+      1
+    ],
+    [
+      "stock mount",
+      1
+    ],
+    [
+      "stock accessory",
+      2
+    ],
+    [
+      "underbarrel",
+      1
+    ]
+  ],
+  "weapon_category": [
+    "AUTOMATIC_RIFLES"
+  ],
+  "id": "ak74",
+  "looks_like": "ar15",
+  "description": "The successor to the well-known AK-47 rifle.  It combines the reliability of the AK series with the high-velocity, lightweight 5.45x39mm cartridge.",
+  "weight": "3400 g",
+  "volume": "2418 ml",
+  "longest_side": "94 cm",
+  "price": 390000,
+  "price_postapoc": 4000,
+  "to_hit": -1,
+  "bashing": 11,
+  "material": [
+    "steel",
+    "wood"
+  ],
+  "ammo": [
+    "545x39"
+  ],
+    "built_in_mods": [
+    "AK74_muzzle"
+  ],
+  "dispersion": 120,
+  "durability": 8,
+  "min_cycle_recoil": 1260,
+  "modes": [
+    [
+      "DEFAULT",
+      "semi-auto",
+      1
+    ],
+    [
+      "AUTO",
+      "auto",
+      4
+    ]
+  ],
+  "barrel_volume": "250 ml",
+  "flags": [
+    "NEVER_JAMS"
+  ],
+  "pocket_data": [
+    {
+      "pocket_type": "MAGAZINE_WELL",
+      "item_restriction": [
+        "ak74mag",
+        "rpk74mag",
+        "casket74mag",
+        "rpk74drum"
+      ]
+    }
+  ]
+},
+{
+  "type": "GUN",
+  "reload_noise_volume": 10,
+  "//": "default handling for anything without a stock",
+  "handling": 10,
+  "name": {
+    "str": "Mini Draco"
+  },
+  "symbol": "(",
+  "color": "brown",
+  "faults": [
+    "fault_gun_blackpowder",
+    "fault_gun_dirt",
+    "fault_gun_chamber_spent"
+  ],
+  "ranged_damage": {
+    "damage_type": "bullet",
+    "amount": -2
+  },
+  "copy-from": "pistol_base",
+  "skill": "pistol",
+  "sight_dispersion": 60,
+  "valid_mod_locations": [
+    [
+      "accessories",
+      4
+    ],
+    [
+      "barrel",
+      1
+    ],
+    [
+      "bore",
+      1
+    ],
+    [
+      "brass catcher",
+      1
+    ],
+    [
+      "grip",
+      1
+    ],
+    [
+      "mechanism",
+      4
+    ],
+    [
+      "muzzle",
+      1
+    ],
+    [
+      "rail mount",
+      1
+    ],
+    [
+      "sights mount",
+      1
+    ],
+    [
+      "sling",
+      1
+    ],
+    [
+      "stock mount",
+      1
+    ],
+    [
+      "underbarrel mount",
+      1
+    ]
+  ],
+  "id": "draco",
+  "looks_like": "ar15",
+  "description": "Essentially a semi-auto AK with a short barrel and no stock, this unwieldy \"pistol\" has seen some popularity with civilian shooters and gangbangers alike.",
+  "weight": "2563 g",
+  "volume": "1286 ml",
+  "longest_side": "46 cm",
+  "price": 72500,
+  "price_postapoc": 2500,
+  "to_hit": -5,
+  "bashing": 8,
+  "material": [
+    "steel",
+    "wood"
+  ],
+  "ammo": [
+    "762"
+  ],
+  "dispersion": 205,
+  "durability": 7,
+  "min_cycle_recoil": 1832,
+  "pocket_data": [
+    {
+      "pocket_type": "MAGAZINE_WELL",
+      "item_restriction": [
+        "akmag30",
+        "akmag10",
+        "akmag20",
+        "akmag40",
+        "akdrum75",
+        "akmag100",
+        "akdrum100"
+      ]
+    }
+  ]
+},
+{
+  "type": "GUN",
+  "reload_noise_volume": 10,
+  "//": "this is the default handling for anything with a stock",
+  "handling": 20,
+  "name": {
+    "str": "AK-47"
+  },
+  "symbol": "(",
+  "color": "brown",
+  "faults": [
+    "fault_gun_blackpowder",
+    "fault_gun_dirt",
+    "fault_gun_chamber_spent"
+  ],
+  "ranged_damage": {
+    "damage_type": "bullet",
+    "amount": 0
+  },
+  "copy-from": "rifle_semi",
+  "skill": "rifle",
+  "valid_mod_locations": [
+    [
+      "accessories",
+      4
+    ],
+    [
+      "barrel",
+      1
+    ],
+    [
+      "bore",
+      1
+    ],
+    [
+      "brass catcher",
+      1
+    ],
+    [
+      "grip",
+      1
+    ],
+    [
+      "mechanism",
+      4
+    ],
+    [
+      "muzzle",
+      1
+    ],
+    [
+      "rail mount",
+      1
+    ],
+    [
+      "sights mount",
+      1
+    ],
+    [
+      "sling",
+      1
+    ],
+    [
+      "stock mount",
+      1
+    ],
+    [
+      "stock accessory",
+      2
+    ],
+    [
+      "underbarrel mount",
+      1
+    ]
+  ],
+  "weapon_category": [
+    "AUTOMATIC_RIFLES"
+  ],
+  "id": "aksemi",
+  "looks_like": "ar15",
+  "description": "Civilian-legal clones of the iconic Kalashnikov, like this one, were manufactured and imported by many different firms.  Even without full-auto function, their solid firepower and reliability in harsh conditions make them valuable weapons in this new world.",
+  "weight": "3402 g",
+  "volume": "2167 ml",
+  "longest_side": "87 cm",
+  "price": 79500,
+  "price_postapoc": 3000,
+  "to_hit": -1,
+  "bashing": 12,
+  "material": [
+    "steel",
+    "wood"
+  ],
+  "ammo": [
+    "762"
+  ],
+  "dispersion": 145,
+  "durability": 8,
+  "min_cycle_recoil": 1832,
+  "pocket_data": [
+    {
+      "pocket_type": "MAGAZINE_WELL",
+      "item_restriction": [
+        "akmag30",
+        "akmag10",
+        "akmag20",
+        "akmag40",
+        "akdrum75",
+        "akdrum100",
+        "akmag100"
+      ]
+    }
+  ]
+},
+{
+  "type": "GUN",
+  "reload_noise_volume": 10,
+  "//": "Total unloaded weight of gun 3000 grams.  Current weight of folding stock 200 grams.",
+  "handling": 20,
+  "name": {
+    "str_sp": "Beretta ARX-160"
+  },
+  "symbol": "(",
+  "color": "blue",
+  "faults": [
+    "fault_gun_blackpowder",
+    "fault_gun_dirt",
+    "fault_gun_chamber_spent"
+  ],
+  "ranged_damage": {
+    "damage_type": "bullet",
+    "amount": 0
+  },
+  "copy-from": "rifle_auto",
+  "skill": "rifle",
+  "valid_mod_locations": [
+    [
+      "accessories",
+      4
+    ],
+    [
+      "barrel",
+      1
+    ],
+    [
+      "bore",
+      1
+    ],
+    [
+      "brass catcher",
+      1
+    ],
+    [
+      "grip",
+      1
+    ],
+    [
+      "mechanism",
+      4
+    ],
+    [
+      "muzzle",
+      1
+    ],
+    [
+      "rail",
+      1
+    ],
+    [
+      "sights",
+      1
+    ],
+    [
+      "sling",
+      1
+    ],
+    [
+      "stock",
+      1
+    ],
+    [
+      "stock accessory",
+      2
+    ],
+    [
+      "underbarrel",
+      1
+    ]
+  ],
+  "weapon_category": [
+    "AUTOMATIC_RIFLES"
+  ],
+  "id": "arx160",
+  "looks_like": "ar15",
+  "description": "The Beretta ARX-160 was a Phase II contender in the United States Army Individual Carbine competition to replace the M4 carbine.  It failed to replace it, but it is widely used by military all around the world.  This version is chambered for 7.62x39mm.",
+  "weight": "3080 g",
+  "volume": "6323 ml",
+  "longest_side": "91 cm",
+  "price": 450000,
+  "price_postapoc": 4500,
+  "to_hit": -1,
+  "bashing": 11,
+  "material": [
+    "steel"
+  ],
+  "ammo": [
+    "762"
+  ],
+  "dispersion": 125,
+  "durability": 9,
+  "min_cycle_recoil": 1832,
+  "modes": [
+    [
+      "DEFAULT",
+      "semi-auto",
+      1
+    ],
+    [
+      "AUTO",
+      "auto",
+      4
+    ]
+  ],
+  "barrel_volume": "250 ml",
+  "default_mods": [
+    "folding_stock"
+  ],
+  "pocket_data": [
+    {
+      "pocket_type": "MAGAZINE_WELL",
+      "item_restriction": [
+        "akmag30",
+        "akmag10",
+        "akmag20",
+        "akmag40",
+        "akdrum75",
+        "akdrum100"
+      ]
+    }
+  ]
+},
+{
+  "type": "GUN",
+  "reload_noise_volume": 10,
+  "//": "An exceptionally new AK style gun found illicitly as part of a quest.",
+  "handling": 20,
+  "name": {
+    "str": "Kord 6P67"
+  },
+  "symbol": "(",
+  "color": "brown",
+  "faults": [
+    "fault_gun_blackpowder",
+    "fault_gun_dirt",
+    "fault_gun_chamber_spent"
+  ],
+  "ranged_damage": {
+    "damage_type": "bullet",
+    "amount": 0
+  },
+  "copy-from": "rifle_auto",
+  "skill": "rifle",
+  "valid_mod_locations": [
+    [
+      "accessories",
+      4
+    ],
+    [
+      "barrel",
+      1
+    ],
+    [
+      "bore",
+      1
+    ],
+    [
+      "brass catcher",
+      1
+    ],
+    [
+      "grip",
+      1
+    ],
+    [
+      "mechanism",
+      4
+    ],
+    [
+      "muzzle",
+      1
+    ],
+    [
+      "rail",
+      1
+    ],
+    [
+      "sights",
+      1
+    ],
+    [
+      "sling",
+      1
+    ],
+    [
+      "stock",
+      1
+    ],
+    [
+      "underbarrel",
+      1
+    ]
+  ],
+  "weapon_category": [
+    "AUTOMATIC_RIFLES"
+  ],
+  "id": "kord",
+  "looks_like": "ar15",
+  "description": "A special forces Russian rifle chambered in 5.45.  This version uses standard Picatinny rails, has modern lightweight furniture and a unique complex recoil balance system for high fire rate with minimal recoil.  It combines the reliability of the AK series with the high-velocity, lightweight 5.45x39mm cartridge and accepts standard AK-74M magazines.",
+  "weight": "3250 g",
+  "volume": "2418 ml",
+  "longest_side": "96 cm",
+  "price": 390000,
+  "price_postapoc": 4000,
+  "to_hit": -1,
+  "bashing": 11,
+  "material": [
+    "steel",
+    "plastic"
+  ],
+  "ammo": [
+    "545x39"
+  ],
+  "dispersion": 90,
+  "durability": 8,
+  "min_cycle_recoil": 1260,
+  "modes": [
+    [
+      "DEFAULT",
+      "semi-auto",
+      1
+    ],
+    [
+      "BURST",
+      "burst",
+      2
+    ],
+    [
+      "AUTO",
+      "auto",
+      4
+    ]
+  ],
+  "barrel_volume": "250 ml",
+  "default_mods": [
+    "bars",
+    "wire_stock"
+  ],
+  "flags": [
+    "NEVER_JAMS",
+    "MISSION_ITEM"
+  ],
+  "pocket_data": [
+    {
+      "pocket_type": "MAGAZINE_WELL",
+      "item_restriction": [
+        "ak74mag",
+        "rpk74mag",
+        "casket74mag",
+        "rpk74drum"
+      ]
+    }
+  ]
+},
+{
+  "type": "GUN",
+  "reload_noise_volume": 10,
+  "//": "this is the default handling for anything with a stock",
+  "handling": 20,
+  "name": {
+    "str": "SKS"
+  },
+  "symbol": "(",
+  "color": "brown",
+  "faults": [
+    "fault_gun_blackpowder",
+    "fault_gun_dirt",
+    "fault_gun_chamber_spent"
+  ],
+  "ranged_damage": {
+    "damage_type": "bullet",
+    "amount": 1
+  },
+  "copy-from": "rifle_semi",
+  "skill": "rifle",
+  "valid_mod_locations": [
+    [
+      "accessories",
+      4
+    ],
+    [
+      "barrel",
+      1
+    ],
+    [
+      "bore",
+      1
+    ],
+    [
+      "brass catcher",
+      1
+    ],
+    [
+      "grip",
+      1
+    ],
+    [
+      "mechanism",
+      4
+    ],
+    [
+      "muzzle",
+      1
+    ],
+    [
+      "rail",
+      1
+    ],
+    [
+      "sights",
+      1
+    ],
+    [
+      "sling",
+      1
+    ],
+    [
+      "stock mount",
+      1
+    ],
+    [
+      "stock accessory",
+      2
+    ],
+    [
+      "underbarrel",
+      1
+    ]
+  ],
+  "weapon_category": [
+    "AUTOMATIC_RIFLES"
+  ],
+  "id": "sks",
+  "looks_like": "ar15",
+  "description": "Developed by the Soviets in 1945, this rifle was quickly replaced by the full-auto AK-47.  However, due to its superb accuracy, low recoil, and deployable integrated bayonet, this gun maintains immense popularity.",
+  "ascii_picture": "sks",
+  "weight": "3850 g",
+  "volume": "2838 ml",
+  "longest_side": "103 cm",
+  "price": 38000,
+  "price_postapoc": 3500,
+  "to_hit": -1,
+  "bashing": 12,
+  "material": [
+    "steel",
+    "wood"
+  ],
+  "ammo": [
+    "762"
+  ],
+  "dispersion": 55,
+  "durability": 8,
+  "min_cycle_recoil": 1832,
+  "clip_size": 10,
+  "barrel_volume": "500 ml",
+  "built_in_mods": [
+    "inter_bayonet"
+  ],
+  "flags": [
+    "RELOAD_ONE",
+    "NEVER_JAMS"
+  ],
+  "pocket_data": [
+    {
+      "pocket_type": "MAGAZINE",
+      "rigid": true,
+      "ammo_restriction": {
+        "762": 10
+      },
+      "allowed_speedloaders": [
+        "762x39_clip"
+      ]
+    }
+  ]
+},
+{
+  "type": "GUN",
+  "reload_noise_volume": 10,
+  "//": "Name changed to match the non-branded version. Also changed to the SIG 553, as the 552 is discontinued and the 553 is still in production and is identical to the 552.",
+  "handling": 20,
+  "name": {
+    "str": "SIG assault rifle"
+  },
+  "symbol": "(",
+  "color": "light_gray",
+  "faults": [
+    "fault_gun_blackpowder",
+    "fault_gun_dirt",
+    "fault_gun_chamber_spent"
+  ],
+  "ranged_damage": {
+    "damage_type": "bullet",
+    "amount": 0
+  },
+  "copy-from": "rifle_auto",
+  "skill": "rifle",
+  "valid_mod_locations": [
+    [
+      "accessories",
+      4
+    ],
+    [
+      "barrel",
+      1
+    ],
+    [
+      "bore",
+      1
+    ],
+    [
+      "brass catcher",
+      1
+    ],
+    [
+      "grip",
+      1
+    ],
+    [
+      "mechanism",
+      4
+    ],
+    [
+      "magazine",
+      1
+    ],
+    [
+      "muzzle",
+      1
+    ],
+    [
+      "rail",
+      2
+    ],
+    [
+      "sights",
+      1
+    ],
+    [
+      "sling",
+      1
+    ],
+    [
+      "stock",
+      1
+    ],
+    [
+      "stock accessory",
+      2
+    ],
+    [
+      "underbarrel",
+      1
+    ]
+  ],
+  "weapon_category": [
+    "AUTOMATIC_RIFLES"
+  ],
+  "id": "sig_assault_rifle",
+  "looks_like": "ar15",
+  "description": "A compact selective fire automatic rifle designed for the Swiss military.  It features a three-round burst mode and an integrated folding stock.  It is chambered in 5.56x45mm and accepts STANAG magazines.",
+  "weight": "3200 g",
+  "volume": "2950 ml",
+  "longest_side": "741 mm",
+  "price": 320000,
+  "price_postapoc": 6000,
+  "variant_type": "gun",
+  "variants": [
+    {
+      "id": "sig553",
+      "name": {
+        "str": "SIG 553"
+      },
+      "description": "A compact selective fire automatic rifle designed for the Swiss military.  It features a three-round burst mode and an integrated folding stock.",
+      "weight": 1
+    }
+  ],
+  "to_hit": -1,
+  "bashing": 10,
+  "material": [
+    "steel",
+    "plastic"
+  ],
+  "ammo": [
+    "223"
+  ],
+  "dispersion": 10,
+  "durability": 9,
+  "min_cycle_recoil": 1350,
+  "modes": [
+    [
+      "DEFAULT",
+      "semi-auto",
+      1
+    ],
+    [
+      "BURST",
+      "3 rd.",
+      3
+    ],
+    [
+      "AUTO",
+      "auto",
+      4
+    ]
+  ],
+  "built_in_mods": [
+    "folding_stock"
+  ],
+  "pocket_data": [
+    {
+      "pocket_type": "MAGAZINE_WELL",
+      "item_restriction": [
+        "stanag30",
+        "stanag5",
+        "stanag5ranger",
+        "stanag10",
+        "stanag10ranger",
+        "stanag20",
+        "stanag20ranger",
+        "stanag30ranger",
+        "stanag40",
+        "stanag40ranger",
+        "stanag50",
+        "stanag60",
+        "stanag60drum",
+        "stanag90",
+        "stanag100",
+        "stanag100drum",
+        "stanag150",
+        "survivor223mag"
+      ]
+    }
+  ]
+}
+]

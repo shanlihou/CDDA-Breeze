@@ -284,7 +284,6 @@
   {
     "type": "effect_on_condition",
     "id": "EOC_TRAVEL_ENSURE_MAYA_ISHERWOOD",
-    "eoc_type": "ACTIVATION",
     "condition": {
       "compare_int": [
         {
@@ -299,41 +298,65 @@
     },
     "effect": [
       {
-        "u_location_variable": {
-          "global_val": "travel_maya_isherwood_spawn_location"
-        },
-        "target_params": {
-          "om_terrain": "horse_farm_isherwood_13_2ndfloor",
-          "om_terrain_match_type": "TYPE",
-          "om_special": "Isherwood Farms",
-          "z": 1,
-          "random": false
-        }
-      },
-      {
-        "mapgen_update": "travel_spawn_maya_isherwood_second_floor",
-        "target_var": {
-          "global_val": "travel_maya_isherwood_spawn_location"
-        }
-      },
-      {
-        "arithmetic": [
-          {
-            "global_val": "var",
-            "var_name": "travel_maya_isherwood_spawned"
+        "run_eocs": {
+          "id": "EOC_TRAVEL_MAYA_ISHERWOOD_AT_FARM",
+          "condition": {
+            "or": [
+              {
+                "u_near_om_location": "horse_farm_isherwood_13_2ndfloor"
+              },
+              {
+                "u_near_om_location": "horse_farm_isherwood_13"
+              },
+              {
+                "u_near_om_location": "horse_farm_isherwood_14"
+              },
+              {
+                "u_near_om_location": "horse_farm_isherwood_12"
+              }
+            ]
           },
-          "=",
-          {
-            "const": 1
-          }
-        ]
+          "effect": [
+            {
+              "u_location_variable": {
+                "global_val": "travel_maya_isherwood_spawn_location"
+              },
+              "target_params": {
+                "om_terrain": "horse_farm_isherwood_13_2ndfloor",
+                "om_terrain_match_type": "TYPE",
+                "om_special": "Isherwood Farms",
+                "z": 1,
+                "random": false
+              }
+            },
+            {
+              "mapgen_update": "travel_spawn_maya_isherwood_second_floor",
+              "target_var": {
+                "global_val": "travel_maya_isherwood_spawn_location"
+              }
+            },
+            {
+              "arithmetic": [
+                {
+                  "global_val": "var",
+                  "var_name": "travel_maya_isherwood_spawned"
+                },
+                "=",
+                {
+                  "const": 1
+                }
+              ]
+            }
+          ]
+        }
       },
       {
         "run_eocs": [
           "EOC_TRAVEL_ENSURE_MAYA_STOCK_ZONE_V2"
         ]
       }
-    ]
+    ],
+    "recurrence": 5
   },
   {
     "type": "mapgen",
@@ -353,7 +376,6 @@
   {
     "type": "effect_on_condition",
     "id": "EOC_TRAVEL_ENSURE_MAYA_STOCK_ZONE_V2",
-    "eoc_type": "ACTIVATION",
     "condition": {
       "compare_int": [
         {
@@ -368,36 +390,60 @@
     },
     "effect": [
       {
-        "u_location_variable": {
-          "global_val": "travel_maya_stock_zone_location_v2"
-        },
-        "target_params": {
-          "om_terrain": "horse_farm_isherwood_13_2ndfloor",
-          "om_terrain_match_type": "TYPE",
-          "om_special": "Isherwood Farms",
-          "z": 1,
-          "random": false
-        }
-      },
-      {
-        "mapgen_update": "travel_place_maya_stock_zone_v2",
-        "target_var": {
-          "global_val": "travel_maya_stock_zone_location_v2"
-        }
-      },
-      {
-        "arithmetic": [
-          {
-            "global_val": "var",
-            "var_name": "travel_maya_stock_zone_v2"
+        "run_eocs": {
+          "id": "EOC_TRAVEL_MAYA_STOCK_AT_FARM",
+          "condition": {
+            "or": [
+              {
+                "u_near_om_location": "horse_farm_isherwood_13_2ndfloor"
+              },
+              {
+                "u_near_om_location": "horse_farm_isherwood_13"
+              },
+              {
+                "u_near_om_location": "horse_farm_isherwood_14"
+              },
+              {
+                "u_near_om_location": "horse_farm_isherwood_12"
+              }
+            ]
           },
-          "=",
-          {
-            "const": 1
-          }
-        ]
+          "effect": [
+            {
+              "u_location_variable": {
+                "global_val": "travel_maya_stock_zone_location_v2"
+              },
+              "target_params": {
+                "om_terrain": "horse_farm_isherwood_13_2ndfloor",
+                "om_terrain_match_type": "TYPE",
+                "om_special": "Isherwood Farms",
+                "z": 1,
+                "random": false
+              }
+            },
+            {
+              "mapgen_update": "travel_place_maya_stock_zone_v2",
+              "target_var": {
+                "global_val": "travel_maya_stock_zone_location_v2"
+              }
+            },
+            {
+              "arithmetic": [
+                {
+                  "global_val": "var",
+                  "var_name": "travel_maya_stock_zone_v2"
+                },
+                "=",
+                {
+                  "const": 1
+                }
+              ]
+            }
+          ]
+        }
       }
-    ]
+    ],
+    "recurrence": 5
   },
   {
     "type": "mapgen",

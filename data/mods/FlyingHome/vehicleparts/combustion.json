@@ -1,0 +1,26 @@
+[
+    {
+        "id": "FH_engine_installed",
+        "copy-from": "gas_turbine_engine",
+        "type": "vehicle_part",
+        "item": "FH_engine",
+        "description": "一个复杂的引擎，仅仅消耗少量燃油，即可让几乎一栋房子飞起来！",
+        "durability": 4000,
+        "epower": -10,
+        "power": 4474199,
+        "energy_consumption": "1 W",
+        "breaks_into": [
+          { "item": "steel_chunk", "count": [ 100, 120 ] }
+        ],
+        "requirements": {
+          "install": { "skills": [ [ "mechanics", 9 ] ], "time": "60 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
+          "removal": { "skills": [ [ "mechanics", 7 ] ], "time": "30 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
+          "repair": {
+            "skills": [ [ "mechanics", 10 ] ],
+            "time": "60 m",
+            "using": [ [ "vehicle_wrench_2", 1 ]]
+          }
+        },
+        "damage_reduction": { "all": 100 }
+    }
+]

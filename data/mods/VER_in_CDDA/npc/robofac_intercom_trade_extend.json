@@ -1,0 +1,128 @@
+[
+    {
+        "id":"TALK_ROBOFAC_INTERCOM_SERVICES",
+        "type": "talk_topic",
+        "insert_before_standard_exits": true,
+        "responses":[
+            {"text":"有特制的武器么？我觉得我需要更强的火力",
+            "condition":{"not":{"npc_has_var": "told_about_spweapon", "type": "dialogue", "context": "intercom", "value": "yes" }},
+            "topic": "TALK_ROBOFAC_INTERCOM_SPWEAPON_DIALOGUE0"},
+            {"text":"我和你们的特化武装与异界技术的研究主管有协议，需要看看特制武器清单",
+            "condition":{"npc_has_var": "told_about_spweapon", "type": "dialogue", "context": "intercom", "value": "yes"},
+            "topic": "TALK_ROBOFAC_INTERCOM_SPWEAPON_MENU"}
+        ]
+    },
+    {
+        "id":"TALK_ROBOFAC_INTERCOM_SPWEAPON_DIALOGUE0",
+        "type": "talk_topic",
+        "dynamic_line": "当然没有...（突然响起的电话声，笑声和抱怨声）啧，你运气不错，特化武装与异界技术的研究主管，研究员Z有话要和你说",
+        "responses":[
+                {"text":"好耶！！！","topic": "TALK_ROBOFAC_INTERCOM_SPWEAPON_DIALOGUE"}
+        ]
+
+    },
+    {
+        "id":"TALK_ROBOFAC_INTERCOM_SPWEAPON_DIALOGUE",
+        "type":"talk_topic",
+        "dynamic_line":"“Hello，Stranger~嘿嘿嘿”（边翻动纸张边发出奸商的声音）“听说你想要更劲的武器？我不介意用较高价格来出售一些测试或者成熟产品，不过签了这个协议先”对讲机的窗口打开了，里面是一份协议",
+        "responses":[
+            {"text":"“你没学到生化危机4奸商笑声的精髓...价格高要看武器值不值这个价了，十分钱两分货也行吧...”签好了这份武器测试人员协议，把它放回托盘，窗口紧接着关闭了，很快又打开了",
+            "effect": [
+                {"npc_add_var": "told_about_spweapon", "type": "dialogue", "context": "intercom", "value": "yes"}
+            ],
+            "topic":"TALK_ROBOFAC_INTERCOM_SPWEAPON_MENU"}
+        ]
+    },
+    {
+        "id":"TALK_ROBOFAC_INTERCOM_SPWEAPON_MENU",
+        "type":"talk_topic",
+        "dynamic_line":"“那么来看看清单吧”一个PDA从对讲机打开的金属窗口被送出，你拿起了它，查看可购买选项",
+        "responses":[
+            {"text":"“除虫射菌”：一把破旧的双管猎枪",
+            "condition":{"not":{"npc_has_var": "npc_bought_shotgun_d_sp", "type": "dialogue", "context": "intercom", "value": "yes" }},
+            "topic":"TALK_ROBOFAC_INTERCOM_SPWEAPON_shotgun_d_sp"},
+            {"text":"“人来疯”：一把特殊的等离子炮",
+            "condition":{"not":{"npc_has_var": "npc_bought_frisk_plasma_gun", "type": "dialogue", "context": "intercom", "value": "yes" }},
+            "topic":"TALK_ROBOFAC_INTERCOM_SPWEAPON_frisk_plasma_gun"},
+            {"text":"“暴风雪”：一把急冻射流步枪",
+            "condition":{"not":{"npc_has_var": "npc_bought_Freeze_jet_rifle", "type": "dialogue", "context": "intercom", "value": "yes" }},
+            "topic":"TALK_ROBOFAC_INTERCOM_SPWEAPON_Freeze_jet_rifle"},
+            {"text":"HUB01特殊弹药补给箱",
+            "condition":{"or":[
+                {"npc_has_var": "npc_bought_Freeze_jet_rifle", "type": "dialogue", "context": "intercom", "value": "yes" },
+                {"npc_has_var": "npc_bought_frisk_plasma_gun", "type": "dialogue", "context": "intercom", "value": "yes" }
+                ]},
+            "topic":"TALK_ROBOFAC_INTERCOM_SPWEAPON_VER_HUB_SPBOX"},
+            {"text":"““看来暂时没有我想要的东西了”，放回PDA","topic":"TALK_ROBOFAC_INTERCOM_SERVICES"}
+        ]
+    },
+    {
+        "id":"TALK_ROBOFAC_INTERCOM_SPWEAPON_shotgun_d_sp",
+        "type":"talk_topic",
+        "dynamic_line":"别以为在拿破东西坑你啊，这把霰弹枪算是对奇迹武器（灵魂武器？）研究的起点，包括研究员Z内，h实验室内能使用这把奇迹武器的人只有3个，本不应该作为武器对外售卖，但研究员Z认为你会和它很搭，会完成枪内灵魂的夙愿，特此出售给你\n售价：75 HUB01金币",
+        "responses":[
+            {"text":"“我要这个”，掏出75 HUB01金币",
+            "condition": { "u_has_items": { "item": "RobofacCoin", "count": 75 } },
+            "effect": [
+              { "u_sell_item": "RobofacCoin", "count": 75 },
+              { "u_spawn_item": "shotgun_d_sp" },
+              { "npc_add_var": "npc_bought_shotgun_d_sp", "type": "dialogue", "context": "intercom", "value": "yes" }
+            ],
+            "topic":"TALK_ROBOFAC_INTERCOM_SPWEAPON_MENU"
+            },
+            {"text":"看看别的武器","topic":"TALK_ROBOFAC_INTERCOM_SPWEAPON_MENU"}
+        ]
+    },
+    {
+        "id":"TALK_ROBOFAC_INTERCOM_SPWEAPON_frisk_plasma_gun",
+        "type":"talk_topic",
+        "dynamic_line":"这玩意用的时候注意点，别在被包围的时候使用，它发射的等离子脉冲会在弹跳的两个生物体间传递，而且对每次弹跳的生物都会进行爆炸标记，虽然只有冲击波，但还是不能小看威力，算是研究员Z想卖掉的破烂？敌对生物越多用的越划算\n售价：100 HUB01金币",
+        "responses":[
+            {"text":"“我要这个”，掏出100 HUB01金币",
+            "condition": { "u_has_items": { "item": "RobofacCoin", "count": 100 } },
+            "effect": [
+              { "u_sell_item": "RobofacCoin", "count": 100 },
+              { "u_spawn_item": "frisk_plasma_gun" },
+              { "u_spawn_item": "hydrogen_can", "count":20},
+              { "npc_add_var": "npc_bought_frisk_plasma_gun", "type": "dialogue", "context": "intercom", "value": "yes" }
+            ],
+            "topic":"TALK_ROBOFAC_INTERCOM_SPWEAPON_MENU"
+            },
+            {"text":"看看别的武器","topic":"TALK_ROBOFAC_INTERCOM_SPWEAPON_MENU"}
+        ]
+    },
+    {
+        "id":"TALK_ROBOFAC_INTERCOM_SPWEAPON_Freeze_jet_rifle",
+        "type":"talk_topic",
+        "dynamic_line":"这款急冻射流步枪算是研究员Z的得意之作之一，在对目标造成较为严重的冷冻伤害的同时会在命中目标附近造成雪地地形，减缓敌对生物的行进进程，虽然据说使用了研究冷冻传送门后得到的技术，但是研究员Z保证安全并试图让安保部队全面列装，就目前的使用情况而言，确实很稳定\n售价：125 HUB01金币",
+        "responses":[
+            {"text":"“我要这个”，掏出125 HUB01金币",
+            "condition": { "u_has_items": { "item": "RobofacCoin", "count": 125 } },
+            "effect": [
+              { "u_sell_item": "RobofacCoin", "count": 125 },
+              { "u_spawn_item": "Freeze_jet_rifle" },
+              { "u_spawn_item": "coolant_tank", "count":2},
+              { "npc_add_var": "npc_bought_Freeze_jet_rifle", "type": "dialogue", "context": "intercom", "value": "yes" }
+            ],
+            "topic":"TALK_ROBOFAC_INTERCOM_SPWEAPON_MENU"
+            },
+            {"text":"看看别的武器","topic":"TALK_ROBOFAC_INTERCOM_SPWEAPON_MENU"}
+        ]
+    },
+    {
+        "id":"TALK_ROBOFAC_INTERCOM_SPWEAPON_VER_HUB_SPBOX",
+        "type":"talk_topic",
+        "dynamic_line":"一个暴风雪 急冻射流步枪和人来疯 等离子炮的特殊弹药补给箱，如果外面没弹药卖了可以在这买，售价较高\n售价：18 HUB01金币",
+        "responses":[
+            {"text":"“妈的奸商......算了，我要这个”，掏出10 HUB01金币",
+            "condition": { "u_has_items": { "item": "RobofacCoin", "count": 18 } },
+            "effect": [
+              { "u_sell_item": "RobofacCoin", "count": 18 },
+              { "u_spawn_item": "VER_HUB_SPBOX" }
+            ],
+            "topic":"TALK_ROBOFAC_INTERCOM_SPWEAPON_MENU"
+            },
+            {"text":"看看别的武器","topic":"TALK_ROBOFAC_INTERCOM_SPWEAPON_MENU"}
+        ]
+    }
+]

@@ -1,0 +1,40 @@
+[
+  {
+    "type": "mod_tileset",
+    "compatibility": [
+      "Chibi_Ultica",
+      "UltimateCataclysm",
+      "MshockXottoplus",
+      "UNDEAD_PEOPLE",
+      "UNDEAD_PEOPLE_BASE",
+      "UNDEAD_PEOPLE_LEGACY",
+      "UlticaShell",
+      "MshockXottoplus12",
+      "MSX++DEAD_PEOPLE",
+      "MXplus12_for_cosmetics",
+      "MSXotto+"
+    ],
+    "tiles-new": [
+      {
+        "file": "巨型生物贴图.png",
+        "tiles": [
+          { "id": "巨型肉蛇", "fg": 0, "rotates": false },
+          {
+            "id": [ "光合异子之柱" ],
+            "animated": true,
+            "fg": [
+              { "weight": 5, "sprite": 2 },
+              { "weight": 5, "sprite": 3 },
+              { "weight": 5, "sprite": 4 },
+              { "weight": 5, "sprite": 5 }
+            ]
+          }
+        ],
+        "sprite_width": 96,
+        "sprite_height": 96,
+        "sprite_offset_x": -32,
+        "sprite_offset_y": -64
+      }
+    ]
+  }
+]

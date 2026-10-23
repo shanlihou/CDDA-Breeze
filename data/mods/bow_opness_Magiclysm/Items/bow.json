@@ -1,0 +1,218 @@
+[
+  {
+    "id": "rune_druid_weapon",
+    "copy-from": "rune_druid_weapon",
+    "type": "GUN",
+    "name": {"str": "德鲁伊复合弓"},
+    "description": "一把采用多种材料复合制成以增加储能效率的弓。弓背两端镶嵌着两个德鲁伊符文。",
+    "min_strength": 9,
+    "range": 12,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 17
+    },
+    "use_action": {
+      "ammo_scale": 0,
+      "menu_text": "强化",
+      "type": "transform",
+      "target": "rune_druid_weapon_2",
+      "msg": "你激发刻印，强化了德鲁伊复合弓。"
+    }
+  },
+  {
+    "id": "rune_druid_weapon_2",
+    "copy-from": "rune_druid_weapon",
+    "type": "GUN",
+    "name": {"str": "德鲁伊复合弓-强化"},
+    "description": "一把采用多种材料复合制成以增加储能效率的弓。弓背两端镶嵌着两个德鲁伊符文。",
+    "min_strength": 13,
+    "range": 14,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 21
+    },
+    "use_action": {
+      "ammo_scale": 0,
+      "menu_text": "强化",
+      "type": "transform",
+      "target": "rune_druid_weapon_3",
+      "msg": "你激发刻印，再次强化了德鲁伊复合弓。"
+    }
+  },
+  {
+    "id": "rune_druid_weapon_3",
+    "copy-from": "rune_druid_weapon",
+    "type": "GUN",
+    "name": {"str": "德鲁伊复合弓-二重强化"},
+    "description": "一把采用多种材料复合制成以增加储能效率的弓。弓背两端镶嵌着两个德鲁伊符文。",
+    "min_strength": 17,
+    "range": 16,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 25
+    },
+    "use_action": {
+      "ammo_scale": 0,
+      "menu_text": "解除强化",
+      "type": "transform",
+      "target": "rune_druid_weapon",
+      "msg": "你激发刻印，解除了德鲁伊复合弓的强化。"
+    }
+  },
+  {
+    "id": "druid_recurve",
+    "copy-from": "druid_recurve",
+    "type": "GUN",
+    "name": {"str": "乌尔斯之弓"},
+    "description": "一把魔法生成的华丽反曲弓。由结实而有弹性的木料制成,拉开弓弦就会自动生成一只箭。",
+    "min_strength": 9,
+	"flags": [
+      "FIRE_TWOHAND",
+      "PRIMITIVE_RANGED_WEAPON",
+      "BELTED",
+      "UNBREAKABLE_MELEE",
+      "NONCONDUCTIVE",
+      "ONLY_ONE",
+      "NO_REPAIR",
+      "NO_SALVAGE",
+      "NO_UNLOAD",
+      "WATERPROOF_GUN",
+      "NO_TURRET",
+      "NEVER_JAMS",
+      "MAGIC_FOCUS"
+    ],
+    "range": 12,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 30
+    },
+    "use_action": {
+      "ammo_scale": 0,
+      "menu_text": "强化",
+      "type": "transform",
+      "target": "druid_recurve_2",
+      "msg": "你激发刻印，强化了乌尔斯之弓。"
+    }
+  },
+  {
+    "id": "druid_recurve_2",
+    "copy-from": "druid_recurve",
+    "type": "GUN",
+    "name": {"str": "乌尔斯之弓-强化"},
+    "description": "一把魔法生成的华丽反曲弓。由结实而有弹性的木料制成,拉开弓弦就会自动生成一只箭。这把弓经过一次强化以增强伤害和射程，但是需要更高的力量来使用。",
+    "min_strength": 13,
+    "range": 16,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 40
+    },
+    "use_action": {
+      "ammo_scale": 0,
+      "menu_text": "强化",
+      "type": "transform",
+      "target": "druid_recurve_3",
+      "msg": "你激发刻印，再次强化了乌尔斯之弓。"
+    }
+  },
+  {
+    "id": "druid_recurve_3",
+    "copy-from": "druid_recurve",
+    "type": "GUN",
+    "name": {"str": "乌尔斯之弓-二重强化"},
+    "description": "一把魔法生成的华丽反曲弓。由结实而有弹性的木料制成,拉开弓弦就会自动生成一只箭。这把弓经过两次强化以大幅增强伤害和射程，但是需要极高的力量来使用。",
+    "min_strength": 17,
+    "range": 20,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 50
+    },
+    "use_action": {
+      "ammo_scale": 0,
+      "menu_text": "解除强化",
+      "type": "transform",
+      "target": "druid_recurve",
+      "msg": "你激发刻印，解除了乌尔斯之弓的强化。"
+    }
+  },
+  {
+    "id": "ichaival",
+    "copy-from": "ichaival",
+    "type": "GUN",
+    "name": {"str": "神弓伊奇巴尔"},
+    "description": "伊奇巴尔,传说中北欧众神之父奥丁使用的神弓。据说每次拉弦能够射出10只箭。这件上面覆盖满了金银饰品,以及一只装饰华丽的渡鸦。",
+    "flags": [
+      "FIRE_TWOHAND",
+      "STR_DRAW",
+      "RELOAD_AND_SHOOT",
+      "PRIMITIVE_RANGED_WEAPON",
+      "BELTED",
+      "WATER_FRIENDLY",
+      "WATERPROOF_GUN",
+      "NEVER_JAMS",
+      "SHEATH_BOW",
+      "MAGIC_FOCUS"
+    ],
+    "min_strength": 9,
+    "range": 20,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 20
+    },
+    "use_action": {
+      "ammo_scale": 0,
+      "menu_text": "强化",
+      "type": "transform",
+      "target": "ichaival_2",
+      "msg": "你激发刻印，强化了神弓伊奇巴尔。"
+    },
+    "modes": [ [ "DEFAULT", "single", 1 ], [ "AUTO", "auto", 10 ] ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "item_restriction": [
+          "ichaival_quiver"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ichaival_2",
+    "copy-from": "ichaival",
+    "type": "GUN",
+    "name": {"str": "神弓伊奇巴尔-强化"},
+    "description": "伊奇巴尔,传说中北欧众神之父奥丁使用的神弓。据说每次拉弦能够射出10只箭。这件上面覆盖满了金银饰品,以及一只装饰华丽的渡鸦。这把弓经过一次强化以增强伤害和射程，但是需要更高的力量来使用。",
+    "min_strength": 13,
+    "range": 25,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 26
+    },
+    "use_action": {
+      "ammo_scale": 0,
+      "menu_text": "强化",
+      "type": "transform",
+      "target": "ichaival_3",
+      "msg": "你激发刻印，强化了神弓伊奇巴尔。"
+    }
+  },
+  {
+    "id": "ichaival_3",
+    "copy-from": "ichaival",
+    "type": "GUN",
+    "name": {"str": "神弓伊奇巴尔-二重强化"},
+    "description": "伊奇巴尔,传说中北欧众神之父奥丁使用的神弓。据说每次拉弦能够射出10只箭。这件上面覆盖满了金银饰品,以及一只装饰华丽的渡鸦。这把弓经过两次强化以大幅增强伤害和射程，但是需要极高的力量来使用。",
+    "min_strength": 17,
+    "range": 30,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 32
+    },
+    "use_action": {
+      "ammo_scale": 0,
+      "menu_text": "解除强化",
+      "type": "transform",
+      "target": "ichaival",
+      "msg": "你激发刻印，解除了神弓伊奇巴尔的强化。"
+    }
+  }
+]

@@ -1,0 +1,76 @@
+[
+  {
+    "type": "martial_art",
+    "id": "style_SG",
+    "name": { "str": "安全警卫格斗术" },
+    "description": "结合安全警卫配套的改造专门设计的生化格斗术，以爆发与精度搭配为主，特点是稳定持久的作战姿态。",
+    "initiate": [
+      "目标锁定中……\n敌人分析中……\n作战计划制定中……",
+      "%s开始进行战斗分析。"
+    ],
+    "primary_skill": "cutting",
+    "static_buffs": [
+      {
+        "id": "buff_SG_static",
+        "name": "作战姿态",
+        "description": "维持作战姿态，逐步提升命中/闪避/格挡。\n命中 +1\n闪避 +1\n格挡 +1\n最大 +3",
+        "unarmed_allowed": true,
+        "melee_allowed": true,
+        "max_stacks": 3,
+        "flat_bonuses": [
+          { "stat": "hit", "scale": 1.0 },
+          { "stat": "dodge", "scale": 1.0 },
+		  { "stat": "block", "scale": 1.0 }
+        ]
+      }
+    ],
+    "onmove_buffs": [
+      {
+        "id": "buff_SG_onmove",
+        "name": "强化行动超频",
+        "description": "超频运算，破坏力与速度逐渐提高，命中率下降，如果停下需要重新加速。\n速度 +3   钝击 +1   闪避 +1\n命中率 -0.1   暴击率 +0.1\n最大 +42",
+        "unarmed_allowed": true,
+        "melee_allowed": true,
+        "buff_duration": 1,
+        "max_stacks": 42,
+        "flat_bonuses": [
+		  { "stat": "speed", "scale": 3.0 },
+          { "stat": "dodge", "scale": 1.0 },
+          { "stat": "damage", "type": "bash", "scale": 1.0 },
+          { "stat": "hit", "scale": -0.1 },
+		  { "stat": "crit_chance", "scale": 0.1 }
+        ]
+      }
+    ],
+    "onpause_buffs": [
+      {
+        "id": "buff_SG_onpause",
+        "name": "强化目标锁定",
+        "description": "固守防御，持续强化目标锁定，如果行动需要重新锁定。\n命中 +1\n格挡率 +1\n暴击率 +1\n最大 +42",
+        "unarmed_allowed": true,
+        "melee_allowed": true,
+        "buff_duration": 1,
+        "max_stacks": 42,
+        "flat_bonuses": [
+          { "stat": "hit", "scale": 1.0 },
+		  { "stat": "block_effectiveness", "scale": 1.0 },
+		  { "stat": "crit_chance", "scale": 1.0 }
+        ]
+      }
+    ],
+    "techniques": [ "tec_SG_counter",
+      "tec_SG_disarm",
+      "tec_SG_takedown",
+      "tec_SG_wide",
+      "tec_SG_break",
+      "tec_SG_punch",
+      "tec_SG_Kick",
+      "tec_SG_swee_past",
+      "tec_SG_Down_poke",
+      "tec_SG_Heavy_chop",
+      "tec_SG_Split",
+      "tec_SG_Strangle_stab"
+    ],
+    "weapon_category": [ "KNIVES" ]
+  }
+]

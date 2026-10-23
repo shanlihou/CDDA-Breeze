@@ -1,0 +1,128 @@
+[
+  {
+    "id": "cyyl_yh_nlf_wdms",
+    "type": "TOOL_ARMOR",
+    "category": "armor",
+    "copy-from": "yh_nlf_sz_copy",
+    "name": {
+      "str": "次元医疗<永恒>能量服(无敌模式)"
+    },
+    "description": "无限体力、无限恢复、无限状态、无限免伤、无限属性，每1秒消耗1点能量。",
+    "warmth": 100,
+    "encumbrance": 0,
+    "environmental_protection": 10000,
+    "material_thickness": 10,
+    "flags": [
+      "TRADER_AVOID",
+      "ZERO_WEIGHT",
+      "TARDIS",
+      "IR_EFFECT",
+      "PARTIAL_DEAF",
+      "ALARMCLOCK",
+      "ALLOWS_NATURAL_ATTACKS",
+      "ALLOWS_TAIL",
+      "ALLOWS_TALONS",
+      "BAROMETER",
+      "ACID_IMMUNE",
+      "BASH_IMMUNE",
+      "BIO_IMMUNE",
+      "BULLET_IMMUNE",
+      "COLD_IMMUNE",
+      "CUT_IMMUNE",
+      "ELECTRIC_IMMUNE",
+      "HEAT_IMMUNE",
+      "STAB_IMMUNE",
+      "ENHANCED_VISION",
+      "FIX_FARSIGHT",
+      "FIX_NEARSIGHT",
+      "FLASH_PROTECTION",
+      "GAS_PROOF",
+      "GNV_EFFECT",
+      "HYGROMETER",
+      "LEVITATION",
+      "NONCONDUCTIVE",
+      "OVERSIZE",
+      "PADDED",
+      "POWERARMOR_COMPATIBLE",
+      "RAD_PROOF",
+      "RAINPROOF",
+      "REBREATHER",
+      "SKINTIGHT",
+      "STURDY",
+      "SUN_GLASSES",
+      "SUPER_FANCY",
+      "SWIM_GOGGLES",
+      "THERMOMETER",
+      "PORTAL_PROOF",
+      "VARSIZE",
+      "WATCH",
+      "WATER_FRIENDLY",
+      "WATERPROOF",
+      "ZOOM"
+    ],
+    "weight_capacity_bonus": "1000000000 kg",
+    "qualities": [
+      [
+        "GLARE",
+        100000
+      ],
+      [
+        "LIFT",
+        100000
+      ],
+      [
+        "JACK",
+        100000
+      ]
+    ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "id": "c_cyyl_yh_nlf_yfxg_wdms"
+        },
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "id": "c_cyyl_yh_nlf_yfxg_wdms1"
+        }
+      ]
+    },
+    "power_draw": 1,
+    "revert_to": "cyyl_yh_nlf_ptms",
+    "use_action": [
+      {
+        "type": "transform",
+        "menu_text": "切换普通模式",
+        "target": "cyyl_yh_nlf_ptms",
+        "active": false,
+        "msg": "开启了能量服的普通模式。"
+      },
+      {
+        "type": "consume_drug",
+        "effects": [
+          {
+            "id": "yh_yly_fmqc_zt",
+            "duration": "10 s"
+          }
+        ],
+        "damage_over_time": [
+          {
+            "damage_type": "pure",
+            "duration": "10 s",
+            "amount": -100000,
+            "bodyparts": [
+              "head",
+              "torso",
+              "arm_l",
+              "arm_r",
+              "leg_l",
+              "leg_r"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

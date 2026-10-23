@@ -1,0 +1,351 @@
+[
+    {
+		"type" : "recipe",
+		"result": "mil_mess_kit",
+		"category": "CC_商店",
+		"id_suffix": "CC_SSS_0",
+		"subcategory": "CSC_商店_杂项",
+		"skill_used": "space_shop",
+		"skills_required": ["space_shop", 0],
+		"difficulty": 0,
+		"time": 10,
+		"autolearn": true,
+		"components":
+		[
+			[
+			[ "space_copper", 23 ]
+			]
+		]
+	},
+	{
+		"type" : "recipe",
+		"result": "knife_swissarmy",
+		"category": "CC_商店",
+		"id_suffix": "CC_SSS_0",
+		"subcategory": "CSC_商店_杂项",
+		"skill_used": "space_shop",
+		"skills_required": ["space_shop", 0],
+		"difficulty": 0,
+		"time": 10,
+		"autolearn": true,
+		"components":
+		[
+			[
+			[ "space_copper", 35 ]
+			]
+		]
+	},
+	{
+    "name": { "str": "无限水袋" },
+    "id": "wuxianshui",
+    "type": "GENERIC",
+    "copy-from": "waterskin3",
+    "price_postapoc": "850 USD",
+    "category": "clothing",
+    "relic_data": { "charge_info": { "recharge_type": "periodic", "time": "24 h", "regenerate_ammo": true } },
+    "use_action": {
+      "target": "water_clean",
+      "msg": "你打开一看已经有水冒出来了",
+      "container": "wuxianshui",
+      "target_charges": 10,
+      "moves": 50,
+      "type": "transform"
+      }
+    },
+    {
+    "result": "wuxianshui",
+    "type": "recipe",
+    "category": "CC_商店",
+		"id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_商店_杂项",
+    "time": "2 h",
+    "autolearn": true,
+    "components": [[["space_copper",100]]]
+    },
+    {
+    "name": { "str": "无限面包袋" },
+    "id": "wuxianmianbao",
+    "type": "GENERIC",
+    "copy-from": "mre_bag",
+    "price_postapoc": "8500 USD",
+    "category": "clothing",
+    "relic_data": { "charge_info": { "recharge_type": "periodic", "time": "24 h", "regenerate_ammo": true } },
+    "use_action": {
+      "target": "bread",
+      "msg": "你封口后重新打开一看已经出现了新的面包",
+      "container": "wuxianmianbao",
+      "target_charges": 10,
+      "moves": 50,
+      "type": "transform"
+      }
+    },
+    {
+    "result": "wuxianmianbao",
+    "type": "recipe",
+    "category": "CC_商店",
+		"id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_商店_杂项",
+    "time": "4000 s",
+    "autolearn": true,
+    "components": [[["space_copper",100]]]
+    },
+	{
+		"type" : "recipe",
+		"result": "id_science",
+		"category": "CC_商店",
+		"id_suffix": "CC_SSS_0",
+		"subcategory": "CSC_商店_杂项",
+		"skill_used": "space_shop",
+		"skills_required": ["space_shop", 0],
+		"difficulty": 0,
+		"time": 10,
+		"autolearn": true,
+		"components":
+		[
+			[
+			[ "space_copper", 60 ]
+			]
+		]
+	},{
+		"type" : "recipe",
+		"result": "solar_cell",
+		"category": "CC_商店",
+		"id_suffix": "CC_SSS_0",
+		"subcategory": "CSC_商店_杂项",
+		"skill_used": "space_shop",
+		"skills_required": ["space_shop", 0],
+		"difficulty": 0,
+		"time": 10,
+		"autolearn": true,
+		"components":
+		[
+			[
+			[ "space_copper", 10 ]
+			]
+		]
+	},{
+		"type" : "recipe",
+		"result": "battery",
+		"category": "CC_商店",
+		"id_suffix": "CC_SSS_0",
+		"subcategory": "CSC_商店_杂项",
+		"skill_used": "space_shop",
+		"skills_required": ["space_shop", 0],
+		"difficulty": 0,
+		"time": 10,
+		"autolearn": true,
+		"components":
+		[
+			[
+			[ "space_copper", 20 ]
+			]
+		]
+	},{
+		"type" : "recipe",
+		"result": "fnp90mag",
+		"category": "CC_商店",
+		"id_suffix": "CC_SSS_0",
+		"subcategory": "CSC_商店_杂项",
+		"skill_used": "space_shop",
+		"skills_required": ["space_shop", 0],
+		"difficulty": 0,
+		"time": 10,
+		"autolearn": true,
+		"components":
+		[
+			[
+			[ "space_copper", 5 ]
+			]
+		]
+	},{
+		"type" : "recipe",
+		"result": "glockbigmag",
+		"category": "CC_商店",
+		"id_suffix": "CC_SSS_0",
+		"subcategory": "CSC_商店_杂项",
+		"skill_used": "space_shop",
+		"skills_required": ["space_shop", 0],
+		"difficulty": 0,
+		"time": 10,
+		"autolearn": true,
+		"components":
+		[
+			[
+			[ "space_copper", 5 ]
+			]
+		]
+	},{
+		"type" : "recipe",
+		"result": "glock40bigmag",
+		"category": "CC_商店",
+		"id_suffix": "CC_SSS_0",
+		"subcategory": "CSC_商店_杂项",
+		"skill_used": "space_shop",
+		"skills_required": ["space_shop", 0],
+		"difficulty": 0,
+		"time": 10,
+		"autolearn": true,
+		"components":
+		[
+			[
+			[ "space_copper", 6 ]
+			]
+		]
+	},{
+		"type" : "recipe",
+		"result": "glock40mag",
+		"category": "CC_商店",
+		"id_suffix": "CC_SSS_0",
+		"subcategory": "CSC_商店_杂项",
+		"skill_used": "space_shop",
+		"skills_required": ["space_shop", 0],
+		"difficulty": 0,
+		"time": 10,
+		"autolearn": true,
+		"components":
+		[
+			[
+			[ "space_copper", 5 ]
+			]
+		]
+	},{
+		"type" : "recipe",
+		"result": "glockmag",
+		"category": "CC_商店",
+		"id_suffix": "CC_SSS_0",
+		"subcategory": "CSC_商店_杂项",
+		"skill_used": "space_shop",
+		"skills_required": ["space_shop", 0],
+		"difficulty": 0,
+		"time": 10,
+		"autolearn": true,
+		"components":
+		[
+			[
+			[ "space_copper", 5 ]
+			]
+		]
+	},{
+		"type" : "recipe",
+		"result": "cot",
+		"category": "CC_商店",
+		"id_suffix": "CC_SSS_0",
+		"subcategory": "CSC_商店_杂项",
+		"skill_used": "space_shop",
+		"skills_required": ["space_shop", 0],
+		"difficulty": 0,
+		"time": 10,
+		"autolearn": true,
+		"components":
+		[
+			[
+			[ "space_copper", 75 ]
+			]
+		]
+	},{
+		"type" : "recipe",
+		"result": "militarymap",
+		"category": "CC_商店",
+		"id_suffix": "CC_SSS_0",
+		"subcategory": "CSC_商店_杂项",
+		"skill_used": "space_shop",
+		"skills_required": ["space_shop", 0],
+		"difficulty": 0,
+		"time": 10,
+		"autolearn": true,
+		"components":
+		[
+			[
+			[ "space_copper", 10 ]
+			]
+		]
+	},{
+		"type" : "recipe",
+		"result": "id_military",
+		"category": "CC_商店",
+		"id_suffix": "CC_SSS_0",
+		"subcategory": "CSC_商店_杂项",
+		"skill_used": "space_shop",
+		"skills_required": ["space_shop", 0],
+		"difficulty": 0,
+		"time": 10,
+		"autolearn": true,
+		"components":
+		[
+			[
+			[ "space_copper", 120 ]
+			]
+		]
+	},{
+		"type" : "recipe",
+		"result": "plut_cell",
+		"category": "CC_商店",
+		"id_suffix": "CC_SSS_0",
+		"subcategory": "CSC_商店_杂项",
+		"skill_used": "space_shop",
+		"skills_required": ["space_shop", 0],
+		"difficulty": 0,
+		"time": 10,
+		"autolearn": true,
+		"components":
+		[
+			[
+			[ "space_copper", 1 ]
+			]
+		]
+	},{
+		"type" : "recipe",
+		"result": "gasoline",
+		"category": "CC_商店",
+		"id_suffix": "CC_SSS_0",
+		"subcategory": "CSC_商店_杂项",
+		"skill_used": "space_shop",
+		"skills_required": ["space_shop", 0],
+		"difficulty": 0,
+		"time": 10,
+		"autolearn": true,
+		"components":
+		[
+			[
+			[ "space_copper", 1 ]
+			]
+		]
+	},
+	{
+		"type" : "recipe",
+		"result": "medical_gauze",
+		"category": "CC_商店",
+		"id_suffix": "CC_SSS_0",
+		"subcategory": "CSC_商店_杂项",
+		"result_mult": 5,
+		"skill_used": "space_shop",
+		"skills_required": ["space_shop", 0],
+		"difficulty": 0,
+		"time": 10,
+		"autolearn": true,
+		"components":
+		[
+			[
+			[ "space_copper", 1 ]
+			]
+		]
+	},
+	{
+		"type" : "recipe",
+		"result": "diesel",
+		"category": "CC_商店",
+		"id_suffix": "CC_SSS_0",
+		"subcategory": "CSC_商店_杂项",
+		"skill_used": "space_shop",
+		"skills_required": ["space_shop", 0],
+		"difficulty": 0,
+		"time": 10,
+		"autolearn": true,
+		"components":
+		[
+			[
+			[ "space_copper", 1 ]
+			]
+		]
+	}
+]

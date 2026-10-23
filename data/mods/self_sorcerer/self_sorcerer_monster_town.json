@@ -1,0 +1,771 @@
+[
+  {
+    "type": "terrain",
+    "id": "t_glass_roof_plussss",
+    "name": "skylight",
+    "description": "A giant sheet of glass inserted into the roof to let light pass through.",
+    "symbol": "o",
+    "looks_like": "t_linoleum_white",
+    "color": "cyan",
+    "move_cost": 2,
+    "flags": [ "TRANSPARENT", "TRANSPARENT_FLOOR" ],
+    "bash": {
+      "str_min": 200,
+      "str_max": 400,
+      "sound": "glass breaking!",
+      "sound_fail": "whack!",
+      "ter_set": "t_skylight_frame",
+      "items": [ { "item": "glass_shard", "count": [ 21, 29 ] } ]
+    }
+  },
+  {
+    "type": "overmap_special",
+    "id": "self_sorcerer_monster",
+    "overmaps": [
+    	{ "point": [ 0, 0, 0 ], "overmap": "self_sorcerer_monster_1" },
+    	{ "point": [ 0, 0, 1 ], "overmap": "self_sorcerer_monster_2" },
+    	{ "point": [ 0, 0, 2 ], "overmap": "self_sorcerer_monster_3" },
+    	{ "point": [ 0, 0, 3 ], "overmap": "self_sorcerer_monster_4" },
+    	{ "point": [ 0, 0, 4 ], "overmap": "self_sorcerer_monster_5" },
+    	{ "point": [ 0, 0, 5 ], "overmap": "self_sorcerer_monster_6" }
+    ],
+    "locations": [ "wilderness" ],
+    "city_distance": [ 20, -1 ],
+    "city_sizes": [ 0, -1 ],
+    "occurrences": [ 1, 1 ],
+    "flags": [ "CLASSIC", "WILDERNESS" ]
+  },
+  {
+    "type": "overmap_terrain",
+    "id": [ "self_sorcerer_monster_1" ],
+    "name": "它之所",
+    "sym": "A",
+    "color": "red",
+    "flags": [ "NO_ROTATE" ],
+    "see_cost": 5
+  },
+  {
+    "type": "overmap_terrain",
+    "id": [ "self_sorcerer_monster_2" ],
+    "name": "它之所",
+    "sym": "A",
+    "color": "red",
+    "flags": [ "NO_ROTATE" ],
+    "see_cost": 5
+  },
+  {
+    "type": "overmap_terrain",
+    "id": [ "self_sorcerer_monster_3" ],
+    "name": "它之所",
+    "sym": "A",
+    "color": "red",
+    "flags": [ "NO_ROTATE" ],
+    "see_cost": 5
+  },
+  {
+    "type": "overmap_terrain",
+    "id": [ "self_sorcerer_monster_4" ],
+    "name": "它之所",
+    "sym": "A",
+    "color": "red",
+    "flags": [ "NO_ROTATE" ],
+    "see_cost": 5
+  },
+  {
+    "type": "overmap_terrain",
+    "id": [ "self_sorcerer_monster_5" ],
+    "name": "它之所",
+    "sym": "A",
+    "color": "red",
+    "flags": [ "NO_ROTATE" ],
+    "see_cost": 5
+  },
+  {
+    "type": "overmap_terrain",
+    "id": [ "self_sorcerer_monster_6" ],
+    "name": "它之所",
+    "sym": "A",
+    "color": "red",
+    "flags": [ "NO_ROTATE" ],
+    "see_cost": 5
+  },
+  {
+    "type": "mapgen",
+    "method": "json",
+    "om_terrain": "self_sorcerer_monster_1",
+    "object": {
+      "fill_ter": "t_glass_roof_plussss",
+      "rows": [
+        "xxxxxxxxxxxzzxxxxxxxxxxx",
+        "xu________x__x________ux",
+        "x_xxx_xxx_x__x_xxx_xxx_x",
+        "x_x_______x__x_______x_x",
+        "x_x___xxxxx__xxxxx___x_x",
+        "x______________________x",
+        "xxx_xxx___xxxx___xxx_xxx",
+        "x_x_x______________x_x_x",
+        "x_x_x___x______x___x_x_x",
+        "x___x____x____x____x___x",
+        "xxxxx_x___x__x___x_xxxxx",
+        "z_____x____xx____x_____z",
+        "z_____x____xx____x_____z",
+        "xxxxx_x___x__x___x_xxxxx",
+        "x___x____x____x____x___x",
+        "x_x_x___x______x___x_x_x",
+        "x_x_x______________x_x_x",
+        "xxx_xxx___xxxx___xxx_xxx",
+        "x______________________x",
+        "x_x_______x__x_______x_x",
+        "x_x_______x__x_______x_x",
+        "x_xxx_xxx_x__x_xxx_xxx_x",
+        "xu____x___x__x___x____ux",
+        "xxxxxxxxxxxzzxxxxxxxxxxx"
+      ],
+      "place_monsters": [
+        {
+          "monster": "GROUP_CR_1_3",
+          "x": [ 3, 21 ],
+          "y": [ 3, 21 ],
+          "density": 0.1,
+          "repeat": [ 4, 8 ]
+        }
+      ],
+      "terrain": {
+        "_": "t_glass_roof_plussss",
+      	"z": "t_ballistic_door_glass_c",
+      	"x": "t_ballistic_glass",
+      	"u": "t_stairs_up"
+      },
+      "furniture": {
+        "_": [
+          [ "f_null", 100 ]
+        ],
+        "u": [
+          [ "f_null", 100 ]
+        ],
+        "z": [
+          [ "f_null", 100 ]
+        ],
+        "x": [
+          [ "f_null", 100 ]
+        ]
+      }
+    }
+  },
+  {
+    "type": "mapgen",
+    "method": "json",
+    "om_terrain": "self_sorcerer_monster_2",
+    "object": {
+      "fill_ter": "t_glass_roof_plussss",
+      "rows": [
+        "cccccccccccccccccccccccc",
+        "cd____________________dc",
+        "c_ccc______________ccc_c",
+        "c_c____ccc____ccc____c_c",
+        "c_c__________________c_c",
+        "c____cc___cccc___cc____c",
+        "c____c____________c____c",
+        "c__c___cccc__cccc___c__c",
+        "c__c___c________c___c__c",
+        "c__c___c___cc___c___c__c",
+        "c____c_c________c_c____c",
+        "c____c___c_uu_c___c____c",
+        "c____c___c_uu_c___c____c",
+        "c____c_c________c_c____c",
+        "c__c___c___cc___c___c__c",
+        "c__c___c________c___c__c",
+        "c__c___cccc__cccc___c__c",
+        "c____c____________c____c",
+        "c____cc___cccc___cc____c",
+        "c_c__________________c_c",
+        "c_c____ccc____ccc____c_c",
+        "c_ccc______________ccc_c",
+        "cd____________________dc",
+        "cccccccccccccccccccccccc"
+      ],
+      "place_monsters": [
+        {
+          "monster": "GROUP_CR_2_5",
+          "x": [ 4, 20 ],
+          "y": [ 4, 10 ],
+          "density": 0.1,
+          "repeat": [ 3, 6 ]
+        },
+        {
+          "monster": "GROUP_CR_2_5",
+          "x": [ 4, 10 ],
+          "y": [ 11, 13 ],
+          "density": 0.1,
+          "repeat": [ 1, 2 ]
+        },
+        {
+          "monster": "GROUP_CR_2_5",
+          "x": [ 14, 20 ],
+          "y": [ 11, 13 ],
+          "density": 0.1,
+          "repeat": [ 1, 2 ]
+        },
+        {
+          "monster": "GROUP_CR_2_5",
+          "x": [ 4, 20 ],
+          "y": [ 14, 20 ],
+          "density": 0.1,
+          "repeat": [ 3, 6 ]
+        }
+      ],
+      "terrain": {
+      	"_": "t_glass_roof_plussss",
+      	"c": "t_ballistic_glass",
+      	"d": "t_stairs_down",
+      	"u": "t_stairs_up"
+      },
+      "furniture": {
+        "_": [
+          [ "f_null", 100 ]
+        ],
+        "c": [
+          [ "f_null", 100 ]
+        ],
+        "d": [
+          [ "f_null", 100 ]
+        ],
+        "u": [
+          [ "f_null", 100 ]
+        ]
+      }
+    }
+  },
+  {
+    "type": "mapgen",
+    "method": "json",
+    "om_terrain": "self_sorcerer_monster_3",
+    "object": {
+      "fill_ter": "t_glass_roof_plussss",
+      "rows": [
+        "cccccccccccccccccccccccc",
+        "c__________uu__________c",
+        "c_ccc______________ccc_c",
+        "c_c____ccc____ccc____c_c",
+        "c_c__________________c_c",
+        "c____cc___cccc___cc____c",
+        "c____c____________c____c",
+        "c__c___cccc__cccc___c__c",
+        "c__c___c________c___c__c",
+        "c__c___c___cc___c___c__c",
+        "c____c_c________c_c____c",
+        "cu___c___c_dd_c___c___uc",
+        "cu___c___c_dd_c___c___uc",
+        "c____c_c________c_c____c",
+        "c__c___c___cc___c___c__c",
+        "c__c___c________c___c__c",
+        "c__c___cccc__cccc___c__c",
+        "c____c____________c____c",
+        "c____cc___cccc___cc____c",
+        "c_c__________________c_c",
+        "c_c____ccc____ccc____c_c",
+        "c_ccc______________ccc_c",
+        "c__________uu__________c",
+        "cccccccccccccccccccccccc"
+      ],
+      "place_monsters": [
+        {
+          "monster": "GROUP_CR_3_6",
+          "x": [ 4, 20 ],
+          "y": [ 4, 10 ],
+          "density": 0.1,
+          "repeat": [ 3, 6 ]
+        },
+        {
+          "monster": "GROUP_CR_3_6",
+          "x": [ 4, 10 ],
+          "y": [ 11, 13 ],
+          "density": 0.1,
+          "repeat": [ 1, 2 ]
+        },
+        {
+          "monster": "GROUP_CR_3_6",
+          "x": [ 14, 20 ],
+          "y": [ 11, 13 ],
+          "density": 0.1,
+          "repeat": [ 1, 2 ]
+        },
+        {
+          "monster": "GROUP_CR_3_6",
+          "x": [ 4, 20 ],
+          "y": [ 14, 20 ],
+          "density": 0.1,
+          "repeat": [ 3, 6 ]
+        }
+      ],
+      "terrain": {
+      	"_": "t_glass_roof_plussss",
+      	"c": "t_ballistic_glass",
+      	"d": "t_stairs_down",
+      	"u": "t_stairs_up"
+      },
+      "furniture": {
+        "_": [
+          [ "f_null", 100 ]
+        ],
+        "c": [
+          [ "f_null", 100 ]
+        ],
+        "d": [
+          [ "f_null", 100 ]
+        ],
+        "u": [
+          [ "f_null", 100 ]
+        ]
+      }
+    }
+  },
+  {
+    "type": "mapgen",
+    "method": "json",
+    "om_terrain": "self_sorcerer_monster_4",
+    "object": {
+      "fill_ter": "t_glass_roof_plussss",
+      "rows": [
+        "cccccccccccccccccccccccc",
+        "c__________dd__________c",
+        "c_ccc______________ccc_c",
+        "c_c____ccc____ccc____c_c",
+        "c_c__________________c_c",
+        "c____cc___cccc___cc____c",
+        "c____c____________c____c",
+        "c__c___cccc__cccc___c__c",
+        "c__c___c________c___c__c",
+        "c__c___c___cc___c___c__c",
+        "c____c_c________c_c____c",
+        "cd___c___c_uu_c___c___dc",
+        "cd___c___c_uu_c___c___dc",
+        "c____c_c________c_c____c",
+        "c__c___c___cc___c___c__c",
+        "c__c___c________c___c__c",
+        "c__c___cccc__cccc___c__c",
+        "c____c____________c____c",
+        "c____cc___cccc___cc____c",
+        "c_c__________________c_c",
+        "c_c____ccc____ccc____c_c",
+        "c_ccc______________ccc_c",
+        "c__________dd__________c",
+        "cccccccccccccccccccccccc"
+      ],
+      "place_monsters": [
+        {
+          "monster": "GROUP_CR_4_7",
+          "x": [ 4, 20 ],
+          "y": [ 4, 10 ],
+          "density": 0.1,
+          "repeat": [ 3, 6 ]
+        },
+        {
+          "monster": "GROUP_CR_4_7",
+          "x": [ 4, 10 ],
+          "y": [ 11, 13 ],
+          "density": 0.1,
+          "repeat": [ 1, 2 ]
+        },
+        {
+          "monster": "GROUP_CR_4_7",
+          "x": [ 14, 20 ],
+          "y": [ 11, 13 ],
+          "density": 0.1,
+          "repeat": [ 1, 2 ]
+        },
+        {
+          "monster": "GROUP_CR_4_7",
+          "x": [ 4, 20 ],
+          "y": [ 14, 20 ],
+          "density": 0.1,
+          "repeat": [ 3, 6 ]
+        }
+      ],
+      "terrain": {
+      	"_": "t_glass_roof_plussss",
+      	"c": "t_ballistic_glass",
+      	"d": "t_stairs_down",
+      	"u": "t_stairs_up"
+      },
+      "furniture": {
+        "_": [
+          [ "f_null", 100 ]
+        ],
+        "c": [
+          [ "f_null", 100 ]
+        ],
+        "d": [
+          [ "f_null", 100 ]
+        ],
+        "u": [
+          [ "f_null", 100 ]
+        ]
+      }
+    }
+  },
+  {
+    "type": "mapgen",
+    "method": "json",
+    "om_terrain": "self_sorcerer_monster_5",
+    "object": {
+      "fill_ter": "t_glass_roof_plussss",
+      "rows": [
+        "cccccccccccccccccccccccc",
+        "cu____________________uc",
+        "c_ccc______________ccc_c",
+        "c_c____ccc____ccc____c_c",
+        "c_c__________________c_c",
+        "c____cc___cccc___cc____c",
+        "c____c____________c____c",
+        "c__c___cccc__cccc___c__c",
+        "c__c___c________c___c__c",
+        "c__c___c___cc___c___c__c",
+        "c____c_c________c_c____c",
+        "c____c___c_dd_c___c____c",
+        "c____c___c_dd_c___c____c",
+        "c____c_c________c_c____c",
+        "c__c___c___cc___c___c__c",
+        "c__c___c________c___c__c",
+        "c__c___cccc__cccc___c__c",
+        "c____c____________c____c",
+        "c____cc___cccc___cc____c",
+        "c_c__________________c_c",
+        "c_c____ccc____ccc____c_c",
+        "c_ccc______________ccc_c",
+        "cu____________________uc",
+        "cccccccccccccccccccccccc"
+      ],
+      "place_monsters": [
+        {
+          "monster": "GROUP_CR_7_9",
+          "x": [ 4, 20 ],
+          "y": [ 4, 10 ],
+          "density": 0.1,
+          "repeat": [ 3, 6 ]
+        },
+        {
+          "monster": "GROUP_CR_7_9",
+          "x": [ 4, 10 ],
+          "y": [ 11, 13 ],
+          "density": 0.1,
+          "repeat": [ 1, 2 ]
+        },
+        {
+          "monster": "GROUP_CR_7_9",
+          "x": [ 14, 20 ],
+          "y": [ 11, 13 ],
+          "density": 0.1,
+          "repeat": [ 1, 2 ]
+        },
+        {
+          "monster": "GROUP_CR_7_9",
+          "x": [ 4, 20 ],
+          "y": [ 14, 20 ],
+          "density": 0.1,
+          "repeat": [ 3, 6 ]
+        }
+      ],
+      "terrain": {
+      	"_": "t_glass_roof_plussss",
+      	"c": "t_ballistic_glass",
+      	"d": "t_stairs_down",
+      	"u": "t_stairs_up"
+      },
+      "furniture": {
+        "_": [
+          [ "f_null", 100 ]
+        ],
+        "c": [
+          [ "f_null", 100 ]
+        ],
+        "u": [
+          [ "f_null", 100 ]
+        ],
+        "d": [
+          [ "f_null", 100 ]
+        ]
+      }
+    }
+  },
+  {
+    "type": "mapgen",
+    "method": "json",
+    "om_terrain": "self_sorcerer_monster_6",
+    "object": {
+      "fill_ter": "t_glass_roof_plussss",
+      "rows": [
+        "cccccccccccccccccccccccc",
+        "cd____________________dc",
+        "c______________________c",
+        "c______________________c",
+        "c______________________c",
+        "c______________________c",
+        "c______________________c",
+        "c______________________c",
+        "c______________________c",
+        "c______________________c",
+        "c______________________c",
+        "c__________xy__________c",
+        "c__________zx__________c",
+        "c______________________c",
+        "c______________________c",
+        "c______________________c",
+        "c______________________c",
+        "c______________________c",
+        "c______________________c",
+        "c______________________c",
+        "c______________________c",
+        "c______________________c",
+        "cd____________________dc",
+        "cccccccccccccccccccccccc"
+      ],
+      "items": {
+      	"x": { "item": "self_sorcerer_monster_cr_staff", "chance": 33 },
+      	"y": { "item": "self_sorcerer_monster_cr_staff_high", "chance": 33 },
+      	"z": { "item": "self_sorcerer_monster_cr_staff", "chance": 100 }
+      },
+      "terrain": {
+      	"_": "t_glass_roof_plussss",
+      	"x": "t_glass_roof_plussss",
+      	"y": "t_glass_roof_plussss",
+      	"z": "t_glass_roof_plussss",
+      	"c": "t_ballistic_glass",
+      	"d": "t_stairs_down"
+      },
+      "furniture": {
+        "_": [
+          [ "f_null", 100 ]
+        ],
+        "c": [
+          [ "f_null", 100 ]
+        ],
+        "d": [
+          [ "f_null", 100 ]
+        ],
+        "x": [
+          [ "f_null", 100 ]
+        ],
+        "y": [
+          [ "f_null", 100 ]
+        ],
+        "z": [
+          [ "f_null", 100 ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "self_sorcerer_monster_cr_staff",
+    "type": "item_group",
+    "items": [
+      [ "sor_summon_monster_cr1_staff", 10 ],
+      [ "sor_summon_monster_cr2_staff", 10 ],
+      [ "sor_summon_monster_cr3_staff", 10 ],
+      [ "sor_summon_monster_cr4_staff", 10 ],
+      [ "sor_summon_monster_cr5_staff", 10 ],
+      [ "sor_summon_monster_cr6_staff", 10 ],
+      [ "sor_summon_monster_cr7_staff", 10 ],
+      [ "sor_summon_monster_cr8_staff", 10 ],
+      [ "sor_summon_monster_cr9_staff", 10 ]
+    ]
+  },
+  {
+    "id": "self_sorcerer_monster_cr_staff_high",
+    "type": "item_group",
+    "items": [
+      [ "sor_summon_monster_cr1_staff", 1 ],
+      [ "sor_summon_monster_cr2_staff", 2 ],
+      [ "sor_summon_monster_cr3_staff", 3 ],
+      [ "sor_summon_monster_cr4_staff", 4 ],
+      [ "sor_summon_monster_cr5_staff", 5 ],
+      [ "sor_summon_monster_cr6_staff", 6 ],
+      [ "sor_summon_monster_cr7_staff", 7 ],
+      [ "sor_summon_monster_cr8_staff", 8 ],
+      [ "sor_summon_monster_cr9_staff", 9 ]
+    ]
+  },
+  {
+    "id": "sor_summon_monster_cr9_staff",
+    "name": { "str": "法杖-Lv10-它界之杖" },
+    "description": "这根法杖并非由你熟知的方法制造，你仅能辨别出使用它会召唤出什么。\n每次施法消耗充能：9999",
+    "type": "TOOL",
+    "weight": "800 g",
+    "volume": "1400 ml",
+    "longest_side": "80 cm",
+    "price": 999999,
+    "price_postapoc": 999999,
+    "melee_damage": { "bash": 16 },
+    "to_hit": 1,
+    "material": [ "wood", "gold" ],
+    "techniques": [ "WBLOCK_2", "PRECISE" ],
+    "symbol": "|",
+    "color": "red",
+    "flags": [ "NONCONDUCTIVE", "NO_UNLOAD", "MAGIC_FOCUS" ],
+    "ammo": [ "sorcerer_wand_ammo" ],
+    "relic_data": { "passive_effects": [ { "has": "WIELD", "condition": "ALWAYS", "values": [ { "value": "REGEN_MANA", "multiply": 1.0 } ] } ] },
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "sorcerer_wand_ammo": 9999 } } ],
+    "charges_per_use": 9999,
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_sor_cr_9",
+      "friendly_msg": "法杖召唤出了一个它界生物！",
+      "hostile_msg": "法杖召唤出了一个它界生物！",
+      "difficulty": 10,
+      "place_randomly": true,
+      "moves": 100
+    }
+  },
+  {
+  	"copy-from": "sor_summon_monster_cr9_staff",
+    "id": "sor_summon_monster_cr8_staff",
+    "name": { "str": "法杖-Lv10-它界之杖" },
+    "description": "这根法杖并非由你熟知的方法制造，你仅能辨别出使用它会召唤出什么。\n每次施法消耗充能：9999",
+    "type": "TOOL",
+    "relic_data": { "passive_effects": [ { "has": "WIELD", "condition": "ALWAYS", "values": [ { "value": "REGEN_MANA", "multiply": 1.0 } ] } ] },
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "sorcerer_wand_ammo": 9999 } } ],
+    "charges_per_use": 9999,
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_sor_cr_8",
+      "friendly_msg": "法杖召唤出了一个它界生物！",
+      "hostile_msg": "法杖召唤出了一个它界生物！",
+      "difficulty": 10,
+      "place_randomly": true,
+      "moves": 100
+    }
+  },
+  {
+  	"copy-from": "sor_summon_monster_cr9_staff",
+    "id": "sor_summon_monster_cr7_staff",
+    "name": { "str": "法杖-Lv10-它界之杖" },
+    "description": "这根法杖并非由你熟知的方法制造，你仅能辨别出使用它会召唤出什么。\n每次施法消耗充能：9999",
+    "type": "TOOL",
+    "relic_data": { "passive_effects": [ { "has": "WIELD", "condition": "ALWAYS", "values": [ { "value": "REGEN_MANA", "multiply": 1.0 } ] } ] },
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "sorcerer_wand_ammo": 9999 } } ],
+    "charges_per_use": 9999,
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_sor_cr_7",
+      "friendly_msg": "法杖召唤出了一个它界生物！",
+      "hostile_msg": "法杖召唤出了一个它界生物！",
+      "difficulty": 10,
+      "place_randomly": true,
+      "moves": 100
+    }
+  },
+  {
+  	"copy-from": "sor_summon_monster_cr9_staff",
+    "id": "sor_summon_monster_cr6_staff",
+    "name": { "str": "法杖-Lv10-它界之杖" },
+    "description": "这根法杖并非由你熟知的方法制造，你仅能辨别出使用它会召唤出什么。\n每次施法消耗充能：9999",
+    "type": "TOOL",
+    "relic_data": { "passive_effects": [ { "has": "WIELD", "condition": "ALWAYS", "values": [ { "value": "REGEN_MANA", "multiply": 1.0 } ] } ] },
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "sorcerer_wand_ammo": 9999 } } ],
+    "charges_per_use": 9999,
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_sor_cr_6",
+      "friendly_msg": "法杖召唤出了一个它界生物！",
+      "hostile_msg": "法杖召唤出了一个它界生物！",
+      "difficulty": 10,
+      "place_randomly": true,
+      "moves": 100
+    }
+  },
+  {
+  	"copy-from": "sor_summon_monster_cr9_staff",
+    "id": "sor_summon_monster_cr5_staff",
+    "name": { "str": "法杖-Lv10-它界之杖" },
+    "description": "这根法杖并非由你熟知的方法制造，你仅能辨别出使用它会召唤出什么。\n每次施法消耗充能：9999",
+    "type": "TOOL",
+    "relic_data": { "passive_effects": [ { "has": "WIELD", "condition": "ALWAYS", "values": [ { "value": "REGEN_MANA", "multiply": 1.0 } ] } ] },
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "sorcerer_wand_ammo": 9999 } } ],
+    "charges_per_use": 9999,
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_sor_cr_5",
+      "friendly_msg": "法杖召唤出了一个它界生物！",
+      "hostile_msg": "法杖召唤出了一个它界生物！",
+      "difficulty": 10,
+      "place_randomly": true,
+      "moves": 100
+    }
+  },
+  {
+  	"copy-from": "sor_summon_monster_cr9_staff",
+    "id": "sor_summon_monster_cr4_staff",
+    "name": { "str": "法杖-Lv10-它界之杖" },
+    "description": "这根法杖并非由你熟知的方法制造，你仅能辨别出使用它会召唤出什么。\n每次施法消耗充能：9999",
+    "type": "TOOL",
+    "relic_data": { "passive_effects": [ { "has": "WIELD", "condition": "ALWAYS", "values": [ { "value": "REGEN_MANA", "multiply": 1.0 } ] } ] },
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "sorcerer_wand_ammo": 9999 } } ],
+    "charges_per_use": 9999,
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_sor_cr_4",
+      "friendly_msg": "法杖召唤出了一个它界生物！",
+      "hostile_msg": "法杖召唤出了一个它界生物！",
+      "difficulty": 10,
+      "place_randomly": true,
+      "moves": 100
+    }
+  },
+  {
+  	"copy-from": "sor_summon_monster_cr9_staff",
+    "id": "sor_summon_monster_cr3_staff",
+    "name": { "str": "法杖-Lv10-它界之杖" },
+    "description": "这根法杖并非由你熟知的方法制造，你仅能辨别出使用它会召唤出什么。\n每次施法消耗充能：9999",
+    "type": "TOOL",
+    "relic_data": { "passive_effects": [ { "has": "WIELD", "condition": "ALWAYS", "values": [ { "value": "REGEN_MANA", "multiply": 1.0 } ] } ] },
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "sorcerer_wand_ammo": 9999 } } ],
+    "charges_per_use": 9999,
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_sor_cr_3",
+      "friendly_msg": "法杖召唤出了一个它界生物！",
+      "hostile_msg": "法杖召唤出了一个它界生物！",
+      "difficulty": 10,
+      "place_randomly": true,
+      "moves": 100
+    }
+  },
+  {
+  	"copy-from": "sor_summon_monster_cr9_staff",
+    "id": "sor_summon_monster_cr2_staff",
+    "name": { "str": "法杖-Lv10-它界之杖" },
+    "description": "这根法杖并非由你熟知的方法制造，你仅能辨别出使用它会召唤出什么。\n每次施法消耗充能：9999",
+    "type": "TOOL",
+    "relic_data": { "passive_effects": [ { "has": "WIELD", "condition": "ALWAYS", "values": [ { "value": "REGEN_MANA", "multiply": 1.0 } ] } ] },
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "sorcerer_wand_ammo": 9999 } } ],
+    "charges_per_use": 9999,
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_sor_cr_2",
+      "friendly_msg": "法杖召唤出了一个它界生物！",
+      "hostile_msg": "法杖召唤出了一个它界生物！",
+      "difficulty": 10,
+      "place_randomly": true,
+      "moves": 100
+    }
+  },
+  {
+  	"copy-from": "sor_summon_monster_cr9_staff",
+    "id": "sor_summon_monster_cr1_staff",
+    "name": { "str": "法杖-Lv10-它界之杖" },
+    "description": "这根法杖并非由你熟知的方法制造，你仅能辨别出使用它会召唤出什么。\n每次施法消耗充能：9999",
+    "type": "TOOL",
+    "relic_data": { "passive_effects": [ { "has": "WIELD", "condition": "ALWAYS", "values": [ { "value": "REGEN_MANA", "multiply": 1.0 } ] } ] },
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "sorcerer_wand_ammo": 9999 } } ],
+    "charges_per_use": 9999,
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_sor_cr_1",
+      "friendly_msg": "法杖召唤出了一个它界生物！",
+      "hostile_msg": "法杖召唤出了一个它界生物！",
+      "difficulty": 10,
+      "place_randomly": true,
+      "moves": 100
+    }
+  }
+]

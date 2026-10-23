@@ -1,0 +1,56 @@
+[
+  {
+    "id": "grip_melee",
+    "type": "GUNMOD",
+    "name": {
+      "str": "钝击握把"
+    },
+    "description": "一组金属部件，用于保护武器免受近战损伤，因为你现在可以把它当作指虎来砸脸！不过你得有足够的力量才行。",
+    "volume": "200 ml",
+    "weight": "600 g",
+    "price": 48000,
+    "price_postapoc": 750,
+    "install_time": "5 m",
+    "material": [
+      "steel"
+    ],
+    "symbol": ":",
+    "color": "dark_gray",
+    "bashing": 14,
+    "dispersion_modifier": -45,
+    "location": "grip",
+    "min_skills": [
+      [
+        "weapon",
+        3
+      ]
+    ],
+    "mod_targets": [
+      "pistol",
+      "smg"
+    ],
+    "mode_modifier": [
+      [
+        "REACH",
+        "knuckle_steel",
+        1,
+        [
+          "MELEE",
+          "REACH_ATTACK"
+        ]
+      ]
+    ],
+    "techniques": [
+      "BRUTAL",
+      "WBLOCK_1",
+      "WIDE"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "UNARMED_WEAPON"
+    ],
+    "//": "This abomination doesn't exist, or shouldn't exist, but it's too good to let it pass",
+    "//2": "Ideally, this would be exclusive with with barrel, stock and sight attachments",
+    "//3": "Rejected values: durability +3"
+  }
+]

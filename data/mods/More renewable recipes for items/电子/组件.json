@@ -1,0 +1,211 @@
+[
+  {
+    "result": "thermostat",
+    "type": "recipe",
+    "id_suffix":"from_mrrfi_thermostat",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_COMPONENTS",
+    "skill_used": "electronics",
+    "difficulty": 3,
+    "skills_required": [ "mechanics", 2 ],
+    "time": "35 m",
+    "autolearn": true,
+    "using": [ [ "soldering_standard", 5 ] ],
+    "qualities": [ {"id": "SAW_M_FINE", "level": 1} ],
+    "components": 
+    [ 
+      [ [ "copper", 10 ] ], 
+      [ [ "sheet_metal_small", 1 ] ], 
+      [ [ "plastic_chunk", 1 ] ] ,
+      [ [ "cable", 2 ] ] 
+    ]
+  },
+  {
+    "result": "compressor",
+    "type": "recipe",
+    "id_suffix":"from_mrrfi_compressor",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_COMPONENTS",
+    "skill_used": "electronics",
+    "difficulty": 5,
+    "skills_required": [ "mechanics", 4 ],
+    "time": "80 m",
+    "autolearn": true,
+    "using": [ [ "soldering_standard", 5 ] ],
+    "qualities": [ {"id": "SAW_M_FINE", "level": 1} ,{"id":"SCREW","level":1},{"id":"WRENCH","level":2}],
+    "components": 
+    [ 
+      [ [ "motor_tiny", 1 ] ], 
+      [ [ "sheet_metal_small", 4 ],[ "scrap",12 ] ], 
+      [ [ "scrap",8 ], [ "steel_chunk",2 ]],
+      [ [ "cu_pipe", 1 ] ] ,
+      [ [ "cable", 2 ] ] 
+    ]
+  },
+  {
+    "result": "circuit",
+    "type": "recipe",
+    "id_suffix":"from_mrrfi_circuit",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_COMPONENTS",
+    "skill_used": "electronics",
+    "difficulty": 4,
+    "skills_required": [ "fabrication", 4 ],
+    "time": "40 m",
+    "autolearn": true,
+    "qualities": [ {"id": "CHEM", "level": 1} ,{"id":"HAMMER_FINE","level": 1},{"id": "DRILL", "level": 1},{"id":"ANVIL","level":1}],
+    "components": 
+    [ 
+      [ [ "polycarbonate_sheet", 1 ] ], 
+      [ [ "copper", 10 ] ], 
+      [ [ "superglue",1 ]],
+      [ [ "chem_acetone", 1 ] ] ,
+      [ [ "chem_ferric_chloride", 7 ] ] ,
+      [ ["water_clean",1] ]
+    ]
+  },
+  {
+    "result": "processor",
+    "type": "recipe",
+    "id_suffix":"from_mrrfi_processor",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_COMPONENTS",
+    "skill_used": "electronics",
+    "difficulty": 6,
+    "skills_required": [ "fabrication", 2 ],
+    "time": "45 m",
+    "autolearn": true,
+    "qualities": [ {"id": "SCREW_FINE", "level": 1}],
+    "using": [ [ "soldering_standard", 2 ] ],
+    "components": 
+    [ 
+      [ [ "circuit", 2 ] ], 
+      [ [ "e_scrap", 1 ] ], 
+      [ [ "copper_wire",1 ]],
+      [ [ "superglue", 1 ] ] 
+    ]
+  },
+  {
+    "result": "small_lcd_screen",
+    "type": "recipe",
+    "id_suffix":"from_mrrfi_small_lcd_screen",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_COMPONENTS",
+    "skill_used": "electronics",
+    "difficulty": 7,
+    "skills_required": [ "chemistry", 6 ],
+    "time": "180 m",
+    "autolearn": true,
+    "qualities": [ {"id": "CHEM", "level": 3}],
+    "tools": [[ [ "surface_heat", 20, "LIST" ] ]],
+    "using": [ [ "soldering_standard", 20 ] ],
+    "components": 
+    [ 
+      [ [ "glass_shard", 5 ] ], 
+      [ [ "chem_toluene", 150 ] ], 
+      [ [ "solder_wire",10 ]],
+      [ [ "chem_sulphuric_acid", 1 ] ] ,
+      [ [ "iodine_crystal", 3 ] ] ,
+      [ [ "epoxy_chunk", 1 ] ] ,
+      [ [ "plastic_chunk", 1 ] ] 
+    ]
+  },
+  {
+    "result": "large_lcd_screen",
+    "type": "recipe",
+    "id_suffix":"from_mrrfi_large_lcd_screen",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_COMPONENTS",
+    "skill_used": "electronics",
+    "difficulty": 7,
+    "skills_required": [ "chemistry", 6 ],
+    "time": " 8 h ",
+    "autolearn": true,
+    "qualities": [ {"id": "CHEM", "level": 3}],
+    "tools": [[ [ "surface_heat", 60, "LIST" ] ]],
+    "using": [ [ "soldering_standard", 60 ] ],
+    "components": 
+    [ 
+      [ [ "glass_shard", 250 ] ], 
+      [ [ "chem_toluene", 1000 ] ], 
+      [ [ "solder_wire",500 ]],
+      [ [ "chem_sulphuric_acid", 20 ] ] ,
+      [ [ "iodine_crystal", 150 ] ] ,
+      [ [ "epoxy_chunk", 50 ] ] ,
+      [ [ "plastic_chunk", 50 ] ] 
+    ]
+  },
+  {
+    "result": "RAM",
+    "type": "recipe",
+    "id_suffix":"from_mrrfi_RAM",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_COMPONENTS",
+    "skill_used": "electronics",
+    "difficulty": 6,
+    "skills_required": [ "fabrication", 3 ],
+    "time": "40 m",
+    "autolearn": true,
+    "qualities": [ {"id": "SCREW_FINE", "level": 1}],
+    "using": [ [ "soldering_standard", 10 ] ],
+    "components": 
+    [ 
+      [ [ "circuit", 1 ] ], 
+      [ [ "e_scrap", 2 ] ]
+    ]
+  },
+  {
+    "result": "element",
+    "type": "recipe",
+    "id_suffix":"from_mrrfi_elemente",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_COMPONENTS",
+    "skill_used": "electronics",
+    "difficulty": 4,
+    "skills_required": [ "fabrication", 3 ],
+    "time": "25 m",
+    "autolearn": true,
+    "qualities": [ {"id": "SCREW_FINE", "level": 1},{"id": "HAMMER_FINE", "level": 1},{"id": "SAW_M", "level": 1},{"id": "VISE", "level": 1}],
+    "tools": [ [ [ "surface_heat", 10, "LIST" ] ] ],
+    "using": [ [ "soldering_standard", 5 ] ],
+    "components": 
+    [ 
+      [ [ "crude_heating_element", 1 ] ], 
+      [ [ "scrap", 2 ] ],
+      [ [ "chem_nickel_powder", 1 ] ],
+      [ [ "material_quicklime", 10 ] ],
+      [ [ "copper_wire",2 ]]
+    ]
+  },
+  {
+    "result": "mobile_memory_card_used",
+    "type": "recipe",
+    "id_suffix":"from_mrrfi_mobile_memory_card_used",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_COMPONENTS",
+    "skill_used": "electronics",
+    "difficulty": 8,
+    "skills_required": [ "fabrication", 4 ],
+    "time": "45 m",
+    "autolearn": true,
+    "result_mult": 2,
+    "qualities": [ {"id": "SCREW_FINE", "level": 1}],
+    "using": [ [ "soldering_standard", 5 ] ],
+    "components": 
+    [ 
+      [ [ "RAM", 1 ] ], 
+      [ [ "processor", 1 ] ],
+      [ [ "copper_wire", 1 ] ], 
+      [ [ "plastic_chunk", 1 ] ]
+    ]
+  }
+]

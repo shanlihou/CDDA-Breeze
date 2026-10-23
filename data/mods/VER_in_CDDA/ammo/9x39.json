@@ -1,0 +1,127 @@
+[
+    {
+        "id":"9x39SP5",
+        "type": "AMMO",
+        "loudness":20,
+        "name": { "str": "9x39mm SP5弹" },
+        "description": "250 格令的9x39mm SP5弹，一种具有铅核的传统全金属被甲弹，不过有对增加精准性进行设计。",
+        "weight": "21 g",
+        "volume": "250 ml",
+        "longest_side": "56 mm",
+        "price": 10000,
+        "price_postapoc": 5000,
+        "flags": [
+            "IRREPLACEABLE_CONSUMABLE"
+        ],
+        "material": [
+          "brass",
+          "lead",
+          "powder"
+        ],
+        "symbol": "=",
+        "color": "dark_gray",
+        "count": 20,
+        "stack_size": 50,
+        "ammo_type": "9x39",
+        "casing": "9x39_casing",
+        "range": 26,
+        "damage": {
+          "damage_type": "bullet",
+          "amount": 35,
+          "armor_penetration": 30
+        },
+        "dispersion": 120,
+        "recoil": 1600,
+        "effects": [
+          "COOKOFF",
+          "NEVER_MISFIRES"
+        ]
+        
+      },
+      {
+        "id":"9x39SP6",
+        "type": "AMMO",
+        "copy-from":"9x39SP5",
+        "name": { "str": "9x39mm SP6弹" },
+        "description": "248 格令的9x39mm SP6弹，一种具有硬质钢蕊的穿甲弹，在100米的距离穿透8 mm（0.31寸）的钢板，并保有足够的动能来歼灭躲在这些障碍物后的目标。。",
+        "longest_side": "60 mm",
+        "weight": "23 g",
+        "price": 15000,
+        "price_postapoc": 7500,
+        "range": 27,
+        "damage": {
+          "damage_type": "bullet",
+          "amount": 30,
+          "armor_penetration": 40
+        },
+        "dispersion": 25,
+        "recoil": 2000
+      },
+      {
+        "id":"9x39SPP",
+        "type": "AMMO",
+        "copy-from":"9x39SP5",
+        "name": { "str": "9x39mm SPP弹" },
+        "description": "254 格令的9x39mm SPP弹，具有增强穿透力的SPP狙击子弹，由钢和铅核放置在双金属半壳中，形状为截锥形。",
+        "longest_side": "62 mm",
+        "weight": "25 g",
+        "price": 20000,
+        "price_postapoc": 10000,
+        "range": 28,
+        "damage": {
+          "damage_type": "bullet",
+          "amount": 34,
+          "armor_penetration": 42
+        },
+        "dispersion": 24,
+        "recoil": 1800
+      },
+      {
+        "id":"reloaded_9x39",
+        "type": "AMMO",
+        "copy-from":"9x39SP5",
+        "loudness":23,
+        "name": { "str": "9x39mmSP5 弹 （复装）" },
+        "description": "一枚做工粗糙的9x39mm弹。这枚弹药应该是由幸存者或大灾变前的业余爱好者手工重新装填的，与工厂生产的弹药相比，性能稍差。",
+        "longest_side": "62 mm",
+        "weight": "20 g",
+        "price": 8000,
+        "price_postapoc": 4000,
+        "range": 26,
+        "damage": {
+          "damage_type": "bullet",
+          "amount": 25,
+          "armor_penetration": 25
+        },
+        "effects": [
+          "COOKOFF",
+          "RECYCLED"
+        ],
+        "dispersion": 40,
+        "recoil": 2500
+      },
+      {
+        "id":"reloaded_9x39P",
+        "type": "AMMO",
+        "copy-from":"9x39SP5",
+        "loudness":25,
+        "name": { "str": "9x39mmSP5 弹 （超量复装）" },
+        "description": "一枚做工粗糙的9x39mm弹，不仅如此制作者还擅自加了装药，消音效果快消失了。这枚弹药应该是由幸存者或大灾变前的业余爱好者手工重新装填的，与工厂生产的弹药相比，性能稍差。",
+        "longest_side": "62 mm",
+        "weight": "20 g",
+        "price": 9000,
+        "price_postapoc": 4500,
+        "range": 26,
+        "damage": {
+          "damage_type": "bullet",
+          "amount": 28,
+          "armor_penetration": 28
+        },
+        "effects": [
+          "COOKOFF",
+          "RECYCLED"
+        ],
+        "dispersion": 50,
+        "recoil": 2800
+      }
+]

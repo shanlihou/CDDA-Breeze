@@ -1,0 +1,137 @@
+[
+  {
+    "type": "mutation",
+    "id": "NO_PSIONICS",
+    "name": { "str": "头脑盲区" },
+    "description": "你对灵能拥有正常人类（所缺乏）的潜力。",
+    "player_display": false,
+    "points": 0,
+    "dummy": true,
+    "category": [ "HUMAN" ],
+    "cancels": [
+      "BIOKIN_NEEDS",
+      "CLAIR_SENSES",
+      "PYROGLOW_WEAK",
+      "PYROGLOW_STRONG",
+      "TELEKINETIC_CARRY",
+      "TELEPATHIC_SUGGESTION",
+      "TELEPORTER_PROTECT",
+      "VITAKINETIC_HEALTH"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "BIOKIN_NEEDS",
+    "name": { "str": "高效系统" },
+    "points": 0,
+    "description": "得益于你的能力，你比普通人所需的食物和饮水略少，并且在消化吸收方面更有效率。",
+    "metabolism_modifier": -0.15,
+    "thirst_modifier": -0.15,
+    "vitamins_absorb_multi": [ [ "all", [ [ "vitA", 1.05 ], [ "vitB", 1.05 ], [ "vitC", 1.05 ], [ "calcium", 1.05 ], [ "iron", 1.05 ] ] ] ],
+    "player_display": true,
+    "purifiable": false
+  },
+  {
+    "type": "mutation",
+    "id": "CLAIR_SENSES",
+    "name": { "str": "灵能感知" },
+    "points": 0,
+    "description": "你的能力增强了你的普通感官。",
+    "hearing_modifier": 1.2,
+    "flags": [ "ENHANCED_VISION", "EYE_MEMBRANE", "WATCH" ],
+    "player_display": true,
+    "purifiable": false
+  },
+  {
+    "type": "mutation",
+    "id": "PYROGLOW_WEAK",
+    "name": { "str": "念动火焰光辉[柔和]" },
+    "points": 0,
+    "description": "你可以让周围的空气发出光芒。",
+    "active": true,
+    "player_display": true,
+    "purifiable": false,
+    "cost": 0,
+    "transform": { "target": "PYROGLOW_WEAK_A", "msg_transform": "你周围的空气开始柔和地发光。", "active": true, "moves": 10 }
+  },
+  {
+    "type": "mutation",
+    "id": "PYROGLOW_WEAK_A",
+    "name": { "str": "念动火焰光辉[柔和]（开启）" },
+    "description": "你周围的空气正在发光。",
+    "copy-from": "PYROGLOW_WEAK",
+    "valid": false,
+    "transform": { "target": "PYROGLOW_WEAK", "msg_transform": "你周围的空气失去了光芒。", "active": false, "moves": 10 },
+    "enchantments": [ { "values": [ { "value": "LUMINATION", "add": 20 } ] } ]
+  },
+  {
+    "type": "mutation",
+    "id": "PYROGLOW_STRONG",
+    "name": { "str": "念动火焰光辉[明亮]" },
+    "points": 0,
+    "description": "你可以让周围的空气发出明亮的光芒。",
+    "active": true,
+    "player_display": true,
+    "purifiable": false,
+    "cost": 0,
+    "transform": { "target": "PYROGLOW_STRONG_A", "msg_transform": "你周围的空气开始明亮地发光。", "active": true, "moves": 10 }
+  },
+  {
+    "type": "mutation",
+    "id": "PYROGLOW_STRONG_A",
+    "name": { "str": "念动火焰光辉[明亮]（开启）" },
+    "description": "你周围的空气正在发出明亮的光芒。",
+    "copy-from": "PYROGLOW_STRONG",
+    "valid": false,
+    "transform": { "target": "PYROGLOW_STRONG", "msg_transform": "你周围的空气失去了光芒。", "active": false, "moves": 10 },
+    "enchantments": [ { "values": [ { "value": "LUMINATION", "add": 150 } ] } ]
+  },
+  {
+    "type": "mutation",
+    "id": "TELEKINETIC_CARRY",
+    "name": { "str": "减轻负担" },
+    "points": 0,
+    "description": "你在运用灵能力量来减轻你的负重。",
+    "weight_capacity_modifier": 1.1,
+    "valid": false,
+    "player_display": true,
+    "purifiable": false
+  },
+  {
+    "type": "mutation",
+    "id": "TELEPATHIC_SUGGESTION",
+    "name": { "str": "心灵暗示" },
+    "points": 0,
+    "description": "你在微妙地影响与你交谈的人的思想。",
+    "social_modifiers": { "lie": 15, "persuade": 15, "intimidate": 15 },
+    "valid": false,
+    "player_display": true,
+    "purifiable": false
+  },
+  {
+    "type": "mutation",
+    "id": "TELEPORTER_PROTECT",
+    "name": { "str": "空间重校准" },
+    "points": 0,
+    "description": "你可以在一定程度上让异界的视线远离你，并且可以瞬移极短距离以攀爬墙壁或避免坠落。",
+    "flags": [ "TELESTOP", "CLIMB_NO_LADDER", "FEATHER_FALL" ],
+    "valid": false,
+    "player_display": true,
+    "purifiable": false
+  },
+  {
+    "type": "mutation",
+    "id": "VITAKINETIC_HEALTH",
+    "name": { "str": "生命绽放" },
+    "points": 0,
+    "description": "你的灵能力量略微加速你的愈合速度，且任何骨折都会正确愈合。",
+    "healing_awake": 0.2,
+    "healing_resting": 0.25,
+    "mending_modifier": 1.5,
+    "vitamin_rates": [ [ "mutant_toxin", 180 ] ],
+    "flags": [ "MEND_ALL" ],
+    "valid": false,
+    "player_display": true,
+    "purifiable": false
+  }
+]

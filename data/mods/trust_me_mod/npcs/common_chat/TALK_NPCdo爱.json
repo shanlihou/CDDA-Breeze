@@ -1,0 +1,160 @@
+[
+  {
+    "type": "material",
+    "id": "性体液",
+    "name": "性体液",
+    "copy-from": "blood"
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "精液",
+    "name": { "str_sp": "精液" },
+    "copy-from": "human_flesh",
+    "looks_like": "milk",
+    "weight": "262 g",
+    "color": "white",
+    "container": "bag_iv",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "price_postapoc": 10,
+    "description": "精液，而且是人的精液。真恶心。",
+    "price": 0,
+    "material": [ "性体液" ],
+    "volume": "10 ml",
+    "phase": "liquid",
+    "calories": 11,
+    "quench": 1,
+    "fun": -1,
+    "delete": { "flags": [ "SMOKABLE" ] }
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "淫液",
+    "name": { "str_sp": "淫液" },
+    "copy-from": "human_flesh",
+    "looks_like": "water",
+    "weight": "262 g",
+    "color": "white",
+    "container": "bag_iv",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "price_postapoc": 10,
+    "description": "有些黏的的透明液体。",
+    "price": 0,
+    "material": [ "性体液" ],
+    "volume": "10 ml",
+    "phase": "liquid",
+    "calories": 7,
+    "quench": 2,
+    "fun": -1,
+    "delete": { "flags": [ "SMOKABLE" ] }
+  },
+  {
+    "type": "effect_type",
+    "id": "高潮余韵",
+    "name": [ "高潮余韵" ],
+    "desc": [ "你刚刚经历过高潮，体力有些下降" ],
+    "rating": "bad",
+    "base_mods": { "str_mod": [ -3, 0 ], "dex_mod": [ -2, 0 ], "per_mod": [ -2, 0 ], "int_mod": [ -3, 0 ] }
+  },
+  {
+    "//": "|————————分割线————————|",
+    "id": "ACT_正常@男",
+    "type": "activity_type",
+    "activity_level": "ACTIVE_EXERCISE",
+    "verb": "做爱",
+    "based_on": "time",
+    "no_resume": true,
+    "auto_needs": true,
+    "interruptable": false
+  },
+  {
+    "id": "morale_正常@男",
+    "type": "morale_type",
+    "text": "做爱"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_正常@男",
+    "effect": [
+      { "u_assign_activity": "ACT_正常@男", "duration": 900 },
+      { "u_message": "嗯…♡", "type": "info" },
+      { "u_message": "啊～♡", "type": "info" },
+      { "u_message": "啊♡~~♡…", "type": "info" },
+      { "u_message": "好舒服～♡", "type": "info" },
+      { "u_message": "嗯♡～啊♡啊啊♡…", "type": "info" },
+      { "u_message": "再快一点哦啊啊♡…", "type": "info" },
+      { "u_message": "嗯♡～啊♡要去了哦哦~………", "type": "info" },
+      {
+        "u_add_morale": "morale_正常@男",
+        "bonus": 20,
+        "max_bonus": 100,
+        "duration": "60 minutes",
+        "decay_start": "60 minutes"
+      },
+      { "npc_add_effect": "高潮余韵", "intensity": 1, "duration": "60 minutes" },
+      { "u_add_effect": "高潮余韵", "intensity": 1, "duration": "60 minutes" }
+    ]
+  },
+  {
+    "//": "|————————分割线————————|",
+    "id": "ACT_正常@女",
+    "type": "activity_type",
+    "activity_level": "ACTIVE_EXERCISE",
+    "verb": "做爱",
+    "based_on": "time",
+    "no_resume": true,
+    "auto_needs": true,
+    "interruptable": false
+  },
+  {
+    "id": "morale_正常@女",
+    "type": "morale_type",
+    "text": "做爱"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_正常@女",
+    "effect": [
+      { "u_assign_activity": "ACT_正常@女", "duration": 900 },
+      { "u_message": "嗯…♡", "type": "info" },
+      { "u_message": "啊～♡", "type": "info" },
+      { "u_message": "嗯♡~~♡…", "type": "info" },
+      { "u_message": "好爽～♡", "type": "info" },
+      { "u_message": "嗯♡……♡…", "type": "info" },
+      { "u_message": "好紧…", "type": "info" },
+      { "u_message": "嗯～要射了！~………", "type": "info" },
+      {
+        "u_add_morale": "morale_正常@女",
+        "bonus": 20,
+        "max_bonus": 100,
+        "duration": "60 minutes",
+        "decay_start": "60 minutes"
+      },
+      { "npc_add_effect": "高潮余韵", "intensity": 1, "duration": "60 minutes" },
+      { "u_add_effect": "高潮余韵", "intensity": 1, "duration": "60 minutes" }
+    ]
+  },
+  {
+    "id": "做爱对话",
+    "type": "talk_topic",
+    "dynamic_line": [ { "npc_female": true, "yes": "要在这里做吗~", "no": "你想要在这里做~" } ],
+    "responses": [
+      {
+        "text": "当然",
+        "condition": { "and": [ "npc_female", "u_male" ] },
+        "topic": "TALK_DONE",
+        "opinion": { "trust": 1, "value": 1, "fear": -1, "anger": -1, "owed": 0 },
+        "effect": [ { "run_eocs": [ "EOC_正常@男" ] } ]
+      },
+      {
+        "text": "就在这里吧",
+        "condition": { "and": [ "u_female", "npc_male" ] },
+        "topic": "TALK_DONE",
+        "opinion": { "trust": 1, "value": 1, "fear": -1, "anger": -1, "owed": 0 },
+        "effect": [ { "run_eocs": [ "EOC_正常@女" ] } ]
+      },
+      { "text": "先等等……我们找个更适合的地方……", "topic": "TALK_DONE" }
+    ]
+  }
+]

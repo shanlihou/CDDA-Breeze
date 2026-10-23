@@ -1,0 +1,31 @@
+[
+
+ {
+    "type": "item_group",
+    "id": "zhenghe_008",
+    "//": "地魔虫",
+    "subtype": "collection",
+    "entries": [
+    {"item": "graboid_fang",
+    "prob": 90
+    },
+    {"item": "essence_blood",
+    "count": [ 20, 25 ],
+    "prob": 50
+    },
+     { "item": "destiny_copper", "count": [ 60, 80 ] }
+    ]
+  },
+ {
+    "id": "mon_graboid",
+    "//": "地魔虫",
+    "copy-from": "mon_graboid",
+    "type": "MONSTER",
+    "death_drops": {"subtype": "collection", "groups":["zhenghe_008"]
+    
+    
+    }
+  }
+ 
+
+]

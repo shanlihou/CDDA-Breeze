@@ -1,0 +1,2662 @@
+[
+ {
+  "type": "vehicle_part",
+  "id": "CCGzhuangjiaban",
+  "name": {
+   "str": "CC装甲板钢制"
+  },
+  "categories": [
+   "warfare"
+  ],
+  "color": "red",
+  "broken_color": "red",
+  "damage_modifier": 9,
+  "durability": 2500,
+  "bonus": 999999,
+  "folded_volume": "250 ml",
+  "description": "高强度装甲板。",
+  "item": "sheet_metal",
+  "location": "armor",
+  "requirements": {
+   "install": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "removal": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "repair": {
+    "skills": [
+     [
+      "tailor",
+      1
+     ]
+    ],
+    "time": "150 s",
+    "using": [
+     [
+      "adhesive",
+      1
+     ]
+    ]
+   }
+  },
+  "flags": [
+   "ARMOR",
+   "SHOCK_ABSORBER"
+  ],
+  "breaks_into": [
+   {
+    "item": "steel_lump",
+    "count": [
+     4,
+     6
+    ]
+   },
+   {
+    "item": "steel_chunk",
+    "count": [
+     4,
+     6
+    ]
+   },
+   {
+    "item": "scrap",
+    "count": [
+     4,
+     6
+    ]
+   },
+   {
+    "item": "spike",
+    "count": [
+     0,
+     2
+    ]
+   }
+  ],
+  "damage_reduction": {
+   "all": 999999
+  },
+  "variants": [
+   {
+    "symbols": ")",
+    "symbols_broken": "#"
+   }
+  ],
+  "symbol": "&"
+ },
+ {
+  "type": "vehicle_part",
+  "id": "CCMzhuangjiaban",
+  "name": {
+   "str": "CC装甲板木制"
+  },
+  "categories": [
+   "warfare"
+  ],
+  "color": "red",
+  "broken_color": "red",
+  "damage_modifier": 9,
+  "durability": 1500,
+  "bonus": 999999,
+  "folded_volume": "250 ml",
+  "description": "高强度装甲板",
+  "item": "wood_plate",
+  "location": "armor",
+  "requirements": {
+   "install": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "removal": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "repair": {
+    "skills": [
+     [
+      "tailor",
+      1
+     ]
+    ],
+    "time": "150 s",
+    "using": [
+     [
+      "adhesive",
+      1
+     ]
+    ]
+   }
+  },
+  "flags": [
+   "ARMOR",
+   "SHOCK_ABSORBER"
+  ],
+  "breaks_into": [
+   {
+    "item": "steel_lump",
+    "count": [
+     4,
+     6
+    ]
+   },
+   {
+    "item": "steel_chunk",
+    "count": [
+     4,
+     6
+    ]
+   },
+   {
+    "item": "scrap",
+    "count": [
+     4,
+     6
+    ]
+   },
+   {
+    "item": "spike",
+    "count": [
+     0,
+     2
+    ]
+   }
+  ],
+  "damage_reduction": {
+   "all": 999999
+  },
+  "variants": [
+   {
+    "symbols": ")",
+    "symbols_broken": "#"
+   }
+  ],
+  "symbol": "&"
+ },
+ {
+  "type": "vehicle_part",
+  "id": "CChdroof",
+  "name": {
+   "str": "CC车顶盖"
+  },
+  "categories": [
+   "hull"
+  ],
+  "color": "dark_gray",
+  "broken_color": "dark_gray",
+  "durability": 1000,
+  "folded_volume": "250 ml",
+  "description": "A thick metal roof.",
+  "//": "higher reqs than roof due to extra welds for redundancy",
+  "item": "wood_plate",
+  "location": "roof",
+  "requirements": {
+   "install": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "removal": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "repair": {
+    "skills": [
+     [
+      "tailor",
+      1
+     ]
+    ],
+    "time": "150 s",
+    "using": [
+     [
+      "adhesive",
+      1
+     ]
+    ]
+   }
+  },
+  "flags": [
+   "ROOF"
+  ],
+  "breaks_into": "ig_vp_steel_plate",
+  "damage_reduction": {
+   "all": 90000
+  },
+  "variants": [
+   {
+    "symbols": "#",
+    "symbols_broken": "#"
+   }
+  ],
+  "symbol": "&"
+ },
+ {
+  "type": "vehicle_part",
+  "id": "CCsolar_panel_v2",
+  "copy-from": "solar_panel_v2",
+  "looks_like": "reinforced_solar_panel",
+  "name": {
+   "str": "CC太阳能板"
+  },
+  "color": "light_blue",
+  "broken_color": "light_gray",
+  "proportional": {
+   "epower": 0.9
+  },
+  "damage_modifier": 80,
+  "durability": 1500,
+  "folded_volume": "100 ml",
+  "description": "阔以放边上的高强度太阳能板。",
+  "item": "solar_panel",
+  "requirements": {
+   "install": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "removal": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "repair": {
+    "skills": [
+     [
+      "tailor",
+      1
+     ]
+    ],
+    "time": "150 s",
+    "using": [
+     [
+      "adhesive",
+      1
+     ]
+    ]
+   }
+  },
+  "breaks_into": [
+   {
+    "item": "steel_lump",
+    "count": [
+     4,
+     7
+    ]
+   },
+   {
+    "item": "steel_chunk",
+    "count": [
+     4,
+     7
+    ]
+   },
+   {
+    "item": "scrap",
+    "count": [
+     4,
+     7
+    ]
+   },
+   {
+    "item": "solar_cell",
+    "count": [
+     1,
+     6
+    ]
+   }
+  ],
+  "damage_reduction": {
+   "all": 99999
+  },
+  "symbol": "&"
+ },
+ {
+  "id": "CCwmzhuangchui",
+  "type": "vehicle_part",
+  "name": {
+   "str": "CC撞锤"
+  },
+  "item": "sheet_metal",
+  "location": "structure",
+  "color": "light_blue",
+  "broken_color": "light_blue",
+  "durability": 1500,
+  "damage_modifier": 99999,
+  "folded_volume": "1 ml",
+  "breaks_into": [
+   {
+    "item": "steel_plate"
+   }
+  ],
+  "description": "高强度高伤害撞锤",
+  "requirements": {
+   "install": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "removal": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "repair": {
+    "skills": [
+     [
+      "tailor",
+      1
+     ]
+    ],
+    "time": "150 s",
+    "using": [
+     [
+      "adhesive",
+      1
+     ]
+    ]
+   }
+  },
+  "flags": [
+   "OBSTACLE",
+   "PROTRUSION",
+   "SHARP",
+   "FLOATS"
+  ],
+  "variants": [
+   {
+    "symbols": "X",
+    "symbols_broken": "0"
+   }
+  ],
+  "symbol": "&"
+ },
+ {
+  "id": "CCarmor_tread",
+  "type": "vehicle_part",
+  "name": {
+   "str": "CC履带装甲"
+  },
+  "item": "wheel_armor",
+  "location": "under",
+  "color": "light_green",
+  "broken_color": "light_green",
+  "durability": 1500,
+  "damage_modifier": 10,
+  "folded_volume": "250 ml",
+  "breaks_into": [
+   {
+    "item": "wheel_armor"
+   }
+  ],
+  "description": "一条由装甲车轮环环相扣而成的履带。它可以替代轮胎，提供了更好抓地和越野性能。",
+  "requirements": {
+   "install": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "removal": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "repair": {
+    "skills": [
+     [
+      "tailor",
+      1
+     ]
+    ],
+    "time": "150 s",
+    "using": [
+     [
+      "adhesive",
+      1
+     ]
+    ]
+   }
+  },
+  "wheel_offroad_rating": 0.9,
+  "wheel_terrain_modifiers": {
+   "FLAT": [
+    0,
+    3
+   ]
+  },
+  "contact_area": 3500,
+  "rolling_resistance": 1.8,
+  "flags": [
+   "WHEEL",
+   "STABLE",
+   "VARIABLE_SIZE"
+  ],
+  "variants": [
+   {
+    "symbols": "|",
+    "symbols_broken": "x"
+   }
+  ],
+  "symbol": "&"
+ },
+ {
+  "id": "CCwood_tread",
+  "type": "vehicle_part",
+  "name": {
+   "str": "CC履带木制（可转向）"
+  },
+  "item": "wheel_wood",
+  "location": "under",
+  "color": "light_green",
+  "broken_color": "light_green",
+  "durability": 1500,
+  "damage_modifier": 10,
+  "folded_volume": "250 ml",
+  "breaks_into": [
+   {
+    "item": "wheel_wood"
+   }
+  ],
+  "description": "一条由木制车轮环环相扣而成的履带。它可以替代轮胎，提供了更好抓地和越野性能。",
+  "requirements": {
+   "install": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "removal": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "repair": {
+    "skills": [
+     [
+      "tailor",
+      1
+     ]
+    ],
+    "time": "150 s",
+    "using": [
+     [
+      "adhesive",
+      1
+     ]
+    ]
+   }
+  },
+  "wheel_offroad_rating": 0.9,
+  "wheel_terrain_modifiers": {
+   "FLAT": [
+    0,
+    3
+   ]
+  },
+  "contact_area": 3500,
+  "rolling_resistance": 1.8,
+  "flags": [
+   "WHEEL",
+   "STABLE",
+   "STEERABLE",
+   "VARIABLE_SIZE"
+  ],
+  "variants": [
+   {
+    "symbols": "|",
+    "symbols_broken": "x"
+   }
+  ],
+  "symbol": "&"
+ },
+ {
+  "type": "vehicle_part",
+  "id": "CCvehicle_scoop",
+  "name": {
+   "str": "CC车铲"
+  },
+  "categories": [
+   "utility"
+  ],
+  "broken_color": "dark_gray",
+  "durability": 1500,
+  "folded_volume": "250 ml",
+  "description": "A scoop.  Use the vehicle controls to turn it on or off.  When turned on, it will scoop up loose items that it travels over until it's full.",
+  "epower": -5,
+  "size": "10000 L",
+  "cargo_weight_modifier": 0,
+  "damage_modifier": 10,
+  "item": "sheet_metal",
+  "//1": "100cm weld to install, 30cm weld per damage quadrant to repair",
+  "requirements": {
+   "install": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "removal": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "repair": {
+    "skills": [
+     [
+      "tailor",
+      1
+     ]
+    ],
+    "time": "150 s",
+    "using": [
+     [
+      "adhesive",
+      1
+     ]
+    ]
+   }
+  },
+  "flags": [
+   "SCOOP",
+   "CARGO",
+   "ENABLED_DRAINS_EPOWER"
+  ],
+  "location": "under",
+  "breaks_into": [
+   {
+    "item": "scrap",
+    "count": [
+     2,
+     5
+    ]
+   },
+   {
+    "item": "plastic_chunk",
+    "count": [
+     1,
+     5
+    ]
+   }
+  ],
+  "damage_reduction": {
+   "all": 999999
+  },
+  "variants": [
+   {
+    "symbols": "R",
+    "symbols_broken": ";"
+   }
+  ],
+  "symbol": "&",
+  "color": "light_gray"
+ },
+ {
+  "type": "vehicle_part",
+  "id": "CCfadianji",
+  "name": {
+   "str": "CC能源（风）"
+  },
+  "looks_like": "wind_turbine",
+  "categories": [
+   "energy"
+  ],
+  "color": "yellow",
+  "broken_color": "yellow",
+  "fuel_type": "null",
+  "damage_modifier": 10,
+  "durability": 1500,
+  "folded_volume": "250 ml",
+  "description": "环保能源技术，风光动能互补发电技术。",
+  "epower": 1000,
+  "item": "xl_wind_turbine",
+  "location": "on_roof",
+  "power": 10,
+  "requirements": {
+   "install": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "removal": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "repair": {
+    "skills": [
+     [
+      "tailor",
+      1
+     ]
+    ],
+    "time": "150 s",
+    "using": [
+     [
+      "adhesive",
+      1
+     ]
+    ]
+   }
+  },
+  "flags": [
+   "REACTOR",
+   "PERPETUAL"
+  ],
+  "damage_reduction": {
+   "all": 99999
+  },
+  "variants": [
+   {
+    "symbols": "Y",
+    "symbols_broken": "X"
+   }
+  ],
+  "symbol": "&"
+ },
+ {
+  "type": "vehicle_part",
+  "id": "CCcompact_ASRG_containment",
+  "name": {
+   "str": "CC能源（同位素）"
+  },
+  "looks_like": "f_compact_ASRG_containment",
+  "categories": [
+   "energy"
+  ],
+  "color": "green_white",
+  "broken_color": "blue",
+  "damage_modifier": 8,
+  "durability": 1500,
+  "folded_volume": "250 ml",
+  "description": "A military ASRG covered in heavy plating.  Provides constant albeit low power to your car.",
+  "//": "40cm of weld per damage quadrant",
+  "epower": 1000,
+  "item": "compact_ASRG_containment",
+  "requirements": {
+   "install": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "removal": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "repair": {
+    "skills": [
+     [
+      "tailor",
+      1
+     ]
+    ],
+    "time": "150 s",
+    "using": [
+     [
+      "adhesive",
+      1
+     ]
+    ]
+   }
+  },
+  "flags": [
+   "COVERED",
+   "PERPETUAL",
+   "REACTOR"
+  ],
+  "breaks_into": [
+   {
+    "item": "scrap",
+    "count": [
+     4,
+     16
+    ]
+   },
+   {
+    "item": "steel_chunk",
+    "count": [
+     1,
+     6
+    ]
+   },
+   {
+    "item": "plutonium",
+    "count": [
+     0,
+     2
+    ]
+   },
+   {
+    "item": "lead",
+    "charges": [
+     12,
+     18
+    ]
+   }
+  ],
+  "damage_reduction": {
+   "all": 99999
+  },
+  "variants": [
+   {
+    "symbols": "0",
+    "symbols_broken": "#"
+   }
+  ],
+  "symbol": "&"
+ },
+ {
+  "type": "vehicle_part",
+  "id": "CCstorage_battery_mount",
+  "name": {
+   "str": "CC蓄电池箱"
+  },
+  "categories": [
+   "energy"
+  ],
+  "broken_color": "red",
+  "damage_modifier": 80,
+  "durability": 1000,
+  "folded_volume": "250 ml",
+  "description": "A battery case for storage batteries.  Allows quick removal or addition of a storage battery, if you can lift the battery.",
+  "item": "it_battery_mount",
+  "//": "40cm weld to affix",
+  "location": "fuel_source",
+  "requirements": {
+   "install": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "removal": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "repair": {
+    "skills": [
+     [
+      "tailor",
+      1
+     ]
+    ],
+    "time": "150 s",
+    "using": [
+     [
+      "adhesive",
+      1
+     ]
+    ]
+   }
+  },
+  "flags": [
+   "BATTERY_MOUNT"
+  ],
+  "breaks_into": [
+   {
+    "item": "steel_lump",
+    "prob": 50
+   },
+   {
+    "item": "steel_chunk",
+    "count": [
+     1,
+     2
+    ]
+   },
+   {
+    "item": "scrap",
+    "count": [
+     0,
+     3
+    ]
+   }
+  ],
+  "damage_reduction": {
+   "all": 99999,
+   "bash": 80
+  },
+  "variants": [
+   {
+    "symbols": "O",
+    "symbols_broken": "#"
+   }
+  ],
+  "symbol": "&",
+  "color": "light_gray"
+ },
+ {
+  "id": "CCstorage_battery",
+  "type": "vehicle_part",
+  "name": {
+   "str": "CC蓄电池（大型）"
+  },
+  "categories": [
+   "energy"
+  ],
+  "item": "storage_battery",
+  "location": "fuel_source",
+  "fuel_type": "battery",
+  "color": "yellow",
+  "broken_color": "red",
+  "durability": 1000,
+  "damage_reduction": {
+   "all": 99000
+  },
+  "folded_volume": "150 ml",
+  "description": "A battery for storing electrical power, and discharging it to power electrical devices built into the vehicle.",
+  "damage_modifier": 80,
+  "breaks_into": [
+   {
+    "item": "steel_lump",
+    "count": [
+     5,
+     10
+    ]
+   },
+   {
+    "item": "steel_chunk",
+    "count": [
+     5,
+     10
+    ]
+   },
+   {
+    "item": "scrap",
+    "count": [
+     5,
+     10
+    ]
+   },
+   {
+    "item": "medium_storage_battery",
+    "count": [
+     1,
+     2
+    ]
+   }
+  ],
+  "//": "29cm length battery, welded on at least two edges",
+  "requirements": {
+   "install": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "1 m"
+   },
+   "removal": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "1 m"
+   }
+  },
+  "flags": [
+   "BATTERY_MOUNT"
+  ],
+  "variants": [
+   {
+    "symbols": "O",
+    "symbols_broken": "#"
+   }
+  ],
+  "symbol": "&"
+ },
+ {
+  "id": "CClarge_storage_battery",
+  "copy-from": "CCstorage_battery",
+  "type": "vehicle_part",
+  "name": {
+   "str": "CC蓄电池（超大型"
+  },
+  "item": "large_storage_battery",
+  "durability": 1000,
+  "damage_reduction": {
+   "all": 99000
+  },
+  "folded_volume": "250 ml",
+  "breaks_into": [
+   {
+    "item": "steel_lump",
+    "count": [
+     10,
+     20
+    ]
+   },
+   {
+    "item": "steel_chunk",
+    "count": [
+     5,
+     10
+    ]
+   },
+   {
+    "item": "scrap",
+    "count": [
+     5,
+     10
+    ]
+   },
+   {
+    "item": "storage_battery",
+    "count": [
+     0,
+     1
+    ]
+   }
+  ],
+  "symbol": "&",
+  "color": "light_gray"
+ },
+ {
+  "id": "CCwmmzuoyi",
+  "type": "vehicle_part",
+  "name": {
+   "str": "CC多功能座椅"
+  },
+  "item": "sheet",
+  "location": "anywhere",
+  "color": "light_green",
+  "broken_color": "light_green",
+  "durability": 1500,
+  "damage_reduction": {
+   "all": 99000
+  },
+  "damage_modifier": 9,
+  "epower": -35,
+  "folded_volume": "50 ml",
+  "comfort": 99999,
+  "floor_bedding_warmth": 500,
+  "breaks_into": [
+   {
+    "item": "scrap"
+   }
+  ],
+  "description": "可以睡觉的舒适座椅，搭载了大量车辆控制部件的智能座椅。（车上物品太多可能导致直接折叠后部分堆积物品消失，原游戏设定问题）",
+  "requirements": {
+   "install": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "removal": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "repair": {
+    "skills": [
+     [
+      "tailor",
+      1
+     ]
+    ],
+    "time": "150 s",
+    "using": [
+     [
+      "adhesive",
+      1
+     ]
+    ]
+   }
+  },
+  "flags": [
+   "SEAT",
+   "BED",
+   "BOARDABLE",
+   "BELTABLE",
+   "REMOTE_CONTROLS",
+   "CONTROLS",
+   "CTRL_ELECTRONIC",
+   "VISION",
+   "CAMERA",
+   "CAMERA_CONTROL",
+   "ENABLED_DRAINS_EPOWER",
+   "CONTROL_ANIMAL"
+  ],
+  "control_requirements": {
+   "air": {
+    "proficiencies": [
+     "prof_helicopter_pilot"
+    ]
+   }
+  },
+  "variants": [
+   {
+    "symbols": "#",
+    "symbols_broken": "*"
+   }
+  ],
+  "symbol": "&"
+ },
+ {
+  "type": "vehicle_part",
+  "id": "CCworkbench",
+  "name": {
+   "str": "CC工作台"
+  },
+  "looks_like": "veh_table_wood",
+  "categories": [
+   "utility"
+  ],
+  "color": "red",
+  "damage_modifier": 6,
+  "folded_volume": "250 ml",
+  "durability": 1500,
+  "size": "10000 L",
+  "cargo_weight_modifier": 0,
+  "item": "workbench",
+  "location": "center",
+  "//": "20cm weld per quadrant of damage",
+  "requirements": {
+   "install": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "removal": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "repair": {
+    "skills": [
+     [
+      "tailor",
+      1
+     ]
+    ],
+    "time": "150 s",
+    "using": [
+     [
+      "adhesive",
+      1
+     ]
+    ]
+   }
+  },
+  "flags": [
+   "CARGO",
+   "BOARDABLE",
+   "FLAT_SURF",
+   "WORKBENCH"
+  ],
+  "breaks_into": [
+   {
+    "item": "pipe",
+    "count": [
+     4,
+     6
+    ]
+   },
+   {
+    "item": "sheet_metal",
+    "count": [
+     0,
+     1
+    ]
+   },
+   {
+    "item": "sheet_metal_small",
+    "count": [
+     12,
+     24
+    ]
+   },
+   {
+    "item": "steel_chunk",
+    "count": [
+     4,
+     8
+    ]
+   },
+   {
+    "item": "scrap",
+    "count": [
+     12,
+     24
+    ]
+   }
+  ],
+  "workbench": {
+   "multiplier": 1.5,
+   "mass": "5000 kg",
+   "volume": "900L"
+  },
+  "damage_reduction": {
+   "all": 99999
+  },
+  "variants": [
+   {
+    "symbols": "#",
+    "symbols_broken": "#"
+   }
+  ],
+  "symbol": "&"
+ },
+ {
+  "type": "vehicle_part",
+  "id": "CCzhediebanxczgzt",
+  "//": "抄写的C++MOD载具部件",
+  "name": {
+   "str": "CC集成车载工具台"
+  },
+  "description": "一个由很多设施组成的车载工具，所有工具都压缩精简成一个紧凑部件。比原版多一些功能(C++MOD)",
+  "color": "light_red",
+  "broken_color": "light_red",
+  "damage_modifier": 8,
+  "folded_volume": "100 ml",
+  "durability": 1500,
+  "damage_reduction": {
+   "all": 99000
+  },
+  "item": "frame_wood_light",
+  "flags": [
+   "AISLE",
+   "BOARDABLE",
+   "STEREO"
+  ],
+  "pseudo_tools": [
+   {
+    "id": "vac_sealer"
+   },
+   {
+    "id": "vac_mold"
+   },
+   {
+    "id": "can_sealer"
+   },
+   {
+    "id": "dehydrator"
+   },
+   {
+    "id": "water_purifier",
+    "hotkey": "p"
+   },
+   {
+    "id": "food_processor"
+   },
+   {
+    "id": "press"
+   },
+   {
+    "id": "puller"
+   },
+   {
+    "id": "chemistry_set"
+   },
+   {
+    "id": "electrolysis_kit"
+   },
+   {
+    "id": "water_faucet"
+   },
+   {
+    "id": "forge"
+   },
+   {
+    "id": "syringe"
+   },
+   {
+    "id": "tailors_kit"
+   },
+   {
+    "id": "hotplate",
+    "hotkey": "h"
+   },
+   {
+    "id": "tongs"
+   },
+   {
+    "id": "jack"
+   },
+   {
+    "id": "pot"
+   },
+   {
+    "id": "hose_garden"
+   },
+   {
+    "id": "pickaxe"
+   },
+   {
+    "id": "dutch_oven"
+   },
+   {
+    "id": "pressure_cooker"
+   },
+   {
+    "id": "pot_canning"
+   },
+   {
+    "id": "pastaextruder"
+   },
+   {
+    "id": "swage"
+   },
+   {
+    "id": "thread_cutting_set"
+   },
+   {
+    "id": "hotcut"
+   },
+   {
+    "id": "pan"
+   },
+   {
+    "id": "scutcheritem"
+   },
+   {
+    "id": "fake_anvil"
+   },
+   {
+    "id": "electric_spinwheel"
+   },
+   {
+    "id": "spinwheelitem"
+   },
+   {
+    "id": "wire_draw_machine"
+   },
+   {
+    "id": "pump_complex"
+   },
+   {
+    "id": "lug_wrench"
+   },
+   {
+    "id": "butchering_kit"
+   },
+   {
+    "id": "metal_file"
+   },
+   {
+    "id": "corded_powerdrill"
+   },
+   {
+    "id": "thermometer"
+   },
+   {
+    "id": "misc_repairkit"
+   },
+   {
+    "id": "large_repairkit"
+   },
+   {
+    "id": "reciprocating_saw"
+   },
+   {
+    "id": "metalworking_tongs"
+   },
+   {
+    "id": "angle_grinder"
+   },
+   {
+    "id": "closed_loop_extractor_small"
+   },
+   {
+    "id": "circsaw_off"
+   },
+   {
+    "id": "kiln"
+   },
+   {
+    "id": "still"
+   },
+   {
+    "id": "still_lab"
+   },
+   {
+    "id": "small_pressure_vessel"
+   },
+   {
+    "id": "welder",
+    "hotkey": "w"
+   },
+   {
+    "id": "soldering_iron",
+    "hotkey": "g"
+   }
+  ],
+  "breaks_into": [
+   {
+    "item": "steel_lump",
+    "count": [
+     30,
+     40
+    ]
+   },
+   {
+    "item": "steel_chunk",
+    "count": [
+     30,
+     40
+    ]
+   },
+   {
+    "item": "scrap",
+    "count": [
+     30,
+     40
+    ]
+   },
+   {
+    "item": "circuit",
+    "count": [
+     30,
+     40
+    ]
+   },
+   {
+    "item": "e_scrap",
+    "count": [
+     30,
+     40
+    ]
+   },
+   {
+    "item": "amplifier",
+    "count": [
+     30,
+     40
+    ]
+   }
+  ],
+  "requirements": {
+   "install": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "removal": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "repair": {
+    "skills": [
+     [
+      "tailor",
+      1
+     ]
+    ],
+    "time": "150 s",
+    "using": [
+     [
+      "adhesive",
+      1
+     ]
+    ]
+   }
+  },
+  "variants": [
+   {
+    "symbols": "&",
+    "symbols_broken": "x"
+   }
+  ],
+  "symbol": "&"
+ },
+ {
+  "id": "CCwmchejia",
+  "type": "vehicle_part",
+  "name": {
+   "str": "CC浮力车架"
+  },
+  "item": "scrap",
+  "location": "structure",
+  "color": "white",
+  "broken_color": "white",
+  "description": "很硬可漂水上的车架",
+  "durability": 1500,
+  "damage_reduction": {
+   "all": 99000
+  },
+  "folded_volume": "50 ml",
+  "breaks_into": [
+   {
+    "item": "scrap"
+   }
+  ],
+  "requirements": {
+   "install": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "removal": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "repair": {
+    "skills": [
+     [
+      "tailor",
+      1
+     ]
+    ],
+    "time": "150 s",
+    "using": [
+     [
+      "adhesive",
+      1
+     ]
+    ]
+   }
+  },
+  "flags": [
+   "MOUNTABLE",
+   "INITIAL_PART",
+   "FLOATS"
+  ],
+  "variants": [
+   {
+    "symbols": "]",
+    "symbols_broken": "#"
+   }
+  ],
+  "symbol": "&"
+ },
+ {
+  "id": "CCboliban",
+  "type": "vehicle_part",
+  "breaks_into": [
+   {
+    "count": [
+     25,
+     50
+    ],
+    "item": "glass_shard"
+   },
+   {
+    "count": [
+     4,
+     8
+    ],
+    "item": "wire"
+   }
+  ],
+  "broken_color": "light_gray",
+  "categories": [
+   "hull"
+  ],
+  "color": "light_blue",
+  "damage_modifier": 9,
+  "damage_reduction": {
+   "all": 999999
+  },
+  "folded_volume": "100 ml",
+  "description": "高强度玻璃板，可以当墙壁用。",
+  "durability": 1500,
+  "flags": [
+   "WINDSHIELD",
+   "OBSTACLE",
+   "WINDOW"
+  ],
+  "item": "glass_sheet",
+  "location": "center",
+  "looks_like": "windshield",
+  "name": {
+   "str": "CC玻璃板"
+  },
+  "requirements": {
+   "install": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "removal": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "repair": {
+    "skills": [
+     [
+      "tailor",
+      1
+     ]
+    ],
+    "time": "150 s",
+    "using": [
+     [
+      "adhesive",
+      1
+     ]
+    ]
+   }
+  },
+  "variants": [
+   {
+    "symbols": "\"",
+    "symbols_broken": "0"
+   }
+  ],
+  "symbol": "&"
+ },
+ {
+  "type": "vehicle_part",
+  "id": "CCair_jack",
+  "name": {
+   "str": "CC千斤顶简易"
+  },
+  "item": "jack_makeshift",
+  "categories": [
+   "utility"
+  ],
+  "broken_color": "light_blue",
+  "looks_like": "crane_small",
+  "durability": 1500,
+  "folded_volume": "100 ml",
+  "description": "An extendable metal pylon used to replace a portable jack.  If mounted to a vehicle, it could be used to lift it up.",
+  "breaks_into": [
+   {
+    "item": "pipe",
+    "count": [
+     4,
+     12
+    ]
+   },
+   {
+    "item": "scrap",
+    "count": [
+     8,
+     24
+    ]
+   },
+   {
+    "item": "jack",
+    "count": [
+     1,
+     1
+    ]
+   }
+  ],
+  "qualities": [
+   [
+    "SELF_JACK",
+    17
+   ],
+   [
+    "LIFT",
+    50
+   ],
+   [
+    "JACK",
+    50
+   ]
+  ],
+  "//": "30cm of weld per quadrant of damage and 120cm weld to install",
+  "requirements": {
+   "install": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "removal": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "repair": {
+    "skills": [
+     [
+      "tailor",
+      1
+     ]
+    ],
+    "time": "150 s",
+    "using": [
+     [
+      "adhesive",
+      1
+     ]
+    ]
+   }
+  },
+  "flags": [
+   "PROTRUSION",
+   "SELF_JACK"
+  ],
+  "pseudo_tools": [
+   {
+    "id": "crane_pseudo_item"
+   }
+  ],
+  "damage_reduction": {
+   "all": 99999
+  },
+  "variants": [
+   {
+    "symbols": "[",
+    "symbols_broken": "/"
+   }
+  ],
+  "symbol": "&",
+  "color": "light_gray"
+ },
+ {
+  "type": "vehicle_part",
+  "id": "CCQair_jack",
+  "name": {
+   "str": "CC千斤顶气动"
+  },
+  "item": "v_airjack_item",
+  "categories": [
+   "utility"
+  ],
+  "broken_color": "light_blue",
+  "looks_like": "crane_small",
+  "durability": 1500,
+  "folded_volume": "100 ml",
+  "description": "An extendable metal pylon used to replace a portable jack.  If mounted to a vehicle, it could be used to lift it up.",
+  "breaks_into": [
+   {
+    "item": "pipe",
+    "count": [
+     4,
+     12
+    ]
+   },
+   {
+    "item": "scrap",
+    "count": [
+     8,
+     24
+    ]
+   },
+   {
+    "item": "jack",
+    "count": [
+     1,
+     1
+    ]
+   }
+  ],
+  "qualities": [
+   [
+    "SELF_JACK",
+    17
+   ],
+   [
+    "LIFT",
+    50
+   ],
+   [
+    "JACK",
+    50
+   ]
+  ],
+  "//": "30cm of weld per quadrant of damage and 120cm weld to install",
+  "requirements": {
+   "install": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "removal": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "repair": {
+    "skills": [
+     [
+      "tailor",
+      1
+     ]
+    ],
+    "time": "150 s",
+    "using": [
+     [
+      "adhesive",
+      1
+     ]
+    ]
+   }
+  },
+  "flags": [
+   "PROTRUSION",
+   "SELF_JACK"
+  ],
+  "pseudo_tools": [
+   {
+    "id": "crane_pseudo_item"
+   }
+  ],
+  "damage_reduction": {
+   "all": 99999
+  },
+  "variants": [
+   {
+    "symbols": "[",
+    "symbols_broken": "/"
+   }
+  ],
+  "symbol": "&",
+  "color": "light_gray"
+ },
+ {
+  "type": "vehicle_part",
+  "id": "CCstacked_cargo_space",
+  "name": "CC大型车底货柜",
+  "color": "light_gray",
+  "variants": [
+   {
+    "symbols": "=",
+    "symbols_broken": "#"
+   }
+  ],
+  "looks_like": "trunk_floor",
+  "broken_color": "dark_gray",
+  "categories": [
+   "utility"
+  ],
+  "durability": 1500,
+  "damage_reduction": {
+   "all": 99000
+  },
+  "folded_volume": "250 ml",
+  "size": "25000 L",
+  "cargo_weight_modifier": 0,
+  "item": "cargo_rack",
+  "location": "center",
+  "requirements": {
+   "install": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "removal": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "repair": {
+    "skills": [
+     [
+      "tailor",
+      1
+     ]
+    ],
+    "time": "150 s",
+    "using": [
+     [
+      "adhesive",
+      1
+     ]
+    ]
+   }
+  },
+  "flags": [
+   "AISLE",
+   "BOARDABLE",
+   "CARGO",
+   "LOCKABLE_CARGO",
+   "COVERED"
+  ],
+  "breaks_into": [
+   {
+    "item": "steel_lump",
+    "count": [
+     24,
+     32
+    ]
+   },
+   {
+    "item": "steel_chunk",
+    "count": [
+     24,
+     32
+    ]
+   },
+   {
+    "item": "scrap",
+    "count": [
+     24,
+     32
+    ]
+   }
+  ],
+  "symbol": "&"
+ },
+ {
+  "type": "vehicle_part",
+  "id": "CCMstacked_cargo_space",
+  "name": "CC大型车底货柜",
+  "color": "light_gray",
+  "variants": [
+   {
+    "symbols": "=",
+    "symbols_broken": "#"
+   }
+  ],
+  "looks_like": "trunk_floor",
+  "broken_color": "dark_gray",
+  "categories": [
+   "utility"
+  ],
+  "durability": 1000,
+  "damage_reduction": {
+   "all": 99000
+  },
+  "folded_volume": "250 ml",
+  "size": "25000 L",
+  "cargo_weight_modifier": 0,
+  "item": "foldwoodframe",
+  "location": "center",
+  "requirements": {
+   "install": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "removal": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "repair": {
+    "skills": [
+     [
+      "tailor",
+      1
+     ]
+    ],
+    "time": "150 s",
+    "using": [
+     [
+      "adhesive",
+      1
+     ]
+    ]
+   }
+  },
+  "flags": [
+   "AISLE",
+   "BOARDABLE",
+   "CARGO",
+   "LOCKABLE_CARGO",
+   "COVERED"
+  ],
+  "breaks_into": [
+   {
+    "item": "steel_lump",
+    "count": [
+     24,
+     32
+    ]
+   },
+   {
+    "item": "steel_chunk",
+    "count": [
+     24,
+     32
+    ]
+   },
+   {
+    "item": "scrap",
+    "count": [
+     24,
+     32
+    ]
+   }
+  ],
+  "symbol": "&"
+ },
+ {
+  "type": "vehicle_part",
+  "id": "CCminifreezer_floor",
+  "name": "CC车底冷冻库(迷你冰柜)",
+  "variants": [
+   {
+    "symbols": "H",
+    "symbols_broken": "#"
+   }
+  ],
+  "looks_like": "trunk_floor",
+  "color": "light_blue",
+  "broken_color": "blue",
+  "damage_modifier": 10,
+  "durability": 1000,
+  "folded_volume": "250 ml",
+  "epower": -200,
+  "size": "10000 L",
+  "cargo_weight_modifier": 0,
+  "item": "minifreezer",
+  "location": "center",
+  "requirements": {
+   "install": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "removal": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "repair": {
+    "skills": [
+     [
+      "tailor",
+      1
+     ]
+    ],
+    "time": "150 s",
+    "using": [
+     [
+      "adhesive",
+      1
+     ]
+    ]
+   }
+  },
+  "flags": [
+   "AISLE",
+   "BOARDABLE",
+   "CARGO",
+   "LOCKABLE_CARGO",
+   "FREEZER",
+   "COVERED",
+   "ENABLED_DRAINS_EPOWER"
+  ],
+  "damage_reduction": {
+   "all": 999999
+  },
+  "breaks_into": [
+   {
+    "item": "steel_lump",
+    "count": [
+     8,
+     13
+    ]
+   },
+   {
+    "item": "steel_chunk",
+    "count": [
+     8,
+     13
+    ]
+   },
+   {
+    "item": "scrap",
+    "count": [
+     8,
+     13
+    ]
+   },
+   {
+    "item": "hose",
+    "prob": 50
+   }
+  ],
+  "symbol": "&"
+ },
+ {
+  "type": "vehicle_part",
+  "id": "CCfridge_floor",
+  "name": "CC车底冷冻库(冰箱)",
+  "variants": [
+   {
+    "symbols": "H",
+    "symbols_broken": "#"
+   }
+  ],
+  "looks_like": "trunk_floor",
+  "color": "light_blue",
+  "broken_color": "blue",
+  "damage_modifier": 10,
+  "durability": 1000,
+  "damage_reduction": {
+   "all": 99000
+  },
+  "folded_volume": "250 ml",
+  "epower": -200,
+  "size": "10000 L",
+  "cargo_weight_modifier": 0,
+  "item": "minifridge",
+  "location": "center",
+  "requirements": {
+   "install": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "removal": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "repair": {
+    "skills": [
+     [
+      "tailor",
+      1
+     ]
+    ],
+    "time": "150 s",
+    "using": [
+     [
+      "adhesive",
+      1
+     ]
+    ]
+   }
+  },
+  "flags": [
+   "AISLE",
+   "BOARDABLE",
+   "CARGO",
+   "LOCKABLE_CARGO",
+   "FREEZER",
+   "COVERED",
+   "ENABLED_DRAINS_EPOWER"
+  ],
+  "breaks_into": [
+   {
+    "item": "steel_lump",
+    "count": [
+     8,
+     13
+    ]
+   },
+   {
+    "item": "steel_chunk",
+    "count": [
+     8,
+     13
+    ]
+   },
+   {
+    "item": "scrap",
+    "count": [
+     8,
+     13
+    ]
+   },
+   {
+    "item": "hose",
+    "prob": 50
+   }
+  ],
+  "symbol": "&"
+ },
+ {
+  "type": "vehicle_part",
+  "id": "CCglass_fridge_floor",
+  "name": "CC车底冷冻库(玻璃门冰箱)",
+  "variants": [
+   {
+    "symbols": "H",
+    "symbols_broken": "#"
+   }
+  ],
+  "looks_like": "trunk_floor",
+  "color": "light_blue",
+  "broken_color": "blue",
+  "damage_modifier": 10,
+  "durability": 1000,
+  "damage_reduction": {
+   "all": 99000
+  },
+  "folded_volume": "250 ml",
+  "epower": -200,
+  "size": "10000 L",
+  "cargo_weight_modifier": 0,
+  "item": "minifridge",
+  "location": "center",
+  "requirements": {
+   "install": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "removal": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "repair": {
+    "skills": [
+     [
+      "tailor",
+      1
+     ]
+    ],
+    "time": "150 s",
+    "using": [
+     [
+      "adhesive",
+      1
+     ]
+    ]
+   }
+  },
+  "flags": [
+   "AISLE",
+   "BOARDABLE",
+   "CARGO",
+   "LOCKABLE_CARGO",
+   "FREEZER",
+   "COVERED",
+   "ENABLED_DRAINS_EPOWER"
+  ],
+  "breaks_into": [
+   {
+    "item": "steel_lump",
+    "count": [
+     8,
+     13
+    ]
+   },
+   {
+    "item": "steel_chunk",
+    "count": [
+     8,
+     13
+    ]
+   },
+   {
+    "item": "scrap",
+    "count": [
+     8,
+     13
+    ]
+   },
+   {
+    "item": "hose",
+    "prob": 50
+   }
+  ],
+  "symbol": "&"
+ },
+ {
+  "type": "vehicle_part",
+  "id": "CCfreezer_floor",
+  "name": "CC车底冷冻库(冰柜)",
+  "variants": [
+   {
+    "symbols": "H",
+    "symbols_broken": "#"
+   }
+  ],
+  "looks_like": "trunk_floor",
+  "color": "light_blue",
+  "broken_color": "blue",
+  "damage_modifier": 10,
+  "durability": 1000,
+  "damage_reduction": {
+   "all": 99000
+  },
+  "folded_volume": "250 ml",
+  "epower": -200,
+  "size": "10000 L",
+  "cargo_weight_modifier": 0,
+  "item": "minifridge",
+  "location": "center",
+  "requirements": {
+   "install": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "removal": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "repair": {
+    "skills": [
+     [
+      "tailor",
+      1
+     ]
+    ],
+    "time": "150 s",
+    "using": [
+     [
+      "adhesive",
+      1
+     ]
+    ]
+   }
+  },
+  "flags": [
+   "AISLE",
+   "BOARDABLE",
+   "CARGO",
+   "LOCKABLE_CARGO",
+   "FREEZER",
+   "COVERED",
+   "ENABLED_DRAINS_EPOWER"
+  ],
+  "breaks_into": [
+   {
+    "item": "steel_lump",
+    "count": [
+     8,
+     13
+    ]
+   },
+   {
+    "item": "steel_chunk",
+    "count": [
+     8,
+     13
+    ]
+   },
+   {
+    "item": "scrap",
+    "count": [
+     8,
+     13
+    ]
+   },
+   {
+    "item": "hose",
+    "prob": 50
+   }
+  ],
+  "symbol": "&"
+ },
+ {
+  "type": "vehicle_part",
+  "id": "CCminifridge_floor",
+  "name": "CC车底冷藏库(迷你冰箱)",
+  "variants": [
+   {
+    "symbols": "H",
+    "symbols_broken": "#"
+   }
+  ],
+  "looks_like": "trunk_floor",
+  "color": "light_blue",
+  "broken_color": "light_blue",
+  "damage_modifier": 10,
+  "durability": 1000,
+  "folded_volume": "250 ml",
+  "description": "A small fridge.  When turned on, it will cool the food inside, extended the time until the food spoils.",
+  "//": "Use average consumption, not the max on the appliance rating plate. 30W ~ 260kWh per annum",
+  "epower": -100,
+  "size": "10000 L",
+  "cargo_weight_modifier": 0,
+  "item": "minifridge",
+  "location": "center",
+  "requirements": {
+   "install": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "removal": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "repair": {
+    "skills": [
+     [
+      "tailor",
+      1
+     ]
+    ],
+    "time": "150 s",
+    "using": [
+     [
+      "adhesive",
+      1
+     ]
+    ]
+   }
+  },
+  "flags": [
+   "AISLE",
+   "BOARDABLE",
+   "CARGO",
+   "LOCKABLE_CARGO",
+   "FRIDGE",
+   "COVERED",
+   "ENABLED_DRAINS_EPOWER"
+  ],
+  "damage_reduction": {
+   "all": 999999
+  },
+  "breaks_into": [
+   {
+    "item": "steel_lump",
+    "count": [
+     8,
+     13
+    ]
+   },
+   {
+    "item": "steel_chunk",
+    "count": [
+     8,
+     13
+    ]
+   },
+   {
+    "item": "scrap",
+    "count": [
+     8,
+     13
+    ]
+   },
+   {
+    "item": "hose",
+    "prob": 50
+   }
+  ],
+  "symbol": "&"
+ },
+ {
+  "type": "vehicle_part",
+  "id": "CCclay_minifridge_floor",
+  "name": "CC车底冷藏库(水浴陶锅)",
+  "variants": [
+   {
+    "symbols": "H",
+    "symbols_broken": "#"
+   }
+  ],
+  "looks_like": "trunk_floor",
+  "color": "light_blue",
+  "broken_color": "light_blue",
+  "damage_modifier": 10,
+  "durability": 800,
+  "folded_volume": "1250 ml",
+  "description": "通过水蒸发降温原理，实现在原始无电力条件下的冷藏保存食物方案。（延长食物质保，不能冻结）",
+  "size": "10000 L",
+  "cargo_weight_modifier": 0,
+  "item": "pot_canning_clay",
+  "location": "center",
+  "requirements": {
+   "install": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "removal": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "repair": {
+    "skills": [
+     [
+      "tailor",
+      1
+     ]
+    ],
+    "time": "150 s",
+    "using": [
+     [
+      "adhesive",
+      1
+     ]
+    ]
+   }
+  },
+  "flags": [
+   "AISLE",
+   "BOARDABLE",
+   "CARGO",
+   "LOCKABLE_CARGO",
+   "FRIDGE",
+   "COVERED"
+  ],
+  "damage_reduction": {
+   "all": 999999
+  },
+  "breaks_into": [
+   {
+    "item": "steel_lump",
+    "count": [
+     8,
+     13
+    ]
+   },
+   {
+    "item": "steel_chunk",
+    "count": [
+     8,
+     13
+    ]
+   },
+   {
+    "item": "scrap",
+    "count": [
+     8,
+     13
+    ]
+   },
+   {
+    "item": "hose",
+    "prob": 50
+   }
+  ],
+  "symbol": "&"
+ }
+]

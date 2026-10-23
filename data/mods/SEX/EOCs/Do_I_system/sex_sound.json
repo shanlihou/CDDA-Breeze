@@ -1,0 +1,143 @@
+[
+  {
+    "//": "叫春检测",
+    "type": "effect_on_condition",
+    "id": "EOC_sound_female",
+    "condition": {
+      "and": [
+        { "u_has_effect": "u_sex" },
+        "u_female",
+        {
+          "compare_int":[
+            { "u_val": "var", "var_name": "pleasant", "type": "int", "context": "快感" }, ">", { "const": 0 }
+          ]
+        }
+      ]
+    },
+    "effect": [
+      {
+        "switch": { "u_val": "var", "var_name": "relation", "type": "int", "context": "关系" },
+        "cases":[
+          {
+            "case": 3,
+            "effect": [
+              {
+                "switch": { "u_val": "var", "var_name": "favorability", "type": "int", "context": "好感"  },
+                "cases": [
+                  {
+                    "case": 0,
+                    "effect":[
+                      { "u_make_sound": "<sex_female0>", "volume": 10, "snippet": true, "type": "speech" }
+                    ]
+                  },
+                  {
+                    "case": 50,
+                    "effect":[
+                      { "u_make_sound": "<sex_female1>", "volume": 10, "snippet": true, "type": "speech" }
+                    ]
+                  },
+                  {
+                    "case": 200,
+                    "effect":[
+                      { "u_make_sound": "<sex_female2>", "volume": 10, "snippet": true, "type": "speech" }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "case": 5,
+            "effect": [
+              {
+                "switch": { "u_val": "var", "var_name": "favorability", "type": "int", "context": "好感"  },
+                "cases": [
+                  {
+                    "case": 100,
+                    "effect":[
+                      { "u_make_sound": "<sex_female1>", "volume": 10, "snippet": true, "type": "speech" }
+                    ]
+                  },
+                  {
+                    "case": 32767,
+                    "effect":[
+                      { "u_make_sound": "<sex_female3>", "volume": 10, "snippet": true, "type": "speech" }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "//": "叫春检测",
+    "type": "effect_on_condition",
+    "id": "EOC_sound_male",
+    "condition": {
+      "and": [
+        { "u_has_effect": "u_sex" },
+        "u_male"
+      ]
+    },
+    "effect": [
+      {
+        "switch": { "u_val": "var", "var_name": "relation", "type": "int", "context": "关系" },
+        "cases":[
+          {
+            "case": 3,
+            "effect": [
+              {
+                "switch": { "u_val": "var", "var_name": "favorability", "type": "int", "context": "好感"  },
+                "cases": [
+                  {
+                    "case": 0,
+                    "effect":[
+                      { "u_make_sound": "<sex_male1>", "volume": 10, "snippet": true, "type": "speech" }
+                    ]
+                  },
+                  {
+                    "case": 50,
+                    "effect":[
+                      { "u_make_sound": "<sex_male1>", "volume": 10, "snippet": true, "type": "speech" }
+                    ]
+                  },
+                  {
+                    "case": 200,
+                    "effect":[
+                      { "u_make_sound": "<sex_male2>", "volume": 10, "snippet": true, "type": "speech" }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "case": 5,
+            "effect": [
+              {
+                "switch": { "u_val": "var", "var_name": "favorability", "type": "int", "context": "好感"  },
+                "cases": [
+                  {
+                    "case": 100,
+                    "effect":[
+                      { "u_make_sound": "<sex_male1>", "volume": 10, "snippet": true, "type": "speech" }
+                    ]
+                  },
+                  {
+                    "case": 32767,
+                    "effect":[
+                      { "u_make_sound": "<sex_male3>", "volume": 10, "snippet": true, "type": "speech" }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

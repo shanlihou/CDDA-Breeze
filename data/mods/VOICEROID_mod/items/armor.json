@@ -1,0 +1,2664 @@
+[
+  {
+    "//1": "COLORにblackは使わない。コンソール版だとほぼ見えなくなり見失う為。黒い物はdark_grayかwhiteで。",
+    "//2": "なんでもかんでもFANCYフラグを付けない事。SUPER_FANCYも控える。アクセサリー類とピンポイントな衣装のみに絞る。",
+    "copy-from": "hat_cotton",
+    "id": "voiro_schoolcap_ai",
+    "type": "ARMOR",
+    "name": "通学帽(月读爱)[voiro]",
+    "description": "帽檐呈圆周展开的帽子，为了防止交通事故，帽子的特征是明显的黄色。",
+    "weight": "70 g",
+    "volume": "250 ml",
+    "price": 1100,
+    "color": "yellow",
+    "armor": [
+      {
+        "covers": [ "head" ],
+        "coverage": 50,
+        "encumbrance": 4
+      }
+    ],
+    "warmth": 5,
+    "material_thickness": 1,
+    "environmental_protection": 2,
+    "flags": [ "VARSIZE", "SUN_GLASSES" ]
+  },
+  {
+    "id": "voiro_smock_ai",
+    "type": "ARMOR",
+    "name": "罩衫(月读爱)[voiro]",
+    "description": "宽松的长度和长袖子的淡粉色上衣。在玩泥巴的时候发挥了优势。开肩是月读爱式样的特征。",
+    "weight": "82 g",
+    "volume": "250 ml",
+    "price": 1000,
+    "material": [ "cotton" ],
+    "symbol": "[",
+    "color": "pink",
+    "armor": [
+      { "coverage": 100, "covers": [ "torso", "arm_l", "arm_r" ] },
+      { "coverage": 15, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_hip_l", "leg_hip_r" ], "encumbrance": 5 }
+    ],
+    "warmth": 15,
+    "material_thickness": 1,
+    "environmental_protection": 1,
+    "flags": [ "VARSIZE", "OUTER", "POCKETS" ]
+  },
+  {
+    "id": "voiro_pumpkinpants_ai",
+    "type": "ARMOR",
+    "copy-from": "shorts",
+    "name": "南瓜短裤(月读爱)[voiro]",
+    "description": "膨胀成南瓜状的内裤。虽然很容易和内衣混淆，但这并不是内衣。",
+    "weight": "460 g",
+    "volume": "25 ml",
+    "price": 1200,
+    "material": [ "cotton" ],
+    "warmth": 10,
+    "material_thickness": 1,
+    "flags": [ "VARSIZE" ]
+  },
+  {
+    "id": "voiro_socks_ai",
+    "type": "ARMOR",
+    "copy-from": "tights",
+    "name": "过膝袜(月读爱)[voiro]",
+    "description": "带有荷叶边的纯白的过膝袜。右脚侧经常会错位。",
+    "weight": "39 g",
+    "volume": "250 ml",
+    "price": 800,
+    "armor": [
+      { "encumbrance": 5, "coverage": 100, "covers": [ "foot_l", "foot_r" ] },
+      {
+        "covers": [ "leg_l"],
+        "specifically_covers": [ "leg_lower_l", "leg_knee_l", "leg_upper_l" ],
+        "coverage": 70,
+        "encumbrance": 4
+      },
+      {
+        "covers": [ "leg_r" ],
+        "specifically_covers": [ "leg_lower_r","leg_knee_r", "leg_upper_r" ],
+        "coverage": 30,
+        "encumbrance": 4
+      }
+    ],
+    "warmth": 5,
+    "material_thickness": 1,
+    "flags": [ "VARSIZE", "SKINTIGHT" ]
+  },
+  {
+    "id": "voiro_shoes_ai",
+    "type": "ARMOR",
+    "copy-from": "dress_shoes",
+    "name": "浅口皮鞋(月读爱)[voiro]",
+    "description": "带着绑带的玛丽珍小皮鞋。",
+    "weight": "468 g",
+    "volume": "1250 ml",
+    "price": 6000,
+    "environmental_protection": 1,
+    "flags": [ "VARSIZE" ]
+  },
+  {
+    "id": "voiro_sailor_outfit_shota",
+    "type": "ARMOR",
+    "copy-from": "polo_shirt",
+    "name": "水手服(月读翔太)[voiro]",
+    "description": "广为人知的海军陆战队军服。 月读翔太式样的版型很短，露出肚脐。这件上衣有一个独特的领子。",
+    "weight": "242 g",
+    "price": 4200,
+    "color": "light_blue",
+    "armor": [
+      { "coverage": 85, "covers": [ "torso" ] },
+      {
+        "coverage": 100,
+        "covers": [ "arm_l", "arm_r" ],
+        "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r" ]
+      }
+    ],
+    "warmth": 5,
+    "material_thickness": 1,
+    "flags": [ "VARSIZE" ]
+  },
+  {
+    "id": "voiro_shorts_denim_shota",
+    "type": "ARMOR",
+    "name": "牛仔裤(月读翔太)[voiro]",
+    "copy-from": "hot_pants",
+    "description": "水手式样的牛仔布料的裤子。上面的腰带有点用。",
+    "weight": "380 g",
+    "volume": "1250 ml",
+    "price": 2400,
+    "color": "light_blue",
+    "armor": [
+      {"coverage": 100,"covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_hip_l", "leg_hip_r" ], "encumbrance": [ 1, 2 ] }
+    ],
+    "warmth": 5,
+    "material_thickness": 3,
+    "pocket_data": [
+      {
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "90 cm",
+        "moves": 50,
+        "flag_restriction": [ "BELT_CLIP" ],
+        "holster": true
+      }
+    ],
+    "flags": [ "VARSIZE" ]
+  },
+  {
+    "id": "voiro_arm_warmers_shota",
+    "type": "ARMOR",
+    "copy-from": "arm_warmers",
+    "name": "保暖臂套(月读翔太)[voiro]",
+    "description": "覆盖到手背的黑色保暖臂套。",
+    "price": 1400,
+    "armor": [
+      {
+        "encumbrance": 1,
+        "coverage": 80,
+        "covers": [ "arm_l", "arm_r" ],
+        "specifically_covers": [ "arm_lower_l", "arm_lower_r", "arm_elbow_l", "arm_elbow_r"  ]
+      },
+      {
+        "covers": [ "hand_l", "hand_r" ],
+        "coverage": 60
+      }
+    ],
+    "material_thickness": 1,
+    "flags": [ "VARSIZE", "SKINTIGHT" ]
+  },
+  {
+    "id": "voiro_sneakers_shota",
+    "type": "ARMOR",
+    "copy-from": "sneakers",
+    "name": "运动鞋(月读翔太)[voiro]",
+    "description": "带有蓝色线条的氯丁橡胶高帮运动鞋。即使在雨中也很舒服哦!",
+    "weight": "640 g",
+    "volume": "1500 ml",
+    "price": 12000,
+    "material": [ "neoprene", "leather", "cotton", "rubber" ]
+  },
+  {
+    "id": "voiro_hoodie_yukari",
+    "type": "ARMOR",
+    "copy-from": "hoodie",
+    "name":"卫衣(结月缘) [voiro] ",
+    "description": "一件内衬为粉色的可爱的兔耳帽卫衣。",
+    "weight": "520 g",
+    "price": 18000,				"//": "现实中COSPA，inc.销售的与结月有关的风衣的价格（日元）。",
+    "color": "pink",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 80, "encumbrance": [ 6, 12 ] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 95, "encumbrance": [ 6, 6 ] }
+    ],
+    "material_thickness": 3,
+    "flags": [ "VARSIZE", "OUTER", "POCKETS", "HOOD", "FANCY" ]
+  },
+  {
+    "id": "voiro_dress_yukari",
+    "type": "ARMOR",
+    "copy-from": "sundress",
+    "name": "连衣裙(结月缘) [voiro]",
+    "description": "一件带有近未来感的腰部部件的紫色吊带连衣裙。",
+    "weight": "480 g",
+    "volume": "1250 ml",
+    "price": 8000,
+    "material": [ "cotton", "plastic" ],
+    "color": "light_cyan",
+    "armor": [
+      { "coverage": 65, "covers": [ "torso" ] },
+      {
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
+        "coverage": 100
+      }
+    ],
+    "warmth": 10,
+    "material_thickness": 1,
+    "flags": [ "VARSIZE" ]
+  },
+  {
+    "id": "voiro_arm_covers_yukari",
+    "type": "ARMOR",
+    "copy-from": "arm_warmers",
+    "name":"臂套(结月缘) [voiro] ",
+    "description":"以防晒和保湿为目的的覆盖上臂的衣物。",
+    "weight": "38 g",
+    "volume": "250 ml",
+    "price": 2000,
+    "color": "light_cyan",
+    "armor": [
+      {
+        "encumbrance": 1,
+        "coverage": 80,
+        "covers": [ "arm_l", "arm_r" ],
+        "specifically_covers": [ "arm_lower_l", "arm_lower_r", "arm_elbow_l", "arm_elbow_r", "arm_upper_l","arm_upper_r"  ]
+      }
+    ],
+    "warmth": 5,
+    "material_thickness": 1,
+    "flags": [ "VARSIZE", "SKINTIGHT" ]
+  },
+  {
+    "id": "voiro_socks_yukari",
+    "type": "ARMOR",
+    "copy-from": "tights",
+    "name":"过膝袜(结月缘) [voiro] ",
+    "description":"以竖条纹为特征的紫色过膝袜。",
+    "weight": "59 g",
+    "volume": "250 ml",
+    "price": 1000,
+    "color": "light_cyan",
+    "armor": [
+      { "encumbrance": 5, "coverage": 100, "covers": [ "foot_l", "foot_r" ] },
+      {
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_lower_l", "leg_lower_r", "leg_knee_l", "leg_knee_r", "leg_upper_l", "leg_upper_r" ],
+        "coverage": 70
+      }
+    ],
+    "warmth": 5,
+    "material_thickness": 1,
+    "flags": [ "VARSIZE", "SKINTIGHT" ]
+  },
+  {
+    "id": "voiro_shoes_yukari",
+    "type": "ARMOR",
+    "copy-from": "dress_shoes",
+    "name": "浅口皮鞋(结月缘)[voiro]",
+    "description": "系带和粉色的鞋底很可爱，鞋底有点厚的平底鞋。",
+    "weight": "624 g",
+    "volume": "1500 ml",
+    "price": 9800,
+    "color": "pink",
+    "environmental_protection": 1,
+    "flags": [ "VARSIZE","FANCY" ]
+  },
+  {
+    "id": "voiro_gobag_yukari",
+    "type": "ARMOR",
+    "name": "个人用手提包(结月缘)[voiro]",
+    "description":"一个两侧附有背包的巨大的双层包。 好像是缘为了消灭僵尸而制作的。 使用后取出里面的东西，好好利用吧。",
+    "use_action": { "type": "unpack", "group": "gobag_contents_yukari", "items_fit": true, "filthy_volume_threshold": "10 L" },
+    "copy-from": "gobag"
+  },
+  {
+    "id": "voiro_aliceband_zunko",
+    "type": "ARMOR",
+    "category" : "other",
+    "name": "发箍(东北俊子)[voiro]",
+    "description": "被称为爱丽丝头带的头部装饰品。模仿毛豆制作的俊子的物品，被称为俊达发箍。",
+    "weight": "26 g",
+    "volume": "1 ml",
+    "price": 4200,
+    "material": [ "plastic", "cotton" ],
+    "symbol": "[",
+    "color": "green",
+    "armor": [
+      {
+        "covers": [ "head" ],
+        "coverage": 10,
+        "encumbrance": 2
+      }
+    ],
+    "warmth": 5,
+    "material_thickness": 1,
+    "environmental_protection": 1,
+    "flags": [ "FANCY", "SKINTIGHT" ]
+  },
+  {
+    "id": "voiro_kimono_zunko",
+    "type": "ARMOR",
+    "copy-from": "kimono",
+    "name": "和服(东北俊子)[voiro]",
+    "description": "洋溢着毛豆泥甜甜香味的萌葱色和服。长度被裁短了。",
+    "weight": "920 g",
+    "volume": "3 L",
+    "price": 160000,
+    "color": "green",
+    "armor": [
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ], "coverage": 100, "encumbrance": [ 2, 5 ] },
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ], "coverage": 95 },
+      {
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
+        "coverage": 100
+      },
+      {
+        "covers": [ "arm_l", "arm_r" ],
+        "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r", "arm_upper_r", "arm_upper_l" ],
+        "coverage": 70,
+        "encumbrance": [ 2, 2 ]
+      }
+    ],
+    "material_thickness": 3,
+    "environmental_protection": 1,
+    "flags": [ "VARSIZE", "POCKETS", "FANCY" ]
+  },
+  {
+    "//": "※和服mod、和装modより説明文を拝借しました。",
+    "id": "voiro_breastplate_zunko",
+    "type": "ARMOR",
+    "copy-from": "plastron_plastic",
+    "name": "护胸(东北俊子)[voiro]",
+    "description": "弓道射箭时女性穿的胸甲。俊子的式样为真皮的大型护胸。",
+    "weight": "270 g",
+    "volume": "750 ml",
+    "price": 4800,
+    "material": [ "leather" ],
+    "color": "light_gray",
+    "warmth": 5,
+    "material_thickness": 2,
+    "flags": [ "VARSIZE", "BELTED" ]
+  },
+  {
+    "//": "東北三姉妹の履物は下駄の可能性もあるが形状的に草履っぽいので草履で統一する。",
+    "id": "voiro_zouri_zunko",
+    "type": "ARMOR",
+    "copy-from": "straw_sandals",
+    "name": "日式凉鞋(东北俊子)[voiro]",
+    "description": "此类凉鞋有一个明亮的深色底部，称为“卷”。",
+    "weight": "280 g",
+    "volume": "1 L",
+    "price": 8000,
+    "bashing": 2,
+    "material": [ "leather", "cotton" ],
+    "color": "green",
+    "warmth": 5,
+    "material_thickness": 3,
+    "environmental_protection": 1,
+    "flags": [ "VARSIZE", "WATERPROOF", "FANCY" ]
+  },
+  {
+    "id": "voiro_aliceband_tsuzumi",
+    "type": "ARMOR",
+    "category" : "other",
+    "name": "发箍(铃木梓梓弥)[voiro]",
+    "description": "被称为爱丽丝发带的头部装饰品。",
+    "weight": "20 g",
+    "volume": "1 ml",
+    "price": 800,
+    "material": [ "plastic" ],
+    "symbol": "[",
+    "color": "blue",
+    "flags": [ "FANCY" ]
+  },
+  {
+    "id": "voiro_blouse_tsuzumi",
+    "type": "ARMOR",
+    "copy-from": "polo_shirt",
+    "name": "女式衬衫(铃木梓梓弥)[voiro]",
+    "description": "广义上是衬衫的一种，但构造不同，纽扣的方式也相反。白色的质地配上蓝色的蝴蝶结十分搭配。",
+    "weight": "210 g",
+    "volume": "750 ml",
+    "price": 7200,
+    "color": "white",
+    "warmth": 5,
+    "material_thickness": 1
+  },
+  {
+    "id": "voiro_hot_pants_tsuzumi",
+    "type": "ARMOR",
+    "copy-from": "hot_pants",
+    "name": "热裤(铃木梓梓弥)[voiro]",
+    "description": "白色的简单短裤。上面的腰带有点用。",
+    "weight": "120 g",
+    "volume": "250 ml",
+    "price": 4000,
+    "color": "white",
+    "warmth": 5,
+    "material_thickness": 1,
+    "flags": [ "VARSIZE" ]
+  },
+  {
+    "id": "voiro_sandals_tsuzumi",
+    "type": "ARMOR",
+    "copy-from": "leathersandals",
+    "name": "凉鞋(铃木梓梓弥)[voiro]",
+    "description": "美丽的皮革凉鞋，是鲜艳的蓝色。防御性能靠不住，不过能凉爽地度过炎热的季节。",
+    "weight": "120 g",
+    "volume": "250 ml",
+    "price": 8000,
+    "color": "blue",
+    "material_thickness": 1,
+    "flags": [ "VARSIZE", "WATER_FRIENDLY", "ALLOWS_NATURAL_ATTACKS", "FANCY" ]
+  },
+  {
+    "//": "スキンヘッドのキャラで装備しない限りは他のキャラで装備しても見た目の違和感は無いと思う。",
+    "id": "voiro_ornament_akane",
+    "type": "ARMOR",
+    "category" : "other",
+    "name": "发饰(琴叶茜)[voiro]",
+    "description": "用红绳装饰和箭翎图案花纹丝带做成的和风的发饰。",
+    "weight": "107 g",
+    "volume": "1 ml",
+    "price": 1800,
+    "material": [ "cotton" ],
+    "symbol": "[",
+    "color": "red",
+    "flags": [ "FANCY" ]
+  },
+  {
+    "id": "voiro_dress_akane",
+    "type": "ARMOR",
+    "copy-from": "sundress",
+    "name": "连衣裙(琴叶茜)[voiro]",
+    "description": "带有围幔上系的装饰结的黑色和风连衣裙。",
+    "weight": "310 g",
+    "volume": "1250 ml",
+    "price": 6000,
+    "color": "red",
+    "armor": [
+      { "coverage": 90, "covers": [ "torso" ] },
+      {
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_upper_l", "leg_upper_r", "leg_hip_l", "leg_hip_r" ],
+        "coverage": 80
+      }
+    ],
+    "warmth": 10,
+    "material_thickness": 1
+  },
+  {
+    "id": "voiro_dress_sode_akane",
+    "type": "ARMOR",
+    "copy-from": "arm_warmers",
+    "name": "袖子(琴叶茜)[voiro]",
+    "description": "搭配连衣裙穿的袖子。本来是指被称为振袖的日本和服袖子的部位。",
+    "weight": "70 g",
+    "volume": "500 ml",
+    "price": 1000,
+    "color": "red",
+    "armor": [
+      {
+        "encumbrance": 1,
+        "coverage": 100,
+        "covers": [ "arm_l", "arm_r" ],
+        "specifically_covers": [ "arm_lower_l", "arm_lower_r", "arm_elbow_l", "arm_elbow_r", "arm_upper_l", "arm_upper_r" ]
+      }
+    ],
+    "warmth": 10,
+    "material_thickness": 1,
+    "flags": [ "VARSIZE" ]
+  },
+  {
+    "id": "voiro_socks_akane",
+    "type": "ARMOR",
+    "copy-from": "tights",
+    "name": "过膝袜(琴叶茜)[voiro]",
+    "description": "让人联想到琴叶葵的水色过膝袜。",
+    "weight": "46 g",
+    "volume": "250 ml",
+    "price": 1000,
+    "color": "light_blue",
+    "armor": [
+      { "encumbrance": 5, "coverage": 100, "covers": [ "foot_l", "foot_r" ] },
+      {
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_lower_l", "leg_lower_r", "leg_knee_l", "leg_knee_r", "leg_upper_l", "leg_upper_r" ],
+        "coverage": 30,
+        "encumbrance": 4
+      }
+    ],
+    "warmth": 5,
+    "material_thickness": 1,
+    "flags": [ "VARSIZE", "SKINTIGHT" ]
+  },
+  {
+    "id": "voiro_boots_akane",
+    "type": "ARMOR",
+    "copy-from": "knee_high_boots",
+    "name": "靴子(琴叶茜)[voiro]",
+    "description": "一双印着红色条纹图案的黑色靴子，就像频谱图一样。",
+    "weight": "760 g",
+    "volume": "2500 ml",
+    "price": 8500,
+    "color": "red",
+    "warmth": 15,
+    "material_thickness": 2,
+    "environmental_protection": 2,
+    "flags": [ "VARSIZE", "WATERPROOF" ]
+  }, 
+  { 
+    "id": "voiro_ornament_aoi",
+    "type": "ARMOR",
+    "category" : "other",
+    "name": "发饰(琴叶葵)[voiro]",
+    "description": "用蓝绳装饰和箭翎图案花纹丝带做成的和风的发饰。",
+    "weight": "107 g",
+    "volume": "1 ml",
+    "price": 1800,
+    "material": [ "cotton" ],
+    "symbol": "[",
+    "color": "light_blue",
+    "flags": [ "FANCY" ]
+  },
+  {
+    "id": "voiro_dress_aoi",
+    "type": "ARMOR",
+    "copy-from": "voiro_dress_akane",
+    "name": "连衣裙(琴叶葵)[voiro]",
+    "description": "带有围幔上系的装饰结的白色和风连衣裙。",
+    "weight": "310 g",
+    "volume": "1250 ml",
+    "price": 6000,
+    "color": "light_blue"
+  },
+  {
+    "id": "voiro_dress_sode_aoi",
+    "type": "ARMOR",
+    "copy-from": "voiro_dress_sode_akane",
+    "name": "袖子(琴叶葵)[voiro]",
+    "description": "搭配连衣裙穿的袖子。本来是指被称为振袖的日本和服袖子的部位。"
+  },
+  {
+    "id": "voiro_socks_aoi",
+    "type": "ARMOR",
+    "copy-from": "voiro_socks_akane",
+    "name": "过膝袜(琴叶葵)[voiro]",
+    "description": "让人联想到琴叶茜的粉色过膝袜。"
+  },
+  {
+    "id": "voiro_boots_aoi",
+    "type": "ARMOR",
+    "copy-from": "voiro_boots_akane",
+    "name": "靴子(琴叶葵)[voiro]",
+    "description": "这是一双印着蓝色花纹图案的水色靴子，就像频谱图一样。",
+    "color": "light_blue"
+  },
+  {
+    "id": "voiro_crown_galaco",
+    "type": "ARMOR",
+    "copy-from": "crown_golden",
+    "name": "王冠(Galaco)[voiro]",
+    "description": "一顶顶端镶嵌着宝石，有着白色纹样的茶褐色小王冠。",
+    "weight": "500 g",
+    "volume": "500 ml",
+    "price": 10000000,
+    "armor": [
+      {
+        "encumbrance": 10,
+        "coverage": 15,
+        "covers": [ "head" ]
+      }
+    ],
+    "material_thickness": 2,
+    "flags": [ "SUPER_FANCY" ]
+  },
+  {
+    "//1": "羽衣部分は(プレイヤーが)着衣の並べ替えを頑張らなければいけなくなるのでオミットしました。",
+    "id": "voiro_dress_galaco",
+    "type": "ARMOR",
+    "copy-from": "sundress",
+    "name": "连衣裙(Galaco)[voiro]",
+    "description": "轻飘飘的白色连衣裙和粉色上衣的套装。",
+    "weight": "610 g",
+    "volume": "2 L",
+    "price": 21000,
+    "color": "pink",
+    "armor": [
+      { "coverage": 65, "covers": [ "torso" ] },
+      { "coverage": 90, "covers": [ "arm_l", "arm_r" ] },
+      {
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_knee_l", "leg_knee_r", "leg_upper_l", "leg_upper_r", "leg_hip_l", "leg_hip_r" ],
+        "coverage": 100
+      }
+    ],
+    "warmth": 20,
+    "material_thickness": 3,
+    "environmental_protection": 1,
+    "flags": [ "VARSIZE", "FANCY" ]
+  },
+  {
+    "id": "voiro_tights_galaco",
+    "type": "ARMOR",
+    "copy-from": "tights",
+    "name": "紧身裤(Galaco)[voiro]",
+    "description": "这是一条紧贴腿和脚的布制紧身裤。有像长筒袜绽线一样的斑点，是Galaco的样式。",
+    "price": 2500,
+    "flags": [ "VARSIZE", "SKINTIGHT" ]
+  },
+  {
+    "//1": "ヒールを白く塗っている絵師さんはお一方しか確認出来なかったが、公式設定画の真横図だと白かった。",
+    "//2": "ハイヒールの動作制限は40(50)だけど、あまりにも制限きついので20(30)にした。",
+    "id": "voiro_heels_galaco",
+    "type": "ARMOR",
+    "copy-from": "heels",
+    "name": "高跟鞋(Galaco)[voiro]",
+    "description": "鞋跟很高。走路多少有些困难。作为演出服式样的特征鞋跟部分白色，带有三角的装饰。",
+    "price": 7000,
+    "armor": [
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_heel_r", "foot_heel_l", "foot_toes_r", "foot_toes_l" ],
+        "material": [ { "type": "leather", "covered_by_mat": 100, "thickness": 1 } ],
+        "encumbrance": 30,
+        "coverage": 80
+      },
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_sole_r", "foot_sole_l" ],
+        "material": [ { "type": "leather", "covered_by_mat": 100, "thickness": 2.0 } ],
+        "coverage": 90
+      }
+    ],
+    "flags": [ "VARSIZE", "SUPER_FANCY" ]
+  },
+  {
+    "//1": "アイテムでは検索しやすいようにONE表記。",
+    "//2": "ベルトが付いてるけどOИEのは固定用では無く、オシャレ用の見せベルトっぽいのでツールの収容は無し。",
+    "id": "voiro_dress_one",
+    "copy-from": "sundress",
+    "type": "ARMOR",
+    "name": "连衣裙(ONE)[voiro]",
+    "description": "白色的内衬上衣，搭配橙色和黑色的吊带衫，腰带则是白色的。",
+    "weight": "330 g",
+    "volume": "1250 ml",
+    "price": 14000,
+    "material": [ "cotton", "leather" ],
+    "color": "light_red",
+    "armor": [
+      { "coverage": 65, "covers": [ "torso" ] },
+      {
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": ["leg_hip_l", "leg_hip_r" ],
+        "coverage": 100
+      }
+    ],
+    "warmth": 10,
+    "material_thickness": 1,
+    "flags": [ "VARSIZE", "FANCY" ]
+  },
+  {
+    "id": "voiro_arm_covers_one",
+    "type": "ARMOR",
+    "copy-from": "arm_warmers",
+    "name": "臂套(ONE)[voiro]",
+    "description": "以时髦为目的的护手臂套，OИE的是露出手指的样式。",
+    "weight": "30 g",
+    "volume": "250 ml",
+    "price": 3000,
+    "color": "light_red",
+    "armor": [
+      {
+        "encumbrance": 1,
+        "coverage": 100,
+        "covers": [ "arm_l", "arm_r" ],
+        "specifically_covers": [ "arm_lower_l", "arm_lower_r", "arm_elbow_l", "arm_elbow_r", "arm_upper_l", "arm_upper_r" ]
+      },
+      {
+        "covers": [ "hand_l", "hand_r" ],
+        "coverage": 40
+      }
+    ],
+    "warmth": 10,
+    "material_thickness": 1,
+    "flags": [ "VARSIZE", "FANCY" ]
+  },
+  {
+    "//": "白の三本ラインは表現出来なかったのでオミット。",
+    "id": "voiro_socks_one",
+    "type": "ARMOR",
+    "copy-from": "tights",
+    "name": "过膝袜(ONE)[voiro]",
+    "description": "左脚是过膝袜，右脚则是长袜的组合。",
+    "weight": "45 g",
+    "volume": "250 ml",
+    "price": 3200,
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ] ,"coverage": 100 },
+      {
+        "covers": [ "leg_r" ],
+        "specifically_covers": [ "leg_lower_r", "leg_knee_r", "leg_upper_r" ],
+        "coverage": 70,
+        "encumbrance": 4
+      },
+      {
+        "covers": [ "leg_l" ],
+        "specifically_covers": [ "leg_lower_l", "leg_knee_l" ],
+        "coverage": 90,
+        "encumbrance": 4
+      }
+    ],
+    "warmth": 5,
+    "material_thickness": 1,
+    "flags": [ "VARSIZE", "SKINTIGHT" ]
+  },
+  {
+    "id": "voiro_boots_one",
+    "type": "ARMOR",
+    "copy-from": "boots",
+    "name": "靴子(ONE)[voiro]",
+    "description": "脚踝的位置上有红色花纹的靴子，仿佛太阳旗。",
+    "weight": "720 g",
+    "volume": "2500 ml",
+    "price": 10500,
+    "color": "light_red",
+   "armor": [
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_sole_r", "foot_sole_l" ],
+        "material": [
+          { "type": "leather", "covered_by_mat": 100, "thickness": 0.1 },
+          { "type": "rubber", "covered_by_mat": 100, "thickness": 4.0 }
+        ],
+        "coverage": 100,
+        "encumbrance": 20
+      },
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [
+          "foot_heel_r",
+          "foot_heel_l",
+          "foot_arch_r",
+          "foot_arch_l",
+          "foot_toes_r",
+          "foot_toes_l",
+          "foot_ankle_l",
+          "foot_ankle_r"
+        ],
+        "material": [ { "type": "leather", "covered_by_mat": 100, "thickness": 2.0 } ],
+        "coverage": 100
+      },
+      {
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_lower_l", "leg_lower_r" ],
+        "coverage": 100,
+        "encumbrance": 12
+      }
+    ],
+    "material_thickness": 3,
+    "environmental_protection": 2,
+    "pocket_data": [
+      {
+        "holster": true,
+        "min_item_volume": "250 ml",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "70 cm",
+        "moves": 3,
+        "flag_restriction": [ "SHEATH_KNIFE" ]
+      }
+    ],
+    "flags": [ "VARSIZE", "WATERPROOF" ]
+  },
+  {
+    "id": "voiro_choker",
+    "type": "ARMOR",
+    "category" : "other",
+    "name": "项圈(IA・ONE)[voiro]",
+    "description": "带有看起来像两个L对立的标记的项圈。",
+    "weight": "20 g",
+    "volume": "1 ml",
+    "price": 3800,
+    "material": [ "leather" ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "flags": [ "FANCY" ]
+  },
+  {
+    "//": "「Zoff社製～」同僚の氷山キヨテルの愛用眼鏡がZoff社製。なら水奈瀬コウの眼鏡もZoff社製だろうという創作です。",
+    "id": "voiro_glasses_kou",
+    "type": "ARMOR",
+    "copy-from": "sunglasses",
+    "name": "眼镜(水奈濑光)[voiro]",
+    "description": "Zoff公司生产的红框眼镜。使用后可以把太阳光集中在一点上。",
+    "weight": "30 g",
+    "volume": "250 ml",
+    "price": 7900,
+    "color": "red",
+    "armor": [
+      {
+        "covers": [ "eyes" ],
+        "coverage": 75
+      }
+    ],
+    "use_action": { "type": "firestarter", "moves": 1000, "moves_slow": 25000, "need_sunlight": true },
+    "flags": [ "WATER_FRIENDLY", "FANCY", "FIRESTARTER", "FIX_NEARSIGHT", "FIX_FARSIGHT" ]
+  },
+  {
+    "id": "voiro_hoodie_kou",
+    "type": "ARMOR",
+    "copy-from": "hoodie",
+    "name": "卫衣(水奈濑光)[voiro]",
+    "description": "带兜帽的绿色卫衣。",
+    "weight": "400 g",
+    "volume": "2500 ml",
+    "price": 4000,
+    "color": "green",
+    "warmth": 30,
+    "material_thickness": 3,
+    "flags": [ "VARSIZE", "OUTER", "POCKETS", "HOOD" ]
+  },
+  {
+    "id": "voiro_jacket_kou",
+    "type": "ARMOR",
+    "copy-from": "jacket_jean",
+     "name": "夹克(水奈濑光)[voiro]",
+    "description":  "一件可以像西装一样，用作商务或私人的时髦夹克。",
+    "weight": "196 g",
+    "volume": "2 L",
+    "price": 7000,
+    "armor": [
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ], "coverage": 100, "encumbrance": [ 0, 0 ] },
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ], "coverage": 95 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": [5, 5 ] }
+    ],
+    "flags": [ "VARSIZE", "FANCY", "POCKETS", "OUTER" ]
+  },
+  {
+    "id": "voiro_jeans_kou",
+    "type": "ARMOR",
+    "copy-from": "jeans",
+    "name": "牛仔裤(水奈濑光)[voiro]",
+    "description": "一种深裆的宽松紫色牛仔裤。",
+    "weight": "750 g",
+    "volume": "2250 ml",
+    "price": 12000,
+    "material_thickness": 3,
+    "flags": [ "VARSIZE", "POCKETS" ]
+  },
+  {
+    "id": "voiro_sneakers_kou",
+    "type": "ARMOR",
+    "copy-from": "sneakers",
+    "name":"运动鞋(水奈濑光)[voiro] ",
+    "description":"仿皮革的白色高帮运动鞋。非常适合走在街上。",
+    "weight": "800 g",
+    "volume": "2 L",
+    "price": 18000,
+    "material": [ "cotton", "leather","rubber" ],
+    "color": "white",
+    "flags": [ "VARSIZE", "WATERPROOF", "FANCY" ]
+  },
+  {
+    "id": "voiro_glasses_seika",
+    "type": "ARMOR",
+    "copy-from": "voiro_glasses_kou",
+    "name":"眼镜(京町精华)[voiro] ",
+    "description":"时空监查院发给时空监视员的“对光学迷彩眼镜”的复制品。 使用后可以将太阳光集中在一点上。",
+    "color": "red",
+    "flags": [ "WATER_FRIENDLY", "FANCY", "FIRESTARTER", "FIX_NEARSIGHT", "FIX_FARSIGHT" ]
+  },
+  {
+    "id": "voiro_dress_shirt_seika",
+    "type": "ARMOR",
+    "copy-from": "dress_shirt",
+    "name":"礼服衬衫(京町精华)[voiro] ",
+    "description":"白色无袖羽绒衬衫。穿上这个的话，一定会被认为是冷酷的美人哦。",
+    "weight": "210 g",
+    "volume": "500 ml",
+    "price": 2200,
+    "color": "white",
+    "armor": [
+      {
+        "covers": [ "torso" ],
+        "coverage": 80,
+        "encumbrance": 5
+      }
+    ],
+    "warmth": 10,
+    "material_thickness": 1,
+    "flags": [ "VARSIZE", "FANCY" ]
+  },
+  {
+    "id": "voiro_vest_seika",
+    "type": "ARMOR",
+    "name":"背心(京町精华)[voiro] ",
+    "description":"胸前带有精华町标志徽章的绿色办公服。",
+    "weight": "242 g",
+    "volume": "500 ml",
+    "price": 4000,
+    "material": [ "cotton" ],
+    "symbol": "[",
+    "color": "green",
+    "armor": [
+      {
+        "covers": [ "torso" ],
+        "coverage": 80,
+        "encumbrance": 6
+      }
+    ],
+    "warmth": 15,
+    "material_thickness": 1,
+    "flags": [ "VARSIZE", "POCKETS", "OUTER" ]
+  },
+  {
+    "id": "voiro_arm_covers_seika",
+    "type": "ARMOR",
+    "copy-from": "arm_warmers",
+    "name":"臂套(京町精华)[voiro] ",
+    "description":"是和办公服配套戴的袖子。因为是露出腋下的设计，所以是体现可分离部件意义的很强的衣服。",
+    "weight": "49 g",
+    "volume": "250 ml",
+    "price": 1200,
+    "color": "green",
+    "armor": [
+      {
+        "encumbrance": 1,
+        "coverage": 70,
+        "covers": [ "arm_l", "arm_r" ],
+        "specifically_covers": [ "arm_lower_l", "arm_lower_r", "arm_elbow_l", "arm_elbow_r", "arm_upper_l", "arm_upper_r" ]
+      }
+    ],
+    "warmth": 15,
+    "material_thickness": 1,
+    "flags": [ "VARSIZE", "OUTER" ]
+  },
+  {
+    "id": "voiro_skirt_seika",
+    "type": "ARMOR",
+    "copy-from": "nanoskirt",
+    "name":"短裙(京町精华) [voiro] ",
+    "description":"一条有黄色线条的紧身裙。",
+    "weight": "68 g",
+    "volume": "250 ml",
+    "price": 5000,
+    "color": "green",
+    "warmth": 10,
+    "flags": [ "VARSIZE", "POCKETS" ]
+  },
+  {
+    "id": "voiro_socks_seika",
+    "type": "ARMOR",
+    "copy-from": "tights",
+    "name":"短袜(京町精华)[voiro]",
+    "description":"令人印象深刻的深绿色的短袜。",
+    "weight": "46 g",
+    "volume": "250 ml",
+    "price": 1000,
+    "color": "green",
+    "armor": [
+      { "encumbrance": 5, "coverage": 100, "covers": [ "foot_l", "foot_r" ] },
+      {
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_lower_l", "leg_lower_r", "leg_knee_l", "leg_knee_r", "leg_upper_l", "leg_upper_r" ],
+        "coverage": 70,
+        "encumbrance": 4
+      }
+    ],
+    "warmth": 5,
+    "material_thickness": 1,
+    "flags": [ "VARSIZE", "SKINTIGHT" ]
+  },
+  {
+    "//": "ブーツだけどヒールが高いので、ハイヒール(ギャラ子)と同じ動作制限にした。",
+    "id": "voiro_boots_seika",
+    "type": "ARMOR",
+    "copy-from": "boots",
+    "name":"靴子(京町精华)[voiro]",
+    "description":"一双印有精华町标志的绿色长靴,鞋跟较高的原因走路多少有些困难。",
+    "weight": "800 g",
+    "volume": "2500 ml",
+    "price": 10000,
+    "color": "green",
+    "pocket_data": [
+      {
+        "holster": true,
+        "min_item_volume": "250 ml",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "70 cm",
+        "moves": 3,
+        "flag_restriction": [ "SHEATH_KNIFE" ]
+      }
+    ],
+    "flags": [ "VARSIZE", "WATERPROOF", "FANCY" ]
+  },
+  {
+    "id": "voiro_dress_akari",
+    "type": "ARMOR",
+    "copy-from": "sundress",
+    "name":"连衣裙(绁星灯)[voiro] ",
+    "description":"一套白色衬衫和黑色连衣裙的套装。",
+    "weight": "370 g",
+    "volume": "2 L",
+    "price": 13000,
+    "color": "dark_gray",
+    "armor": [
+      { "coverage": 90, "covers": [ "torso" ] },
+      {
+        "coverage": 100,
+        "covers": [ "arm_l", "arm_r" ],
+        "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r" ]
+      },
+      {
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_upper_l", "leg_upper_r", "leg_hip_l", "leg_hip_r" ],
+        "coverage": 70
+      }
+    ],
+    "warmth": 15,
+    "material_thickness": 2,
+    "flags": [ "VARSIZE" ]
+  },
+  {
+    "id": "voiro_jacket_akari",
+    "type": "ARMOR",
+    "copy-from": "jacket_jean",
+    "name":"夹克(绁星灯)[voiro] ",
+    "description":"模仿飞行员穿的飞行夹克而制作的民用产品。防水加工，内部填满了棉花，很暖和。",
+    "weight": "600 g",
+    "volume": "3 L",
+    "price": 19800,				"//": "現実でOctober Beastさんで扱っていた紲星あかりフライトジャケットの値段(日本円)。",
+    "material": [ "leather", "cotton" ],
+    "flags": [ "VARSIZE", "FANCY", "POCKETS", "OUTER", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "voiro_arm_warmers_akari",
+    "type": "ARMOR",
+    "copy-from": "arm_warmers",
+    "name":"保暖臂套(绁星灯)[voiro] ",
+    "description":"一种覆盖到手背露出手指的条纹臂套。",
+    "weight": "41 g",
+    "volume": "250 ml",
+    "price": 1500,
+    "color": "yellow",
+    "material_thickness": 1,
+    "armor": [
+      {
+        "encumbrance": 1,
+        "coverage": 80,
+        "covers": [ "arm_l", "arm_r" ],
+        "specifically_covers": [ "arm_lower_l", "arm_lower_r", "arm_elbow_l", "arm_elbow_r"  ]
+      },
+      {
+        "covers": [ "hand_l", "hand_r" ],
+        "coverage": 60
+      }
+    ],
+    "flags": [ "VARSIZE", "SKINTIGHT" ]
+  },
+  {
+    "id": "voiro_tights_akari",
+    "type": "ARMOR",
+    "copy-from": "tights",
+    "name":"连裤袜(绁星灯)[voiro] ",
+    "description":"一条稍微厚一点的紧身裤，牢牢地紧贴在腿和脚上。条纹图案，穿着很舒服。",
+    "weight": "158 g",
+    "volume": "250 ml",
+    "price": 2000,
+    "color": "yellow",
+    "warmth": 15,
+    "material_thickness": 1,
+    "flags": [ "VARSIZE", "SKINTIGHT" ]
+  },
+  {
+    "id": "voiro_shoes_akari",
+    "type": "ARMOR",
+    "copy-from": "dress_shoes",
+    "name":"浅口皮鞋(绁星灯)[voiro] ",
+    "description":"是带着银色绑带的玛丽珍小皮鞋。因为有鞋跟，所以走路多少有些困难。",
+    "weight": "588 g",
+    "volume": "1250 ml",
+    "price": 8000,
+    "color": "dark_gray",
+    "warmth": 10,
+    "material_thickness": 2,
+    "environmental_protection": 1,
+    "flags": [ "VARSIZE" ]
+  },
+  {
+    "//": "桜乃そらと音街ウナの眼鏡。水奈瀬コウの眼鏡と1ドット分高さが違う。",
+    "id": "voiro_glasses_red",
+    "type": "ARMOR",
+    "copy-from": "fancy_glasses_bifocal",
+    "name":"眼镜(赤)[voiro] ",
+    "description":"红框眼镜。使用后能将太阳光集中在一点上。",
+    "weight": "30 g",
+    "volume": "250 ml",
+    "price": 7900,
+    "color": "red",
+    "flags": [ "WATER_FRIENDLY", "FANCY", "FIRESTARTER", "FIX_NEARSIGHT", "FIX_FARSIGHT" ]
+  },
+  {
+    "id": "voiro_dress_sora",
+    "type": "ARMOR",
+    "copy-from": "sundress",
+    "name":"连衣裙(樱乃空)[voiro] ",
+    "description":"一件蓬松的蓝色和白色格子连衣裙。很适合春天的阳光呢！",
+    "weight": "502 g",
+    "volume": "3 L",
+    "price": 10000,
+    "warmth": 10,
+    "material_thickness": 1,
+    "flags": [ "VARSIZE" ]
+  },
+  {
+    "//": "ショールなのか肩掛けカーディガンなのか判断出来ないがショールとしていた動画があったのでショールにしておく。",
+    "id": "voiro_shawl_sora",
+    "type": "ARMOR",
+    "name":"披肩(樱乃空)[voiro] ",
+    "description":"以防寒和装饰为目的的披肩。",
+    "weight": "220 g",
+    "volume": "1 L",
+    "price": 6000,
+    "material": [ "cotton" ],
+    "symbol": "[",
+    "color": "blue",
+    "armor": [
+      {
+        "covers": [ "torso" ],
+        "coverage": 15,
+        "encumbrance": 0
+      }
+    ],
+    "warmth": 20,
+    "material_thickness": 1,
+    "flags": [ "VARSIZE", "OUTER" ]
+  },
+  {
+    "id": "voiro_shoes_sora",
+    "type": "ARMOR",
+    "copy-from": "dress_shoes",
+    "name":"浅口皮鞋(樱乃空)[voiro] ",
+    "description":"适合初春的十字绑带。 因为有鞋跟，所以走路多少有些困难。",
+    "weight": "460 g",
+    "volume": "1 L",
+    "price": 8500,
+    "color": "light_blue",
+    "warmth": 10,
+    "flags": [ "VARSIZE" ]
+  },
+  {
+    "id": "voiro_ornament_tuina",
+    "type": "ARMOR",
+    "category" : "other",
+    "name":"发饰(役追傩)[voiro] ",
+    "description":"一款带有细纹的栀子色发卡。",
+    "weight": "10 g",
+    "volume": "1 ml",
+    "price": 100,
+    "material": [ "cotton" ],
+    "symbol": "[",
+    "color": "light_red",
+    "flags": [ "FANCY" ]
+  },
+  {
+    "id": "voiro_costume_tuina",
+    "type": "ARMOR",
+    "copy-from": "sundress",
+    "name":"装束(如月追傩)[voiro] ",
+    "description":"传统上被称为方相氏的人们穿的栀子色装束。如月追傩的装束进行了大胆的改编。",
+    "weight": "620 g",
+    "volume": "2 L",
+    "price": 20000,
+    "color": "light_red",
+    "warmth": 15,
+    "material_thickness": 3,
+    "environmental_protection": 1,
+    "armor": [
+      { "coverage": 80, "covers": [ "torso" ] },
+      {
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": ["leg_hip_l", "leg_hip_r" ],
+        "coverage": 100
+      }
+    ],
+    "flags": [ "VARSIZE", "FANCY" ]
+  },
+  {
+    "id": "voiro_costume_sode_tuina",
+    "type": "ARMOR",
+    "copy-from": "arm_warmers",
+    "name":"袖子(如月追傩)[voiro] ",
+    "description":"配合装束制作的袖子。本来是指被称为振袖的日本和服袖子的部位。",
+    "weight": "72 g",
+    "volume": "500 ml",
+    "price": 2000,
+    "color": "light_red",
+    "warmth": 15,
+    "material_thickness": 3,
+    "environmental_protection": 1,
+    "flags": [ "VARSIZE", "FANCY" ]
+  },
+  {
+    "//": "海外の人か山登りが趣味の人にスパッツって言うと足回りのカバーの方を想像される思う。",
+    "id": "voiro_leggings_tuina",
+    "type": "ARMOR",
+    "copy-from": "under_armor_shorts",
+    "name":"紧身裤(如月追傩)[voiro] ",
+    "description":"是尼龙制的紧贴皮肤的半紧身裤。兼具运动和保暖性能。",
+    "weight": "92 g",
+    "volume": "250 ml",
+    "price": 1000
+  },
+  {
+    "id": "voiro_geta_tuina",
+    "type": "ARMOR",
+    "copy-from": "geta",
+    "name":"高木屐(如月追傩)[voiro] ",
+    "description":"用来走山路的木屐，因为只有一齿，所以也被称为天狗木屐。原本是山中的和尚僧侣等修行者主要使用的脚具。",
+    "weight": "480 g",
+    "volume": "1250 ml",
+    "price": 7000,
+    "color": "white",
+    "flags": [ "VARSIZE", "WATERPROOF", "FANCY" ]
+  },
+  {
+    "//": "着用部位無し装備。FANCYフラグも無し。機能は未実装。",
+    "id": "voiro_zenki_tuina",
+    "type": "ARMOR",
+    "copy-from": "teddy",
+    "category": "other",
+    "name":"布偶(前鬼)[voiro] ",
+    "description":"如月追傩所跟随的夫妇之鬼。灵魂寄居在布偶里，有红色的身体和粗大的尾巴，额头上的F字标志是它的特征。可以代替枕头。",
+    "weight": "600 g",
+    "volume": "2500 ml",
+    "color": "red",
+    "flags": [ "BELTED", "SLEEP_AID" ]
+  },
+  {
+    "//": "着用部位無し装備。FANCYフラグも無し。機能は未実装。",
+    "id": "voiro_goki_tuina",
+    "type": "ARMOR",
+    "copy-from": "voiro_zenki_tuina",
+    "category": "other",
+    "name":"布偶(后鬼)[voiro]",
+    "description":"如月追傩所跟随的夫妇之鬼。灵魂寄居在布偶里，蓝色的身体和纤细的尾巴，额头上的B字标志是它的特征，戴着白蒙头纱。可以代替枕头。",
+    "weight": "550 g",
+    "volume": "2250 ml",
+    "color": "blue"
+  },
+  {
+    "id": "voiro_ornament_bead",
+    "type": "ARMOR",
+    "category" : "other",
+    "name":"发饰(珠子)[voiro] ",
+    "description":"用绳子和木制珠子做的简单的发饰。虽然可以戴着，但不会带来任何效果。",
+    "weight": "10 g",
+    "volume": "1 ml",
+    "price": 100,
+    "material": [ "wood" ],
+    "symbol": "[",
+    "color": "red",
+    "flags": [ "VARSIZE", "FANCY" ]
+  },
+  {
+    "//1": "スカートと繋がっているワンピースなのか、jamバンドのページを漁ったが判断付かず。",
+    "//2": "CDDA的には離れてた方が便利なので切り離す事にした。",
+    "id": "voiro_corset_maki",
+    "type": "ARMOR",
+    "copy-from": "corset",
+    "name":"皮革紧身胸衣(弦卷真纪)[voiro] ",
+    "description":"红色漆皮制的紧贴皮肤的紧身衣。这更像是一种服装，并不是用于纠正或塑身目的。使用后可以松开",
+    "weight": "220 g",
+    "volume": "750 ml",
+    "price": 6000,
+    "color": "red",
+    "armor": [
+      {
+        "covers": [ "torso" ],
+        "coverage": 60,
+        "encumbrance": 4
+      }
+    ],
+    "material_thickness": 2,
+    "environmental_protection": 1,
+    "use_action": { "type": "transform", "msg": "You loosen your %s.", "target": "voiro_corset_loose_maki", "menu_text": "Loosen" },
+    "flags": [ "VARSIZE", "SKINTIGHT", "FANCY" ]
+  },
+  {
+    "id": "voiro_corset_loose_maki",
+    "copy-from": "voiro_corset_maki",
+    "type": "ARMOR",
+    "name":"皮革紧身胸衣(松开)(弦卷真纪)[voiro] ",
+    "description": "红色漆皮制的紧贴皮肤的紧身衣。这更像是一种服装，并不是用于纠正或塑身目的。使用后它会紧紧地收紧腰带，使其紧贴皮肤佩戴。",
+    "use_action": { "type": "transform", "msg": "You wrap your corset tighter.", "target": "voiro_corset_maki", "menu_text": "Wrap tighter" }
+  },
+  {
+    "id": "voiro_shirt_maki",
+    "type": "ARMOR",
+    "name":"开胸衬衫(弦卷真纪)[voiro] ",
+    "description":"红色领带配套的、胸口开得很大的衬衫。",
+    "weight": "180 g",
+    "volume": "500 ml",
+    "price": 4000,
+    "material": [ "cotton" ],
+    "symbol": "[",
+    "color": "white",
+    "armor": [ 
+      { "coverage": 50, "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ] }, 
+      { "coverage": 60, "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ] }
+    ],
+    "warmth": 5,
+    "material_thickness": 1,
+    "flags": [ "VARSIZE", "FANCY" ]
+  },
+  {
+    "id": "voiro_arm_covers_maki",
+    "type": "ARMOR",
+    "copy-from": "arm_warmers",
+    "name":"臂套(弦卷真纪)[voiro] ",
+    "description":"搭配服装用的臂套。",
+    "weight": "61 g",
+    "volume": "500 ml",
+    "price": 3000,
+    "warmth": 5,
+    "material_thickness": 1,
+    "flags": [ "VARSIZE" ]
+  },
+  {
+    "id": "voiro_skirt_maki",
+    "type": "ARMOR",
+    "copy-from": "nanoskirt",
+    "name":"短裙(弦卷真纪)[voiro]",
+    "description":"棉制的长度较短且通风良好的服装用裙子。",
+    "weight": "80 g",
+    "volume": "250 ml",
+    "price": 7000,
+    "warmth": 5,
+    "flags": [ "VARSIZE" ]
+  },
+  {
+    "id": "voiro_socks_maki",
+    "type": "ARMOR",
+    "copy-from": "tights",
+    "name":"过膝袜(弦卷真纪)[voiro] ",
+    "description":"左脚是过膝袜，右脚是短袜的组合。",
+    "weight": "45 g",
+    "volume": "250 ml",
+    "price": 3200,
+    "color": "red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ] ,"coverage": 100 },
+      {
+        "covers": [ "leg_r" ],
+        "specifically_covers": [ "leg_lower_r", "leg_knee_r" ],
+        "coverage": 70,
+        "encumbrance": 4
+      },
+      {
+        "covers": [ "leg_l" ],
+        "specifically_covers": [ "leg_lower_l", "leg_knee_l", "leg_upper_l" ],
+        "coverage": 80,
+        "encumbrance": 4
+      }
+    ],
+    "warmth": 5,
+    "material_thickness": 1,
+    "flags": [ "VARSIZE", "SKINTIGHT" ]
+  },
+  {
+    "id": "voiro_sneakers_maki",
+    "type": "ARMOR",
+    "copy-from": "sneakers",
+    "name":"运动鞋(弦卷真纪)[voiro] ",
+    "description":"橡胶底有点厚的红色运动鞋。",
+    "weight": "700 g",
+    "volume": "2 L",
+    "price": 10000,
+    "material": [ "cotton", "leather", "rubber" ],
+    "color": "red"
+  },
+  {
+    "type": "ARMOR",
+    "id": "voiro_dress_sasara",
+    "copy-from": "sundress",
+    "name":"连衣裙(佐藤莎莎拉)[voiro] ",
+    "description":"给人清纯印象的纯白连衣裙。",
+    "weight": "100 g",
+    "volume": "1 L",
+    "price": 6000,
+    "color": "white",
+    "armor": [
+      { "coverage": 90, "covers": [ "torso" ] },
+      {
+        "coverage": 100,
+        "covers": [ "arm_l", "arm_r" ],
+        "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r" ]
+      },
+      { "coverage": 50, "covers": [ "arm_l", "arm_r" ], "specifically_covers": [ "arm_upper_l", "arm_upper_r" ] },
+      {
+        "covers": [ "leg_l", "leg_r" ],
+        "coverage": 70,
+        "encumbrance": 15
+      }
+    ],
+    "warmth": 5,
+    "material_thickness": 1,
+    "flags": [ "VARSIZE", "FANCY" ]
+  },
+  {
+    "id": "voiro_shoes_sasara",
+    "type": "ARMOR",
+    "copy-from": "dress_shoes",
+    "name":"浅口皮鞋(佐藤莎莎拉)[voiro] ",
+    "description":"一双朴素的粉色浅口鞋。",
+    "weight": "290 g",
+    "volume": "1000 ml",
+    "price": 10000,
+    "color": "pink",
+    "warmth": 10,
+    "material_thickness": 1,
+    "flags": [ "VARSIZE", "FANCY" ]
+  },
+  {
+    "id": "voiro_dress_shirt_takahashi",
+    "type": "ARMOR",
+    "copy-from": "dress_shirt",
+    "name":"礼服衬衫(高桥)[voiro] ",
+    "description":"没有口袋的朴素白色礼服衬衫。领子很整齐。",
+    "weight": "250 g",
+    "volume": "700 ml",
+    "price": 1500,
+    "color": "white",
+    "warmth": 10,
+    "material_thickness": 1,
+    "flags": [ "VARSIZE", "FANCY" ]
+  },
+  {
+    "id": "voiro_jacket_takahashi",
+    "type": "ARMOR",
+    "copy-from": "jacket_jean",
+    "name":"夹克(高桥)[voiro]",
+    "description":"一件不方便穿着的朴素白色夹克。",
+    "weight": "196 g",
+    "volume": "2 L",
+    "price": 10000,
+    "color": "white",
+    "warmth": 10,
+    "material_thickness": 2,
+    "flags": [ "VARSIZE", "FANCY", "POCKETS", "OUTER" ]
+  },
+  {
+    "id": "voiro_pants_takahashi",
+    "type": "ARMOR",
+    "copy-from": "pants",
+    "name":"棉裤(高桥)[voiro]",
+    "description":"简单的灰色棉质长裤。因为附有腰带所以有点用。",
+    "weight": "560 g",
+    "volume": "2 L",
+    "price": 6000,
+    "color": "white",
+    "pocket_data": [
+      {
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "90 cm",
+        "moves": 50,
+        "flag_restriction": [ "BELT_CLIP" ],
+        "holster": true
+      }
+    ],
+    "flags": [ "VARSIZE", "POCKETS" ]
+  },
+  {
+    "id": "voiro_sneakers_takahashi",
+    "type": "ARMOR",
+    "copy-from": "sneakers",
+    "name":"运动鞋(高桥)[voiro] ",
+    "description":"没有杂色的洁白运动鞋。",
+    "weight": "840 g",
+    "volume": "1500 ml",
+    "price": 26000,
+    "material": [ "cotton", "leather", "rubber" ],
+    "color": "white",
+    "flags": [ "VARSIZE", "SUPER_FANCY" ]
+  },
+  {
+    "id": "voiro_wrist_takahashi",
+    "type": "ARMOR",
+    "copy-from": "bandolier_wrist",
+    "name":"腕带(高桥)[voiro] ",
+    "description":"带有格子纹的腕带。" ,
+    "weight": "30 g",
+    "volume": "250 ml",
+    "price": 1000
+  },
+  {
+    "id": "voiro_belt_evil",
+    "type": "ARMOR",
+    "name":"恶之皮带[voiro] ",
+    "description":"一种在皮带中央带有“恶”字皮带扣的恶之皮带。",
+    "weight": "200 g",
+    "volume": "250 ml",
+    "price": 0,
+    "bashing": 5,
+    "material": [ "leather", "steel", "plastic" ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "pocket_data": [
+      {
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "90 cm",
+        "moves": 50,
+        "flag_restriction": [ "BELT_CLIP" ],
+        "holster": true
+      }
+    ],
+    "armor": [ { "encumbrance": 1, "coverage": 40, "covers": [ "torso" ], "specifically_covers": [ "torso_waist" ] } ],
+    "flags": [ "BELTED", "WATER_FRIENDLY", "SUPER_FANCY" ]
+  },
+  {
+    "id": "voiro_sarashi",
+    "type": "ARMOR",
+    "copy-from": "plastron_plastic",
+    "name": "漂白布[voiro]",
+    "looks_like": "bandages",
+    "description":"一条漂白的棉布。除了用于辅助医疗的腹带、内衣和紧身衣之外，它还可以代替纱布和绷带。",
+    "weight": "70 g",
+    "volume": "250 ml",
+    "price": 1000,
+    "material": [ "cotton" ],
+    "color": "white",
+    "warmth": 5,
+    "material_thickness": 1,
+    "flags": [ "VARSIZE", "SKINTIGHT" ]
+  },
+  {
+    "id": "voiro_kimono_kiritan",
+    "type": "ARMOR",
+    "copy-from": "kimono",
+    "name":"和服(东北切蒲英)[voiro] ",
+    "description":"带有浓郁味噌香味的和服与短裙的组合。",
+    "weight": "640 g",
+    "volume": "2 L",
+    "price": 140000,
+    "color": "pink",
+    "armor": [
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ], "coverage": 100, "encumbrance": [ 2, 5 ] },
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ], "coverage": 95 },
+      { "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_hip_l", "leg_hip_r" ], "coverage": 100, "encumbrance": [ 2, 2 ] },
+      {
+        "covers": [ "arm_l", "arm_r" ],
+        "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r", "arm_upper_r", "arm_upper_l", "arm_elbow_r", "arm_elbow_l" ],
+        "coverage": 100,
+        "encumbrance": [ 2, 2 ]
+      },
+      { "covers": [ "arm_l", "arm_r" ], "specifically_covers": [ "arm_lower_l", "arm_lower_r" ], "coverage": 95 }
+    ],
+    "material_thickness": 3,
+    "environmental_protection": 1,
+    "flags": [ "VARSIZE", "POCKETS", "FANCY" ]
+  },
+  {
+    "id": "voiro_zouri_kiritan",
+    "type": "ARMOR",
+    "copy-from": "straw_sandals",
+    "name":"凉鞋(东北切蒲英)[voiro] ",
+    "description": "称为“卷”的鞋帮部分是黑色的，木屐带则是红色的日式凉鞋。",
+    "weight": "260 g",
+    "volume": "1 L",
+    "price": 7000,
+    "material": [ "leather", "cotton" ],
+    "color": "dark_gray",
+    "warmth": 5,
+    "material_thickness": 3,
+    "environmental_protection": 1,
+    "flags": [ "BELTED", "VARSIZE", "WATERPROOF", "FANCY" ]
+  },
+  {
+    "//": "収納容積は日本のメーカー3社の平均値をきりよくした値。きりたんmodの時より一回り能力を底上げした。",
+    "id": "voiro_randsel",
+    "type": "ARMOR",
+    "copy-from": "backpack_leather",
+    "name":"双肩包[voiro] ",
+    "description":"大部分日本学童使用的耐用背包。 因为两侧附有用于固定大型道具的轮孔，所以可以搬运更多的东西。",
+    "weight": "1 kg",
+    "volume": "1500 ml",
+    "price": 36000,
+    "warmth": 6,
+    "material_thickness": 5,
+    "environmental_protection": 2,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "30 kg",
+        "max_item_length": "40 cm",
+        "moves": 300
+      },
+      {
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "90 cm",
+        "moves": 50,
+        "flag_restriction": [ "BELT_CLIP" ],
+        "holster": true
+      }
+    ],
+    "armor": [
+      {
+        "encumbrance": 4,
+        "volume_encumber_modifier": 0.2,
+        "coverage": 60,
+        "covers": [ "torso" ],
+        "specifically_covers": [ "torso_hanging_back" ]
+      }
+    ],
+    "flags": [ "BELTED", "STURDY", "WATER_FRIENDLY","TARDIS" ]
+  },
+  {
+    "id": "voiro_dress_ia",
+    "type": "ARMOR",
+    "copy-from": "sundress",
+    "name":"连衣裙(IA)[voiro] ",
+    "description":"带袖子的吊带衫和裙子的组合。" ,
+    "weight": "347 g",
+    "volume": "1500 ml",
+    "price": 14000,
+    "color": "dark_gray",
+    "armor": [
+      { "coverage": 65, "covers": [ "torso" ] },
+      { "coverage": 90, "covers": [ "arm_l", "arm_r" ] }, 
+      {
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": ["leg_hip_l", "leg_hip_r" ],
+        "coverage": 100
+      }
+    ],
+    "warmth": 10,
+    "material_thickness": 1,
+    "flags": [ "VARSIZE", "FANCY" ]
+  },
+  {
+    "//": "白の三本ラインは表現出来なかったのでオミット。",
+    "id": "voiro_socks_ia",
+    "type": "ARMOR",
+    "copy-from": "tights",
+    "name":"过膝袜(IA)[voiro]",
+    "description":"右脚是过膝袜，左脚是短袜的组合。左腿上有绑带。",
+    "weight": "55 g",
+    "volume": "250 ml",
+    "price": 3700,
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ] ,"coverage": 100 },
+      {
+        "covers": [ "leg_r" ],
+        "specifically_covers": [ "leg_lower_r", "leg_knee_r", "leg_upper_r" ],
+        "coverage": 70,
+        "encumbrance": 4
+      },
+      {
+        "covers": [ "leg_l" ],
+        "specifically_covers": [ "leg_lower_l", "leg_knee_l" ],
+        "coverage": 90,
+        "encumbrance": 4
+      }
+    ],
+    "warmth": 5,
+    "material_thickness": 1,
+    "flags": [ "VARSIZE", "SKINTIGHT", "FANCY" ]
+  },
+  {
+    "id": "voiro_boots_ia",
+    "type": "ARMOR",
+    "copy-from": "boots",
+    "name":"靴子(IA)[voiro]",
+    "description":"缠着皮带的白色靴子。",
+    "weight": "725 g",
+    "volume": "2500 ml",
+    "price": 12000,
+    "color": "white",
+   "armor": [
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_sole_r", "foot_sole_l" ],
+        "material": [
+          { "type": "leather", "covered_by_mat": 100, "thickness": 0.1 },
+          { "type": "rubber", "covered_by_mat": 100, "thickness": 4.0 }
+        ],
+        "coverage": 100,
+        "encumbrance": 20
+      },
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [
+          "foot_heel_r",
+          "foot_heel_l",
+          "foot_arch_r",
+          "foot_arch_l",
+          "foot_toes_r",
+          "foot_toes_l",
+          "foot_ankle_l",
+          "foot_ankle_r"
+        ],
+        "material": [ { "type": "leather", "covered_by_mat": 100, "thickness": 2.0 } ],
+        "coverage": 100
+      },
+      {
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_lower_l", "leg_lower_r" ],
+        "coverage": 100,
+        "encumbrance": 12
+      }
+    ],
+    "material_thickness": 3,
+    "environmental_protection": 2,
+    "pocket_data": [
+      {
+        "holster": true,
+        "min_item_volume": "250 ml",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "70 cm",
+        "moves": 3,
+        "flag_restriction": [ "SHEATH_KNIFE" ]
+      }
+    ],
+    "flags": [ "VARSIZE", "WATERPROOF" ]
+  },
+  {
+    "id": "voiro_kimono_itako",
+    "type": "ARMOR",
+    "copy-from": "kimono",
+    "name":"和服(东北伊达子)[voiro] ",
+    "description":"带有巨大装饰带的透明羽衣。振袖很长，是一件美丽的双层和服。",
+    "weight": "1400 g",
+    "volume": "6 L",
+    "price": 200000,
+    "material_thickness": 6,
+    "environmental_protection": 2,
+    "flags": [ "VARSIZE", "POCKETS", "SUPER_FANCY" ]
+  },
+  {
+    "id": "voiro_zouri_itako",
+    "type": "ARMOR",
+    "copy-from": "straw_sandals",
+    "name": "日式凉鞋(东北伊达子)[voiro]",
+    "description": "朴素的黑色凉鞋。凉鞋是日本自古以来就被认为比木屐和草鞋的规格更高的鞋。",
+    "weight": "280 g",
+    "volume": "1 L",
+    "price": 8000,
+    "material": [ "leather", "cotton","wood" ],
+    "warmth": 5,
+    "material_thickness": 3,
+    "environmental_protection": 1,
+    "flags": [ "VARSIZE", "WATERPROOF", "FANCY" ]
+  },
+  {
+    "id": "voiro_aliceband_hime",
+    "type": "ARMOR",
+    "category" : "other",
+    "name": "发箍(鸣花姬)[voiro]",
+    "description": "被称为爱丽丝带的头部装饰品。有模仿牛的角和蝴蝶结。",
+    "weight": "80 g",
+    "volume": "250 ml",
+    "price": 1200,
+    "material": [ "plastic", "cotton" ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "armor": [
+      {
+        "covers": [ "head" ],
+        "coverage": 10,
+        "encumbrance": 2
+      }
+    ],
+    "warmth": 5,
+    "material_thickness": 1,
+    "environmental_protection": 1,
+    "flags": [ "FANCY" ]
+  },
+  {
+    "id": "voiro_dress_hime",
+    "type": "ARMOR",
+    "copy-from": "sundress",
+    "name": "连衣裙(鸣花姬)[voiro]",
+    "description": "带有红色蝴蝶结的水手风连衣裙与红色短裙内衬的组合。",
+    "weight": "285 g",
+    "volume": "1500 ml",
+    "price": 9800,
+    "armor": [
+      { "coverage": 80, "covers": [ "torso" ] },
+      {
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": ["leg_hip_l", "leg_hip_r" ],
+        "coverage": 100
+      }
+    ],
+    "warmth": 10,
+    "material_thickness": 1,
+    "flags": [ "VARSIZE" ]
+  },
+  {
+    "id": "voiro_fundoshi",
+    "type": "ARMOR",
+    "copy-from": "panties",
+    "name": "兜裆裤[voiro]",
+    "description": "采用了兜裆布功能的棉制内衣。因为不使用橡胶不勒紧下半身穿在脚上感觉不一样。虽然名字很像，但是和日本传统的兜裆布不一样。",
+    "weight": "28 g",
+    "volume": "250 ml",
+    "price": 2200,
+    "armor": [ { "coverage": 40, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_hip_l", "leg_hip_r" ] } ],
+    "flags": [ "VARSIZE", "SKINTIGHT", "FANCY" ]
+  },
+  {
+    "//1": "ガイノイド_Talkの衣装だと靴を履いていて指が出ているかは確認できないが、ボカロの衣装だと出ている。",
+    "//2": "創作設定ということでご容赦を。石入り靴下とかのレシピ設定がめんどかった訳では無い。",
+    "id": "voiro_socks_hime",
+    "type": "ARMOR",
+    "copy-from": "socks",
+    "name": "袜子(鸣花姬)[voiro]",
+    "description": "左右颜色不同的袜子。覆盖到脚背，脚底接近赤脚的状态。",
+    "weight": "23 g",
+    "volume": "250 ml",
+    "price": 1000,
+    "warmth": 2,
+    "material_thickness": 1,
+    "armor": [ { "coverage": 45, "covers": [ "foot_l", "foot_r" ] } ],
+    "flags": [ "VARSIZE", "SKINTIGHT" ]
+  },
+  {
+    "id": "voiro_boots_meikaers",
+    "type": "ARMOR",
+    "copy-from": "boots",
+    "name": "靴子(姬·尊)[voiro]",
+    "description": "一双红色脚裸靴，底部有双齿的木屐。",
+    "weight": "460 g",
+    "volume": "1 L",
+    "price": 10500,
+    "material": [ "cotton", "leather", "wood" ],
+    "warmth": 20,
+    "flags": [ "VARSIZE", "FANCY" ]
+  },
+  {
+    "id": "voiro_aliceband_mikoto",
+    "type": "ARMOR",
+    "category" : "other",
+    "name": "发箍(鸣花尊)[voiro]",
+    "description": "被称为爱丽丝带的头部装饰品。有模仿牛的角和蝴蝶结。",
+    "weight": "80 g",
+    "volume": "250 ml",
+    "price": 1200,
+    "material": [ "plastic", "cotton" ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "armor": [
+      {
+        "covers": [ "head" ],
+        "coverage": 10,
+        "encumbrance": 2
+      }
+    ],
+    "warmth": 5,
+    "material_thickness": 1,
+    "environmental_protection": 1,
+    "flags": [ "FANCY" ]
+  },
+  {
+    "id": "voiro_dress_mikoto",
+    "type": "ARMOR",
+    "copy-from": "voiro_dress_hime",
+    "name": "连衣裙(鸣花尊)[voiro]",
+    "description": "带有红色蝴蝶结的水手风连衣裙与红色短裙内衬的组合。"
+  },
+  {
+    "//1": "ガイノイド_Talkの衣装だと靴を履いていて指が出ているかは確認できないが、ボカロの衣装だと出ている。",
+    "//2": "創作設定ということでご容赦を。石入り靴下とかのレシピ設定がめんどかった訳では無い。",
+    "id": "voiro_socks_mikoto",
+    "type": "ARMOR",
+    "copy-from": "voiro_socks_hime",
+    "name": "袜子(鸣花尊)[voiro]",
+    "description": "左右颜色不同的袜子。覆盖到脚背，脚底接近赤脚的状态。"
+  },
+  {
+    "id": "voiro_bag_una",
+    "type": "ARMOR",
+    "copy-from": "mbag",
+    "name": "学生书包[voiro]",
+    "description": "厚实的真皮背包。因为结实的制作有强度，但收纳容积少。",
+    "weight": "750 g",
+    "volume": "1000 ml",
+    "price": 11000,
+    "material": [ "leather" ],
+    "armor": [
+      {
+        "covers": [ "torso" ],
+        "coverage": 30,
+        "encumbrance": 3
+      }
+    ],
+    "warmth": 6,
+    "material_thickness": 4,
+    "environmental_protection": 2,
+    "flags": [ "BELTED", "STURDY", "WATER_FRIENDLY","TARDIS" ]
+  },
+  {
+    "id": "voiro_blouse_nozomi",
+    "type": "ARMOR",
+    "copy-from": "longshirt",
+    "name": "衬衫(希)[voiro]",
+    "description": "浅米色的衬衫。",
+    "weight": "200 g",
+    "volume": "750 ml",
+    "price": 3500,
+    "flags": [ "VARSIZE" ]
+  },
+  {
+    "id": "voiro_skirt_nozomi",
+    "type": "ARMOR",
+    "copy-from": "skirt",
+    "name": "短裙(希)[voiro]",
+    "description": "腰的周围是带有明显特征的米色短裙。",
+    "weight": "74 g",
+    "volume": "250 ml",
+    "price": 6500,
+    "flags": [ "VARSIZE" ]
+  },
+  {
+    "id": "voiro_loafers_nozomi",
+    "type": "ARMOR",
+    "copy-from": "dress_shoes",
+    "name": "乐福鞋(希)[voiro]",
+    "description": "没有鞋带的朴素茶色皮鞋。",
+    "weight": "700 g",
+    "volume": "1500 ml",
+    "price": 8000,
+    "material": [ "leather" ],
+    "flags": [ "VARSIZE" ]
+  },
+  {
+    "//": "materialはニッケルが無いのでスティールで。",
+    "id": "voiro_ornament_yuzuru",
+    "type": "ARMOR",
+    "copy-from": "fc_hairpin",
+    "category" : "other",
+    "name": "发饰(伊织弓鹤)[voiro]",
+    "description": "用铃铛串成的当发夹用的装饰。铃铛并不会响，所以不用担心。",
+    "weight": "40 g",
+    "volume": 0,
+    "price": 500,
+    "material": [ "steel" ],
+    "flags": [ "FANCY", "ZERO_WEIGHT" ]
+  },
+  {
+    "id": "voiro_dress_shirt_yuzuru",
+    "type": "ARMOR",
+    "copy-from": "longshirt",
+    "name": "礼服衬衫(伊织弓鹤)[voiro]",
+    "description": "袖子稍短，领子和袖子上有特征图案的礼服衬衫。",
+    "weight": "250 g",
+    "volume": "650 ml",
+    "price": 1500,
+    "color": "white",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance":5 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 70, "encumbrance": 5 }
+    ]
+  },
+  {
+    "id": "voiro_ornament_yuzuru2",
+    "type": "ARMOR",
+    "category" : "other",
+    "name": "装饰绳(伊织弓鹤)[voiro]",
+    "description": "界绳式样的可挂在脖子上的装饰绳。铃铛并不会响，所以不用担心。（界绳:为了新年里不让灾神进入而在家门口拉的绳）",
+    "weight": "350 g",
+    "volume": "250 ml",
+    "price": 2000,
+    "material": [ "cotton", "steel" ],
+    "symbol": "[",
+    "color": "yellow",
+    "flags": [ "FANCY" ]
+  },
+  {
+    "//": "コットンパンツなのかジーンズなのか判別不明。最近の若者はジーンズあまり履かないのでコットンパンツで。",
+    "id": "voiro_pants_yuzuru",
+    "type": "ARMOR",
+    "copy-from": "pants",
+    "name": "棉裤(伊织弓鹤)[voiro]",
+    "description": "黑色棉质长裤。",
+    "weight": "560 g",
+    "volume": "2 L",
+    "price": 5000
+  },
+  {
+    "id": "voiro_sneakers_yuzuru",
+    "type": "ARMOR",
+    "copy-from": "sneakers",
+    "name": "运动鞋(伊织弓鹤)[voiro]",
+    "description": "黑色高帮运动鞋。只是溅到一点水的话根本不算什么!",
+    "weight": "900 g",
+    "volume": "2 L",
+    "price": 16000,
+    "material": [ "cotton", "leather","rubber" ],
+    "flags": [ "VARSIZE", "WATERPROOF" ]
+  },
+  {
+    "id": "voiro_kimono_hal-o-roid",
+    "type": "ARMOR",
+    "copy-from": "kimono",
+    "name": "和服(HAL-O-ROID)[voiro]",
+    "description": "一件能让人联想到银河夜空的图案非常美丽的和服。",
+    "weight": "1200 g",
+    "volume": "5 L",
+    "price": 400000,
+    "to_hit": -5,
+    "color": "blue",
+    "material_thickness": 2,
+    "flags": [ "VARSIZE", "SUPER_FANCY" ]
+  },
+  {
+    "id": "voiro_setta_hal-o-roid",
+    "type": "ARMOR",
+    "name": "竹皮履(HAL-O-ROID)[voiro]",
+    "description": "草鞋的一种，主要供男性穿着，由竹皮编织而成，底部覆盖皮革。 如果是定制的话价格要相差一个数量级。",
+    "weight": "280 g",
+    "volume": "1 L",
+    "price": 40000,
+    "to_hit": -2,
+    "bashing": 2,
+    "material": [ "leather", "cotton" ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "armor": [
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "coverage": 50,
+        "encumbrance": 10
+      }
+    ],
+    "warmth": 5,
+    "material_thickness": 2,
+    "environmental_protection": 1,
+    "flags": [ "VARSIZE", "WATERPROOF", "SUPER_FANCY" ]
+  },
+  {
+    "id": "voiro_camisole_flower",
+    "type": "ARMOR",
+    "copy-from": "camisole",
+    "name": "吊带衫(flower)[voiro]",
+    "description": "一件紫色吊带背心，腰部透明。",
+    "weight": "160 g",
+    "volume": "250 ml",
+    "price": 4000,
+    "armor": [
+      {
+        "covers": [ "torso" ],
+        "coverage": 40
+      }
+    ],
+    "flags": [ "VARSIZE", "SKINTIGHT" ]
+  },
+  {
+    "id": "voiro_jacket_flower",
+    "type": "ARMOR",
+    "copy-from": "jacket_jean",
+    "name": "夹克(flower)[voiro]",
+    "description": "紫色部分是透明的时髦夹克。附有2个大口袋，能收纳很多东西。",
+    "weight": "350 g",
+    "volume": "3 L",
+    "price": 13000,
+    "material": [ "cotton", "plastic" ],
+    "color": "dark_gray",
+    "warmth": 20,
+    "material_thickness": 2,
+    "flags": [ "VARSIZE", "FANCY", "POCKETS", "OUTER", "HOOD", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "voiro_hot_pants_flower",
+    "type": "ARMOR",
+    "copy-from": "hot_pants",
+    "name": "热裤(flower)[voiro]",
+    "description": "一条朴素的黑色短裤。",
+    "weight": "84 g",
+    "volume": "250 ml",
+    "price": 3000,
+    "color": "dark_gray",
+    "material_thickness": 1,
+    "flags": [ "VARSIZE", "WATER_FRIENDLY", "SKINTIGHT" ]
+  },
+  {
+    "id": "voiro_leg_warmers_flower",
+    "type": "ARMOR",
+    "copy-from": "leg_warmers",
+    "name": "暖腿套(flower)[voiro]",
+    "description": "蓝色条纹暖腿套和绷带的组合。 如果分解的话，还可以当绷带用。",
+    "weight": "36 g",
+    "volume": "500 ml",
+    "price": 500,
+    "color": "blue",
+    "armor": [
+      {
+        "covers": [ "leg_l", "leg_r" ],
+        "coverage": 25,
+        "encumbrance": 1
+      }
+    ],
+    "warmth": 10,
+    "material_thickness": 1,
+    "flags": [ "SKINTIGHT" ]
+  },
+  {
+    "id": "voiro_sandals_flower",
+    "type": "ARMOR",
+    "copy-from": "boots",
+    "name": "凉鞋(flower)[voiro]",
+    "description": "覆盖小腿加入衬里的靴子凉鞋。",
+    "weight": "300 g",
+    "volume": "500 ml",
+    "price": 12000,
+    "color": "dark_gray",
+    "warmth": 5,
+    "material_thickness": 2,
+    "environmental_protection": 1,
+    "flags": [ "VARSIZE", "WATER_FRIENDLY", "ALLOWS_NATURAL_ATTACKS", "FANCY" ]
+  },
+  {
+    "id": "voiro_choker_flower",
+    "type": "ARMOR",
+    "category" : "other",
+    "name": "项圈(flower)[voiro]",
+    "description": "带有透明的f标志的项圈。",
+    "weight": "20 g",
+    "volume": 0,
+    "price": 3800,
+    "material": [ "leather", "glass" ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "flags": [ "FANCY", "ZERO_WEIGHT" ]
+  },
+  {
+    "id": "voiro_dress_shirt_zundamon",
+    "type": "ARMOR",
+    "copy-from": "dress_shirt",
+    "name": "礼服衬衫(俊达萌)[voiro]",
+    "description": "一件散发着淡淡毛豆泥香味的短袖礼服衬衫。"
+  },
+  {
+    "id": "voiro_overall_zundamon",
+    "type": "ARMOR",
+    "name": "连衣裤(俊达萌)[voiro]",
+    "description": "一件散发着淡淡毛豆泥香味的短款连衣裤。",
+    "weight": "340 g",
+    "volume": "1500 ml",
+    "price": 4000,
+    "price_postapoc": 50,
+    "to_hit": 1,
+    "material": [ "cotton" ],
+    "symbol": "[",
+    "looks_like": "shorts",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1250 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "19 cm",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1250 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "19 cm",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1250 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "19 cm",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1250 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "19 cm",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1080 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "165 mm",
+        "moves": 100
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1080 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "165 mm",
+        "moves": 100
+      }
+    ],
+    "warmth": 5,
+    "material_thickness": 0.2,
+    "flags": [ "VARSIZE", "POCKETS" ],
+    "armor": [
+      {
+        "encumbrance": [ 2, 5 ],
+        "coverage": 100,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ]
+      },
+      { "coverage": 50, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_upper_l", "leg_upper_r" ] }
+    ]
+  },
+  {
+    "id": "voiro_sneakers_zundamon",
+    "type": "ARMOR",
+    "copy-from": "sneakers",
+    "name": "运动鞋(俊达萌)[voiro]",
+    "description": "一双散发着淡淡毛豆泥香味的绿色运动鞋。",
+    "weight": "900 g",
+    "volume": "2 L",
+    "price": 16000,
+    "flags": [ "VARSIZE", "WATERPROOF" ]
+  },
+  {
+    "id": "voiro_hat_metan",
+    "type": "ARMOR",
+    "copy-from": "hat_cotton",
+    "name": { "str": "纯白的凉帽(四国玫碳)[voiro]" },
+    "description": "纯白的凉帽。无论在什么地方都不会弄脏的厉害的凉帽。",
+    "weight": "10 g",
+    "volume": "250 ml",
+    "price": 2500,
+    "price_postapoc": 50,
+    "color": "white",
+    "warmth": 10,
+    "flags": [ "VARSIZE" ],
+    "armor": [ { "encumbrance": 10, "coverage": 25, "covers": [ "head" ] } ]
+  },
+  {
+    "id": "voiro_dress_metan",
+    "repairs_like": "jeans",
+    "type": "ARMOR",
+    "copy-from": "dress",
+    "looks_like": "dress",
+    "name": { "str": "纯白的礼服(四国玫碳)[voiro]", "str_pl": "纯白的礼服(四国玫碳)[voiro]" },
+    "description": "纯白的礼服。无论在什么地方都不会弄脏的厉害的礼服。",
+    "price": 18000,
+    "color": "white",
+    "warmth": 15,
+    "flags": [ "VARSIZE", "SUPER_FANCY" ],
+    "armor": [ { "encumbrance": 7, "coverage": 90, "covers": [ "torso", "arm_l", "arm_r", "leg_l", "leg_r" ] } ]
+  },
+  {
+    "id": "voiro_tights_metan",
+    "type": "ARMOR",
+    "copy-from": "tights",
+    "name": { "str_sp": "纯白的紧身裤(四国玫碳)[voiro]" },
+    "description": "纯白的紧身裤。无论在什么地方都不会弄脏的厉害的紧身裤。",
+    "flags": [ "VARSIZE", "SKINTIGHT" ]
+  },
+  {
+    "id": "voiro_dress_shoes_metan",
+    "type": "ARMOR",
+    "copy-from": "dress_shoes",
+    "name": { "str": "礼服鞋(四国玫碳)[voiro]", "str_pl": "礼服鞋(四国玫碳)[voiro]" },
+    "description": "纯白的礼服鞋。无论在什么地方都不会弄脏的厉害的礼服鞋。"
+  },
+  {
+    "id": "voiro_shirt_tumugi",
+    "type": "ARMOR",
+    "copy-from": "dress_shirt",
+    "name": "女式衬衫(春日部䌷)[voiro]",
+    "description": "广义上是衬衫的一种，但构造不同，纽扣的方式也相反。使用黑色的面料。"
+  },
+  {
+    "id": "voiro_skirt_tumugi",
+    "type": "ARMOR",
+    "copy-from": "nanoskirt",
+    "name": "短裙(春日部䌷)[voiro]",
+    "description": "长度较短，透气良好的棉质学生服裙子。"
+  },
+  {
+    "id": "voiro_cardigan_tumugi",
+    "type": "ARMOR",
+    "copy-from": "sweater",
+    "name": "开襟衫(春日部䌷)[voiro]",
+    "description": "由毛线或针织物制成的前开口上衣。",
+    "material": [ "wool" ],
+    "warmth": 30,
+    "material_thickness": 3,
+    "flags": [ "VARSIZE", "OUTER" ]
+  },
+  {
+    "id": "voiro_necktie_tumugi",
+    "type": "ARMOR",
+    "copy-from": "tie_necktie",
+    "name": { "str": "领带(春日部䌷)" },
+    "description": "学生服黄色领带。稍稍松开更加时髦！"
+  },
+  {
+    "id": "voiro_socks_tumugi",
+    "type": "ARMOR",
+    "copy-from": "socks",
+    "name": "袜子(春日部䌷)[voiro]",
+    "description": "白色的及膝袜。长度到膝盖以下。"
+  },
+  {
+    "id": "voiro_shoes_tumugi",
+    "type": "ARMOR",
+    "copy-from": "dress_shoes",
+    "name": "乐福鞋(春日部䌷)[voiro]",
+    "description": "没有鞋带的简单的黑色皮鞋。"
+  },
+  {
+    "id": "voiro_hat_hau",
+    "type": "ARMOR",
+    "copy-from": "hat_cotton",
+    "name": "护士帽(雨晴晴雨)[voiro]",
+    "description": "白色布料上带有心形标志的护士帽。特别可爱呢。",
+    "armor": [ { "coverage": 35, "covers": [ "head" ] } ],
+    "warmth": 1,
+    "material_thickness": 2,
+    "flags": [ "FANCY" ]
+  },
+  {
+    "id": "voiro_nurse_clothes_hau",
+    "type": "ARMOR",
+    "copy-from": "flag_shirt",
+    "name": "护士服(雨晴晴雨)[voiro]",
+    "description": "白色布料上带有粉色线条的护士服",
+    "armor": [ 
+      { "coverage": 75, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_hip_l", "leg_hip_r" ] },
+      { "coverage": 90, "covers": [ "torso" ] },
+      { "coverage": 100,"covers": [ "arm_l", "arm_r" ], "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r" ] },
+      { "coverage": 50, "covers": [ "arm_l", "arm_r" ], "specifically_covers": [ "arm_upper_l", "arm_upper_r" ] } 
+    ],
+    "flags": [ "FANCY" ]
+  },
+  {
+    "id": "voiro_glove_hau",
+    "type": "ARMOR",
+    "copy-from": "gloves_fingerless",
+    "name": "露指手套(雨晴晴雨)[voiro]",
+    "description": "稍微辛苦的工作也没关系!的露指手套。",
+    "flags": [ "FANCY" ]
+  },
+  {
+    "id": "voiro_socks_hau",
+    "type": "ARMOR",
+    "copy-from": "stockings",
+    "name": "过膝袜(雨晴晴雨)[voiro]",
+    "description": "纯白的过膝袜。像她的心灵一样无暇。",
+    "armor": [
+      { "encumbrance": 5, "coverage": 100, "covers": [ "foot_l", "foot_r" ] },
+      {
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_lower_l", "leg_lower_r", "leg_knee_l", "leg_knee_r", "leg_upper_l", "leg_upper_r" ],
+        "coverage": 30,
+        "encumbrance": 4
+      }
+    ],
+    "flags": [ "FANCY","VARSIZE", "SKINTIGHT" ]
+  },
+  {
+    "id": "voiro_hat_rithu",
+    "type": "ARMOR",
+    "copy-from": "hat_cotton",
+    "name": "帽子(波音律)[voiro]",
+    "description": "一顶漂亮的黑色帽子。",
+    "armor": [ { "coverage": 25, "covers": [ "head" ] } ],
+    "warmth": 1,
+    "material_thickness": 2,
+    "flags": [ "FANCY" ]
+  },
+  {
+    "id": "voiro_jacket_rithu",
+    "type": "ARMOR",
+    "copy-from": "jacket_jean",
+    "name": "夹克(波音律)[voiro]",
+    "description": "黑色的时髦夹克。",
+    "flags": [ "FANCY" ]
+  },
+  {
+    "id": "voiro_skirt_rithu",
+    "type": "ARMOR",
+    "copy-from": "skirt",
+    "name": "短裙(波音律)[voiro]",
+    "description": "黑色的漂亮短裙。",
+    "flags": [ "FANCY" ]
+  },
+  {
+    "id": "voiro_hair_ornaments_himari",
+    "type": "ARMOR",
+    "copy-from": "silver_hairpin",
+    "name": "发饰(冥鸣阳葵)[voiro]",
+    "description": "可爱的金属发饰。"
+  },
+  {
+    "id": "voiro_dress_himari",
+    "type": "ARMOR",
+    "copy-from": "sundress",
+    "name": "连衣裙(冥鸣阳葵)[voiro]",
+    "description": "可爱的短连衣裙。"
+  },
+  {
+    "id": "voiro_long_glove_himari",
+    "type": "ARMOR",
+    "copy-from": "long_glove_white",
+    "name": "长手套(冥鸣阳葵)[voiro]",
+    "description": "以黑色为基调的稍微成熟的长手套。能隐隐约约看见手臂。"
+  },
+  {
+    "id": "voiro_headring_sora",
+    "type": "ARMOR",
+    "copy-from": "silver_necklace",
+    "name": "圆环(九州宇宙)[voiro]",
+    "description": "浮在头顶的不可思议的物体。好像装备了就会浮起来。现在好像出了故障。"
+  },
+  {
+    "id": "voiro_monocle_sora",
+    "type": "TOOL",
+    "copy-from": "glasses_monocle",
+    "name": "女子力检测仪(九州宇宙)[voiro]",
+    "description": "原本是安装在左眼上测量女子力的装置。现在女子力检测仪主要用作摄像。",
+    "ammo": [ "battery" ],
+    "flags": [ "WATER_BREAK_ACTIVE" ],
+    "charges_per_use": 5,
+    "use_action": [ "CAMERA" ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "flag_restriction": [ "BATTERY_LIGHT", "BATTERY_ULTRA_LIGHT" ],
+        "default_magazine": "light_plus_battery_cell"
+      }
+    ]
+  },
+  {
+    "id": "voiro_suit_sora",
+    "type": "ARMOR",
+    "copy-from": "bondage_suit",
+    "name": "防护服(九州宇宙)[voiro]",
+    "description": "是为了保护全身的套装,但是不知为何似乎露出率很高?",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 60 },
+      { "coverage": 20, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_hip_l", "leg_hip_r" ] }
+    ],
+    "flags": [ "VARSIZE" ]
+  },
+  {
+    "id": "voiro_long_glove_sora",
+    "type": "ARMOR",
+    "copy-from": "long_glove_white",
+    "name": "长手套(九州宇宙)[voiro]",
+    "description": "以黑色为基调的稍微成熟的长手套。有点透明。"
+  },
+  {
+    "id": "voiro_boots_sora",
+    "type": "ARMOR",
+    "copy-from": "knee_high_boots",
+    "name": "过膝长靴(九州宇宙)[voiro]",
+    "description": "为了保护脚而特别定制的过膝长靴。有点太性感了。"
+  },
+  {
+    "id": "voiro_suit_yukari",
+    "type": "ARMOR",
+    "copy-from": "mil_flight_suit",
+    "name": "战斗员套装(结月缘)[voiro]",
+    "description": "一套可以保护整个身体的紧身服。 酷炫、时髦且实用的产品。",
+    "material": [ "nomex","lycra","neoprene" ],
+    "price": "2000 USD",
+    "price_postapoc": "2000 USD",
+    "material_thickness": 3,
+    "flags": [ "VARSIZE","ALARMCLOCK","FANCY","RAD_RESIST","SLOWS_THIRST" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ACTIVE",
+          "values": [
+            { "value": "STRENGTH", "add": 10 },
+            { "value": "CLIMATE_CONTROL_HEAT", "add": 30 },
+            { "value": "CLIMATE_CONTROL_CHILL", "add": 30 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "voiro_suit_maki",
+    "type": "ARMOR",
+    "copy-from": "voiro_suit_yukari",
+    "name": "战斗员套装(弦卷真纪)[voiro]",
+    "description": "一套可以保护整个身体的紧身服。 酷炫、时髦且实用的产品。"
+  },
+  {
+    "id": "voiro_sweater_rikka",
+    "type": "ARMOR",
+    "name": "毛衣(小春六花)[voiro]",
+    "description": "V字领的针织毛衣。 不是很厚，但足够保暖。",
+    "copy-from": "sweater",
+    "warmth": 25
+  },
+  {
+    "//": "設定資料には「モコモコ素材」と書かれているが、セーター、制服、シャツとの兼ね合いから素材と暖かさはノーマルのパーカーに合わせた。",
+    "id": "voiro_hoodie_rikka",
+    "type": "ARMOR",
+    "name": "连帽衫(小春六花)[voiro]",
+    "description": "灰色连帽衫，饰有玩偶熊“LAKISTON”的徽标和字母。",
+    "copy-from": "hoodie"
+  },
+  {
+    "//1": "ブレザー型だけど厳密にはブレザーに当てはまらないし、ジャケットなんだけどジャケット表記は違う気がするので設定資料遵守で「制服」表記。",
+    "//2": "ブレザーは積層が「通常」、ジャケットは「上着」。セーターや、パーカーとの兼ね合いから制服の積層は上着に。",
+    "id": "voiro_school_uniform_rikka",
+    "type": "ARMOR",
+    "name": "学生制服(小春六花)[voiro]",
+    "description": "日本学生穿的校服。 看起来像是西装外套和水手服的组合，左臂上附有两道黑条纹。",
+    "copy-from": "blazer",
+    "material": [ "cotton" ],
+    "warmth": 10,
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 85, "encumbrance": [ 12, 12 ] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 85, "encumbrance": [ 12, 12 ] }
+    ],
+    "flags": [ "VARSIZE", "FANCY", "OUTER" ]
+  },
+  {
+    "//": "初期状態で制服の上に表示させたいのでOUTERフラグ。",
+    "id": "voiro_tie_ascot_rikka",
+    "type": "ARMOR",
+    "name": "领结(小春六花)[voiro]",
+    "description": "一种用丝带系紧的蝴蝶形粉色领结。",
+    "copy-from": "tie_necktie",
+    "flags": ["FANCY", "OUTER" ]
+  },
+  {
+    "id": "voiro_skirt_rikka",
+    "type": "ARMOR",
+    "name": "短裙(小春六花)[voiro]",
+    "description": "学生制服短裙，边缘有水色的线条。",
+    "copy-from": "nanoskirt"
+  },
+  {
+    "//": "差別化の為、ボイロmodの靴下系で唯一暖かさを10にした。",
+    "id": "voiro_socks_rikka",
+    "type": "ARMOR",
+    "name": "长筒袜(小春六花)[voiro]",
+    "description": "白色长筒袜，靠近根部有两道黑条纹。保暖效果很棒。",
+    "copy-from": "socks",
+    "armor": [ 
+      { "coverage": 100, "covers": [ "foot_l", "foot_r" ] },
+      {
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_lower_l", "leg_lower_r" ],
+        "coverage": 100
+      }
+    ],
+    "warmth": 10
+  },
+  {
+    "id": "voiro_sneakers_rikka",
+    "type": "ARMOR",
+    "name": "运动鞋(小春六花)[voiro]",
+    "description": "脚较高的坡跟运动鞋。 粉色面料上印有玩偶熊Lakiston标志，浅蓝色丝带极具特色。",
+    "copy-from": "sneakers"
+  },
+  {
+    "//": "泥棒袋を除いては鞄系の着用部位が片腕、片手になっているものがない事と、リュックの様に背負う事もあるので着用部位は胴のみとした。",
+    "id": "voiro_bag_rikka",
+    "type": "ARMOR",
+    "name": "制服包(小春六花)[voiro]",
+    "description": "一款看起来像较小的行李袋的单肩包，在日本被称为波士顿包。 学生使用的更小，通常由聚酯或尼龙制成。",
+    "copy-from": "duffelbag"
+  },
+  {
+    "id": "voiro_suit_lakiston",
+    "type": "ARMOR",
+    "name": "玩偶服(Lakiston)[voiro]",
+    "description": "模仿ラキストン（Lakiston）的全身服装，拉基斯顿是一只长着角和小翅膀的泰迪熊。 穿上后移动起来会很困难，但十分保暖。",
+    "copy-from": "wolfsuit"
+  },
+  {
+    "id": "voiro_duffelbag_yukari",
+    "type": "ARMOR",
+    "name": "行李袋(结月缘)[voiro]",
+    "description": "一款行李袋，具有优雅的紫色，饰有结月缘标志性的兔子图案。 是在大灾变前限量出售的稀有物品。",
+    "copy-from": "duffelbag",
+    "looks_like": "voiro_gobag_yukari"
+  },
+  {
+    "id": "voiro_survior_duffelbag_yukari",
+    "type": "ARMOR",
+    "name": "幸存者行李袋(结月缘)[voiro]",
+    "description": "一款特殊耐用的重量级行李袋，具有优雅的紫色，饰有结月缘标志性的兔子图案。 经过特殊改造，可以携带尽可能多的行李。",
+    "copy-from": "survivor_duffel_bag",
+    "looks_like": "voiro_gobag_yukari"
+  },
+  {
+    "id": "voiro_hat_cotton_mochiko",
+    "type": "ARMOR",
+    "name": "帽子(望野京子)[voiro]",
+    "description": "带有犬耳形状的棉质黑色帽子。 温暖又时髦的单品。",
+    "copy-from": "hat_cotton"
+  },
+  {
+    "id": "voiro_goggles_mochiko",
+    "type": "ARMOR",
+    "name": "防风护目镜(望野京子)[voiro]",
+    "description": "时髦又实用的定制护目镜，可用于喷漆和焊接。",
+    "copy-from": "goggles_welding",
+    "extend": { "flags": [ "FANCY","OUTER" ] },
+    "armor": [ { "encumbrance": 1, "coverage": 10, "covers": [ "head" ], "specifically_covers": [ "head_forehead" ] } ]
+  },
+  {
+    "id": "voiro_shirt_mochiko",
+    "type": "ARMOR",
+    "name": "时髦衬衫(望野京子)[voiro]",
+    "description": "胸部敞开的衬衫。 很时髦，但真的能称之为衬衫吗？",
+    "copy-from": "voiro_shirt_maki"
+  },
+  {
+    "id": "voiro_arm_covers_mochiko",
+    "type": "ARMOR",
+    "name": "臂套(望野京子)[voiro]",
+    "description": "一款时髦的黑色臂套。 覆盖手背但露出五指。",
+    "copy-from": "voiro_arm_covers_one"
+  },
+  {
+    "id": "voiro_nanoskirt_mochiko",
+    "type": "ARMOR",
+    "name": "纳米短裙(望野京子)[voiro]",
+    "description": "相当短的裙子。 虽然很时髦，但是有些过于暴露......",
+    "extend": { "flags": [ "FANCY" ] },
+    "copy-from": "nanoskirt"
+  },
+  {
+    "id": "voiro_socks_mochiko",
+    "type": "ARMOR",
+    "name": "及膝袜(望野京子)[voiro]",
+    "description": "时髦的及膝袜。",
+    "extend": { "flags": [ "FANCY" ] },
+    "copy-from": "voiro_socks_hau"
+  }
+]

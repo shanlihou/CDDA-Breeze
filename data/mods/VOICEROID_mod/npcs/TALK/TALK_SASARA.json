@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_SASARA_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"请问，你知道梓梓弥和高桥在哪吗？",
+    "responses":[
+      { "text": "要一起去找吗？", "topic": "TALK_SASARA_SAN_2" },
+      { "text": "…", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_SASARA_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"真是的，他们两个去哪里了呀？",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

@@ -1,0 +1,45 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "PROF_HENSHIN_effect",
+    "effect": [
+      { "u_message": "你甩了甩手，做好进攻准备。", "type": "good" },
+	  { "u_lose_effect": "Henshin_Swing_Arm" },
+	  { "u_lose_effect": "Henshin_Squat" },
+	  { "u_lose_effect": "Henshin_Dodge" },
+	  { "u_add_effect": "Henshin_Swing_Arm", "duration": "2 s" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "PROF_HENSHIN_effect_2",
+    "effect": [
+      { "u_message": "你摆出流氓蹲姿势，蓄势待发。", "type": "good" },
+	  { "u_lose_effect": "Henshin_Swing_Arm" },
+	  { "u_lose_effect": "Henshin_Squat" },
+	  { "u_lose_effect": "Henshin_Dodge" },
+	  { "u_add_effect": "Henshin_Squat", "duration": "2 s" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "PROF_HENSHIN_effect_3",
+    "effect": [
+      { "u_message": "你聚精凝神，专注于闪避敌人攻击。", "type": "good" },
+	  { "u_lose_effect": "Henshin_Swing_Arm" },
+	  { "u_lose_effect": "Henshin_Squat" },
+	  { "u_lose_effect": "Henshin_Dodge" },
+	  { "u_add_effect": "Henshin_Dodge", "duration": "2 s" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "power_knuckle_effect",
+    "effect": [
+	  { "u_lose_effect": "Henshin_Swing_Arm" },
+	  { "u_lose_effect": "Henshin_Squat" },
+	  { "u_lose_effect": "Henshin_Dodge" },
+	  { "u_add_effect": "Henshin_Swing_Arm", "duration": "2 s" }
+    ]
+  }
+]

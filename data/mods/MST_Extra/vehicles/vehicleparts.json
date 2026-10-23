@@ -1,0 +1,742 @@
+[
+  {
+    "id": "makeshift_sled_frame_part",
+    "looks_like": "folding_wooden_frame",
+    "type": "vehicle_part",
+    "name": "轻型板条雪橇框架",
+    "item": "makeshift_sled_frame_item",
+    "location": "structure",
+    "symbol": "h",
+    "color": "brown",
+    "broken_color": "brown",
+    "durability": 15,
+    "folded_volume": 15,
+    "breaks_into": [
+      {
+        "item": "splinter",
+        "count": [
+          0,
+          6
+        ]
+      }
+    ],
+    "flags": [
+      "INITIAL_PART",
+      "MOUNTABLE"
+    ],
+    "requirements": {
+      "install": {
+        "skills": [
+          [
+            "survival",
+            0
+          ]
+        ],
+        "time": "15 m",
+        "using": [
+          [
+            "vehicle_sled",
+            1
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "survival",
+            0
+          ]
+        ],
+        "time": "10 m"
+      },
+      "repair": {
+        "skills": [
+          [
+            "survival",
+            1
+          ]
+        ],
+        "time": "15 m",
+        "using": [
+          [
+            "vehicle_sled",
+            1
+          ]
+        ]
+      }
+    },
+    "damage_reduction": {
+      "all": 6
+    }
+  },
+  {
+    "id": "makeshift_sled_runner_part",
+    "looks_like": "wheel_wood",
+    "type": "vehicle_part",
+    "name": "雪橇滑行板",
+    "item": "makeshift_sled_runners_item",
+    "location": "under",
+    "symbol": "o",
+    "broken_symbol": "x",
+    "color": "brown",
+    "durability": 25,
+    "damage_modifier": 50,
+    "folded_volume": 10,
+    "flags": [
+      "WHEEL",
+      "STABLE"
+    ],
+    "breaks_into": [
+      {
+        "item": "splinter",
+        "count": [
+          3,
+          6
+        ]
+      }
+    ],
+    "requirements": {
+      "install": {
+        "skills": [
+          [
+            "survival",
+            0
+          ]
+        ],
+        "time": "15 m",
+        "using": [
+          [
+            "vehicle_sled",
+            1
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "survival",
+            0
+          ]
+        ],
+        "time": "10 m"
+      },
+      "repair": {
+        "skills": [
+          [
+            "survival",
+            1
+          ]
+        ],
+        "time": "15 m",
+        "using": [
+          [
+            "vehicle_sled",
+            1
+          ]
+        ]
+      }
+    },
+    "damage_reduction": {
+      "all": 8
+    }
+  },
+  {
+    "type": "vehicle_part",
+    "id": "makeshift_sled_basket_part",
+    "looks_like": "wood box",
+    "name": "编织储物篮",
+    "symbol": "o",
+    "color": "brown",
+    "broken_symbol": "#",
+    "broken_color": "brown",
+    "damage_modifier": 60,
+    "durability": 40,
+    "folded_volume": 20,
+    "size": 150,
+    "item": "makeshift_sled_basket_item",
+    "location": "center",
+    "flags": [
+      "CARGO",
+      "BOARDABLE",
+      "COVERED",
+      "LOCKABLE_CARGO"
+    ],
+    "breaks_into": [
+      {
+        "item": "splinter",
+        "count": [
+          4,
+          9
+        ]
+      }
+    ],
+    "requirements": {
+      "install": {
+        "skills": [
+          [
+            "survival",
+            1
+          ]
+        ],
+        "time": "15 m",
+        "using": [
+          [
+            "vehicle_sled",
+            1
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "survival",
+            1
+          ]
+        ],
+        "time": "10 m"
+      },
+      "repair": {
+        "skills": [
+          [
+            "survival",
+            2
+          ]
+        ],
+        "time": "15 m",
+        "using": [
+          [
+            "vehicle_sled",
+            1
+          ]
+        ]
+      }
+    },
+    "damage_reduction": {
+      "all": 6
+    }
+  },
+  {
+    "type": "vehicle_part",
+    "id": "boat_board_birchbark",
+    "name": {
+      "str": "桦皮船壳"
+    },
+    "description": "一块防水船壳,防止你的船进水.",
+    "symbol": "o",
+    "looks_like": "f_fiber_mat",
+    "color": "brown",
+    "broken_symbol": "x",
+    "broken_color": "light_gray",
+    "damage_modifier": 50,
+    "durability": 20,
+    "item": "birchbark_panel",
+    "location": "under",
+    "requirements": {
+      "install": {
+        "skills": [
+          [
+            "survival",
+            2
+          ]
+        ],
+        "time": "20 m",
+        "using": [
+          [
+            "vehicle_birchbark_boat",
+            1
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "survival",
+            2
+          ]
+        ],
+        "time": "10 m"
+      },
+      "repair": {
+        "skills": [
+          [
+            "survival",
+            3
+          ]
+        ],
+        "time": "20 m",
+        "using": [
+          [
+            "adhesive",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "FLOATS"
+    ],
+    "breaks_into": [
+      {
+        "item": "birchbark",
+        "count": [
+          0,
+          6
+        ]
+      }
+    ],
+    "damage_reduction": {
+      "all": 5
+    }
+  },
+  {
+    "type": "vehicle_part",
+    "id": "birchbark_aisle",
+    "name": {
+      "str": "桦皮过道"
+    },
+    "symbol": "=",
+    "looks_like": "f_fiber_mat",
+    "color": "brown",
+    "broken_symbol": "#",
+    "broken_color": "brown",
+    "durability": 100,
+    "description": "用厚实紧密的桦树皮做成的过道.",
+    "item": "birchbark_panel",
+    "location": "center",
+    "requirements": {
+      "install": {
+        "skills": [
+          [
+            "survival",
+            1
+          ]
+        ],
+        "time": "20 m",
+        "using": [
+          [
+            "vehicle_sled",
+            1
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "survival",
+            1
+          ]
+        ],
+        "time": "10 m"
+      },
+      "repair": {
+        "skills": [
+          [
+            "survival",
+            2
+          ]
+        ],
+        "time": "20 m",
+        "using": [
+          [
+            "adhesive",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "AISLE",
+      "BOARDABLE"
+    ],
+    "breaks_into": [
+      {
+        "item": "birchbark",
+        "count": [
+          0,
+          6
+        ]
+      }
+    ],
+    "damage_reduction": {
+      "all": 8
+    }
+  },
+  {
+    "type": "vehicle_part",
+    "id": "roof_birchbark",
+    "name": {
+      "str": "桦皮车顶"
+    },
+    "symbol": "#",
+    "color": "light_gray",
+    "broken_symbol": "#",
+    "broken_color": "dark_gray",
+    "durability": 65,
+    "description": "由厚实紧密的桦树皮做成的车顶盖.起码能遮风挡雨",
+    "item": "birchbark_panel",
+    "location": "roof",
+    "requirements": {
+      "install": {
+        "skills": [
+          [
+            "survival",
+            1
+          ]
+        ],
+        "time": "20 m",
+        "using": [
+          [
+            "vehicle_sled",
+            1
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "survival",
+            1
+          ]
+        ],
+        "time": "10 m"
+      },
+      "repair": {
+        "skills": [
+          [
+            "survival",
+            2
+          ]
+        ],
+        "time": "20 m",
+        "using": [
+          [
+            "adhesive",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "ROOF"
+    ],
+    "breaks_into": [
+      {
+        "item": "birchbark",
+        "count": [
+          0,
+          6
+        ]
+      }
+    ],
+    "damage_reduction": {
+      "all": 8
+    }
+  },
+  {
+    "id": "log_frame_part",
+    "looks_like": "frame_wood_cover",
+    "type": "vehicle_part",
+    "name": "木架",
+    "item": "log_frame_item",
+    "location": "structure",
+    "symbol": "j",
+    "color": "brown",
+    "broken_color": "brown",
+    "durability": 300,
+    "description": "一个由原木雕刻而成的重型木筏框架，使木筏漂浮。其他载具部件能够安装在它上面。如果构成载具的所有框架和部件都可折叠，那么这辆载具能够被打包折叠并可像普通物品一样被拾取带走。",
+    "folded_volume": 35,
+    "breaks_into": [
+      {
+        "item": "splinter",
+        "count": [
+          20,
+          30
+        ]
+      }
+    ],
+    "flags": [
+      "INITIAL_PART",
+      "FLOATS",
+      "STABLE",
+      "MOUNTABLE",
+      "BOARDABLE"
+    ],
+    "requirements": {
+      "install": {
+        "skills": [
+          [
+            "survival",
+            1
+          ]
+        ],
+        "time": "30 m",
+        "using": [
+          [
+            "vehicle_log_frame",
+            1
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "survival",
+            1
+          ]
+        ],
+        "time": "15 m"
+      },
+      "repair": {
+        "skills": [
+          [
+            "survival",
+            2
+          ]
+        ],
+        "time": "30 m",
+        "using": [
+          [
+            "adhesive",
+            1
+          ]
+        ]
+      }
+    },
+    "damage_reduction": {
+      "all": 52
+    }
+  },
+  {
+    "type": "vehicle_part",
+    "id": "door_log_frame",
+    "name": {
+      "str": "原木车门"
+    },
+    "symbol": "+",
+    "looks_like": "door_wood",
+    "color": "brown",
+    "broken_symbol": "&",
+    "broken_color": "brown",
+    "damage_modifier": 75,
+    "durability": 340,
+    "description": "一扇原木框架做成的车门.它是实心的,所以关上门时你不能透过它来观察.",
+    "item": "log_frame_item",
+    "location": "center",
+    "requirements": {
+      "install": {
+        "skills": [
+          [
+            "survival",
+            1
+          ]
+        ],
+        "time": "30 m",
+        "using": [
+          [
+            "vehicle_log_frame",
+            1
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "survival",
+            1
+          ]
+        ],
+        "time": "15 m"
+      },
+      "repair": {
+        "skills": [
+          [
+            "survival",
+            3
+          ]
+        ],
+        "time": "30 m",
+        "using": [
+          [
+            "adhesive",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "OBSTACLE",
+      "OPENABLE",
+      "BOARDABLE",
+      "OPAQUE",
+      "AISLE"
+    ],
+    "breaks_into": [
+      {
+        "item": "splinter",
+        "count": [
+          20,
+          30
+        ]
+      }
+    ],
+    "damage_reduction": {
+      "all": 24
+    }
+  },
+  {
+    "abstract": "log_frame_board_abstract",
+    "type": "vehicle_part",
+    "copy-from": "base_board_abstract",
+    "item": "log_frame_item",
+    "color": "brown",
+    "broken_color": "brown",
+    "durability": 200,
+    "breaks_into": [
+      {
+        "item": "splinter",
+        "count": [
+          20,
+          30
+        ]
+      }
+    ],
+    "requirements": {
+      "install": {
+        "skills": [
+          [
+            "survival",
+            1
+          ]
+        ],
+        "time": "30 m",
+        "using": [
+          [
+            "vehicle_log_frame",
+            1
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "survival",
+            1
+          ]
+        ],
+        "time": "15 m"
+      },
+      "repair": {
+        "skills": [
+          [
+            "survival",
+            3
+          ]
+        ],
+        "time": "30 m",
+        "using": [
+          [
+            "adhesive",
+            1
+          ]
+        ]
+      }
+    },
+    "damage_reduction": {
+      "all": 10
+    }
+  },
+  {
+    "id": "log_frame_board",
+    "type": "vehicle_part",
+    "copy-from": "log_frame_board_abstract",
+    "name": {
+      "str": "原木隔板"
+    },
+    "description": "一扇原木框架做成的隔板.能够阻挡丧尸和其他人的视线.",
+    "extend": {
+      "flags": [
+        "OPAQUE",
+        "FULL_BOARD"
+      ]
+    }
+  },
+  {
+    "type": "vehicle_part",
+    "id": "bed_straw_rollmat",
+    "name": {
+      "str": "草垫"
+    },
+    "symbol": "#",
+    "looks_like": "f_straw_bed",
+    "color": "magenta",
+    "broken_symbol": "*",
+    "broken_color": "magenta",
+    "damage_modifier": 60,
+    "durability": 60,
+    "description": "用厚厚的稻草铺成的窄小但舒适的床.",
+    "size": 100,
+    "item": "straw_bed_rollmat",
+    "comfort": 3,
+    "floor_bedding_warmth": 200,
+    "location": "center",
+    "requirements": {
+      "install": {
+        "skills": [
+          [
+            "survival",
+            1
+          ]
+        ],
+        "time": "40 m",
+        "using": [
+          [
+            "cordage_short",
+            4
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "survival",
+            1
+          ]
+        ],
+        "time": "20 m"
+      },
+      "repair": {
+        "skills": [
+          [
+            "survival",
+            2
+          ]
+        ],
+        "time": "40 m",
+        "using": [
+          [
+            "cordage_short",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "BED",
+      "BOARDABLE",
+      "CARGO",
+      "MOUNTABLE"
+    ],
+    "breaks_into": [
+      {
+        "item": "straw_pile",
+        "count": [
+          7,
+          8
+        ]
+      }
+    ],
+    "damage_reduction": {
+      "all": 2
+    }
+  }
+]

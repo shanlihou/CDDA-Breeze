@@ -1,0 +1,22 @@
+[
+  {
+    "id": "bio_heat_absorb",
+    "type": "bionic",
+    "name": { "str": "Heat Drain" },
+    "description": "While fighting unarmed against a warm-blooded opponent, there is a chance that a successful hit will drain body heat, inflicting a small amount of extra damage, and increasing your power reserves slightly.",
+    "occupied_bodyparts": [
+      [ "torso", 6 ],
+      [ "head", 3 ],
+      [ "arm_l", 3 ],
+      [ "arm_r", 3 ],
+      [ "hand_l", 1 ],
+      [ "hand_r", 1 ],
+      [ "leg_l", 5 ],
+      [ "leg_r", 5 ],
+      [ "foot_l", 2 ],
+      [ "foot_r", 2 ]
+    ],
+    "flags": [ "BIONIC_TOGGLED", "BIONIC_NPC_USABLE" ],
+    "trigger_cost": "1 J"
+  }
+]

@@ -1,0 +1,380 @@
+[
+  {
+    "id": "nano_blade",
+    "type": "GENERIC",
+    "name": "纳米长剑",
+    "category": "weapons",
+    "looks_like": "broadsword",
+    "description": "这把长剑相当锋利,并且配备了手柄保护使用者的双手,在不使用的时候可以将其收进手柄当中.",
+    "symbol": "{",
+    "color": "light_gray",
+    "volume": 1,
+    "weight": 50,
+    "techniques": [
+      "SPIN",
+      "WIDE",
+      "RAPID"
+    ],
+    "cutting": 75,
+    "to_hit": 3,
+    "price": 50000,
+    "material": "nanite",
+    "flags": [
+      "TRADER_AVOID",
+      "SHEATH_KNIFE"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        3
+      ],
+      [
+        "BUTCHER",
+        20
+      ]
+    ]
+  },
+  {
+    "id": "nano_dagger",
+    "type": "GENERIC",
+    "name": "纳米匕首",
+    "category": "weapons",
+    "looks_like": "punch_dagger",
+    "description": "这把匕首相当锋利,并且配备了手柄保护使用者的双手,在不使用的时候可以将其收进手柄当中.",
+    "symbol": "{",
+    "color": "light_gray",
+    "volume": "50ml",
+    "weight": 25,
+    "techniques": [
+      "RAPID"
+    ],
+    "cutting": 45,
+    "to_hit": 3,
+    "price": 50000,
+    "material": "nanite",
+    "flags": [
+      "STAB",
+      "UNARMED_WEAPON",
+      "TRADER_AVOID",
+      "SHEATH_KNIFE"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        4
+      ],
+      [
+        "CUT_FINE",
+        7
+      ],
+      [
+        "BUTCHER",
+        80
+      ]
+    ]
+  },
+  {
+    "id": "nano_spear",
+    "type": "GENERIC",
+    "name": "纳米长矛",
+    "category": "weapons",
+    "looks_like": "pike",
+    "description": "这把长矛相当锋利,并且配备了额外的助力器,在不使用的时候可以将其收缩成一根小管子.",
+    "symbol": "{",
+    "color": "light_gray",
+    "volume": 4,
+    "weight": 648,
+    "techniques": [
+      "WBLOCK_2",
+      "SWEEP",
+      "SPIN",
+      "WIDE",
+      "RAPID"
+    ],
+    "cutting": 45,
+    "bashing": 45,
+    "to_hit": 3,
+    "price": 50000,
+    "material": "nanite",
+    "flags": [
+      "TRADER_AVOID",
+      "SHEATH_KNIFE",
+      "SHEATH_SWORD",
+      "SHEATH_SPEAR",
+      "STAB",
+      "REACH_ATTACK",
+      "MESSY"
+    ]
+  },
+  {
+    "abstract": "nanogun",
+    "type": "GUN",
+    "name": "nanotech gun",
+    "description": "You shouldn't see this.",
+    "symbol": "(",
+    "color": "light_gray",
+    "weight": "5 kg",
+    "volume": 1,
+    "price": 500000,
+    "material": "nanite",
+    "ammo": "nanite_ammo",
+    "flags": [
+      "NEVER_JAMS",
+      "NONCONDUCTIVE",
+      "TRADER_AVOID",
+      "WATERPROOF_GUN"
+    ],
+    "pocket_data": [ { "pocket_type": "MAGAZINE_WELL", "item_restriction": [ "nano_wire_mag", "nano_dart_mag","nano_blade_mag","nano_deathcloud_mag","nano_mag_empty" ] } ],
+    "bashing": 0,
+    "cutting": 0,
+    "to_hit": 0,
+    "durability": 10,
+    "magazine_well": 1,
+    "reload": 30,
+    "magazines": [
+      [
+        "nanite_ammo",
+        [
+          "nano_dart_mag",
+          "nano_blade_mag",
+          "nano_wire_mag"
+        ]
+      ]
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "nano_shredder",
+    "type": "GUN",
+    "name": "纳米霰弹枪",
+    "copy-from": "nanogun",
+    "description": "纳米霰弹枪,基于装填的弹芯类型,可以发射出不同构型的单分子弹药.",
+    "looks_like": "rm614_lmg",
+    "weight": 1844,
+    "skill": "shotgun",
+    "ammo": "nanite_ammo",
+    "volume": 8,
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": 9,
+      "armor_penetration": 15
+    },
+    "range": 2,
+    "dispersion": 400,
+    "sight_dispersion": 80,
+    "aim_speed": 4,
+    "recoil": 90,
+    "modes": [
+      [
+        "DEFAULT",
+        "blast",
+        5,
+        "SIMULTANEOUS"
+      ],
+      [
+        "BURST",
+        "auto",
+        20
+      ]
+    ]
+  },
+  {
+    "id": "nano_pistol",
+    "type": "GUN",
+    "name": "纳米手枪",
+    "copy-from": "nanogun",
+    "description": "纳米手枪,基于装填的弹芯类型,可以发射出不同构型的单分子弹药.",
+    "looks_like": "needlepistol",
+    "weight": 1096,
+    "price": 250000,
+    "skill": "pistol",
+    "volume": 4,
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": 1,
+      "armor_penetration": 15
+    },
+    "range": 4,
+    "dispersion": 60,
+    "sight_dispersion": 20,
+    "aim_speed": 6,
+    "recoil": 10,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "BURST",
+        "burst",
+        5,
+        "SIMULTANEOUS"
+      ],
+      [
+        "AUTO",
+        "auto",
+        15
+      ]
+    ]
+  },
+  {
+    "id": "nano_rifle",
+    "type": "GUN",
+    "name": "纳米步枪",
+    "copy-from": "nanogun",
+    "description": "纳米步枪,基于装填的弹芯类型,可以发射出不同构型的单分子弹药.",
+    "looks_like": "rm11b_sniper_rifle",
+    "weight": 1844,
+    "skill": "rifle",
+    "volume": 8,
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": 1,
+      "armor_penetration": 15
+    },
+    "range": 12,
+    "dispersion": 0,
+    "sight_dispersion": 0,
+    "aim_speed": 20,
+    "recoil": 10,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "BURST",
+        "burst",
+        10,
+        "SIMULTANEOUS"
+      ],
+      [
+        "AUTO",
+        "auto",
+        25
+      ]
+    ]
+  },
+  {
+    "id": "nano_smg",
+    "type": "GUN",
+    "name": "纳米冲锋枪",
+    "copy-from": "nanogun",
+    "description": "纳米冲锋枪,基于装填的弹芯类型,可以发射出不同构型的单分子弹药.",
+    "looks_like": "rm360_carbine",
+    "weight": 1992,
+    "price": 375000,
+    "skill": "smg",
+    "volume": 6,
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": 4,
+      "armor_penetration": 15
+    },
+    "range": 2,
+    "dispersion": 200,
+    "sight_dispersion": 20,
+    "aim_speed": 4,
+    "recoil": 40,
+    "modes": [
+      [
+        "DEFAULT",
+        "burst",
+        5,
+        "SIMULTANEOUS"
+      ],
+      [
+        "BURST",
+        "auto",
+        25
+      ],
+      [
+        "FULL",
+        "maximum",
+        50
+      ]
+    ]
+  },
+  {
+    "id": "nano_launcher",
+    "type": "GUN",
+    "name": "纳米火箭筒",
+    "copy-from": "nanogun",
+    "description": "纳米火箭筒,可以发射大量纳米金属丝,威力巨大,可以摧毁一切.",
+    "looks_like": "mininuke_launcher",
+    "weight": 2000,
+    "skill": "launcher",
+    "ammo": "nanite_deathcloud_ammo",
+    "volume": 8,
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": 55,
+      "armor_penetration": 15
+    },
+    "range": 15,
+    "dispersion": 800,
+    "sight_dispersion": 50,
+    "aim_speed": 60,
+    "recoil": 550,
+    "magazines": [
+      [
+        "nanite_deathcloud_ammo",
+        [
+          "nano_deathcloud_mag"
+        ]
+      ]
+    ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "BLAST",
+        "blast",
+        5,
+        "SIMULTANEOUS"
+      ]
+    ]
+  }
+]

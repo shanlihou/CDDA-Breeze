@@ -1,0 +1,39 @@
+[
+  {
+    "id": "cc_bio_solar",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "subtypes": [ "BIONIC_ITEM" ],
+    "name": { "str": "CCL42光伏发电CBM" },
+    "description": "在你的背上安装了一组可伸缩的太阳能电池板。当处于阳光直射环境下时，它们会自动展开并缓慢为你的设备补充电量。--技术来自余波未尽之地",
+    "price": "35 USD",
+    "difficulty": 2
+  },
+  {
+    "id": "cc_bio_solar",
+    "type": "bionic",
+    "name": { "str": "CCL42光伏发电" },
+    "description": "安装在你的背部的是一组可伸缩且加固的太阳能电池板，形状像弯曲的蝴蝶翅膀。在阳光充足的情况下，它们会自动展开并缓慢为你补充能量水平。--来自余波未尽",
+    "occupied_bodyparts": [ [ "torso", 1 ] ],
+    "fuel_options": [ "sunlight" ],
+    "fuel_efficiency": 1.5,
+    "time": "1 s",
+    "flags": [ "BIONIC_POWER_SOURCE", "BIONIC_TOGGLED" ],
+    "activated_on_install": true
+  }, 
+  {
+        "type" : "recipe",
+    "result": "cc_bio_solar",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC供应CBM",
+    "skill_used": "firstaid",
+    "difficulty": 3,
+    "time": "1second",
+    "reversible": true,
+    "autolearn": true,
+    "components": [ [ [ "CCMODcoin", 230 ] ] ]
+  }
+  
+]

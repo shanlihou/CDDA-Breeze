@@ -1,0 +1,625 @@
+[
+  {
+    "id": "bloomers",
+    "type": "ARMOR",
+    "name": "灯笼裤",
+    "description": "一条舒适、宽松的白色裤子，穿在连衣裙下面但其他内衣外面。和你的帽子一样重要。",
+    "repairs_like": "jeans",
+    "volume": "1000 ml",
+    "weight": "200 g",
+    "price": 2500,
+    "price_postapoc": 500,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 1,
+    "symbol": "[",
+    "looks_like": "leg_warmers",
+    "color": "white",
+    "warmth": 5,
+    "armor": [
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_hip_l",
+          "leg_hip_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          2,
+          4
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_upper_l",
+          "leg_upper_r"
+        ],
+        "coverage": 35,
+        "encumbrance": [
+          2,
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cheongsam",
+    "type": "ARMOR",
+    "name": {
+      "str": "旗袍",
+      "str_pl": "旗袍"
+    },
+    "copy-from": "dress",
+    "description": "一件优雅的中式连衣裙，展现出从领口延伸到右侧末端的标志性侧缝，以及遍布表面的精致刺绣设计。上半身紧身且略感不适，短袖不是问题，侧缝通过巧妙的开衩让整块面料自然分隔，使腿部活动自如。",
+    "repairs_like": "dress",
+    "volume": "3500 ml",
+    "weight": "1000 g",
+    "price": 24000,
+    "price_postapoc": 65,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 0.2,
+    "symbol": "[",
+    "looks_like": "robe",
+    "color": "red",
+    "warmth": 10,
+    "armor": [
+      {
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "specifically_covers": [
+          "arm_shoulder_l",
+          "arm_shoulder_r"
+        ],
+        "coverage": 8,
+        "encumbrance": [
+          0,
+          2
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_hip_l",
+          "leg_hip_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          2,
+          4
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_upper_l",
+          "leg_upper_r"
+        ],
+        "coverage": 95,
+        "encumbrance": [
+          2,
+          4
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_knee_l",
+          "leg_knee_r"
+        ],
+        "coverage": 95,
+        "encumbrance": [
+          2,
+          4
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_lower_l",
+          "leg_lower_r"
+        ],
+        "coverage": 20,
+        "encumbrance": [
+          0,
+          2
+        ]
+      },
+      {
+        "covers": [
+          "torso"
+        ],
+        "coverage": 95,
+        "encumbrance": [
+          8,
+          16
+        ]
+      }
+    ],
+    "flags": [
+      "FANCY",
+      "VARSIZE"
+    ],
+    "//": "Generic below the knee version, no silk material so it's made of cotton instead"
+  },
+  {
+    "id": "cheongsam_medium",
+    "type": "ARMOR",
+    "name": {
+      "str": "旗袍（中）",
+      "str_pl": "旗袍（中）"
+    },
+    "copy-from": "cheongsam",
+    "description": "一件优雅的中式连衣裙，展现出从领口延伸到右侧末端的标志性侧缝，以及遍布表面的精致刺绣设计。这件比通常的短，勉强盖住膝盖以下。",
+    "repairs_like": "cheongsam",
+    "volume": "3000 ml",
+    "weight": "900 g",
+    "price": 22000,
+    "price_postapoc": 60,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 0.2,
+    "symbol": "[",
+    "looks_like": "dress",
+    "color": "red",
+    "warmth": 9,
+    "armor": [
+      {
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "specifically_covers": [
+          "arm_shoulder_l",
+          "arm_shoulder_r"
+        ],
+        "coverage": 8,
+        "encumbrance": [
+          0,
+          2
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_hip_l",
+          "leg_hip_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          2,
+          4
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_upper_l",
+          "leg_upper_r"
+        ],
+        "coverage": 95,
+        "encumbrance": [
+          2,
+          4
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_knee_l",
+          "leg_knee_r"
+        ],
+        "coverage": 45,
+        "encumbrance": [
+          0,
+          2
+        ]
+      },
+      {
+        "covers": [
+          "torso"
+        ],
+        "coverage": 95,
+        "encumbrance": [
+          8,
+          16
+        ]
+      }
+    ],
+    "flags": [
+      "FANCY",
+      "VARSIZE"
+    ],
+    "//": "Ends around 4-6 cm below the knee"
+  },
+  {
+    "id": "cheongsam_short",
+    "type": "ARMOR",
+    "name": {
+      "str": "旗袍（短）",
+      "str_pl": "旗袍（短）"
+    },
+    "copy-from": "cheongsam",
+    "description": "一件优雅的中式连衣裙，展现出从领口延伸到右侧末端的标志性侧缝，以及遍布表面的精致刺绣设计。这件很大胆，短到勉强盖住大腿，就像一件放大了二十倍优雅度的衬衫。",
+    "repairs_like": "cheongsam",
+    "volume": "2700 ml",
+    "weight": "750 g",
+    "price": 22000,
+    "price_postapoc": 60,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 0.2,
+    "symbol": "[",
+    "looks_like": "dress",
+    "color": "red",
+    "warmth": 9,
+    "armor": [
+      {
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "specifically_covers": [
+          "arm_shoulder_l",
+          "arm_shoulder_r"
+        ],
+        "coverage": 8,
+        "encumbrance": [
+          0,
+          2
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_hip_l",
+          "leg_hip_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          2,
+          4
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_upper_l",
+          "leg_upper_r"
+        ],
+        "coverage": 30,
+        "encumbrance": [
+          2,
+          4
+        ]
+      },
+      {
+        "covers": [
+          "torso"
+        ],
+        "coverage": 95,
+        "encumbrance": [
+          8,
+          16
+        ]
+      }
+    ],
+    "flags": [
+      "FANCY",
+      "VARSIZE"
+    ],
+    "//": "Covers one third of the thigh at best"
+  },
+  {
+    "id": "tai_chi_pants",
+    "type": "ARMOR",
+    "name": {
+      "str": "太极裤"
+    },
+    "description": "用于练习太极的白色宽松裤子。非常舒适。",
+    "volume": "2000 ml",
+    "weight": "350 g",
+    "price": 3000,
+    "price_postapoc": 50,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 0.15,
+    "symbol": "[",
+    "looks_like": "pants",
+    "color": "white",
+    "warmth": 4,
+    "armor": [
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "coverage": 85,
+        "encumbrance": [
+          1,
+          3
+        ]
+      }
+    ],
+    "flags": [
+      "VARSIZE"
+    ]
+  },
+  {
+    "id": "tang_shirt",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "唐装衬衫",
+    "copy-from": "longshirt",
+    "description": "一件具有典型中式风格的长袖衬衫。它有一个短而略带弹性的领子，用绳结代替纽扣，面料手感与普通长袖衬衫不同。",
+    "repairs_like": "longshirt",
+    "volume": "1000 ml",
+    "weight": "300 g",
+    "price": 2000,
+    "price_postapoc": 65,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 0.35,
+    "symbol": "[",
+    "looks_like": "longshirt",
+    "color": "light_gray",
+    "warmth": 6,
+    "armor": [
+      {
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "coverage": 90,
+        "encumbrance": [
+          2,
+          4
+        ]
+      },
+      {
+        "covers": [
+          "torso"
+        ],
+        "coverage": 90,
+        "encumbrance": [
+          2,
+          5
+        ]
+      }
+    ],
+    "flags": [
+      "VARSIZE"
+    ]
+  },
+  {
+    "id": "tang_suit",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "唐装",
+    "copy-from": "jacket_jean",
+    "description": "一件具有典型中式风格的长袖夹克。尽管看起来像衬衫，但它是穿在衬衫外面的，所以算作夹克。具有标志性的领子和代替纽扣的绳结，并带有内袋。特殊剪裁能保持整体形状，所以看起来不会宽松或肥大。穿上它让你想试试那些帅气的动作。",
+    "repairs_like": "jacket_jean",
+    "volume": "4000 ml",
+    "weight": "800 g",
+    "price": 6000,
+    "price_postapoc": 300,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 0.35,
+    "symbol": "[",
+    "looks_like": "jacket_jean",
+    "color": "white",
+    "warmth": 24,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "800 ml",
+        "max_contains_weight": "1 kg",
+        "max_item_length": "13 cm",
+        "moves": 150
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "800 ml",
+        "max_contains_weight": "1 kg",
+        "max_item_length": "13 cm",
+        "moves": 150
+      }
+    ],
+    "armor": [
+      {
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "coverage": 90,
+        "encumbrance": [
+          6,
+          10
+        ]
+      },
+      {
+        "covers": [
+          "torso"
+        ],
+        "coverage": 90,
+        "encumbrance": [
+          6,
+          12
+        ]
+      }
+    ],
+    "flags": [
+      "OUTER",
+      "POCKETS",
+      "VARSIZE"
+    ]
+  },
+  {
+    "id": "ribbon_black",
+    "type": "TOOL_ARMOR",
+    "name": "黑色丝带",
+    "description": "一条小小的黑色丝带，用来扎头发。",
+    "repairs_like": "tie_bow",
+    "volume": "200 ml",
+    "weight": "150 g",
+    "price": 1000,
+    "price_postapoc": 10,
+    "symbol": "[",
+    "color": "black",
+    "material": [
+      "cotton"
+    ],
+    "armor": [
+      {
+        "covers": [
+          "head"
+        ],
+        "coverage": 0,
+        "encumbrance": [
+          0,
+          0
+        ]
+      }
+    ],
+    "flags": [
+      "FANCY",
+      "NO_WEAR_EFFECT"
+    ]
+  },
+  {
+    "id": "ribbon_neck",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "颈饰丝带",
+      "str_pl": "颈饰丝带"
+    },
+    "copy-from": "tie_necktie",
+    "description": "一条系在蝴蝶结上的黑色丝带，用来代替领带。",
+    "repairs_like": "tie_necktie",
+    "volume": "600 ml",
+    "weight": "400 g",
+    "price": 1000,
+    "price_postapoc": 10,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 1,
+    "symbol": "[",
+    "color": "black",
+    "armor": [
+      {
+        "covers": [
+          "torso"
+        ],
+        "coverage": 5,
+        "encumbrance": [
+          0,
+          0
+        ]
+      }
+    ],
+    "flags": [
+      "FANCY",
+      "NO_WEAR_EFFECT",
+      "VARSIZE"
+    ]
+  },
+  {
+    "id": "socks_long",
+    "type": "ARMOR",
+    "name": {
+      "str": "长袜",
+      "str_pl": "长袜"
+    },
+    "description": "长袜，刚好到膝盖以下。",
+    "volume": "400 ml",
+    "weight": "50 g",
+    "price": 2000,
+    "price_postapoc": 500,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 0.2,
+    "symbol": "[",
+    "looks_like": "socks_wool",
+    "color": "black",
+    "warmth": 8,
+    "armor": [
+      {
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          1,
+          2
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_lower_l",
+          "leg_lower_r"
+        ],
+        "coverage": 25,
+        "encumbrance": [
+          2,
+          4
+        ]
+      }
+    ],
+    "flags": [
+      "SKINTIGHT",
+      "VARSIZE"
+    ]
+  }
+]

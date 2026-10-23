@@ -1,0 +1,24 @@
+[
+  {
+    "id": "seed_satsumaimo",
+    "type": "COMESTIBLE",
+    "copy-from": "seed",
+    "name": {
+      "str": "萨摩芋种子",
+      "str_pl": "萨摩芋种子"
+    },
+    "description": "一撮萨摩芋种子。它们又黑又小。",
+    "weight": "10 mg",
+    "//": "They look tiny so I'm assuming it's a bunch of them and not individual seeds",
+    "price": 50,
+    "stack_size": 10,
+    "seed_data": {
+      "plant_name": "萨摩芋",
+      "fruit": "satsumaimo",
+      "byproducts": [
+        "withered"
+      ],
+      "grow": "95 days"
+    }
+  }
+]

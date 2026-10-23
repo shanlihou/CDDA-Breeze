@@ -1,0 +1,74 @@
+[
+  {
+    "type": "mutation",
+    "id": "mmnl",
+    "name": {
+      "str": "蜗牛耐力"
+    },
+    "points": 99,
+    "description": "耐力上限暴增，恢复速度也大幅度提升",
+    "valid": false,
+    "purifiable": false,
+    "max_stamina_modifier": 100,
+    "stamina_regen_modifier": 5
+  },
+  {
+    "type": "mutation",
+    "id": "mmhf",
+    "name": {
+      "str": "蜗牛恢复"
+    },
+    "points": 99,
+    "description": "断肢恢复(超暴增)以及睡眠恢复增加",
+    "valid": false,
+    "purifiable": false,
+    "healing_resting": 10,
+    "mending_modifier": 100
+  },
+  {
+    "type": "mutation",
+    "id": "mmxy",
+    "name": {
+      "str": "蜗牛的隐蔽性"
+    },
+    "points": 99,
+    "description": "你几乎不可能再发出声音和自己的味道让其他怪物感知到",
+    "valid": false,
+    "purifiable": false,
+    "noise_modifier": 0.00,
+    "scent_modifier": 0.00
+  },
+  {
+    "type": "mutation",
+    "id": "mmlz",
+    "name": {
+      "str": "蜗牛小手"
+    },
+    "points": 99,
+    "description": "手部累赘-30",
+    "valid": false,
+    "purifiable": false,
+     "encumbrance_always": [
+      [
+        "hand_l",
+        -30
+      ],
+      [
+        "hand_r",
+        -30
+      ]
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "mmzl",
+    "name": {
+      "str": "蜗牛的智力(?)"
+    },
+    "points": 99,
+    "description": "超暴增阅读速度",
+    "valid": false,
+    "purifiable": false,
+    "reading_speed_multiplier": 0.00
+  }
+]

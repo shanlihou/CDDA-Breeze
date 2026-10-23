@@ -1,0 +1,217 @@
+[
+  {
+    "type": "vehicle_part",
+    "id": "SWP_frame_1",
+    "looks_like": "xlframe",
+    "name": "SWP轻型车架",
+    "description": "由SWP的I型戒指安装得来的载具部件，一个车架。它比看上去还要轻的多，并且可折叠。坚固程度却已经达到战地军用级别。可惜想批量产出几乎不可能。\n“贵的东西唯一的缺点就是贵。”",
+    "symbol": "#",
+    "color": "brown",
+    "broken_symbol": "#",
+    "broken_color": "brown",
+    "damage_modifier": 50,
+    "durability": 1000,
+    "volume": "20 L",
+    "item": "SWP_frame_1",
+    "location": "structure",
+    "standard_symbols": true,
+    "categories": [ "hull" ],
+    "difficulty": 0,
+    "folded_volume": "5 L",
+    "folding_time": "10 s",
+    "unfolding_time": "10 s",
+    "requirements": {
+    "install": {
+     "skills": [ [ "mechanics", 1 ] ],
+      "time": "8 m" },
+    "removal": {
+     "skills": [ [ "mechanics", 1 ] ],
+      "time": "12 m" },
+    "repair": {
+     "skills": [ [ "mechanics", 1 ] ],
+      "time": "12 m",
+     "using": [ [ "repair_welding_standard", 1 ] ] }
+      },
+    "breaks_into": [ { "item": "destiny_copper", "count": [ 100, 150 ] } ],
+    "flags": [ "MOUNTABLE", "INITIAL_PART" ],
+     "damage_reduction": {
+      "all": 70,
+      "bullet": 110
+   }
+  },
+  {
+    "type": "vehicle_part",
+    "id": "SWP_floorcargo_2",
+    "looks_like": "trunk_floor",
+    "name": "空间地板行李箱II型",
+    "description": "由SWP的II型戒指安装得来的载具部件，是一个安装在地板上的行李箱，容量比看上去多的多，依旧是可折叠结构。可惜的是，这款的反响并不如它的设计者想象中的好。\n“看起来大多数家伙更喜欢在杂乱无章的货物堆里步履蹒跚地扭曲爬行，而不是选择更优雅的可行走地板行李箱。”这段话太具有攻击性，因此发表此段言论的SWP高管现已被开除。",
+    "symbol": "#",
+    "color": "light_cyan",
+    "broken_symbol": "#",
+    "broken_color": "brown",
+    "categories": [ "cargo" ],
+    "damage_modifier": 50,
+    "durability": 600,
+    "size": "350 L",
+    "item": "SWP_floorcargo_2",
+    "location": "center",
+    "folded_volume": "5 L",
+    "folding_time": "1 m",
+    "unfolding_time": "1 m",
+    "difficulty": 0,
+    "requirements": {
+     "install": {
+      "skills": [ [ "mechanics", 2 ] ],
+      "time": "15 m",
+      "using": [ [ "welding_standard", 2 ] ] },
+     "removal": {
+      "skills": [ [ "mechanics", 2 ] ],
+      "time": "12 m" },
+     "repair": {
+      "skills": [ [ "mechanics", 2 ] ],
+      "time": "12 m",
+      "using": [ [ "repair_welding_standard", 1 ] ] }
+     },
+    "breaks_into": [ { "item": "destiny_copper", "count": [ 200, 300 ] } ],
+    "flags": [ "CARGO", "BOARDABLE", "AISLE" ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "SWP_fridge_3",
+    "looks_like": "minifridge",
+    "name": "功能空间冰柜III型",
+    "description": "由SWP的III型戒指安装得来的，冰箱样貌的部件。只是一个使用了空间折叠技术的大冰柜而已，所以依然需要用电。它并不高，并且很结实，所以你完全可以从这里通过。\n“可以储存各种东西的大型冰柜，专为那些不喜欢分类的家伙准备！”\n实际上，大多数人的使用原因只是因为它比一般的冰柜大。",
+    "symbol": "#",
+    "color": "light_blue",
+    "broken_symbol": "#",
+    "broken_color": "light_blue",
+    "categories": [ "cargo" ],
+    "location": "center",
+    "damage_modifier": 50,
+    "durability": 800,
+    "size": "750 L",
+    "item": "SWP_fridge_3",
+    "folded_volume": "30 L",
+    "folding_time": "1 m",
+    "unfolding_time": "1 m",
+    "epower": -45,
+    "difficulty": 0,
+    "requirements": {
+     "install": {
+      "skills": [ [ "mechanics", 4 ] ],
+      "time": "15 m",
+      "using": [ [ "welding_standard", 3 ] ] },
+     "removal": {
+      "skills": [ [ "mechanics", 4 ] ],
+      "time": "12 m" },
+     "repair": {
+      "skills": [ [ "mechanics", 1 ] ],
+      "time": "12 m",
+      "using": [ [ "repair_welding_standard", 1 ] ] }
+     },
+    "breaks_into": [ { "item": "destiny_copper", "count": [ 400, 600 ] } ],
+    "flags": [
+     "CARGO",
+     "BOARDABLE",
+     "COVERED",
+     "FREEZER",
+     "ENABLED_DRAINS_EPOWER"
+      ]
+  },
+  {
+    "type": "vehicle_part",
+    "looks_like": "f_utility_shelf",
+    "id": "SWP_cargo_4",
+    "name": "空间货架IV型",
+    "description": "由SWP的IV型戒指安装得来的载具部件，一个运用了空间折叠技术的货架。尽管容量极大，然而由于IV型戒指的价格问题，它的实用性并不强。\n“仿造实用货架外观设计的不实用物品，基地车狂热爱好者的终极组件。”",
+    "symbol": "#",
+    "color": "light_blue",
+    "broken_symbol": "#",
+    "broken_color": "light_blue",
+    "categories": [ "cargo" ],
+    "location": "center",
+    "damage_modifier": 50,
+    "durability": 1000,
+    "size": "1800 L",
+    "item": "SWP_cargo_4_part",
+    "difficulty": 0,
+    "requirements": {
+     "install": {
+      "skills": [ [ "mechanics", 6 ] ],
+      "time": "15 m",
+      "using": [ [ "welding_standard", 2 ] ] },
+     "removal": {
+      "skills": [ [ "mechanics", 6 ] ],
+      "time": "12 m" },
+     "repair": {
+      "skills": [ [ "mechanics", 6 ] ],
+      "time": "12 m",
+      "using": [ [ "repair_welding_standard", 1 ] ] }
+     },
+    "breaks_into": [ { "item": "destiny_copper", "count": [ 600, 800 ] } ],
+    "flags": [ "CARGO", "OBSTACLE" ]
+  },
+  {
+    "type": "vehicle_part",
+    "looks_like": "workbench_with_recharger",
+    "id": "SWP_table_4",
+    "name": "空间工作台IV型",
+    "description": "由SWP的IV型戒指安装得来的载具部件：配备了一个充电器的工作台。当你将手放到表面，你会发现手从工作台边缘开始进行比例缩小，到达它的中心时，你的手大概只有原来的半成大小，却感觉不到任何的异常。为了安全保证，你不能站在上面。\n“采用了试验版空间微缩技术，这样使用者就不会在长时制造中失去他们的双手！大概。”\n他刚刚说了“大概”，是吧？",
+    "symbol": "#",
+    "color": "light_blue",
+    "broken_symbol": "#",
+    "broken_color": "light_blue",
+    "categories": [ "utility" ],
+    "location": "center",
+    "damage_modifier": 50,
+    "durability": 1000,
+    "size": "560 L",
+    "item": "SWP_table_4_part",
+    "difficulty": 0,
+    "folded_volume": "50 L",
+    "folding_time": "3 m",
+    "unfolding_time": "3 m",
+    "requirements": {
+     "install": {
+      "skills": [ [ "mechanics", 6 ] ],
+      "time": "15 m",
+      "using": [ [ "welding_standard", 2 ] ] },
+     "removal": {
+      "skills": [ [ "mechanics", 6 ] ],
+      "time": "12 m" },
+     "repair": {
+      "skills": [ [ "mechanics", 6 ] ],
+      "time": "12 m",
+      "using": [ [ "repair_welding_standard", 1 ] ] }
+     },
+    "breaks_into": [ { "item": "destiny_copper", "count": [ 600, 800 ] } ],
+    "flags": [
+     "CARGO",
+     "OBSTACLE",
+     "FLAT_SURF",
+     "WORKBENCH",
+     "ENABLED_DRAINS_EPOWER",
+     "RECHARGE" ],
+    "workbench": { "multiplier": 1.3, "mass": 800000, "volume": "550L" },
+    "bonus": 120,
+    "epower": -50
+  },
+  {
+    "type": "vehicle_part",
+    "id": "GD_vp_tank1",
+    "name": "功能型空间水箱",
+    "item": "GS_container2",
+    "location": "fuel_source",
+    "symbol": "O",
+    "broken_color": "red",
+    "difficulty": 0,
+    "durability": 200,
+    "size": 1000,
+    "damage_modifier": 80,
+    "folded_volume": "2 ml",
+    "folding_time": "1 s",
+    "unfolding_time": "1 s",
+    "breaks_into": [ { "item": "destiny_copper", "count": [ 100, 125 ] } ],
+    "flags": [ "CARGO" ]
+  }
+]

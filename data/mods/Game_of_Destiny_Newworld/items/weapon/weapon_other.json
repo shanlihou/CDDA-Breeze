@@ -1,0 +1,81 @@
+[
+  {
+    "//": "定位：小说中朴柔的天命武装，混乱、魅惑特技。不低的消耗，逆势下扭转局面。",
+    "id": "GS_eq_star_charm",
+    "type": "TOOL",
+    "category": "GS_weapon",
+    "name": "明星光環",
+    "description": "「明星」特质凝聚的光环，魅惑周围敌人，短时间内成为你的簇拥，冷却时间48小时。",
+    "weight": "95 g",
+    "volume": "218 ml",
+    "material": [ "super_mt" ],
+    "symbol": "@",
+    "color": "red",
+    "charges_per_use": 48,
+    "relic_data": {
+     "charge_info": {
+      "regenerate_ammo": true,
+      "recharge_type": "periodic",
+      "time": "2 h"
+      }
+     },
+    "pocket_data": [
+     {
+     "pocket_type": "MAGAZINE",
+     "rigid": true,
+     "ammo_restriction": {
+      "destiny_fortune_type": 48
+       }
+      }
+     ],
+    "use_action": { "type": "cast_spell", "spell_id": "AEA_ENTRANCE", "no_fail": true, "level": 15 },
+    "flags": [ "NO_UNLOAD", "NO_RELOAD" ]
+  },
+  {
+    "id": "GS_wp_per3_mirror_illusion",
+    "type": "TOOL",
+    "category": "GS_weapon",
+    "name": "虚伪之镜",
+    "description": "「幻象」特质的天命武装，将现实渲染成幻想的模样，拿在手上能作为光源。\n\n主动技：虚伪之影，影响对手的感知与心智，震慑周围敌人并使其混乱，冷却时间24小时。",
+    "weight": "52 g",
+    "volume": "95 ml",
+    "material": [ "glass", "super_mt" ],
+    "symbol": "o",
+    "color": "light_cyan",
+    "charges_per_use": 24,
+    "relic_data": {
+      "charge_info": { "regenerate_ammo": true, "recharge_type": "periodic", "time": "2 h" },
+      "passive_effects": [ { "has": "WIELD", "condition": "ALWAYS", "effect": [ "AEA_LIGHT" ] } ]
+    },
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "destiny_fortune_type": 24 } } ],
+    "use_action": [
+      { "type": "cast_spell", "spell_id": "AEA_ENTRANCE", "no_fail": true, "level": 15 },
+      { "type": "cast_spell", "spell_id": "AEA_CONFUSED", "no_fail": true, "level": 15 }
+    ],
+    "effects": [ "ZERO_WEIGHT" ],
+    "flags": [ "NO_UNLOAD", "NO_RELOAD" ]
+  },
+  {
+    "id": "GS_wp_per4_mirror_illusion",
+    "type": "TOOL",
+    "category": "GS_weapon",
+    "name": { "str": "虚实之镜", "str_pl": "虚实之镜" },
+    "description": "「虚实」特质的天命武装，将现实渲染成幻想的模样，拿在手上时产生光源。冷却时间12小时。\n\n主动技能：幻惑，影响对手的感知与心智，使周围敌人产生震慑、混乱、魅惑效果，将敌人暂时转化为你的簇拥。\n\n※装备等级已封顶。",
+    "weight": "52 g",
+    "volume": "95 ml",
+    "material": [ "glass", "super_mt" ],
+    "symbol": "o",
+    "color": "light_cyan",
+    "charges_per_use": 12,
+    "relic_data": {
+      "charge_info": { "regenerate_ammo": true, "recharge_type": "periodic", "time": "2 h" },
+      "passive_effects": [ { "has": "WIELD", "condition": "ALWAYS", "effect": [ "AEA_LIGHT" ] } ] },
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "destiny_fortune_type": 24 } } ],
+    "use_action": [
+      { "type": "cast_spell", "spell_id": "AEA_ENTRANCE", "no_fail": true, "level": 15 },
+      { "type": "cast_spell", "spell_id": "AEA_CONFUSED", "no_fail": true, "level": 15 }
+    ],
+    "effects": [ "ZERO_WEIGHT" ],
+    "flags": [ "NO_UNLOAD", "NO_RELOAD" ]
+  }
+]

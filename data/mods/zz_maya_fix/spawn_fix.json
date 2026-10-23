@@ -1,0 +1,15 @@
+[
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "travel_spawn_maya_isherwood_second_floor",
+    "method": "json",
+    "object": {
+      "remove_npcs": [
+        { "unique_id": "TRAVEL_MAYA_SCARLETT", "x": 0, "y": 0 }
+      ],
+      "place_npcs": [
+        { "class": "TRAVEL_MAYA_SCARLETT", "unique_id": "TRAVEL_MAYA_SCARLETT", "x": 8, "y": 3 }
+      ]
+    }
+  }
+]

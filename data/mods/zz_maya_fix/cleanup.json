@@ -1,0 +1,174 @@
+[
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "zz_remove_maya_hub",
+    "method": "json",
+    "object": {
+      "remove_npcs": [
+        {
+          "unique_id": "TRAVEL_MAYA_SCARLETT",
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_ZZ_MAYA_AT_FARM",
+    "eoc_type": "ACTIVATION",
+    "condition": {
+      "or": [
+        {
+          "u_near_om_location": "horse_farm_isherwood_13_2ndfloor"
+        },
+        {
+          "u_near_om_location": "horse_farm_isherwood_13"
+        },
+        {
+          "u_near_om_location": "horse_farm_isherwood_14"
+        },
+        {
+          "u_near_om_location": "horse_farm_isherwood_12"
+        }
+      ]
+    },
+    "effect": [
+      {
+        "arithmetic": [
+          {
+            "global_val": "var",
+            "var_name": "zz_maya_at_farm"
+          },
+          "=",
+          {
+            "const": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_ZZ_MAYA_CLEANUP",
+    "recurrence": 5,
+    "condition": {
+      "and": [
+        {
+          "compare_int": [
+            {
+              "global_val": "var",
+              "var_name": "travel_maya_isherwood_spawned"
+            },
+            "==",
+            {
+              "const": 1
+            }
+          ]
+        },
+        {
+          "compare_int": [
+            {
+              "global_val": "var",
+              "var_name": "zz_maya_cleanup_done"
+            },
+            "!=",
+            {
+              "const": 1
+            }
+          ]
+        }
+      ]
+    },
+    "effect": [
+      {
+        "arithmetic": [
+          {
+            "global_val": "var",
+            "var_name": "zz_maya_at_farm"
+          },
+          "=",
+          {
+            "const": 0
+          }
+        ]
+      },
+      {
+        "u_run_npc_eocs": [
+          "EOC_ZZ_MAYA_AT_FARM"
+        ],
+        "unique_ids": [
+          "TRAVEL_MAYA_SCARLETT"
+        ]
+      },
+      {
+        "run_eocs": {
+          "id": "EOC_ZZ_MAYA_CLEAN_TRY",
+          "condition": {
+            "compare_int": [
+              {
+                "global_val": "var",
+                "var_name": "zz_maya_at_farm"
+              },
+              "!=",
+              {
+                "const": 1
+              }
+            ]
+          },
+          "effect": [
+            {
+              "mapgen_update": "zz_remove_maya_hub",
+              "target_var": {
+                "global_val": "travel_maya_isherwood_spawn_location"
+              }
+            },
+            {
+              "arithmetic": [
+                {
+                  "global_val": "var",
+                  "var_name": "zz_maya_cleanup_done"
+                },
+                "=",
+                {
+                  "const": 1
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "run_eocs": {
+          "id": "EOC_ZZ_MAYA_MARK_OK",
+          "condition": {
+            "compare_int": [
+              {
+                "global_val": "var",
+                "var_name": "zz_maya_at_farm"
+              },
+              "==",
+              {
+                "const": 1
+              }
+            ]
+          },
+          "effect": [
+            {
+              "arithmetic": [
+                {
+                  "global_val": "var",
+                  "var_name": "zz_maya_cleanup_done"
+                },
+                "=",
+                {
+                  "const": 1
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

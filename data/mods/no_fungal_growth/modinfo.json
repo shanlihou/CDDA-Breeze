@@ -14,7 +14,52 @@
     "type": "MONSTER",
     "name": { "str": "spore cloud" },
     "upgrades": false,
-    "special_attacks": [ [ "DISAPPEAR", 10 ] ],
+    "special_attacks": [ [ "DISAPPEAR", 1 ] ],
     "delete": { "special_attacks": [ "PLANT" ] }
+  },
+  {
+    "id": "mon_fungaloid",
+    "copy-from": "mon_fungaloid",
+    "type": "MONSTER",
+    "name": { "str": "fungaloid" },
+    "upgrades": false,
+    "special_attacks": [ [ "DISAPPEAR", 1 ] ],
+    "delete": { "special_attacks": [ "FUNGUS" ] }
+  },
+  {
+    "id": "mon_fungaloid_shambler",
+    "copy-from": "mon_fungaloid_shambler",
+    "type": "MONSTER",
+    "name": { "str": "fungaloid shambler" },
+    "upgrades": false,
+    "special_attacks": [ [ "DISAPPEAR", 1 ] ],
+    "delete": { "special_attacks": [ "FUNGUS" ] }
+  },
+  {
+    "id": "mon_zombie_smoker_fungus",
+    "copy-from": "mon_zombie_smoker_fungus",
+    "type": "MONSTER",
+    "name": { "str": "fungaloid shambler" },
+    "upgrades": false,
+    "special_attacks": [ [ "DISAPPEAR", 1 ] ],
+    "delete": { "special_attacks": [ "FUNGUS" ] }
+  },
+  {
+    "id": "mon_zombie_gasbag_fungus",
+    "copy-from": "mon_zombie_gasbag_fungus",
+    "type": "MONSTER",
+    "name": { "str": "fungaloid shambler" },
+    "upgrades": false,
+    "special_attacks": [ [ "DISAPPEAR", 1 ] ],
+    "delete": { "special_attacks": [ "FUNGUS" ] }
+  },
+  {
+    "id": "mon_boomer_fungus",
+    "copy-from": "mon_boomer_fungus",
+    "type": "MONSTER",
+    "name": { "str": "fungaloid shambler" },
+    "upgrades": false,
+    "special_attacks": [ [ "DISAPPEAR", 1 ] ],
+    "delete": { "special_attacks": [ "FUNGUS" ] }
   }
 ]

@@ -1,0 +1,138 @@
+[
+  {
+    "type": "mutation",
+    "id": "X孢子共生:力量",
+    "name": { "str": "X孢子共生:力量" },
+    "points": 1,
+    "description": "X孢子共生带来的力量强化，你的肌肉力量被孢子强化，大幅度增加",
+    "passive_mods": { "str_mod": 3 }
+  },
+  {
+    "type": "mutation",
+    "id": "X孢子共生:敏捷",
+    "name": { "str": "X孢子共生:敏捷" },
+    "points": 1,
+    "description": "X孢子共生带来的敏捷强化，你的敏捷能力已经大幅度强化",
+    "passive_mods": { "dex_mod": 3 }
+  },
+  {
+    "type": "mutation",
+    "id": "X孢子共生:智力",
+    "name": { "str": "X孢子共生:智力" },
+    "points": 1,
+    "description": "X孢子共生带来的智力强化，你的大脑共生了一部分孢子，以及大幅度增加",
+    "passive_mods": { "int_mod": 3 }
+  },
+  {
+    "type": "mutation",
+    "id": "X孢子共生:感知",
+    "name": { "str": "X孢子共生:感知" },
+    "points": 1,
+    "description": "X孢子共生带来的感知强化，你的感知能力已经大幅度增加",
+    "passive_mods": { "per_mod": 3 }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "X孢子共生:力量",
+    "effect": [ { "u_add_trait": "X孢子共生:力量" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "X孢子共生:敏捷",
+    "effect": [ { "u_add_trait": "X孢子共生:敏捷" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "X孢子共生:智力",
+    "effect": [ { "u_add_trait": "X孢子共生:智力" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "X孢子共生:感知",
+    "effect": [ { "u_add_trait": "X孢子共生:感知" } ]
+  },
+  {
+    "id": "X孢子共生:力量",
+    "type": "TOOL",
+    "name": { "str": "X孢子共生:力量" },
+    "description": "X孢子的共生阶段，X孢子会对人体的力量进行强化，<color_yellow>力量＋3</color>",
+    "weight": "10 g",
+    "volume": "10 ml",
+    "price": 10,
+    "price_postapoc": 0,
+    "to_hit": -3,
+    "bashing": 8,
+    "material": [ "flesh" ],
+    "symbol": ";",
+    "color": "light_green",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "description": "X孢子的共生阶段，X孢子会对人体的力量进行强化，<color_yellow>力量＋3</color>",
+      "effect_on_conditions": [ "X孢子共生:力量" ]
+    },
+    "flags": [ "SINGLE_USE" ]
+  },
+  {
+    "id": "X孢子共生:敏捷",
+    "type": "TOOL",
+    "name": { "str": "X孢子共生:敏捷" },
+    "description": "X孢子的共生阶段，X孢子会对人体的敏捷进行强化，<color_yellow>敏捷＋3</color>",
+    "weight": "10 g",
+    "volume": "10 ml",
+    "price": 10,
+    "price_postapoc": 0,
+    "to_hit": -3,
+    "bashing": 8,
+    "material": [ "flesh" ],
+    "symbol": ";",
+    "color": "light_green",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "description": "X孢子的共生阶段，X孢子会对人体的敏捷进行强化，<color_yellow>敏捷＋3</color>",
+      "effect_on_conditions": [ "X孢子共生:敏捷" ]
+    },
+    "flags": [ "SINGLE_USE" ]
+  },
+  {
+    "id": "X孢子共生:智力",
+    "type": "TOOL",
+    "name": { "str": "X孢子共生:智力" },
+    "description": "X孢子的共生阶段，X孢子会对人体的智力进行强化，<color_yellow>智力＋3</color>",
+    "weight": "10 g",
+    "volume": "10 ml",
+    "price": 10,
+    "price_postapoc": 0,
+    "to_hit": -3,
+    "bashing": 8,
+    "material": [ "flesh" ],
+    "symbol": ";",
+    "color": "light_green",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "description": "X孢子的共生阶段，X孢子会对人体的智力进行强化，<color_yellow>智力＋3</color>",
+      "effect_on_conditions": [ "X孢子共生:智力" ]
+    },
+    "flags": [ "SINGLE_USE" ]
+  },
+  {
+    "id": "X孢子共生:感知",
+    "type": "TOOL",
+    "name": { "str": "X孢子共生:感知" },
+    "description": "X孢子的共生阶段，X孢子会对人体的感知进行强化，<color_yellow>感知＋3</color>",
+    "weight": "10 g",
+    "volume": "10 ml",
+    "price": 10,
+    "price_postapoc": 0,
+    "to_hit": -3,
+    "bashing": 8,
+    "material": [ "flesh" ],
+    "symbol": ";",
+    "color": "light_green",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "description": "X孢子的共生阶段，X孢子会对人体的感知进行强化，<color_yellow>感知＋3</color>",
+      "effect_on_conditions": [ "X孢子共生:感知" ]
+    },
+    "flags": [ "SINGLE_USE" ]
+  }
+]

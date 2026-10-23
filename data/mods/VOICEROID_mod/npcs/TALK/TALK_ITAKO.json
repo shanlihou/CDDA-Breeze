@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_ITAKO_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"唉～……想要轻松赚钱啊～……",
+    "responses":[
+      { "text": "一起赚钱吧！(邀请加入队伍)", "topic": "TALK_ITAKO_SAN_2" },
+      { "text": "嗯...赚钱吗", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_ITAKO_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"我会展示妖狐的力量给你看！",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

@@ -1,0 +1,24 @@
+[
+    {
+      "type": "overmap_terrain",
+      "id": "wakening_land",
+      "name": "遗忘之地",
+      "sym": "+",
+      "color": "brown",
+      "see_cost": 2,
+	  "extras": "land",
+      "flags": [ "NO_ROTATE" ]
+    },{
+      "type" : "overmap_special",
+      "id" : "Wakening land",
+      "overmaps" : [
+          { "point":[0,0,0], "overmap": "wakening_land"}
+      ],
+      "locations" : [ "field" ],
+      "city_distance" : [10, 20],
+      "city_sizes" : [0, 6],
+      "occurrences" : [1, 1],
+      "rotate" : false,
+      "flags" : [ "GLOBALLY_UNIQUE" ]
+    }
+]

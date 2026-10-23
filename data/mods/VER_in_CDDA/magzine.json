@@ -1,0 +1,305 @@
+[
+    {
+        "id": "9x39MAG_rd20",
+        "type": "MAGAZINE",
+        "name": {
+          "str": "9x39mm弹20发弹夹"
+        },
+        "description": "OTs-14-4A(“闪电-4”)专用9x39mm弹弹夹，能装20发9x39mm子弹的弹夹.",
+        "weight": "200 g",
+        "volume": "200 ml",
+        "looks_like": "stanag30",
+        "longest_side": "190 mm",
+        "price": 600,
+        "price_postapoc": 200,
+        "material": [
+          "steel",
+          "plastic"
+        ],
+        "symbol": "#",
+        "color": "light_gray",
+        "ammo_type": [
+          "9x39"
+        ],
+        "reload_time":100,
+        "flags": [
+          "MAG_COMPACT",
+          "BELT_CLIP"
+        ],
+        "pocket_data": [
+          {
+            "pocket_type": "MAGAZINE",
+            "rigid": true,
+            "ammo_restriction": {
+              "9x39": 20
+            }
+          }
+        ]
+    },
+    {
+        "id": "9x39MAG_rd10",
+        "type": "MAGAZINE",
+        "name": {
+          "str": "9x39mm弹10发弹夹"
+        },
+        "description": "VSS Vintorez狙击步枪专用9x39mm弹弹夹，能装10发9x39mm子弹的弹夹.",
+        "weight": "130 g",
+        "volume": "130 ml",
+        "looks_like": "stanag30",
+        "longest_side": "130 mm",
+        "price": 600,
+        "price_postapoc": 200,
+        "material": [
+          "steel",
+          "plastic"
+        ],
+        "symbol": "#",
+        "color": "light_gray",
+        "ammo_type": [
+          "9x39"
+        ],
+        "reload_time":100,
+        "flags": [
+          "MAG_COMPACT",
+          "BELT_CLIP"
+        ],
+        "pocket_data": [
+          {
+            "pocket_type": "MAGAZINE",
+            "rigid": true,
+            "ammo_restriction": {
+              "9x39": 10
+            }
+          }
+        ]
+    },
+    {
+        "id": "9x39MAG_rd9",
+        "type": "MAGAZINE",
+        "name": {
+          "str": "内务部手枪弹夹"
+        },
+        "description": "苏联内务部手枪专用9x39mm弹弹夹，能装9发9x39mm子弹的弹夹.",
+        "weight": "80 g",
+        "volume": "60 ml",
+        "looks_like": "stanag30",
+        "longest_side": "80 mm",
+        "price": 600,
+        "price_postapoc": 200,
+        "material": [
+          "steel",
+          "plastic"
+        ],
+        "symbol": "#",
+        "color": "light_gray",
+        "ammo_type": [
+          "9x39"
+        ],
+        "reload_time":100,
+        "flags": [
+          "MAG_COMPACT",
+          "BELT_CLIP"
+        ],
+        "pocket_data": [
+          {
+            "pocket_type": "MAGAZINE",
+            "rigid": true,
+            "ammo_restriction": {
+              "9x39": 9
+            }
+          }
+        ]
+    },
+    {
+      "id": "exodiimag_OTs-14",
+      "type": "MAGAZINE",
+      "name": {
+        "str": "OTs-14E用-12.3ln弹30发弹夹"
+      },
+      "description": "OTs-14E(“闪电-4”)专用12.3ln弹弹夹，能装30发12.3ln子弹的弹夹.",
+      "weight": "400 g",
+      "volume": "300 ml",
+      "looks_like": "stanag30",
+      "longest_side": "210 mm",
+      "price": 600,
+      "price_postapoc": 200,
+      "material": [
+        "steel",
+        "plastic"
+      ],
+      "symbol": "#",
+      "color": "light_gray",
+      "ammo_type": [
+        "123ln"
+      ],
+      "reload_time":100,
+      "flags": [
+        "MAG_COMPACT",
+        "BELT_CLIP"
+      ],
+      "pocket_data": [
+        {
+          "pocket_type": "MAGAZINE",
+          "rigid": true,
+          "ammo_restriction": {
+            "123ln": 30
+          }
+        }
+      ]
+  },
+  {
+    "id": "AA12MAG_rd8",
+    "looks_like": "shotbelt_20",
+    "type": "MAGAZINE",
+    "name": { "str": "AA-12 8发弹夹" },
+    "description": "一个可拆卸式的8发盒型弹夹，为AA-12供弹",
+    "weight": "210 g",
+    "volume": "500 ml",
+    "price": 4500,
+    "price_postapoc": 100,
+    "material": [ "plastic" ],
+    "symbol": "#",
+    "color": "dark_gray",
+    "ammo_type": [ "shot" ],
+    "flags": [ "MAG_COMPACT" ],
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "shot": 8 } } ]
+  },
+  {
+    "id": "AA12MAG_rd20",
+    "looks_like": "shotbelt_20",
+    "type": "MAGAZINE",
+    "name": { "str": "AA-12 20发弹夹" },
+    "description": "一个可拆卸式的20发鼓型弹夹，为AA-12供弹",
+    "weight": "600 g",
+    "volume": "600 ml",
+    "price": 10000,
+    "price_postapoc": 300,
+    "material": [ "plastic" ],
+    "symbol": "#",
+    "color": "dark_gray",
+    "ammo_type": [ "shot" ],
+    "flags": [ "MAG_COMPACT" ],
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "shot": 20 } } ]
+  },
+  {
+    "id": "AA12MAG_rd32",
+    "looks_like": "shotbelt_20",
+    "type": "MAGAZINE",
+    "name": { "str": "AA-12 32发弹鼓" },
+    "description": "一个可拆卸式的32发鼓型弹夹，为AA-12供弹",
+    "weight": "1210 g",
+    "volume": "900 ml",
+    "price": 14000,
+    "price_postapoc": 500,
+    "material": [ "plastic" ],
+    "symbol": "#",
+    "color": "dark_gray",
+    "ammo_type": [ "shot" ],
+    "flags": [ "MAG_BULKY" ],
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "shot": 32 } } ]
+  },
+  {
+    "id": "HARMAG_rd25",
+    "looks_like": "shotbelt_20",
+    "type": "MAGAZINE",
+    "name": { "str": "霍特自动步枪 25发弹鼓" },
+    "description": "一个老式的25发弹鼓，为霍特自动步枪供弹",
+    "weight": "1210 g",
+    "volume": "500 ml",
+    "price": 6000,
+    "price_postapoc": 500,
+    "material": [ "plastic" ],
+    "symbol": "#",
+    "color": "dark_gray",
+    "ammo_type": [ "762R" ],
+    "flags": [ "MAG_BULKY" ],
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "762R": 25 } } ]
+  },
+  {
+    "id": "coolant_tank",
+    "looks_like": "nitrogen_tank",
+    "type": "MAGAZINE",
+    "name": { "str": "急冻射流步枪冷却剂罐" },
+    "description": "一个封闭的很好的金属罐，上面写着“急冻射流步枪冷却剂罐几个大字”，并标注不要打开,底下还有研究员Z偷偷写上去的冷笑话",
+    "weight": "200 g",
+    "volume": "720 ml",
+    "price": 30000,
+    "price_postapoc": 10000,
+    "material": [ "plastic","steel" ],
+    "symbol": "#",
+    "color": "dark_gray",
+    "ammo_type": [ "coolant" ],
+    "flags": [ "MAG_BULKY","NO_UNLOAD","NO_RELOAD" ],
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "coolant": 50 } } ]
+  },
+  {
+    "id": "robofac40_40",
+    "looks_like": "calicomag",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "HWP 40发弹匣 (.40S&W)"
+    },
+    "description": "一个高容量40发盒式弹匣，可用于Hub 01混合武器平台。",
+    "weight": "280 g",
+    "volume": "400 ml",
+    "longest_side": "400 mm",
+    "price": 8500,
+    "price_postapoc": 1000,
+    "material": [
+      "plastic",
+      "steel"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [
+      "40"
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "40": 40
+        }
+      }
+    ]
+  },
+  {
+    "id": "robofac40_45",
+    "looks_like": "calicomag",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "HWP 40发弹匣 (.45ACP)"
+    },
+    "description": "一个中容量40发盒式弹匣，可用于Hub 01混合武器平台。",
+    "weight": "280 g",
+    "volume": "400 ml",
+    "longest_side": "400 mm",
+    "price": 8500,
+    "price_postapoc": 1000,
+    "material": [
+      "plastic",
+      "steel"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [
+      "45"
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "45": 40
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,75 @@
+[
+ {
+  "id": "CC_tank",
+  "type": "vehicle_part",
+  "name": {
+   "str": "CC加温油箱（80升）"
+  },
+  "copy-from": "fridgetank",
+  "item": "heattank",
+  "location": "fuel_source",
+  "variants": [
+   {
+    "symbols": "O",
+    "symbols_broken": "#"
+   }
+  ],
+  "color": "light_gray",
+  "broken_color": "light_gray",
+  "durability": 1000,
+  "damage_reduction": {
+   "all": 999999
+  },
+  "damage_modifier": 10,
+  "epower": -10,
+  "folded_volume": "8 L",
+  "cargo_weight_modifier": 0,
+  "breaks_into": [
+   {
+    "item": "heattank"
+   }
+  ],
+  "description": "一个方便的水箱。装入车辆引擎所对应消耗的燃料后，引擎启动时将会自动从对应的水箱内抽取燃料。装入水或其他液体后，可以在车辆水龙头处获取对应液体。你也可以使用一根橡胶软管从水箱中抽取液体。",
+  "requirements": {
+   "install": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "removal": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "repair": {
+    "skills": [
+     [
+      "tailor",
+      1
+     ]
+    ],
+    "time": "150 s",
+    "using": [
+     [
+      "adhesive",
+      1
+     ]
+    ]
+   }
+  },
+  "flags": [
+   "FLUIDTANK",
+   "HEATED_TANK",
+   "ENABLED_DRAINS_EPOWER"
+  ],
+  "symbol": "&"
+ }
+]

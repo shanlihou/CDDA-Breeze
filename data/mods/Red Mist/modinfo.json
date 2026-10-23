@@ -1,0 +1,30 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "Red Mist",
+    "name": "<color_red>殷红迷雾</color>",
+    "authors": [
+      "Horsemen"
+    ],
+    "description": "添加了一个武术，只能开局获得。",
+    "version": "DDA version, update 2/26/2023",
+    "category": "content",
+    "dependencies": [
+      "dda"
+    ]
+  },
+    {
+    "type": "mutation",
+    "id": "MARTIAL_ARTS_REDMIST",
+    "name": {
+      "str": "红雾传说"
+    },
+    "points": 6,
+    "description": "殷红迷雾之页。",
+    "starting_trait": true,
+    "initial_ma_styles": [
+      "redmist_art"
+    ],
+    "valid": false
+  }
+]

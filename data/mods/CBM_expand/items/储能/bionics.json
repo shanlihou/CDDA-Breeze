@@ -1,0 +1,54 @@
+[
+  {
+    "id": "bio_power_storage_cascade",
+    "copy-from": "bionic_general_npc_usable",
+    "type": "BIONIC_ITEM",
+    "name": { "str": "储能模块组CBM" },
+    "looks_like": "bio_int_enhancer",
+    "description": "小型生化电池插件组，受体至少需要一个储能模块才能使用耗能型生化插件,同时还需要至少一种供能型生化插件为其充能。\n这是级联版本，共级联了6块储能模块CBM。可以为受体增加600点生化能量储备上限。",
+    "price": 2400000,
+    "price_postapoc": 3000,
+    "weight": "200 g",
+    "difficulty": 1,
+    "installation_data": "AID_bio_power_storage"
+  },
+  {
+    "id": "bio_power_storage_mkII_cascade",
+    "copy-from": "bionic_general_npc_usable",
+    "type": "BIONIC_ITEM",
+    "name": { "str": "储能模块Mk.II型组CBM" },
+    "looks_like": "bio_int_enhancer",
+    "description": "DoubleTech公司研发的新一代生化插件,旨在取代大受欢迎的第一代储能模块。\n这是级联版本，共级联了6块储能模块MK.II型CBM。\n可以为受体增加1500点能量储备上限。",
+    "price": 6000000,
+    "price_postapoc": 4500,
+    "weight": "600 g",
+    "difficulty": 1,
+    "installation_data": "AID_bio_power_storage_mkII"
+  },
+  {
+    "id": "bio_power_storage_mkIII",
+    "copy-from": "bionic_general_npc_usable",
+    "type": "BIONIC_ITEM",
+    "name": { "str": "储能模块Mk.III型CBM" },
+    "looks_like": "bio_int_enhancer",
+    "description": "通过超常的知识和动手能力，你创造出了DoubleTech公司所尚未实现的第三代储能模块。如果不是世界末日来临，DoubleTech公司一定会邀请你去成为他们的首席研究人员，但这话现在听起来像个地狱笑话。\n可以为受体增加1000点能量储备上限。\n由于技术基于二代储能模块，所以可以使用二代储能模块的安装数据安装。",
+    "price": 2000000,
+    "price_postapoc": 10000,
+    "weight": "300 g",
+    "difficulty": 1,
+    "installation_data": "AID_bio_power_storage_mkII"
+  },
+  {
+    "id": "bio_power_storage_mkIII_cascade",
+    "copy-from": "bionic_general_npc_usable",
+    "type": "BIONIC_ITEM",
+    "name": { "str": "储能模块Mk.III型组CBM" },
+    "looks_like": "bio_int_enhancer",
+    "description": "通过超常的知识和动手能力，你创造出了DoubleTech公司所尚未实现的第三代储能模块。如果不是世界末日来临，DoubleTech公司一定会邀请你去成为他们的首席研究人员，但这话现在听起来像个地狱笑话。\n这是级联版本，共级联了6块储能模块MK.III型CBM。可以为受体增加6000点能量储备上限。\n由于技术基于二代储能模块，所以可以使用二代储能模块的安装数据安装。",
+    "price": 10000000,
+    "price_postapoc": 60000,
+    "weight": "1000 g",
+    "difficulty": 1,
+    "installation_data": "AID_bio_power_storage_mkII"
+  }
+]

@@ -1,0 +1,95 @@
+[
+  {
+    "type": "effect_type",
+    "//":"检测角色初始化",
+    "id": "u_initialized"
+  },
+  {
+    "type": "effect_type",
+    "//":"检测天赋",
+    "id": "u_trait_sex_love"
+  },
+  {
+    "type": "effect_type",
+    "//":"检测天赋",
+    "id": "u_trait_sex_0"
+  },
+  {
+    "type": "effect_type",
+    "id": "heat",
+    "name": [ "旖念", "渴望", "发情", "失控" ],
+    "desc": [
+      "偶尔的性冲动，没有什么实际影响。",
+      "你从心底渴望一次放纵的性爱。",
+      "性欲填满了你的大脑--还有你的\"身体\"",
+      "你意识不到自己要做什么，除了做爱。"
+    ],
+    "max_intensity": 4,
+    "base_mods": {
+      "per_mod": [ -1 , 0 ]
+    },
+    "scaling_mods": {
+      "per_mod": [ -1 ],
+      "dex_mod": [ -1 ],
+      "int_mod": [ -1 , -2 ]
+    },
+    "rating": "bad"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_desire_effect_0",
+    "condition": {
+      "compare_int": [ { "u_val": "var", "var_name": "desire", "type": "int", "context": "欲望" }, ">", { "const": 250 } ]
+    },
+    "deactivate_condition":{
+      "not": { "u_has_effect": "heat", "intensity": 2 }
+    },
+    "effect":[
+      {
+        "u_add_effect": "heat", "intensity": 1, "duration": 5
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_desire_effect_1",
+    "condition": {
+      "compare_int": [ { "u_val": "var", "var_name": "desire", "type": "int", "context": "欲望" }, ">", { "const": 500 } ]
+    },
+    "deactivate_condition":{
+      "not": { "u_has_effect": "heat", "intensity": 3 }
+    },
+    "effect":[
+      {
+        "u_add_effect": "heat", "intensity": 2, "duration": 5
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_desire_effect_2",
+    "condition": {
+      "compare_int": [ { "u_val": "var", "var_name": "desire", "type": "int", "context": "欲望" }, ">", { "const": 750 } ]
+    },
+    "deactivate_condition":{
+      "not": { "u_has_effect": "heat", "intensity": 4 }
+    },
+    "effect":[
+      {
+        "u_add_effect": "heat", "intensity": 3, "duration": 5
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_desire_effect_3",
+    "condition": {
+      "compare_int": [ { "u_val": "var", "var_name": "desire", "type": "int", "context": "欲望" }, ">", { "const": 1000 } ]
+    },
+    "effect":[
+      {
+        "u_add_effect": "heat", "intensity": 4, "duration": 5
+      }
+    ]
+  }
+]

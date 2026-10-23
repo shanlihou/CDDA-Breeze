@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_AKARI_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"好饿，你有食物吗？",
+    "responses":[
+      { "text": "食物的话，我还有剩一些(邀请成为伙伴)", "topic": "TALK_AKARI_SAN_2" },
+      { "text": "可疑的家伙……", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_AKARI_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"好耶——！",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

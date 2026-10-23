@@ -1,0 +1,102 @@
+[
+	{
+        "type" : "mutation",
+        "id" : "PROF_HENSHIN",
+        "name" : "战斗记忆",
+        "points" : 0,
+        "description" : "虽然你忘记了大部分的事情，但至少你还记得应该怎么去战斗。激活该特性以施展甩手动作。",
+        "initial_ma_styles" : [ "style_henshin" ],
+        "valid": false,
+        "purifiable": false,
+        "profession": true,
+		"active": true,
+		"activated_eocs": [ "PROF_HENSHIN_effect" ],
+		"deactivated_eocs": [ "PROF_HENSHIN_effect" ],
+        "transform": { "target": "PROF_HENSHIN_PLUS", "active": true, "moves": 50 }
+    },{
+        "type" : "mutation",
+        "id" : "PROF_HENSHIN_PLUS",
+        "copy-from": "PROF_HENSHIN",
+        "transform": { "target": "PROF_HENSHIN", "active": false, "moves": 50 }
+    },{
+        "type" : "mutation",
+        "id" : "HENSHIN_MUTATION_1",
+        "name" : "变身负荷一级",
+        "points" : 0,
+        "description" : "变身给予你所向披靡的力量，同时也不断灼烧着你的精神。",
+		"mixed_effect": true,
+		"valid": false,
+        "purifiable": false,
+		"flags": [ "Henshin_Henshin_Flag" ]
+    },{
+        "type" : "mutation",
+        "id" : "HENSHIN_MUTATION_2",
+        "name" : "变身负荷二级",
+        "points" : 0,
+        "description" : "变身给予你所向披靡的力量，同时也不断灼烧着你的精神。",
+		"mixed_effect": true,
+		"valid": false,
+        "purifiable": false,
+		"flags": [ "Henshin_Henshin_Flag" ]
+    },{
+        "type" : "mutation",
+        "id" : "HENSHIN_MUTATION_3",
+        "name" : "变身负荷三级",
+        "points" : 0,
+        "description" : "变身给予你所向披靡的力量，同时也不断灼烧着你的精神。",
+		"mixed_effect": true,
+		"valid": false,
+        "purifiable": false,
+		"flags": [ "Henshin_Henshin_Flag" ]
+    },{
+        "type" : "mutation",
+        "id" : "HENSHIN_MUTATION_4",
+        "name" : "动能过载负荷",
+        "points" : 0,
+        "description" : "动能过载给予你靡坚不摧的力量，同时也不断灼烧着你的精神。",
+		"mixed_effect": true,
+		"valid": false,
+        "purifiable": false,
+		"flags": [ "Henshin_Overdrive_Flag" ]
+    },{
+        "type" : "mutation",
+        "id" : "PROF_HENSHIN_MISSION",
+        "name" : "完整记忆",
+        "points" : 0,
+        "description" : "你找回了所有你失去的记忆，这使你拥有了强大的精神力量，更不容易感到疲惫。激活该特性以摆出流氓蹲姿势。",
+		"valid": false,
+        "purifiable": false,
+        "profession": true,
+		"active": true,
+		"activated_eocs": [ "PROF_HENSHIN_effect_2" ],
+		"deactivated_eocs": [ "PROF_HENSHIN_effect_2" ],
+        "transform": { "target": "PROF_HENSHIN_MISSION_PLUS", "active": true, "moves": 100 },
+		"metabolism_modifier": -0.2,
+		"fatigue_modifier": -0.2
+    },{
+        "type" : "mutation",
+        "id" : "PROF_HENSHIN_MISSION_PLUS",
+        "copy-from": "PROF_HENSHIN_MISSION",
+        "transform": { "target": "PROF_HENSHIN_MISSION", "active": false, "moves": 100 }
+    },{
+        "type" : "mutation",
+        "id" : "PROF_HENSHIN_MISSION_2",
+        "name" : "坚强意志",
+        "points" : 0,
+        "description" : "与龙奥尔菲诺的激烈战斗使你的肉体得到成长，现在你能够突破自身极限，更持久地进行战斗。激活该特性以专注于闪避。",
+		"valid": false,
+        "purifiable": false,
+        "profession": true,
+		"active": true,
+		"activated_eocs": [ "PROF_HENSHIN_effect_3" ],
+		"deactivated_eocs": [ "PROF_HENSHIN_effect_3" ],
+        "transform": { "target": "PROF_HENSHIN_MISSION_2_PLUS", "active": true, "moves": 150 },
+		"cardio_multiplier": 1.2,
+		"stamina_regen_modifier": 0.2
+    },{
+        "type" : "mutation",
+        "id" : "PROF_HENSHIN_MISSION_2_PLUS",
+        "copy-from": "PROF_HENSHIN_MISSION_2",
+        "transform": { "target": "PROF_HENSHIN_MISSION_2", "active": false, "moves": 150 }
+    }
+]

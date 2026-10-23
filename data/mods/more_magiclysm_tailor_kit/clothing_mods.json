@@ -1,0 +1,227 @@
+[
+  {
+    "type": "clothing_mod",
+    "id": "black_dragon_scale_padded",
+    "flag": "black_dragon_scale_padded",
+    "item": "dragon_black_scale",
+    "implement_prompt": "附加黑龙鳞强化",
+    "destroy_prompt": "去除黑龙鳞附魔",
+    "mod_value": [
+      { "type": "acid", "value": 3, "round_up": true, "proportion": [ "coverage" ] },
+      { "type": "bash", "value": 2, "proportion": [ "thickness", "coverage" ] },
+      { "type": "cut", "value": 2, "proportion": [ "thickness", "coverage" ] },
+      { "type": "bullet", "value": 0.5, "proportion": [ "thickness", "coverage" ] },
+      { "type": "encumbrance", "value": 1, "round_up": true, "proportion": [ "coverage" ] }
+    ]
+  },
+  {
+    "type": "clothing_mod",
+    "id": "demon_chitin_piece_padded",
+    "flag": "demon_chitin_piece_padded",
+    "item": "demon_chitin_piece",
+    "implement_prompt": "附加恶魔甲壳强化",
+    "destroy_prompt": "去除恶魔甲壳附魔",
+    "mod_value": [
+      { "type": "fire", "value": 2, "round_up": true, "proportion": [ "coverage" ] },
+      { "type": "bash", "value": 1, "proportion": [ "thickness", "coverage" ] },
+      { "type": "cut", "value": 1, "proportion": [ "thickness", "coverage" ] },
+      { "type": "bullet", "value": 0.25, "proportion": [ "thickness", "coverage" ] },
+      { "type": "encumbrance", "value": 1, "round_up": true, "proportion": [ "coverage" ] }
+    ]
+  },
+  {
+    "type": "clothing_mod",
+    "id": "black_dragon_tanned_hide_padded",
+    "flag": "black_dragon_tanned_hide_padded",
+    "item": "black_dragon_tanned_hide",
+    "implement_prompt": "附加黑龙皮强化",
+    "destroy_prompt": "去除黑龙皮附魔",
+    "mod_value": [
+      { "type": "acid", "value": 5, "round_up": true, "proportion": [ "coverage" ] },
+      { "type": "bash", "value": 0.5, "proportion": [ "thickness", "coverage" ] },
+      { "type": "cut", "value": 0.5, "proportion": [ "thickness", "coverage" ] },
+      { "type": "bullet", "value": 1, "proportion": [ "thickness", "coverage" ] },
+      { "type": "encumbrance", "value": 3, "round_up": true, "proportion": [ "coverage" ] }
+    ]
+  },
+  {
+    "type": "clothing_mod",
+    "id": "peridot_padded",
+    "flag": "peridot_padded",
+    "item": "peridot",
+    "implement_prompt": "添加橄榄石附魔",
+    "destroy_prompt": "去除橄榄石附魔",
+    "mod_value": [
+      { "type": "acid", "value": 2, "round_up": true, "proportion": [ "thickness", "coverage" ] }
+    ]
+  },
+  {
+    "type": "clothing_mod",
+    "id": "aquamarine_padded",
+    "flag": "aquamarine_padded",
+    "item": "aquamarine",
+    "implement_prompt": "添加海蓝宝石附魔",
+    "destroy_prompt": "去除海蓝宝石附魔",
+    "mod_value": [
+      { "type": "warmth", "value": -5, "proportion": [ "coverage" ] }
+    ]
+  },
+  {
+    "type": "clothing_mod",
+    "id": "pearl_padded",
+    "flag": "pearl_padded",
+    "item": "pearl",
+    "implement_prompt": "添加珍珠附魔",
+    "destroy_prompt": "去除珍珠附魔",
+    "mod_value": [
+      { "type": "warmth", "value": 5, "proportion": [ "coverage" ] }
+    ]
+  },
+  {
+    "type": "clothing_mod",
+    "id": "tourmaline_padded",
+    "flag": "tourmaline_padded",
+    "item": "tourmaline",
+    "implement_prompt": "添加电气石附魔",
+    "destroy_prompt": "去除电气石附魔",
+    "mod_value": [
+      { "type": "cut", "value": -0.5, "proportion": [ "thickness", "coverage" ] },
+      { "type": "bullet", "value": -1, "proportion": [ "thickness", "coverage" ] },
+      { "type": "encumbrance", "value": -2, "proportion": [ "coverage" ] }
+    ]
+  },
+  {
+    "type": "clothing_mod",
+    "id": "garnet_padded",
+    "flag": "garnet_padded",
+    "item": "garnet",
+    "implement_prompt": "添加石榴石附魔",
+    "destroy_prompt": "去除石榴石附魔",
+    "mod_value": [
+      { "type": "fire", "value": 1, "proportion": [ "thickness", "coverage" ] }
+    ]
+  },
+  {
+    "type": "clothing_mod",
+    "id": "emerald_padded",
+    "flag": "emerald_padded",
+    "item": "emerald",
+    "implement_prompt": "添加祖母绿附魔",
+    "destroy_prompt": "去除祖母绿附魔",
+    "mod_value": [
+      { "type": "acid", "value": 5, "proportion": [ "thickness", "coverage" ] }
+    ]
+  },
+  {
+    "type": "clothing_mod",
+    "id": "amethyst_padded",
+    "flag": "amethyst_padded",
+    "item": "amethyst",
+    "implement_prompt": "添加紫水晶附魔",
+    "destroy_prompt": "去除紫水晶附魔",
+    "mod_value": [
+      { "type": "fire", "value": 0.5, "round_up": true, "proportion": [ "thickness", "coverage" ] },
+      { "type": "acid", "value": 0.5, "round_up": true, "proportion": [ "thickness", "coverage" ] },
+      { "type": "bash", "value": -1, "proportion": [ "thickness", "coverage" ] },
+      { "type": "cut", "value": -1, "proportion": [ "thickness", "coverage" ] },
+      { "type": "bullet", "value": -1, "proportion": [ "thickness", "coverage" ] },
+      { "type": "encumbrance", "value": -3, "round_up": true, "proportion": [ "coverage" ] }
+    ]
+  },
+  {
+    "type": "clothing_mod",
+    "id": "alexandrite_padded",
+    "flag": "alexandrite_padded",
+    "item": "alexandrite",
+    "implement_prompt": "添加紫翠玉附魔",
+    "destroy_prompt": "去除紫翠玉附魔",
+    "mod_value": [
+      { "type": "acid", "value": 1, "round_up": true, "proportion": [ "thickness", "coverage" ] },
+      { "type": "bash", "value": -0.5, "proportion": [ "thickness", "coverage" ] },
+      { "type": "cut", "value": -0.5, "proportion": [ "thickness", "coverage" ] },
+      { "type": "bullet", "value": -0.5, "proportion": [ "thickness", "coverage" ] },
+      { "type": "encumbrance", "value": -1, "round_up": true, "proportion": [ "coverage" ] }
+    ]
+  },
+  {
+    "type": "clothing_mod",
+    "id": "ruby_padded",
+    "flag": "ruby_padded",
+    "item": "ruby",
+    "implement_prompt": "添加红宝石附魔",
+    "destroy_prompt": "去除红宝石附魔",
+    "mod_value": [
+      { "type": "fire", "value": 1, "round_up": true, "proportion": [ "thickness", "coverage" ] },
+      { "type": "warmth", "value": 10, "round_up": true, "proportion": [ "coverage" ] }
+    ]
+  },
+  {
+    "type": "clothing_mod",
+    "id": "sapphire_padded",
+    "flag": "sapphire_padded",
+    "item": "sapphire",
+    "implement_prompt": "添加蓝宝石附魔",
+    "destroy_prompt": "去除蓝宝石附魔",
+    "mod_value": [
+      { "type": "fire", "value": -1, "round_up": true, "proportion": [ "thickness", "coverage" ] },
+      { "type": "warmth", "value": -20, "round_up": true, "proportion": [ "coverage" ] }
+    ]
+  },
+  {
+    "type": "clothing_mod",
+    "id": "blue_topaz_padded",
+    "flag": "blue_topaz_padded",
+    "item": "blue_topaz",
+    "implement_prompt": "添加蓝黄玉附魔",
+    "destroy_prompt": "去除蓝黄玉附魔",
+    "mod_value": [
+      { "type": "warmth", "value": -10, "round_up": true, "proportion": [ "coverage" ] },
+      { "type": "encumbrance", "value": 1, "round_up": true, "proportion": [ "coverage" ] }
+    ]
+  },
+  {
+    "type": "clothing_mod",
+    "id": "opal_padded",
+    "flag": "opal_padded",
+    "item": "opal",
+    "implement_prompt": "添加蛋白石附魔",
+    "destroy_prompt": "去除蛋白石附魔",
+    "mod_value": [
+      { "type": "bash", "value": 1, "round_up": true, "proportion": [ "thickness", "coverage" ] },
+      { "type": "warmth", "value": 15, "round_up": true, "proportion": [ "coverage" ] }
+    ]
+  },
+  {
+    "type": "clothing_mod",
+    "id": "citrine_padded",
+    "flag": "citrine_padded",
+    "item": "citrine",
+    "implement_prompt": "添加黄水晶附魔",
+    "destroy_prompt": "去除黄水晶附魔",
+    "mod_value": [
+      { "type": "fire", "value": -0.5, "round_up": true, "proportion": [ "thickness", "coverage" ] },
+      { "type": "acid", "value": -0.5, "round_up": true, "proportion": [ "thickness", "coverage" ] },
+      { "type": "bash", "value": 0.5, "proportion": [ "thickness", "coverage" ] },
+      { "type": "cut", "value": 0.5, "proportion": [ "thickness", "coverage" ] },
+      { "type": "bullet", "value": 0.5, "proportion": [ "thickness", "coverage" ] },
+      { "type": "warmth", "value": 10, "proportion": [ "coverage" ] },
+      { "type": "encumbrance", "value": 1, "round_up": true, "proportion": [ "coverage" ] }
+    ]
+  },
+  {
+    "type": "clothing_mod",
+    "id": "bulette_pearl_padded",
+    "flag": "bulette_pearl_padded",
+    "item": "bulette_pearl",
+    "implement_prompt": "添加鲨蜥兽珍宝附魔",
+    "destroy_prompt": "去除鲨蜥兽珍宝附魔",
+    "mod_value": [
+      { "type": "fire", "value": 0.5, "round_up": true, "proportion": [ "thickness", "coverage" ] },
+      { "type": "acid", "value": 0.5, "round_up": true, "proportion": [ "thickness", "coverage" ] },
+      { "type": "bash", "value": 0.5, "proportion": [ "thickness", "coverage" ] },
+      { "type": "cut", "value": 0.5, "proportion": [ "thickness", "coverage" ] },
+      { "type": "bullet", "value": 0.5, "proportion": [ "thickness", "coverage" ] },
+      { "type": "encumbrance", "value": 2, "round_up": true, "proportion": [ "coverage" ] }
+    ]
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "托卡马克核聚变发动机",
+    "copy-from": "engine_motor",
+    "type": "vehicle_part",
+    "name": { "str": "托卡马克核聚变发动机" },
+    "item": "托卡马克核聚变发动机",
+    "description": "一个平平无奇的圆盘状器械，谁也不会想到它蕴含着太阳的力量",
+    "rotor_diameter": -9999,
+    "durability": 4000,
+    "epower": 132000,
+    "power": 55550000,
+    "energy_consumption": "1 W",
+    "breaks_into": [ { "item": "steel_chunk", "count": [ 100, 120 ] } ],
+    "requirements": {
+      "install": { "skills": [ [ "mechanics", 10 ] ], "time": "60 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
+      "removal": { "skills": [ [ "mechanics", 10 ] ], "time": "30 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
+      "repair": { "skills": [ [ "mechanics", 10 ] ], "time": "60 m", "using": [ [ "vehicle_wrench_2", 1 ] ] }
+    },
+    "damage_reduction": { "all": 4096 },
+    "flags": [ "ROTOR", "ENGINE", "E_HIGHER_SKILL", "E_HEATER" ]
+  }
+]

@@ -1,0 +1,165 @@
+[
+  {
+    "type": "furniture",
+    "id": "wmzm",
+    "name": "蜗牛壳地板",
+    "description": "非常坚硬的地板，你不用担心突然有虫子钻破你的帐篷然后攻入后亭好的",
+    "symbol": ";",
+    "color": "green",
+    "move_cost_mod": 0,
+    "looks_like": "f_groundsheet",
+    "required_str": -1,
+    "flags": [ "TRANSPARENT", "INDOORS", "NOCOLLIDE", "SUN_ROOF_ABOVE" ],
+    "examine_action": "portable_structure",
+    "deployed_item": "zhaohuanzp",
+    "bash": {
+      "str_min": 999999,
+      "str_max": 999999,
+      "sound": "喵!",
+      "sound_fail": "喵喵!",
+      "items": [ { "item": "zhaohuanzp" } ],
+      "tent_centers": [ "f_groundsheet", "f_fema_groundsheet", "f_skin_groundsheet" ]
+    }
+  },
+  {
+  "type": "furniture",
+    "id": "mwzmkai",
+    "name": "蜗牛壳之门 关!",
+    "description": "门已经关闭了，无坚不摧，但是看好，否则可能会被人偷去当盾牌",
+    "symbol": ".",
+    "color": "blue",
+    "move_cost_mod": 0,
+    "required_str": -1,
+    "flags": [ "TRANSPARENT" ],
+    "close": "mwzmgb",
+    "looks_like": "t_door_metal_o",
+    "connects_to": "CANVAS_WALL",
+    "bash": {
+      "str_min": 999999,
+      "str_max": 999999,
+      "sound": "喵喵!",
+      "sound_fail": "喵喵喵!",
+      "sound_vol": 8,
+      "tent_centers": [ "f_groundsheet", "f_fema_groundsheet", "f_skin_groundsheet", "f_center_groundsheet" ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "mwzmgb",
+    "name": "蜗牛壳之门 开!",
+    "description": "猫の后♡门已经敞开",
+    "symbol": "+",
+    "color": "blue",
+    "move_cost_mod": -1,
+    "coverage": 100,
+    "required_str": -1,
+    "looks_like":"t_door_metal_lab_c",
+    "flags": [ "FLAMMABLE_HARD", "NOITEM", "DOOR", "BLOCK_WIND", "SUN_ROOF_ABOVE" ],
+    "open": "mwzmkai",
+    "connects_to": "CANVAS_WALL",
+    "bash": {
+      "str_min": 9999999,
+      "str_max": 9999999,
+      "sound": "rrrrip!",
+      "sound_fail": "slap!",
+      "sound_vol": 8,
+      "collapse_radius": 2,
+      "tent_centers": [ "f_center_groundsheet" ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "mwzmgzd",
+    "name": "蜗牛壳之门 关!",
+    "description": "门已经关闭了，无坚不摧，但是看好，否则可能会被人偷去当盾牌",
+    "symbol": ".",
+    "color": "blue",
+    "move_cost_mod": 0,
+    "required_str": -1,
+    "flags": [ "TRANSPARENT" ],
+    "close": "mwzmkqzd",
+    "examine_action": "portable_structure",
+    "deployed_item": "zdmwzm",
+    "looks_like": "t_door_metal_o",
+    "connects_to": "CANVAS_WALL",
+    "bash": {
+      "str_min": 999999,
+      "str_max": 999999,
+      "sound": "喵喵!",
+      "sound_fail": "喵喵喵!",
+      "sound_vol": 8,
+      "tent_centers": [ "f_groundsheet", "f_fema_groundsheet", "f_skin_groundsheet", "f_center_groundsheet" ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "mwzmkqzd",
+    "name": "蜗牛壳之门 开!",
+    "description": "猫の后♡门已经敞开",
+    "symbol": "+",
+    "color": "blue",
+    "move_cost_mod": -1,
+    "coverage": 100,
+    "required_str": -1,
+    "examine_action": "portable_structure",
+    "deployed_item": "zdmwzm",
+    "looks_like":"t_door_metal_lab_c",
+    "flags": [ "FLAMMABLE_HARD", "NOITEM", "DOOR", "BLOCK_WIND", "SUN_ROOF_ABOVE" ],
+    "open": "mwzmgzd",
+    "connects_to": "CANVAS_WALL",
+    "bash": {
+      "str_min": 9999999,
+      "str_max": 9999999,
+      "sound": "rrrrip!",
+      "sound_fail": "slap!",
+      "sound_vol": 8,
+      "collapse_radius": 2,
+      "tent_centers": [ "f_center_groundsheet" ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "mwdqb",
+    "name": "蜗牛壳墙壁",
+    "description": "极为坚硬的墙，你还担心睡觉PY被偷袭!吗？这个墙不管是浩克还是C4都不可能打破，你可以安心睡觉了",
+    "symbol": "#",
+    "color": "blue",
+    "move_cost_mod": -1,
+    "looks_like": "t_secretdoor_metal_c",
+    "examine_action": "portable_structure",
+    "deployed_item": "mwqb",
+    "coverage": 100,
+    "required_str": -1,
+    
+    "flags":  [ "NOITEM", "SUPPORTS_ROOF", "WALL", "NO_SCENT", "AUTO_WALL_SYMBOL", "MINEABLE", "BLOCK_WIND" ],
+    "connects_to": "CANVAS_WALL",
+   
+    "bash": {
+      "str_min": 999999,
+      "str_max": 999999,
+       "items": [ { "item": "mwqb" } ],
+      "sound": "爬!",
+      "sound_fail": "爬爬!"
+    }
+    },
+    {
+    "type": "furniture",
+    "id": "mwzq",
+    "name": "蜗牛壳之墙",
+    "description": "极为坚硬的墙，你还担心睡觉PY被偷袭!吗？这个墙不管是浩克还是C4都不可能打破，你可以安心睡觉了",
+    "symbol": "#",
+    "color": "blue",
+    "move_cost_mod": -1,
+    "looks_like": "t_secretdoor_metal_c",
+    "coverage": 100,
+    "required_str": -1,
+    "flags":  [ "NOITEM", "SUPPORTS_ROOF", "WALL", "NO_SCENT", "AUTO_WALL_SYMBOL", "MINEABLE", "BLOCK_WIND" ],
+    "connects_to": "CANVAS_WALL",
+    "bash": {
+      "str_min": 999999,
+      "str_max": 999999,
+      "sound": "爬!",
+      "sound_fail": "爬爬!"
+    }
+  }
+]

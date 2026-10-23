@@ -1,0 +1,34 @@
+[
+  {
+    "abstract": "helicopter_rotors",
+    "type": "vehicle_part",
+    "categories": [ "movement" ],
+    "location": "on_roof",
+    "symbol": "Y",
+    "color": "yellow",
+    "broken_symbol": "O",
+    "broken_color": "light_gray",
+    "folded_volume": 1000,
+    "flags": [ "ROTOR" ],
+    "description": "A set of aerofoil helicopter rotors, when spun at high speed, they generate thrust via lift."
+  },
+  {
+    "id": "反重力悬浮器",
+    "copy-from": "helicopter_rotors",
+    "type": "vehicle_part",
+    "name": { "str": "反重力悬浮器" },
+    "item": "反重力悬浮器",
+    "//": "rotor diameter is in meters",
+    "rotor_diameter": -9999,
+    "durability": 600000,
+    "description": "一款秘密研究的反重力悬浮器，看起来很重，但可以被轻易举起来，它需要一个引擎来带动，才能激活",
+    "damage_modifier": 300,
+    "requirements": {
+      "install": { "skills": [ [ "mechanics", 10 ] ], "time": "3 h", "using": [ [ "welding_standard", 300 ] ] },
+      "removal": { "skills": [ [ "mechanics", 10 ] ], "time": "3 h", "using": [ [ "welding_standard", 300 ] ] },
+      "repair": { "skills": [ [ "mechanics", 10 ], [ "fabrication", 5 ] ], "time": "30 m", "using": [ [ "welding_standard", 300 ] ] }
+    },
+    "breaks_into": [ { "item": "scrap", "count": [ 100, 300 ] }, { "item": "steel_chunk", "count": [ 60, 150 ] } ],
+    "damage_reduction": { "all": 4096 }
+  }
+]

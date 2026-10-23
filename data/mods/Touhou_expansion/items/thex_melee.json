@@ -1,0 +1,387 @@
+[
+  {
+    "id": "kanabo",
+    "type": "GENERIC",
+    "name": {
+      "str": "金棒",
+      "str_pl": "金棒"
+    },
+    "description": "一种传奇武器。据说是鬼所用的，据记载曾被强壮的士兵用来打断敌方战马的马腿，也许还能击穿盔甲。类似于狼牙棒，其“头部”覆盖着一个带有金属钉的六角形帽，而手柄末端附有一个厚铁环。由于尺寸较大，使用起来有些笨拙，你需要足够的力量才能使用它。",
+    "volume": "2100 ml",
+    "weight": "6000 g",
+    "longest_side": "120 cm",
+    "//": "Calculated as 4 * 110 cm wooden cylinder with a 5.5 * 60 cm octogonal iron cap, reduced weight. 10 cm metal ring not considered",
+    "price_postapoc": 350,
+    "to_hit": {
+      "grip": "weapon",
+      "length": "long",
+      "surface": "every",
+      "balance": "uneven"
+    },
+    "bashing": 46,
+    "cutting": 4,
+    "material": [
+      "iron",
+      "wood"
+    ],
+    "symbol": "/",
+    "looks_like": "bat",
+    "color": "black",
+    "techniques": [
+      "BRUTAL",
+      "SWEEP",
+      "WBLOCK_1",
+      "WIDE"
+    ],
+    "weapon_category": [
+      "GREAT_HAMMERS",
+      "MACES"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "MESSY"
+    ]
+  },
+  {
+    "id": "kanabo_spiked",
+    "type": "GENERIC",
+    "name": {
+      "str": "金棒（带刺）",
+      "str_pl": "金棒（带刺）"
+    },
+    "copy-from": "kanabo",
+    "description": "一种传奇武器。据说是鬼所用的，据记载曾被强壮的士兵用来打断敌方战马的马腿，也许还能击穿盔甲。看起来像一根铁棒，其“头部”是一个带有金属尖刺的六角棱柱，而手柄末端附有一个厚铁环。你需要极大的力量才能挥舞它。",
+    "bashing": 44,
+    "cutting": 8,
+    "flags": [
+      "DURABLE_MELEE",
+      "MESSY"
+    ]
+  },
+  {
+    "id": "kanabo_short",
+    "type": "GENERIC",
+    "name": {
+      "str": "金棒（短）",
+      "str_pl": "金棒（短）"
+    },
+    "copy-from": "kanabo",
+    "description": "一种传奇武器。据说是鬼所用的，据记载曾被强壮的士兵用来打断敌方战马的马腿，也许还能击穿盔甲。看起来像一根短铁棒，其“头部”是一个带有金属钉的六角棱柱，而手柄末端附有一个厚铁环。它非常重，所以你需要一些力量才能挥舞它。",
+    "volume": "1300 ml",
+    "weight": "5000 g",
+    "longest_side": "70 cm",
+    "//": "Calculated as 4 * 70 cm wooden cylinder with a 5.5 * 60 cm octogonal iron cap. 10 cm metal ring not considered",
+    "price_postapoc": 300,
+    "to_hit": {
+      "grip": "weapon",
+      "length": "short",
+      "surface": "every",
+      "balance": "neutral"
+    },
+    "bashing": 34,
+    "cutting": 4,
+    "techniques": [
+      "BRUTAL",
+      "SWEEP",
+      "WBLOCK_1",
+      "WIDE"
+    ],
+    "weapon_category": [
+      "GREAT_HAMMERS",
+      "MACES"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "MESSY"
+    ]
+  },
+  {
+    "id": "kanabo_short_spiked",
+    "type": "GENERIC",
+    "name": {
+      "str": "金棒（短，带刺）",
+      "str_pl": "金棒（短，带刺）"
+    },
+    "copy-from": "kanabo",
+    "description": "一种传奇武器。据说是鬼所用的，据记载曾被强壮的士兵用来打断敌方战马的马腿，也许还能击穿盔甲。看起来像一根短铁棒，其“头部”是一个带有金属尖刺的六角棱柱，而手柄末端附有一个厚铁环。它非常重，所以你需要一些力量才能挥舞它。",
+    "to_hit": {
+      "grip": "weapon",
+      "length": "short",
+      "surface": "every",
+      "balance": "neutral"
+    },
+    "bashing": 32,
+    "cutting": 8,
+    "flags": [
+      "DURABLE_MELEE",
+      "MESSY"
+    ]
+  },
+  {
+    "id": "kanabo_2h",
+    "type": "GENERIC",
+    "name": {
+      "str": "金棒（双手）",
+      "str_pl": "金棒（双手）"
+    },
+    "copy-from": "kanabo",
+    "description": "一把非常大的双头金棒。由一根长而粗壮的木杆组成，两端各有一个带钉的金属帽。重到需要双手才能挥舞，说被它击中会很痛都是轻描淡写。",
+    "volume": "4000 ml",
+    "weight": "11000 g",
+    "longest_side": "200 cm",
+    "//": "Calculated as a 4 * 200 cm wooden cylinder with two 6 * 60 cm octogonal iron caps, reduced weight",
+    "price_postapoc": 500,
+    "to_hit": {
+      "grip": "weapon",
+      "length": "long",
+      "surface": "any",
+      "balance": "neutral"
+    },
+    "bashing": 54,
+    "cutting": 4,
+    "material": [
+      "iron",
+      "wood"
+    ],
+    "symbol": "/",
+    "looks_like": "i_staff",
+    "color": "black",
+    "techniques": [
+      "BRUTAL",
+      "SPIN",
+      "SWEEP",
+      "WBLOCK_2",
+      "WIDE"
+    ],
+    "weapon_category": [
+      "GREAT_HAMMERS",
+      "QUARTERSTAVES"
+    ],
+    "flags": [
+      "ALWAYS_TWOHAND",
+      "DURABLE_MELEE",
+      "MESSY",
+      "REACH_ATTACK"
+    ]
+  },
+  {
+    "id": "kanabo_2h_spiked",
+    "type": "GENERIC",
+    "name": {
+      "str": "金棒（双手，带刺）",
+      "str_pl": "金棒（双手，带刺）"
+    },
+    "copy-from": "kanabo_2h",
+    "description": "一把非常大的双头金棒。由一根长而粗壮的木杆组成，两端各有一个带刺的金属帽。重到需要双手才能挥舞，说被它击中会很痛都是轻描淡写。",
+    "bashing": 52,
+    "cutting": 8,
+    "flags": [
+      "ALWAYS_TWOHAND",
+      "DURABLE_MELEE",
+      "MESSY",
+      "REACH_ATTACK"
+    ]
+  },
+  {
+    "id": "kanabo_oni",
+    "type": "GENERIC",
+    "name": {
+      "str": "铁金棒",
+      "str_pl": "铁金棒"
+    },
+    "copy-from": "kanabo",
+    "description": "一种传奇武器。据说是鬼所用的，据记载曾被强壮的士兵用来打断敌方战马的马腿，也许还能击穿盔甲。这一把很粗糙，完全金属制成，带有金属钉，一端有一个厚铁环。极其沉重，似乎使用者必须拥有超人的力量。",
+    "volume": "2300 ml",
+    "weight": "18000 g",
+    "longest_side": "120 cm",
+    "//": "Calculated as a 4.5 * 50 cm handle with a 5.5 * 60 cm octogon, iron density. 10 cm metal ring at the end not considered",
+    "price_postapoc": 350,
+    "to_hit": {
+      "grip": "weapon",
+      "length": "long",
+      "surface": "every",
+      "balance": "clumsy"
+    },
+    "bashing": 50,
+    "cutting": 6,
+    "material": [
+      "iron"
+    ],
+    "symbol": "/",
+    "looks_like": "bat",
+    "color": "black",
+    "techniques": [
+      "BRUTAL",
+      "SWEEP",
+      "WBLOCK_1",
+      "WIDE"
+    ],
+    "weapon_category": [
+      "GREAT_HAMMERS",
+      "MACES"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "MESSY"
+    ]
+  },
+  {
+    "id": "kanabo_oni_spiked",
+    "type": "GENERIC",
+    "name": {
+      "str": "铁金棒（带刺）",
+      "str_pl": "铁金棒（带刺）"
+    },
+    "copy-from": "kanabo",
+    "description": "一种传奇武器。据说是鬼所用的，据记载曾被强壮的士兵用来打断敌方战马的马腿，也许还能击穿盔甲。这一把很粗糙，完全金属制成，带有金属尖刺，一端有一个厚铁环。极其沉重，似乎使用者必须拥有超人的力量。",
+    "volume": "2300 ml",
+    "weight": "18000 g",
+    "longest_side": "120 cm",
+    "price_postapoc": 350,
+    "to_hit": {
+      "grip": "weapon",
+      "length": "long",
+      "surface": "every",
+      "balance": "clumsy"
+    },
+    "bashing": 46,
+    "cutting": 10,
+    "material": [
+      "iron"
+    ],
+    "symbol": "/",
+    "looks_like": "bat",
+    "color": "black",
+    "techniques": [
+      "BRUTAL",
+      "SWEEP",
+      "WBLOCK_1",
+      "WIDE"
+    ],
+    "weapon_category": [
+      "GREAT_HAMMERS",
+      "MACES"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "MESSY"
+    ]
+  },
+  {
+    "id": "kanabo_oni_2h",
+    "type": "GENERIC",
+    "name": {
+      "str": "铁金棒（双手）",
+      "str_pl": "铁金棒（双手）"
+    },
+    "copy-from": "kanabo_2h",
+    "description": "一把非常大的双头金棒。基本上是一根长长的黑色铁杆，两端各有一个带钉的金棒头。极其沉重，极其粗暴，极具破坏力。",
+    "volume": "13000 ml",
+    "weight": "50 kg",
+    "longest_side": "200 cm",
+    "//": "Calculated as a 5 * 200 cm iron cylinder with two 10 * 60 cm octogonal iron caps, halved weight",
+    "price_postapoc": 250,
+    "to_hit": {
+      "grip": "weapon",
+      "length": "long",
+      "surface": "any",
+      "balance": "neutral"
+    },
+    "bashing": 65,
+    "cutting": 5,
+    "material": [
+      "iron"
+    ],
+    "symbol": "/",
+    "looks_like": "kanabo_2h",
+    "color": "black",
+    "techniques": [
+      "BRUTAL",
+      "SPIN",
+      "SWEEP",
+      "WBLOCK_2",
+      "WIDE"
+    ],
+    "weapon_category": [
+      "GREAT_HAMMERS",
+      "QUARTERSTAVES"
+    ],
+    "flags": [
+      "ALWAYS_TWOHAND",
+      "DURABLE_MELEE",
+      "MESSY",
+      "REACH_ATTACK"
+    ]
+  },
+  {
+    "id": "kanabo_oni_2h_spiked",
+    "type": "GENERIC",
+    "name": {
+      "str": "铁金棒（双手，带刺）",
+      "str_pl": "铁金棒（双手，带刺）"
+    },
+    "copy-from": "kanabo_2h",
+    "description": "一把非常大的双头金棒。基本上是一根长长的黑色铁杆，两端各有一个带刺的金棒头。极其沉重，极其粗暴，极具破坏力。",
+    "bashing": 62,
+    "cutting": 10,
+    "techniques": [
+      "BRUTAL",
+      "SPIN",
+      "SWEEP",
+      "WBLOCK_2",
+      "WIDE"
+    ],
+    "weapon_category": [
+      "GREAT_HAMMERS",
+      "QUARTERSTAVES"
+    ],
+    "flags": [
+      "ALWAYS_TWOHAND",
+      "DURABLE_MELEE",
+      "MESSY",
+      "REACH_ATTACK"
+    ]
+  },
+  {
+    "id": "tengu_sword",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "天狗剑",
+      "str_pl": "天狗剑"
+    },
+    "description": "一把笨重且比较粗的金属剑，看起来有点像尖牙。非常适合天狗使用",
+    "volume": "2000 ml",
+    "weight": "3000 g",
+    "longest_side": "140 cm",
+    "//": "Double length from tengu_shield , taken as reference",
+    "price_postapoc": 7500,
+    "to_hit": {
+      "grip": "weapon",
+      "length": "long",
+      "surface": "line",
+      "balance": "neutral"
+    },
+    "//2": "Should be well balanced if you have Tengu strength or something",
+    "bashing": 12,
+    "cutting": 28,
+    "material": [
+      "steel"
+    ],
+    "//3": "Should be tengu_steel",
+    "symbol": "/",
+    "color": "light_gray",
+    "techniques": [
+      "BRUTAL",
+      "SWEEP",
+      "WBLOCK_2"
+    ],
+    "weapon_category": [
+      "JAPANESE_SWORDS",
+      "GREAT_SWORDS"
+    ],
+    "flags": [
+      "DURABLE_MELEE"
+    ]
+  }
+]

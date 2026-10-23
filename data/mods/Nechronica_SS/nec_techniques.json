@@ -1,0 +1,105 @@
+[
+  {
+    "//": "",
+    "type": "technique",
+    "id": "tec_nec_hakkei",
+    "name": "发劲",
+    "skill_requirements": [ { "name": "unarmed", "level": 2 } ],
+    "unarmed_allowed": true,
+    "crit_tec": true,
+    "knockback_dist": 2,
+    "messages": ["用强大的爆发将%s击飞了",
+            "<npcname>的发劲将%sを击飞了"
+            ],
+    "mult_bonuses": [ { "stat": "damage", "type": "bash", "scale": 1.2 } ],
+    "attack_vectors": [ "HAND" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_nec_senpukyaku",
+    "name": "旋风脚",
+    "skill_requirements": [ { "name": "unarmed", "level": 3 } ],
+    "dodge_counter": true,
+    "unarmed_allowed": true,
+    "required_buffs_all": [ "nec_kung_fu_dodge" ],
+    "knockback_dist": 2,
+    "weighting": 5,
+    "messages" : [
+        "回旋的踢击将%s踢飞了",
+        "<npcname>的回旋踢将%s踢飞了"
+    ],
+    "aoe": "spin",
+    "mult_bonuses": [ { "stat": "damage", "type": "bash", "scale": 3 } ],
+    "attack_vectors": [ "FOOT" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_nec_tetsuzanko",
+    "name": "铁山靠",
+    "skill_requirements": [ { "name": "unarmed", "level": 4 } ],
+    "unarmed_allowed": true,
+    "required_buffs_all": [ "nec_kung_fu_dodge" ],
+    "crit_tec": true,
+    "down_dur": 2,
+    "knockback_dist": 3,
+    "messages" : [
+        "铁山靠将%s撞飞了出去",
+        "<npcname>的铁山靠将%s撞飞了出去"
+    ],
+    "mult_bonuses": [ { "stat": "damage", "type": "bash", "scale": 2.0 } ],
+    "attack_vectors": [ "HAND" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_nec_baton_rapid",
+    "name": "瞬打",
+    "skill_requirements": [ { "name": "melee", "level": 1 } ],
+    "melee_allowed": true,
+    "messages" : [
+        "迅速的击打了%s",
+        "<npcname>快速地击打了%s"
+    ],
+    "mult_bonuses": [
+      { "stat": "damage", "type": "bash", "scale": 1.1 },
+      { "stat": "movecost", "scale": 0.9 }
+    ],
+    "attack_vectors": [ "WEAPON" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_nec_baton_strike",
+    "name": "刚打",
+    "skill_requirements": [ { "name": "melee", "level": 2 } ],
+    "melee_allowed": true,
+    "messages" : [
+        "猛烈地打飞了%s",
+        "<npcname>将%s猛烈地打飞了"
+    ],
+    "knockback_dist": 1,
+    "mult_bonuses": [
+      { "stat": "damage", "type": "bash", "scale": 1.2 },
+      { "stat": "movecost", "scale": 1.1 }
+    ],
+    "attack_vectors": [ "WEAPON" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_nec_baton_rollingkick",
+    "name": "跳跃回旋踢",
+    "skill_requirements": [ { "name": "melee", "level": 3 } ],
+    "dodge_counter": true,
+    "melee_allowed": true,
+    "weapon_categories_allowed": [ "QUARTERSTAVES" ],
+    "required_buffs_all": [ "nec_kung_fu_dodge" ],
+    "knockback_dist": 2,
+    "weighting": 5,
+    "messages" : [
+        "跳跃并旋转地将%s踢飞了出去",
+        "<npcname>的跳跃回旋踢将%s踢飞了出去"
+    ],
+    "aoe": "spin",
+    "mult_bonuses": [ { "stat": "damage", "type": "bash", "scale": 3.5 } ],
+    "attack_vectors": [ "FOOT" ]
+  }
+
+]

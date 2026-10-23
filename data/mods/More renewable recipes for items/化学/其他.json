@@ -1,0 +1,103 @@
+[
+ {
+   "result": "plastic_chunk",
+    "type": "recipe",
+    "activity_level": "NO_EXERCISE",
+    "category": "CC_CHEM",
+    "subcategory": "CSC_CHEM_OTHER",
+    "skill_used": "chemistry",
+    "difficulty": 7,
+    "time": "3 h",
+    "byproducts": [ [ "diesel",4]],
+    "book_learn": [ [ "adv_chemistry", 7 ] ],
+    "result_mult": 20,
+    "batch_time_factors": [ 80, 4 ],
+    "qualities": [{ "id": "CHEM", "level":2  },{ "id": "BOIL", "level": 2 },{"id":"PRESSURIZATION", "level":1 }],
+    "tools": [[ [ "surface_heat", 40, "LIST" ] ]],
+    "components": 
+    [
+      [
+       ["lamp_oil",12]
+      ],
+      [
+       ["chem_sulphuric_acid",2]
+      ],
+      [
+       ["bleach",1],
+       ["chem_hydrogen_peroxide_conc",1]
+      ],
+      [
+       ["water_clean",4]
+      ]
+    ]
+ },
+ {
+   "result": "chunk_rubber",
+    "type": "recipe",
+    "activity_level": "NO_EXERCISE",
+    "category": "CC_CHEM",
+    "subcategory": "CSC_CHEM_OTHER",
+    "skill_used": "chemistry",
+    "difficulty": 6,
+    "time": "3 h",
+    "book_learn": [ [ "adv_chemistry", 5 ] ],
+    "charges": 20,
+    "batch_time_factors": [ 80, 4 ],
+    "qualities": [{ "id": "CHEM", "level":3  },{ "id": "BOIL", "level": 2 },{"id":"DISTILL", "level":2 }],
+    "tools": [[ [ "surface_heat", 20, "LIST" ] ]],
+    "components": 
+    [
+      [
+       ["gasoline",3000]
+      ],
+      [
+       ["chem_benzene",1000]
+      ],
+      [
+       ["chem_sulphuric_acid",4]
+      ],
+      [
+       ["soap",1],
+       ["soapy_water",1],
+       ["liquid_soap",1],
+       ["detergent",5]
+      ],
+      [
+       ["water_clean",4]
+      ]
+    ]
+ },
+ {
+   "result": "detergent",
+    "type": "recipe",
+    "activity_level": "NO_EXERCISE",
+    "category": "CC_CHEM",
+    "subcategory": "CSC_CHEM_OTHER",
+    "skill_used": "chemistry",
+    "difficulty": 4,
+    "skills_required": [ "fabrication", 2 ],
+    "time": "2 h",
+    "book_learn": [ [ "adv_chemistry", 4 ] ],
+    "charges": 750,
+    "batch_time_factors": [ 80, 4 ],
+    "qualities": [{ "id": "CHEM", "level":2  },{ "id": "BOIL", "level": 2 }],
+    "tools": [[ [ "surface_heat", 20, "LIST" ] ]],
+    "components": 
+    [
+      [
+       ["chem_sulphuric_acid",1]
+      ],
+      [
+       ["chem_ethanol",500],
+       ["methed_alcohol",500]
+      ],
+      [
+       ["lye",1],
+       ["lye_potassium",1]
+      ],
+      [
+       ["water_clean",4]
+      ]
+    ]
+ }
+]

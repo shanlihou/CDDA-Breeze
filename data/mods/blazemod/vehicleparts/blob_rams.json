@@ -1,0 +1,40 @@
+[
+  {
+    "id": "frostie_ram",
+    "type": "vehicle_part",
+    "name": {
+      "str": "变形怪冰冻撞锤"
+    },
+    "item": "frostie",
+    "location": "structure",
+    "symbol": "X",
+    "broken_symbol": "0",
+    "color": "light_blue",
+    "broken_color": "light_blue",
+    "durability": 1000,
+    "damage_modifier": 200,
+    "folded_volume": "250 ml",
+    "breaks_into": [
+      {
+        "item": "frostiegrow"
+      }
+    ],
+    "description": "一只活的处于极寒状态的变形怪变成的载具部件。会大大提升载具碰撞时所造成的伤害。安装在车辆外侧，最好是正前方。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "OBSTACLE",
+      "PROTRUSION",
+      "SHARP"
+    ]
+  }
+]

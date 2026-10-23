@@ -1,0 +1,450 @@
+[
+    {
+        "type" : "technique",
+        "id" : "tec_rider_punch_od",
+        "name" : "骑士必杀拳",
+		"melee_allowed":true,
+		"crit_ok" : true,
+		"flat_bonuses" : [ { "stat": "damage", "type": "heat", "scale": 100.0 } ],
+		"mult_bonuses" : [ { "stat": "damage", "type": "bash", "scale": 0.9 } ],
+        "messages" : [
+            "你握紧过载武器，从肩部发力，一记简单却有毁灭性破坏力的直拳打向 %s ",
+            "<npcname> 一拳击向 %s "
+        ],
+		"weighting": 1001,
+		"stun_dur" : 2,
+		"down_dur" : 1,
+		"knockback_dist" : 2,
+		"powerful_knockback": true,
+		"forbidden_char_flags": [ "Henshin_Squat_Flag" ],
+		"attack_vectors": [ "WEAPON" ],
+		"weapon_categories_allowed" : [ "HENSHIN_KICK_WEAPON_ON" ]
+    },{
+        "type" : "technique",
+        "id" : "tec_rider_kick_od",
+        "name" : "骑士必杀踢",
+		"skill_requirements": [ { "name": "melee", "level": 2 } ],
+		"melee_allowed":true,
+		"crit_ok" : true,
+		"flat_bonuses" : [ { "stat": "damage", "type": "heat", "scale": 100.0 } ],
+		"mult_bonuses" : [ { "stat": "damage", "type": "bash", "scale": 1.2 } , { "stat": "movecost", "scale": 1.15 } ],
+        "messages" : [
+            "你将过载装置装至腿部，提膝转胯，一记简单却有毁灭性破坏力的侧踢抽向 %s ",
+            "<npcname> 一记侧踢抽向 %s "
+        ],
+		"weighting": 1001,
+		"stun_dur" : 1,
+		"down_dur" : 1,
+		"knockback_dist" : 3,
+		"powerful_knockback": true,
+		"forbidden_char_flags": [ "Henshin_Swing_Arm_Flag" ],
+		"attack_vectors": [ "WEAPON" ],
+		"weapon_categories_allowed" : [ "HENSHIN_KICK_WEAPON_ON" ]
+    },{
+        "type" : "technique",
+        "id" : "tec_rider_finish_punch",
+        "name" : "骑士终结拳",
+        "skill_requirements": [ { "name": "melee", "level": 4 } ],
+		"melee_allowed":true,
+		"crit_ok" : true,
+		"flat_bonuses" : [ { "stat": "damage", "type": "heat", "scale": 100.0 } ],
+		"mult_bonuses" : [ { "stat": "damage", "type": "bash", "scale": 1.5 } , { "stat": "movecost", "scale": 1.45 } ],
+        "messages" : [
+            "你握紧过载武器，猛地加大出力，一记凝聚强大动能的正拳轰击 %s ",
+            "<npcname> 一记正拳轰向 %s "
+        ],
+		"weighting": 1001,
+		"stun_dur" : 3,
+		"down_dur" : 2,
+		"knockback_dist" : 3,
+		"powerful_knockback": true,
+		"forbidden_char_flags": [ "Henshin_Squat_Flag" ],
+		"attack_vectors": [ "WEAPON" ],
+		"weapon_categories_allowed" : [ "HENSHIN_KICK_WEAPON_ON" ]
+    },{
+        "type" : "technique",
+        "id" : "tec_rider_sweep_od",
+        "name" : "骑士过载扫踢",
+        "skill_requirements": [ { "name": "melee", "level": 3 } ],
+		"melee_allowed":true,
+		"crit_ok" : true,
+		"flat_bonuses" : [ { "stat": "damage", "type": "heat", "scale": 100.0 } ],
+		"mult_bonuses" : [ { "stat": "damage", "type": "bash", "scale": 1.2 } , { "stat": "movecost", "scale": 1.3 } ],
+        "messages" : [
+            "你将过载装置装至腿部，以弧线横向发力，一记凝聚强大动能的扫踢抽击 %s ",
+            "<npcname> 扫踢 %s "
+        ],
+		"weighting": 1001,
+		"stun_dur" : 1,
+		"down_dur" : 1,
+		"knockback_dist" : 1,
+		"powerful_knockback": true,
+		"aoe" : "wide",
+		"forbidden_char_flags": [ "Henshin_Swing_Arm_Flag" ],
+		"attack_vectors": [ "WEAPON" ],
+		"weapon_categories_allowed" : [ "HENSHIN_KICK_WEAPON_ON" ]
+    },{
+        "type" : "technique",
+        "id" : "tec_rider_spin_od",
+        "name" : "骑士旋风踢",
+        "skill_requirements": [ { "name": "melee", "level": 5 } ],
+		"melee_allowed":true,
+		"crit_ok" : true,
+		"flat_bonuses" : [ { "stat": "damage", "type": "heat", "scale": 100.0 } ],
+		"mult_bonuses" : [ { "stat": "damage", "type": "bash", "scale": 1.2 } , { "stat": "movecost", "scale": 1.4 } ],
+        "messages" : [
+            "你将过载装置装至腿部，前跨一步，旋转身体并蹬地起跳，一记凝聚强大动能的旋风踢扫击 %s 和周围",
+            "<npcname> 旋转踢击 %s "
+        ],
+		"weighting": 1001,
+		"stun_dur" : 1,
+		"down_dur" : 1,
+		"knockback_dist" : 1,
+		"powerful_knockback": true,
+		"aoe" : "spin",
+		"forbidden_char_flags": [ "Henshin_Swing_Arm_Flag" ],
+		"attack_vectors": [ "WEAPON" ],
+		"weapon_categories_allowed" : [ "HENSHIN_KICK_WEAPON_ON" ]
+    },{
+        "type" : "technique",
+        "id" : "tec_rider_finish_time",
+        "name" : "骑士音爆踢",
+        "skill_requirements": [ { "name": "melee", "level": 6 } ],
+		"melee_allowed":true,
+		"crit_ok" : true,
+		"flat_bonuses" : [ { "stat": "damage", "type": "heat", "scale": 100.0 } ],
+		"mult_bonuses" : [ { "stat": "damage", "type": "bash", "scale": 1.2 } , { "stat": "movecost", "scale": 1.2 } ],
+        "messages" : [
+            "你将过载装置装至腿部，以腰为轴拧转上体，屈膝起腿，一记凝聚强大动能的猛踢径直击穿 %s ",
+            "<npcname> 转身旋转，一记直踢贯穿 %s "
+        ],
+		"weighting": 1001,
+		"stun_dur" : 2,
+		"down_dur" : 2,
+		"knockback_dist" : 3,
+		"powerful_knockback": true,
+		"aoe" : "impale",
+		"forbidden_char_flags": [ "Henshin_Swing_Arm_Flag" ],
+		"attack_vectors": [ "WEAPON" ],
+		"weapon_categories_allowed" : [ "HENSHIN_KICK_WEAPON_ON" ]
+    },{
+        "type" : "technique",
+        "id" : "tec_rider_crimson_smash",
+        "name" : "深红电钻",
+        "skill_requirements": [ { "name": "melee", "level": 8 } ],
+		"melee_allowed":true,
+		"crit_tec" : true,
+		"flat_bonuses" : [ { "stat": "damage", "type": "heat", "scale": 255.0 } ],
+		"mult_bonuses" : [ { "stat": "movecost", "scale": 1.5 } ],
+        "messages" : [
+            "你将过载装置装至腿部，一跃而起，于半空中踢出一记深红光锥将 %s 牢牢锁定，而后以凝聚强大动能的飞踢如电钻般将其贯穿",
+            "<npcname> 一跃而起，一记深红电钻贯穿 %s "
+        ],
+		"weighting": 501,
+		"stun_dur" : 4,
+		"down_dur" : 3,
+		"knockback_dist" : 4,
+		"knockback_follow": true,
+		"powerful_knockback": true,
+		"forbidden_char_flags": [ "Henshin_Swing_Arm_Flag" ],
+		"attack_vectors": [ "WEAPON" ],
+		"weapon_categories_allowed" : [ "HENSHIN_KICK_WEAPON_ON" ]
+    },{
+		"type": "technique",
+		"id": "tec_rider_counter_block",
+		"name": "骑士格挡反击",
+		"skill_requirements": [ { "name": "melee", "level": 7 } ],
+		"melee_allowed":true,
+		"block_counter":true,
+		"miss_recovery":true,
+		"flat_bonuses" : [ { "stat": "damage", "type": "heat", "scale": 100.0 } ],
+		"mult_bonuses":[ { "stat": "damage", "type": "bash", "scale": 0.7 } , { "stat": "movecost", "scale": 0.0 } ],
+		"messages": [ 
+			"你接下 %s 的攻击，同时猛地加大过载装置出力，欺身向前并一拳轰出",
+			"<npcname> 接下 %s 的攻击，并欺身向前打出一拳"
+		],
+		"weighting": 51,
+		"stun_dur" : 2,
+		"knockback_dist" : 1,
+		"powerful_knockback": true,
+		"forbidden_char_flags": [ "Henshin_Squat_Flag" ],
+		"attack_vectors": [ "WEAPON" ],
+		"weapon_categories_allowed" : [ "HENSHIN_KICK_WEAPON_ON" ]
+	},{
+		"type": "technique",
+		"id": "tec_rider_counter_dodge",
+		"name": "骑士闪避反击",
+		"skill_requirements": [ { "name": "melee", "level": 7 } ],
+		"melee_allowed":true,
+		"dodge_counter":true,
+		"miss_recovery":true,
+		"flat_bonuses" : [ { "stat": "damage", "type": "heat", "scale": 100.0 } ],
+		"mult_bonuses":[ { "stat": "damage", "type": "bash", "scale": 0.7 } , { "stat": "movecost", "scale": 0.0 } ],
+		"messages": [ 
+			"你闪开 %s 的攻击，同时将过载装置装至腿部，变换身位并一脚踢出",
+			"<npcname> 闪开 %s 的攻击，并变换身位踢出一脚"
+		],
+		"weighting": 51,
+		"down_dur" : 2,
+		"knockback_dist" : 1,
+		"powerful_knockback": true,
+		"forbidden_char_flags": [ "Henshin_Swing_Arm_Flag" ],
+		"attack_vectors": [ "WEAPON" ],
+		"weapon_categories_allowed" : [ "HENSHIN_KICK_WEAPON_ON" ]
+	},
+
+
+
+    {	
+		"type":"technique",
+		"id":"tec_rider_feint",
+		"name":"骑士佯攻",
+		"skill_requirements": [ { "name": "melee", "level": 1 } ],
+		"unarmed_allowed":true,
+		"melee_allowed":true,
+		"defensive":true,
+		"miss_recovery":true,
+		"messages":[
+            "你以退为进，虚实结合，佯攻 %s ",
+            "<npcname> 以退为进，佯攻 %s "
+		],
+		"description": "基础骑士战技",
+		"forbidden_char_flags": [ "Henshin_Overdrive_Flag" ]
+	},{
+        "type" : "technique",
+        "id" : "tec_rider_punch",
+        "name" : "骑士左直拳",
+        "skill_requirements": [ { "name": "melee", "level": 1 } ],
+        "unarmed_allowed" : true,
+		"melee_allowed":true,
+		"crit_ok" : true,
+		"mult_bonuses" : [ { "stat": "damage", "type": "bash", "scale": 1.05 } , { "stat": "movecost", "scale": 0.85 } ],
+        "messages" : [
+            "你右脚蹬地，力从肩发，一记左直拳轰向 %s ",
+            "<npcname> 一记左直拳轰向 %s "
+        ],
+		"forbidden_char_flags": [ "Henshin_Overdrive_Flag", "Henshin_Squat_Flag" ],
+		"attack_vectors": [ "WEAPON", "HAND" ]
+    },{
+        "type" : "technique",
+        "id" : "tec_rider_punch_2",
+        "name" : "骑士右直拳",
+        "skill_requirements": [ { "name": "melee", "level": 1 } ],
+        "unarmed_allowed" : true,
+		"melee_allowed":true,
+		"crit_ok" : true,
+		"mult_bonuses" : [ { "stat": "damage", "type": "bash", "scale": 1.15 } , { "stat": "movecost", "scale": 0.95 } ],
+        "messages" : [
+            "你左脚蹬地，力从肩发，一记右直拳轰向 %s ",
+            "<npcname> 一记右直拳轰向 %s "
+        ],
+		"forbidden_char_flags": [ "Henshin_Overdrive_Flag", "Henshin_Squat_Flag" ],
+		"attack_vectors": [ "WEAPON", "HAND" ]
+    },{
+        "type" : "technique",
+        "id" : "tec_rider_swing",
+        "name" : "骑士左摆拳",
+        "skill_requirements": [ { "name": "melee", "level": 2 } ],
+        "unarmed_allowed" : true,
+		"melee_allowed":true,
+		"crit_ok" : true,
+		"mult_bonuses" : [ { "stat": "damage", "type": "bash", "scale": 1.1 } , { "stat": "movecost", "scale": 0.9 } ],
+        "messages" : [
+            "你身体右转，左膝内扣，一记左摆拳打向 %s ",
+            "<npcname> 一记左摆拳打向 %s "
+        ],
+		"forbidden_char_flags": [ "Henshin_Overdrive_Flag", "Henshin_Squat_Flag" ],
+		"attack_vectors": [ "WEAPON", "HAND" ]
+    },{
+        "type" : "technique",
+        "id" : "tec_rider_swing_2",
+        "name" : "骑士右摆拳",
+        "skill_requirements": [ { "name": "melee", "level": 2 } ],
+        "unarmed_allowed" : true,
+		"melee_allowed":true,
+		"crit_ok" : true,
+		"mult_bonuses" : [ { "stat": "damage", "type": "bash", "scale": 1.2 } ],
+        "messages" : [
+            "你身体左转，右膝内扣，一记右摆拳打向 %s ",
+            "<npcname> 一记右摆拳打向 %s "
+        ],
+		"forbidden_char_flags": [ "Henshin_Overdrive_Flag", "Henshin_Squat_Flag" ],
+		"attack_vectors": [ "WEAPON", "HAND" ]
+    },{
+        "type" : "technique",
+        "id" : "tec_rider_uppercut",
+        "name" : "骑士左勾拳",
+        "skill_requirements": [ { "name": "melee", "level": 3 } ],
+        "unarmed_allowed" : true,
+		"melee_allowed":true,
+		"crit_ok" : true,
+		"mult_bonuses" : [ { "stat": "damage", "type": "bash", "scale": 1.15 } , { "stat": "movecost", "scale": 0.95 } ],
+        "messages" : [
+            "你左腿微屈，挺身右转，左拳由下向前一记勾拳砸向 %s ",
+            "<npcname> 一记左勾拳砸向 %s "
+        ],
+		"forbidden_char_flags": [ "Henshin_Overdrive_Flag", "Henshin_Squat_Flag" ],
+		"attack_vectors": [ "WEAPON", "HAND" ]
+    },{
+        "type" : "technique",
+        "id" : "tec_rider_uppercut_2",
+        "name" : "骑士右勾拳",
+        "skill_requirements": [ { "name": "melee", "level": 3 } ],
+        "unarmed_allowed" : true,
+		"melee_allowed":true,
+		"crit_ok" : true,
+		"mult_bonuses" : [ { "stat": "damage", "type": "bash", "scale": 1.3 } , { "stat": "movecost", "scale": 1.05 } ],
+        "messages" : [
+            "你右腿微屈，挺身左转，右拳由下向前一记勾拳砸向 %s ",
+            "<npcname> 一记右勾拳砸向 %s "
+        ],
+		"forbidden_char_flags": [ "Henshin_Overdrive_Flag", "Henshin_Squat_Flag" ],
+		"attack_vectors": [ "WEAPON", "HAND" ]
+    },{
+        "type" : "technique",
+        "id" : "tec_rider_sweep",
+        "name" : "骑士扫踢",
+        "skill_requirements": [ { "name": "melee", "level": 2 } ],
+        "unarmed_allowed" : true,
+		"melee_allowed":true,
+		"crit_ok" : true,
+		"mult_bonuses" : [ { "stat": "damage", "type": "bash", "scale": 1.35 } , { "stat": "movecost", "scale": 1.2 } ],
+        "messages" : [
+            "你转胯拧腰，横向发力，用脚背至胫骨扫踢 %s ",
+            "<npcname> 扫踢 %s "
+        ],
+		"weighting": 2,
+		"down_dur" : 1,
+		"attack_vectors": [ "WEAPON", "FOOT" ],
+		"forbidden_char_flags": [ "Henshin_Overdrive_Flag", "Henshin_Swing_Arm_Flag" ]
+    },{
+        "type" : "technique",
+        "id" : "tec_rider_kick",
+        "name" : "骑士正踢",
+        "skill_requirements": [ { "name": "melee", "level": 3 } ],
+        "unarmed_allowed" : true,
+		"melee_allowed":true,
+		"crit_ok" : true,
+		"mult_bonuses" : [ { "stat": "damage", "type": "bash", "scale": 1.3 } , { "stat": "movecost", "scale": 1.15 } ],
+        "messages" : [
+            "你大腿肌肉力量瞬间爆发，带动小腿力量，猛地踢击 %s ",
+            "<npcname> 猛地踢击 %s "
+        ],
+		"weighting": 2,
+		"stun_dur" : 1,
+        "knockback_dist" : 1,
+		"attack_vectors": [ "WEAPON", "FOOT" ],
+		"forbidden_char_flags": [ "Henshin_Overdrive_Flag", "Henshin_Swing_Arm_Flag" ]
+    },{
+        "type" : "technique",
+        "id" : "tec_rider_back_kick",
+        "name" : "骑士转身踢",
+        "skill_requirements": [ { "name": "melee", "level": 4 } ],
+        "unarmed_allowed" : true,
+		"melee_allowed":true,
+		"crit_ok" : true,
+		"mult_bonuses" : [ { "stat": "damage", "type": "bash", "scale": 1.4 } , { "stat": "movecost", "scale": 1.25 } ],
+        "messages" : [
+            "你以腰为轴拧转上体，屈膝起腿，一记猛踢抽向 %s ",
+            "<npcname> 转身旋转，一记猛踢抽向 %s "
+        ],
+		"weighting": 2,
+		"stun_dur" : 2,
+        "knockback_dist" : 1,
+		"attack_vectors": [ "WEAPON", "FOOT" ],
+		"forbidden_char_flags": [ "Henshin_Overdrive_Flag", "Henshin_Swing_Arm_Flag" ]
+    },{
+        "type" : "technique",
+        "id" : "tec_rider_counter",
+        "name" : "骑士缴械",
+        "skill_requirements": [ { "name": "melee", "level": 5 } ],
+		"unarmed_allowed":true,
+		"melee_allowed" : true,
+		"disarms" : true,
+		"human_target": true,
+		"req_buffs":[
+			"henshin_dodge_buff"
+		],
+        "messages" : [
+            "你避开攻击，抓住机会，缴械了 %s ",
+            "<npcname> 缴械了 %s "
+        ],
+		"weighting": 3,
+		"forbidden_char_flags": [ "Henshin_Overdrive_Flag", "Henshin_Squat_Flag" ],
+		"attack_vectors": [ "HAND" ]
+    },{
+        "type" : "technique",
+        "id" : "tec_rider_counter_2",
+        "name" : "骑士反擒拿",
+        "skill_requirements": [ { "name": "melee", "level": 6 } ],
+        "unarmed_allowed" : true,
+        "melee_allowed" : true,
+        "defensive" : true,
+        "grab_break" : true,
+		"req_buffs":[
+			"henshin_move_buff"
+		],
+		"weighting": 3,
+		"forbidden_char_flags": [ "Henshin_Overdrive_Flag" ]
+    },
+
+
+
+	{
+        "type" : "technique",
+        "id" : "tec_rider_power_knuckle",
+        "name" : "甩手击",
+		"skill_requirements": [ { "name": "melee", "level": 1 } ],
+		"melee_allowed":true,
+		"crit_ok" : true,
+		"mult_bonuses" : [ { "stat": "damage", "type": "bash", "scale": 0.8 } , { "stat": "movecost", "scale": 0.6 } ],
+        "messages" : [
+            "你甩了甩手，连续猛击 %s ",
+            "<npcname> 甩了甩手，连续猛击 %s "
+        ],
+		"description": "击晕 1 回合，至少 1 级近战",
+		"stun_dur" : 1,
+		"forbidden_char_flags": [ "Henshin_Swing_Arm_Flag", "Henshin_Squat_Flag" ],
+		"attack_vectors": [ "WEAPON" ],
+		"weapon_categories_allowed" : [ "HENSHIN_KICK_WEAPON_OFF" ],
+		"eocs": [ "power_knuckle_effect" ]
+    },{
+        "type" : "technique",
+        "id" : "tec_rider_power_knuckle_2",
+        "name" : "甩手重击",
+		"skill_requirements": [ { "name": "melee", "level": 2 } ],
+		"melee_allowed":true,
+		"crit_ok" : true,
+		"mult_bonuses" : [ { "stat": "damage", "type": "bash", "scale": 1.3 } , { "stat": "movecost", "scale": 1.1 } ],
+        "messages" : [
+            "你甩了甩手，全力一击砸倒 %s ",
+            "<npcname> 甩了甩手，全力一击砸倒 %s "
+        ],
+		"description": "击倒 1 回合，至少 2 级近战",
+		"down_dur" : 1,
+		"forbidden_char_flags": [ "Henshin_Swing_Arm_Flag", "Henshin_Squat_Flag" ],
+		"attack_vectors": [ "WEAPON" ],
+		"weapon_categories_allowed" : [ "HENSHIN_KICK_WEAPON_OFF" ],
+		"eocs": [ "power_knuckle_effect" ]
+    },{
+        "type" : "technique",
+        "id" : "tec_rider_power_knuckle_3",
+        "name" : "甩手追击",
+		"skill_requirements": [ { "name": "melee", "level": 3 } ],
+		"melee_allowed":true,
+		"crit_ok" : true,
+		"stunned_target": true,
+		"mult_bonuses" : [ { "stat": "damage", "type": "bash", "scale": 1.1 } , { "stat": "movecost", "scale": 0.8 } ],
+        "messages" : [
+            "你甩了甩手，连绵不绝地追击 %s ",
+            "<npcname> 甩了甩手，连绵不绝地追击 %s "
+        ],
+		"description": "击退 1 格，至少 3 级近战，仅对眩晕敌人使用",
+		"knockback_dist": 1,
+		"knockback_follow": true,
+		"forbidden_char_flags": [ "Henshin_Swing_Arm_Flag", "Henshin_Squat_Flag" ],
+		"attack_vectors": [ "WEAPON" ],
+		"weapon_categories_allowed" : [ "HENSHIN_KICK_WEAPON_OFF" ],
+		"eocs": [ "power_knuckle_effect" ]
+    }
+]

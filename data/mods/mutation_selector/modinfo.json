@@ -1,0 +1,18 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "mutation_selector",
+    "name": "突变选择器",
+    "authors": [ "Rewryte" ],
+    "description": "突变时，允许您从可能的突变列表中手动选择，而不是随机获得一个。",
+    "category": "rebalance",
+    "dependencies": [ "dda" ]
+  },
+  {
+    "type": "EXTERNAL_OPTION",
+    "name": "SHOW_MUTATION_SELECTOR",
+    "stype": "bool",
+    "value": true,
+    "info": "在突变时显示可选突变列表（启用/禁用）"
+  }
+]

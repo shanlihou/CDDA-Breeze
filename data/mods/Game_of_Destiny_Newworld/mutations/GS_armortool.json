@@ -1,0 +1,29 @@
+[
+   {
+    "type": "mutation",
+    "id": "GS_armor_silence",
+    "name": { "str": "寂静无声" },
+    "points": 1,
+    "mixed_effect": true,
+    "description": "你的现在的脚步和猫一样轻。",
+    "noise_modifier": 0.1
+  },
+  {
+    "type": "mutation",
+    "id": "GS_tool_skyeye",
+    "name": { "str": "天眼" },
+    "points": 0,
+    "mixed_effect": true,
+    "description": "你现在可以看穿墙壁。",
+    "flags": [ "CLAIRVOYANCE" ]
+  },
+  {
+    "type": "mutation",
+    "id": "GS_tool_fire_small",
+    "name": { "str": "不灭火焰（小）" },
+    "points": 0,
+    "mixed_effect": true,
+    "description": "火苗不算大，但足以照亮你的周围。",
+    "lumination": [ [ "hand_l", 90 ] ]
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "tengu_geta",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "天狗木屐",
+    "copy-from": "geta",
+    "description": "一双红色的天狗木屐。这些是货真价实的，看起来像鞋底有长长的牙齿的鞋子。",
+    "repairs_like": "geta",
+    "volume": "1000 ml",
+    "weight": "660 g",
+    "price": 13000,
+    "price_postapoc": 650,
+    "material": [
+      "leather",
+      "wood"
+    ],
+    "material_thickness": 2,
+    "symbol": "[",
+    "looks_like": "dress_shoes",
+    "color": "red",
+    "warmth": 10,
+    "armor": [
+      {
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ],
+        "coverage": 65,
+        "encumbrance": 10
+      }
+    ],
+    "flags": [
+      "FANCY",
+      "VARSIZE",
+      "WATERPROOF"
+    ]
+  },
+  {
+    "id": "tengu_hat",
+    "type": "TOOL_ARMOR",
+    "category": "armor",
+    "name": "兜巾",
+    "description": "一顶红色多面体盒状小帽。也可以用来喝酒。",
+    "volume": "350 ml",
+    "weight": "200 g",
+    "price": 10000,
+    "price_postapoc": 100,
+    "material": [
+      "wood"
+    ],
+    "material_thickness": 2,
+    "symbol": "[",
+    "color": "red",
+    "warmth": 1,
+    "armor": [
+      {
+        "covers": [
+          "head"
+        ],
+        "coverage": 5,
+        "encumbrance": [
+          0,
+          0
+        ]
+      }
+    ],
+    "flags": [
+      "FANCY",
+      "OUTER",
+      "STURDY"
+    ]
+  }
+]

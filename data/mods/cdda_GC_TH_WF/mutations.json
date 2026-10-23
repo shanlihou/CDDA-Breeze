@@ -1,0 +1,591 @@
+[
+    {
+        "type": "mutation_category",
+        "id": "TH_white_fog",
+        "name": "TH:白雾",
+        "threshold_mut": "THRESH_TH_WF",
+        "mutagen_message": "For Killing.",
+        "memorial_message": "Killing.",
+        "vitamin": "TH_WF_Vitamin"
+    },
+    {
+        "type": "mutation_type",
+        "id": "TH_WF_B"
+    },
+    {
+        "type": "mutation",
+        "id": "THRESH_TH_WF",
+        "name": {
+          "str": "<color_white>Pale Knight</color>"
+        },
+        "category": [
+            "TH_WF"
+        ],
+        "points": 1,
+        "description": "Those disasters grows in your body and your mind, and you will get power from your pain. Why don't you flame the world?",
+        "valid": false,
+        "purifiable": false,
+        "threshold": true
+    },
+    {
+        "type": "mutation",
+        "id": "TH_WF_BodyProf",
+        "name": {
+            "str": "Pale Knight : Prof"
+        },
+        "points": 4,
+        "description": "TH-Plan:Pale Knight\nYou are no longer the flesh.Those bacteria won't bother you anymore.",
+        "purifiable": false,
+        "mixed_effect": true,
+        "active": false,
+        "category": [
+            "TH_white_fog"
+        ],
+        "enchantments": [
+            "TH_WF_BodyProf"
+        ]
+    },
+    {
+        "type": "mutation",
+        "id": "TH_WF_Body1",
+        "name": {
+            "str": "Pale Knight : XENOTYPE I"
+        },
+        "points": 1,
+        "description": "TH-Plan:Pale Knight\nYour body become to change to another form. It seems no longer the flesh. You are stronger, but less resistant",
+        "purifiable": false,
+        "mixed_effect": true,
+        "active": false,
+        "category": [
+            "TH_white_fog"
+        ],
+        "hp_modifier": 1,
+        "changes_to": [
+            "TH_WF_Strong_Body2"
+          ],
+        "enchantments": [
+            {
+              "condition": "ALWAYS",
+              "values": [
+                {
+                  "value": "EXTRA_BASH",
+                  "multiply": 1
+                },
+                {
+                    "value": "EXTRA_CUT",
+                    "multiply": 1
+                },
+                {
+                    "value": "EXTRA_STAB",
+                    "multiply": 1
+                },
+                {
+                    "value": "EXTRA_BULLET",
+                    "multiply": 1
+                }
+              ]
+            }
+        ]
+    },
+    {
+        "type": "mutation",
+        "id": "TH_WF_Strong_Body2",
+        "name": {
+            "str": "Pale Knight : XENOTYPE II"
+        },
+        "points": 4,
+        "description": "TH-Plan:Pale Knight\nYour body are no longer the same as before. It transform into another form. You are stronger, but less resistant",
+        "purifiable": false,
+        "mixed_effect": true,
+        "active": false,
+        "category": [
+            "TH_white_fog"
+        ],
+        "changes_to": [
+            "TH_WF_Strong_Body3"
+          ],
+        "prereqs": [
+            "TH_WF_Body1"
+          ],
+        "hp_modifier_secondary": 3,
+        "enchantments": [
+            {
+              "condition": "ALWAYS",
+              "values": [
+                {
+                  "value": "EXTRA_BASH",
+                  "multiply": 2
+                },
+                {
+                    "value": "EXTRA_CUT",
+                    "multiply": 2
+                },
+                {
+                    "value": "EXTRA_STAB",
+                    "multiply": 2
+                },
+                {
+                    "value": "EXTRA_BULLET",
+                    "multiply": 2
+                }
+              ]
+            }
+        ]
+    },
+    {
+        "type": "mutation",
+        "id": "TH_WF_Strong_Body3",
+        "name": {
+            "str": "Pale Knight : XENOTYPE III"
+        },
+        "points": 8,
+        "description": "TH-Plan:Pale Knight\nYour body are no longer the same as before. Something reared in your body. You are stronger, but less resistant",
+        "purifiable": false,
+        "mixed_effect": true,
+        "active": false,
+        "category": [
+            "TH_white_fog"
+        ],
+        "prereqs": [
+            "TH_WF_Strong_Body2"
+          ],
+        "threshreq": [
+            "THRESH_TH_WF"
+        ],
+        "changes_to":[
+            "TH_WF_Strong_Body4"
+        ],
+        "hp_modifier_secondary": 6,
+        "enchantments": [
+            {
+              "condition": "ALWAYS",
+              "values": [
+                {
+                  "value": "EXTRA_BASH",
+                  "multiply": 3
+                },
+                {
+                    "value": "EXTRA_CUT",
+                    "multiply": 3
+                },
+                {
+                    "value": "EXTRA_STAB",
+                    "multiply": 3
+                },
+                {
+                    "value": "EXTRA_BULLET",
+                    "multiply": 3
+                }
+              ]
+            }
+        ]
+    },
+    {
+        "type": "mutation",
+        "id": "TH_WF_Strong_Body4",
+        "name": {
+            "str": "Pale Knight : XENOTYPE IV"
+        },
+        "points": 16,
+        "description": "TH-Plan:Pale Knight\nYour body are no longer the same as before. Something reared in your body. You are stronger, but less resistant",
+        "purifiable": false,
+        "mixed_effect": true,
+        "active": false,
+        "category": [
+            "TH_white_fog"
+        ],
+        "prereqs": [
+            "TH_WF_Strong_Body3"
+          ],
+        "threshreq": [
+            "THRESH_TH_WF"
+        ],
+        "hp_modifier_secondary": 12,
+        "enchantments": [
+            {
+              "condition": "ALWAYS",
+              "values": [
+                {
+                  "value": "EXTRA_BASH",
+                  "multiply": 4
+                },
+                {
+                    "value": "EXTRA_CUT",
+                    "multiply": 4
+                },
+                {
+                    "value": "EXTRA_STAB",
+                    "multiply": 4
+                },
+                {
+                    "value": "EXTRA_BULLET",
+                    "multiply": 4
+                }
+              ]
+            }
+        ]
+    },
+    {
+        "type": "mutation",
+        "id": "TH_WF_Str1",
+        "name": {
+            "str": "Pale Knight : Decay I"
+        },
+        "points": 1,
+        "description": "TH-Plan:Pale Knight\nSomething make your body stronger, but your mind weaker.",
+        "purifiable": false,
+        "mixed_effect": true,
+        "active": false,
+        "category": [
+            "TH_white_fog"
+        ],
+        "changes_to": [
+            "TH_WF_Str2"
+          ],
+        "passive_mods": {
+            "str_mod": 4,
+            "int_mod": -1
+        }
+    },
+    {
+        "type": "mutation",
+        "id": "TH_WF_Str2",
+        "name": {
+            "str": "Pale Knight : Decay II"
+        },
+        "points": 4,
+        "description": "TH-Plan:Pale Knight\nSomething make your body more stronger, but your mind weaker.",
+        "purifiable": false,
+        "mixed_effect": true,
+        "active": false,
+        "category": [
+            "TH_white_fog"
+        ],
+        "changes_to": [
+            "TH_WF_Str3"
+          ],
+        "prereqs":[
+            "TH_WF_Str1"
+        ],
+        "passive_mods": {
+            "str_mod": 8,
+            "dex_mod": -1,
+            "int_mod": -1
+        }
+    },
+    {
+        "type": "mutation",
+        "id": "TH_WF_Str3",
+        "name": {
+            "str": "Pale Knight : Decay III"
+        },
+        "points": 8,
+        "description": "TH-Plan:Pale Knight\nSomething make your body beyond stronger, but your mind weaker.",
+        "purifiable": false,
+        "mixed_effect": true,
+        "active": false,
+        "category": [
+            "TH_white_fog"
+        ],
+        "threshreq":[
+            "THRESH_TH_WF"
+        ],
+        "changes_to":[
+            "TH_WF_Str4"
+        ],
+        "prereqs":[
+            "TH_WF_Str2"
+        ],
+        "passive_mods": {
+            "str_mod": 16,
+            "dex_mod": -4,
+            "int_mod": -2
+        }
+    },
+    {
+        "type": "mutation",
+        "id": "TH_WF_Str4",
+        "name": {
+            "str": "Pale Knight : Decay IV"
+        },
+        "points": 8,
+        "description": "TH-Plan:Pale Knight\nSomething make your body beyond stronger, but your mind weaker.",
+        "purifiable": false,
+        "mixed_effect": true,
+        "active": false,
+        "category": [
+            "TH_white_fog"
+        ],
+        "threshreq":[
+            "THRESH_TH_WF"
+        ],
+        "prereqs":[
+            "TH_WF_Str3"
+        ],
+        "passive_mods": {
+            "str_mod": 32,
+            "dex_mod": -4,
+            "int_mod": -2
+        }
+    },
+    {
+        "type": "mutation",
+        "id": "TH_WF_Pain_Resistant",
+        "name": {
+            "str": "Pale Knight : Pain Reistant"
+        },
+        "points": 4,
+        "description": "TH-Plan:Pale Knight\nYour nervous system have turned. You will get less pain.",
+        "purifiable": false,
+        "mixed_effect": true,
+        "active": false,
+        "category": [
+            "TH_white_fog"
+        ],
+        "changes_to":[
+            "TH_WF_Pain_Immune"
+        ],
+        "enchantments": [
+            "TH_WF_PAIN1"
+        ]
+    },
+    {
+        "type": "mutation",
+        "id": "TH_WF_Pain_Immune",
+        "name": {
+            "str": "Pale Knight : Pain Immune"
+        },
+        "points": 8,
+        "description": "TH-Plan:Pale Knight\nYour nervous system have turned. You will no longer get pain.",
+        "purifiable": false,
+        "mixed_effect": true,
+        "active": false,
+        "category": [
+            "TH_white_fog"
+        ],
+        "threshreq":[
+            "THRESH_TH_WF"
+        ],
+        "prereqs":[
+            "TH_WF_Pain_Resistant"
+        ],
+        "flags": [
+            "PAIN_IMMUNE"
+        ],
+        "enchantments": [
+            "TH_WF_PAIN2"
+        ]
+    },
+    {
+        "type": "mutation",
+        "id": "TH_WF_Burn",
+        "name": {
+            "str": "Pale Knight : Burning"
+        },
+        "points": 4,
+        "description": "TH-Plan:Pale Knight\nBurning yourself, get both pain and power.",
+        "purifiable": false,
+        "mixed_effect": true,
+        "active": true,
+        "types": "TH_WF_B",
+        "category": [
+            "TH_white_fog"
+        ],
+        "transform": {
+            "target": "TH_WF_Burn_active",
+            "msg_transform": "You become stronger.",
+            "active": true,
+            "moves": 20
+        }
+    },
+    {
+        "type": "mutation",
+        "id": "TH_WF_Burn_active",
+        "name": {
+            "str": "Pale Knight : Burning"
+        },
+        "points": 8,
+        "description": "TH-Plan:Pale Knight\nBurning yourself, get both pain and power.",
+        "purifiable": false,
+        "mixed_effect": true,
+        "active": true,
+        "types": "TH_WF_B",
+        "category": [
+            "TH_white_fog"
+        ],
+        "enchantments": [ "TH_WF_Burn_enc", { "condition": "ALWAYS", "values": [ { "value": "SPEED", "multiply": 1 } ] } ],
+        "attackcost_modifier": 0.75,
+        "transform": {
+            "target": "TH_WF_Burn",
+            "msg_transform": "Your body recover.",
+            "active": false,
+            "moves": 20
+        }
+    },
+    {
+        "type": "mutation",
+        "id": "TH_WF_Fog_Blood",
+        "name": {
+            "str": "Pale Knight : Fog_Blood"
+        },
+        "description": "TH-Plan:Pale Knight\nYour blood have turned, and you can't bleed anymore.",
+        "points": 3,
+        "purifiable": false,
+        "mixed_effect": true,
+        "active": false,
+        "category": [
+            "TH_white_fog"
+        ],
+        "flags":[
+            "BLEED_IMMUNE"
+        ]
+    },
+    {
+        "type": "mutation",
+        "id": "TH_WF_Ugly",
+        "name": {
+            "str": "Pale Knight : Ugly"
+        },
+        "description": "TH-Plan:Pale Knight\nYour face have turned, it's not for human appreciation.",
+        "points": -2,
+        "visibility": 4,
+        "ugliness": 4,
+        "purifiable": false,
+        "mixed_effect": true,
+        "active": false,
+        "category": [
+            "TH_white_fog"
+        ]
+    },
+    {
+        "type": "mutation",
+        "id": "TH_WF_Slow",
+        "name": {
+            "str": "Pale Knight : Slow"
+        },
+        "description": "TH-Plan:Pale Knight\nYou become so XENOTYPE and it's hard to move. Your move speed slow down by %10, and harder to dodge.",
+        "points": -1,
+        "purifiable": false,
+        "mixed_effect": true,
+        "active": false,
+        "category": [
+            "TH_white_fog"
+        ],
+        "movecost_modifier": 1.1,
+        "dodge_modifier": -3
+    },
+    {
+        "type": "mutation",
+        "id": "TH_WF_Assimilate",
+        "name": {
+            "str": "Pale Knight : Assimilate I"
+        },
+        "points": 4,
+        "description": "TH-Plan:Pale Knight\nYou can release the virus to targets, and then absorb enemy and cure youself.",
+        "purifiable": false,
+        "mixed_effect": true,
+        "active": false,
+        "category": [
+            "TH_white_fog"
+        ],
+        "spells_learned": [
+            [
+                "GC_WF_Harvest",
+                5
+            ]
+        ]
+    },
+    {
+        "type": "mutation",
+        "id": "TH_WF_Assimilate2",
+        "name": {
+            "str": "Pale Knight : Assimilate II"
+        },
+        "points": 8,
+        "description": "TH-Plan:Pale Knight\nYou can release the virus to targets, and then absorb enemy and cure youself.",
+        "purifiable": false,
+        "mixed_effect": true,
+        "active": false,
+        "category": [
+            "TH_white_fog"
+        ],
+        "prereqs":[
+            "TH_WF_Assimilate"
+        ],
+        "spells_learned": [
+            [
+                "GC_WF_Harvest3",
+                13
+            ]
+        ]
+    },
+    {
+        "type": "mutation",
+        "id": "TH_WF_Assimilate3",
+        "name": {
+            "str": "Pale Knight : Assimilate III"
+        },
+        "points": 8,
+        "description": "TH-Plan:Pale Knight\nYou can release the virus to targets, and then absorb enemy and cure youself.",
+        "purifiable": false,
+        "mixed_effect": true,
+        "active": false,
+        "category": [
+            "TH_white_fog"
+        ],
+        "prereqs":[
+            "TH_WF_Assimilate2"
+        ],
+        "threshreq":[
+            "THRESH_TH_WF"
+        ],
+        "spells_learned": [
+            [
+                "GC_WF_Harvest4",
+                25
+            ]
+        ]
+    },
+    {
+        "type": "mutation",
+        "id": "TH_WF_Crystallize",
+        "name": {
+            "str": "Pale Knight : Crystallize"
+        },
+        "points": 4,
+        "description": "TH-Plan:Pale Knight\nYou can cosume your life to produce a precious things.",
+        "purifiable": false,
+        "mixed_effect": true,
+        "active": false,
+        "category": [
+            "TH_white_fog"
+        ],
+        "spells_learned": [
+            [
+                "GC_WF_Crystallize",
+                5
+            ]
+        ]
+    },
+    {
+        "type": "mutation",
+        "id": "TH_WF_Fission",
+        "name": {
+            "str": "Pale Knight : Fission"
+        },
+        "points": 4,
+        "description": "TH-Plan:Pale Knight\nYou can splinter monsters from within you to fight for you",
+        "purifiable": false,
+        "mixed_effect": true,
+        "active": false,
+        "category": [
+            "TH_white_fog"
+        ],
+        "spells_learned": [
+            [
+                "GC_WF_Summon_monster1",
+                1
+            ]
+        ]
+    }
+]

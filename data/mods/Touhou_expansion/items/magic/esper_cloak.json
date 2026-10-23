@@ -1,0 +1,58 @@
+[
+  {
+    "id": "esper_cloak",
+    "type": "ARMOR",
+    "name": {
+      "str": "超能力者斗篷",
+      "str_pl": "超能力者斗篷"
+    },
+    "description": "一件高领斗篷。外侧为黑色，内侧为红色并印有几个符文。仅仅触摸它就让你感到更加坚定。",
+    "volume": "3 L",
+    "weight": "1175 g",
+    "price_postapoc": 25000,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "none",
+      "length": "hand",
+      "surface": "any"
+    },
+    "bashing": 2,
+    "material": [
+      "cotton"
+    ],
+    "symbol": "ᚠ",
+    "looks_like": "cloak",
+    "color": "black",
+    "armor": [
+      {
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "leg_l",
+          "leg_r"
+        ],
+        "coverage": 65,
+        "encumbrance": 4
+      }
+    ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "mutations": [
+            "esper_cloak_mut"
+          ]
+        }
+      ]
+    },
+    "flags": [
+      "FANCY",
+      "HOOD",
+      "ONLY_ONE",
+      "OUTER",
+      "OVERSIZE"
+    ]
+  }
+]

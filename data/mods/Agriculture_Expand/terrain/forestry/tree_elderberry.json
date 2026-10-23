@@ -1,0 +1,67 @@
+[
+	{
+		"type": "terrain",
+		"id": "forestry_t_tree_elderberry_fertilized",
+		"name": "已经施过肥的接骨木",
+		"copy-from": "t_tree_elderberry",
+		"symbol": "7",
+		"color": [ "light_green", "red_green", "light_green", "brown" ],
+		"examine_action": "harvest_ter",
+		"looks_like": "t_tree_elderberry",
+		"harvest_by_season": [
+			{
+				"seasons": [ "summer" ],
+				"id": "forestry_fertilized_elderberry_harv"
+			}
+		]
+	},
+	{
+		"id": "forestry_fertilized_elderberry_harv",
+		"type": "harvest",
+		"entries": [ { "drop": "elderberries", "base_num": [ 12, 30 ], "scale_num": [ 0.1, 0.7 ] } ]
+	},
+
+	{
+		"type": "terrain",
+		"id": "forestry_t_tree_elderberry_pruned",
+		"name": "已经修剪过的接骨木",
+		"copy-from": "t_tree_elderberry",
+		"symbol": "7",
+		"color": [ "light_green", "red_green", "light_green", "brown" ],
+		"examine_action": "harvest_ter",
+		"looks_like": "t_tree_elderberry",
+		"harvest_by_season": [
+			{
+				"seasons": [ "summer" ],
+				"id": "forestry_pruned_elderberry_harv"
+			}
+		]
+	},
+	{
+		"id": "forestry_pruned_elderberry_harv",
+		"type": "harvest",
+		"entries": [ { "drop": "elderberries", "base_num": [ 9, 22 ], "scale_num": [ 0, 0.6 ] } ]
+	},
+
+	{
+		"type": "terrain",
+		"id": "forestry_t_tree_elderberry_fertilized_pruned",
+		"name": "施过肥并修剪过的接骨木",
+		"copy-from": "t_tree_elderberry",
+		"symbol": "7",
+		"color": [ "light_green", "red_green", "light_green", "brown" ],
+		"examine_action": "harvest_ter",
+		"looks_like": "t_tree_elderberry",
+		"harvest_by_season": [
+			{
+				"seasons": [ "summer" ],
+				"id": "forestry_fertilized_pruned_elderberry_harv"
+			}
+		]
+	},
+	{
+		"id": "forestry_fertilized_pruned_elderberry_harv",
+		"type": "harvest",
+		"entries": [ { "drop": "elderberries", "base_num": [ 20, 50 ], "scale_num": [ 0.2, 0.8 ] } ]
+	}
+]

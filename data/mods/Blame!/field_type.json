@@ -1,0 +1,58 @@
+[
+  {
+    "id": "fd_Graviton_Beam_LASER",
+    "type": "field_type",
+    "legacy_enum_id": 999,
+    "intensity_levels": [
+      { "name": "重力子射线", "color": "red", "sym": "X", "light_emitted": 90,
+        "translucency": 13 }
+    ],
+    "description_affix": "illuminated_by",
+    "priority": 4,
+    "half_life": "1 turns",
+    "phase": "plasma",
+    "display_items": false,
+    "display_field": true,
+    "looks_like": "fd_plasma"
+  },
+  {
+    "id": "fd_GB_fusion",
+    "type": "field_type",
+    "legacy_enum_id": 1000,
+    "intensity_levels": [
+      {
+        "name": "熔化痕迹",
+        "sym": "~",
+        "color": "red",
+        "dangerous": true,
+        "light_emitted": 5,
+		"heat_radiation": 2,
+        "translucency": 0,
+        "convection_temperature_mod": 600,
+		"effects":
+        [
+          {
+            "effect_id":"effect_GB_fusion",
+            "min_duration": "10 seconds",
+            "max_duration": "1 minutes",
+            "intensity": 13,
+            "is_environmental": true,
+            "immune_inside_vehicle": true,
+            "message": "你被熔化的地面点燃了！",
+            "message_npc": "<npcname> 被熔化的地面点燃了！",
+            "message_type": "bad"
+		  }
+		]
+      }
+		],
+    "immunity_data": { "flags": [ "HEAT_IMMUNE" ] },
+    "priority": 1,
+    "outdoor_age_speedup": "42 seconds",
+    "underwater_age_speedup": "13 seconds",
+    "half_life": "90 seconds",
+    "phase": "liquid",
+    "has_fire": true,
+    "display_items": false,
+    "display_field": true
+	}
+]

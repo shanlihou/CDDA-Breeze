@@ -1,0 +1,271 @@
+[
+  {
+    "id": "c_cyyl_yh_nlf_yfxg_wdms1",
+    "//": "(无敌模式)装备的被动效果(附魔)的统筹,减少装备代码的词条长度。",
+    "type": "enchantment",
+    "has": "WORN",
+    "condition": "ALWAYS",
+    "values": [
+      {
+        "value": "BONUS_DODGE",
+        "add": 100
+      },
+      {
+        "value": "BONUS_BLOCK",
+        "add": 100
+      },
+      {
+        "value": "MELEE_DAMAGE",
+        "add": 10000
+      },
+      {
+        "value": "BIONIC_POWER",
+        "add": 100000000000
+      },
+      {
+        "value": "MAX_STAMINA",
+        "add": 20000000
+      },
+      {
+        "value": "REGEN_STAMINA",
+        "add": 3000000
+      },
+      {
+        "value": "MAX_HP",
+        "add": 10000000
+      },
+      {
+        "value": "REGEN_HP",
+        "add": 100000
+      },
+      {
+        "value": "SOCIAL_LIE",
+        "add": 100
+      },
+      {
+        "value": "SOCIAL_PERSUADE",
+        "add": 100
+      },
+      {
+        "value": "SOCIAL_INTIMIDATE",
+        "add": 100
+      },
+      {
+        "value": "HUNGER",
+        "add": -100
+      },
+      {
+        "value": "THIRST",
+        "add": -100
+      },
+      {
+        "value": "FATIGUE",
+        "add": -100
+      },
+      {
+        "value": "WEAPON_DISPERSION",
+        "add": -100
+      },
+      {
+        "value": "RECOIL_MODIFIER",
+        "add": -100
+      },
+      {
+        "value": "ATTACK_SPEED",
+        "add": -100
+      },
+      {
+        "value": "MOVE_COST",
+        "add": -100
+      },
+      {
+        "value": "METABOLISM",
+        "add": -100
+      },
+      {
+        "value": "CLIMATE_CONTROL_HEAT",
+        "add": 10000
+      },
+      {
+        "value": "CLIMATE_CONTROL_CHILL",
+        "add": 10000
+      },
+      { "value": "ARMOR_BASH", "add": -10000000 },
+      { "value": "ARMOR_CUT", "add": -10000000 },
+      { "value": "ARMOR_STAB", "add": -10000000 },
+      { "value": "ARMOR_BULLET", "add": -10000000 },
+      { "value": "ARMOR_HEAT", "add": -10000000 },
+      { "value": "ARMOR_COLD", "add": -10000000 },
+      { "value": "ARMOR_ELEC", "add": -10000000 },
+      { "value": "ARMOR_ACID", "add": -10000000 },
+      { "value": "ARMOR_BIO", "add": -10000000 }
+    ]
+  },
+  {
+    "id": "c_cyyl_yh_nlf_yfxg_wdms",
+    "//": "(无敌模式)装备的被动效果(附魔)的统筹,减少装备代码的词条长度。",
+    "type": "enchantment",
+    "has": "WORN",
+    "condition": "ALWAYS",
+    "values": [
+      {
+        "value": "BONUS_DODGE",
+        "multiply": 100
+      },
+      {
+        "value": "BONUS_BLOCK",
+        "multiply": 100
+      },
+      {
+        "value": "MELEE_DAMAGE",
+        "multiply": 100
+      },
+      {
+        "value": "BIONIC_POWER",
+        "multiply": 100
+      },
+      {
+        "value": "MAX_STAMINA",
+        "multiply": 20
+      },
+      {
+        "value": "REGEN_STAMINA",
+        "multiply": 20
+      },
+      {
+        "value": "MAX_HP",
+        "multiply": 100
+      },
+      {
+        "value": "REGEN_HP",
+        "multiply": 100
+      },
+      {
+        "value": "READING_EXP",
+        "multiply": 100
+      },
+      {
+        "value": "LEARNING_FOCUS",
+        "multiply": 100
+      },
+      {
+        "value": "SOCIAL_LIE",
+        "multiply": 100
+      },
+      {
+        "value": "SOCIAL_PERSUADE",
+        "multiply": 100
+      },
+      {
+        "value": "SOCIAL_INTIMIDATE",
+        "multiply": 100
+      },
+      {
+        "value": "HUNGER",
+        "multiply": -0.99
+      },
+      {
+        "value": "THIRST",
+        "multiply": -0.99
+      },
+      {
+        "value": "FATIGUE",
+        "multiply": -0.99
+      },
+      {
+        "value": "WEAPON_DISPERSION",
+        "multiply": -0.99
+      },
+      {
+        "value": "RECOIL_MODIFIER",
+        "multiply": -0.99
+      },
+      {
+        "value": "ATTACK_SPEED",
+        "multiply": -0.99
+      },
+      {
+        "value": "MOVE_COST",
+        "multiply": -0.99
+      },
+      {
+        "value": "METABOLISM",
+        "multiply": -0.99
+      },
+      {
+        "value": "CLIMATE_CONTROL_HEAT",
+        "multiply": 100
+      },
+      {
+        "value": "CLIMATE_CONTROL_CHILL",
+        "multiply": 100
+      },
+      {
+        "value": "ATTACK_NOISE",
+        "multiply": -1
+      },
+      {
+        "value": "FOOTSTEP_NOISE",
+        "multiply": -1
+      }
+    ],
+    "ench_effects": [
+      {
+        "effect": "nlf_yfxg_wdms_zt",
+        "intensity": 1
+      }
+    ]
+  },
+  {
+    "id": "nlf_yfxg_wdms_zt",
+    "type": "effect_type",
+    "name": [ "能量服效果(无敌模式)" ],
+    "desc": [ "你无敌了。闪避,格挡次数/近战伤害+100/1万×100倍、生化能量+10万KJ×100倍、生命/恢复速度+1000万/10万×100倍、耐力/恢复速度+300万/200万×20倍、社交三种选择概率+100×100倍、饥饿/口渴/疲劳/新陈代谢消耗-100-99%、攻击/移动消耗-100-99%、极端温度适应+1万×100倍、阅读经验/学习专注度×100倍、武器散布/后坐力-100-99%、脚步声/攻击噪音-100%、全属性+9999×2倍、全伤害-1千万-100%。(不会被抓住和窒息)" ],
+    "apply_message": "<永恒>能量服(无敌模式)效果启动。",
+    "remove_message": "<永恒>能量服(无敌模式)效果停止。",
+    "rating": "good",
+    "base_mods": {
+      "str_mod": [ 9999 ],
+      "dex_mod": [ 9999 ],
+      "per_mod": [ 9999 ],
+      "int_mod": [ 9999 ],
+      "speed_mod": [ 9999 ],
+      "health_min": [ 9999 ],
+      "stamina_min": [ 100000 ],
+      "pkill_tick": [ 3600 ],
+      "pkill_min": [ 10 ]
+    },
+    "flags": [ "INVISIBLE", "SPATIAL_BARRIER" ],
+    "removes_effects": [
+      "grabbed",
+      "frostbite",
+      "frostbite_recovery",
+      "cold",
+      "shakes",
+      "fungus",
+      "onfire",
+      "hot",
+      "hot_speed",
+      "relax_gas",
+      "dermatik",
+      "bloodworms",
+      "paincysts",
+      "brainworms",
+      "tapeworm",
+      "blind",
+      "poison",
+      "venom_dmg",
+      "venom_weaken",
+      "stung",
+      "badpoison",
+      "foodpoison",
+      "paralyzepoison",
+      "tetanus",
+      "rat_bite_fever",
+      "infected",
+      "asthma",
+      "flu"
+    ],
+    "enchantments": [ { "values": [ { "value": "ITEM_DAMAGE_PURE", "add": 100000 }, { "value": "ARMOR_BASH", "multiply": -1 }, { "value": "ARMOR_CUT", "multiply": -1 }, { "value": "ARMOR_STAB", "multiply": -1 }, { "value": "ARMOR_BULLET", "multiply": -1 }, { "value": "ARMOR_HEAT", "multiply": -1 }, { "value": "ARMOR_COLD", "multiply": -1 }, { "value": "ARMOR_ELEC", "multiply": -1 }, { "value": "ARMOR_ACID", "multiply": -1 }, { "value": "ARMOR_BIO", "multiply": -1 } ] } ]
+  }
+]

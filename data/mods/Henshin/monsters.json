@@ -1,0 +1,653 @@
+[
+  {
+    "id": "mon_henshin_RioTrooper",
+    "type": "MONSTER",
+    "name": { "str": "莱欧骑兵", "str_pl": "莱欧骑兵部队" },
+    "description": "人形的异质存在，被奇特的全覆式战斗装甲所保护，因此一般的攻击对其难以奏效。擅长近身战，精于防守反击，并且会对自己视野所及之处的大多数生物进行无差别攻击，这其中也包括了你。",
+    "default_faction": "nether",
+    "bodytype": "human",
+    "species": [ "NETHER" ],
+	"diff": 30,
+    "volume": "98039 ml",
+    "weight": "100 kg",
+    "hp": 155,
+    "speed": 100,
+    "material": [ "alien_material" ],
+    "symbol": "H",
+    "color": "yellow_magenta",
+    "aggression": 100,
+    "morale": 555,
+    "melee_skill": 5,
+    "melee_dice": 7,
+    "melee_dice_sides": 3,
+	"dodge": 3,
+    "armor_bash": 15,
+    "armor_cut": 25,
+	"armor_stab": 20,
+    "armor_bullet": 30,
+	"armor_fire": 10,
+	"armor_elec": 5,
+	"vision_day": 30,
+    "vision_night": 5,
+    "harvest": "exempt",
+	"death_function": { "effect": { "id": "death_riotrooper", "hit_self": true }, "corpse_type": "NO_CORPSE", "message": "%s 爆发四散！" },
+	"death_drops": "henshin_death_drops_riotrooper",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+	  "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "CLIMBS",
+	  "PUSH_MON",
+	  "CAN_OPEN_DOORS",
+      "NO_BREATHE",
+	  "PATH_AVOID_DANGER_2"
+    ]
+  },
+  
+  {
+    "id": "mon_henshin_orphnoch_1",
+    "type": "MONSTER",
+    "name": { "str": "刺魟奥尔菲诺", "str_pl": "刺魟奥尔菲诺" },
+    "description": "具有刺魟特征的奥尔菲诺，以三叉长矛作为武器，擅长近身战，能够轻而易举地砸破一米厚的混凝土。",
+    "default_faction": "nether_player_hate",
+    "bodytype": "human",
+    "species": [ "NETHER" ],
+	"diff": 30,
+    "volume": "211764 ml",
+    "weight": "108 kg",
+    "hp": 555,
+    "speed": 120,
+    "material": [ "alien_material" ],
+    "symbol": "F",
+    "color": "dark_gray_red",
+    "aggression": 100,
+    "morale": 999,
+    "melee_skill": 8,
+    "melee_dice": 18,
+    "melee_dice_sides": 5,
+    "melee_damage": [ { "damage_type": "cut", "amount": 10 }, { "damage_type": "stab", "amount": 30 } ],
+	"bleed_rate": 30,
+	"dodge": 5,
+    "armor_bash": 35,
+    "armor_cut": 45,
+	"armor_stab": 65,
+    "armor_bullet": 25,
+	"armor_fire": 25,
+	"vision_day": 60,
+    "vision_night": 60,
+	"regenerates": 10,
+    "harvest": "exempt",
+    "special_attacks": [ [ "impale", 30 ], [ "barbed_tentacle", 30 ] ],
+	"death_function": { "effect": { "id": "death_orphnoch_1_fake", "hit_self": true }, "corpse_type": "NO_CORPSE", "message": "%s 扔下三叉长矛，下半身变异出鱼尾，开始在空中高速游动起来！" },
+    "flags": [
+      "ALL_SEEING",
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "SMELLS",
+	  "KEENNOSE",
+      "DESTROYS",
+      "CLIMBS",
+	  "CAN_OPEN_DOORS",
+      "NO_BREATHE",
+	  "STUN_IMMUNE",
+	  "PATH_AVOID_DANGER_1"
+    ]
+  },
+  {
+    "id": "mon_henshin_orphnoch_1_2",
+    "type": "MONSTER",
+    "name": { "str": "刺魟奥尔菲诺游泳态", "str_pl": "刺魟奥尔菲诺游泳态" },
+    "description": "刺魟奥尔菲诺的另一种形态，下半身变成鱼一样的姿态，像在空中游泳一样移动，以高速撞击进行攻击。",
+    "default_faction": "nether_player_hate",
+    "bodytype": "fish",
+    "species": [ "NETHER" ],
+	"diff": 30,
+    "volume": "211764 ml",
+    "weight": "108 kg",
+    "hp": 255,
+    "speed": 555,
+    "material": [ "alien_material" ],
+    "symbol": "F",
+    "color": "dark_gray_red",
+    "aggression": 100,
+    "morale": 999,
+    "melee_skill": 8,
+    "melee_dice": 11,
+    "melee_dice_sides": 4,
+    "melee_damage": [ { "damage_type": "cut", "amount": 10 }, { "damage_type": "stab", "amount": 10 } ],
+	"dodge": 9,
+    "armor_bash": 20,
+    "armor_cut": 30,
+	"armor_stab": 50,
+    "armor_bullet": 40,
+	"armor_fire": 25,
+	"vision_day": 60,
+    "vision_night": 60,
+	"regenerates": 20,
+    "harvest": "exempt",
+    "special_attacks": [ [ "stag_smash", 50 ], [ "barbed_tentacle", 10 ] ],
+	"death_function": { "effect": { "id": "death_orphnoch_1_fake_2", "hit_self": true }, "corpse_type": "NO_CORPSE", "message": "%s 摔在地上，下半身变回了人型！" },
+    "flags": [
+	  "ALL_SEEING",
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "SMELLS",
+	  "KEENNOSE",
+      "FLIES",
+      "BASHES",
+      "DESTROYS",
+      "CLIMBS",
+      "NO_BREATHE",
+	  "STUN_IMMUNE",
+	  "PATH_AVOID_DANGER_1"
+    ]
+  },
+  {
+    "id": "mon_henshin_orphnoch_1_3",
+    "type": "MONSTER",
+    "name": { "str": "刺魟奥尔菲诺", "str_pl": "刺魟奥尔菲诺" },
+    "description": "具有刺魟特征的奥尔菲诺，已经遭受重创。",
+    "default_faction": "nether_player_hate",
+    "bodytype": "human",
+    "species": [ "NETHER" ],
+	"diff": 30,
+    "volume": "211764 ml",
+    "weight": "108 kg",
+    "hp": 255,
+    "speed": 110,
+    "material": [ "alien_material" ],
+    "symbol": "F",
+    "color": "dark_gray_red",
+    "aggression": 100,
+    "morale": 999,
+    "melee_skill": 7,
+    "melee_dice": 15,
+    "melee_dice_sides": 4,
+    "melee_damage": [ { "damage_type": "cut", "amount": 10 }, { "damage_type": "stab", "amount": 10 } ],
+	"dodge": 4,
+    "armor_bash": 30,
+    "armor_cut": 40,
+	"armor_stab": 60,
+    "armor_bullet": 20,
+	"armor_fire": 25,
+	"vision_day": 60,
+    "vision_night": 60,
+	"regenerates": 10,
+    "harvest": "exempt",
+    "special_attacks": [ [ "barbed_tentacle", 40 ] ],
+	"death_function": { "effect": { "id": "death_orphnoch", "hit_self": true }, "corpse_type": "NO_CORPSE", "message": "%s 爆发四散！" },
+	"death_drops": "henshin_alien_death_drops_orphnoch",
+    "flags": [
+      "GRABS",
+	  "STUMBLES",
+	  "ALL_SEEING",
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "SMELLS",
+	  "KEENNOSE",
+	  "CLIMBS",
+	  "CAN_OPEN_DOORS",
+      "NO_BREATHE",
+	  "STUN_IMMUNE"
+    ]
+  },
+  
+  
+  
+  {
+    "id": "mon_henshin_orphnoch_2",
+    "type": "MONSTER",
+    "name": { "str": "龙奥尔菲诺魔人态", "str_pl": "龙奥尔菲诺魔人态" },
+    "description": "龙形的奥尔菲诺，盔甲一样的身体能够反弹绝大多数伤害，并且两只手臂上都戴着龙的头部形状的巨大的爪型利器，能够轻而易举地粉碎三米厚的钢铁。",
+    "default_faction": "nether_player_hate",
+    "bodytype": "human",
+    "species": [ "NETHER" ],
+	"diff": 30,
+    "volume": "327450 ml",
+    "weight": "167 kg",
+    "hp": 999,
+    "speed": 130,
+    "material": [ "alien_material" ],
+    "symbol": "D",
+    "color": "dark_gray_red",
+    "aggression": 100,
+    "morale": 999,
+    "melee_skill": 10,
+    "melee_dice": 19,
+    "melee_dice_sides": 4,
+    "melee_damage": [ { "damage_type": "cut", "amount": 30 }, { "damage_type": "stab", "amount": 10 } ],
+	"bleed_rate": 50,
+	"dodge": 6,
+    "armor_bash": 70,
+    "armor_cut": 70,
+	"armor_stab": 70,
+    "armor_bullet": 70,
+	"armor_fire": 50,
+    "armor_elec": 50,
+	"vision_day": 60,
+    "vision_night": 60,
+	"regenerates": 5,
+    "harvest": "exempt",
+    "special_attacks": [ [ "smash", 30 ], [ "stag_smash", 30 ], [ "long_barbed_tentacle", 30 ] ],
+	"death_function": { "effect": { "id": "death_orphnoch_2_fake", "hit_self": true }, "corpse_type": "NO_CORPSE", "message": "%s 蜕掉外壳，变身龙人态，风驰电掣地向你袭来！" },
+    "flags": [
+      "ALL_SEEING",
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "SMELLS",
+	  "KEENNOSE",
+      "BASHES",
+      "DESTROYS",
+	  "GRABS",
+      "CLIMBS",
+	  "CAN_OPEN_DOORS",
+      "NO_BREATHE",
+	  "PUSH_MON",
+      "PUSH_VEH",
+	  "STUN_IMMUNE"
+    ]
+  },
+  {
+    "id": "mon_henshin_orphnoch_2_2",
+    "type": "MONSTER",
+    "name": { "str": "龙奥尔菲诺龙人态", "str_pl": "龙奥尔菲诺龙人态" },
+    "description": "龙形的奥尔菲诺，蜕皮后体型较瘦，看起来更像龙，能够以轻量化的身躯进行比加速形态更快的超高速移动。",
+    "default_faction": "nether_player_hate",
+    "bodytype": "human",
+    "species": [ "NETHER" ],
+	"diff": 30,
+    "volume": "233332 ml",
+    "weight": "119 kg",
+    "hp": 555,
+    "speed": 1555,
+    "material": [ "alien_material" ],
+    "symbol": "D",
+    "color": "dark_gray_red",
+    "aggression": 100,
+    "morale": 999,
+    "melee_skill": 10,
+    "melee_dice": 13,
+    "melee_dice_sides": 4,
+    "melee_damage": [ { "damage_type": "cut", "amount": 30 }, { "damage_type": "stab", "amount": 10 } ],
+	"bleed_rate": 30,
+	"dodge": 10,
+    "armor_bash": 50,
+    "armor_cut": 50,
+	"armor_stab": 50,
+    "armor_bullet": 50,
+	"armor_fire": 40,
+    "armor_elec": 40,
+	"vision_day": 60,
+    "vision_night": 60,
+	"regenerates": 10,
+    "harvest": "exempt",
+    "special_attacks": [ [ "smash", 20 ], [ "stag_smash", 20 ], [ "long_barbed_tentacle", 50 ] ],
+	"death_function": { "effect": { "id": "death_orphnoch_2_fake_2", "hit_self": true }, "corpse_type": "NO_CORPSE", "message": "%s 遭受重创，变回龙人态，以守为攻地向你发起进攻！" },
+    "flags": [
+      "ALL_SEEING",
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "SMELLS",
+	  "KEENNOSE",
+	  "FLIES",
+      "BASHES",
+      "DESTROYS",
+	  "GRABS",
+      "CLIMBS",
+      "NO_BREATHE",
+	  "PUSH_MON",
+      "PUSH_VEH",
+	  "STUN_IMMUNE",
+	  "PATH_AVOID_DANGER_2"
+    ]
+  },
+  {
+    "id": "mon_henshin_orphnoch_2_3",
+    "type": "MONSTER",
+    "name": { "str": "龙奥尔菲诺魔人态", "str_pl": "龙奥尔菲诺魔人态" },
+    "description": "龙形的奥尔菲诺，已经遭受重创。",
+    "default_faction": "nether_player_hate",
+    "bodytype": "human",
+    "species": [ "NETHER" ],
+	"diff": 30,
+    "volume": "327450 ml",
+    "weight": "167 kg",
+    "hp": 555,
+    "speed": 120,
+    "material": [ "alien_material" ],
+    "symbol": "D",
+    "color": "dark_gray_red",
+    "aggression": 100,
+    "morale": 999,
+    "melee_skill": 9,
+    "melee_dice": 16,
+    "melee_dice_sides": 4,
+    "melee_damage": [ { "damage_type": "cut", "amount": 30 }, { "damage_type": "stab", "amount": 10 } ],
+	"bleed_rate": 30,
+	"dodge": 5,
+    "armor_bash": 60,
+    "armor_cut": 60,
+	"armor_stab": 60,
+    "armor_bullet": 60,
+	"armor_fire": 45,
+    "armor_elec": 45,
+	"vision_day": 60,
+    "vision_night": 60,
+	"regenerates": 5,
+    "harvest": "exempt",
+    "special_attacks": [ [ "smash", 25 ], [ "stag_smash", 25 ], [ "long_barbed_tentacle", 10 ] ],
+	"death_function": { "effect": { "id": "death_orphnoch_2", "hit_self": true }, "corpse_type": "NO_CORPSE", "message": "%s 爆发四散！" },
+	"death_drops": "henshin_alien_death_drops_orphnoch",
+    "flags": [
+      "ALL_SEEING",
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "SMELLS",
+	  "KEENNOSE",
+      "BASHES",
+      "DESTROYS",
+	  "GRABS",
+      "CLIMBS",
+      "NO_BREATHE",
+	  "STUN_IMMUNE",
+	  "PATH_AVOID_DANGER_1"
+    ]
+  },
+
+
+
+  {
+    "id": "mon_albino_penguin",
+	"copy-from": "mon_albino_penguin",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_amigara_horror",
+	"copy-from": "mon_amigara_horror",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_blank",
+	"copy-from": "mon_blank",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_blood_sacrifice",
+	"copy-from": "mon_blood_sacrifice",
+	"type": "MONSTER",
+    "death_drops": { "subtype": "collection", "groups": [ "default_zombie_clothes", "henshin_alien_death_drops" ] }
+  },{
+    "id": "mon_breather",
+	"copy-from": "mon_breather",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_breather_hub",
+	"copy-from": "mon_breather_hub",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_shrapnel_swarm",
+	"copy-from": "mon_shrapnel_swarm",
+	"type": "MONSTER",
+    "death_drops": { "subtype": "collection", "groups": [ "shrapnel_swarm_drops", "henshin_alien_death_drops" ] }
+  },{
+    "id": "mon_structural_spur",
+	"copy-from": "mon_structural_spur",
+	"type": "MONSTER",
+    "death_drops": { "subtype": "collection", "groups": [ "structural_spur_drops", "henshin_alien_death_drops" ] }
+  },{
+    "id": "mon_darkman",
+	"copy-from": "mon_darkman",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_dementia",
+	"copy-from": "mon_dementia",
+	"type": "MONSTER",
+    "death_drops": { "subtype": "collection", "groups": [ "default_zombie_death_drops", "henshin_alien_death_drops" ] }
+  },{
+    "id": "mon_dog_thing",
+	"copy-from": "mon_dog_thing",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_flaming_eye",
+	"copy-from": "mon_flaming_eye",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_flying_polyp",
+	"copy-from": "mon_flying_polyp",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_unseen_hunter",
+	"copy-from": "mon_unseen_hunter",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_gelatin",
+	"copy-from": "mon_gelatin",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_gozu",
+	"copy-from": "mon_gozu",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_gracke",
+	"copy-from": "mon_gracke",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_headless_dog_thing",
+	"copy-from": "mon_headless_dog_thing",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_hound_tindalos",
+	"copy-from": "mon_hound_tindalos",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_hound_tindalos_afterimage",
+	"copy-from": "mon_hound_tindalos_afterimage",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_hunting_horror",
+	"copy-from": "mon_hunting_horror",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_kreck",
+	"copy-from": "mon_kreck",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_rabbit_dreadful",
+	"copy-from": "mon_rabbit_dreadful",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_shadow",
+	"copy-from": "mon_shadow",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_shadow_snake",
+	"copy-from": "mon_shadow_snake",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_shoggoth",
+	"copy-from": "mon_shoggoth",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_thing",
+	"copy-from": "mon_thing",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_twisted_body",
+	"copy-from": "mon_twisted_body",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_yugg",
+	"copy-from": "mon_yugg",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_vortex",
+	"copy-from": "mon_vortex",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_shifting_mass",
+	"copy-from": "mon_shifting_mass",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_impossible_shape",
+	"copy-from": "mon_impossible_shape",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_absence",
+	"copy-from": "mon_absence",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_giant_appendage",
+	"copy-from": "mon_giant_appendage",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_memory",
+	"copy-from": "mon_memory",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_swarm_structure",
+	"copy-from": "mon_swarm_structure",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_twisting_blade",
+	"copy-from": "mon_twisting_blade",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_archunk_weak",
+	"copy-from": "mon_archunk_weak",
+	"type": "MONSTER",
+    "death_drops": { "subtype": "collection", "groups": [ "ps_artifact_weak", "henshin_alien_death_drops" ] }
+  },{
+    "id": "mon_archunk_medium",
+	"copy-from": "mon_archunk_medium",
+	"type": "MONSTER",
+    "death_drops": { "subtype": "collection", "groups": [ "ps_artifact_medium", "henshin_alien_death_drops" ] }
+  },{
+    "id": "mon_archunk_strong",
+	"copy-from": "mon_archunk_strong",
+	"type": "MONSTER",
+    "death_drops": { "subtype": "collection", "groups": [ "ps_artifact_strong", "henshin_alien_death_drops" ] }
+  },{
+    "id": "mon_pale_reflection",
+	"copy-from": "mon_pale_reflection",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_twisted_reflection",
+	"copy-from": "mon_twisted_reflection",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_dark_reflection",
+	"copy-from": "mon_dark_reflection",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_better_half",
+	"copy-from": "mon_better_half",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_tainted_shadow",
+	"copy-from": "mon_tainted_shadow",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_hallucinator",
+	"copy-from": "mon_hallucinator",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_guilt",
+	"copy-from": "mon_guilt",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_sloth",
+	"copy-from": "mon_sloth",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_endless_hunger",
+	"copy-from": "mon_endless_hunger",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },
+  
+  
+  
+  {
+    "id": "mon_mi_go",
+	"copy-from": "mon_mi_go",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_mi_go_slaver",
+	"copy-from": "mon_mi_go_slaver",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_mi_go_surgeon",
+	"copy-from": "mon_mi_go_surgeon",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_mi_go_guard",
+	"copy-from": "mon_mi_go_guard",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_mi_go_myrmidon",
+	"copy-from": "mon_mi_go_myrmidon",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_mi_go_captured",
+	"copy-from": "mon_mi_go_captured",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  },{
+    "id": "mon_mi_go_scout",
+	"copy-from": "mon_mi_go_scout",
+	"type": "MONSTER",
+    "death_drops": "henshin_alien_death_drops"
+  }
+]

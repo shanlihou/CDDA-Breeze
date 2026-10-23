@@ -1,0 +1,17 @@
+[
+	{
+		"id":"TALK_T_trader",
+		"type":"talk_topic",
+		"dynamic_line":"？",
+		"responses":[ { "text": "[需要:30个传送门金币]购买传送门抽卡卷（10次抽卡次数）", "topic": "TALK_T1_1"},{ "text": "[需要:30个传送门金币]购买圣诞抽卡券（10次抽卡次数）", "topic": "TALK_T1_2"},{ "text": "[需要:30个传送门金币]购买虎年吉祥抽卡卷（10次抽卡次数）", "topic": "TALK_T1_3"},{ "text": "[需要:30个传送门金币]购买妖狐村抽卡卷（10次抽卡次数）", "topic": "TALK_T1_4"},{ "text": "[需要:30个传送门金币]购买安眠抽卡卷（10次抽卡次数）", "topic": "TALK_T1_5"},{ "text": "[需要:30个传送门金币]购买兔年吉祥抽卡卷（10次抽卡次数）", "topic": "TALK_T1_6"},{"condition":{ "not": { "npc_is_in_field": "fd_ncard_nosell" } }, "text": "[需要:500个传送门金币]买下行商", "topic": "TALK_T1_99"},{ "text": "告诉我怎么搞到刀乐", "topic": "TALK_DONE","condition": { "not" :{"u_compare_time_since_var": "time_MONEY_BANK","type": "timer", "context": "time", "op": "<", "time": "30 d" }},"effect": [{ "assign_mission": "MISSION_REACH_MONEY_BANK" }] },  { "text": "将美元兑换成传送门金币", "topic": "TALK_EX_exchange" },{ "text": "没什么", "topic": "TALK_DONE" } ] 
+	}
+,
+	{
+		"id":"TALK_T_trader2",
+		"type":"talk_topic",
+		"dynamic_line":"？",
+		"responses":[ { "text": "[需要:30个传送门金币]购买传送门抽卡卷（10次抽卡次数）", "topic": "TALK_T1_1_2"},{ "text": "[需要:30个传送门金币]购买圣诞抽卡券（10次抽卡次数）", "topic": "TALK_T1_2_2"},{ "text": "[需要:30个传送门金币]购买虎年吉祥抽卡卷（10次抽卡次数）", "topic": "TALK_T1_3_2"},{ "text": "[需要:30个传送门金币]购买妖狐村抽卡卷（10次抽卡次数）", "topic": "TALK_T1_4_2"},{ "text": "[需要:30个传送门金币]购买安眠抽卡卷（10次抽卡次数）", "topic": "TALK_T1_5_2"},{ "text": "[需要:30个传送门金币]购买兔年吉祥抽卡卷（10次抽卡次数）", "topic": "TALK_T1_6_2"},{"condition":{ "not": { "npc_is_in_field": "fd_ncard_nosell" } }, "text": "[需要:500个传送门金币]买下行商", "topic": "TALK_T1_99_2"},{ "text": "告诉我怎么搞到刀乐", "topic": "TALK_DONE","condition": { "not" :{"u_compare_time_since_var": "time_MONEY_BANK","type": "timer", "context": "time", "op": "<", "time": "30 d" }},"effect": [{ "assign_mission": "MISSION_REACH_MONEY_BANK" }] },  { "text": "将美元兑换成传送门金币", "topic": "TALK_EX_exchange" },{ "text": "没什么", "topic": "TALK_DONE" } ] 
+	}
+
+
+]

@@ -1,0 +1,227 @@
+[
+	{
+		"type": "martial_art",
+		"id": "style_henshin",
+		"name": "骑士战法",
+		"description": "异界骑士所使用的战斗技艺，会根据使用者身体和精神素质全方位提升战斗力，动能过载时更能施展出威力极强的必杀技。（注：使用该武术难以积累徒手格斗经验）",
+		"initiate": [ "你甩了甩手，摆出战斗姿态。", "%s 甩了甩手，摆出战斗姿态。" ],
+		"learn_difficulty": 4,
+		"arm_block": 1,
+		"leg_block": 3,
+			"static_buffs":[
+				{
+					"id": "henshin_stationary_buff_unarmed",
+					"name": "骑士不死于徒手",
+					"description": "获得额外招架，提高格挡效率，并根据感知提高你的钝击伤害和钝击穿甲。",
+					"unarmed_allowed": true,
+					"skill_requirements": [ { "name": "melee", "level": 1 } ],
+					"bonus_blocks" : 1,
+					"flat_bonuses":[
+						{ "stat": "block_effectiveness", "scale": 1.0 },
+						{ "stat": "damage", "type": "bash", "scaling-stat": "per", "scale": 0.5 },
+						{ "stat": "arpen", "type": "bash", "scaling-stat": "per", "scale": 0.5 }
+					]
+				},{
+					"id": "henshin_stationary_buff_melee",
+					"name": "骑士直感",
+					"description": "获得额外闪避，并根据敏捷增强闪避，根据力量增强格挡。",
+					"unarmed_allowed": true,
+					"melee_allowed": true,
+					"skill_requirements": [ { "name": "melee", "level": 1 } ],
+					"bonus_dodges" : 1,
+					"flat_bonuses":[
+						{ "stat": "block", "scaling-stat": "str", "scale": 0.3 },
+						{ "stat": "dodge", "scaling-stat": "dex", "scale": 0.3 }
+					]
+				},{
+					"id": "henshin_stationary_buff_henshin",
+					"name": "光子血液",
+					"description": "显露于战斗装甲表面的红色液态能量如血液般在你全身流转，使你的攻击根据力量附加火焰伤害，并根据感知提高你的火焰穿甲。",
+					"unarmed_allowed": true,
+					"melee_allowed": true,
+					"required_char_flags_all": [ "Henshin_Henshin_Flag" ],
+					"flat_bonuses":[
+						{ "stat": "damage", "type": "heat", "scaling-stat": "str", "scale": 0.5 },
+						{ "stat": "arpen", "type": "heat", "scaling-stat": "per", "scale": 0.5 }
+					]
+				}
+			],
+			"onmove_buffs":[
+				{
+					"id": "henshin_move_buff",
+					"name": "骑士步法",
+					"description": "每次移动都能根据敏捷提高你的命中，并减少行动点数消耗。",
+					"unarmed_allowed": true,
+					"melee_allowed": true,
+					"skill_requirements": [ { "name": "melee", "level": 2 } ],
+					"buff_duration": 3,
+					"max_stacks": 3,
+					"flat_bonuses":[
+						{ "stat": "hit", "scaling-stat": "dex", "scale": 0.3 }
+					],
+					"mult_bonuses":[
+						{ "stat": "movecost", "scale": 0.95 }
+					]
+				},
+				{
+					"id":"henshin_dodge_buff_4",
+					"name":"表演时间",
+					"description":"好了，表演时间到！根据全属性极大提升你的命中和暴击。",
+					"unarmed_allowed": true,
+					"melee_allowed": true,
+					"skill_requirements": [ { "name": "melee", "level": 6 } ],
+					"required_buffs_all": [ "henshin_attack_buff", "henshin_dodge_buff_3" ],
+					"flat_bonuses":[
+						{ "stat": "hit", "scaling-stat": "str", "scale": 0.3 },
+						{ "stat": "hit", "scaling-stat": "dex", "scale": 0.3 },
+						{ "stat": "hit", "scaling-stat": "int", "scale": 0.3 },
+						{ "stat": "hit", "scaling-stat": "per", "scale": 0.3 },
+						{ "stat": "crit_chance", "scaling-stat": "str", "scale": 0.3 },
+						{ "stat": "crit_chance", "scaling-stat": "dex", "scale": 0.3 },
+						{ "stat": "crit_chance", "scaling-stat": "int", "scale": 0.3 },
+						{ "stat": "crit_chance", "scaling-stat": "per", "scale": 0.3 }
+					],
+					"buff_duration": 3
+				}
+			],
+			"onhit_buffs" : [
+				{
+					"id": "henshin_attack_buff",
+					"name": "骑士连击",
+					"description": "每次命中都能根据力量提高你的钝击伤害，并减少行动点数消耗。",
+					"unarmed_allowed": true,
+					"melee_allowed": true,
+					"skill_requirements": [ { "name": "melee", "level": 2 } ],
+					"buff_duration": 3,
+					"max_stacks": 3,
+					"flat_bonuses":[
+						{ "stat": "damage", "type": "bash", "scaling-stat": "str", "scale": 0.3 }
+					],
+					"mult_bonuses":[
+						{ "stat": "movecost", "scale": 0.95 }
+					]
+				},
+				{
+					"id":"henshin_dodge_buff_2",
+					"name":"骑士节奏",
+					"description":"你从连续的闪避和攻击中把握到了战斗的节奏，根据智力提高你的暴击。维持移动并闪避攻击以进入骑士战舞（需要 5 级近战）。",
+					"unarmed_allowed": true,
+					"melee_allowed": true,
+					"skill_requirements": [ { "name": "melee", "level": 4 } ],
+					"required_buffs_all": [ "henshin_attack_buff", "henshin_dodge_buff" ],
+					"buff_duration": 3,
+					"max_stacks": 3,
+					"flat_bonuses":[
+						{ "stat": "crit_chance", "scaling-stat": "int", "scale": 0.3 }
+					]
+				}
+			],
+			"ondodge_buffs":[
+				{
+					"id":"henshin_dodge_buff",
+					"name":"骑士反击",
+					"description":"你灵活地闪避开敌人的攻击，抢占进攻先机。减少行动点数消耗，并根据智力提高你的命中。维持连击并使攻击命中以进入骑士节奏（需要 4 级近战）。",
+					"unarmed_allowed": true,
+					"melee_allowed": true,
+					"skill_requirements": [ { "name": "melee", "level": 3 } ],
+					"buff_duration": 2,
+					"flat_bonuses":[
+						{ "stat": "hit", "scaling-stat": "int", "scale": 0.5 }
+					],
+					"mult_bonuses":[
+						{ "stat": "movecost", "scale": 0.9 }
+					]
+				},
+				{
+					"id":"henshin_dodge_buff_3",
+					"name":"骑士战舞",
+					"description":"这场战斗已经成为了专属于你一个人的舞台，你不会被击倒且免疫投技。维持连击并进行移动以进入表演时间（需要 6 级近战）。",
+					"unarmed_allowed": true,
+					"melee_allowed": true,
+					"throw_immune": true,
+					"skill_requirements": [ { "name": "melee", "level": 5 } ],
+					"required_buffs_all": [ "henshin_move_buff", "henshin_dodge_buff_2" ],
+					"buff_duration": 5
+				}
+			],
+			"onpause_buffs" : [
+				{
+					"id":"henshin_pause_buff",
+					"name":"不动如山",
+					"description":"你守势沉稳，防守如大山岿然。获得额外招架，并根据全属性极大增强你的格挡。成功格挡以进入“动如雷震”状态（需要 8 级近战）。",
+					"unarmed_allowed": true,
+					"melee_allowed": true,
+					"skill_requirements": [ { "name": "melee", "level": 7 } ],
+					"buff_duration": 1,
+					"bonus_blocks" : 1,
+					"flat_bonuses":[
+						{ "stat": "block", "scaling-stat": "str", "scale": 0.3 },
+						{ "stat": "block", "scaling-stat": "dex", "scale": 0.3 },
+						{ "stat": "block", "scaling-stat": "int", "scale": 0.3 },
+						{ "stat": "block", "scaling-stat": "per", "scale": 0.3 }
+					]
+				}
+			],
+			"onblock_buffs" : [
+				{
+					"id":"henshin_block_buff",
+					"name":"动如雷震",
+					"description":"你以静制动，转守为攻，如雷霆万钧。根据全属性极大提升你的钝击伤害。",
+					"unarmed_allowed": true,
+					"melee_allowed": true,
+					"skill_requirements": [ { "name": "melee", "level": 8 } ],
+					"required_buffs_all": [ "henshin_pause_buff" ],
+					"buff_duration": 1,
+					"flat_bonuses":[
+						{ "stat": "damage", "type": "bash", "scaling-stat": "str", "scale": 0.5 },
+						{ "stat": "damage", "type": "bash", "scaling-stat": "dex", "scale": 0.5 },
+						{ "stat": "damage", "type": "bash", "scaling-stat": "int", "scale": 0.5 },
+						{ "stat": "damage", "type": "bash", "scaling-stat": "per", "scale": 0.5 }
+					]
+				}
+			],
+			"onkill_buffs" : [
+				{
+					"id":"henshin_kill_buff",
+					"name":"侵掠如火",
+					"description":"你攻势炽烈，进攻如烈火迅猛。根据全属性极大提升你的速度。",
+					"unarmed_allowed": true,
+					"melee_allowed": true,
+					"skill_requirements": [ { "name": "melee", "level": 9 } ],
+					"buff_duration": 2,
+					"max_stacks": 2,
+					"flat_bonuses": [
+						{ "stat": "speed", "scaling-stat": "str", "scale": 0.3 },
+						{ "stat": "speed", "scaling-stat": "dex", "scale": 0.3 },
+						{ "stat": "speed", "scaling-stat": "int", "scale": 0.3 },
+						{ "stat": "speed", "scaling-stat": "per", "scale": 0.3 }
+					]
+				}
+			],
+			"techniques":[
+				"tec_rider_punch_od",
+				"tec_rider_kick_od",
+				"tec_rider_sweep_od",
+				"tec_rider_spin_od",
+				"tec_rider_finish_punch",
+				"tec_rider_finish_time",
+				"tec_rider_crimson_smash",
+				"tec_rider_counter_block",
+				"tec_rider_counter_dodge",
+				
+				"tec_rider_feint",
+				"tec_rider_punch",
+				"tec_rider_punch_2",
+				"tec_rider_swing",
+				"tec_rider_swing_2",
+				"tec_rider_uppercut",
+				"tec_rider_uppercut_2",
+				"tec_rider_sweep",
+				"tec_rider_kick",
+				"tec_rider_back_kick",
+				"tec_rider_counter",
+				"tec_rider_counter_2"
+			],
+			"weapon_category": [ "HENSHIN_KICK_WEAPON_OFF", "HENSHIN_KICK_WEAPON_ON", "HENSHIN_SHOOT_WEAPON" ]
+	}
+]

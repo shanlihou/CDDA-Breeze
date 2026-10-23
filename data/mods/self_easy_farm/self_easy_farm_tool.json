@@ -1,0 +1,370 @@
+[
+  {
+    "id": "self_easy_farm_tool_1",
+    "type": "TOOL",
+    "category": "spare_parts",
+    "name": "有机灌注机框架",
+    "description": "金属制成的框架，需要其他部件才能组装为机器",
+    "weight": "2 kg",
+    "volume": "2 L",
+    "longest_side": "100 cm",
+    "price": 100,
+    "price_postapoc": 100,
+    "material": [ "steel" ],
+    "symbol": "E",
+    "color": "blue",
+    "flags": [ "NO_SALVAGE" ]
+  },
+  {
+    "type": "recipe",
+    "result": "self_easy_farm_tool_1",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_PARTS",
+    "skill_used": "fabrication",
+    "difficulty": 6,
+    "time": "1 h",
+    "autolearn": true,
+    "using": [ [ "soldering_standard", 50 ] ],
+    "components": [
+      [
+        [ "steel_lump", 16 ],
+        [ "steel_chunk", 64 ],
+        [ "scrap", 320 ]
+      ]
+    ]
+  },
+  {
+    "id": "self_easy_farm_tool_2",
+    "type": "TOOL",
+    "category": "spare_parts",
+    "name": "有机灌注机容器",
+    "description": "钢化玻璃材质的容器，用于盛放材料",
+    "weight": "2 kg",
+    "volume": "2 L",
+    "longest_side": "100 cm",
+    "price": 100,
+    "price_postapoc": 100,
+    "material": [ "glass" ],
+    "symbol": "E",
+    "color": "blue",
+    "flags": [ "NO_SALVAGE" ]
+  },
+  {
+    "type": "recipe",
+    "result": "self_easy_farm_tool_2",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_PARTS",
+    "skill_used": "fabrication",
+    "difficulty": 6,
+    "time": "1 h",
+    "autolearn": true,
+    "using": [ [ "soldering_standard", 50 ] ],
+    "components": [
+      [
+        [ "steel_lump", 8 ],
+        [ "steel_chunk", 32 ],
+        [ "scrap", 160 ]
+      ],
+      [
+        [ "tempered_glass_sheet", 1 ],
+        [ "jar_glass_sealed", 42 ],
+        [ "flask_glass", 126 ],
+        [ "glass_shard", 400 ]
+      ]
+    ]
+  },
+  {
+    "id": "self_easy_farm_tool_3",
+    "type": "TOOL",
+    "category": "spare_parts",
+    "name": "有机灌注机基底",
+    "description": "植物需要一些适当的环境才能生长",
+    "weight": "2 kg",
+    "volume": "2 L",
+    "longest_side": "100 cm",
+    "price": 100,
+    "price_postapoc": 100,
+    "material": [ "soil" ],
+    "symbol": "E",
+    "color": "blue",
+    "flags": [ "NO_SALVAGE" ]
+  },
+  {
+    "type": "recipe",
+    "result": "self_easy_farm_tool_3",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_PARTS",
+    "skill_used": "fabrication",
+    "difficulty": 6,
+    "time": "1 h",
+    "autolearn": true,
+    "components": [
+      [
+        [ "material_soil", 40 ]
+      ],
+      [
+        [ "fertilizer_liquid", 20 ],
+        [ "fertilizer_commercial", 20 ]
+      ]
+    ]
+  },
+  {
+    "id": "self_easy_farm_tool_4",
+    "type": "TOOL",
+    "category": "spare_parts",
+    "name": "有机灌注机运作零件",
+    "description": "一份打包好的机械工作需求的零件",
+    "weight": "2 kg",
+    "volume": "2 L",
+    "longest_side": "100 cm",
+    "price": 100,
+    "price_postapoc": 100,
+    "material": [ "steel" ],
+    "symbol": "E",
+    "color": "blue",
+    "flags": [ "NO_SALVAGE" ]
+  },
+  {
+    "type": "recipe",
+    "result": "self_easy_farm_tool_4",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_PARTS",
+    "skill_used": "fabrication",
+    "difficulty": 6,
+    "time": "1 h",
+    "autolearn": true,
+    "components": [
+      [
+        [ "spring", 8 ]
+      ],
+      [
+        [ "circuit", 8 ]
+      ],
+      [
+        [ "e_scrap", 12 ]
+      ],
+      [
+        [ "amplifier", 3 ]
+      ],
+      [
+        [ "cable", 400 ]
+      ],
+      [
+        [ "power_supply", 4 ]
+      ],
+      [
+        [ "motor_tiny", 4 ]
+      ],
+      [
+        [ "solder_wire", 200 ]
+      ],
+      [
+        [ "large_lcd_screen", 1 ]
+      ],
+      [
+        [ "element", 2 ],
+        [ "crude_heating_element", 2 ]
+      ]
+    ]
+  },
+  {
+    "id": "self_easy_farm_tool_5",
+    "type": "TOOL",
+    "category": "spare_parts",
+    "name": "有机灌注机运作外壳",
+    "description": "用来保护你脆弱的机器",
+    "weight": "2 kg",
+    "volume": "2 L",
+    "longest_side": "100 cm",
+    "price": 100,
+    "price_postapoc": 100,
+    "material": [ "steel" ],
+    "symbol": "E",
+    "color": "blue",
+    "flags": [ "NO_SALVAGE" ]
+  },
+  {
+    "type": "recipe",
+    "result": "self_easy_farm_tool_5",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_PARTS",
+    "skill_used": "fabrication",
+    "difficulty": 6,
+    "time": "4 h",
+    "autolearn": true,
+    "using": [ [ "soldering_standard", 100 ] ],
+    "components": [
+      [
+        [ "steel_lump", 16 ],
+        [ "steel_chunk", 64 ],
+        [ "scrap", 320 ]
+      ]
+    ]
+  },
+  {
+    "id": "self_easy_farm_tool",
+    "type": "vehicle_part",
+    "name": "有机灌注机",
+    "item": "self_easy_farm_tool",
+    "pseudo_tools": [ { "id": "self_easy_farm_tool" } ],
+    "symbol": "E",
+    "color": "blue",
+    "categories": [ "utility" ],
+    "broken_color": "light_gray",
+    "damage_modifier": 0,
+    "durability": 30000,
+    "description": "一台有机灌注机，用来将种子迅速催生成熟",
+    "folded_volume": "5 L",
+    "breaks_into": [
+      { "item": "self_easy_farm_tool_1", "count": [ 0, 1 ] },
+      { "item": "self_easy_farm_tool_2", "count": [ 0, 1 ] },
+      { "item": "self_easy_farm_tool_3", "count": [ 0, 1 ] },
+      { "item": "self_easy_farm_tool_4", "count": [ 0, 1 ] },
+      { "item": "self_easy_farm_tool_5", "count": [ 0, 1 ] }
+    ],
+    "requirements": {
+      "install": { "skills": [ [ "mechanics", 2 ] ], "time": "5 m", "using": [ [ "welding_standard", 5 ] ] },
+      "removal": { "skills": [ [ "mechanics", 2 ] ], "time": "5 m", "using": [ [ "vehicle_weld_removal", 1 ] ] },
+      "repair": { "skills": [ [ "mechanics", 3 ] ], "time": "5 m", "using": [ [ "welding_standard", 5 ] ] }
+    },
+    "flags": [ "APPLIANCE" ]
+  },
+  {
+    "type": "construction",
+    "id": "app_self_easy_farm_tool",
+    "group": "place_self_easy_farm_tool",
+    "category": "APPLIANCE",
+    "required_skills": [ [ "fabrication", 0 ] ],
+    "time": "5 m",
+    "components": [ [ [ "self_easy_farm_tool", 1 ] ] ],
+    "pre_special": "check_empty",
+    "post_special": "done_appliance",
+    "activity_level": "BRISK_EXERCISE"
+  },
+  {
+    "type": "construction_group",
+    "id": "place_self_easy_farm_tool",
+    "name": "有机灌注机"
+  },
+  {
+    "id": "self_easy_farm_tool",
+    "type": "TOOL",
+    "category": "tools",
+    "name": "有机灌注机",
+    "description": "一台有机灌注机，用来将种子迅速催生成熟",
+    "weight": "10 kg",
+    "volume": "5 L",
+    "longest_side": "100 cm",
+    "price": 100,
+    "price_postapoc": 100,
+    "material": [ "steel" ],
+    "symbol": "E",
+    "color": "blue",
+    "flags": [ "NO_SALVAGE" ],
+    "ammo": [ "battery" ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "holster": true,
+        "max_contains_volume": "1000 L",
+        "max_contains_weight": "1000 kg",
+        "weight_multiplier": 0.0,
+        "volume_multiplier": 0.0,
+        "item_restriction": [
+        	"huge_atomic_battery_cell",
+        	"heavy_atomic_battery_cell",
+        	"heavy_plus_battery_cell",
+        	"heavy_battery_cell",
+        	"heavy_disposable_cell",
+        	"battery_car",
+        	"battery_motorbike",
+        	"small_storage_battery",
+        	"medium_storage_battery",
+        	"storage_battery",
+        	"large_storage_battery"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "self_easy_farm_tool",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_TOOLS",
+    "skill_used": "fabrication",
+    "difficulty": 6,
+    "time": "1 h",
+    "autolearn": true,
+    "using": [ [ "soldering_standard", 200 ] ],
+    "components": [
+      [
+        [ "self_easy_farm_tool_1", 1 ]
+      ],
+      [
+        [ "self_easy_farm_tool_2", 1 ]
+      ],
+      [
+        [ "self_easy_farm_tool_3", 1 ]
+      ],
+      [
+        [ "self_easy_farm_tool_4", 1 ]
+      ],
+      [
+        [ "self_easy_farm_tool_5", 1 ]
+      ]
+    ]
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "self_easy_farm_fertilizer",
+    "name": "有机堆肥",
+    "weight": "20 g",
+    "color": "yellow",
+    "container": "bag_canvas",
+    "comestible_type": "FOOD",
+    "symbol": "~",
+    "quench": -10,
+    "healthy": -10,
+    "calories": 0,
+    "description": "好用的堆肥",
+    "price": 0,
+    "price_postapoc": 0,
+    "material": [ "powder" ],
+    "volume": "1 L",
+    "charges": 24,
+    "category": "chems",
+    "fun": -20
+  },
+  {
+    "type": "recipe",
+    "result": "self_easy_farm_fertilizer",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_PARTS",
+    "skill_used": "fabrication",
+    "difficulty": 6,
+    "time": "30 m",
+    "charges": 24,
+    "autolearn": true,
+    "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "CHEM", "level": 1 } ],
+    "tools": [ [ [ "surface_heat", 20, "LIST" ] ] ],
+    "components": [
+      [
+        [ "ash", 40 ]
+      ],
+      [
+        [ "meal_chitin_piece", 30 ]
+      ],
+      [
+        [ "meal_bone", 20 ],
+        [ "meal_bone_tainted", 20 ]
+      ],
+      [
+        [ "charcoal", 10 ]
+      ],
+      [
+        [ "chem_saltpetre", 10 ]
+      ]
+    ]
+  }
+]

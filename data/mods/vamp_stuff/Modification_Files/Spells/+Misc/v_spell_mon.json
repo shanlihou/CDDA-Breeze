@@ -1,0 +1,286 @@
+[
+  {
+    "id": "mon_desolation_aura",
+    "type": "MONSTER",
+    "name": {
+      "str": "凄暗"
+    },
+    "description": "一团由纯粹恐惧构成的雾气，轻柔地有规律地起伏着。",
+    "default_faction": "player",
+    "species": [
+      "HORROR"
+    ],
+    "diff": 30,
+    "volume": "3 ml",
+    "weight": "3 g",
+    "//": "No way to make this monster immune to its own emitted fields, so an invincible HP is needed here. Take note that only the player and any vampire NPCs are immune, and nothing else.",
+    "hp": 1000000,
+    "speed": 50,
+    "symbol": "*",
+    "color": "light_gray",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 0,
+    "melee_dice": 0,
+    "melee_dice_sides": 0,
+    "dodge": 6,
+    "vision_day": 30,
+    "vision_night": 30,
+    "harvest": "exempt",
+    "emit_fields": [
+      "emit_v_desolate"
+    ],
+    "death_function": {
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s melts away."
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "SMELLS",
+      "NOHEAD",
+      "HARDTOSHOOT",
+      "WEBWALK",
+      "FLIES",
+      "PLASTIC",
+      "ELECTRIC",
+      "ACIDPROOF",
+      "NO_BREATHE",
+      "NOGIB"
+    ]
+  },
+  {
+    "id": "mon_orus_bloodling",
+    "type": "MONSTER",
+    "name": {
+      "str": "流血"
+    },
+    "description": "肿胀的血块，形成某种东西…可怕的。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 25,
+    "speed": 10,
+    "material": [
+      "flesh"
+    ],
+    "attack_cost": 300,
+    "harvest": "exempt",
+    "symbol": "&",
+    "color": "light_red",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 4,
+    "melee_dice": 2,
+    "melee_dice_sides": 2,
+    "armor_bash": 20,
+    "death_function": {
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s melts away."
+    },
+    "regenerates": 5,
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "ELECTRIC",
+      "ACIDPROOF",
+      "NO_BREATHE",
+      "PLASTIC"
+    ]
+  },
+  {
+    "id": "mon_ether_shadow",
+    "type": "MONSTER",
+    "name": {
+      "str": "以太之影"
+    },
+    "description": "一个诡异的人形影子，在微弱阴森的光照下若隐若现。",
+    "default_faction": "player",
+    "species": [
+      "HORROR"
+    ],
+    "bodytype": "human",
+    "diff": 10,
+    "//": "ethereal creatures has no physical density.",
+    "volume": "3 ml",
+    "weight": "3 g",
+    "hp": 20,
+    "speed": 130,
+    "symbol": "@",
+    "color": "light_gray",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 0,
+    "melee_dice": 0,
+    "melee_dice_sides": 0,
+    "dodge": 8,
+    "armor_cut": 999,
+    "armor_stab": 999,
+    "armor_bash": 999,
+    "vision_day": 18,
+    "vision_night": 18,
+    "luminance": 5,
+    "path_settings": {
+      "max_dist": 5,
+      "max_length": 20
+    },
+    "special_attacks": [
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "mon_ether_shadow_spell_target"
+        },
+        "cooldown": 14,
+        "monster_message": "%1$s盯着%3$s，挥动着手臂！"
+      }
+    ],
+    "harvest": "exempt",
+    "death_function": {
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s melts away."
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "SMELLS",
+      "HARDTOSHOOT",
+      "WEBWALK",
+      "FLIES",
+      "NO_BREATHE",
+      "NOGIB"
+    ]
+  },
+  {
+    "id": "mon_idol_vex",
+    "type": "MONSTER",
+    "name": {
+      "str": "烦恼"
+    },
+    "description": "一个以太神，隐藏在一个无法穿透的屏障之下。在清晰的视野中，一个模模糊糊的人形身影在空中自由漂浮。",
+    "default_faction": "player",
+    "species": [
+      "HORROR"
+    ],
+    "bodytype": "human",
+    "diff": 50,
+    "volume": "3 ml",
+    "weight": "3 g",
+    "hp": 400,
+    "speed": 60,
+    "symbol": "@",
+    "color": "white",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 0,
+    "melee_dice": 0,
+    "melee_dice_sides": 0,
+    "dodge": 5,
+    "armor_cut": 999,
+    "armor_stab": 999,
+    "armor_bash": 999,
+    "vision_day": 30,
+    "vision_night": 30,
+    "luminance": 20,
+    "path_settings": {
+      "max_dist": 5,
+      "max_length": 20
+    },
+    "special_attacks": [
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "mon_idol_vex_spell_target"
+        },
+        "cooldown": 11,
+        "monster_message": "%1$s 闪烁并怒视着 %3$s!"
+      }
+    ],
+    "harvest": "exempt",
+    "death_function": {
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s melts away."
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "SMELLS",
+      "HARDTOSHOOT",
+      "WEBWALK",
+      "FLIES",
+      "NO_BREATHE",
+      "NOGIB"
+    ]
+  },
+  {
+    "id": "mon_idol_vex_etherhar",
+    "type": "MONSTER",
+    "name": {
+      "str": "空灵使者"
+    },
+    "description": "汇聚了以太力量的恐怖云雾。看上去很不稳定，好像一碰到就会突然内爆。",
+    "default_faction": "player",
+    "species": [
+      "HORROR"
+    ],
+    "diff": 20,
+    "volume": "3 ml",
+    "weight": "3 g",
+    "hp": 5,
+    "speed": 25,
+    "symbol": "0",
+    "color": "white",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 0,
+    "melee_dice": 0,
+    "melee_dice_sides": 0,
+    "dodge": 2,
+    "armor_cut": 999,
+    "armor_stab": 999,
+    "armor_bash": 999,
+    "vision_day": 10,
+    "vision_night": 10,
+    "luminance": 2,
+    "path_settings": {
+      "max_dist": 5,
+      "max_length": 20
+    },
+    "special_attacks": [
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "mon_idol_vex_etherhar_spell_target"
+        },
+        "cooldown": 1,
+        "monster_message": "%1$s 发出闪耀的光芒！"
+      }
+    ],
+    "harvest": "exempt",
+    "death_function": {
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s melts away."
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "SMELLS",
+      "HARDTOSHOOT",
+      "WEBWALK",
+      "FLIES",
+      "NO_BREATHE",
+      "NOGIB"
+    ]
+  }
+]

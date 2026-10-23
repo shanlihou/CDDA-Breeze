@@ -1,0 +1,81 @@
+[
+	{
+		"id":"ncard_cm_ev1_cocktail",
+		"type":"COMESTIBLE",
+		"name":{ "str_sp": "神圣鸡尾酒" },
+		"description":"如你所见，它是一种琥珀色的液体，里面正在不断冒着白色的泡。喝下它，像蜂蜜一样浓郁的香味会在口中扩散开来，让你体内充满可以燃烧全身的力量。",
+		"weight":"252 g",
+		"color":"yellow",
+		"use_action":{"type": "consume_drug","activation_message": "你感觉到有一股活力从你的体内涌出！","effects": [{ "id": "ef_ncard_ev1_cm_holy_cocktail", "duration": "20 m" },{ "id": "drunk", "duration": 810 }]},
+		"stim":10,
+		"container":"ncard_cm_ev1_bottle_glass",
+		"comestible_type":"DRINK",
+		"symbol":"~",
+		"quench":10,
+		"healthy":20,
+		"calories":784,
+		"material":[ "alcohol", "water" ],
+		"primary_material":"water",
+		"volume":"750 ml",
+		"phase":"liquid",
+		"charges":1,
+		"fun":70,
+		"freezing_point":-70,
+		"flags":[ "TRADER_AVOID","EATEN_HOT","EATEN_COLD" ]
+	}
+,
+	{
+		"id":"ncard_cm_ev1_bottle_glass",
+		"type":"GENERIC",
+		"name":{ "str_sp": "神圣之瓶" },
+		"description":"这是一个带有金色装饰的华丽瓶子。",
+		"copy-from":"bottle_glass",
+		"color":"yellow",
+		"material":[ "gold" ],
+		"flags":[ "TRADER_AVOID" ]
+	}
+,
+	{
+		"id":"ncard_cm_ev2_omochi",
+		"type":"COMESTIBLE",
+		"name":{ "str_sp": "年糕" },
+		"description":"一块烤成棕色的年糕，我觉得它米香的味道和有嚼劲的口感会带出你内心中潜藏着的力量。",
+		"weight":"200 g",
+		"color":"white",
+		"use_action":{"type": "consume_drug","activation_message": "你感觉到有一股力量从你的体内涌出！","effects": [{ "id": "ef_ncard_ev2_cm_omochi", "duration": "20 m" }]},
+		"comestible_type":"FOOD",
+		"symbol":"o",
+		"healthy":10,
+		"calories":800,
+		"material":[ "veggy" ],
+		"primary_material":"dried_vegetable",
+		"volume":"200 ml",
+		"spoils_in":"360 days",
+		"fun":70,
+		"freezing_point":0,
+		"flags":[ "TRADER_AVOID","EATEN_HOT" ]
+	}
+,
+	{
+		"id":"ncard_cm_ev3_omochi",
+		"type":"COMESTIBLE",
+		"name":{ "str_sp": "樱饼" },
+		"description":"用樱花叶包裹着的麻薯，我觉得它自带的甜味和有嚼劲的口感会带出你内心中潜藏着的力量 ",
+		"weight":"200 g",
+		"color":"white",
+		"use_action":{"type": "consume_drug","activation_message": "你感觉到有一股力量从你的体内涌出！","effects": [{ "id": "ef_ncard_ev2_cm_omochi", "duration": "20 m" }]},
+		"comestible_type":"FOOD",
+		"symbol":"o",
+		"healthy":10,
+		"calories":800,
+		"material":[ "veggy" ],
+		"primary_material":"dried_vegetable",
+		"volume":"200 ml",
+		"spoils_in":"360 days",
+		"fun":70,
+		"freezing_point":0,
+		"flags":[ "TRADER_AVOID","EATEN_HOT" ]
+	}
+
+
+]

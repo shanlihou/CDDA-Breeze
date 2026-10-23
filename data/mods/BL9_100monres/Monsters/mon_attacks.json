@@ -1,0 +1,91 @@
+[
+  {
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "id": "chainsaw_swing",
+    "cooldown": 12,
+    "move_cost": 120,
+    "damage_max_instance": [
+      {
+        "damage_type": "cut",
+        "amount": 13,
+        "armor_penetration": 11
+      }
+    ],
+    "body_parts": [
+      [
+        "torso",
+        1
+      ]
+    ],
+    "effects": [
+      {
+        "id": "downed",
+        "duration": 2
+      }
+    ],
+    "hit_dmg_u": "%1$s在你的躯干摆动！",
+    "hit_dmg_npc": "%1$s在<npcname>的躯干摆动！",
+    "no_dmg_msg_u": "%1$s试图挥向你的躯干，但未能穿透你的盔甲！",
+    "no_dmg_msg_npc": "%1$s试图在<npcname>的躯干摆动，但未能穿透他们的装甲！",
+    "miss_msg_u": "%s向你挥来，你却闪开了！",
+    "miss_msg_npc": "%s摆<npcname>，却躲闪！"
+  },
+  {
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "id": "chainsaw_thrust",
+    "cooldown": 9,
+    "move_cost": 210,
+    "accuracy": 5,
+    "damage_max_instance": [
+      {
+        "damage_type": "cut",
+        "amount": 10,
+        "armor_penetration": 10
+      }
+    ],
+    "hit_dmg_u": "%1$s用它的电锯猛刺你！",
+    "hit_dmg_npc": "%1$s用电锯在<npcname>处猛刺！",
+    "no_dmg_msg_u": "%1$s试图用它的链锯向你刺去，但是没有穿透你的装甲！",
+    "no_dmg_msg_npc": "%1$s试图用它的链锯在<npcname>处推进，但未能穿透他们的装甲！",
+    "miss_msg_u": "%s用它的电锯猛刺你，但你让开！",
+    "miss_msg_npc": "%s用它的电锯在<npcname>处猛刺，但它们躲开了！"
+  },
+  {
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "id": "crushing_blow",
+    "cooldown": 12,
+    "move_cost": 150,
+    "damage_max_instance": [
+      {
+        "damage_type": "bash",
+        "amount": 13,
+        "armor_penetration": 11
+      }
+    ],
+    "body_parts": [
+      [
+        "torso",
+        1
+      ]
+    ],
+    "effects": [
+      {
+        "id": "downed",
+        "duration": 2
+      },
+      {
+        "id": "stunned",
+        "duration": 3
+      }
+    ],
+    "hit_dmg_u": "%1$s碾压你！",
+    "hit_dmg_npc": "%1$s碾压<npcname>！",
+    "no_dmg_msg_u": "%1$s试图碾压你，但未能穿透你的装甲！",
+    "no_dmg_msg_npc": "%1$s试图碾压<npcname>，但未能穿透他们的装甲！",
+    "miss_msg_u": "%s想碾压你，你却闪开了！",
+    "miss_msg_npc": "%s试图碾压<npcname>，但他们躲闪！"
+  }
+]

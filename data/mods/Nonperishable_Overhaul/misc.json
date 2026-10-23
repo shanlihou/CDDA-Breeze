@@ -1,0 +1,140 @@
+[
+  {
+    "type": "COMESTIBLE",
+    "id": "brew_milk_curdled",
+    "copy-from": "brew_milk_curdled",
+    "name": {
+      "str_sp": "凝乳"
+    },
+    "description": "加了醋与天然凝乳酶的牛奶。若在发酵瓮里放一段时间，就可以用来制造奶酪。",
+    "spoils_in": 0
+  },
+  {
+    "id": "mugwort_oil",
+    "copy-from": "mugwort_oil",
+    "//": "Last I checked, med-type comestibles are bugged and can't spoiled, so this fixes that.  Also fixes the inevitable consequence of fixing it in the hardcoded, as them mugwort will have no good way to store it in an accessible state.",
+    "type": "COMESTIBLE",
+    "name": {
+      "str_sp": "艾蒿油"
+    },
+    "description": "从艾蒿中提取出来的一些精油。可以口服，用以驱除体内的寄生虫。用水送服！",
+    "spoils_in": 0
+  },
+  {
+    "id": "thyme_oil",
+    "copy-from": "thyme_oil",
+    "type": "COMESTIBLE",
+    "name": {
+      "str_sp": "百里香精油"
+    },
+    "description": "从百里香中提取的精华成分，可以作为轻度刺激性消毒剂。",
+    "spoils_in": 0
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cracklins",
+    "copy-from": "cracklins",
+    "//": "Always wondered why these weren't treated like the dried pork rinds they normally are, at least store bought.",
+    "name": {
+      "str_sp": "香脆猪油渣"
+    },
+    "description": "一份在油中炸到酥脆可口的可食用的脂肪和皮。\n“酥脆得流油！”",
+    "spoils_in": 0
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "milk_curdled",
+    "copy-from": "milk_curdled",
+    "name": {
+      "str_sp": "酪乳"
+    },
+    "description": "一些用醋和凝乳酶凝结的牛奶凝结物，尚须加盐和滤掉乳清。",
+    "spoils_in": 0
+  },
+  {
+    "id": "jerky_offal",
+    "//": "Depending on mod load order, MST Extra's jerked offal may fail to inherit the changes to vanilla jerky, so this redundant entry is needed to ensure the desired interaction between the two mods",
+    "copy-from": "jerky",
+    "type": "COMESTIBLE",
+    "name": {
+      "str_sp": "烤干杂碎"
+    },
+    "description": "没怎么处理,只经过普通风干,又咸又干的各种内脏. 闻起来像狗粮一样糟糕,但可以很好的长期储存.",
+    "fun": -2,
+    "healthy": -1,
+    "calories": 92,
+    "proportional": {
+      "price": 0.8
+    },
+    "delete": {
+      "flags": [
+        "NO_CRAFT_INHERIT"
+      ]
+    },
+    "spoils_in": 0
+  },
+  {
+    "id": "potted_meat",
+    "//": "Depending on mod load order, MST Extra's potted meat may fail to inherit the changes to pemmican, so this redundant entry is needed to ensure the desired interaction between the two mods",
+    "copy-from": "pemmican",
+    "type": "COMESTIBLE",
+    "name": {
+      "str_sp": "罐装肉"
+    },
+    "conditional_names": [
+      {
+        "type": "FLAG",
+        "condition": "CANNIBALISM",
+        "name": {
+          "str_sp": "potted person"
+        }
+      },
+      {
+        "type": "COMPONENT_ID",
+        "condition": "mutant",
+        "name": {
+          "str_sp": "potted freak"
+        }
+      }
+    ],
+    "weight": "155 g",
+    "container": "can_medium",
+    "calories": 452,
+    "charges": 2,
+    "description": "将肉类烹调煮熟,浸没在黄油或融化的脂肪中进行保存,这是种在罐装技术出现之前的一种食品保存形式.也被称为油封肉.味道浓郁且富含脂肪,可以保存很长时间.",
+    "price": "12 USD",
+    "price_postapoc": "4 USD",
+    "material": [
+      "flesh"
+    ],
+    "vitamins": [
+      [
+        "vitA",
+        7
+      ],
+      [
+        "vitC",
+        16
+      ],
+      [
+        "calcium",
+        2
+      ],
+      [
+        "iron",
+        69
+      ],
+      [
+        "vitB",
+        781
+      ]
+    ],
+    "fun": 1,
+    "extend": {
+      "flags": [
+        "EATEN_HOT"
+      ]
+    },
+    "spoils_in": 0
+  }
+]

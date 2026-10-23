@@ -1,0 +1,25 @@
+[
+  {
+    "type": "mutation",
+    "id": "临渊者效应",
+    "name": { "str": "临渊者效应" },
+    "points": 0,
+    "description": "在临渊者中你的耐力几乎无限，移动速度极快，噪音几乎消失，你可以依靠推进系统跳跃一段距离，但这一切并非没有代价，临渊者会极大的消耗你的身体能量，新陈代谢速度增加了1500倍,常人的能量储备只能驾驶10分钟",
+    "cardio_multiplier": 100,
+    "stamina_regen_modifier": 5000,
+    "metabolism_modifier": 1500,
+    "noise_modifier": 0.1,
+    "hp_modifier": 3,
+    "healing_awake": 5000.0,
+    "healing_resting": 5000.0,
+    "mending_modifier": 1000.0,
+    "movecost_obstacle_modifier": 0.2,
+    "movecost_flatground_modifier": 0.2,
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [ { "value": "CLIMATE_CONTROL_CHILL", "add": 2500 }, { "value": "CLIMATE_CONTROL_HEAT", "add": 500 } ]
+      }
+    ]
+  }
+]

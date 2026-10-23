@@ -1,0 +1,35 @@
+[
+	{
+		"id":"ncard_spell_card_pull_ally2",
+		"type":"TOOL",
+		"copy-from":"ncard_base_r1",
+		"name":"铜制卡片(咏唱/驱散(弱))",
+		"description":"一张一次性卡片，可以用神秘的力量将我方怪物吹到15米外。请注意，它对敌人或NPC是不起作用的。",
+		"material":[ "bronze" ],
+		"symbol":"i",
+		"color":"brown",
+		"flags":[ "UNBREAKABLE_MELEE","TRADER_AVOID","NO_UNLOAD", "NO_RELOAD" ],
+		"pocket_data":[ { "pocket_type": "MAGAZINE", "ammo_restriction": { "ncard_misc_powder_a": 3 } } ],
+		"use_action":{ "type": "cast_spell", "spell_id": "spell_ncard_pull_ally2", "no_fail": true, "level": 0 },
+		"price":0,
+		"charges_per_use":1
+	}
+,
+	{
+		"id":"ncard_spell_card_pull_ally",
+		"type":"TOOL",
+		"copy-from":"ncard_base_r1",
+		"name":"铜制卡片(咏唱/驱散)",
+		"description":"一张一次性卡片，可以用神秘的力量将我方怪物吹到30米外。请注意，它对敌人或NPC是不起作用的。",
+		"material":[ "bronze" ],
+		"symbol":"i",
+		"color":"brown",
+		"flags":[ "UNBREAKABLE_MELEE","TRADER_AVOID","NO_UNLOAD", "NO_RELOAD" ],
+		"pocket_data":[ { "pocket_type": "MAGAZINE", "ammo_restriction": { "ncard_misc_powder_a": 3 } } ],
+		"use_action":{ "type": "cast_spell", "spell_id": "spell_ncard_pull_ally", "no_fail": true, "level": 0 },
+		"price":0,
+		"charges_per_use":1
+	}
+
+
+]

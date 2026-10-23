@@ -1,0 +1,666 @@
+[
+  {
+    "//": "力量初级",
+    "id": "TALK_SP_STRENGTH1_MUTAGEN",
+    "type": "talk_topic",
+    "dynamic_line": "你努力地集中意念，引导能量强化神经系统，凝结力量特质。",
+    "responses": [
+      {
+        "text": "肌肉发达",
+        "condition": {
+          "and": [
+            { "not": { "u_has_trait": "STR_UP_2" } },
+            { "not": { "u_has_trait": "STR_UP_3" } },
+            { "not": { "u_has_trait": "SP_STR_UP" } }
+          ]
+        },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "STR_UP_2" }
+      },
+      {
+        "text": "活化肾上腺素",
+        "condition": { "not": { "u_has_trait": "ADRENALINE" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "ADRENALINE" }
+      },
+      {
+        "text": "坚韧皮肤",
+        "condition": { "not": { "u_has_trait": "THICKSKIN" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "THICKSKIN" }
+      },
+      { "text": "取消", "topic": "TALK_DONE", "effect": { "u_spawn_item": "cohesion_strength1" } }
+    ]
+  },
+  {
+    "//": "力量中级",
+    "id": "TALK_SP_STRENGTH2_MUTAGEN",
+    "type": "talk_topic",
+    "dynamic_line": "你努力地集中意念，引导能量强化神经系统，凝结力量特质。",
+    "responses": [
+      {
+        "text": "孔武有力",
+        "condition": {
+          "and": [ { "u_has_trait": "STR_UP_2" }, { "not": { "u_has_trait": "STR_UP_3" } }, { "not": { "u_has_trait": "SP_STR_UP" } } ]
+        },
+        "topic": "TALK_DONE",
+        "effect": [ { "u_lose_trait": "STR_UP_2" }, { "u_add_trait": "STR_UP_3" } ]
+      },
+      {
+        "text": "背肌发达",
+        "condition": { "not": { "u_has_trait": "STRONGBACK" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "STRONGBACK" }
+      },
+      {
+        "text": "强壮",
+        "condition": { "and": [ { "not": { "u_has_trait": "TOUGH" } }, { "not": { "u_has_trait": "TOUGH3" } } ] },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "TOUGH" }
+      },
+      {
+        "text": "心肺强化",
+        "condition": { "not": { "u_has_trait": "SP_CARDIOREGEN" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "SP_CARDIOREGEN" }
+      },
+      { "text": "取消", "topic": "TALK_DONE", "effect": { "u_spawn_item": "cohesion_strength2" } }
+    ]
+  },
+  {
+    "//": "力量高级",
+    "id": "TALK_SP_STRENGTH3_MUTAGEN",
+    "type": "talk_topic",
+    "dynamic_line": "你努力地集中意念，引导能量强化神经系统，凝结力量特质。",
+    "responses": [
+      {
+        "text": "骁勇善战",
+        "condition": { "and": [ { "u_has_trait": "STR_UP_3" }, { "not": { "u_has_trait": "SP_STR_UP" } } ] },
+        "topic": "TALK_DONE",
+        "effect": [ { "u_lose_trait": "STR_UP_3" }, { "u_add_trait": "SP_STR_UP" } ]
+      },
+      {
+        "text": "精力充沛",
+        "condition": { "not": { "u_has_trait": "GOODCARDIO" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "GOODCARDIO" }
+      },
+      {
+        "text": "不可战胜",
+        "condition": { "and": [ { "u_has_trait": "TOUGH" }, { "not": { "u_has_trait": "TOUGH3" } } ] },
+        "topic": "TALK_DONE",
+        "effect": [ { "u_lose_trait": "TOUGH" }, { "u_add_trait": "TOUGH3" } ]
+      },
+      { "text": "取消", "topic": "TALK_DONE", "effect": { "u_spawn_item": "cohesion_strength3" } }
+    ]
+  },
+  {
+    "//": "敏捷初级",
+    "id": "TALK_SP_DEXTERITY1_MUTAGEN",
+    "type": "talk_topic",
+    "dynamic_line": "你努力地集中意念，引导能量强化神经系统，凝结敏捷特质。",
+    "responses": [
+      {
+        "text": "灵巧",
+        "condition": {
+          "and": [
+            { "not": { "u_has_trait": "DEX_UP_2" } },
+            { "not": { "u_has_trait": "DEX_UP_3" } },
+            { "not": { "u_has_trait": "SP_DEX_UP" } }
+          ]
+        },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "DEX_UP_2" }
+      },
+      {
+        "text": "眼疾手快",
+        "condition": { "not": { "u_has_trait": "DEFT" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "DEFT" }
+      },
+      {
+        "text": "潜行",
+        "condition": { "not": { "u_has_trait": "LIGHTSTEP" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "LIGHTSTEP" }
+      },
+      { "text": "取消", "topic": "TALK_DONE", "effect": { "u_spawn_item": "cohesion_dexterity1" } }
+    ]
+  },
+  {
+    "//": "敏捷中级",
+    "id": "TALK_SP_DEXTERITY2_MUTAGEN",
+    "type": "talk_topic",
+    "dynamic_line": "你努力地集中意念，引导能量强化神经系统，凝结敏捷特质。",
+    "responses": [
+      {
+        "text": "高度灵巧",
+        "condition": {
+          "and": [ { "u_has_trait": "DEX_UP_2" }, { "not": { "u_has_trait": "DEX_UP_3" } }, { "not": { "u_has_trait": "SP_DEX_UP" } } ]
+        },
+        "topic": "TALK_DONE",
+        "effect": [ { "u_lose_trait": "DEX_UP_2" }, { "u_add_trait": "DEX_UP_3" } ]
+      },
+      {
+        "text": "身轻如燕",
+        "condition": { "not": { "u_has_trait": "DEX_AGILE_FEET" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "DEX_AGILE_FEET" }
+      },
+      {
+        "text": "心灵手巧",
+        "condition": { "and": [ { "u_has_trait": "DEX_AGILE_FEET" }, { "not": { "u_has_trait": "DEX_AGILE_HAND" } } ] },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "DEX_AGILE_FEET" }
+      },
+      {
+        "text": "速行",
+        "condition": { "and": [ { "not": { "u_has_trait": "FLEET" } }, { "not": { "u_has_trait": "FLEET2" } } ] },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "FLEET" }
+      },
+      { "text": "取消", "topic": "TALK_DONE", "effect": { "u_spawn_item": "cohesion_dexterity2" } }
+    ]
+  },
+  {
+    "//": "敏捷高级",
+    "id": "TALK_SP_DEXTERITY3_MUTAGEN",
+    "type": "talk_topic",
+    "dynamic_line": "你努力地集中意念，引导能量强化神经系统，凝结敏捷特质。",
+    "responses": [
+      {
+        "text": "电光石火",
+        "condition": { "and": [ { "u_has_trait": "DEX_UP_3" }, { "not": { "u_has_trait": "SP_DEX_UP" } } ] },
+        "topic": "TALK_DONE",
+        "effect": [ { "u_lose_trait": "DEX_UP_3" }, { "u_add_trait": "SP_DEX_UP" } ]
+      },
+      {
+        "text": "闪电反射",
+        "condition": {
+          "and": [
+            { "u_has_trait": "SP_DEX_UP" },
+            { "u_has_trait": "QUICK" },
+            { "u_has_trait": "FLEET2" },
+            { "not": { "u_has_trait": "DEX_AGILE_TORSO" } }
+          ]
+        },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "DEX_AGILE_TORSO" }
+      },
+      {
+        "text": "跑步健将",
+        "condition": { "and": [ { "u_has_trait": "FLEET" }, { "not": { "u_has_trait": "FLEET2" } } ] },
+        "topic": "TALK_DONE",
+        "effect": [ { "u_lose_trait": "FLEET" }, { "u_add_trait": "FLEET2" } ]
+      },
+      {
+        "text": "迅捷",
+        "condition": { "not": { "u_has_trait": "QUICK" } },
+        "topic": "TALK_DONE",
+        "effect": [ { "u_add_trait": "QUICK" } ]
+      },
+      { "text": "取消", "topic": "TALK_DONE", "effect": { "u_spawn_item": "cohesion_dexterity3" } }
+    ]
+  },
+  {
+    "//": "智力初级",
+    "id": "TALK_SP_INTELLIGENCE1_MUTAGEN",
+    "type": "talk_topic",
+    "dynamic_line": "你努力地集中意念，引导能量强化神经系统，凝结智力特质。",
+    "responses": [
+      {
+        "text": "精明强干",
+        "condition": {
+          "and": [
+            { "not": { "u_has_trait": "INT_UP_2" } },
+            { "not": { "u_has_trait": "INT_UP_3" } },
+            { "not": { "u_has_trait": "SP_INT_UP" } }
+          ]
+        },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "INT_UP_2" }
+      },
+      {
+        "text": "快速阅读",
+        "condition": { "not": { "u_has_trait": "FASTREADER" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "FASTREADER" }
+      },
+      {
+        "text": "欺骗精通",
+        "condition": { "not": { "u_has_trait": "LIAR" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "LIAR" }
+      },
+      { "text": "取消", "topic": "TALK_DONE", "effect": { "u_spawn_item": "cohesion_intelligence1" } }
+    ]
+  },
+  {
+    "//": "智力中级",
+    "id": "TALK_SP_INTELLIGENCE2_MUTAGEN",
+    "type": "talk_topic",
+    "dynamic_line": "你努力地集中意念，引导能量强化神经系统，凝结智力特质。",
+    "responses": [
+      {
+        "text": "算无遗策",
+        "condition": {
+          "and": [ { "u_has_trait": "INT_UP_2" }, { "not": { "u_has_trait": "INT_UP_3" } }, { "not": { "u_has_trait": "SP_INT_UP" } } ]
+        },
+        "topic": "TALK_DONE",
+        "effect": [ { "u_lose_trait": "INT_UP_2" }, { "u_add_trait": "INT_UP_3" } ]
+      },
+      {
+        "text": "出色记忆",
+        "condition": { "not": { "u_has_trait": "GOODMEMORY" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "GOODMEMORY" }
+      },
+      {
+        "text": "打包专家",
+        "condition": { "not": { "u_has_trait": "PACKMULE" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "PACKMULE" }
+      },
+      { "text": "取消", "topic": "TALK_DONE", "effect": { "u_spawn_item": "cohesion_intelligence2" } }
+    ]
+  },
+  {
+    "//": "智力高级",
+    "id": "TALK_SP_INTELLIGENCE3_MUTAGEN",
+    "type": "talk_topic",
+    "dynamic_line": "你努力地集中意念，引导能量强化神经系统，凝结智力特质。",
+    "responses": [
+      {
+        "text": "智计百出",
+        "condition": { "and": [ { "u_has_trait": "INT_UP_3" }, { "not": { "u_has_trait": "SP_INT_UP" } } ] },
+        "topic": "TALK_DONE",
+        "effect": [ { "u_lose_trait": "INT_UP_3" }, { "u_add_trait": "SP_INT_UP" } ]
+      },
+      {
+        "text": "快速学习",
+        "condition": { "not": { "u_has_trait": "FASTLEARNER" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "FASTLEARNER" }
+      },
+      {
+        "text": "优良基因",
+        "condition": { "not": { "u_has_trait": "ROBUST" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "ROBUST" }
+      },
+      { "text": "取消", "topic": "TALK_DONE", "effect": { "u_spawn_item": "cohesion_intelligence3" } }
+    ]
+  },
+  {
+    "//": "感知初级",
+    "id": "TALK_SP_PERCEPTION1_MUTAGEN",
+    "type": "talk_topic",
+    "dynamic_line": "你努力地集中意念，引导能量强化神经系统，凝结感知特质。",
+    "responses": [
+      {
+        "text": "高度感知",
+        "condition": {
+          "and": [
+            { "not": { "u_has_trait": "PER_UP_2" } },
+            { "not": { "u_has_trait": "PER_UP_3" } },
+            { "not": { "u_has_trait": "SP_PER_UP" } }
+          ]
+        },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "PER_UP_2" }
+      },
+      {
+        "text": "视觉发达",
+        "condition": { "not": { "u_has_trait": "EAGLEEYED" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "EAGLEEYED" }
+      },
+      {
+        "text": "听觉发达",
+        "condition": { "not": { "u_has_trait": "GOODHEARING" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "GOODHEARING" }
+      },
+      {
+        "text": "夜视",
+        "condition": { "not": { "u_has_trait": "NIGHTVISION" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "NIGHTVISION" }
+      },
+      { "text": "取消", "topic": "TALK_DONE", "effect": { "u_spawn_item": "cohesion_perception1" } }
+    ]
+  },
+  {
+    "//": "感知中级",
+    "id": "TALK_SP_PERCEPTION2_MUTAGEN",
+    "type": "talk_topic",
+    "dynamic_line": "你努力地集中意念，引导能量强化神经系统，凝结感知特质。",
+    "responses": [
+      {
+        "text": "洞察一切",
+        "condition": {
+          "and": [ { "u_has_trait": "PER_UP_2" }, { "not": { "u_has_trait": "PER_UP_3" } }, { "not": { "u_has_trait": "SP_PER_UP" } } ]
+        },
+        "topic": "TALK_DONE",
+        "effect": [ { "u_lose_trait": "PER_UP_2" }, { "u_add_trait": "PER_UP_3" } ]
+      },
+      {
+        "text": "高级夜视",
+        "condition": { "not": { "u_has_trait": "NIGHTVISION2" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "NIGHTVISION2" }
+      },
+      {
+        "text": "目光如电",
+        "condition": { "and": [ { "u_has_trait": "EAGLEEYED" }, { "not": { "u_has_trait": "SP_EAGLEEYE2" } } ] },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "SP_EAGLEEYE2" }
+      },
+      { "text": "取消", "topic": "TALK_DONE", "effect": { "u_spawn_item": "cohesion_perception2" } }
+    ]
+  },
+  {
+    "//": "感知高级",
+    "id": "TALK_SP_PERCEPTION3_MUTAGEN",
+    "type": "talk_topic",
+    "dynamic_line": "你努力地集中意念，引导能量强化神经系统，凝结感知特质。",
+    "responses": [
+      {
+        "text": "心有灵犀",
+        "condition": { "and": [ { "u_has_trait": "PER_UP_3" }, { "not": { "u_has_trait": "SP_PER_UP" } } ] },
+        "topic": "TALK_DONE",
+        "effect": [ { "u_lose_trait": "PER_UP_3" }, { "u_add_trait": "SP_PER_UP" } ]
+      },
+      {
+        "text": "完美夜视",
+        "condition": { "and": [ { "u_has_trait": "NIGHTVISION2" }, { "not": { "u_has_trait": "NIGHTVISION3" } } ] },
+        "topic": "TALK_DONE",
+        "effect": [ { "u_lose_trait": "NIGHTVISION2" }, { "u_add_trait": "NIGHTVISION3" } ]
+      },
+      {
+        "text": "红外视觉",
+        "condition": { "and": [ { "u_has_trait": "NIGHTVISION3" }, { "not": { "u_has_trait": "INFRARED" } } ] },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "INFRARED" }
+      },
+      { "text": "取消", "topic": "TALK_DONE", "effect": { "u_spawn_item": "cohesion_perception3" } }
+    ]
+  },
+  {
+    "//": "耐力初级",
+    "id": "TALK_SP_ENDURENCE1_MUTAGEN",
+    "type": "talk_topic",
+    "dynamic_line": "你努力地集中意念，引导能量强化神经系统，凝结耐力特质。",
+    "responses": [
+      {
+        "text": "毒素抵抗",
+        "condition": { "not": { "u_has_trait": "POISRESIST" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "POISRESIST" }
+      },
+      {
+        "text": "感染抵抗",
+        "condition": { "not": { "u_has_trait": "INFRESIST" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "INFRESIST" }
+      },
+      {
+        "text": "疾病抵抗",
+        "condition": { "not": { "u_has_trait": "DISRESISTANT" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "DISRESISTANT" }
+      },
+      {
+        "text": "寄生免疫",
+        "condition": { "not": { "u_has_trait": "PARAIMMUNE" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "PARAIMMUNE" }
+      },
+      {
+        "text": "少眠者",
+        "condition": { "not": { "u_has_trait": "WAKEFUL" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "WAKEFUL" }
+      },
+      {
+        "text": "肠胃发达",
+        "condition": { "not": { "u_has_trait": "STRONGSTOMACH" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "STRONGSTOMACH" }
+      },
+      { "text": "取消", "topic": "TALK_DONE", "effect": { "u_spawn_item": "cohesion_endurence1" } }
+    ]
+  },
+  {
+    "//": "耐力中级",
+    "id": "TALK_SP_ENDURENCE2_MUTAGEN",
+    "type": "talk_topic",
+    "dynamic_line": "你努力地集中意念，引导能量强化神经系统，凝结耐力特质。",
+    "responses": [
+      {
+        "text": "血脉归返",
+        "condition": { "not": { "u_has_trait": "END_LINEAGE" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "END_LINEAGE" }
+      },
+      {
+        "text": "疼痛抵抗",
+        "condition": { "not": { "u_has_trait": "PAINRESIST" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "PAINRESIST" }
+      },
+      {
+        "text": "疼痛恢复",
+        "condition": { "not": { "u_has_trait": "PAINREC1" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "PAINREC1" }
+      },
+      {
+        "text": "感染免疫",
+        "condition": { "and": [ { "u_has_trait": "INFRESIST" }, { "not": { "u_has_trait": "INFIMMUNE" } } ] },
+        "topic": "TALK_DONE",
+        "effect": [ { "u_lose_trait": "INFRESIST" }, { "u_add_trait": "INFIMMUNE" } ]
+      },
+      {
+        "text": "自愈",
+        "condition": { "and": [ { "not": { "u_has_trait": "REGEN" } }, { "not": { "u_has_trait": "FASTHEALER" } } ] },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "FASTHEALER" }
+      },
+      {
+        "text": "节食",
+        "condition": { "not": { "u_has_trait": "LIGHTEATER" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "LIGHTEATER" }
+      },
+      { "text": "取消", "topic": "TALK_DONE", "effect": { "u_spawn_item": "cohesion_endurence2" } }
+    ]
+  },
+  {
+    "//": "耐力高级",
+    "id": "TALK_SP_ENDURENCE3_MUTAGEN",
+    "type": "talk_topic",
+    "dynamic_line": "你努力地集中意念，引导能量强化神经系统，凝结耐力特质。",
+    "responses": [
+      {
+        "text": "急速自愈",
+        "condition": { "and": [ { "u_has_trait": "FASTHEALER" }, { "not": { "u_has_trait": "REGEN" } } ] },
+        "topic": "TALK_DONE",
+        "effect": [ { "u_lose_trait": "FASTHEALER" }, { "u_add_trait": "REGEN" } ]
+      },
+      {
+        "text": "急速疼痛恢复",
+        "condition": { "and": [ { "u_has_trait": "PAINREC1" }, { "not": { "u_has_trait": "PAINREC3" } } ] },
+        "topic": "TALK_DONE",
+        "effect": [ { "u_lose_trait": "PAINREC1" }, { "u_add_trait": "PAINREC3" } ]
+      },
+      { "text": "取消", "topic": "TALK_DONE", "effect": { "u_spawn_item": "cohesion_endurence3" } }
+    ]
+  },
+  {
+    "//": "感性初级",
+    "id": "TALK_SP_SENSE1_MUTAGEN",
+    "type": "talk_topic",
+    "dynamic_line": "你努力地集中意念，引导能量强化神经系统，凝结感性特质。",
+    "responses": [
+      {
+        "text": "动物共鸣",
+        "condition": { "not": { "u_has_trait": "ANIMALEMPATH" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "ANIMALEMPATH" }
+      },
+      {
+        "text": "感染抵抗",
+        "condition": { "not": { "u_has_trait": "BEAUTIFUL" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "BEAUTIFUL" }
+      },
+      {
+        "text": "睡神",
+        "condition": { "not": { "u_has_trait": "EASYSLEEPER" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "EASYSLEEPER" }
+      },
+      {
+        "text": "抗瘾体质",
+        "condition": { "not": { "u_has_trait": "NONADDICTIVE" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "NONADDICTIVE" }
+      },
+      {
+        "text": "神学家",
+        "condition": { "not": { "u_has_trait": "SPIRITUAL" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "SPIRITUAL" }
+      },
+      { "text": "取消", "topic": "TALK_DONE", "effect": { "u_spawn_item": "cohesion_sensibility1" } }
+    ]
+  },
+  {
+    "//": "感性高级",
+    "id": "TALK_SP_SENSE2_MUTAGEN",
+    "type": "talk_topic",
+    "dynamic_line": "你努力地集中意念，引导能量强化神经系统，凝结感性特质。",
+    "responses": [
+      {
+        "text": "极致容貌",
+        "condition": { "and": [ { "u_has_trait": "BEAUTIFUL" }, { "not": { "u_has_trait": "BEAUTIFUL3" } } ] },
+        "topic": "TALK_DONE",
+        "effect": [ { "u_lose_trait": "BEAUTIFUL" }, { "u_add_trait": "BEAUTIFUL3" } ]
+      },
+      {
+        "text": "美食家",
+        "condition": { "not": { "u_has_trait": "GOURMAND" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "GOURMAND" }
+      },
+      {
+        "text": "乐天派",
+        "condition": { "not": { "u_has_trait": "OPTIMISTIC" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "OPTIMISTIC" }
+      },
+      {
+        "text": "时尚范",
+        "condition": { "not": { "u_has_trait": "STYLISH" } },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "STYLISH" }
+      },
+      { "text": "取消", "topic": "TALK_DONE", "effect": { "u_spawn_item": "cohesion_sensibility2" } }
+    ]
+  },
+  {
+    "//": "肉身成圣",
+    "id": "TALK_SP_IMMORTAL_MUTAGEN",
+    "type": "talk_topic",
+    "dynamic_line": "时空停滞，一股神祕力量涌入体内！",
+    "responses": [
+      {
+        "text": "肉身成圣（一级）",
+        "condition": {
+          "and": [
+            { "not": { "u_has_trait": "IMMORTAL_1" } },
+            { "not": { "u_has_trait": "IMMORTAL_2" } },
+            { "not": { "u_has_trait": "IMMORTAL_3" } }
+          ]
+        },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "IMMORTAL_1" }
+      },
+      {
+        "text": "肉身成圣（二级）",
+        "condition": { "and": [ { "u_has_trait": "IMMORTAL_1" }, { "not": { "u_has_trait": "IMMORTAL_2" } } ] },
+        "topic": "TALK_DONE",
+        "effect": [ { "u_lose_trait": "IMMORTAL_1" }, { "u_add_trait": "IMMORTAL_2" } ]
+      },
+      {
+        "text": "肉身成圣（满级）",
+        "condition": { "and": [ { "u_has_trait": "IMMORTAL_2" }, { "not": { "u_has_trait": "IMMORTAL_3" } } ] },
+        "topic": "TALK_DONE",
+        "effect": [ { "u_lose_trait": "IMMORTAL_2" }, { "u_add_trait": "IMMORTAL_3" } ]
+      },
+      { "text": "取消", "topic": "TALK_DONE", "effect": { "u_spawn_item": "cohesion_immortal" } }
+    ]
+  },
+  {
+    "//": "新人王",
+    "id": "TALK_SP_NOVICE_MUTAGEN",
+    "type": "talk_topic",
+    "dynamic_line": "时空陡然停滞，你被笼罩在凝结的时空中，接受来自高维位面的讯息。",
+    "responses": [
+      {
+        "text": "晋升超凡新人王",
+        "condition": { "and": [ { "not": { "u_has_trait": "SP_NOVICE1" } }, { "not": { "u_has_trait": "SP_NOVICE2" } } ] },
+        "topic": "TALK_DONE",
+        "effect": { "u_add_trait": "SP_NOVICE1" }
+      },
+      {
+        "text": "晋升至尊新人王",
+        "condition": { "and": [ { "u_has_trait": "SP_NOVICE1" }, { "not": { "u_has_trait": "SP_NOVICE2" } } ] },
+        "topic": "TALK_DONE",
+        "effect": [ { "u_lose_trait": "SP_NOVICE1" }, { "u_add_trait": "SP_NOVICE2" } ]
+      },
+      { "text": "取消", "topic": "TALK_DONE", "effect": { "u_spawn_item": "cohesion_title" } }
+    ]
+  },
+  {
+    "//": "天命透支",
+    "id": "TALK_SP_OVERDRAW_MUTAGEN",
+    "type": "talk_topic",
+    "dynamic_line": "大量天命化为纯粹能量注入体内，弭平你陨落时溃散的命运，你感觉身上的负担减轻了。",
+    "responses": [
+      {
+        "text": "天命透支LV2",
+        "condition": {
+          "and": [
+            { "u_has_trait": "OVERDRAW_1" },
+            { "not": { "u_has_trait": "OVERDRAW_2" } },
+            { "not": { "u_has_trait": "OVERDRAW_3" } },
+            { "not": { "u_has_trait": "OVERDRAW_END" } }
+          ]
+        },
+        "topic": "TALK_DONE",
+        "effect": [ { "u_lose_trait": "OVERDRAW_1" }, { "u_add_trait": "OVERDRAW_2" } ]
+      },
+      {
+        "text": "天命透支LV1",
+        "condition": {
+          "and": [
+            { "u_has_trait": "OVERDRAW_2" },
+            { "not": { "u_has_trait": "OVERDRAW_3" } },
+            { "not": { "u_has_trait": "OVERDRAW_END" } }
+          ]
+        },
+        "topic": "TALK_DONE",
+        "effect": [ { "u_lose_trait": "OVERDRAW_2" }, { "u_add_trait": "OVERDRAW_3" } ]
+      },
+      {
+        "text": "历劫归来",
+        "condition": { "and": [ { "u_has_trait": "OVERDRAW_3" }, { "not": { "u_has_trait": "OVERDRAW_END" } } ] },
+        "topic": "TALK_DONE",
+        "effect": [ { "u_lose_trait": "OVERDRAW_3" }, { "u_add_trait": "OVERDRAW_END" } ]
+      },
+      { "text": "取消", "topic": "TALK_DONE", "effect": { "u_spawn_item": "destiny_silver", "count": 5 } }
+    ]
+  }
+]

@@ -1,0 +1,187 @@
+[
+  {
+    "type": "AMMO",
+    "id": "shotcanister_scrap",
+    "price": 1000,
+    "price_postapoc": 1000,
+    "name": {
+      "str": "废铁弹丸罐"
+    },
+    "symbol": "=",
+    "color": "green",
+    "description": "这个类似粗糙霰弹的小纸罐，里面塞满了各种废金属碎片。",
+    "material": [
+      "steel"
+    ],
+    "volume": "250 ml",
+    "weight": "55 g",
+    "bashing": 2,
+    "cutting": 1,
+    "ammo_type": "shotcanister",
+    "looks_like": "shot_scrap",
+    "range": 1,
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 10
+    },
+    "dispersion": 250,
+    "loudness": 0,
+    "count": 10
+  },
+  {
+    "type": "AMMO",
+    "id": "shotcanister_pebble",
+    "price": 1000,
+    "price_postapoc": 1000,
+    "name": {
+      "str": "卵石弹丸罐"
+    },
+    "symbol": "=",
+    "color": "green",
+    "description": "这个类似粗糙霰弹的小纸罐，里面塞满了小卵石。伤害很差，但弹道比废铁稳定得多。",
+    "material": [
+      "stone"
+    ],
+    "volume": "250 ml",
+    "weight": "55 g",
+    "bashing": 2,
+    "cutting": 1,
+    "ammo_type": "shotcanister",
+    "looks_like": "shot_scrap",
+    "range": 2,
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 7,
+      "armor_penetration": 1
+    },
+    "dispersion": 80,
+    "loudness": 0,
+    "count": 10
+  },
+  {
+    "type": "AMMO",
+    "id": "shotcanister_flechette",
+    "price": 1000,
+    "price_postapoc": 1000,
+    "name": {
+      "str": "钢针弹丸罐"
+    },
+    "symbol": "=",
+    "color": "green",
+    "description": "这个类似粗糙霰弹的小纸罐，里面塞满了手工制作的钢针，具备一定的穿甲能力。",
+    "material": [
+      "steel"
+    ],
+    "volume": "250 ml",
+    "weight": "55 g",
+    "bashing": 2,
+    "cutting": 1,
+    "ammo_type": "shotcanister",
+    "looks_like": "shot_scrap",
+    "range": 3,
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 13,
+      "armor_penetration": 7
+    },
+    "dispersion": 50,
+    "loudness": 0,
+    "count": 10
+  },
+  {
+    "type": "AMMO",
+    "id": "shotcanister_bearing",
+    "price": 1000,
+    "price_postapoc": 1000,
+    "name": {
+      "str": "滚珠弹丸罐"
+    },
+    "symbol": "=",
+    "color": "green",
+    "description": "这个类似粗糙霰弹的小纸罐，里面塞满了手工制作的滚珠，略微改善了弹道稳定性。",
+    "material": [
+      "steel"
+    ],
+    "volume": "250 ml",
+    "weight": "55 g",
+    "bashing": 2,
+    "cutting": 1,
+    "ammo_type": "shotcanister",
+    "looks_like": "shot_scrap",
+    "range": 2,
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 12,
+      "armor_penetration": 2
+    },
+    "dispersion": 100,
+    "loudness": 0,
+    "count": 10
+  },
+  {
+    "type": "MAGAZINE",
+    "id": "pnv_auto_crossbow_mag20",
+    "name": {
+      "str": "20发弩矢弹匣"
+    },
+    "description": "可容纳20发弩矢。",
+    "weight": "300 g",
+    "volume": "650 ml",
+    "price": 500,
+    "price_postapoc": 200,
+    "material": [
+      "steel"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [
+      "bolt"
+    ],
+    "reload_time": 160,
+    "flags": [
+      "MAG_BULKY"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "bolt": 20
+        }
+      }
+    ]
+  },
+  {
+    "type": "MAGAZINE",
+    "id": "pnv_auto_crossbow_mag40",
+    "name": {
+      "str": "40发弩矢弹匣"
+    },
+    "description": "可容纳40发弩矢。",
+    "weight": "300 g",
+    "volume": "1200 ml",
+    "price": 600,
+    "price_postapoc": 300,
+    "material": [
+      "steel"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [
+      "bolt"
+    ],
+    "reload_time": 160,
+    "flags": [
+      "MAG_BULKY"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "bolt": 40
+        }
+      }
+    ]
+  }
+]

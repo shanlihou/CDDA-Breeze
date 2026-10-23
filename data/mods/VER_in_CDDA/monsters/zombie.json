@@ -1,0 +1,1194 @@
+[
+  {
+    "id": "ver_mon_zombie_hulk_tank",
+    "type": "MONSTER",
+    "name": {
+      "str": "Tank"
+    },
+
+    "description": "普通丧尸浩克的下一步进化，非常像求生之路里的Tank，真的会掏出大石块砸你，如果你在没注意它的时候被它近了身......祝你好运",
+    "default_faction": "zombie",
+    "bodytype": "human",
+    "species": [
+      "ZOMBIE",
+      "HUMAN"
+    ],
+    "looks_like":"mon_zombie_hulk",
+    "diff": 10,
+    "volume": "1000000 ml",
+    "//":"感觉上Tank应该更大才对",
+    "weight": "600 kg",
+    "hp": 800,
+    "speed": 120,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "Z",
+    "color": "white_magenta",
+    "scents_tracked": [
+      "sc_human",
+      "sc_fetid"
+    ],
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 8,
+    "melee_dice": 5,
+    "melee_dice_sides": 10,
+    "weakpoint_sets": [
+      "wps_humanoid_body",
+      "wps_humanoid_head_small"
+    ],
+    "families": [
+      "prof_intro_biology",
+      "prof_physiology",
+      "prof_wp_zombie",
+      "prof_wp_hulk"
+    ],
+    "bleed_rate": 0,
+    "vision_day": 83,
+    "vision_night": 4,
+    "harvest": "zombie",
+    "grab_strength": 50,
+    "special_attacks": [
+        {
+            "type": "gun",
+            "cooldown": 5,
+            "move_cost": 150,
+            "gun_type": "zom_tank_thrown_rock",
+            "ammo_type": "m_tank_rock",
+            "no_ammo_sound": "",
+            "fake_skills": [
+              [
+                "throw",
+                8
+              ]
+            ],
+            "fake_str": 25,
+            "condition": {
+              "not": {
+                "u_has_effect": "maimed_arm"
+              }
+            },
+            "require_targeting_player": false,
+            "ranges": [
+              [
+                2,
+                15,
+                "DEFAULT"
+              ]
+            ],
+            "description": "Tank向你丢了一大块石头!"
+          },
+          {
+            "id": "slam",
+            "cooldown": 12,
+            "damage_max_instance": [
+              {
+                "damage_type": "bash",
+                "amount": 35
+              }
+            ]
+          },
+      {
+        "id": "smash",
+        "cooldown": 3,
+        "throw_strength": 150
+      }
+    ],
+    "starting_ammo": {
+        "m_tank_rock": 125
+      },
+    "death_drops": "mon_zombie_hulk_death_drops",
+    "fungalize_into": "mon_zombie_fungus",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "GRABS",
+      "BASHES",
+      "DESTROYS",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "PUSH_MON",
+      "PUSH_VEH",
+      "FILTHY"
+    ],
+    "//2":"看我啥时候能弄出来特定伤害增伤吧",
+    "armor_bash": 14,
+    "armor_cut": 20,
+    "armor_bullet": 18,
+    "armor_elec": 8,
+    "armor_heat":-20
+  },
+  {
+    "id": "ver_mon_zombie_Magnetic_storm_Raiders",
+    "type": "MONSTER",
+    "name": {
+      "str": "磁暴突袭者"
+    },
+    "description": "磁场转动100匹，吃我一拳！\n这只炽电躯壳在进化中不仅得到了更大的躯体，还领悟了以电流刺激肉体来达到加速的力量，尽管还是比普通浩克速度慢一些，但是近战技巧并不弱，还会对你使用奔雷拳！\n它似乎会阻碍对它射击的子弹，不过进化带来的在躯干闪烁的核心似乎用钝器打起来不错？",
+    "default_faction": "zombie",
+    "bodytype": "human",
+    "species": [
+      "ZOMBIE",
+      "HUMAN"
+    ],
+    "diff": 10,
+    "volume": "200000 ml",
+    "weight": "300000 g",
+    "hp": 300,
+    "speed": 100,
+    "material": [
+      "flesh"
+    ],
+    "looks_like":"mon_zombie_nullfield",
+    "symbol": "Z",
+    "color": "i_cyan",
+    "aggression": 100,
+    "attack_cost": 80,
+    "attack_effs": [
+      {
+        "id": "stunned",
+        "duration": 1,
+        "chance": 10
+      }
+    ],
+    "morale": 100,
+    "melee_skill": 10,
+    "melee_dice": 10,
+    "melee_dice_sides": 3,
+    "weakpoint_sets": [
+      "wps_humanoid_body",
+      "wps_humanoid_head_small"
+    ],
+    "families": [
+      "prof_intro_biology",
+      "prof_physiology",
+      "prof_wp_zombie",
+      "prof_electromagnetics",
+      "prof_wp_hulk"
+    ],
+    "bleed_rate": 0,
+    "//2": "melee damage is quite weak since the shockfield around it is its most dangerous function",
+    "melee_damage": [
+      {
+        "damage_type": "electric",
+        "amount": 12
+      }
+    ],
+    "vision_day": 50,
+    "vision_night": 3,
+    "luminance": 24,
+    "harvest": "zombie_Magnetic_storm_Raiders_harvest",
+    "special_attacks": [
+      [
+        "PARROT",
+        6
+      ],
+      {
+        "id": "smash",
+        "cooldown": 20,
+        "throw_strength": 40
+      },
+      [
+        "SHOCKSTORM",
+        35
+      ],
+      {
+        "id": "monspell_zombie_Magnetic_storm_Raiders_target",
+        "type": "spell",
+        "spell_data": {
+          "id": "mon_zombie_Magnetic_storm_Raiders_target"
+        },
+        "condition": {
+          "compare_num": [
+            {
+              "distance": [
+                "u",
+                "npc"
+              ]
+            },
+            ">=",
+            {
+              "const": 9
+            }
+          ]
+        },
+        "cooldown": 40,
+        "monster_message": "<color_yellow> %1$s用电流刺激了自己的身体！\n“磁场转动100匹！”\n奔雷拳在蓄力了！</color>"
+      },
+      {
+        "type": "spell",
+        "id": "monspell_zombie_Magnetic_storm_Raiders_charge_target_random",
+        "spell_data": {
+          "id": "mon_zombie_Magnetic_storm_Raiders_charge_target_random"
+        },
+        "cooldown": 4,
+        "condition": {
+          "and": [
+            {
+              "not": {
+                "u_has_effect": "Magnetic_storm_Raiders_momentum_initial"
+              }
+            },
+            {
+              "u_has_effect": "Magnetic_storm_Raiders_momentum_initialcheck"
+            }
+          ]
+        },
+        "monster_message": "<color_yellow>%1$s“吔，吃我奔雷拳啊~”</color>"
+      }
+    ],
+    "emit_fields": [
+      {
+        "emit_id": "emit_shock_cloud",
+        "delay": "2 s"
+      }
+    ],
+    "special_when_hit": [
+      "ZAPBACK",
+      100
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "WARM",
+      "POISON",
+      "ELECTRIC",
+      "NO_BREATHE",
+      "REVIVES",
+      "ELECTRIC_FIELD",
+      "FILTHY",
+      "SMELLS",
+      "STUMBLES",
+      "BASHES",
+      "GROUP_BASH",
+      "PUSH_MON",
+      "RANGED_ATTACKER"
+    ],
+    "armor_cut": 60,
+    "armor_bullet": 100,
+    "death_function": { "message": "“还有...高手...”" }
+  },
+  {
+    "id": "ver_mon_zombie_armored_plus",
+    "type": "MONSTER",
+    "looks_like":"mon_zombie_armored",
+    "name": {
+      "str": "无赖战士"
+    },
+    "description": "尽管被包裹在一台几乎无法穿透的战斗机甲之中，但还是有什么东西杀死了这个士兵。然而经过未知的进化 ...它似乎进化出了能量核心来给身上的坦克服供能，并且填充了大部分的弱点，虽然本体被强化的不多，但是它仍拿着生前使用的A7步枪（似乎已经损坏但是被血肉填充供能后还能使用），不要小觑它的威胁！",
+    "default_faction": "zombie",
+    "bodytype": "human",
+    "species": [
+      "ZOMBIE",
+      "HUMAN"
+    ],
+    "diff": 10,
+    "volume": "180000 ml",
+    "weight": "280000 g",
+    "hp": 240,
+    "speed": 100,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "Z",
+    "color": "white_red",
+    "scents_tracked": [
+      "sc_human",
+      "sc_fetid"
+    ],
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill":10,
+    "melee_dice": 3,
+    "melee_dice_sides": 8,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 5
+      }
+    ],
+    "starting_ammo":{"battery":1000000},
+    "special_attacks":[
+      {
+        "type":"gun",
+        "cooldown":4,
+        "ammo_type":"battery",
+        "gun_type":"ver_broken_A7",
+        "fake_skills":[["gun",5],["rifle",5]],
+        "ranges":[[1,10,"AUTO"],[10,25,"DEFAULT"]],
+                "require_targeting_player": true,
+                "require_targeting_npc": true,
+                "require_targeting_monster": true,
+                "targeting_sound": "“为了人类的荣光...消除危险感染者...射击....”",
+                "targeting_volume": 50,
+                "targeting_cost": 200
+      },
+      ["BIO_OP_TAKEDOWN",20],
+      [
+        "PARROT",
+        6
+      ]
+      ],
+    "weakpoint_sets": [
+      "wps_humanoid_full_helmet"
+    ],
+    "families": [
+      "prof_intro_biology",
+      "prof_physiology",
+      "prof_wp_zombie",
+      "prof_wp_syn_armored",
+      "prof_wp_hulk"
+    ],
+    "weakpoints": [
+      {
+        "name": "a crack in the armor",
+        "armor_mult": {
+          "bullet": 0.8,
+          "cut": 0.6,
+          "stab": 0.6,
+          "bash": 0.4
+        },
+        "coverage": 2,
+        "coverage_mult": {
+          "broad": 0.8
+        },
+        "difficulty": {
+          "ranged": 7,
+          "melee": 10
+        }
+      }
+    ],
+    "bleed_rate": 0,
+    "vision_day": 40,
+    "vision_night": 20,
+    "harvest": "zombie_ver_mon_zombie_armored_plus",
+    "death_drops": "ver_mon_zombie_armored_plus_death_drops",
+    "burn_into": "mon_zombie_scorched",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "FILTHY",
+      "PRIORITIZE_TARGETS"
+    ],
+    "armor_bash": 95,
+    "armor_cut": 120,
+    "armor_acid":25,
+    "armor_bullet": 120,
+    "armor_elec": 10,
+    "armor_heat":17,
+    "death_function": { "message": "“啊...原来...我也是感染者...”" }
+  },
+  {
+    "id": "ver_mon_zombie_hammer_hands_hulk",
+  "type": "MONSTER",
+  "name": {
+    "str": "废铁麒麟臂浩克"
+  },
+  "description": "这只浩克身上覆盖着生锈的金属破片。大块的金属砸穿了它的手臂，并融合成了...麒麟臂？那铁锈如果刺到你的身上...那几乎必然会得破伤风了",
+  "default_faction": "zombie",
+  "bodytype": "human",
+  "species": [
+    "ZOMBIE",
+    "HUMAN"
+  ],
+  "volume": "125000 ml",
+  "weight": "300000 g",
+  "hp": 540,
+  "speed": 110,
+  "material": [
+    "flesh"
+  ],
+  "symbol": "Z",
+  "looks_like": "mon_zombie_plated",
+  "color": "brown",
+  "scents_tracked": [
+    "sc_human",
+    "sc_fetid"
+  ],
+  "aggression": 100,
+  "morale": 100,
+  "melee_skill": 8,
+  "melee_dice": 9,
+  "melee_dice_sides": 4,
+  "melee_damage": [
+    {
+      "damage_type": "cut",
+      "amount": 20
+    }
+  ],
+  "weakpoint_sets": [
+    "wps_humanoid_body"
+  ],
+  "families": [
+    "prof_intro_biology",
+    "prof_physiology",
+    "prof_wp_zombie",
+    "prof_wp_hulk"
+  ],
+  "bleed_rate": 0,
+  "vision_day": 16,
+  "vision_night":4,
+  "harvest": "zombie",
+  "grab_strength": 30,
+  "special_attacks": [
+    {
+      "id": "smash",
+      "cooldown": 10,
+      "throw_strength": 50
+    },
+    ["BIO_OP_TAKEDOWN",5]
+  ],
+  "death_drops": "default_zombie_death_drops",
+  "attack_effs": [
+    {
+      "id": "tetanus",
+      "duration": 600,
+      "chance": 80
+    }
+  ],
+  "burn_into": "mon_zombie_scorched",
+  "flags": [
+    "SEES",
+    "HEARS",
+    "SMELLS",
+    "STUMBLES",
+    "WARM",
+    "GRABS",
+    "BASHES",
+    "GROUP_BASH",
+    "POISON",
+    "NO_BREATHE",
+    "REVIVES",
+    "PUSH_MON",
+    "PUSH_VEH",
+    "FILTHY"
+  ],
+  "armor_bash":20,
+  "armor_cut":30,
+  "armor_bullet":25
+  },
+  {
+    "id": "ver_mon_zombie_master_supermee",
+    "type": "MONSTER",
+    "name": {
+      "str": "浩克主宰"
+    },
+    "looks_like":"mon_zombie_master",
+    "description": "极度危险的丧尸，请立即击毙，或者...马上开始逃跑！！！\n这只丧尸的脸一半五官风干收紧一般细腻红润，它的嘴唇回缩让它露出不自然的诡异笑容，暴露出在它发出诡异的光的大眼睛下方的一排黝黑发亮的牙齿。它体型十分庞大，移动起来却流畅而又如同经过严密控制一般。它周围的空气弥漫着一股危险的气息，而照落在它身上的光线似乎变得非常明亮刺眼。\n你认得它...至少认得它的前身,主宰丧尸，但它不间断的，令人毛骨悚然的轻笑声让你感到更加不妙",
+    "default_faction": "zombie",
+    "bodytype": "human",
+    "species": [
+      "ZOMBIE",
+      "HUMAN"
+    ],
+    "diff": 50,
+    "volume": "150000 ml",
+    "weight": "20000 g",
+    "hp": 360,
+    "speed": 120,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "Z",
+    "color": "red_cyan",
+    "scents_tracked": [
+      "sc_human",
+      "sc_fetid"
+    ],
+    "aggression": 1,
+    "morale": 100,
+    "melee_skill": 10,
+    "melee_dice": 2,
+    "melee_dice_sides": 25,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 0
+      }
+    ],
+    "dodge": 10,
+    "weakpoint_sets": [
+      "wps_humanoid_body"
+    ],
+    "families": [
+      "prof_intro_biology",
+      "prof_physiology",
+      "prof_wp_zombie",
+      "prof_wp_hulk"
+    ],
+    "bleed_rate": 0,
+    "vision_day": 40,
+    "vision_night": 15,
+    "luminance": 5,
+    "regenerates": 10,
+    "harvest": "zombie",
+    "path_settings": {
+      "max_dist": 10,
+      "allow_open_doors": true,
+      "avoid_traps": true,
+      "avoid_sharp": true
+    },
+    "special_attacks": [
+      {
+        "type": "spell",
+        "id": "monspell_zombie_master_supermee_summon",
+        "spell_data": {
+          "id": "mon_zombie_master_supermee_summon"
+        },
+        "condition": {
+          "compare_num": [
+            {
+              "distance": [
+                "u",
+                "npc"
+              ]
+            },
+            ">=",
+            {
+              "const": 20
+            }
+          ]
+        },
+        "cooldown": 15,
+        "monster_message": "<color_white_red>%1$s“你知道什么是最稀有的人类品质吗？礼貌。”</color>"
+      },
+      [
+        "PARROT",
+        6
+      ],
+      [
+        "RESURRECT",
+        0
+      ],
+      [
+        "UPGRADE",
+        8
+      ]
+      
+      
+    ],
+    "anger_triggers": [
+      "HURT",
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK"
+    ],
+    "death_drops": "ver_mon_zombie_master_supermee_death_drops",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "BASHES",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "CAN_OPEN_DOORS",
+      "PRIORITIZE_TARGETS",
+      "NO_FUNG_DMG",
+      "FILTHY",
+      "PATH_AVOID_DANGER_1"
+    ],
+    "armor_bash":5,
+    "armor_bullet":50,
+    "armor_cut":5,
+    "armor_heat":10,
+    "armor_elec":5,
+    "death_function":{
+      "corpse_type":"NO_CORPSE",
+      "message":"“嘻嘻嘻......”"
+    }
+  },
+  {
+    "id":"mon_zombie_hulk_minion",
+    "type":"MONSTER",
+    "name":{
+      "str":"浩克仆从"
+    },
+    "looks_like":"mon_zombie_hulk",
+    "description":"一个全身肌肉都发生了变异的超大块头丧尸，体型约为六个人大小，双臂极为强壮，力量之大足以击碎墙壁，愤怒的破坏欲支配着它粉碎着所能见到的一切，极为危险。\n浩克仆从毕竟经过浩克主宰的训练，比一般的浩克更加训练有素，很显然它们不会存在很久，但足以把你撕碎了！！！",
+    "copy-from":"mon_zombie_hulk",
+    "speed":100,
+    "special_attacks": [
+      {
+        "id": "smash",
+        "throw_strength": 120,
+        "cooldown": 10
+      },
+      {
+        "id": "bio_op_takedown",
+        "cooldown": 20
+      },
+      [
+        "RANGED_PULL",
+        20
+      ],
+      [
+        "GRAB_DRAG",
+        10
+      ]
+    ],
+    "dodge":8,
+    "death_drops":"mon_zombie_hulk_minion_drops",
+    "death_function": {
+      "corpse_type": "NO_CORPSE",
+      "message": "%s消失了，仿佛之前你的战斗都是幻觉"
+    }
+  },
+  {
+    "id":"mon_zombie_hulk_minion_2",
+    "type":"MONSTER",
+    "copy-from":"mon_zombie_hulk_minion",
+    "default_faction":"player"
+  },
+  {
+    "id": "ver_mon_zombie_soldier_blackops_hulk",
+    "type": "MONSTER",
+    "name": {
+      "str": "猎杀者浩克"
+    },
+    "description": "身上残留的制服碎片表明这个怪物曾经是一名士兵，它现在变得更大了，变异的皮肤呈现出一种奇怪的纹理，和制服的材料相近虽然没有到凯夫拉浩克的地步。它失去了人类的所有特征，隐藏在仿佛有生命的阴影中。它的移动方式不可思议的优雅和灵动，尽管身体巨大。",
+    "looks_like": "mon_zombie_kevlar_2",
+    "default_faction": "zombie",
+    "bodytype": "human",
+    "species": [
+      "ZOMBIE",
+      "HUMAN"
+    ],
+    "volume": "250000 ml",
+    "weight": "180000 g",
+    "hp": 300,
+    "speed": 100,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "Z",
+    "color": "light_green_green",
+    "scents_tracked": [
+      "sc_human",
+      "sc_fetid"
+    ],
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 10,
+    "melee_dice": 3,
+    "melee_dice_sides": 7,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 5
+      }
+    ],
+    "dodge": 8,
+    "bleed_rate": 0,
+    "weakpoint_sets": [
+      "wps_humanoid_body",
+      "wps_humanoid_body_armor",
+      "wps_humanoid_open_helmet"
+    ],
+    "families": [
+      "prof_intro_biology",
+      "prof_physiology",
+      "prof_wp_zombie",
+      "prof_wp_syn_armored",
+      "prof_wp_hulk"
+    ],
+    "vision_day": 30,
+    "vision_night": 50,
+    "harvest": "zombie",
+    "grab_strength": 25,
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 8,
+        "damage_max_instance": [
+          {
+            "damage_type": "stab",
+            "amount": 8,
+            "armor_multiplier": 0.8
+          }
+        ]
+      },
+      {
+        "id": "scratch",
+        "cooldown": 10,
+        "damage_max_instance": [
+          {
+            "damage_type": "bash",
+            "amount": 5,
+            "armor_multiplier": 0.5
+          }
+        ]
+      },
+      {
+        "type": "leap",
+        "cooldown": 8,
+        "max_range": 6
+      }
+    ],
+    "death_drops": "mon_zombie_soldier_death_drops",
+    "burn_into": "mon_zombie_scorched",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "GRABS",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "PUSH_MON",
+      "NIGHT_INVISIBILITY",
+      "FILTHY",
+      "KEENNOSE"
+    ],
+    "armor_bash":24,
+    "armor_cut":40,
+    "armor_bullet":30,
+    "armor_elec":5,
+    "copy-from": "mon_zombie_soldier_blackops_1"
+  },
+  {
+    "id": "ver_mon_zombie_brute_hulk",
+    "type": "MONSTER",
+    "name": {
+      "str": "漆黑夜魔"
+    },
+    "looks_like":"ver_mon_zombie_brute_ninja",
+    "description": "一具不知何故像某种恶灵一样躲在黑暗之中的巨型丧尸，体型庞大但其行动十分敏捷。它的下颚已经裂开，身上长出了较多的骨刺，虽然不及消逝的光芒中夜魔那般威胁巨大，但是隐蔽性令它的威胁更上一层楼",
+    "default_faction": "zombie",
+    "bodytype": "human",
+    "species": [
+      "ZOMBIE",
+      "HUMAN"
+    ],
+    "diff": 5,
+    "volume": "125000 ml",
+    "weight": "160000 g",
+    "hp": 360,
+    "speed": 95,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "Z",
+    "color": "dark_gray_red",
+    "scents_tracked": [
+      "sc_human",
+      "sc_fetid"
+    ],
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 10,
+    "melee_dice": 4,
+    "melee_dice_sides": 6,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 10
+      }
+    ],
+    "dodge": 6,
+    "weakpoint_sets": [
+      "wps_humanoid_body",
+      "wps_humanoid_head_small"
+    ],
+    "families": [
+      "prof_intro_biology",
+      "prof_physiology",
+      "prof_wp_zombie"
+    ],
+    "bleed_rate": 0,
+    "vision_day": 10,
+    "vision_night": 50,
+    "harvest": "zombie",
+    "special_attacks": [
+      {
+        "id": "smash",
+        "throw_strength": 72,
+        "cooldown": 30
+      },
+      {
+        "id": "stretch_attack",
+        "cooldown": 40
+      },
+      {
+        "id": "longswipe"
+      },
+      {
+        "id": "cut_throat"
+      }
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "burn_into": "mon_zombie_fiend",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "SMELLS",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "PUSH_MON",
+      "PUSH_VEH",
+      "NIGHT_INVISIBILITY",
+      "FILTHY"
+    ],
+    "armor_bash":12,
+    "armor_bullet":10,
+    "armor_cut":8,
+    "armor_elec":2
+  },
+  {
+    "id": "ver_mon_zombie_prey_hulk",
+    "type": "MONSTER",
+    "name": {
+      "str": "掠食者浩克"
+    },
+    "looks_like":"mon_zombie_predator",
+    "description": "它发达四肢的关节以奇怪的角度弯折，虽然整体结构似乎比进化之前强不了多少，但是这只巨型人型生物仍能以惊人的速度飞快移动，好似在网上行走的蜘蛛。它的牙齿和手臂都磨成了尖刺型，身上深可见骨的伤口缓缓地流出着黑色的软泥。那裂开至脖子的大嘴显示了它掠食者的身份",
+    "default_faction": "zombie",
+    "bodytype": "human",
+    "species": [
+      "ZOMBIE",
+      "HUMAN"
+    ],
+    "volume": "125000 ml",
+    "weight": "200000 g",
+    "hp": 150,
+    "speed": 200,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "Z",
+    "color": "brown_green",
+    "scents_tracked": [
+      "sc_human",
+      "sc_fetid"
+    ],
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 8,
+    "melee_dice": 4,
+    "melee_dice_sides": 5,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 8
+      }
+    ],
+    "dodge": 6,
+    "weakpoints": [
+      {
+        "name": "the head",
+        "armor_mult": {
+          "physical": 0.5
+        },
+        "coverage": 3
+      },
+      {
+        "name": "the eye",
+        "armor_mult": {
+          "physical": 0
+        },
+        "coverage": 1
+      }
+    ],
+    "families": [
+      "prof_intro_biology",
+      "prof_physiology",
+      "prof_wp_zombie"
+    ],
+    "bleed_rate": 0,
+    "vision_day": 50,
+    "vision_night": 20,
+    "harvest": "zombie",
+    "path_settings": {
+      "max_dist": 5
+    },
+    "special_attacks": [
+      {
+        "type": "leap",
+        "cooldown": 6,
+        "max_range": 5,
+        "min_consider_range": 2,
+        "max_consider_range": 4
+      },
+      {
+        "type": "bite",
+        "cooldown": 10,
+        "damage_max_instance": [
+          {
+            "damage_type": "cut",
+            "amount": 15,
+            "armor_multiplier": 0.1
+          }
+        ]
+      },
+      {
+        "id": "impale"
+      }
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "burn_into": "mon_zombie_scorched",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "CLIMBS",
+      "FILTHY"
+    ],
+    "armor_bash":8,
+    "armor_cut":8,
+    "armor_bullet":8,
+    "armor_elec":2
+  },
+  {
+    "id": "ver_mon_zombie_grappler_hulk",
+    "type": "MONSTER",
+    "name": {
+      "str": "长臂浩克"
+    },
+    "description": "这只巨型丧尸在移动时，两条相当长的手臂沿着地面拖动。肿胀的后背看起来像是驼背了，肩膀上的肌肉上形成了一种新的膜来替代皮肤。",
+    "default_faction": "zombie",
+    "bodytype": "human",
+    "species": [
+      "ZOMBIE",
+      "HUMAN"
+    ],
+    "volume": "125000 ml",
+    "weight": "180000 g",
+    "hp": 350,
+    "speed": 95,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "Z",
+    "color": "black_cyan",
+    "scents_tracked": [
+      "sc_human",
+      "sc_fetid"
+    ],
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 8,
+    "melee_dice": 4,
+    "melee_dice_sides": 6,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 0
+      }
+    ],
+    "dodge": 5,
+    "bleed_rate": 50,
+    "vision_day": 40,
+    "vision_night": 10,
+    "weakpoint_sets": [
+      "wps_humanoid_body"
+    ],
+    "families": [
+      "prof_intro_biology",
+      "prof_physiology",
+      "prof_wp_zombie",
+      "prof_wp_hulk"
+    ],
+    "harvest": "zombie",
+    "grab_strength": 200,
+    "special_attacks": [
+      [
+        "RANGED_PULL",
+        20
+      ],
+      [
+        "GRAB_DRAG",
+        3
+      ],
+      {
+        "type": "bite",
+        "cooldown": 5
+      }
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "burn_into": "mon_zombie_scorched",
+    "fungalize_into": "mon_zombie_fungus",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "GRABS",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "PUSH_MON",
+      "FILTHY",
+      "RANGED_ATTACKER"
+    ]
+  },
+  {
+    "id":"ver_mon_zombie_witch",
+    "name":{
+      "str":"Witch"
+    },
+    "type":"MONSTER",
+    "default_faction":"zombie",
+    "looks_like":"mon_zombie_swimmer_base",
+    "description":"“嘘...不要惊扰它”\nWitch身上只穿着单薄与破烂的汗衣和内裤，有一双发亮的橙黄色的眼睛和一双血红色的爪子，身材极为瘦弱，头发和皮肤非常苍白。witch只想独处，这样才能尽情地哭泣。她们讨厌闪烁的光线和吵闹的噪音，但是更痛恨被偷袭。如果你听到Witch在低声啜泣，关掉你的手电悄悄地从她身边走开。",
+    "bodytype":"human",
+    "species":[
+      "HUMAN",
+      "ZOMBIE"
+    ],
+    "volume":"62000ml",
+    "weight":"70000g",
+    "hp":200,
+    "speed":150,
+    "material":[
+      "flesh"
+    ],
+    "symbol":"Z",
+    "color":"black_cyan",
+    "scents_tracked":[
+      "sc_fetid",
+      "sc_human"
+    ],
+    "aggression":-10,
+    "morale":100,
+    "melee_skill":10,
+    "melee_dice":3,
+    "melee_dice_sides":10,
+    "melee_damage":[
+        {
+          "damage_type":"stab",
+          "amount":25
+        }
+    ],
+    "attack_effs": [
+      {
+        "id": "stunned",
+        "duration": 1,
+        "chance": 5
+      }
+    ],
+    "dodge":4,
+    "bleed_rate":50,
+    "vision_day":20,
+    "vision_night":30,
+    "weakpoint_sets":[
+      "wps_humanoid_body",
+      "wps_humanoid_head_small"
+    ],
+    "families":[
+      "prof_physiology",
+      "prof_intro_biology",
+      "prof_wp_zombie"
+    ],
+    "harvest": "zombie_ver_mon_zombie_witch",
+    "path_settings": {
+      "max_dist": 10,
+      "allow_open_doors": true,
+      "avoid_traps": true,
+      "avoid_sharp": true
+    },
+    "grab_strength": 15,
+    "special_attacks": [
+      [
+        "PARROT",
+        6
+      ],
+      {
+        "type": "leap",
+        "cooldown": 8,
+        "max_range": 4,
+        "min_consider_range": 1,
+        "max_consider_range": 4
+      },
+      {
+        "type": "spell",
+        "id": "monspell_zombie_witch_defence",
+        "spell_data": {
+          "id": "mon_zombie_witch_defence"
+        },
+        "cooldown": 120,
+        "monster_message": "<color_white_red>你惊扰了Witch！！！</color>"
+      },
+      {
+        "type": "spell",
+        "id": "monspell_zombie_witch_attack",
+        "spell_data": {
+          "id": "mon_zombie_witch_attack"
+        },
+        "condition": {
+          "compare_num": [
+            {
+              "distance": [
+                "u",
+                "npc"
+              ]
+            },
+            "<=",
+            {
+              "const": 1
+            }
+          ]
+        },
+        "cooldown": 360,
+        "monster_message": "<color_white_red>%1$s把你抓出动脉大出血了！！！</color>"
+      }
+    ],
+    "anger_triggers": [
+      "HURT",
+      "PLAYER_CLOSE"
+    ],
+    "death_drops":"default_zombie_death_drops",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "BASHES",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "CAN_OPEN_DOORS",
+      "PRIORITIZE_TARGETS",
+      "NO_FUNG_DMG",
+      "FILTHY",
+      "PATH_AVOID_DANGER_1"
+    ],
+    "armor_bash":10,
+    "armor_cut":10,
+    "armor_bullet":10,
+    "armor_heat":10,
+    "armor_elec":5,
+    "death_function":{
+      "message":"“嘤......”"
+    }
+  }
+]

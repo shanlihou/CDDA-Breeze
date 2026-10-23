@@ -1,0 +1,258 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "bio_SG_hibernate_3h",
+    "condition": {"compare_int": [ { "u_val": "bmi_permil" }, ">", { "const": 15000 } ]},
+    "effect": [ 
+	{ "u_add_effect": "SG_hibernate", "intensity": 1, "duration": "3 hours" },
+	{ "u_assign_activity": "ACT_SG_hibernate", "duration": "3 hours" }
+	],
+    "false_effect": [ { "u_message": "休眠中止！\n储备热量极低！请补充足够的营养物质以满足休眠需求！", "type": "bad","popup": true } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "bio_SG_hibernate_6h",
+    "condition": {"compare_int": [ { "u_val": "bmi_permil" }, ">", { "const": 15000 } ]},
+    "effect": [ 
+	{ "u_add_effect": "SG_hibernate", "intensity": 1, "duration": "6 hours" },
+	{ "u_assign_activity": "ACT_SG_hibernate", "duration": "6 hours" }
+	],
+    "false_effect": [ { "u_message": "休眠中止！\n储备热量极低！请补充足够的营养物质以满足休眠需求！", "type": "bad","popup": true } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "bio_SG_hibernate_12h",
+    "condition": {"compare_int": [ { "u_val": "bmi_permil" }, ">", { "const": 15000 } ]},
+    "effect": [ 
+	{ "u_add_effect": "SG_hibernate", "intensity": 1, "duration": "12 hours" },
+	{ "u_assign_activity": "ACT_SG_hibernate", "duration": "12 hours" }
+	],
+    "false_effect": [ { "u_message": "休眠中止！\n储备热量极低！请补充足够的营养物质以满足休眠需求！", "type": "bad","popup": true } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "bio_SG_hibernate_1d",
+    "condition": {"compare_int": [ { "u_val": "bmi_permil" }, ">", { "const": 15000 } ]},
+    "effect": [ 
+	{ "u_add_effect": "SG_hibernate", "intensity": 1, "duration": "1 days" },
+	{ "u_assign_activity": "ACT_SG_hibernate", "duration": "1 days" }
+	],
+    "false_effect": [ { "u_message": "休眠中止！\n储备热量极低！请补充足够的营养物质以满足休眠需求！", "type": "bad","popup": true } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "bio_SG_hibernate_5d",
+    "condition": {"compare_int": [ { "u_val": "bmi_permil" }, ">", { "const": 15000 } ]},
+    "effect": [ 
+	{ "u_add_effect": "SG_hibernate", "intensity": 1, "duration": "5 days" },
+	{ "u_assign_activity": "ACT_SG_hibernate", "duration": "5 days" }
+	],
+    "false_effect": [ { "u_message": "休眠中止！\n储备热量极低！请补充足够的营养物质以满足休眠需求！", "type": "bad","popup": true } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "bio_SG_hibernate_15d",
+    "condition": {"compare_int": [ { "u_val": "bmi_permil" }, ">", { "const": 15000 } ]},
+    "effect": [ 
+	{ "u_add_effect": "SG_hibernate", "intensity": 1, "duration": "15 days" },
+	{ "u_assign_activity": "ACT_SG_hibernate", "duration": "15 days" }
+	],
+    "false_effect": [ { "u_message": "休眠中止！\n储备热量极低！请补充足够的营养物质以满足休眠需求！", "type": "bad","popup": true } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "bio_SG_hibernate_30d",
+    "condition": {"compare_int": [ { "u_val": "bmi_permil" }, ">", { "const": 20000 } ]},
+    "effect": [ 
+	{ "u_add_effect": "SG_hibernate", "intensity": 1, "duration": "30 days" },
+	{ "u_assign_activity": "ACT_SG_hibernate", "duration": "30 days" }
+	],
+    "false_effect": [ { "u_message": "休眠中止！\n储备热量过低！请补充足够的营养物质以满足休眠需求！", "type": "warning","popup": true } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "bio_SG_hibernate_90d",
+    "condition": {"compare_int": [ { "u_val": "bmi_permil" }, ">", { "const": 30000 } ]},
+    "effect": [ 
+	{ "u_add_effect": "SG_hibernate", "intensity": 1, "duration": "90 days" },
+	{ "u_assign_activity": "ACT_SG_hibernate", "duration": "90 days" }
+	],
+    "false_effect": [ { "u_message": "休眠中止！\n储备热量过低，请补充营养物质以满足休眠需求！", "type": "warning","popup": true } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "bio_SG_hibernate_180d",
+    "condition": {"compare_int": [ { "u_val": "bmi_permil" }, ">", { "const": 40000 } ]},
+    "effect": [ 
+	{ "u_add_effect": "SG_hibernate", "intensity": 1, "duration": "180 days" },
+	{ "u_assign_activity": "ACT_SG_hibernate", "duration": "180 days" }
+	],
+    "false_effect": [ { "u_message": "休眠中止。\n储备热量低，请补充营养物质以满足休眠需求。","popup": true, "type": "warning" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "bio_SG_hibernate_360d",
+    "condition": {"compare_int": [ { "u_val": "bmi_permil" }, ">", { "const": 55000 } ]},
+    "effect": [ 
+	{ "u_add_effect": "SG_hibernate", "intensity": 1, "duration": "360 days" },
+	{ "u_assign_activity": "ACT_SG_hibernate", "duration": "360 days" }
+	],
+    "false_effect": [ { "u_message": "休眠中止。\n储备热量偏低，请补充更多营养物质以满足休眠需求。","popup": true } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "bio_SG_hibernate_1080d",
+    "condition": {"compare_int": [ { "u_val": "bmi_permil" }, ">", { "const": 130000 } ]},
+    "effect": [ 
+	{ "u_add_effect": "SG_hibernate", "intensity": 1, "duration": "1080 days" },
+	{ "u_assign_activity": "ACT_SG_hibernate", "duration": "1080 days" }
+	],
+    "false_effect": [ { "u_message": "休眠中止。\n储备热量不足休眠，请补充大量营养物质以满足休眠需求。","popup": true } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "bio_SG_hibernate_10800d",
+    "condition": {"compare_int": [ { "u_val": "bmi_permil" }, ">", { "const": 1130000 } ]},
+    "effect": [ 
+	{ "u_add_effect": "SG_hibernate", "intensity": 1, "duration": "10800 days" },
+	{ "u_assign_activity": "ACT_SG_hibernate", "duration": "10800 days" }
+	],
+    "false_effect": [ { "u_message": "休眠中止。\n储备热量不足休眠，请补充极大量营养物质以满足休眠需求。","popup": true } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "bio_SG_hibernate_close",
+    "condition": { "u_has_effect": "SG_hibernate" },
+    "effect":[{ "u_add_effect": "SG_hibernate_clos", "intensity": 1, "duration": "30 seconds" },
+            { "u_message": "紧急休眠中止！\n休眠机能暂停！\n请确保自身安全！\n等待系统恢复！", "type": "bad","popup": true }],
+    "false_effect": [ { "u_message": "错误！系统休眠未开启！","popup": true } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "bio_SG_thirst_detection",
+    "recurrence": 1,
+    "condition": {
+      "and": [
+	  {"u_has_bionics": "bio_arcthitecture" },
+	  {"u_has_bionics": "bio_Security_Guard" }
+	  ]
+	  },
+    "effect": [ { "arithmetic": [ { "u_val": "thirst" }, "=", { "const": 0 } ] } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "bio_SG_fatigue_detection",
+    "recurrence": 1,
+    "condition": {
+      "and": [
+	  {"u_has_bionics": "bio_arcthitecture" },
+	  {"u_has_bionics": "bio_Security_Guard" }
+	  ]
+	  },
+    "effect": [ { "arithmetic": [ { "u_val": "fatigue" }, "=", { "const": 0 } ] } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "bio_SG_focus_detection",
+    "recurrence": 1,
+    "condition": {
+      "and": [
+	  {"u_has_bionics": "bio_arcthitecture" },
+	  {"u_has_bionics": "bio_Security_Guard" }
+	  ]
+	  },
+    "effect": [ { "arithmetic": [ { "u_val": "focus" }, "=", { "const": 100 } ] } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "bio_SG_kcal_detection",
+    "recurrence": 1,
+    "condition": {
+      "and": [
+	  {"u_has_bionics": "bio_arcthitecture" },
+	  {"u_has_bionics": "bio_Security_Guard" },
+      { "compare_int": [ { "u_val": "stored_kcal" }, "<=", { "const": 50 } ] }
+	  ]
+	  },
+    "effect": [ { "arithmetic": [ { "u_val": "stored_kcal" }, "+=", { "const": 10 } ] } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "bio_SG_DEATH_detection",
+    "eoc_type": "PREVENT_DEATH",
+    "condition": {
+      "and": [
+	  {"u_has_bionics": "bio_arcthitecture" },
+	  {"u_has_bionics": "bio_Security_Guard" }
+	  ]
+	  },
+    "effect": [
+	  { "u_add_effect": "SG_hibernate_DEATH", "intensity": 1, "duration": [ "12 hours", "3 days" ] },
+      { "u_set_hp": 1, "only_increase": true }
+	]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "bio_SG_DEATH_ACT_detection",
+    "recurrence": 1,
+    "condition": {
+      "and": [
+	  {"u_has_bionics": "bio_arcthitecture" },
+	  {"u_has_bionics": "bio_Security_Guard" },
+	  {"u_has_effect": "SG_hibernate_DEATH" }
+	  ]
+	  },
+    "effect":[
+	  { "u_assign_activity": "ACT_SG_hibernate_DEATH", "duration": "3 seconds" },
+	  { "arithmetic": [ { "u_val": "power" }, "-=", { "const": 1 } ] }
+	]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "Cyberball_over_eoc",
+    "condition": {
+      "and": [
+	  {"u_has_bionics": "bio_arcthitecture" },
+	  {"u_has_bionics": "bio_Security_Guard" },
+	  { "u_has_items": { "item": "Cyberball_connect_terminal", "count": 1 } }
+	  ]
+	  },
+    "effect": { "queue_eocs": "Cyberball_over_eoc_2", "time_in_future": [ "0 seconds", "0 seconds" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "Cyberball_over_eoc_2",
+    "condition": {
+      "and": [
+	  {"u_has_bionics": "bio_arcthitecture" },
+	  {"u_has_bionics": "bio_Security_Guard" },
+	  { "u_has_items": { "item": "Cyberball_connect_terminal", "count": 1 } }
+	  ]
+	  },
+    "effect": [ 
+	  { "u_spawn_item": "Cyberball_connect_terminal_instable", "count": 1 , "suppress_message":true },
+	  { "u_remove_item_with": "Cyberball_connect_terminal", "count": 1 , "suppress_message":true },
+      { "u_message": "终端停止了。" },
+	  { "u_learn_recipe": "arcthitecture_particulate" },
+	  { "u_learn_recipe": "arcthitecture_toolset" },
+	  { "u_learn_recipe": "Cyberball_integrated_chip" },
+	  { "u_learn_recipe": "arcthitecture_frame" },
+	  { "u_learn_recipe": "arcthitecture_plate" },
+	  { "u_learn_recipe": "arcthitecture_seal_plate" },
+	  { "u_learn_recipe": "arcthitecture_drum" },
+	  { "u_learn_recipe": "arcthitecture_fuel_bunker" },
+	  { "u_learn_recipe": "Integrated_Control_System" },
+	  { "u_learn_recipe": "arcthitecture_battery_car" },
+	  { "u_learn_recipe": "arcthitecture_alternator_car" },
+	  { "u_learn_recipe": "arcthitecture_wheel" },
+	  { "u_learn_recipe": "solidity_energy_battery" },
+	  { "u_learn_recipe": "arcthitecture_reaction_engine" },
+	  { "u_learn_recipe": "solidity_energy_battery_small" },
+	  { "u_learn_recipe": "armor_arcthitecture" },
+	  { "u_learn_recipe": "armor_arcthitecture_combat" },
+	  { "u_learn_recipe": "katana_ARTTT" },
+	  { "u_learn_recipe": "giant_sword_ARTTT" },
+	  { "u_learn_recipe": "baldric_ARTTT" }
+	  ]
+  }
+]

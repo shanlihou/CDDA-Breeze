@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_ONE_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"嘿！那边的小哥，认识我的妹妹吗？",
+    "responses":[
+      { "text": "一起找找吧", "topic": "TALK_ONE_SAN_2" },
+      { "text": "不认识", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_ONE_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"既然这样，我就陪你一起去吧，哎，你有什么零食吗？",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

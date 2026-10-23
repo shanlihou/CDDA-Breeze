@@ -1,0 +1,56 @@
+[
+  {
+    "type": "furniture",
+    "id": "f_妈耶，这不是一个普通垃圾桶而是异冫...",
+    "name": "异次元垃圾桶",
+    "symbol": "&",
+    "description": "你也不知道是什么原理，但这个你用缝衣线制成的垃圾桶有种神奇的魔力使它不但会自己发出光芒而且还会把任何放进去的东西不可逆的传送到异次元",
+    "color": "light_cyan",
+    "move_cost_mod": 1,
+    "looks_like": "f_trashcan",
+    "required_str": 1,
+    "max_volume": "10000 L",
+    "flags": [ "TRANSPARENT", "FLAMMABLE_ASH", "CONTAINER", "PLACE_ITEM", "MOUNTABLE", "SHORT", "NO_SCENT", "DESTROY_ITEM", "EASY_DECONSTRUCT" ],
+	"deconstruct": { "items": [ { "item": "异次元垃圾桶(折叠)", "count": 1 } ] },
+    "bash": {
+      "str_min": 1,
+      "str_max": 10,
+      "sound": "你听到一声 刺耳如垃圾桶般的 尖叫！",
+      "sound_fail": "whump.",
+      "items": [ { "item": "plastic_chunk", "count": [ 1, 2 ] } ]
+    }
+  },
+  {
+    "id": "异次元垃圾桶(折叠)",
+    "type": "TOOL",
+    "name": { "str": "异次元垃圾桶(折叠)" },
+    "description": "你也不知道是什么原理，但这个你用缝衣线制成的垃圾桶有种神奇的魔力使它不但会自己发出光芒而且还会把任何放进去的东西不可逆的传送到异次元",
+    "weight": "1 g",
+    "volume": "1 L",
+    "longest_side": "1 cm",
+    "price": 100,
+    "material": [ "空气" ],
+    "symbol": "=",
+    "color": "light_cyan",
+    "use_action": { "type": "deploy_furn", "furn_type": "f_妈耶，这不是一个普通垃圾桶而是异冫..." }
+  },
+  {
+    "result": "异次元垃圾桶(折叠)",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MATERIALS",
+    "skill_used": "tailor",
+    "difficulty": 0,
+    "time": "1 s",
+    "autolearn": true,
+    "reversible": false,
+    "components": [ [ [ "thread", 1 ] ] ]
+  },
+  {
+    "type": "material",
+    "id": "空气",
+    "name": "空气",
+    "copy-from": "pseudo_fuel"
+  }
+]

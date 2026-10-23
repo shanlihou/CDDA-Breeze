@@ -16,6 +16,7 @@
 #include "avatar.h"
 #include "basecamp.h"
 #include "calendar.h"
+#include "cata_utility.h"
 #include "character.h"
 #include "coordinates.h"
 #include "debug.h"
@@ -86,6 +87,21 @@ bool check_if_reported_work(const std::string& faction_id_str) {
 
 }
 
+
+bool read_reserved_u_val( const std::string &name, std::string &out )
+{
+    // 0.H 兼容层：{"u_val": "mid_autumn_holiday_year"} —— 当前公历年，
+    // 供 mod 记录「今年中秋已经送过月饼」。名字经 get_talk_varname 拼装后带 npctalk_var_ 前缀。
+    if( name == "npctalk_var_mid_autumn_holiday_year" ) {
+        const int year = mid_autumn_year();
+        if( year <= 0 ) {
+            return false;
+        }
+        out = std::to_string( year );
+        return true;
+    }
+    return false;
+}
 
 template<class T>
 std::string get_talk_varname( const JsonObject &jo, const std::string &member,
@@ -1304,6 +1320,27 @@ void conditional_t<T>::set_is_season( const JsonObject &jo, const std::string &m
                ( season == SUMMER && season_name.evaluate( d ) == "summer" ) ||
                ( season == AUTUMN && season_name.evaluate( d ) == "autumn" ) ||
                ( season == WINTER && season_name.evaluate( d ) == "winter" );
+    };
+}
+
+template<class T>
+void conditional_t<T>::set_is_mid_autumn_holiday( const JsonObject &jo, const std::string &member )
+{
+    // 0.H 允许 true / false / "yes" / "no" 几种写法，统一折算成一个期望的布尔值。
+    bool expected = true;
+    const JsonValue jv = jo.get_member( member );
+    if( jv.test_bool() ) {
+        expected = jv.get_bool();
+    } else if( jv.test_string() ) {
+        const std::string raw = jv.get_string();
+        expected = raw != "no" && raw != "false" && raw != "0";
+    } else if( jv.test_number() ) {
+        expected = jv.get_int() != 0;
+    } else {
+        jv.throw_error( "invalid is_mid_autumn_holiday condition, expected a bool" );
+    }
+    condition = [expected]( const T & ) {
+        return is_mid_autumn_holiday() == expected;
     };
 }
 
@@ -3453,6 +3490,8 @@ conditional_t<T>::conditional_t( const JsonObject &jo )
         set_days_since( jo, "days_since_cataclysm" );
     } else if( jo.has_string( "is_season" ) ) {
         set_is_season( jo, "is_season" );
+    } else if( jo.has_member( "is_mid_autumn_holiday" ) ) {
+        set_is_mid_autumn_holiday( jo, "is_mid_autumn_holiday" );
     } else if( jo.has_string( "mission_goal" ) ) {
         set_mission_goal( jo, "mission_goal", true );
     } else if( jo.has_string( "npc_mission_goal" ) ) {

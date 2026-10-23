@@ -1,0 +1,48 @@
+[
+  {
+    "type": "mod_tileset",
+    "compatibility": [
+      "Chibi_Ultica",
+      "UltimateCataclysm",
+      "MshockXottoplus",
+      "UNDEAD_PEOPLE",
+      "UNDEAD_PEOPLE_BASE",
+      "UNDEAD_PEOPLE_LEGACY",
+      "UlticaShell",
+      "MshockXottoplus12",
+      "MSX++DEAD_PEOPLE",
+      "MXplus12_for_cosmetics",
+      "MSXotto+"
+    ],
+    "tiles-new": [
+      {
+        "file": "直升机旋翼贴图.png",
+        "tiles": [
+          { "id": "vp_small_civilian_rotors", "fg": 0, "multitile": true, "additional_tiles": [ { "id": "broken", "fg": 1 } ] },
+          {
+            "id": "vp_heavy_duty_military_rotor",
+            "fg": 2,
+            "multitile": true,
+            "additional_tiles": [ { "id": "broken", "fg": 3 } ]
+          },
+          {
+            "id": "vp_heavy_duty_military_osprey_rotors",
+            "fg": 4,
+            "multitile": true,
+            "additional_tiles": [ { "id": "broken", "fg": 5 } ]
+          },
+          {
+            "id": "vp_heavy_duty_military_blackhawk_rotors",
+            "fg": 6,
+            "multitile": true,
+            "additional_tiles": [ { "id": "broken", "fg": 7 } ]
+          }
+        ],
+        "sprite_width": 544,
+        "sprite_height": 544,
+        "sprite_offset_x": -256,
+        "sprite_offset_y": -256
+      }
+    ]
+  }
+]

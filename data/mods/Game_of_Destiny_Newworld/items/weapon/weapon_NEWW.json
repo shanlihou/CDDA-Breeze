@@ -1,0 +1,145 @@
+[
+  {
+    "id": "DT_weapont_semisolid",
+    "looks_like": "shock_epee",
+    "type": "GENERIC",
+    "symbol": "D",
+    "color": "red",
+    "category": "Determination",
+    "name": { "str": "不稳定决心" },
+    "description": "来自新世界最神秘的十三号时间线的不明物体，由极其纯净的决心与极其纯净的仇恨构成，战斗时可以变化为任意形态打击敌人，随意变化的特质能用来撬门。“当两种不可能相融的物质组合在一起，我们就不得不考虑高维生物的存在可能性了。”\n\n<color_cyan>这件物品拥有来自其他世界的力量。</color>",
+    "weight": "700 g",
+    "volume": "500 ml",
+    "longest_side": "35 cm",
+    "material": [ "DT_dt", "DT_hate" ],
+    "repairs_with": [ "DT_mt_gel" ],
+    "bashing": 10,
+    "cutting": 22,
+    "to_hit": {
+    "grip": "weapon",
+    "length": "long",
+    "surface": "any",
+    "balance": "good"
+    },
+    "techniques": [
+    "WBLOCK_1",
+    "DT_SWORD_1",
+    "DT_ENGULF"
+    ],
+    "qualities": [
+    [ "PRY", 3 ]
+    ],
+    "pocket_data": [
+    {
+      "pocket_type": "MAGAZINE",
+      "watertight": true,
+      "rigid": true,
+      "weight_multiplier": 0.01,
+      "ammo_restriction": {
+        "DT_ammo_water": 45
+      }
+    }
+  ],
+    "use_action": [ "CROWBAR" ],
+    "flags": [ "DURABLE_MELEE", "PERFECT_LOCKPICK", "DT_items", "HATE_items" ]
+  },
+  {
+   "id": "DT_f_branch",
+   "looks_like": "stick",
+   "type": "GENERIC",
+   "name": { "str": "普通树枝", "str_pl": "一些树枝" },
+   "description": "一根由新世界配方制造的高级树枝，真正意义上的坚不可摧。当你将它拿在手里时，你能响应一股<color_red>源自内心的力量</color>，就如同你是天地之间的主角一般。几乎没有什么能躲开它的攻击。\n\n<color_cyan>这件物品拥有来自其他时空的力量。</color><color_yellow>不会损坏</color>。\n\n战技需要2级“前行决意”解锁。提醒：攻速极快，低耐力者慎用。",
+   "weight": "1200 g",
+   "volume": "1555 ml",
+   "longest_side": "45 cm",
+   "material": [ "DT_dt", "wood" ],
+   "symbol": "l",
+   "color": "brown",
+   "category": "weapons",
+   "weapon_category": [ "BATONS" ],
+   "price": 16000,
+   "price_postapoc": 3500,
+   "to_hit": 6,
+   "bashing": 22,
+   "flags": [ "SHEATH_SPEAR", "UNBREAKABLE" ],
+   "techniques": [
+   "WBLOCK_1",
+   "DT_BRANCH_1",
+   "DT_SUPER_speedattack"
+    ]
+   },
+   {
+   "id": "DT_toy_knife",
+   "looks_like": "knife_chef",
+   "type": "GUN",
+   "name": { "str": "旧匕首" },
+   "description": "一把由新世界配方制造的刀……又钝又锈，若非仇恨驱动，怕是敌人的头发都切不下。用来近战不现实。当你将它拿在手里时，你能响应一股<color_yellow>源自内心的</color><color_green>力量</color>。但当你挥舞它时，有那么一瞬间，你似乎感觉它变成了红色。\n\n<color_cyan>这件物品拥有来自其他时空的力量。</color>可以发出远程斩击（类似剑气）攻击敌人，造成斩击伤害。",
+   "weight": "80 g",
+   "volume": "136 ml",
+   "longest_side": "15 cm",
+   "material": [ "DT_dt", "plastic", "DT_hate" ],
+   "symbol": "l",
+   "color": "brown",
+   "price": 16000,
+   "price_postapoc": 3500,
+   "to_hit": 1,
+   "bashing": 1,
+   "cutting": 14,
+   "techniques": [
+   "DT_UNREAL_KNIFE_1"
+    ],
+   "flags": [
+   "SHEATH_KNIFE",
+   "STAB",
+   "NEVER_JAMS",
+   "NON_FOULING"
+  ],
+  "ranged_damage": {
+    "damage_type": "cut",
+    "amount": 20,
+    "armor_penetration": 20
+  },
+  "ammo_effects": [
+    "NEVER_MISFIRES",
+    "NO_ITEM_DAMAGE",
+    "TARDIS"
+  ],
+  "skill": "pistol",
+  "ammo": [
+    "DT_ammo_hate"
+  ],
+  "range": 12,
+  "dispersion": 50,
+  "sight_dispersion": 6,
+  "durability": 10,
+  "modes": [
+    [
+     "DEFAULT",
+     "斩击", 1
+    ],
+    [
+     "BRUST",
+     "连斩", 3
+    ]
+  ],
+  "clip_size": 9,
+  "reload": 60,
+  "valid_mod_locations": [
+    [
+      "sling", 1
+    ]
+  ],
+  "pocket_data": [
+    {
+      "pocket_type": "MAGAZINE",
+      "weight_multiplier": 0.2,
+      "volume_multiplier": 0.2,
+      "ammo_restriction": {
+        "DT_ammo_hate": 9
+      },
+      "rigid": true,
+      "watertight": true
+    }
+  ]
+ }
+]

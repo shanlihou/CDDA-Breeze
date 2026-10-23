@@ -1,0 +1,15 @@
+[
+ {
+  "id": "DT_vitamin_f",
+  "type": "vitamin",
+  "vit_type": "drug",
+  "name": "错误代码",
+  "excess": "DT_vitamin_error",
+  "min": -1,
+  "max": 8000,
+  "rate": "1 m",
+  "disease_excess": [ [ 500, 1499 ], [ 1500, 8000 ] ],
+  "decays_into": [ [ "calcium", 2 ], [ "iron", 2 ], [ "vitC", 2 ] ],
+  "flags": ["OBSOLETE"]
+ }
+]

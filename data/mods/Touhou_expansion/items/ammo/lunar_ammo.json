@@ -1,0 +1,109 @@
+[
+  {
+    "id": "ammo_lunar_4d_thorn",
+    "type": "AMMO",
+    "name": {
+      "str_sp": "荆棘弹"
+    },
+    "description": "看起来奇特的四维弹药。像某种金属花或爪，在中间真正的子弹周围附着七到九根\"荆棘\"，具体数量取决于你检查时如何旋转它。也许是由于折叠，几发这样的弹药堆叠在一起时体积比预期的小，形成一个有棱角的无定形金属团。至少可以说，令人迷幻。",
+    "weight": "22 g",
+    "volume": "4 ml",
+    "//": "The thorns have no actual volume or mass, until they do",
+    "price_postapoc": 900,
+    "material": [
+      "steel"
+    ],
+    "symbol": "=",
+    "color": "light_gray",
+    "//2": "bullet is made from steel, the flower look as if it was made from brass",
+    "ammo_type": "ammo_lunar_4d_1",
+    "count": 23,
+    "stack_size": 37,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 25,
+      "armor_penetration": 15
+    },
+    "dispersion": 30,
+    "range": 50,
+    "recoil": 200,
+    "effects": [
+      "NEVER_MISFIRES"
+    ],
+    "flags": [
+      "IRREPLACEABLE_CONSUMABLE",
+      "NON_FOULING"
+    ]
+  },
+  {
+    "id": "ammo_lunar_4d_claw",
+    "type": "AMMO",
+    "name": {
+      "str_sp": "爪弹"
+    },
+    "description": "看起来奇特的四维弹药。钢制弹头没有弹壳，而且似乎全身刻着无法辨认的铭文。摸起来时感觉比看起来要大，仿佛周围有一层看不见的外壳。不过，将它们装入各自的弹匣完全没有问题。",
+    "weight": "12 g",
+    "volume": "24 ml",
+    "price_postapoc": 900,
+    "material": [
+      "steel"
+    ],
+    "symbol": "=",
+    "color": "dark_gray",
+    "ammo_type": "ammo_lunar_4d_2",
+    "count": 13,
+    "stack_size": 19,
+    "damage": {
+      "damage_type": "cut",
+      "amount": 25,
+      "armor_penetration": 15
+    },
+    "dispersion": 15,
+    "range": 50,
+    "recoil": 200,
+    "effects": [
+      "NEVER_MISFIRES"
+    ],
+    "flags": [
+      "IRREPLACEABLE_CONSUMABLE",
+      "NON_FOULING"
+    ]
+  },
+  {
+    "id": "ammo_lunar_5d_ofuda",
+    "type": "AMMO",
+    "name": {
+      "str_sp": "符咒弹"
+    },
+    "description": "看起来奇特的五维弹药。它由源和流组成。源是符咒，上面有着无法辨认的文字。流似乎就是这些文字的内容，在射击时被武器读取并实体化，同时消耗每一张符咒。",
+    "weight": "1 g",
+    "volume": "2 ml",
+    "price_postapoc": 900,
+    "material": [
+      "paper"
+    ],
+    "symbol": "=",
+    "color": "white",
+    "ammo_type": "ammo_lunar_5d_1",
+    "casing": "paper",
+    "count": 101,
+    "stack_size": 127,
+    "damage": {
+      "damage_type": "cut",
+      "amount": 35,
+      "armor_penetration": 25
+    },
+    "dispersion": 0,
+    "range": 50,
+    "recoil": 200,
+    "effects": [
+      "NEVER_MISFIRES"
+    ],
+    "flags": [
+      "IRREPLACEABLE_CONSUMABLE",
+      "NON_FOULING"
+    ],
+    "//": "For bleeding something out. This would generate a lot of impurity on the target",
+    "//2": "Damage should be extradimensional: rnd(0.33-0.8) damage to whatever lacking a 'EXTRADIMENSIONAL' flag or something, damages no terrain, things like that"
+  }
+]

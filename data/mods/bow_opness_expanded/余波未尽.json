@@ -1,0 +1,355 @@
+[
+{
+  "id": "scrapbow",
+  "looks_like": "longbow",
+  "type": "GUN",
+  "symbol": "(",
+  "color": "yellow",
+  "name": {
+    "str": "salvage bow"
+  },
+  "description": "A bow made from readily-available materials, and quickly and cheaply put together.  It is not made to be pretty, but to get a job done.  Its nocks and string are made of shape-memory alloy that help increase string tension in the string.  The memory alloy requires a UPS source to be activated.",
+  "price": 38000,
+  "//": "90 lb draw weight, 28in draw, 70J, 0.464 slugs of momentum with a 0.066lb arrow.",
+  "material": [
+    "steel",
+    "plastic"
+  ],
+  "flags": [
+    "FIRE_TWOHAND",
+    "RELOAD_AND_SHOOT",
+    "PRIMITIVE_RANGED_WEAPON",
+    "BELTED",
+    "WATER_FRIENDLY",
+    "SHEATH_BOW",
+    "WATERPROOF_GUN",
+    "NEVER_JAMS"
+  ],
+  "ammo_effects": [
+    "NEVER_MISFIRES"
+  ],
+  "skill": "archery",
+  "min_strength": 12,
+  "ammo": [
+    "arrow"
+  ],
+  "weight": "540 g",
+  "volume": "2500 ml",
+  "longest_side": "152 cm",
+  "price_postapoc": 2000,
+  "bashing": 12,
+  "armor_data": {
+    "armor": [
+      {
+        "material": [
+          {
+            "type": "steel",
+            "covered_by_mat": 100,
+            "thickness": 1
+          },
+          {
+            "type": "plastic",
+            "covered_by_mat": 100,
+            "thickness": 1
+          }
+        ],
+        "encumbrance": 20,
+        "coverage": 5,
+        "covers": [
+          "torso"
+        ]
+      }
+    ]
+  },
+  "reload_noise_volume": 3,
+  "loudness": 6,
+  "ranged_damage": {
+    "damage_type": "stab",
+    "amount": 24
+  },
+  "range": 14,
+  "dispersion": 850,
+  "sight_dispersion": 3000,
+  "durability": 6,
+  "clip_size": 1,
+  "valid_mod_locations": [
+    [
+      "underbarrel",
+      1
+    ],
+    [
+      "sights",
+      1
+    ],
+    [
+      "accessories",
+      2
+    ],
+    [
+      "stabilizer",
+      1
+    ],
+    [
+      "dampening",
+      1
+    ]
+  ],
+  "reload": 50,
+  "pocket_data": [
+    {
+      "pocket_type": "MAGAZINE",
+      "ammo_restriction": {
+        "arrow": 1
+      }
+    }
+  ],
+  "copy-from": "compositebow",
+  "ups_charges": 4
+},
+{
+  "id": "azabow_off",
+  "looks_like": "longbow",
+  "type": "GUN",
+  "symbol": "(",
+  "color": "white",
+  "name": {
+    "str": "Aztlani bow"
+  },
+  "description": "An ornate bow used by Aztlani nobility during hunting rituals.  Designed to fell the plated creatures of Aztlan, its articulated and power assisted limbs allow it to fire projectiles with a strength comparable to modern assault rifles.\n\nWith its drawing aid system currently disabled, firing it will require truly superhuman strength.  It can be activated to toggle it drawing assist functionality.",
+  "price": 50000,
+  "//": "60 lb draw weight 24in draw, 100J, 0.55 slugs of momentum with a 30g arrow.",
+  "material": [
+    "superalloy",
+    "qt_steel",
+    "wood"
+  ],
+  "flags": [
+    "FIRE_TWOHAND",
+    "RELOAD_AND_SHOOT",
+    "PRIMITIVE_RANGED_WEAPON",
+    "SHEATH_BOW",
+    "WATERPROOF_GUN",
+    "NEVER_JAMS"
+  ],
+  "ammo_effects": [
+    "NEVER_MISFIRES"
+  ],
+  "skill": "archery",
+  "min_strength": 40,
+  "ammo": [
+    "arrow"
+  ],
+  "weight": "907 g",
+  "volume": "1500 ml",
+  "longest_side": "150 cm",
+  "price_postapoc": 40000,
+  "bashing": 8,
+  "to_hit": 1,
+  "reload_noise_volume": 3,
+  "loudness": 10,
+  "ranged_damage": {
+    "damage_type": "stab",
+    "amount": 40
+  },
+  "range": 25,
+  "dispersion": 1000,
+  "sight_dispersion": 3000,
+  "durability": 6,
+  "clip_size": 1,
+  "valid_mod_locations": [
+    [
+      "underbarrel",
+      1
+    ],
+    [
+      "sights",
+      1
+    ],
+    [
+      "accessories",
+      2
+    ],
+    [
+      "stabilizer",
+      1
+    ],
+    [
+      "dampening",
+      1
+    ],
+    [
+      "arrow rest",
+      1
+    ]
+  ],
+  "use_action": {
+    "menu_text": "Activate",
+    "type": "transform",
+    "target": "azabow_on",
+    "msg": "You connect the bow to your UPS.",
+    "ammo_scale": 0
+  },
+  "reload": 50,
+  "pocket_data": [
+    {
+      "pocket_type": "MAGAZINE",
+      "ammo_restriction": {
+        "arrow": 1
+      }
+    }
+  ],
+  "copy-from": "compbow",
+  "armor_data": {
+    "armor": [
+      {
+        "material": [
+          {
+            "type": "superalloy",
+            "covered_by_mat": 100,
+            "thickness": 1
+          },
+          {
+            "type": "qt_steel",
+            "covered_by_mat": 100,
+            "thickness": 1
+          },
+          {
+            "type": "wood",
+            "covered_by_mat": 100,
+            "thickness": 1
+          }
+        ],
+        "encumbrance": 20,
+        "coverage": 5,
+        "covers": [
+          "torso"
+        ]
+      }
+    ]
+  }
+},
+{
+  "id": "azabow_on",
+  "looks_like": "longbow",
+  "type": "GUN",
+  "symbol": "(",
+  "color": "white",
+  "name": {
+    "str": "Aztlani bow (active)",
+    "str_pl": "Aztlani bows (active)"
+  },
+  "description": "An ornate bow used by Aztlani nobility during hunting rituals.  Designed to fell the plated creatures of Aztlan, its articulated and power assisted limbs allow it to fire projectiles with a strength comparable to modern assault rifles.\n\nWith its drawing aid system enabled, it can be much more easily drawn, at the cost of a modest amount of UPS power consumption per arrow.  It can be activated to toggle it drawing assist functionality.",
+  "price": 50000,
+  "//": "60 lb draw weight 24in draw, 100J, 0.55 slugs of momentum with a 30g arrow.",
+  "material": [
+    "superalloy",
+    "qt_steel",
+    "wood"
+  ],
+  "flags": [
+    "FIRE_TWOHAND",
+    "RELOAD_AND_SHOOT",
+    "PRIMITIVE_RANGED_WEAPON",
+    "SHEATH_BOW",
+    "WATERPROOF_GUN",
+    "NEVER_JAMS"
+  ],
+  "ammo_effects": [
+    "NEVER_MISFIRES"
+  ],
+  "skill": "archery",
+  "min_strength": 20,
+  "ammo": [
+    "arrow"
+  ],
+  "weight": "907 g",
+  "volume": "1500 ml",
+  "longest_side": "150 cm",
+  "price_postapoc": 40000,
+  "bashing": 8,
+  "to_hit": 1,
+  "reload_noise_volume": 3,
+  "loudness": 10,
+  "ranged_damage": {
+    "damage_type": "stab",
+    "amount": 40
+  },
+  "range": 25,
+  "dispersion": 1000,
+  "sight_dispersion": 3000,
+  "durability": 6,
+  "clip_size": 1,
+  "valid_mod_locations": [
+    [
+      "underbarrel",
+      1
+    ],
+    [
+      "sights",
+      1
+    ],
+    [
+      "accessories",
+      2
+    ],
+    [
+      "stabilizer",
+      1
+    ],
+    [
+      "dampening",
+      1
+    ],
+    [
+      "arrow rest",
+      1
+    ]
+  ],
+  "use_action": {
+    "menu_text": "Deactivate",
+    "ammo_scale": 0,
+    "type": "transform",
+    "target": "azabow_off",
+    "msg": "You disconnect the UPS."
+  },
+  "reload": 50,
+  "pocket_data": [
+    {
+      "pocket_type": "MAGAZINE",
+      "ammo_restriction": {
+        "arrow": 1
+      }
+    }
+  ],
+  "copy-from": "azabow_off",
+  "armor_data": {
+    "armor": [
+      {
+        "material": [
+          {
+            "type": "superalloy",
+            "covered_by_mat": 100,
+            "thickness": 1
+          },
+          {
+            "type": "qt_steel",
+            "covered_by_mat": 100,
+            "thickness": 1
+          },
+          {
+            "type": "wood",
+            "covered_by_mat": 100,
+            "thickness": 1
+          }
+        ],
+        "encumbrance": 20,
+        "coverage": 5,
+        "covers": [
+          "torso"
+        ]
+      }
+    ]
+  },
+  "ups_charges": 12
+}
+]

@@ -1,0 +1,907 @@
+[
+  {
+    "type": "ARMOR",
+    "id": "magic_gun_backpack",
+    "name": { "str": "魔法长枪背包" },
+    "description": "你可以用它装下好几把长枪，也许不是长枪也行。",
+    "weight": "700 g",
+    "volume": "7 L",
+    "longest_side": "203 cm",
+    "price": 13700,
+    "price_postapoc": 13700,
+    "material": [ "canvas" ],
+    "symbol": "[",
+    "looks_like": "slingpack",
+    "color": "green",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "10 L",
+        "max_contains_weight": "10 kg",
+        "max_item_length": "200 cm",
+        "holster": true,
+        "moves": 600
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "10 L",
+        "max_contains_weight": "10 kg",
+        "max_item_length": "200 cm",
+        "holster": true,
+        "moves": 600
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "10 L",
+        "max_contains_weight": "10 kg",
+        "max_item_length": "200 cm",
+        "holster": true,
+        "moves": 600
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "10 L",
+        "max_contains_weight": "10 kg",
+        "max_item_length": "200 cm",
+        "holster": true,
+        "moves": 600
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "10 L",
+        "max_contains_weight": "10 kg",
+        "max_item_length": "200 cm",
+        "holster": true,
+        "moves": 600
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "10 L",
+        "max_contains_weight": "10 kg",
+        "max_item_length": "200 cm",
+        "holster": true,
+        "moves": 600
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "10 L",
+        "max_contains_weight": "10 kg",
+        "max_item_length": "200 cm",
+        "holster": true,
+        "moves": 600
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "10 L",
+        "max_contains_weight": "10 kg",
+        "max_item_length": "200 cm",
+        "holster": true,
+        "moves": 600
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "10 L",
+        "max_contains_weight": "10 kg",
+        "max_item_length": "200 cm",
+        "holster": true,
+        "moves": 600
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "10 L",
+        "max_contains_weight": "10 kg",
+        "max_item_length": "200 cm",
+        "holster": true,
+        "moves": 600
+      }
+    ],
+    "warmth": 1,
+    "material_thickness": 1,
+    "flags": [ "BELTED", "OVERSIZE", "WATER_FRIENDLY" ],
+    "armor": [ { "encumbrance": [ 6, 6 ], "coverage": 20, "covers": [ "torso" ], "specifically_covers": [ "torso_hanging_back" ] } ]
+  },
+  {
+    "id": "self_magic_gohomebone",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "category": "other",
+    "name": "返回骨片",
+    "description": "回到一个被标记的地点。\n节省魔力的好替代品。",
+    "weight": "10 g",
+    "volume": "10 ml",
+    "longest_side": "5 cm",
+    "price": 500,
+    "price_postapoc": 500,
+    "material": [ "bone" ],
+    "symbol": "?",
+    "color": "white",
+    "flags": [ "NO_AUTO_CONSUME", "NUTRIENT_OVERRIDE", "NONCONDUCTIVE", "MAGIC_FOCUS", "NO_INGEST", "EDIBLE_FROZEN", "SINGLE_USE" ],
+    "stack_size": 1,
+    "use_action": {
+    	"type": "cast_spell",
+    	"spell_id": "self_magic_gohomebone_spell",
+    	"no_fail": true,
+    	"need_wielding": true,
+    	"level": 0
+    }
+  },
+  {
+    "id": "self_magic_gohomebone_spell",
+    "type": "SPELL",
+    "name": "返回骨片",
+    "description": "回到一个被标记的地点。",
+    "valid_targets": [ "self" ],
+    "effect": "translocate",
+    "shape": "blast",
+    "base_casting_time": 1000,
+    "energy_source": "MANA",
+    "spell_class": "NONE"
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "self_magic_knife_bag",
+    "qualities": [
+      { "id": "CUT", "level": 2 },
+      { "id": "MANA_INFUSE", "level": 2 },
+      { "id": "MANA_FOCUS", "level": 1 },
+      { "id": "CHISEL", "level": 3 }
+    ],
+    "using": [ [ "sewing_standard", 50 ] ],
+    "components": [
+    	[
+    		[ "spell_scroll_knifeshot", 1 ]
+    	],
+    	[
+    		[ "crystallized_mana", 60 ]
+    	],
+    	[
+    		[ "leather", 4 ]
+    	]
+    ],
+    "time": "10 m",
+    "skill_used": "spellcraft",
+    "difficulty": 3,
+    "category": "CC_ENCHANTED",
+    "subcategory": "CSC_ENCHANTED_WEAPONS",
+    "autolearn": true
+  },
+  {
+    "id": "self_magic_knife_bag",
+    "type": "TOOL_ARMOR",
+    "looks_like": "holster",
+    "name": "有限飞刀袋",
+    "description": "这个小袋子能把魔力结晶变成飞刀。\n一位对飞刀术情有独钟的法师发明了它。\n小心，这些飞刀不会一直存在。",
+    "price": 800000,
+    "price_postapoc": "1800 USD",
+    "volume": "100 ml",
+    "weight": "160 g",
+    "material": [ "leather" ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "charges_per_use": 1,
+    "armor_data": {
+      "sided": true,
+      "armor": [
+        {
+          "material": [ { "type": "leather", "covered_by_mat": 100, "thickness": 1.0 } ],
+          "encumbrance": 0,
+          "coverage": 5,
+          "covers": [ "leg_l", "leg_r" ]
+        }
+      ]
+    },
+    "environmental_protection": 1,
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "crystallized_mana": 60 } } ],
+    "flags": [ "OVERSIZE", "NO_REPAIR", "STURDY", "BELTED" ],
+    "use_action": { "type": "cast_spell", "spell_id": "self_magic_knife_bag_throw_blade", "no_fail": true, "level": 1, "need_worn": true }
+  },
+  {
+    "id": "self_magic_knife_bag_throw_blade",
+    "type": "SPELL",
+    "name": "取出飞刀",
+    "description": "从袋中取出一把飞刀。",
+    "valid_targets": [ "self" ],
+    "effect": "spawn_item",
+    "effect_str": "throwing_knife",
+    "shape": "blast",
+    "message": "你从袋中取出一把飞刀，好好使用吧。",
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_duration": 6000,
+    "max_duration": 6000
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "self_magic_milk_sealed",
+    "components": [
+    	[
+    		[ "crystallized_mana", 400 ]
+    	],
+    	[
+    		[ "milk_raw", 40 ]
+    	],
+    	[
+    		[ "meat", 20 ]
+    	]
+    ],
+    "time": "60 m",
+    "skill_used": "spellcraft",
+    "difficulty": 5,
+    "category": "CC_ENCHANTED",
+    "subcategory": "CSC_ENCHANTED_OTHER",
+    "autolearn": true
+  },
+  {
+    "type": "ammunition_type",
+    "id": "self_magic_milk_ammo",
+    "name": "罐中产物",
+    "default": "self_magic_milk_item"
+  },
+  {
+    "type": "AMMO",
+    "id": "self_magic_milk_item",
+    "category": "spare_parts",
+    "name": { "str_sp": "罐中产物（奶牛）" },
+    "description": "中间态产物。",
+    "weight": "100 mg",
+    "volume": "100 ml",
+    "price": 10,
+    "flags": [ "TRADER_AVOID" ],
+    "material": [ "glass" ],
+    "symbol": "o",
+    "color": "dark_gray",
+    "count": 100,
+    "ammo_type": "self_magic_milk_ammo",
+    "looks_like": "battery"
+  },
+  {
+    "id": "self_magic_milk_sealed",
+    "type": "TOOL",
+    "looks_like": "jar_glass_sealed",
+    "name": "罐中奶牛",
+    "description": "透过罐子你可以看到一只半透明奶牛。\n每天它都能产出一些牛奶供你饮用。",
+    "price": 400000,
+    "price_postapoc": "1200 USD",
+    "volume": "500 ml",
+    "weight": "800 g",
+    "material": [ "glass" ],
+	  "symbol": ")",
+	  "color": "light_cyan",
+    "charges_per_use": 1,
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "self_magic_milk_ammo": 30 } } ],
+    "flags": [ "NO_RELOAD" ],
+    "relic_data": { "charge_info": { "recharge_type": "periodic", "time": "24 h", "regenerate_ammo": true } }
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "water_clean",
+    "byproducts": [ [ "milk_raw", 1 ] ],
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_OTHER",
+  	"id_suffix": "from_damofa_self_milk",
+    "skill_used": "fabrication",
+    "time": "30 s",
+    "batch_time_factors": [ 90, 2 ],
+    "autolearn": true,
+    "flags": [ "BLIND_EASY" ],
+    "components": [
+    	[
+    		[ "self_magic_milk_item", 1 ]
+    	]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "self_magic_ranch",
+    "components": [
+    	[
+    		[ "crystallized_mana", 3600 ]
+    	],
+    	[
+    		[ "teleporter", 1 ]
+    	],
+    	[
+    		[ "self_magic_milk_sealed", 4 ]
+    	]
+    ],
+    "time": "60 m",
+    "skill_used": "spellcraft",
+    "difficulty": 5,
+    "category": "CC_ENCHANTED",
+    "subcategory": "CSC_ENCHANTED_OTHER",
+    "autolearn": true
+  },
+  {
+    "type": "ammunition_type",
+    "id": "self_magic_ranch_ammo",
+    "name": "罐中产物",
+    "default": "self_magic_ranch_item"
+  },
+  {
+    "type": "AMMO",
+    "id": "self_magic_ranch_item",
+    "category": "spare_parts",
+    "name": { "str_sp": "罐中产物（牧场）" },
+    "description": "中间态产物。",
+    "weight": "100 mg",
+    "volume": "100 ml",
+    "price": 10,
+    "flags": [ "TRADER_AVOID" ],
+    "material": [ "glass" ],
+    "symbol": "o",
+    "color": "dark_gray",
+    "count": 100,
+    "ammo_type": "self_magic_ranch_ammo",
+    "looks_like": "battery"
+  },
+  {
+    "id": "self_magic_ranch",
+    "type": "TOOL",
+    "looks_like": "jar_glass_sealed",
+    "name": "罐中牧场",
+    "description": "透过罐子你可以看到一个小小的像素牧场。\n猪，牛，鸡，羊，还有小麦田，甜菜田，水塘……\n每天它都能产出一些资源供你使用。",
+    "price": 4000000,
+    "price_postapoc": "12000 USD",
+    "volume": "500 ml",
+    "weight": "800 g",
+    "material": [ "glass" ],
+	  "symbol": ")",
+	  "color": "light_cyan",
+    "charges_per_use": 1,
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "self_magic_ranch_ammo": 180 } } ],
+    "flags": [ "NO_RELOAD" ],
+    "relic_data": { "charge_info": { "recharge_type": "periodic", "time": "4 h", "regenerate_ammo": true } }
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "water_clean",
+    "byproducts": [ [ "milk_raw", 1 ] ],
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_OTHER",
+  	"id_suffix": "from_damofa_self_ranch_1",
+    "skill_used": "fabrication",
+    "time": "30 s",
+    "batch_time_factors": [ 90, 2 ],
+    "autolearn": true,
+    "flags": [ "BLIND_EASY" ],
+    "components": [
+    	[
+    		[ "self_magic_ranch_item", 1 ]
+    	]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "water_clean",
+    "byproducts": [ [ "meat", 2 ] ],
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_OTHER",
+  	"id_suffix": "from_damofa_self_ranch_2",
+    "skill_used": "fabrication",
+    "time": "30 s",
+    "batch_time_factors": [ 90, 2 ],
+    "autolearn": true,
+    "flags": [ "BLIND_EASY" ],
+    "components": [
+    	[
+    		[ "self_magic_ranch_item", 1 ]
+    	]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "water_clean",
+    "byproducts": [ [ "fat", 1 ] ],
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_OTHER",
+  	"id_suffix": "from_damofa_self_ranch_3",
+    "skill_used": "fabrication",
+    "time": "30 s",
+    "batch_time_factors": [ 90, 2 ],
+    "autolearn": true,
+    "flags": [ "BLIND_EASY" ],
+    "components": [
+    	[
+    		[ "self_magic_ranch_item", 1 ]
+    	]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "water_clean",
+    "byproducts": [ [ "porkbelly", 1 ] ],
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_OTHER",
+  	"id_suffix": "from_damofa_self_ranch_4",
+    "skill_used": "fabrication",
+    "time": "30 s",
+    "batch_time_factors": [ 90, 2 ],
+    "autolearn": true,
+    "flags": [ "BLIND_EASY" ],
+    "components": [
+    	[
+    		[ "self_magic_ranch_item", 1 ]
+    	]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "water_clean",
+    "byproducts": [ [ "bone", 2 ] ],
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_OTHER",
+  	"id_suffix": "from_damofa_self_ranch_5",
+    "skill_used": "fabrication",
+    "time": "30 s",
+    "batch_time_factors": [ 90, 2 ],
+    "autolearn": true,
+    "flags": [ "BLIND_EASY" ],
+    "components": [
+    	[
+    		[ "self_magic_ranch_item", 1 ]
+    	]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "water_clean",
+    "byproducts": [ [ "egg_chicken", 4 ] ],
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_OTHER",
+  	"id_suffix": "from_damofa_self_ranch_6",
+    "skill_used": "fabrication",
+    "time": "30 s",
+    "batch_time_factors": [ 90, 2 ],
+    "autolearn": true,
+    "flags": [ "BLIND_EASY" ],
+    "components": [
+    	[
+    		[ "self_magic_ranch_item", 1 ]
+    	]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "water_clean",
+    "byproducts": [ [ "feather", 1 ] ],
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_OTHER",
+  	"id_suffix": "from_damofa_self_ranch_7",
+    "skill_used": "fabrication",
+    "time": "30 s",
+    "batch_time_factors": [ 90, 2 ],
+    "autolearn": true,
+    "flags": [ "BLIND_EASY" ],
+    "components": [
+    	[
+    		[ "self_magic_ranch_item", 1 ]
+    	]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "water_clean",
+    "byproducts": [ [ "wool_staple", 2 ] ],
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_OTHER",
+  	"id_suffix": "from_damofa_self_ranch_8",
+    "skill_used": "fabrication",
+    "time": "30 s",
+    "batch_time_factors": [ 90, 2 ],
+    "autolearn": true,
+    "flags": [ "BLIND_EASY" ],
+    "components": [
+    	[
+    		[ "self_magic_ranch_item", 1 ]
+    	]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "water_clean",
+    "byproducts": [ [ "raw_leather", 1 ] ],
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_OTHER",
+  	"id_suffix": "from_damofa_self_ranch_9",
+    "skill_used": "fabrication",
+    "time": "30 s",
+    "batch_time_factors": [ 90, 2 ],
+    "autolearn": true,
+    "flags": [ "BLIND_EASY" ],
+    "components": [
+    	[
+    		[ "self_magic_ranch_item", 1 ]
+    	]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "water_clean",
+    "byproducts": [ [ "raw_fur", 1 ] ],
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_OTHER",
+  	"id_suffix": "from_damofa_self_ranch_10",
+    "skill_used": "fabrication",
+    "time": "30 s",
+    "batch_time_factors": [ 90, 2 ],
+    "autolearn": true,
+    "flags": [ "BLIND_EASY" ],
+    "components": [
+    	[
+    		[ "self_magic_ranch_item", 1 ]
+    	]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "water_clean",
+    "byproducts": [ [ "wheat", 4 ] ],
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_OTHER",
+  	"id_suffix": "from_damofa_self_ranch_11",
+    "skill_used": "fabrication",
+    "time": "30 s",
+    "batch_time_factors": [ 90, 2 ],
+    "autolearn": true,
+    "flags": [ "BLIND_EASY" ],
+    "components": [
+    	[
+    		[ "self_magic_ranch_item", 1 ]
+    	]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "water_clean",
+    "byproducts": [ [ "sugar_beet", 4 ] ],
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_OTHER",
+  	"id_suffix": "from_damofa_self_ranch_12",
+    "skill_used": "fabrication",
+    "time": "30 s",
+    "batch_time_factors": [ 90, 2 ],
+    "autolearn": true,
+    "flags": [ "BLIND_EASY" ],
+    "components": [
+    	[
+    		[ "self_magic_ranch_item", 1 ]
+    	]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "water_clean",
+    "byproducts": [ [ "fish", 2 ] ],
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_OTHER",
+  	"id_suffix": "from_damofa_self_ranch_13",
+    "skill_used": "fabrication",
+    "time": "30 s",
+    "batch_time_factors": [ 90, 2 ],
+    "autolearn": true,
+    "flags": [ "BLIND_EASY" ],
+    "components": [
+    	[
+    		[ "self_magic_ranch_item", 1 ]
+    	]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "water_clean",
+    "byproducts": [ [ "veggy_wild", 4 ] ],
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_OTHER",
+  	"id_suffix": "from_damofa_self_ranch_14",
+    "skill_used": "fabrication",
+    "time": "30 s",
+    "batch_time_factors": [ 90, 2 ],
+    "autolearn": true,
+    "flags": [ "BLIND_EASY" ],
+    "components": [
+    	[
+    		[ "self_magic_ranch_item", 1 ]
+    	]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "water_clean",
+    "byproducts": [ [ "honeycomb", 2 ] ],
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_OTHER",
+  	"id_suffix": "from_damofa_self_ranch_15",
+    "skill_used": "fabrication",
+    "time": "30 s",
+    "batch_time_factors": [ 90, 2 ],
+    "autolearn": true,
+    "flags": [ "BLIND_EASY" ],
+    "components": [
+    	[
+    		[ "self_magic_ranch_item", 1 ]
+    	]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "water_clean",
+    "byproducts": [ [ "potato", 4 ] ],
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_OTHER",
+  	"id_suffix": "from_damofa_self_ranch_16",
+    "skill_used": "fabrication",
+    "time": "30 s",
+    "batch_time_factors": [ 90, 2 ],
+    "autolearn": true,
+    "flags": [ "BLIND_EASY" ],
+    "components": [
+    	[
+    		[ "self_magic_ranch_item", 1 ]
+    	]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "water_clean",
+    "byproducts": [ [ "mushroom", 8 ] ],
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_OTHER",
+  	"id_suffix": "from_damofa_self_ranch_17",
+    "skill_used": "fabrication",
+    "time": "30 s",
+    "batch_time_factors": [ 90, 2 ],
+    "autolearn": true,
+    "flags": [ "BLIND_EASY" ],
+    "components": [
+    	[
+    		[ "self_magic_ranch_item", 1 ]
+    	]
+    ]
+  },
+  {
+    "id": "self_magic_lv_ring_1",
+    "type": "TOOL_ARMOR",
+    "name": "绿之戒指",
+    "description": "提升精力恢复速度。",
+    "weight": "20 g",
+    "volume": "20 ml",
+    "price": 100000,
+    "price_postapoc": 100000,
+    "material": [ "gold" ],
+    "symbol": "O",
+    "color": "green",
+    "sided": true,
+    "flags": [ "WATER_FRIENDLY", "ALLOWS_NATURAL_ATTACKS", "FANCY", "ONE_PER_LAYER", "SKINTIGHT" ],
+    "armor": [
+      {
+        "encumbrance": 0,
+        "coverage": 0,
+        "covers": [ "hand_l", "hand_r" ],
+        "specifically_covers": [ "hand_fingers_l", "hand_fingers_r" ],
+        "rigid_layer_only": true
+      }
+    ],
+    "relic_data": {
+    	"passive_effects": [ { "has": "WORN", "condition": "ALWAYS", "values": [
+    		{ "value": "REGEN_STAMINA", "multiply": 0.25 }
+    	] } ]
+    }
+  },
+  {
+    "id": "self_magic_lv_ring_2",
+    "type": "TOOL_ARMOR",
+    "name": "绿之戒指+1",
+    "description": "提升精力恢复速度。",
+    "price_postapoc": 200000,
+    "copy-from": "self_magic_lv_ring_1",
+    "relic_data": {
+    	"passive_effects": [ { "has": "WORN", "condition": "ALWAYS", "values": [
+    		{ "value": "REGEN_STAMINA", "multiply": 0.5 }
+    	] } ]
+    }
+  },
+  {
+    "id": "self_magic_lv_ring_3",
+    "type": "TOOL_ARMOR",
+    "name": "绿之戒指+2",
+    "description": "提升精力恢复速度。",
+    "price_postapoc": 400000,
+    "copy-from": "self_magic_lv_ring_1",
+    "relic_data": {
+    	"passive_effects": [ { "has": "WORN", "condition": "ALWAYS", "values": [
+    		{ "value": "REGEN_STAMINA", "multiply": 0.75 }
+    	] } ]
+    }
+  },
+  {
+    "id": "self_magic_huang_ring_1",
+    "type": "TOOL_ARMOR",
+    "name": "黄之戒指",
+    "description": "提升精力上限。",
+    "color": "yellow",
+    "price_postapoc": 100000,
+    "copy-from": "self_magic_lv_ring_1",
+    "relic_data": {
+    	"passive_effects": [ { "has": "WORN", "condition": "ALWAYS", "values": [
+    		{ "value": "MAX_STAMINA", "multiply": 0.25 }
+    	] } ]
+    }
+  },
+  {
+    "id": "self_magic_huang_ring_2",
+    "type": "TOOL_ARMOR",
+    "name": "黄之戒指+1",
+    "description": "提升精力上限。",
+    "color": "yellow",
+    "price_postapoc": 200000,
+    "copy-from": "self_magic_lv_ring_1",
+    "relic_data": {
+    	"passive_effects": [ { "has": "WORN", "condition": "ALWAYS", "values": [
+    		{ "value": "MAX_STAMINA", "multiply": 0.5 }
+    	] } ]
+    }
+  },
+  {
+    "id": "self_magic_huang_ring_3",
+    "type": "TOOL_ARMOR",
+    "name": "黄之戒指+2",
+    "description": "提升精力上限。",
+    "color": "yellow",
+    "price_postapoc": 400000,
+    "copy-from": "self_magic_lv_ring_1",
+    "relic_data": {
+    	"passive_effects": [ { "has": "WORN", "condition": "ALWAYS", "values": [
+    		{ "value": "MAX_STAMINA", "multiply": 0.75 }
+    	] } ]
+    }
+  },
+  {
+    "id": "self_magic_hui_ring_1",
+    "type": "TOOL_ARMOR",
+    "name": "灰之戒指",
+    "description": "加快攻击移动速度。",
+    "color": "light_gray",
+    "price_postapoc": 100000,
+    "copy-from": "self_magic_lv_ring_1",
+    "relic_data": {
+    	"passive_effects": [ { "has": "WORN", "condition": "ALWAYS", "values": [
+    		{ "value": "ATTACK_SPEED", "multiply": -0.1 },
+    		{ "value": "MOVE_COST", "multiply": -0.1 }
+    	] } ]
+    }
+  },
+  {
+    "id": "self_magic_hui_ring_2",
+    "type": "TOOL_ARMOR",
+    "name": "灰之戒指+1",
+    "description": "加快攻击移动速度。",
+    "color": "light_gray",
+    "price_postapoc": 200000,
+    "copy-from": "self_magic_lv_ring_1",
+    "relic_data": {
+    	"passive_effects": [ { "has": "WORN", "condition": "ALWAYS", "values": [
+    		{ "value": "ATTACK_SPEED", "multiply": -0.15 },
+    		{ "value": "MOVE_COST", "multiply": -0.15 }
+    	] } ]
+    }
+  },
+  {
+    "id": "self_magic_hui_ring_3",
+    "type": "TOOL_ARMOR",
+    "name": "灰之戒指+2",
+    "description": "加快攻击移动速度。",
+    "color": "light_gray",
+    "price_postapoc": 400000,
+    "copy-from": "self_magic_lv_ring_1",
+    "relic_data": {
+    	"passive_effects": [ { "has": "WORN", "condition": "ALWAYS", "values": [
+    		{ "value": "ATTACK_SPEED", "multiply": -0.2 },
+    		{ "value": "MOVE_COST", "multiply": -0.2 }
+    	] } ]
+    }
+  },
+  {
+    "type": "item_group",
+    "id": "self_magic_ring",
+    "items": [
+    	{ "item": "magic_gun_backpack", "prob": 50 },
+    	{ "item": "self_magic_gohomebone", "count": [ 4, 20 ], "prob": 100 },
+      { "item": "self_magic_lv_ring_1", "prob": 50 },
+      { "item": "self_magic_huang_ring_1", "prob": 50 },
+      { "item": "self_magic_hui_ring_1", "prob": 50 },
+      { "item": "self_magic_lv_ring_2", "prob": 25 },
+      { "item": "self_magic_huang_ring_2", "prob": 25 },
+      { "item": "self_magic_hui_ring_2", "prob": 25 },
+      { "item": "self_magic_lv_ring_3", "prob": 10 },
+      { "item": "self_magic_huang_ring_3", "prob": 10 },
+      { "item": "self_magic_hui_ring_3", "prob": 10 }
+    ]
+  },
+  {
+    "id": "enchanted_rings_common",
+    "type": "item_group",
+    "copy-from": "enchanted_rings_common",
+    "subtype": "collection",
+    "extend": {
+      "items": [
+        { "group": "self_magic_ring", "prob": 10 }
+      ]
+    }
+  },
+  {
+    "id": "enchanted_rings_uncommon",
+    "type": "item_group",
+    "copy-from": "enchanted_rings_uncommon",
+    "subtype": "collection",
+    "extend": {
+      "items": [
+        { "group": "self_magic_ring", "prob": 10 }
+      ]
+    }
+  },
+  {
+    "id": "enchanted_rings_unusual",
+    "type": "item_group",
+    "copy-from": "enchanted_rings_unusual",
+    "subtype": "collection",
+    "extend": {
+      "items": [
+        { "group": "self_magic_ring", "prob": 10 }
+      ]
+    }
+  },
+  {
+    "id": "enchanted_rings_rare",
+    "type": "item_group",
+    "copy-from": "enchanted_rings_rare",
+    "subtype": "collection",
+    "extend": {
+      "items": [
+        { "group": "self_magic_ring", "prob": 10 }
+      ]
+    }
+  },
+  {
+    "copy-from": "gun_cases",
+    "id": "gun_cases",
+    "type": "item_group",
+    "subtype": "distribution",
+    "extend": {
+      "entries": [
+        { "item": "magic_gun_backpack", "prob": 40 }
+      ]
+    }
+  },
+  {
+    "copy-from": "SUS_gunstore_gear",
+    "id": "SUS_gunstore_gear",
+    "type": "item_group",
+    "subtype": "distribution",
+    "extend": {
+      "entries": [
+        { "item": "magic_gun_backpack", "prob": 40 }
+      ]
+    }
+  }
+]

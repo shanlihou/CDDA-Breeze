@@ -1,0 +1,92 @@
+[
+  {
+    "type": "vehicle_part",
+    "id": "v_curtain_MULTISQUARE",
+    "copy-from": "v_curtain",
+    "name": {
+      "str": "curtain"
+    }
+  },
+  {
+    "type": "vehicle_part",
+    "id": "mounted_abzats",
+    "copy-from": "turret",
+    "name": {
+      "str": "阿布扎茨炮塔"
+    },
+    "item": "bigun",
+    "looks_like": "turret_generic",
+    "color": "green",
+    "broken_color": "green",
+    "categories": [
+      "warfare"
+    ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "turret_mark19",
+    "copy-from": "turret",
+    "name": {
+      "str": "车载 MK19 榴弹机枪"
+    },
+    "item": "mark19",
+    "color": "green",
+    "broken_color": "green",
+    "looks_like": "turret_generic",
+    "categories": [
+      "warfare"
+    ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "turret_laser_rifle",
+    "copy-from": "turret",
+    "name": {
+      "str": "车载激光步枪"
+    },
+    "item": "laser_rifle",
+    "color": "light_cyan",
+    "broken_color": "light_cyan",
+    "looks_like": "turret_generic",
+    "categories": [
+      "warfare"
+    ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "turret_m2browning",
+    "copy-from": "turret",
+    "name": {
+      "str": "车载 M2 重机枪"
+    },
+    "item": "m2browning",
+    "color": "green",
+    "broken_color": "green",
+    "looks_like": "turret_generic",
+    "categories": [
+      "warfare"
+    ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "CCfuel_bunker",
+    "copy-from": "CCfuel_bunker",
+    "name": {
+      "str": "CC燃料仓"
+    },
+    "symbol": "O",
+    "color": "brown",
+    "broken_color": "brown"
+  },
+  {
+    "type": "vehicle_part",
+    "id": "v_heavy_lathe",
+    "copy-from": "v_heavy_lathe",
+    "name": {
+      "str": "动力车床"
+    },
+    "symbol": "&",
+    "color": "light_cyan",
+    "broken_color": "light_gray"
+  }
+]

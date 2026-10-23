@@ -1,0 +1,117 @@
+[
+  {
+    "type": "MONSTER_FACTION",
+    "name": "cyyl_boss",
+    "neutral": [
+      "NETHER",
+      "ZOMBIE"
+    ]
+  },
+  {
+    "type": "material",
+    "id": "cyylcaizhi",
+    "name": "次元医疗",
+    "density": 500,
+    "bash_resist": 50,
+    "cut_resist": 50,
+    "bullet_resist": 50,
+    "elec_resist": 50,
+    "soft": true,
+    "acid_resist": 500,
+    "fire_resist": 500,
+    "chip_resist": 1000,
+    "reinforces": true,
+    "bash_dmg_verb": "被猛击",
+    "cut_dmg_verb": "被切割",
+    "repaired_with": "cyyl_fenmo",
+    "salvaged_into": "cyyl_fenmo",
+    "dmg_adj": [
+      "还剩80%耐久",
+      "还剩60%耐久",
+      "还剩40%耐久",
+      "还剩20%耐久"
+    ],
+    "burn_data": [
+      {
+        "fuel": -50,
+        "smoke": 0,
+        "burn": 0
+      },
+      { "immune": true },
+      {
+        "fuel": 0,
+        "smoke": 0,
+        "burn": 1
+      }
+    ]
+  },
+  {
+    "type": "tool_quality",
+    "id": "CYYL_jishu",
+    "name": {
+      "str": "次元医疗技术"
+    }
+  },
+  {
+    "type": "tool_quality",
+    "id": "CYYL_TSNL_jishu",
+    "name": {
+      "str": "次元医疗特殊能量技术"
+    }
+  },
+  {
+    "type": "tool_quality",
+    "id": "cyyl_nlf_yhnlSSV",
+    "name": {
+      "str": "永恒能量固化技术"
+    }
+  },
+  {
+    "type": "tool_quality",
+    "id": "CYYL_nlct",
+    "name": {
+      "str": "次元医疗能量充填"
+    }
+  },
+  {
+    "type": "ammunition_type",
+    "id": "cyyl_ammo",
+    "name": "次元医疗弹药",
+    "default": "cyyl_fenmo"
+  },
+  {
+    "type": "ammunition_type",
+    "id": "cyyl_hb",
+    "name": "次元医疗交易货币",
+    "default": "cyyl_jyhb"
+  },
+  {
+    "type": "ammunition_type",
+    "id": "cyyl_nlf_yhnl_ammo",
+    "name": "永恒能量",
+    "default": "cyyl_nlf_yhnl"
+  },
+  {
+    "type": "ammunition_type",
+    "id": "cyyl_wq_ammo",
+    "name": "次元医疗武器弹药",
+    "default": "cyyl_yh_wq_zd"
+  },
+  {
+    "type": "ammunition_type",
+    "id": "cyyl_cjbq_ammo",
+    "name": "次元医疗冲击步枪弹药",
+    "default": "cyyl_yh_cjbq_zd"
+  },
+  {
+    "type": "ammunition_type",
+    "id": "cyyl_jccjp_ammo",
+    "name": "次元医疗荆刺长狙炮弹药",
+    "default": "cyyl_yh_jccjp_zd"
+  },
+  {
+    "id": "morale_craving_XXXX",
+    "type": "morale_type",
+    "text": "渴望XXXX"
+  }
+]

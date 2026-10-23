@@ -1,0 +1,26 @@
+[
+    {
+        "id": "FH_rotor_installed",
+        "copy-from": "helicopter_rotors",
+        "type": "vehicle_part",
+        "name": { "str": "飞行堡垒旋翼" },
+        "item": "FH_rotor",
+        "//": "rotor diameter is in meters",
+        "rotor_diameter": 2,
+        "durability": 45000,
+        "description": "一组疯狂的旋翼，您想来一次真正的《飞屋环游记》吗？",
+        "damage_modifier": 80,
+        "flags": [ "ROTOR" , "NO_REPAIR", "SMASH_REMOVE" ],
+        "requirements": {
+            "install": { "skills": [ [ "mechanics", 9 ] ], "time": "60 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
+            "removal": { "skills": [ [ "mechanics", 7 ] ], "time": "30 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
+            "repair": {
+              "skills": [ [ "mechanics", 10 ] ],
+              "time": "60 m",
+              "using": [ [ "vehicle_wrench_2", 1 ]]
+            }
+          },
+        "breaks_into": [ { "item": "steel_chunk", "count": [ 8, 16 ] } ],
+        "damage_reduction": { "all": 100 }
+    }
+]

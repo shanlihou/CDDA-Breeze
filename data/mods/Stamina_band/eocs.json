@@ -1,0 +1,15 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_staminashow",
+    "//": "Displays the player's stats.",
+    "effect": [
+      {
+           "arithmetic": [ { "u_val": "var", "var_name": "staminalevel" }, "=", { "u_val": "stamina"} ] 
+      },
+      {
+        "u_message": "当前耐力值: <u_val:staminalevel>."
+      }
+    ]
+  }
+]

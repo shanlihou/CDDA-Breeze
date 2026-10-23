@@ -138,6 +138,13 @@ struct talk_effect_fun_t {
         }
 };
 
+/**
+ * 0.H 兼容层：u_val 的「保留名」取值（如 mid_autumn_holiday_year）。
+ * 这些名字不对应真实存在的人物变量，而是引擎提供的只读计算值。
+ * 实现在 condition.cpp。@return 命中并写入 out 时为 true。
+ */
+bool read_reserved_u_val( const std::string &name, std::string &out );
+
 struct var_info {
     var_info( var_type in_type, std::string in_name ): type( in_type ),
         name( std::move( in_name ) ) {}
@@ -164,6 +171,11 @@ static std::string read_var_value( const var_info &info, const T &d )
         return read_var_value( resolved, d );
     }
     std::string ret_val;
+    // 0.H 兼容层：u_val 保留名（引擎计算值，如 mid_autumn_holiday_year）优先，
+    // 否则会走到 talker::get_value 去查一个根本不存在的变量。
+    if( info.type == var_type::u && read_reserved_u_val( info.name, ret_val ) ) {
+        return ret_val;
+    }
     global_variables &globvars = get_globals();
     switch( info.type ) {
         case var_type::global:

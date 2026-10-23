@@ -1,0 +1,18 @@
+[
+  {
+    "id": "MISSION_REACH_MONEY_BANK",
+    "type": "mission_definition",
+    "name": { "str": "「寻找有钱的地方」" },
+    "description": "我从一个旅商那边听说了一个似乎有很多钱的地方，我们去找吧。",
+    "goal": "MGOAL_GO_TO",
+    "difficulty": 2,
+    "value": 0,
+    "start": {
+      "effect": [{ "u_message": "接受任务「寻找有钱的地方」","type": "good","popup": true  },
+                     { "u_add_var": "time_MONEY_BANK", "type": "timer", "context": "time", "time": true }
+      ],
+      "assign_mission_target": { "om_terrain": "bank_1", "reveal_radius": 5, "cant_see": true }
+
+    }
+  }
+  ]

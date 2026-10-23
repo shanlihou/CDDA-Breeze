@@ -1,0 +1,108 @@
+[
+  {
+    "//": "Normal zombies but with modified attributes/abilities. Some shares similarities to other secronom zed mutants.",
+    "id": "mon_secrozombie_rot",
+    "copy-from": "mon_zombie",
+    "type": "MONSTER",
+    "name": {
+      "str": "丧尸"
+    },
+    "description": "一个人类的身体，随着它的移动而摇摆，在它油亮的黑眼睛中可以看到一种不可阻挡的愤怒。它散发着强烈的臭味。",
+    "emit_fields": [
+      {
+        "emit_id": "emit_secrozombie_rot",
+        "delay": "1 s"
+      }
+    ],
+    "relative": {
+      "hp": 15,
+      "speed": -5
+    },
+    "symbol": "Ƶ",
+    "color": "light_green_yellow",
+    "harvest": "zombie",
+    "upgrades": {}
+  },
+  {
+    "id": "mon_secrozombie_armored",
+    "copy-from": "mon_zombie",
+    "type": "MONSTER",
+    "name": {
+      "str": "丧尸"
+    },
+    "description": "一个人类的身体，随着它的移动而摇摆，在它油亮的黑眼睛中可以看到一种不可阻挡的愤怒。它被不规则的骨质突起所覆盖。",
+    "relative": {
+      "hp": 35,
+      "speed": -5,
+      "armor_bash": 3,
+      "armor_cut": 4,
+      "armor_bullet": 3,
+      "armor_stab": 3
+    },
+    "symbol": "Ƶ",
+    "color": "light_green_white",
+    "harvest": "zombie",
+    "upgrades": {}
+  },
+  {
+    "id": "mon_secrozombie_tent",
+    "copy-from": "mon_zombie",
+    "type": "MONSTER",
+    "name": {
+      "str": "丧尸"
+    },
+    "description": "一个人类的尸体，随着它的移动而摇摆着，从它油亮的黑眼睛中可以看出一种不可阻挡的愤怒。几只触手在它的身体周围气势汹汹地扭动着。",
+    "relative": {
+      "hp": 25,
+      "speed": 5,
+      "armor_bash": 1
+    },
+    "symbol": "Ƶ",
+    "color": "green",
+    "harvest": "zombie",
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 5
+      },
+      [
+        "GRAB",
+        3
+      ],
+      [
+        "scratch",
+        20
+      ]
+    ],
+    "upgrades": {}
+  },
+  {
+    "id": "mon_secrozombie_blade",
+    "copy-from": "mon_zombie",
+    "type": "MONSTER",
+    "name": {
+      "str": "丧尸"
+    },
+    "description": "一个人类的身体，随着它的移动而摇摆，在它油亮的黑眼睛中可以看到一种不可阻挡的愤怒。它的手变异成了一对骨刃。",
+    "relative": {
+      "hp": 10,
+      "melee_skill": 1
+    },
+    "symbol": "Ƶ",
+    "color": "light_green",
+    "harvest": "zombie",
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 3
+      }
+    ],
+    "special_attacks": [
+      [
+        "scratch",
+        3
+      ]
+    ],
+    "upgrades": {}
+  }
+]

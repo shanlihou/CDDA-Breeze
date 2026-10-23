@@ -1,0 +1,172 @@
+[
+  {
+    "id": "pso1_scope",
+    "type": "GUNMOD",
+    "name": {
+      "str": "PSO-1 瞄准镜"
+    },
+    "copy-from": "rifle_scope",
+    "description": "一款 4 倍瞄准镜，最初为 SVD-63 设计。它采用侧装方式，不会干扰武器的机械瞄具；内部充氮密封，可防止瞄准镜起雾；并具有独特的分划，有助于补偿最远 1000 米的弹道下坠。不过，相较其他瞄准镜，它略显笨重。",
+    "volume": "3460 ml",
+    "weight": "600 g",
+    "integral_volume": "1000 ml",
+    "integral_longest_side": "0 cm",
+    "//2": "Whole volume is 3.46 L, I really don't know how but it's getting reduced.",
+    "price": 68000,
+    "price_postapoc": 750,
+    "material": [
+      "aluminum",
+      "glass"
+    ],
+    "symbol": ":",
+    "color": "dark_gray",
+    "aim_speed_modifier": 0,
+    "field_of_view": 270,
+    "install_time": "5 m",
+    "location": "sights",
+    "min_skills": [
+      [
+        "weapon",
+        2
+      ],
+      [
+        "gun",
+        4
+      ]
+    ],
+    "mod_targets": [
+      "rifle"
+    ],
+    "sight_dispersion": 0,
+    "flags": [
+      "ZOOM"
+    ],
+    "//": "No idea what these values do"
+  },
+  {
+    "id": "pso1_scope2",
+    "type": "GUNMOD",
+    "name": {
+      "str": "PSO-1 瞄准镜（固定式）"
+    },
+    "copy-from": "pso1_scope",
+    "description": "一款 4 倍瞄准镜，为 SVD-63 设计。它采用侧装方式，不会干扰武器的机械瞄具；内部充氮密封，可防止瞄准镜起雾；并具有独特的分划，有助于补偿最远 1000 米的弹道下坠。不过，相较其他瞄准镜，它略显笨重。这固定在武器上，因此无法拆卸。",
+    "flags": [
+      "IRREMOVABLE",
+      "ZOOM"
+    ]
+  },
+  {
+    "id": "onm76_scope",
+    "type": "GUNMOD",
+    "name": {
+      "str": "ON-M76 瞄准镜"
+    },
+    "copy-from": "pso1_scope",
+    "description": "一款 4 倍瞄准镜，为 M76 Zastava 设计。它基于 PSO-1，能够在白天和夜间条件下提供支持。",
+    "color": "black",
+    "field_of_view": 255,
+    "flags": [
+      "DISABLE_SIGHTS",
+      "ZOOM"
+    ]
+  },
+  {
+    "id": "scrome_scope",
+    "type": "GUNMOD",
+    "name": {
+      "str": "SCROME LTE 瞄准镜"
+    },
+    "copy-from": "rifle_scope",
+    "description": "一款 10 倍瞄准镜，供狙击步枪使用。它被法国军队采用，具有兼容皮卡汀尼和韦弗导轨的接口，因此可兼容北约武器。",
+    "volume": "666 ml",
+    "weight": "740 g",
+    "price": 68000,
+    "price_postapoc": 750,
+    "material": [
+      "aluminum",
+      "glass"
+    ],
+    "symbol": ":",
+    "color": "black",
+    "aim_speed_modifier": 0,
+    "field_of_view": 270,
+    "install_time": "5 m",
+    "location": "sights",
+    "min_skills": [
+      [
+        "weapon",
+        2
+      ],
+      [
+        "gun",
+        4
+      ]
+    ],
+    "mod_targets": [
+      "rifle"
+    ],
+    "sight_dispersion": 0,
+    "flags": [
+      "DISABLE_SIGHTS",
+      "ZOOM"
+    ],
+    "//": "No idea what these values do"
+  },
+  {
+    "id": "susat_scope",
+    "type": "GUNMOD",
+    "name": {
+      "str": "SUSAT 瞄准镜"
+    },
+    "copy-from": "rifle_scope",
+    "description": "一款 4 倍瞄准镜，为中距离交战设计。得益于分划上的氚涂层，它可在低光条件下使用。",
+    "volume": "480 ml",
+    "weight": "417 g",
+    "price": 68000,
+    "price_postapoc": 750,
+    "material": [
+      "aluminum",
+      "glass"
+    ],
+    "symbol": ":",
+    "color": "dark_gray",
+    "aim_speed_modifier": -1,
+    "field_of_view": 270,
+    "install_time": "5 m",
+    "location": "sights",
+    "min_skills": [
+      [
+        "weapon",
+        2
+      ],
+      [
+        "gun",
+        4
+      ]
+    ],
+    "mod_targets": [
+      "rifle"
+    ],
+    "sight_dispersion": 0,
+    "flags": [
+      "DISABLE_SIGHTS",
+      "ZOOM"
+    ],
+    "//": "No idea what these values do, but the SIG550 uses this so I'm going with it"
+  },
+  {
+    "id": "susat_scope2",
+    "type": "GUNMOD",
+    "name": {
+      "str": "SUSAT 瞄准镜（固定式）"
+    },
+    "copy-from": "susat_scope",
+    "description": "一款 4 倍瞄准镜，为中距离交战设计。得益于分划上的氚涂层，它可在低光条件下使用。这固定在武器上，因此无法拆卸。",
+    "flags": [
+      "DISABLE_SIGHTS",
+      "IRREMOVABLE",
+      "ZOOM"
+    ]
+  }
+]

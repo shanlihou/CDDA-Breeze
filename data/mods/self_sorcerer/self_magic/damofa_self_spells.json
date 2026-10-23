@@ -1,0 +1,1026 @@
+[
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "spell_scroll_crystallize_mana",
+    "id_suffix": "from_self_magic",
+    "tools": [
+      [
+        [
+          "black_pen",
+          5
+        ],
+        [
+          "red_pen",
+          5
+        ],
+        [
+          "blue_pen",
+          5
+        ],
+        [
+          "green_pen",
+          5
+        ],
+        [
+          "pencil",
+          5
+        ],
+        [
+          "pen",
+          5
+        ],
+        [
+          "permanent_marker",
+          5
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "paper",
+          1
+        ]
+      ]
+    ],
+    "time": "10 m",
+    "skill_used": "spellcraft",
+    "difficulty": 1,
+    "category": "CC_ENCHANTED",
+    "subcategory": "CSC_ENCHANTED_OTHER",
+    "autolearn": true
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "spell_scroll_spell_craft_any_all_eat",
+    "tools": [
+      [
+        [
+          "black_pen",
+          20
+        ],
+        [
+          "red_pen",
+          20
+        ],
+        [
+          "blue_pen",
+          20
+        ],
+        [
+          "green_pen",
+          20
+        ],
+        [
+          "pencil",
+          20
+        ],
+        [
+          "pen",
+          20
+        ],
+        [
+          "permanent_marker",
+          20
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "crystallized_mana",
+          100
+        ]
+      ],
+      [
+        [
+          "paper",
+          1
+        ]
+      ]
+    ],
+    "time": "10 m",
+    "skill_used": "spellcraft",
+    "difficulty": 5,
+    "category": "CC_ENCHANTED",
+    "subcategory": "CSC_ENCHANTED_OTHER",
+    "autolearn": true
+  },
+  {
+    "type": "BOOK",
+    "copy-from": "spell_scroll",
+    "id": "spell_scroll_spell_craft_any_all_eat",
+    "name": {
+      "str": "等价交换卷轴",
+      "str_pl": "等价交换卷轴"
+    },
+    "description": "把这个变成那个！",
+    "use_action": {
+      "type": "learn_spell",
+      "spells": [
+        "spell_craft_any_all_eat",
+        "spell_craft_borken_crystallize_mana",
+        "spell_craft_crystallize_mana_plus",
+        "spell_craft_magic_arrow",
+        "spell_craft_magic_bolt",
+        "spell_craft_heal"
+      ]
+    }
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "spell_scroll_spell_craft_any_all_eat_plus",
+    "tools": [
+      [
+        [
+          "black_pen",
+          100
+        ],
+        [
+          "red_pen",
+          100
+        ],
+        [
+          "blue_pen",
+          100
+        ],
+        [
+          "green_pen",
+          100
+        ],
+        [
+          "pencil",
+          100
+        ],
+        [
+          "pen",
+          100
+        ],
+        [
+          "permanent_marker",
+          100
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "crystallized_mana",
+          1000
+        ]
+      ],
+      [
+        [
+          "spell_scroll_spell_craft_any_all_eat",
+          1
+        ]
+      ]
+    ],
+    "time": "10 m",
+    "skill_used": "spellcraft",
+    "difficulty": 10,
+    "category": "CC_ENCHANTED",
+    "subcategory": "CSC_ENCHANTED_OTHER",
+    "autolearn": true
+  },
+  {
+    "type": "BOOK",
+    "copy-from": "spell_scroll",
+    "id": "spell_scroll_spell_craft_any_all_eat_plus",
+    "name": {
+      "str": "高级等价交换卷轴",
+      "str_pl": "高级等价交换卷轴"
+    },
+    "description": "把这个变成那个！",
+    "use_action": {
+      "type": "learn_spell",
+      "spells": [
+        "spell_craft_any_all_eat",
+        "spell_craft_any_all_water",
+        "spell_craft_any_all_eat_water",
+        "spell_craft_any_all_better_eat_water",
+        "spell_craft_borken_crystallize_mana",
+        "spell_craft_crystallize_mana_plus",
+        "spell_craft_magic_arrow",
+        "spell_craft_magic_arrow_1",
+        "spell_craft_magic_arrow_2",
+        "spell_craft_magic_bolt",
+        "spell_craft_magic_bolt_1",
+        "spell_craft_magic_bolt_2",
+        "spell_craft_heal",
+        "spell_craft_regen"
+      ]
+    }
+  },
+  {
+    "id": "spell_craft_any_all_eat",
+    "type": "SPELL",
+    "name": "点物成干粮",
+    "description": "把一些杂物变成干粮",
+    "spell_class": "NONE",
+    "components": "damofa_self_spells_components_food",
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "spawn_item",
+    "effect_str": "damofa_self_eat",
+    "min_damage": 1,
+    "max_damage": 5,
+    "damage_increment": 0.25,
+    "energy_source": "MANA",
+    "difficulty": 1,
+    "max_level": 20,
+    "flags": [
+      "CONCENTRATE",
+      "VERBAL",
+      "NO_LEGS",
+      "LOUD",
+      "SOMATIC"
+    ],
+    "shape": "blast",
+    "base_casting_time": 60000,
+    "casting_time_increment": -3000.0,
+    "final_casting_time": 100,
+    "base_energy_cost": 1000,
+    "energy_increment": -50.0,
+    "final_energy_cost": 100,
+    "learn_spells": {
+      "spell_craft_any_all_water": 3
+    }
+  },
+  {
+    "id": "spell_craft_any_all_water",
+    "type": "SPELL",
+    "name": "点空气成水术",
+    "description": "吃干粮的时候你感觉有点不爽，所以琢磨出了这个法术……把一些空气变成水，准确的说，是凝结水蒸气",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "spawn_item",
+    "effect_str": "damofa_self_water",
+    "min_damage": 2,
+    "max_damage": 20,
+    "damage_increment": 1.0,
+    "energy_source": "MANA",
+    "difficulty": 2,
+    "max_level": 20,
+    "flags": [
+      "CONCENTRATE",
+      "VERBAL",
+      "NO_LEGS",
+      "LOUD",
+      "SOMATIC"
+    ],
+    "shape": "blast",
+    "base_casting_time": 30000,
+    "casting_time_increment": -1500.0,
+    "final_casting_time": 100,
+    "base_energy_cost": 300,
+    "energy_increment": -15.0,
+    "final_energy_cost": 100,
+    "learn_spells": {
+      "spell_craft_any_all_eat_water": 1,
+      "spell_craft_any_all_eat_1": 3
+    }
+  },
+  {
+    "id": "spell_craft_any_all_eat_1",
+    "type": "SPELL",
+    "name": "点空气成干粮",
+    "description": "先凝结水蒸气，再把水变成干粮……虽然有损耗但总而言之你不再需要背上一包杂物了",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "spawn_item",
+    "effect_str": "damofa_self_eat",
+    "min_damage": 1,
+    "max_damage": 10,
+    "damage_increment": 0.5,
+    "energy_source": "MANA",
+    "difficulty": 3,
+    "max_level": 20,
+    "flags": [
+      "CONCENTRATE",
+      "VERBAL",
+      "NO_LEGS",
+      "LOUD",
+      "SOMATIC"
+    ],
+    "shape": "blast",
+    "base_casting_time": 90000,
+    "casting_time_increment": -4500.0,
+    "final_casting_time": 100,
+    "base_energy_cost": 1200,
+    "energy_increment": -60.0,
+    "final_energy_cost": 100
+  },
+  {
+    "id": "spell_craft_any_all_eat_water",
+    "type": "SPELL",
+    "name": "固态干粮丸",
+    "description": "不想用两次魔法解决一个问题，所以你研究出了食物水份全满足的全新法术。简单来说，先凝结水，再把一半的水变成干粮，然后把它们混在一起……所以你不会在乎口感的，对吧？",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "spawn_item",
+    "effect_str": "damofa_self_eat_drink",
+    "min_damage": 1,
+    "max_damage": 10,
+    "damage_increment": 0.5,
+    "energy_source": "MANA",
+    "difficulty": 3,
+    "max_level": 20,
+    "flags": [
+      "CONCENTRATE",
+      "VERBAL",
+      "NO_LEGS",
+      "LOUD",
+      "SOMATIC"
+    ],
+    "shape": "blast",
+    "base_casting_time": 90000,
+    "casting_time_increment": -4500.0,
+    "final_casting_time": 100,
+    "base_energy_cost": 1200,
+    "energy_increment": -60.0,
+    "final_energy_cost": 100,
+    "learn_spells": {
+      "spell_craft_any_all_better_eat_water": 1,
+      "spell_craft_any_all_eat_1": 3
+    }
+  },
+  {
+    "id": "spell_craft_any_all_better_eat_water",
+    "type": "SPELL",
+    "name": "美味固态干粮丸",
+    "description": "只尝了一次你就受不了那种口感，改进过的成品更接近饮料而不是糊糊，并且不知道为什么它有了一股奶味，你觉得这很好，已经可以暂停这方面的研究了。",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "spawn_item",
+    "effect_str": "damofa_self_better_eat_drink",
+    "min_damage": 1,
+    "max_damage": 10,
+    "damage_increment": 0.5,
+    "energy_source": "MANA",
+    "difficulty": 5,
+    "max_level": 20,
+    "flags": [
+      "CONCENTRATE",
+      "VERBAL",
+      "NO_LEGS",
+      "LOUD",
+      "SOMATIC"
+    ],
+    "shape": "blast",
+    "base_casting_time": 90000,
+    "casting_time_increment": -4500.0,
+    "final_casting_time": 100,
+    "base_energy_cost": 1200,
+    "energy_increment": -60.0,
+    "final_energy_cost": 100,
+    "learn_spells": {
+      "spell_craft_any_all_eat_1": 3
+    }
+  },
+  {
+    "id": "spell_craft_borken_crystallize_mana",
+    "type": "SPELL",
+    "name": "碎晶术",
+    "description": "指的是魔力结晶",
+    "valid_targets": [
+      "self"
+    ],
+    "components": "damofa_self_spells_components_20",
+    "spell_class": "NONE",
+    "flags": [
+      "PERMANENT",
+      "PERMANENT_ALL_LEVELS",
+      "NO_LEGS",
+      "CONCENTRATE"
+    ],
+    "difficulty": 3,
+    "min_damage": 25,
+    "max_damage": 50,
+    "damage_increment": 1,
+    "max_level": 25,
+    "effect": "spawn_item",
+    "effect_str": "mana_dust",
+    "shape": "blast",
+    "energy_source": "MANA",
+    "base_energy_cost": 5000,
+    "final_energy_cost": 5000,
+    "base_casting_time": 6000,
+    "final_casting_time": 6000
+  },
+  {
+    "id": "spell_craft_crystallize_mana_plus",
+    "type": "SPELL",
+    "name": "高等魔力结晶",
+    "description": "高级版本的魔力结晶法术，准确的说，是炼晶术",
+    "valid_targets": [
+      "self"
+    ],
+    "components": "damofa_self_spells_components_gem",
+    "spell_class": "NONE",
+    "flags": [
+      "PERMANENT",
+      "PERMANENT_ALL_LEVELS",
+      "NO_LEGS",
+      "CONCENTRATE"
+    ],
+    "difficulty": 5,
+    "min_damage": 1,
+    "max_damage": 10,
+    "damage_increment": 0.25,
+    "max_level": 40,
+    "effect": "spawn_item",
+    "effect_str": "crystallized_mana",
+    "shape": "blast",
+    "energy_source": "MANA",
+    "base_energy_cost": 6000,
+    "energy_increment": -100,
+    "final_energy_cost": 1000,
+    "base_casting_time": 36000,
+    "casting_time_increment": -1500,
+    "final_casting_time": 6000
+  },
+  {
+    "id": "spell_craft_magic_arrow",
+    "type": "SPELL",
+    "name": "魔力穿刺箭矢",
+    "description": "将魔力结晶塑造为箭矢，这种魔力箭矢有33穿刺伤害和4破甲，无法回收",
+    "valid_targets": [
+      "self"
+    ],
+    "components": "damofa_self_spells_components_10",
+    "spell_class": "NONE",
+    "flags": [
+      "PERMANENT",
+      "PERMANENT_ALL_LEVELS",
+      "NO_LEGS",
+      "CONCENTRATE"
+    ],
+    "difficulty": 3,
+    "min_damage": 20,
+    "max_damage": 60,
+    "damage_increment": 2,
+    "max_level": 20,
+    "effect": "spawn_item",
+    "effect_str": "damofa_self_arrow_1",
+    "shape": "blast",
+    "energy_source": "MANA",
+    "base_energy_cost": 200,
+    "final_energy_cost": 200,
+    "base_casting_time": 1000,
+    "final_casting_time": 1000
+  },
+  {
+    "id": "spell_craft_magic_arrow_1",
+    "type": "SPELL",
+    "name": "魔力冲击箭矢",
+    "description": "将魔力结晶塑造为箭矢，这种魔力箭矢有55真实伤害，无法回收",
+    "valid_targets": [
+      "self"
+    ],
+    "components": "damofa_self_spells_components_15",
+    "spell_class": "NONE",
+    "flags": [
+      "PERMANENT",
+      "PERMANENT_ALL_LEVELS",
+      "NO_LEGS",
+      "CONCENTRATE"
+    ],
+    "difficulty": 5,
+    "min_damage": 25,
+    "max_damage": 75,
+    "damage_increment": 2,
+    "max_level": 25,
+    "effect": "spawn_item",
+    "effect_str": "damofa_self_arrow_2",
+    "shape": "blast",
+    "energy_source": "MANA",
+    "base_energy_cost": 200,
+    "final_energy_cost": 200,
+    "base_casting_time": 1000,
+    "final_casting_time": 1000
+  },
+  {
+    "id": "spell_craft_magic_arrow_2",
+    "type": "SPELL",
+    "name": "高等魔力穿刺箭矢",
+    "description": "将魔力结晶塑造为箭矢，这种魔力箭矢有44穿刺伤害和6破甲及300％暴击伤害，无法回收",
+    "valid_targets": [
+      "self"
+    ],
+    "components": "damofa_self_spells_components_25",
+    "spell_class": "NONE",
+    "flags": [
+      "PERMANENT",
+      "PERMANENT_ALL_LEVELS",
+      "NO_LEGS",
+      "CONCENTRATE"
+    ],
+    "difficulty": 7,
+    "min_damage": 30,
+    "max_damage": 90,
+    "damage_increment": 2,
+    "max_level": 30,
+    "effect": "spawn_item",
+    "effect_str": "damofa_self_arrow_3",
+    "shape": "blast",
+    "energy_source": "MANA",
+    "base_energy_cost": 200,
+    "final_energy_cost": 200,
+    "base_casting_time": 1000,
+    "final_casting_time": 1000
+  },
+  {
+    "id": "spell_craft_magic_bolt",
+    "type": "SPELL",
+    "name": "魔力穿刺弩矢",
+    "description": "将魔力结晶塑造为弩矢，这种魔力弩矢有22穿刺伤害和4破甲，无法回收",
+    "valid_targets": [
+      "self"
+    ],
+    "components": "damofa_self_spells_components_10",
+    "spell_class": "NONE",
+    "flags": [
+      "PERMANENT",
+      "PERMANENT_ALL_LEVELS",
+      "NO_LEGS",
+      "CONCENTRATE"
+    ],
+    "difficulty": 3,
+    "min_damage": 20,
+    "max_damage": 60,
+    "damage_increment": 2,
+    "max_level": 20,
+    "effect": "spawn_item",
+    "effect_str": "damofa_self_bolt_1",
+    "shape": "blast",
+    "energy_source": "MANA",
+    "base_energy_cost": 200,
+    "final_energy_cost": 200,
+    "base_casting_time": 1000,
+    "final_casting_time": 1000
+  },
+  {
+    "id": "spell_craft_magic_bolt_1",
+    "type": "SPELL",
+    "name": "魔力冲击弩矢",
+    "description": "将魔力结晶塑造为弩矢，这种魔力弩矢有55真实伤害，无法回收",
+    "valid_targets": [
+      "self"
+    ],
+    "components": "damofa_self_spells_components_15",
+    "spell_class": "NONE",
+    "flags": [
+      "PERMANENT",
+      "PERMANENT_ALL_LEVELS",
+      "NO_LEGS",
+      "CONCENTRATE"
+    ],
+    "difficulty": 5,
+    "min_damage": 25,
+    "max_damage": 75,
+    "damage_increment": 2,
+    "max_level": 25,
+    "effect": "spawn_item",
+    "effect_str": "damofa_self_bolt_2",
+    "shape": "blast",
+    "energy_source": "MANA",
+    "base_energy_cost": 200,
+    "final_energy_cost": 200,
+    "base_casting_time": 1000,
+    "final_casting_time": 1000
+  },
+  {
+    "id": "spell_craft_magic_bolt_2",
+    "type": "SPELL",
+    "name": "高等魔力穿刺弩矢",
+    "description": "将魔力结晶塑造为弩矢，这种魔力弩矢有33穿刺伤害和6破甲及300％暴击伤害，无法回收",
+    "valid_targets": [
+      "self"
+    ],
+    "components": "damofa_self_spells_components_25",
+    "spell_class": "NONE",
+    "flags": [
+      "PERMANENT",
+      "PERMANENT_ALL_LEVELS",
+      "NO_LEGS",
+      "CONCENTRATE"
+    ],
+    "difficulty": 7,
+    "min_damage": 30,
+    "max_damage": 90,
+    "damage_increment": 2,
+    "max_level": 30,
+    "effect": "spawn_item",
+    "effect_str": "damofa_self_bolt_3",
+    "shape": "blast",
+    "energy_source": "MANA",
+    "base_energy_cost": 200,
+    "final_energy_cost": 200,
+    "base_casting_time": 1000,
+    "final_casting_time": 1000
+  },
+  {
+    "id": "spell_craft_heal",
+    "type": "SPELL",
+    "name": "伤口填补",
+    "description": "填补那些不太大的伤口。移除咬伤与感染。",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "components": "damofa_self_spells_components_heal",
+    "min_damage": -20,
+    "max_damage": -60,
+    "damage_increment": -2.0,
+    "max_level": 20,
+    "min_range": 1,
+    "max_range": 12,
+    "range_increment": 1,
+    "effect": "attack",
+    "shape": "blast",
+    "base_casting_time": 3000,
+    "final_casting_time": 300,
+    "casting_time_increment": -200.0,
+    "base_energy_cost": 600,
+    "final_energy_cost": 200,
+    "energy_increment": -50,
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_PROJECTILE",
+      "NO_LEGS"
+    ],
+    "spell_class": "NONE",
+    "difficulty": 6,
+    "energy_source": "MANA",
+    "extra_effects": [
+      {
+        "id": "spell_craft_heal_1"
+      },
+      {
+        "id": "spell_zz_heal_vigor"
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_heal_1",
+    "type": "SPELL",
+    "name": "伤口填补（移除咬伤和感染）",
+    "description": "移除咬伤。",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "SILENT"
+    ],
+    "effect": "attack",
+    "effect_str": "heal_remove_effect",
+    "shape": "blast",
+    "base_casting_time": 0,
+    "energy_source": "MANA",
+    "spell_class": "NONE",
+    "difficulty": 1,
+    "base_energy_cost": 0
+  },
+  {
+    "type": "effect_type",
+    "id": "heal_remove_effect",
+    "removes_effects": [
+      "bite",
+      "infected",
+      "recover"
+    ]
+  },
+  {
+    "id": "spell_craft_regen",
+    "type": "SPELL",
+    "name": "躯体再生",
+    "description": "只要还活着。移除负面效果（等同万能药）。",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "components": "damofa_self_spells_components_regen",
+    "min_damage": -200,
+    "max_damage": -1000,
+    "damage_increment": -40.0,
+    "max_level": 30,
+    "min_range": 1,
+    "max_range": 24,
+    "range_increment": 1,
+    "effect": "attack",
+    "shape": "blast",
+    "base_casting_time": 10000,
+    "final_casting_time": 500,
+    "casting_time_increment": -500.0,
+    "base_energy_cost": 5000,
+    "final_energy_cost": 500,
+    "energy_increment": -300,
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_PROJECTILE",
+      "NO_LEGS"
+    ],
+    "spell_class": "NONE",
+    "difficulty": 24,
+    "energy_source": "MANA",
+    "extra_effects": [
+      {
+        "id": "spell_craft_regen_1"
+      },
+      {
+        "id": "spell_zz_heal_vigor"
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_regen_1",
+    "type": "SPELL",
+    "name": "躯体再生（移除负面）",
+    "description": "移除负面效果。",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "SILENT"
+    ],
+    "effect": "attack",
+    "effect_str": "regen_remove_effect",
+    "shape": "blast",
+    "base_casting_time": 0,
+    "energy_source": "MANA",
+    "spell_class": "NONE",
+    "difficulty": 1,
+    "base_energy_cost": 0
+  },
+  {
+    "type": "effect_type",
+    "id": "regen_remove_effect",
+    "removes_effects": [
+      "bite",
+      "bleed",
+      "winded",
+      "fungus",
+      "dermatik",
+      "bloodworms",
+      "paincysts",
+      "brainworms",
+      "tapeworm",
+      "blind",
+      "poison",
+      "venom_dmg",
+      "venom_weaken",
+      "stung",
+      "badpoison",
+      "foodpoison",
+      "paralyzepoison",
+      "tetanus",
+      "rat_bite_fever",
+      "infected",
+      "asthma",
+      "common_cold",
+      "flu"
+    ]
+  },
+  {
+    "id": "self_craft_potion_heal",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "weight": "20 g",
+    "volume": "25 ml",
+    "price": 1000,
+    "price_postapoc": 80,
+    "container": "bag_plastic",
+    "material": [
+      "plastic"
+    ],
+    "symbol": "!",
+    "color": "red",
+    "quench": 5,
+    "calories": 40,
+    "healthy": 5,
+    "fun": 0,
+    "stack_size": 1,
+    "flags": [
+      "NPC_SAFE",
+      "WATER_DISSOLVE",
+      "NUTRIENT_OVERRIDE",
+      "EDIBLE_FROZEN"
+    ],
+    "name": "伤口填补补剂",
+    "description": "填补伤口用的材料补剂，比起使用原料更加廉价。也可以用来清洗伤口。",
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "伤口一阵酥麻，然后传来清凉感。",
+      "effects": [
+        {
+          "id": "potion_heal_remove"
+        }
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "potion_heal_remove",
+    "removes_effects": [
+      "bite"
+    ]
+  },
+  {
+    "id": "self_craft_potion_regen",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "weight": "20 g",
+    "volume": "25 ml",
+    "price": 1000,
+    "price_postapoc": 80,
+    "container": "bag_plastic",
+    "material": [
+      "plastic"
+    ],
+    "symbol": "!",
+    "color": "red",
+    "quench": 20,
+    "calories": 200,
+    "healthy": 5,
+    "fun": 0,
+    "stack_size": 1,
+    "flags": [
+      "NPC_SAFE",
+      "WATER_DISSOLVE",
+      "NUTRIENT_OVERRIDE",
+      "EDIBLE_FROZEN"
+    ],
+    "name": "躯体再生补剂",
+    "description": "再生躯体时用的材料补剂，比起使用原料更加廉价。也可以用来消除感染。",
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "伤口传来火辣辣的疼痛，然后变为痒痒的。",
+      "effects": [
+        {
+          "id": "potion_regen_remove"
+        }
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "potion_regen_remove",
+    "removes_effects": [
+      "bite",
+      "infected"
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "self_craft_potion_heal",
+    "skill_used": "spellcraft",
+    "difficulty": 1,
+    "category": "CC_ENCHANTED",
+    "subcategory": "CSC_ENCHANTED_OTHER",
+    "autolearn": true,
+    "result_mult": 5,
+    "time": "15 m",
+    "qualities": [
+      {
+        "id": "CONTAIN",
+        "level": 1
+      },
+      {
+        "id": "MANA_INFUSE",
+        "level": 1
+      },
+      {
+        "id": "MANA_FOCUS",
+        "level": 1
+      },
+      {
+        "id": "MAGIC_CAULDRON",
+        "level": 1
+      }
+    ],
+    "tools": [
+      [
+        [
+          "surface_heat",
+          30,
+          "LIST"
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "potion_starter",
+          5
+        ]
+      ],
+      [
+        [
+          "dragon_blood",
+          1
+        ]
+      ],
+      [
+        [
+          "mana_dust",
+          5
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "self_craft_potion_regen",
+    "skill_used": "spellcraft",
+    "difficulty": 1,
+    "category": "CC_ENCHANTED",
+    "subcategory": "CSC_ENCHANTED_OTHER",
+    "autolearn": true,
+    "result_mult": 5,
+    "time": "30 m",
+    "qualities": [
+      {
+        "id": "CONTAIN",
+        "level": 1
+      },
+      {
+        "id": "CONCENTRATE",
+        "level": 1
+      },
+      {
+        "id": "MANA_INFUSE",
+        "level": 2
+      },
+      {
+        "id": "MANA_FOCUS",
+        "level": 1
+      },
+      {
+        "id": "MAGIC_CAULDRON",
+        "level": 1
+      }
+    ],
+    "tools": [
+      [
+        [
+          "surface_heat",
+          45,
+          "LIST"
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "potion_starter_superior",
+          5
+        ]
+      ],
+      [
+        [
+          "dragon_blood",
+          5
+        ]
+      ],
+      [
+        [
+          "meat_dragon",
+          5
+        ]
+      ],
+      [
+        [
+          "lotus",
+          1
+        ]
+      ],
+      [
+        [
+          "mana_dust",
+          10
+        ]
+      ]
+    ]
+  }
+]

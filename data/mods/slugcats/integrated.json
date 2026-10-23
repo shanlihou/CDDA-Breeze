@@ -1,0 +1,36 @@
+[
+  {
+    "id": "integrated_stomach",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": { "str_sp": "胃" },
+    "description": "你的胃能够储存一些小物品。这需要一些时间，而且相当恶心，但紧急情况下也能凑合。",
+    "weight": "500 g",
+    "volume": "251 ml",
+    "price": 0,
+    "price_postapoc": 0,
+    "material": [ "flesh" ],
+    "symbol": "x",
+    "color": "magenta",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": " 250 ml",
+        "max_contains_weight": "1 kg",
+        "max_item_length": "20 cm",
+        "moves": 300
+      }
+    ],
+    "warmth": 0,
+    "environmental_protection": 0,
+    "flags": [ "INTEGRATED", "ALLOWS_NATURAL_ATTACKS", "UNBREAKABLE", "WATERPROOF", "PERSONAL", "SOFT", "PADDED" ],
+    "armor": [
+      {
+        "material": [ { "type": "flesh", "covered_by_mat": 100, "thickness": 1 } ],
+        "covers": [ "torso" ],
+        "coverage": 33,
+        "encumbrance": 0
+      }
+    ]
+  }
+]

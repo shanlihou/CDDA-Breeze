@@ -1,0 +1,792 @@
+[
+  {
+    "id": "bless",
+    "type": "SPELL",
+    "name": {
+      "str": "祝福"
+    },
+    "description": "给予你能量和提升你能力的祝福法术。",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "VERBAL",
+      "SOMATIC",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "effect": "attack",
+    "effect_str": "bless",
+    "shape": "blast",
+    "affected_body_parts": [
+      "torso"
+    ],
+    "base_casting_time": 100,
+    "base_energy_cost": 100,
+    "energy_source": "MANA",
+    "spell_class": "TECHNOMANCER",
+    "difficulty": 1,
+    "max_level": 30,
+    "min_aoe": 0,
+    "max_aoe": 7,
+    "aoe_increment": 0.25,
+    "min_range": 1,
+    "max_range": 15,
+    "range_increment": 0.75,
+    "//": "duration is in moves",
+    "min_duration": 6000,
+    "max_duration": 30000,
+    "duration_increment": 400
+  },
+  {
+    "id": "invisibility",
+    "type": "SPELL",
+    "name": {
+      "str": "隐身"
+    },
+    "description": "一道魔法场隐藏了你的外观。常被称作隐身，但是没有使用不明觉厉的科学原理。",
+    "message": "你的身影逐渐消失，在外部世界看来就像不复存在了！",
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "attack",
+    "effect_str": "invisibility",
+    "shape": "blast",
+    "flags": [
+      "NO_PROJECTILE"
+    ],
+    "spell_class": "TECHNOMANCER",
+    "difficulty": 4,
+    "base_casting_time": 100,
+    "base_energy_cost": 400,
+    "energy_source": "MANA",
+    "min_duration": 1250,
+    "max_duration": 9000,
+    "duration_increment": 250,
+    "max_level": 30
+  },
+  {
+    "id": "holy_blade",
+    "type": "SPELL",
+    "name": {
+      "str": "光明之刃"
+    },
+    "description": "这把光明之刃将斩断它所接触到的任何邪恶！",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "VERBAL",
+      "NO_LEGS",
+      "CONCENTRATE"
+    ],
+    "min_range": 0,
+    "max_range": 0,
+    "min_damage": 1,
+    "max_damage": 1,
+    "effect": "spawn_item",
+    "effect_str": "longsword",
+    "shape": "blast",
+    "base_casting_time": 350,
+    "base_energy_cost": 375,
+    "min_duration": 3000,
+    "max_duration": 13500,
+    "duration_increment": 3000,
+    "difficulty": 5,
+    "max_level": 30,
+    "spell_class": "TECHNOMANCER",
+    "energy_source": "MANA"
+  },
+  {
+    "id": "spirit_armor",
+    "type": "SPELL",
+    "name": {
+      "str": "心灵装甲"
+    },
+    "description": "如果你的信念足够强大，邪恶就无法通过你的防御！",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "VERBAL",
+      "NO_LEGS",
+      "CONCENTRATE",
+      "SOMATIC"
+    ],
+    "min_range": 0,
+    "max_range": 0,
+    "min_damage": 1,
+    "max_damage": 1,
+    "effect": "spawn_item",
+    "effect_str": "armor_spirit",
+    "shape": "blast",
+    "spell_class": "TECHNOMANCER",
+    "energy_source": "MANA",
+    "difficulty": 5,
+    "max_level": 30,
+    "base_casting_time": 350,
+    "base_energy_cost": 375,
+    "min_duration": 3000,
+    "max_duration": 13500,
+    "duration_increment": 3000
+  },
+  {
+    "id": "create_atomic_lamp",
+    "type": "SPELL",
+    "name": {
+      "str": "魔法灯"
+    },
+    "description": "创造一盏神奇的魔法灯。",
+    "valid_targets": [
+      "none"
+    ],
+    "flags": [
+      "VERBAL",
+      "NO_LEGS",
+      "CONCENTRATE"
+    ],
+    "min_range": 0,
+    "max_range": 0,
+    "min_damage": 1,
+    "max_damage": 1,
+    "effect": "spawn_item",
+    "effect_str": "magic_lamp",
+    "shape": "blast",
+    "energy_source": "MANA",
+    "spell_class": "TECHNOMANCER",
+    "difficulty": 2,
+    "max_level": 30,
+    "base_casting_time": 200,
+    "base_energy_cost": 750,
+    "min_duration": 100000,
+    "max_duration": 1500000,
+    "duration_increment": 45000
+  },
+  {
+    "id": "recover_bionic_power",
+    "type": "SPELL",
+    "name": {
+      "str": "魔能转换术"
+    },
+    "description": "你发现了一种将你的魔力转换成生化能量的方法。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_LEGS",
+      "NO_HANDS",
+      "SOMATIC",
+      "VERBAL",
+      "SILENT"
+    ],
+    "min_damage": 250,
+    "damage_increment": 50,
+    "max_damage": 22500,
+    "base_energy_cost": 250,
+    "energy_increment": 50,
+    "final_energy_cost": 22500,
+    "max_level": 37,
+    "spell_class": "TECHNOMANCER",
+    "effect": "recover_energy",
+    "effect_str": "BIONIC",
+    "shape": "blast",
+    "energy_source": "MANA",
+    "difficulty": 6,
+    "base_casting_time": 1000
+  },
+  {
+    "id": "create_rune_technomancer",
+    "type": "SPELL",
+    "name": {
+      "str": "科技法师符文"
+    },
+    "description": "这仪式会创造出一块与科技法师共鸣的小石块。你可以将符文作为催化剂用于制造其它物品。",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 1,
+    "max_damage": 1,
+    "effect": "spawn_item",
+    "effect_str": "rune_technomancer",
+    "shape": "blast",
+    "base_casting_time": 5000,
+    "base_energy_cost": 5,
+    "min_duration": 1,
+    "max_duration": 2,
+    "duration_increment": 1,
+    "difficulty": 0,
+    "max_level": 0,
+    "spell_class": "TECHNOMANCER",
+    "energy_source": "MANA",
+    "flags": [
+      "PERMANENT",
+      "NO_LEGS",
+      "CONCENTRATE"
+    ]
+  },
+  {
+    "id": "taze",
+    "type": "SPELL",
+    "name": {
+      "str": "电击术"
+    },
+    "description": "这个法术产生一个非常短的闪电来电击你的敌人。",
+    "valid_targets": [
+      "hostile",
+      "ground",
+      "ally"
+    ],
+    "flags": [
+      "NO_LEGS",
+      "LOUD",
+      "SOMATIC"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "spell_class": "TECHNOMANCER",
+    "energy_source": "BIONIC",
+    "difficulty": 1,
+    "base_casting_time": 100,
+    "casting_time_increment": -1,
+    "final_casting_time": 70,
+    "base_energy_cost": 50,
+    "energy_increment": -1,
+    "final_energy_cost": 20,
+    "max_level": 30,
+    "damage_type": "electric",
+    "min_damage": 10,
+    "max_damage": 45,
+    "damage_increment": 1,
+    "min_range": 1,
+    "max_range": 6,
+    "range_increment": 0.2
+  },
+  {
+    "id": "quantum_tunnel_lesser",
+    "type": "SPELL",
+    "name": {
+      "str": "次级隧穿术"
+    },
+    "description": "这个法术可以操纵量子什么的，让你穿越一小段空间，甚至是物质。然而不幸的是，某种不确定性之类的东西使你无法完全控制自己以什么方式出现在哪。你在传送后会头晕脑胀，需要一段时间才能恢复。",
+    "valid_targets": [
+      "none"
+    ],
+    "flags": [
+      "NO_LEGS",
+      "NO_HANDS",
+      "SILENT"
+    ],
+    "effect": "short_range_teleport",
+    "effect_str": "dazed",
+    "shape": "blast",
+    "spell_class": "TECHNOMANCER",
+    "energy_source": "MANA",
+    "difficulty": 2,
+    "max_level": 30,
+    "base_casting_time": 100,
+    "casting_time_increment": -1,
+    "final_casting_time": 70,
+    "base_energy_cost": 100,
+    "energy_increment": -1,
+    "final_energy_cost": 70,
+    "min_aoe": 4,
+    "max_aoe": 1,
+    "aoe_increment": -0.25,
+    "min_range": 5,
+    "max_range": 15,
+    "range_increment": 0.25,
+    "min_duration": 100,
+    "max_duration": 100
+  },
+  {
+    "id": "synaptic_stimulation",
+    "type": "SPELL",
+    "name": {
+      "str": "突触刺激"
+    },
+    "description": "这个法术会刺激你大脑中的神经突触，使其速度超过正常的处理速度，大大增强你的思维处理能力，包括增强你的反应能力、速度和智力能力。请谨慎使用。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_LEGS",
+      "VERBAL",
+      "NO_PROJECTILE"
+    ],
+    "effect": "attack",
+    "effect_str": "synaptic_stim",
+    "shape": "blast",
+    "spell_class": "TECHNOMANCER",
+    "energy_source": "MANA",
+    "difficulty": 5,
+    "max_level": 30,
+    "base_casting_time": 500,
+    "casting_time_increment": -2.5,
+    "final_casting_time": 425,
+    "base_energy_cost": 500,
+    "energy_increment": -5,
+    "final_energy_cost": 350,
+    "min_duration": 180000,
+    "max_duration": 540000,
+    "duration_increment": 10000
+  },
+  {
+    "id": "laze",
+    "type": "SPELL",
+    "name": {
+      "str": "激光术"
+    },
+    "description": "你集中并对目标释放一束聚焦的光子，又名激光。",
+    "valid_targets": [
+      "hostile",
+      "ground",
+      "ally"
+    ],
+    "flags": [
+      "NO_LEGS",
+      "LOUD",
+      "SOMATIC",
+      "NO_PROJECTILE"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "spell_class": "TECHNOMANCER",
+    "energy_source": "BIONIC",
+    "difficulty": 3,
+    "max_level": 30,
+    "base_casting_time": 100,
+    "casting_time_increment": -1,
+    "final_casting_time": 70,
+    "base_energy_cost": 150,
+    "energy_increment": -2,
+    "final_energy_cost": 90,
+    "min_damage": 15,
+    "max_damage": 90,
+    "damage_increment": 2.5,
+    "damage_type": "heat",
+    "min_range": 10,
+    "max_range": 35,
+    "range_increment": 1
+  },
+  {
+    "id": "animated_blade",
+    "type": "SPELL",
+    "name": {
+      "str": "召唤魔法长剑"
+    },
+    "description": "这个法术召唤会飞行的魔法长剑，可以把你的敌人砍成一定的大小。也就是砍成碎块。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "CONCENTRATE"
+    ],
+    "effect": "summon",
+    "effect_str": "mon_animated_blade",
+    "shape": "blast",
+    "spell_class": "TECHNOMANCER",
+    "energy_source": "MANA",
+    "difficulty": 6,
+    "max_level": 30,
+    "base_casting_time": 200,
+    "casting_time_increment": -2,
+    "final_casting_time": 140,
+    "base_energy_cost": 350,
+    "energy_increment": -2,
+    "final_energy_cost": 290,
+    "min_damage": 1,
+    "max_damage": 3,
+    "damage_increment": 0.15,
+    "min_range": 1,
+    "max_range": 7,
+    "range_increment": 0.25,
+    "min_aoe": 3,
+    "max_aoe": 3,
+    "min_duration": 1000,
+    "max_duration": 6750,
+    "duration_increment": 200
+  },
+  {
+    "id": "mirror_image",
+    "type": "SPELL",
+    "name": {
+      "str": "召唤镜像"
+    },
+    "description": "这个法术通过操纵光线形成一个几乎不可触及的影子生物，简而言之就是一个魔法全息投影。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "CONCENTRATE"
+    ],
+    "effect": "summon",
+    "effect_str": "mon_mirror_image",
+    "shape": "blast",
+    "spell_class": "TECHNOMANCER",
+    "energy_source": "MANA",
+    "difficulty": 4,
+    "max_level": 30,
+    "base_casting_time": 150,
+    "casting_time_increment": -1,
+    "final_casting_time": 120,
+    "base_energy_cost": 200,
+    "energy_increment": -2,
+    "final_energy_cost": 140,
+    "min_damage": 1,
+    "max_damage": 8,
+    "damage_increment": 0.5,
+    "min_range": 1,
+    "max_range": 15,
+    "range_increment": 0.5,
+    "min_aoe": 3,
+    "max_aoe": 3,
+    "min_duration": 3000,
+    "max_duration": 9000,
+    "duration_increment": 200
+  },
+  {
+    "id": "holographic_transposition",
+    "type": "SPELL",
+    "name": {
+      "str": "全息换位术"
+    },
+    "description": "让你能够和已存在自身的全息投影交换位置。如果宇宙本身无法区分你们，谁还能呢？",
+    "valid_targets": [
+      "hostile",
+      "ally"
+    ],
+    "targeted_monster_ids": [
+      "mon_mirror_image",
+      "mon_hologram"
+    ],
+    "flags": [
+      "NO_LEGS",
+      "LOUD",
+      "SOMATIC",
+      "SWAP_POS",
+      "NO_PROJECTILE"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "spell_class": "TECHNOMANCER",
+    "energy_source": "MANA",
+    "difficulty": 3,
+    "max_level": 30,
+    "base_casting_time": 100,
+    "casting_time_increment": -1,
+    "final_casting_time": 70,
+    "base_energy_cost": 150,
+    "energy_increment": -2,
+    "final_energy_cost": 80,
+    "min_range": 20,
+    "max_range": 45,
+    "range_increment": 1
+  },
+  {
+    "id": "summon_floating_disk",
+    "type": "SPELL",
+    "name": {
+      "str": "召唤飘浮碟"
+    },
+    "description": "召唤一个能够减轻你的负担的飘浮碟。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "CONCENTRATE"
+    ],
+    "effect": "summon_vehicle",
+    "spell_class": "TECHNOMANCER",
+    "energy_source": "MANA",
+    "effect_str": "floating_disk",
+    "shape": "blast",
+    "difficulty": 5,
+    "max_level": 30,
+    "base_casting_time": 120,
+    "base_energy_cost": 500,
+    "min_range": 1,
+    "max_range": 15,
+    "range_increment": 1,
+    "min_duration": 400000,
+    "max_duration": 14400000,
+    "duration_increment": 200
+  },
+  {
+    "id": "summon_magic_motorcycle",
+    "type": "SPELL",
+    "name": {
+      "str": "召唤魔托车"
+    },
+    "description": "你不是一个牛仔，但是你还是骑着铁骑。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "CONCENTRATE"
+    ],
+    "effect": "summon_vehicle",
+    "spell_class": "TECHNOMANCER",
+    "energy_source": "MANA",
+    "effect_str": "magic_motorcycle",
+    "shape": "blast",
+    "difficulty": 5,
+    "max_level": 30,
+    "base_casting_time": 1000,
+    "base_energy_cost": 1000,
+    "min_range": 1,
+    "max_range": 15,
+    "range_increment": 1,
+    "min_duration": 240000,
+    "max_duration": 2160000,
+    "duration_increment": 60000
+  },
+  {
+    "id": "overcharge_burn",
+    "type": "SPELL",
+    "name": {
+      "str": "过载烧伤"
+    },
+    "description": "施放过载术造成的副作用。",
+    "message": "",
+    "effect": "spawn_item",
+    "effect_str": "overcharge_burn_scar",
+    "shape": "blast",
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_duration": 500,
+    "duration_increment": -10,
+    "max_duration": 50,
+    "max_level": 45,
+    "valid_targets": [
+      "none"
+    ]
+  },
+  {
+    "id": "overcharge_eyes",
+    "type": "SPELL",
+    "name": {
+      "str": "喷嚏激光术"
+    },
+    "description": "你将体内的生化电池过载，从你的脸上射出半定向的激光光束。这个法术的发明者一定有某种诡异的幽默感。",
+    "message": "你将体内的生化能量过载并导入你仅余的灵脉中，并将其导引至脸部射出。",
+    "sound_description": "bzzzzzzt!",
+    "sound_ambient": true,
+    "effect": "attack",
+    "shape": "cone",
+    "extra_effects": [
+      {
+        "id": "overcharge_burn",
+        "hit_self": true
+      }
+    ],
+    "min_damage": 90,
+    "damage_increment": 5,
+    "max_damage": 300,
+    "min_range": 8,
+    "range_increment": 0.35,
+    "max_range": 30,
+    "min_aoe": 10,
+    "aoe_increment": 0.17,
+    "max_aoe": 22,
+    "base_energy_cost": 500,
+    "final_energy_cost": 500,
+    "spell_class": "TECHNOMANCER",
+    "energy_source": "BIONIC",
+    "damage_type": "cut",
+    "difficulty": 1,
+    "max_level": 45,
+    "base_casting_time": 120,
+    "final_casting_time": 120,
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "LOUD",
+      "VERBAL",
+      "NO_HANDS",
+      "NO_LEGS"
+    ]
+  },
+  {
+    "type": "SPELL",
+    "name": {
+      "str": "X光视觉"
+    },
+    "id": "x-ray",
+    "description": "你发射出一道X光，并通过魔法来短暂地看清X光所及区域。",
+    "valid_targets": [
+      "hostile",
+      "ground",
+      "ally"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "IGNORE_WALLS"
+    ],
+    "effect": "attack",
+    "shape": "cone",
+    "field_id": "fd_clairvoyant",
+    "min_field_intensity": 1,
+    "max_field_intensity": 1,
+    "difficulty": 6,
+    "min_range": 5,
+    "max_range": 30,
+    "range_increment": 0.75,
+    "max_level": 30,
+    "min_aoe": 15,
+    "max_aoe": 90,
+    "aoe_increment": 1.5,
+    "min_duration": 0,
+    "max_duration": 1350,
+    "duration_increment": 45,
+    "base_casting_time": 175,
+    "base_energy_cost": 550,
+    "energy_source": "BIONIC",
+    "spell_class": "TECHNOMANCER"
+  },
+  {
+    "type": "SPELL",
+    "name": {
+      "str": "开锁术"
+    },
+    "id": "knock",
+    "description": "你引导魔力，将其变成能够解开禁锢的力量。这种法术只能打开木门。",
+    "valid_targets": [
+      "ground"
+    ],
+    "effect": "ter_transform",
+    "effect_str": "unlock_doors",
+    "shape": "blast",
+    "flags": [
+      "NO_LEGS",
+      "SOMATIC",
+      "CONCENTRATE",
+      "NO_PROJECTILE"
+    ],
+    "max_level": 22,
+    "base_casting_time": 1200,
+    "final_casting_time": 980,
+    "casting_time_increment": -10,
+    "base_energy_cost": 350,
+    "difficulty": 3,
+    "min_range": 1,
+    "max_range": 6,
+    "range_increment": 0.2,
+    "energy_source": "MANA",
+    "spell_class": "TECHNOMANCER"
+  },
+  {
+    "type": "SPELL",
+    "name": {
+      "str": "万能开锁术"
+    },
+    "id": "improved_knock",
+    "description": "你引导魔力，将其变成能够解开禁锢的力量。这种法术能打开任何锁住的门。\n“阿拉霍洞开！”",
+    "valid_targets": [
+      "ground"
+    ],
+    "effect": "ter_transform",
+    "effect_str": "unlock_all_doors",
+    "shape": "blast",
+    "flags": [
+      "NO_LEGS",
+      "SOMATIC",
+      "CONCENTRATE",
+      "NO_PROJECTILE"
+    ],
+    "max_level": 22,
+    "base_casting_time": 2600,
+    "final_casting_time": 2270,
+    "casting_time_increment": -15,
+    "base_energy_cost": 800,
+    "difficulty": 7,
+    "min_range": 6,
+    "max_range": 6,
+    "energy_source": "MANA",
+    "spell_class": "TECHNOMANCER"
+  },
+  {
+    "id": "technomancer_knifeshot",
+    "type": "SPELL",
+    "name": {
+      "str": "飞刀术"
+    },
+    "description": "这个法术能在一把刀子周围产生磁场，并将其高速发射出去。",
+    "valid_targets": [
+      "hostile",
+      "ally"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "SILENT",
+      "SOMATIC"
+    ],
+    "components": "spell_components_knifeshot",
+    "effect": "attack",
+    "shape": "blast",
+    "spell_class": "TECHNOMANCER",
+    "energy_source": "BIONIC",
+    "difficulty": 5,
+    "max_level": 30,
+    "base_casting_time": 600,
+    "casting_time_increment": -15,
+    "final_casting_time": 150,
+    "base_energy_cost": 50,
+    "min_damage": 30,
+    "max_damage": 105,
+    "damage_increment": 2,
+    "damage_type": "stab",
+    "min_range": 10,
+    "max_range": 30,
+    "range_increment": 0.5,
+    "min_pierce": 3,
+    "max_pierce": 15,
+    "pierce_increment": 0.35,
+    "learn_spells": {
+      "technomancer_knifeshot_superior": 20
+    }
+  },
+  {
+    "id": "technomancer_knifeshot_superior",
+    "type": "SPELL",
+    "name": {
+      "str": "超高速飞刀术"
+    },
+    "description": "这个法术比之前更进一步，它所射出的飞刀速度快到能够直接穿透目标。",
+    "valid_targets": [
+      "hostile",
+      "ally"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "LOUD",
+      "SOMATIC"
+    ],
+    "components": "spell_components_knifeshot",
+    "effect": "attack",
+    "shape": "line",
+    "spell_class": "TECHNOMANCER",
+    "energy_source": "BIONIC",
+    "difficulty": 7,
+    "max_level": 1,
+    "base_casting_time": 500,
+    "base_energy_cost": 125,
+    "min_damage": 165,
+    "max_damage": 165,
+    "damage_type": "bullet",
+    "min_range": 9,
+    "max_range": 9,
+    "min_pierce": 20,
+    "max_pierce": 20
+  }
+]

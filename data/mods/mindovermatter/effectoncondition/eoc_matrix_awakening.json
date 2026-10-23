@@ -1,0 +1,137 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_BIOKIN_MATRIX_AWAKENING",
+    "condition": { "not": { "u_has_trait": "BIOKINETIC" } },
+    "effect": [
+      { "u_message": "你凝视着这颗奇异的水晶，光芒缓缓变得愈发明亮。当光芒充盈你的视野时，你开始察觉到自己心跳的声音、血液在血管中奔流的律动、以及供氧给肌肉的每一丝气息。你看见了它们彼此之间的连接——尽管并不完全清楚自己是怎么做到的——你伸出手，调整了那股流动。力量与强能霎时涌入你的身体，而你用内在之眼注视这些连接时，你明白了刚才所做的一切，也知道如何再次做到。水晶的光芒逐渐消退，留下黯淡无色的晶体，而你的视线也恢复了清晰。", "popup": true },
+      { "u_add_trait": "BIOKINETIC" },
+      { "u_add_trait": "BIOKIN_NEEDS" },
+      { "u_spawn_item": "matrix_crystal_drained" },
+      { "u_add_effect": "effect_biokin_physical", "duration": "5 minutes" }
+    ],
+    "false_effect": [
+      { "u_message": "你凝视着这颗奇异的水晶，光芒缓缓变得愈发明亮。它开始脉动，起初缓慢，随后越来越快，你的脑袋也随之一起胀痛。你将视线移开，但脑中那股胀痛依旧挥之不去。" },
+      { "u_add_effect": "psionic_overload", "duration": "1 hours" },
+      { "u_add_effect": "stunned", "duration": 5 }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_CLAIR_MATRIX_AWAKENING",
+    "condition": { "not": { "u_has_trait": "CLAIRSENTIENT" } },
+    "effect": [
+      { "u_message": "你凝视着这颗奇异的水晶，光芒缓缓变得愈发明亮。你回忆起童年时光，那是在世界末日之前，但记忆开始发生分岔。你看见自己站在航母舰桥，望向窗外，一只巨硕的触手正冲破海面；你身处一间素白净室，透过强化玻璃窗看着同事复生；你卷入暴乱，被路障处的士兵开枪射中；你和朋友露营时，一群猪般大小的黄蜂从天而降。数十种人生在眼前飞速掠过——可能发生却从未发生的、以及从未可能存在的——每一段碎片都还没来得及抓住就已消散。当最后一幕结束，你能透过水晶、透过你的双手、透过大地看到一切。你能看见永远。", "popup": true },
+      { "u_add_trait": "CLAIRSENTIENT" },
+      { "u_add_trait": "CLAIR_SENSES" },
+      { "u_spawn_item": "matrix_crystal_drained" },
+      { "u_add_effect": "effect_clair_clear_sight", "duration": "1 minutes" }
+    ],
+    "false_effect": [
+      { "u_message": "你凝视着这颗奇异的水晶，光芒缓缓变得愈发明亮。它开始脉动，起初缓慢，随后越来越快，你的脑袋也随之一起胀痛。你将视线移开，但脑中那股胀痛依旧挥之不去。" },
+      { "u_add_effect": "psionic_overload", "duration": "1 hours" },
+      { "u_add_effect": "stunned", "duration": 5 }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_PYROKIN_MATRIX_AWAKENING",
+    "condition": { "not": { "u_has_trait": "PYROKINETIC" } },
+    "effect": [
+      { "u_message": "你凝视着这颗奇异的水晶，光芒缓缓变得愈发明亮。水晶开始发光，核心处微光渐强，先是照亮周围，随后让一切轮廓分明。当它在你的手中灼灼闪耀时，温度逐渐升高。那温暖沿着手臂蔓延至全身，使你的身体充满舒适的热量，接着你周围的空气也染上这股热与光。空气像夏日热浪般波动，即使火花与火焰在空中跳动，你也只感到怡人的暖意。你伸出空着的那只手，让火焰在指间流转，而当水晶的光芒渐弱直至消失时，你甚至没有察觉到。", "popup": true },
+      { "u_add_trait": "PYROKINETIC" },
+      { "u_add_trait": "PYROGLOW_WEAK" },
+      { "u_add_trait": "PYROGLOW_STRONG" },
+      { "u_spawn_item": "matrix_crystal_drained" },
+      { "u_add_effect": "effect_pyrokinetic_cloak", "duration": "5 minutes" },
+      { "u_add_effect": "effect_pyrokinetic_aura", "duration": "5 minutes" }
+    ],
+    "false_effect": [
+      { "u_message": "你凝视着这颗奇异的水晶，光芒缓缓变得愈发明亮。它开始脉动，起初缓慢，随后越来越快，你的脑袋也随之一起胀痛。你将视线移开，但脑中那股胀痛依旧挥之不去。" },
+      { "u_add_effect": "psionic_overload", "duration": "1 hours" },
+      { "u_add_effect": "stunned", "duration": 5 }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_TELEKIN_MATRIX_AWAKENING",
+    "condition": { "not": { "u_has_trait": "TELEKINETIC" } },
+    "effect": [
+      { "u_message": "你凝视着这颗奇异的水晶，光芒缓缓变得愈发明亮。你松开手，但水晶并未坠落——它悬浮在空中，凭虚无承托。当你注视它时，你觉察到物体之间的连接：引力、吸引与斥力，一一呈现——你能看见引力对水晶的微弱影响，而随着一个念头，你轻轻推动了它。水晶漂浮升空，拉伸了它与你之间以及地面的连接，随后它们适应了新的位置。你拉扯这些连接，旋转水晶，左右移动，而随着水晶中的光芒逐渐黯淡，你松开意念，水晶落回你的掌心。", "popup": true },
+      { "u_add_trait": "TELEKINETIC" },
+      { "u_add_trait": "TELEKINETIC_CARRY" },
+      { "u_spawn_item": "matrix_crystal_drained" },
+      { "u_add_effect": "effect_telekinetic_armor", "duration": "1 minutes" }
+    ],
+    "false_effect": [
+      { "u_message": "你凝视着这颗奇异的水晶，光芒缓缓变得愈发明亮。它开始脉动，起初缓慢，随后越来越快，你的脑袋也随之一起胀痛。你将视线移开，但脑中那股胀痛依旧挥之不去。" },
+      { "u_add_effect": "psionic_overload", "duration": "1 hours" },
+      { "u_add_effect": "stunned", "duration": 5 }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_TEEP_MATRIX_AWAKENING",
+    "condition": { "not": { "u_has_trait": "TELEPATH" } },
+    "effect": [
+      { "u_message": "你凝视着这颗奇异的水晶，光芒缓缓变得愈发明亮。在光芒中，你看见自己站在那，手捧发光的水晶，而水晶中又有一个更小的自己，像无尽的镜廊。时间放慢了——你决定移动手，你能感觉到念头在大脑中形成，信号沿神经传至脊柱，再到手，最后你看着动作终于发生。当你置身自身之外观察自己的思绪时，光愈发明亮，你感到注意力被吸引向那光，你伸出手，轻轻推动自己的心灵，对自我的觉知变得锐利如激光。当光芒和幻象消退，水晶变得暗淡毫无生气，你将全部注意力——全部的注意力——转向下一项任务。", "popup": true },
+      { "u_add_trait": "TELEPATH" },
+      { "u_add_trait": "TELEPATHIC_SUGGESTION" },
+      { "u_spawn_item": "matrix_crystal_drained" },
+      { "u_add_effect": "effect_telepathic_learning_bonus", "duration": "1 minutes" }
+    ],
+    "false_effect": [
+      { "u_message": "你凝视着这颗奇异的水晶，光芒缓缓变得愈发明亮。它开始脉动，起初缓慢，随后越来越快，你的脑袋也随之一起胀痛。你将视线移开，但脑中那股胀痛依旧挥之不去。" },
+      { "u_add_effect": "psionic_overload", "duration": "1 hours" },
+      { "u_add_effect": "stunned", "duration": 5 }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_TELEPORT_MATRIX_AWAKENING",
+    "condition": { "not": { "u_has_trait": "TELEPORTER" } },
+    "effect": [
+      { "u_message": "你凝视着这颗奇异的水晶，光芒缓缓变得愈发明亮。当光芒扩散并照亮周围地形时，空气微微闪烁。你能看见你在末世后藏匿的卧室；你能看见一座城市，建筑由绿滑石砌成，其中的人形只有模糊的面影；你能看见你以前常去的咖啡馆，如今破败而空荡，其后门传来有节奏的砰砰声，似有东西在撞击；你能看见一个光点，飘浮在星空的虚空中，并听见一阵单调无调的嗡鸣。你看见了连接这四个地点以及无数其他地方的路径，那些发光的小径，你可以轻易沿着它们走向以前不曾知晓的方向。当你踏上其中一条路时，水晶中的光芒逐渐熄灭。", "popup": true },
+      { "u_add_trait": "TELEPORTER" },
+      { "u_add_trait": "TELEPORTER_PROTECT" },
+      { "u_spawn_item": "matrix_crystal_drained" },
+      {
+        "u_cast_spell": {
+          "id": "teleport_blink_monster",
+          "message": "你周围的现实突然扭曲，你已身处别处！"
+        }
+      }
+    ],
+    "false_effect": [
+      { "u_message": "你凝视着这颗奇异的水晶，光芒缓缓变得愈发明亮。它开始脉动，起初缓慢，随后越来越快，你的脑袋也随之一起胀痛。你将视线移开，但脑中那股胀痛依旧挥之不去。" },
+      { "u_add_effect": "psionic_overload", "duration": "1 hours" },
+      { "u_add_effect": "stunned", "duration": 5 }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_VITAKIN_MATRIX_AWAKENING",
+    "condition": { "not": { "u_has_trait": "VITAKINETIC" } },
+    "effect": [
+      { "u_message": "你凝视着这颗奇异的水晶，光芒缓缓变得愈发明亮。你开始觉察到自己的皮肤，每一处割伤、淤伤和擦伤，以及胃中的食物和进出肺部的空气。你能感受到空气中因大灾变而弥漫的烟气，伤口中的尘土碎屑，食物中的焦黑。你并不确切知道如何做到，但你伸出手，将这一切——所有大灾变日常生活中的污浊与秽物——推开并封存起来。你立刻感觉好多了，仿佛卸下了未曾觉察的重担，而水晶的光芒渐暗并熄灭时，你挺直了腰背。一切都会好起来的。", "popup": true },
+      { "u_add_trait": "VITAKINETIC" },
+      { "u_add_trait": "VITAKINETIC_HEALTH" },
+      { "u_spawn_item": "matrix_crystal_drained" },
+      { "u_add_effect": "effect_vita_health", "duration": "5 minutes" }
+    ],
+    "false_effect": [
+      { "u_message": "你凝视着这颗奇异的水晶，光芒缓缓变得愈发明亮。它开始脉动，起初缓慢，随后越来越快，你的脑袋也随之一起胀痛。你将视线移开，但脑中那股胀痛依旧挥之不去。" },
+      { "u_add_effect": "psionic_overload", "duration": "1 hours" },
+      { "u_add_effect": "stunned", "duration": 5 }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DRAINED_MATRIX",
+    "effect": [
+      { "u_message": "你凝视着这颗奇异的水晶，微弱的光芒扩大，直至充满你的视野。它开始脉动，起初缓慢，随后越来越快，你的脑袋也随之一起胀痛。你将视线移开，但脑中那股胀痛依旧挥之不去。" },
+      { "u_add_effect": "psionic_overload", "duration": "15 minutes" },
+      { "u_add_effect": "stunned", "duration": 2 }
+    ]
+  }
+]

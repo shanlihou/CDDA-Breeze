@@ -1,0 +1,369 @@
+[
+  {
+    "id": "bio_arcthitecture",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "name": {
+      "str": "构造体改造 CBM"
+    },
+    "description": "一种完全改造，可以将大部分身体结构更替为一种名为“构造体”的特殊物质，它可以如人体般再生，且异常坚韧，还具有很强的环境抗性。",
+    "price": "65536 USD",
+    "difficulty": 13
+  },
+  {
+    "id": "bio_Security_Guard",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "name": {
+      "str": "安全警卫改造 CBM"
+    },
+    "description": "特殊的系统化改造工程，足以让人脱胎换骨。",
+    "price": "65536 USD",
+    "difficulty": 13
+  },
+  {
+    "id": "bio_power_solidity",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "name": {
+      "str": "固态储能装置 CBM"
+    },
+    "description": "一种可以将能量固态压缩进行储能的装置，只需一点空间就可以存储大量能量，提供10000kJ的能量储备。",
+    "price": "65536 USD",
+    "difficulty": 13
+  },
+  {
+    "id": "bio_gravity_furnace",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "name": {
+      "str": "微型重力炉 CBM"
+    },
+    "description": "利用引力和暗物质的相互作用，通过暗物质流动在引力场中形成的“叶轮”来获得能量的装置。此装置为微型版本。",
+    "price": "65536 USD",
+    "difficulty": 13
+  },
+  {
+    "id": "bio_SG_hibernate_system",
+    "copy-from": "bionic_general_npc_usable",
+    "type": "BIONIC_ITEM",
+    "name": { "str": "休眠系统 CBM" },
+    "looks_like": "bio_int_enhancer",
+    "description": "有时为了跨越漫长的时间，安全警卫需要关机休眠很久。休眠系统会让身体的需求与反应大大降低，并停止视听功能，恢复能力大幅提高。",
+    "price": 350000,
+    "price_postapoc": 500,
+    "weight": "50 g",
+    "difficulty": 13
+  },
+  {
+    "id": "bio_increased_bionics_space_Ω",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "name": {
+      "str": "统治局生化扩展 CBM"
+    },
+    "description": "统治局科技，完全没听说过的奇异科技。\n将身体内的空间与量子隧道结合，安装的装置会以量子形态结合于身体。",
+    "price": "65536 USD",
+    "difficulty": 13
+  },
+  {
+    "id": "fake_SG_drill_press_tool",
+    "copy-from": "drill_press_tool",
+    "type": "TOOL",
+	"flags": ["PSEUDO", "USES_BIONIC_POWER"],
+    "name": { "str": "安全局集成系统" },
+    "sub": "drill_press_tool"
+  },
+  {
+    "id": "fake_SG_angle_grinder",
+    "copy-from": "angle_grinder",
+    "type": "TOOL",
+	"flags": ["PSEUDO", "USES_BIONIC_POWER"],
+    "name": { "str": "安全局集成系统" },
+    "sub": "angle_grinder"
+  },
+  {
+    "id": "fake_SG_cordless_impact_wrench",
+    "copy-from": "cordless_impact_wrench",
+    "type": "TOOL",
+	"flags": ["PSEUDO", "USES_BIONIC_POWER"],
+    "name": { "str": "安全局集成系统" },
+    "sub": "cordless_impact_wrench"
+  },
+  {
+    "id": "fake_SG_large_repairkit",
+    "copy-from": "large_repairkit",
+    "type": "TOOL",
+	"flags": ["PSEUDO", "USES_BIONIC_POWER"],
+    "name": { "str": "安全局集成系统" },
+    "sub": "large_repairkit"
+  },
+  {
+    "id": "fake_SG_forge",
+    "copy-from": "forge",
+    "type": "TOOL",
+	"flags": ["PSEUDO", "USES_BIONIC_POWER"],
+    "name": { "str": "安全局集成系统" },
+    "sub": "forge"
+  },
+  {
+    "id": "fake_SG_metal_file",
+    "copy-from": "metal_file",
+    "type": "TOOL",
+	"flags": ["PSEUDO", "USES_BIONIC_POWER"],
+    "name": { "str": "安全局集成系统" },
+    "sub": "metal_file"
+  },
+  {
+    "id": "fake_SG_metalworking_tongs",
+    "copy-from": "metalworking_tongs",
+    "type": "TOOL",
+	"flags": ["PSEUDO", "USES_BIONIC_POWER"],
+    "name": { "str": "安全局集成系统" },
+    "sub": "metalworking_tongs"
+  },
+  {
+    "id": "fake_SG_drift",
+    "copy-from": "drift",
+    "type": "TOOL",
+	"flags": ["PSEUDO", "USES_BIONIC_POWER"],
+    "name": { "str": "安全局集成系统" },
+    "sub": "drift"
+  },
+  {
+    "id": "fake_SG_tongs",
+    "copy-from": "tongs",
+    "type": "TOOL",
+	"flags": ["PSEUDO", "USES_BIONIC_POWER"],
+    "name": { "str": "安全局集成系统" },
+    "sub": "tongs"
+  },
+  {
+    "id": "fake_SG_hotcut",
+    "copy-from": "hotcut",
+    "type": "TOOL",
+	"flags": ["PSEUDO", "USES_BIONIC_POWER"],
+    "name": { "str": "安全局集成系统" },
+    "sub": "hotcut"
+  },
+  {
+    "id": "fake_SG_laptop",
+    "copy-from": "laptop",
+    "type": "TOOL",
+	"flags": ["PSEUDO", "USES_BIONIC_POWER"],
+    "name": { "str": "安全局集成系统" },
+    "sub": "laptop"
+  },
+  {
+    "id": "fake_SG_press",
+    "copy-from": "press",
+    "type": "TOOL",
+	"flags": ["PSEUDO", "USES_BIONIC_POWER"],
+    "name": { "str": "安全局集成系统" },
+    "sub": "press"
+  },
+  {
+    "id": "fake_SG_press_dowel",
+    "copy-from": "press_dowel",
+    "type": "TOOL",
+	"flags": ["PSEUDO", "USES_BIONIC_POWER"],
+    "name": { "str": "安全局集成系统" },
+    "sub": "press_dowel"
+  },
+  {
+    "id": "fake_SG_sieve_steel",
+    "copy-from": "sieve_steel",
+    "type": "TOOL",
+	"flags": ["PSEUDO", "USES_BIONIC_POWER"],
+    "name": { "str": "安全局集成系统" },
+    "sub": "sieve_steel"
+  },
+  {
+    "id": "fake_SG_colander_steel",
+    "copy-from": "colander_steel",
+    "type": "TOOL",
+	"flags": ["PSEUDO", "USES_BIONIC_POWER"],
+    "name": { "str": "安全局集成系统" },
+    "sub": "colander_steel"
+  },
+  {
+    "id": "fake_SG_electrolysis_kit",
+    "copy-from": "electrolysis_kit",
+    "type": "TOOL",
+	"flags": ["PSEUDO", "USES_BIONIC_POWER"],
+    "name": { "str": "安全局集成系统" },
+    "sub": "electrolysis_kit"
+  },
+  {
+    "id": "fake_SG_ketene_lamp",
+    "copy-from": "ketene_lamp",
+    "type": "TOOL",
+	"flags": ["PSEUDO", "USES_BIONIC_POWER"],
+    "name": { "str": "安全局集成系统" },
+    "sub": "ketene_lamp"
+  },
+  {
+    "id": "fake_SG_dehydrator",
+    "copy-from": "dehydrator",
+    "type": "TOOL",
+	"flags": ["PSEUDO", "USES_BIONIC_POWER"],
+    "name": { "str": "安全局集成系统" },
+    "sub": "dehydrator"
+  },
+  {
+    "id": "fake_SG_funnel",
+    "copy-from": "funnel",
+    "type": "TOOL",
+	"flags": ["PSEUDO", "USES_BIONIC_POWER"],
+    "name": { "str": "安全局集成系统" },
+    "sub": "funnel"
+  },
+  {
+    "id": "fake_SG_funnel_separation",
+    "copy-from": "funnel_separation",
+    "type": "TOOL",
+	"flags": ["PSEUDO", "USES_BIONIC_POWER"],
+    "name": { "str": "安全局集成系统" },
+    "sub": "funnel_separation"
+  },
+  {
+    "id": "fake_SG_boltcutters",
+    "copy-from": "boltcutters",
+    "type": "TOOL",
+	"flags": ["PSEUDO", "USES_BIONIC_POWER"],
+    "name": { "str": "安全局集成系统" },
+    "sub": "boltcutters"
+  },
+  {
+    "id": "fake_SG_can_sealer",
+    "copy-from": "can_sealer",
+    "type": "TOOL",
+	"flags": ["PSEUDO", "USES_BIONIC_POWER"],
+    "name": { "str": "安全局集成系统" },
+    "sub": "can_sealer"
+  },
+  {
+    "id": "fake_SG_multimeter",
+    "copy-from": "multimeter",
+    "type": "TOOL",
+	"flags": ["PSEUDO", "USES_BIONIC_POWER"],
+    "name": { "str": "安全局集成系统" },
+    "sub": "multimeter"
+  },
+  {
+    "id": "fake_SG_cordless_drill",
+    "copy-from": "cordless_drill",
+    "type": "TOOL",
+	"flags": ["PSEUDO", "USES_BIONIC_POWER"],
+    "name": { "str": "安全局集成系统" },
+    "sub": "cordless_drill"
+  },
+  {
+    "id": "fake_SG_food_processor",
+    "copy-from": "food_processor",
+    "type": "TOOL",
+	"flags": ["PSEUDO", "USES_BIONIC_POWER"],
+    "name": { "str": "安全局集成系统" },
+    "sub": "food_processor"
+  },
+  {
+    "id": "fake_SG_polisher",
+    "copy-from": "polisher",
+    "type": "TOOL",
+	"flags": ["PSEUDO", "USES_BIONIC_POWER"],
+    "name": { "str": "安全局集成系统" },
+    "sub": "polisher"
+  },
+  {
+    "id": "fake_SG_tire_changer",
+    "copy-from": "fake_tire_changer",
+    "type": "TOOL",
+	"flags": ["PSEUDO", "USES_BIONIC_POWER"],
+    "name": { "str": "安全局集成系统" },
+    "sub": "fake_tire_changer"
+  },
+  {
+    "id": "fake_SG_welder",
+    "copy-from": "welder",
+    "type": "TOOL",
+	"flags": ["PSEUDO", "USES_BIONIC_POWER"],
+    "name": { "str": "安全局集成系统" },
+    "sub": "welder"
+  },
+  {
+    "id": "fake_SG_wire_draw_machine",
+    "copy-from": "wire_draw_machine",
+    "type": "TOOL",
+	"flags": ["PSEUDO", "USES_BIONIC_POWER"],
+    "name": { "str": "安全局集成系统" },
+    "sub": "wire_draw_machine"
+  },
+  {
+    "id": "fake_SG_reciprocating_saw",
+    "copy-from": "reciprocating_saw",
+    "type": "TOOL",
+	"flags": ["PSEUDO", "USES_BIONIC_POWER"],
+    "name": { "str": "安全局集成系统" },
+    "sub": "reciprocating_saw"
+  },
+  {
+    "id": "fake_SG_tablesaw_tool",
+    "copy-from": "tablesaw_tool",
+    "type": "TOOL",
+	"flags": ["PSEUDO", "USES_BIONIC_POWER"],
+    "name": { "str": "安全局集成系统" },
+    "sub": "tablesaw_tool"
+  },
+  {
+    "id": "fake_SG_hacksaw",
+    "copy-from": "hacksaw",
+    "type": "TOOL",
+	"flags": ["PSEUDO", "USES_BIONIC_POWER"],
+    "name": { "str": "安全局集成系统" },
+    "sub": "hacksaw"
+  },
+  {
+    "id": "fake_SG_saw",
+    "copy-from": "saw",
+    "type": "TOOL",
+	"flags": ["PSEUDO", "USES_BIONIC_POWER"],
+    "name": { "str": "安全局集成系统" },
+    "sub": "saw"
+  },
+  {
+    "id": "fake_SG_mitresaw_tool",
+    "copy-from": "mitresaw_tool",
+    "type": "TOOL",
+	"flags": ["PSEUDO", "USES_BIONIC_POWER"],
+    "name": { "str": "安全局集成系统" },
+    "sub": "mitresaw_tool"
+  },
+  {
+    "id": "fake_SG_bandsaw_tool",
+    "copy-from": "bandsaw_tool",
+    "type": "TOOL",
+	"flags": ["PSEUDO", "USES_BIONIC_POWER"],
+    "name": { "str": "安全局集成系统" },
+    "sub": "bandsaw_tool"
+  },
+  {
+    "id": "pseudo_arcthitecture_toolset",
+    "copy-from": "arcthitecture_toolset",
+    "sub": "arcthitecture_toolset",
+    "type": "TOOL",
+	"ammo": ["battery"],
+    "extend": { "flags": [ "ALLOWS_REMOTE_USE", "PSEUDO", "ZERO_WEIGHT" ] },
+    "pocket_data": [ { "pocket_type": "MAGAZINE_WELL", "default_magazine": "pseudo_battery" } ],
+    "weight": "1 g",
+    "volume": "1 ml",
+    "symbol": "&",
+    "color": "red",
+    "name": { "str": "车载构筑造换器" }
+  },
+  {
+    "id": "pseudo_arcthitecture_toolset_ap",
+    "type": "TOOL",
+    "copy-from": "pseudo_arcthitecture_toolset",
+    "name": { "str": "构筑造换器（安置）" }
+  }
+]

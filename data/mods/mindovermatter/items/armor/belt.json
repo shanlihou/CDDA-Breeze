@@ -1,0 +1,214 @@
+[
+  {
+    "id": "psionic_shield_belt",
+    "type": "TOOL_ARMOR",
+    "name": { "str": "护盾腰带" },
+    "description": "一条简单的合成纤维腰带，腰带环右侧有一个小盒子。盒子上有一个可拨动开关，内部有一个风格化的盾牌，盾牌上有Ψ和XEDRA的标志。",
+    "weight": "350 g",
+    "volume": "500 ml",
+    "price": 10000,
+    "price_postapoc": 500,
+    "material": [ "nylon", "steel", "nether_crystal" ],
+    "symbol": "[",
+    "looks_like": "leather_belt",
+    "color": "yellow",
+    "material_thickness": 1.5,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": { "psionic_charge_power": 90 }
+      }
+    ],
+    "use_action": [
+      {
+        "type": "transform",
+        "msg": "你拨动盒子上的开关，一盏红色LED灯亮起。",
+        "target": "psionic_shield_belt_on",
+        "active": true,
+        "need_charges": 1,
+        "need_charges_msg": "开关咔哒一声，但什么也没发生。",
+        "need_worn": true,
+        "menu_text": "拨动开关"
+      }
+    ],
+    "flags": [
+      "BELTED",
+      "OVERSIZE",
+      "NONCONDUCTIVE",
+      "NO_REPAIR",
+      "COMBAT_TOGGLEABLE",
+      "NO_UNLOAD"
+    ],
+    "armor": [
+      {
+        "encumbrance": 2,
+        "coverage": 50,
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_waist"
+        ],
+        "volume_encumber_modifier": 0.35
+      }
+    ],
+    "relic_data": {
+      "charge_info": { "recharge_type": "periodic", "time": "60 s", "regenerate_ammo": true }
+    },
+    "//": "Recharge time is 60 seconds due to bug #48019, making it actually 30 seconds. Reduce to 30 seconds if that ever gets fixed."
+  },
+  {
+    "id": "psionic_shield_belt_on",
+    "type": "TOOL_ARMOR",
+    "name": { "str": "护盾腰带（激活）" },
+    "copy-from": "psionic_shield_belt",
+    "turns_per_charge": 1,
+    "revert_to": "psionic_shield_belt",
+    "use_action": [
+      {
+        "ammo_scale": 0,
+        "target": "psionic_shield_belt",
+        "msg": "你拨动盒子上的开关，红色LED灯熄灭。",
+        "menu_text": "拨动开关",
+        "type": "transform"
+      }
+    ],
+    "extend": { "flags": [ "NO_TAKEOFF" ] },
+    "relic_data": {
+      "values": [
+        { "value": "ARMOR_CUT", "add": -15 },
+        { "value": "ARMOR_BASH", "add": -8 },
+        { "value": "ARMOR_STAB", "add": -20 },
+        { "value": "ARMOR_BULLET", "add": -40 }
+      ]
+    }
+  },
+  {
+    "id": "psionic_shield_belt_broken",
+    "type": "TOOL_ARMOR",
+    "name": { "str": "护盾腰带" },
+    "copy-from": "psionic_shield_belt",
+    "description": "一条简单的合成纤维腰带，腰带环右侧有一个小盒子。盒子上有一个可拨动开关，内部有一个风格化的盾牌，盾牌上有Ψ和XEDRA的标志。它上面还有一道很大的裂纹，移动时会发出嘎嘎声。",
+    "use_action": [
+      {
+        "type": "transform",
+        "msg": "你拨动盒子上的开关，但什么也没发生。",
+        "target": "psionic_shield_belt_broken",
+        "need_worn": true,
+        "menu_text": "拨动开关"
+      }
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": { "psionic_charge_power": 90 }
+      }
+    ],
+    "relic_data": { "passive_effects": [ { "has": "HELD", "condition": "ALWAYS", "values": [ { "value": "MAX_MANA", "add": 0 } ] } ] }
+  },
+  {
+    "id": "psionic_fire_shield_belt",
+    "type": "TOOL_ARMOR",
+    "name": { "str": "抑制腰带" },
+    "description": "一条简单的合成纤维腰带，腰带环右侧有一个小盒子。盒子上有一个可拨动开关，内部有一个风格化的火焰，火焰上有一个大的🛇符号，其背后有Ψ和XEDRA的标志。",
+    "weight": "350 g",
+    "volume": "500 ml",
+    "price": 10000,
+    "price_postapoc": 500,
+    "material": [ "nylon", "steel", "nether_crystal" ],
+    "symbol": "[",
+    "looks_like": "leather_belt",
+    "color": "red",
+    "material_thickness": 1.5,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": { "psionic_charge_power": 300 }
+      }
+    ],
+    "use_action": [
+      {
+        "type": "transform",
+        "msg": "你拨动盒子上的开关，一盏红色LED灯亮起。",
+        "target": "psionic_fire_shield_belt_on",
+        "active": true,
+        "need_charges": 1,
+        "need_charges_msg": "开关咔哒一声，但什么也没发生。",
+        "need_worn": true,
+        "menu_text": "拨动开关"
+      }
+    ],
+    "flags": [
+      "BELTED",
+      "OVERSIZE",
+      "NONCONDUCTIVE",
+      "NO_REPAIR",
+      "COMBAT_TOGGLEABLE",
+      "NO_UNLOAD"
+    ],
+    "armor": [
+      {
+        "encumbrance": 2,
+        "coverage": 50,
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_waist"
+        ],
+        "volume_encumber_modifier": 0.35
+      }
+    ],
+    "relic_data": {
+      "charge_info": { "recharge_type": "periodic", "time": "30 s", "regenerate_ammo": true }
+    },
+    "//": "Recharge time is 30 seconds due to bug #48019, making it actually 15 seconds. Reduce to 15 seconds if that ever gets fixed."
+  },
+  {
+    "id": "psionic_fire_shield_belt_on",
+    "type": "TOOL_ARMOR",
+    "name": { "str": "抑制腰带（激活）" },
+    "copy-from": "psionic_fire_shield_belt",
+    "turns_per_charge": 1,
+    "revert_to": "psionic_fire_shield_belt",
+    "use_action": [
+      {
+        "ammo_scale": 0,
+        "target": "psionic_fire_shield_belt",
+        "msg": "你拨动盒子上的开关，红色LED灯熄灭。",
+        "menu_text": "拨动开关",
+        "type": "transform"
+      }
+    ],
+    "extend": { "flags": [ "NO_TAKEOFF" ] },
+    "relic_data": {
+      "values": [
+        { "value": "ARMOR_HEAT", "add": -80 },
+        { "value": "CLIMATE_CONTROL_CHILL", "add": 400 }
+      ]
+    }
+  },
+  {
+    "id": "psionic_fire_shield_belt_broken",
+    "type": "TOOL_ARMOR",
+    "copy-from": "psionic_fire_shield_belt",
+    "name": { "str": "抑制腰带" },
+    "description": "一条简单的合成纤维腰带，腰带环右侧有一个小盒子。盒子上有一个可拨动开关，内部有一个风格化的火焰，火焰上有一个大的🛇符号，其背后有Ψ和XEDRA的标志。它上面还有一道很大的裂纹，移动时会发出嘎嘎声。",
+    "use_action": [
+      {
+        "type": "transform",
+        "msg": "你拨动盒子上的开关，但什么也没发生。",
+        "target": "psionic_fire_shield_belt_broken",
+        "need_worn": true,
+        "menu_text": "拨动开关"
+      }
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": { "psionic_charge_power": 300 }
+      }
+    ],
+    "relic_data": { "passive_effects": [ { "has": "HELD", "condition": "ALWAYS", "values": [ { "value": "MAX_MANA", "add": 0 } ] } ] }
+  }
+]

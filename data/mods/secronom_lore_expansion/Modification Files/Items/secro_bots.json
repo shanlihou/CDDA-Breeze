@@ -1,0 +1,177 @@
+[
+  {
+    "id": "bot_secro_laserturret_mod",
+    "type": "TOOL",
+    "name": {
+      "str": "无效激光束转台"
+    },
+    "description": "一个未激活的SDP-L1炮塔。激活以放置它。",
+    "volume": "60000 ml",
+    "weight": "172 kg",
+    "price": "200 USD",
+    "to_hit": -5,
+    "bashing": 10,
+    "material": [
+      "steel"
+    ],
+    "symbol": "2",
+    "color": "light_red",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_secro_laserturret_mod",
+      "friendly_msg": "SPD-L1 发出嘟嘟声，然后扫描附近...",
+      "hostile_msg": "哦，不...",
+      "difficulty": 0,
+      "moves": 250,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_bot_secroinforcer",
+    "symbol": ",",
+    "color": "green",
+    "name": {
+      "str": "破损的强化机器人"
+    },
+    "category": "other",
+    "description": "一个破损到无法修复的强化机器人。可以从里面挖出一些零件。",
+    "price": "10 USD",
+    "price_postapoc": 10,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "volume": "190 L",
+    "weight": "290 kg",
+    "bashing": 10,
+    "to_hit": -4,
+    "flags": [
+      "TRADER_AVOID",
+      "NO_REPAIR"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_bot_secroshocker",
+    "symbol": ",",
+    "color": "white",
+    "name": {
+      "str": "破损的放电机器人"
+    },
+    "category": "other",
+    "description": "令人震惊的机器人坏得无法修复。可以挖出零件。",
+    "price": "10 USD",
+    "price_postapoc": 10,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "volume": "30000 ml",
+    "weight": "40750 g",
+    "bashing": 4,
+    "cutting": 4,
+    "to_hit": -3,
+    "flags": [
+      "TRADER_AVOID",
+      "NO_REPAIR"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_bot_secroriflewalker",
+    "symbol": ",",
+    "color": "white",
+    "name": {
+      "str": "破损的步行机器人"
+    },
+    "category": "other",
+    "description": "无法修复的步行机器人。可以挖出零件。",
+    "price": "10 USD",
+    "price_postapoc": 10,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "volume": "30000 ml",
+    "weight": "40750 g",
+    "bashing": 3,
+    "to_hit": -3,
+    "flags": [
+      "TRADER_AVOID",
+      "NO_REPAIR"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_bot_secrolauncher",
+    "symbol": ",",
+    "color": "white",
+    "name": {
+      "str": "破损的发射器机器人"
+    },
+    "category": "other",
+    "description": "一个发射机器人坏得无法修复。可以挖出零件。",
+    "price": "10 USD",
+    "price_postapoc": 10,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "volume": "30000 ml",
+    "weight": "40750 g",
+    "bashing": 3,
+    "to_hit": -3,
+    "flags": [
+      "TRADER_AVOID",
+      "NO_REPAIR"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_secro_fleshmech_unlink",
+    "name": {
+      "str": "破碎的血肉外骨骼装甲"
+    },
+    "description": "这是一套破损的皮肉外骨骼服，看起来无法修复。",
+    "weight": "1480388 g",
+    "volume": "250 L",
+    "to_hit": -3,
+    "bashing": 8,
+    "material": [
+      "superalloy",
+      "secro_flesh_reinforced"
+    ],
+    "symbol": ";",
+    "color": "light_red",
+    "flags": [
+      "TRADER_AVOID",
+      "NO_REPAIR"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_secro_fleshmech",
+    "name": {
+      "str": "破碎的血肉外骨骼装甲"
+    },
+    "description": "这是一套破损的皮肉外骨骼服，看起来无法修复。",
+    "weight": "1480388 g",
+    "volume": "250 L",
+    "to_hit": -3,
+    "bashing": 8,
+    "material": [
+      "superalloy",
+      "secro_flesh_reinforced"
+    ],
+    "symbol": ";",
+    "color": "light_red",
+    "flags": [
+      "TRADER_AVOID",
+      "NO_REPAIR"
+    ]
+  }
+]

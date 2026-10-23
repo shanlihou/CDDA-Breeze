@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_GALACO_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"喂，你知道哪里有适合种植的土地吗？",
+    "responses":[
+      { "text": "我们一起来找吧", "topic": "TALK_GALACO_SAN_2" },
+      { "text": "不知道", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_GALACO_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"谢谢！如果找到的话记得告诉我",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

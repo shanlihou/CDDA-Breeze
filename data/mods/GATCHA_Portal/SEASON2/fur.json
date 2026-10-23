@@ -1,0 +1,63 @@
+[
+	{
+		"type":"furniture",
+		"id":"f_lootcrate_s2_rare1",
+		"name":"铜宝箱",
+		"description":"一个铜宝箱，你可以使用“s”砸碎指令来打开它。",
+		"symbol":"n",
+		"color":"brown",
+		"copy-from":"f_lootcrate_ev3_rare1",
+		"light_emitted":10,
+		"move_cost_mod":2,
+		"required_str":0,
+		"flags":["TRANSPARENT","PLACE_ITEM","NOCOLLIDE"],
+		"bash":{"str_min":0,"str_max":0,"sound_vol":2,"sound":"*咔嚓*","sound_fail":"*啪嗒*","items":[{"group":"item_group_chest_r1"}]}
+	}
+,
+	{
+		"type":"furniture",
+		"id":"f_lootcrate_s2_rare2",
+		"name":"银宝箱",
+		"description":"一个银宝箱，你可以使用“s”砸碎指令来打开它。",
+		"symbol":"n",
+		"color":"white",
+		"copy-from":"f_lootcrate_ev3_rare2",
+		"light_emitted":10,
+		"move_cost_mod":2,
+		"required_str":0,
+		"flags":["TRANSPARENT","PLACE_ITEM","NOCOLLIDE" ],
+		"bash":{"str_min":0,"str_max":0,"sound_vol":2,"sound":"*咔嚓*","sound_fail":"*啪嗒*","items":[{"group":"item_group_chest_r2"}]}
+	}
+,
+	{
+		"type":"furniture",
+		"id":"f_lootcrate_s2_rare3",
+		"name":"金宝箱",
+		"description":"一个闪闪发光的金宝箱，你可以使用“s”砸碎指令来打开它。",
+		"symbol":"n",
+		"color":"yellow",
+		"copy-from":"f_lootcrate_ev3_rare3",
+		"light_emitted":40,
+		"move_cost_mod":2,
+		"required_str":0,
+		"flags":["TRANSPARENT","PLACE_ITEM","NOCOLLIDE" ],
+		"bash":{"str_min":0,"str_max":0,"sound_vol":2,"sound":"*咔嚓*","sound_fail":"*啪嗒*","items":[{"group":"item_group_chest_s2_r3"}]}
+	}
+,
+	{
+		"type":"furniture",
+		"id":"f_lootcrate_s2_rare4",
+		"name":"彩虹宝箱",
+		"description":"一个闪闪发光的彩虹宝箱，你可以使用“s”砸碎指令来打开它。",
+		"symbol":"n",
+		"color":"cyan",
+		"copy-from":"f_lootcrate_ev3_rare4",
+		"light_emitted":40,
+		"move_cost_mod":2,
+		"required_str":0,
+		"flags":["TRANSPARENT","PLACE_ITEM","NOCOLLIDE" ],
+		"bash":{"str_min":0,"str_max":0,"sound_vol":2,"sound":"*咔嚓*","sound_fail":"*啪嗒*","items":[{"group":"item_group_chest_s2_r4"}]}
+	}
+
+
+]

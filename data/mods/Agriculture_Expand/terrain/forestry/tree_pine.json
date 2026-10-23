@@ -1,0 +1,76 @@
+[
+	{
+		"type": "terrain",
+		"id": "forestry_t_tree_pine_fertilized",
+		"name": "已经施过肥的核桃树",
+		"copy-from": "t_tree_pine",
+		"symbol": "7",
+		"color": "green",
+		"examine_action": "harvest_ter",
+		"looks_like": "t_tree_pine",
+		"harvest_by_season": [
+			{
+				"seasons": [ "spring", "summer", "autumn", "winter" ],
+				"id": "forestry_fertilized_pine_harv"
+			}
+		]
+	},
+	{
+		"id": "forestry_fertilized_pine_harv",
+		"type": "harvest",
+		"entries": [
+			{ "drop": "pine_bough", "base_num": [ 3, 12 ], "scale_num": [ 0, 0.1 ] },
+			{ "drop": "pinecone", "base_num": [ 2, 6 ], "scale_num": [ 0, 0.1 ] }
+		]
+	},
+
+	{
+		"type": "terrain",
+		"id": "forestry_t_tree_pine_pruned",
+		"name": "已经修剪过的核桃树",
+		"copy-from": "t_tree_pine",
+		"symbol": "7",
+		"color": "green",
+		"examine_action": "harvest_ter",
+		"looks_like": "t_tree_pine",
+		"harvest_by_season": [
+			{
+				"seasons": [ "spring", "summer", "autumn", "winter" ],
+				"id": "forestry_pruned_pine_harv"
+			}
+		]
+	},
+	{
+		"id": "forestry_pruned_pine_harv",
+		"type": "harvest",
+		"entries": [
+			{ "drop": "pine_bough", "base_num": [ 2, 9 ], "scale_num": [ 0, 0.2 ] },
+			{ "drop": "pinecone", "base_num": [ 1, 5 ], "scale_num": [ 0, 0.2 ] }
+		]
+	},
+
+	{
+		"type": "terrain",
+		"id": "forestry_t_tree_pine_fertilized_pruned",
+		"name": "施过肥并修剪过的核桃树",
+		"copy-from": "t_tree_pine",
+		"symbol": "7",
+		"color": "green",
+		"examine_action": "harvest_ter",
+		"looks_like": "t_tree_pine",
+		"harvest_by_season": [
+			{
+				"seasons": [ "spring", "summer", "autumn", "winter" ],
+				"id": "forestry_fertilized_pruned_pine_harv"
+			}
+		]
+	},
+	{
+		"id": "forestry_fertilized_pruned_pine_harv",
+		"type": "harvest",
+		"entries": [
+			{ "drop": "pine_bough", "base_num": [ 5, 20 ], "scale_num": [ 0, 0.3 ] },
+			{ "drop": "pinecone", "base_num": [ 3, 10 ], "scale_num": [ 0, 0.3 ] }
+		]
+	}
+]

@@ -1,0 +1,185 @@
+[
+  {
+    "id": "Boss_YH",
+    "looks_like": "mon_yrax_apeirogon",
+    "type": "MONSTER",
+    "material": [ "cyylcaizhi" ],
+    "name": { "str": "《永恒》" },
+    "description": "其体型无比巨大,感觉能吞噬一切,全身被黑泥包裹，正中心的物体就是它无限能量的根源。",
+    "symbol": "*",
+    "color": "blue_red",
+    "bodytype": "blob",
+    "default_faction": "cyyl_boss",
+    "species": [
+      "SLIME"
+    ],
+    "volume": "999999 ml",
+    "weight": "999 kg",
+    "hp": 1500,
+    "speed": 200,
+    "morale": 100,
+    "aggression": 100,
+    "melee_skill": 12,
+    "melee_dice": 10,
+    "melee_dice_sides": 6,
+    "melee_cut": 20,
+    "attack_cost": 100,
+    "melee_damage": [
+      {
+        "damage_type": "bullet",
+        "amount": 20
+      }
+    ],
+    "armor_bash": 20,
+    "armor_cut": 25,
+    "armor_bullet": 60,
+    "armor_elec": 20,
+    "dodge": 4,
+    "weakpoint_sets": [],
+    "families": [ "prof_intro_biology", "prof_wp_zombie", "prof_wp_syn_armored" ],
+    "vision_day": 80,
+    "vision_night": 60,
+    "regenerates": 40,
+    "regen_morale": true,
+    "absorb_ml_per_hp": 250,
+    "split_move_cost": 0,
+    "absorb_move_cost_per_ml": 0.0,
+    "harvest": "exempt",
+    "death_drops": {},
+    "death_function": { "corpse_type": "BROKEN" },
+    "path_settings": {
+      "max_dist": 10,
+      "allow_open_doors": true,
+      "avoid_traps": true,
+      "avoid_sharp": true
+    },
+    "special_attacks": [
+      [
+        "ACID_BARF",
+        60
+      ],
+      [
+        "SMASH",
+        200
+      ],
+      [
+        "GRAB",
+        60
+      ],
+      [
+        "LUNGE",
+        60
+      ],
+      [
+        "BIO_OP_DISARM",
+        180
+      ],
+      [
+        "PULL_METAL_WEAPON",
+        180
+      ],
+      [
+        "FEAR_PARALYZE",
+        300
+      ],
+      [
+        "GENERATOR",
+        60
+      ],
+      [
+        "ZOMBIE_FUSE",
+        0
+      ]
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "SWIMS",
+      "PLASTIC",
+      "SLUDGEPROOF",
+      "ACID_BLOOD",
+      "ACIDPROOF",
+      "NOHEAD",
+      "NOGIB",
+      "BASHES",
+      "CAN_OPEN_DOORS",
+      "GROUP_BASH",
+      "NO_BREATHE",
+      "REVIVES",
+      "PUSH_MON",
+      "PATH_AVOID_DANGER_1",
+      "PRIORITIZE_TARGETS",
+      "COLDPROOF",
+      "STUN_IMMUNE",
+      "VENOM",
+      "SLUDGEPROOF",
+      "NIGHT_INVISIBILITY",
+      "KEENNOSE",
+      "GRABS",
+      "GOODHEARING",
+      "FLIES",
+      "FIREPROOF",
+      "DESTROYS",
+      "BORES",
+      "CAN_DIG",
+      "BADVENOM"
+    ]
+  },
+  {
+    "id": "special_mon_zombie_scientist",
+    "type": "MONSTER",
+    "name": { "str": "特殊研究员丧尸" },
+    "description": "这只研究员丧尸和其他的研究员丧尸有些不同,它更具攻击性,似乎还有一丝意识,在它破烂的实验服口袋里似乎有一张特殊的黑色卡片。",
+    "default_faction": "science",
+    "bodytype": "human",
+    "looks_like": "mon_zombie_scientist",
+    "//": "zombie scientists are recognised as friendly by the lab's defense system",
+    "categories": [ "CLASSIC" ],
+    "species": [ "ZOMBIE", "HUMAN" ],
+    "volume": "64000 ml",
+    "weight": "83500 g",
+    "hp": 120,
+    "speed": 95,
+    "material": [ "flesh" ],
+    "symbol": "Z",
+    "color": "white_cyan",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 5,
+    "melee_dice": 4,
+    "melee_dice_sides": 6,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 5
+      }
+    ],
+    "dodge": 4,
+    "armor_elec": 1,
+    "weakpoint_sets": [ "wps_humanoid_body" ],
+    "families": [ "prof_intro_biology", "prof_wp_zombie" ],
+    "vision_day": 50,
+    "vision_night": 4,
+    "harvest": "zombie",
+    "path_settings": { "max_dist": 5 },
+    "special_attacks": [ [ "scratch", 20 ] ],
+    "death_drops": "VIP_card_dlbao",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "POISON",
+      "ACIDPROOF",
+      "NO_BREATHE",
+      "REVIVES",
+      "PUSH_MON",
+      "PATH_AVOID_DANGER_1",
+      "PRIORITIZE_TARGETS",
+      "FILTHY"
+    ]
+  }
+]

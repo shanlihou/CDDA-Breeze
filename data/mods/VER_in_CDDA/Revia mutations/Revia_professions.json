@@ -1,0 +1,44 @@
+[
+    {
+        "type": "profession",
+        "id": "Revia_young",
+        "name": "年轻的雷维亚圣堂武士",
+        "description": "强度较高！！！以及建议女性开局，因为环世界作者的原设雷维亚是纯女性种族\n刚刚成年不久且通过圣堂武士考核的你（高尾数雷维亚活个200年很正常）着甲来到祭祀场来献祭豆腐取悦斯卡恩女神（狐狸爱吃油豆腐不是么），结果本地超凡智能的一个空间实验送到了异世界，在彻底来到异世界前，你的朋友刚好把斯卡恩标记和血之书都扔给了你，甚至还有能提升三次的血石。但愿在血神的荣光下，你能在这个世界继续战斗吧。",
+        "points": 12,
+        "proficiencies": [ "prof_spotting","prof_lockpicking","prof_wound_care","prof_burn_care","prof_knife_skills","prof_fermenting","prof_baking","prof_frying","prof_forage_cooking" ],
+        "skills": [
+          { "level": 3, "name": "gun" },
+          { "level": 2, "name": "shotgun" },
+          { "level": 2, "name": "pistol" },
+          { "level": 4, "name": "survival" },
+          { "level": 2, "name": "chemistry" },
+          { "level": 6, "name": "cooking" },
+          { "level": 3, "name": "traps"},
+          { "level": 4, "name": "melee"},
+          { "level": 3, "name": "bashing"},
+          { "level": 3, "name": "cutting"},
+          { "level": 3, "name": "stabbing"},
+          { "level": 4, "name": "dodge"},
+          { "level": 2, "name": "speech"}
+        ],
+        "traits":["THRESH_Revia","Revia_tail_V","ReviaEyes2","ReviaEars2","Reviaclaw2","HUNGER3","FLEET2","BEAUTIFUL3"],
+        "items": {
+          "both": {
+            "items": [
+              "nomad_rig",
+              "qt_chainmail_suit",
+              "nomad_bodyglove_2",
+              "boots_plate",
+              "backpack_leather"
+            ],
+            "entries": [
+              { "item": "Revia_blood_stone","count":3},
+              { "item": "Revia_Skarne_signal", "count": 1 },
+              { "item": "Revia_bloodbook", "count": 1 }
+            ]
+          },
+          "male": [ "boxer_shorts" ],
+          "female": [ "sports_bra", "boxer_shorts" ]
+        }
+      }
+]

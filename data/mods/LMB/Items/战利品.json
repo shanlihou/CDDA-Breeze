@@ -1,0 +1,255 @@
+[
+    {
+        "id": "lmb_loot_item_1",
+        "type": "TOOL",
+        "looks_like":"large_storage_battery",
+        "name": { "str": "6-STEN-140-M坦克电池" },
+        "description": "一个不小且重的大型蓄电池，通常装在坦克上。你没法将它接入常规的车辆中，但是似乎有的人很需要它。",
+        "weight": "43235 g",
+        "volume": "15 L",
+        "price": 100000000,
+        "price_postapoc": 2000000,
+        "to_hit": -3,
+        "material": [
+        "steel"
+        ],
+        "symbol": ";",
+        "color": "black"
+      },
+      {
+        "id": "lmb_loot_item_2",
+        "type": "TOOL",
+        "looks_like":"power_supply",
+        "name": { "str": "Iridium军用热成像模块" },
+        "description": "一个像个小盒子的电子仪器，是军用热成像系统的重要单元模块。",
+        "weight": "210 g",
+        "volume": "1 L",
+        "price": 15000000,
+        "price_postapoc": 500000,
+        "to_hit": -3,
+        "material": [
+        "steel"
+        ],
+        "symbol": ";",
+        "color": "black"
+      },
+      {
+        "id": "lmb_loot_item_3",
+        "type": "TOOL",
+        "looks_like":"chem_rdx",
+        "name": { "str": "TP-200砖型TNT" },
+        "description": "一小袋用布袋包装的TNT，被用于地震勘探，钻孔炸药，破碎超大物品和执行特殊爆破作业时的中间雷管。",
+        "weight": "200 g",
+        "volume": "450 ml",
+        "price": 2000000,
+        "price_postapoc": 150000,
+        "to_hit": -3,
+        "material": [
+        "steel"
+        ],
+        "symbol": ";",
+        "color": "black"
+      },
+      {
+        "id": "lmb_loot_item_4",
+        "type": "TOOL",
+        "name": { "str": "MS2000指示器" },
+        "description": "美军常使用的频闪灯指示器，带有只有夜视仪才能看到的红外模式和普通的频闪模式，常用于夜间行动和救援指示。",
+        "weight": "150 g",
+        "volume": "220 ml",
+        "price": 3200000,
+        "price_postapoc": 125000,
+        "to_hit": -3,
+        "material": [
+        "steel"
+        ],
+        "symbol": ";",
+        "color": "black"
+      },
+      {
+        "id": "lmb_loot_item_5",
+        "type": "TOOL",
+        "name": { "str": "VR1500测距仪" },
+        "description": "一种手持光学设备，被用于测量它和目标之间的距离。",
+        "weight": "218 g",
+        "volume": "550 ml",
+        "price": 3200000,
+        "price_postapoc": 250000,
+        "to_hit": -3,
+        "material": [
+        "steel"
+        ],
+        "symbol": ";",
+        "color": "black"
+      },
+      {
+        "type": "TOOL",
+        "id": "LMB_ammo_box_556",
+        "category": "other",
+        "name": {
+          "str": "M855弹药盒",
+          "str_pl": "M855弹药盒"
+        },
+        "looks_like": "mre_beef_box",
+        "description": "一个小盒子，装着30颗5.56×45北约标准的M855子弹。激活以打开获取里面的子弹。",
+        "weight": "50 g",
+        "volume": "170 ml",
+        "price": 0,
+        "price_postapoc": 0,
+        "to_hit": -1,
+        "use_action": {
+          "type": "unpack",
+          "group": "lmb_ammo_855"
+        },
+        "material": [
+          "plastic",
+          "aluminum"
+        ],
+        "symbol": ";",
+        "color": "light_gray"
+      },
+      {
+        "id": "lmb_ammo_855",
+        "type": "item_group",
+        "subtype": "distribution",
+        "entries": [
+         {"item":"556"}
+              ]
+    },
+      {
+        "type": "TOOL",
+        "id": "LMB_ammo_box_556_1",
+        "category": "other",
+        "name": {
+          "str": "M855A1弹药盒",
+          "str_pl": "M855A1弹药盒"
+        },
+        "looks_like": "mre_beef_box",
+        "description": "一个小盒子，装着30颗5.56×45北约标准的M855A1子弹。激活以打开获取里面的子弹。",
+        "weight": "50 g",
+        "volume": "170 ml",
+        "price": 0,
+        "price_postapoc": 0,
+        "to_hit": -1,
+        "use_action": {
+          "type": "unpack",
+          "group": "lmb_ammo_855a1"
+        },
+        "material": [
+          "plastic",
+          "aluminum"
+        ],
+        "symbol": ";",
+        "color": "light_gray"
+      },
+      {
+        "id": "lmb_ammo_855a1",
+        "type": "item_group",
+        "subtype": "distribution",
+        "entries": [
+         {"item":"556_m855a1"}
+              ]
+    },
+      {
+        "type": "TOOL",
+        "id": "LMB_ammo_box_556_2",
+        "category": "other",
+        "name": {
+          "str": "MK262弹药盒",
+          "str_pl": "MK262弹药盒"
+        },
+        "looks_like": "mre_beef_box",
+        "description": "一个小盒子，装着30颗5.56×45北约标准的MK262训练用子弹。激活以打开获取里面的子弹。",
+        "weight": "50 g",
+        "volume": "170 ml",
+        "price": 0,
+        "price_postapoc": 0,
+        "to_hit": -1,
+        "use_action": {
+          "type": "unpack",
+          "group": "lmb_ammo_mk262"
+        },
+        "material": [
+          "plastic",
+          "aluminum"
+        ],
+        "symbol": ";",
+        "color": "light_gray"
+      },
+      {
+        "id": "lmb_ammo_mk262",
+        "type": "item_group",
+        "subtype": "distribution",
+        "entries": [
+         {"item":"556_mk262"}
+              ]
+    },
+      {
+        "type": "TOOL",
+        "id": "LMB_ammo_box_556_3",
+        "category": "other",
+        "name": {
+          "str": "MK318弹药盒",
+          "str_pl": "MK318弹药盒"
+        },
+        "looks_like": "mre_beef_box",
+        "description": "一个小盒子，装着30颗5.56×45北约标准的MK318高精度狙击用子弹。激活以打开获取里面的子弹。",
+        "weight": "50 g",
+        "volume": "170 ml",
+        "price": 0,
+        "price_postapoc": 0,
+        "to_hit": -1,
+        "use_action": {
+          "type": "unpack",
+          "group": "lmb_ammo_mk318"
+        },
+        "material": [
+          "plastic",
+          "aluminum"
+        ],
+        "symbol": ";",
+        "color": "light_gray"
+      },
+      {
+        "id": "lmb_ammo_mk318",
+        "type": "item_group",
+        "subtype": "distribution",
+        "entries": [
+         {"item":"556_mk318"}
+              ]
+    },
+    {
+      "type": "TOOL",
+      "id": "LMB_ammo_box_762",
+      "category": "other",
+      "name": {
+        "str": "M80弹药盒",
+        "str_pl": "M80弹药盒"
+      },
+      "looks_like": "mre_beef_box",
+      "description": "一个小盒子，装着30颗762×51北约标准的M80穿甲弹。激活以打开获取里面的子弹。",
+      "weight": "70 g",
+      "volume": "200 ml",
+      "price": 0,
+      "price_postapoc": 0,
+      "to_hit": -1,
+      "use_action": {
+        "type": "unpack",
+        "group": "lmb_ammo_762"
+      },
+      "material": [
+        "plastic",
+        "aluminum"
+      ],
+      "symbol": ";",
+      "color": "light_gray"
+    },
+    {
+      "id": "lmb_ammo_762",
+      "type": "item_group",
+      "subtype": "distribution",
+      "entries": [
+       {"item":"762_51"}
+            ]
+  }
+]

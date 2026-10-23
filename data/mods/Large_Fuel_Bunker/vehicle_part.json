@@ -1,0 +1,65 @@
+[
+    {
+        "id": "fuel_bunker",
+        "type": "vehicle_part",
+        "name": {
+            "str": "fuel bunker"
+        },
+        "item": "fuel_bunker",
+        "location": "fuel_source",
+        "symbol": "O",
+        "categories": ["movement"],
+        "color": "brown",
+        "broken_color": "brown",
+        "looks_like": "tank",
+        "durability": 150,
+        "description": "一个用于储存50L木炭的燃料舱",
+        "damage_modifier": 80,
+        "breaks_into": [
+            {"item": "steel_lump","count": [ 2,2 ]},
+            {"item": "steel_chunk","count": [1,2]},
+            {"item": "scrap","count": [1,5]}
+        ],
+        "requirements": {
+            "install": {"skills": [["mechanics",1]],"time": "60 m","using": [["welding_standard",5]]},
+            "removal": {"skills": [["mechanics",2]],"time": "30 m","using": [["vehicle_weld_removal",1]]},
+            "repair": {"skills": [["mechanics",2]],"time": "60 m","using": [["repair_welding_standard",2]]}
+        },
+        "damage_reduction": {"all": 24,"stab": 18}
+    },
+    {
+        "id": "fuel_bunker_100L",
+        "type": "vehicle_part",
+        "categories": ["movement"],
+        "copy-from":"fuel_bunker",
+        "name": {
+            "str": "燃料舱(100L)"
+        },
+        "item": "fuel_bunker_100L",
+        "durability": 200,
+        "description": "一个用于储存100L木炭的燃料舱",
+        "breaks_into": [
+            {"item": "steel_lump","count": [ 4,4 ]},
+            {"item": "steel_chunk","count": [2,4]},
+            {"item": "scrap","count": [2,10]}
+        ]
+        
+    },
+    {
+        "id": "fuel_bunker_200L",
+        "type": "vehicle_part",
+        "categories": ["movement"],
+        "copy-from":"fuel_bunker",
+        "name": {
+            "str": "燃料舱(200L)"
+        },
+        "item": "fuel_bunker_200L",
+        "durability": 250,
+        "description": "一个用于储存200L木炭的燃料舱",
+        "breaks_into": [
+            {"item": "steel_lump","count": [ 8,8 ]},
+            {"item": "steel_chunk","count": [4,8]},
+            {"item": "scrap","count": [4,20]}
+        ]
+    }
+]

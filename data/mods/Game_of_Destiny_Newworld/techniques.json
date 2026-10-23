@@ -1,0 +1,219 @@
+[
+  {
+    "type": "technique",
+    "id": "DT_SWORD_1",
+    "name": "拟态斩击",
+    "melee_allowed": true,
+    "skill_requirements": [ 
+     {
+      "name": "GE_DT",
+     "level": 1
+     },
+     {
+     "name": "melee",
+     "level": 4
+     }
+    ],
+    "mult_bonuses": [
+    {
+      "stat": "movecost",
+      "scale": 0.7
+    },
+    {
+      "stat": "damage",
+      "type": "bash",
+      "scale": 0.5
+    },
+    {
+      "stat": "damage",
+      "type": "cut",
+      "scale": 1.6
+    },
+    {
+      "stat": "damage",
+      "type": "stab",
+      "scale": 1.6
+    }
+    ],
+    "messages": [
+    "决心随着你的动作拟态剑刃，迅速斩击%s。",
+    "<npcname>拟态出剑刃，迅速斩击%s。"
+    ],
+    "description": "70%耗时，160%斩击伤害，钝击伤害减半",
+    "attack_vectors": [ "WEAPON" ]
+  },
+  {
+    "type": "technique",
+    "id": "DT_ENGULF",
+    "name": "仇恨侵蚀",
+    "melee_allowed": true,
+    "crit_tec": true,
+    "skill_requirements": [ 
+    { "name": "GE_DT",
+    "level": 4 },
+    { "name": "melee",
+    "level": 5 }
+    ],
+    "flat_bonuses": [
+    {
+      "stat": "damage",
+      "type": "pure",
+      "scale": 36
+    },
+    {
+      "stat": "arpen",
+      "type": "bash",
+      "scaling-stat": "dex",
+      "scale": 0.6
+    },
+    {
+      "stat": "arpen",
+      "type": "cut",
+      "scaling-stat": "dex",
+      "scale": 0.6
+    },
+    {
+      "stat": "arpen",
+      "type": "stab",
+      "scaling-stat": "dex",
+      "scale": 0.6
+    }
+    ],
+    "messages": [
+    "随着你的攻击，仇恨化作实体，侵蚀%s。",
+    "<npcname>的攻击使决心中的仇恨化作实体，侵蚀%s。"
+    ],
+    "description": "60%敏捷穿甲，36点真实伤害，仅暴击",
+    "attack_vectors": [ "WEAPON" ]
+    },
+    {
+    "type": "technique",
+    "id": "DT_BRANCH_1",
+    "name": "破绽反击",
+    "skill_requirements": [
+     {
+     "name": "melee", "level": 2
+     },
+     {
+     "name": "NE_DT", "level": 2
+     }
+    ],
+    "melee_allowed": true,
+    "block_counter": true, 
+    "crit_ok": true,
+    "weight": 1,
+    "mult_bonuses": [ {
+      "stat": "damage",
+      "type": "bash",
+      "scale": 1.2 } ],
+      "messages": [
+    "你巧妙化解了攻击，随后迅速反击。",
+    "<npcname>轻松化解了攻击，并迅速反击。" ],
+    "description": "格挡成功时反击",
+  "attack_vectors": [ "WEAPON" ]
+   },
+   {
+    "type": "technique",
+    "id": "DT_SUPER_speedattack",
+    "name": "闪烁袭击",
+    "messages": [
+    "你以极快的速度攻击%s",
+    "<npcname>以极快的速度攻击%s。"
+    ],
+    "skill_requirements": [
+     {
+     "name": "melee", "level": 2
+     },
+     {
+     "name": "NE_DT", "level": 2
+     }
+    ],
+    "melee_allowed": true,
+    "crit_ok": false,
+    "mult_bonuses": [
+    {
+      "stat": "movecost",
+      "scale": 0.4
+    },
+    {
+      "stat": "damage",
+      "type": "bash",
+      "scale": 0.55
+    },
+    {
+      "stat": "damage",
+      "type": "cut",
+      "scale": 0.55
+    },
+    {
+      "stat": "damage",
+      "type": "stab",
+      "scale": 0.55
+    }
+    ],
+    "flat_bonuses": [
+    {
+      "stat": "damage",
+      "type": "pure",
+      "scale": 5
+    }
+    ],
+    "description": "40%耗时，55%伤害，附加5点真伤",
+    "attack_vectors": [ "WEAPON" ]
+   }, 
+  {
+  "type": "technique",
+  "id": "DT_UNREAL_KNIFE_1",
+  "name": "虚假的真刀斩击",
+  "messages": [
+    "一道淡红色的斩击随着你的挥刀出现，瞬间斩击%s！",
+    "<npcname>挥刀，一道淡红色的斩击出现，瞬间斩击%s！"
+  ],
+  "description": "80范围斩伤，触发概率低，由于玩具刀本身属性太低，所以仅供危机情况下使用。(不知道为什么，目前无法正常触发）",
+  "skill_requirements": [
+    {
+     "name": "melee",
+     "level": 2
+    },
+    {
+     "name": "GE_DT",
+     "level": 2
+    }
+  ],
+   "weighting": -1,
+   "melee_allowed": true,
+   "aoe": "wide",
+   "crit_ok": true,
+   "mult_bonuses": [
+    {
+      "stat": "damage",
+      "type": "bash",
+      "scale": 1
+    },
+    {
+      "stat": "damage",
+      "type": "cut",
+      "scale": 1
+    },
+    {
+      "stat": "damage",
+      "type": "stab",
+      "scale": 1
+    },
+    {
+      "stat": "movecost",
+      "scale": 0.5
+    }
+    ],
+    "flat_bonuses": [
+     {
+      "stat": "damage",
+      "type": "cut",
+      "scale": 80
+     }
+    ],
+  "attack_vectors": [
+    "WEAPON"
+  ]
+ }
+]

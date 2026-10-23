@@ -1,0 +1,424 @@
+[
+  {
+    "id": "spell_craft_sorcerer_lv9_time_stop",
+    "type": "SPELL",
+    "name": "术士-Lv9-时间停止",
+    "description": "获得1200速度，持续1d4+1秒+0.05x智力秒。\n在此状态下，你对大部分都近乎免疫伤害。",
+    "components": "spell_sorcerer_use_item_9",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DURATION"
+    ],
+    "effect": "attack",
+    "effect_str": "effect_sorcerer_time_stop",
+    "shape": "blast",
+    "base_casting_time": 50,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_9",
+    "difficulty": 9,
+    "max_level": 0,
+    "base_energy_cost": 0,
+    "min_duration": 270,
+    "max_duration": 570
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_sorcerer_time_stop",
+    "name": [
+      "时间停止"
+    ],
+    "desc": [
+      "你的速度提高了，周围的一切仿佛停止一般。\n你近乎免疫伤害。"
+    ],
+    "apply_message": "时间停止！",
+    "remove_message": "时间恢复流动。",
+    "rating": "good",
+    "base_mods": {
+      "speed_mod": [
+        1200
+      ]
+    },
+    "max_intensity": 999,
+    "int_dur_factor": "1 s",
+    "enchantments": [
+      {
+        "values": [
+          {
+            "value": "ARMOR_BASH",
+            "multiply": -0.95
+          },
+          {
+            "value": "ARMOR_CUT",
+            "multiply": -0.95
+          },
+          {
+            "value": "ARMOR_STAB",
+            "multiply": -0.95
+          },
+          {
+            "value": "ARMOR_BULLET",
+            "multiply": -0.95
+          },
+          {
+            "value": "ARMOR_ACID",
+            "multiply": -0.95
+          },
+          {
+            "value": "ARMOR_BIO",
+            "multiply": -0.95
+          },
+          {
+            "value": "ARMOR_COLD",
+            "multiply": -0.95
+          },
+          {
+            "value": "ARMOR_ELEC",
+            "multiply": -0.95
+          },
+          {
+            "value": "ARMOR_HEAT",
+            "multiply": -0.95
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv9_kill",
+    "type": "SPELL",
+    "name": "术士-Lv9-律令死亡",
+    "description": "对目标造成(5+智力/4)%至(125+智力/4)%当前血量的伤害，无视阻挡。",
+    "components": "spell_sorcerer_use_item_9",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "NO_HANDS",
+      "RANDOM_DAMAGE",
+      "PERCENTAGE_DAMAGE",
+      "NO_PROJECTILE"
+    ],
+    "min_damage": 8,
+    "max_damage": 128,
+    "damage_type": "pure",
+    "min_range": 30,
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_9",
+    "difficulty": 9,
+    "max_level": 0,
+    "base_casting_time": 50,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv9_invisibility",
+    "type": "SPELL",
+    "name": "术士-Lv9-终极隐形",
+    "description": "你获得隐形，持续20分钟+20x智力秒。",
+    "components": "spell_sorcerer_use_item_9",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "effect_str": "effect_sorcerer_high_invisibility",
+    "shape": "blast",
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_9",
+    "difficulty": 9,
+    "max_level": 0,
+    "base_energy_cost": 0,
+    "min_duration": 148000,
+    "max_duration": 148000
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_sorcerer_high_invisibility",
+    "name": [
+      "终极隐形"
+    ],
+    "desc": [
+      "你隐身了。"
+    ],
+    "apply_message": "没有人能看见你！",
+    "remove_message": "你能被看见了。",
+    "max_intensity": 999,
+    "int_dur_factor": "5 m",
+    "flags": [
+      "INVISIBLE"
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv9_fireball",
+    "type": "SPELL",
+    "name": "术士-Lv9-流星爆",
+    "description": "在目标范围内引发爆炸，并招来6颗陨石造成额外伤害，无视阻挡，穿透墙壁。",
+    "components": "spell_sorcerer_use_item_9",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "NO_PROJECTILE",
+      "IGNORE_WALLS"
+    ],
+    "max_level": 0,
+    "min_damage": 253,
+    "max_damage": 764,
+    "min_aoe": 9,
+    "min_range": 60,
+    "spell_class": "spell_craft_sorcerer_9",
+    "base_casting_time": 300,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 9,
+    "damage_type": "heat",
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_lv9_fireball_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv9_fireball_2"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv9_fireball_3"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv9_fireball_4"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv9_fireball_5"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv9_fireball_6"
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv9_fireball_1",
+    "type": "SPELL",
+    "name": "术士-Lv9-流星爆（钝击）",
+    "description": "额外伤害。",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "RANDOM_DAMAGE",
+      "RANDOM_TARGET",
+      "NO_PROJECTILE",
+      "IGNORE_WALLS"
+    ],
+    "max_level": 0,
+    "min_damage": 128,
+    "max_damage": 389,
+    "min_aoe": 4,
+    "min_range": 7,
+    "spell_class": "spell_craft_sorcerer_9",
+    "base_casting_time": 300,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 9,
+    "damage_type": "bash"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_lv9_fireball_1",
+    "id": "spell_craft_sorcerer_lv9_fireball_2",
+    "type": "SPELL",
+    "name": "术士-Lv9-流星爆（电击）",
+    "damage_type": "electric",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_lv9_fireball_1",
+    "id": "spell_craft_sorcerer_lv9_fireball_3",
+    "type": "SPELL",
+    "name": "术士-Lv9-流星爆（穿刺）",
+    "damage_type": "stab",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_lv9_fireball_1",
+    "id": "spell_craft_sorcerer_lv9_fireball_4",
+    "type": "SPELL",
+    "name": "术士-Lv9-流星爆（寒冰）",
+    "damage_type": "cold",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_lv9_fireball_1",
+    "id": "spell_craft_sorcerer_lv9_fireball_5",
+    "type": "SPELL",
+    "name": "术士-Lv9-流星爆（酸性）",
+    "damage_type": "acid",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_lv9_fireball_1",
+    "id": "spell_craft_sorcerer_lv9_fireball_6",
+    "type": "SPELL",
+    "name": "术士-Lv9-流星爆（生化）",
+    "damage_type": "biological",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv9_summon_monster",
+    "type": "SPELL",
+    "name": "术士-Lv9-召唤怪物 IX",
+    "description": "在目标范围内召唤1-3怪物9，或者2-5怪物8，或者3-7怪物7，持续10分钟。",
+    "components": "spell_sorcerer_use_item_9",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "WONDER"
+    ],
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 8,
+    "min_aoe": 3,
+    "spell_class": "spell_craft_sorcerer_9",
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "max_level": 0,
+    "min_duration": 60000,
+    "max_duration": 60000,
+    "difficulty": 9,
+    "base_energy_cost": 0,
+    "shape": "blast",
+    "effect": "attack",
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_lv9_summon_monster_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv9_summon_monster_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv9_summon_monster_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv9_summon_monster_2"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv9_summon_monster_2"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv9_summon_monster_3"
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv9_summon_monster_1",
+    "type": "SPELL",
+    "name": "术士-Lv9-召唤怪物9",
+    "description": "在目标范围内召唤1-3只怪物9，持续10分钟。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "message": "",
+    "min_damage": 1,
+    "max_damage": 3,
+    "min_range": 8,
+    "min_aoe": 3,
+    "spell_class": "spell_craft_sorcerer_9",
+    "base_casting_time": 0,
+    "energy_source": "MANA",
+    "max_level": 0,
+    "min_duration": 60000,
+    "max_duration": 60000,
+    "difficulty": 9,
+    "base_energy_cost": 0,
+    "shape": "blast",
+    "effect": "summon",
+    "effect_str": "mon_sor_summon_9"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_lv9_summon_monster_1",
+    "id": "spell_craft_sorcerer_lv9_summon_monster_2",
+    "type": "SPELL",
+    "name": "术士-Lv9-召唤怪物8",
+    "description": "在目标范围内召唤2-5只怪物8，持续10分钟。",
+    "effect_str": "mon_sor_summon_8",
+    "min_damage": 2,
+    "max_damage": 5,
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_lv9_summon_monster_1",
+    "id": "spell_craft_sorcerer_lv9_summon_monster_3",
+    "type": "SPELL",
+    "name": "术士-Lv9-召唤怪物7",
+    "description": "在目标范围内召唤3-7只怪物7，持续10分钟。",
+    "effect_str": "mon_sor_summon_7",
+    "min_damage": 3,
+    "max_damage": 7,
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv9_create_enchanted_item",
+    "type": "SPELL",
+    "name": "术士-Lv9-制造魔法装备 IV",
+    "description": "制造一件随机部位的魔法装备。",
+    "components": "spell_sorcerer_use_enchanted_item_4",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "CONCENTRATE",
+      "PERMANENT"
+    ],
+    "effect": "spawn_item",
+    "effect_str": "sor_enchanted_item_rnd_4",
+    "min_damage": 1,
+    "max_damage": 1,
+    "shape": "blast",
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_9",
+    "difficulty": 18,
+    "max_level": 0,
+    "base_energy_cost": 0
+  }
+]

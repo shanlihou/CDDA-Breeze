@@ -1,0 +1,389 @@
+[
+  {
+    "//": "定义数据",
+    "type": "effect_on_condition",
+    "id": "EOC_sex_define",
+    "effect": [
+      {
+        "set_string_var": { "u_val": "sex_worth", "type": "int", "context": "性价值", "default": 0 },
+        "target_var": { "u_val": "sex_worth" }
+      },
+      {
+        "set_string_var": { "u_val": "npc_sex_worth", "type": "int", "context": "性价值", "default": 0 },
+        "target_var": { "u_val": "npc_sex_worth" }
+      },
+      {
+        "set_string_var": { "u_val": "pleasant", "type": "int", "context": "快感", "default": 0 },
+        "target_var": { "u_val": "pleasant" }
+      },
+      {
+        "set_string_var": { "u_val": "pleasant_rate", "type": "int", "context": "快感获得速率", "default": 0 },
+        "target_var": { "u_val": "pleasant_rate" }
+      },
+      {
+        "set_string_var": { "u_val": "sex_worth_bak", "type": "int", "context": "性价值备份", "default": 0 },
+        "target_var": { "u_val": "sex_worth" }
+      },
+      {
+        "u_add_var": "desc", "type": "string", "context": "文本", "value": "这是一个bug"
+      },
+      {
+        "set_string_var": { "u_val": "desc", "type": "string", "context": "文本" },
+        "target_var": { "u_val": "desc" }
+      }
+    ]
+  },
+  
+  
+  {
+    "//": "自慰",
+    "type": "effect_on_condition",
+    "id": "EOC_sex_self",
+    "effect": [
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" },
+          "=",
+          { "const": 0 }
+        ]
+      },
+      {
+        "u_add_var": "desc", "type": "string", "context": "文本", "value": "这是一个bug"
+      },
+      {
+        "run_eocs":["EOC_hand_male_check", "EOC_hand_female_check", "EOC_vibrator_female_check", "EOC_masturbator_male_check", "EOC_electric_masturbator_on_male_check", "EOC_water_ass_mould_male_check", "EOC_wood_dick_female_check", "EOC_ass_mould_male_check", "EOC_sex_self_balance"]
+      }
+    ]
+  },
+  
+  {
+    "//": "自慰结算，获得快感",
+    "type": "effect_on_condition",
+    "id": "EOC_sex_self_balance",
+    "effect":[
+      {
+        "u_assign_activity": "ACT_自慰", "duration": 300
+      },
+      {
+        "run_eocs": ["EOC_effect_sex_lose","EOC_pleasant_rate_back","EOC_effect_sex_get"]
+      }
+    ]
+  },
+  {
+    "//": "增加快感",
+    "type": "effect_on_condition",
+    "id": "EOC_pleasant_get",
+    "effect": [
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "pleasant", "type": "int", "context": "快感" }, "+=", { "u_val": "var", "var_name": "pleasant_rate", "type": "int", "context": "快感获得速率" }
+        ]
+      },
+      {
+        "run_eocs":[ "EOC_sex_climax_check" ]
+      }
+    ]
+  },
+  
+  {
+    "//": "调整快感获得速率",
+    "type": "effect_on_condition",
+    "id": "EOC_pleasant_rate_back",
+    "condition": {
+      "and":[
+        {
+          "not": { "u_has_effect": "u_sex" }
+        },
+        {
+          "compare_int":[
+          { "u_val": "var", "var_name": "sex_worth_bak", "type": "int", "context": "性价值备份" }, "!=", { "const": 0 }
+          ]
+        }
+      ]
+    },
+    "effect": [
+      {
+        "arithmetic":[
+        { "u_val": "var", "var_name": "pleasant_rate", "type": "int", "context": "快感获得速率" }, "-=", { "u_val": "var", "var_name": "sex_worth_bak", "type": "int", "context": "性价值备份" }
+        ]
+      },
+      {
+        "arithmetic":[
+        { "u_val": "var", "var_name": "sex_worth_bak", "type": "int", "context": "性价值备份" }, "=", { "const": 0 }
+        ]
+      }
+    ]
+  },
+  
+  {
+    "//": "快感降低以及取得心情",
+    "type": "effect_on_condition",
+    "id": "EOC_sex_decline",
+    "condition":{
+      "compare_int":[
+        { "u_val": "var", "var_name": "pleasant", "type": "int", "context": "快感" }, ">", { "const": 0 }
+      ]
+    },
+    "effect": [
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "pleasant", "type": "int", "context": "快感" }, "-=", { "arithmetic": [ { "u_val": "var", "var_name": "pleasant", "type": "int", "context": "快感" }, "/", { "const": 25 } ], "min": 40, "max": 100}
+        ],
+        "min": 0
+      },
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "desire_level", "type": "int", "context": "欲望指数" }, "+=", { "arithmetic": [ { "rand": 12 }, "/", { "const": 10 } ] }
+        ]
+      },
+      {
+        "u_add_morale": "morale_sex",
+        "bonus": { "arithmetic": [ { "u_val": "var", "var_name": "pleasant", "type": "int", "context": "快感" }, "/", { "const": 120 } ], "max": 18 },
+        "max_bonus": 30,
+        "duration": "300 minutes",
+        "decay_start": "150  minutes"
+      },
+      {
+        "u_add_morale": "morale_sex2",
+        "bonus": { "arithmetic": [ { "const": 27 }, "-", { "arithmetic": [ { "u_val": "var", "var_name": "pleasant", "type": "int", "context": "快感" }, "/", { "const": 30 } ] } ], "max": 0 },
+        "max_bonus": -30,
+        "duration": "5 minutes",
+        "decay_start": " 4 minutes"
+      },
+      {
+        "run_eocs": ["EOC_sound_female","EOC_sound_male"]
+      }
+    ]
+  },
+  
+  {
+    "//": "快感降低以及取得心情npc",
+    "type": "effect_on_condition",
+    "id": "EOC_npc_sex_decline",
+    "condition":{
+      "compare_int":[
+        { "u_val": "var", "var_name": "pleasant", "type": "int", "context": "快感" }, ">", { "const": 0 }
+      ]
+    },
+    "effect": [
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "pleasant", "type": "int", "context": "快感" }, "-=", { "arithmetic": [ { "u_val": "var", "var_name": "pleasant", "type": "int", "context": "快感" }, "/", { "const": 25 } ], "min": 40, "max": 100}
+        ],
+        "min": 0
+      },
+      {
+        "u_add_morale": "morale_sex",
+        "bonus": { "arithmetic": [ { "u_val": "var", "var_name": "pleasant", "type": "int", "context": "快感" }, "/", { "const": 120 } ], "max": 18 },
+        "max_bonus": 30,
+        "duration": "300 minutes",
+        "decay_start": "150  minutes"
+      },
+      {
+        "u_add_morale": "morale_sex2",
+        "bonus": { "arithmetic": [ { "const": 27 }, "-", { "arithmetic": [ { "u_val": "var", "var_name": "pleasant", "type": "int", "context": "快感" }, "/", { "const": 30 } ] } ], "max": 0 },
+        "max_bonus": -30,
+        "duration": "5 minutes",
+        "decay_start": " 4 minutes"
+      },
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "favorability", "type": "int", "context": "好感" }, "+=", { "rand": 1 }
+        ]
+      },
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "compliance", "type": "int", "context": "服从" }, "+=", { "rand": 1 }
+        ]
+      },
+      {
+        "run_eocs": ["EOC_sound_female","EOC_sound_male"]
+      }
+    ]
+  },
+  
+  {
+    "//": "高潮检测",
+    "type": "effect_on_condition",
+    "id": "EOC_sex_climax_check",
+    "condition":{
+      "compare_int":[
+        { "u_val": "var", "var_name": "pleasant", "type": "int", "context": "快感" }, ">", { "arithmetic": [ { "arithmetic": [ { "const": 1200 }, "-", { "arithmetic": [ { "u_val": "perception_base" }, "*", { "const": 50 } ] } ] }, "+", { "arithmetic": [ { "u_val": "var", "var_name": "desire_level", "type": "int", "context": "欲望指数" }, "/", { "const": 6 } ] } ] }
+      ]
+    },
+    "effect": [
+      {
+        "u_add_effect": "sex_target_1", "duration": 10
+      },
+      {
+        "run_eocs": ["EOC_effect_sex_lose","EOC_pleasant_rate_back"]
+      },
+      {
+        "run_eocs":[ "EOC_sex_climax_female", "EOC_sex_climax_male" ]
+      }
+    ]
+  },
+  
+  {
+    "//": "雌性高潮",
+    "type": "effect_on_condition",
+    "id": "EOC_sex_climax_female",
+    "condition": {
+      "and": [
+        "u_female",
+        { "u_has_effect": "sex_target_1" }
+      ]
+    },
+    "effect": [
+      {
+        "u_lose_effect": "sex_target_1"
+      },
+      {
+        "u_add_effect": "climax", "duration": { "arithmetic": [ { "u_val": "var", "var_name": "pleasant", "type": "int", "context": "快感" }, "/", { "const": 30 } ], "max": 50 }, "intensity": { "arithmetic": [ { "u_val": "var", "var_name": "pleasant", "type": "int", "context": "快感" }, "/", { "const": 100 } ], "max": 20 }
+      },
+      {
+        "run_eocs": ["EOC_effect_sex_lose","EOC_pleasant_rate_back"]
+      },
+      {
+        "u_spawn_item": "sexul_fluid", "count": { "arithmetic": [ { "u_val": "var", "var_name": "pleasant", "type": "int", "context": "快感" }, "/", { "const": 300 } ], "max": 5 }
+      },
+      {
+        "u_add_morale": "morale_climax",
+        "bonus": { "arithmetic": [ { "u_val": "var", "var_name": "pleasant", "type": "int", "context": "快感" }, "/", { "const": 90 } ], "max": 24 },
+        "max_bonus": 70,
+        "duration": "3 hours",
+        "decay_start": "1 hour 30 minutes"
+      },
+      {
+        "u_lose_morale": "morale_sex2"
+      },
+      {
+        "arithmetic":[
+          { "u_val": "stored_kcal" }, "-=", { "const": 61 }
+        ]
+      },
+      {
+        "arithmetic":[
+          { "u_val": "thirst" }, "+=", { "const": 8 }
+        ]
+      },
+      {
+        "arithmetic":[
+          { "u_val": "stim" }, "+=", { "rand": 10 }
+        ]
+      },
+      {
+        "arithmetic": [ { "u_val": "var", "var_name": "favorability", "type": "int", "context": "好感"  }, "+=",  { "arithmetic": [ { "u_val": "var", "var_name": "pleasant", "type": "int", "context": "快感" }, "/", { "const": 150 } ], "max": 100 } ]
+      },
+      {
+        "set_string_var": { "u_val": "favorability", "type": "int", "context": "好感" },
+        "target_var": { "u_val": "favorability" }
+      },
+      {
+        "u_make_sound": "<female_climax>", "volume": 25, "snippet": true, "type": "speech"
+      },
+      {
+        "u_assign_activity": "ACT_高潮", "duration": 10
+      }
+    ]
+  },
+  
+  {
+    "//": "雄性射精",
+    "type": "effect_on_condition",
+    "id": "EOC_sex_climax_male",
+    "condition": {
+      "and": [
+        "u_male",
+        { "u_has_effect": "sex_target_1" }
+      ]
+    },
+    "effect": [
+      {
+      "u_add_effect": "cum", "duration": { "arithmetic": [ { "u_val": "var", "var_name": "pleasant", "type": "int", "context": "快感" }, "/", { "const": 50 } ], "max": 40 }, "intensity": { "arithmetic": [ { "u_val": "var", "var_name": "pleasant", "type": "int", "context": "快感" }, "/", { "const": 100 } ], "max": 20 }
+      },
+      {
+        "run_eocs": ["EOC_effect_sex_lose","EOC_pleasant_rate_back"]
+      },
+      {
+        "run_eocs": [ "EOC_condom" ]
+      },
+      {
+        "u_add_morale": "morale_climax",
+        "bonus": { "arithmetic": [ { "u_val": "var", "var_name": "pleasant", "type": "int", "context": "快感" }, "/", { "const": 100 } ], "max": 20 },
+        "max_bonus": 70,
+        "duration": "3 hours",
+        "decay_start": "1 hour 30 minutes"
+      },
+      {
+        "u_lose_morale": "morale_sex2"
+      },
+      {
+        "arithmetic":[
+          { "u_val": "stored_kcal" }, "-=", { "const": 121 }
+        ]
+      },
+      {
+        "arithmetic":[
+          { "u_val": "thirst" }, "+=", { "const": 6 }
+        ]
+      },
+      {
+        "arithmetic":[
+          { "u_val": "stim" }, "+=", { "rand": 7 }
+        ]
+      },
+      {
+        "arithmetic": [ { "u_val": "var", "var_name": "favorability", "type": "int", "context": "好感"  }, "+=", { "arithmetic": [ { "u_val": "var", "var_name": "pleasant", "type": "int", "context": "快感" }, "/", { "const": 150 } ], "max": 100 } ]
+      },
+      {
+        "set_string_var": { "u_val": "favorability", "type": "int", "context": "好感" },
+        "target_var": { "u_val": "favorability" }
+      },
+      {
+        "u_make_sound": "<male_climax>", "volume": 25, "snippet": true, "type": "speech"
+      },
+      {
+        "u_assign_activity": "ACT_高潮", "duration": 10
+      }
+    ]
+  },
+  
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_condom",
+    "condition": {
+      "u_has_item": "condom"
+    },
+    "effect": [
+      {
+        "run_eocs": [ "EOC_ask_use_condom" ]
+      }
+    ],
+    "false_effect": [
+      {
+        "u_spawn_item": "semen", "count": { "arithmetic": [ { "u_val": "var", "var_name": "pleasant", "type": "int", "context": "快感" }, "/", { "const": 500 } ], "max": 3 }
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_ask_use_condom",
+    "condition": {
+      "u_query": "你要使用避孕套吗？", "default": true
+    },
+    "effect": [
+      {
+        "u_consume_item": "condom", "count": 1
+      },
+      {
+        "u_spawn_item": "semen", "count": { "arithmetic": [ { "u_val": "var", "var_name": "pleasant", "type": "int", "context": "快感" }, "/", { "const": 500 } ], "max": 3 }, "container": "condom"
+      }
+    ],
+    "false_effect": [
+      {
+        "u_spawn_item": "semen", "count": { "arithmetic": [ { "u_val": "var", "var_name": "pleasant", "type": "int", "context": "快感" }, "/", { "const": 500 } ], "max": 3 }
+      }
+    ]
+  }
+]

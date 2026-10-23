@@ -1,0 +1,567 @@
+[
+  {
+    "id": "cyyl_xfgj",
+    "type": "TOOL",
+    "material": [
+      "cyylcaizhi"
+    ],
+    "symbol": "+",
+    "color": "blue",
+    "name": {
+      "str": "次元医疗修复工具"
+    },
+    "description": "所有次元医疗材质的物品只能由此物修复。",
+    "looks_like": "two_way_radio",
+    "price": "20000 USD",
+    "price_postapoc": "20 USD",
+    "weight": "500 g",
+    "volume": "2000 ml",
+    "bashing": 0,
+    "cutting": 0,
+    "to_hit": -1,
+    "qualities": [
+      [
+        "CYYL_nlct",
+        1
+      ]
+    ],
+    "max_charges": 0,
+    "initial_charges": 0,
+    "charges_per_use": 0,
+    "turns_per_charge": 0,
+    "ammo": [ "cyyl_ammo" ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "cyyl_ammo": 1
+        }
+      }
+    ],
+    "use_action": [
+      {
+        "type": "repair_item",
+        "item_action_type": "repair_metal",
+        "materials": [
+          "cyylcaizhi"
+        ],
+        "skill": "chemistry",
+        "tool_quality": 10,
+        "cost_scaling": 0.1,
+        "move_cost": 100
+      }
+    ],
+    "flags": [
+      "TRADER_AVOID",
+      "NONCONDUCTIVE",
+      "ALLOWS_REMOTE_USE"
+    ]
+  },
+  {
+    "id": "cyyly_cs",
+    "type": "TOOL",
+    "material": [
+      "cyylcaizhi"
+    ],
+    "symbol": "+",
+    "color": "light_gray",
+    "name": { "str": "次元医疗仪(初始)" },
+    "description": "次元医疗公司最初研发的医疗仪器。又大又重,适配的电池也很少,在现在看来已经非常落后了。",
+    "weight": "300000 g",
+    "volume": "200 L",
+    "looks_like": "chemlab",
+    "price": "3000 USD",
+    "price_postapoc": "500 USD",
+    "bashing": 4,
+    "cutting": 0,
+    "to_hit": -4,
+    "ammo": [ "battery" ],
+    "charges_per_use": 100,
+    "use_action": [
+      {
+        "type": "heal",
+        "bandages_power": 3,
+        "disinfectant_power": 2,
+        "bleed": 10,
+        "bite": 0.5,
+        "move_cost": 200
+      }
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "light_disposable_cell",
+          "medium_disposable_cell",
+          "heavy_disposable_cell",
+          "medium_battery_cell",
+          "medium_plus_battery_cell",
+          "heavy_battery_cell",
+          "heavy_plus_battery_cell"
+        ]
+      }
+    ],
+    "flags": [
+      "TRADER_AVOID",
+      "NONCONDUCTIVE",
+      "ALLOWS_REMOTE_USE"
+    ]
+  },
+  {
+    "id": "cyyly_zq",
+    "type": "TOOL",
+    "material": [
+      "cyylcaizhi"
+    ],
+    "symbol": "+",
+    "color": "green",
+    "name": { "str": "次元医疗仪(增强)[抗感染]" },
+    "description": "次元医疗公司经过修改仪器实现了一次大升级,不但医疗效果变好,还降低了仪器重量和能源消耗,并增加了可使用电池的型号,但这也是50年前的事情了。",
+    "weight": "150000 g",
+    "volume": "100 L",
+    "looks_like": "chemlab",
+    "price": "5000 USD",
+    "price_postapoc": "600 USD",
+    "bashing": 3,
+    "cutting": 0,
+    "to_hit": -3,
+    "ammo": [ "battery" ],
+    "charges_per_use": 50,
+    "use_action": [
+      "ANTIFUNGAL",
+      {
+        "type": "heal",
+        "bandages_power": 4,
+        "disinfectant_power": 4,
+        "bleed": 20,
+        "bite": 1.00,
+        "move_cost": 100
+      }
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "light_minus_atomic_battery_cell",
+          "light_atomic_battery_cell",
+          "light_disposable_cell",
+          "medium_battery_cell",
+          "medium_plus_battery_cell",
+          "medium_disposable_cell",
+          "heavy_battery_cell",
+          "heavy_plus_battery_cell",
+          "heavy_disposable_cell"
+        ]
+      }
+    ],
+    "flags": [
+      "TRADER_AVOID",
+      "NONCONDUCTIVE",
+      "ALLOWS_REMOTE_USE"
+    ]
+  },
+  {
+    "id": "cyyly_zz",
+    "type": "TOOL_ARMOR",
+    "material": [
+      "cyylcaizhi"
+    ],
+    "symbol": "+",
+    "color": "magenta",
+    "name": { "str": "次元医疗仪(最终)[抗感染/抗真菌/止痛]" },
+    "description": "次元医疗公司现在正在使用并且提供医疗的仪器,已经成型,进行了全方面的升级和强化(现可作为夹板恢复断肢了),是公司的得意之作。",
+    "weight": "15000 g",
+    "volume": "10 L",
+    "looks_like": "sapphire",
+    "price": "20000 USD",
+    "price_postapoc": "1000 USD",
+    "bashing": 2,
+    "cutting": 0,
+    "to_hit": -2,
+    "armor_data": {
+      "sided": true,
+      "armor": [
+        {
+          "encumbrance": 0,
+          "coverage": 0,
+          "covers": [
+            "arm_l",
+            "arm_r",
+            "hand_l",
+            "hand_r",
+            "leg_l",
+            "leg_r",
+            "foot_l",
+            "foot_r"
+          ]
+        }
+      ]
+    },
+    "ammo": [ "battery" ],
+    "charges_per_use": 1,
+    "use_action": [
+      "ANTIFUNGAL",
+      "ANTIBIOTIC",
+      {
+        "type": "consume_drug",
+        "activation_message": "你服用了特效止痛药。(不会成瘾,不要多次服用)",
+        "effects": [
+          { "id": "pkill_TX", "duration": "60 s" }
+        ]
+      },
+      {
+        "type": "heal",
+        "bandages_power": 5,
+        "disinfectant_power": 5,
+        "bleed": 30,
+        "bite": 2.00,
+        "move_cost": 50
+      }
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "light_minus_atomic_battery_cell",
+          "light_minus_disposable_cell",
+          "light_battery_cell",
+          "light_plus_battery_cell",
+          "light_atomic_battery_cell",
+          "light_disposable_cell",
+          "medium_battery_cell",
+          "medium_plus_battery_cell",
+          "medium_atomic_battery_cell",
+          "medium_disposable_cell",
+          "heavy_battery_cell",
+          "heavy_plus_battery_cell",
+          "heavy_atomic_battery_cell",
+          "heavy_disposable_cell"
+        ]
+      }
+    ],
+    "flags": [
+      "TRADER_AVOID",
+      "NONCONDUCTIVE",
+      "ALLOWS_REMOTE_USE",
+      "ONLY_ONE",
+      "SEMITANGIBLE",
+      "STURDY",
+      "OVERSIZE",
+      "WATER_FRIENDLY",
+      "OUTER",
+      "SPLINT"
+    ]
+  },
+  {
+    "id": "cyyly_yh",
+    "type": "TOOL_ARMOR",
+    "material": [
+      "cyylcaizhi"
+    ],
+    "symbol": "+",
+    "color": "red",
+    "name": { "str": "次元医疗仪(永恒)[全净化恢复]" },
+    "description": "在研究完次元医疗仪(最终)4年后,次元医疗公司发现了一种全新的未知医疗材料,准备研究用来改进次元医疗仪(最终),不幸的是再开始研究不久后,大灾变就爆发了,新型医疗材料也再这个过程中遗失,这个仪器的制作只是一个理论上可行的东西,实际还是未知...",
+    "weight": "1000 g",
+    "volume": "500 ml",
+    "looks_like": "aquamarine",
+    "price": "100000 USD",
+    "price_postapoc": "2000 USD",
+    "bashing": 1,
+    "cutting": 0,
+    "to_hit": -1,
+    "armor_data": {
+      "sided": true,
+      "armor": [
+        {
+          "encumbrance": 0,
+          "coverage": 0,
+          "covers": [
+            "head",
+            "mouth",
+            "eyes",
+            "torso",
+            "arm_l",
+            "arm_r",
+            "hand_l",
+            "hand_r",
+            "leg_l",
+            "leg_r",
+            "foot_l",
+            "foot_r"
+          ]
+        }
+      ]
+    },
+    "max_charges": 0,
+    "initial_charges": 0,
+    "charges_per_use": 0,
+    "turns_per_charge": 0,
+    "ammo": [ "cyyl_ammo" ],
+    "use_action": [
+      {
+        "type": "consume_drug",
+        "effects": [
+          { "id": "yh_yly_jkzj_zt", "duration": "60 s" },
+          { "id": "yh_yly_fmqc_zt",
+      "duration": "10 s" },
+          { "id": "pkill_TX", "duration": "60 s" }
+        ],
+        "damage_over_time": [
+          {
+            "damage_type": "pure",
+            "duration": "1 h",
+            "amount": -10,
+            "bodyparts": [
+              "head",
+              "torso",
+              "arm_l",
+              "arm_r",
+              "leg_l",
+              "leg_r"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heal",
+        "bandages_power": 10,
+        "disinfectant_power": 10,
+        "bleed": 50,
+        "bite": 10.00,
+        "move_cost": 1
+      }
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "cyyl_ammo": 10000
+        }
+      }
+    ],
+    "flags": [
+      "TRADER_AVOID",
+      "NONCONDUCTIVE",
+      "ALLOWS_REMOTE_USE",
+      "ONLY_ONE",
+      "SEMITANGIBLE",
+      "STURDY",
+      "OVERSIZE",
+      "WATER_FRIENDLY",
+      "OUTER",
+      "SPLINT"
+    ]
+  },
+  {
+    "id": "cyyl_Boss1_zhq",
+    "type": "TOOL",
+    "material": [
+      "cyylcaizhi"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "name": { "str": "次元医疗BOSS召唤器" },
+    "description": "召唤BOSS用的工具。在召唤时中断,此物品也会被消耗。(消耗品)",
+    "looks_like": "two_way_radio",
+    "volume": "100 ml",
+    "weight": "50 g",
+    "to_hit": -1,
+    "price": "100 USD",
+    "price_postapoc": "20 USD",
+    "use_action": {
+      "type": "countdown",
+      "name": "召唤"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "ZH_Boss_YH",
+      "no_fail": true,
+      "level": 0
+    },
+    "flags": [
+      "TRADER_AVOID",
+      "NONCONDUCTIVE",
+      "ALLOWS_REMOTE_USE"
+    ]
+  },
+  {
+    "id": "cyyl_ywmcsjz",
+    "type": "TOOL",
+    "material": [
+      "cyylcaizhi"
+    ],
+    "symbol": "/",
+    "color": "light_gray",
+    "name": { "str": "易位门传送卷轴" },
+    "description": "等待1回合,传送到保存的易位门上。传送中断,此物品也会被消耗。(消耗品)",
+    "looks_like": "paper",
+    "volume": "100 ml",
+    "weight": "10 g",
+    "to_hit": -1,
+    "price": "100 USD",
+    "price_postapoc": "20 USD",
+    "use_action": {
+      "type": "countdown",
+      "name": "易位门传送"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "translocate_self",
+      "no_fail": true,
+      "level": 25
+    },
+    "flags": [
+      "TRADER_AVOID",
+      "NONCONDUCTIVE",
+      "ALLOWS_REMOTE_USE"
+    ]
+  },
+
+  {
+    "id": "cyyl_yh_snq",
+    "type": "ARMOR",
+    "category": "clothing",
+    "material": [
+      "cyylcaizhi"
+    ],
+    "symbol": "[",
+    "color": "blue",
+    "name": { "str": "次元医疗<永恒>收纳器" },
+    "description": "有一个收纳物品的异空间,可以存放很多物品。(内容物腐坏很慢)",
+    "looks_like": "backpack_tactical_large",
+    "price": "1000000 USD",
+    "price_postapoc": "100000 USD",
+    "weight": "5000 g",
+    "volume": "5000 ml",
+    "bashing": 0,
+    "cutting": 0,
+    "to_hit": 0,
+    "armor": [
+      {
+        "coverage": 100,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "warmth": 0,
+    "environmental_protection": 0,
+    "encumbrance": 0,
+    "material_thickness": 10,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "watertight": true,
+        "rigid": true,
+        "moves": 100,
+        "max_contains_volume": "500 L",
+        "max_contains_weight": "600 kg",
+        "max_item_length": "10 meter",
+        "spoil_multiplier": 0.005,
+        "weight_multiplier": 0.005,
+        "volume_multiplier": 0.005
+      }
+    ],
+    "flags": [
+      "TRADER_AVOID",
+      "NONCONDUCTIVE",
+      "ALLOWS_NATURAL_ATTACKS",
+      "OVERSIZE",
+      "STURDY",
+      "TARDIS",
+      "BELTED",
+      "WATERPROOF",
+      "WATER_FRIENDLY"
+    ]
+  },
+
+  {
+    "id": "cyyl_yh_csh",
+    "type": "GENERIC",
+    "category": "container",
+    "material": [
+      "cyylcaizhi"
+    ],
+    "symbol": ")",
+    "color": "blue",
+    "name": {
+      "str": "次元医疗<永恒>储水壶"
+    },
+    "description": "一个用来储水的壶,能存放很多液体,有保温、净水和加热的功能。(内容物腐坏很慢)",
+    "looks_like": "canteen",
+    "price": "1000000 USD",
+    "price_postapoc": "100000 USD",
+    "weight": "5000 g",
+    "volume": "5000 ml",
+    "bashing": 0,
+    "cutting": 0,
+    "to_hit": 0,
+    "armor_data": {
+      "sided": true,
+      "armor": [
+        {
+          "encumbrance": 0,
+          "coverage": 8,
+          "covers": [ "leg_l", "leg_r" ],
+          "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
+          "material": [
+            {
+              "type": "cyylcaizhi",
+              "covered_by_mat": 100,
+              "thickness": 2.0
+            }
+          ]
+        }
+      ]
+    },
+    "environmental_protection": 0,
+    "material_thickness": 2,
+    "insulation": 50,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "watertight": true,
+        "rigid": true,
+        "moves": 100,
+        "max_contains_volume": "100 L",
+        "max_contains_weight": "200 kg",
+        "max_item_length": "20 cm",
+        "spoil_multiplier": 0.005,
+        "weight_multiplier": 0.005,
+        "volume_multiplier": 0.005
+      }
+    ],
+    "flags": [
+      "TRADER_AVOID",
+      "NONCONDUCTIVE",
+      "ALLOWS_REMOTE_USE",
+      "ALLOWS_NATURAL_ATTACKS",
+      "OVERSIZE",
+      "STURDY",
+      "TARDIS",
+      "BELTED",
+      "WATERPROOF",
+      "WATER_FRIENDLY"
+    ],
+    "use_action": [
+      "WATER_PURIFIER",
+      "HOTPLATE"
+    ]
+  }
+]

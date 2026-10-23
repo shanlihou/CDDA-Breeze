@@ -1,0 +1,149 @@
+[
+  {
+    "id": "gloople_tank",
+    "type": "GENERIC",
+    "category": "container",
+    "name": {
+      "str": "凝胶囊形仓"
+    },
+    "description": "虽然变形怪急着被喂养，但这些小家伙们还不热衷于放弃液体。还需要更多的转变。",
+    "weight": "6662 g",
+    "volume": "10 L",
+    "price": 100,
+    "to_hit": -2,
+    "material": [
+      "flesh"
+    ],
+    "symbol": ";",
+    "color": "light_green",
+    "flags": [
+      "TARDIS"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "watertight": true,
+        "rigid": true,
+        "max_contains_volume": "10 L",
+        "max_contains_weight": "25 kg"
+      }
+    ]
+  },
+  {
+    "id": "gloople_tank_large",
+    "type": "GENERIC",
+    "category": "container",
+    "name": {
+      "str": "凝胶油箱"
+    },
+    "copy-from": "gloople_tank",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "watertight": true,
+        "rigid": true,
+        "max_contains_volume": "60 L",
+        "max_contains_weight": "120 kg"
+      }
+    ],
+    "volume": "60 L"
+  },
+  {
+    "id": "gray_tank",
+    "type": "GENERIC",
+    "category": "container",
+    "name": {
+      "str": "灰色茧形仓"
+    },
+    "description": "虽然变形怪急着被喂养，但这些小家伙们还不热衷于放弃液体。还需要更多的转变。",
+    "weight": "19120 g",
+    "volume": "10 L",
+    "price": 100,
+    "to_hit": -2,
+    "material": [
+      "flesh"
+    ],
+    "symbol": ";",
+    "color": "light_gray",
+    "flags": [
+      "TARDIS"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "watertight": true,
+        "rigid": true,
+        "max_contains_volume": "30 L",
+        "max_contains_weight": "60 kg"
+      }
+    ]
+  },
+  {
+    "id": "gray_tank_large",
+    "type": "GENERIC",
+    "category": "container",
+    "name": {
+      "str": "灰色油箱"
+    },
+    "copy-from": "gray_tank",
+    "volume": "100 L",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "watertight": true,
+        "rigid": true,
+        "max_contains_volume": "100 L",
+        "max_contains_weight": "200 kg"
+      }
+    ]
+  },
+  {
+    "id": "oozle_tank",
+    "type": "GENERIC",
+    "category": "container",
+    "name": {
+      "str": "软泥荚形仓"
+    },
+    "description": "虽然变形怪急着被喂养，但这些小家伙们还不热衷于放弃液体。还需要更多的转变。",
+    "weight": "16262 g",
+    "volume": "7500 ml",
+    "price": 100,
+    "to_hit": -2,
+    "material": [
+      "flesh"
+    ],
+    "symbol": ";",
+    "color": "green",
+    "flags": [
+      "TARDIS"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "watertight": true,
+        "rigid": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "40 kg"
+      }
+    ]
+  },
+  {
+    "id": "oozle_tank_large",
+    "type": "GENERIC",
+    "category": "container",
+    "name": {
+      "str": "软泥油箱"
+    },
+    "copy-from": "oozle_tank",
+    "volume": "80 L",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "watertight": true,
+        "rigid": true,
+        "max_contains_volume": "80 L",
+        "max_contains_weight": "160 kg"
+      }
+    ]
+  }
+]

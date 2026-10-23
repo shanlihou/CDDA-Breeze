@@ -1,0 +1,57 @@
+[
+  {
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "slugcat_spears",
+    "entries": [
+      {
+        "distribution": [
+          { "item": "pointy_stick", "prob": 25 },
+          { "item": "sharp_rebar", "prob": 25 },
+          { "item": "pointed_rebar", "prob": 50 }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "slugcat_grenades",
+    "entries": [
+      {
+        "distribution": [
+          { "item": "flashbang_fruit", "prob": 25},
+          { "item": "gel_grenade", "prob": 75 }
+        ]
+      }
+    ]
+  },
+    {
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "slugcat_flashbangs",
+    "entries": [
+      {
+        "distribution": [
+          { "item": "flashbang_fruit", "prob": 100 }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "slugcat_spears_strapped",
+    "entries": [
+      { "item": "spearsling", "prob": 100, "contents_item": { "group": "slugcat_spears" } },
+      {
+        "distribution": [
+          { "item": "pointy_stick", "prob": 25 },
+          { "item": "sharp_rebar", "prob": 25 },
+          { "item": "pointed_rebar", "prob": 50 }
+        ],
+	"prob": 100
+      }
+    ]
+  }
+]

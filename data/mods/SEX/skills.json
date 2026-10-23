@@ -1,0 +1,22 @@
+[
+  {
+    "type": "skill",
+    "id": "sex",
+    "name": { "str": "性爱" },
+    "description": "性爱技巧和知识的技能。可以给你与对方带来更高的快感，同时更容易在性爱中取得和对方的好感。",
+    "display_category": "display_interaction"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_sex_level_bak",
+    "effect":[
+      {
+        "arithmetic": [
+          { "u_val": "var", "var_name": "sex_level_bak", "type": "int", "context": "性爱技能备份" },
+          "=",
+          { "u_val": "skill_level", "skill": "sex" }
+        ]
+      }
+    ]
+  }
+]

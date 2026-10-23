@@ -1,0 +1,223 @@
+[
+{
+    "id": "bio_power_storage_mkIII",
+    "type": "bionic",
+    "name": {
+      "str": "储能模块Mk.III型"
+    },
+    "capacity": "500 kJ",
+    "description": "中型生化电池插件，能够为受体增加500点能量储备上限。",
+    "flags": [
+      "BIONIC_NPC_USABLE"
+    ]
+  },
+  {
+    "id": "bio_power_storage_mkIII",
+    "copy-from": "bionic_general_npc_usable",
+    "type": "BIONIC_ITEM",
+    "name": {
+      "str_sp": "储能模块Mk.III型CBM"
+    },
+    "looks_like": "bio_power_storage_mkII",
+    "description": "用双面胶将两个储能模块Mk.II型黏在一起制造出的新型储能模块。能够为受体增加500点能量储备上限。",
+    "price": 2000000,
+    "weight": "50 g",
+    "difficulty": 1
+	},
+	
+	  {  "id": "bio_power_storage_mkIV",
+    "type": "bionic",
+    "name": {
+      "str": "储能模块Mk.IV型"
+    },
+    "capacity": "1000 kJ",
+    "description": "大型生化电池插件，能够为受体增加1000点能量储备上限。",
+    "flags": [
+      "BIONIC_NPC_USABLE"
+    ]
+  },
+  {
+    "id": "bio_power_storage_mkIV",
+    "copy-from": "bionic_general_npc_usable",
+    "type": "BIONIC_ITEM",
+    "name": {
+      "str_sp": "储能模块Mk.IV型CBM"
+    },
+    "looks_like": "bio_power_storage_mkII",
+    "description": "用电焊将两个储能模块Mk.III型焊在一起制造出的新型储能模块。能够为受体增加1000点能量储备上限。",
+    "price": 4000000,
+    "weight": "50 g",
+    "difficulty": 1},
+  
+	   { "id": "bio_power_storage_mkV",
+    "type": "bionic",
+    "name": {
+      "str": "储能模块Mk.V型"
+    },
+    "capacity": "2500 kJ",
+	    "description": "巨型生化电池插件。能够为受体增加2500点能量储备上限。",
+    "flags": [
+      "BIONIC_NPC_USABLE"
+    ]
+  },
+  {
+    "id": "bio_power_storage_mkV",
+    "copy-from": "bionic_general_npc_usable",
+    "type": "BIONIC_ITEM",
+    "name": {
+      "str_sp": "储能模块Mk.V型CBM"
+    },
+    "looks_like": "bio_power_storage_mkII",
+	    "description": "用液压机将两个储能模块Mk.IV型储能模块压在一起制造出的新型储能模块。科学还真是永无止境啊。能够为受体增加2500点能量储备上限。",
+    "price": 8000000,
+    "weight": "50 g",
+    "difficulty": 1
+  },
+  
+  	   { "id": "bio_power_storage_mkVI",
+    "type": "bionic",
+    "name": {
+      "str": "储能模块Mk.VI型"
+    },
+    "capacity": "5000 kJ",
+	    "description": "超级生化电池插件。能够为受体增加5000点能量储备上限。",
+    "flags": [
+      "BIONIC_NPC_USABLE"
+    ]
+  },
+  {
+    "id": "bio_power_storage_mkVI",
+    "copy-from": "bionic_general_npc_usable",
+    "type": "BIONIC_ITEM",
+    "name": {
+      "str_sp": "储能模块Mk.VI型CBM"
+    },
+    "looks_like": "bio_power_storage_mkII",
+    "description": "用储能模块对撞机将两个储能模块Mk.V型储能模块撞在一起制造出的超级储能模块。科学还真是永无止境啊。能够为受体增加5000点能量储备上限。",
+    "price": 16000000,
+    "weight": "50 g",
+    "difficulty": 1
+  },
+  
+  	   { "id": "bio_power_storage_mkVII",
+    "type": "bionic",
+    "name": {
+      "str": "储能模块Mk.VII型"
+    },
+    "capacity": "10000 kJ",
+    "description": "究极生化电池插件。能够为受体增加10000点能量储备上限。",
+    "flags": [
+      "BIONIC_NPC_USABLE"
+    ]
+  },
+  {
+    "id": "bio_power_storage_mkVII",
+    "copy-from": "bionic_general_npc_usable",
+    "type": "BIONIC_ITEM",
+    "name": {
+      "str_sp": "储能模块Mk.VII型CBM"
+    },
+    "looks_like": "bio_power_storage_mkII",
+	    "description": "用黑洞将两个储能模块Mk.VI型储能模块坍缩在一起制造出的储能模块。科学还真是永无止境啊。能够为受体增加10000点能量储备上限。",
+    "price": 32000000,
+    "weight": "50 g",
+    "difficulty": 1
+  },
+  
+      {
+    "type": "recipe",
+    "result": "bio_power_storage_mkII",
+    "category": "CC_ELECTRONIC",
+    "activity_level": "NO_EXERCISE",
+    "subcategory": "CSC_ELECTRONIC_CBMS",
+    "skill_used": "electronics",
+    "time": "1 s",
+    "reversible": true,
+    "autolearn": true,
+    "components": 
+	[
+	[ [ "bio_power_storage", 2 ] ] 
+	],
+    "flags": [ "BLIND_EASY" ]
+  },
+    {
+    "type": "recipe",
+    "result": "bio_power_storage_mkIII",
+    "category": "CC_ELECTRONIC",
+    "activity_level": "NO_EXERCISE",
+    "subcategory": "CSC_ELECTRONIC_CBMS",
+    "skill_used": "electronics",
+    "time": "1 s",
+    "reversible": true,
+    "autolearn": true,
+    "components": 
+	[
+	[ [ "bio_power_storage_mkII", 2 ] ] 
+	],
+    "flags": [ "BLIND_EASY" ]
+  },
+      {
+    "type": "recipe",
+    "result": "bio_power_storage_mkIV",
+    "category": "CC_ELECTRONIC",
+    "activity_level": "NO_EXERCISE",
+    "subcategory": "CSC_ELECTRONIC_CBMS",
+    "skill_used": "electronics",
+    "time": "1 s",
+    "reversible": true,
+    "autolearn": true,
+    "components": 
+	[
+	[ [ "bio_power_storage_mkIII", 2 ] ] 
+	],
+    "flags": [ "BLIND_EASY" ]
+  },
+      {
+    "type": "recipe",
+    "result": "bio_power_storage_mkV",
+    "category": "CC_ELECTRONIC",
+    "activity_level": "NO_EXERCISE",
+    "subcategory": "CSC_ELECTRONIC_CBMS",
+    "skill_used": "electronics",
+    "time": "1 s",
+    "reversible": true,
+    "autolearn": true,
+    "components": 
+	[
+	[ [ "bio_power_storage_mkIV", 2 ] ] 
+	],
+    "flags": [ "BLIND_EASY" ]
+  },
+      {
+    "type": "recipe",
+    "result": "bio_power_storage_mkVI",
+    "category": "CC_ELECTRONIC",
+    "activity_level": "NO_EXERCISE",
+    "subcategory": "CSC_ELECTRONIC_CBMS",
+    "skill_used": "electronics",
+    "time": "1 s",
+    "reversible": true,
+    "autolearn": true,
+    "components": 
+	[
+	[ [ "bio_power_storage_mkV", 2 ] ] 
+	],
+    "flags": [ "BLIND_EASY" ]
+  },
+        {
+    "type": "recipe",
+    "result": "bio_power_storage_mkVII",
+    "category": "CC_ELECTRONIC",
+    "activity_level": "NO_EXERCISE",
+    "subcategory": "CSC_ELECTRONIC_CBMS",
+    "skill_used": "electronics",
+    "time": "1 s",
+    "reversible": true,
+    "autolearn": true,
+    "components": 
+	[
+	[ [ "bio_power_storage_mkVI", 2 ] ] 
+	],
+    "flags": [ "BLIND_EASY" ]
+  }
+]

@@ -1,0 +1,127 @@
+[
+  {
+    "id": "CCcompbow",
+    "looks_like": "longbow",
+    "type": "GUN",
+    "subtypes": [ "ARMOR", "GUN" ],
+    "symbol": "(",
+    "color": "yellow",
+    "name": { "str": "CC六式重装降魔弓·煌华麟（Der Freischütz）" },
+    "description": "六式重装降魔弓·煌华麟（Der Freischütz），是狮子王机关专为旗下舞威媛（诅咒/暗杀专家）研发的对魔专用重型灵装。平时是银色巨剑形态，能通过刀身拆分旋转变形为西洋弓，刀形态可斩断空间，弓形态能发射强力咒矢并释放大范围咒术。\n（补充：以上是传奇武器背景，这个只是CC特种复合材料制的仿品，没辣么强大）",
+    "price": "550 USD",
+    "price_postapoc": "55 USD",
+    "//": "60 lb draw weight 24in draw, 100J, 0.55 slugs of momentum with a 30g arrow.",
+    "material": [ "monolith", "copper", "cotton", "superalloy", "steel", "plastic", "wood", "bone" ],
+    "flags": [ "NONCONDUCTIVE", "FIRE_TWOHAND", "RELOAD_AND_SHOOT", "PRIMITIVE_RANGED_WEAPON", "SHEATH_BOW", "WATERPROOF_GUN", "NEVER_JAMS", "UNBREAKABLE_MELEE", "MAGIC_FOCUS", "BELTED", "AURA", "POWERARMOR_COMPATIBLE", "SEMITANGIBLE" ],
+    "armor": [
+        {
+          "material": [
+            { "type": "monolith", "covered_by_mat": 100, "thickness": 0.2 }
+          ],
+          "encumbrance": -4,
+          "coverage": 5,
+          "covers": [ "torso" ]
+        }
+    ],
+    "weapon_category": [ "KNIVES" ],
+    "ammo_effects": [ "NEVER_MISFIRES", "BEANBAG", "BLINDS_EYES", "ROBOT_DAZZLE", "EMP", "SHOT" ],
+    "skill": "archery",
+    "min_strength": 6,
+    "ammo": [ "pebble", "bolt", "arrow", "rock", "sling-ready_grenade" ],
+    "weight": "907 g",
+    "volume": "1500 ml",
+    "longest_side": "150 cm",
+    "to_hit": 15,
+    "reload_noise_volume": 3,
+    "loudness": 6,
+    "ranged_damage": { "damage_type": "stab", "amount": 28, "armor_penetration": 50 },
+    "range": 18,
+    "dispersion": 150,
+    "sight_dispersion": 3000,
+    "durability": 9,
+    "clip_size": 1,
+    "use_action": {
+      "menu_text": "变装",
+      "type": "transform",
+      "target": "CCspear_steel",
+      "msg": "弓弦收回，切换长枪模式。",
+      "ammo_scale": 0
+    },
+    "reload": 10,
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "arrow": 1,"pebble": 1, "bolt": 1, "sling-ready_grenade": 1, "rock": 1 } } ],
+    "melee_damage": { "bash": 58 }
+  },
+  {
+    "type": "GUN", 
+    "subtypes": [ "ARMOR" ],
+    "category": "weapons",
+    "looks_like": "qiang",
+    "id": "CCspear_steel",
+    "price": "550 USD",
+    "price_postapoc": "55 USD",
+    "name": { "str": "CC七式突击降魔机枪·雪霞狼（Schneewalzer）" },
+    "description": "正式全称是七式突击降魔机枪（Schneewalzer），枪铭/通称是雪霞狼。这是狮子王机关秘藏的对魔灵枪，核心是世上仅存三把的破魔圣枪之一，刻有神格振动波驱动术式，可折叠收纳，银质长枪形态能无效化魔力、斩断结界，是专门针对真祖等强力魔族的武器。\n（补充：以上是传奇背景，这个只是CC特种复合材料制的长枪仿品，没辣么强大）",
+    "weight": "1500 g",
+    "color": "light_gray",
+    "symbol": "/",
+    "material": [ "monolith", "copper", "cotton", "superalloy", "steel", "plastic", "wood", "bone" ],
+    "skill": "melee",
+    "min_strength": 6,
+    "volume": "1350 ml",
+    "longest_side": "180 cm",
+    "to_hit": { "grip": "weapon", "length": "long", "surface": "point", "balance": "good" },
+    "flags": [ "UNBREAKABLE_MELEE", "SPEAR", "REACH_ATTACK", "REACH3", "NONCONDUCTIVE", "SHEATH_SPEAR", "MAGIC_FOCUS", "BELTED", "AURA", "POWERARMOR_COMPATIBLE", "SEMITANGIBLE" ], 
+    "qualities": [ [ "COOK", 1 ], [ "AXE", 4 ], [ "CUT", 4 ], [ "BUTCHER", 37 ] ], 
+    "techniques": [ "tec_fencing_riposte", "tec_sojutsu_shove", "tec_break", "WBLOCK_2", "BRUTAL", "SWEEP", "WIDE", "IMPALE", "SPIN", "PRECISE" ],
+    "armor": [
+        {
+          "material": [
+            { "type": "monolith", "covered_by_mat": 100, "thickness": 0.2 }
+          ],
+          "encumbrance": -4,
+          "coverage": 5,
+          "covers": [ "torso" ]
+        }
+    ],
+    "weapon_category": [ "POLEARMS", "SPEARS", "KNIVES" ],
+    "melee_damage": { "cut": 21, "bash": 24, "stab": 52, "heat": 10, "cold": 10, "electric": 10 },
+    "use_action": {
+      "ammo_scale": 0,
+      "menu_text": "变装",
+      "type": "transform",
+      "target": "CCcompbow",
+      "msg": "弓弦展开，切换战弓模式。"
+    }
+  },
+    {
+        "type" : "recipe",
+    "result": "CCcompbow",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC武器装备",
+    "skill_used": "survival",
+    "time": "100second",
+    "reversible": true,
+    "autolearn": true,
+    "components": [ [ [ "CCMODcoin", 160 ] ] ]
+  },
+    {
+        "type" : "recipe",
+    "result": "CCspear_steel",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC武器装备",
+    "skill_used": "fabrication",
+    "difficulty": 5,
+    "skills_required": [
+    "melee",
+    1
+  ],
+    "time": "100second",
+    "reversible": true,
+    "autolearn": true,
+    "components": [ [ [ "CCMODcoin", 160 ] ] ]
+  }
+]

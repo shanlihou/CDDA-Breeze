@@ -1,0 +1,498 @@
+[
+    {
+        "type": "GUN",
+        "reload_noise_volume": 10,
+        "handling": 20,
+        "name": {
+          "str": "OTs-14-4A突击步枪"
+        },
+        "symbol": "(",
+        "color": "brown",
+        "ranged_damage": {
+          "damage_type": "bullet",
+          "amount": 5
+        },
+        "copy-from": "rifle_auto",
+        "skill": "rifle",
+        "valid_mod_locations": [
+          [
+            "barrel",
+            1
+          ],
+          [
+            "bore",
+            1
+          ],
+          [
+            "brass catcher",
+            1
+          ],
+          [
+            "grip",
+            1
+          ],
+          [
+            "mechanism",
+            4
+          ],
+          [
+            "rail mount",
+            1
+          ],
+          [
+            "sights mount",
+            1
+          ],
+          [
+            "sling",
+            1
+          ],
+          [
+            "stock mount",
+            1
+          ],
+          [
+            "stock accessory",
+            2
+          ]
+        ],
+        "weapon_category": [
+          "AUTOMATIC_RIFLES"
+        ],
+        "id": "OTs-14",
+        "looks_like": "fs2000",
+        "description": "OTs-14 Groza是俄罗斯开发的无托突击步枪，发射9×39毫米亚音速弹药。该枪开发于1990年代前期，由俄罗斯图拉市的中央运动与捕猎用枪设计局（俄语：ЦКИБ СОО）设计，图拉兵工厂负责生产。你眼前这把是有下挂可拆卸榴弹发射器的标准型OTs-14-4A",
+        "weight": "2500 g",
+        "volume": "2500 ml",
+        "barrel_length": "500 mm",
+        "longest_side": "90 cm",
+        "built_in_mods": [
+            "GP-25"
+          ],
+        "price": 290000,
+        "price_postapoc": 25000,
+        "to_hit": -1,
+        "material": [
+          "steel",
+          "plastic"
+        ],
+        "ammo": [
+          "9x39"
+        ],
+        "dispersion": 150,
+        "durability": 10,
+        "min_cycle_recoil": 1000,
+        "modes": [
+          [
+            "DEFAULT",
+            "点射",
+            3
+
+          ],
+          [
+            "AUTO",
+            "auto",
+            5
+          ]
+          
+        ],
+        "pocket_data": [
+          {
+            "pocket_type": "MAGAZINE_WELL",
+            "item_restriction": [
+              "9x39MAG_rd20"
+            ]
+          }
+        ],
+          "bashing": 12
+    },
+    {
+        "type": "GUN",
+        "reload_noise_volume": 10,
+        "handling": 20,
+        "name": {
+          "str": "OTs-14-E突击步枪"
+        },
+        "symbol": "(",
+        "color": "brown",
+        "ranged_damage": {
+          "damage_type": "bullet",
+          "amount": -1
+        },
+        "copy-from": "rifle_auto",
+        "skill": "rifle",
+        "valid_mod_locations": [
+          [
+            "barrel",
+            1
+          ],
+          [
+            "bore",
+            1
+          ],
+          [
+            "brass catcher",
+            1
+          ],
+          [
+            "grip",
+            1
+          ],
+          [
+            "mechanism",
+            4
+          ],
+          [
+            "rail mount",
+            1
+          ],
+          [
+            "sights mount",
+            1
+          ],
+          [
+            "sling",
+            1
+          ],
+          [
+            "stock mount",
+            1
+          ],
+          [
+            "stock accessory",
+            2
+          ]
+        ],
+        "weapon_category": [
+          "AUTOMATIC_RIFLES"
+        ],
+        "range":-25,
+        "id": "OTs-14_EXODII",
+        "looks_like": "fs2000",
+        "description": "OTs-14 Groza是俄罗斯开发的无托突击步枪，发射9×39毫米亚音速弹药。该枪开发于1990年代前期，由俄罗斯图拉市的中央运动与捕猎用枪设计局（俄语：ЦКИБ СОО）设计，图拉兵工厂负责生产。流亡族在流浪的途中找到了这把枪的蓝图并进行改造，使其能发射12.3ln子弹。你眼前这把是有下挂可拆卸榴弹发射器的标准型OTs-14-4A改装OTs-14-4E",
+        "weight": "4500 g",
+        "volume": "3500 ml",
+        "barrel_length": "600 mm",
+        "longest_side": "90 cm",
+        "built_in_mods": [
+            "GP-25"
+          ],
+        "price": 290000,
+        "price_postapoc": 40000,
+        "to_hit": -1,
+        "material": [
+          "steel",
+          "plastic"
+        ],
+        "ammo": [
+          "123ln"
+        ],
+        "dispersion": 60,
+        "durability": 10,
+        "modes": [
+          [
+            "DEFAULT",
+            "点射",
+            3
+
+          ],
+          [
+            "AUTO",
+            "auto",
+            5
+          ]
+
+        ],
+        "pocket_data": [
+          {
+            "pocket_type": "MAGAZINE_WELL",
+            "item_restriction": [
+              "exodiimag_OTs-14"
+            ]
+          }
+        ],
+          "bashing": 12
+
+    },
+    {
+        "type": "GUN",
+        "reload_noise_volume": 10,
+        "handling": 20,
+        "name": {
+          "str": "VSS Vintorez狙击步枪"
+        },
+        "symbol": "(",
+        "color": "brown",
+        "ranged_damage": {
+          "damage_type": "bullet",
+          "amount": 20
+        },
+        "copy-from": "rifle_auto",
+        "skill": "rifle",
+        "valid_mod_locations": [
+          [
+            "barrel",
+            1
+          ],
+          [
+            "bore",
+            1
+          ],
+          [
+            "brass catcher",
+            1
+          ],
+          [
+            "grip",
+            1
+          ],
+          [
+            "mechanism",
+            4
+          ],
+          [
+            "rail mount",
+            1
+          ],
+          [
+            "sights mount",
+            1
+          ],
+          [
+            "sling",
+            1
+          ],
+          [
+            "stock mount",
+            1
+          ],
+          [
+            "stock accessory",
+            2
+          ],
+          [
+            "underbarrel mount",
+            1
+          ]
+        ],
+        "weapon_category": [
+          "AUTOMATIC_RIFLES"
+        ],
+        "id": "VSS",
+        "looks_like": "f2000",
+        "description": "VSS（俄语：Винтовка Снайперская Специальная，罗马化：Vintovka Snayperskaya Spetsialnaya，直译：特种狙击步枪，GRAU编号6P29），又名Vintorez（俄语：Винторез，直译：螺纹剪裁机），是一款使用9×39毫米亚音速弹药的微声狙击步枪。该枪由苏联工业设计局中央精密工程研究所（俄语：ЦНИИТОЧМАШ，罗马化：TsNIITochMash）于20世纪80年代末设计。",
+        "weight": "4500 g",
+        "volume": "5500 ml",
+        "barrel_length": "650 mm",
+        "longest_side": "100 cm",
+        "built_in_mods": [
+            "VSS_suppressor"
+          ],
+        "range": 20,
+        "price": 290000,
+        "price_postapoc": 30000,
+        "to_hit": -1,
+        "material": [
+          "steel",
+          "plastic"
+        ],
+        "ammo": [
+          "9x39"
+        ],
+        "loudness":-10,
+        "dispersion": 150,
+        "durability": 10,
+        "min_cycle_recoil": 1000,
+        "modes": [
+          [
+            "DEFAULT",
+            "semi-auto",
+            1
+          ],
+          [
+            "AUTO",
+            "auto",
+            2
+          ]
+        ],
+        "pocket_data": [
+          {
+            "pocket_type": "MAGAZINE_WELL",
+            "item_restriction": [
+              "9x39MAG_rd10"
+            ]
+          }
+        ],
+          "bashing": 12
+
+    },
+    {
+        "id": "Soviet_NKVD_pistol",
+        "looks_like": "deagle_44",
+        "type": "GUN",
+        "reload_noise_volume": 10,
+        "name": {
+          "str_sp": "苏联内务部手枪"
+        },
+        "description": "在战前,这把枪由伊凡·莫斯维奇·施瓦兹制作苏联国家安全委员会和内务部特工都使用过这把枪。它曾被称为「世上最强大的手枪」。",
+        "weight": "750 g",
+        "volume": "800 ml",
+        "barrel_length": "200 mm",
+        "longest_side": "30 cm",
+        "price": 87500,
+        "price_postapoc": 10000,
+        "to_hit": -2,
+        "material": [
+          "steel",
+          "plastic"
+        ],
+        "symbol": "(",
+        "color": "light_gray",
+        "ammo": [
+          "9x39"
+        ],
+        "skill": "pistol",
+        "ranged_damage": {
+          "damage_type": "bullet",
+          "amount": -4
+        },
+        "dispersion": 480,
+        "durability": 7,
+        "min_cycle_recoil": 20000,
+        "weapon_category": [
+          "AUTOMATIC_PISTOLS"
+        ],
+        "valid_mod_locations": [
+          [
+            "barrel",
+            1
+          ],
+          [
+            "bore",
+            1
+          ],
+          [
+            "brass catcher",
+            1
+          ],
+          [
+            "grip",
+            1
+          ],
+          [
+            "mechanism",
+            4
+          ],
+          [
+            "rail",
+            1
+          ],
+          [
+            "sights",
+            1
+          ],
+          [
+            "stock",
+            1
+          ],
+          [
+            "underbarrel",
+            1
+          ]
+        ],
+        "pocket_data": [
+          {
+            "magazine_well": "250 ml",
+            "pocket_type": "MAGAZINE_WELL",
+            "item_restriction": [
+              "9x39MAG_rd9"
+            ]
+          }
+        ],
+          "bashing": 12
+
+    },
+    {
+        "id": "NRS_R_Daggerl",
+        "looks_like": "rm_42",
+        "type": "GUN",
+        "reload_noise_volume": 10,
+        "name": {
+          "str_sp": "NRS侦察匕首"
+        },
+        "description": "苏联特工使用的匕首有多种，其中最具代表性的可能是NRS侦察匕首。这是一款匕首枪，其设计基本上为后面的匕首枪设计定了一个基调——匕首的外形，在手柄中设计枪械的发射装置。",
+        "weight": "400 g",
+        "volume": "600 ml",
+        "barrel_length": "100 mm",
+        "longest_side": "25 cm",
+        "price": 875000,
+        "price_postapoc": 50000,
+        "min_skills": [
+            [
+              "weapon",
+              2
+            ],
+            [
+              "melee",
+              1
+            ]
+          ],
+        "to_hit": {
+            "grip": "weapon",
+            "length": "short",
+            "surface": "point",
+            "balance": "good"
+          },
+          "techniques": [
+            "RAPID",
+            "WBLOCK_2"
+          ],
+        "material": [
+          "qt_steel",
+          "plastic"
+        ],
+        "symbol": "(",
+        "color": "light_gray",
+        "ammo": [
+          "9x39"
+        ],
+        "skill": "pistol",
+        "ranged_damage": {
+          "damage_type": "bullet",
+          "amount": -4
+        },
+        "range": -20,
+        "loudness":-20,
+        "dispersion": 600,
+        "durability": 10,
+        "blackpowder_tolerance": 56,
+        "clip_size": 1,
+        "flags": [
+          "DURABLE_MELEE",
+          "SHEATH_KNIFE",
+          "DIAMOND"
+        ],
+        "weapon_category": [
+          "AUTOMATIC_PISTOLS",
+          "KNIVES"
+        ],
+        "valid_mod_locations": [
+          [
+            "mechanism",
+            1
+          ]
+        ],
+        "pocket_data": [
+          {
+            "pocket_type": "MAGAZINE",
+            "rigid": true,
+            "ammo_restriction": {
+            "9x39": 1}
+          }
+        ],
+        "melee_damage": {
+          "bash": 4,
+          "stab": 22
+        }
+    }
+]

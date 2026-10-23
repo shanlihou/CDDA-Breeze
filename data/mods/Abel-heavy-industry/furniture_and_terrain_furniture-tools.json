@@ -1,0 +1,299 @@
+[
+  {
+    "type": "furniture",
+    "id": "f_加压采油钻头",
+    "name": "加压采油钻头",
+    "looks_like": "f_machinery_light",
+    "description": "加压采油钻头",
+    "symbol": "7",
+    "color": "yellow_red",
+    "move_cost_mod": 8,
+    "coverage": 40,
+    "required_str": 500,
+    "examine_action": { "type": "appliance_convert", "furn_set": "f_null", "item": "加压采油钻头" },
+    "flags": [ "BLOCKSDOOR", "TRANSPARENT", "MOUNTABLE", "EASY_DECONSTRUCT" ],
+    "deconstruct": { "items": [ { "item": "加压采油钻头", "count": 1 } ] },
+    "bash": {
+      "str_min": 40,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        { "item": "cable", "charges": [ 0, 4 ] },
+        { "item": "scrap", "count": [ 8, 12 ] },
+        { "item": "steel_chunk", "count": [ 2, 4 ] },
+        { "item": "plastic_chunk", "count": [ 4, 10 ] },
+        { "item": "steel_plate", "count": [ 2, 4 ] }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_加压抽取装置",
+    "name": "加压抽取装置",
+    "looks_like": "f_machinery_light",
+    "description": "加压抽取装置",
+    "symbol": "7",
+    "color": "yellow_red",
+    "move_cost_mod": 8,
+    "coverage": 40,
+    "required_str": 10,
+    "examine_action": { "type": "appliance_convert", "furn_set": "f_null", "item": "加压抽取装置" },
+    "flags": [ "BLOCKSDOOR", "TRANSPARENT", "MOUNTABLE", "EASY_DECONSTRUCT" ],
+    "deconstruct": { "items": [ { "item": "加压抽取装置", "count": 1 } ] },
+    "bash": {
+      "str_min": 40,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        { "item": "cable", "charges": [ 0, 4 ] },
+        { "item": "scrap", "count": [ 8, 12 ] },
+        { "item": "steel_chunk", "count": [ 2, 4 ] },
+        { "item": "plastic_chunk", "count": [ 4, 10 ] },
+        { "item": "steel_plate", "count": [ 2, 4 ] }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_超声波油层探测仪",
+    "name": "超声波油层探测仪",
+    "looks_like": "f_machinery_light",
+    "description": "超声波油层探测仪",
+    "symbol": "7",
+    "color": "yellow_red",
+    "move_cost_mod": 8,
+    "coverage": 40,
+    "required_str": 10,
+    "examine_action": { "type": "appliance_convert", "furn_set": "f_null", "item": "超声波油层探测仪" },
+    "flags": [ "BLOCKSDOOR", "TRANSPARENT", "MOUNTABLE", "EASY_DECONSTRUCT" ],
+    "deconstruct": { "items": [ { "item": "超声波油层探测仪", "count": 1 } ] },
+    "bash": {
+      "str_min": 40,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        { "item": "cable", "charges": [ 0, 4 ] },
+        { "item": "scrap", "count": [ 8, 12 ] },
+        { "item": "steel_chunk", "count": [ 2, 4 ] },
+        { "item": "plastic_chunk", "count": [ 4, 10 ] },
+        { "item": "steel_plate", "count": [ 2, 4 ] }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_油水分离装置",
+    "name": "油水分离装置",
+    "looks_like": "f_machinery_light",
+    "description": "油水分离装置",
+    "symbol": "7",
+    "color": "yellow_red",
+    "move_cost_mod": 8,
+    "coverage": 40,
+    "required_str": 10,
+    "examine_action": { "type": "appliance_convert", "furn_set": "f_null", "item": "油水分离装置" },
+    "flags": [ "BLOCKSDOOR", "TRANSPARENT", "MOUNTABLE", "EASY_DECONSTRUCT" ],
+    "deconstruct": { "items": [ { "item": "油水分离装置", "count": 1 } ] },
+    "bash": {
+      "str_min": 40,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        { "item": "cable", "charges": [ 0, 4 ] },
+        { "item": "scrap", "count": [ 8, 12 ] },
+        { "item": "steel_chunk", "count": [ 2, 4 ] },
+        { "item": "plastic_chunk", "count": [ 4, 10 ] },
+        { "item": "steel_plate", "count": [ 2, 4 ] }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_工业用电动机",
+    "name": "工业用电动机",
+    "looks_like": "f_machinery_light",
+    "description": "工业用电动机",
+    "symbol": "7",
+    "color": "yellow_red",
+    "move_cost_mod": 8,
+    "coverage": 40,
+    "required_str": 10,
+    "examine_action": { "type": "appliance_convert", "furn_set": "f_null", "item": "工业用电动机" },
+    "flags": [ "BLOCKSDOOR", "TRANSPARENT", "MOUNTABLE", "EASY_DECONSTRUCT" ],
+    "deconstruct": { "items": [ { "item": "工业用电动机", "count": 1 } ] },
+    "bash": {
+      "str_min": 40,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        { "item": "cable", "charges": [ 0, 4 ] },
+        { "item": "scrap", "count": [ 8, 12 ] },
+        { "item": "steel_chunk", "count": [ 2, 4 ] },
+        { "item": "plastic_chunk", "count": [ 4, 10 ] },
+        { "item": "steel_plate", "count": [ 2, 4 ] }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_工业用加热炉",
+    "name": "工业用加热炉",
+    "looks_like": "f_machinery_light",
+    "description": "工业用加热炉",
+    "symbol": "7",
+    "color": "yellow_red",
+    "move_cost_mod": 8,
+    "coverage": 40,
+    "required_str": 10,
+    "examine_action": { "type": "appliance_convert", "furn_set": "f_null", "item": "工业用加热炉" },
+    "flags": [ "BLOCKSDOOR", "TRANSPARENT", "MOUNTABLE", "EASY_DECONSTRUCT" ],
+    "deconstruct": { "items": [ { "item": "工业用加热炉", "count": 1 } ] },
+    "bash": {
+      "str_min": 40,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        { "item": "cable", "charges": [ 0, 4 ] },
+        { "item": "scrap", "count": [ 8, 12 ] },
+        { "item": "steel_chunk", "count": [ 2, 4 ] },
+        { "item": "plastic_chunk", "count": [ 4, 10 ] },
+        { "item": "steel_plate", "count": [ 2, 4 ] }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_石油分馏塔————汽油罐",
+    "name": "石油分馏塔————汽油罐",
+    "looks_like": "f_machinery_light",
+    "description": "石油分馏塔————汽油罐",
+    "symbol": "7",
+    "color": "yellow_red",
+    "move_cost_mod": 8,
+    "coverage": 40,
+    "required_str": 10,
+    "examine_action": { "type": "appliance_convert", "furn_set": "f_null", "item": "石油分馏塔————汽油罐" },
+    "flags": [ "BLOCKSDOOR", "TRANSPARENT", "MOUNTABLE", "EASY_DECONSTRUCT" ],
+    "deconstruct": { "items": [ { "item": "石油分馏塔————汽油罐", "count": 1 } ] },
+    "bash": {
+      "str_min": 40,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        { "item": "cable", "charges": [ 0, 4 ] },
+        { "item": "scrap", "count": [ 8, 12 ] },
+        { "item": "steel_chunk", "count": [ 2, 4 ] },
+        { "item": "plastic_chunk", "count": [ 4, 10 ] },
+        { "item": "steel_plate", "count": [ 2, 4 ] }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_石油分馏塔————柴油罐",
+    "name": "石油分馏塔————柴油罐",
+    "looks_like": "f_machinery_light",
+    "description": "石油分馏塔————柴油罐",
+    "symbol": "7",
+    "color": "yellow_red",
+    "move_cost_mod": 8,
+    "coverage": 40,
+    "required_str": 10,
+    "examine_action": { "type": "appliance_convert", "furn_set": "f_null", "item": "石油分馏塔————柴油罐" },
+    "flags": [ "BLOCKSDOOR", "TRANSPARENT", "MOUNTABLE", "EASY_DECONSTRUCT" ],
+    "deconstruct": { "items": [ { "item": "石油分馏塔————柴油罐", "count": 1 } ] },
+    "bash": {
+      "str_min": 40,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        { "item": "cable", "charges": [ 0, 4 ] },
+        { "item": "scrap", "count": [ 8, 12 ] },
+        { "item": "steel_chunk", "count": [ 2, 4 ] },
+        { "item": "plastic_chunk", "count": [ 4, 10 ] },
+        { "item": "steel_plate", "count": [ 2, 4 ] }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_石油分馏塔————煤油罐",
+    "name": "石油分馏塔————煤油罐",
+    "looks_like": "f_machinery_light",
+    "description": "石油分馏塔————煤油罐",
+    "symbol": "7",
+    "color": "yellow_red",
+    "move_cost_mod": 8,
+    "coverage": 40,
+    "required_str": 10,
+    "examine_action": { "type": "appliance_convert", "furn_set": "f_null", "item": "石油分馏塔————煤油罐" },
+    "flags": [ "BLOCKSDOOR", "TRANSPARENT", "MOUNTABLE", "EASY_DECONSTRUCT" ],
+    "deconstruct": { "items": [ { "item": "石油分馏塔————煤油罐", "count": 1 } ] },
+    "bash": {
+      "str_min": 40,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        { "item": "cable", "charges": [ 0, 4 ] },
+        { "item": "scrap", "count": [ 8, 12 ] },
+        { "item": "steel_chunk", "count": [ 2, 4 ] },
+        { "item": "plastic_chunk", "count": [ 4, 10 ] },
+        { "item": "steel_plate", "count": [ 2, 4 ] }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_石油分馏塔————石脑油罐",
+    "name": "石油分馏塔————石脑油罐",
+    "looks_like": "f_machinery_light",
+    "description": "石油分馏塔————石脑油罐",
+    "symbol": "7",
+    "color": "yellow_red",
+    "move_cost_mod": 8,
+    "coverage": 40,
+    "required_str": 10,
+    "examine_action": { "type": "appliance_convert", "furn_set": "f_null", "item": "石油分馏塔————石脑油罐" },
+    "flags": [ "BLOCKSDOOR", "TRANSPARENT", "MOUNTABLE", "EASY_DECONSTRUCT" ],
+    "deconstruct": { "items": [ { "item": "石油分馏塔————石脑油罐", "count": 1 } ] },
+    "bash": {
+      "str_min": 40,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        { "item": "cable", "charges": [ 0, 4 ] },
+        { "item": "scrap", "count": [ 8, 12 ] },
+        { "item": "steel_chunk", "count": [ 2, 4 ] },
+        { "item": "plastic_chunk", "count": [ 4, 10 ] },
+        { "item": "steel_plate", "count": [ 2, 4 ] }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_石油分馏塔————沥青罐",
+    "name": "石油分馏塔————沥青罐",
+    "looks_like": "f_machinery_light",
+    "description": "石油分馏塔————沥青罐",
+    "symbol": "7",
+    "color": "yellow_red",
+    "move_cost_mod": 8,
+    "coverage": 40,
+    "required_str": 10,
+    "examine_action": { "type": "appliance_convert", "furn_set": "f_null", "item": "石油分馏塔————沥青罐" },
+    "flags": [ "BLOCKSDOOR", "TRANSPARENT", "MOUNTABLE", "EASY_DECONSTRUCT" ],
+    "deconstruct": { "items": [ { "item": "石油分馏塔————沥青罐", "count": 1 } ] },
+    "bash": {
+      "str_min": 40,
+      "str_max": 150,
+      "sound_fail": "clang!",
+      "items": [
+        { "item": "cable", "charges": [ 0, 4 ] },
+        { "item": "scrap", "count": [ 8, 12 ] },
+        { "item": "steel_chunk", "count": [ 2, 4 ] },
+        { "item": "plastic_chunk", "count": [ 4, 10 ] },
+        { "item": "steel_plate", "count": [ 2, 4 ] }
+      ]
+    }
+  }
+]

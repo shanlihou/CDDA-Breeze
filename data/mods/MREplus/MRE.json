@@ -1,0 +1,67 @@
+[
+{
+    "type": "TOOL",
+    "id": "LMB_MRE",
+    "category": "other",
+    "name": {
+      "str": "单兵补给口粮MRE",
+      "str_pl": "单兵补给口粮MRE"
+    },
+    "looks_like": "mre_beef_box",
+    "description": "一包美军所使用的单兵补给口粮，里面有着一名士兵一天所需的一切营养。激活以获取内容物。",
+    "weight": "1800 g",
+    "volume": "2 L",
+    "price": 0,
+    "price_postapoc": 0,
+    "to_hit": -1,
+    "use_action": {
+      "type": "unpack",
+      "group": "mre_full_pack",
+      "filthy_volume_threshold": "10 L"
+    },
+    "material": [
+      "plastic",
+      "aluminum"
+    ],
+    "symbol": ";",
+    "color": "light_gray"
+  },
+  {
+    "type": "TOOL",
+    "id": "LMB_MRE_1",
+    "category": "other",
+    "name": {
+      "str": "使用过的单兵补给口粮MRE",
+      "str_pl": "使用过的单兵补给口粮MRE"
+    },
+    "looks_like": "mre_beef_box",
+    "description": "一包美军所使用的单兵补给口粮，里面有着一名士兵一天所需的一切营养。这一包军粮曾被人打开过，激活以获取其中的剩余内容物。",
+    "weight": "1800 g",
+    "volume": "2 L",
+    "price": 0,
+    "price_postapoc": 0,
+    "to_hit": -1,
+    "use_action": {
+      "type": "unpack",
+      "group": "mre_used_pack",
+      "filthy_volume_threshold": "10 L"
+    },
+    "material": [
+      "plastic",
+      "aluminum"
+    ],
+    "symbol": ";",
+    "color": "light_gray"
+  },
+{
+    "type": "item_group",
+    "id": "MRE",
+    "items": [ { "item": "LMB_MRE" } ]
+  },
+  {
+    "type": "item_group",
+    "id": "any_MRE",
+    "subtype": "distribution",
+    "entries": [ { "item": "LMB_MRE" }, { "item": "LMB_MRE_1" } ]
+  }
+]

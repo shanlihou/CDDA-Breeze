@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_AKANESAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"你是谁？对了，你有见过葵吗？是个长得和我很像的孩子。",
+    "responses":[
+      { "text": "我帮你一起找找吧", "topic": "TALK_AKANESAN_2" },
+      { "text": "不认识", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_AKANESAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"好的，麻烦你了，葵——！你在哪儿啊！",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

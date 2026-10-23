@@ -1,0 +1,202 @@
+[
+  {
+    "id": [
+      "TALK_NEUTRAL",
+      "TALK_FRIENDLY",
+      "TALK_SCARED",
+      "TALK_WARY",
+      "TALK_AGGRESSIVE",
+      "TALK_STRANGER_NEUTRAL",
+      "TALK_STRANGER_FRIENDLY",
+      "TALK_STRANGER_SCARED",
+      "TALK_STRANGER_WARY",
+      "TALK_MISSION_DESCRIBE_URGENT",
+      "TALK_MUG",
+      "TALK_STRANGER_AGGRESSIVE",
+      "TALK_FRIEND"
+    ],
+    "type": "talk_topic",
+    "dynamic_line": {
+      "is_by_radio": "我想这种事不适合在对讲机里说，我们还是面对面谈吧",
+      "no": "你有什么事情要做吗？"
+    },
+    "responses": [ { "text": "[关系]互动交流模块", "topic": "互动交流模块" } ]
+  },
+  {
+    "id": [ "互动交流模块" ],
+    "type": "talk_topic",
+    "responses": [
+      {
+        "text": "[交流]可以多聊一聊吗,我想要多认识你一点……",
+        "trial": { "type": "PERSUADE", "difficulty": 10 },
+        "success": { "topic": "魅力交流开始" },
+        "failure": { "topic": "魅力交流取消" },
+        "condition": {
+          "and": [
+            { "compare_int": [ { "npc_val": "npc_trust" }, ">=", { "const": 0 } ] },
+            { "not": { "npc_has_effect": "asked_to_socialize" } }
+          ]
+        }
+      },
+      {
+        "text": "[婚约]我们结婚吧（使用结婚戒指求婚，信任30+，价值30+）",
+        "condition": {
+          "and": [
+            { "not": { "npc_has_trait": "ENGAGEMENT" } },
+            { "not": { "u_has_trait": "ENGAGEMENT" } },
+            { "compare_int": [ { "npc_val": "npc_trust" }, ">=", { "const": 30 } ] },
+            { "compare_int": [ { "npc_val": "npc_value" }, ">=", { "const": 30 } ] },
+            { "u_has_items": { "item": "ring_engagement", "count": 1 } }
+          ]
+        },
+        "topic": "TALK_ENGAGEMENT"
+      },
+      {
+        "text": "[婚约]我们结婚吧（使用结婚戒指求婚，信任30+，价值30+）",
+        "condition": {
+          "and": [
+            { "not": { "npc_has_trait": "ENGAGEMENT" } },
+            { "not": { "u_has_trait": "ENGAGEMENT" } },
+            { "compare_int": [ { "npc_val": "npc_trust" }, ">=", { "const": 30 } ] },
+            { "compare_int": [ { "npc_val": "npc_value" }, ">=", { "const": 30 } ] },
+            { "u_has_items": { "item": "ring_wedding", "count": 1 } }
+          ]
+        },
+        "topic": "TALK_ENGAGEMENT_WEDDING"
+      },
+      {
+        "text": "[做爱]我们来要不要来做~❤",
+        "condition": {
+          "and": [
+            { "or": [ { "and": [ "u_male", "npc_female" ] }, { "and": [ "u_female", "npc_male" ] } ] },
+            { "compare_int": [ { "npc_val": "npc_trust" }, ">=", { "const": 20 } ] },
+            { "compare_int": [ { "npc_val": "npc_value" }, ">=", { "const": 20 } ] }
+          ]
+        },
+        "topic": "做爱对话"
+      },
+      {
+        "text": "[亲密]亲爱的……我好想你……（亲密对话）",
+        "topic": "婚约亲密对话",
+        "condition": { "and": [ { "npc_has_trait": "ENGAGEMENT" }, { "u_has_trait": "ENGAGEMENT" } ] }
+      },
+      {
+        "text": "[解约]我们解除婚约吧",
+        "topic": "解除婚约",
+        "condition": { "and": [ { "npc_has_trait": "ENGAGEMENT" }, { "u_has_trait": "ENGAGEMENT" } ] }
+      },
+      { "text": "暂时还是不聊吧", "topic": "TALK_DONE" }
+    ]
+  },
+  {
+    "id": "魅力交流开始",
+    "type": "talk_topic",
+    "dynamic_line": "好啊~你都想聊些什么呢~",
+    "responses": [ { "text": "我想……", "topic": "TALK_FRIEND_CHAT2" } ]
+  },
+  {
+    "id": "魅力交流取消",
+    "type": "talk_topic",
+    "dynamic_line": "哦抱歉，我对你不是特别感兴趣，谢谢",
+    "responses": [ { "text": "我知道了，打扰了……", "topic": "TALK_DONE" } ]
+  },
+  {
+    "id": "TALK_ENGAGEMENT",
+    "type": "talk_topic",
+    "dynamic_line": [
+      {
+        "npc_female": true,
+        "yes": "啊！真的吗？好高兴……嗯……我愿意♡",
+        "no": "是吗……我很开心…谢谢你……我们结婚吧……"
+      }
+    ],
+    "responses": [
+      {
+        "text": "让我们一起在这大灾变的世界过得幸福吧……",
+        "topic": "TALK_DONE",
+        "effect": [ { "u_sell_item": "ring_engagement" }, { "u_add_trait": "ENGAGEMENT" }, { "npc_add_trait": "ENGAGEMENT" } ]
+      },
+      { "text": "还是算了吧，我还没想好", "topic": "TALK_DONE" }
+    ]
+  },
+  {
+    "id": "TALK_ENGAGEMENT_WEDDING",
+    "type": "talk_topic",
+    "dynamic_line": [
+      {
+        "npc_female": true,
+        "yes": "啊！真的吗？好高兴……嗯……我愿意♡",
+        "no": "是吗……我很开心…谢谢你……我们结婚吧……"
+      }
+    ],
+    "responses": [
+      {
+        "text": "让我们一起在这大灾变的世界过得幸福吧……",
+        "topic": "TALK_DONE",
+        "effect": [ { "u_sell_item": "ring_wedding" }, { "u_add_trait": "ENGAGEMENT" }, { "npc_add_trait": "ENGAGEMENT" } ]
+      },
+      { "text": "还是算了吧，我还没想好", "topic": "TALK_DONE" }
+    ]
+  },
+  {
+    "id": "ACT_亲热",
+    "type": "activity_type",
+    "activity_level": "ACTIVE_EXERCISE",
+    "verb": "亲热",
+    "based_on": "time",
+    "no_resume": true,
+    "auto_needs": true,
+    "interruptable": false
+  },
+  {
+    "id": "morale_亲热",
+    "type": "morale_type",
+    "text": "亲热"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_亲热",
+    "effect": [
+      { "u_assign_activity": "ACT_亲热", "duration": 3000 },
+      { "u_message": "亲爱的……我好想你……", "type": "info" },
+      { "u_message": "嗯……我也是……好爱你♡", "type": "info" },
+      { "u_message": "我也好想你……", "type": "info" },
+      { "u_message": "嗯…♡", "type": "info" },
+      {
+        "u_add_morale": "morale_亲热",
+        "bonus": 20,
+        "max_bonus": 100,
+        "duration": "60 minutes",
+        "decay_start": "60 minutes"
+      }
+    ]
+  },
+  {
+    "id": "婚约亲密对话",
+    "type": "talk_topic",
+    "dynamic_line": [ { "npc_female": true, "yes": "嗯……我也是……好爱你♡", "no": "我也好想你……" } ],
+    "responses": [
+      {
+        "text": "（温言细语的交谈）",
+        "topic": "TALK_DONE",
+        "opinion": { "trust": 2, "value": 2, "fear": -2, "anger": -2, "owed": 1 },
+        "effect": [ { "run_eocs": [ "EOC_亲热" ] } ]
+      },
+      { "text": "先等等……我们找个更适合的地方……", "topic": "TALK_DONE" }
+    ]
+  },
+  {
+    "id": "解除婚约",
+    "type": "talk_topic",
+    "dynamic_line": [ { "npc_female": true, "yes": "你真的想好了吗……", "no": "你真的想好了吗……" } ],
+    "responses": [
+      {
+        "text": "确定(信任-30，价值-30，双方失去婚约者特质)",
+        "topic": "TALK_DONE",
+        "opinion": { "trust": -30, "value": -30, "fear": 0, "anger": 0, "owed": 0 },
+        "effect": [ { "u_lose_trait": "ENGAGEMENT" }, { "npc_lose_trait": "ENGAGEMENT" } ]
+      },
+      { "text": "还是算了吧，我还没想好", "topic": "TALK_DONE" }
+    ]
+  }
+]

@@ -1,0 +1,22 @@
+[
+	{
+		"type" : "ammunition_type",
+		"id" : "space_silver_type",
+		"name" : "次元银币",
+		"default" : "space_silver"
+	},{
+		"type" : "AMMO",
+		"id" : "space_silver",
+		"category" : "space_currency",
+		"name" : "次元银币",
+		"name_plural" : "次元银币",
+		"symbol" : "$",
+		"color" : "light_gray",
+		"weight": "0 g",
+		"volume": "0 ml",
+		"description" : "大灾变来临之后，这玩意儿才出现了，作为等价物进行交易，比空间铜币有更高的价值。",
+		"flags": [ "ZERO_WEIGHT" ],
+		"material" : "space_material",
+		"ammo_type" : "space_silver_type"
+	}
+]

@@ -1,0 +1,217 @@
+[
+  {
+    "id": "flashbang_fruit",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": { "str": "闪光果" },
+    "description": "一种深蓝色的小果实，散发着柔和的光芒。当你轻轻挤压它时，它会短暂地闪一下，然后再次发光。",
+    "weight": "150 g",
+    "volume": "250 ml",
+    "price": 2000,
+    "price_postapoc": 500,
+    "to_hit": -4,
+    "material": [ "fruit" ],
+    "symbol": "o",
+    "color": "blue",
+    "use_action": {
+      "need_wielding": true,
+      "target": "flashbang_fruit_act",
+      "msg": "你挤压了闪光果。",
+      "target_charges": 0,
+      "active": true,
+      "menu_text": "挤压",
+      "type": "transform"
+    },
+    "flags": [ "BOMB", "GRENADE" ]
+  },
+  {
+    "id": "flashbang_fruit_act",
+    "type": "TOOL",
+    "copy-from": "flashbang_fruit",
+    "name": { "str": "激活的闪光果" },
+    "description": "这颗闪光果正在发光，很快就会以强烈的光芒引爆，致盲并震晕附近的任何人。最好把它扔出去！",
+    "initial_charges": 0,
+    "max_charges": 0,
+    "turns_per_charge": 1,
+    "use_action": {
+      "type": "explosion",
+      "do_flashbang": true,
+      "sound_volume": 0,
+      "sound_msg": "",
+      "no_deactivate_msg": "你已经挤压了%s，试着把它扔出去吧。"
+    },
+    "flags": [ "TRADER_AVOID" ]
+  },
+  {
+    "id": "explosive_powder",
+    "type": "GENERIC",
+    "name": { "str": "爆炸粉末" },
+    "weight": "250 g",
+    "volume": "250 ml",
+    "price": 2000,
+    "price_postapoc": 500,
+    "charges": 100,
+    "to_hit": -4,
+    "material": [ "powder" ],
+    "symbol": "!",
+    "color": "red",
+    "description": "一种高反应性的深红色粉末。与水混合后会变成凝胶状稠度。"
+  },
+  {
+    "id": "explosive_powder_paste",
+    "type": "GENERIC",
+    "name": { "str": "爆炸糊" },
+    "copy-from": "explosive_powder",
+    "description": "这种爆炸粉末已与水混合，变成了腻子般的稠度。如果你够绝望的话，可以用它来涂抹东西。"
+  },
+  {
+    "id": "gel_grenade",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": { "str": "凝胶手雷", "str_pl": "凝胶手雷" },
+    "description": "一种由大致球形的物体与爆炸糊结合制成的手雷。高度敏感；小心处理。",
+    "weight": "250 g",
+    "volume": "250 ml",
+    "price": 0,
+    "price_postapoc": 0,
+    "to_hit": -3,
+    "bashing": 4,
+    "material": [ "stone", "powder" ],
+    "symbol": "o",
+    "color": "red",
+    "use_action": {
+      "need_wielding": true,
+      "target": "gel_grenade_act",
+      "msg": "你启动了凝胶手雷。",
+      "target_charges": 0,
+      "active": true,
+      "menu_text": "启动",
+      "type": "transform"
+    },
+    "flags": [ "BOMB" ]
+  },
+  {
+    "id": "gel_grenade_act",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": { "str": "凝胶手雷", "str_pl": "凝胶手雷" },
+    "copy-from": "gel_grenade",
+    "description": "一种由大致球形的物体与爆炸糊结合制成的手雷。高度敏感；小心处理。这颗即将爆炸！",
+    "initial_charges": 0,
+    "max_charges": 0,
+    "turns_per_charge": 1,
+    "use_action": {
+      "type": "explosion",
+      "sound_volume": 0,
+      "sound_msg": "",
+      "no_deactivate_msg": "你已经启动了%s，试着把它扔出去吧。",
+      "explosion": { "power": 200 }
+    },
+    "flags": [ "TRADER_AVOID", "BOMB" ]
+  },
+  {
+    "id": "iv_mutagen_slugcat",
+    "copy-from": "iv_mutagen_flavor",
+    "type": "COMESTIBLE",
+    "name": { "str": "蛞蝓猫诱变引物" },
+    "description": "一种加工过的诱变引物，颜色如暴风云。",
+    "looks_like": "iv_mutagen",
+    "color": "dark_gray",
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你注射了蛞蝓猫诱变引物。",
+      "tools_needed": { "syringe": -1 },
+      "vitamins": [ [ "mutagen_slugcat", 450, 550 ] ]
+    }
+  },
+  {
+    "id": "mutagen_slugcat",
+    "copy-from": "mutagen_flavor",
+    "type": "COMESTIBLE",
+    "name": { "str": "蛞蝓猫诱变剂" },
+    "looks_like": "mutagen",
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你喝下了蛞蝓猫诱变剂。",
+      "vitamins": [ [ "mutagen_slugcat", 225 ], [ "mutagen", 125 ] ]
+    }
+  },
+  {
+    "type": "GENERIC",
+    "id": "slugcat_sample",
+    "copy-from": "mutagen_sample",
+    "color": "dark_gray",
+    "name": { "str": "蛞蝓猫样本" },
+    "description": "一团位移的悬浮液。",
+    "looks_like": "medical_sample",
+    "material": [ "flesh", "blood", "bone" ]
+  },
+  {
+    "id": "insecticidalsporebomb",
+    "type": "GENERIC",
+    "name": { "str": "杀虫孢子簇" },
+    "weight": "150 g",
+    "volume": "250 ml",
+    "price": 2000,
+    "price_postapoc": 500,
+    "to_hit": -4,
+    "material": [ "fruit" ],
+    "symbol": "o",
+    "color": "dark_gray",
+    "description": "一个淡灰色的植物球，上面点缀着绿色。当你拿着它时，导火索般的'茎'嘶嘶作响并冒烟。",
+    "use_action": {
+      "need_wielding": true,
+      "menu_text": "启动",
+      "msg": "你启动了孢子团。",
+      "type": "transform",
+      "target_charges": 0,
+      "target": "insecticidalsporebomb_act"
+    }
+  },
+  {
+    "id": "insecticidalsporebomb_act",
+    "type": "GENERIC",
+    "name": { "str": "已激活的杀虫孢子簇" },
+    "copy-from": "insecticidalsporebomb",
+    "description": "这个杀虫孢子簇正在释放剧毒的烟雾。",
+    "initial_charges": 0,
+    "max_charges": 0,
+    "turns_per_charge": 1,
+    "emits": [ "emit_insecticidal_stream" ],
+    "countdown_interval": 100
+  },
+  {
+    "id": "scav_pistol_item",
+    "copy-from": "pistol_base",
+    "type": "GUN",
+    "name": { "str_sp": "胡椒瓶左轮手枪" },
+    "description": "一把用废料制成的粗糙胡椒瓶左轮手枪。这种简单的设计足以让任何人制造和操作，无论是人类、蛞蝓猫还是拾荒者。",
+    "weight": "850 g",
+    "volume": "300 ml",
+    "longest_side": "100 mm",
+    "price": 5000,
+    "price_postapoc": 2500,
+    "to_hit": -2,
+    "ranged_damage": { "damage_type": "bullet", "amount": -4 },
+    "bashing": 4,
+    "material": [ "steel", "wood" ],
+    "symbol": "(",
+    "color": "brown",
+    "ammo": [ "flintlock" ],
+    "range": 6,
+    "dispersion": 800,
+    "durability": 4,
+    "min_cycle_recoil": 450,
+    "faults": [ "fault_gun_blackpowder", "fault_gun_dirt" ],
+    "flags": [ "RELOAD_ONE" ],
+    "blackpowder_tolerance": 56,
+    "reload": 300,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": { "flintlock": 6 }
+      }
+    ]
+  }
+]

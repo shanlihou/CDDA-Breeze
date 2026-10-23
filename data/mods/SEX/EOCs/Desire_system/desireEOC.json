@@ -1,0 +1,235 @@
+[
+  {
+    "//": "定义欲望",
+    "type": "effect_on_condition",
+    "id": "EOC_desire_define",
+    "effect": [
+      {
+        "set_string_var": { "u_val": "desire_level", "type": "int", "context": "欲望指数", "default": 500 },
+        "target_var": { "u_val": "desire_level" }
+      },
+      {
+        "set_string_var": { "u_val": "desire", "type": "int", "context": "欲望", "default": 0 },
+        "target_var": { "u_val": "desire" }
+      },
+      {
+        "set_string_var": { "u_val": "sex_level_bak", "type": "int", "context": "性爱技能备份", "default": 0 },
+        "target_var": { "u_val": "sex_level_bak"}
+      }
+    ]
+  },
+  {
+    "//": "初始化",
+    "type": "effect_on_condition",
+    "id": "EOC_desire_initialize",
+    "condition": {
+    "not": { "u_has_effect": "u_initialized" }
+    },
+    "effect": [
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "desire_level", "type": "int", "context": "欲望指数" },
+          "+=",
+          { "const": 750 }
+        ]
+      },
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "sex_level_bak", "type": "int", "context": "性爱技能备份" },
+          "=",
+          { "const": 0 }
+        ]
+      },
+      {
+        "arithmetic":[
+          { "u_val": "spell_level", "spell": "sex_self_hand" },
+          "=",
+          { "const": 1 }
+        ]
+      },
+      { "u_add_var": "sta1", "type": "str", "context": "sta", "value": "自由" },
+      { "u_add_var": "sta2", "type": "str", "context": "sta", "value": "自由" },
+      { "u_add_var": "sta3", "type": "str", "context": "sta", "value": "自由" },
+      { "u_add_var": "sta4", "type": "str", "context": "sta", "value": "自由" },
+      { "u_add_var": "sta5", "type": "str", "context": "sta", "value": "自由" },
+      { "u_add_var": "sta6", "type": "str", "context": "sta", "value": "自由" },
+      { "u_add_var": "sta7", "type": "str", "context": "sta", "value": "自由" },
+      {
+        "set_string_var": { "u_val": "sta1", "type": "str", "context": "sta"},
+        "target_var": { "u_val": "sta1" }
+      },
+      {
+        "set_string_var": { "u_val": "sta2", "type": "str", "context": "sta" },
+        "target_var": { "u_val": "sta2" }
+      },
+      {
+        "set_string_var": { "u_val": "sta3", "type": "str", "context": "sta" },
+        "target_var": { "u_val": "sta3" }
+      },
+      {
+        "set_string_var": { "u_val": "sta4", "type": "str", "context": "sta" },
+        "target_var": { "u_val": "sta4" }
+      },
+      {
+        "set_string_var": { "u_val": "sta5", "type": "str", "context": "sta" },
+        "target_var": { "u_val": "sta5" }
+      },
+      {
+        "set_string_var": { "u_val": "sta1", "type": "str", "context": "sta" },
+        "target_var": { "u_val": "sta6" }
+      },
+      {
+        "set_string_var": { "u_val": "sta1", "type": "str", "context": "sta" },
+        "target_var": { "u_val": "sta7" }
+      },
+      {
+        "arithmetic": [ { "u_val": "var", "var_name": "favorability", "type": "int", "context": "好感"  }, "+=", { "const": 100 } ]
+      },
+      {
+        "set_string_var": { "u_val": "favorability", "type": "int", "context": "好感" },
+        "target_var": { "u_val": "favorability" }
+      },
+      {
+        "arithmetic": [ { "u_val": "var", "var_name": "relation", "type": "int", "context": "关系"  }, "+=", { "const": 5 } ]
+      },
+      {
+        "set_string_var": { "u_val": "relation", "type": "int", "context": "好感" },
+        "target_var": { "u_val": "relation" }
+      },
+      {
+        "u_add_effect":"u_initialized",
+        "duration": "PERMANENT" 
+      }
+    ]
+  },
+  {
+    "//": "初始化npc",
+    "type": "effect_on_condition",
+    "id": "EOC_npc_initialize",
+    "condition": {
+    "not": { "u_has_effect": "u_initialized" }
+    },
+    "effect": [
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "desire_level", "type": "int", "context": "欲望指数", "default": 0 },
+          "+=",
+          { "const": 750 }
+        ]
+      },
+      {
+        "set_string_var": { "u_val": "desire_level", "type": "int", "context": "欲望指数" },
+        "target_var": { "u_val": "npc_desire_level" }
+      },
+      {
+        "u_add_effect":"u_initialized",
+        "duration": "PERMANENT" 
+      }
+    ]
+  },
+  {
+    "//": "获取各级欲望效果",
+    "type": "effect_on_condition",
+    "id": "EOC_desire_effect_add",
+    "effect":[
+      {
+        "run_eocs":["EOC_desire_effect_0", "EOC_desire_effect_1", "EOC_desire_effect_2", "EOC_desire_effect_3"]
+      }
+    ]
+  },
+  {
+    "//": "实现各天赋的效果",
+    "type": "effect_on_condition",
+    "id": "EOC_desire_traits",
+    "effect":[
+      {
+        "run_eocs":["EOC_trait_sex_love", "EOC_trait_sex_0"]
+      },
+      {
+        "run_eocs":["EOC_trait_sex_love-back", "EOC_trait_sex_0-back"]
+      }
+    ]
+  },
+  
+  {
+    "//": "对数据进行纠错",
+    "type": "effect_on_condition",
+    "id": "EOC_desire_debugs",
+    "effect":[
+      {
+        "run_eocs":["EOC_desire_level_debug", "EOC_desire_debug"]
+      }
+    ]
+  },
+  
+  {
+    "//": "获得技能对欲望指数的加成",
+    "type": "effect_on_condition",
+    "id": "EOC_desire_skill",
+    "condition": {
+      "compare_int": [
+        { "u_val": "skill_level", "skill": "sex" },
+        "!=",
+        { "u_val": "var", "var_name": "sex_level_bak", "type": "int", "context": "性爱技能备份" }
+       ]
+    },
+    "effect": [
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "desire_level", "type": "int", "context": "欲望指数" },
+          "+=",
+          { "arithmetic": [ { "arithmetic":[ { "u_val": "skill_level", "skill": "sex" }, "-", { "u_val": "var", "var_name": "sex_level_bak", "type": "int", "context": "性爱技能备份" } ] }, "*", { "const": 100 } ] }
+        ]
+      },
+      {
+        "run_eocs":["EOC_desire_debugs", "EOC_sex_level_bak"]
+      }
+    ]
+  },
+  
+  
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_desire_up",
+    "eoc_type": "RECURRING",
+    "recurrence": [ "150m", "210m" ],
+    "condition": {
+      "compare_int": [ { "u_val": "var", "var_name": "desire", "type": "int", "context": "欲望" }, "<", { "u_val": "var", "var_name": "desire_level", "type": "int", "context": "欲望指数" } ]
+    },
+    "effect":[
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "desire", "type": "int", "context": "欲望" },
+          "+=",
+          { "arithmetic": [ { "u_val": "var", "var_name": "desire_level", "type": "int", "context": "欲望指数" },
+          "/",
+          { "const": 50 } ] }
+        ]
+      },
+      {
+        "run_eocs":["EOC_desire_debugs"]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_desire_level_decline",
+    "eoc_type": "RECURRING",
+    "recurrence": [ "150m", "210m" ],
+    "condition": {
+      "compare_int": [ { "u_val": "var", "var_name": "desire_level", "type": "int", "context": "欲望指数" }, ">", { "const": 100 } ]
+    },
+    "effect":[
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "desire_level", "type": "int", "context": "欲望指数" },
+          "-=",
+          { "const": 1 }
+        ]
+      },
+      {
+        "run_eocs":["EOC_desire_debugs"]
+      }
+    ]
+  }
+]

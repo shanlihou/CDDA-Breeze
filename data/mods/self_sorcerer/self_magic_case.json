@@ -1,0 +1,133 @@
+[
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "spell_scroll_spell_craft_magic_case",
+    "components": [
+    	[
+    		[ "paper", 1 ],
+    		[ "napkin", 1 ],
+    		[ "cardboard", 1 ],
+    		[ "cured_hide", 1 ],
+    		[ "willowbark", 1 ],
+    		[ "birchbark", 1 ],
+    		[ "tanbark", 1 ],
+    		[ "meat_bark", 1 ],
+    		[ "alder_bark", 1 ],
+    		[ "meat_bark", 1 ],
+    		[ "wrapper_pr", 1 ]
+    	]
+    ],
+    "time": "10 m",
+    "skill_used": "spellcraft",
+    "difficulty": 1,
+    "category": "CC_ENCHANTED",
+    "subcategory": "CSC_ENCHANTED_OTHER",
+    "autolearn": true
+  },
+  {
+    "type": "BOOK",
+    "copy-from": "spell_scroll",
+    "id": "spell_scroll_spell_craft_magic_case",
+    "name": { "str": "魔力放出卷轴", "str_pl": "魔力放出卷轴" },
+    "description": "魔力放出，是一种通过不加节制的放出魔力强化自身的技巧，甚至算不上技巧。",
+    "use_action": { "type": "learn_spell",
+    	"spells": [
+    		"spell_craft_magic_case",
+    		"spell_craft_magic_case_off"
+    	]
+    }
+  },
+  {
+    "id": "spell_craft_magic_case",
+    "type": "SPELL",
+    "name": "魔力放出",
+    "description": "通过不加节制的放出魔力强化自身。\n提升基础属性和速度，降低受到的伤害。\n小幅降低体力上限，中幅降低体力恢复速度，大幅降低魔力上限，超大幅降低魔力恢复速度。\n带来额外的饥渴和疲劳。",
+    "valid_targets": [ "self" ],
+    "flags": [ "NO_FAIL", "NO_HANDS", "NO_LEGS", "NO_EXPLOSION_SFX", "SILENT", "NO_PROJECTILE" ],
+    "effect": "attack",
+    "effect_str": "effect_spell_craft_magic_case",
+    "shape": "blast",
+    "base_casting_time": 0,
+    "energy_source": "MANA",
+    "spell_class": "NONE",
+    "difficulty": 1,
+    "max_level": 30,
+    "base_energy_cost": 600,
+    "energy_increment": -15,
+    "final_energy_cost": 200,
+    "min_duration": 12000,
+    "duration_increment": 12000,
+    "max_duration": 360000
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_spell_craft_magic_case",
+    "name": [ "魔力放出" ],
+    "desc": [ "你正在通过放出的魔力强化自己。" ],
+    "apply_message": "你放出魔力强化了自己！",
+    "remove_message": "魔力强化的效果退去了。",
+    "int_dur_factor": "1 m",
+    "max_intensity": 61,
+    "rating": "good",
+    "base_mods": {
+    	"hunger_min": [ 1 ],
+    	"hunger_chance": [ 8 ],
+    	"thirst_min": [ 1 ],
+    	"thirst_chance": [ 16 ],
+      "fatigue_min": [ 1 ],
+    	"fatigue_chance": [ 32 ],
+    	"str_mod": [ 2 ],
+    	"dex_mod": [ 2 ],
+    	"per_mod": [ 2 ],
+    	"int_mod": [ 2 ],
+    	"speed_mod": [ 20 ]
+    },
+    "scaling_mods": {
+    	"str_mod": [ 0.1 ],
+    	"dex_mod": [ 0.1 ],
+    	"per_mod": [ 0.1 ],
+    	"int_mod": [ 0.1 ],
+    	"speed_mod": [ 0.5 ]
+    },
+    "enchantments": [
+      {
+        "values": [
+          { "value": "BONUS_BLOCK", "add": 1 },
+          { "value": "BONUS_DODGE", "add": 1 },
+          { "value": "ARMOR_BASH", "add": -5 },
+          { "value": "ARMOR_CUT", "add": -5 },
+          { "value": "ARMOR_STAB", "add": -5 },
+          { "value": "ARMOR_BULLET", "add": -10 },
+          { "value": "ARMOR_ACID", "add": -20 },
+          { "value": "ARMOR_BIO", "add": -20 },
+          { "value": "ARMOR_COLD", "add": -20 },
+          { "value": "ARMOR_ELEC", "add": -20 },
+          { "value": "ARMOR_HEAT", "add": -20 },
+    			{ "value": "MAX_STAMINA", "multiply": -0.1 },
+    			{ "value": "REGEN_STAMINA", "multiply": -0.25 },
+    			{ "value": "MAX_MANA", "multiply": -0.5 },
+    			{ "value": "REGEN_MANA", "multiply": -0.75 },
+          { "value": "CLIMATE_CONTROL_HEAT", "add": 37 },
+          { "value": "CLIMATE_CONTROL_CHILL", "add": 37 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_magic_case_off",
+    "type": "SPELL",
+    "name": "取消魔力放出",
+    "description": "停止魔力放出。",
+    "valid_targets": [ "self" ],
+    "flags": [ "NO_FAIL", "NO_HANDS", "NO_LEGS", "NO_EXPLOSION_SFX", "SILENT", "NO_PROJECTILE" ],
+    "effect": "remove_effect",
+    "effect_str": "effect_spell_craft_magic_case",
+    "shape": "blast",
+    "base_casting_time": 0,
+    "energy_source": "MANA",
+    "spell_class": "NONE",
+    "difficulty": 1,
+    "base_energy_cost": 0
+  }
+]

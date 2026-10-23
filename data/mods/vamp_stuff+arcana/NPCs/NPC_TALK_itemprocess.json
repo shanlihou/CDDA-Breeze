@@ -1,0 +1,3666 @@
+[
+  {
+    "//": "Get used to the spam of token giving. I just have to ensure you get the rewards and you'll get the money without notifying you about it.",
+    "id": "VAMP_ASEEKER_questinquire_ihave_essence",
+    "type": "talk_topic",
+    "dynamic_line": "它适合我的收藏。想把这些卖给我吗？",
+    "responses": [
+      {
+        "text": "对！这是你要的15个源质！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_essence",
+        "condition": {
+          "and": [
+            {
+              "u_has_items": {
+                "item": "essence",
+                "count": 15
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabitems"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabmoney"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekernorewardcollab"
+              }
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "essence",
+            "count": 15
+          },
+          {
+            "u_spend_cash": -3000
+          }
+        ]
+      },
+      {
+        "text": "对！这是你要的7个源质！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_essence",
+        "condition": {
+          "and": [
+            {
+              "u_has_items": {
+                "item": "essence",
+                "count": 15
+              }
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabitems"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "essence",
+            "count": 15
+          }
+        ]
+      },
+      {
+        "text": "对！这是你要的7个源质！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_essence",
+        "condition": {
+          "and": [
+            {
+              "u_has_items": {
+                "item": "essence",
+                "count": 15
+              }
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabmoney"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "essence",
+            "count": 15
+          },
+          {
+            "u_spend_cash": -20500
+          }
+        ]
+      },
+      {
+        "text": "对！这是你要的7个源质！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_essence",
+        "condition": {
+          "and": [
+            {
+              "u_has_items": {
+                "item": "essence",
+                "count": 15
+              }
+            },
+            {
+              "npc_has_trait": "vaseekernorewardcollab"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "essence",
+            "count": 15
+          },
+          {
+            "u_spend_cash": -9000
+          }
+        ]
+      },
+      {
+        "text": "我没有更多…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "not": {
+            "u_has_items": {
+              "item": "essence",
+              "count": 15
+            }
+          }
+        }
+      },
+      {
+        "text": "我需要收集更多…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "not": {
+            "u_has_items": {
+              "item": "essence",
+              "count": 15
+            }
+          }
+        }
+      },
+      {
+        "text": "我想卖点别的…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "u_has_items": {
+            "item": "essence",
+            "count": 15
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_questinquire_ihave_bloodessence",
+    "type": "talk_topic",
+    "dynamic_line": "它适合我的收藏。想把这些卖给我吗？",
+    "responses": [
+      {
+        "text": "对！这是你要的8个猩血源质！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_bloodessence",
+        "condition": {
+          "and": [
+            {
+              "u_has_items": {
+                "item": "essence_blood",
+                "count": 8
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabitems"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabmoney"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekernorewardcollab"
+              }
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "essence_blood",
+            "count": 8
+          },
+          {
+            "u_spend_cash": -5500
+          }
+        ]
+      },
+      {
+        "text": "对！这是你要的5种猩血源质！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_bloodessence",
+        "condition": {
+          "and": [
+            {
+              "u_has_items": {
+                "item": "essence_blood",
+                "count": 8
+              }
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabitems"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "essence_blood",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "text": "对！这是你要的5种猩血源质！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_bloodessence",
+        "condition": {
+          "and": [
+            {
+              "u_has_items": {
+                "item": "essence_blood",
+                "count": 8
+              }
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabmoney"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "essence_blood",
+            "count": 8
+          },
+          {
+            "u_spend_cash": -26500
+          }
+        ]
+      },
+      {
+        "text": "对！这是你要的5种猩血源质！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_bloodessence",
+        "condition": {
+          "and": [
+            {
+              "u_has_items": {
+                "item": "essence_blood",
+                "count": 8
+              }
+            },
+            {
+              "npc_has_trait": "vaseekernorewardcollab"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "essence_blood",
+            "count": 8
+          },
+          {
+            "u_spend_cash": -9000
+          }
+        ]
+      },
+      {
+        "text": "我没有更多…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "not": {
+            "u_has_items": {
+              "item": "essence_blood",
+              "count": 8
+            }
+          }
+        }
+      },
+      {
+        "text": "我需要收集更多…",
+        "topic": "TALK_DONE",
+        "condition": {
+          "not": {
+            "u_has_items": {
+              "item": "essence_blood",
+              "count": 8
+            }
+          }
+        }
+      },
+      {
+        "text": "我想卖点别的…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "u_has_items": {
+            "item": "essence_blood",
+            "count": 8
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_questinquire_ihave_dullessence",
+    "type": "talk_topic",
+    "dynamic_line": "它适合我的收藏。想把这些卖给我吗？",
+    "responses": [
+      {
+        "text": "对！这是你要的22个阴黯源质！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_dullessence",
+        "condition": {
+          "and": [
+            {
+              "u_has_items": {
+                "item": "essence_dull",
+                "count": 22
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabitems"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabmoney"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekernorewardcollab"
+              }
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "essence_dull",
+            "count": 22
+          },
+          {
+            "u_spend_cash": -7500
+          }
+        ]
+      },
+      {
+        "text": "对！这是你要的15个阴黯源质！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_dullessence",
+        "condition": {
+          "and": [
+            {
+              "u_has_items": {
+                "item": "essence_dull",
+                "count": 22
+              }
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabitems"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "essence_dull",
+            "count": 22
+          }
+        ]
+      },
+      {
+        "text": "对！这是你要的15个阴黯源质！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_dullessence",
+        "condition": {
+          "and": [
+            {
+              "u_has_items": {
+                "item": "essence_dull",
+                "count": 22
+              }
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabmoney"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "essence_dull",
+            "count": 22
+          },
+          {
+            "u_spend_cash": -30500
+          }
+        ]
+      },
+      {
+        "text": "对！这是你要的15个阴黯源质！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_dullessence",
+        "condition": {
+          "and": [
+            {
+              "u_has_items": {
+                "item": "essence_dull",
+                "count": 22
+              }
+            },
+            {
+              "npc_has_trait": "vaseekernorewardcollab"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "essence_dull",
+            "count": 22
+          },
+          {
+            "u_spend_cash": -10500
+          }
+        ]
+      },
+      {
+        "text": "我没有更多…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "not": {
+            "u_has_items": {
+              "item": "essence_dull",
+              "count": 22
+            }
+          }
+        }
+      },
+      {
+        "text": "我需要收集更多…",
+        "topic": "TALK_DONE",
+        "condition": {
+          "not": {
+            "u_has_items": {
+              "item": "essence_dull",
+              "count": 22
+            }
+          }
+        }
+      },
+      {
+        "text": "我想卖点别的…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "u_has_items": {
+            "item": "essence_dull",
+            "count": 22
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_questinquire_ihave_pureessence",
+    "type": "talk_topic",
+    "dynamic_line": "它适合我的收藏。想把这些卖给我吗？",
+    "responses": [
+      {
+        "text": "对！这是你要的璀璨源质！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_pureessence",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "essence_pure"
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabitems"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabmoney"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekernorewardcollab"
+              }
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "essence_pure"
+          },
+          {
+            "u_spend_cash": -10500
+          }
+        ]
+      },
+      {
+        "text": "对！这是你要的璀璨源质！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_pureessence",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "essence_pure"
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabitems"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "essence_pure"
+          }
+        ]
+      },
+      {
+        "text": "对！这是你要的璀璨源质！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_pureessence",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "essence_pure"
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabmoney"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "essence_pure"
+          },
+          {
+            "u_spend_cash": -51500
+          }
+        ]
+      },
+      {
+        "text": "对！这是你要的璀璨源质！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_pureessence",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "essence_pure"
+            },
+            {
+              "npc_has_trait": "vaseekernorewardcollab"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "essence_pure"
+          },
+          {
+            "u_spend_cash": -19000
+          }
+        ]
+      },
+      {
+        "text": "我没有更多…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "not": {
+            "u_has_item": "essence_pure"
+          }
+        }
+      },
+      {
+        "text": "我需要收集更多…",
+        "topic": "TALK_DONE",
+        "condition": {
+          "not": {
+            "u_has_item": "essence_pure"
+          }
+        }
+      },
+      {
+        "text": "我想卖点别的…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "u_has_item": "essence_pure"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_questinquire_ihave_windfrag",
+    "type": "talk_topic",
+    "dynamic_line": "它适合我的收藏。想把这些卖给我吗？",
+    "responses": [
+      {
+        "text": "好！这是一块风碎！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_windfrag",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "vortex_shard"
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabitems"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabmoney"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekernorewardcollab"
+              }
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "vortex_shard"
+          },
+          {
+            "u_spend_cash": -3500
+          }
+        ]
+      },
+      {
+        "text": "好！这是一块风碎！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_windfrag",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "vortex_shard"
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabitems"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "vortex_shard"
+          }
+        ]
+      },
+      {
+        "text": "好！这是一块风碎！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_windfrag",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "vortex_shard"
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabmoney"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "vortex_shard"
+          },
+          {
+            "u_spend_cash": -31500
+          }
+        ]
+      },
+      {
+        "text": "好！这是一块风碎！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_windfrag",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "vortex_shard"
+            },
+            {
+              "npc_has_trait": "vaseekernorewardcollab"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "vortex_shard"
+          },
+          {
+            "u_spend_cash": -11000
+          }
+        ]
+      },
+      {
+        "text": "我没有更多…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "not": {
+            "u_has_item": "vortex_shard"
+          }
+        }
+      },
+      {
+        "text": "我需要收集更多…",
+        "topic": "TALK_DONE",
+        "condition": {
+          "not": {
+            "u_has_item": "vortex_shard"
+          }
+        }
+      },
+      {
+        "text": "我想卖点别的…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "u_has_item": "vortex_shard"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_questinquire_ihave_blobgem",
+    "type": "talk_topic",
+    "dynamic_line": "它适合我的收藏。想把这些卖给我吗？",
+    "responses": [
+      {
+        "text": "好！这是一颗无定形琥珀！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_blobgem",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "blob_gem"
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabitems"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabmoney"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekernorewardcollab"
+              }
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "blob_gem"
+          },
+          {
+            "u_spend_cash": -4500
+          }
+        ]
+      },
+      {
+        "text": "好！这是一颗无定形琥珀！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_blobgem",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "blob_gem"
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabitems"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "blob_gem"
+          }
+        ]
+      },
+      {
+        "text": "好！这是一颗无定形琥珀！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_blobgem",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "blob_gem"
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabmoney"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "blob_gem"
+          },
+          {
+            "u_spend_cash": -24500
+          }
+        ]
+      },
+      {
+        "text": "好！这是一颗无定形琥珀！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_blobgem",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "blob_gem"
+            },
+            {
+              "npc_has_trait": "vaseekernorewardcollab"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "blob_gem"
+          },
+          {
+            "u_spend_cash": -9500
+          }
+        ]
+      },
+      {
+        "text": "我没有更多…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "not": {
+            "u_has_item": "blob_gem"
+          }
+        }
+      },
+      {
+        "text": "我需要收集更多…",
+        "topic": "TALK_DONE",
+        "condition": {
+          "not": {
+            "u_has_item": "blob_gem"
+          }
+        }
+      },
+      {
+        "text": "我想卖点别的…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "u_has_item": "blob_gem"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_questinquire_ihave_monstertear",
+    "type": "talk_topic",
+    "dynamic_line": "它适合我的收藏。想把这些卖给我吗？",
+    "responses": [
+      {
+        "text": "好！这是一颗蓝色晶泪！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_monstertear",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "monster_tear"
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabitems"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabmoney"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekernorewardcollab"
+              }
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "monster_tear"
+          },
+          {
+            "u_spend_cash": -5000
+          }
+        ]
+      },
+      {
+        "text": "好！这是一颗蓝色晶泪！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_monstertear",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "monster_tear"
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabitems"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "monster_tear"
+          }
+        ]
+      },
+      {
+        "text": "好！这是一颗蓝色晶泪！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_monstertear",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "monster_tear"
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabmoney"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "monster_tear"
+          },
+          {
+            "u_spend_cash": -40000
+          }
+        ]
+      },
+      {
+        "text": "好！这是一颗蓝色晶泪！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_monstertear",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "monster_tear"
+            },
+            {
+              "npc_has_trait": "vaseekernorewardcollab"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "monster_tear"
+          },
+          {
+            "u_spend_cash": -11000
+          }
+        ]
+      },
+      {
+        "text": "我没有更多…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "not": {
+            "u_has_item": "monster_tear"
+          }
+        }
+      },
+      {
+        "text": "我需要收集更多…",
+        "topic": "TALK_DONE",
+        "condition": {
+          "not": {
+            "u_has_item": "monster_tear"
+          }
+        }
+      },
+      {
+        "text": "我想卖点别的…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "u_has_item": "monster_tear"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_questinquire_ihave_shadowgem",
+    "type": "talk_topic",
+    "dynamic_line": "它适合我的收藏。想把这些卖给我吗？",
+    "responses": [
+      {
+        "text": "好！这是一颗暗影宝石！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_shadowgem",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "shadow_gem"
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabitems"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabmoney"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekernorewardcollab"
+              }
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "shadow_gem"
+          },
+          {
+            "u_spend_cash": -7000
+          }
+        ]
+      },
+      {
+        "text": "好！这是一颗暗影宝石！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_shadowgem",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "shadow_gem"
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabitems"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "shadow_gem"
+          }
+        ]
+      },
+      {
+        "text": "好！这是一颗暗影宝石！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_shadowgem",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "shadow_gem"
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabmoney"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "shadow_gem"
+          },
+          {
+            "u_spend_cash": -45500
+          }
+        ]
+      },
+      {
+        "text": "好！这是一颗暗影宝石！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_shadowgem",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "shadow_gem"
+            },
+            {
+              "npc_has_trait": "vaseekernorewardcollab"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "shadow_gem"
+          },
+          {
+            "u_spend_cash": -13500
+          }
+        ]
+      },
+      {
+        "text": "我没有更多…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "not": {
+            "u_has_item": "shadow_gem"
+          }
+        }
+      },
+      {
+        "text": "我需要收集更多…",
+        "topic": "TALK_DONE",
+        "condition": {
+          "not": {
+            "u_has_item": "shadow_gem"
+          }
+        }
+      },
+      {
+        "text": "我想卖点别的…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "u_has_item": "shadow_gem"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_questinquire_ihave_bonetwisted",
+    "type": "talk_topic",
+    "dynamic_line": "它适合我的收藏。想把这些卖给我吗？",
+    "responses": [
+      {
+        "text": "好！这是一个扭曲骨头！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_bonetwisted",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "bone_twisted"
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabitems"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabmoney"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekernorewardcollab"
+              }
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "bone_twisted"
+          },
+          {
+            "u_spend_cash": -2500
+          }
+        ]
+      },
+      {
+        "text": "好！这是一个扭曲骨头！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_bonetwisted",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "bone_twisted"
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabitems"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "bone_twisted"
+          }
+        ]
+      },
+      {
+        "text": "好！这是一个扭曲骨头！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_bonetwisted",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "bone_twisted"
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabmoney"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "bone_twisted"
+          },
+          {
+            "u_spend_cash": -19500
+          }
+        ]
+      },
+      {
+        "text": "好！这是一个扭曲骨头！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_bonetwisted",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "bone_twisted"
+            },
+            {
+              "npc_has_trait": "vaseekernorewardcollab"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "bone_twisted"
+          },
+          {
+            "u_spend_cash": -8500
+          }
+        ]
+      },
+      {
+        "text": "我没有更多…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "not": {
+            "u_has_item": "bone_twisted"
+          }
+        }
+      },
+      {
+        "text": "我需要收集更多…",
+        "topic": "TALK_DONE",
+        "condition": {
+          "not": {
+            "u_has_item": "bone_twisted"
+          }
+        }
+      },
+      {
+        "text": "我想卖点别的…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "u_has_item": "bone_twisted"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_questinquire_ihave_grackenknuckles",
+    "type": "talk_topic",
+    "dynamic_line": "它适合我的收藏。想把这些卖给我吗？",
+    "responses": [
+      {
+        "text": "好！这是一节断裂的指骨！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_grackenknuckles",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "gracken_knuckles"
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabitems"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabmoney"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekernorewardcollab"
+              }
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "gracken_knuckles"
+          },
+          {
+            "u_spend_cash": -2000
+          }
+        ]
+      },
+      {
+        "text": "好！这是一节断裂的指骨！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_grackenknuckles",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "gracken_knuckles"
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabitems"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "gracken_knuckles"
+          }
+        ]
+      },
+      {
+        "text": "好！这是一节断裂的指骨！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_grackenknuckles",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "gracken_knuckles"
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabmoney"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "gracken_knuckles"
+          },
+          {
+            "u_spend_cash": -17000
+          }
+        ]
+      },
+      {
+        "text": "好！这是一节断裂的指骨！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_grackenknuckles",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "gracken_knuckles"
+            },
+            {
+              "npc_has_trait": "vaseekernorewardcollab"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "gracken_knuckles"
+          },
+          {
+            "u_spend_cash": -7000
+          }
+        ]
+      },
+      {
+        "text": "我没有更多…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "not": {
+            "u_has_item": "gracken_knuckles"
+          }
+        }
+      },
+      {
+        "text": "我需要收集更多…",
+        "topic": "TALK_DONE",
+        "condition": {
+          "not": {
+            "u_has_item": "gracken_knuckles"
+          }
+        }
+      },
+      {
+        "text": "我想卖点别的…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "u_has_item": "gracken_knuckles"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_questinquire_ihave_wyrmskinpiece",
+    "type": "talk_topic",
+    "dynamic_line": "它适合我的收藏。想把这些卖给我吗？",
+    "responses": [
+      {
+        "text": "对！这是你的一块虎皮碎片！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_wyrmskinpiece",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "wyrmskin_piece"
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabitems"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabmoney"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekernorewardcollab"
+              }
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "wyrmskin_piece"
+          },
+          {
+            "u_spend_cash": -2000
+          }
+        ]
+      },
+      {
+        "text": "对！这是你的一块虎皮碎片！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_wyrmskinpiece",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "wyrmskin_piece"
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabitems"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "wyrmskin_piece"
+          }
+        ]
+      },
+      {
+        "text": "对！这是你的一块虎皮碎片！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_wyrmskinpiece",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "wyrmskin_piece"
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabmoney"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "wyrmskin_piece"
+          },
+          {
+            "u_spend_cash": -17000
+          }
+        ]
+      },
+      {
+        "text": "对！这是你的一块虎皮碎片！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_wyrmskinpiece",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "wyrmskin_piece"
+            },
+            {
+              "npc_has_trait": "vaseekernorewardcollab"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "wyrmskin_piece"
+          },
+          {
+            "u_spend_cash": -7000
+          }
+        ]
+      },
+      {
+        "text": "我没有更多…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "not": {
+            "u_has_item": "wyrmskin_piece"
+          }
+        }
+      },
+      {
+        "text": "我需要收集更多…",
+        "topic": "TALK_DONE",
+        "condition": {
+          "not": {
+            "u_has_item": "wyrmskin_piece"
+          }
+        }
+      },
+      {
+        "text": "我想卖点别的…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "u_has_item": "wyrmskin_piece"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_questinquire_ihave_monsterfang",
+    "type": "talk_topic",
+    "dynamic_line": "它适合我的收藏。想把这些卖给我吗？",
+    "responses": [
+      {
+        "text": "好！这是一颗巨兽尖牙！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_monsterfang",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "monster_fang"
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabitems"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabmoney"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekernorewardcollab"
+              }
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "monster_fang"
+          },
+          {
+            "u_spend_cash": -2500
+          }
+        ]
+      },
+      {
+        "text": "好！这是一颗巨兽尖牙！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_monsterfang",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "monster_fang"
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabitems"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "monster_fang"
+          }
+        ]
+      },
+      {
+        "text": "好！这是一颗巨兽尖牙！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_monsterfang",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "monster_fang"
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabmoney"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "monster_fang"
+          },
+          {
+            "u_spend_cash": -12000
+          }
+        ]
+      },
+      {
+        "text": "好！这是一颗巨兽尖牙！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_monsterfang",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "monster_fang"
+            },
+            {
+              "npc_has_trait": "vaseekernorewardcollab"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "monster_fang"
+          },
+          {
+            "u_spend_cash": -3000
+          }
+        ]
+      },
+      {
+        "text": "我没有更多…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "not": {
+            "u_has_item": "monster_fang"
+          }
+        }
+      },
+      {
+        "text": "我需要收集更多…",
+        "topic": "TALK_DONE",
+        "condition": {
+          "not": {
+            "u_has_item": "monster_fang"
+          }
+        }
+      },
+      {
+        "text": "我想卖点别的…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "u_has_item": "monster_fang"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_questinquire_ihave_iridescentplate",
+    "type": "talk_topic",
+    "dynamic_line": "它适合我的收藏。想把这些卖给我吗？",
+    "responses": [
+      {
+        "text": "好！这是一块五彩斑斓的组织！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_iridescentplate",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "iridescent_plate"
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabitems"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabmoney"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekernorewardcollab"
+              }
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "iridescent_plate"
+          },
+          {
+            "u_spend_cash": -3500
+          }
+        ]
+      },
+      {
+        "text": "好！这是一块五彩斑斓的组织！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_iridescentplate",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "iridescent_plate"
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabitems"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "iridescent_plate"
+          }
+        ]
+      },
+      {
+        "text": "好！这是一块五彩斑斓的组织！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_iridescentplate",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "iridescent_plate"
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabmoney"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "iridescent_plate"
+          },
+          {
+            "u_spend_cash": -36500
+          }
+        ]
+      },
+      {
+        "text": "好！这是一块五彩斑斓的组织！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_iridescentplate",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "iridescent_plate"
+            },
+            {
+              "npc_has_trait": "vaseekernorewardcollab"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "iridescent_plate"
+          },
+          {
+            "u_spend_cash": -5000
+          }
+        ]
+      },
+      {
+        "text": "我没有更多…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "not": {
+            "u_has_item": "iridescent_plate"
+          }
+        }
+      },
+      {
+        "text": "我需要收集更多…",
+        "topic": "TALK_DONE",
+        "condition": {
+          "not": {
+            "u_has_item": "iridescent_plate"
+          }
+        }
+      },
+      {
+        "text": "我想卖点别的…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "u_has_item": "iridescent_plate"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_questinquire_ihave_engravedstone",
+    "type": "talk_topic",
+    "dynamic_line": "它适合我的收藏。想把这些卖给我吗？",
+    "responses": [
+      {
+        "text": "对！给你一块雕文石块！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_engravedstone",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "engraved_stone"
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabitems"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabmoney"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekernorewardcollab"
+              }
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "engraved_stone"
+          },
+          {
+            "u_spend_cash": -9000
+          }
+        ]
+      },
+      {
+        "text": "对！给你一块雕文石块！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_engravedstone",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "engraved_stone"
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabitems"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "engraved_stone"
+          }
+        ]
+      },
+      {
+        "text": "对！给你一块雕文石块！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_engravedstone",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "engraved_stone"
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabmoney"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "engraved_stone"
+          },
+          {
+            "u_spend_cash": -78500
+          }
+        ]
+      },
+      {
+        "text": "对！给你一块雕文石块！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_engravedstone",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "engraved_stone"
+            },
+            {
+              "npc_has_trait": "vaseekernorewardcollab"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "engraved_stone"
+          },
+          {
+            "u_spend_cash": -12000
+          }
+        ]
+      },
+      {
+        "text": "我没有更多…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "not": {
+            "u_has_item": "engraved_stone"
+          }
+        }
+      },
+      {
+        "text": "我需要收集更多…",
+        "topic": "TALK_DONE",
+        "condition": {
+          "not": {
+            "u_has_item": "engraved_stone"
+          }
+        }
+      },
+      {
+        "text": "我想卖点别的…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "u_has_item": "engraved_stone"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_questinquire_ihave_draconicheart",
+    "type": "talk_topic",
+    "dynamic_line": "它适合我的收藏。想把这些卖给我吗？",
+    "responses": [
+      {
+        "text": "好！这是一颗石化之心！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_draconicheart",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "draconic_heart"
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabitems"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabmoney"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekernorewardcollab"
+              }
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "draconic_heart"
+          },
+          {
+            "u_spend_cash": -11500
+          }
+        ]
+      },
+      {
+        "text": "好！这是一颗石化之心！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_draconicheart",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "draconic_heart"
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabitems"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "draconic_heart"
+          }
+        ]
+      },
+      {
+        "text": "好！这是一颗石化之心！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_draconicheart",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "draconic_heart"
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabmoney"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "draconic_heart"
+          },
+          {
+            "u_spend_cash": -88500
+          }
+        ]
+      },
+      {
+        "text": "好！这是一颗石化之心！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_draconicheart",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "draconic_heart"
+            },
+            {
+              "npc_has_trait": "vaseekernorewardcollab"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "draconic_heart"
+          },
+          {
+            "u_spend_cash": -19000
+          }
+        ]
+      },
+      {
+        "text": "我没有更多…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "not": {
+            "u_has_item": "draconic_heart"
+          }
+        }
+      },
+      {
+        "text": "我需要收集更多…",
+        "topic": "TALK_DONE",
+        "condition": {
+          "not": {
+            "u_has_item": "draconic_heart"
+          }
+        }
+      },
+      {
+        "text": "我想卖点别的…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "u_has_item": "draconic_heart"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_questinquire_ihave_sun_sword",
+    "type": "talk_topic",
+    "dynamic_line": "它适合我的收藏。想把这些卖给我吗？",
+    "responses": [
+      {
+        "text": "好！这是一把不朽之剑！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_sun_sword",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "sun_sword"
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabitems"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabmoney"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekernorewardcollab"
+              }
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "sun_sword"
+          },
+          {
+            "u_spend_cash": -12500
+          }
+        ]
+      },
+      {
+        "text": "好！这是一把不朽之剑！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_sun_sword",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "sun_sword"
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabitems"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "sun_sword"
+          }
+        ]
+      },
+      {
+        "text": "好！这是一把不朽之剑！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_sun_sword",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "sun_sword"
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabmoney"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "sun_sword"
+          },
+          {
+            "u_spend_cash": -96000
+          }
+        ]
+      },
+      {
+        "text": "好！这是一把不朽之剑！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_sun_sword",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "sun_sword"
+            },
+            {
+              "npc_has_trait": "vaseekernorewardcollab"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "sun_sword"
+          },
+          {
+            "u_spend_cash": -22000
+          }
+        ]
+      },
+      {
+        "text": "我没有更多…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "not": {
+            "u_has_item": "sun_sword"
+          }
+        }
+      },
+      {
+        "text": "我需要收集更多…",
+        "topic": "TALK_DONE",
+        "condition": {
+          "not": {
+            "u_has_item": "sun_sword"
+          }
+        }
+      },
+      {
+        "text": "我想卖点别的…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "u_has_item": "sun_sword"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_questinquire_ihave_hexenhammer",
+    "type": "talk_topic",
+    "dynamic_line": "它适合我的收藏。想把这些卖给我吗？",
+    "responses": [
+      {
+        "text": "好！这是一把猎人之锤！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_hexenhammer",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "hexenhammer"
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabitems"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabmoney"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekernorewardcollab"
+              }
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "hexenhammer"
+          },
+          {
+            "u_spend_cash": -11000
+          }
+        ]
+      },
+      {
+        "text": "好！这是一把猎人之锤！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_hexenhammer",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "hexenhammer"
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabitems"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "hexenhammer"
+          }
+        ]
+      },
+      {
+        "text": "好！这是一把猎人之锤！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_hexenhammer",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "hexenhammer"
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabmoney"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "hexenhammer"
+          },
+          {
+            "u_spend_cash": -90500
+          }
+        ]
+      },
+      {
+        "text": "好！这是一把猎人之锤！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_hexenhammer",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "hexenhammer"
+            },
+            {
+              "npc_has_trait": "vaseekernorewardcollab"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "hexenhammer"
+          },
+          {
+            "u_spend_cash": -19500
+          }
+        ]
+      },
+      {
+        "text": "我没有更多…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "not": {
+            "u_has_item": "hexenhammer"
+          }
+        }
+      },
+      {
+        "text": "我需要收集更多…",
+        "topic": "TALK_DONE",
+        "condition": {
+          "not": {
+            "u_has_item": "hexenhammer"
+          }
+        }
+      },
+      {
+        "text": "我想卖点别的…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "u_has_item": "hexenhammer"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_questinquire_ihave_spear_pestilence",
+    "type": "talk_topic",
+    "dynamic_line": "它适合我的收藏。想把这些卖给我吗？",
+    "responses": [
+      {
+        "text": "好！这是一把瘟疫之矛！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_spear_pestilence",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "spear_pestilence"
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabitems"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabmoney"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekernorewardcollab"
+              }
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "spear_pestilence"
+          },
+          {
+            "u_spend_cash": -7000
+          }
+        ]
+      },
+      {
+        "text": "好！这是一把瘟疫之矛！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_spear_pestilence",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "spear_pestilence"
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabitems"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "spear_pestilence"
+          }
+        ]
+      },
+      {
+        "text": "好！这是一把瘟疫之矛！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_spear_pestilence",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "spear_pestilence"
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabmoney"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "spear_pestilence"
+          },
+          {
+            "u_spend_cash": -67500
+          }
+        ]
+      },
+      {
+        "text": "好！这是一把瘟疫之矛！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_spear_pestilence",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "spear_pestilence"
+            },
+            {
+              "npc_has_trait": "vaseekernorewardcollab"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "spear_pestilence"
+          },
+          {
+            "u_spend_cash": -15500
+          }
+        ]
+      },
+      {
+        "text": "我没有更多…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "not": {
+            "u_has_item": "spear_pestilence"
+          }
+        }
+      },
+      {
+        "text": "我需要收集更多…",
+        "topic": "TALK_DONE",
+        "condition": {
+          "not": {
+            "u_has_item": "spear_pestilence"
+          }
+        }
+      },
+      {
+        "text": "我想卖点别的…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "u_has_item": "spear_pestilence"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_questinquire_ihave_staff_druidic",
+    "type": "talk_topic",
+    "dynamic_line": "它适合我的收藏。想把这些卖给我吗？",
+    "responses": [
+      {
+        "text": "好！这是一把德鲁伊法杖！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_staff_druidic",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "staff_druidic"
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabitems"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabmoney"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekernorewardcollab"
+              }
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "staff_druidic"
+          },
+          {
+            "u_spend_cash": -8000
+          }
+        ]
+      },
+      {
+        "text": "好！这是一把德鲁伊法杖！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_staff_druidic",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "staff_druidic"
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabitems"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "staff_druidic"
+          }
+        ]
+      },
+      {
+        "text": "好！这是一把德鲁伊法杖！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_staff_druidic",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "staff_druidic"
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabmoney"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "staff_druidic"
+          },
+          {
+            "u_spend_cash": -72000
+          }
+        ]
+      },
+      {
+        "text": "好！这是一把德鲁伊法杖！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_staff_druidic",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "staff_druidic"
+            },
+            {
+              "npc_has_trait": "vaseekernorewardcollab"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "staff_druidic"
+          },
+          {
+            "u_spend_cash": -13000
+          }
+        ]
+      },
+      {
+        "text": "我没有更多…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "not": {
+            "u_has_item": "staff_druidic"
+          }
+        }
+      },
+      {
+        "text": "我需要收集更多…",
+        "topic": "TALK_DONE",
+        "condition": {
+          "not": {
+            "u_has_item": "staff_druidic"
+          }
+        }
+      },
+      {
+        "text": "我想卖点别的…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "u_has_item": "staff_druidic"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_questinquire_ihave_stormbringer",
+    "type": "talk_topic",
+    "dynamic_line": "它适合我的收藏。想把这些卖给我吗？",
+    "responses": [
+      {
+        "text": "好！这是一把诅咒之刃！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_stormbringer",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "stormbringer"
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabitems"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekerrewardingcollabmoney"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "vaseekernorewardcollab"
+              }
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "stormbringer"
+          },
+          {
+            "u_spend_cash": -7500
+          }
+        ]
+      },
+      {
+        "text": "好！这是一把诅咒之刃！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_stormbringer",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "stormbringer"
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabitems"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_spawn_item": "arcanetoken"
+          },
+          {
+            "u_sell_item": "stormbringer"
+          }
+        ]
+      },
+      {
+        "text": "好！这是一把诅咒之刃！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_stormbringer",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "stormbringer"
+            },
+            {
+              "npc_has_trait": "vaseekerrewardingcollabmoney"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "stormbringer"
+          },
+          {
+            "u_spend_cash": -82500
+          }
+        ]
+      },
+      {
+        "text": "好！这是一把诅咒之刃！",
+        "topic": "VAMP_ASEEKER_questinquire_ihave_stormbringer",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "stormbringer"
+            },
+            {
+              "npc_has_trait": "vaseekernorewardcollab"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "stormbringer"
+          },
+          {
+            "u_spend_cash": -11000
+          }
+        ]
+      },
+      {
+        "text": "我没有更多…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "not": {
+            "u_has_item": "stormbringer"
+          }
+        }
+      },
+      {
+        "text": "我需要收集更多…",
+        "topic": "TALK_DONE",
+        "condition": {
+          "not": {
+            "u_has_item": "stormbringer"
+          }
+        }
+      },
+      {
+        "text": "我想卖点别的…",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "u_has_item": "stormbringer"
+        }
+      }
+    ]
+  }
+]

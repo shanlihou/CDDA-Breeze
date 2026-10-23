@@ -1,0 +1,592 @@
+[
+    {
+		"type": "mod_tileset",
+		"compatibility": [
+			"UNDEAD_PEOPLE_BASE_v2",
+			"MSX++DEAD_PEOPLE",
+			"UNDEAD_PEOPLE",
+			"UNDEAD_PEOPLE_BASE",
+			"MshockXottoplus"
+		],
+        "tiles-new": [
+			{
+				"file": "tileset/VER.png",
+				"sprite_width": 64,
+				"sprite_height": 32,
+				"sprite_offset_x": -16,
+				"sprite_offset_y": 0,
+                "tiles":[
+                    {
+                    "id": "VER_railgun_version",
+                    "fg": 0,
+                    "rotates": false
+                    },{
+                    "id": "overlay_wielded_VER_railgun_version",
+                    "fg": 1,
+                    "rotates": false
+                    },
+                    {
+                    "id": "VER_railgun_version_on",
+                    "fg": 2,
+                    "rotates": false
+                    },{
+                    "id": "overlay_wielded_VER_railgun_version_on",
+                    "fg": 3,
+                    "rotates": false
+                    },
+                    {
+                    "id": "VER_HAR",
+                    "fg": 4,
+                    "rotates": false
+                    },{
+                    "id": "overlay_wielded_VER_HAR",
+                    "fg": 5,
+                    "rotates": false
+                    }
+                ]
+            },
+            {
+				"file": "tileset/gun_1.png",
+				"sprite_width": 32,
+				"sprite_height": 32,
+				"sprite_offset_x": 0,
+				"sprite_offset_y": 0,
+                "tiles":[
+                    {
+                    "id": "OTs-14",
+                    "fg": 8,
+                    "rotates": false
+                    },{
+                    "id": "overlay_wielded_OTs-14",
+                    "fg": 9,
+                    "rotates": false
+                    },
+                    {
+                    "id": "overlay_wielded_OTs-14_EXODII",
+                    "fg": 11,
+                    "rotates": false
+                    },
+                    {
+                    "id": "OTs-14_EXODII",
+                    "fg": 10,
+                    "rotates": false
+                    },
+                    {
+                    "id": "overlay_wielded_VSS",
+                    "fg": 13,
+                    "rotates": false
+                    },
+                    {
+                    "id": "VSS",
+                    "fg": 12,
+                    "rotates": false
+                    },
+                    {
+                    "id": "overlay_wielded_Soviet_NKVD_pistol",
+                    "fg": 15,
+                    "rotates": false
+                    },
+                    {
+                    "id": "Soviet_NKVD_pistol",
+                    "fg": 14,
+                    "rotates": false
+                    },
+                    {
+                    "id": "overlay_wielded_NRS_R_Daggerl",
+                    "fg": 17,
+                    "rotates": false
+                    },
+                    {
+                    "id": "NRS_R_Daggerl",
+                    "fg": 16,
+                    "rotates": false
+                    },
+                    {
+                    "id":"dragonbreath_bow",
+                    "fg":18,
+                    "rotates":false
+                    },
+                    {
+                    "id":"overlay_wielded_dragonbreath_bow",
+                    "fg":19,
+                    "rotates":false
+                    },
+                    {
+                    "id":"rep_crossbow_plus",
+                    "fg":20,
+                    "rotates":false
+                    },
+                    {
+                    "id":"overlay_wielded_rep_crossbow_plus",
+                    "fg":21,
+                    "rotates":false
+                    },
+                    {
+                    "id":"aksemi_auto_mod",
+                    "fg":22,
+                    "rotates":false
+                    },
+                    {
+                    "id":"overlay_wielded_aksemi_auto_mod",
+                    "fg":22,
+                    "rotates":false
+                    },
+                    {
+                    "id":"GP-25",
+                    "fg":23,
+                    "rotates":false
+                    },
+                    {
+                        "id":"overlay_wielded_GP-25",
+                        "fg":23,
+                        "rotates":false
+                    },
+                    {
+                        "id":"AA12MAG_rd8",
+                        "fg":24,
+                        "rotates":false
+                    },
+                    {
+                        "id":"overlay_wielded_AA12MAG_rd8",
+                        "fg":24,
+                        "rotates":false
+                    },
+                    {
+                        "id":"AA12MAG_rd20",
+                        "fg":24,
+                        "rotates":false
+                    },
+                    {
+                        "id":"overlay_wielded_AA12MAG_rd20",
+                        "fg":24,
+                        "rotates":false
+                    },
+                    {
+                        "id":"AA12MAG_rd32",
+                        "fg":24,
+                        "rotates":false
+                    },
+                    {
+                        "id":"overlay_wielded_AA12MAG_rd32",
+                        "fg":24,
+                        "rotates":false
+                    },
+                    {
+                        "id":"HARMAG_rd25",
+                        "fg":24,
+                        "rotates":false
+                    },
+                    {
+                        "id":"overlay_wielded_HARMAG_rd25",
+                        "fg":24,
+                        "rotates":false
+                    },
+                    {
+                        "id":"VER_AA12",
+                        "fg":25,
+                        "rotates":false
+                    },
+                    {
+                        "id":"overlay_wielded_VER_AA12",
+                        "fg":26,
+                        "rotates":false
+                    },
+                    {
+                        "id":"overlay_mutation_Revia_tail_I",
+                        "fg":35,
+                        "rotates":false
+                    },
+                    {
+                        "id":"overlay_mutation_Revia_tail_II",
+                        "fg":34,
+                        "rotates":false
+                    },
+                    {
+                        "id":"overlay_mutation_Revia_tail_II",
+                        "fg":33,
+                        "rotates":false
+                    },
+                    {
+                        "id":"overlay_mutation_Revia_tail_IV",
+                        "fg":32,
+                        "rotates":false
+                    },
+                    {
+                        "id":"overlay_mutation_Revia_tail_V",
+                        "fg":31,
+                        "rotates":false
+                    },
+                    {
+                        "id":"overlay_mutation_Revia_tail_VI",
+                        "fg":30,
+                        "rotates":false
+                    },
+                    {
+                        "id":"overlay_mutation_Revia_tail_VII",
+                        "fg":29,
+                        "rotates":false
+                    },
+                    {
+                        "id":"overlay_mutation_Revia_tail_VIII",
+                        "fg":28,
+                        "rotates":false
+                    },
+                    {
+                        "id":"overlay_mutation_Revia_tail_IX",
+                        "fg":27,
+                        "rotates":false
+                    },
+                    {
+                        "id":"VER_6x49FMJ",
+                        "fg":36,
+                        "rotates":false
+                    },
+                    {
+                        "id":"overlay_wielded_VER_6x49FMJ",
+                        "fg":36,
+                        "rotates":false
+                    },
+                    {
+                        "id":"VER_6x49AP",
+                        "fg":37,
+                        "rotates":false
+                    },
+                    {
+                        "id":"overlay_wielded_VER_6x49SAP",
+                        "fg":37,
+                        "rotates":false
+                    },
+                    {
+                        "id":"VER_6x49API",
+                        "fg":38,
+                        "rotates":false
+                    },
+                    {
+                        "id":"overlay_wielded_VER_6x49API",
+                        "fg":38,
+                        "rotates":false
+                    },
+                    {
+                        "id":"VER_6x49HE",
+                        "fg":39,
+                        "rotates":false
+                    },
+                    {
+                        "id":"overlay_wielded_VER_6x49HE",
+                        "fg":39,
+                        "rotates":false
+                    },
+                    {
+                        "id":"VER_6x49SHELL",
+                        "fg":40,
+                        "rotates":false
+                    },
+                    {
+                        "id":"overlay_wielded_VER_6x49SHELL",
+                        "fg":40,
+                        "rotates":false
+                    },
+                    {
+                        "id":"9x39SP5",
+                        "fg":41,
+                        "rotates":false
+                    },
+                    {
+                        "id":"overlay_wielded_9x39SP5",
+                        "fg":41,
+                        "rotates":false
+                    },
+                    {
+                        "id":"9x39SP6",
+                        "fg":42,
+                        "rotates":false
+                    },
+                    {
+                        "id":"overlay_wielded_9x39SP6",
+                        "fg":42,
+                        "rotates":false
+                    },
+                    {
+                        "id":"9x39SPP",
+                        "fg":43,
+                        "rotates":false
+                    },
+                    {
+                        "id":"overlay_wielded_9x39SPP",
+                        "fg":43,
+                        "rotates":false
+                    },
+                    {
+                        "id":"reloaded_9x39",
+                        "fg":44,
+                        "rotates":false
+                    },
+                    {
+                        "id":"overlay_wielded_reloaded_9x39",
+                        "fg":44,
+                        "rotates":false
+                    },
+                    {
+                        "id":"reloaded_9x39P",
+                        "fg":45,
+                        "rotates":false
+                    },
+                    {
+                        "id":"overlay_wielded_reloaded_9x39P",
+                        "fg":45,
+                        "rotates":false
+                    },
+                    {
+                        "id":"9x39_casing",
+                        "fg":46,
+                        "rotates":false
+                    },
+                    {
+                        "id":"overlay_wielded_9x39_casing",
+                        "fg":46,
+                        "rotates":false
+                    },
+                    {
+                        "id":"VOL-25",
+                        "fg":47,
+                        "rotates":false
+                    },
+                    {
+                        "id":"overlay_wielded_VOL-25",
+                        "fg":47,
+                        "rotates":false
+                    },
+                    {
+                        "id":"VOL-25_EMP",
+                        "fg":47,
+                        "rotates":false
+                    },
+                    {
+                        "id":"overlay_wielded_VOL-25_EMP",
+                        "fg":47,
+                        "rotates":false
+                    },
+                    {
+                        "id":"shotgun_d_sp",
+                        "fg":48,
+                        "rotates":false
+                    },
+                    {
+                        "id":"overlay_wielded_shotgun_d_sp",
+                        "fg":49,
+                        "rotates":false
+                    },
+                    {
+                        "id":"shotgun_d_sp2",
+                        "fg":48,
+                        "rotates":false
+                    },
+                    {
+                        "id":"overlay_wielded_shotgun_d_sp",
+                        "fg":49,
+                        "rotates":false
+                    },
+                    {
+                        "id":"Freeze_jet_rifle",
+                        "fg":52,
+                        "rotates":false
+                    },
+                    {
+                        "id":"overlay_wielded_Freeze_jet_rifle",
+                        "fg":53,
+                        "rotates":false
+                    },
+                    {
+                        "id":"frisk_plasma_gun",
+                        "fg":50,
+                        "rotates":false
+                    },
+                    {
+                        "id":"overlay_wielded_frisk_plasma_gun",
+                        "fg":51,
+                        "rotates":false
+                    },
+                    {
+                        "id":"coolant_tank",
+                        "fg":55,
+                        "rotates":false
+                    },
+                    {
+                        "id":"overlay_wielded_coolant_tank",
+                        "fg":55,
+                        "rotates":false
+                    },
+                    {
+                        "id":"hydrogen_can",
+                        "fg":54,
+                        "rotates":false
+                    },
+                    {
+                        "id":"overlay_wielded_hydrogen_can",
+                        "fg":54,
+                        "rotates":false
+                    },
+                    {
+                        "id": "ver_mon_zombie_hulk_tank",
+                        "fg": 56,
+                        "rotates": false
+                    },
+                    {
+                        "id": "ver_mon_zombie_Magnetic_storm_Raiders",
+                        "fg": 57,
+                        "rotates": false
+                    },
+                    {
+                        "id": "ver_mon_zombie_armored_plus",
+                        "fg": 58,
+                        "rotates": false
+                    },
+                    {
+                        "id": "ver_mon_zombie_hammer_hands_hulk",
+                        "fg": 59,
+                        "rotates": false
+                    },
+                    {
+                        "id": "ver_mon_zombie_master_supermee",
+                        "fg": 60,
+                        "rotates": false
+                    },
+                    {
+                        "id": "mon_zombie_hulk_minion",
+                        "fg": 61,
+                        "rotates": false
+                    },
+                    {
+                        "id": "mon_zombie_hulk_minion_2",
+                        "fg": 61,
+                        "rotates": false
+                    },
+                    {
+                        "id": "ver_mon_zombie_soldier_blackops_hulk",
+                        "fg": 62,
+                        "rotates": false
+                    },
+                    {
+                        "id": "ver_mon_zombie_brute_hulk",
+                        "fg": 63,
+                        "rotates": false
+                    },
+                    {
+                        "id": "ver_mon_zombie_prey_hulk",
+                        "fg": 64,
+                        "rotates": false
+                    },
+                    {
+                        "id": "ver_mon_zombie_grappler_hulk",
+                        "fg": 65,
+                        "rotates": false
+                    },
+                    {
+                        "id": "ver_mon_zombie_witch",
+                        "fg": 66,
+                        "rotates": false
+                    },
+                    {
+                        "id": "nutritional_cream",
+                        "fg": 67,
+                        "rotates": false
+                    },
+                    {
+                        "id": "overlay_wielded_nutritional_cream",
+                        "fg": 67,
+                        "rotates": false
+                    },
+                    {
+                        "id": "ver_witch_hands",
+                        "fg": 68,
+                        "rotates": false
+                    },
+                    {
+                        "id": "overlay_wielded_ver_witch_hands",
+                        "fg": 68,
+                        "rotates": false
+                    },
+                    {
+                        "id": "overlay_wielded_ver_witch_hands_wp",
+                        "fg": 69,
+                        "rotates": false
+                    },
+                    {
+                        "id": "ver_witch_hands_wp",
+                        "fg": 68,
+                        "rotates": false
+                    },
+                    {
+                        "id": "overlay_wielded_VER_recipe",
+                        "fg": 70,
+                        "rotates": false
+                    },
+                    {
+                        "id": "VER_recipe",
+                        "fg": 70,
+                        "rotates": false
+                    },
+                    {
+                        "id": "overlay_wielded_VER_press",
+                        "fg": 71,
+                        "rotates": false
+                    },
+                    {
+                        "id": "VER_press",
+                        "fg": 71,
+                        "rotates": false
+                    },
+                    {
+                        "id": "overlay_wielded_ver_blood_core",
+                        "fg": 72,
+                        "rotates": false
+                    },
+                    {
+                        "id": "ver_blood_core",
+                        "fg": 72,
+                        "rotates": false
+                    },
+                    {
+                        "id": "overlay_wielded_ver_elec_core",
+                        "fg": 73,
+                        "rotates": false
+                    },
+                    {
+                        "id": "ver_elec_core",
+                        "fg": 73,
+                        "rotates": false
+                    },
+                    {
+                        "id": "overlay_wielded_ver_zombie_master_supermee_left_core",
+                        "fg": 74,
+                        "rotates": false
+                    },
+                    {
+                        "id": "ver_zombie_master_supermee_left_core",
+                        "fg": 74,
+                        "rotates": false
+                    }
+                ]
+            },
+            {
+				"file": "tileset/Revia_ear.png",
+				"sprite_width": 32,
+				"sprite_height": 64,
+				"sprite_offset_x": 0,
+				"sprite_offset_y": -32,
+                "tiles":[
+                    {
+                    "id": "overlay_mutation_ReviaEars",
+                    "fg": 78,
+                    "rotates": false
+                    },
+                    {
+                        "id": "overlay_mutation_ReviaEars2",
+                        "fg": 78,
+                        "rotates": false
+                    }
+                ]
+            }
+        ]
+    }
+]

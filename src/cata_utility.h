@@ -601,6 +601,19 @@ std::unordered_set<T> &operator<<( std::unordered_set<T> &lhv, std::unordered_se
 holiday get_holiday_from_time( std::time_t time = 0, bool force_refresh = false );
 
 /**
+ * 0.H 兼容层：按现实日期（系统本地时间）判断今天是否中秋（农历八月十五）。
+ * 中秋按农历走，无法用固定公历月日表达，故用一张离线生成的中秋日期表（1900-2100）。
+ * @param time The timestamp to assess, or current time if 0
+ */
+bool is_mid_autumn_holiday( std::time_t time = 0 );
+
+/**
+ * 0.H 兼容层：返回 time 所在的公历年，用于给「今年中秋已经送过月饼」之类的变量打标记。
+ * 表范围外或取时间失败返回 0。
+ */
+int mid_autumn_year( std::time_t time = 0 );
+
+/**
  * Returns a random (weighted) bucket index from a list of weights
  * @param weights vector with a list of int weights
  * @return random bucket index

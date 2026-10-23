@@ -1,0 +1,40 @@
+[
+  {
+    "id": "t4_mana_darkburst",
+    "type": "SPELL",
+    "name": {
+      "str": "暗爆"
+    },
+    "description": "一股亵渎魔法从你的身体中爆发，对周围的敌人造成<color_light_gray>真实伤害</color>。\n*3格半径内的敌人被<color_yellow>推开</color>。\n\n这是一个<color_light_red>四阶</color>法术。",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "extra_effects": [
+      {
+        "id": "t4_mana_darkburst_push"
+      }
+    ],
+    "base_energy_cost": 250,
+    "final_energy_cost": 600,
+    "energy_source": "MANA",
+    "spell_class": "VAMP_MANA_spellcaster",
+    "difficulty": 5,
+    "min_damage": 30,
+    "max_damage": 90,
+    "damage_increment": 1.5,
+    "max_level": 20,
+    "min_aoe": 4,
+    "max_aoe": 5,
+    "aoe_increment": 0.2,
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "base_casting_time": 225,
+    "damage_type": "pure"
+  }
+]

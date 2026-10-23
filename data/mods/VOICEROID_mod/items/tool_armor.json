@@ -1,0 +1,896 @@
+[
+  {
+    "id": "voiro_headset_ai",
+    "type": "TOOL_ARMOR",
+    "copy-from": "two_way_radio",
+    "name": "耳机(月读爱)[voiro]",
+    "description": "是嵌入了无线通信功能的月读爱的头戴式耳机。",
+    "weight": "169 g",
+    "volume": "250 ml",
+    "price": 4600
+  },
+  {
+    "//": "演奏する事で意欲を上げれる。表現方法は変更したいがテキスト弄ろうとするとエラー落ちするのでやむ無し。",
+    "id": "voiro_stuffed_bunny_ai",
+    "type": "TOOL_ARMOR",
+    "category": "other",
+    "copy-from": "teddy_bear",
+    "name": "布偶(兔子)[voiro]",
+    "description": "粉红色的长耳朵。即使被打也不痛不痒。可以用于演奏或者当作枕头。",
+    "to_hit": 1,
+    "weight": "488 g",
+    "volume": "2500 ml",
+    "price": 3800,
+    "color": "pink",
+    "armor": [
+      {
+        "covers": [ "hand_l", "hand_r", "arm_l", "arm_r" ],
+        "coverage": 5,
+        "encumbrance": 100
+      }
+    ],
+    "material_thickness": 2,
+    "flags": [ "OVERSIZE", "BELTED", "RESTRICT_HANDS", "FANCY", "SLEEP_AID" ],
+    "max_charges": 1,
+    "initial_charges": 1,
+    "use_action": {
+      "type": "musical_instrument",
+      "speed_penalty": 30,
+      "volume": 5,
+      "fun": -5,
+      "fun_bonus": 1,
+      "description_frequency": 20,
+      "player_descriptions": [ "你正在和兔子玩耍。 ","过家家真好玩♪" ],
+      "npc_descriptions": [ "%n正在和兔子玩耍。 ","过家家真好玩♪" ]
+    }
+  },
+  {
+    "id": "voiro_headset_shota",
+    "type": "TOOL_ARMOR",
+    "copy-from": "voiro_headset_ai",
+    "name": "耳机(月读翔太)[voiro]",
+    "description": "嵌入了无线通信功能的月读翔太的头戴式耳机。",
+    "weight": "174 g",
+    "volume": "250 ml",
+    "price": 4800
+  },
+  {
+    "id": "voiro_yoshidasuit",
+    "type": "TOOL_ARMOR",
+    "category" : "clothing",
+    "copy-from": "wolfsuit",
+    "name": "人偶服(吉田君)[voiro]",
+    "description": "雅马哈公司开发的吉田君的人偶服。里面充满了高科技，与有重量的普通人偶服装相比，在确保收纳空间、防水性能、温度调节机构等多方面进行了改良。",
+    "weight": "24480 g",
+    "volume": "25 L",
+    "price": 30000000,
+    "to_hit": -3,
+    "material": [ "ceramic", "kevlar", "cotton" ],
+    "symbol": "[",
+    "color": "red",
+    "warmth": 50,
+    "material_thickness": 4,
+    "environmental_protection": 4,
+    "flags": [ "OVERSIZE", "OUTER", "STURDY", "WATERPROOF", "RAINPROOF", "WATCH", "ALARMCLOCK" ],
+    "charges_per_use": 1,
+    "ammo": "battery",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "rigid": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "heavy_battery_cell",
+          "heavy_plus_battery_cell",
+          "heavy_atomic_battery_cell",
+          "heavy_disposable_cell"
+        ]
+      }
+    ],
+    "use_action": {
+        "type": "transform",
+        "msg": "强化外骨骼『吉田机器人』，启动！",
+        "target": "voiro_yoshidaroid",
+        "active": true
+    }
+  },
+  {
+    "//1": "重サバやRM13コンバットに比べ明らかに弱く感じるが、最大の強みは積層が「上着」である事。",
+    "//2": "両足が被る為、RM13コンバットの上には着れないが被服率100%の上着は強い。",
+    "id": "voiro_yoshidaroid",
+    "type": "TOOL_ARMOR",
+    "category" : "armor",
+    "copy-from": "voiro_yoshidasuit",
+    "name": "人偶服(吉田君)[voiro]",
+    "description": "雅马哈公司开发的带有吉田君人偶服的强化外骨骼。",
+    "weight": "24480 g",
+    "volume": "25 L",
+    "price": 30000000,
+    "material_thickness": 6,
+    "environmental_protection": 10,
+    "flags": [ "OVERSIZE", "OUTER", "STURDY", "WATERPROOF", "RAINPROOF", "ELECTRIC_IMMUNE", "WATCH", "ALARMCLOCK", "SUN_GLASSES", "RAD_RESIST" ],
+    "turns_per_charge": 3,
+    "revert_to": "voiro_yoshidasuit",
+    "use_action": {
+        "type": "transform",
+        "menu_text": "Turn off",
+        "msg": "已关闭强化外骨骼『吉田机器人』。",
+        "target": "voiro_yoshidasuit",
+        "need_charges": 1,
+        "need_charges_msg": "%s的电池能量不足、强化外骨骼『吉田机器人』已自动关闭。"
+    },
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ACTIVE",
+          "values": [
+            { "value": "STRENGTH", "add": 10 },
+            { "value": "CLIMATE_CONTROL_HEAT", "add": 50 },
+            { "value": "CLIMATE_CONTROL_CHILL", "add": 50 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "voiro_ornament_yukari",
+    "type": "TOOL_ARMOR",
+    "category" : "other",
+    "copy-from": "fc_hairpin",
+    "name": "发饰(结月缘)[voiro]",
+    "description": "据说是结月缘的本体，搭载了光束发射机构，是传闻中的神秘饰品。使用后可以改变头戴位置。",
+    "weight": "79 g",
+    "volume": "10 ml",
+    "price": 7900,
+    "color": "light_cyan",
+    "use_action" : {
+      "menu_text" : "调整",
+      "type" : "transform",
+      "target" : "voiro_ornament_yukari2",
+      "msg" : "发饰的位置调整了。"
+    }
+  },
+  {
+    "id": "voiro_ornament_yukari2",
+    "type": "TOOL_ARMOR",
+    "category" : "other",
+    "copy-from": "voiro_ornament_yukari",
+    "name": "发饰(结月缘)[voiro]",
+    "use_action" : {
+      "menu_text" : "调整",
+      "type" : "transform",
+      "target" : "voiro_ornament_yukari",
+      "msg" : "发饰的位置调整了。"
+    }
+  },
+  {
+    "id": "voiro_headset_seika",
+    "type": "TOOL_ARMOR",
+    "name": "耳机(京町精华)[voiro]",
+    "copy-from": "voiro_headset_ai",
+    "description": "嵌入了无线通信功能的京町精华的头戴式耳机。印有精华町的标志。",
+    "weight": "188 g",
+    "volume": "250 ml",
+    "price": 5200,
+    "color": "green"
+  },
+  {
+    "id": "voiro_ornament_akari",
+    "type": "TOOL_ARMOR",
+    "category" : "other",
+    "copy-from": "fc_hairpin",
+    "name": "发饰(绁星灯)[voiro]",
+    "description": "一个在镜头中闪烁着星星标志的神秘饰品。使用后可以改变头戴位置。",
+    "weight": "83 g",
+    "volume": "10 ml",
+    "price": 8300,
+    "color": "yellow",
+    "use_action" : {
+      "menu_text" : "调整",
+      "type" : "transform",
+      "target" : "voiro_ornament_akari2",
+      "msg" : "发饰的位置改变了。"
+    }
+  },
+  {
+    "id": "voiro_ornament_akari2",
+    "type": "TOOL_ARMOR",
+    "category" : "other",
+    "copy-from": "voiro_ornament_akari",
+    "name": "发饰(绁星灯)[voiro]",
+    "description": "一个在镜头中闪烁着星星标志的神秘饰品。使用后可以改变头戴位置。",
+    "use_action" : {
+      "menu_text" : "调整",
+      "type" : "transform",
+      "target" : "voiro_ornament_akari",
+      "msg" : "发饰的位置改变了。"
+    }
+  },
+  {
+    "//1": "着用部位無し装備。ずんだもんや前鬼、後鬼と場所が被らないようにした。",
+    "//2": "マンハックのように使える様にはしたいが未実装。",
+    "id": "voiro_sorarobo",
+    "type": "TOOL_ARMOR",
+    "category" : "other",
+    "name": "空中机器人[voiro]",
+    "description": "谜一样的漂浮机器人，平时它会拟态成耳罩。使用后可以变成耳罩。",
+    "weight": "400 g",
+    "volume": "500 ml",
+    "price": 0,
+    "material" : [ "steel" ],
+    "symbol": "[",
+    "color": "light_blue",
+    "use_action" : {
+      "menu_text" : "变身(耳罩)",
+      "type" : "transform",
+      "target" : "voiro_earmuffs_sora",
+      "msg" : "空中机器人变成耳罩的形态了。"
+    },
+    "flags": [ "BELTED" ]
+  },
+  {
+    "//": "着用部位無し装備。そらロボに変身してもFANCYフラグが消えるだけでメリットがあるわけではない。",
+    "id": "voiro_earmuffs_sora",
+    "type": "TOOL_ARMOR",
+    "category" : "other",
+    "name": "耳罩(樱乃空)[voiro]",
+    "description": "一个神秘的耳罩形状的机械装饰品。。",
+    "weight": "400 g",
+    "volume": "500 ml",
+    "price": 0,
+    "material" : [ "steel" ],
+    "symbol": "[",
+    "color": "light_blue",
+    "use_action" : {
+      "menu_text" : "变身(空中机器人)",
+      "type" : "transform",
+      "target" : "voiro_sorarobo",
+      "msg" : "耳罩变成空中机器人的形态了。"
+    },
+    "flags": [ "FANCY" ]
+  },
+  {
+    "//1": "ついなちゃんの設定によると、フ○ンネルのように小型恵方巻きを飛ばす機能があるらしい。",
+    "//2": "マンハックのように使える様にはしたいが未実装。今は回避を上昇させる「虎の巻」としての本の役割。",
+    "//3": "虎韜＝虎の巻＝兵法の極意＝三十六計(三十六計の最善の計「走為上」(逃走))＝回避　何の問題も無いな！",
+    "id": "voiro_ehoumaki",
+    "type": "BOOK",
+    "name": "书(学习/太公兵法)[voiro]",
+    "description": "中国周朝流传下来的兵法《六韬》中的一篇《虎韬》。绝对不是惠方卷。",
+    "weight": "5 kg",
+    "volume": "10 L",
+    "price": 0,
+    "material": [ "paper" ],
+    "symbol": "?",
+    "color": "dark_gray",
+    "skill": "dodge",
+    "required_level": 2,
+    "max_level": 7,
+    "intelligence": 12,
+    "time": "3 h",
+    "fun": -8,
+    "armor_data": {
+      "material_thickness": 1,
+      "armor": [ { "encumbrance": 20, "coverage": 5, "covers": [ "torso" ] } ]
+    },
+
+    "flags": [ "BELTED" ]
+  },
+  {
+    "id": "voiro_dickson",
+    "type": "TOOL_ARMOR",
+    "category": "armor",
+    "name": "方相氏面具(役追傩)[voiro]",
+    "description": "方相氏戴的金色四目面具。役追傩的面具绰号为“Dixon”，是沉默寡言的面具。使用后戴在脸上。",
+    "weight": "1 kg",
+    "volume": "1750 ml",
+    "price": 0,
+    "material": [ "wood" ],
+    "symbol": "[",
+    "color": "brown",
+    "armor": [
+      {
+        "covers": [ "head" ],
+        "coverage": 25,
+        "encumbrance": 10
+      }
+    ],
+    "material_thickness": 3,
+    "environmental_protection": 2,
+    "techniques": [ "WBLOCK_1" ],
+    "use_action" : {
+      "menu_text" : "戴在脸上",
+      "type" : "transform",
+      "target" : "voiro_dickson_worn",
+      "msg" : "把方相氏面具戴在脸上了。"
+    },
+    "flags": [ "OVERSIZE", "BELTED", "WATER_FRIENDLY" ]
+  },
+  {
+    "id": "voiro_dickson_worn",
+    "type": "TOOL_ARMOR",
+    "category": "armor",
+    "copy-from": "voiro_dickson",
+    "name": "方相氏面具(役追傩)[voiro]",
+    "description": "方相氏戴的金色四目面具。役追傩的面具绰号为“Dixon”，是沉默寡言的面具。使用后推到头上。",
+    "armor": [
+      {
+        "covers": [ "eyes", "mouth" ],
+        "coverage": 95,
+        "encumbrance": 10
+      }
+    ],
+    "use_action" : {
+      "menu_text" : "推到头上",
+      "type" : "transform",
+      "target" : "voiro_dickson",
+      "msg" : "把方相氏面具推到头上了。"
+    }
+  },
+  {
+    "id": "voiro_headset_maki",
+    "type": "TOOL_ARMOR",
+    "copy-from": "voiro_headset_ai",
+    "name": "耳机(弦卷真纪)[voiro]",
+    "description": "嵌入了无线通信功能的弦卷真纪的头戴式耳机。",
+    "weight": "172 g",
+    "volume": "250 ml",
+    "price": 6200
+  },
+  {
+    "type": "TOOL_ARMOR",
+    "id": "voiro_guitar_mustang",
+    "copy-from": "guitar_electric",
+    "name": "电吉他(小野马)[voiro]",
+    "description": "弦卷真纪心爱的乐器。日本芬达的野马。其爆炸性的高音域和小身材无法想象的个性声音，让听众为之着迷。",
+    "price": 96000
+  },
+  {
+    "id": "voiro_ornament_yukari_evil",
+    "type": "TOOL_ARMOR",
+    "category" : "other",
+    "copy-from": "fc_hairpin",
+    "name": "发饰(病态的缘)[voiro]",
+    "description": "结月缘的本体，搭载了光束发射机构，是传闻中的神秘饰品。使用来改变头戴位置。",
+    "weight": "79 g",
+    "volume": "10 ml",
+    "price": 7900,
+    "color": "light_cyan",
+    "use_action" : {
+      "menu_text" : "调整",
+      "type" : "transform",
+      "target" : "voiro_ornament_yukari_evil2",
+      "msg" : "发饰的位置改变了。"
+    }
+  },
+  {
+    "id": "voiro_ornament_yukari_evil2",
+    "type": "TOOL_ARMOR",
+    "category" : "other",
+    "copy-from": "voiro_ornament_yukari_evil",
+    "name": "发饰(病态的缘)[voiro]",
+    "description": "结月缘的本体，搭载了光束发射机构，是传闻中的神秘饰品。使用来改变头戴位置。",
+    "use_action" : {
+      "menu_text" : "调整",
+      "type" : "transform",
+      "target" : "voiro_ornament_yukari_evil",
+      "msg" : "发饰的位置改变了。"
+    }
+  },
+  {
+    "id": "voiro_hat_una",
+    "type": "TOOL_ARMOR",
+    "category" : "other",
+    "copy-from": "hat_cotton",
+    "name": "鳗鱼帽(音街鳗)[voiro]",
+    "description": "一顶模仿鳗鱼形状的名为鳗鱼帽的帽子。戴在白色的博士帽上。使用之后会变成鳗鱼帽(音街鳗Sugar)。",
+    "weight": "1500 g",
+    "volume": "18 L",
+    "price": 4050,					"//": "現実で「音街ウナ Official Goods Shop」で扱っているオタマン帽の値段(日本円)。",
+    "color": "blue",
+    "armor": [
+      {
+        "covers": [ "head" ],
+        "coverage": 90,
+        "encumbrance": 12
+      }
+    ],
+    "warmth": 20,
+    "material_thickness": 8,
+    "environmental_protection": 3,
+    "use_action" : {
+      "menu_text" : "使用",
+      "type" : "transform",
+      "target" : "voiro_hat_una_sugar",
+      "msg" : "变成Sugar版了。"
+    },
+    "flags": [ "OVERSIZE", "OUTER", "WATER_FRIENDLY", "FANCY", "RAINPROOF", "SLEEP_AID" ]
+  },
+  {
+    "id": "voiro_hat_una_sugar",
+    "type": "TOOL_ARMOR",
+    "category" : "other",
+    "copy-from": "voiro_hat_una",
+    "name": "鳗鱼帽(音街鳗Sugar)[voiro]",
+    "description": "一顶模仿鳗鱼形状的名为鳗鱼帽的帽子。使用之后会变成鳗鱼帽(音街鳗Spicy)。",
+    "use_action" : {
+      "menu_text" : "使用",
+      "type" : "transform",
+      "target" : "voiro_hat_una_spicy",
+      "msg" : "变成Spicy版了。"
+    }
+  },
+  {
+    "id": "voiro_hat_una_spicy",
+    "type": "TOOL_ARMOR",
+    "category" : "other",
+    "copy-from": "voiro_hat_una",
+    "name": "鳗鱼帽(音街鳗Spicy)[voiro]",
+    "description": "一顶模仿鳗鱼形状的名为鳗鱼帽的帽子。特征是黄色的角和雷纹。使用之后会变成鳗鱼帽(音街鳗)。",
+    "use_action" : {
+      "menu_text" : "使用",
+      "type" : "transform",
+      "target" : "voiro_hat_una",
+      "msg" : "变成Talk_Ex版了。"
+    }
+  },
+  {
+    "id": "voiro_dress_una",
+    "type": "TOOL_ARMOR",
+    "category" : "armor",
+    "copy-from": "sundress",
+    "name": "连衣裙(音街鳗)[voiro]",
+    "description": "一件带有鳗鱼符号的刺绣和口袋的粉色连衣裙。使用之后会变成偶像服装(音街鳗Sugar)。",
+    "weight": "280 g",
+    "volume": "1500 ml",
+    "price": 10000,
+    "armor": [
+      { "coverage": 80, "covers": [ "torso" ] },
+      {
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_knee_l", "leg_knee_r", "leg_upper_l", "leg_upper_r", "leg_hip_l", "leg_hip_r" ],
+        "coverage": 100
+      }
+    ],
+    "warmth": 10,
+    "material_thickness": 1,
+    "use_action" : {
+      "menu_text" : "使用",
+      "type" : "transform",
+      "target" : "voiro_idol_costume_una_sugar",
+      "msg" : "变成Sugar版了。"
+    },
+    "flags": [ "VARSIZE" ]
+  },
+  {
+    "//": "ワンピースから性能が変わるが、都合上問題がありそうな値段、収納容量はそのままにする。",
+    "id": "voiro_idol_costume_una_sugar",
+    "type": "TOOL_ARMOR",
+    "category" : "armor",
+    "name": "偶像服装(音街鳗Sugar)[voiro]",
+    "description": "给人以行军乐队指挥的印象的可爱的服装。使用之后会变成偶像服装(音街鳗Spicy)。",
+    "weight": "312 g",
+    "volume": "1500 ml",
+    "price": 10000,
+    "material": [ "cotton" ],
+    "symbol": "[",
+    "color": "blue",
+    "armor": [
+      { "coverage": 90, "covers": [ "torso" ] },
+      {
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
+        "coverage": 100
+      },
+      {
+        "coverage": 100,
+        "covers": [ "arm_l", "arm_r" ],
+        "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r" ]
+      }
+    ],
+    "warmth": 15,
+    "use_action" : {
+      "menu_text" : "使用",
+      "type" : "transform",
+      "target" : "voiro_idol_costume_una_spicy",
+      "msg" : "变成Spicy版了。"
+    },
+    "flags": [ "VARSIZE", "FANCY" ]
+  },
+  {
+    "//": "ワンピース、アイドル衣装(sugar)から性能が変わるが、都合上問題がありそうな値段、収納容量はそのままにする。",
+    "id": "voiro_idol_costume_una_spicy",
+    "type": "TOOL_ARMOR",
+    "category" : "armor",
+    "copy-from": "voiro_idol_costume_una_sugar",
+    "name": "偶像服装(音街鳗Spicy)[voiro]",
+    "description": "一套夸张的偶像服装。使用之后会变成连衣裙(音街鳗)。",
+    "weight": "300 g",
+    "color": "dark_gray",
+    "armor": [
+      { "coverage": 80, "covers": [ "torso" ] },
+      {
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
+        "coverage": 100
+      },
+      {
+        "encumbrance": 1,
+        "coverage": 80,
+        "covers": [ "arm_l", "arm_r" ],
+        "specifically_covers": [ "arm_elbow_l", "arm_elbow_r", "arm_upper_l", "arm_upper_r" ]
+      }
+    ],
+    "warmth": 5,
+    "use_action" : {
+      "menu_text" : "使用",
+      "type" : "transform",
+      "target" : "voiro_dress_una",
+      "msg" : "变成Talk_Ex版了。"
+    }
+  },
+  {
+    "id": "voiro_tights_una",
+    "type": "ARMOR",
+    "name": "紧身裤(音街鳗)[voiro]",
+    "copy-from": "tights",
+    "description": "一条紧贴腿和脚的稍微厚一点的紧身裤。色调格纹是令人印象深刻的红色。使用之后会变成袜子(音街鳗Sugar)。",
+    "weight": "158 g",
+    "price": 2000,
+    "warmth": 15,
+    "material_thickness": 1,
+    "use_action" : {
+      "menu_text" : "使用",
+      "type" : "transform",
+      "target" : "voiro_socks_una_sugar",
+      "msg" : "变成Sugar版了。"
+    }
+  },
+  {
+    "id": "voiro_socks_una_sugar",
+    "type": "ARMOR",
+    "copy-from": "socks",
+    "name": "袜子(音街鳗Sugar)[voiro]",
+    "description": "一双左边有琴键图案，右边是素色的袜子。在左腿上有乐谱设计的装饰品。使用之后会变成袜子(音街鳗Spicy)。",
+    "weight": "31 g",
+    "volume": "250 ml",
+    "price": 2000,
+    "use_action" : {
+      "menu_text" : "使用",
+      "type" : "transform",
+      "target" : "voiro_socks_una_spicy",
+      "msg" : "变成Spicy版了。"
+    },
+    "flags": [ "VARSIZE", "SKINTIGHT" ]
+  },
+  {
+    "id": "voiro_socks_una_spicy",
+    "type": "ARMOR",
+    "name": "紧身裤(音街鳗Spicy)[voiro]",
+    "copy-from": "voiro_tights_una",
+    "description": "用皮带固定的丝袜和有琴键图案的皮革长筒袜的组合。使用之后会变成紧身裤(音街鳗)。",
+    "weight": "45 g",
+    "volume": "250 ml",
+    "price": 2000,
+    "material": [ "cotton", "leather" ],
+    "armor": [
+      { "encumbrance": 5, "coverage": 100, "covers": [ "foot_l", "foot_r" ] },
+      {
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_lower_l", "leg_lower_r", "leg_knee_l", "leg_knee_r", "leg_upper_l", "leg_upper_r" ],
+        "coverage": 40,
+        "encumbrance": 4
+      }
+    ],
+    "warmth": 10,
+    "material_thickness": 1,
+    "use_action" : {
+      "menu_text" : "使用",
+      "type" : "transform",
+      "target" : "voiro_tights_una",
+      "msg" : "变成Talk_Ex版了。"
+    }
+  },
+  {
+    "id": "voiro_boots_una",
+    "type": "ARMOR",
+    "name": "靴子(音街鳗)[voiro]",
+    "copy-from": "boots",
+    "description": "整体是圆滚滚的充满近未来感的靴子。使用之后会变成运动鞋(音街鳗Sugar)。",
+    "weight": "800 g",
+    "volume": "2000 ml",
+    "price": 10000,
+    "material": [ "cotton", "leather" ],
+    "material_thickness": 2,
+    "environmental_protection": 1,
+    "use_action" : {
+      "menu_text" : "使用",
+      "type" : "transform",
+      "target" : "voiro_sneakers_una_sugar",
+      "msg" : "变成Sugar版了。"
+    }
+  },
+  {
+    "id": "voiro_sneakers_una_sugar",
+    "type": "ARMOR",
+    "copy-from": "sneakers",
+    "name": "运动鞋(音街鳗Sugar)[voiro]",
+    "description": "附有羽毛装饰的鞋底稍厚的运动鞋。使用之后会变成靴子(音街鳗Spicy)。",
+    "weight": "800 g",
+    "volume": "2000 ml",
+    "price": 10000,
+    "material_thickness": 2,
+    "environmental_protection": 1,
+    "use_action" : {
+      "menu_text" : "使用",
+      "type" : "transform",
+      "target" : "voiro_boots_una_spicy",
+      "msg" : "变成Spicy版了。"
+    }
+  },
+  {
+    "id": "voiro_boots_una_spicy",
+    "type": "ARMOR",
+    "copy-from": "boots",
+    "name": "靴子(音街鳗Spicy)[voiro]",
+    "description": "特征是黄色缝线的厚底平底靴。使用之后会变成靴子(音街鳗)。",
+    "weight": "800 g",
+    "volume": "2000 ml",
+    "price": 10000,
+    "bashing": 6,
+    "use_action" : {
+      "menu_text" : "使用",
+      "type" : "transform",
+      "target" : "voiro_boots_una",
+      "msg" : "变成Talk_Ex版了。"
+    }
+  },
+  {
+    "id": "voiro_headset_miku",
+    "type": "TOOL_ARMOR",
+    "copy-from": "voiro_headset_ai",
+    "name": "耳机(初音未来)[voiro]",
+    "description": "嵌入了无线通信功能的初音未来的头戴式耳机。使用之后会变成耳机(弱音白)。",
+    "weight": "179 g",
+    "volume": "250 ml",
+    "price": 3939,
+    "charges_per_use": 0,
+    "use_action" : {
+      "menu_text" : "使用",
+      "type" : "transform",
+      "target" : "voiro_headset_haku",
+      "msg" : "变成耳机(弱音白)了。"
+    }
+  },
+  {
+    "id": "voiro_headset_haku",
+    "type": "TOOL_ARMOR",
+    "copy-from": "voiro_headset_miku",
+    "name": "耳机(弱音白)[voiro]",
+    "description": "嵌入了无线通信功能的弱音白的头戴式耳机。使用之后会变成耳机(初音未来)。",
+    "weight": "186 g",
+    "volume": "250 ml",
+    "use_action" : {
+      "menu_text" : "使用",
+      "type" : "transform",
+      "target" : "voiro_headset_miku",
+      "msg" : "变成耳机(初音未来)了。"
+    }
+  },
+  {
+    "id": "voiro_sleeveless_miku",
+    "type": "ARMOR",
+    "copy-from": "tank_top",
+    "name": "无袖衫(初音未来)[voiro]",
+    "description": "超越科学极限的无袖绿色羽绒衬衫。使用之后会变成无袖衫(弱音白)。",
+    "weight": "239 g",
+    "volume": "1250 ml",
+    "price": 3900,
+    "color": "green",
+    "armor": [
+      {
+        "covers": [ "torso" ],
+        "coverage": 80,
+        "encumbrance": 0
+      }
+    ],
+    "use_action" : {
+      "menu_text" : "使用",
+      "type" : "transform",
+      "target" : "voiro_sleeveless_haku",
+      "msg" : "变成无袖衫(弱音白)了。"
+    },
+    "flags": [ "VARSIZE" ]
+  },
+  {
+    "id": "voiro_sleeveless_haku",
+    "type": "ARMOR",
+    "copy-from": "voiro_sleeveless_miku",
+    "name": "无袖衫(弱音白)[voiro]",
+    "description": "沾着酒精气味的无袖灰色羽绒衬衫。使用之后会变成无袖衫(初音未来)。",
+    "weight": "189 g",
+    "volume": "500 ml",
+    "color": "dark_gray",
+    "armor": [
+      {
+        "covers": [ "torso" ],
+        "coverage": 50,
+        "encumbrance": 0
+      }
+    ],
+    "use_action" : {
+      "menu_text" : "使用",
+      "type" : "transform",
+      "target" : "voiro_sleeveless_miku",
+      "msg" : "变成无袖衫(初音未来)了。"
+    }
+  },
+  {
+    "id": "voiro_arm_covers_miku",
+    "type": "ARMOR",
+    "copy-from": "arm_warmers",
+    "name": "臂套(初音未来)[voiro]",
+    "description": "充满近未来感的边缘是绿色的臂套。使用之后会变成臂套(弱音白)。",
+    "weight": "78 g",
+    "volume": "500 ml",
+    "price": 3939,
+    "color": "green",
+    "armor": [
+      {
+        "covers": [ "arm_l", "arm_r" ],
+        "specifically_covers": [ "arm_upper_l", "arm_upper_r" ],"coverage": 70, "encumbrance": 2 
+      },
+      {
+        "covers": [ "arm_l", "arm_r" ],
+        "specifically_covers": [ "arm_elbow_l", "arm_elbow_r","arm_lower_l", "arm_lower_r" ],"coverage": 100, "encumbrance": 2
+      }
+    ],
+    "warmth": 10,
+    "use_action" : {
+      "menu_text" : "使用",
+      "type" : "transform",
+      "target" : "voiro_arm_covers_haku",
+      "msg" : "变成臂套(弱音白)了。"
+    },
+    "flags": [ "VARSIZE" ]
+  },
+  {
+    "id": "voiro_arm_covers_haku",
+    "type": "ARMOR",
+    "copy-from": "voiro_arm_covers_miku",
+    "name": "臂套(弱音白)[voiro]",
+    "description": "充满近未来感的边缘是紫色的臂套。使用之后会变成臂套(初音未来)。",
+    "weight": "89 g",
+    "volume": "500 ml",
+    "color": "dark_gray",
+    "use_action" : {
+      "menu_text" : "使用",
+      "type" : "transform",
+      "target" : "voiro_arm_covers_miku",
+      "msg" : "变成臂套(初音未来)了。"
+    },
+    "flags": [ "VARSIZE" ]
+  },
+  {
+    "id": "voiro_skirt_miku",
+    "type": "ARMOR",
+    "copy-from": "nanoskirt",
+    "name": "短裙(初音未来)[voiro]",
+    "description": "一条有一部分会发光的高科技制造的短裙。使用之后会变成细筒裤(弱音白)。",
+    "weight": "78 g",
+    "volume": "250 ml",
+    "price": 3939,
+    "color": "green",
+    "use_action" : {
+      "menu_text" : "使用",
+      "type" : "transform",
+      "target" : "voiro_pants_haku",
+      "msg" : "变成细筒裤(弱音白)了。"
+    },
+    "flags": [ "VARSIZE" ]
+  },
+  {
+    "//": "ベルト付いてるけど、transformしたら中身が消える(と思う)ので、ベルト機能は無し。",
+    "id": "voiro_pants_haku",
+    "type": "ARMOR",
+    "copy-from": "pants",
+    "name": "细筒裤(弱音白)[voiro]",
+    "description": "从腰部到膝盖紧贴身体，然后开始下摆向外扩散的裤子。特征是紫色的线条。使用之后会变成短裙(初音未来)。",
+    "weight": "445 g",
+    "volume": "2 L",
+    "price": 3939,
+    "color": "dark_gray",
+    "use_action" : {
+      "menu_text" : "使用",
+      "type" : "transform",
+      "target" : "voiro_skirt_miku",
+      "msg" : "变成短裙(初音未来)了。"
+    },
+    "flags": [ "VARSIZE", "POCKETS" ]
+  },
+  {
+    "id": "voiro_boots_miku",
+    "type": "ARMOR",
+    "copy-from": "thigh_high_boots",
+    "name": "靴子(初音未来)[voiro]",
+    "description": "膝盖部分淡淡的发光，有琴键的花纹的黑色的高筒靴。使用之后会变成靴子(弱音白)。",
+    "weight": "780 g",
+    "volume": "3500 ml",
+    "price": 3939,
+    "use_action" : {
+      "menu_text" : "使用",
+      "type" : "transform",
+      "target" : "voiro_boots_haku",
+      "msg" : "变成靴子(弱音白)了。"
+    },
+    "armor": [
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [
+          "foot_heel_r",
+          "foot_heel_l",
+          "foot_arch_r",
+          "foot_arch_l",
+          "foot_toes_r",
+          "foot_toes_l",
+          "foot_ankle_r",
+          "foot_ankle_l"
+        ],
+        "material": [ { "type": "cotton", "covered_by_mat": 100, "thickness": 2 } ],
+        "encumbrance": 20,
+        "coverage": 100
+      },
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_sole_r", "foot_sole_l" ],
+        "material": [
+          { "type": "leather", "covered_by_mat": 100, "thickness": 0.1 },
+          { "type": "rubber", "covered_by_mat": 100, "thickness": 4.0 }
+        ],
+        "coverage": 100
+      },
+      {
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_lower_l", "leg_lower_r", "leg_knee_l", "leg_knee_r" ],
+        "coverage": 100,
+        "encumbrance": 20
+      },
+      {
+        "encumbrance": 0,
+        "coverage": 65,
+        "covers": [ "leg_r", "leg_l" ],
+        "specifically_covers": [ "leg_upper_l", "leg_upper_r" ]
+      }
+    ],
+    "flags": [ "VARSIZE", "WATERPROOF", "FANCY"  ]
+  },
+  {
+    "id": "voiro_boots_haku",
+    "type": "ARMOR",
+    "copy-from": "boots",
+    "name": "靴子(弱音白)[voiro]",
+    "description": "鞋底是紫色的亮白色短靴。使用之后会变成靴子(初音未来)。",
+    "weight": "445 g",
+    "volume": "2 L",
+    "price": 3939,
+    "use_action" : {
+      "menu_text" : "使用",
+      "type" : "transform",
+      "target" : "voiro_boots_miku",
+      "msg" : "变成靴子(初音未来)了。"
+    },
+    "flags": [ "VARSIZE", "WATERPROOF", "FANCY"  ]
+  },
+  {
+    "id": "voiro_hairpin_rikka",
+    "type": "TOOL_ARMOR",
+    "category": "clothing",
+    "name": "装饰发夹(小春六花)[voiro]",
+    "copy-from": "fc_hairpin",
+    "description": "带有樱花花瓣装饰的发夹。",
+    "looks_like": "fc_hairpin"
+  }
+]

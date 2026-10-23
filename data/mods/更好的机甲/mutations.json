@@ -1,0 +1,61 @@
+[
+  {
+    "type": "SPELL",
+    "id": "机甲推进跳跃",
+    "name": "机甲推进跳跃",
+    "description": "幽灵机甲利用推进系统进行跳跃移动",
+    "valid_targets": [ "self", "ally", "hostile", "ground", "item", "field" ],
+    "flags": [ "SILENT", "NO_LEGS", "NO_HANDS", "MUST_HAVE_CLASS_TO_LEARN", "NO_EXPLOSION_SFX" ],
+    "effect": "dash",
+    "shape": "cone",
+    "min_damage": 0,
+    "max_damage": 0,
+    "damage_increment": 0,
+    "damage_type": "bash",
+    "min_range": 10,
+    "max_range": 10,
+    "spell_class": "LEAPING_LEGS",
+    "difficulty": -20,
+    "base_casting_time": 200,
+    "base_energy_cost": 1,
+    "max_level": 1,
+    "energy_source": "STAMINA"
+  },
+  {
+    "type": "mutation",
+    "id": "幽灵机甲移动",
+    "name": { "str": "幽灵机甲移动" },
+    "points": 0,
+    "description": "在幽灵机甲中你的耐力几乎无限，移动速度也更快了，噪音几乎消失，你可以凭借机甲的推进系统跳跃一段距离",
+    "cardio_multiplier": 100,
+    "stamina_regen_modifier": 5000,
+    "movecost_flatground_modifier": 0.8,
+    "movecost_obstacle_modifier": 0.8,
+    "metabolism_modifier": -0.9,
+    "noise_modifier": 0.1
+  },
+  {
+    "type": "mutation",
+    "id": "大兵机甲移动",
+    "name": { "str": "大兵机甲移动" },
+    "points": 0,
+    "description": "在大兵机甲中你的耐力几乎无限，移动速度也更快了，噪音震聋欲耳",
+    "cardio_multiplier": 100,
+    "stamina_regen_modifier": 5000,
+    "movecost_flatground_modifier": 1,
+    "movecost_obstacle_modifier": 1,
+    "metabolism_modifier": -0.9,
+    "noise_modifier": 4
+  },
+  {
+    "type": "mutation",
+    "id": "千斤顶机甲移动",
+    "name": { "str": "千斤顶机甲移动" },
+    "points": 0,
+    "description": "在千斤顶机甲中你的耐力几乎无限，移动速度更慢了，噪音震聋欲耳",
+    "cardio_multiplier": 100,
+    "stamina_regen_modifier": 5000,
+    "metabolism_modifier": -0.9,
+    "noise_modifier": 8
+  }
+]

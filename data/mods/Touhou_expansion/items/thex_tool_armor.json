@@ -1,0 +1,255 @@
+[
+  {
+    "id": "lunar_riot_shield",
+    "type": "TOOL_ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "LDF 防暴盾",
+      "str_pl": "LDF 防暴盾"
+    },
+    "description": "一面长方形、略微弯曲的盾牌，由 LDF 的防暴部门使用。它比看起来要轻。",
+    "weight": "4000 g",
+    "volume": "3500 ml",
+    "longest_side": "180 cm",
+    "price": 24000,
+    "price_postapoc": 4800,
+    "to_hit": {
+      "balance": "good",
+      "grip": "weapon",
+      "length": "long",
+      "surface": "any"
+    },
+    "bashing": 16,
+    "material": [
+      "steel"
+    ],
+    "//": "Add lunarian_steel or something",
+    "material_thickness": 8,
+    "symbol": "[",
+    "color": "white",
+    "techniques": [
+      "BRUTAL",
+      "SHIELDBASH",
+      "WBLOCK_3"
+    ],
+    "armor": [
+      {
+        "covers": [
+          "arm_l",
+          "hand_l"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          12,
+          20
+        ]
+      },
+      {
+        "covers": [
+          "arm_r",
+          "hand_r",
+          "leg_l",
+          "torso"
+        ],
+        "coverage": 85,
+        "encumbrance": [
+          2,
+          2
+        ]
+      },
+      {
+        "covers": [
+          "foot_l",
+          "foot_r",
+          "head",
+          "leg_r"
+        ],
+        "coverage": 65,
+        "encumbrance": [
+          0,
+          0
+        ]
+      }
+    ],
+    "//3": "I have no idea if this is enough to emulate a shield's coverage",
+    "weapon_category": [
+      "SHIELDS"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "OUTER",
+      "OVERSIZE"
+    ],
+    "//2": "Don't know if this should be TOOL_ARMOR, ARMOR or WEAPON. Ideally one should shield bash with it while using it, independently of any actual weapons on the 'main hand', because good shields are used to shield bash faces"
+  },
+  {
+    "id": "tengu_mask",
+    "type": "TOOL_ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "天狗面具（侧脸）",
+      "str_pl": "天狗面具（侧脸）"
+    },
+    "description": "一个天狗面具，更准确的说一张代表了传说中的红脸长鼻子的天狗的面具，据说被真正的天狗使用过，戴在侧脸上",
+    "weight": "1000 g",
+    "volume": "2600 ml",
+    "//": "25x15x20 cm cone /3 ",
+    "price": 22000,
+    "price_postapoc": 1000,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "none",
+      "length": "hand",
+      "surface": "any"
+    },
+    "bashing": 4,
+    "material": [
+      "wood"
+    ],
+    "symbol": "[",
+    "color": "red",
+    "warmth": 2,
+    "use_action": {
+      "type": "transform",
+      "target": "tengu_mask2",
+      "menu_text": "戴上面具",
+      "msg": "你戴上了天狗面具。"
+    },
+    "armor": [
+      {
+        "covers": [
+          "head"
+        ],
+        "coverage": 15,
+        "encumbrance": [
+          2,
+          4
+        ]
+      }
+    ],
+    "flags": [
+      "OUTER"
+    ]
+  },
+  {
+    "id": "tengu_mask2",
+    "type": "TOOL_ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "天狗面具（正脸）",
+      "str_pl": "天狗面具（正脸）"
+    },
+    "copy-from": "tengu_mask",
+    "description": "一个天狗面具，更准确的说一张代表了传说中的红脸长鼻子的天狗的面具，据说被真正的天狗使用过，戴在正脸上",
+    "environmental_protection": 2,
+    "warmth": 10,
+    "use_action": {
+      "type": "transform",
+      "target": "tengu_mask",
+      "menu_text": "摘下面具",
+      "msg": "你摘下了覆盖脸部的天狗面具。"
+    },
+    "armor": [
+      {
+        "covers": [
+          "head"
+        ],
+        "coverage": 45,
+        "encumbrance": [
+          4,
+          8
+        ]
+      }
+    ],
+    "techniques": [
+      "WBLOCK_1"
+    ],
+    "flags": [
+      "OUTER"
+    ]
+  },
+  {
+    "id": "tengu_shield",
+    "type": "TOOL_ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "天狗盾",
+      "str_pl": "天狗盾"
+    },
+    "description": "一面菱形铁盾，漆成白色，中间有红色枫叶图案，边缘用某种钢材加固。天狗巡逻队成员使用它。",
+    "weight": "3500 g",
+    "volume": "3500 ml",
+    "longest_side": "70 cm",
+    "price": 24000,
+    "price_postapoc": 4800,
+    "to_hit": {
+      "balance": "good",
+      "grip": "weapon",
+      "length": "short",
+      "surface": "any"
+    },
+    "bashing": 16,
+    "material": [
+      "iron",
+      "steel"
+    ],
+    "//": "Add tengu_steel or something",
+    "material_thickness": 6,
+    "symbol": "[",
+    "color": "white",
+    "techniques": [
+      "BRUTAL",
+      "SHIELDBASH",
+      "WBLOCK_3"
+    ],
+    "armor": [
+      {
+        "covers": [
+          "arm_l",
+          "hand_l"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          8,
+          12
+        ]
+      },
+      {
+        "covers": [
+          "arm_r",
+          "hand_r",
+          "leg_l",
+          "torso"
+        ],
+        "coverage": 50,
+        "encumbrance": [
+          0,
+          0
+        ]
+      },
+      {
+        "covers": [
+          "foot_l",
+          "foot_r",
+          "head",
+          "leg_r"
+        ],
+        "coverage": 25,
+        "encumbrance": [
+          0,
+          0
+        ]
+      }
+    ],
+    "//3": "I have no idea if this is enough to emulate a shield's coverage",
+    "weapon_category": [
+      "SHIELDS"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "OUTER",
+      "OVERSIZE"
+    ],
+    "//2": "Don't know if this should be TOOL_ARMOR, ARMOR or WEAPON. Ideally one should shield bash with it while using it, independently of any actual weapons on the 'main hand', because good shields are used to shield bash faces"
+  }
+]

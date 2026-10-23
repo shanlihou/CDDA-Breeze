@@ -1,0 +1,62 @@
+[
+  {
+        "type" : "recipe",
+    "result": "CCingf_autodoc_couch",
+    "byproducts": [ ["anesthetic_kit", 1], ["anesthetic", 5] ],
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC食品医疗",
+    "skill_used": "survival",
+    "time": "1second",
+    "autolearn": true,
+    "components": [ [ [ "CCMODcoin", 300 ] ] ]
+  },
+  {
+    "id": "CCingf_autodoc_couch",
+    "type": "TOOL",
+    "category": "tool",
+    "name": { "str": "CC折叠全自动手术台" },
+    "description": "使用CC折叠全自动手术台，在附近位置放置一个CC全自动手术仪手术台。CC技术改进，设备上现在只需要CC全自动医疗仪手术台即可正常使用功能。可便携带走和安装的CC折叠全自动手术台。（建造选项家具收回）",
+    "looks_like": "scorecard",
+    "weight": "400 g",
+    "volume": "200 ml",
+    "price": "200 USD",
+    "price_postapoc": "100 USD",
+    "material": [ "paper" ],
+    "symbol": ",",
+    "color": "light_gray",
+    "use_action": { "type": "deploy_furn", "furn_type": "CCf_autodoc_couch" }
+  },
+  {
+    "type": "furniture",
+    "id": "CCf_autodoc_couch",
+    "name": "CC折叠全自动手术台",
+    "symbol": "H",
+    "looks_like": "f_sofa",
+    "description": "CC技术改进，设备上现在只需要CC全自动医疗仪手术台即可使用功能。可便携带走和安装的CC折叠全自动手术台。（建造选项家具收回）",
+    "bgcolor": "red",
+    "move_cost_mod": 2,
+    "coverage": 40,
+    "comfort": 4,
+    "floor_bedding_warmth": 500,
+    "required_str": 10,
+    "deconstruct": {
+      "items": [
+        { "item": "CCingf_autodoc_couch", "count": 1 }
+      ]
+    },
+    "flags": [ "TRANSPARENT", "AUTODOC", "AUTODOC_COUCH", "CONTAINER", "MOUNTABLE", "NO_PICKUP_ON_EXAMINE" ],
+    "examine_action": "autodoc",
+    "surgery_skill_multiplier": 1.0,
+    "bash": {
+      "str_min": 10,
+      "str_max": 40,
+      "sound": "smash!",
+      "sound_fail": "whump.",
+      "items": [
+        { "item": "CCingf_autodoc_couch", "count": 1 }
+      ]
+    }
+  }
+]

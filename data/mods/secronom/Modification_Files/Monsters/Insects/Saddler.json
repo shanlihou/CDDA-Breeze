@@ -1,0 +1,1061 @@
+[
+  {
+    "//": "This is an insect, a manipulating alien parasite similar to the half-life's head crab. Due to coding limitations, things are lot more complicated.",
+    "id": "mon_insect_saddler_brood",
+    "type": "MONSTER",
+    "name": {
+      "str": "怀孕的萨德勒"
+    },
+    "description": "恶魔般的巨大马鞍，无数绿色多毛的细腿覆盖着它的整个底部。在他们下面发出一种沉重的，可怕的声音，然而……",
+    "default_faction": "saddler",
+    "species": [
+      "SSADDLER"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 170,
+    "speed": 15,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
+    "symbol": "H",
+    "attack_cost": 200,
+    "color": "magenta_green",
+    "aggression": 5,
+    "morale": 100,
+    "melee_skill": 8,
+    "melee_dice": 4,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
+    "special_attacks": [
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "mon_insect_saddler_brood_birth_target"
+        },
+        "cooldown": 20,
+        "monster_message": "<color_yellow>怀孕的赛德勒生下了一只幼年萨德勒！</color>"
+      }
+    ],
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "FRIEND_DIED"
+    ],
+    "armor_bash": 22,
+    "armor_cut": 20,
+    "armor_bullet": 16,
+    "armor_stab": 20,
+    "vision_day": 12,
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "NO_BREATHE",
+      "CLIMBS",
+      "BASHES",
+      "POISON",
+      "QUEEN"
+    ]
+  },
+  {
+    "//": "Broodmother's ability has 1/8 chance to permanently stops it from spawning minions... to avoid population boom.",
+    "id": "mon_insect_saddler_brood_limit",
+    "looks_like": "mon_insect_saddler_brood",
+    "type": "MONSTER",
+    "name": {
+      "str": "怀孕的萨德勒"
+    },
+    "description": "恶魔般的巨大萨德勒，有无数绿色多毛的细长腿，覆盖整个萨德勒的下半部分。",
+    "default_faction": "saddler",
+    "species": [
+      "SSADDLER"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 170,
+    "speed": 35,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
+    "symbol": "H",
+    "attack_cost": 125,
+    "color": "magenta_green",
+    "aggression": 5,
+    "morale": 100,
+    "melee_skill": 8,
+    "melee_dice": 4,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "FRIEND_DIED"
+    ],
+    "armor_bash": 22,
+    "armor_cut": 20,
+    "armor_bullet": 16,
+    "armor_stab": 20,
+    "vision_day": 12,
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "NO_BREATHE",
+      "CLIMBS",
+      "BASHES",
+      "POISON",
+      "QUEEN"
+    ]
+  },
+  {
+    "id": "mon_insect_saddler_baby_potent",
+    "type": "MONSTER",
+    "name": {
+      "str": "幼年萨德勒"
+    },
+    "description": "一个腐坏的，不成熟的赛德勒，由于无力的四肢没有命令地抽搐，经常绊倒。",
+    "default_faction": "saddler",
+    "species": [
+      "SSADDLER"
+    ],
+    "volume": "750 ml",
+    "weight": "1000 g",
+    "hp": 5,
+    "speed": 35,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
+    "symbol": "h",
+    "color": "light_green",
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "FRIEND_DIED"
+    ],
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 0,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 1
+      }
+    ],
+    "upgrades": {
+      "age_grow": 6,
+      "half_life": 1,
+      "into": "mon_insect_saddler"
+    },
+    "special_attacks": [
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "mon_insect_saddler_baby_potent_target"
+        },
+        "cooldown": 100,
+        "monster_message": "<color_magenta>萨德勒幼崽在抽搐着...</color>"
+      }
+    ],
+    "vision_day": 4,
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "NO_BREATHE",
+      "CLIMBS",
+      "BASHES",
+      "POISON",
+      "STUMBLES",
+      "LARVA"
+    ]
+  },
+  {
+    "id": "mon_insect_saddler_baby",
+    "type": "MONSTER",
+    "name": {
+      "str": "幼年萨德勒"
+    },
+    "description": "一个腐坏的，不成熟的赛德勒，由于无力的四肢没有命令地抽搐，经常绊倒。",
+    "default_faction": "saddler",
+    "species": [
+      "SSADDLER"
+    ],
+    "volume": "750 ml",
+    "weight": "1000 g",
+    "hp": 5,
+    "speed": 35,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
+    "symbol": "h",
+    "color": "light_green",
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "FRIEND_DIED"
+    ],
+    "aggression": 0,
+    "morale": 0,
+    "melee_skill": 0,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 1
+      }
+    ],
+    "upgrades": {
+      "age_grow": 6,
+      "half_life": 1,
+      "into": "mon_insect_saddler"
+    },
+    "vision_day": 4,
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "NO_BREATHE",
+      "CLIMBS",
+      "BASHES",
+      "POISON",
+      "STUMBLES",
+      "LARVA"
+    ]
+  },
+  {
+    "id": "mon_insect_saddler",
+    "type": "MONSTER",
+    "name": {
+      "str": "异形萨德勒"
+    },
+    "description": "一种形似外星人的昆虫，有着细长的四肢，小眼睛和皮包骨。它驼背的头部和巨大的底部裂缝表明它的器官并没有以动物的方式运作。",
+    "default_faction": "saddler",
+    "species": [
+      "SSADDLER"
+    ],
+    "volume": "4000 ml",
+    "weight": "4000 g",
+    "harvest": "zombie",
+    "hp": 20,
+    "speed": 100,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "h",
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "FRIEND_DIED"
+    ],
+    "color": "green",
+    "aggression": 5,
+    "morale": 5,
+    "melee_skill": 2,
+    "melee_dice": 1,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
+    "armor_bash": 2,
+    "armor_stab": 1,
+    "vision_day": 6,
+    "special_attacks": [
+      {
+        "type": "leap",
+        "cooldown": 60,
+        "max_range": 4
+      },
+      {
+        "type": "leap",
+        "cooldown": 15,
+        "max_range": 3,
+        "min_range": 2,
+        "allow_no_target": true
+      }
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "NO_BREATHE",
+      "CLIMBS",
+      "BASHES",
+      "POISON"
+    ]
+  },
+  {
+    "id": "mon_insect_saddler_brute",
+    "type": "MONSTER",
+    "name": {
+      "str": "狂暴异形萨德勒"
+    },
+    "description": "有一个巨大的驼峰和四肢是其前身的两倍大的鞍具。与其他人不同的是，它的原始本能更倾向于凶猛的攻击。",
+    "default_faction": "saddler",
+    "species": [
+      "SSADDLER"
+    ],
+    "volume": "18000 ml",
+    "weight": "10500 g",
+    "harvest": "zombie",
+    "hp": 65,
+    "speed": 65,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "h",
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "FRIEND_DIED"
+    ],
+    "color": "dark_gray",
+    "aggression": 50,
+    "morale": 25,
+    "melee_skill": 4,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
+    "vision_day": 12,
+    "armor_bash": 4,
+    "armor_cut": 1,
+    "armor_bullet": 1,
+    "armor_stab": 2,
+    "special_attacks": [
+      {
+        "type": "leap",
+        "cooldown": 120,
+        "max_range": 4
+      },
+      {
+        "type": "leap",
+        "cooldown": 30,
+        "max_range": 3,
+        "min_range": 2,
+        "allow_no_target": true
+      }
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "NO_BREATHE",
+      "CLIMBS",
+      "BASHES",
+      "POISON",
+      "PUSH_MON"
+    ]
+  },
+  {
+    "id": "mon_insect_saddler_scout",
+    "type": "MONSTER",
+    "name": {
+      "str": "迅捷异形萨德勒"
+    },
+    "description": "一种纤细的鞍形物，在它锋利的四肢上游动时流着口水。体弱多病，擅长一路冲刺，达到目标。",
+    "default_faction": "saddler",
+    "species": [
+      "SSADDLER"
+    ],
+    "volume": "4750 ml",
+    "weight": "4750 g",
+    "harvest": "zombie",
+    "hp": 30,
+    "speed": 110,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "h",
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "FRIEND_DIED"
+    ],
+    "color": "red",
+    "aggression": 50,
+    "morale": 25,
+    "melee_skill": 4,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      }
+    ],
+    "dodge": 5,
+    "vision_day": 15,
+    "armor_bash": 1,
+    "special_attacks": [
+      {
+        "type": "leap",
+        "cooldown": 30,
+        "max_range": 4
+      },
+      {
+        "type": "leap",
+        "cooldown": 15,
+        "max_range": 3,
+        "min_range": 2,
+        "allow_no_target": true
+      }
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "NO_BREATHE",
+      "CLIMBS",
+      "BASHES",
+      "POISON"
+    ]
+  },
+  {
+    "//": "Saddlers are stronger when they manipulate a creature. Living, sentient creatures (humans, which are rare for saddlers to seek for) possesses more raw strength than undeads (zeds are common due to cataclysm).",
+    "id": "mon_saddler_infected",
+    "type": "MONSTER",
+    "name": {
+      "str": "寄生萨德勒"
+    },
+    "description": "曾经是人类，现在一条粗壮的血管屈服于寄生恶魔。它的整个头部都被寄生虫的裂口“吃掉”，而它的手则变成了粘乎乎乎的利爪。它痛苦地呻吟着，当你靠近它时，可以听到一些低沉、听不见的咕哝声。",
+    "default_faction": "saddler",
+    "species": [
+      "SSADDLER",
+      "HUMAN"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 180,
+    "harvest": "human",
+    "speed": 70,
+    "material": [
+      "hflesh"
+    ],
+    "symbol": "@",
+    "color": "green",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 6,
+    "melee_dice": 1,
+    "melee_dice_sides": 6,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 6
+      }
+    ],
+    "dodge": 1,
+    "armor_bash": 8,
+    "armor_cut": 2,
+    "armor_bullet": 2,
+    "armor_stab": 4,
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 25
+      },
+      [
+        "GRAB",
+        40
+      ],
+      [
+        "scratch",
+        32
+      ],
+      [
+        "PARROT",
+        22
+      ]
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "death_function": {
+      "corpse_type": "NORMAL",
+      "message": "%s dies!\n<color_light_red>The saddler pops off from its host!</color>",
+      "effect": {
+        "id": "mon_saddler_infected_death",
+        "hit_self": true
+      }
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "FILTHY",
+      "GRABS"
+    ]
+  },
+  {
+    "id": "mon_saddler_infected_brute",
+    "type": "MONSTER",
+    "name": {
+      "str": "狂暴寄生萨德勒"
+    },
+    "description": "一个驼背的人被残忍的寄生虫控制住了。它脏兮兮的爪子上散发着鲜血的臭味，这暗示着它的突然变化导致了它增厚的皮肤层可见的小缺陷。",
+    "default_faction": "saddler",
+    "species": [
+      "SSADDLER",
+      "HUMAN"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 220,
+    "harvest": "human",
+    "speed": 60,
+    "material": [
+      "hflesh"
+    ],
+    "symbol": "@",
+    "color": "dark_gray",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 8,
+    "melee_dice": 3,
+    "melee_dice_sides": 6,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      }
+    ],
+    "armor_bash": 16,
+    "armor_cut": 4,
+    "armor_bullet": 4,
+    "armor_stab": 8,
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 25
+      },
+      [
+        "GRAB",
+        40
+      ],
+      [
+        "scratch",
+        32
+      ],
+      [
+        "PARROT",
+        22
+      ]
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "death_function": {
+      "corpse_type": "NORMAL",
+      "message": "%s dies!\n<color_light_red>The saddler brute pops off from its host!</color>",
+      "effect": {
+        "id": "mon_saddler_brute_infected_death",
+        "hit_self": true
+      }
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "FILTHY",
+      "GRABS"
+    ]
+  },
+  {
+    "id": "mon_saddler_infected_scout",
+    "type": "MONSTER",
+    "name": {
+      "str": "迅捷寄生萨德勒"
+    },
+    "description": "一种被感染的人，身体细长，似乎很灵活，爪子弯曲成一对可怕的锋利的刀子。然而致命的是，它的改变会使宿主的肉和内脏变得致密，从而使其重要的四肢变得非常脆弱。",
+    "default_faction": "saddler",
+    "species": [
+      "SSADDLER",
+      "HUMAN"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 80,
+    "harvest": "human",
+    "speed": 105,
+    "material": [
+      "hflesh"
+    ],
+    "symbol": "@",
+    "color": "red",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 8,
+    "melee_dice": 1,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 8
+      }
+    ],
+    "dodge": 5,
+    "armor_bash": 4,
+    "armor_cut": 1,
+    "armor_bullet": 1,
+    "armor_stab": 2,
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 25
+      },
+      [
+        "GRAB",
+        40
+      ],
+      [
+        "scratch",
+        32
+      ],
+      [
+        "PARROT",
+        22
+      ]
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "death_function": {
+      "corpse_type": "NORMAL",
+      "message": "%s dies!\n<color_light_red>The saddler scout pops off from its host!</color>",
+      "effect": {
+        "id": "mon_saddler_scout_infected_death",
+        "hit_self": true
+      }
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "FILTHY",
+      "GRABS"
+    ]
+  },
+  {
+    "id": "mon_zombie_saddler_infected",
+    "type": "MONSTER",
+    "name": {
+      "str": "丧尸萨德勒"
+    },
+    "description": "一具大而瘦的头上滴着黑色黏液的尸体，还有一双可怕的利爪。不知道马鞍者是如何操纵这个不死生物的思想的，但它的感官肯定是迟钝的，身体的变化被放大了，不像活人",
+    "default_faction": "saddler",
+    "species": [
+      "SSADDLER",
+      "ZOMBIE"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 125,
+    "harvest": "zombie",
+    "speed": 55,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "Z",
+    "color": "green",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 4,
+    "melee_dice": 1,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 5
+      }
+    ],
+    "dodge": 1,
+    "armor_bash": 4,
+    "armor_cut": 1,
+    "armor_bullet": 1,
+    "armor_stab": 2,
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 25
+      },
+      [
+        "GRAB",
+        40
+      ],
+      [
+        "scratch",
+        32
+      ]
+    ],
+    "vision_day": 10,
+    "vision_night": 2,
+    "death_drops": "default_zombie_death_drops",
+    "death_function": {
+      "corpse_type": "NORMAL",
+      "message": "%s dies!\n<color_light_red>The saddler pops off from its host!</color>",
+      "effect": {
+        "id": "mon_saddler_infected_death",
+        "hit_self": true
+      }
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "FILTHY",
+      "GRABS"
+    ]
+  },
+  {
+    "id": "mon_zombie_saddler_infected_brute",
+    "type": "MONSTER",
+    "name": {
+      "str": "狂暴丧尸兽"
+    },
+    "description": "一个粗犷的丧尸，头和手都是拱形的，变成了骨瘦如柴的爪子。它的身体可以承受多次打击，但皮肤的僵硬使它的动作看起来像是残废了。",
+    "default_faction": "saddler",
+    "species": [
+      "SSADDLER",
+      "ZOMBIE"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 170,
+    "harvest": "zombie",
+    "speed": 45,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "Z",
+    "color": "dark_gray",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 6,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 3
+      }
+    ],
+    "armor_bash": 8,
+    "armor_cut": 2,
+    "armor_bullet": 2,
+    "armor_stab": 4,
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 25
+      },
+      [
+        "GRAB",
+        40
+      ],
+      [
+        "scratch",
+        32
+      ]
+    ],
+    "vision_day": 10,
+    "vision_night": 2,
+    "death_drops": "default_zombie_death_drops",
+    "death_function": {
+      "corpse_type": "NORMAL",
+      "message": "%s dies!\n<color_light_red>The saddler brute pops off from its host!</color>",
+      "effect": {
+        "id": "mon_saddler_brute_infected_death",
+        "hit_self": true
+      }
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "FILTHY",
+      "GRABS"
+    ]
+  },
+  {
+    "id": "mon_zombie_saddler_infected_scout",
+    "type": "MONSTER",
+    "name": {
+      "str": "迅捷寄生萨德勒"
+    },
+    "description": "一种瘦削的尸体，头部和手臂的长度是平均长度的两倍，顶端有凶猛的利爪。尽管它瘦弱的身体，它的敏捷动作超过了大多数目标。",
+    "default_faction": "saddler",
+    "species": [
+      "SSADDLER",
+      "ZOMBIE"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 55,
+    "harvest": "zombie",
+    "speed": 100,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "Z",
+    "color": "red",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 6,
+    "melee_dice": 1,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 7
+      }
+    ],
+    "dodge": 4,
+    "armor_bash": 2,
+    "armor_stab": 1,
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 25
+      },
+      [
+        "GRAB",
+        40
+      ],
+      [
+        "scratch",
+        32
+      ]
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "death_function": {
+      "corpse_type": "NORMAL",
+      "message": "%s dies!\n<color_light_red>The saddler scout pops off from its host!</color>",
+      "effect": {
+        "id": "mon_saddler_scout_infected_death",
+        "hit_self": true
+      }
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "FILTHY",
+      "GRABS"
+    ]
+  },
+  {
+    "//": "The product of a saddler after being manipulated.",
+    "id": "mon_zombie_saddler_used",
+    "type": "MONSTER",
+    "name": {
+      "str": "无头丧尸"
+    },
+    "description": "无头行尸走肉。它的手变成了锋利的爪子，上面满是黑色的黏液。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE"
+    ],
+    "volume": "55000 ml",
+    "weight": "69000 g",
+    "hp": 75,
+    "harvest": "zombie",
+    "speed": 50,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "Z",
+    "color": "green",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 2,
+    "melee_dice": 1,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 5
+      }
+    ],
+    "armor_bash": 4,
+    "armor_cut": 1,
+    "armor_bullet": 1,
+    "armor_stab": 2,
+    "special_attacks": [
+      [
+        "GRAB",
+        40
+      ],
+      [
+        "scratch",
+        32
+      ]
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "flags": [
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "FILTHY",
+      "GRABS"
+    ]
+  },
+  {
+    "id": "mon_zombie_saddler_brute_used",
+    "type": "MONSTER",
+    "name": {
+      "str": "无头狂暴丧尸"
+    },
+    "description": "它有着粗壮的无头身躯，非常厚的皮肤和一排杂草丛生的指甲，这表明这具尸体经过了一次变异。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE"
+    ],
+    "volume": "55000 ml",
+    "weight": "69000 g",
+    "hp": 115,
+    "harvest": "zombie",
+    "speed": 40,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "Z",
+    "color": "dark_gray",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 4,
+    "melee_dice": 2,
+    "melee_dice_sides": 6,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 3
+      }
+    ],
+    "armor_bash": 8,
+    "armor_cut": 2,
+    "armor_bullet": 2,
+    "armor_stab": 4,
+    "special_attacks": [
+      [
+        "GRAB",
+        40
+      ],
+      [
+        "scratch",
+        32
+      ]
+    ],
+    "vision_day": 10,
+    "vision_night": 2,
+    "death_drops": "default_zombie_death_drops",
+    "flags": [
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "FILTHY",
+      "GRABS"
+    ]
+  },
+  {
+    "id": "mon_zombie_saddler_scout_used",
+    "type": "MONSTER",
+    "name": {
+      "str": "无头迅捷丧尸"
+    },
+    "description": "一种无头的丧尸，身体细长，手臂锋利，看起来是变异的产物。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE"
+    ],
+    "volume": "55000 ml",
+    "weight": "69000 g",
+    "hp": 45,
+    "harvest": "zombie",
+    "speed": 95,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "Z",
+    "color": "red",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 4,
+    "melee_dice": 1,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 7
+      }
+    ],
+    "dodge": 1,
+    "armor_bash": 2,
+    "armor_stab": 1,
+    "special_attacks": [
+      [
+        "GRAB",
+        40
+      ],
+      [
+        "scratch",
+        32
+      ]
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "flags": [
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "FILTHY",
+      "GRABS"
+    ]
+  }
+]

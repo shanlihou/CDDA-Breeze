@@ -1,0 +1,25 @@
+[
+  {
+    "id": "bio_power_storage_mkII",
+    "type": "bionic",
+    "name": { "str": "Power Storage Mk. II" },
+    "capacity": "500 kJ",
+    "dupes_allowed": true,
+    "description": "紧凑型能源仿生模块，可将你的能量容量提升500 kJ。",
+    "flags": [ "BIONIC_NPC_USABLE" ]
+  },
+  {
+        "type" : "recipe",
+    "result": "bio_power_storage_mkII",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC供应CBM",
+    "skill_used": "firstaid",
+    "difficulty": 3,
+    "time": "1second",
+    "reversible": true,
+    "autolearn": true,
+    "components": [ [ [ "CCMODcoin", 230 ] ] ]
+  }
+]

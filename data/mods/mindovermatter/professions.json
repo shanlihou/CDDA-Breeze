@@ -1,0 +1,248 @@
+[
+  {
+    "type": "profession",
+    "id": "psi_new_psychic",
+    "name": "觉醒灵能者",
+    "description": "你在一场传送门风暴中幸存下来并躲藏起来，现实在你周围破碎，当你出来检查损伤时，你发现风暴留下的一块奇异水晶。它令人着迷，你带走了它。有时，在夜里，你会在睡前凝视它，你几乎感觉你内在的某种东西正在对水晶中的光芒作出回应。",
+    "points": 1,
+    "items": {
+      "both": {
+        "items": [ "jeans", "longshirt", "socks", "sneakers", "mbag", "water_clean", "wristwatch" ],
+        "entries": [ { "group": "charged_smart_phone" }, { "group": "charged_matches" }, { "group": "dist_matrix_crystals" } ]
+      },
+      "male": [ "boxer_shorts" ],
+      "female": [ "bra", "panties" ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "psi_biokinetic_athlete",
+    "name": "明星运动员",
+    "description": "你一直擅长田径运动。人们称赞你的努力和刻苦，但事实是你几乎不需要练习。这一切对你来说都是自然而然，就像呼吸一样自然。这在大灾变中保护了你——你跑过了死者和其他追逐你的更糟的东西，逃出了城市，而且这肯定是能让你坚持下去的东西，尤其是现在，你比以往任何时候都更强更快。",
+    "points": 4,
+    "skills": [
+      { "level": 2, "name": "throw" },
+      { "level": 3, "name": "swimming" },
+      { "level": 1, "name": "unarmed" }
+    ],
+    "traits": [
+      "BIOKINETIC",
+      "BIOKIN_NEEDS"
+    ],
+    "spells": [
+      { "id": "biokin_physical_enhance", "level": 4 },
+      { "id": "biokin_overcome_pain", "level": 2 },
+      { "id": "biokin_reflex_enhance", "level": 1 }
+    ],
+    "items": {
+      "both": {
+        "items": [ "jacket_light", "jeans", "socks", "cleats", "sports_drink" ],
+        "entries": [
+          { "group": "charged_smart_phone" },
+          { "item": "tshirt", "variant": "generic_tshirt" }
+        ]
+      },
+      "male": [ "boxer_shorts" ],
+      "female": [ "sports_bra", "panties" ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "psi_clairsentient_doomseer",
+    "name": "末日先知",
+    "description": "你知道世界即将终结，但他们从不听。他们从不听！他们看不见行走在他们中间的东西！他们不知道你看到了什么，你知道即将发生什么，而现在他们又在哪？在僵尸的肚子里或者和那些尸体一起游荡，但你还活着。",
+    "points": 0,
+    "skills": [
+      { "level": 2, "name": "speech" },
+      { "level": 1, "name": "metaphysics" }
+    ],
+    "traits": [
+      "CLAIRSENTIENT",
+      "CLAIR_SENSES",
+      "SCHIZOPHRENIC"
+    ],
+    "spells": [
+      { "id": "clair_night_vision", "level": 4 },
+      { "id": "clair_perfect_path", "level": 2 },
+      { "id": "clair_voyance", "level": 2 }
+    ],
+    "items": {
+      "both": {
+        "items": [ "jeans", "socks", "robe", "lowtops", "newest_newspaper", "weeks_old_newspaper", "months_old_newspaper" ],
+        "entries": [ { "group": "charged_smart_phone" }, { "item": "tshirt", "variant": "generic_tshirt" } ]
+      },
+      "male": [ "briefs" ],
+      "female": [ "bra", "panties" ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "psi_pyrokinetic_firestarter",
+    "name": "纵火者",
+    "description": "火总是让你着迷。你放的火差点让你被逮捕几次，但那种冲动太强烈了。就像它们在呼唤你，催促你创造它们。自从天空破裂以来，你可以仅凭一个念头就创造火焰。",
+    "points": 4,
+    "skills": [
+      { "level": 2, "name": "cooking" },
+      { "level": 1, "name": "driving" },
+      { "level": 2, "name": "metaphysics" }
+    ],
+    "traits": [
+      "PYROMANIA",
+      "PYROKINETIC",
+      "PYROGLOW_WEAK",
+      "PYROGLOW_STRONG"
+    ],
+    "spells": [
+      { "id": "pyrokinetic_eruption", "level": 3 },
+      { "id": "pyrokinetic_flamethrower", "level": 2 },
+      { "id": "pyrokinetic_flash", "level": 3 }
+    ],
+    "items": {
+      "both": {
+        "items": [ "socks", "jeans", "sneakers" ],
+        "entries": [
+          { "item": "tshirt", "variant": "generic_tshirt" },
+          { "item": "lighter", "charges": 100 },
+          { "item": "lighter", "charges": 100 },
+          { "group": "charged_matches" }
+        ]
+      },
+      "male": [ "boxer_shorts" ],
+      "female": [ "bra", "panties" ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "psi_telekinetic_testsubject",
+    "name": "实验对象，黑曜石闪电计划",
+    "description": "在大灾变之前，你被“自愿”参加了一个绝密军事项目。他们从未告诉你那些注射、脑电图和盯着桌上一个硬币数小时是为了什么目的，但现在你能用意念移动物体，你很清楚地知道他们的目标是什么。",
+    "points": 5,
+    "skills": [
+      { "level": 2, "name": "gun" },
+      { "level": 2, "name": "pistol" },
+      { "level": 1, "name": "dodge" },
+      { "level": 1, "name": "driving" },
+      { "level": 1, "name": "metaphysics" }
+    ],
+    "traits": [ "TELEKINETIC", "TELEKINETIC_CARRY" ],
+    "spells": [
+      { "id": "telekinetic_push", "level": 4 },
+      { "id": "telekinetic_pull", "level": 3 },
+      { "id": "telekinetic_wave", "level": 2 }
+    ],
+    "items": {
+      "both": {
+        "items": [ "pants_army", "gloves_tactical", "army_top", "boots_combat", "socks" ],
+        "entries": [
+          { "item": "water_clean", "container-item": "canteen" },
+          { "item": "knife_combat", "container-item": "sheath" }
+        ]
+      },
+      "male": [ "boxer_briefs" ],
+      "female": [ "bra", "panties" ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "psi_telepath_interrogater",
+    "name": "政府审讯员（已故）",
+    "description": "你并未在大灾变中死去，因为纸面上你已经死了。你作为一项旨在培养灵能审讯员的实验项目的一部分，获得了新身份。他们告诉你你在为国家服务，你的天赋将是赢得必定发展的新冷战的关键，但他们没有考虑到基地里有一位灵能者的后果。你立刻就知道情况比高层告诉你的糟糕得多，你的天赋让你即使在封锁面前也能“说服”守卫放你出去。你本想去别处，远离新英格兰，但终结来得比你想象的还要快。",
+    "points": 3,
+    "skills": [
+      { "level": 3, "name": "speech" },
+      { "level": 3, "name": "metaphysics" }
+    ],
+    "traits": [ "TELEPATH", "TELEPATHIC_SUGGESTION" ],
+    "spells": [
+      { "id": "telepathic_concentration", "level": 4 },
+      { "id": "telepathic_shield", "level": 2 },
+      { "id": "telepathic_confusion", "level": 2 }
+    ],
+    "items": {
+      "both": {
+        "items": [ "pants", "dress_shirt", "socks", "dress_shoes" ],
+        "entries": [
+          { "item": "water_clean", "container-item": "canteen" },
+          { "group": "charged_smart_phone" },
+          { "item": "lighter", "charges": 100 }
+        ]
+      },
+      "male": [ "briefs" ],
+      "female": [ "bra", "panties" ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "psi_teleporter_slider",
+    "name": "伊兹库阿特利军团联络官，约瓦利·埃赫卡特分部",
+    "description": "你不明白发生了什么。你正准备在赫布里底群岛外的一个传送点进行例行跳跃，驱动器突然发生电力级联，现在你在这里，在特拉尔蒂克帕克特利的某个其他版本上。你需要找到回家的路，但首先你得找到生存的方法。",
+    "points": 6,
+    "skills": [
+      { "level": 2, "name": "computer" },
+      { "level": 2, "name": "gun" },
+      { "level": 2, "name": "pistol" },
+      { "level": 3, "name": "metaphysics" }
+    ],
+    "traits": [ "TELEPORTER", "TELEPORTER_PROTECT" ],
+    "spells": [
+      { "id": "teleport_blink", "level": 5 },
+      { "id": "teleport_slow", "level": 1 },
+      { "id": "teleport_farstep", "level": 3 }
+    ],
+    "items": {
+      "both": {
+        "items": [ "wristwatch", "pants", "dress_shirt", "socks", "dress_shoes", "officer_uniform", "beret", "holster" ],
+        "entries": [
+          { "item": "mom_fusion_pistol", "ammo-item": "mom_fusion_ammo", "charges": 40, "contents-item": [ "mom_fusion_mag" ] },
+          { "item": "mom_fusion_mag", "ammo-item": "mom_fusion_ammo", "charges": 40 }
+        ]
+      },
+      "male": [ "briefs" ],
+      "female": [ "bra", "panties" ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "psi_vitakinetic_healer",
+    "name": "信仰治疗师",
+    "description": "人们来找你治疗现代医学告诉他们不治之症，你治好了他们。至少，他们感觉好了，这才是最重要的。现在死者行走，对你的劝诫没有反应，但你的治疗对自己比以往对任何人都更有效。",
+    "points": 4,
+    "skills": [
+      { "level": 2, "name": "speech" },
+      { "level": 1, "name": "driving" },
+      { "level": 1, "name": "metaphysics" }
+    ],
+    "traits": [ "VITAKINETIC", "VITAKINETIC_HEALTH", "SPIRITUAL" ],
+    "spells": [
+      { "id": "vita_stop_bleeding", "level": 2 },
+      { "id": "vita_health_power", "level": 5 },
+      { "id": "vita_sleeping_trance", "level": 1 }
+    ],
+    "items": {
+      "both": {
+        "items": [ "dress_shirt", "pants", "socks", "dress_shoes", "wristwatch", "flyer", "flyer", "flyer", "holy_symbol" ],
+        "entries": [ { "group": "charged_smart_phone" } ]
+      },
+      "male": [ "briefs" ],
+      "female": [ "bra", "panties" ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "paranormal_investigator",
+    "copy-from": "paranormal_investigator",
+    "extend": { "skills": [ { "level": 2, "name": "metaphysics" } ] }
+  },
+  {
+    "type": "profession",
+    "id": "guru",
+    "copy-from": "guru",
+    "extend": { "skills": [ { "level": 3, "name": "metaphysics" } ] }
+  },
+  {
+    "type": "profession",
+    "id": "naturalist",
+    "copy-from": "naturalist",
+    "extend": { "skills": [ { "level": 1, "name": "metaphysics" } ] }
+  }
+]

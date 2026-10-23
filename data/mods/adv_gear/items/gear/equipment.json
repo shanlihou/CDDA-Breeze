@@ -1,0 +1,433 @@
+[
+  {
+    "abstract": "nanogear",
+    "type": "ARMOR",
+    "name": "nanotech gear",
+    "description": "You shouldn't see this - nanogear",
+    "symbol": "[",
+    "color": "light_gray",
+    "volume": 1,
+    "weight": 1713,
+    "storage": 0,
+    "price": 500000,
+    "material": "nanite",
+    "flags": [
+      "ALLOWS_NATURAL_ATTACKS",
+      "TRADER_AVOID",
+      "OVERSIZE"
+    ],
+    "bashing": 0,
+    "cutting": 0,
+    "to_hit": 0,
+    "warmth": 0,
+    "environmental_protection": 0,
+    "encumbrance": 0,
+    "coverage": 10,
+    "material_thickness": 1
+  },
+  {
+    "id": "nano_shield",
+    "type": "ARMOR",
+    "name": "纳米护盾",
+    "category": "armor",
+    "looks_like": "shield_scutum",
+    "description": "根据纳米科技制作成的护盾,目前处于关闭状态.你可以用它来阻挡攻击,当不使用时,它处于手柄之中.",
+    "weight": 569,
+    "volume": 4,
+    "price": 250000,
+    "to_hit": 0,
+    "bashing": 10,
+    "material": "nanite",
+    "symbol": "[",
+    "color": "light_gray",
+    "covers": [
+      "ARM_EITHER",
+      "HAND_EITHER"
+    ],
+    "coverage": 90,
+    "encumbrance": 28,
+    "material_thickness": 4,
+    "techniques": [
+      "WBLOCK_3"
+    ],
+    "flags": [
+      "OVERSIZE",
+      "BELTED",
+      "RESTRICT_HANDS",
+      "BLOCK_WHILE_WORN",
+      "TRADER_AVOID"
+    ],
+    "use_action": {
+      "type": "transform",
+      "target": "nano_shield_active",
+      "active": false,
+      "msg": "护盾切换为主动模式。"
+    }
+  },
+  {
+    "id": "nano_shield_active",
+    "type": "ARMOR",
+    "name": "纳米护盾 (主动)",
+    "category": "armor",
+    "looks_like": "shield_scutum",
+    "description": "根据纳米科技制作成的护盾,目前处于开启状态.它会自动帮你阻挡攻击,让你可以使用双手进行其他操作.当不使用时,它处于手柄之中.",
+    "weight": 569,
+    "volume": 2,
+    "price": 250000,
+    "to_hit": 0,
+    "bashing": 10,
+    "material": "nanite",
+    "symbol": "[",
+    "color": "light_gray",
+    "covers": [
+      "ARM_EITHER"
+    ],
+    "coverage": 60,
+    "encumbrance": 15,
+    "material_thickness": 4,
+    "techniques": [
+      "WBLOCK_3"
+    ],
+    "flags": [
+      "OVERSIZE",
+      "BELTED",
+      "BLOCK_WHILE_WORN",
+      "TRADER_AVOID"
+    ],
+    "use_action": {
+      "type": "transform",
+      "target": "nano_shield",
+      "active": false,
+      "msg": "护盾切换为被动模式。"
+    }
+  },
+  {
+    "type": "ARMOR",
+    "id": "nano_storage",
+    "name": "纳米背包",
+    "copy-from": "nanogear",
+    "looks_like": "slime_scrap",
+    "weight": 3157,
+    "covers": [
+      "TORSO"
+    ],
+    "storage": 1000,
+    "description": "这一个纳米技术制作的存储工具,它拥有超大的存储空间可以帮你放下足够多的物品.",
+    "artifact_data": {
+      "effects_worn": [
+        "AEP_CARRY_MORE"
+      ]
+    },
+    "volume": 8,
+    "extend": {
+      "flags": [
+        "BELTED"
+      ]
+    },
+    "coverage": 30
+  },
+  {
+    "type": "ARMOR",
+    "id": "nano_holster",
+    "name": "纳米枪套",
+    "copy-from": "nanogear",
+    "looks_like": "holster",
+    "covers": [
+      "LEG_EITHER"
+    ],
+    "description": "拥有人工智能的纳米枪套,可以存放枪支并且根据需要自动将武器放入主人手中.",
+    "extend": {
+      "flags": [
+        "BELTED"
+      ]
+    },
+    "use_action": {
+      "type": "holster",
+      "holster_prompt": "收起武器",
+      "holster_msg": "你将 %s 收鞘。",
+      "max_volume": 18,
+      "min_volume": 0,
+      "multi": 2,
+      "max_weight": 5000,
+      "draw_cost": 0,
+      "skills": [
+        "pistol",
+        "smg",
+        "shotgun",
+        "rifle",
+        "launcher"
+      ]
+    }
+  },
+  {
+    "type": "ARMOR",
+    "id": "nano_sheath",
+    "name": "纳米剑鞘",
+    "copy-from": "nanogear",
+    "looks_like": "sheath",
+    "covers": [
+      "LEG_EITHER"
+    ],
+    "description": "拥有人工智能的纳米枪套,可以存放刀剑等武器,并且根据需要自动将武器放入主人手中.",
+    "extend": {
+      "flags": [
+        "BELTED"
+      ]
+    },
+    "use_action": {
+      "type": "holster",
+      "holster_prompt": "收起武器",
+      "holster_msg": "你收起了 %s 。",
+      "max_volume": 18,
+      "min_volume": 0,
+      "multi": 2,
+      "max_weight": 5000,
+      "draw_cost": 0,
+      "flags": [
+        "SHEATH_KNIFE",
+        "SHEATH_SWORD",
+        "SHEATH_SPEAR"
+      ]
+    }
+  },
+  {
+    "type": "ARMOR",
+    "id": "nano_mag_holder",
+    "name": "纳米弹匣包",
+    "copy-from": "nanogear",
+    "looks_like": "slime_scrap",
+    "description": "拥有人工智能的纳米弹匣包,可以存放弹匣,并且根据需要自动装填弹药.",
+    "covers": [
+      "ARM_EITHER"
+    ],
+    "extend": {
+      "flags": [
+        "BELTED"
+      ]
+    },
+    "use_action": {
+      "type": "holster",
+      "holster_prompt": "收起弹药。",
+      "holster_msg": "你收起了 %s。",
+      "multi": 4,
+      "max_volume": 6,
+      "min_volume": 0,
+      "draw_cost": 0,
+      "flags": [
+        "MAG_COMPACT",
+        "MAG_BULKY"
+      ]
+    }
+  },
+  {
+    "type": "ARMOR",
+    "id": "nanosuit",
+    "name": "纳米套装",
+    "copy-from": "nanogear",
+    "weight": 9836,
+    "covers": [
+      "HEAD",
+      "MOUTH",
+      "EYES",
+      "TORSO",
+      "ARMS",
+      "HANDS",
+      "LEGS",
+      "FEET"
+    ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ACTIVE",
+          "values": [
+            {
+              "value": "CLIMATE_CONTROL_HEAT",
+              "add": 50
+            }
+          ]
+        }
+      ]
+    },
+    "description": "用纳米粒子制作而成的纳米套装,可以完整的覆盖身体的任何部位,在保护你免受外部威胁的同时可以激活产生循环热量，帮助你抵御寒冷.",
+    "looks_like": "rm13_armor_on",
+    "artifact_data": {
+      "effects_worn": [
+        "AEP_STR_UP"
+      ]
+    },
+    "volume": 6,
+    "environmental_protection": 30,
+    "qualities": [
+      [
+        "GLARE",
+        2
+      ]
+    ],
+    "extend": {
+      "flags": [
+        "ALARMCLOCK",
+        "BAROMETER",
+        "ELECTRIC_IMMUNE",
+        "FIX_FARSIGHT",
+        "FIX_NEARSIGHT",
+        "GAS_PROOF",
+        "HOOD",
+        "HYGROMETER",
+        "POCKETS",
+        "RAD_PROOF",
+        "RAINPROOF",
+        "REBREATHER",
+        "SKINTIGHT",
+        "STURDY",
+        "SUN_GLASSES",
+        "SUPER_FANCY",
+        "SWIM_GOGGLES",
+        "THERMOMETER",
+        "VARSIZE",
+        "WATCH",
+        "WATER_FRIENDLY",
+        "WATERPROOF"
+      ]
+    },
+    "coverage": 100,
+    "material_thickness": 3,
+    "use_action": [
+      {
+        "type": "transform",
+        "menu_text": "循环加热",
+        "target": "nanosuit_heated",
+        "active": false,
+        "msg": "启用纳米套装的加热模式."
+      }
+    ]
+  },
+  {
+    "type": "ARMOR",
+    "id": "nanosuit_heated",
+    "name": "纳米套装 (heat+)",
+    "copy-from": "nanosuit",
+    "description": "用纳米粒子制作而成的纳米套装,可以完整的覆盖身体的任何部位,在保护你免受外部威胁的同时可以激活产生循环热量,帮助你抵御寒冷.",
+    "warmth": 50,
+    "use_action": [
+      {
+        "type": "transform",
+        "menu_text": "循环加热",
+        "target": "nanosuit_heated_2",
+        "active": false,
+        "msg": "增加纳米套装热量."
+      }
+    ]
+  },
+  {
+    "type": "ARMOR",
+    "id": "nanosuit_heated_2",
+    "copy-from": "nanosuit_heated",
+    "name": "纳米套装 (heat++)",
+    "warmth": 100,
+    "use_action": [
+      {
+        "type": "transform",
+        "menu_text": "循环加热",
+        "target": "nanosuit_heated_3",
+        "active": false,
+        "msg": "增加纳米套装热量."
+      }
+    ]
+  },
+  {
+    "type": "ARMOR",
+    "id": "nanosuit_heated_3",
+    "copy-from": "nanosuit_heated",
+    "name": "纳米套装 (heat+++)",
+    "warmth": 150,
+    "use_action": [
+      {
+        "type": "transform",
+        "menu_text": "循环加热",
+        "target": "nanosuit_heated_4",
+        "active": false,
+        "msg": "增加纳米套装热量."
+      }
+    ]
+  },
+  {
+    "type": "ARMOR",
+    "id": "nanosuit_heated_4",
+    "copy-from": "nanosuit_heated",
+    "name": "纳米套装 (heat++++)",
+    "warmth": 200,
+    "use_action": [
+      {
+        "type": "transform",
+        "menu_text": "循环加热",
+        "target": "nanosuit_heated_5",
+        "active": false,
+        "msg": "增加纳米套装热量."
+      }
+    ]
+  },
+  {
+    "type": "ARMOR",
+    "id": "nanosuit_heated_5",
+    "copy-from": "nanosuit_heated",
+    "name": "纳米套装 (heat+++++)",
+    "warmth": 250,
+    "use_action": [
+      {
+        "type": "transform",
+        "menu_text": "循环加热",
+        "target": "nanosuit",
+        "active": false,
+        "msg": "关闭纳米套装的加热模式."
+      }
+    ]
+  },
+  {
+    "id": "nano_container",
+    "type": "GENERIC",
+    "symbol": ")",
+    "color": "light_gray",
+    "name": "纳米水壶",
+    "category": "other",
+    "description": "纳米制作成的液体压缩机,可以保存液体的同时保鲜.",
+    "price": 240000,
+    "weight": 2957,
+    "volume": 16,
+    "bashing": 0,
+    "cutting": 0,
+    "to_hit": 0,
+    "material": "nanite",
+    "armor_data": {
+      "covers": [
+        "TORSO"
+      ],
+      "coverage": 10,
+      "encumbrance": 4,
+      "material_thickness": 1
+    },
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "seals": true,
+        "watertight": true,
+        "spoil_multiplier": 0.000,
+        "weight_multiplier": 0.000,
+        "volume_multiplier": 0.000,
+        "max_contains_volume": "1000 L",
+        "max_item_volume": "0 ml",
+        "max_contains_weight": "30000 kg",
+        "max_item_length": "0 mm"
+      }
+    ],
+    "contains": 10000,
+    "flags": [
+      "TARDIS",
+      "NONCONDUCTIVE",
+      "TRADER_AVOID"
+    ],
+    "preserves": true,
+    "insulation": 50
+  }
+]

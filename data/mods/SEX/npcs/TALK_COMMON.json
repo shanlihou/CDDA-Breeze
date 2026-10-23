@@ -1,0 +1,455 @@
+[
+  {
+    "//": "定义数据",
+    "type": "effect_on_condition",
+    "id": "EOC_npc_define",
+    "effect": [
+      {
+        "set_string_var": { "u_val": "desire_level", "type": "int", "context": "欲望指数"},
+        "target_var": { "u_val": "npc_desire_level" }
+      },
+      {
+        "set_string_var": { "u_val": "sta1", "type": "str", "context": "sta"},
+        "target_var": { "u_val": "sta1" }
+      },
+      {
+        "set_string_var": { "u_val": "sta2", "type": "str", "context": "sta" },
+        "target_var": { "u_val": "sta2" }
+      },
+      {
+        "set_string_var": { "u_val": "sta3", "type": "str", "context": "sta" },
+        "target_var": { "u_val": "sta3" }
+      },
+      {
+        "set_string_var": { "u_val": "sta4", "type": "str", "context": "sta" },
+        "target_var": { "u_val": "sta4" }
+      },
+      {
+        "set_string_var": { "u_val": "sta5", "type": "str", "context": "sta" },
+        "target_var": { "u_val": "sta5" }
+      },
+      {
+        "set_string_var": { "u_val": "sta1", "type": "str", "context": "sta" },
+        "target_var": { "u_val": "sta6" }
+      },
+      {
+        "set_string_var": { "u_val": "sta1", "type": "str", "context": "sta" },
+        "target_var": { "u_val": "sta7" }
+      },
+      {
+        "set_string_var": { "u_val": "stb1", "type": "int", "context": "stb" },
+        "target_var": { "u_val": "stb1" }
+      },
+      {
+        "set_string_var": { "u_val": "stb2", "type": "int", "context": "stb" },
+        "target_var": { "u_val": "stb2" }
+      },
+      {
+        "set_string_var": { "u_val": "stb3", "type": "int", "context": "stb" },
+        "target_var": { "u_val": "stb3" }
+      },
+      {
+        "set_string_var": { "u_val": "stb4", "type": "int", "context": "stb" },
+        "target_var": { "u_val": "stb4" }
+      },
+      {
+        "set_string_var": { "u_val": "stb5", "type": "int", "context": "stb" },
+        "target_var": { "u_val": "stb5" }
+      },
+      {
+        "set_string_var": { "u_val": "stb6", "type": "int", "context": "stb" },
+        "target_var": { "u_val": "stb6" }
+      },
+      {
+        "set_string_var": { "npc_val": "favorability", "type": "int", "context": "好感" },
+        "target_var": { "npc_val": "favorability" }
+      },
+      {
+        "set_string_var": { "npc_val": "relation", "type": "int", "context": "关系" },
+        "target_var": { "npc_val": "relation" }
+      }
+    ]
+  },
+  
+  
+  {
+    "id": [
+      "TALK_STRANGER_NEUTRAL",
+      "TALK_STRANGER_FRIENDLY",
+      "TALK_STRANGER_SCARED",
+      "TALK_STRANGER_WARY",
+      "TALK_MISSION_DESCRIBE_URGENT",
+      "TALK_MUG",
+      "TALK_STRANGER_AGGRESSIVE"
+    ],
+    "type": "talk_topic",
+    "responses": [
+      {
+        "text": "侵犯",
+        "topic": "TALK_violate_query",
+        "condition": {
+          "and": [
+            {
+              "or": [
+                {
+                  "and": [
+                    "u_male",
+                    "npc_female"
+                  ]
+                },
+                {
+                  "and": [
+                    "u_female",
+                    "npc_male"
+                  ]
+                }
+              ]
+            },
+            {
+              "compare_int":[
+                { "distance": [ "u", "npc" ] },
+                "<=",
+                { "const": 15 }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "TALK_violate_query",
+    "type": "talk_topic",
+    "dynamic_line": "你想干嘛？",
+    "responses": [
+      {
+        "text": "放弃抵抗！",
+        "trial": { "type": "INTIMIDATE", "difficulty": 20, "mod": [ [ "FEAR", 3 ] ] },
+        "opinion": { "trust": -2, "value": -1, "anger": 2 },
+        "success": {
+          "topic": "TALK_violate",
+          "effect": [
+            "stranger_neutral",
+            { "npc_first_topic": "TALK_violate" },
+            { "arithmetic": [ { "npc_val": "var", "var_name": "favorability", "type": "int", "context": "好感"  }, "-=", { "const": 50 } ] },
+            { "arithmetic": [ { "npc_val": "var", "var_name": "relation", "type": "int", "context": "关系" }, "-=", { "const": 2 } ] },
+            {
+              "set_string_var": { "npc_val": "favorability", "type": "int", "context": "好感" },
+              "target_var": { "npc_val": "favorability" }
+            },
+            {
+              "set_string_var": { "npc_val": "relation", "type": "int", "context": "关系" },
+              "target_var": { "npc_val": "relation" }
+            }
+          ]
+        },
+        "failure": {
+          "topic": "TALK_DONE",
+          "effect": [
+            "hostile"
+          ]
+        }
+      },
+      {
+        "text": "[力量、敏捷和距离判定]控制<npc_name>",
+        "trial": { "type": "CONDITION", "condition": { "and": [ { "compare_int": [ { "npc_val": "strength_base" }, "<=", { "u_val": "strength_base" } ] }, { "compare_int": [ { "arithmetic":[ { "npc_val": "dexterity_base" }, "+", { "distance": [ "u", "npc" ] } ] }, "<=", { "u_val": "dexterity_base" } ] } ] } },
+        "opinion": { "trust": -2, "value": -1, "anger": 2 },
+        "success": {
+          "topic": "TALK_DONE",
+          "effect": [
+            "stranger_neutral",
+            { "npc_first_topic": "TALK_violate" },
+            { "arithmetic": [ { "npc_val": "var", "var_name": "favorability", "type": "int", "context": "好感"  }, "-=", { "const": 100 } ] },
+            { "arithmetic": [ { "npc_val": "var", "var_name": "relation", "type": "int", "context": "关系" }, "-=", { "const": 2 } ] },
+            {
+              "set_string_var": { "npc_val": "favorability", "type": "int", "context": "好感" },
+              "target_var": { "npc_val": "favorability" }
+            },
+            {
+              "set_string_var": { "npc_val": "relation", "type": "int", "context": "关系" },
+              "target_var": { "npc_val": "relation" }
+            }
+          ]
+        },
+        "failure": {
+          "topic": "TALK_DONE",
+          "effect": [
+            "hostile"
+          ]
+        },
+        "condition":{
+          "compare_int":[
+            { "distance": [ "u", "npc" ] },
+            "<=",
+            { "const": 5 }
+          ]
+        }
+      },
+      {
+        "text": "取消",
+        "topic": "TALK_NONE"
+      }
+    ]
+  },
+  {
+    "id": [ "TALK_ALLY_ORDERS" ],
+    "type": "talk_topic",
+    "responses": [
+      {
+        "text": "做爱",
+        "topic": "TALK_SEX_MENU",
+        "condition":{
+          "and": [
+            {
+              "or": [
+                {
+                  "and": [
+                    "u_male",
+                    "npc_female"
+                  ]
+                },
+                {
+                  "and": [
+                    "u_female",
+                    "npc_male"
+                  ]
+                }
+              ]
+            },
+            {
+              "compare_int":[
+                { "distance": [ "u", "npc" ] },
+                "<=",
+                { "const": 1 }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "TALK_violate",
+    "type": "talk_topic",
+    "dynamic_line": "我会顺从你的！不要杀我…",
+    "responses": [
+      {
+        "text": "侵犯",
+        "condition": {
+          "and": [
+            {
+              "or": [
+                {
+                  "and": [
+                    "u_male",
+                    "npc_female"
+                  ]
+                },
+                {
+                  "and": [
+                    "u_female",
+                    "npc_male"
+                  ]
+                }
+              ]
+            },
+            {
+              "compare_int":[
+                { "distance": [ "u", "npc" ] },
+                "<=",
+                { "const": 1 }
+              ]
+            }
+          ]
+        },
+        "topic": "TALK_SEX_MENU",
+        "effect": [
+          {
+            "set_string_var": { "npc_val": "favorability", "type": "int", "context": "好感" },
+            "target_var": { "npc_val": "favorability" }
+          },
+          {
+            "set_string_var": { "npc_val": "relation", "type": "int", "context": "关系" },
+            "target_var": { "npc_val": "relation" }
+          }
+        ]
+      },
+      {
+        "text": "你要遵循这些规则",
+        "topic": "TALK_MISC_RULES"
+      },
+      {
+        "text": "跟我走",
+        "topic": "TALK_DONE",
+        "effect": [
+          "follow_only"
+        ]
+      },
+      {
+        "text": "不要跟着我",
+        "topic": "TALK_DONE",
+        "effect": [
+          "stop_following"
+        ]
+      },
+      {
+        "text": "你自由了",
+        "trial": { "type": "CONDITION", "condition": { "compare_int":[ { "npc_val": "var", "var_name": "favorability", "type": "int", "context": "好感"  }, ">=", { "const": 200 } ] } },
+        "success":{
+          "topic": "TALK_npc_no_want"
+        },
+        "failure":{
+          "topic": "TALK_DONE",
+          "effect": [
+            "npc_thankful",
+            "stop_following",
+            { "npc_first_topic": "TALK_STRANGER_NEUTRAL" },
+            { "arithmetic": [ { "npc_val": "var", "var_name": "favorability", "type": "int", "context": "好感"  }, "+=", { "const": 30 } ] },
+            { "arithmetic": [ { "npc_val": "var", "var_name": "relation", "type": "int", "context": "关系" }, "+=", { "const": 2 } ] },
+            {
+              "set_string_var": { "npc_val": "favorability", "type": "int", "context": "好感" },
+              "target_var": { "npc_val": "favorability" }
+            },
+            {
+              "set_string_var": { "npc_val": "relation", "type": "int", "context": "关系" },
+              "target_var": { "npc_val": "relation" }
+            }
+          ]
+        }
+      },
+      {
+        "text": "取消",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_npc_no_want",
+    "type": "talk_topic",
+    "dynamic_line": "主人，你要抛弃我吗？",
+    "responses": [
+      {
+        "text": "确定",
+        "topic": "TALK_DONE",
+        "effect": [
+          "npc_thankful",
+          "stop_following",
+          { "npc_first_topic": "TALK_STRANGER_NEUTRAL" },
+          { "arithmetic": [ { "npc_val": "var", "var_name": "favorability", "type": "int", "context": "好感"  }, "-=", { "const": 30 } ] },
+          { "arithmetic": [ { "npc_val": "var", "var_name": "relation", "type": "int", "context": "关系" }, "+=", { "const": 2 } ] },
+          {
+            "set_string_var": { "npc_val": "favorability", "type": "int", "context": "好感" },
+            "target_var": { "npc_val": "favorability" }
+          },
+          {
+            "set_string_var": { "npc_val": "relation", "type": "int", "context": "关系" },
+            "target_var": { "npc_val": "relation" }
+          }
+        ]
+      },
+      {
+        "text": "取消",
+        "topic": "TALK_NONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_SEX_MENU",
+    "type": "talk_topic",
+    "dynamic_line": "你想要做什么？\"\n  好感度：<npc_val:favorability>，关系<npc_val:relation>\"--性爱行动栏--",
+    "responses": [
+      {
+        "text": "小穴 <u_val:sta1>",
+        "topic": "TALK_sex1",
+        "condition": "u_female"
+      },
+      {
+        "text": "肉棒 <u_val:sta2>",
+        "topic": "TALK_sex2",
+        "condition": "u_male"
+      },
+      {
+        "text": "腿 <u_val:sta3>",
+        "topic": "TALK_sex3"
+      },
+      {
+        "text": "手 <u_val:sta4>",
+        "topic": "TALK_sex4"
+      },
+      {
+        "text": "胸部 <u_val:sta5>",
+        "topic": "TALK_sex5"
+      },
+      {
+        "text": "臀部 <u_val:sta6>",
+        "topic": "TALK_sex6"
+      },
+      {
+        "text": "嘴 <u_val:sta7>",
+        "topic": "TALK_sex7"
+      },
+      {
+        "text": "执行",
+        "effect": [
+          { "run_eocs": [ "EOC_sex_npc" ] }
+        ],
+        "topic": "TALK_DONE"
+      },
+      {
+        "text": "取消",
+        "effect": [
+          { "run_eocs": [ "EOC_npc_sex_zero" ] }
+        ],
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_npc_sex_zero",
+    "effect":[
+      { "u_add_var": "sta1", "type": "str", "context": "sta", "value": "自由" },
+      { "u_add_var": "sta2", "type": "str", "context": "sta", "value": "自由" },
+      { "u_add_var": "sta3", "type": "str", "context": "sta", "value": "自由" },
+      { "u_add_var": "sta4", "type": "str", "context": "sta", "value": "自由" },
+      { "u_add_var": "sta5", "type": "str", "context": "sta", "value": "自由" },
+      { "u_add_var": "sta6", "type": "str", "context": "sta", "value": "自由" },
+      { "u_add_var": "sta7", "type": "str", "context": "sta", "value": "自由" },
+      {
+        "set_string_var": { "u_val": "sta1", "type": "str", "context": "sta"},
+        "target_var": { "u_val": "sta1" }
+      },
+      {
+        "set_string_var": { "u_val": "sta2", "type": "str", "context": "sta" },
+        "target_var": { "u_val": "sta2" }
+      },
+      {
+        "set_string_var": { "u_val": "sta3", "type": "str", "context": "sta" },
+        "target_var": { "u_val": "sta3" }
+      },
+      {
+        "set_string_var": { "u_val": "sta4", "type": "str", "context": "sta" },
+        "target_var": { "u_val": "sta4" }
+      },
+      {
+        "set_string_var": { "u_val": "sta5", "type": "str", "context": "sta" },
+        "target_var": { "u_val": "sta5" }
+      },
+      {
+        "set_string_var": { "u_val": "sta1", "type": "str", "context": "sta" },
+        "target_var": { "u_val": "sta6" }
+      },
+      {
+        "set_string_var": { "u_val": "sta1", "type": "str", "context": "sta" },
+        "target_var": { "u_val": "sta7" }
+      },
+      { "arithmetic": [ { "u_val": "var", "var_name": "stb1", "type": "int", "context": "stb" }, "=", { "const": 0 } ] },
+      { "arithmetic": [ { "u_val": "var", "var_name": "stb2", "type": "int", "context": "stb" }, "=", { "const": 0 } ] },
+      { "arithmetic": [ { "u_val": "var", "var_name": "stb3", "type": "int", "context": "stb" }, "=", { "const": 0 } ] },
+      { "arithmetic": [ { "u_val": "var", "var_name": "stb4", "type": "int", "context": "stb" }, "=", { "const": 0 } ] },
+      { "arithmetic": [ { "u_val": "var", "var_name": "stb5", "type": "int", "context": "stb" }, "=", { "const": 0 } ] },
+      { "arithmetic": [ { "u_val": "var", "var_name": "stb6", "type": "int", "context": "stb" }, "=", { "const": 0 } ] },
+      { "arithmetic": [ { "u_val": "var", "var_name": "stb7", "type": "int", "context": "stb" }, "=", { "const": 0 } ] }
+    ]
+  }
+]

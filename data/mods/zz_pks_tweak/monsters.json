@@ -1,0 +1,33 @@
+[
+  {
+    "type": "MONSTER",
+    "id": "mon_cow",
+    "copy-from": "mon_cow",
+    "aggression": -10,
+    "morale": 50,
+    "anger_triggers": [ "HURT", "PLAYER_NEAR_BABY" ],
+    "fear_triggers": [],
+    "placate_triggers": [ "PLAYER_WEAK" ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_pig",
+    "copy-from": "mon_pig",
+    "aggression": 10,
+    "morale": 30,
+    "anger_triggers": [ "PLAYER_WEAK", "FRIEND_ATTACKED" ],
+    "fear_triggers": [ "SOUND", "PLAYER_CLOSE" ],
+    "placate_triggers": []
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_horse",
+    "copy-from": "mon_horse",
+    "speed": 300,
+    "aggression": 0,
+    "morale": 20,
+    "anger_triggers": [ "FRIEND_ATTACKED" ],
+    "fear_triggers": [ "SOUND", "PLAYER_CLOSE" ],
+    "placate_triggers": [ "PLAYER_WEAK" ]
+  }
+]

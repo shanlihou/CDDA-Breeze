@@ -1,0 +1,260 @@
+[
+    {
+        "type": "martial_art",
+        "id": "style_bajiquan",
+        "name": { "str": "八極拳" },
+        "description": "八极拳，中国拳术名称。“八极”意为发劲可达四面八方极远之处。其动作朴实简洁，刚猛脆烈，多震脚发劲动作。",
+        "initiate": [ "你扎稳了马步，准备好面对敌人。", "%s 运劲入地，准备好应对攻击。" ],
+        "learn_difficulty": 5,
+        "arm_block": 4,
+        "leg_block": 4,
+        "allow_all_weapons": true,
+        "primary_skill": "stabbing",
+        "static_buffs": [
+      {
+        "id": "baji_static_melee",
+        "name": "六合大枪",
+        "description": "你久习八极拳和大枪术，完美掌握大枪术的基本。\n斩击、刺击+30%。",
+        "skill_requirements": [ { "name": "melee", "level": 3 } ],
+        "melee_allowed": true,
+        "unarmed_allowed" : false,
+        "unarmed_weapons_allowed": false,
+        "mult_bonuses": [
+          { "stat": "damage", "type": "cut", "scale": 1.3 },
+          { "stat": "damage", "type": "stab", "scale": 1.3 }
+        ]
+      },
+      {
+        "id": "baji_static",
+        "name": "沉坠劲",
+        "description": "你四肢百骸一运劲，就有如大鼎立于地面、老树盘根于土地中一般，有难以撼动的气势。\n钝击+10%。\n格挡+100%力量值。\n+2格挡次数。",
+        "skill_requirements": [ { "name": "unarmed", "level": 3 } ],
+        "melee_allowed": true,
+        "unarmed_allowed": true,
+        "unarmed_weapons_allowed": true,
+        "bonus_blocks": 2,
+        "flat_bonuses": [ { "stat": "block", "scaling-stat": "str", "scale": 1.0 } ],
+        "mult_bonuses": [
+          { "stat": "damage", "type": "bash", "scale": 1.1 }
+        ]
+      },
+      {
+        "id": "baji_static2",
+        "name": "十字劲",
+        "description": "你将『沉坠劲』所凝聚的劲，向四面八方撑张伸展。\n钝击+30%。\n闪避+100%敏捷值。\n+2闪避次数。",
+        "skill_requirements": [ { "name": "unarmed", "level": 5 } ],
+        "required_buffs_all": [ "baji_static" ],
+        "melee_allowed": true,
+        "unarmed_allowed": true,
+        "unarmed_weapons_allowed": true,
+        "bonus_dodges": 2,
+        "flat_bonuses": [ { "stat": "dodge", "scaling-stat": "dex", "scale": 1.0 } ],
+        "mult_bonuses": [
+          { "stat": "damage", "type": "bash", "scale": 1.3 }
+        ]
+      },
+      {
+        "id": "baji_static3",
+        "name": "缠丝劲",
+        "description": "你将撑展的『十字劲』回转环绕，使劲力可随遇而出，随感而发。\n钝击+30%。\n命中+150%感知值。\n钝击穿甲+50%智力值。",
+        "skill_requirements": [ { "name": "unarmed", "level": 7 } ],
+        "required_buffs_all": [ "baji_static2" ],
+        "melee_allowed": true,
+        "unarmed_allowed": true,
+        "unarmed_weapons_allowed": true,
+        "flat_bonuses": [ 
+                  { "stat": "hit", "scaling-stat": "per", "scale": 1.5 },
+                  { "stat": "arpen", "type": "bash", "scaling-stat": "int", "scale": 0.5 }
+		],
+        "mult_bonuses": [
+          { "stat": "damage", "type": "bash", "scale": 1.3 }
+        ]
+      }
+    ],
+        "onhit_buffs" : [
+            {
+                "id": "Bajiquan_spear_buff",
+                "name": "心与意合",
+                "description": "直接猛烈，一经发动则难以阻止、连绵不决。\n钝击、斩击、刺击+10%。\n命中+1。\n持续3回合。",
+                "skill_requirements": [ { "name": "melee", "level": 4 } ],
+                "melee_allowed": true,
+                "unarmed_allowed": true,
+                "unarmed_weapons_allowed": false,
+                "buff_duration": 3,
+                "max_stacks": 1,
+                "flat_bonuses": [
+                  { "stat": "hit", "scale": 1.5 }
+                ],
+                "mult_bonuses": [
+                  { "stat": "damage", "type": "cut", "scale": 1.1 },
+                  { "stat": "damage", "type": "stab", "scale": 1.1 },
+                  { "stat": "damage", "type": "bash", "scale": 1.1 }
+                ]
+            },{
+                "id": "Bajiquan_spear_buff_2",
+                "name": "意与气合",
+                "description": "你正在攻击之中观察着对方破绽，同时保持你猛烈的攻势。\n斩击、刺击、钝击+30%。\n速度+20。\n持续3回合。",
+                "skill_requirements": [ { "name": "melee", "level": 6 } ],
+                "required_buffs_all": [ "Bajiquan_spear_buff" ],
+                "melee_allowed": true,
+                "unarmed_allowed": true,
+                "unarmed_weapons_allowed": false,
+                "buff_duration": 3,
+                "max_stacks": 1,
+                "flat_bonuses": [
+				  { "stat": "speed", "scale": 20.0 }
+                ],
+                "mult_bonuses": [
+                  { "stat": "damage", "type": "cut", "scale": 1.3 },
+                  { "stat": "damage", "type": "stab", "scale": 1.3 },
+                  { "stat": "damage", "type": "bash", "scale": 1.3 }
+                ]
+            },{
+                "id": "Bajiquan_spear_buff_3",
+                "name": "气与力合",
+                "description": "在连续攻击之中，你发现了对方极大的破绽，你蓄积力量，即将使出八极术中的绝招！\n斩击、刺击、钝击+50%。\n斩击、刺击，钝击穿甲+50%智力值。\n持续3回合。",
+                "skill_requirements": [ { "name": "melee", "level": 8 } ],
+                "required_buffs_all": [ "Bajiquan_spear_buff_2" ],
+                "melee_allowed": true,
+                "unarmed_allowed": true,
+                "unarmed_weapons_allowed": false,
+                "buff_duration": 3,
+                "max_stacks": 1,
+                "flat_bonuses": [
+                  { "stat": "arpen", "type": "cut", "scaling-stat": "int", "scale": 0.5 },
+                  { "stat": "arpen", "type": "stab", "scaling-stat": "int", "scale": 0.5 },
+                  { "stat": "arpen", "type": "bash", "scaling-stat": "int", "scale": 0.5 }
+                ],
+                "mult_bonuses": [
+                  { "stat": "damage", "type": "cut", "scale": 1.5 },
+                  { "stat": "damage", "type": "stab", "scale": 1.5 },
+                  { "stat": "damage", "type": "bash", "scale": 1.5 }
+                ]
+            }
+        ],
+        "ondodge_buffs": [
+            {
+                "id": "buff_Bajiquan_ondodge",
+                "name": "提笼换步",
+                "description": "你腰劲带动上身旋转，以腿为辅，使两足迅速向左右移位闪躲了攻击。\n闪避+1。\n暴击几率+1。\n+2闪避次数每层。\n持续3回合，最高9层。",
+                "skill_requirements": [ { "name": "unarmed", "level": 5 } ],
+                "melee_allowed": true,
+                "unarmed_allowed" : true,
+                "unarmed_weapons_allowed": true,
+                "buff_duration": 3,
+                "bonus_dodges": 2,
+                "max_stacks": 9,
+                "flat_bonuses": [ { "stat": "dodge", "scale": 1.5 },
+                { "stat": "crit_chance","scale": 1.1 } ]
+            }
+        ],
+        "onblock_buffs": [
+            {
+                "id": "buff_Bajiquan_onblock",
+                "name": "硬桥硬马",
+                "description": "你稳如铁塔坐如山，摆好架式格档了攻击并准备好迅猛地反击。\n格挡+1。\n+2格挡次数每层。\n钝击、刺击、斩击防御+50%力量值。\n持续3回合，最高9层。",
+                "skill_requirements": [ { "name": "unarmed", "level": 5 } ],
+                "melee_allowed": true,
+                "unarmed_allowed" : true,
+                "unarmed_weapons_allowed": true,
+                "buff_duration": 3,
+                "bonus_blocks": 2,
+                "max_stacks": 9,
+                "flat_bonuses": [ { "stat": "block", "scale": 1.5 },
+                { "stat": "armor", "type": "cut", "scaling-stat": "str", "scale": 0.5 },
+                  { "stat": "armor", "type": "stab", "scaling-stat": "str", "scale": 0.5 },
+                  { "stat": "armor", "type": "bash", "scaling-stat": "str", "scale": 0.5 } ]
+            }
+        ],
+        "onattack_buffs": [
+            {
+                "id": "buff_Bajiquan_onattack",
+                "name": "八极闯步",
+                "description": "你攻击后踱步发力，手足肩胯联合动作往前大步进发。\n速度+20。\n持续3回合，最高9层。",
+                "skill_requirements": [ { "name": "unarmed", "level": 3 } ],
+                "melee_allowed": true,
+                "unarmed_allowed" : true,
+                "unarmed_weapons_allowed": true,
+                "buff_duration": 3,
+                "max_stacks": 9,
+                "flat_bonuses": [ { "stat": "speed", "scale": 20.0 } ]
+            }
+        ],
+        "techniques" : [
+            "tec_baji_punch",
+            "tec_baji_crit_lite",
+            "tec_baji_counter_elbow",
+            "tec_baji_counter_elbow_2",
+            "tec_baji_counter_back",
+            "tec_baji_crit",
+            "tec_baji_piercing",
+            "tec_baji_feint",
+            "tec_baji_disarm",
+            "tec_baji_illusion_hit",
+            "tec_baji_piercing_crit",
+            "tec_baji_stab_combination",
+            "tec_baji_stab_combination_2",
+            "tec_baji_stab_combination_3"
+        ],
+        "weapon_category": [ "SPEARS", "POLEARMS", "QUARTERSTAVES" ],
+        "//" : [
+            "spear_rebar",
+            "spear_wood",
+            "spear_copper",
+            "spear_forked",
+            "spear_steel",
+            "spear_survivor",
+            "spear_knife",
+            "spear_knife_superior",
+            "spear_stone",
+            "spear_spike",
+            "spear_pipe",
+            "spear_homemade_halfpike",
+            "sharpened_pipe",
+            "simple_spear_pipe",
+            "pointed_rebar",
+            "sharp_rebar",
+            "pointy_stick",
+            "pointy_stick_long",
+            "bee_sting",
+            "fighter_sting",
+            "wasp_sting",
+            "pitchfork",
+            "javelin",
+            "javelin_iron",
+            "spear_dory",
+            "pike",
+            "pike_inferior",
+            "pike_fake",
+            "pike_wood",
+            "pike_copper",
+            "qiang",
+            "q_staff",
+            "i_staff",
+            "shock_staff",
+            "sword_bayonet",
+            "glaive",
+            "halberd",
+            "halberd_fake",
+            "makeshift_halberd",
+            "makeshift_glaive",
+            "ji",
+            "naginata",
+            "naginata_inferior",
+            "naginata_fake",
+            "long_pole",
+            "pike_pole",
+            "l-stick",
+            "stick",
+            "stick_long",
+            "long_pole",
+            "pool_cue",
+            "cudgel",
+            "staff_sling",
+			"broom",
+			"mop"
+        ]
+    }
+]
+
+

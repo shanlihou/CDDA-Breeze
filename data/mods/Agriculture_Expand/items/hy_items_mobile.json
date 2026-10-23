@@ -1,0 +1,445 @@
+[
+ {
+  "//": "催芽流程",
+  "type": "GENERIC",
+  "id": "hy_mobile_germination_box",
+  "name": {
+   "str": "水培催芽机",
+   "str_pl": "水培催芽机"
+  },
+  "description": "一个水培催芽机，没有具体商标或标志来识别生产厂家，但说明书显示它可以达到99.9%的催芽成功率。",
+  "weight": "10000 g",
+  "volume": "40 L",
+  "symbol": ")",
+  "color": "brown",
+  "price": 1300,
+  "material": [
+   "iron",
+   "plastic",
+   "steel",
+   "copper"
+  ]
+ },
+ {
+  "//": "催芽流程",
+  "type": "GENERIC",
+  "abstract": "hy_mobile_germination_box_active",
+  "name": {
+   "str": "正在运行的水培催芽机",
+   "str_pl": "正在运行的水培催芽机"
+  },
+  "description": "水培催芽机正在运行催芽操作。在实验室找到的水培催芽机，没有具体商标或标志来识别生产厂家，但说明书显示它可以达到99.9%的催芽成功率。【正常情况下，你不应该看到这个物品。】",
+  "copy-from": "hy_mobile_germination_box",
+  "weight": "11000 g"
+ },
+ {
+  "//": "催芽流程",
+  "type": "GENERIC",
+  "abstract": "hy_mobile_germination_box_done",
+  "name": {
+   "str": "催芽完毕的水培催芽机",
+   "str_pl": "催芽完毕的水培催芽机"
+  },
+  "description": "水培催芽机已经完成了番茄种子催芽操作，可以激活或者拆解以获得发芽的种子。在实验室找到的水培催芽机，没有具体商标或标志来识别生产厂家，但说明书显示它可以达到99.9%的催芽成功率。【正常情况下，你不应该看到这个物品。】",
+  "copy-from": "hy_mobile_germination_box",
+  "weight": "11000 g"
+ },
+ {
+  "//": "催芽流程",
+  "type": "GENERIC",
+  "id": "hy_mobile_simple_germination_box",
+  "name": {
+   "str": "简易水培催芽皿",
+   "str_pl": "简易水培催芽皿"
+  },
+  "description": "从书里学到的由一张纸巾和一个碗（盘）合成的简易催芽器皿，据说催芽成功率高达90%。",
+  "weight": "450 g",
+  "volume": "300 ml",
+  "symbol": ")",
+  "color": "brown",
+  "price": 1300,
+  "material": [
+   "clay",
+   "plastic"
+  ]
+ },
+ {
+  "//": "催芽流程",
+  "type": "GENERIC",
+  "abstract": "hy_mobile_simple_germination_box_active",
+  "name": {
+   "str": "正在催芽中的简易水培催芽皿",
+   "str_pl": "正在催芽中的简易水培催芽皿"
+  },
+  "description": "透过塑料袋，你能看到种子发芽过程中的实时状态。从书里学到的由一张纸巾和一个碗（盘）合成的简易催芽器皿，据说催芽成功率高达90%。【正常情况下，你不应该看到这个物品。】",
+  "copy-from": "hy_mobile_simple_germination_box",
+  "weight": "500 g"
+ },
+ {
+  "//": "催芽流程",
+  "type": "GENERIC",
+  "abstract": "hy_mobile_simple_germination_box_done",
+  "name": {
+   "str": "催芽完毕的简易水培催芽皿",
+   "str_pl": "催芽完毕的简易水培催芽皿"
+  },
+  "description": "透过塑料袋，你能看到种子已经发芽，但有零星的种子并没有反应。从书里学到的由一张纸巾和一个碗（盘）合成的简易催芽器皿，据说催芽成功率高达90%。【正常情况下，你不应该看到这个物品。】",
+  "copy-from": "hy_mobile_simple_germination_box",
+  "weight": "500 g"
+ },
+ {
+  "type": "TOOL",
+  "abstract": "hy_mobile_germinated_seed",
+  "name": {
+   "str": "发芽的种子",
+   "str_pl": "发芽的种子"
+  },
+  "description": "一颗刚刚发芽的种子。【正常情况下，你不应该看到这个物品。】",
+  "weight": "2 g",
+  "volume": "5 ml",
+  "symbol": ",",
+  "color": "green",
+  "price": 1300,
+  "material": "veggy",
+  "ammo": "seedling_bowl",
+  "initial_charges": 0,
+  "turns_per_charge": 1,
+  "pocket_data": [
+   {
+    "pocket_type": "MAGAZINE",
+    "ammo_restriction": {
+     "seedling_bowl": 1
+    },
+    "rigid": true
+   }
+  ]
+ },
+ {
+  "//": "育苗流程",
+  "type": "AMMO",
+  "id": "hy_mobile_seedling_bowl",
+  "name": {
+   "str": "育苗钵",
+   "str_pl": "育苗钵"
+  },
+  "description": "一个水培育苗过程中需要用到的育苗钵。可以作为“弹药”装填到发芽的种子中，激活发芽的种子即可变为“含有发芽种子的育苗钵”。",
+  "weight": "50 g",
+  "volume": "50 ml",
+  "symbol": ")",
+  "color": "brown",
+  "price": 1300,
+  "material": "plastic",
+  "ammo_type": "seedling_bowl"
+ },
+ {
+  "//": "育苗流程",
+  "type": "GENERIC",
+  "id": "hy_mobile_nursery_soil_huge",
+  "name": {
+   "str": "一大堆育苗土",
+   "str_pl": "一大堆育苗土"
+  },
+  "description": "一大堆掺杂了约三分之一沙子的泥土。掺杂的沙子使泥土疏松且保水排水性良好，适合用来育苗。通过激活或者拆解来获得标准单位育苗土。",
+  "volume": "7500 ml",
+  "weight": "8250 g",
+  "material": [
+   "soil",
+   "powder_nonflam"
+  ],
+  "price": 0,
+  "symbol": "=",
+  "color": "brown",
+  "use_action": "DISASSEMBLE"
+ },
+ {
+  "//": "育苗流程",
+  "type": "AMMO",
+  "id": "hy_mobile_nursery_soil",
+  "name": {
+   "str": "标准单位育苗土",
+   "str_pl": "标准单位育苗土"
+  },
+  "description": "一堆掺杂了约三分之一沙子的泥土。掺杂的沙子使泥土疏松且保水排水性良好，适合用来育苗。",
+  "copy-from": "material_soil",
+  "volume": "500 ml",
+  "weight": "550 g",
+  "material": [
+   "soil",
+   "powder_nonflam"
+  ],
+  "ammo_type": "nursery_soil"
+ },
+ {
+  "//": "育苗流程",
+  "type": "TOOL",
+  "abstract": "hy_mobile_seedling_bowl_has_seed",
+  "name": {
+   "str": "含有发芽种子的育苗钵",
+   "str_pl": "含有发芽种子的育苗钵"
+  },
+  "description": "一个水培育苗过程中需要用到的育苗钵。种子已经装填进育苗钵，请填充育苗土。【正常情况下，你不应该看到这个物品。】",
+  "symbol": ")",
+  "color": "brown",
+  "price": 1300,
+  "weight": "610 g",
+  "volume": "550 ml",
+  "material": [
+   "plastic",
+   "veggy"
+  ],
+  "ammo": "nursery_soil",
+  "initial_charges": 0,
+  "turns_per_charge": 1,
+  "charges_per_use": 1,
+  "pocket_data": [
+   {
+    "pocket_type": "MAGAZINE",
+    "ammo_restriction": {
+     "nursery_soil": 1
+    },
+    "rigid": true
+   }
+  ]
+ },
+ {
+  "//": "育苗流程",
+  "type": "GENERIC",
+  "abstract": "hy_mobile_seedling_bowl_in_the_nursery",
+  "name": {
+   "str": "正在育苗的育苗钵",
+   "str_pl": "正在育苗的育苗钵"
+  },
+  "description": "一个水培育苗过程中需要用到的育苗钵。种子和育苗土已经装填进育苗钵，请等待育苗完成。【正常情况下，你不应该看到这个物品。】",
+  "symbol": ")",
+  "color": "brown",
+  "price": 1300,
+  "weight": "650 g",
+  "volume": "550 ml",
+  "material": [
+   "plastic",
+   "veggy"
+  ]
+ },
+ {
+  "//": "育苗流程",
+  "type": "GENERIC",
+  "abstract": "hy_mobile_seedling_bowl_seedling",
+  "name": {
+   "str": "育苗完成的育苗钵",
+   "str_pl": "育苗完成的育苗钵"
+  },
+  "description": "一个水培育苗过程中需要用到的育苗钵。育苗阶段结束，请激活或拆解物品以获得植株幼苗。【正常情况下，你不应该看到这个物品。】",
+  "copy-from": "hy_mobile_seedling_bowl_in_the_nursery"
+ },
+ {
+  "type": "TOOL",
+  "abstract": "hy_mobile_seedling",
+  "name": {
+   "str": "植株幼苗",
+   "str_pl": "植株幼苗"
+  },
+  "description": "一株植物幼苗。【正常情况下，你不应该看到这个物品。】",
+  "weight": "20 g",
+  "volume": "200 ml",
+  "symbol": ",",
+  "color": "green",
+  "price": 1300,
+  "material": "veggy",
+  "ammo": "planting_basket_spongia",
+  "initial_charges": 0,
+  "turns_per_charge": 1,
+  "charges_per_use": 1,
+  "pocket_data": [
+   {
+    "pocket_type": "MAGAZINE",
+    "ammo_restriction": {
+     "planting_basket_spongia": 1
+    },
+    "rigid": true
+   }
+  ]
+ },
+ {
+  "//": "定植流程",
+  "type": "AMMO",
+  "id": "hy_mobile_planting_basket_spongia",
+  "name": {
+   "str": "定植篮海绵",
+   "str_pl": "定植篮海绵"
+  },
+  "description": "一块水培育苗过程中用来固定植株的定植篮海绵。",
+  "weight": "8 g",
+  "volume": "10 ml",
+  "symbol": ")",
+  "color": "brown",
+  "price": 1300,
+  "count": 5,
+  "material": "plastic",
+  "ammo_type": "planting_basket_spongia"
+ },
+ {
+  "//": "定植流程",
+  "type": "AMMO",
+  "id": "hy_mobile_planting_basket",
+  "name": {
+   "str": "定植篮",
+   "str_pl": "定植篮"
+  },
+  "description": "一个水培育苗过程中需要用到的定植篮。",
+  "weight": "15 g",
+  "volume": "20 ml",
+  "symbol": ")",
+  "color": "brown",
+  "price": 1300,
+  "count": 5,
+  "material": "plastic",
+  "ammo_type": "planting_basket"
+ },
+ {
+  "//": "定植流程",
+  "type": "TOOL",
+  "abstract": "hy_mobile_planting_basket_spongia_seedling",
+  "name": {
+   "str": "被海绵固定的植株幼苗",
+   "str_pl": "被海绵固定的植株幼苗"
+  },
+  "description": "一株被海绵固定的植物幼苗。【正常情况下，你不应该看到这个物品。】",
+  "weight": "30 g",
+  "volume": "250 ml",
+  "symbol": ",",
+  "color": "green",
+  "price": 1300,
+  "material": [
+   "veggy",
+   "plastic"
+  ],
+  "ammo": "planting_basket",
+  "initial_charges": 0,
+  "turns_per_charge": 1,
+  "charges_per_use": 1,
+  "pocket_data": [
+   {
+    "pocket_type": "MAGAZINE",
+    "ammo_restriction": {
+     "planting_basket": 1
+    },
+    "rigid": true
+   }
+  ]
+ },
+ {
+  "//": "定植流程",
+  "type": "GENERIC",
+  "abstract": "hy_mobile_planting_basket_seedling",
+  "name": {
+   "str": "装有植株幼苗的定植篮",
+   "str_pl": "装有植株幼苗的定植篮"
+  },
+  "description": "一株被海绵和定植篮固定的植物幼苗。【正常情况下，你不应该看到这个物品。】",
+  "symbol": ")",
+  "color": "brown",
+  "price": 1300,
+  "weight": "50 g",
+  "volume": "300 ml",
+  "material": [
+   "plastic",
+   "veggy"
+  ]
+ },
+ {
+  "//": "水培流程",
+  "type": "GENERIC",
+  "abstract": "hy_mobile_adv",
+  "name": {
+   "str": "便携式水培箱",
+   "str_pl": "便携式水培箱"
+  },
+  "description": "一个含有某种作物的便携式水培箱。【正常情况下，你不应该看到这个物品。】",
+  "weight": "10000 g",
+  "symbol": ")",
+  "color": "brown",
+  "price": 1300,
+  "material": [
+   "iron",
+   "plastic",
+   "steel",
+   "copper"
+  ],
+  "volume": "120 L",
+  "category": "tools"
+ },
+ {
+  "type": "GENERIC",
+  "id": "hy_mobile_adv_m",
+  "name": {
+   "str": "单层便携式水培箱",
+   "str_pl": "单层便携式水培箱"
+  },
+  "description": "一个可以种植作物的便携式专业单层水培箱。激活以折叠收纳节省空间。",
+  "copy-from": "hy_mobile_adv",
+  "weight": "10000 g",
+  "volume": "120 L",
+  "use_action": {
+   "type": "transform",
+   "menu_text": "折叠空水培箱",
+   "msg": "将水培箱折叠以节省储存空间。",
+   "moves": 200,
+   "target": "hy_mobile_adv_m_folded"
+  }
+ },
+ {
+  "type": "GENERIC",
+  "id": "hy_mobile_adv_m_folded",
+  "name": {
+   "str": "单层便携式水培箱（折叠）",
+   "str_pl": "单层便携式水培箱（折叠）"
+  },
+  "description": "一个被折叠的可以种植作物的便携式专业单层水培箱。激活以展开使用。",
+  "copy-from": "hy_mobile_adv",
+  "weight": "10000 g",
+  "volume": "20 L",
+  "use_action": {
+   "type": "transform",
+   "menu_text": "展开空水培箱",
+   "msg": "展开折叠的水培箱以准备种植。",
+   "moves": 200,
+   "target": "hy_mobile_adv_m"
+  }
+ },
+ {
+  "type": "GENERIC",
+  "id": "hy_mobile_adv_m_seedling",
+  "name": {
+   "str": "单层便携式水培箱（幼苗）",
+   "str_pl": "单层便携式水培箱（幼苗）"
+  },
+  "description": "这是一个只能容纳<color_red>10株</color>植物的水培箱，内部植株目前正处于幼苗阶段。【正常情况下，你不应该看到这个物品。】",
+  "copy-from": "hy_mobile_adv_m",
+  "weight": "10500 g",
+  "volume": "120 L"
+ },
+ {
+  "type": "GENERIC",
+  "id": "hy_mobile_adv_m_mature",
+  "name": {
+   "str": "单层便携式水培箱（成熟）",
+   "str_pl": "单层便携式水培箱（成熟）"
+  },
+  "description": "这是一个只能容纳<color_red>10株</color>植物的水培箱，内部植株目前正处于成熟但不可收获阶段。【正常情况下，你不应该看到这个物品。】",
+  "copy-from": "hy_mobile_adv_m",
+  "weight": "12500 g",
+  "volume": "120 L"
+ },
+ {
+  "type": "GENERIC",
+  "id": "hy_mobile_adv_m_harvest",
+  "name": {
+   "str": "单层便携式水培箱（可收获）",
+   "str_pl": "单层便携式水培箱（可收获）"
+  },
+  "description": "这是一个只能容纳<color_red>10株</color>植物的水培箱，目前正处于收获阶段，请激活或者拆卸此物品以获得作物。【正常情况下，你不应该看到这个物品。】",
+  "copy-from": "hy_mobile_adv_m",
+  "weight": "13500 g",
+  "volume": "120 L"
+ }
+]

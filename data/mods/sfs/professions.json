@@ -1,0 +1,22 @@
+[
+  {
+    "type": "profession",
+    "ident": "parkour_practitioner",
+    "name": "异乡人",
+    "description": "来自异界的幸存者，拥有系统和金手指。",
+    "points": 16,
+    "traits": [
+      "MARTIAL_ARTS_BAJI","FAST_REFLEXES","FLEET2","GOODCARDIO","TUNNEL_FIGHTER","NIGHT_RAIDER","EAGLEEYED","STRONGKNEES","LIGHTSTEP","DEFT","QUICK"
+    ],
+    "proficiencies": [ "prof_parkour" ],
+    "skills": [ { "level": 15, "name": "dodge" }, { "level": 15, "name": "swimming" } ],
+    "items": {
+      "both": {
+        "items": [ "hoodie", "pants_cargo", "socks_ankle", "sneakers", "runner_bag", "wristwatch","eink_tablet_pc","异界项链","异界水壶" ],
+        "entries": [ { "group": "charged_smart_phone" }, { "item": "tshirt", "variant": "generic_tshirt" } ]
+      },
+      "male": [ "briefs" ],
+      "female": [ "sports_bra", "boy_shorts" ]
+    }
+  }
+]

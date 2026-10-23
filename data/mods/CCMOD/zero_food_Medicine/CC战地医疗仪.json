@@ -1,0 +1,68 @@
+[
+  {
+    "id": "CCwearable_rx12",
+    "type": "TOOL",
+    "subtypes": [ "TOOL", "ARMOR" ],
+    "category": "armor",
+    "symbol": "[",
+    "color": "blue",
+    "name": { "str": "CC19战地医疗仪" },
+    "description": "又名“CC战术医疗枪”，也有人称“救死扶伤枪”，能耗高（100kj）但强大的多功能医疗箱，战地医疗兵必备。\n内部的干冰可制造喷射用的气体。和常规医疗注射器原理不一样，这里主要是激发其中不同的异界结晶的波动反应，给人服用异种能量液促进恢复去辐射或者抗真菌。可激活爆发剧烈强闪光波动或者施放电击震荡。（医生也能上战场）\n注意：其中注射效果同RA21E 医用安瓿差不多，通常用于处理感染、伤口、中毒、毒液螫入和一般疲劳等方面的功效，每小时不能超过两次。",
+    "price": "400 USD",
+    "price_postapoc": "100 USD",
+    "environmental_protection": 2,
+    "material": [ "ceramic", "superalloy" ],
+    "flags": [ "NONCONDUCTIVE", "FLOTATION", "CALORIES_INTAKE", "TWO_WAY_RADIO", "WATCH", "ALARMCLOCK", "OVERSIZE", "SEMITANGIBLE", "USE_UPS", "THERMOMETER", "UNBREAKABLE_MELEE", "MAGIC_FOCUS", "WATERPROOF" ],
+    "weight": "200 g",
+    "volume": "200 ml",
+    "charges_per_use": 100,
+    "tool_ammo": "battery",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "light_minus_battery_cell", 
+          "solar_cell",
+          "light_minus_battery_cell",
+          "heavy_battery_cell",
+          "heavy_plus_battery_cell", 
+          "small_storage_battery", 
+          "medium_storage_battery", 
+          "battery_motorbike_small",
+          "battery_motorbike",
+          "battery_car",
+          "light_minus_disposable_cell", 
+          "light_battery_cell"
+        ]
+      }
+    ],
+    "qualities": [ [ "HOSE", 1 ], [ "DISTILL", 1 ], [ "CUT_FINE", 5 ], [ "CHEM", 3 ], [ "ANALYSIS", 1 ], [ "CONTAIN", 2 ], [ "FINE_GRIND", 2 ], [ "OVEN", 3 ], [ "FILTER", 2 ], [ "BUTCHER", 37 ] ], 
+    "use_action": [ 
+    "JET_INJECTOR","ANTIFUNGAL", 
+    "EXTINGUISHER", "FITNESS_CHECK",
+    "RADGLOVE", 
+    { "type": "explosion", "do_flashbang": true },
+    { "type": "heal", "bandages_power": 4, "bleed": 15, "bite": 0.95, "disinfectant_power": 4, "move_cost": 600 }, 
+    { "type": "consume_drug",  "activation_message": "You take some Prussian blue.", "effects": [ { "id": "pblue", "duration": 3600 } ] },
+    { "type": "link_up", "cable_length": 60, "charge_rate": "1000 W" } ],
+    "material_thickness": 3
+  },
+    {
+        "type" : "recipe",
+    "result": "CCwearable_rx12",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC食品医疗",
+    "skill_used": "survival",
+    "flags": [ "BLIND_EASY" ],
+    "time": "100second",
+    "reversible": true,
+    "autolearn": true,
+    "components": [ [ [ "CCMODcoin", 360 ] ] ]
+  }
+]

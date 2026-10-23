@@ -1,0 +1,35 @@
+[
+  {
+    "type": "mutation",
+    "id": "mutation_Security_Guard",
+    "name": {
+      "str": "安全警卫改造手术"
+    },
+    "points": 1,
+    "description": "经过了统治局科技处理的肉体部分，能够与构造体改造配合，快速自愈。",
+    "starting_trait": false,
+    "purifiable": false,
+    "healing_awake": 42,
+    "mending_modifier": 42,
+	"hp_modifier": 2.1,
+    "vomit_multiplier": 0.01,
+    "overmap_sight": 9,
+    "stomach_size_multiplier": 13.0,
+    "cardio_multiplier": 2,
+    "crafting_speed_multiplier": 1.3,
+    "flags": [ "MEND_ALL" ]
+  },
+  {
+    "type": "mutation",
+    "id": "MARTIAL_ARTS_SG",
+    "name": {
+      "str": "安全警卫格斗术"
+    },
+    "points": 13,
+    "description": "从军警格斗术脱胎而来，结合安全警卫配套改造专门设计的生化格斗术，以爆发与精度搭配为主，特点是稳定持久的作战姿态。",
+    "initial_ma_styles": [
+      "style_SG"
+    ],
+    "valid": false
+  }
+  ]

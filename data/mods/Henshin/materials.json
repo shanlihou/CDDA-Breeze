@@ -1,0 +1,28 @@
+[
+  {
+    "type": "material",
+    "ident": "alien_material",
+    "name": "异界金属",
+    "density": 30,
+	"breathability": "GOOD",
+	"specific_heat_liquid": 1,
+    "specific_heat_solid": 1,
+    "latent_heat": 5555,
+    "cold_resist": 6,
+	"bash_resist": 8,
+    "cut_resist": 10,
+	"biologic_resist": 12,
+	"bullet_resist": 14,
+	"elec_resist": 16,
+	"acid_resist": 18,
+    "fire_resist": 20,
+	"wind_resist": 55,
+    "chip_resist": 99,
+	"reinforces": true,
+	"repaired_with": "alien_energy_full",
+    "dmg_adj": [ "marked", "dented", "smashed", "shattered" ],
+    "bash_dmg_verb": "dented",
+    "cut_dmg_verb": "scratched",
+    "burn_products": [ [ "alien_energy_part", 1 ] ]
+  }
+]

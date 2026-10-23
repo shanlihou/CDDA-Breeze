@@ -1,0 +1,614 @@
+[
+  {
+    "id": "point_flare",
+    "type": "SPELL",
+    "name": {
+      "str": "定点炎爆"
+    },
+    "description": "在指定地点制造强烈热能，以伤害目标。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "SOMATIC",
+      "LOUD",
+      "NO_PROJECTILE"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "damage_type": "heat",
+    "min_damage": 16,
+    "damage_increment": 4,
+    "max_damage": 120,
+    "min_range": 3,
+    "range_increment": 0.5,
+    "max_range": 17,
+    "base_energy_cost": 75,
+    "spell_class": "KELVINIST",
+    "difficulty": 4,
+    "max_level": 22,
+    "base_casting_time": 300,
+    "energy_source": "MANA"
+  },
+  {
+    "id": "nova_flare",
+    "type": "SPELL",
+    "name": "超新星炎爆",
+    "description": "在目标位置产生巨大热量，对目标造成极大伤害。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "SOMATIC",
+      "LOUD",
+      "NO_PROJECTILE"
+    ],
+    "components": "spell_components_nova_flare",
+    "effect": "attack",
+    "shape": "blast",
+    "damage_type": "heat",
+    "min_damage": 45,
+    "damage_increment": 6,
+    "max_damage": 201,
+    "min_range": 3,
+    "range_increment": 0.5,
+    "max_range": 14,
+    "base_energy_cost": 80,
+    "spell_class": "KELVINIST",
+    "difficulty": 8,
+    "max_level": 24,
+    "base_casting_time": 300,
+    "energy_source": "MANA"
+  },
+  {
+    "id": "create_lighter",
+    "type": "SPELL",
+    "name": {
+      "str": "火焰之指"
+    },
+    "description": "召唤出一朵不会烧到你的小火苗，可以用来点燃其它物品。看起来你需要有点燃东西的想法它才会点火，因为你可以把它安全的存放在你的口袋里。",
+    "valid_targets": [
+      "none"
+    ],
+    "flags": [
+      "NO_LEGS"
+    ],
+    "effect": "spawn_item",
+    "effect_str": "finger_firelighter",
+    "shape": "blast",
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_duration": 6000,
+    "max_duration": 90000,
+    "duration_increment": 5400,
+    "max_level": 15,
+    "spell_class": "KELVINIST",
+    "energy_source": "MANA",
+    "base_casting_time": 250,
+    "final_casting_time": 50,
+    "casting_time_increment": -20,
+    "base_energy_cost": 65,
+    "difficulty": 0
+  },
+  {
+    "id": "ice_spike",
+    "type": "SPELL",
+    "name": {
+      "str": "冰刺"
+    },
+    "description": "在目标上方制造冰刺，坠落造成伤害。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "SOMATIC",
+      "LOUD",
+      "VERBAL",
+      "NO_PROJECTILE"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "damage_type": "cold",
+    "min_damage": 30,
+    "max_damage": 150,
+    "damage_increment": 3.5,
+    "min_range": 4,
+    "max_range": 18,
+    "range_increment": 0.6,
+    "max_level": 30,
+    "difficulty": 6,
+    "spell_class": "KELVINIST",
+    "base_casting_time": 200,
+    "energy_source": "MANA",
+    "base_energy_cost": 100
+  },
+  {
+    "id": "fireball",
+    "type": "SPELL",
+    "name": {
+      "str": "火球术"
+    },
+    "description": "投掷一颗豌豆大小的炽热球体，到达目标或遇到障碍物时发生剧烈烧灼。",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "self",
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "IGNITE_FLAMMABLE"
+    ],
+    "max_level": 30,
+    "min_damage": 24,
+    "max_damage": 102,
+    "damage_increment": 2,
+    "min_aoe": 3,
+    "max_aoe": 7,
+    "aoe_increment": 0.1,
+    "min_range": 6,
+    "max_range": 30,
+    "range_increment": 1,
+    "spell_class": "KELVINIST",
+    "base_casting_time": 200,
+    "base_energy_cost": 350,
+    "energy_source": "MANA",
+    "difficulty": 4,
+    "damage_type": "heat"
+  },
+  {
+    "id": "cone_cold",
+    "type": "SPELL",
+    "name": {
+      "str": "极寒喷射"
+    },
+    "description": "向目标发射一股锥形的极寒空气。",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL"
+    ],
+    "max_level": 30,
+    "min_damage": 24,
+    "max_damage": 102,
+    "damage_increment": 2,
+    "min_aoe": 30,
+    "max_aoe": 90,
+    "aoe_increment": 1.4,
+    "min_range": 6,
+    "max_range": 30,
+    "range_increment": 1,
+    "spell_class": "KELVINIST",
+    "base_casting_time": 200,
+    "base_energy_cost": 350,
+    "energy_source": "MANA",
+    "difficulty": 4,
+    "field_id": "fd_cold_air2",
+    "min_field_intensity": 0,
+    "max_field_intensity": 4,
+    "field_intensity_increment": 0.5,
+    "damage_type": "cold"
+  },
+  {
+    "id": "burning_hands",
+    "type": "SPELL",
+    "name": {
+      "str": "燃烧之手"
+    },
+    "description": "向一片较小的锥形区域喷射火焰。“你肯定在其他游戏中见过这个。”",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "IGNITE_FLAMMABLE"
+    ],
+    "max_level": 30,
+    "min_damage": 8,
+    "max_damage": 95,
+    "damage_increment": 4,
+    "min_range": 3,
+    "max_range": 8,
+    "range_increment": 0.25,
+    "min_aoe": 25,
+    "max_aoe": 90,
+    "aoe_increment": 5,
+    "spell_class": "KELVINIST",
+    "base_casting_time": 100,
+    "base_energy_cost": 150,
+    "energy_source": "MANA",
+    "difficulty": 2,
+    "damage_type": "heat"
+  },
+  {
+    "id": "frost_spray",
+    "type": "SPELL",
+    "name": {
+      "str": "寒霜喷射"
+    },
+    "description": "向一片较小的锥形区域喷射冰寒。“你肯定在其他游戏中见过这个。”",
+    "effect": "attack",
+    "effect_str": "cold",
+    "shape": "cone",
+    "affected_body_parts": [
+      "torso"
+    ],
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL"
+    ],
+    "max_level": 30,
+    "min_damage": 8,
+    "max_damage": 95,
+    "damage_increment": 4,
+    "min_range": 3,
+    "max_range": 8,
+    "range_increment": 0.25,
+    "min_aoe": 25,
+    "max_aoe": 90,
+    "aoe_increment": 5,
+    "spell_class": "KELVINIST",
+    "base_casting_time": 100,
+    "base_energy_cost": 100,
+    "energy_source": "MANA",
+    "difficulty": 2,
+    "damage_type": "cold"
+  },
+  {
+    "id": "chilling_touch",
+    "type": "SPELL",
+    "name": {
+      "str": "寒冷之触"
+    },
+    "description": "用严寒冻结被你触碰的目标。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "NO_PROJECTILE"
+    ],
+    "effect": "attack",
+    "effect_str": "cold",
+    "shape": "blast",
+    "affected_body_parts": [
+      "torso"
+    ],
+    "damage_type": "cold",
+    "min_damage": 3,
+    "damage_increment": 4,
+    "max_damage": 60,
+    "min_range": 1,
+    "max_range": 1,
+    "base_energy_cost": 50,
+    "spell_class": "KELVINIST",
+    "difficulty": 1,
+    "max_level": 15,
+    "base_casting_time": 100,
+    "energy_source": "MANA"
+  },
+  {
+    "id": "glide_ice",
+    "type": "SPELL",
+    "name": {
+      "str": "冰上滑行"
+    },
+    "description": "将你的脚包裹在一层神奇的冰层中，让你更快地沿着光滑的表面滑行。",
+    "valid_targets": [
+      "none"
+    ],
+    "flags": [
+      "VERBAL",
+      "NO_HANDS",
+      "NO_LEGS",
+      "CONCENTRATE"
+    ],
+    "min_damage": 1,
+    "max_damage": 1,
+    "effect": "spawn_item",
+    "effect_str": "ice_gliders",
+    "shape": "blast",
+    "energy_source": "MANA",
+    "spell_class": "KELVINIST",
+    "difficulty": 2,
+    "max_level": 30,
+    "base_casting_time": 650,
+    "base_energy_cost": 100,
+    "min_duration": 10000,
+    "max_duration": 150000,
+    "duration_increment": 2000
+  },
+  {
+    "id": "hoary_blast",
+    "type": "SPELL",
+    "name": {
+      "str": "白霜冲击"
+    },
+    "description": "你发射出一颗发光的白色冰晶，在撞击之处绽放酷寒。",
+    "effect": "attack",
+    "effect_str": "cold",
+    "shape": "blast",
+    "affected_body_parts": [
+      "torso"
+    ],
+    "valid_targets": [
+      "self",
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "max_level": 30,
+    "min_damage": 24,
+    "max_damage": 102,
+    "damage_increment": 2,
+    "min_aoe": 3,
+    "max_aoe": 8,
+    "aoe_increment": 0.1,
+    "min_range": 6,
+    "max_range": 30,
+    "range_increment": 1,
+    "spell_class": "KELVINIST",
+    "base_casting_time": 200,
+    "base_energy_cost": 350,
+    "energy_source": "MANA",
+    "difficulty": 4,
+    "damage_type": "cold"
+  },
+  {
+    "id": "ice_shield",
+    "type": "SPELL",
+    "name": {
+      "str": "冰盾"
+    },
+    "description": "在你的手臂上制造一个魔法冰盾，你可以用它在近战中保护自己，并使用它来攻击。",
+    "valid_targets": [
+      "none"
+    ],
+    "flags": [
+      "NO_LEGS",
+      "CONCENTRATE",
+      "VERBAL"
+    ],
+    "min_damage": 1,
+    "max_damage": 1,
+    "effect": "spawn_item",
+    "effect_str": "shield_ice",
+    "shape": "blast",
+    "energy_source": "MANA",
+    "spell_class": "KELVINIST",
+    "difficulty": 2,
+    "max_level": 30,
+    "base_casting_time": 150,
+    "base_energy_cost": 100,
+    "min_duration": 10000,
+    "max_duration": 75000,
+    "duration_increment": 3000
+  },
+  {
+    "id": "frost_armor",
+    "type": "SPELL",
+    "name": {
+      "str": "霜甲"
+    },
+    "description": "用一层薄薄的魔法冰来保护你不受伤害。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_LEGS",
+      "CONCENTRATE",
+      "VERBAL",
+      "SOMATIC"
+    ],
+    "effect": "spawn_item",
+    "effect_str": "armor_frost",
+    "shape": "blast",
+    "affected_body_parts": [
+      "head",
+      "torso",
+      "leg_l",
+      "leg_r",
+      "arm_r",
+      "arm_l"
+    ],
+    "energy_source": "MANA",
+    "spell_class": "KELVINIST",
+    "difficulty": 3,
+    "max_level": 30,
+    "base_casting_time": 200,
+    "base_energy_cost": 550,
+    "min_duration": 10000,
+    "max_duration": 75000,
+    "duration_increment": 3000
+  },
+  {
+    "id": "create_rune_kelvinist",
+    "type": "SPELL",
+    "name": {
+      "str": "炽霜法师符文"
+    },
+    "description": "这仪式会创造出一块与炽霜法师共鸣的小石块。你可以将符文作为催化剂用于制造其它物品。",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 1,
+    "max_damage": 1,
+    "effect": "spawn_item",
+    "effect_str": "rune_kelvinist",
+    "shape": "blast",
+    "base_casting_time": 5000,
+    "base_energy_cost": 5,
+    "min_duration": 1,
+    "max_duration": 2,
+    "duration_increment": 1,
+    "difficulty": 0,
+    "max_level": 0,
+    "spell_class": "KELVINIST",
+    "energy_source": "MANA",
+    "flags": [
+      "PERMANENT",
+      "NO_LEGS",
+      "CONCENTRATE"
+    ]
+  },
+  {
+    "id": "kelvinist_summon_flamesword",
+    "type": "SPELL",
+    "name": {
+      "str": "火焰剑"
+    },
+    "description": "这个法术点燃一柄木剑，将其变成一把燃烧的剑。可以对敌人造成烧伤，瘀伤和砍伤。",
+    "valid_targets": [
+      "none"
+    ],
+    "flags": [
+      "NO_LEGS"
+    ],
+    "effect": "spawn_item",
+    "effect_str": "flamesword",
+    "shape": "blast",
+    "components": "spell_components_flamesword",
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_duration": 30000,
+    "max_duration": 135000,
+    "duration_increment": 6000,
+    "max_level": 15,
+    "spell_class": "KELVINIST",
+    "energy_source": "MANA",
+    "base_casting_time": 250,
+    "base_energy_cost": 300,
+    "difficulty": 4
+  },
+  {
+    "id": "kelvinist_flamebreath",
+    "type": "SPELL",
+    "name": {
+      "str": "火焰吐息"
+    },
+    "description": "这个法术点燃散布在空气中的尘埃，释放出一个火焰锥。炽热的灰烬会附着在目标身上，并随着时间的推移造成更多灼伤。",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "CONCENTRATE",
+      "IGNITE_FLAMMABLE"
+    ],
+    "components": "spell_components_flamebreath",
+    "max_level": 15,
+    "min_damage": 25,
+    "max_damage": 67,
+    "damage_increment": 2,
+    "min_dot": 2,
+    "max_dot": 7,
+    "dot_increment": 0.3,
+    "min_duration": 400,
+    "max_duration": 1500,
+    "duration_increment": 60,
+    "min_range": 5,
+    "max_range": 18,
+    "range_increment": 0.7,
+    "min_aoe": 15,
+    "max_aoe": 45,
+    "aoe_increment": 1.5,
+    "spell_class": "KELVINIST",
+    "base_casting_time": 150,
+    "base_energy_cost": 200,
+    "energy_source": "MANA",
+    "difficulty": 5,
+    "damage_type": "heat"
+  },
+  {
+    "id": "freezing_touch_slow_effect",
+    "type": "SPELL",
+    "name": {
+      "str": "极寒之触"
+    },
+    "description": "这是极寒之触的一个次级咒语。",
+    "shape": "blast",
+    "effect": "attack",
+    "effect_str": "slow_freeze_effect",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SILENT"
+    ],
+    "min_duration": 1000,
+    "max_duration": 1000,
+    "min_range": 1,
+    "max_range": 1
+  },
+  {
+    "id": "freezing_touch",
+    "type": "SPELL",
+    "name": {
+      "str": "极寒之触"
+    },
+    "description": "你的双手在如此寒冷的温度下能冻结接触到的任何物体，它会减慢你触碰到的敌人。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "NO_PROJECTILE"
+    ],
+    "components": "spell_components_freezing_touch",
+    "effect": "attack",
+    "effect_str": "cold",
+    "shape": "blast",
+    "affected_body_parts": [
+      "torso"
+    ],
+    "damage_type": "cold",
+    "min_damage": 38,
+    "damage_increment": 5,
+    "max_damage": 173,
+    "min_range": 1,
+    "max_range": 1,
+    "base_energy_cost": 85,
+    "spell_class": "KELVINIST",
+    "difficulty": 7,
+    "max_level": 27,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "extra_effects": [
+      {
+        "id": "freezing_touch_slow_effect"
+      }
+    ]
+  }
+]

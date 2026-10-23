@@ -1,0 +1,102 @@
+
+[
+    {
+        "id": "fuel_bunker",
+        "type": "MAGAZINE",
+        "name": {
+        "str": "fuel bunker"
+        },
+        "description": "A bin for holding solid fuel.",
+        "symbol": "]",
+        "color": "white",
+        "looks_like": "cargo_rack",
+        "material": [
+        "steel"
+        ],
+        "category": "veh_parts",
+        "weight": "22000 g",
+        "volume": "55 L",
+        "capacity": 10000,
+        "//": "mods will need to expand",
+        "ammo_type": [
+        "charcoal"
+        ],
+        "price": 3000,
+        "price_postapoc": 100,
+        "pocket_data": [
+        {
+            "pocket_type": "MAGAZINE",
+            "rigid": true,
+            "ammo_restriction": {
+            "charcoal": 10000
+            }
+        }
+        ]
+    },
+    {
+        "id": "fuel_bunker_100L",
+        "type": "MAGAZINE",
+        "name": {
+        "str": "燃料舱(100L)"
+        },
+        "description": "一个用于储存100L木炭的燃料舱",
+        "symbol": "]",
+        "color": "white",
+        "looks_like": "cargo_rack",
+        "material": [
+        "steel"
+        ],
+        "category": "veh_parts",
+        "weight": "44000 g",
+        "volume": "110 L",
+        "capacity": 20000,
+        "//": "mods will need to expand",
+        "ammo_type": [
+        "charcoal"
+        ],
+        "price": 6000,
+        "price_postapoc": 200,
+        "pocket_data": [
+        {
+            "pocket_type": "MAGAZINE",
+            "rigid": true,
+            "ammo_restriction": {
+            "charcoal": 20000
+            }
+        }
+        ]
+    },
+    {
+        "id": "fuel_bunker_200L",
+        "type": "MAGAZINE",
+        "name": {
+        "str": "燃料舱(200L)"
+        },
+        "description": "一个用于储存200L木炭的燃料舱",
+        "symbol": "]",
+        "color": "white",
+        "looks_like": "cargo_rack",
+        "material": [
+        "steel"
+        ],
+        "category": "veh_parts",
+        "weight": "88000 g",
+        "volume": "220 L",
+        "capacity": 40000,
+        "//": "mods will need to expand",
+        "ammo_type": [
+        "charcoal"
+        ],
+        "price": 12000,
+        "price_postapoc": 400,
+        "pocket_data": [
+        {
+            "pocket_type": "MAGAZINE",
+            "rigid": true,
+            "ammo_restriction": {
+            "charcoal": 40000
+            }
+        }
+        ]
+    }
+]

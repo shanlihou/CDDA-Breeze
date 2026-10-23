@@ -1,0 +1,2996 @@
+[
+  {
+    "type": "TOOL_ARMOR",
+    "id": "jiadiao",
+    "name": {
+      "str": "可穿戴假屌"
+    },
+    "category": "clothing",
+    "volume": "1500 ml",
+    "description": "一个假屌，内部是海绵凝胶一样软软的中空结构，外部是塑料类硬性材料，请穿厚一点的裤子，不然牛至可能会露出来",
+    "weight": "500 g",
+    "to_hit": -1,
+    "color": "light_gray",
+    "covers": [
+      "leg_l",
+      "leg_r"
+    ],
+    "sided": true,
+    "price": 6000,
+    "looks_like": "vibrator",
+    "price_postapoc": 100,
+    "material": [
+      "plastic"
+    ],
+    "flags": [
+      "OVERSIZE",
+      "SKINTIGHT",
+      "POWERARMOR_COMPATIBLE"
+    ],
+    "use_action": [
+      "VIBE"
+    ],
+    "symbol": "["
+  },
+  {
+    "type": "TOOL_ARMOR",
+    "id": "weizhankaidun",
+    "category": "armor",
+    "name": {
+      "str": "未展开的盾"
+    },
+    "description": "没有完全展开的盾，因此他没有那么高的防御力",
+    "weight": "8840 g",
+    "color": "dark_gray",
+    "price": "8 kUSD",
+    "material": [
+      "superalloy",
+      "plastic"
+    ],
+    "looks_like": "waterskin",
+    "volume": "4500 ml",
+    "to_hit": -1,
+    "bashing": 8,
+    "symbol": "{",
+    "flags": [
+      "OVERSIZE",
+      "ALLOWS_NATURAL_ATTACKS",
+      "ONLY_ONE"
+    ],
+    "techniques": [
+      "WBLOCK_3",
+      "BRUTAL"
+    ],
+    "armor": [
+      {
+        "coverage": 50,
+        "encumbrance": 1,
+        "covers": [
+          "head",
+          "mouth",
+          "eyes",
+          "torso",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r"
+        ]
+      }
+    ],
+    "material_thickness": 2,
+    "use_action": {
+      "type": "transform",
+      "target": "fdd",
+      "msg": "你展开了盾牌，没人能破你防了"
+    }
+  },
+  {
+    "id": "fdd",
+    "type": "TOOL_ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "防弹盾牌"
+    },
+    "description": "一个能够绝对防弹的盾牌，但是不防爆炸，因此榴弹可能无法击穿盾牌，但是一定能炸死你",
+    "use_action": {
+      "type": "transform",
+      "target": "weizhankaidun",
+      "msg": "你折叠了盾牌，你现在无法防弹了"
+    },
+    "weight": "2260 g",
+    "volume": "2250 ml",
+    "price": 22000,
+    "price_postapoc": 1000,
+    "to_hit": -1,
+    "bashing": 8,
+    "material": [
+      "plastic",
+      "superalloy"
+    ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "armor": [
+      {
+        "coverage": 100,
+        "encumbrance": 30,
+        "covers": [
+          "head",
+          "mouth",
+          "eyes",
+          "torso",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r"
+        ]
+      }
+    ],
+    "material_thickness": 50,
+    "techniques": [
+      "WBLOCK_3"
+    ],
+    "flags": [
+      "WATERPROOF",
+      "OVERSIZE",
+      "BELTED",
+      "RESTRICT_HANDS",
+      "BULLET_IMMUNE",
+      "STAB_IMMUNE",
+      "TRADER_AVOID",
+      "STURDY",
+      "SUN_GLASSES"
+    ]
+  },
+  {
+    "type": "TOOL",
+    "id": "zhaohuanxjjs",
+    "name": {
+      "str": "召唤锈甲僵尸"
+    },
+    "volume": "25 ml",
+    "description": "一个穿着生锈铁甲的丧尸",
+    "weight": "10 g",
+    "to_hit": -1,
+    "color": "light_gray",
+    "price": 60,
+    "price_postapoc": 10,
+    "material": [
+      "stone"
+    ],
+    "flags": [
+      "TRADER_AVOID",
+      "SINGLE_USE"
+    ],
+    "symbol": "[",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_zombie_plated",
+      "friendly_msg": "你召唤了锈甲丧尸",
+      "moves": 100
+    }
+  },
+  {
+    "type": "TOOL_ARMOR",
+    "id": "mwzly",
+    "name": {
+      "str": "蜗牛治疗仪"
+    },
+    "volume": "25 ml",
+    "description": "可以将自己的身体传送到蜗牛壳里，会有一个白色一直流鼻涕的蜗牛为你治疗，如果被真菌感染也可以把嘴巴传送过去吃药，装备后可以给全身断肢部位治疗(不要把奇怪的部位放进去",
+    "weight": "10 g",
+    "to_hit": -1,
+    "color": "light_gray",
+    "price": 60,
+    "sided": true,
+    "armor": [
+      {
+        "coverage": 100,
+        "covers": [
+          "head",
+          "mouth",
+          "eyes",
+          "torso",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r"
+        ]
+      }
+    ],
+    "charges_per_use": 200,
+    "price_postapoc": 10,
+    "ammo": "battery",
+    "use_action": [
+      "ANTIFUNGAL",
+      {
+        "type": "heal",
+        "bandages_power": 4,
+        "bleed": 20,
+        "bite": 100,
+        "disinfectant_power": 100,
+        "move_cost": 10
+      }
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "medium_battery_cell",
+          "medium_plus_battery_cell",
+          "medium_atomic_battery_cell",
+          "medium_disposable_cell",
+          "heavy_battery_cell",
+          "heavy_plus_battery_cell",
+          "heavy_atomic_battery_cell",
+          "heavy_disposable_cell",
+          "light_plus_battery_cell",
+          "light_minus_battery_cell",
+          "light_minus_disposable_cell",
+          "light_battery_cell",
+          "light_disposable_cell",
+          "light_atomic_battery_cell",
+          "light_minus_atomic_battery_cell"
+        ]
+      }
+    ],
+    "material": [
+      "steel"
+    ],
+    "flags": [
+      "TRADER_AVOID",
+      "SPLINT",
+      "NONCONDUCTIVE",
+      "ONLY_ONE",
+      "OVERSIZE",
+      "SEMITANGIBLE"
+    ],
+    "symbol": "["
+  },
+  {
+    "type": "TOOL",
+    "id": "zhaohuanlzsl",
+    "name": {
+      "str": "召唤利爪首领"
+    },
+    "volume": "25 ml",
+    "description": "一个十分强大的利爪首领怪物，可以召唤出来为你战斗",
+    "weight": "10 g",
+    "to_hit": -1,
+    "color": "light_gray",
+    "price": 60,
+    "price_postapoc": 10,
+    "material": [
+      "stone"
+    ],
+    "flags": [
+      "TRADER_AVOID",
+      "SINGLE_USE"
+    ],
+    "symbol": "[",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_alpha_razorclaw",
+      "friendly_msg": "召唤利爪首领",
+      "moves": 100
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "zhaohuanzp",
+    "name": {
+      "str": "召唤帐篷"
+    },
+    "volume": "25 ml",
+    "description": "可以召唤一个非常坚硬的小猫屋，坚硬到你无法想象",
+    "weight": "10 g",
+    "to_hit": -1,
+    "color": "light_gray",
+    "price": 60,
+    "price_postapoc": 10,
+    "material": [
+      "stone"
+    ],
+    "flags": [
+      "TRADER_AVOID"
+    ],
+    "symbol": "[",
+    "use_action": {
+      "type": "deploy_tent",
+      "radius": 1,
+      "broken_type": "zhaohuanzp",
+      "wall": "mwzq",
+      "floor": "wmzm",
+      "door_opened": "mwzmgb",
+      "door_closed": "mwzmkai"
+    }
+  },
+  {
+    "id": "maomaojinbi",
+    "type": "AMMO",
+    "category": "other",
+    "name": {
+      "str": "蜗牛金币"
+    },
+    "description": "一个硬币，上面有一个猫的图案，生产日期1145年1月4日，可以用来购买一些东西",
+    "weight": "6 g",
+    "volume": "1 ml",
+    "price": 999999999,
+    "ammo_type": "maomaojb",
+    "price_postapoc": 999999999,
+    "material": [
+      "silver"
+    ],
+    "symbol": "o",
+    "color": "light_gray"
+  },
+  {
+    "type": "TOOL",
+    "id": "zdmwzm",
+    "name": {
+      "str": "蜗牛之门"
+    },
+    "volume": "25 ml",
+    "description": "一个蜗牛的门，门上有着一个在流泪的猫猫头，后面还有一大群蜗牛没有在流泪，可以放下变成极为坚硬的墙，也可以收回(要不把这当盾牌？)",
+    "weight": "10 g",
+    "to_hit": -1,
+    "color": "light_gray",
+    "price": 60,
+    "price_postapoc": 10,
+    "material": [
+      "stone"
+    ],
+    "flags": [
+      "TRADER_AVOID"
+    ],
+    "symbol": "[",
+    "use_action": {
+      "type": "deploy_furn",
+      "furn_type": "mwzmgzd"
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "mwqb",
+    "name": {
+      "str": "蜗牛墙壁"
+    },
+    "volume": "25 ml",
+    "description": "召唤一个极为坚硬的墙壁为你防御，不需要的时候也可以收回放回背包(你甚至可以像玩MC一样用这个做一个房子，想出门就把墙放包里)",
+    "weight": "10 g",
+    "to_hit": -1,
+    "color": "light_gray",
+    "price": 60,
+    "price_postapoc": 10,
+    "material": [
+      "stone"
+    ],
+    "flags": [
+      "TRADER_AVOID"
+    ],
+    "symbol": "[",
+    "use_action": {
+      "type": "deploy_furn",
+      "furn_type": "mwdqb"
+    }
+  },
+  {
+    "id": "smzy100fadx",
+    "looks_like": "glock17_17",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "沙漠之鹰.50口径100发弹鼓"
+    },
+    "description": "啧。。。反正就是一个很大的弹匣",
+    "weight": "300 g",
+    "volume": "1000 ml",
+    "price": 6750,
+    "price_postapoc": 100,
+    "material": [
+      "steel"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [
+      "50"
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "50": 100
+        }
+      }
+    ]
+  },
+  {
+    "id": "smzy30fadx",
+    "looks_like": "glock17_17",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "沙漠之鹰.50口径30发弹匣"
+    },
+    "description": "洛洛克那么个小萝莉都能上百发子弹，我30发不过分吧",
+    "weight": "180 g",
+    "volume": "500 ml",
+    "price": 6750,
+    "price_postapoc": 100,
+    "material": [
+      "steel"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [
+      "50"
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "50": 30
+        }
+      }
+    ]
+  },
+  {
+    "id": ".50smzydanxia",
+    "looks_like": "glock17_17",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "沙漠之鹰.50口径8发弹匣"
+    },
+    "description": "加大加厚，专供.50沙漠之鹰使用",
+    "weight": "90 g",
+    "volume": "250 ml",
+    "price": 6750,
+    "price_postapoc": 100,
+    "material": [
+      "steel"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [
+      "50"
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "50": 8
+        }
+      }
+    ]
+  },
+  {
+    "id": "xczshayin",
+    "looks_like": "glock_17",
+    "type": "GUN",
+    "reload_noise_volume": 10,
+    "name": {
+      "str_sp": "沙漠之鹰.50手枪"
+    },
+    "description": "可以发射.50子弹的手枪，满足你对大口径手枪的极致幻想",
+    "weight": "1700 g",
+    "volume": "617 ml",
+    "longest_side": "29 cm",
+    "price": 87500,
+    "price_postapoc": 2750,
+    "to_hit": -2,
+    "bashing": 12,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "(",
+    "color": "light_gray",
+    "ammo": [
+      "50"
+    ],
+    "skill": "pistol",
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": -1
+    },
+    "dispersion": 480,
+    "durability": 7,
+    "min_cycle_recoil": 1413,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "faults": [
+      "fault_gun_blackpowder",
+      "fault_gun_dirt",
+      "fault_gun_chamber_spent"
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "250 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          ".50smzydanxia",
+          "smzy30fadx",
+          "smzy100fadx"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "xczshayin_high_damage",
+    "looks_like": "sw_500",
+    "type": "GUN",
+    "reload_noise_volume": 10,
+    "name": {
+      "str_sp": ".49马格南手枪"
+    },
+    "description": "来自忍者杀手世界的.49口径马格南手枪，因49为兽之数字而增加威力。枪身闪耀着大业物的光泽，手持时能够利用厚重的手枪作为指虎，一有机会就从猛烈的正拳突开始贴近射击，但因为单持所以伤害有所不足。",
+    "weight": "1700 g",
+    "volume": "617 ml",
+    "longest_side": "29 cm",
+    "price": 87500,
+    "price_postapoc": 2750,
+    "to_hit": -2,
+    "bashing": 15,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "(",
+    "color": "light_gray",
+    "ammo": [
+      "50"
+    ],
+    "skill": "pistol",
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": 49
+    },
+    "dispersion": 480,
+    "durability": 7,
+    "min_cycle_recoil": 1413,
+    "aim_speed": 11,
+    "reload": 50,
+    "flags": [
+      "UNARMED_WEAPON",
+      "DURABLE_MELEE"
+    ],
+    "techniques": [
+      "PRECISE",
+      "BRUTAL",
+      "WBLOCK_2"
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "faults": [
+      "fault_gun_blackpowder",
+      "fault_gun_dirt",
+      "fault_gun_chamber_spent"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "50": 6
+        }
+      }
+    ],
+    "weapon_category": [
+      "SN_MARTIAL"
+    ]
+  },
+  {
+    "id": "xczshayin_dual",
+    "looks_like": "sw_500",
+    "type": "GUN",
+    "reload_noise_volume": 10,
+    "name": {
+      "str_sp": "双持的.49马格南手枪"
+    },
+    "description": "来自忍者杀手世界的.49口径马格南手枪，因49为兽之数字而增加威力。成对的枪身相呼应着大业物的闪光，手持时能够利用厚重的手枪作为指虎，一有机会就从猛烈的正拳突开始贴近射击。",
+    "weight": "3400 g",
+    "volume": "1234 ml",
+    "longest_side": "29 cm",
+    "price": 175000,
+    "price_postapoc": 5500,
+    "to_hit": -2,
+    "bashing": 24,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "(",
+    "color": "light_gray",
+    "ammo": [
+      "50"
+    ],
+    "skill": "pistol",
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": 49
+    },
+    "dispersion": 600,
+    "durability": 7,
+    "min_cycle_recoil": 1413,
+    "aim_speed": 100,
+    "reload": 70,
+    "flags": [
+      "UNARMED_WEAPON",
+      "DURABLE_MELEE"
+    ],
+    "techniques": [
+      "PRECISE",
+      "BRUTAL",
+      "WBLOCK_2",
+      "SWEEP"
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        2
+      ],
+      [
+        "bore",
+        2
+      ],
+      [
+        "grip",
+        2
+      ],
+      [
+        "mechanism",
+        8
+      ],
+      [
+        "muzzle",
+        2
+      ],
+      [
+        "rail",
+        2
+      ],
+      [
+        "sights",
+        2
+      ],
+      [
+        "stock",
+        2
+      ],
+      [
+        "underbarrel",
+        2
+      ]
+    ],
+    "faults": [
+      "fault_gun_blackpowder",
+      "fault_gun_dirt",
+      "fault_gun_chamber_spent"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "50": 12
+        }
+      }
+    ],
+    "weapon_category": [
+      "SN_MARTIAL"
+    ]
+  },
+  {
+    "id": "reloader_49mag",
+    "type": "GENERIC",
+    "name": {
+      "str": ".49马格南快速上弹器"
+    },
+    "description": "一个特制的快速上弹器，可同时装填12发.49马格南弹药，专为双持左轮手枪设计，也可用于单持版。装填时对准弹仓即可一次性完成。",
+    "weight": "100 g",
+    "volume": "250 ml",
+    "longest_side": "10 cm",
+    "price": 2000,
+    "price_postapoc": 200,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "=",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "50": 12
+        }
+      }
+    ]
+  },
+  {
+    "id": "holy_nunchaku",
+    "type": "GENERIC",
+    "name": {
+      "str": "神圣双截棍"
+    },
+    "description": "来自忍者杀手世界的三神器之一，双截棍 of 破坏。奈落的不净之炎正沉睡在其中。由黑檀木作为棍身，两侧棍尾刻着「忍」「殺」二字。",
+    "weight": "600 g",
+    "volume": "1 L",
+    "longest_side": "60 cm",
+    "price": 6000,
+    "price_postapoc": 800,
+    "material": [
+      "katsu_wanso_steel"
+    ],
+    "symbol": "/",
+    "color": "black",
+    "bashing": 300,
+    "cutting": 150,
+    "to_hit": 5,
+    "flags": [
+      "UNBREAKABLE_MELEE",
+      "SHEATH_SWORD",
+      "MAGIC_FOCUS",
+      "WATER_FRIENDLY",
+      "TRADER_AVOID",
+      "UNARMED_WEAPON",
+      "REACH_ATTACK",
+      "STAB"
+    ],
+    "techniques": [
+      "PRECISE",
+      "tec_swift_strike",
+      "SWEEP",
+      "WBLOCK_2",
+      "SPIN",
+      "BRUTAL",
+      "WHIP_DISARM"
+    ],
+    "use_action": {
+      "type": "transform",
+      "target": "holy_nunchaku_active",
+      "msg": "你用力扭动棍身，榨出其中的凡人嗟怨！",
+      "menu_text": "放出不净之炎",
+      "moves": 1
+    },
+    "weapon_category": [
+      "SN_MARTIAL"
+    ]
+  },
+  {
+    "id": "holy_nunchaku_active",
+    "type": "GENERIC",
+    "name": {
+      "str": "神圣双截棍（黑炎）"
+    },
+    "description": "奈落的不净之炎被过度的凡人嗟怨引动而不断从棍身与棍尾喷发出来。两侧棍尾的「忍」「殺」二字正激烈发光。",
+    "weight": "600 g",
+    "volume": "1 L",
+    "longest_side": "60 cm",
+    "price": 6000,
+    "price_postapoc": 800,
+    "material": [
+      "katsu_wanso_steel"
+    ],
+    "symbol": "/",
+    "color": "black",
+    "bashing": 300,
+    "cutting": 150,
+    "to_hit": 5,
+    "flags": [
+      "UNBREAKABLE_MELEE",
+      "SHEATH_SWORD",
+      "MAGIC_FOCUS",
+      "WATER_FRIENDLY",
+      "TRADER_AVOID",
+      "UNARMED_WEAPON",
+      "FLAMING",
+      "LIGHT_6",
+      "REACH_ATTACK",
+      "STAB"
+    ],
+    "techniques": [
+      "PRECISE",
+      "tec_swift_strike",
+      "SWEEP",
+      "WBLOCK_2",
+      "SPIN",
+      "BRUTAL",
+      "WHIP_DISARM"
+    ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "hit_you_effect": [
+            {
+              "id": "black_fire_burn",
+              "once_in": 1,
+              "message": "不净之炎在%2$s身上炸开！",
+              "npc_message": "%1$s的不净之炎在%2$s身上炸开！"
+            }
+          ],
+          "values": []
+        }
+      ]
+    },
+    "use_action": [
+      {
+        "type": "transform",
+        "target": "holy_nunchaku",
+        "msg": "不净之炎钻回棍身，双截棍恢复常态。",
+        "menu_text": "熄灭火焰",
+        "moves": 1
+      },
+      {
+        "type": "cast_spell",
+        "spell_id": "holy_nunchaku_fireball",
+        "level": 1,
+        "no_fail": true,
+        "need_wielding": false,
+        "menu_text": "不净火球",
+        "name": "不净火球"
+      }
+    ],
+    "weapon_category": [
+      "SN_MARTIAL"
+    ]
+  },
+  {
+    "id": "holy_gauntlets",
+    "type": "ARMOR",
+    "name": {
+      "str": "神圣手甲"
+    },
+    "description": "来自忍者杀手世界的三神器之一，手甲·of·支配。",
+    "weight": "800 g",
+    "volume": "1500 ml",
+    "price": 10000,
+    "price_postapoc": 2000,
+    "material": [
+      "katsu_wanso_steel"
+    ],
+    "symbol": "[",
+    "color": "white",
+    "bashing": 100,
+    "cutting": 80,
+    "to_hit": 5,
+    "flags": [
+      "UNARMED_WEAPON",
+      "MAGIC_FOCUS",
+      "STURDY",
+      "FIT",
+      "WATERPROOF",
+      "RAINPROOF",
+      "GAS_PROOF",
+      "RAD_PROOF",
+      "ELECTRIC_IMMUNE",
+      "SUPER_FANCY",
+      "UNBREAKABLE",
+      "STAB",
+      "PADDED"
+    ],
+    "armor": [
+      {
+        "coverage": 100,
+        "encumbrance": 15,
+        "covers": [
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r"
+        ],
+        "specifically_covers": [
+          "arm_lower_l",
+          "arm_lower_r",
+          "hand_wrist_l",
+          "hand_wrist_r",
+          "hand_palm_l",
+          "hand_palm_r",
+          "hand_back_l",
+          "hand_back_r",
+          "hand_fingers_l",
+          "hand_fingers_r"
+        ],
+        "material": [
+          {
+            "type": "katsu_wanso_steel",
+            "covered_by_mat": 100,
+            "thickness": 8.0
+          }
+        ],
+        "resist": {
+          "bash": 100,
+          "cut": 100,
+          "stab": 100,
+          "bullet": 100,
+          "heat": 100,
+          "cold": 100,
+          "electric": 100,
+          "acid": 100
+        }
+      }
+    ],
+    "techniques": [
+      "PRECISE",
+      "tec_swift_strike",
+      "SWEEP",
+      "SPIN",
+      "WBLOCK_2",
+      "BRUTAL",
+      "WHIP_DISARM"
+    ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "STRENGTH",
+              "add": 11
+            },
+            {
+              "value": "DEXTERITY",
+              "add": 11
+            },
+            {
+              "value": "MAX_STAMINA",
+              "add": 90
+            },
+            {
+              "value": "REGEN_STAMINA",
+              "add": 65
+            },
+            {
+              "value": "MOVE_COST",
+              "multiply": -0.65
+            },
+            {
+              "value": "SPEED",
+              "add": 65
+            },
+            {
+              "value": "CARRY_WEIGHT",
+              "multiply": 0.9
+            }
+          ]
+        }
+      ]
+    },
+    "use_action": {
+      "type": "transform",
+      "target": "holy_bracelet",
+      "msg": "你扭动手腕，神圣手甲收缩成一只精致的手镯。",
+      "menu_text": "化为手镯",
+      "moves": 1
+    }
+  },
+  {
+    "id": "holy_bracelet",
+    "type": "ARMOR",
+    "name": {
+      "str": "神圣手甲（手镯形态）"
+    },
+    "description": "来自忍者杀手世界的三神器之一，手甲·of·支配。现在是手镯的形态。",
+    "weight": "100 g",
+    "volume": "250 ml",
+    "longest_side": "20 cm",
+    "price": 8000,
+    "price_postapoc": 1500,
+    "material": [
+      "katsu_wanso_steel"
+    ],
+    "symbol": "o",
+    "color": "white",
+    "flags": [
+      "MAGIC_FOCUS",
+      "STURDY",
+      "FIT",
+      "WATERPROOF",
+      "RAINPROOF",
+      "GAS_PROOF",
+      "RAD_PROOF",
+      "ELECTRIC_IMMUNE",
+      "SUPER_FANCY",
+      "UNBREAKABLE"
+    ],
+    "armor": [
+      {
+        "coverage": 15,
+        "encumbrance": 0,
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "specifically_covers": [
+          "arm_lower_l",
+          "arm_lower_r"
+        ],
+        "material": [
+          {
+            "type": "leather",
+            "covered_by_mat": 100,
+            "thickness": 0.5
+          }
+        ],
+        "resist": {
+          "bash": 100,
+          "cut": 100,
+          "stab": 100,
+          "bullet": 100,
+          "heat": 100,
+          "cold": 100,
+          "electric": 100,
+          "acid": 100
+        }
+      }
+    ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "STRENGTH",
+              "add": 11
+            },
+            {
+              "value": "DEXTERITY",
+              "add": 11
+            },
+            {
+              "value": "MAX_STAMINA",
+              "add": 90
+            },
+            {
+              "value": "REGEN_STAMINA",
+              "add": 65
+            },
+            {
+              "value": "MOVE_COST",
+              "multiply": -0.65
+            },
+            {
+              "value": "SPEED",
+              "add": 65
+            },
+            {
+              "value": "CARRY_WEIGHT",
+              "multiply": 0.9
+            }
+          ]
+        }
+      ]
+    },
+    "use_action": [
+      {
+        "type": "learn_spell",
+        "spells": [
+          "holy_fetch_wide_hostile",
+          "holy_fetch_wide_ally",
+          "holy_fetch_wide_item",
+          "holy_gauntlets_push"
+        ]
+      },
+      {
+        "type": "transform",
+        "target": "holy_gauntlets",
+        "msg": "你扭动手腕，手镯展开成神圣手甲！",
+        "menu_text": "展开手甲",
+        "moves": 1
+      }
+    ]
+  },
+  {
+    "id": "holy_mask",
+    "type": "ARMOR",
+    "name": {
+      "str": "神圣面甲"
+    },
+    "description": "来自忍者杀手世界的三神器之一，面甲·of·支配。",
+    "weight": "600 g",
+    "volume": "1250 ml",
+    "price": 10000,
+    "price_postapoc": 2000,
+    "material": [
+      "katsu_wanso_steel"
+    ],
+    "symbol": "[",
+    "color": "white",
+    "flags": [
+      "FIT",
+      "WATERPROOF",
+      "RAINPROOF",
+      "GAS_PROOF",
+      "RAD_PROOF",
+      "ELECTRIC_IMMUNE",
+      "STURDY",
+      "SUN_GLASSES",
+      "FLASH_PROTECTION",
+      "PARTIAL_DEAF",
+      "SWIM_GOGGLES",
+      "REBREATHER",
+      "SUPER_FANCY",
+      "UNBREAKABLE"
+    ],
+    "armor": [
+      {
+        "covers": [
+          "head",
+          "eyes",
+          "mouth"
+        ],
+        "coverage": 100,
+        "encumbrance": 15,
+        "material": [
+          {
+            "type": "katsu_wanso_steel",
+            "covered_by_mat": 100,
+            "thickness": 5.0
+          }
+        ],
+        "resist": {
+          "bash": 100,
+          "cut": 100,
+          "stab": 100,
+          "bullet": 100,
+          "heat": 100,
+          "cold": 100,
+          "electric": 100,
+          "acid": 100
+        }
+      }
+    ],
+    "environmental_protection": 40,
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "INTELLIGENCE",
+              "add": 11
+            },
+            {
+              "value": "PERCEPTION",
+              "add": 11
+            },
+            {
+              "value": "MAX_MANA",
+              "add": 10000
+            },
+            {
+              "value": "REGEN_MANA",
+              "add": 100
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "snake_sword",
+    "type": "GENERIC",
+    "name": {
+      "str": "蛇·剑"
+    },
+    "description": "神秘的可变武器。平常是普通的忍者刀，但只要用特殊的技术甩动便能分离刀身，变成以丝线连接分段化的刀刃，变形成危险的鞭状武器。剑刃淬有蛇毒。",
+    "weight": "800 g",
+    "volume": "1500 ml",
+    "longest_side": "70 cm",
+    "price": 5000,
+    "price_postapoc": 500,
+    "material": [
+      "steel"
+    ],
+    "symbol": "/",
+    "color": "light_gray",
+    "bashing": 22,
+    "cutting": 18,
+    "to_hit": 2,
+    "flags": [
+      "SHEATH_SWORD",
+      "DURABLE_MELEE",
+      "UNBREAKABLE_MELEE",
+      "STAB"
+    ],
+    "techniques": [
+      "PRECISE",
+      "WBLOCK_2",
+      "BRUTAL",
+      "WIDE"
+    ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "hit_you_effect": [
+            {
+              "id": "snake_venom_strike",
+              "once_in": 1,
+              "message": "蛇毒从剑刃渗入%2$s体内！",
+              "npc_message": "%1$s的蛇毒渗入%2$s体内！"
+            }
+          ],
+          "values": []
+        }
+      ]
+    },
+    "use_action": {
+      "type": "transform",
+      "target": "snake_whip",
+      "msg": "你甩动蛇剑，剑身瞬间分裂成危险的鞭状武器！",
+      "menu_text": "变形"
+    }
+  },
+  {
+    "id": "snake_whip",
+    "type": "GENERIC",
+    "name": {
+      "str": "蛇·剑（鞭状）"
+    },
+    "description": "神秘的可变武器，由蛇·剑变形而来的鞭状武器。由高强度丝链接的刀刃组成，可以挥舞攻击远距离目标。再次甩动可以恢复为剑形态。鞭身淬有蛇毒。",
+    "weight": "800 g",
+    "volume": "1500 ml",
+    "longest_side": "120 cm",
+    "price": 5000,
+    "price_postapoc": 500,
+    "material": [
+      "steel"
+    ],
+    "symbol": "~",
+    "color": "dark_gray",
+    "bashing": 8,
+    "cutting": 32,
+    "to_hit": 1,
+    "flags": [
+      "WHIP",
+      "REACH_ATTACK",
+      "REACH3",
+      "DURABLE_MELEE",
+      "UNBREAKABLE_MELEE"
+    ],
+    "techniques": [
+      "PRECISE",
+      "tec_swift_strike",
+      "SWEEP",
+      "SPIN",
+      "WHIP_DISARM",
+      "WBLOCK_2",
+      "GRAB",
+      "WRAP"
+    ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "hit_you_effect": [
+            {
+              "id": "snake_venom_strike",
+              "once_in": 1,
+              "message": "蛇毒从鞭身渗入%2$s体内！",
+              "npc_message": "%1$s的蛇毒渗入%2$s体内！"
+            }
+          ],
+          "values": []
+        }
+      ]
+    },
+    "use_action": {
+      "type": "transform",
+      "target": "snake_sword",
+      "msg": "你再次甩动，鞭收缩成剑！",
+      "menu_text": "变形"
+    }
+  },
+  {
+    "id": "snake_sword_base",
+    "type": "GENERIC",
+    "name": {
+      "str": "蛇·剑（无毒）"
+    },
+    "description": "神秘的可变武器。平常是普通的忍者刀，但只要用特殊的技术甩动便能分离刀身，变成以丝线连接分段化的刀刃，变形成危险的鞭状武器。剑刃尚未淬毒。",
+    "weight": "800 g",
+    "volume": "1500 ml",
+    "longest_side": "70 cm",
+    "price": 5000,
+    "price_postapoc": 500,
+    "material": [
+      "steel"
+    ],
+    "symbol": "/",
+    "color": "light_gray",
+    "bashing": 22,
+    "cutting": 18,
+    "to_hit": 2,
+    "flags": [
+      "SHEATH_SWORD",
+      "DURABLE_MELEE",
+      "UNBREAKABLE_MELEE",
+      "STAB"
+    ],
+    "techniques": [
+      "PRECISE",
+      "WBLOCK_2",
+      "BRUTAL",
+      "WIDE"
+    ],
+    "use_action": {
+      "type": "transform",
+      "target": "snake_whip_base",
+      "msg": "你甩动蛇剑，剑身瞬间分裂成危险的鞭状武器！",
+      "menu_text": "变形"
+    }
+  },
+  {
+    "id": "snake_whip_base",
+    "type": "GENERIC",
+    "name": {
+      "str": "蛇·剑（鞭状·无毒）"
+    },
+    "description": "神秘的可变武器，由蛇·剑（无毒）变形而来的鞭状武器。由高强度丝链接的刀刃组成，可以挥舞攻击远距离目标。再次甩动可以恢复为剑形态。",
+    "weight": "800 g",
+    "volume": "1500 ml",
+    "longest_side": "120 cm",
+    "price": 5000,
+    "price_postapoc": 500,
+    "material": [
+      "steel"
+    ],
+    "symbol": "~",
+    "color": "dark_gray",
+    "bashing": 8,
+    "cutting": 32,
+    "to_hit": 1,
+    "flags": [
+      "WHIP",
+      "REACH_ATTACK",
+      "REACH3",
+      "DURABLE_MELEE",
+      "UNBREAKABLE_MELEE"
+    ],
+    "techniques": [
+      "PRECISE",
+      "tec_swift_strike",
+      "SWEEP",
+      "SPIN",
+      "WHIP_DISARM",
+      "WBLOCK_2",
+      "GRAB",
+      "WRAP"
+    ],
+    "use_action": {
+      "type": "transform",
+      "target": "snake_sword_base",
+      "msg": "你再次甩动，鞭收缩成剑！",
+      "menu_text": "变形"
+    }
+  },
+  {
+    "id": "snake_sword_para",
+    "type": "GENERIC",
+    "name": {
+      "str": "蛇·剑（麻痹）"
+    },
+    "description": "神秘的可变武器。平常是普通的忍者刀，但只要用特殊的技术甩动便能分离刀身，变成以丝线连接分段化的刀刃，变形成危险的鞭状武器。剑刃淬有强效麻痹毒素。",
+    "weight": "800 g",
+    "volume": "1500 ml",
+    "longest_side": "70 cm",
+    "price": 5000,
+    "price_postapoc": 500,
+    "material": [
+      "steel"
+    ],
+    "symbol": "/",
+    "color": "light_gray",
+    "bashing": 22,
+    "cutting": 18,
+    "to_hit": 2,
+    "flags": [
+      "SHEATH_SWORD",
+      "DURABLE_MELEE",
+      "UNBREAKABLE_MELEE",
+      "STAB"
+    ],
+    "techniques": [
+      "PRECISE",
+      "WBLOCK_2",
+      "BRUTAL",
+      "WIDE"
+    ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "hit_you_effect": [
+            {
+              "id": "snake_venom_strike",
+              "once_in": 1,
+              "message": "蛇毒从剑刃渗入%2$s体内！",
+              "npc_message": "%1$s的蛇毒渗入%2$s体内！"
+            },
+            {
+              "id": "snake_paralyze_only",
+              "once_in": 1,
+              "message": "麻痹毒素渗入%2$s的神经！",
+              "npc_message": "%1$s的麻痹毒素渗入%2$s的神经！"
+            }
+          ],
+          "values": []
+        }
+      ]
+    },
+    "use_action": {
+      "type": "transform",
+      "target": "snake_whip_para",
+      "msg": "你甩动蛇剑，剑身瞬间分裂成危险的鞭状武器！",
+      "menu_text": "变形"
+    }
+  },
+  {
+    "id": "snake_whip_para",
+    "type": "GENERIC",
+    "name": {
+      "str": "蛇·剑（鞭状·麻痹）"
+    },
+    "description": "神秘的可变武器，由蛇·剑（麻痹）变形而来的鞭状武器。由高强度丝链接的刀刃组成，可以挥舞攻击远距离目标。再次甩动可以恢复为剑形态。鞭身淬有强效麻痹毒素。",
+    "weight": "800 g",
+    "volume": "1500 ml",
+    "longest_side": "120 cm",
+    "price": 5000,
+    "price_postapoc": 500,
+    "material": [
+      "steel"
+    ],
+    "symbol": "~",
+    "color": "dark_gray",
+    "bashing": 8,
+    "cutting": 32,
+    "to_hit": 1,
+    "flags": [
+      "WHIP",
+      "REACH_ATTACK",
+      "REACH3",
+      "DURABLE_MELEE",
+      "UNBREAKABLE_MELEE"
+    ],
+    "techniques": [
+      "PRECISE",
+      "tec_swift_strike",
+      "SWEEP",
+      "SPIN",
+      "WHIP_DISARM",
+      "WBLOCK_2",
+      "GRAB",
+      "WRAP"
+    ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "hit_you_effect": [
+            {
+              "id": "snake_venom_strike",
+              "once_in": 1,
+              "message": "蛇毒从鞭身渗入%2$s体内！",
+              "npc_message": "%1$s的蛇毒渗入%2$s体内！"
+            },
+            {
+              "id": "snake_paralyze_only",
+              "once_in": 1,
+              "message": "麻痹毒素渗入%2$s的神经！",
+              "npc_message": "%1$s的麻痹毒素渗入%2$s的神经！"
+            }
+          ],
+          "values": []
+        }
+      ]
+    },
+    "use_action": {
+      "type": "transform",
+      "target": "snake_sword_para",
+      "msg": "你再次甩动，鞭收缩成剑！",
+      "menu_text": "变形"
+    }
+  },
+  {
+    "type": "GUNMOD",
+    "id": "50xiaguaqiang",
+    "name": {
+      "str": "幸存者下挂式.50手枪"
+    },
+    "location": "underbarrel",
+    "weight": "1750 g",
+    "volume": "617 ml",
+    "longest_side": "29 cm",
+    "color": "dark_gray",
+    "handling_modifier": -2,
+    "to_hit": -2,
+    "price": "120 USD",
+    "price_postapoc": "12 USD",
+    "description": "一把.50下挂式沙鹰，改装之后他无法再直接射击，但是可以放在枪械下面使用了（妈妈再也不用担心我需要带两把枪而有累赘了）",
+    "looks_like": "glock_17",
+    "symbol": ":",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "mod_targets": [
+      "rifle",
+      "pistol",
+      "shotgun",
+      "smg",
+      "crossbow",
+      "launcher"
+    ],
+    "bashing": 8,
+    "gun_data": {
+      "skill": "pistol",
+      "ammo": "50",
+      "ranged_damage": {
+        "damage_type": "bullet",
+        "amount": -1
+      },
+      "dispersion": 100,
+      "min_cycle_recoil": 450,
+      "reload": 200
+    },
+    "min_skills": [
+      [
+        "weapon",
+        2
+      ],
+      [
+        "pistol",
+        1
+      ]
+    ],
+    "install_time": "20 m",
+    "pocket_data": [
+      {
+        "magazine_well": "250 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "3000 kg",
+        "item_restriction": [
+          ".50smzydanxia",
+          "smzy30fadx",
+          "smzy100fadx"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "yscz2932",
+    "type": "TOOL",
+    "name": {
+      "str": "蜗牛建筑摧毁锤"
+    },
+    "description": "将S到的建筑连同这个锤子一起化为碎片(来蜗牛壳某个生活极其落魄loser的蜗牛所制作的锤子)",
+    "ascii_picture": "hammer",
+    "longest_side": "10 cm",
+    "weight": "500 g",
+    "volume": "100 ml",
+    "price": 1,
+    "price_postapoc": 100,
+    "to_hit": -9999999,
+    "bashing": 99999999,
+    "material": [
+      "glass"
+    ],
+    "symbol": ";",
+    "color": "black",
+    "qualities": [
+      [
+        "HAMMER",
+        3
+      ],
+      [
+        "HAMMER_FINE",
+        1
+      ]
+    ],
+    "use_action": [
+      "HAMMER",
+      "CROWBAR"
+    ],
+    "flags": [
+      "BELT_CLIP",
+      "NONCONDUCTIVE",
+      "FRAGILE_MELEE"
+    ]
+  },
+  {
+    "type": "TOOL",
+    "id": "maomaozl",
+    "name": {
+      "str": "量子速读"
+    },
+    "volume": "25 ml",
+    "description": "让你读一切都极快",
+    "weight": "10 g",
+    "to_hit": -1,
+    "color": "light_gray",
+    "price": 60,
+    "price_postapoc": 10,
+    "material": [
+      "stone"
+    ],
+    "flags": [
+      "TRADER_AVOID"
+    ],
+    "symbol": "[",
+    "use_action": {
+      "type": "countdown",
+      "name": "施法",
+      "message": "施法。"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "mmzlsf",
+      "no_fail": true,
+      "level": 1
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "mmzlvip",
+    "name": {
+      "str": "蜗牛治疗VIP卡片"
+    },
+    "volume": "25 ml",
+    "description": "让你的断肢以及睡眠时恢复增加，尤其是断肢恢复，快到很法式蜗牛",
+    "weight": "10 g",
+    "to_hit": -1,
+    "color": "light_gray",
+    "price": 60,
+    "price_postapoc": 10,
+    "material": [
+      "stone"
+    ],
+    "flags": [
+      "TRADER_AVOID"
+    ],
+    "symbol": "[",
+    "use_action": {
+      "type": "countdown",
+      "name": "施法",
+      "message": "施法"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "mmhfsf",
+      "no_fail": true,
+      "level": 1
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "maomaodkd",
+    "name": {
+      "str": "蜗牛的啃腚"
+    },
+    "volume": "25 ml",
+    "description": "让你的耐力和耐力恢复速度超大幅增加，蜗牛的肯定让你自信，你更加有活力",
+    "weight": "10 g",
+    "to_hit": -1,
+    "color": "light_gray",
+    "price": 60,
+    "price_postapoc": 10,
+    "material": [
+      "stone"
+    ],
+    "flags": [
+      "TRADER_AVOID"
+    ],
+    "symbol": "[",
+    "use_action": {
+      "type": "countdown",
+      "name": "施法",
+      "message": "施法"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "mmnlsf",
+      "no_fail": true,
+      "level": 1
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "ryxyq",
+    "name": {
+      "str": "蜗牛之隐蔽"
+    },
+    "volume": "25 ml",
+    "description": "一个隐蔽之石，使用后消除脚步声，以及味道",
+    "weight": "10 g",
+    "to_hit": -1,
+    "color": "light_gray",
+    "price": 60,
+    "price_postapoc": 10,
+    "material": [
+      "stone"
+    ],
+    "flags": [
+      "TRADER_AVOID"
+    ],
+    "symbol": "[",
+    "use_action": {
+      "type": "countdown",
+      "name": "施法",
+      "message": "施法。"
+    },
+    "countdown_interval": 1,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "cast_spell",
+      "spell_id": "mmtbmf",
+      "no_fail": true,
+      "level": 1
+    }
+  },
+  {
+    "id": "bxbb",
+    "type": "TOOL_ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "冰箱背包"
+    },
+    "description": "这是一个背带加冰箱的简陋冰箱背包，可以把电池放上去供能，你想把苹果或者土豆之类的蔬菜水果放到电池的那个地方，突然一个猫爪从缝里伸手把你的水果给拍掉了，并说了一句，别特么用你那水果充电了",
+    "weight": "8000 g",
+    "volume": "15750 ml",
+    "price": 35000,
+    "price_postapoc": 1500,
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "steel"
+    ],
+    "symbol": "[",
+    "looks_like": "minifridge",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "spoil_multiplier": 0.0,
+        "weight_multiplier": 0.0,
+        "volume_multiplier": 0.0,
+        "max_contains_volume": "75 ml",
+        "max_contains_weight": "60 kg",
+        "moves": 100
+      },
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "holster": true,
+        "max_contains_volume": "20 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "medium_battery_cell",
+          "medium_plus_battery_cell",
+          "medium_atomic_battery_cell",
+          "medium_disposable_cell",
+          "heavy_battery_cell",
+          "heavy_plus_battery_cell",
+          "heavy_atomic_battery_cell",
+          "heavy_disposable_cell",
+          "light_plus_battery_cell",
+          "light_minus_battery_cell",
+          "light_minus_disposable_cell",
+          "light_battery_cell",
+          "light_disposable_cell",
+          "light_atomic_battery_cell",
+          "light_minus_atomic_battery_cell"
+        ]
+      }
+    ],
+    "color": "light_gray",
+    "armor": [
+      {
+        "coverage": 40,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "max_encumbrance": 20,
+    "material_thickness": 2,
+    "ammo": "battery",
+    "revert_to": "bxbb",
+    "use_action": {
+      "type": "transform",
+      "msg": "你打开了冰箱",
+      "target": "bxbbyjh",
+      "active": true,
+      "need_charges": 1,
+      "need_charges_msg": "冰箱背包没电了，你快放进去一个苹果!"
+    },
+    "flags": [
+      "BELTED",
+      "OVERSIZE",
+      "TARDIS",
+      "NO_REPAIR"
+    ]
+  },
+  {
+    "id": "bxbbyjh",
+    "type": "TOOL_ARMOR",
+    "repairs_like": "bxbb",
+    "name": {
+      "str": "冰箱背包(已激活)"
+    },
+    "description": "内部物品现在不会腐坏的，你以为冰箱是降低温度？错!其实是直接把食物虚化了，因此不被冷冻却不会腐坏，你无法直接关闭这个冰箱，只能等待他没电，或者把电池拿出来",
+    "weight": "8000 g",
+    "to_hit": -5,
+    "color": "brown",
+    "symbol": "]",
+    "looks_like": "minifridge",
+    "ammo": "battery",
+    "revert_to": "bxbb",
+    "power_draw": 1,
+    "material": [
+      "steel"
+    ],
+    "volume": "15750 ml",
+    "price_postapoc": 50,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "max_contains_volume": "75 ml",
+        "spoil_multiplier": 0.0,
+        "max_contains_weight": "60 kg",
+        "moves": 100
+      },
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "holster": true,
+        "max_contains_volume": "20 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "medium_battery_cell",
+          "medium_plus_battery_cell",
+          "medium_atomic_battery_cell",
+          "medium_disposable_cell",
+          "heavy_battery_cell",
+          "heavy_plus_battery_cell",
+          "heavy_atomic_battery_cell",
+          "heavy_disposable_cell",
+          "light_plus_battery_cell",
+          "light_minus_battery_cell",
+          "light_minus_disposable_cell",
+          "light_battery_cell",
+          "light_disposable_cell",
+          "light_atomic_battery_cell",
+          "light_minus_atomic_battery_cell"
+        ]
+      }
+    ],
+    "armor": [
+      {
+        "coverage": 40,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "encumbrance": 20,
+    "warmth": 5,
+    "bashing": 16,
+    "cutting": 4,
+    "price": 3500,
+    "flags": [
+      "BELTED",
+      "OVERSIZE",
+      "TARDIS",
+      "NO_REPAIR"
+    ]
+  },
+  {
+    "id": "zhijianzuanto",
+    "repairs_like": "gloves_light",
+    "type": "ARMOR",
+    "name": {
+      "str": "电钻手套附件"
+    },
+    "description": "一个附件，可以放手上，你可以拿他钻墙挖矿",
+    "weight": "5 g",
+    "volume": "10 ml",
+    "price": 3000,
+    "price_postapoc": 250,
+    "to_hit": 1,
+    "material": [
+      "cotton"
+    ],
+    "symbol": "[",
+    "looks_like": "gloves_tactical",
+    "color": "white",
+    "armor": [
+      {
+        "coverage": 100,
+        "covers": [
+          "hand_l",
+          "hand_r"
+        ]
+      }
+    ],
+    "material_thickness": 1,
+    "use_action": [
+      "JACKHAMMER",
+      "PICKAXE"
+    ],
+    "flags": [
+      "ALLOWS_NATURAL_ATTACKS",
+      "OVERSIZE",
+      "POWERARMOR_COMPATIBLE"
+    ]
+  },
+  {
+    "id": "rgpj",
+    "type": "GUNMOD",
+    "name": {
+      "str": "软管挂件"
+    },
+    "description": "你在枪械配件装了一个管子，可以在一些时候拿出来用",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "integral_volume": "0 ml",
+    "price": 2500,
+    "install_time": "1 m",
+    "material": [
+      "steel",
+      "superalloy"
+    ],
+    "symbol": ":",
+    "color": "dark_gray",
+    "location": "mechanism",
+    "qualities": [
+      [
+        "HOSE",
+        2
+      ]
+    ],
+    "mod_targets": [
+      "smg",
+      "rifle",
+      "pistol",
+      "shotgun",
+      "crossbow",
+      "launcher"
+    ],
+    "min_skills": [
+      [
+        "weapon",
+        4
+      ],
+      [
+        "mechanics",
+        3
+      ],
+      [
+        "gun",
+        2
+      ]
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "INSTALL_DIFFICULT"
+    ]
+  },
+  {
+    "type": "TOOL",
+    "id": "qzb2932",
+    "name": {
+      "str": "蜗牛起重笔"
+    },
+    "volume": "150 ml",
+    "description": "车子轮胎还有引擎想拆觉得麻烦？快来使用蜗牛起重笔，只需要轻轻一挥，车子就能直接芜湖飞到月球",
+    "weight": "100 g",
+    "to_hit": -1,
+    "color": "light_gray",
+    "price": 60,
+    "price_postapoc": 10,
+    "qualities": [
+      [
+        "LIFT",
+        100
+      ],
+      [
+        "JACK",
+        100
+      ]
+    ],
+    "material": [
+      "wood"
+    ],
+    "flags": [
+      "TRADER_AVOID"
+    ],
+    "symbol": "["
+  },
+  {
+    "id": "xczsr",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "蜗牛幸存者万能工具"
+    },
+    "description": "一个幸存者所制作的万能工具，被猫屋拿去并给了所有幸存者蓝图，这个万能工具，是一个绳子和可折叠刀做成，刀可以展开化为铁板，绳子可放入刀柄内，因此体积较小，你可以将绳子折叠出一个圈挂在身上",
+    "weight": "390 g",
+    "volume": "250 ml",
+    "longest_side": "20 cm",
+    "price": 4000,
+    "price_postapoc": 750,
+    "to_hit": -1,
+    "looks_like": "knife_combat",
+    "cutting": 16,
+    "material": [
+      "steel",
+      "leather"
+    ],
+    "armor": [
+      {
+        "coverage": 0,
+        "covers": [
+          "head"
+        ]
+      }
+    ],
+    "symbol": "/",
+    "color": "dark_gray",
+    "qualities": [
+      [
+        "LEATHER_AWL",
+        2
+      ],
+      [
+        "WRENCH",
+        2
+      ],
+      [
+        "CUT_GLASS",
+        1
+      ],
+      [
+        "PULL",
+        2
+      ],
+      [
+        "HOSE",
+        1
+      ],
+      [
+        "HAMMER",
+        5
+      ],
+      [
+        "EXTRACT",
+        3
+      ],
+      [
+        "FILE",
+        2
+      ],
+      [
+        "CHISEL",
+        3
+      ],
+      [
+        "FISHING",
+        2
+      ],
+      [
+        "AXE",
+        4
+      ],
+      [
+        "SEPARATE",
+        1
+      ],
+      [
+        "ANALYSIS",
+        1
+      ],
+      [
+        "SEW",
+        4
+      ],
+      [
+        "GRASS_CUT",
+        2
+      ],
+      [
+        "FILTER",
+        2
+      ],
+      [
+        "WELD",
+        2
+      ],
+      [
+        "CHEM",
+        3
+      ],
+      [
+        "PRESSURIZATION",
+        2
+      ],
+      [
+        "VISE",
+        1
+      ],
+      [
+        "SHEAR",
+        3
+      ],
+      [
+        "REAM",
+        2
+      ],
+      [
+        "CHURN",
+        1
+      ],
+      [
+        "SAW_M",
+        10
+      ],
+      [
+        "WRENCH_FINE",
+        1
+      ],
+      [
+        "HAMMER_FINE",
+        1
+      ],
+      [
+        "SAW_M_FINE",
+        2
+      ],
+      [
+        "SCREW_FINE",
+        1
+      ],
+      [
+        "CUT_FINE",
+        5
+      ],
+      [
+        "FINE_GRIND",
+        1
+      ],
+      [
+        "FINE_DISTILL",
+        1
+      ],
+      [
+        "OVEN",
+        2
+      ],
+      [
+        "WHEEL_FAST",
+        1
+      ],
+      [
+        "ANESTHESIA",
+        1
+      ],
+      [
+        "FABRIC_CUT",
+        2
+      ],
+      [
+        "SAW_W",
+        2
+      ],
+      [
+        "CHISEL_WOOD",
+        3
+      ],
+      [
+        "SCREW",
+        1
+      ],
+      [
+        "CONCENTRATE",
+        1
+      ],
+      [
+        "SMOOTH",
+        2
+      ],
+      [
+        "LIFT",
+        40
+      ],
+      [
+        "JACK",
+        40
+      ],
+      [
+        "GLARE",
+        1
+      ],
+      [
+        "PRYING_NAIL",
+        1
+      ],
+      [
+        "PRY",
+        4
+      ],
+      [
+        "LOCKPICK",
+        40
+      ],
+      [
+        "CUT",
+        2
+      ],
+      [
+        "HAMMER_SOFT",
+        1
+      ],
+      [
+        "ROPE",
+        2
+      ],
+      [
+        "COOK",
+        3
+      ],
+      [
+        "PUNCH",
+        2
+      ],
+      [
+        "BUTCHER",
+        37
+      ],
+      [
+        "DIG",
+        3
+      ],
+      [
+        "SMOKE_PIPE",
+        1
+      ],
+      [
+        "SUSPENDING",
+        2
+      ],
+      [
+        "GRIND",
+        2
+      ],
+      [
+        "FISH_TRAP",
+        1
+      ],
+      [
+        "KNIT",
+        1
+      ],
+      [
+        "DISTILL",
+        2
+      ],
+      [
+        "BOIL",
+        2
+      ],
+      [
+        "SELF_JACK",
+        17
+      ],
+      [
+        "DRILL",
+        3
+      ],
+      [
+        "ANVIL",
+        3
+      ],
+      [
+        "SEW_CURVED",
+        1
+      ]
+    ],
+    "flags": [
+      "SHEATH_KNIFE",
+      "REACH3",
+      "REACH_ATTACK",
+      "SPEAR"
+    ]
+  },
+  {
+    "id": "lzgh",
+    "type": "ARMOR",
+    "name": {
+      "str": "蜗牛累赘光环"
+    },
+    "description": "一个蛮漂亮的蜗牛光盘悬浮在你的头上，你不再感到一丝累赘，你如同果体一般，感觉一{切都很丝滑(比德芙还要丝滑)，你穿上后身体上的一切外物会被传送到蜗牛壳，此时你感受不到他们，但是可以使用他们，如果东西太多就传送不了了〔全身累赘减100，如果本身累赘不到100会变成0，如果出现负累赘可能是BUG，超过100你还会感到累赘〕",
+    "weight": "300 g",
+    "volume": "500 ml",
+    "price": 2500,
+    "price_postapoc": 50,
+    "material": [
+      "nomex"
+    ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "armor": [
+      {
+        "coverage": 0,
+        "encumbrance": -100,
+        "covers": [
+          "head",
+          "mouth",
+          "eyes",
+          "torso",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r"
+        ]
+      }
+    ],
+    "use_action": {
+      "type": "transform",
+      "target": "lzgh2",
+      "msg": "你褪去了手部的光环，现在你能使用徒手武器了"
+    },
+    "material_thickness": 0.1,
+    "flags": [
+      "AURA",
+      "OVERSIZE",
+      "ONLY_ONE",
+      "TRADER_AVOID",
+      "NONCONDUCTIVE",
+      "NO_SALVAGE"
+    ]
+  },
+  {
+    "id": "lzgh2",
+    "type": "ARMOR",
+    "name": {
+      "str": "蜗牛累赘光环(徒手战斗模式)"
+    },
+    "description": "一个蛮漂亮的蜗牛光盘悬浮在你的头上，你不再感到一丝累赘，你如同果体一般，感觉一{切都很丝滑(比德芙还要丝滑)，你穿上后身体上的一切外物会被传送到蜗牛壳，此时你感受不到他们，但是可以使用他们，如果东西太多就传送不了了〔全身累赘减100，如果本身累赘不到100会变成0，如果出现负累赘可能是BUG，超过100你还会感到累赘〕",
+    "weight": "300 g",
+    "volume": "500 ml",
+    "price": 2500,
+    "price_postapoc": 50,
+    "material": [
+      "nomex"
+    ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "armor": [
+      {
+        "coverage": 0,
+        "encumbrance": -100,
+        "covers": [
+          "head",
+          "mouth",
+          "eyes",
+          "torso",
+          "arm_l",
+          "arm_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r"
+        ]
+      }
+    ],
+    "use_action": {
+      "type": "transform",
+      "target": "lzgh",
+      "msg": "你重新装备了手部的光环，因此你无法使用徒手武器了"
+    },
+    "material_thickness": 0.1,
+    "flags": [
+      "AURA",
+      "OVERSIZE",
+      "ONLY_ONE",
+      "TRADER_AVOID",
+      "NONCONDUCTIVE",
+      "NO_SALVAGE"
+    ]
+  },
+  {
+    "id": "hwjsy",
+    "type": "ARMOR",
+    "name": {
+      "str": "恒温紧身皮衣"
+    },
+    "description": "恒温紧身皮衣，戴上之后把温度控制在舒适范围内，如果你死了还穿着这个，那么僵尸们会很感谢你，因为他们不用担心凉了不好吃",
+    "weight": "300 g",
+    "volume": "500 ml",
+    "price": 2500,
+    "price_postapoc": 50,
+    "material": [
+      "leather"
+    ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "CLIMATE_CONTROL_HEAT",
+              "add": 1000
+            },
+            {
+              "value": "CLIMATE_CONTROL_CHILL",
+              "add": 1000
+            }
+          ]
+        }
+      ]
+    },
+    "armor": [
+      {
+        "coverage": 100,
+        "encumbrance": 0,
+        "covers": [
+          "head",
+          "mouth",
+          "eyes",
+          "torso",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r"
+        ]
+      }
+    ],
+    "material_thickness": 0.1,
+    "flags": [
+      "SKINTIGHT",
+      "HEAT_IMMUNE",
+      "COLD_IMMUNE",
+      "SEMITANGIBLE",
+      "WATER_FRIENDLY"
+    ]
+  },
+  {
+    "id": "bianxieshicdq",
+    "type": "TOOL",
+    "name": {
+      "str": "便携式充电器"
+    },
+    "description": "将电池放进去，每分钟回复10电量，白天会使用太阳能，晚上会使用风力来恢复电量，无法给一次性电池与钚燃料电池充电（这是无名猫的另一个MOD，因为需要因此转移了过来用于制作无限电的物品）",
+    "weight": "20 g",
+    "volume": "20 ml",
+    "longest_side": "5 cm",
+    "price": 3000,
+    "price_postapoc": 500,
+    "to_hit": -4,
+    "bashing": 1,
+    "cutting": 4,
+    "material": [
+      "steel"
+    ],
+    "symbol": ";",
+    "color": "light_gray",
+    "charges_per_use": 100,
+    "relic_data": {
+      "charge_info": {
+        "regenerate_ammo": true,
+        "recharge_type": "periodic",
+        "time": "1 m",
+        "rate": 10
+      }
+    },
+    "flags": [
+      "NO_REPAIR"
+    ],
+    "ammo": [
+      "battery"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "medium_battery_cell",
+          "medium_plus_battery_cell",
+          "heavy_battery_cell",
+          "heavy_plus_battery_cell",
+          "light_plus_battery_cell",
+          "light_minus_battery_cell",
+          "light_battery_cell"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "shuiguocdq",
+    "type": "TOOL",
+    "name": {
+      "str": "水果充电器"
+    },
+    "description": "一个用水果充电的东西，水果真是厉害，能发电能当服务器，还能吃，就是有点弱，每小时电量+1",
+    "weight": "20 g",
+    "volume": "20 ml",
+    "longest_side": "5 cm",
+    "price": 3000,
+    "price_postapoc": 500,
+    "to_hit": -4,
+    "bashing": 1,
+    "cutting": 4,
+    "material": [
+      "steel"
+    ],
+    "symbol": ";",
+    "color": "light_gray",
+    "charges_per_use": 10,
+    "relic_data": {
+      "charge_info": {
+        "regenerate_ammo": true,
+        "recharge_type": "periodic",
+        "time": "60 m"
+      }
+    },
+    "flags": [
+      "NO_REPAIR"
+    ],
+    "ammo": [
+      "battery"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "medium_battery_cell",
+          "medium_plus_battery_cell",
+          "heavy_battery_cell",
+          "heavy_plus_battery_cell",
+          "light_plus_battery_cell",
+          "light_minus_battery_cell",
+          "light_battery_cell"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "TOOL",
+    "id": "zhaohuankflhaoke",
+    "name": {
+      "str": "召唤凯拉夫浩克僵尸"
+    },
+    "volume": "25 ml",
+    "description": "有着一些装甲的浩克，你既然已经需要用他，可想而知你的敌人有多么离谱",
+    "weight": "10 g",
+    "to_hit": -1,
+    "color": "light_gray",
+    "price": 60,
+    "price_postapoc": 10,
+    "material": [
+      "stone"
+    ],
+    "flags": [
+      "TRADER_AVOID"
+    ],
+    "symbol": "[",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_zombie_kevlar_2",
+      "moves": 100
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "zhaohuankuloujusho",
+    "name": {
+      "str": "召唤骷颅巨兽"
+    },
+    "volume": "25 ml",
+    "description": "一个巨大的骷髅巨兽，他不那么容易被子弹打中(冷知识：在中国版CDDA中，骷髅巨兽变成了无头骷髅巨兽)",
+    "weight": "10 g",
+    "to_hit": -1,
+    "color": "light_gray",
+    "price": 60,
+    "price_postapoc": 10,
+    "material": [
+      "stone"
+    ],
+    "flags": [
+      "TRADER_AVOID"
+    ],
+    "symbol": "[",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_skeleton_hulk",
+      "friendly_msg": "你召唤了骷髅巨兽",
+      "moves": 100
+    }
+  },
+  {
+    "id": "qinhemilifumo",
+    "type": "GUNMOD",
+    "name": {
+      "str": "亲和魔力附魔配件"
+    },
+    "description": "安装后让枪械拥有亲和魔力功能（需要配合大魔法使用），这其实并不是什么附魔配件，其实这是一个让枪械回到以前杀死了牛顿然后让枪械无法再掉落，因此你可以直接松手施法",
+    "weight": "12 g",
+    "volume": "25 ml",
+    "integral_volume": "0 ml",
+    "price": 2500,
+    "install_time": "10 m",
+    "material": [
+      "steel",
+      "superalloy"
+    ],
+    "symbol": ":",
+    "color": "dark_gray",
+    "location": "mechanism",
+    "mod_targets": [
+      "smg",
+      "rifle",
+      "pistol",
+      "shotgun",
+      "crossbow",
+      "launcher"
+    ],
+    "min_skills": [
+      [
+        "weapon",
+        4
+      ],
+      [
+        "mechanics",
+        3
+      ],
+      [
+        "gun",
+        2
+      ]
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "MAGIC_FOCUS",
+      "INSTALL_DIFFICULT"
+    ]
+  },
+  {
+    "id": "xczscyd",
+    "type": "ARMOR",
+    "name": {
+      "str": "幸存者生存腰带"
+    },
+    "description": "A custom-built leather belt covered with pouches, with a sheath to carry a smaller blade, a holster to carry a pistol and a loop for holding larger tools.  Durable and carefully crafted to be comfortable to wear.  Activate to sheathe/draw a weapon.",
+    "weight": "1549 g",
+    "volume": "2250 ml",
+    "price": 15000,
+    "price_postapoc": 2500,
+    "material": [
+      "leather"
+    ],
+    "symbol": "[",
+    "looks_like": "holster",
+    "color": "brown",
+    "material_thickness": 2,
+    "pocket_data": [
+      {
+        "magazine_well": "999999 L",
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "spoil_multiplier": 0.0,
+        "weight_multiplier": 0.0,
+        "volume_multiplier": 0.0,
+        "max_contains_volume": "99999999 L",
+        "max_item_volume": "99999999 L",
+        "max_contains_weight": "9999999 kg",
+        "max_item_length": "99999 km",
+        "moves": 1
+      },
+      {
+        "magazine_well": "999999 L",
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "spoil_multiplier": 0.0,
+        "weight_multiplier": 0.0,
+        "volume_multiplier": 0.0,
+        "max_contains_volume": "99999999 L",
+        "max_item_volume": "99999999 L",
+        "max_contains_weight": "9999999 kg",
+        "max_item_length": "99999 km",
+        "moves": 1
+      },
+      {
+        "magazine_well": "999999 L",
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "spoil_multiplier": 0.0,
+        "weight_multiplier": 0.0,
+        "volume_multiplier": 0.0,
+        "max_contains_volume": "99999999 L",
+        "max_item_volume": "99999999 L",
+        "max_contains_weight": "9999999 kg",
+        "max_item_length": "99999 km",
+        "moves": 1
+      },
+      {
+        "magazine_well": "999999 L",
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "spoil_multiplier": 0.0,
+        "weight_multiplier": 0.0,
+        "volume_multiplier": 0.0,
+        "max_contains_volume": "99999999 L",
+        "max_item_volume": "99999999 L",
+        "max_contains_weight": "9999999 kg",
+        "max_item_length": "99999 km",
+        "moves": 1
+      },
+      {
+        "magazine_well": "999999 L",
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "spoil_multiplier": 0.0,
+        "weight_multiplier": 0.0,
+        "volume_multiplier": 0.0,
+        "max_contains_volume": "99999999 L",
+        "max_item_volume": "99999999 L",
+        "max_contains_weight": "9999999 kg",
+        "max_item_length": "99999 km",
+        "moves": 1
+      },
+      {
+        "magazine_well": "999999 L",
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "spoil_multiplier": 0.0,
+        "weight_multiplier": 0.0,
+        "volume_multiplier": 0.0,
+        "max_contains_volume": "99999999 L",
+        "max_item_volume": "99999999 L",
+        "max_contains_weight": "9999999 kg",
+        "max_item_length": "99999 km",
+        "moves": 1
+      },
+      {
+        "magazine_well": "999999 L",
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "spoil_multiplier": 0.0,
+        "weight_multiplier": 0.0,
+        "volume_multiplier": 0.0,
+        "max_contains_volume": "99999999 L",
+        "max_item_volume": "99999999 L",
+        "max_contains_weight": "9999999 kg",
+        "max_item_length": "99999 km",
+        "moves": 1
+      },
+      {
+        "magazine_well": "999999 L",
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "spoil_multiplier": 0.0,
+        "weight_multiplier": 0.0,
+        "volume_multiplier": 0.0,
+        "max_contains_volume": "99999999 L",
+        "max_item_volume": "99999999 L",
+        "max_contains_weight": "9999999 kg",
+        "max_item_length": "99999 km",
+        "moves": 1
+      },
+      {
+        "magazine_well": "999999 L",
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "spoil_multiplier": 0.0,
+        "weight_multiplier": 0.0,
+        "volume_multiplier": 0.0,
+        "max_contains_volume": "99999999 L",
+        "max_item_volume": "99999999 L",
+        "max_contains_weight": "9999999 kg",
+        "max_item_length": "99999 km",
+        "moves": 1
+      }
+    ],
+    "use_action": {
+      "type": "holster",
+      "holster_prompt": "Store item",
+      "holster_msg": "You put your %1$s in your %2$s"
+    },
+    "flags": [
+      "WATER_FRIENDLY",
+      "STURDY",
+      "BELTED",
+      "OVERSIZE",
+      "SEMITANGIBLE",
+      "TARDIS"
+    ],
+    "armor": [
+      {
+        "encumbrance": [
+          0,
+          0
+        ],
+        "coverage": 100,
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_waist"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cargo_aisle",
+    "type": "GENERIC",
+    "name": {
+      "str": "floor trunk"
+    },
+    "description": "A section of flooring with a cargo space beneath and a hinged door for access.",
+    "weight": "19200 g",
+    "color": "cyan",
+    "symbol": "]",
+    "volume": "50 L",
+    "bashing": 2,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "category": "veh_parts",
+    "price": 20000,
+    "price_postapoc": 500
+  }
+]

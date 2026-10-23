@@ -1,0 +1,1118 @@
+[
+  {
+    "id": "BL9_str1_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_light_red>BL9 高级力量调节剂</color>"
+    },
+    "description": "当你激活这个特殊的调节剂时，你会感觉到力量的提升（<color_light_blue>力量+3</color>），感觉你不受自己控制，而是被一个实体引导了，或者你认为……",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action1",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "red",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  },
+  {
+    "id": "BL9_str_endurance1_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_light_red>BL9 高级耐力调节剂</color>"
+    },
+    "description": "You feel that you can endure the hardships of Cataclysm better (<color_light_blue>+25% to maximal carry weight, -15% to fatigue, slight protection from bleeding</color>) once you ACTIVATE this particular modifier, it feels not as if you're controlled but guided by an entity or so you think...",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action2",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "red",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  },
+  {
+    "id": "BL9_str_tentacle_stab1_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_light_red>BL9 触手刺击调节剂</color>"
+    },
+    "description": "当你激活这个特殊的调节剂时，你会感觉到挥舞<color_light_blue>武器</color>的感觉，感觉你不受自己控制，而是被一个实体引导了，或者你认为……",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action3",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "red",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  },
+  {
+    "id": "BL9_str_tentacle_hit1_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_light_red>BL9 触手打击调节剂</color>"
+    },
+    "description": "当你激活这个特殊的调节剂时，你会感觉到挥舞<color_light_blue>武器</color>的感觉，感觉你不受自己控制，而是被一个实体引导了，或者你认为……",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action4",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "red",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  },
+  {
+    "id": "BL9_str_armoredskin1_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_light_red>BL9 高级甲肤调节剂</color>"
+    },
+    "description": "当你激活这个特殊的调节剂时，你感觉你的皮肤完全被BL9的保护层覆盖（<color_light_blue>身体所有部位+4所有类型的伤害的防护，包括元素</color>），感觉你不受自己控制，而是被一个实体引导了，或者你认为……",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action5",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "red",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  },
+  {
+    "id": "BL9_str2_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_light_red>BL9 高级力量调节剂</color>"
+    },
+    "description": "当你激活这个特殊的调节剂时，你会感觉到一种难以置信的力量提升（<color_light_blue>力量+6</color>），感觉你不受自己控制，而是被一个实体引导了，或者你认为……",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action6",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "red",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  },
+  {
+    "id": "BL9_str_endurance2_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_light_red>BL9 高级耐力调节剂</color>"
+    },
+    "description": "You feel that you can endure the hardships of Cataclysm with much greater efficiency (<color_light_blue>+55% to maximal carry weight, -35% to fatigue, moderate protection from bleeding</color>) once you ACTIVATE this particular modifier, it feels not as if you're controlled but guided by an entity or so you think...",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action7",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "red",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  },
+  {
+    "id": "BL9_str_tentacle_stab2_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_light_red>BL9 高级触手刺击调节剂</color>"
+    },
+    "description": "当你激活这个特殊的调节剂时，你会感觉到一种挥舞<color_light_blue>非常强大的武器</color>的感觉，感觉你不受自己控制，而是被一个实体引导了，或者你认为……",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action8",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "red",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  },
+  {
+    "id": "BL9_str_tentacle_hit2_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_light_red>BL9 高级触手打击调节剂</color>"
+    },
+    "description": "当你激活这个特殊的调节剂时，你会感觉到一种挥舞<color_light_blue>非常强大的武器</color>的感觉，感觉你不受自己控制，而是被一个实体引导了，或者你认为……",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action9",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "red",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  },
+  {
+    "id": "BL9_str_armoredskin2_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_light_red>BL9 高级甲肤调节剂</color>"
+    },
+    "description": "当你激活这个特殊的调节剂时，你感觉你的皮肤完全被BL9的保护层覆盖（<color_light_blue>身体所有部位+6所有类型的伤害的防护，包括元素</color>），感觉你不受自己控制，而是被一个实体引导了，或者你认为……",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action10",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "red",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  },
+  {
+    "id": "BL9_dex1_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_light_cyan>BL9 敏捷调节剂</color>"
+    },
+    "description": "当你激活这个特殊的调节剂时，你会感到敏捷的提升（<color_light_blue>敏捷+3</color>），感觉你不受自己控制，而是被一个实体引导了，或者你认为……",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action16",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "cyan",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  },
+  {
+    "id": "BL9_dex_energeticness1_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_light_cyan>BL9 能量调节剂</color>"
+    },
+    "description": "当你激活这个特殊的调节剂时，你感觉自己变得更加运动和精力充沛（<color_light_blue>最大耐力增25%，体力恢复速度+15%</color>），感觉你不受自己控制，而是被一个实体引导了，或者你认为……",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action17",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "cyan",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  },
+  {
+    "id": "BL9_dex_deftness1_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_light_cyan>BL9 柔韧调节剂</color>"
+    },
+    "description": "当你激活这个特殊的调节剂时，你感觉自己变得更快、更灵活（<color_light_blue>闪避技能+1，行动速度+15%</color>），感觉你不受自己控制，而是被一个实体引导了，或者你认为……",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action18",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "cyan",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  },
+  {
+    "id": "BL9_dex_agility1_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_light_cyan>BL9 迅捷调节剂</color>"
+    },
+    "description": "当你激活这个特殊的调节剂时，你觉得你可以在所有表面上移动得更好，更有效地清除障碍物（<color_light_blue>移速增加15%，游泳速度增加15%</color>），感觉你不受自己控制，而是被一个实体引导了，或者你认为……",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action19",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "cyan",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  },
+  {
+    "id": "BL9_dex2_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_light_cyan>BL9 高级敏捷调节剂</color>"
+    },
+    "description": "当你激活这个特殊的调节剂时，你会感觉到敏捷有了惊人的提升（<color_light_blue>敏捷+6</color>），感觉你不受自己控制，而是被一个实体引导了，或者你认为……",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action20",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "cyan",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  },
+  {
+    "id": "BL9_dex_energeticness2_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_light_cyan>BL9 高级能量调节剂</color>"
+    },
+    "description": "当你激活这个特殊的调节剂时，你感觉自己变得非常运动和精力充沛（<color_light_blue>最大耐力增加55%，体力恢复速度+35%</color>），感觉你不受自己控制，而是被一个实体引导了，或者你认为……",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action21",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "cyan",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  },
+  {
+    "id": "BL9_dex_deftness2_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_light_cyan>BL9 高级柔韧调节剂</color>"
+    },
+    "description": "当你激活这个特殊的调节剂时，你会觉得自己变得难以置信的快，更加灵巧（<color_light_blue>闪避技能+2，行动速度+35%</color>），感觉你不受自己控制，而是被一个实体引导了，或者你认为……",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action22",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "cyan",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  },
+  {
+    "id": "BL9_dex_agility2_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_light_cyan>BL9 高级迅捷调节剂</color>"
+    },
+    "description": "当你激活这个特殊的调节剂时，你觉得你可以在所有表面上移动得更好，并以难以置信的效率清除障碍（<color_light_blue>移速增加35%，游泳速度增加35%</color>），感觉你不受自己控制，而是被一个实体引导了，或者你认为……",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action23",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "cyan",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  },
+  {
+    "id": "BL9_hp1_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_light_green>BL9 健康调节剂</color>"
+    },
+    "description": "当你激活这个特殊的调节剂时，你会感觉到生命值的提升（<color_light_blue>HP上限增加15%</color>），感觉你不受自己控制，而是被一个实体引导了，或者你认为……",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action28",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "green",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  },
+  {
+    "id": "BL9_hp_regen1_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_light_green>BL9 再生调节剂</color>"
+    },
+    "description": "当你激活这个特殊的调节剂时，你会觉得你的损伤再生速度更快（<color_light_blue>伤口在睡眠时恢复速度提升55%，在清醒时提升25%,断肢愈合速度提升225%</color>），感觉你不受自己控制，而是被一个实体引导了，或者你认为……",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action29",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "green",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  },
+  {
+    "id": "BL9_hp_wakeful_mind1_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_light_green>BL9 清醒心智调节剂</color>"
+    },
+    "description": "当你激活这个特殊的调节剂时，你觉得你现在可以保持清醒更长时间（<color_light_blue>疲劳速率-35%，疲劳恢复+48%</color>），感觉你不受自己控制，而是被一个实体引导了，或者你认为……",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action30",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "green",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  },
+  {
+    "id": "BL9_hp_amplified_metabolism1_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_light_green>BL9 代谢增强调节剂</color>"
+    },
+    "description": "当你激活这个特殊的调节剂时，你觉得你的新陈代谢现在更有效了（<color_light_blue>小幅度促进愈合，小幅度减少疲劳，小幅度提高耐力</color>），感觉你不受自己控制，而是被一个实体引导了，或者你认为……",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action31",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "green",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  },
+  {
+    "id": "BL9_hp2_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_light_green>BL9 高级健康调节剂</color>"
+    },
+    "description": "当你激活这个特殊的调节剂时，你会感觉到一个难以置信的生命值提升（<color_light_blue>HP上限增加35%</color>），感觉你不受自己控制，而是被一个实体引导了，或者你认为……",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action32",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "green",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  },
+  {
+    "id": "BL9_hp_regen2_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_light_green>BL9 高级再生调节剂</color>"
+    },
+    "description": "当你激活这个特殊的调节剂时，你会感觉到你的伤害以难以置信的速度再生（<color_light_blue> 伤口在睡眠时恢复速度提升45%，在清醒时提升75%，断肢再生速度+265%</color>），感觉你不受自己控制，而是被一个实体引导了，或者你认为……",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action33",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "green",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  },
+  {
+    "id": "BL9_hp_wakeful_mind2_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_light_green>BL9 高级清醒心智调节剂</color>"
+    },
+    "description": "当你激活这个特殊的调节剂时，你觉得你现在可以保持清醒更长的时间（<color_light_blue>疲劳速率-77%，疲劳恢复+105%</color>），感觉你不受自己控制，而是被一个实体引导了，或者你认为……",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action34",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "green",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  },
+  {
+    "id": "BL9_hp_amplified_metabolism2_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_light_green>BL9 高级代谢增强调节剂</color>"
+    },
+    "description": "当你激活这个特殊的调节剂时，你觉得你的新陈代谢现在是难以置信的高效（<color_light_blue>小幅促进愈合，小幅减少疲劳，小幅提高耐力</color>），感觉你不受自己控制，而是被一个实体引导了，或者你认为……",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action35",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "green",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  },
+  {
+    "id": "BL9_per1_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_yellow>BL9 洞察调节剂</color>"
+    },
+    "description": "当你激活这个特殊的调节剂时，你会感觉到感知的提升（<color_light_blue>感知+3/</color>），感觉你不受自己控制，而是被一个实体引导了，或者你认为……",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action40",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "yellow",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  },
+  {
+    "id": "BL9_per_elevatedsense1_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_yellow>BL9 感知提升调节剂</color>"
+    },
+    "description": "当你激活这个特殊的调节剂时，你的视觉和听觉会得到提升（<color_light_blue>大地图视野+5，听力增加25%</color>）。感觉你不受自己控制，而是被一个实体引导了，或者你认为……",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action41",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "yellow",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  },
+  {
+    "id": "BL9_per_stealthaura1_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_yellow>BL9 隐形光环调节剂</color>"
+    },
+    "description": "当你激活这个特殊的调节剂时，你会感觉到一种无形的光环围绕着你，这会提高你的隐形能力（<color_light_blue>潜行能力+15，气味减少15%，噪音减少15%</color>）。感觉你不受自己控制，而是被一个实体引导了，或者你认为……",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action42",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "yellow",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  },
+  {
+    "id": "BL9_per2_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_yellow>BL9 高级洞察调节剂</color>"
+    },
+    "description": "当你激活这个特殊的调节剂时，你会感觉到一种难以置信的感知提升（<color_light_blue>感知+6/</color>），感觉你不受自己控制，而是被一个实体引导了，或者你认为……",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action43",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "yellow",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  },
+  {
+    "id": "BL9_per_elevatedsense2_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_yellow>BL9 高级感知提升调节剂</color>"
+    },
+    "description": "当你激活这个特殊的调节剂时，你的视觉和听觉都会得到难以置信的提升（<color_light_blue>大地图视野+10，听力增加55%</color>）。感觉你不受自己控制，而是被一个实体引导了，或者你认为……",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action44",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "yellow",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  },
+  {
+    "id": "BL9_per_stealthaura2_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_yellow>BL9 高级隐形光环调节剂</color>"
+    },
+    "description": "当你激活这个特殊的调节剂时，你会感觉到一种无形的光环围绕着你，这难以置信地提高了你的隐形能力（<color_light_blue>潜行能力+35，气味减少45%，噪音减少45%</color>），感觉你不受自己控制，而是被一个实体引导了，或者你认为……",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action45",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "yellow",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  },
+  {
+    "id": "BL9_int1_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_blue>BL9 智力调节剂</color>"
+    },
+    "description": "当你激活这个特殊的调节剂时，你会感觉到智力的提升（<color_light_blue>智力+3</color>），感觉你不受自己控制，而是被一个实体引导了，或者你认为……",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action49",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "blue",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  },
+  {
+    "id": "BL9_int_aptitude1_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_blue>BL9 天资调节剂</color>"
+    },
+    "description": "当你激活这个特殊的调节剂时，你觉得你的信息吸收能力以及与手工艺相关的天赋都会增加（<color_light_blue>阅读速度+25%，工艺技能+1</color>），感觉你不受自己控制，而是被一个实体引导了，或者你认为……",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action50",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "blue",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  },
+  {
+    "id": "BL9_int2_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_blue>BL9 高级智力调节剂</color>"
+    },
+    "description": "当你激活这个特殊的调节剂时，你会感觉到一种难以置信的智力提升（<color_light_blue>智力+6</color>），感觉你不受自己控制，而是被一个实体引导了，或者你认为……",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action51",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "blue",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  },
+  {
+    "id": "BL9_int_aptitude2_modifier",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "<color_blue>BL9 高级天资调节剂</color>"
+    },
+    "description": "当你激活这个特殊的调节剂时，你觉得你的信息吸收能力以及与手工艺相关的天赋都会大大提高（<color_light_blue>阅读速度+65%，工艺技能+1.5</color>），感觉你不受自己控制，而是被一个实体引导了，或者你认为……",
+    "weight": "85 g",
+    "volume": "15 ml",
+    "price": "500 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "BL9"
+    ],
+    "looks_like": "iv_mutagen",
+    "symbol": "[",
+    "charges": 1,
+    "healthy": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "BL9_mutation_artifact_action52",
+      "no_fail": true,
+      "level": 0
+    },
+    "color": "blue",
+    "flags": [
+      "NPC_SAFE",
+      "INEDIBLE"
+    ]
+  }
+]

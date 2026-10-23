@@ -1,0 +1,85 @@
+[
+  {
+    "type": "furniture",
+    "abstract": "f_huge_freezer_base",
+    "name": "虚拟超大号冰柜",
+    "looks_like": "f_glass_fridge",
+    "symbol": "{",
+    "color": "light_cyan",
+    "description": "如果你看到这一条信息说明出现bug了。从冷冻维生舱得到启迪，研发出的超大储存空间冷冻冰柜，至于你问创新点在哪里……足够宽敞这一点难道不值得表扬吗？",
+    "move_cost_mod": -1,
+    "coverage": 90,
+    "required_str": 11,
+    "flags": [ "PLACE_ITEM", "BLOCKSDOOR", "MINEABLE", "EASY_DECONSTRUCT" ],
+    "deconstruct": { "items": [ { "item": "huge_freezer", "count": 1 } ] },
+    "max_volume": "3000 L",
+    "bash": {
+      "str_min": 12,
+      "str_max": 50,
+      "sound": "metal screeching!",
+      "sound_fail": "clang!",
+      "items": [
+        { "item": "sheet_metal", "count": [ 1, 3 ] },
+        { "item": "sheet_metal_small", "count": [ 6, 9 ] },
+        { "item": "steel_chunk", "count": [ 0, 3 ] },
+        { "item": "scrap", "count": [ 2, 8 ] },
+        { "item": "cable", "charges": [ 1, 3 ] },
+        { "item": "hose", "count": 1 },
+        { "item": "cu_pipe", "count": [ 1, 4 ] },
+        { "item": "scrap_copper", "count": [ 0, 2 ] },
+        { "item": "glass_shard", "count": [ 2, 4 ] },
+        { "item": "motor_tiny", "prob": 25 }
+      ],
+      "ranged": { "reduction": [ 6, 12 ], "destroy_threshold": 50 }
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_huge_freezer_off",
+    "name": "“冷冻腊肉”冰柜（关）",
+    "copy-from": "f_huge_freezer_base",
+    "symbol": "{",
+    "description": "冰冻腊肉竭诚为您服务！目前冰柜尚处于关闭状态。",
+    "transforms_into": "f_huge_freezer",
+    "prompt": "启动冰柜",
+    "message": "你打开了“冷冻腊肉”冰柜",
+    "color": "blue",
+    "deconstruct": { "items": [ { "item": "huge_freezer", "count": 1 } ] }
+  },
+  {
+    "type": "furniture",
+    "id": "f_huge_freezer",
+    "name": "“冷冻腊肉”冰柜",
+    "copy-from": "f_huge_freezer_base",
+    "symbol": "{",
+    "description": "冰冻腊肉竭诚为您服务！目前冰柜缺少能源。",
+    "transforms_into": "f_huge_freezer_off",
+    "prompt": "关闭冰柜",
+    "message": "你关闭了“冷冻腊肉”冰柜",
+    "active": [ "charge_watcher", { "min_power": 450, "transform": { "id": "f_huge_freezer_on", "msg": "The freezer starts up." } } ],
+    "color": "blue",
+    "deconstruct": { "items": [ { "item": "huge_freezer", "count": 1 } ] }
+  },
+  {
+    "type": "furniture",
+    "id": "f_huge_freezer_on",
+    "name": "“冷冻腊肉”冰柜（运行中）",
+    "copy-from": "f_huge_freezer_base",
+    "symbol": "{",
+    "description": "冰冻腊肉竭诚为您服务！目前冰柜正在制冷中。",
+    "transforms_into": "f_huge_freezer_off",
+    "prompt": "关闭冰柜",
+    "message": "你关闭了“冷冻腊肉”冰柜",
+    "color": "blue",
+    "extend": { "flags": [ "FREEZER" ] },
+    "deconstruct": { "items": [ { "item": "huge_freezer", "count": 1 } ] },
+    "active": [
+      "steady_consumer",
+      {
+        "power": 250,
+        "consume_every": "600 s",
+        "transform": { "id": "f_huge_freezer", "msg": "The freezer shuts down." }
+      }
+    ]
+  }
+]

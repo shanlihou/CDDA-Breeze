@@ -1,0 +1,43 @@
+[
+  {
+    "type": "item_group",
+    "id": "zhenghe_014",
+    "subtype": "collection",
+    "entries": [
+      {
+        "item": "monster_tear",
+        "prob": 15
+      },
+      {
+        "item": "essence",
+        "prob": 10,
+        "count": [
+          2,
+          4
+        ]
+      },
+      {
+        "item": "destiny_copper",
+        "count": [
+          20,
+          25
+        ]
+      }
+    ]
+  },
+
+ {
+    "id": "mon_albino_penguin",
+    "copy-from": "mon_albino_penguin",
+    "speed": 80,
+    "extend": {
+      "categories": [
+        "CLASSIC"
+      ]
+    },
+    "type": "MONSTER",
+    "death_drops": { "subtype": "collection", "groups": [ [ "henshin_alien_death_drops", 100 ], [ "zhenghe_014", 100 ] ] }
+  }
+ 
+
+]

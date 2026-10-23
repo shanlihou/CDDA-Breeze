@@ -1,0 +1,126 @@
+[
+  {
+    "result": "self_armor_repairkit",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_OTHER",
+    "skill_used": "fabrication",
+    "difficulty": 0,
+    "autolearn": true,
+    "time": "10 m",
+    "components": [
+      [
+      	[ "misc_repairkit", 1 ]
+      ],
+      [
+      	[ "small_repairkit", 1 ],
+      	[ "large_repairkit", 1 ]
+      ],
+      [
+      	[ "self_easy_armor_cailiao_5", 1 ],
+      	[ "self_easy_armor_cailiao_10", 1 ],
+      	[ "self_easy_armor_cailiao_19", 1 ],
+      	[ "self_easy_armor_cailiao_15", 1 ],
+      	[ "self_easy_armor_cailiao_22", 1 ],
+      	[ "self_easy_armor_cailiao_25", 1 ],
+      	[ "self_easy_armor_cailiao_27", 1 ]
+      ]
+    ]
+  },
+  {
+    "id": "self_armor_repairkit",
+    "type": "TOOL",
+    "name": "装甲修理包",
+    "description": "用来修理装甲。",
+    "weight": "500 g",
+    "volume": "500 ml",
+    "longest_side": "20 cm",
+    "price": 100,
+    "price_postapoc": 100,
+    "to_hit": -1,
+    "bashing": 2,
+    "material": [ "steel", "plastic" ],
+    "symbol": ";",
+    "color": "light_gray",
+    "qualities": [
+      [ "HAMMER_FINE", 1 ],
+      [ "HAMMER", 3 ],
+      [ "PRY", 3 ],
+      [ "SAW_M_FINE", 2 ],
+      [ "SAW_M", 2 ],
+      [ "WRENCH_FINE", 1 ],
+      [ "WRENCH", 2 ],
+      [ "SCREW_FINE", 1 ],
+      [ "SCREW", 1 ],
+      [ "CHISEL", 3 ],
+      [ "CHISEL_WOOD", 3 ],
+      [ "PRYING_NAIL", 1 ],
+    	[ "CUT", 2 ],
+    	[ "CUT_FINE", 3 ],
+    	[ "AXE", 3 ],
+    	[ "SAW_W", 2 ],
+    	[ "BUTCHER", 30 ],
+    	[ "FABRIC_CUT", 2 ]
+    ],
+    "ammo": [ "battery" ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "flag_restriction": [ "BATTERY_MEDIUM" ],
+        "default_magazine": "medium_battery_cell"
+      }
+    ],
+    "charges_per_use": 5,
+    "use_action": [
+      {
+        "type": "repair_item",
+        "item_action_type": "repair_metal",
+        "materials": [
+          "iron",
+          "steel",
+          "lc_steel",
+          "mc_steel",
+          "hc_steel",
+          "ch_steel",
+          "lc_steel_chain",
+          "mc_steel_chain",
+          "hc_steel_chain",
+          "ch_steel_chain",
+          "aluminum",
+          "copper",
+          "bronze",
+          "fancy_bronze",
+          "silver",
+          "gold",
+          "platinum",
+          "superalloy",
+          "plastic",
+          "lead",
+          "tin",
+          "zinc",
+        	"acidchitin",
+        	"bone",
+        	"chitin",
+        	"paper",
+        	"cardboard",
+        	"wood",
+        	"kevlar_rigid",
+        	"alien_resin",
+        	"diamond",
+        	"gemstone",
+        	"ceramic",
+        	"stone",
+        	"clay",
+        	"dry_plant"
+        ],
+        "skill": "fabrication",
+        "tool_quality": 5,
+        "cost_scaling": 0.1,
+        "move_cost": 1000
+      }
+    ],
+    "flags": [ "ALLOWS_REMOTE_USE" ]
+  }
+]

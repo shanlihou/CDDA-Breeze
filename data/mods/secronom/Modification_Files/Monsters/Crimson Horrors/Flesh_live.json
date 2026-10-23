@@ -1,0 +1,1771 @@
+[
+  {
+    "//": "The taken (or flesh variants) - flesh version of vanilla creatures. This file contains wildlife variants.",
+    "id": "mon_sflesh_bear_cub",
+    "type": "MONSTER",
+    "copy-from": "mon_sflesh_taken_bear",
+    "name": {
+      "str": "幼年黑熊"
+    },
+    "description": "美国黑熊的幼体。这个小家伙虽然看上去没啥威胁，但是你需要当心它的父母；人人都知道黑熊有保护幼崽的习性。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "volume": "40750 ml",
+    "weight": "40750 g",
+    "hp": 25,
+    "speed": 90,
+    "symbol": "b",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 2,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "amount": 1,
+        "damage_type": "bash"
+      },
+      {
+        "amount": 3,
+        "damage_type": "cut"
+      }
+    ],
+    "armor_bash": 3,
+    "dodge": 2,
+    "harvest": "mammal_fur"
+  },
+  {
+    "id": "mon_sflesh_taken_bear",
+    "type": "MONSTER",
+    "name": {
+      "str": "黑熊"
+    },
+    "description": "美洲黑熊，一种大型杂食性动物。有着强有力的爪子和下颚，而且是一名出色的伏击捕食者。大多数个体一般会避开人类生存，但是对幼崽的保护欲非常强。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "default_faction": "secro_flesh",
+    "bodytype": "bear",
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
+    "volume": "154250 ml",
+    "weight": "154250 g",
+    "hp": 125,
+    "speed": 140,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "B",
+    "color": "dark_gray",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 6,
+    "melee_dice": 4,
+    "melee_dice_sides": 6,
+    "melee_damage": [
+      {
+        "amount": 1,
+        "damage_type": "bash"
+      },
+      {
+        "amount": 5,
+        "damage_type": "cut"
+      }
+    ],
+    "dodge": 3,
+    "armor_bash": 5,
+    "vision_day": 30,
+    "vision_night": 10,
+    "//": "Its not actually THAT fleshy in all, just infected, so harvest is the same.",
+    "harvest": "mammal_large_fur",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "POISON",
+      "NO_BREATHE",
+      "BASHES"
+    ]
+  },
+  {
+    "id": "mon_sflesh_taken_rat",
+    "type": "MONSTER",
+    "name": {
+      "str": "黑鼠"
+    },
+    "description": "黑鼠，一种杂食性的啮齿动物，拥有纯黑色的皮毛和粗糙的长尾巴。它的出现预示着瘟疫、饥荒、兽疥癣。它有时成群结对地出现在已死或将死的人、畜上。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "default_faction": "secro_flesh",
+    "bodytype": "pig",
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
+    "volume": "200 ml",
+    "weight": "200 g",
+    "hp": 8,
+    "speed": 100,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "r",
+    "color": "dark_gray",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 5,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "melee_damage": [
+      {
+        "amount": 1,
+        "damage_type": "bash"
+      },
+      {
+        "amount": 2,
+        "damage_type": "cut"
+      }
+    ],
+    "armor_bash": 3,
+    "dodge": 2,
+    "vision_day": 30,
+    "vision_night": 10,
+    "harvest": "mammal_tiny",
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WARM",
+      "POISON",
+      "NO_BREATHE",
+      "SWIMS"
+    ]
+  },
+  {
+    "id": "mon_sflesh_taken_cougar",
+    "type": "MONSTER",
+    "name": {
+      "str": "美洲狮"
+    },
+    "description": "东部美洲狮，大型猫科食肉动物。曾经在这一地区被认为已经灭绝，但是经过保育，在大灾变之后，成功的恢复了往日的荣光。迅捷而安静，这只捕猎者能够远距离跳扑，并用致命的爪子抓住猎物，最后用巨大的獠牙给它致命一击。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "default_faction": "secro_flesh",
+    "bodytype": "dog",
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
+    "volume": "63000 ml",
+    "weight": "63000 g",
+    "hp": 75,
+    "speed": 180,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "C",
+    "color": "brown",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "dodge": 5,
+    "armor_bash": 4,
+    "vision_night": 10,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 8
+      }
+    ],
+    "special_attacks": [
+      [
+        "scratch",
+        10
+      ],
+      {
+        "type": "leap",
+        "cooldown": 5,
+        "max_range": 5
+      }
+    ],
+    "harvest": "mammal_fur",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "SMELLS",
+      "WARM",
+      "KEENNOSE",
+      "POISON",
+      "NO_BREATHE"
+    ]
+  },
+  {
+    "id": "mon_sflesh_taken_moose",
+    "type": "MONSTER",
+    "name": {
+      "str": "驼鹿"
+    },
+    "description": "东部驼鹿，当今世界上种群数量最多的鹿类。虽然不被激怒时不会攻击别人，但发情季节会使得雄性驼鹿脾气火爆。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "default_faction": "secro_flesh",
+    "bodytype": "horse",
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
+    "volume": "386000 ml",
+    "weight": "386000 g",
+    "hp": 150,
+    "speed": 200,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "M",
+    "color": "brown",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 6,
+    "melee_dice": 3,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "amount": 2,
+        "damage_type": "bash"
+      }
+    ],
+    "dodge": 1,
+    "armor_bash": 7,
+    "armor_cut": 1,
+    "armor_bullet": 1,
+    "vision_night": 7,
+    "harvest": "mammal_large_leather",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "POISON",
+      "NO_BREATHE"
+    ]
+  },
+  {
+    "id": "mon_sflesh_beaver",
+    "type": "MONSTER",
+    "name": {
+      "str": "河狸"
+    },
+    "description": "北美海狸，世上最大的啮齿动物，他的浆状尾巴可以帮其穿过湖面，其突出的门牙可以咬断木头，喜欢在湖面与溪流建造大坝。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "default_faction": "secro_flesh",
+    "bodytype": "bear",
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
+    "volume": "20250 ml",
+    "weight": "20250 g",
+    "hp": 20,
+    "speed": 90,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "r",
+    "color": "brown",
+    "aggression": 100,
+    "morale": 100,
+    "melee_dice": 1,
+    "melee_dice_sides": 6,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 8
+      }
+    ],
+    "armor_bash": 3,
+    "dodge": 2,
+    "harvest": "mammal_small_fur",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "SWIMS",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_sflesh_boar_wild_piglet",
+    "type": "MONSTER",
+    "name": {
+      "str": "小野猪"
+    },
+    "description": "这种野生杂食性动物并非原产于美国，是由从狩猎保护区逃出来的欧亚野猪和野外野化后的家猪杂交而成的品种。在过去的几十年里，它们在美国的种群数量猛增。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "default_faction": "secro_flesh",
+    "bodytype": "pig",
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
+    "volume": "10 L",
+    "weight": "10 kg",
+    "hp": 6,
+    "speed": 90,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "b",
+    "color": "brown",
+    "looks_like": "mon_pig_piglet",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 1,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "amount": 1,
+        "damage_type": "bash"
+      },
+      {
+        "amount": 2,
+        "damage_type": "cut"
+      }
+    ],
+    "armor_bash": 3,
+    "dodge": 4,
+    "harvest": "mammal_small_fur",
+    "path_settings": {
+      "max_dist": 10
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "KEENNOSE"
+    ]
+  },
+  {
+    "id": "mon_sflesh_boar_wild",
+    "type": "MONSTER",
+    "name": {
+      "str": "野猪"
+    },
+    "description": "这种野生杂食性动物并非原产于美国，是由从狩猎保护区逃出来的欧亚野猪和野外野化后的家猪杂交而成的品种。在过去的几十年里，它们在美国的种群数量猛增。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "looks_like": "mon_pig",
+    "default_faction": "secro_flesh",
+    "bodytype": "pig",
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
+    "volume": "100 L",
+    "weight": "100 kg",
+    "hp": 75,
+    "speed": 110,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "b",
+    "color": "brown",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 5,
+    "melee_dice": 2,
+    "melee_dice_sides": 8,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 7
+      }
+    ],
+    "dodge": 2,
+    "armor_bash": 5,
+    "armor_cut": 1,
+    "armor_bullet": 1,
+    "harvest": "mammal_fur",
+    "path_settings": {
+      "max_dist": 10
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "KEENNOSE"
+    ]
+  },
+  {
+    "id": "mon_sflesh_cat_kitten",
+    "type": "MONSTER",
+    "copy-from": "mon_sflesh_cat",
+    "name": {
+      "str": "小猫"
+    },
+    "description": "一只不知名品种的可爱小猫，在死亡中喵喵叫着和跳跃着。现在已经恢复野性了。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "default_faction": "secro_flesh",
+    "bodytype": "dog",
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
+    "volume": "1000 ml",
+    "weight": "1 kg",
+    "hp": 8,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "c",
+    "color": "light_gray",
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
+    "dodge": 14,
+    "special_attacks": [
+      [
+        "scratch",
+        10
+      ]
+    ],
+    "harvest": "mammal_tiny",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "SMELLS",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_sflesh_cat",
+    "type": "MONSTER",
+    "name": {
+      "str": "猫"
+    },
+    "description": "一种未知血统的猫科食肉动物。在恶劣的环境和严酷的生存条件下，它变得肮脏又不安分。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "default_faction": "secro_flesh",
+    "bodytype": "dog",
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
+    "volume": "8600 ml",
+    "weight": "8600 g",
+    "hp": 20,
+    "speed": 150,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "c",
+    "color": "brown",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 6,
+    "melee_dice": 1,
+    "melee_dice_sides": 6,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      }
+    ],
+    "armor_bash": 3,
+    "dodge": 8,
+    "vision_night": 20,
+    "harvest": "mammal_small_fur",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "SMELLS",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_sflesh_chipmunk",
+    "type": "MONSTER",
+    "name": {
+      "str": "花栗鼠"
+    },
+    "description": "一只小栗鼠，非常小巧的杂食性啮齿动物，它花了很多时间游荡在商店城镇收集食物，然后将食物藏在洞穴之中。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "default_faction": "secro_flesh",
+    "bodytype": "pig",
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
+    "volume": "96 ml",
+    "weight": "96 g",
+    "hp": 5,
+    "speed": 110,
+    "material": [
+      "flesh"
+    ],
+    "symbol": ".",
+    "color": "brown",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 1,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "melee_damage": [
+      {
+        "amount": 1,
+        "damage_type": "bash"
+      },
+      {
+        "amount": 2,
+        "damage_type": "cut"
+      }
+    ],
+    "armor_bash": 3,
+    "dodge": 4,
+    "harvest": "mammal_tiny",
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_sflesh_cow_calf",
+    "type": "MONSTER",
+    "name": {
+      "str": "牛犊",
+      "str_pl": "牛犊"
+    },
+    "description": "一头被圈养的牛，一种反刍类农场动物，肌肉相当发达，雄性个体长着凶恶的角并且具有威胁性。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "default_faction": "secro_flesh",
+    "bodytype": "dog",
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 50,
+    "speed": 120,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "C",
+    "color": "light_gray",
+    "looks_like": "mon_cow",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 3,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "amount": 1,
+        "damage_type": "bash"
+      },
+      {
+        "amount": 3,
+        "damage_type": "cut"
+      }
+    ],
+    "armor_bash": 5,
+    "dodge": 2,
+    "path_settings": {
+      "max_dist": 10
+    },
+    "death_drops": {
+      "subtype": "collection",
+      "groups": [
+        [
+          "cow",
+          25
+        ]
+      ]
+    },
+    "harvest": "mammal_large_leather",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_sflesh_cow",
+    "type": "MONSTER",
+    "name": {
+      "str": "牛"
+    },
+    "description": "一头被圈养的牛，一种反刍类农场动物，肌肉相当发达，雄性个体长着凶恶的角并且具有威胁性。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "default_faction": "secro_flesh",
+    "bodytype": "dog",
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
+    "volume": "680388 ml",
+    "weight": "680388 g",
+    "hp": 125,
+    "speed": 130,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "C",
+    "color": "light_gray",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 10,
+    "dodge": 2,
+    "melee_damage": [
+      {
+        "amount": 1,
+        "damage_type": "bash"
+      },
+      {
+        "amount": 7,
+        "damage_type": "cut"
+      }
+    ],
+    "armor_bash": 5,
+    "path_settings": {
+      "max_dist": 10
+    },
+    "death_drops": {
+      "subtype": "collection",
+      "groups": [
+        [
+          "cow",
+          25
+        ]
+      ]
+    },
+    "harvest": "mammal_large_leather",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_sflesh_coyote",
+    "type": "MONSTER",
+    "name": {
+      "str": "郊狼"
+    },
+    "description": "东部郊狼，也被称作花呢狼，是一种由灰狼和土狼杂交而成的后代。它面对人类或其他食肉动物时会胆怯，但一旦受到威胁，它仍然会战斗，而且大灾变使它的胆子比以往更大了些。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "default_faction": "secro_flesh",
+    "bodytype": "dog",
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
+    "volume": "13250 ml",
+    "weight": "13250 g",
+    "hp": 28,
+    "speed": 155,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "d",
+    "color": "brown",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "dodge": 3,
+    "melee_damage": [
+      {
+        "amount": 1,
+        "damage_type": "bash"
+      },
+      {
+        "amount": 3,
+        "damage_type": "cut"
+      }
+    ],
+    "armor_bash": 4,
+    "vision_night": 5,
+    "path_settings": {
+      "max_dist": 10
+    },
+    "harvest": "mammal_fur",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "KEENNOSE"
+    ]
+  },
+  {
+    "id": "mon_sflesh_deer_fawn",
+    "type": "MONSTER",
+    "name": {
+      "str": "小鹿"
+    },
+    "description": "北方森林中的栖居的白尾鹿的幼体，快速灵敏且健壮，狼和巨型变异蛛最喜爱的猎物。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "default_faction": "secro_flesh",
+    "bodytype": "horse",
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
+    "volume": "40750 ml",
+    "weight": "40750 g",
+    "hp": 25,
+    "speed": 200,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "D",
+    "color": "brown",
+    "looks_like": "mon_deer",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 3,
+    "melee_dice": 3,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "amount": 2,
+        "damage_type": "bash"
+      }
+    ],
+    "armor_bash": 3,
+    "dodge": 3,
+    "vision_night": 12,
+    "harvest": "mammal_small_leather",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_sflesh_deer",
+    "type": "MONSTER",
+    "name": {
+      "str": "鹿"
+    },
+    "description": "北方森林中的栖居的白尾鹿，快速灵敏且健壮，狼和巨型变异蛛最喜爱的猎物。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "default_faction": "secro_flesh",
+    "bodytype": "horse",
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
+    "volume": "87000 ml",
+    "weight": "87 kg",
+    "hp": 75,
+    "speed": 300,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "D",
+    "color": "brown",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 3,
+    "melee_dice": 3,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "amount": 2,
+        "damage_type": "bash"
+      }
+    ],
+    "armor_bash": 3,
+    "dodge": 3,
+    "vision_night": 12,
+    "harvest": "mammal_large_leather",
+    "path_settings": {
+      "max_dist": 10
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_sflesh_dog",
+    "type": "MONSTER",
+    "name": {
+      "str": "狗"
+    },
+    "description": "一种流浪狗，身上覆盖着厚厚的膜状脉管，分辨不出它的品种。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "default_faction": "secro_flesh",
+    "bodytype": "dog",
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
+    "volume": "30000 ml",
+    "weight": "30 kg",
+    "harvest": "mammal_small_fur",
+    "hp": 38,
+    "speed": 150,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "d",
+    "color": "light_gray",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 5
+      }
+    ],
+    "armor_bash": 3,
+    "dodge": 3,
+    "vision_night": 5,
+    "path_settings": {
+      "max_dist": 10
+    },
+    "special_attacks": [
+      [
+        "ABSORB_ITEMS",
+        0
+      ]
+    ],
+    "absorb_ml_per_hp": 250,
+    "absorb_move_cost_per_ml": 0,
+    "flags": [
+      "HEARS",
+      "KEENNOSE",
+      "SEES",
+      "SMELLS",
+      "SWARMS",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_sflesh_dog_pup",
+    "type": "MONSTER",
+    "copy-from": "mon_sflesh_dog",
+    "name": {
+      "str": "拉布拉多幼犬",
+      "str_pl": "拉布拉多小狗"
+    },
+    "description": "一只小狗，看起来更像一个血毛球。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "volume": "750 ml",
+    "weight": "1 kg",
+    "hp": 10,
+    "speed": 98,
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 2,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "melee_damage": [
+      {
+        "amount": 1,
+        "damage_type": "bash"
+      },
+      {
+        "amount": 2,
+        "damage_type": "cut"
+      }
+    ],
+    "armor_bash": 3,
+    "dodge": 1,
+    "vision_night": 4,
+    "harvest": "mammal_tiny"
+  },
+  {
+    "id": "mon_sflesh_fox",
+    "type": "MONSTER",
+    "name": {
+      "str": "狐狸",
+      "str_pl": "狐狸"
+    },
+    "description": "一只长着血色皮毛的狐狸…真的。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "default_faction": "secro_flesh",
+    "bodytype": "dog",
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
+    "volume": "4132 ml",
+    "weight": "4132 g",
+    "hp": 38,
+    "speed": 145,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "d",
+    "color": "red",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 4,
+    "melee_dice": 1,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      }
+    ],
+    "armor_bash": 3,
+    "dodge": 6,
+    "vision_night": 5,
+    "harvest": "mammal_tiny",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "KEENNOSE"
+    ]
+  },
+  {
+    "id": "mon_sflesh_groundhog",
+    "type": "MONSTER",
+    "name": {
+      "str": "土拨鼠"
+    },
+    "description": "被称为土拨鼠，这只生活在地面上的松鼠科动物喜欢掘土，神出鬼没，会“啊啊啊”的叫。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "default_faction": "secro_flesh",
+    "bodytype": "pig",
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
+    "volume": "3628 ml",
+    "weight": "3628 g",
+    "hp": 15,
+    "speed": 140,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "r",
+    "color": "light_gray",
+    "aggression": 100,
+    "morale": 100,
+    "melee_dice": 1,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      }
+    ],
+    "armor_bash": 3,
+    "dodge": 4,
+    "harvest": "mammal_tiny",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "SMELLS",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_sflesh_horse",
+    "type": "MONSTER",
+    "name": {
+      "str": "马"
+    },
+    "description": "一匹拥有浓密的鬃毛，摇晃的尾巴和强壮的肌肉的哺乳动物。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "default_faction": "secro_flesh",
+    "bodytype": "horse",
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
+    "volume": "550000 ml",
+    "weight": "550 kg",
+    "hp": 113,
+    "aggression": 100,
+    "morale": 100,
+    "speed": 300,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "H",
+    "color": "brown",
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 12,
+    "melee_damage": [
+      {
+        "amount": 2,
+        "damage_type": "bash"
+      }
+    ],
+    "armor_bash": 5,
+    "dodge": 2,
+    "harvest": "mammal_large_leather",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_sflesh_lemming",
+    "type": "MONSTER",
+    "name": {
+      "str": "旅鼠"
+    },
+    "description": "北美沼泽旅鼠，以素食为主的小型啮齿动物，一生都在深水沼或其他湿地中度过。与大众的看法“为了保证物种延续、控制种群大小，有组织地集群跳海”相反，它们不是特别倒霉或喜欢集体自杀的动物，它们也许更愿意相互厮杀同类相食而不是自杀，这导致了经常的世代数量消长。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "default_faction": "secro_flesh",
+    "bodytype": "pig",
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
+    "volume": "30 ml",
+    "weight": "30 g",
+    "hp": 5,
+    "speed": 90,
+    "material": [
+      "flesh"
+    ],
+    "symbol": ".",
+    "color": "light_gray",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 4,
+    "melee_damage": [
+      {
+        "amount": 1,
+        "damage_type": "bash"
+      },
+      {
+        "amount": 1,
+        "damage_type": "cut"
+      }
+    ],
+    "armor_bash": 3,
+    "dodge": 2,
+    "harvest": "mammal_tiny",
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WARM",
+      "SWIMS"
+    ]
+  },
+  {
+    "id": "mon_sflesh_mink",
+    "type": "MONSTER",
+    "name": {
+      "str": "貂"
+    },
+    "description": "美洲貂，一种半水栖鼬，因为皮毛的缘故曾被集中养殖。它是能干的渔夫，但来自当地水獭的竞争压力使其转为更频繁地于陆地觅食。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "default_faction": "secro_flesh",
+    "bodytype": "dog",
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
+    "volume": "800 ml",
+    "weight": "800 g",
+    "hp": 38,
+    "speed": 130,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "m",
+    "color": "dark_gray",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 4,
+    "melee_dice": 1,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      }
+    ],
+    "armor_bash": 3,
+    "dodge": 6,
+    "harvest": "mammal_tiny",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "KEENNOSE"
+    ]
+  },
+  {
+    "id": "mon_sflesh_muskrat",
+    "type": "MONSTER",
+    "name": {
+      "str": "麝鼠"
+    },
+    "description": "一只大型杂食性啮齿动物，浑身长着浓密的毛皮，在整个北半球的湿地中均有出没。它用一种类似麝香的气味来标记自己的领地，而这也正是它的名字的由来。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "default_faction": "secro_flesh",
+    "bodytype": "pig",
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
+    "volume": "1362 ml",
+    "weight": "1362 g",
+    "hp": 13,
+    "speed": 100,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "r",
+    "color": "brown",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 5,
+    "melee_dice": 1,
+    "melee_dice_sides": 6,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      }
+    ],
+    "armor_bash": 3,
+    "dodge": 2,
+    "harvest": "mammal_tiny",
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WARM",
+      "SWIMS"
+    ]
+  },
+  {
+    "id": "mon_sflesh_nakedmolerat_giant",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型裸鼹鼠"
+    },
+    "description": "一种巨大的、遍布皱纹的变异裸鼹鼠，皮肤几乎呈半透明，通过不断的挖掘，已经变得更加坚韧。它的身体布满了巨大的疥疮，有着一架工业挖掘机般的体型与几根长如轿车的胡须。经常发出尖锐的唧唧声，它正在四处游荡觅食。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "default_faction": "secro_flesh",
+    "bodytype": "pig",
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
+    "diff": 2,
+    "volume": "200000 ml",
+    "weight": "200 kg",
+    "hp": 150,
+    "speed": 80,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "M",
+    "color": "pink",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 8,
+    "melee_dice": 4,
+    "melee_dice_sides": 6,
+    "dodge": 1,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 12
+      }
+    ],
+    "armor_bash": 8,
+    "armor_cut": 2,
+    "armor_bullet": 2,
+    "vision_day": 0,
+    "vision_night": 0,
+    "harvest": "mutant_mammal_large_leather",
+    "special_attacks": [
+      [
+        "SHRIEK_ALERT",
+        10
+      ],
+      [
+        "SHRIEK_STUN",
+        1
+      ],
+      {
+        "type": "bite",
+        "cooldown": 6
+      },
+      [
+        "impale",
+        10
+      ]
+    ],
+    "regenerates": 10,
+    "regen_morale": true,
+    "flags": [
+      "ATTACKMON",
+      "BORES",
+      "CAN_DIG",
+      "HEARS",
+      "KEENNOSE",
+      "SMELLS",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_sflesh_opossum",
+    "type": "MONSTER",
+    "name": {
+      "str": "负鼠"
+    },
+    "description": "弗吉尼亚负鼠，一种小型的杂食性有袋类，原产于北美洲。大小犹如正常猫，耐寒，适应性极强，常见于城市附近。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "default_faction": "secro_flesh",
+    "bodytype": "pig",
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
+    "volume": "3000 ml",
+    "weight": "3 kg",
+    "hp": 15,
+    "speed": 110,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "p",
+    "color": "white",
+    "aggression": 100,
+    "morale": 100,
+    "melee_dice": 1,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "amount": 1,
+        "damage_type": "bash"
+      },
+      {
+        "amount": 2,
+        "damage_type": "cut"
+      }
+    ],
+    "armor_bash": 3,
+    "dodge": 2,
+    "vision_night": 5,
+    "harvest": "mammal_tiny",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "KEENNOSE"
+    ]
+  },
+  {
+    "id": "mon_sflesh_otter",
+    "type": "MONSTER",
+    "name": {
+      "str": "獭"
+    },
+    "description": "北美水獭，一种害羞的半水栖哺乳动物，广泛成群生活在溪流沿岸，是黄鼠狼的近亲。它是优秀的渔民和足智多谋的幸存者，利用海狸和其他动物的废弃巢穴来养活自己的幼崽。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "default_faction": "secro_flesh",
+    "bodytype": "pig",
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
+    "volume": "9000 ml",
+    "weight": "9 kg",
+    "hp": 15,
+    "speed": 110,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "m",
+    "color": "brown",
+    "aggression": 100,
+    "morale": 100,
+    "melee_dice": 1,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      }
+    ],
+    "armor_bash": 3,
+    "dodge": 4,
+    "harvest": "mammal_small_fur",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "SWIMS",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_sflesh_pig_piglet",
+    "type": "MONSTER",
+    "name": {
+      "str": "小猪"
+    },
+    "description": "一种源自于野猪的杂食性驯养后裔，既聪明又好奇，还很美味。现在它已恢复了野性，蓄势待发。不同于成年个体，它还能被再次驯服。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "default_faction": "secro_flesh",
+    "bodytype": "pig",
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
+    "volume": "10000 ml",
+    "weight": "10 kg",
+    "hp": 6,
+    "speed": 80,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "p",
+    "color": "pink",
+    "looks_like": "mon_pig",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 1,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "amount": 1,
+        "damage_type": "bash"
+      },
+      {
+        "amount": 2,
+        "damage_type": "cut"
+      }
+    ],
+    "armor_bash": 3,
+    "dodge": 4,
+    "harvest": "mammal_small_leather",
+    "path_settings": {
+      "max_dist": 10
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "KEENNOSE"
+    ]
+  },
+  {
+    "id": "mon_sflesh_pig",
+    "type": "MONSTER",
+    "name": {
+      "str": "猪"
+    },
+    "description": "一种源自于野猪的杂食性驯养后裔，既聪明又好奇，还很美味。现在它已恢复了野性，蓄势待发。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "default_faction": "secro_flesh",
+    "bodytype": "pig",
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
+    "volume": "200000 ml",
+    "weight": "200 kg",
+    "hp": 63,
+    "speed": 100,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "p",
+    "color": "pink",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 4,
+    "melee_dice": 1,
+    "melee_dice_sides": 8,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 6
+      }
+    ],
+    "armor_bash": 3,
+    "dodge": 2,
+    "harvest": "mammal_large_leather",
+    "path_settings": {
+      "max_dist": 10
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "KEENNOSE"
+    ]
+  },
+  {
+    "id": "mon_sflesh_rabbit",
+    "type": "MONSTER",
+    "name": {
+      "str": "野兔"
+    },
+    "description": "一种小型哺乳动物，有着毛茸茸的尾巴，鼻子翼动的时候很可爱，由美味的肉制成。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "default_faction": "secro_flesh",
+    "bodytype": "pig",
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
+    "volume": "1600 ml",
+    "weight": "1600 g",
+    "hp": 10,
+    "speed": 160,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "r",
+    "color": "brown",
+    "aggression": 100,
+    "morale": 100,
+    "melee_damage": [
+      {
+        "amount": 1,
+        "damage_type": "bash"
+      },
+      {
+        "amount": 1,
+        "damage_type": "cut"
+      }
+    ],
+    "armor_bash": 3,
+    "dodge": 6,
+    "harvest": "mammal_small_fur",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_sflesh_raccoon",
+    "type": "MONSTER",
+    "name": {
+      "str": "浣熊"
+    },
+    "description": "北美本土的小型哺乳动物，具有灵巧的爪子和显著的面部特征。它足智多谋，且足够灵活，据说可以用爪子打开密封的容器。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "default_faction": "secro_flesh",
+    "bodytype": "pig",
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
+    "volume": "6000 ml",
+    "weight": "6 kg",
+    "hp": 18,
+    "speed": 100,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "r",
+    "color": "light_gray",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 1,
+    "melee_dice": 1,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "amount": 1,
+        "damage_type": "bash"
+      },
+      {
+        "amount": 2,
+        "damage_type": "cut"
+      }
+    ],
+    "armor_bash": 3,
+    "dodge": 3,
+    "harvest": "mammal_tiny",
+    "vision_night": 5,
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "KEENNOSE"
+    ]
+  },
+  {
+    "id": "mon_sflesh_sheep_lamb",
+    "type": "MONSTER",
+    "name": {
+      "str": "小羊羔"
+    },
+    "description": "一种胆小的四蹄食草哺乳动物，是人类最早驯化的动物之一。它的身体覆盖着一层厚厚的毛皮，雄性有长长的螺旋状的角。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "default_faction": "secro_flesh",
+    "bodytype": "dog",
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
+    "volume": "40750 ml",
+    "weight": "40750 g",
+    "hp": 25,
+    "aggression": 100,
+    "morale": 100,
+    "speed": 90,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "s",
+    "color": "white",
+    "looks_like": "mon_sheep",
+    "melee_skill": 1,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "amount": 1,
+        "damage_type": "bash"
+      },
+      {
+        "amount": 2,
+        "damage_type": "cut"
+      }
+    ],
+    "armor_bash": 3,
+    "dodge": 2,
+    "harvest": "mammal_small_wool",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_sflesh_sheep",
+    "type": "MONSTER",
+    "name": {
+      "str": "羊",
+      "str_pl": "羊"
+    },
+    "description": "一种胆小的四蹄食草哺乳动物，是人类最早驯化的动物之一。它的身体覆盖着一层厚厚的毛皮，雄性有长长的螺旋状的角。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "default_faction": "secro_flesh",
+    "bodytype": "dog",
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
+    "volume": "81500 ml",
+    "weight": "81500 g",
+    "aggression": 100,
+    "morale": 100,
+    "hp": 113,
+    "speed": 90,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "s",
+    "color": "white",
+    "melee_skill": 3,
+    "melee_dice": 1,
+    "melee_dice_sides": 6,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      }
+    ],
+    "armor_bash": 3,
+    "dodge": 2,
+    "harvest": "mammal_large_wool",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_sflesh_squirrel",
+    "type": "MONSTER",
+    "name": {
+      "str": "松鼠"
+    },
+    "description": "一只小型食谷类啮齿动物，长有浓密毛发的尾巴，经常可以看到它在树枝间穿梭，表情坚定又淘气，惧怕猫和狗。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "default_faction": "secro_flesh",
+    "bodytype": "pig",
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
+    "volume": "624 ml",
+    "weight": "624 g",
+    "hp": 8,
+    "speed": 140,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "r",
+    "color": "light_gray",
+    "aggression": 100,
+    "morale": 100,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "melee_damage": [
+      {
+        "amount": 2,
+        "damage_type": "bash"
+      }
+    ],
+    "armor_bash": 3,
+    "dodge": 4,
+    "harvest": "mammal_tiny",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_sflesh_weasel",
+    "type": "MONSTER",
+    "name": {
+      "str": "黄鼠狼"
+    },
+    "description": "长尾黄鼠狼，虽然体型很小，但是活动范围蔓延到整个欧洲大陆，他不喜欢窝在小洞穴里，而是喜欢猎食其他动物。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "bodytype": "pig",
+    "default_faction": "secro_flesh",
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
+    "volume": "150 ml",
+    "weight": "151 g",
+    "hp": 25,
+    "speed": 110,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "m",
+    "color": "brown",
+    "aggression": 100,
+    "morale": 100,
+    "melee_dice": 1,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      }
+    ],
+    "armor_bash": 3,
+    "dodge": 4,
+    "vision_night": 5,
+    "harvest": "mammal_tiny",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "SWIMS",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_sflesh_wolf",
+    "type": "MONSTER",
+    "name": {
+      "str": "狼",
+      "str_pl": "狼"
+    },
+    "description": "一只生活在新英格兰地区的狡猾捕猎者，曾经一度灭绝。但是大灾变让他们成功的恢复了种群数量，有着出色的团队协作捕猎能力。祝你面对它们时还能好运。\n受到血肉的侵蚀，这只往日活蹦乱跳的生灵不再是动物了，而是变成了一只嗜血的恶魔。",
+    "default_faction": "secro_flesh",
+    "bodytype": "dog",
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
+    "volume": "26625 ml",
+    "weight": "26625 g",
+    "hp": 50,
+    "speed": 165,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "w",
+    "color": "light_gray",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 7,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 6
+      }
+    ],
+    "armor_bash": 4,
+    "dodge": 4,
+    "vision_night": 5,
+    "harvest": "mammal_fur",
+    "path_settings": {
+      "max_dist": 10
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "KEENNOSE"
+    ]
+  },
+  {
+    "id": "mon_sflesh_taken_reindeer",
+    "type": "MONSTER",
+    "bodytype": "horse",
+    "looks_like": "mon_reindeer",
+    "name": {
+      "str": "驯鹿"
+    },
+    "default_faction": "secro_flesh",
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
+    "color": "pink",
+    "description": "这种鹿也被称为驯鹿，原产于北美和欧亚大陆的部分地区，虽然通常是友好的，但它们在交配季节以及饥饿的时候都很有攻击性，这只鹿似乎有点不对劲，似乎比平常更具敌意。",
+    "hp": 150,
+    "speed": 76,
+    "symbol": "R",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 8,
+    "melee_dice": 4,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "amount": 7,
+        "damage_type": "bash"
+      }
+    ],
+    "armor_bash": 5,
+    "dodge": 4,
+    "vision_night": 5,
+    "harvest": "mammal_large_leather",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "POISON",
+      "NO_BREATHE"
+    ]
+  }
+]

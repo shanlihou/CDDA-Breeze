@@ -1,0 +1,595 @@
+[
+  {
+    "type": "recipe",
+    "result": "GS_SWP1_bag",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_道具",
+    "skill_used": "survival",
+    "skills_required": [ [ "GS_int", 2 ], [ "fabrication", 2 ] ],
+    "difficulty": 0,
+    "time": "26 m",
+    "autolearn": true,
+    "qualities": [
+     { "id": "HAMMER_FINE", "level": 1 },
+     { "id": "SAW_M_FINE", "level": 1 }
+    ],
+    "components": [
+    [ [ "destiny_copper", 120 ] ],
+    [ [ "copper_ring", 1 ], [ "copper", 400 ] ],
+    [ [ "GS_basic_int", 1 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "GS_SWP2_traveler",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_道具",
+    "skill_used": "survival",
+    "skills_required": [ [ "GS_int", 2 ], [ "fabrication", 2 ] ],
+    "difficulty": 0,
+    "time": "28 m",
+    "autolearn": true,
+    "proficiencies": [
+     { "proficiency": "prof_metalworking" },
+     { "proficiency": "prof_blacksmithing" }
+    ],
+    "qualities": [
+    { "id": "ANVIL", "level": 1 },
+    { "id": "HAMMER", "level": 3 }
+   ],
+    "components": [
+    [ [ "GS_SWP1_bag", 1 ] ],
+    [ [ "steel_chunk", 100 ], [ "steel_lump", 25 ] ],
+    [ [ "wire", 30 ] ],
+    [ [ "charcoal_cooker", 1 ] ],
+    [ [ "destiny_copper", 350 ] ]
+   ]
+  },
+  {
+    "type": "recipe",
+    "result": "GS_SWP3_luckier",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_道具",
+    "skill_used": "survival",
+    "skills_required": [ [ "GS_int", 4 ], [ "fabrication", 4 ] ],
+    "difficulty": 0,
+    "time": "28 m",
+    "autolearn": true,
+    "proficiencies": [
+     { "proficiency": "prof_metalworking" },
+     { "proficiency": "prof_blacksmithing" }
+    ],
+    "qualities": [
+    { "id": "ANVIL", "level": 3 },
+    { "id": "HAMMER", "level": 3 }
+   ],
+   "tools": [
+    [ [ "forge", 150 ], [ "oxy_torch", 30 ] ]
+   ],
+    "components": [
+    [ [ "GS_SWP1_bag", 1 ] ],
+    [ [ "gold_ring", 1 ], [ "gold_small", 8 ] ],
+    [ [ "diamond", 1 ] ],
+    [ [ "destiny_silver", 6 ] ]
+   ]
+  },
+  {
+    "type": "recipe",
+    "result": "GS_SWP4_controller",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_道具",
+    "skill_used": "survival",
+    "skills_required": [ [ "GS_int", 6 ], [ "fabrication", 6 ] ],
+    "difficulty": 0,
+    "time": "28 m",
+    "autolearn": true,
+    "proficiencies": [
+     { "proficiency": "prof_metalworking" },
+     { "proficiency": "prof_blacksmithing" }
+    ],
+    "qualities": [
+    { "id": "SAW_M_FINE", "level": 1 },
+    { "id": "ANVIL", "level": 3 },
+    { "id": "HAMMER", "level": 3 }
+   ],
+   "tools": [
+    [ [ "forge", 150 ], [ "oxy_torch", 30 ] ],
+    [ [ "tongs", -1 ] ],
+    [ [ "hotcut", -1 ] ]
+   ],
+   "using": [ [ "welding_standard", 5 ] ],
+    "components": [
+    [ [ "GS_SWP1_bag", 1 ] ],
+    [ [ "DT_mt_highpurity_dt", 10 ] ],
+    [ [ "destiny_silver", 8 ] ]
+   ]
+  },
+  {
+    "type": "recipe",
+    "result": "GS_eq_toolbelt",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_道具",
+    "skill_used": "survival",
+    "skills_required": [ [ "GS_int", 2 ], [ "fabrication", 3 ] ],
+    "difficulty": 0,
+    "time": "50 m",
+    "autolearn": true,
+    "components": [
+     [ [ "GS_basic_int", 4 ] ],
+     [ [ "tool_belt", 1 ], [ "fireman_belt", 1 ], [ "webbing_belt", 1 ], [ "police_belt", 1 ] ],
+     [ [ "crude_picklock", 1] ],
+     [ [ "wrench_small", 1 ], [ "wrench", 1 ], [ "socket_wrench_set", 1 ] ],
+     [ [ "screwdriver", 1 ] ],
+     [ [ "hammer", 1 ] ],
+     [ [ "hacksaw", 1 ] ],
+     [ [ "saw", 1 ] ],
+     [ [ "sheath", 1 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "GS_eq_toolbelt2",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_道具",
+    "skill_used": "survival",
+    "skills_required": [ [ "GS_int", 6 ], [ "fabrication", 4 ] ],
+    "difficulty": 0,
+    "time": "50 m",
+    "autolearn": true,
+    "components": [
+    [ [ "GS_eq_toolbelt", 1 ] ],
+    [ [ "GS_basic_int", 3 ] ],
+    [ [ "fanny", 2 ],
+     [ "leg_bag", 2],
+     [ "legrig", 1 ] ],
+    [ [ "tool_belt", 1 ] ],
+    [ [ "scabbard", 1 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "GS_eq_support_quiver",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_道具",
+    "skill_used": "survival",
+    "skills_required": [ [ "GS_int", 4 ], [ "fabrication", 3 ] ],
+    "difficulty": 0,
+    "time": "25 m",
+    "autolearn": true,
+    "components": [
+    [ [ "destiny_copper", 120 ] ],
+    [ [ "quiver", 1 ], [ "quiver_birchbark", 1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "GS_eq_support_magpouch",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_道具",
+    "skill_used": "survival",
+    "skills_required": [ [ "GS_int", 2 ], [ "fabrication", 3 ] ],
+    "difficulty": 0,
+    "time": "40 m",
+    "autolearn": true,
+    "components": [
+     [ [ "destiny_copper", 70 ] ],
+     [ [ "ammo_satchel", 1 ],
+      [ "legpouch_large", 1 ],
+      [ "legpouch", 1 ],
+      [ "chestpouch", 1 ],
+      [ "ammo_satchel_leather", 1 ],
+      [ "chestpouch_leather", 1 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "GS_eq_support_bandolier",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_道具",
+    "skill_used": "survival",
+    "skills_required": [ [ "GS_int", 2 ], [ "fabrication", 3 ] ],
+    "difficulty": 0,
+    "time": "20 m",
+    "autolearn": true,
+    "components": [
+     [ [ "destiny_copper", 150 ] ],
+     [ [ "bandolier_rifle", 1 ], [ "bandolier_pistol", 1 ], [ "torso_bandolier_grenade", 1 ], [ "bandolier_wrist", 1 ], [ "bandolier_shotgun", 1 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "GS_eq_support_sword",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_道具",
+    "skill_used": "survival",
+    "skills_required": [ [ "GS_int", 4 ], [ "fabrication", 5 ] ],
+    "difficulty": 0,
+    "time": "50 m",
+    "autolearn": true,
+    "components": [
+     [ [ "destiny_silver", 3 ] ],
+     [ [ "spearsling", 1 ], [ "bscabbard", 1 ], [ "scabbard", 1 ], [ "baldric", 1 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "GS_eq_support_gun",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_道具",
+    "skill_used": "survival",
+    "skills_required": [ [ "GS_int", 4 ], [ "fabrication", 5 ] ],
+    "difficulty": 0,
+    "time": "50 m",
+    "autolearn": true,
+    "components": [
+     [ [ "destiny_silver", 3 ] ],
+     [ [ "rifle_case_soft", 1 ], [ "rifle_case_soft_leather", 1 ], [ "rifle_case_soft_2", 1 ], [ "rifle_case_xl_soft_leather", 1 ], [ "rifle_case_soft_leather_2", 1 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "GS_tool_welder",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_道具",
+    "skill_used": "survival",
+    "skills_required": [ [ "GS_int", 4 ], [ "mechanics", 3 ] ],
+    "difficulty": 0,
+    "time": "50 m",
+    "autolearn": true,
+    "components": [
+     [ [ "GS_basic_int", 3 ] ],
+     [ [ "welder_crude", 1 ], [ "welder", 1 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "GS_tool_repairkit",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_道具",
+    "skill_used": "survival",
+    "skills_required": [ [ "GS_int", 3 ], [ "fabrication", 3 ] ],
+    "difficulty": 0,
+    "time": "50 m",
+    "autolearn": true,
+    "components": [
+     [ [ "GS_basic_int", 3 ] ],
+     [ [ "sewing_kit", 1 ] ]
+     ]
+  },
+  {
+    "type": "recipe",
+    "result": "GS_tool_shovel_WJQ500",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_道具",
+    "skill_used": "survival",
+    "skills_required": [ [ "GS_int", 5 ], [ "fabrication", 5 ] ],
+    "difficulty": 0,
+    "time": "50 m",
+    "autolearn": true,
+    "components": [
+     [ [ "GS_basic_int", 3 ] ],
+     [ [ "e_tool", 1 ] ]
+     ]
+  },
+  {
+    "type": "recipe",
+    "result": "GS_tool_fire",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_道具",
+    "skill_used": "survival",
+    "skills_required": [ [ "GS_per", 4 ] ],
+    "difficulty": 0,
+    "time": "25 m",
+    "autolearn": true,
+    "flags": [ "BLIND_EASY" ],
+    "components": [
+     [ [ "GS_basic_per", 3 ] ],
+     [ [ "torch", 1 ] ]
+     ]
+  },
+  {
+    "type": "recipe",
+    "result": "GS_tool_fireblock",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_道具",
+    "skill_used": "survival",
+    "skills_required": [ [ "GS_per", 6 ] ],
+    "difficulty": 0,
+    "time": "25 m",
+    "autolearn": true,
+    "components": [ [ [ "destiny_copper", 50 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "GS_tool_acidblock",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_道具",
+    "skill_used": "survival",
+    "skills_required": [ [ "GS_int", 4 ] ],
+    "difficulty": 0,
+    "time": "25 m",
+    "autolearn": true,
+    "components": [ [ [ "destiny_copper", 50 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "GS_tool_shockblock",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_道具",
+    "skill_used": "survival",
+    "skills_required": [ [ "GS_int", 6 ] ],
+    "difficulty": 0,
+    "time": "25 m",
+    "autolearn": true,
+    "components": [ [ [ "destiny_copper", 80 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "GS_tool_block_hot",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_道具",
+    "skill_used": "survival",
+    "skills_required": [ [ "GS_int", 2 ], [ "GS_per", 2 ] ],
+    "difficulty": 0,
+    "time": "25 m",
+    "autolearn": true,
+    "tools": [ [ [ "water", -1 ], [ "water_clean", -1 ], [ "element_water", -1 ] ] ],
+    "components": [ [ [ "destiny_copper", 50 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "GS_tool_block_cold",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_道具",
+    "skill_used": "survival",
+    "skills_required": [ [ "GS_int", 2 ], [ "GS_per", 2 ] ],
+    "difficulty": 0,
+    "time": "25 m",
+    "autolearn": true,
+    "tools": [ [ [ "fire", -1 ] ] ],
+    "components": [ [ [ "destiny_copper", 50 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "GS_PER_earmuff",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_道具",
+    "skill_used": "survival",
+    "skills_required": [ "GS_per", 2 ],
+    "difficulty": 0,
+    "time": "50 m",
+    "autolearn": true,
+    "components": [ [ [ "GS_basic_per", 1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "GS_eq_per1_mp3",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_道具",
+    "skill_used": "computer",
+    "skills_required": [ "GS_per", 2 ],
+    "difficulty": 0,
+    "time": "50 m",
+    "autolearn": true,
+    "components": [
+     [ [ "GS_basic_per", 2 ] ],
+     [ [ "mp3", 1 ] ]
+     ]
+  },
+  {
+    "type": "recipe",
+    "result": "GS_eq_per3_mp3",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_道具",
+    "skill_used": "computer",
+    "skills_required": [ "GS_per", 6 ],
+    "difficulty": 0,
+    "time": "50 m",
+    "autolearn": true,
+    "components": [
+     [ [ "GS_eq_per1_mp3", 1 ] ],
+     [ [ "GS_basic_per", 2 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "GS_tool_per3_crystal",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_道具",
+    "skill_used": "survival",
+    "skills_required": [ [ "GS_per", 4 ] ],
+    "difficulty": 0,
+    "time": "50 m",
+    "autolearn": true,
+    "components": [
+     [ [ "GS_basic_per", 4 ] ],
+     [ [ "two_way_radio", 1 ] ]
+     ]
+  },
+  {
+    "type": "recipe",
+    "result": "GS_item_per4_godeye",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_道具",
+    "skill_used": "survival",
+    "skills_required": [ [ "GS_per", 6 ] ],
+    "difficulty": 0,
+    "time": 0,
+    "autolearn": true,
+    "components": [
+     [ [ "destiny_silver", 2 ] ],
+     [ [ "GS_tool_per3_crystal", 1 ] ],
+     [ [ "broken_eyebot", 1 ] ]
+     ],
+    "flags": [ "BLIND_EASY" ]
+  },
+  {
+    "type": "recipe",
+    "result": "GS_eq_legended_badge",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_道具",
+    "skill_used": "survival",
+    "skills_required": [ [ "GS_str", 10 ], [ "GS_dex", 10 ], [ "GS_int", 10 ], [ "GS_per", 10 ] ],
+    "difficulty": 0,
+    "time": "75 m",
+    "autolearn": true,
+    "components": [
+      [ [ "GS_basic_str", 2 ] ],
+      [ [ "GS_basic_dex", 2 ] ],
+      [ [ "GS_basic_int", 2 ] ],
+      [ [ "GS_basic_per", 2 ] ],
+      [ [ "destiny_silver", 10 ] ]
+    ]
+  },
+  {
+  "type": "recipe",
+  "activity_level": "MODERATE_EXERCISE",
+  "result": "soul_refining_furnace1",
+  "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+  "subcategory": "CSC_超凡_制造工具",
+  "skill_used": "fabrication",
+  "difficulty": 4,
+  "book_learn": [ [ "GS_book_merit1", 0 ], [ "GS_book_merit2", 0 ], [ "GS_book_merit3", 0 ] ],
+  "time": "90 m",
+  "autolearn": true,
+  "qualities": [ { "id": "HAMMER", "level": 3 } ],
+  "tools": [
+    [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ],
+    [ [ "forge", 300 ], [ "oxy_torch", 60 ] ]
+   ],
+  "proficiencies": [
+   { "proficiency": "prof_metalworking" },
+   { "proficiency": "prof_blacksmithing" },
+   { "proficiency": "prof_toolsmithing" }
+  ],
+  "components": [
+   [ [ "steel_chunk", 160 ], [ "steel_lump", 40 ] ],
+   [ [ "sheet_metal", 1 ] ],
+   [ [ "copper_scrap_equivalent", 15, "LIST" ] ],
+   [ [ "brazing_rod_bronze", 60 ] ],
+   [ [ "neww_reiki", 300 ] ]
+  ]
+ },
+ {
+  "type": "recipe",
+  "activity_level": "MODERATE_EXERCISE",
+  "result": "SWP_cartool_basic",
+  "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+  "subcategory": "CSC_超凡_载具部件",
+  "skill_used": "fabrication",
+  "difficulty": 6,
+  "time": "17 m",
+  "reversible": true,
+  "autolearn": true,
+  "book_learn": [ [ "SWP_book_vehicles", 3 ] ],
+  "using": [ [ "welding_standard", 5 ] ],
+  "proficiencies": [
+    { "proficiency": "prof_metalworking" },
+    { "proficiency": "prof_welding_basic" },
+    { "proficiency": "prof_welding" }
+  ],
+  "qualities": [
+   { "id": "SAW_M", "level": 2 }
+  ],
+  "components": [
+   [ [ "sheet_metal_small", 12 ] ],
+   [ [ "sheet_metal", 1 ] ],
+   [ [ "destiny_copper", 80 ] ],
+   [ [ "chunk_rubber", 6 ] ]
+  ]
+ },
+ {
+  "type": "recipe",
+  "activity_level": "MODERATE_EXERCISE",
+  "result": "NW_vacutainer",
+  "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+  "subcategory": "CSC_超凡_制造工具",
+  "skill_used": "fabrication",
+  "difficulty": 3,
+  "time": "26 m",
+  "reversible": true,
+  "book_learn": [ [ "NW_Toolbook", 1 ] ],
+  "using": [ [ "welding_standard", 5 ] ],
+  "components": [
+   [ [ "vacutainer", 1 ] ],
+   [ [ "GS_SWP1_bag", 1 ] ],
+   [ [ "DT_mt_highpurity_dt", 5 ] ],
+   [ [ "destiny_copper", 50 ] ]
+  ]
+ },
+ {
+  "type": "recipe",
+  "activity_level": "fake",
+  "result": "NW_DsRtool",
+  "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+  "subcategory": "CSC_超凡_制造工具",
+  "skill_used": "fabrication",
+  "skills_required": [ "chemistry", 5 ],
+  "time": "3 h",
+  "reversible": true,
+  "flags": [ "BLIND_HARD" ],
+  "book_learn": [ [ "NW_Dbook_Destiny", 6 ] ],
+  "components": [
+   [ [ "chemistry_set", 1 ] ],
+   [ [ "scalpel", 1 ] ],
+   [ [ "butchering_kit", 1 ] ],
+   [ [ "survivor_mess_kit", 1 ] ],
+   [ [ "NW_Nbox", 1 ] ],
+   [ [ "destiny_silver", 3 ] ]
+  ]
+ },
+ {
+  "type": "recipe",
+  "activity_level": "fake",
+  "result": "NW_Writetool",
+  "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+  "subcategory": "CSC_超凡_制造工具",
+  "skill_used": "fabrication",
+  "skills_required": [ "chemistry", 5 ],
+  "time": "3 h",
+  "reversible": true,
+  "flags": [ "BLIND_HARD" ],
+  "book_learn": [ [ "NW_Toolbook", 1 ] ],
+  "components": [
+   [ [ "NW_Nbox", 1 ] ],
+   [ [ "pencil", 3 ] ],
+   [ [ "permanent_marker", 10 ] ],
+   [ [ "pen", 15 ] ],
+   [ [ "black_pen", 4 ] ],
+   [ [ "green_pen", 2 ] ],
+   [ [ "blue_pen", 2 ] ],
+   [ [ "red_pen", 2 ] ],  
+   [ [ "destiny_silver", 1 ] ]
+  ]
+ }
+]

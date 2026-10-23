@@ -1,0 +1,67 @@
+[
+  {
+    "type": "proficiency_category",
+    "id": "prof_psionic",
+    "name": "灵能",
+    "description": "有助于将灵能引导至实体物品或更玄妙应用的专业知识。"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_psionic_basic",
+    "category": "prof_psionic",
+    "name": { "str": "灵能导引" },
+    "description": "你掌握了将能力聚焦于物质物品的基础知识。",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.3,
+    "time_to_learn": "12 h"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_psionic_ritual",
+    "category": "prof_psionics",
+    "name": { "str": "异界数学" },
+    "description": "你了解一些异界物理（？）法则，并能在一定程度上操纵它们。",
+    "can_learn": true,
+    "default_time_multiplier": 1.1,
+    "default_fail_multiplier": 1.9,
+    "time_to_learn": "20 h",
+    "required_proficiencies": [ "prof_psionic_basic" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_psionic_warping",
+    "category": "prof_psionic",
+    "name": { "str": "维度形而上学" },
+    "description": "你熟悉灵能在维度之间流动的方式，并能在一定程度上操纵这种流动。",
+    "can_learn": true,
+    "default_time_multiplier": 1.6,
+    "default_fail_multiplier": 1.2,
+    "time_to_learn": "20 h",
+    "required_proficiencies": [ "prof_psionic_basic", "prof_psionic_containment" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_psionic_containment",
+    "category": "prof_psionic",
+    "name": { "str": "能量封闭" },
+    "description": "你擅长防止杂散物质或思想污染你的作品。",
+    "can_learn": true,
+    "default_time_multiplier": 1.2,
+    "default_fail_multiplier": 1.8,
+    "time_to_learn": "16 h",
+    "required_proficiencies": [ "prof_psionic_basic" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_psionic_morphic",
+    "category": "prof_psionics",
+    "name": { "str": "形态改变" },
+    "description": "你已掌握运用灵能影响生物形态的技巧。",
+    "can_learn": true,
+    "default_time_multiplier": 1.6,
+    "default_fail_multiplier": 1.4,
+    "time_to_learn": "18 h",
+    "required_proficiencies": [ "prof_psionic_basic", "prof_psionic_containment" ]
+  }
+]

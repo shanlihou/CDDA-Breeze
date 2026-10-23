@@ -1,0 +1,17 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "no_resurrection",
+    "name": "沉睡的丧尸自制版",
+    "authors": [ "Vick Veyron" ],
+    "maintainers": [ "Vick Veyron" ],
+    "description": "一个仿照旧版本沉睡丧尸复刻的自制MOD，让那些被杀死的丧尸生物不会再度复活过来，从原版经典丧尸中拆分出来，在使用该MOD时不会强制删除普通丧尸外的丧尸物种，要注意该MOD只影响丧尸种类，对丧尸以外的生物复活无效。",
+    "category": "rebalance",
+    "dependencies": [ "dda" ]
+  },
+  {
+    "type": "monster_adjustment",
+    "species": "ZOMBIE",
+    "flag": { "name": "REVIVES", "value": false }
+  }
+]

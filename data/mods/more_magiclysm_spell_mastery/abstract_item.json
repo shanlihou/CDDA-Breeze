@@ -1,0 +1,60 @@
+[
+  {
+    "type": "material",
+    "id": "MM_ether_energy",
+    "name": "以太",
+    "density": 38,
+    "specific_heat_liquid": 0.82,
+    "specific_heat_solid": 0.45,
+    "latent_heat": 273,
+    "soft": true,
+    "reinforces": true,
+    "bash_resist": 14,
+    "cut_resist": 18,
+    "bullet_resist": 14,
+    "acid_resist": 4,
+    "fire_resist": 20,
+    "elec_resist": 2,
+    "chip_resist": 15,
+    "breathability": "SECOND_SKIN",
+    "dmg_adj": [ "scratched", "cut", "shredded", "tattered" ],
+    "bash_dmg_verb": "ripped",
+    "cut_dmg_verb": "sliced"
+  },
+ {
+    "abstract": "MM_contract_spell_schema",
+    "type": "TOOL",
+    "name": "法术模型模板",
+    "weight": "4 g",
+    "volume": "1 ml",
+    "price": 0,
+    "symbol": "[",
+    "flags": [ "WATER_FRIENDLY", "FANCY", "ONLY_ONE", "NO_UNLOAD", "TRADER_AVOID", "NO_TAKEOFF", "NONCONDUCTIVE" ]
+  },
+  {
+    "abstract": "MM_morb",
+    "type": "TOOL_ARMOR",
+    "name": "法球模板",
+    "description": "只是法球类装备的物品模板。",
+    "weight": "4 g",
+    "volume": 0,
+    "price": 0,
+    "symbol": "o",
+    "coverage": 0,
+    "warmth": 0,
+    "flags": [ "LIGHT_5", "MAGIC_FOCUS", "WATER_FRIENDLY", "ALLOWS_NATURAL_ATTACKS", "FANCY", "OVERSIZE", "PERSONAL", "ZERO_WEIGHT", "NONCONDUCTIVE" ]
+  },
+  {
+    "abstract": "MM_mg_energy_abstract",
+    "type": "AMMO",
+    "category": "spare_parts",
+    "name": { "str": "法术能量弹药模板" },
+    "symbol": "*",
+    "volume": "1 ml",
+    "weight": "0 g",
+    "ammo_type": "MM_arcane_en",
+    "count": 1,
+    "loudness": 0,
+    "effects": [ "NEVER_MISFIRES" ]
+  }
+]

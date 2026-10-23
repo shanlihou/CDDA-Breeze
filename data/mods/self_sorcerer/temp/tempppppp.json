@@ -1,0 +1,40 @@
+[
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "denarius_tempppppp",
+    "components": [
+    	[
+    		[ "denarius", 1 ]
+    	]
+    ],
+    "time": "10 m",
+    "skill_used": "spellcraft",
+    "difficulty": 3,
+    "category": "CC_ENCHANTED",
+    "subcategory": "CSC_ENCHANTED_OTHER",
+    "autolearn": true
+  },
+  {
+    "type": "GENERIC",
+    "category": "currency",
+    "id": "denarius_tempppppp",
+    "name": "寻路第纳尔",
+    "description": "事实上，它可以用来寻找一定范围内的奇迹熔炉。",
+    "price": "25 USD",
+    "price_postapoc": "25 USD",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "to_hit": -3,
+    "color": "light_gray",
+    "symbol": "$",
+    "flags": [ "SINGLE_USE" ],
+    "material": [ "mithril_metal" ],
+    "use_action": {
+      "type": "reveal_map",
+      "radius": 100,
+      "terrain": [ "forge_3B" ],
+      "message": "You add the locations to your map."
+    }
+  }
+]

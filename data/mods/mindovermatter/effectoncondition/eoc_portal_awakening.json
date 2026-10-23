@@ -1,0 +1,287 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_PORTAL_STORM_PSION_AWAKENING",
+    "global": true,
+    "recurrence": [ "2 minutes", "5 minutes" ],
+    "condition": { "and": [ 
+      "u_is_outside",  
+      { "is_weather": "portal_storm" }, 
+      { "not": { "u_has_worn_with_flag": "PORTAL_PROOF" } },
+      { "not": { "u_has_effect": "sleep" } }
+    ] },
+    "deactivate_condition": { "not": { "is_weather": "portal_storm" } },
+    "effect": {
+      "switch": { "global_val": "var", "var_name": "ps_str" },
+      "cases": [
+        {
+          "case": 1,
+          "effect": { 
+            "weighted_list_eocs": [ 
+              [ "EOC_PORTAL_NULL_AWAKENING", { "const": 100 } ],
+              [ "EOC_PORTAL_BIOKIN_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_CLAIR_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_PYRO_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_TELEKIN_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_TEEP_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_PORTER_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_VITA_AWAKENING", { "const": 1 } ]
+            ]
+          }
+        },
+        {
+          "case": 2,
+          "effect": { 
+            "weighted_list_eocs": [ 
+              [ "EOC_PORTAL_NULL_AWAKENING", { "const": 85 } ],
+              [ "EOC_PORTAL_BIOKIN_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_CLAIR_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_PYRO_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_TELEKIN_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_TEEP_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_PORTER_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_VITA_AWAKENING", { "const": 1 } ]
+            ]
+          }
+        },
+        {
+          "case": 3,
+          "effect": { 
+            "weighted_list_eocs": [ 
+              [ "EOC_PORTAL_NULL_AWAKENING", { "const": 65 } ],
+              [ "EOC_PORTAL_BIOKIN_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_CLAIR_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_PYRO_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_TELEKIN_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_TEEP_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_PORTER_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_VITA_AWAKENING", { "const": 1 } ]
+            ]
+          }
+        },
+        {
+          "case": 4,
+          "effect": { 
+            "weighted_list_eocs": [ 
+              [ "EOC_PORTAL_NULL_AWAKENING", { "const": 55 } ],
+              [ "EOC_PORTAL_BIOKIN_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_CLAIR_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_PYRO_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_TELEKIN_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_TEEP_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_PORTER_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_VITA_AWAKENING", { "const": 1 } ]
+            ]
+          }
+        },
+        {
+          "case": 5,
+          "effect": { 
+            "weighted_list_eocs": [ 
+              [ "EOC_PORTAL_NULL_AWAKENING", { "const": 40 } ],
+              [ "EOC_PORTAL_BIOKIN_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_CLAIR_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_PYRO_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_TELEKIN_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_TEEP_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_PORTER_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_VITA_AWAKENING", { "const": 1 } ]
+            ]
+          }
+        },
+        {
+          "case": 6,
+          "effect": { 
+            "weighted_list_eocs": [ 
+              [ "EOC_PORTAL_NULL_AWAKENING", { "const": 25 } ],
+              [ "EOC_PORTAL_BIOKIN_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_CLAIR_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_PYRO_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_TELEKIN_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_TEEP_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_PORTER_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_VITA_AWAKENING", { "const": 1 } ]
+            ]
+          }
+        },
+        {
+          "case": 8,
+          "effect": { 
+            "weighted_list_eocs": [ 
+              [ "EOC_PORTAL_NULL_AWAKENING", { "const": 20 } ],
+              [ "EOC_PORTAL_BIOKIN_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_CLAIR_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_PYRO_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_TELEKIN_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_TEEP_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_PORTER_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_VITA_AWAKENING", { "const": 1 } ]
+            ]
+          }  
+        },
+        {
+          "case": 10,
+          "effect": { 
+            "weighted_list_eocs": [ 
+              [ "EOC_PORTAL_NULL_AWAKENING", { "const": 15 } ],
+              [ "EOC_PORTAL_BIOKIN_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_CLAIR_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_PYRO_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_TELEKIN_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_TEEP_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_PORTER_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_VITA_AWAKENING", { "const": 1 } ]
+            ]
+          }
+        },
+        {
+          "case": 15,
+          "effect": { 
+            "weighted_list_eocs": [ 
+              [ "EOC_PORTAL_NULL_AWAKENING", { "const": 10 } ],
+              [ "EOC_PORTAL_BIOKIN_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_CLAIR_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_PYRO_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_TELEKIN_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_TEEP_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_PORTER_AWAKENING", { "const": 1 } ],
+              [ "EOC_PORTAL_VITA_AWAKENING", { "const": 1 } ]
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_PORTAL_NULL_AWAKENING",
+    "effect": [
+      { "u_message": "" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_PORTAL_BIOKIN_AWAKENING",
+    "condition": { "not": { "u_has_trait": "BIOKINETIC" } }, 
+    "effect": [
+      { "u_message": "一声咆哮充斥你的脑海，甚至比传送门风暴的尖啸狂乱更为响亮。新的力量与活力骤然充盈全身。你挺直腰杆，无视狂风和万花筒般的天空，紧握双拳。你感觉自己能对抗整个世界，能不停歇地冲刺一小时，能将那些巨型昆虫摁倒在地并压住，能闪避子弹。你松开拳头摇了摇头，但那股力量感依旧留存。", "popup": true },
+      { "u_add_trait": "BIOKINETIC" }, 
+      { "u_add_trait": "BIOKIN_NEEDS" }
+     ], 
+    "false_effect": [
+      { "u_message": "一声咆哮充斥你的脑海，甚至比传送门风暴的尖啸狂乱更为响亮。你的脑袋随着万花筒般的天空一起胀痛，肌肉开始不受控制地痉挛。它们突然僵住，你瘫倒在地，仰望着天空，动弹不得。" },
+      { "u_add_effect": "psionic_overload", "duration": { "arithmetic": [ { "global_val": "var", "var_name": "ps_str" }, "*", { "time": "1 hours" } ] } },
+      { "u_add_effect": "effect_biokin_overload", "duration": { "arithmetic": [ { "global_val": "var", "var_name": "ps_str" }, "*", { "time": "2 hours" } ] } },
+      { "u_add_effect": "downed", "duration": { "arithmetic": [ { "global_val": "var", "var_name": "ps_str" }, "*", { "time": "5 seconds" } ] } },
+      { "u_add_effect": "motor_seizure", "duration": { "arithmetic": [ { "global_val": "var", "var_name": "ps_str" }, "*", { "time": "5 seconds" } ] } },
+      { "arithmetic": [ { "u_val": "stamina" }, "-=", { "const": 4000 } ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_PORTAL_CLAIR_AWAKENING",
+    "condition": { "not": { "u_has_trait": "CLAIRSENTIENT" } }, 
+    "effect": [
+      { "u_message": "一声咆哮充斥你的脑海，甚至比传送门风暴的尖啸狂乱更为响亮。你闭上眼睛，但依然能看见——起初只是眼皮后的微光，然后像列车驶出隧道般，光芒扩散开来，照亮了你的周围。你能看到所有方向，你能看到你周围每一片草叶的背后和下方，在风暴的巫光中闪耀，直到你的意识猛地回到身体，你被这冲击震得后退。当你再次睁眼时，周围的色彩更加明亮，声音也比以前更加清晰。", "popup": true },
+      { "u_add_trait": "CLAIRSENTIENT" }, 
+      { "u_add_trait": "CLAIR_SENSES" } 
+    ],
+    "false_effect": [
+      { "u_message": "一声咆哮充斥你的脑海，甚至比传送门风暴的尖啸狂乱更为响亮。你的脑袋随着万花筒般的天空一起胀痛，视野也开始摇晃。天空变得明亮，然后暗沉。声音渐渐消失，随即又在耳边轰鸣，然后整个世界突然消失，留下你身处寂静的黑暗中。" },
+      { "u_add_effect": "psionic_overload", "duration": { "arithmetic": [ { "global_val": "var", "var_name": "ps_str" }, "*", { "time": "1 hours" } ] } },
+      { "u_add_effect": "hallu", "duration": { "arithmetic": [ { "global_val": "var", "var_name": "ps_str" }, "*", { "time": "3 hours" } ] } },
+      { "u_add_effect": "blind_clair_overload", "duration": { "arithmetic": [ { "global_val": "var", "var_name": "ps_str" }, "*", { "time": "15 seconds" } ] } },
+      { "u_add_effect": "deaf_clair_overload", "duration": { "arithmetic": [ { "global_val": "var", "var_name": "ps_str" }, "*", { "time": "15 seconds" } ] } },
+      { "arithmetic": [ { "u_val": "stamina" }, "-=", { "const": 4000 } ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_PORTAL_PYRO_AWAKENING",
+    "condition": { "not": { "u_has_trait": "PYROKINETIC" } }, 
+    "effect": [
+      { "u_message": "一声咆哮充斥你的脑海，甚至比传送门风暴的尖啸狂乱更为响亮。你向碎裂的天空伸出手，光芒在手掌周围汇聚，空气本身开始发光。光芒越来越亮，火焰升腾而起，在你掌心上方空舞。你移动手掌，火焰也随之舞动，环绕着你旋转，最后随着一挥手，它们消散于空中。光芒消退，但炽热的感觉依然留存。", "popup": true },
+      { "u_add_trait": "PYROKINETIC" }, 
+      { "u_add_trait": "PYROGLOW_WEAK" },
+      { "u_add_trait": "PYROGLOW_STRONG" } 
+    ],
+    "false_effect": [
+      { "u_message": "一声咆哮充斥你的脑海，甚至比传送门风暴的尖啸狂乱更为响亮。你的脑袋随着万花筒般的天空一起胀痛，皮肤感到刺痒。空气变得温暖，然后灼热，汗水从每个毛孔渗出。你周围的空气散发出柔和的光芒，热度持续上升，直到你的肌肉瘫软，你跪倒在地。" },
+      { "u_add_effect": "psionic_overload", "duration": { "arithmetic": [ { "global_val": "var", "var_name": "ps_str" }, "*", { "time": "1 hours" } ] } },
+      { "u_add_effect": "effect_pyrokin_overload", "duration": { "arithmetic": [ { "global_val": "var", "var_name": "ps_str" }, "*", { "time": "2 hours" } ] } },
+      { "u_add_effect": "downed", "duration": { "arithmetic": [ { "global_val": "var", "var_name": "ps_str" }, "*", { "time": "1 seconds" } ] } },
+      { "u_set_field": "fd_hot_air3", "outdoor_only": true },
+      { "arithmetic": [ { "u_val": "stamina" }, "-=", { "const": 4000 } ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_PORTAL_TELEKIN_AWAKENING",
+    "condition": { "not": { "u_has_trait": "TELEKINETIC" } }, 
+    "effect": [ 
+      { "u_message": "一声咆哮充斥你的脑海，甚至比传送门风暴的尖啸狂乱更为响亮。你环顾四周寻找掩体，但你身处开阔地带。你向地面伸手，但地面却开始升起——草叶、石块和泥土碎片升起并环绕着你旋转。脑中的咆哮越来越响，你缓缓离地升起，周围的碎片旋转得越来越快，直到你的思绪突然静止，你砰然摔回地面。周围的卵石开始落下——但有一块引起了你的注意，你注视着它，它停住了，悬在空中片刻。", "popup": true },
+      { "u_add_trait": "TELEKINETIC" }, 
+      { "u_add_trait": "TELEKINETIC_CARRY" } 
+    ],
+    "false_effect": [
+      { "u_message": "一声咆哮充斥你的脑海，甚至比传送门风暴的尖啸狂乱更为响亮。你的脑袋随着万花筒般的天空一起胀痛，你踉跄而行。空气本身仿佛在压迫着你，它的重量不断加重，越来越令人窒息。每一步都比冲刺更费力。你集中精力迈出一步又一步，但这几乎耗费了你全部的注意力。" },
+      { "u_add_effect": "psionic_overload", "duration": { "arithmetic": [ { "global_val": "var", "var_name": "ps_str" }, "*", { "time": "1 hours" } ] } },
+      { "u_add_effect": "effect_telekin_overload", "duration": { "arithmetic": [ { "global_val": "var", "var_name": "ps_str" }, "*", { "time": "30 minutes" } ] } },
+      { "u_add_effect": "downed", "duration": { "arithmetic": [ { "global_val": "var", "var_name": "ps_str" }, "*", { "time": "1 seconds" } ] } },
+      { "arithmetic": [ { "u_val": "stamina" }, "-=", { "const": 4000 } ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_PORTAL_TEEP_AWAKENING",
+    "condition": { "not": { "u_has_trait": "TELEPATH" } }, 
+    "effect": [
+      { "u_message": "一声咆哮充斥你的脑海，甚至比传送门风暴的尖啸狂乱更为响亮。一片嘈杂的声音——男性的、女性的、非男非女的、甚至非人类的——在对你说话。世界正在迅速消亡。死者、真菌和植物将争夺残存的一切，而人类将一无所剩。留在这里，在现实交汇之处，走向更美好的明天。当这些声音交织在一起，音量不断攀升时，你以某种方式深入自己的内心，扭转了一下——然后迎来了平静的寂静。尽管传送门风暴仍在肆虐，你的内心却已安宁。", "popup": true },
+      { "u_add_trait": "TELEPATH" }, 
+      { "u_add_trait": "TELEPATHIC_SUGGESTION" } 
+    ],
+    "false_effect": [
+      { "u_message": "一声咆哮充斥你的脑海，甚至比传送门风暴的尖啸狂乱更为响亮。你的脑袋随着万花筒般的天空一起胀痛，低语声开始出现。起初只是模糊的杂音，逐渐变得越来越响，直到汇成一片嘈杂的声音。你听见求饶声、痛苦的尖叫、愤怒与悲伤的呼喊，所有声音混在一起，如雪崩般吞没你，你双膝跪地，捂住耳朵试图隔绝它们，但毫无用处。" },
+      { "u_add_effect": "psionic_overload", "duration": { "arithmetic": [ { "global_val": "var", "var_name": "ps_str" }, "*", { "time": "1 hours" } ] } },
+      { "u_add_effect": "nightmares", "duration": { "arithmetic": [ { "global_val": "var", "var_name": "ps_str" }, "*", { "time": "4 hours " } ] } },
+      { "u_add_effect": "disrupted_sleep", "duration": { "arithmetic": [ { "global_val": "var", "var_name": "ps_str" }, "*", { "time": "4 hours " } ] } },
+      { "u_add_effect": "downed", "duration": { "arithmetic": [ { "global_val": "var", "var_name": "ps_str" }, "*", { "time": "1 seconds" } ] } },
+      { "arithmetic": [ { "u_val": "stamina" }, "-=", { "const": 4000 } ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_PORTAL_PORTER_AWAKENING",
+    "condition": { "not": { "u_has_trait": "TELEPORTER" } }, 
+    "effect": [
+      { "u_message": "一声咆哮充斥你的脑海，甚至比传送门风暴的尖啸狂乱更为响亮。现实变得稀薄——你能看见手底下的地面。你能看到分子之间的空隙，其尺度远超宏观距离。你看见了可以穿行其间的路径，瞬间穿梭空间而毫无阻碍。当距离收缩、现实重新凝固时，那份认知依然留在你心中。", "popup": true },
+      { "u_add_trait": "TELEPORTER" }, 
+      { "u_add_trait": "TELEPORTER_PROTECT" } 
+    ],
+    "false_effect": [
+      { "u_message": "一声咆哮充斥你的脑海，甚至比传送门风暴的尖啸狂乱更为响亮。你的脑袋随着万花筒般的天空一起胀痛，视野摇晃。世界似乎变得遥远，又迅速拉近，你踉跄着，双腿似乎分不清地面在哪里。当你恢复过来抬头看时，你发现自己已经身处别处。" },
+      { "u_add_effect": "psionic_overload", "duration": { "arithmetic": [ { "global_val": "var", "var_name": "ps_str" }, "*", { "time": "1 hours" } ] } },
+      { "u_add_effect": "effect_portal_storm_teleport", "duration": { "arithmetic": [ { "global_val": "var", "var_name": "ps_str" }, "*", { "time": "20 seconds" } ] } },
+      { "u_add_effect": "downed", "duration": { "arithmetic": [ { "global_val": "var", "var_name": "ps_str" }, "*", { "time": "1 seconds" } ] } },
+      { "arithmetic": [ { "u_val": "stamina" }, "-=", { "const": 4000 } ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_PORTAL_VITA_AWAKENING",
+    "condition": { "not": { "u_has_trait": "VITAKINETIC" } }, 
+    "effect": [
+      { "u_message": "一声咆哮充斥你的脑海，甚至比传送门风暴的尖啸狂乱更为响亮。有那么一瞬间，你能感受到血液在血管中流淌，每一个血细胞穿行于身体，向细胞输送养分。你能感受到肺中的氧气穿过肺泡进入血液。传送门风暴的呼啸声与你的心跳同步脉冲了片刻，随后你的意识消退，但那一丝余感仍留存在你脑海深处。", "popup": true },
+      { "u_add_trait": "VITAKINETIC" }, 
+      { "u_add_trait": "VITAKINETIC_HEALTH" } 
+    ],
+    "false_effect": [
+      { "u_message": "一声咆哮充斥你的脑海，甚至比传送门风暴的尖啸狂乱更为响亮。你的脑袋随着万花筒般的天空一起胀痛，心跳声在耳中轰鸣。你能感觉到血液在血管中奔涌，温暖逐渐蔓延全身，热感越来越强，直到变成全身发烫的瘙痒，你跪倒在地。" },
+      { "u_add_effect": "psionic_overload", "duration": { "arithmetic": [ { "global_val": "var", "var_name": "ps_str" }, "*", { "time": "1 hours" } ] } },
+      { "u_add_effect": "flu", "duration":  { "arithmetic": [ { "global_val": "var", "var_name": "ps_str" }, "*", { "time": "4 hours" } ] } },
+      { "u_add_effect": "effect_vitakin_overload", "duration":  { "arithmetic": [ { "global_val": "var", "var_name": "ps_str" }, "*", { "time": "2 hours" } ] } },
+      { "u_add_effect": "downed", "duration": { "arithmetic": [ { "global_val": "var", "var_name": "ps_str" }, "*", { "time": "3 seconds" } ] } },
+      { "arithmetic": [ { "u_val": "stamina" }, "-=", { "const": 4000 } ] }
+    ]
+  }  
+]

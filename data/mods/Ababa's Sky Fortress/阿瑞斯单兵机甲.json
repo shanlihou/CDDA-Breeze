@@ -1,0 +1,389 @@
+[
+  {
+    "id": "阿瑞斯单兵机甲",
+    "type": "TOOL_ARMOR",
+    "repairs_like": "power_armor_basic",
+    "category": "armor",
+    "symbol": "[",
+    "color": "dark_gray",
+    "name": { "str": "阿瑞斯单兵机甲" },
+    "description": "阿瑞斯计划的最终产物之一，作为完善的单兵武器，它的防御力和负重能力惊人，其内部配备了温度计、湿度计、气压计、时钟，以及红外和夜视视觉感受器，辅助瞄准系统显著提高了命中率，唯一的缺点是电量消耗过大",
+    "ammo": [ "battery" ],
+    "flags": [
+      "STURDY",
+      "RAINPROOF",
+      "RAD_PROOF",
+      "NANOFAB_REPAIR",
+      "ELECTRIC_IMMUNE",
+      "PADDED",
+      "USE_UPS",
+      "COMBAT_TOGGLEABLE",
+      "BAROMETER",
+      "THERMOMETER",
+      "WATCH",
+      "HYGROMETER",
+      "SUN_GLASSES",
+      "UNBREAKABLE_MELEE",
+      "OUTER"
+    ],
+    "price": 7920000,
+    "price_postapoc": 850000,
+    "weight_capacity_bonus": "100 kg",
+    "material": [ "carbide", "superalloy", "kevlar_layered", "ceramic" ],
+    "weight": "500000 g",
+    "volume": "500 L",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "60000 ml",
+        "max_contains_weight": "160 kg",
+        "max_item_length": "250 cm",
+        "moves": 20,
+        "rigid": true,
+        "item_restriction": [ "阿瑞斯军用UPS", "UPS_off" ],
+        "volume_encumber_modifier": 0,
+        "description": "UPS储存箱."
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "400 L",
+        "max_contains_weight": "800 kg",
+        "max_item_length": "200 cm",
+        "moves": 200,
+        "rigid": true,
+        "volume_encumber_modifier": 0,
+        "description": "机甲后备箱."
+      }
+    ],
+    "environmental_protection": 300,
+    "warmth": 10,
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ACTIVE",
+          "values": [
+            { "value": "CLIMATE_CONTROL_HEAT", "add": 100 },
+            { "value": "CLIMATE_CONTROL_CHILL", "add": 100 },
+            { "value": "STRENGTH", "add": 200 },
+            { "value": "WEAPON_DISPERSION", "multiply": -0.99 },
+            { "value": "SPEED", "multiply": 1 }
+          ],
+          "mutations": [ "DEBUG_NIGHTVISION", "INFRARED" ]
+        }
+      ]
+    },
+    "use_action": {
+      "type": "transform",
+      "msg": "阿瑞斯单兵机甲已开启",
+      "target": "阿瑞斯单兵机甲（开）",
+      "active": true,
+      "need_charges": 1,
+      "need_charges_msg": "未检测到可用电源。"
+    },
+    "armor": [
+      {
+        "material": [
+          { "type": "carbide", "covered_by_mat": 100, "thickness": 5 },
+          { "type": "kevlar", "covered_by_mat": 100, "thickness": 5 },
+          { "type": "superalloy", "covered_by_mat": 100, "thickness": 10 }
+        ],
+        "encumbrance": 40,
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "cover_vitals": 80,
+        "covers": [ "hand_l", "hand_r" ],
+        "volume_encumber_modifier": 0
+      },
+      {
+        "material": [
+          { "type": "carbide", "covered_by_mat": 100, "thickness": 10 },
+          { "type": "superalloy", "covered_by_mat": 100, "thickness": 10 }
+        ],
+        "encumbrance": 20,
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "cover_vitals": 20,
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [
+          "foot_toes_r",
+          "foot_toes_l",
+          "foot_ankle_r",
+          "foot_ankle_l",
+          "foot_heel_r",
+          "foot_heel_l",
+          "foot_arch_r",
+          "foot_arch_l"
+        ],
+        "volume_encumber_modifier": 0
+      },
+      {
+        "material": [
+          { "type": "carbide", "covered_by_mat": 100, "thickness": 5.0 },
+          { "type": "rubber", "covered_by_mat": 100, "thickness": 10.0 },
+          { "type": "superalloy", "covered_by_mat": 100, "thickness": 10 }
+        ],
+        "encumbrance": 20,
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "cover_vitals": 100,
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_sole_r", "foot_sole_l" ],
+        "volume_encumber_modifier": 0
+      },
+      {
+        "material": [
+          { "type": "kevlar", "covered_by_mat": 100, "thickness": 10 },
+          { "type": "carbide", "covered_by_mat": 100, "thickness": 8 },
+          { "type": "ceramic", "covered_by_mat": 100, "thickness": 15 },
+          { "type": "superalloy", "covered_by_mat": 100, "thickness": 10 }
+        ],
+        "covers": [ "torso" ],
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "cover_vitals": 90,
+        "encumbrance": 40,
+        "layers": [ "OUTER" ],
+        "volume_encumber_modifier": 0
+      },
+      {
+        "material": [
+          { "type": "kevlar", "covered_by_mat": 100, "thickness": 10 },
+          { "type": "carbide", "covered_by_mat": 100, "thickness": 10 },
+          { "type": "ceramic", "covered_by_mat": 100, "thickness": 25 },
+          { "type": "superalloy", "covered_by_mat": 100, "thickness": 10 }
+        ],
+        "covers": [ "arm_l", "arm_r" ],
+        "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r", "arm_upper_l", "arm_upper_r", "arm_elbow_l", "arm_elbow_r" ],
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "cover_vitals": 90,
+        "encumbrance": 20,
+        "layers": [ "OUTER" ],
+        "volume_encumber_modifier": 0
+      },
+      {
+        "material": [
+          { "type": "kevlar", "covered_by_mat": 100, "thickness": 3 },
+          { "type": "carbide", "covered_by_mat": 100, "thickness": 2 },
+          { "type": "superalloy", "covered_by_mat": 100, "thickness": 10 }
+        ],
+        "covers": [ "arm_l", "arm_r" ],
+        "specifically_covers": [ "arm_lower_l", "arm_lower_r" ],
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "cover_vitals": 80,
+        "encumbrance": 20,
+        "volume_encumber_modifier": 0
+      },
+      {
+        "material": [
+          { "type": "kevlar", "covered_by_mat": 100, "thickness": 10 },
+          { "type": "carbide", "covered_by_mat": 100, "thickness": 10 },
+          { "type": "ceramic", "covered_by_mat": 100, "thickness": 10 },
+          { "type": "superalloy", "covered_by_mat": 100, "thickness": 10 }
+        ],
+        "covers": [ "leg_l", "leg_r" ],
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "cover_vitals": 80,
+        "encumbrance": 40,
+        "layers": [ "OUTER" ],
+        "volume_encumber_modifier": 0
+      },
+      {
+        "material": [
+          { "type": "superalloy", "covered_by_mat": 100, "thickness": 10.0 },
+          { "type": "carbide", "covered_by_mat": 100, "thickness": 5 },
+          { "type": "superalloy", "covered_by_mat": 100, "thickness": 10 }
+        ],
+        "covers": [ "head" ],
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "encumbrance": 40
+      },
+      {
+        "material": [
+          { "type": "superalloy", "covered_by_mat": 100, "thickness": 10 },
+          { "type": "superalloy", "covered_by_mat": 100, "thickness": 10 }
+        ],
+        "covers": [ "eyes", "mouth" ],
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "encumbrance": 40,
+        "layers": [ "OUTER" ]
+      }
+    ]
+  },
+  {
+    "id": "阿瑞斯单兵机甲（开）",
+    "repairs_like": "power_armor_basic",
+    "type": "TOOL_ARMOR",
+    "name": { "str": "阿瑞斯单兵机甲（开）" },
+    "description": "阿瑞斯计划的最终产物之一，作为完善的单兵武器，它的防御力和负重能力惊人，其内部配备了温度计、湿度计、气压计、时钟，以及红外和夜视视觉感受器，辅助瞄准系统显著提高了命中率，唯一的缺点是电量消耗过大",
+    "power_draw": "20 kW",
+    "ammo": [ "battery" ],
+    "copy-from": "阿瑞斯单兵机甲",
+    "revert_to": "阿瑞斯单兵机甲",
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ACTIVE",
+          "values": [
+            { "value": "CLIMATE_CONTROL_HEAT", "add": 100 },
+            { "value": "CLIMATE_CONTROL_CHILL", "add": 100 },
+            { "value": "STRENGTH", "add": 200 },
+            { "value": "WEAPON_DISPERSION", "multiply": -0.99 },
+            { "value": "SPEED", "multiply": 1 }
+          ],
+          "mutations": [ "DEBUG_NIGHTVISION", "INFRARED" ]
+        }
+      ]
+    },
+    "use_action": { "type": "transform", "menu_text": "Turn off", "msg": "机甲已关闭", "target": "阿瑞斯单兵机甲" },
+    "environmental_protection": 300,
+    "weight_capacity_bonus": "800 kg",
+    "flags": [
+      "STURDY",
+      "RAINPROOF",
+      "RAD_PROOF",
+      "TRADER_AVOID",
+      "NANOFAB_REPAIR",
+      "ELECTRIC_IMMUNE",
+      "PADDED",
+      "USE_UPS",
+      "COMBAT_TOGGLEABLE",
+      "BAROMETER",
+      "THERMOMETER",
+      "WATCH",
+      "HYGROMETER",
+      "SUN_GLASSES",
+      "UNBREAKABLE_MELEE",
+      "OUTER"
+    ]
+  },
+  {
+    "id": "阿瑞斯纳米皮肤层",
+    "type": "TOOL_ARMOR",
+    "category": "armor",
+    "name": { "str": "阿瑞斯纳米皮肤层" },
+    "description": "一套可以穿戴的纳米绝缘皮肤层，紧紧依附在穿戴者的身上，就像是穿戴者本身的身体组织一样，可以防护电流伤害",
+    "weight": "50 g",
+    "volume": "1 L",
+    "price": 0,
+    "price_postapoc": 0,
+    "to_hit": 1,
+    "bashing": 1,
+    "material": [ "carbide" ],
+    "symbol": "[",
+    "looks_like": "depowered_armor",
+    "color": "light_gray",
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "values": [ { "value": "CLIMATE_CONTROL_HEAT", "add": 10 }, { "value": "CLIMATE_CONTROL_CHILL", "add": 10 } ]
+        }
+      ]
+    },
+    "warmth": 10,
+    "material_thickness": 1,
+    "environmental_protection": 40,
+    "flags": [
+      "WATERPROOF",
+      "UNBREAKABLE_MELEE",
+      "PADDED",
+      "POWERARMOR_COMPATIBLE",
+      "SKINTIGHT",
+      "ELECTRIC_IMMUNE",
+      "OVERSIZE",
+      "SUN_GLASSES"
+    ],
+    "armor": [
+      {
+        "encumbrance": 1,
+        "coverage": 100,
+        "covers": [
+          "head",
+          "eyes",
+          "mouth",
+          "hand_l",
+          "hand_r",
+          "torso",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "阿瑞斯军用UPS",
+    "type": "TOOL",
+    "name": { "str": "阿瑞斯军用UPS", "str_pl": "阿瑞斯军用UPSes" },
+    "description": "一款在阿瑞斯计划中研发的军用性UPS，兼容各种型号的钚燃料电池和蓄电池，无法使用正常电池",
+    "weight": "10000 g",
+    "volume": "2000 ml",
+    "price": 280000,
+    "price_postapoc": 1500,
+    "to_hit": -1,
+    "bashing": 8,
+    "material": [ "aluminum", "plastic" ],
+    "symbol": ";",
+    "color": "light_gray",
+    "ammo": [ "battery" ],
+    "flags": [ "IS_UPS" ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "item_restriction": [
+          "light_minus_atomic_battery_cell",
+          "light_atomic_battery_cell",
+          "medium_atomic_battery_cell",
+          "heavy_atomic_battery_cell",
+          "huge_atomic_battery_cell",
+          "small_storage_battery",
+          "medium_storage_battery",
+          "storage_battery",
+          "large_storage_battery"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "阿瑞斯单兵机甲动能炮",
+    "type": "GUN",
+    "symbol": "(",
+    "color": "brown",
+    "name": { "str": "阿瑞斯单兵机甲动能炮" },
+    "description": "阿瑞斯计划的最终产物之一，通过产生推进力推进弹丸高速发射，从而造成巨大的伤害，重量和体积让普通士兵无法手持，最好穿上机甲再持有它。",
+    "price": 5000000,
+    "material": [ "aluminum", "plastic" ],
+    "flags": [ "NEVER_JAMS", "NO_UNLOAD", "NON_FOULING", "NEEDS_NO_LUBE", "UNBREAKABLE_MELEE" ],
+    "ammo_effects": [ "NEVER_MISFIRES" ],
+    "skill": "rifle",
+    "ammo": [ "pebble" ],
+    "weight": "300000 g",
+    "volume": "200000 ml",
+    "longest_side": "2000 mm",
+    "price_postapoc": 5000000,
+    "to_hit": -2,
+    "ranged_damage": { "damage_type": "bullet", "amount": 275, "armor_penetration": 150 },
+    "range": 500,
+    "dispersion": 7500,
+    "durability": 10,
+    "modes": [ [ "DEFAULT", "semi-auto", 1 ], [ "AUTO", "auto", 4 ] ],
+    "loudness": 12,
+    "ups_charges": 40,
+    "clip_size": 500,
+    "valid_mod_locations": [ [ "grip mount", 1 ], [ "underbarrel mount", 1 ] ],
+    "reload": 1,
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "pebble": 500 } } ]
+  }
+]

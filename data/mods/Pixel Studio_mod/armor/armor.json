@@ -1,0 +1,107 @@
+[
+   {
+    "id": "k1_Blackcombatuniform",
+    "repairs_like": "tshirt",
+    "type": "ARMOR",
+    "name": { "str": "黑色作战服" },
+    "description": "黑色的作战服，特警和军队都十分喜欢使用",
+    "weight": "300 g",
+    "volume": "1 L",
+    "price": 5400,
+    "price_postapoc": 550,
+    "material": [ { "type": "nylon", "portion": 7 }, { "type": "cotton", "portion": 3 } ],
+    "symbol": "[",
+    "looks_like": "tshirt",
+    "color": "black",
+    "armor": [
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ], "coverage": 95, "encumbrance": [ 7, 9 ] },
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ], "coverage": 100 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": [ 7, 9 ] }
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "900 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "15 cm",
+        "moves": 70
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "900 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "15 cm",
+        "moves": 70
+      }
+    ],
+    "warmth": 10,
+    "material_thickness": 0.3,
+    "valid_mods": [ "steel_padded" ],
+    "flags": [ "VARSIZE", "POCKETS","WATER_FRIENDLY" ]
+  },
+  {
+    "id": "k2_Blackcombatuniform",
+    "repairs_like": "jeans",
+    "type": "ARMOR",
+    "name": { "str_sp": "黑色作战裤" },
+    "description": "黑色的作战裤，特警和军队都十分喜欢使用",
+    "weight": "720 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 250,
+    "material": [ { "type": "nylon", "portion": 7 }, { "type": "cotton", "portion": 3 } ],
+    "symbol": "[",
+    "looks_like": "pants_cargo",
+    "color": "black",
+    "armor": [
+      { "covers": [ "leg_r", "leg_l" ], "coverage": 100, "encumbrance": [ 7, 9 ] }
+     ],
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1250 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "19 cm",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1250 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "19 cm",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1250 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "19 cm",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1250 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "19 cm",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1080 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "165 mm",
+        "moves": 100
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1080 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "165 mm",
+        "moves": 100
+      }    
+    ], 
+    "warmth": 10,
+    "material_thickness": 0.4,   
+    "flags": [ "VARSIZE", "POCKETS","WATER_FRIENDLY" ]
+  }
+]

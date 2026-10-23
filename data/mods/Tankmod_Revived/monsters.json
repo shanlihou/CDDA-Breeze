@@ -1,0 +1,110 @@
+[
+  {
+    "id": "mon_uafv_xm246e1",
+    "looks_like": "mon_tankbot",
+    "type": "MONSTER",
+    "name": {
+      "str": "XM246E1 微型坦克UAFV"
+    },
+    "description": "一辆实验型重甲无人战车，与小汽车一样大，主要结构是一门重型120mm主炮。使用装甲履带移动，沉重而无情。如果它瞄准了你…快逃跑吧。",
+    "default_faction": "defense_bot",
+    "species": [
+      "ROBOT"
+    ],
+    "diff": 300,
+    "//": "If it were possible, volume would ideally be ten times this.",
+    "volume": "1000 L",
+    "weight": "45000 kg",
+    "hp": 500,
+    "speed": 100,
+    "regenerates": 2,
+    "material": [
+      "qt_steel",
+      "superalloy"
+    ],
+    "symbol": "R",
+    "color": "dark_gray",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 10,
+    "melee_dice": 5,
+    "melee_dice_sides": 10,
+    "melee_damage": [ { "damage_type": "cut", "amount": 10 } ],
+    "dodge": 1,
+    "armor_bash": 120,
+    "armor_cut": 120,
+    "armor_stab": 120,
+    "armor_bullet": 120,
+    "armor_acid": 50,
+    "armor_fire": 50,
+    "vision_day": 50,
+    "vision_night": 10,
+    "bleed_rate": 0,
+    "starting_ammo": {
+      "120mm_usable_heat": 50
+    },
+    "special_attacks": [
+      [
+        "PARROT",
+        20
+      ],
+      {
+      "id": "smash",
+      "throw_strength": 120
+      },
+      {
+        "type": "gun",
+        "cooldown": 3,
+        "move_cost": 200,
+        "gun_type": "tank_gun_auto_monster",
+        "ammo_type": "120mm_usable_heat",
+        "fake_skills": [
+          [ "gun", 10 ],
+          [ "launcher", 10 ],
+          [ "rifle", 10 ]
+        ],
+        "fake_dex": 20,
+        "ranges": [
+          [ 5, 40, "DEFAULT" ]
+        ],
+        "require_targeting_player": true,
+        "require_targeting_npc": true,
+        "require_targeting_monster": true,
+        "laser_lock": true,
+        "targeting_cost": 100,
+        "targeting_sound": "发现敌人，120毫米破甲弹即将发射！",
+        "targeting_volume": 60,
+        "description": "微型坦克发射了它的120mm机炮！",
+        "no_ammo_sound": "空洞的咔哒声！"
+      }
+    ],
+    "death_function": {
+      "corpse_type": "BROKEN",
+      "effect": {
+        "id": "death_explosion_mon_hazmatbot",
+        "hit_self": true
+      },
+      "message": "The %s explodes!"
+    },
+    "flags": [
+      "WARM",
+      "SLUDGEPROOF",
+      "PUSH_MON",
+      "STUN_IMMUNE",
+      "BASHES",
+      "HIT_AND_RUN",
+      "NOHEAD",
+      "PRIORITIZE_TARGETS",
+      "PATH_AVOID_DANGER_2",
+      "DESTROYS",
+      "SEES",
+      "HEARS",
+      "ELECTRONIC",
+      "COLDPROOF",
+      "NO_BREATHE",
+      "PATH_AVOID_DANGER_1",
+      "LOUDMOVES",
+      "DROPS_AMMO"
+    ]
+  }
+]

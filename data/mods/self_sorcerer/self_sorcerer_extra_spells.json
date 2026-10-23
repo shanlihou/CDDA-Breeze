@@ -1,0 +1,2956 @@
+[
+  {
+    "id": "spell_craft_sorcerer_lv1_shield",
+    "type": "SPELL",
+    "name": "术士-Lv1-护盾术",
+    "description": "一层无形的力场护盾，短时间内大幅减少你受到的伤害。",
+    "components": "spell_sorcerer_use_item_1",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "effect_str": "effect_sorcerer_shield",
+    "shape": "blast",
+    "base_casting_time": 200,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_1",
+    "difficulty": 1,
+    "max_level": 0,
+    "base_energy_cost": 0,
+    "min_duration": 120000,
+    "max_duration": 120000
+  },
+  {
+    "id": "spell_craft_sorcerer_lv3_fly",
+    "type": "SPELL",
+    "name": "术士-Lv3-飞行术",
+    "description": "让身体悬浮起来，大幅提升移动速度并降低移动消耗。",
+    "components": "spell_sorcerer_use_item_3",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "effect_str": "effect_sorcerer_fly",
+    "shape": "blast",
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_3",
+    "difficulty": 3,
+    "max_level": 0,
+    "base_energy_cost": 0,
+    "min_duration": 600000,
+    "max_duration": 600000
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_cone_of_cold",
+    "type": "SPELL",
+    "name": "术士-Lv5-冰锥术",
+    "description": "向前方喷出一片锥形寒气。",
+    "components": "spell_sorcerer_use_item_5",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "max_level": 0,
+    "min_damage": 110,
+    "max_damage": 300,
+    "min_range": 12,
+    "min_aoe": 45,
+    "spell_class": "spell_craft_sorcerer_5",
+    "base_casting_time": 300,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 5,
+    "damage_type": "cold"
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_sorcerer_shield",
+    "name": [
+      "护盾术"
+    ],
+    "desc": [
+      "一层力场护盾减伤，被命中时回复少量体力。"
+    ],
+    "apply_message": "一层力场在你身前展开。",
+    "remove_message": "护盾消散了。",
+    "max_intensity": 999,
+    "int_dur_factor": "5 m",
+    "rating": "good",
+    "enchantments": [
+      {
+        "values": [
+          {
+            "value": "ARMOR_CUT",
+            "add": -10
+          },
+          {
+            "value": "ARMOR_STAB",
+            "add": -10
+          },
+          {
+            "value": "ARMOR_BULLET",
+            "add": -10
+          },
+          {
+            "value": "ARMOR_BASH",
+            "add": -10
+          },
+          {
+            "value": "ARMOR_HEAT",
+            "add": -6
+          },
+          {
+            "value": "ARMOR_COLD",
+            "add": -6
+          },
+          {
+            "value": "ARMOR_ELEC",
+            "add": -6
+          }
+        ],
+        "hit_me_effect": [
+          {
+            "id": "spell_zz_shield_surge",
+            "hit_self": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_sorcerer_fly",
+    "name": [
+      "飞行术"
+    ],
+    "desc": [
+      "身体悬浮，移动更快。"
+    ],
+    "apply_message": "你离开了地面。",
+    "remove_message": "你落回地面。",
+    "max_intensity": 999,
+    "int_dur_factor": "5 m",
+    "rating": "good",
+    "enchantments": [
+      {
+        "values": [
+          {
+            "value": "SPEED",
+            "add": 30
+          },
+          {
+            "value": "MOVE_COST",
+            "multiply": -0.4
+          },
+          {
+            "value": "ARMOR_BASH",
+            "add": -4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_mark_1",
+    "type": "SPELL",
+    "name": "术士-Lv5-传送坐标·一",
+    "description": "把当前坐标刻进第一个记忆槽（可重复覆盖）。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_ZZ_SORC_MARK_1",
+    "shape": "blast",
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_5",
+    "difficulty": 5,
+    "max_level": 0,
+    "base_energy_cost": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_warp_1",
+    "type": "SPELL",
+    "name": "术士-Lv5-传送术·一",
+    "description": "跳回第一个记忆槽的坐标，距离不设限。",
+    "components": "spell_sorcerer_use_item_5",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_ZZ_SORC_GO_1",
+    "shape": "blast",
+    "base_casting_time": 200,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_5",
+    "difficulty": 5,
+    "max_level": 0,
+    "base_energy_cost": 0
+  },
+  {
+    "id": "EOC_ZZ_SORC_MARK_1",
+    "type": "effect_on_condition",
+    "eoc_type": "ACTIVATION",
+    "condition": {
+      "compare_int": [
+        "moon",
+        ">=",
+        {
+          "const": 0
+        }
+      ]
+    },
+    "effect": [
+      {
+        "u_location_variable": {
+          "global_val": "zz_sorc_mark_1"
+        }
+      },
+      {
+        "arithmetic": [
+          {
+            "global_val": "var",
+            "var_name": "zz_sorc_ok_1"
+          },
+          "=",
+          {
+            "const": 1
+          }
+        ]
+      },
+      {
+        "u_message": "第一个传送坐标已记录。",
+        "type": "good",
+        "popup": true
+      }
+    ]
+  },
+  {
+    "id": "EOC_ZZ_SORC_GO_1",
+    "type": "effect_on_condition",
+    "eoc_type": "ACTIVATION",
+    "condition": {
+      "compare_int": [
+        {
+          "global_val": "var",
+          "var_name": "zz_sorc_ok_1"
+        },
+        "==",
+        {
+          "const": 1
+        }
+      ]
+    },
+    "effect": [
+      {
+        "u_teleport": {
+          "global_val": "zz_sorc_mark_1"
+        },
+        "force": true
+      },
+      {
+        "u_message": "你回到了第一个标记点。",
+        "type": "good",
+        "popup": true
+      }
+    ],
+    "false_effect": [
+      {
+        "u_message": "第一个槽还没有记录坐标。",
+        "type": "bad"
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_mark_2",
+    "type": "SPELL",
+    "name": "术士-Lv5-传送坐标·二",
+    "description": "把当前坐标刻进第二个记忆槽（可重复覆盖）。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_ZZ_SORC_MARK_2",
+    "shape": "blast",
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_5",
+    "difficulty": 5,
+    "max_level": 0,
+    "base_energy_cost": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_warp_2",
+    "type": "SPELL",
+    "name": "术士-Lv5-传送术·二",
+    "description": "跳回第二个记忆槽的坐标，距离不设限。",
+    "components": "spell_sorcerer_use_item_5",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_ZZ_SORC_GO_2",
+    "shape": "blast",
+    "base_casting_time": 200,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_5",
+    "difficulty": 5,
+    "max_level": 0,
+    "base_energy_cost": 0
+  },
+  {
+    "id": "EOC_ZZ_SORC_MARK_2",
+    "type": "effect_on_condition",
+    "eoc_type": "ACTIVATION",
+    "condition": {
+      "compare_int": [
+        "moon",
+        ">=",
+        {
+          "const": 0
+        }
+      ]
+    },
+    "effect": [
+      {
+        "u_location_variable": {
+          "global_val": "zz_sorc_mark_2"
+        }
+      },
+      {
+        "arithmetic": [
+          {
+            "global_val": "var",
+            "var_name": "zz_sorc_ok_2"
+          },
+          "=",
+          {
+            "const": 1
+          }
+        ]
+      },
+      {
+        "u_message": "第二个传送坐标已记录。",
+        "type": "good",
+        "popup": true
+      }
+    ]
+  },
+  {
+    "id": "EOC_ZZ_SORC_GO_2",
+    "type": "effect_on_condition",
+    "eoc_type": "ACTIVATION",
+    "condition": {
+      "compare_int": [
+        {
+          "global_val": "var",
+          "var_name": "zz_sorc_ok_2"
+        },
+        "==",
+        {
+          "const": 1
+        }
+      ]
+    },
+    "effect": [
+      {
+        "u_teleport": {
+          "global_val": "zz_sorc_mark_2"
+        },
+        "force": true
+      },
+      {
+        "u_message": "你回到了第二个标记点。",
+        "type": "good",
+        "popup": true
+      }
+    ],
+    "false_effect": [
+      {
+        "u_message": "第二个槽还没有记录坐标。",
+        "type": "bad"
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_mark_3",
+    "type": "SPELL",
+    "name": "术士-Lv5-传送坐标·三",
+    "description": "把当前坐标刻进第三个记忆槽（可重复覆盖）。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_ZZ_SORC_MARK_3",
+    "shape": "blast",
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_5",
+    "difficulty": 5,
+    "max_level": 0,
+    "base_energy_cost": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_warp_3",
+    "type": "SPELL",
+    "name": "术士-Lv5-传送术·三",
+    "description": "跳回第三个记忆槽的坐标，距离不设限。",
+    "components": "spell_sorcerer_use_item_5",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_ZZ_SORC_GO_3",
+    "shape": "blast",
+    "base_casting_time": 200,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_5",
+    "difficulty": 5,
+    "max_level": 0,
+    "base_energy_cost": 0
+  },
+  {
+    "id": "EOC_ZZ_SORC_MARK_3",
+    "type": "effect_on_condition",
+    "eoc_type": "ACTIVATION",
+    "condition": {
+      "compare_int": [
+        "moon",
+        ">=",
+        {
+          "const": 0
+        }
+      ]
+    },
+    "effect": [
+      {
+        "u_location_variable": {
+          "global_val": "zz_sorc_mark_3"
+        }
+      },
+      {
+        "arithmetic": [
+          {
+            "global_val": "var",
+            "var_name": "zz_sorc_ok_3"
+          },
+          "=",
+          {
+            "const": 1
+          }
+        ]
+      },
+      {
+        "u_message": "第三个传送坐标已记录。",
+        "type": "good",
+        "popup": true
+      }
+    ]
+  },
+  {
+    "id": "EOC_ZZ_SORC_GO_3",
+    "type": "effect_on_condition",
+    "eoc_type": "ACTIVATION",
+    "condition": {
+      "compare_int": [
+        {
+          "global_val": "var",
+          "var_name": "zz_sorc_ok_3"
+        },
+        "==",
+        {
+          "const": 1
+        }
+      ]
+    },
+    "effect": [
+      {
+        "u_teleport": {
+          "global_val": "zz_sorc_mark_3"
+        },
+        "force": true
+      },
+      {
+        "u_message": "你回到了第三个标记点。",
+        "type": "good",
+        "popup": true
+      }
+    ],
+    "false_effect": [
+      {
+        "u_message": "第三个槽还没有记录坐标。",
+        "type": "bad"
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv4_polymorph",
+    "type": "SPELL",
+    "name": "术士-Lv4-变形术",
+    "description": "把一只虚弱的怪物变成羊。目标生命值越低越容易成功。",
+    "components": "spell_sorcerer_use_item_4",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "targeted_polymorph",
+    "effect_str": "mon_sheep",
+    "shape": "blast",
+    "min_damage": 120,
+    "max_damage": 120,
+    "min_range": 8,
+    "max_range": 8,
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_4",
+    "difficulty": 4,
+    "max_level": 0,
+    "base_energy_cost": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_telekinesis",
+    "type": "SPELL",
+    "name": "术士-Lv5-心灵遥控",
+    "description": "用意念把周围的敌人拽到身边。",
+    "components": "spell_sorcerer_use_item_5",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "area_pull",
+    "shape": "blast",
+    "min_aoe": 5,
+    "max_aoe": 5,
+    "min_range": 15,
+    "max_range": 15,
+    "base_casting_time": 200,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_5",
+    "difficulty": 5,
+    "max_level": 0,
+    "base_energy_cost": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv7_truesight",
+    "type": "SPELL",
+    "name": "术士-Lv7-真实视觉",
+    "description": "短时间看穿墙壁与障碍，周围的活物都无所遁形。",
+    "components": "spell_sorcerer_use_item_7",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_ZZ_SORC_TRUESIGHT",
+    "shape": "blast",
+    "base_casting_time": 200,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_7",
+    "difficulty": 7,
+    "max_level": 0,
+    "base_energy_cost": 0
+  },
+  {
+    "id": "sor_true_sight",
+    "type": "mutation",
+    "name": {
+      "str": "真实视觉"
+    },
+    "description": "你能看穿墙壁。",
+    "points": 0,
+    "valid": false,
+    "purifiable": false,
+    "flags": [
+      "CLAIRVOYANCE"
+    ],
+    "debug": false
+  },
+  {
+    "id": "EOC_ZZ_SORC_TRUESIGHT",
+    "type": "effect_on_condition",
+    "eoc_type": "ACTIVATION",
+    "condition": {
+      "compare_int": [
+        "moon",
+        ">=",
+        {
+          "const": 0
+        }
+      ]
+    },
+    "effect": [
+      {
+        "u_add_trait": "sor_true_sight"
+      },
+      {
+        "u_add_var": "zz_sorc_ts",
+        "type": "timer",
+        "context": "sorc",
+        "time": true
+      },
+      {
+        "u_message": "视野豁然开朗，墙壁变得透明。",
+        "type": "good",
+        "popup": true
+      }
+    ]
+  },
+  {
+    "id": "EOC_ZZ_SORC_TRUESIGHT_EXPIRE",
+    "type": "effect_on_condition",
+    "recurrence": 30,
+    "condition": {
+      "and": [
+        {
+          "u_has_trait": "sor_true_sight"
+        },
+        {
+          "u_compare_time_since_var": "zz_sorc_ts",
+          "type": "timer",
+          "context": "sorc",
+          "op": ">",
+          "time": "10 m"
+        }
+      ]
+    },
+    "effect": [
+      {
+        "u_lose_trait": "sor_true_sight"
+      },
+      {
+        "u_message": "真实视觉消散了。",
+        "type": "neutral"
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv2_misty_step",
+    "type": "SPELL",
+    "name": "术士-Lv2-次级传送",
+    "description": "瞬时移动到 16 格内的指定位置。",
+    "components": "spell_sorcerer_use_item_2",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "TARGET_TELEPORT"
+    ],
+    "effect": "short_range_teleport",
+    "shape": "blast",
+    "min_range": 16,
+    "max_range": 16,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_2",
+    "difficulty": 2,
+    "max_level": 0,
+    "base_energy_cost": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv1_grease",
+    "type": "SPELL",
+    "name": "术士-Lv1-油腻术",
+    "description": "让一片地面变得油滑。",
+    "components": "spell_sorcerer_use_item_1",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "ter_transform",
+    "effect_str": "zz_sorc_grease",
+    "shape": "blast",
+    "min_aoe": 3,
+    "max_aoe": 3,
+    "min_range": 8,
+    "max_range": 8,
+    "base_casting_time": 200,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_1",
+    "difficulty": 1,
+    "max_level": 0,
+    "base_energy_cost": 0
+  },
+  {
+    "type": "ter_furn_transform",
+    "id": "zz_sorc_grease",
+    "terrain": [
+      {
+        "result": "t_floor_waxed",
+        "valid_terrain": [
+          "t_floor",
+          "t_dirt",
+          "t_grass",
+          "t_grass_long",
+          "t_dirtfloor"
+        ],
+        "message": "地面泛起油光。"
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv0_poison_spray",
+    "type": "SPELL",
+    "name": "术士-Lv0-毒气喷溅",
+    "description": "向面前喷出一股腐蚀性毒气。",
+    "components": "spell_sorcerer_use_item_0",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "damage_type": "biological",
+    "shape": "cone",
+    "min_damage": 8,
+    "max_damage": 14,
+    "min_aoe": 3,
+    "max_aoe": 3,
+    "min_range": 4,
+    "max_range": 4,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_0",
+    "difficulty": 0,
+    "max_level": 0,
+    "base_energy_cost": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv0_chill_touch",
+    "type": "SPELL",
+    "name": "术士-Lv0-寒冰之触",
+    "description": "贴着皮肤释放寒气。",
+    "components": "spell_sorcerer_use_item_0",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "damage_type": "cold",
+    "shape": "blast",
+    "min_damage": 10,
+    "max_damage": 16,
+    "min_range": 1,
+    "max_range": 1,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_0",
+    "difficulty": 0,
+    "max_level": 0,
+    "base_energy_cost": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv6_disintegrate",
+    "type": "SPELL",
+    "name": "术士-Lv6-瓦解术",
+    "description": "把目标的存在本身抹掉一部分。",
+    "components": "spell_sorcerer_use_item_6",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "damage_type": "pure",
+    "shape": "blast",
+    "min_damage": 250,
+    "max_damage": 450,
+    "min_range": 20,
+    "max_range": 20,
+    "base_casting_time": 400,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_6",
+    "difficulty": 6,
+    "max_level": 0,
+    "base_energy_cost": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv8_sunburst",
+    "type": "SPELL",
+    "name": "术士-Lv8-日光爆",
+    "description": "以自身为中心炸开一轮灼热的强光。",
+    "components": "spell_sorcerer_use_item_8",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "damage_type": "heat",
+    "shape": "blast",
+    "min_damage": 200,
+    "max_damage": 400,
+    "min_aoe": 8,
+    "max_aoe": 8,
+    "min_range": 30,
+    "max_range": 30,
+    "base_casting_time": 500,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_8",
+    "difficulty": 8,
+    "max_level": 0,
+    "base_energy_cost": 0,
+    "extra_effects": [
+      {
+        "id": "spell_zz_sunburst_flash"
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv8_greater_shield",
+    "type": "SPELL",
+    "name": "术士-Lv8-高等护盾",
+    "description": "多层力场包裹全身。",
+    "components": "spell_sorcerer_use_item_8",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "effect_str": "effect_zz_greater_shield",
+    "shape": "blast",
+    "min_duration": 180000,
+    "max_duration": 180000,
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_8",
+    "difficulty": 8,
+    "max_level": 0,
+    "base_energy_cost": 0
+  },
+  {
+    "id": "effect_zz_greater_shield",
+    "type": "effect_type",
+    "name": [
+      "高等护盾"
+    ],
+    "desc": [
+      "力场护盾"
+    ],
+    "max_intensity": 1,
+    "enchantments": [
+      {
+        "values": [
+          {
+            "value": "ARMOR_CUT",
+            "add": -25
+          },
+          {
+            "value": "ARMOR_STAB",
+            "add": -25
+          },
+          {
+            "value": "ARMOR_BULLET",
+            "add": -25
+          },
+          {
+            "value": "ARMOR_BASH",
+            "add": -25
+          },
+          {
+            "value": "ARMOR_HEAT",
+            "add": -15
+          },
+          {
+            "value": "ARMOR_COLD",
+            "add": -15
+          },
+          {
+            "value": "ARMOR_ELEC",
+            "add": -15
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spell_zz_sunburst_flash",
+    "type": "SPELL",
+    "name": "日光爆·致盲",
+    "description": "强光造成的短暂失明。",
+    "effect": "flashbang",
+    "shape": "blast",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "min_damage": 0,
+    "max_damage": 5,
+    "damage_type": "heat",
+    "min_aoe": 8,
+    "max_aoe": 8,
+    "min_range": 1,
+    "max_range": 30,
+    "energy_source": "NONE"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv1_thunderwave",
+    "type": "SPELL",
+    "name": "术士-Lv1-雷鸣波",
+    "description": "一声闷响，把周围的敌人轰开。",
+    "components": "spell_sorcerer_use_item_1",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "LOUD"
+    ],
+    "effect": "directed_push",
+    "shape": "blast",
+    "min_damage": 3,
+    "max_damage": 3,
+    "min_aoe": 3,
+    "max_aoe": 3,
+    "min_range": 3,
+    "max_range": 3,
+    "extra_effects": [
+      {
+        "id": "spell_zz_thunderwave_dmg"
+      }
+    ],
+    "base_casting_time": 150,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_1",
+    "difficulty": 1,
+    "max_level": 0,
+    "base_energy_cost": 0
+  },
+  {
+    "id": "spell_zz_thunderwave_dmg",
+    "type": "SPELL",
+    "name": "雷鸣波·冲击",
+    "description": "雷鸣波的钝击部分。",
+    "effect": "attack",
+    "damage_type": "bash",
+    "shape": "blast",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "min_damage": 8,
+    "max_damage": 14,
+    "min_aoe": 3,
+    "max_aoe": 3,
+    "min_range": 3,
+    "max_range": 3,
+    "energy_source": "NONE"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv1_fog_cloud",
+    "type": "SPELL",
+    "name": "术士-Lv1-云雾术",
+    "description": "召来一片浓烟遮蔽视线。",
+    "components": "spell_sorcerer_use_item_1",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "emit",
+    "effect_str": "emit_smoke_plume",
+    "shape": "blast",
+    "min_aoe": 3,
+    "max_aoe": 3,
+    "min_range": 12,
+    "max_range": 12,
+    "base_casting_time": 200,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_1",
+    "difficulty": 1,
+    "max_level": 0,
+    "base_energy_cost": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv1_ice_knife",
+    "type": "SPELL",
+    "name": "术士-Lv1-冰刃术",
+    "description": "掷出一枚冰刃，命中后炸开冰屑。",
+    "components": "spell_sorcerer_use_item_1",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "damage_type": "cold",
+    "shape": "blast",
+    "min_damage": 18,
+    "max_damage": 28,
+    "min_range": 12,
+    "max_range": 12,
+    "extra_effects": [
+      {
+        "id": "spell_zz_ice_knife_burst"
+      }
+    ],
+    "base_casting_time": 150,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_1",
+    "difficulty": 1,
+    "max_level": 0,
+    "base_energy_cost": 0
+  },
+  {
+    "id": "spell_zz_ice_knife_burst",
+    "type": "SPELL",
+    "name": "冰刃术·冰屑",
+    "description": "冰刃碎裂的溅射。",
+    "effect": "attack",
+    "damage_type": "cold",
+    "shape": "blast",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "min_damage": 6,
+    "max_damage": 10,
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 12,
+    "max_range": 12,
+    "energy_source": "NONE"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv3_stinking_cloud",
+    "type": "SPELL",
+    "name": "术士-Lv3-臭云术",
+    "description": "一片腐蚀性的毒云滞留在原地。",
+    "components": "spell_sorcerer_use_item_3",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "emit",
+    "effect_str": "emit_toxic_blast",
+    "shape": "blast",
+    "min_aoe": 3,
+    "max_aoe": 3,
+    "min_range": 12,
+    "max_range": 12,
+    "base_casting_time": 250,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_3",
+    "difficulty": 3,
+    "max_level": 0,
+    "base_energy_cost": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv3_spell_echo",
+    "type": "SPELL",
+    "name": "术士-Lv3-法术回响",
+    "description": "从血脉里榨出额外的体力。",
+    "components": "spell_sorcerer_use_item_3",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "recover_energy",
+    "effect_str": "STAMINA",
+    "shape": "blast",
+    "min_damage": 200,
+    "max_damage": 200,
+    "min_range": 0,
+    "max_range": 0,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_3",
+    "difficulty": 3,
+    "max_level": 0,
+    "base_energy_cost": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_dominate",
+    "type": "SPELL",
+    "name": "术士-Lv5-支配怪物",
+    "description": "生命值低于阈值的怪物会暂时为你作战。",
+    "components": "spell_sorcerer_use_item_5",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "charm_monster",
+    "shape": "blast",
+    "min_damage": 80,
+    "max_damage": 80,
+    "min_range": 10,
+    "max_range": 10,
+    "min_duration": 120000,
+    "max_duration": 120000,
+    "base_casting_time": 400,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_5",
+    "difficulty": 5,
+    "max_level": 0,
+    "base_energy_cost": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_summon_beast",
+    "type": "SPELL",
+    "name": "术士-Lv5-召唤野兽",
+    "description": "从虚空里拽出两只狼为你撕咬敌人。",
+    "components": "spell_sorcerer_use_item_5",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "summon",
+    "effect_str": "mon_wolf",
+    "shape": "blast",
+    "min_damage": 2,
+    "max_damage": 2,
+    "min_aoe": 2,
+    "max_aoe": 2,
+    "min_range": 6,
+    "max_range": 6,
+    "min_duration": 300000,
+    "max_duration": 300000,
+    "base_casting_time": 400,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_5",
+    "difficulty": 5,
+    "max_level": 0,
+    "base_energy_cost": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv7_banishment",
+    "type": "SPELL",
+    "name": "术士-Lv7-放逐术",
+    "description": "把怪物从这个世界抹掉，代价是施法者自己的血肉。",
+    "components": "spell_sorcerer_use_item_7",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "banishment",
+    "shape": "blast",
+    "min_damage": 200,
+    "max_damage": 200,
+    "min_range": 10,
+    "max_range": 10,
+    "base_casting_time": 500,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_7",
+    "difficulty": 7,
+    "max_level": 0,
+    "base_energy_cost": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv1_thunderclap",
+    "type": "SPELL",
+    "name": "术士-Lv1-轰鸣术",
+    "description": "制造一声巨响，把附近的东西引过来。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "noise",
+    "shape": "blast",
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 20,
+    "max_range": 20,
+    "min_damage": 40,
+    "max_damage": 40,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_1",
+    "difficulty": 1,
+    "max_level": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv2_breach",
+    "type": "SPELL",
+    "name": "术士-Lv2-破门术",
+    "description": "直接砸开面前的门、窗或薄墙。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "bash",
+    "shape": "blast",
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 4,
+    "max_range": 4,
+    "min_damage": 70,
+    "max_damage": 70,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_2",
+    "difficulty": 2,
+    "max_level": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv3_transposition",
+    "type": "SPELL",
+    "name": "术士-Lv3-换位术",
+    "description": "与目标位置互换，被围住时脱身。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "translocate",
+    "shape": "blast",
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 10,
+    "max_range": 10,
+    "min_damage": 0,
+    "max_damage": 0,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_3",
+    "difficulty": 3,
+    "max_level": 0
+  },
+  {
+    "id": "spell_zz_dispel_stunned",
+    "type": "SPELL",
+    "name": "驱散·眩晕",
+    "description": "移除眩晕。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "remove_effect",
+    "shape": "blast",
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 8,
+    "max_range": 8,
+    "min_damage": 0,
+    "max_damage": 0,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_3",
+    "difficulty": 3,
+    "max_level": 0,
+    "effect_str": "stunned"
+  },
+  {
+    "id": "spell_zz_dispel_blind",
+    "type": "SPELL",
+    "name": "驱散·目盲",
+    "description": "移除目盲。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "remove_effect",
+    "shape": "blast",
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 8,
+    "max_range": 8,
+    "min_damage": 0,
+    "max_damage": 0,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_3",
+    "difficulty": 3,
+    "max_level": 0,
+    "effect_str": "blind"
+  },
+  {
+    "id": "spell_zz_dispel_bleed",
+    "type": "SPELL",
+    "name": "驱散·流血",
+    "description": "移除流血。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "remove_effect",
+    "shape": "blast",
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 8,
+    "max_range": 8,
+    "min_damage": 0,
+    "max_damage": 0,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_3",
+    "difficulty": 3,
+    "max_level": 0,
+    "effect_str": "bleed"
+  },
+  {
+    "id": "spell_zz_dispel_downed",
+    "type": "SPELL",
+    "name": "驱散·倒地",
+    "description": "移除倒地。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "remove_effect",
+    "shape": "blast",
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 8,
+    "max_range": 8,
+    "min_damage": 0,
+    "max_damage": 0,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_3",
+    "difficulty": 3,
+    "max_level": 0,
+    "effect_str": "downed"
+  },
+  {
+    "id": "spell_zz_dispel_deaf",
+    "type": "SPELL",
+    "name": "驱散·失聪",
+    "description": "移除失聪。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "remove_effect",
+    "shape": "blast",
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 8,
+    "max_range": 8,
+    "min_damage": 0,
+    "max_damage": 0,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_3",
+    "difficulty": 3,
+    "max_level": 0,
+    "effect_str": "deaf"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv3_dispel",
+    "type": "SPELL",
+    "name": "术士-Lv3-驱散魔法",
+    "description": "移除目标身上的眩晕、目盲、流血、倒地和失聪。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "remove_effect",
+    "shape": "blast",
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 8,
+    "max_range": 8,
+    "min_damage": 0,
+    "max_damage": 0,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_3",
+    "difficulty": 3,
+    "max_level": 0,
+    "effect_str": "stunned",
+    "extra_effects": [
+      {
+        "id": "spell_zz_dispel_blind"
+      },
+      {
+        "id": "spell_zz_dispel_bleed"
+      },
+      {
+        "id": "spell_zz_dispel_downed"
+      },
+      {
+        "id": "spell_zz_dispel_deaf"
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv4_mud_to_stone",
+    "type": "SPELL",
+    "name": "术士-Lv4-化泥为石",
+    "description": "把泥地或土地变成坚硬的岩石墙。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "ter_transform",
+    "shape": "blast",
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 6,
+    "max_range": 6,
+    "min_damage": 0,
+    "max_damage": 0,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_4",
+    "difficulty": 4,
+    "max_level": 0,
+    "effect_str": "zz_sorc_mud_to_stone"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_stone_to_mud",
+    "type": "SPELL",
+    "name": "术士-Lv5-化石为泥",
+    "description": "把岩石墙化成泥地，开出一条路。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "ter_transform",
+    "shape": "blast",
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 8,
+    "max_range": 8,
+    "min_damage": 0,
+    "max_damage": 0,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_5",
+    "difficulty": 5,
+    "max_level": 0,
+    "effect_str": "zz_sorc_stone_to_mud"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_animate_dead",
+    "type": "SPELL",
+    "name": "术士-Lv5-亡者复苏",
+    "description": "复活目标格上的一具僵尸尸体，并使其听命于你。目标格有生物时无法施放。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "revive",
+    "shape": "blast",
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 4,
+    "max_range": 4,
+    "min_damage": 0,
+    "max_damage": 0,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_5",
+    "difficulty": 5,
+    "max_level": 0,
+    "effect_str": "ZOMBIE",
+    "extra_effects": [
+      {
+        "id": "spell_zz_raised_charm"
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv6_mana_reflux",
+    "type": "SPELL",
+    "name": "术士-Lv6-魔力回流",
+    "description": "从空气中抽回魔力，回复 3000 点。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "recover_energy",
+    "shape": "blast",
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "min_range": 0,
+    "max_range": 0,
+    "min_damage": 3000,
+    "max_damage": 3000,
+    "base_casting_time": 400,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_6",
+    "difficulty": 6,
+    "max_level": 0,
+    "effect_str": "MANA"
+  },
+  {
+    "type": "ter_furn_transform",
+    "id": "zz_sorc_mud_to_stone",
+    "terrain": [
+      {
+        "result": "t_rock_wall",
+        "valid_terrain": [
+          "t_dirt",
+          "t_dirtmound"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "ter_furn_transform",
+    "id": "zz_sorc_stone_to_mud",
+    "terrain": [
+      {
+        "result": "t_dirtmound",
+        "valid_terrain": [
+          "t_rock_wall",
+          "t_wall"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spell_zz_raised_charm",
+    "type": "SPELL",
+    "name": "复苏支配",
+    "description": "让范围内刚站起来的僵尸认你为主（只作用于僵尸类）。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_LEGS"
+    ],
+    "effect": "charm_monster",
+    "effect_str": "",
+    "shape": "blast",
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 4,
+    "max_range": 4,
+    "min_damage": 120,
+    "max_damage": 120,
+    "min_duration": 60000,
+    "max_duration": 60000,
+    "base_casting_time": 0,
+    "energy_source": "NONE",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_lv5",
+    "difficulty": 5,
+    "max_level": 0,
+    "targeted_monster_species": [
+      "ZOMBIE"
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv1_blind",
+    "type": "SPELL",
+    "name": "术士-Lv1-致盲术",
+    "description": "让目标短暂失明。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "min_duration": 600,
+    "max_duration": 0,
+    "min_damage": 0,
+    "max_damage": 0,
+    "min_range": 12,
+    "max_range": 10,
+    "shape": "blast",
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_1",
+    "difficulty": 1,
+    "max_level": 0,
+    "effect_str": "blind"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv2_fear",
+    "type": "SPELL",
+    "name": "术士-Lv2-恐惧术",
+    "description": "目标陷入恐惧与僵直。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "min_duration": 300,
+    "max_duration": 0,
+    "min_damage": 0,
+    "max_damage": 0,
+    "min_range": 12,
+    "max_range": 10,
+    "shape": "blast",
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_2",
+    "difficulty": 2,
+    "max_level": 0,
+    "effect_str": "fearparalyze"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv2_tear_gas",
+    "type": "SPELL",
+    "name": "术士-Lv2-催泪弹",
+    "description": "在目标处炸开一团催泪瓦斯。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "emit",
+    "min_duration": 0,
+    "max_duration": 0,
+    "min_damage": 0,
+    "max_damage": 0,
+    "min_range": 10,
+    "max_range": 10,
+    "shape": "blast",
+    "min_aoe": 2,
+    "max_aoe": 1,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_2",
+    "difficulty": 2,
+    "max_level": 0,
+    "effect_str": "emit_tear_gas_blast"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv2_charge",
+    "type": "SPELL",
+    "name": "术士-Lv2-冲锋术",
+    "description": "朝目标方向猛冲一段距离。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "dash",
+    "min_duration": 0,
+    "max_duration": 0,
+    "min_damage": 0,
+    "max_damage": 0,
+    "min_range": 8,
+    "max_range": 10,
+    "shape": "cone",
+    "min_aoe": 0,
+    "max_aoe": 1,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_2",
+    "difficulty": 2,
+    "max_level": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv2_conjure",
+    "type": "SPELL",
+    "name": "术士-Lv2-召唤物品",
+    "description": "变出三卷绷带，一段时间后消散。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "spawn_item",
+    "min_duration": 600,
+    "max_duration": 0,
+    "min_damage": 3,
+    "max_damage": 0,
+    "min_range": 0,
+    "max_range": 10,
+    "shape": "blast",
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_2",
+    "difficulty": 2,
+    "max_level": 0,
+    "effect_str": "bandage"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv3_hold",
+    "type": "SPELL",
+    "name": "术士-Lv3-定身术",
+    "description": "把目标定在原地。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "min_duration": 300,
+    "max_duration": 0,
+    "min_damage": 0,
+    "max_damage": 0,
+    "min_range": 10,
+    "max_range": 10,
+    "shape": "blast",
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_3",
+    "difficulty": 3,
+    "max_level": 0,
+    "effect_str": "stunned"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv3_slow",
+    "type": "SPELL",
+    "name": "术士-Lv3-迟缓术",
+    "description": "抽走目标的行动力，让它慢下来。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "mod_moves",
+    "min_duration": 0,
+    "max_duration": 0,
+    "min_damage": -400,
+    "max_damage": 0,
+    "min_range": 10,
+    "max_range": 10,
+    "shape": "blast",
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_3",
+    "difficulty": 3,
+    "max_level": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv4_acid_mist",
+    "type": "SPELL",
+    "name": "术士-Lv4-酸雾术",
+    "description": "在目标区域铺开酸液。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "emit",
+    "min_duration": 0,
+    "max_duration": 0,
+    "min_damage": 0,
+    "max_damage": 0,
+    "min_range": 10,
+    "max_range": 10,
+    "shape": "blast",
+    "min_aoe": 2,
+    "max_aoe": 1,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_4",
+    "difficulty": 4,
+    "max_level": 0,
+    "effect_str": "emit_acid_splash"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_deform",
+    "type": "SPELL",
+    "name": "术士-Lv5-血肉畸变",
+    "description": "强行扭曲敌对者的血肉：生命上限减半、形体畸形、动作迟缓，并造成少量伤害。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "mutate",
+    "min_duration": 0,
+    "max_duration": 0,
+    "min_damage": 10000,
+    "max_damage": 0,
+    "min_range": 8,
+    "max_range": 10,
+    "shape": "blast",
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_5",
+    "difficulty": 5,
+    "max_level": 0,
+    "effect_str": "FLIMSY2",
+    "extra_effects": [
+      {
+        "id": "spell_zz_deform_dmg"
+      },
+      {
+        "id": "spell_zz_deform_ugly"
+      },
+      {
+        "id": "spell_zz_deform_slow"
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv1_purify",
+    "type": "SPELL",
+    "name": "术士-Lv1-净化术",
+    "description": "清除范围内的火焰、毒气、酸液、烟雾、血迹、污浆、污水和真菌毯。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "remove_field",
+    "min_range": 10,
+    "max_range": 10,
+    "shape": "blast",
+    "min_aoe": 2,
+    "max_aoe": 1,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_1",
+    "difficulty": 1,
+    "max_level": 0,
+    "effect_str": "fd_fire",
+    "extra_effects": [
+      {
+        "id": "spell_zz_purify_toxic"
+      },
+      {
+        "id": "spell_zz_purify_acid"
+      },
+      {
+        "id": "spell_zz_purify_smoke"
+      },
+      {
+        "id": "spell_zz_purify_blood"
+      },
+      {
+        "id": "spell_zz_purify_blood_insect"
+      },
+      {
+        "id": "spell_zz_purify_blood_invertebrate"
+      },
+      {
+        "id": "spell_zz_purify_blood_veggy"
+      },
+      {
+        "id": "spell_zz_purify_sludge"
+      },
+      {
+        "id": "spell_zz_purify_sewage"
+      },
+      {
+        "id": "spell_zz_purify_fungus"
+      }
+    ]
+  },
+  {
+    "id": "spell_zz_purify_toxic",
+    "type": "SPELL",
+    "name": "净化·毒气",
+    "description": "净化·毒气",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "remove_field",
+    "min_range": 10,
+    "max_range": 10,
+    "shape": "blast",
+    "min_aoe": 2,
+    "max_aoe": 1,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_1",
+    "difficulty": 1,
+    "max_level": 0,
+    "effect_str": "fd_toxic_gas"
+  },
+  {
+    "id": "spell_zz_purify_acid",
+    "type": "SPELL",
+    "name": "净化·酸液",
+    "description": "净化·酸液",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "remove_field",
+    "min_range": 10,
+    "max_range": 10,
+    "shape": "blast",
+    "min_aoe": 2,
+    "max_aoe": 1,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_1",
+    "difficulty": 1,
+    "max_level": 0,
+    "effect_str": "fd_acid"
+  },
+  {
+    "id": "spell_zz_purify_smoke",
+    "type": "SPELL",
+    "name": "净化·烟雾",
+    "description": "净化·烟雾",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "remove_field",
+    "min_range": 10,
+    "max_range": 10,
+    "shape": "blast",
+    "min_aoe": 2,
+    "max_aoe": 1,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_1",
+    "difficulty": 1,
+    "max_level": 0,
+    "effect_str": "fd_smoke"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv2_pull",
+    "type": "SPELL",
+    "name": "术士-Lv2-牵引术",
+    "description": "把目标整只拽到你面前。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "pull_target",
+    "min_range": 10,
+    "max_range": 10,
+    "shape": "blast",
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_2",
+    "difficulty": 2,
+    "max_level": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv3_shockwave",
+    "type": "SPELL",
+    "name": "术士-Lv3-冲击波",
+    "description": "以自己为中心，把周围一圈东西推开。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "area_push",
+    "min_range": 0,
+    "max_range": 10,
+    "shape": "blast",
+    "min_aoe": 3,
+    "max_aoe": 1,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_3",
+    "difficulty": 3,
+    "max_level": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv4_blast",
+    "type": "SPELL",
+    "name": "术士-Lv4-爆裂术",
+    "description": "在目标处引发一次真实爆炸，会破坏地形。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "explosion",
+    "min_range": 12,
+    "max_range": 10,
+    "shape": "blast",
+    "min_aoe": 30,
+    "max_aoe": 1,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_4",
+    "difficulty": 4,
+    "max_level": 0,
+    "min_damage": 120,
+    "max_damage": 120
+  },
+  {
+    "id": "spell_zz_purify_blood",
+    "type": "SPELL",
+    "name": "净化·血迹",
+    "description": "净化·血迹",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "remove_field",
+    "min_range": 10,
+    "max_range": 10,
+    "shape": "blast",
+    "min_aoe": 2,
+    "max_aoe": 2,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_1",
+    "difficulty": 1,
+    "max_level": 0,
+    "effect_str": "fd_blood"
+  },
+  {
+    "id": "spell_zz_purify_blood_insect",
+    "type": "SPELL",
+    "name": "净化·虫血",
+    "description": "净化·虫血",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "remove_field",
+    "min_range": 10,
+    "max_range": 10,
+    "shape": "blast",
+    "min_aoe": 2,
+    "max_aoe": 2,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_1",
+    "difficulty": 1,
+    "max_level": 0,
+    "effect_str": "fd_blood_insect"
+  },
+  {
+    "id": "spell_zz_purify_blood_invertebrate",
+    "type": "SPELL",
+    "name": "净化·无脊椎血",
+    "description": "净化·无脊椎血",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "remove_field",
+    "min_range": 10,
+    "max_range": 10,
+    "shape": "blast",
+    "min_aoe": 2,
+    "max_aoe": 2,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_1",
+    "difficulty": 1,
+    "max_level": 0,
+    "effect_str": "fd_blood_invertebrate"
+  },
+  {
+    "id": "spell_zz_purify_blood_veggy",
+    "type": "SPELL",
+    "name": "净化·植物汁液",
+    "description": "净化·植物汁液",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "remove_field",
+    "min_range": 10,
+    "max_range": 10,
+    "shape": "blast",
+    "min_aoe": 2,
+    "max_aoe": 2,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_1",
+    "difficulty": 1,
+    "max_level": 0,
+    "effect_str": "fd_blood_veggy"
+  },
+  {
+    "id": "spell_zz_purify_sludge",
+    "type": "SPELL",
+    "name": "净化·污浆",
+    "description": "净化·污浆",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "remove_field",
+    "min_range": 10,
+    "max_range": 10,
+    "shape": "blast",
+    "min_aoe": 2,
+    "max_aoe": 2,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_1",
+    "difficulty": 1,
+    "max_level": 0,
+    "effect_str": "fd_sludge"
+  },
+  {
+    "id": "spell_zz_purify_sewage",
+    "type": "SPELL",
+    "name": "净化·污水",
+    "description": "净化·污水",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "ter_transform",
+    "min_range": 10,
+    "max_range": 10,
+    "shape": "blast",
+    "min_aoe": 2,
+    "max_aoe": 2,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_1",
+    "difficulty": 1,
+    "max_level": 0,
+    "effect_str": "zz_sorc_clean_sewage"
+  },
+  {
+    "id": "spell_zz_purify_fungus",
+    "type": "SPELL",
+    "name": "净化·真菌毯",
+    "description": "净化·真菌毯",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "ter_transform",
+    "min_range": 10,
+    "max_range": 10,
+    "shape": "blast",
+    "min_aoe": 2,
+    "max_aoe": 2,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_1",
+    "difficulty": 1,
+    "max_level": 0,
+    "effect_str": "zz_sorc_clean_fungus"
+  },
+  {
+    "type": "ter_furn_transform",
+    "id": "zz_sorc_clean_sewage",
+    "terrain": [
+      {
+        "result": "t_dirt",
+        "valid_terrain": [
+          "t_sewage"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "ter_furn_transform",
+    "id": "zz_sorc_clean_fungus",
+    "terrain": [
+      {
+        "result": "t_dirt",
+        "valid_terrain": [
+          "t_fungus"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv2_drain",
+    "type": "SPELL",
+    "name": "术士-Lv2-吸血术",
+    "description": "撕开目标的血肉，并回复自己的体力。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 8,
+    "max_range": 10,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_2",
+    "difficulty": 2,
+    "max_level": 0,
+    "min_damage": 30,
+    "max_damage": 30,
+    "min_duration": 100,
+    "max_duration": 100,
+    "effect_str": "bleed",
+    "extra_effects": [
+      {
+        "id": "spell_zz_drain_self",
+        "hit_self": true
+      }
+    ]
+  },
+  {
+    "id": "spell_zz_drain_self",
+    "type": "SPELL",
+    "name": "吸血·回补",
+    "description": "回复自身气血 25 点。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 0,
+    "max_range": 0,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_2",
+    "difficulty": 2,
+    "max_level": 0,
+    "min_damage": -25,
+    "max_damage": -25,
+    "extra_effects": [
+      {
+        "id": "spell_zz_heal_vigor"
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv2_scry",
+    "type": "SPELL",
+    "name": "术士-Lv2-探知术",
+    "description": "向四周展开感知，揭示 6 格大地图范围（13×13 个大地图格）的地形；随等级扩大，最大 12 格。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "map",
+    "shape": "blast",
+    "min_aoe": 6,
+    "max_aoe": 12,
+    "min_range": 0,
+    "max_range": 10,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_2",
+    "difficulty": 2,
+    "max_level": 0,
+    "aoe_increment": 1
+  },
+  {
+    "id": "spell_craft_sorcerer_lv3_amplify",
+    "type": "SPELL",
+    "name": "术士-Lv3-强化术",
+    "description": "让你的盟友或召唤物进化成更强形态。",
+    "valid_targets": [
+      "ally"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "upgrade",
+    "shape": "blast",
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 5,
+    "max_range": 10,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_3",
+    "difficulty": 3,
+    "max_level": 0,
+    "min_damage": 10000,
+    "max_damage": 10000
+  },
+  {
+    "id": "spell_craft_sorcerer_lv4_mass_heal",
+    "type": "SPELL",
+    "name": "术士-Lv4-群体治疗",
+    "description": "治疗半径 3 格内所有友方，每处肢体回复 40 点。",
+    "valid_targets": [
+      "ally",
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_aoe": 3,
+    "max_aoe": 3,
+    "min_range": 10,
+    "max_range": 10,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_4",
+    "difficulty": 4,
+    "max_level": 0,
+    "min_damage": -40,
+    "max_damage": -40
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_charged_blast",
+    "type": "SPELL",
+    "name": "术士-Lv5-蓄力爆裂",
+    "description": "蓄力十秒后引爆：半径 4 格的剧烈爆炸。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "explosion",
+    "shape": "blast",
+    "min_aoe": 40,
+    "max_aoe": 1,
+    "min_range": 14,
+    "max_range": 10,
+    "base_casting_time": 1000,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_5",
+    "difficulty": 5,
+    "max_level": 0,
+    "min_damage": 300,
+    "max_damage": 300
+  },
+  {
+    "id": "spell_zz_heal_vigor",
+    "type": "SPELL",
+    "name": "治疗·生机",
+    "description": "提升目标的健康值。",
+    "effect": "recover_energy",
+    "effect_str": "HEALTH",
+    "valid_targets": [
+      "ally",
+      "self"
+    ],
+    "shape": "blast",
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 0,
+    "max_range": 0,
+    "min_damage": 20,
+    "max_damage": 20,
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "NONE",
+    "flags": [
+      "SILENT"
+    ],
+    "spell_class": "spell_craft_sorcerer_4",
+    "difficulty": 1,
+    "max_level": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv1_feather_fall",
+    "type": "SPELL",
+    "name": "术士-Lv1-羽落术",
+    "description": "让身体轻如羽毛，接下来 1 分钟内坠落不受伤害。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "effect_str": "ignore_fall_damage",
+    "shape": "blast",
+    "min_damage": 0,
+    "max_damage": 0,
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 0,
+    "max_range": 0,
+    "min_duration": 6000,
+    "max_duration": 6000,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_1",
+    "difficulty": 1,
+    "max_level": 0
+  },
+  {
+    "id": "spell_zz_shield_surge",
+    "type": "SPELL",
+    "name": "护盾回响",
+    "description": "护盾吸收冲击时回复体力。",
+    "effect": "recover_energy",
+    "effect_str": "STAMINA",
+    "valid_targets": [
+      "self"
+    ],
+    "shape": "blast",
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 0,
+    "max_range": 0,
+    "min_damage": 20,
+    "max_damage": 20,
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "NONE",
+    "flags": [
+      "SILENT"
+    ],
+    "difficulty": 1,
+    "max_level": 0
+  },
+  {
+    "id": "effect_zz_sor_absorb",
+    "type": "effect_type",
+    "name": [
+      "吸收元素"
+    ],
+    "desc": [
+      "元素伤害减半，受击后蓄能。"
+    ],
+    "apply_message": "一层流动的元素薄膜裹住了你。",
+    "remove_message": "元素薄膜散去了。",
+    "max_intensity": 1,
+    "rating": "good",
+    "enchantments": [
+      {
+        "values": [
+          {
+            "value": "ARMOR_HEAT",
+            "multiply": -0.5
+          },
+          {
+            "value": "ARMOR_COLD",
+            "multiply": -0.5
+          },
+          {
+            "value": "ARMOR_ELEC",
+            "multiply": -0.5
+          }
+        ],
+        "hit_me_effect": [
+          {
+            "id": "spell_zz_absorb_charge",
+            "hit_self": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "effect_zz_sor_charged",
+    "type": "effect_type",
+    "name": [
+      "元素蓄能"
+    ],
+    "desc": [
+      "下一段时间内近战附加元素伤害。"
+    ],
+    "max_intensity": 1,
+    "rating": "good",
+    "enchantments": [
+      {
+        "values": [
+          {
+            "value": "ITEM_DAMAGE_HEAT",
+            "add": 8
+          },
+          {
+            "value": "ITEM_DAMAGE_COLD",
+            "add": 8
+          },
+          {
+            "value": "ITEM_DAMAGE_ELEC",
+            "add": 8
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spell_zz_absorb_charge",
+    "type": "SPELL",
+    "name": "元素蓄能",
+    "description": "吸收的元素能量附着在武器上。",
+    "effect": "attack",
+    "effect_str": "effect_zz_sor_charged",
+    "valid_targets": [
+      "self"
+    ],
+    "shape": "blast",
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 0,
+    "max_range": 0,
+    "min_damage": 0,
+    "max_damage": 0,
+    "min_duration": 3000,
+    "max_duration": 3000,
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "NONE",
+    "flags": [
+      "SILENT"
+    ],
+    "difficulty": 1,
+    "max_level": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv1_absorb",
+    "type": "SPELL",
+    "name": "术士-Lv1-吸收元素",
+    "description": "60 秒内受到的火焰/冰冷/电击伤害减半，每次受击后武器附带 30 秒元素伤害。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "effect_str": "effect_zz_sor_absorb",
+    "shape": "blast",
+    "min_damage": 0,
+    "max_damage": 0,
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 0,
+    "max_range": 0,
+    "min_duration": 6000,
+    "max_duration": 6000,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_1",
+    "difficulty": 1,
+    "max_level": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv1_ease_pain",
+    "type": "SPELL",
+    "name": "术士-Lv1-镇痛术",
+    "description": "缓解单个目标的疼痛 40 点。",
+    "effect": "recover_energy",
+    "effect_str": "PAIN",
+    "valid_targets": [
+      "ally",
+      "self"
+    ],
+    "shape": "blast",
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 3,
+    "max_range": 3,
+    "min_damage": 40,
+    "max_damage": 40,
+    "base_casting_time": 50,
+    "energy_source": "MANA",
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_1",
+    "difficulty": 1,
+    "max_level": 0
+  },
+  {
+    "id": "spell_zz_deform_dmg",
+    "type": "SPELL",
+    "name": "血肉畸变·撕裂",
+    "description": "血肉畸变的附伤。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 8,
+    "max_range": 10,
+    "min_damage": 12,
+    "max_damage": 20,
+    "damage_type": "pure",
+    "energy_source": "NONE",
+    "base_energy_cost": 0,
+    "base_casting_time": 0,
+    "max_level": 0,
+    "flags": [
+      "SILENT",
+      "NO_PROJECTILE"
+    ]
+  },
+  {
+    "id": "spell_zz_deform_ugly",
+    "type": "SPELL",
+    "name": "血肉畸变·畸形",
+    "description": "附加畸形突变。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "mutate",
+    "effect_str": "DEFORMED",
+    "shape": "blast",
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 8,
+    "max_range": 10,
+    "min_damage": 10000,
+    "max_damage": 0,
+    "energy_source": "NONE",
+    "base_energy_cost": 0,
+    "base_casting_time": 0,
+    "max_level": 0,
+    "flags": [
+      "SILENT",
+      "NO_PROJECTILE"
+    ]
+  },
+  {
+    "id": "spell_zz_deform_slow",
+    "type": "SPELL",
+    "name": "血肉畸变·迟缓",
+    "description": "附加迟缓状态。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "effect_str": "effect_zz_deform_slow",
+    "shape": "blast",
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 8,
+    "max_range": 10,
+    "min_duration": 20000,
+    "max_duration": 40000,
+    "min_damage": 0,
+    "max_damage": 0,
+    "energy_source": "NONE",
+    "base_energy_cost": 0,
+    "base_casting_time": 0,
+    "max_level": 0,
+    "flags": [
+      "SILENT",
+      "NO_PROJECTILE"
+    ]
+  },
+  {
+    "id": "effect_zz_deform_slow",
+    "type": "effect_type",
+    "name": [
+      "血肉迟缓",
+      ""
+    ],
+    "desc": [
+      "扭曲的血肉拖慢了你的一切动作。",
+      ""
+    ],
+    "base_mods": {
+      "speed_mod": [
+        -40
+      ]
+    },
+    "max_intensity": 1,
+    "rating": "bad"
+  }
+]

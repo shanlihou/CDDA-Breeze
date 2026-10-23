@@ -1,0 +1,543 @@
+[
+    
+      {
+        "id": "mon_zombie_Magnetic_storm_Raiders_initialcheck",
+        "type": "SPELL",
+        "name": {
+          "str": "突袭检测"
+        },
+        "description": "突袭检测",
+        "flags": [
+          "SILENT",
+          "NO_HANDS",
+          "NO_LEGS",
+          "NO_PROJECTILE",
+          "NO_EXPLOSION_SFX"
+        ],
+        "valid_targets": [
+          "self"
+        ],
+        "effect": "attack",
+        "shape": "blast",
+        "effect_str": "Magnetic_storm_Raiders_momentum_initialcheck",
+        "min_duration": 600,
+        "max_duration": 600
+      },
+      {
+        "id": "mon_zombie_Magnetic_storm_Raiders_initial",
+        "type": "SPELL",
+        "name": {
+          "str": "突袭"
+        },
+        "description": "突袭",
+        "flags": [
+          "SILENT",
+          "NO_HANDS",
+          "NO_LEGS",
+          "NO_PROJECTILE",
+          "NO_EXPLOSION_SFX",
+          "RANDOM_DURATION"
+        ],
+        "valid_targets": [
+          "self"
+        ],
+        "effect": "attack",
+        "shape": "blast",
+        "effect_str": "Magnetic_storm_Raiders_momentum_initial",
+        "min_duration": 300,
+        "max_duration": 400
+      },
+      {
+        "type": "SPELL",
+        "id": "mon_zombie_Magnetic_storm_Raiders_target",
+        "name": {
+          "str": "磁暴突击兽的突袭"
+        },
+        "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
+        "message": "<npcname>锁定了目标…",
+        "extra_effects": [
+            {
+              "id": "mon_zombie_Magnetic_storm_Raiders_initial",
+              "hit_self": true
+            },
+            {
+              "id": "mon_zombie_Magnetic_storm_Raiders_initialcheck",
+              "hit_self": true
+            }
+          ],
+        "flags": [
+          "SILENT",
+          "NO_HANDS",
+          "NO_LEGS",
+          "NO_PROJECTILE",
+          "NO_EXPLOSION_SFX"
+        ],
+        "valid_targets": [
+          "none"
+        ],
+        "effect": "attack",
+        "shape": "blast",
+        "min_range": 18,
+        "max_range": 18
+      },
+      {
+        "type": "effect_type",
+        "id": "Magnetic_storm_Raiders_momentum_initial",
+        "name": [
+          "奔雷拳蓄力中"
+        ],
+        "int_add_val": 1,
+        "int_dur_factor": "1 seconds",
+        "max_intensity": 4,
+        "int_decay_step": -1,
+        "int_decay_tick": 1,
+        "max_duration": 4,
+        "rating": "bad",
+        "show_in_info": true,
+        "scaling_mods": {
+          "speed_mod": [
+            -15
+          ]
+        }
+      },
+      {
+        "type": "effect_type",
+        "id": "Magnetic_storm_Raiders_momentum",
+        "name": [
+          "冲击状态"
+        ],
+        "int_add_val": 1,
+        "int_dur_factor": "1 seconds",
+        "max_intensity": 6,
+        "int_decay_step": -1,
+        "int_decay_tick": 1,
+        "max_duration": 6,
+        "rating": "good",
+        "show_in_info": true,
+        "scaling_mods": {
+          "speed_mod": [
+            10
+          ]
+        }
+      },
+      {
+        "type": "effect_type",
+        "id": "Magnetic_storm_Raiders_momentum_initialcheck"
+      },
+      {
+        "id": "mon_zombie_Magnetic_storm_Raiders_charge",
+        "type": "SPELL",
+        "name": {
+          "str": "冲啊！"
+        },
+        "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
+        "flags": [
+          "SILENT",
+          "NO_HANDS",
+          "NO_LEGS",
+          "NO_PROJECTILE"
+        ],
+        "valid_targets": [
+          "self"
+        ],
+        "effect": "attack",
+        "shape": "blast",
+        "effect_str": "Magnetic_storm_Raiders_momentum",
+        "min_aoe": 25,
+        "max_aoe": 25,
+        "min_duration": 600,
+        "max_duration": 600
+      },
+      {
+        "id": "mon_zombie_Magnetic_storm_Raiders_charge_push",
+        "type": "SPELL",
+        "name": {
+          "str": "住手"
+        },
+        "description": "怪物施法的。如果你看到了这个，那就改读这个：\n‘施法者停在目标旁边。’",
+        "effect": "area_push",
+        "shape": "blast",
+        "flags": [
+          "SILENT",
+          "NO_HANDS",
+          "NO_LEGS",
+          "NO_PROJECTILE",
+          "NO_EXPLOSION_SFX"
+        ],
+        "valid_targets": [
+          "self"
+        ],
+        "min_aoe": 1,
+        "max_aoe": 1
+      },
+      {
+        "id": "mon_zombie_Magnetic_storm_Raiders_charge_pushy",
+        "type": "SPELL",
+        "name": {
+          "str": "推开"
+        },
+        "description": "怪物施法的。如果你看到了这个，那就改读这个：\n‘施法者推动它的路径。’",
+        "effect": "area_push",
+        "shape": "blast",
+        "flags": [
+          "SILENT",
+          "NO_HANDS",
+          "NO_LEGS",
+          "NO_PROJECTILE",
+          "NO_EXPLOSION_SFX",
+          "NO_EXPLOSION_SFX"
+        ],
+        "valid_targets": [
+          "ally",
+          "hostile",
+          "ground"
+        ],
+        "min_aoe": 2,
+        "max_aoe": 2
+      },
+      {
+        "type": "SPELL",
+        "id": "mon_zombie_Magnetic_storm_Raiders_charge_target_random",
+        "name": {
+          "str": "一个法术"
+        },
+        "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施放一个法术",
+        "extra_effects": [
+          {
+            "id": "mon_zombie_Magnetic_storm_Raiders_charge_pull"
+          }
+        ],
+        "flags": [
+          "SILENT",
+          "NO_HANDS",
+          "NO_LEGS",
+          "WONDER",
+          "RANDOM_DAMAGE",
+          "NO_EXPLOSION_SFX"
+        ],
+        "valid_targets": [
+          "hostile"
+        ],
+        "effect": "attack",
+        "shape": "blast",
+        "min_damage": 9,
+        "max_damage": 13,
+        "min_range": 18,
+        "max_range": 18
+      },
+      {
+        "id": "mon_zombie_Magnetic_storm_Raiders_charge_pull",
+        "type": "SPELL",
+        "name": {
+          "str": "冲锋"
+        },
+        "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster sprints toward the target. This is casted randomly between 9 to 13 times.'",
+        "effect": "area_pull",
+        "shape": "blast",
+        "flags": [
+          "SILENT",
+          "NO_HANDS",
+          "NO_LEGS",
+          "NO_PROJECTILE",
+          "NO_EXPLOSION_SFX"
+        ],
+        "extra_effects": [
+          {
+            "id": "mon_zombie_Magnetic_storm_Raiders_charge"
+          },
+          {
+            "id": "mon_zombie_Magnetic_storm_Raiders_charge_push"
+          },
+          {
+            "id": "mon_zombie_Magnetic_storm_Raiders_charge_pushy",
+            "hit_self": true
+          }
+        ],
+        "valid_targets": [
+          "self"
+        ],
+        "min_aoe": 18,
+        "max_aoe": 18
+      },
+      {
+        "id": "mon_zombie_master_supermee_summon",
+        "type": "SPELL",
+        "name": {
+          "str": "召唤浩克"
+        },
+        "description": "浩克主宰召唤浩克用的",
+        "extra_effects":[
+          {
+            "id":"mon_zombie_master_supermee_summon_1",
+            "hit_self":true
+          }
+        ],
+        "flags": [
+          "SILENT",
+          "NO_HANDS",
+          "NO_LEGS",
+          "NO_PROJECTILE",
+          "NO_EXPLOSION_SFX"
+        ],
+        "valid_targets": [
+          "hostile"
+        ],
+        "effect_str":"mon_zombie_master_supermee_summon_trigger",
+        "effect": "attack",
+        "shape": "blast",
+        "min_duration": 400,
+        "max_duration": 400,
+        "min_range": 50,
+        "max_range": 50,
+        "min_aoe":50,
+        "max_aoe":50
+      },
+      {
+        "id": "mon_zombie_master_supermee_summon_1",
+        "type": "SPELL",
+        "name": {
+          "str": "召唤浩克标记"
+        },
+        "description": "浩克主宰召唤浩克用的标记,不过看起来你是被标记的倒霉蛋",
+        "flags": [
+          "SILENT",
+          "NO_HANDS",
+          "NO_LEGS",
+          "NO_PROJECTILE",
+          "NO_EXPLOSION_SFX"
+        ],
+        "valid_targets": [
+          "hostile"
+        ],
+        "effect_str":"mon_zombie_master_supermee_summon_trigger",
+        "effect": "attack",
+        "shape": "blast",
+        "min_duration": 400,
+        "max_duration": 400
+      },
+      {
+        "id":"mon_zombie_master_supermee_summon_trigger",
+        "type":"effect_type",
+        "name":[
+          "召唤浩克标记"
+        ],
+        "desc": [ "被召唤浩克ing" ],
+        "int_add_val": 1,
+        "int_dur_factor": "1 seconds",
+        "max_intensity":4,
+        "int_decay_step": -1,
+        "int_decay_tick": 1,
+        "max_duration": 4,
+        "rating": "bad",
+        "show_in_info": true
+      },
+      
+      {
+        "id":"mon_zombie_master_supermee_summon_trigger_eoc",
+        "type":"effect_on_condition",
+        "recurrence": "4 s",
+        "condition": {
+          "u_has_effect": "mon_zombie_master_supermee_summon_trigger"
+        },
+        "effect":[
+          {
+            "u_spawn_monster": "mon_zombie_hulk_minion",
+            "real_count": 4,
+            "min_radius": 30,
+            "max_radius": 30,
+            "lifespan": "90s",
+            "spawn_message": "浩克仆从降临了!!!"          
+          }
+        ]
+      },
+      {
+        "id":"mon_zombie_master_supermee_summon_trigger_2",
+        "type":"effect_type",
+        "name":[
+          "召唤浩克"
+        ],
+        "desc": [ "召唤浩克ing" ],
+        "int_add_val": 1,
+        "int_dur_factor": "1 seconds",
+        "max_intensity":2,
+        "int_decay_step": -1,
+        "int_decay_tick": 1,
+        "max_duration": 2,
+        "rating": "bad",
+        "show_in_info": true
+      },
+      
+      {
+        "id":"mon_zombie_master_supermee_summon_trigger_2_eoc",
+        "type":"effect_on_condition",
+        "recurrence": "1 s",
+        "condition": {
+          "u_has_effect": "mon_zombie_master_supermee_summon_trigger_2"
+        },
+        "effect":[
+          {
+            "u_spawn_monster": "mon_zombie_hulk_minion_2",
+            "real_count": 2,
+            "min_radius": 2,
+            "max_radius": 4,
+            "lifespan": "180s",
+            "spawn_message": "<color_green>友善的浩克仆从降临了!!!</color>"          
+          }
+        ]
+      },
+      {
+        "id": "mon_zombie_witch_defence",
+        "type": "SPELL",
+        "name": {
+          "str": "Witch的临时射击免疫防护"
+        },
+        "description": "模拟求生的Witch第一下受击锁血（？）然后把打它的人抓的一脸血，除非你打的带眩晕效果的弹药或者是大口径武器，不然别想着秒妹给药，全场尖叫了",
+        "extra_effects":[
+          {
+            "id":"mon_zombie_witch_defence_1",
+            "hit_self":true
+          }
+        ],
+        "flags": [
+          "SILENT",
+          "NO_HANDS",
+          "NO_LEGS",
+          "NO_PROJECTILE",
+          "NO_EXPLOSION_SFX"
+        ],
+        "valid_targets": [
+          "none"
+        ],
+        "effect": "attack",
+        "shape": "blast",
+        "min_range": 50,
+        "max_range": 50,
+        "min_aoe":50,
+        "max_aoe":50
+      },
+      {
+        "id": "mon_zombie_witch_defence_1",
+        "type": "SPELL",
+        "name": {
+          "str": "Witch的临时射击免疫防护"
+        },
+        "description": "模拟求生的Witch第一下受击锁血（？）然后把打它的人抓的一脸血，除非你打的带眩晕效果的弹药或者是大口径武器，不然别想着秒妹给药，全场尖叫了",
+        "flags": [
+          "SILENT",
+          "NO_HANDS",
+          "NO_LEGS",
+          "NO_PROJECTILE",
+          "NO_EXPLOSION_SFX"
+        ],
+        "valid_targets": [
+          "self"
+        ],
+        "effect_str":"mon_zombie_witch_defence",
+        "effect": "attack",
+        "shape": "blast",
+        "min_range": 1,
+        "max_range": 1,
+        "min_aoe":1,
+        "max_aoe":1,
+        "min_duration": 200,
+        "max_duration": 200
+      },
+      {
+        "id":"mon_zombie_witch_defence",
+        "type":"effect_type",
+        "name":[
+          "急速状态（Witch）"
+        ],
+        "desc": [ "Witch的临时加速效果" ],
+        "int_add_val": 1,
+        "int_dur_factor": "1 seconds",
+        "max_intensity":2,
+        "int_decay_step": -1,
+        "int_decay_tick": 1,
+        "max_duration": 2,
+        "rating": "good",
+        "show_in_info": true,
+        "scaling_mods": {
+          "speed_mod": [
+            450
+          ]
+        }
+      },
+      {
+        "id": "mon_zombie_witch_attack",
+        "type": "SPELL",
+        "name": {
+          "str": "Witch的动脉大出血攻击"
+        },
+        "description": "witch把你抓的一脸血（考虑cdda没人拉你就不倒地了）",
+        "flags": [
+          "SILENT",
+          "NO_HANDS",
+          "NO_LEGS",
+          "NO_PROJECTILE",
+          "NO_EXPLOSION_SFX"
+        ],
+        "valid_targets": [
+          "hostile"
+        ],
+        "effect_str":"bleed",
+        "effect": "attack",
+        "shape": "blast",
+        "min_range": 1,
+        "max_range": 1,
+        "min_aoe":2,
+        "max_aoe":2,
+        "max_duration":400000,
+        "min_duration":400000
+      },
+      {
+        "id": "ver_witch_hands_wp_bleed",
+        "type": "SPELL",
+        "name": {
+          "str": "女巫之爪的出血效果"
+        },
+        "description": "女巫之爪的出血效果",
+        "flags": [
+          "SILENT",
+          "NO_HANDS",
+          "NO_LEGS",
+          "NO_PROJECTILE",
+          "NO_EXPLOSION_SFX"
+        ],
+        "valid_targets": [
+          "hostile"
+        ],
+        "effect_str":"bleed",
+        "effect": "attack",
+        "shape": "blast",
+        "min_range": 1,
+        "max_range": 1,
+        "max_duration":400000,
+        "min_duration":400000
+      },
+      {
+        "id": "ver_witch_hands_wp_stunned",
+        "type": "SPELL",
+        "name": {
+          "str": "女巫之爪的眩晕效果"
+        },
+        "description": "女巫之爪的眩晕效果",
+        "flags": [
+          "SILENT",
+          "NO_HANDS",
+          "NO_LEGS",
+          "NO_PROJECTILE",
+          "NO_EXPLOSION_SFX"
+        ],
+        "valid_targets": [
+          "hostile"
+        ],
+        "effect_str":"stunned",
+        "effect": "attack",
+        "shape": "blast",
+        "min_range": 1,
+        "max_range": 1,
+        "max_duration":100,
+        "min_duration":100
+      }
+]

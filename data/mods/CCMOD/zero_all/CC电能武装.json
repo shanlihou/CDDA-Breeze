@@ -1,0 +1,319 @@
+[
+  {
+    "id": "CCRARE_RRGUN",
+    "name": {
+      "str": "CCN92破域电浆炮"
+    },
+    "description": "高能电浆拥有强大伤害和穿透力的同时，还会发生爆炸，与激光、高斯步枪并列的未来兵器。<color_red>装备时步枪技能+5。着弹地点有等离子EMP，电流及小规模爆炸发生。</color>",
+    "type": "GUN",
+    "subtypes": [
+      "GUN",
+      "ARTIFACT"
+    ],
+    "skill": "pistol",
+    "looks_like": "plasma_rifle",
+    "ammo_effects": [
+      "LASER",
+      "ROBOT_DAZZLE",
+      "EMP",
+      "SHOT",
+      "BEANBAG",
+      "INCENDIARY",
+      "LIGHTNING",
+      "PLASMA",
+      "EXPLOSIVE_SMALL",
+      "LARGE_BEANBAG",
+      "BLINDS_EYES",
+      "PARALYZEPOISON",
+      "FLASHBANG"
+    ],
+    "symbol": "E",
+    "color": "green",
+    "weight": "3500 g",
+    "volume": "2500 ml",
+    "longest_side": "80 cm",
+    "barrel_length": "300 mm",
+    "reload_noise_volume": 5,
+    "price": "10000 USD",
+    "price_postapoc": "90 USD",
+    "material": [
+      "steel",
+      "wood",
+      "bone",
+      "plastic"
+    ],
+    "dispersion": 100,
+    "durability": 9,
+    "range": 75,
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": 180,
+      "armor_penetration": 300
+    },
+    "reload": 0,
+    "loudness": 16,
+    "energy_drain": "30 kJ",
+    "melee_damage": {
+      "bash": 90
+    },
+    "weapon_category": [
+      "KNIVES"
+    ],
+    "flags": [
+      "NON_FOULING",
+      "NEEDS_NO_LUBE",
+      "USE_UPS",
+      "UNBREAKABLE_MELEE",
+      "MAGIC_FOCUS",
+      "WATER_FRIENDLY",
+      "WATERPROOF_GUN",
+      "NEVER_JAMS"
+    ],
+    "passive_effects": [
+      {
+        "has": "WIELD",
+        "condition": "ALWAYS",
+        "skills": [
+          {
+            "value": "rifle",
+            "add": 5
+          }
+        ]
+      }
+    ],
+    "qualities": [
+      [
+        "PRY",
+        4
+      ],
+      [
+        "HAMMER",
+        2
+      ],
+      [
+        "DIG",
+        2
+      ],
+      [
+        "PRYING_NAIL",
+        1
+      ]
+    ],
+    "use_action": [
+      "CROWBAR"
+    ],
+    "ammo_to_fire": 1,
+    "valid_mod_locations": [
+      [
+        "sling",
+        1
+      ]
+    ],
+    "default_mods": [
+      "shoulder_strap_front"
+    ],
+    "ammo": [
+      "battery"
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "500 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "light_minus_battery_cell",
+          "light_battery_cell",
+          "medium_battery_cell",
+          "heavy_battery_cell",
+          "light_plus_battery_cell",
+          "medium_plus_battery_cell",
+          "heavy_plus_battery_cell",
+          "light_dry_cell",
+          "medium_dry_cell",
+          "heavy_dry_cell",
+          "light_minus_atomic_battery_cell",
+          "light_atomic_battery_cell",
+          "medium_atomic_battery_cell",
+          "heavy_atomic_battery_cell",
+          "huge_atomic_battery_cell"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "CClaser_rifle",
+    "type": "GUN",
+    "subtypes": [
+      "GUN"
+    ],
+    "color": "yellow",
+    "symbol": "(",
+    "looks_like": "emp_gun",
+    "name": {
+      "str": "CCV5穿甲激光枪"
+    },
+    "description": "为了攻坚而诞生，先进科技打造的聚能激光武器，由于集中强化了聚能束，因此有很强的贯穿和电子打击和干扰效果，但正因如此，无法造成太大的创口，因此伤害并不是很高。试试安装在带控制的载具炮台上使用。嗯？？还可以当烧火棍用？？",
+    "price": "3580 USD",
+    "price_postapoc": "40 USD",
+    "material": [
+      "steel",
+      "wood",
+      "bone",
+      "plastic"
+    ],
+    "weight": "500 g",
+    "volume": "500 ml",
+    "melee_damage": {
+      "bash": 30
+    },
+    "skill": "rifle",
+    "to_hit": -1,
+    "ammo_effects": [
+      "LASER",
+      "ROBOT_DAZZLE",
+      "EMP",
+      "SHOT",
+      "BEANBAG",
+      "INCENDIARY",
+      "BLINDS_EYES"
+    ],
+    "flags": [
+      "NON_FOULING",
+      "NEEDS_NO_LUBE",
+      "USE_UPS",
+      "UNBREAKABLE_MELEE",
+      "MAGIC_FOCUS",
+      "WATER_FRIENDLY",
+      "WATERPROOF_GUN",
+      "NEVER_JAMS"
+    ],
+    "qualities": [
+      [
+        "PRY",
+        4
+      ],
+      [
+        "HAMMER_FINE",
+        1
+      ],
+      [
+        "HAMMER",
+        3
+      ],
+      [
+        "DIG",
+        2
+      ],
+      [
+        "PRYING_NAIL",
+        1
+      ]
+    ],
+    "use_action": [
+      "CROWBAR",
+      "PICKAXE"
+    ],
+    "ammo_to_fire": 3,
+    "ammo": [
+      "battery"
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "500 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "light_minus_battery_cell",
+          "light_battery_cell",
+          "medium_battery_cell",
+          "heavy_battery_cell",
+          "light_plus_battery_cell",
+          "medium_plus_battery_cell",
+          "heavy_plus_battery_cell",
+          "light_dry_cell",
+          "medium_dry_cell",
+          "heavy_dry_cell",
+          "light_minus_atomic_battery_cell",
+          "light_atomic_battery_cell",
+          "medium_atomic_battery_cell",
+          "heavy_atomic_battery_cell",
+          "huge_atomic_battery_cell"
+        ]
+      }
+    ],
+    "valid_mod_locations": [
+      [
+        "sling",
+        1
+      ]
+    ],
+    "default_mods": [
+      "shoulder_strap_front"
+    ],
+    "ranged_damage": {
+      "damage_type": "heat",
+      "amount": 50,
+      "armor_penetration": 30
+    },
+    "range": 60,
+    "dispersion": 90,
+    "durability": 10,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        3
+      ]
+    ],
+    "loudness": 1
+  },
+  {
+    "type": "recipe",
+    "result": "CClaser_rifle",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC武器装备",
+    "skill_used": "survival",
+    "time": "100second",
+    "reversible": true,
+    "autolearn": true,
+    "components": [
+      [
+        [
+          "CCMODcoin",
+          230
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "CCRARE_RRGUN",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC武器装备",
+    "skill_used": "survival",
+    "time": "100second",
+    "reversible": true,
+    "autolearn": true,
+    "components": [
+      [
+        [
+          "CCMODcoin",
+          320
+        ]
+      ]
+    ]
+  }
+]

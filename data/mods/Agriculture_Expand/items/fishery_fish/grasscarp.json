@@ -1,0 +1,35 @@
+[
+	{
+		"type": "COMESTIBLE",
+		"id": "fishery_egg_grasscarp",
+		"name": { "str": "鱼卵（草鱼）" },
+		"copy-from": "fishery_egg",
+		"spoils_in": "10 days",
+		"description": "一些可以食用，也可以等他们孵化出小鱼的草鱼鱼卵。",
+		"rot_spawn": "FISHERY_GROUP_EGG_grasscarp",
+		"rot_spawn_chance": 50
+	},
+	{
+		"name": "FISHERY_GROUP_EGG_grasscarp",
+		"type": "monstergroup",
+		"default": "fishery_mon_grasscarp_juvenile",
+		"monsters": [ ]
+	},
+	{
+		"id": "fishery_mon_grasscarp_juvenile",
+		"type": "MONSTER",
+		"name": { "str": "草鱼鱼苗" },
+		"description": "一条草鱼幼鱼，过一段时间就会变成成鱼。",
+		"copy-from": "fishery_mon_juvenile",
+		"harvest": "fish_tiny",
+		"upgrades": { "age_grow": 20, "into": "mon_fish_grass_carp" }
+	},
+	{
+		"id": "mon_fish_grass_carp",
+		"type": "MONSTER",
+		"copy-from": "mon_fish_grass_carp",
+		"name": { "str": "草鱼" },
+		"reproduction": { "baby_egg": "fishery_egg_grasscarp", "baby_count": 10, "baby_timer": 20 },
+		"baby_flags": [ "SPRING", "SUMMER" ]
+	}
+]

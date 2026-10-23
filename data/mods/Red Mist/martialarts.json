@@ -1,0 +1,117 @@
+[
+  {
+    "type": "martial_art",
+    "id": "redmist_art",
+    "name": {
+      "str": "殷红迷雾之页"
+    },
+    "description": "一种发展于街头的杀人技术，非常管用。",
+	"allow_all_weapons": true,
+    "initiate": [
+      "血雾弥漫，尸横遍野。"
+    ],
+    "learn_difficulty": 5,
+    "primary_skill": "melee",
+	    "onmove_buffs": [{
+        "id": "red_mist_onmove",
+        "name": "速战速决",
+        "description": "速战速决，百战百胜。\n速度+15%敏捷，持续10回合，最大叠加10层。",
+		        "skill_requirements": [
+          {
+            "name": "melee",
+            "level": 5
+          }
+        ],
+		    "melee_allowed": true,
+    "unarmed_allowed": true,
+		"buff_duration": 10,
+        "max_stacks": 10,
+        "flat_bonuses": [
+          {
+            "stat": "speed",
+            "scaling-stat": "dex",
+            "scale": 0.15
+          }
+	  ]}],
+	 "static_buffs": [
+	        {
+        "id": "red_mist_static1",
+        "name": "最强之人",
+        "description": "与我一战，三生有幸。\n闪避次数+2，格挡次数+2。",
+		        "skill_requirements": [
+          {
+            "name": "melee",
+            "level": 7
+          }
+        ],
+		    "melee_allowed": true,
+    "unarmed_allowed": true,
+        "bonus_dodges": 2,
+		"bonus_blocks": 2
+      }],
+    "onkill_buffs": [
+      {
+        "id": "buff_redmist_onkill1",
+        "name": "陷阵之志",
+        "description": "陷阵之志，有死无生。\n速度+15%智力。\n持续10回合，可叠加10次。",
+        "skill_requirements": [
+          {
+            "name": "melee",
+            "level": 9
+          }
+        ],
+		    "melee_allowed": true,
+    "unarmed_allowed": true,
+        "buff_duration": 10,
+        "max_stacks": 10,
+        "flat_bonuses": [
+          {
+            "stat": "speed",
+            "scaling-stat": "int",
+            "scale": 0.15
+          }
+        ]
+      },
+      {
+        "id": "buff_silat_onmoveS",
+        "name": "怒不可遏",
+        "description": "怒火冲天，无尽的力量涌现！\n\n+10%暴击几率！\n持续10回合，可叠加10次。",
+        "skill_requirements": [ { "name": "melee", "level": 1 } ],
+        "melee_allowed": true,
+        "buff_duration": 10,
+        "max_stacks": 10,
+        "flat_bonuses": [ { "stat": "crit_chance", "scale": 0.1 } ]
+      },
+	  {
+        "id": "buff_redmist_onkill2",
+        "name": "红雾传说",
+        "description": "血雾弥漫，尸横遍野。\n物理防护+10%力量，电击防护+10%敏捷，火焰防护+10%智力，酸液防护+10%感知。\n持续10回合，可叠加10次。",
+        "skill_requirements": [
+          {
+            "name": "melee",
+            "level": 9
+          }
+        ],
+		    "melee_allowed": true,
+    "unarmed_allowed": true,
+        "buff_duration": 10,
+        "max_stacks": 10,
+        "flat_bonuses": [
+          { "stat": "armor", "type": "bash", "scaling-stat": "str", "scale": 0.1 },
+          { "stat": "armor", "type": "cut", "scaling-stat": "str", "scale": 0.1 },
+		  { "stat": "armor", "type": "stab", "scaling-stat": "str", "scale": 0.1 },
+          { "stat": "armor", "type": "electric", "scaling-stat": "dex", "scale": 0.1 },
+          { "stat": "armor", "type": "heat", "scaling-stat": "int", "scale": 0.1 },
+		  { "stat": "armor", "type": "acid", "scaling-stat": "per", "scale": 0.1 }
+        ]
+      }],
+    "techniques": [
+      "redmist_shby",
+      "redmist_bxns",
+      "redmist_hfzr1",
+	  "redmist_hfzr2",
+      "redmist_ddzq",
+      "redmist_ddzc",
+      "redmist_ddhz",
+	  "redmist_xwmm"
+    ]}]

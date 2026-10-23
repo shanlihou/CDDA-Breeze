@@ -1,0 +1,35 @@
+[
+{
+    "id": "lbsk_wqb_fn57",
+    "type": "item_group",
+    "subtype": "collection",
+    "//": "fn57手枪包的物品组",
+    "items": [
+      { "item": "fn57", "count": 1 },
+      { "item": "manual_pistol", "count": 1 },
+      { "item": "fn57mag", "count": [ 3, 4 ] },
+      { "item": "rebel_sup", "count": 1 },
+      { "item": "57mm", "count": [ 2, 5 ] }
+    ]
+  },
+  {
+    "id": "lbsk_wqb_fn57",
+    "type": "ARMOR",
+    "name": "FN57手枪包",
+    "description": "CS1.6中警手枪，汞汞汞汞汞汞汞（手枪声音）！我去你怎么还没死，汞汞汞汞汞汞汞（手枪声音）！我怎么没打到你，明明我准心一直在你身上。",
+    "weight": "2800 g",
+    "volume": "2450 ml",
+    "price": 100,
+    "to_hit": 5,
+    "material": [ "cotton", "plastic" ],
+    "symbol": "[",
+    "looks_like": "box_large",
+    "color": "green",
+    "covers": [ "ARMS" ],
+    "coverage": 1,
+    "encumbrance": 1,
+    "warmth": 1,
+    "material_thickness": 3,
+    "use_action": { "type": "unpack", "group": "lbsk_wqb_fn57", "filthy_volume_threshold": "10 L" }
+  }
+]

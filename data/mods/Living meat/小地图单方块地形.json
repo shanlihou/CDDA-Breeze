@@ -1,0 +1,102 @@
+[
+  {
+    "type": "terrain",
+    "id": "t_livingmeat_wall_south",
+    "name": "活肉墙",
+    "description": "一堆肉块与血管生长缠绕形成的血肉墙体，甚至它还在蠕动。",
+    "symbol": "LINE_OXOX",
+    "color": "cyan",
+    "move_cost": 0,
+    "coverage": 100,
+    "roof": "t_livingmeat_floor",
+    "flags": [ "NOITEM", "SUPPORTS_ROOF", "WALL", "NO_SCENT", "AUTO_WALL_SYMBOL", "MINEABLE", "BLOCK_WIND" ],
+    "bash": {
+      "str_min": 10,
+      "str_max": 15,
+      "sound": "boom!",
+      "sound_fail": "whack!",
+      "ter_set": "t_livingmeat_floor",
+      "items": [ { "item": "蠕动肉块", "count": [ 10, 20 ] } ]
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "t_livingmeat_wall_north",
+    "name": "活肉墙",
+    "description": "一堆肉块与血管生长缠绕形成的血肉墙体，甚至它还在蠕动。",
+    "symbol": "LINE_OXOX",
+    "color": "cyan",
+    "move_cost": 0,
+    "coverage": 100,
+    "roof": "t_livingmeat_floor",
+    "flags": [ "NOITEM", "SUPPORTS_ROOF", "WALL", "NO_SCENT", "AUTO_WALL_SYMBOL", "MINEABLE", "BLOCK_WIND" ],
+    "bash": {
+      "str_min": 10,
+      "str_max": 15,
+      "sound": "boom!",
+      "sound_fail": "whack!",
+      "ter_set": "t_livingmeat_floor",
+      "items": [ { "item": "蠕动肉块", "count": [ 10, 20 ] } ]
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "t_livingmeat_wall_west",
+    "name": "活肉墙",
+    "description": "一堆肉块与血管生长缠绕形成的血肉墙体，甚至它还在蠕动。",
+    "symbol": "LINE_OXOX",
+    "color": "cyan",
+    "move_cost": 0,
+    "coverage": 100,
+    "roof": "t_livingmeat_floor",
+    "flags": [ "NOITEM", "SUPPORTS_ROOF", "WALL", "NO_SCENT", "AUTO_WALL_SYMBOL", "MINEABLE", "BLOCK_WIND" ],
+    "bash": {
+      "str_min": 10,
+      "str_max": 15,
+      "sound": "boom!",
+      "sound_fail": "whack!",
+      "ter_set": "t_livingmeat_floor",
+      "items": [ { "item": "蠕动肉块", "count": [ 10, 20 ] } ]
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "t_livingmeat_wall_east",
+    "name": "活肉墙",
+    "description": "一堆肉块与血管生长缠绕形成的血肉墙体，甚至它还在蠕动。",
+    "symbol": "LINE_OXOX",
+    "color": "cyan",
+    "move_cost": 0,
+    "coverage": 100,
+    "roof": "t_livingmeat_floor",
+    "flags": [ "NOITEM", "SUPPORTS_ROOF", "WALL", "NO_SCENT", "AUTO_WALL_SYMBOL", "MINEABLE", "BLOCK_WIND" ],
+    "bash": {
+      "str_min": 10,
+      "str_max": 15,
+      "sound": "boom!",
+      "sound_fail": "whack!",
+      "ter_set": "t_livingmeat_floor",
+      "items": [ { "item": "蠕动肉块", "count": [ 10, 20 ] } ]
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "t_livingmeat_floor",
+    "name": "活肉地板",
+    "description": "一块蠕动的活体地板，看起来有点恶心。",
+    "symbol": ".",
+    "color": "light_cyan",
+    "connect_groups": "METALFLOOR",
+    "connects_to": "METALFLOOR",
+    "move_cost": 2,
+    "flags": [ "TRANSPARENT", "FLAT", "ROAD", "CONNECT_WITH_WALL" ],
+    "bash": {
+      "sound": "boom!",
+      "ter_set": "t_null",
+      "str_min": 10,
+      "str_max": 15,
+      "str_min_supported": 200,
+      "items": [ { "item": "蠕动肉块", "count": [ 10, 20 ] } ]
+    }
+  }
+]

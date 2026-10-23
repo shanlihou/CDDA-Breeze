@@ -1,0 +1,107 @@
+[
+  {
+    "id": "death_explosion_oneineight",
+    "type": "SPELL",
+    "name": { "str": "念动火焰燃烧者之死" },
+    "valid_targets": [ "ally", "ground", "hostile" ],
+    "description": "有1/4几率爆燃。",
+    "flags": [ "WONDER", "NO_EXPLOSION_SFX" ],
+    "shape": "blast",
+    "effect": "noise",
+    "min_damage": 1,
+    "max_damage": 1,
+    "extra_effects": [
+      { "id": "death_fakespell" },
+      { "id": "death_fakespell" },
+      { "id": "death_fakespell" },
+      { "id": "death_fakespell" },
+      { "id": "death_fakespell" },
+      { "id": "death_fakespell" },
+      { "id": "death_fakespell" },
+      { "id": "death_conflagration", "hit_self": true }
+    ]
+  },
+  {
+    "id": "death_explosion_oneinfour",
+    "type": "SPELL",
+    "name": { "str": "念动火焰炼狱之死" },
+    "valid_targets": [ "ally", "ground", "hostile" ],
+    "description": "有1/2几率爆燃。",
+    "flags": [ "WONDER", "NO_EXPLOSION_SFX" ],
+    "shape": "blast",
+    "effect": "noise",
+    "min_damage": 1,
+    "max_damage": 1,
+    "extra_effects": [
+      { "id": "death_fakespell" },
+      { "id": "death_fakespell" },
+      { "id": "death_fakespell" },
+      { "id": "death_conflagration", "hit_self": true }
+    ]
+  },
+  {
+    "id": "death_telekeinetic_hit_oneinfive",
+    "type": "SPELL",
+    "name": { "str": "念动力死亡" },
+    "valid_targets": [ "ally", "ground", "hostile" ],
+    "description": "有1/5几率击倒目标。",
+    "flags": [ "WONDER" ],
+    "shape": "blast",
+    "effect": "noise",
+    "min_damage": 1,
+    "max_damage": 1,
+    "extra_effects": [
+      { "id": "death_fakespell" },
+      { "id": "death_fakespell" },
+      { "id": "death_fakespell" },
+      { "id": "death_fakespell" },
+      { "id": "death_knockdown", "hit_self": true }
+    ]
+  },
+  {
+    "id": "death_telekeinetic_hit_oneinthree",
+    "type": "SPELL",
+    "name": { "str": "念动力死亡" },
+    "valid_targets": [ "ally", "ground", "hostile" ],
+    "description": "有1/3几率击倒目标。",
+    "flags": [ "WONDER" ],
+    "shape": "blast",
+    "effect": "noise",
+    "min_damage": 1,
+    "max_damage": 1,
+    "extra_effects": [
+      { "id": "death_fakespell" },
+      { "id": "death_fakespell" },
+      { "id": "death_knockdown", "hit_self": true }
+    ]
+  },
+  {
+    "id": "death_knockdown",
+    "type": "SPELL",
+    "name": { "str": "念动力波" },
+    "valid_targets": [ "ally", "ground", "hostile" ],
+    "description": "击倒狂野念动力者附近的所有人。",
+    "flags": [ "NO_EXPLOSION_SFX", "SILENT", "RANDOM_DURATION" ],
+    "shape": "blast",
+    "effect": "attack",
+    "effect_str": "downed",
+    "min_aoe": 6,
+    "min_duration": 100,
+    "max_duration": 300
+  },
+  {
+    "id": "death_psychic_scream",
+    "type": "SPELL",
+    "name": { "str": "灵能尖啸" },
+    "valid_targets": [ "ally", "ground", "hostile" ],
+    "description": "如果玩家在灵能者死亡时靠近，则致晕和致盲。",
+    "flags": [ "NO_EXPLOSION_SFX", "SILENT", "RANDOM_DURATION" ],
+    "shape": "blast",
+    "effect": "attack",
+    "effect_str": "stunned",
+    "extra_effects": [ { "id": "pyrokinetic_flash_monster", "hit_self": false, "max_level": 4 } ],
+    "min_aoe": 6,
+    "min_duration": 100,
+    "max_duration": 500
+  }
+]

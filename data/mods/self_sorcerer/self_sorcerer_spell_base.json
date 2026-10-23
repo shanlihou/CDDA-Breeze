@@ -1,0 +1,1224 @@
+[
+  {
+    "id": "spell_craft_sorcerer_base_0",
+    "type": "SPELL",
+    "name": "术士-Lv0-基础",
+    "description": "对于0级法术，也就是戏法的研究。\n这个法术本身不提供任何效果，只在等级提升时使你获得其他法术。\n1级解锁本级法术，3级解锁下级基础，5级解锁研习和额外法术位。\n30级解锁大师法术，使你获得变异，魔力+2000，魔力+100%，魔力恢复+50%。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_EXPLOSION_SFX",
+      "SILENT"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_0",
+    "difficulty": 1,
+    "max_level": 30,
+    "base_casting_time": 500,
+    "base_energy_cost": 1000,
+    "learn_spells": {
+      "spell_craft_sorcerer_master_0": 30,
+      "spell_craft_sorcerer_scroll_0": 0,
+      "spell_craft_sorcerer_scroll_1": 3,
+      "spell_craft_sorcerer_scroll_item_0": 5,
+      "spell_craft_sorcerer_item_0": 5,
+      "spell_craft_sorcerer_lv0_acid": 1,
+      "spell_craft_sorcerer_lv0_cold": 1,
+      "spell_craft_sorcerer_lv0_electric": 1,
+      "spell_craft_sorcerer_lv0_heat": 1,
+      "spell_craft_sorcerer_lv0_light": 1,
+      "spell_craft_sorcerer_lv0_create_fire": 1,
+      "spell_craft_sorcerer_lv0_poison_spray": 1,
+      "spell_craft_sorcerer_lv0_chill_touch": 1
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_base_1",
+    "type": "SPELL",
+    "name": "术士-Lv1-基础",
+    "description": "对于1级法术的研究。\n这个法术本身不提供任何效果，只在等级提升时使你获得其他法术。\n3级解锁本级法术，5级解锁下级基础，7级解锁研习和额外法术位。\n30级解锁大师法术，智力+4，魔力+3000。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_EXPLOSION_SFX",
+      "SILENT"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_1",
+    "difficulty": 2,
+    "max_level": 30,
+    "base_casting_time": 1000,
+    "base_energy_cost": 1000,
+    "learn_spells": {
+      "spell_craft_sorcerer_master_1": 30,
+      "spell_craft_sorcerer_scroll_2": 5,
+      "spell_craft_sorcerer_scroll_item_1": 7,
+      "spell_craft_sorcerer_item_1": 7,
+      "spell_craft_sorcerer_lv1_missile": 3,
+      "spell_craft_sorcerer_lv1_burning_hands": 3,
+      "spell_craft_sorcerer_lv1_move": 3,
+      "spell_craft_sorcerer_lv1_magic_armor": 3,
+      "spell_craft_sorcerer_lv1_sludged": 3,
+      "spell_craft_sorcerer_lv1_create_water": 3,
+      "spell_craft_sorcerer_lv1_create_food": 3,
+      "spell_craft_sorcerer_lv1_air_bubble": 3,
+      "spell_craft_sorcerer_lv1_summon_monster": 3,
+      "spell_craft_sorcerer_lv1_summon_dummy": 3,
+      "spell_craft_sorcerer_lv1_door_open": 3,
+      "spell_craft_sorcerer_lv1_shield": 3,
+      "spell_craft_sorcerer_lv1_grease": 3,
+      "spell_craft_sorcerer_lv1_thunderwave": 3,
+      "spell_craft_sorcerer_lv1_fog_cloud": 3,
+      "spell_craft_sorcerer_lv1_ice_knife": 3,
+      "spell_craft_sorcerer_lv1_feather_fall": 0,
+      "spell_craft_sorcerer_lv1_absorb": 0,
+      "spell_craft_sorcerer_lv1_ease_pain": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_base_2",
+    "type": "SPELL",
+    "name": "术士-Lv2-基础",
+    "description": "对于2级法术的研究。\n这个法术本身不提供任何效果，只在等级提升时使你获得其他法术。\n5级解锁本级法术，7级解锁下级基础，9级解锁研习和额外法术位。\n30级解锁大师法术，魔力+25%，魔力恢复速度+50%。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_EXPLOSION_SFX",
+      "SILENT"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_2",
+    "difficulty": 3,
+    "max_level": 30,
+    "base_casting_time": 1500,
+    "base_energy_cost": 1000,
+    "learn_spells": {
+      "spell_craft_sorcerer_master_2": 30,
+      "spell_craft_sorcerer_scroll_3": 7,
+      "spell_craft_sorcerer_scroll_item_2": 9,
+      "spell_craft_sorcerer_item_2": 9,
+      "spell_craft_sorcerer_lv0_acid2": 1,
+      "spell_craft_sorcerer_lv0_cold2": 1,
+      "spell_craft_sorcerer_lv0_electric2": 1,
+      "spell_craft_sorcerer_lv0_heat2": 1,
+      "spell_craft_sorcerer_lv2_fire": 5,
+      "spell_craft_sorcerer_lv2_str": 5,
+      "spell_craft_sorcerer_lv2_dex": 5,
+      "spell_craft_sorcerer_lv2_int": 5,
+      "spell_craft_sorcerer_lv2_per": 5,
+      "spell_craft_sorcerer_lv2_sta": 5,
+      "spell_craft_sorcerer_lv2_sly": 5,
+      "spell_craft_sorcerer_lv2_armbull": 5,
+      "spell_craft_sorcerer_lv2_web": 5,
+      "spell_craft_sorcerer_lv2_invisibility": 5,
+      "spell_craft_sorcerer_lv2_lesser_restoration": 5,
+      "spell_craft_sorcerer_lv2_summon_monster": 5,
+      "spell_craft_sorcerer_lv2_long_fire": 5,
+      "spell_craft_sorcerer_lv2_icestone": 5,
+      "spell_craft_sorcerer_lv2_misty_step": 5,
+      "spell_craft_sorcerer_lv2_drain": 0,
+      "spell_craft_sorcerer_lv2_scry": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_base_3",
+    "type": "SPELL",
+    "name": "术士-Lv3-基础",
+    "description": "对于3级法术的研究。\n这个法术本身不提供任何效果，只在等级提升时使你获得其他法术。\n7级解锁本级法术，9级解锁下级基础，11级解锁研习和额外法术位。\n30级解锁大师法术，全属性+2，速度+10。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_EXPLOSION_SFX",
+      "SILENT"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_3",
+    "difficulty": 4,
+    "max_level": 30,
+    "base_casting_time": 2000,
+    "base_energy_cost": 1000,
+    "learn_spells": {
+      "spell_craft_sorcerer_master_3": 30,
+      "spell_craft_sorcerer_scroll_4": 9,
+      "spell_craft_sorcerer_scroll_item_3": 11,
+      "spell_craft_sorcerer_item_3": 11,
+      "spell_craft_sorcerer_lv3_fireball": 7,
+      "spell_craft_sorcerer_lv3_lightning_bolt": 7,
+      "spell_craft_sorcerer_lv3_speedup": 7,
+      "spell_craft_sorcerer_lv3_speeddown": 7,
+      "spell_craft_sorcerer_lv3_light": 7,
+      "spell_craft_sorcerer_lv3_ciyuanmen": 7,
+      "spell_craft_sorcerer_lv3_team_food": 7,
+      "spell_craft_sorcerer_lv3_summon_monster": 7,
+      "spell_craft_sorcerer_lv3_create_enchanted_item": 7,
+      "spell_craft_sorcerer_lv3_door_open": 7,
+      "spell_craft_sorcerer_lv3_fly": 7,
+      "spell_craft_sorcerer_lv3_stinking_cloud": 7,
+      "spell_craft_sorcerer_lv3_spell_echo": 7,
+      "spell_craft_sorcerer_lv3_amplify": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_base_4",
+    "type": "SPELL",
+    "name": "术士-Lv4-基础",
+    "description": "对于4级法术的研究。\n这个法术本身不提供任何效果，只在等级提升时使你获得其他法术。\n9级解锁本级法术，11级解锁下级基础，13级解锁研习和额外法术位。\n30级解锁大师法术，魔力+8000。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_EXPLOSION_SFX",
+      "SILENT"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_4",
+    "difficulty": 5,
+    "max_level": 30,
+    "base_casting_time": 2500,
+    "base_energy_cost": 1000,
+    "learn_spells": {
+      "spell_craft_sorcerer_master_4": 30,
+      "spell_craft_sorcerer_scroll_5": 11,
+      "spell_craft_sorcerer_scroll_item_4": 13,
+      "spell_craft_sorcerer_item_4": 13,
+      "spell_craft_sorcerer_lv0_acid4": 1,
+      "spell_craft_sorcerer_lv0_cold4": 1,
+      "spell_craft_sorcerer_lv0_electric4": 1,
+      "spell_craft_sorcerer_lv0_heat4": 1,
+      "spell_craft_sorcerer_lv4_ice_storm": 9,
+      "spell_craft_sorcerer_lv4_stoneskin": 9,
+      "spell_craft_sorcerer_lv4_missile": 9,
+      "spell_craft_sorcerer_lv4_invisibility": 9,
+      "spell_craft_sorcerer_lv4_light": 9,
+      "spell_craft_sorcerer_lv4_restoration": 9,
+      "spell_craft_sorcerer_lv4_freedom_movement": 9,
+      "spell_craft_sorcerer_lv4_summon_monster": 9,
+      "spell_craft_sorcerer_lv4_jackhammer": 9,
+      "spell_craft_sorcerer_lv4_door_locked": 9,
+      "spell_craft_sorcerer_lv4_polymorph": 9,
+      "spell_craft_sorcerer_lv4_mass_heal": 0,
+      "spell_craft_sorcerer_lv4_summon_undead": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_base_5",
+    "type": "SPELL",
+    "name": "术士-Lv5-基础",
+    "description": "对于5级法术的研究。\n这个法术本身不提供任何效果，只在等级提升时使你获得其他法术。\n11级解锁本级法术，13级解锁下级基础，15级解锁研习和额外法术位。\n30级解锁大师法术，所受伤害-30%，生命+50%。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_EXPLOSION_SFX",
+      "SILENT"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_5",
+    "difficulty": 6,
+    "max_level": 30,
+    "base_casting_time": 3000,
+    "base_energy_cost": 1000,
+    "learn_spells": {
+      "spell_craft_sorcerer_master_5": 30,
+      "spell_craft_sorcerer_scroll_6": 13,
+      "spell_craft_sorcerer_scroll_item_5": 15,
+      "spell_craft_sorcerer_item_5": 15,
+      "spell_craft_sorcerer_lv5_ciyuanmen": 11,
+      "spell_craft_sorcerer_lv5_dragon_fire": 11,
+      "spell_craft_sorcerer_lv5_dragon_cold": 11,
+      "spell_craft_sorcerer_lv5_dragon_electric": 11,
+      "spell_craft_sorcerer_lv5_dragon_bio": 11,
+      "spell_craft_sorcerer_lv5_dragon_acid": 11,
+      "spell_craft_sorcerer_lv5_weary": 11,
+      "spell_craft_sorcerer_lv5_invisibility": 11,
+      "spell_craft_sorcerer_lv5_magic_armor": 11,
+      "spell_craft_sorcerer_lv5_life_bubble": 11,
+      "spell_craft_sorcerer_lv5_summon_monster": 11,
+      "spell_craft_sorcerer_lv5_create_enchanted_item": 11,
+      "spell_craft_sorcerer_lv5_downed": 11,
+      "spell_craft_sorcerer_lv5_trans_dirt2pit": 11,
+      "spell_craft_sorcerer_lv5_trans_pit2dirt": 11,
+      "spell_craft_sorcerer_lv5_create_food": 11,
+      "spell_craft_sorcerer_lv5_cone_of_cold": 11,
+      "spell_craft_sorcerer_lv5_mark_1": 11,
+      "spell_craft_sorcerer_lv5_warp_1": 11,
+      "spell_craft_sorcerer_lv5_mark_2": 11,
+      "spell_craft_sorcerer_lv5_warp_2": 11,
+      "spell_craft_sorcerer_lv5_mark_3": 11,
+      "spell_craft_sorcerer_lv5_warp_3": 11,
+      "spell_craft_sorcerer_lv5_telekinesis": 11,
+      "spell_craft_sorcerer_lv5_dominate": 11,
+      "spell_craft_sorcerer_lv5_summon_beast": 11,
+      "spell_craft_sorcerer_lv5_charged_blast": 0,
+      "spell_craft_sorcerer_lv5_summon_shadow": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_base_6",
+    "type": "SPELL",
+    "name": "术士-Lv6-基础",
+    "description": "对于6级法术的研究。\n这个法术本身不提供任何效果，只在等级提升时使你获得其他法术。\n13级解锁本级法术，15级解锁下级基础，17级解锁研习和额外法术位。\n30级解锁大师法术，魔力恢复速度+200%。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_EXPLOSION_SFX",
+      "SILENT"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_6",
+    "difficulty": 7,
+    "max_level": 30,
+    "base_casting_time": 3500,
+    "base_energy_cost": 1000,
+    "learn_spells": {
+      "spell_craft_sorcerer_master_6": 30,
+      "spell_craft_sorcerer_scroll_7": 15,
+      "spell_craft_sorcerer_scroll_item_6": 17,
+      "spell_craft_sorcerer_item_6": 17,
+      "spell_craft_sorcerer_lv0_acid6": 1,
+      "spell_craft_sorcerer_lv0_cold6": 1,
+      "spell_craft_sorcerer_lv0_electric6": 1,
+      "spell_craft_sorcerer_lv0_heat6": 1,
+      "spell_craft_sorcerer_lv6_shocking_lash_1": 13,
+      "spell_craft_sorcerer_lv6_iceball": 13,
+      "spell_craft_sorcerer_lv6_heal": 13,
+      "spell_craft_sorcerer_lv6_str": 13,
+      "spell_craft_sorcerer_lv6_dex": 13,
+      "spell_craft_sorcerer_lv6_int": 13,
+      "spell_craft_sorcerer_lv6_per": 13,
+      "spell_craft_sorcerer_lv6_sta": 13,
+      "spell_craft_sorcerer_lv6_sly": 13,
+      "spell_craft_sorcerer_lv6_magic_armor": 13,
+      "spell_craft_sorcerer_lv6_summon_monster": 13,
+      "spell_craft_sorcerer_lv6_kill_fungal": 13,
+      "spell_craft_sorcerer_lv6_disintegrate": 13,
+      "spell_craft_sorcerer_lv6_summon_flame": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_base_7",
+    "type": "SPELL",
+    "name": "术士-Lv7-基础",
+    "description": "对于7级法术的研究。\n这个法术本身不提供任何效果，只在等级提升时使你获得其他法术。\n15级解锁本级法术，17级解锁下级基础，19级解锁研习和额外法术位。\n30级解锁大师法术，耐力+50%，耐力恢复速度+100%。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_EXPLOSION_SFX",
+      "SILENT"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_7",
+    "difficulty": 8,
+    "max_level": 30,
+    "base_casting_time": 4000,
+    "base_energy_cost": 1000,
+    "learn_spells": {
+      "spell_craft_sorcerer_master_7": 30,
+      "spell_craft_sorcerer_scroll_8": 17,
+      "spell_craft_sorcerer_scroll_item_7": 19,
+      "spell_craft_sorcerer_item_7": 19,
+      "spell_craft_sorcerer_lv7_kill": 15,
+      "spell_craft_sorcerer_lv7_exhausted": 15,
+      "spell_craft_sorcerer_lv7_armbull": 15,
+      "spell_craft_sorcerer_lv7_ciyuanmen": 15,
+      "spell_craft_sorcerer_lv7_rainbow": 15,
+      "spell_craft_sorcerer_lv7_greater_restoration": 15,
+      "spell_craft_sorcerer_lv7_summon_monster": 15,
+      "spell_craft_sorcerer_lv7_create_enchanted_item": 15,
+      "spell_craft_sorcerer_lv7_blind": 15,
+      "spell_craft_sorcerer_lv7_invisibility": 15,
+      "spell_craft_sorcerer_lv7_truesight": 15,
+      "spell_craft_sorcerer_lv7_banishment": 15
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_base_8",
+    "type": "SPELL",
+    "name": "术士-Lv8-基础",
+    "description": "对于8级法术的研究。\n这个法术本身不提供任何效果，只在等级提升时使你获得其他法术。\n17级解锁本级法术，19级解锁下级基础，21级解锁研习和额外法术位。\n30级解锁大师法术，魔力+100%，",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_EXPLOSION_SFX",
+      "SILENT"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_8",
+    "difficulty": 9,
+    "max_level": 30,
+    "base_casting_time": 4500,
+    "base_energy_cost": 1000,
+    "learn_spells": {
+      "spell_craft_sorcerer_master_8": 30,
+      "spell_craft_sorcerer_scroll_9": 19,
+      "spell_craft_sorcerer_scroll_item_8": 21,
+      "spell_craft_sorcerer_item_8": 21,
+      "spell_craft_sorcerer_lv0_acid8": 1,
+      "spell_craft_sorcerer_lv0_cold8": 1,
+      "spell_craft_sorcerer_lv0_electric8": 1,
+      "spell_craft_sorcerer_lv0_heat8": 1,
+      "spell_craft_sorcerer_lv8_firestorm": 17,
+      "spell_craft_sorcerer_lv8_polar_ray": 17,
+      "spell_craft_sorcerer_lv8_missile": 17,
+      "spell_craft_sorcerer_lv8_summon_monster": 17,
+      "spell_craft_sorcerer_lv8_magic_armor": 17,
+      "spell_craft_sorcerer_lv8_stun": 17,
+      "spell_craft_sorcerer_lv8_jackhammer": 17,
+      "spell_craft_sorcerer_lv8_sunburst": 17,
+      "spell_craft_sorcerer_lv8_greater_shield": 17
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_base_9",
+    "type": "SPELL",
+    "name": "术士-Lv9-基础",
+    "description": "对于9级法术的研究。\n这个法术本身不提供任何效果，只在等级提升时使你获得其他法术。\n19级解锁本级法术，23级解锁研习和额外法术位。\n30级解锁大师法术，全属性和速度+25%。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_EXPLOSION_SFX",
+      "SILENT"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_9",
+    "difficulty": 10,
+    "max_level": 30,
+    "base_casting_time": 5000,
+    "base_energy_cost": 1000,
+    "learn_spells": {
+      "spell_craft_sorcerer_master_9": 30,
+      "spell_craft_sorcerer_scroll_item_9": 23,
+      "spell_craft_sorcerer_item_9": 23,
+      "spell_craft_sorcerer_lv9_time_stop": 19,
+      "spell_craft_sorcerer_lv9_kill": 19,
+      "spell_craft_sorcerer_lv9_invisibility": 19,
+      "spell_craft_sorcerer_lv9_fireball": 19,
+      "spell_craft_sorcerer_lv9_summon_monster": 19,
+      "spell_craft_sorcerer_lv9_create_enchanted_item": 19
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_master_0",
+    "type": "SPELL",
+    "name": "术士-大师法术-Lv0",
+    "description": "基础达到30级的奖励法术。\n获得变异：合格术士。\n你是一名合格的术士。提升你的魔力容纳与魔力再生速度。\n魔力+2000\n魔力+100%\n魔力恢复+50%",
+    "components": "spell_sorcerer_use_item_master_0",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_EXPLOSION_SFX",
+      "SILENT",
+      "MUTATE_TRAIT"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "base_casting_time": 6000,
+    "energy_source": "MANA",
+    "spell_class": "NONE",
+    "difficulty": 1,
+    "max_level": 0,
+    "base_energy_cost": 0,
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_master_0_1"
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "spell_craft_sorcerer_master_0",
+    "name": "合格术士",
+    "points": 0,
+    "description": "你是一名合格的术士。提升你的魔力容纳与魔力再生速度。\n魔力+2000\n魔力+100%\n魔力恢复+50%",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": false,
+    "enchantments": [
+      {
+        "values": [
+          {
+            "value": "MAX_MANA",
+            "add": 2000
+          },
+          {
+            "value": "MAX_MANA",
+            "multiply": 1.0
+          },
+          {
+            "value": "REGEN_MANA",
+            "multiply": 0.5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_master_0_1",
+    "type": "SPELL",
+    "name": "大师效果-Lv0",
+    "description": "获得变异：合格术士。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_EXPLOSION_SFX",
+      "SILENT",
+      "MUTATE_TRAIT"
+    ],
+    "effect": "mutate",
+    "effect_str": "spell_craft_sorcerer_master_0",
+    "shape": "blast",
+    "base_casting_time": 0,
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "energy_source": "MANA",
+    "spell_class": "NONE",
+    "difficulty": 1,
+    "max_level": 0,
+    "base_energy_cost": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_master_1",
+    "type": "SPELL",
+    "name": "术士-大师法术-Lv1",
+    "description": "基础达到30级的奖励法术。\n智力+4，魔力+3000。\n持续7天+智力x30分钟。",
+    "components": "spell_sorcerer_use_item_master_1",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_EXPLOSION_SFX",
+      "SILENT"
+    ],
+    "effect": "remove_effect",
+    "effect_str": "effect_sorcerer_master_1",
+    "shape": "blast",
+    "base_casting_time": 6000,
+    "energy_source": "MANA",
+    "spell_class": "NONE",
+    "difficulty": 2,
+    "max_level": 0,
+    "base_energy_cost": 1000,
+    "min_duration": 63000000,
+    "max_duration": 63000000,
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_master_1_1"
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_master_1_1",
+    "type": "SPELL",
+    "name": "大师效果-Lv1",
+    "description": "获得对应等级的大师法术效果。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_EXPLOSION_SFX",
+      "SILENT"
+    ],
+    "effect": "attack",
+    "effect_str": "effect_sorcerer_master_1",
+    "shape": "blast",
+    "base_casting_time": 6000,
+    "energy_source": "MANA",
+    "spell_class": "NONE",
+    "difficulty": 2,
+    "max_level": 0,
+    "base_energy_cost": 0,
+    "min_duration": 63000000,
+    "max_duration": 63000000
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_sorcerer_master_1",
+    "name": [
+      "大师法术lv1"
+    ],
+    "desc": [
+      "智力+4，魔力+3000。"
+    ],
+    "apply_message": "你得到了精研的奖励。",
+    "remove_message": "奖励消失了。",
+    "max_intensity": 999,
+    "int_dur_factor": "60 m",
+    "rating": "good",
+    "enchantments": [
+      {
+        "values": [
+          {
+            "value": "INTELLIGENCE",
+            "add": 4
+          },
+          {
+            "value": "MAX_MANA",
+            "add": 3000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_master_2",
+    "type": "SPELL",
+    "name": "术士-大师法术-Lv2",
+    "description": "基础达到30级的奖励法术。\n魔力+25%，魔力恢复速度+50%。\n持续7天+智力x30分钟。",
+    "components": "spell_sorcerer_use_item_master_2",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_EXPLOSION_SFX",
+      "SILENT"
+    ],
+    "effect": "remove_effect",
+    "effect_str": "effect_sorcerer_master_2",
+    "shape": "blast",
+    "base_casting_time": 6000,
+    "energy_source": "MANA",
+    "spell_class": "NONE",
+    "difficulty": 3,
+    "max_level": 0,
+    "base_energy_cost": 2000,
+    "min_duration": 63000000,
+    "max_duration": 63000000,
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_master_2_1"
+      }
+    ]
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_master_1_1",
+    "type": "SPELL",
+    "name": "大师效果-Lv2",
+    "id": "spell_craft_sorcerer_master_2_1",
+    "effect_str": "effect_sorcerer_master_2",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_sorcerer_master_2",
+    "name": [
+      "大师法术lv2"
+    ],
+    "desc": [
+      "魔力+25%，魔力恢复速度+50%。"
+    ],
+    "apply_message": "你得到了精研的奖励。",
+    "remove_message": "奖励消失了。",
+    "max_intensity": 999,
+    "int_dur_factor": "60 m",
+    "rating": "good",
+    "enchantments": [
+      {
+        "values": [
+          {
+            "value": "MAX_MANA",
+            "multiply": 0.25
+          },
+          {
+            "value": "REGEN_MANA",
+            "multiply": 0.5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_master_3",
+    "type": "SPELL",
+    "name": "术士-大师法术-Lv3",
+    "description": "基础达到30级的奖励法术。\n全属性+2，速度+10。\n持续7天+智力x30分钟。",
+    "components": "spell_sorcerer_use_item_master_3",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_EXPLOSION_SFX",
+      "SILENT"
+    ],
+    "effect": "remove_effect",
+    "effect_str": "effect_sorcerer_master_3",
+    "shape": "blast",
+    "base_casting_time": 6000,
+    "energy_source": "MANA",
+    "spell_class": "NONE",
+    "difficulty": 4,
+    "max_level": 0,
+    "base_energy_cost": 3000,
+    "min_duration": 63000000,
+    "max_duration": 63000000,
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_master_3_1"
+      }
+    ]
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_master_1_1",
+    "type": "SPELL",
+    "name": "大师效果-Lv3",
+    "id": "spell_craft_sorcerer_master_3_1",
+    "effect_str": "effect_sorcerer_master_3",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_sorcerer_master_3",
+    "name": [
+      "大师法术lv3"
+    ],
+    "desc": [
+      "全属性+2，速度+10。"
+    ],
+    "apply_message": "你得到了精研的奖励。",
+    "remove_message": "奖励消失了。",
+    "max_intensity": 999,
+    "int_dur_factor": "60 m",
+    "rating": "good",
+    "enchantments": [
+      {
+        "values": [
+          {
+            "value": "STRENGTH",
+            "add": 2
+          },
+          {
+            "value": "DEXTERITY",
+            "add": 2
+          },
+          {
+            "value": "INTELLIGENCE",
+            "add": 2
+          },
+          {
+            "value": "PERCEPTION",
+            "add": 2
+          },
+          {
+            "value": "SPEED",
+            "add": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_master_4",
+    "type": "SPELL",
+    "name": "术士-大师法术-Lv4",
+    "description": "基础达到30级的奖励法术。\n魔力+8000。\n持续7天+智力x30分钟。",
+    "components": "spell_sorcerer_use_item_master_4",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_EXPLOSION_SFX",
+      "SILENT"
+    ],
+    "effect": "remove_effect",
+    "effect_str": "effect_sorcerer_master_4",
+    "shape": "blast",
+    "base_casting_time": 6000,
+    "energy_source": "MANA",
+    "spell_class": "NONE",
+    "difficulty": 5,
+    "max_level": 0,
+    "base_energy_cost": 4000,
+    "min_duration": 63000000,
+    "max_duration": 63000000,
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_master_4_1"
+      }
+    ]
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_master_1_1",
+    "type": "SPELL",
+    "name": "大师效果-Lv4",
+    "id": "spell_craft_sorcerer_master_4_1",
+    "effect_str": "effect_sorcerer_master_4",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_sorcerer_master_4",
+    "name": [
+      "大师法术lv4"
+    ],
+    "desc": [
+      "魔力+8000。"
+    ],
+    "apply_message": "你得到了精研的奖励。",
+    "remove_message": "奖励消失了。",
+    "max_intensity": 999,
+    "int_dur_factor": "60 m",
+    "rating": "good",
+    "enchantments": [
+      {
+        "values": [
+          {
+            "value": "MAX_MANA",
+            "add": 8000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_master_5",
+    "type": "SPELL",
+    "name": "术士-大师法术-Lv5",
+    "description": "基础达到30级的奖励法术。\n所受伤害-30%，生命+50%。\n持续7天+智力x30分钟。",
+    "components": "spell_sorcerer_use_item_master_5",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_EXPLOSION_SFX",
+      "SILENT"
+    ],
+    "effect": "remove_effect",
+    "effect_str": "effect_sorcerer_master_5",
+    "shape": "blast",
+    "base_casting_time": 6000,
+    "energy_source": "MANA",
+    "spell_class": "NONE",
+    "difficulty": 6,
+    "max_level": 0,
+    "base_energy_cost": 5000,
+    "min_duration": 63000000,
+    "max_duration": 63000000,
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_master_5_1"
+      }
+    ]
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_master_1_1",
+    "type": "SPELL",
+    "name": "大师效果-Lv5",
+    "id": "spell_craft_sorcerer_master_5_1",
+    "effect_str": "effect_sorcerer_master_5",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_sorcerer_master_5",
+    "name": [
+      "大师法术lv5"
+    ],
+    "desc": [
+      "所受伤害-30%，生命+50%。"
+    ],
+    "apply_message": "你得到了精研的奖励。",
+    "remove_message": "奖励消失了。",
+    "max_intensity": 999,
+    "int_dur_factor": "60 m",
+    "rating": "good",
+    "enchantments": [
+      {
+        "values": [
+          {
+            "value": "MAX_HP",
+            "multiply": 0.5
+          },
+          {
+            "value": "ARMOR_ACID",
+            "multiply": -0.3
+          },
+          {
+            "value": "ARMOR_BASH",
+            "multiply": -0.3
+          },
+          {
+            "value": "ARMOR_BIO",
+            "multiply": -0.3
+          },
+          {
+            "value": "ARMOR_BULLET",
+            "multiply": -0.3
+          },
+          {
+            "value": "ARMOR_COLD",
+            "multiply": -0.3
+          },
+          {
+            "value": "ARMOR_CUT",
+            "multiply": -0.3
+          },
+          {
+            "value": "ARMOR_ELEC",
+            "multiply": -0.3
+          },
+          {
+            "value": "ARMOR_HEAT",
+            "multiply": -0.3
+          },
+          {
+            "value": "ARMOR_STAB",
+            "multiply": -0.3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_master_6",
+    "type": "SPELL",
+    "name": "术士-大师法术-Lv6",
+    "description": "基础达到30级的奖励法术。\n魔力恢复速度+200%。\n持续7天+智力x30分钟。",
+    "components": "spell_sorcerer_use_item_master_6",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_EXPLOSION_SFX",
+      "SILENT"
+    ],
+    "effect": "remove_effect",
+    "effect_str": "effect_sorcerer_master_6",
+    "shape": "blast",
+    "base_casting_time": 6000,
+    "energy_source": "MANA",
+    "spell_class": "NONE",
+    "difficulty": 7,
+    "max_level": 0,
+    "base_energy_cost": 6000,
+    "min_duration": 63000000,
+    "max_duration": 63000000,
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_master_6_1"
+      }
+    ]
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_master_1_1",
+    "type": "SPELL",
+    "name": "大师效果-Lv6",
+    "id": "spell_craft_sorcerer_master_6_1",
+    "effect_str": "effect_sorcerer_master_6",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_sorcerer_master_6",
+    "name": [
+      "大师法术lv6"
+    ],
+    "desc": [
+      "魔力恢复速度+200%。"
+    ],
+    "apply_message": "你得到了精研的奖励。",
+    "remove_message": "奖励消失了。",
+    "max_intensity": 999,
+    "int_dur_factor": "60 m",
+    "rating": "good",
+    "enchantments": [
+      {
+        "values": [
+          {
+            "value": "REGEN_MANA",
+            "multiply": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_master_7",
+    "type": "SPELL",
+    "name": "术士-大师法术-Lv7",
+    "description": "基础达到30级的奖励法术。\n耐力+50%，耐力恢复速度+100%。\n持续7天+智力x30分钟。",
+    "components": "spell_sorcerer_use_item_master_7",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_EXPLOSION_SFX",
+      "SILENT"
+    ],
+    "effect": "remove_effect",
+    "effect_str": "effect_sorcerer_master_7",
+    "shape": "blast",
+    "base_casting_time": 6000,
+    "energy_source": "MANA",
+    "spell_class": "NONE",
+    "difficulty": 8,
+    "max_level": 0,
+    "base_energy_cost": 7000,
+    "min_duration": 63000000,
+    "max_duration": 63000000,
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_master_7_1"
+      }
+    ]
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_master_1_1",
+    "type": "SPELL",
+    "name": "大师效果-Lv7",
+    "id": "spell_craft_sorcerer_master_7_1",
+    "effect_str": "effect_sorcerer_master_7",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_sorcerer_master_7",
+    "name": [
+      "大师法术lv7"
+    ],
+    "desc": [
+      "耐力+50%，耐力恢复速度+100%。"
+    ],
+    "apply_message": "你得到了精研的奖励。",
+    "remove_message": "奖励消失了。",
+    "max_intensity": 999,
+    "int_dur_factor": "60 m",
+    "rating": "good",
+    "enchantments": [
+      {
+        "values": [
+          {
+            "value": "MAX_STAMINA",
+            "multiply": 0.5
+          },
+          {
+            "value": "REGEN_STAMINA",
+            "multiply": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_master_8",
+    "type": "SPELL",
+    "name": "术士-大师法术-Lv8",
+    "description": "基础达到30级的奖励法术。\n魔力+100%。\n持续7天+智力x30分钟。",
+    "components": "spell_sorcerer_use_item_master_8",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_EXPLOSION_SFX",
+      "SILENT"
+    ],
+    "effect": "remove_effect",
+    "effect_str": "effect_sorcerer_master_8",
+    "shape": "blast",
+    "base_casting_time": 6000,
+    "energy_source": "MANA",
+    "spell_class": "NONE",
+    "difficulty": 9,
+    "max_level": 0,
+    "base_energy_cost": 8000,
+    "min_duration": 63000000,
+    "max_duration": 63000000,
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_master_8_1"
+      }
+    ]
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_master_1_1",
+    "type": "SPELL",
+    "name": "大师效果-Lv8",
+    "id": "spell_craft_sorcerer_master_8_1",
+    "effect_str": "effect_sorcerer_master_8",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_sorcerer_master_8",
+    "name": [
+      "大师法术lv8"
+    ],
+    "desc": [
+      "魔力+100%。"
+    ],
+    "apply_message": "你得到了精研的奖励。",
+    "remove_message": "奖励消失了。",
+    "max_intensity": 999,
+    "int_dur_factor": "60 m",
+    "rating": "good",
+    "enchantments": [
+      {
+        "values": [
+          {
+            "value": "MAX_MANA",
+            "multiply": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_master_9",
+    "type": "SPELL",
+    "name": "术士-大师法术-Lv9",
+    "description": "基础达到30级的奖励法术。\n全属性和速度+25%。\n持续7天+智力x30分钟。",
+    "components": "spell_sorcerer_use_item_master_9",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_EXPLOSION_SFX",
+      "SILENT"
+    ],
+    "effect": "remove_effect",
+    "effect_str": "effect_sorcerer_master_9",
+    "shape": "blast",
+    "base_casting_time": 6000,
+    "energy_source": "MANA",
+    "spell_class": "NONE",
+    "difficulty": 10,
+    "max_level": 0,
+    "base_energy_cost": 9000,
+    "min_duration": 63000000,
+    "max_duration": 63000000,
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_master_9_1"
+      }
+    ]
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_master_1_1",
+    "type": "SPELL",
+    "name": "大师效果-Lv9",
+    "id": "spell_craft_sorcerer_master_9_1",
+    "effect_str": "effect_sorcerer_master_9",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_sorcerer_master_9",
+    "name": [
+      "大师法术lv9"
+    ],
+    "desc": [
+      "全属性和速度+25%。"
+    ],
+    "apply_message": "你得到了精研的奖励。",
+    "remove_message": "奖励消失了。",
+    "max_intensity": 999,
+    "int_dur_factor": "60 m",
+    "rating": "good",
+    "enchantments": [
+      {
+        "values": [
+          {
+            "value": "STRENGTH",
+            "multiply": 0.25
+          },
+          {
+            "value": "DEXTERITY",
+            "multiply": 0.25
+          },
+          {
+            "value": "INTELLIGENCE",
+            "multiply": 0.25
+          },
+          {
+            "value": "PERCEPTION",
+            "multiply": 0.25
+          },
+          {
+            "value": "SPEED",
+            "multiply": 0.25
+          }
+        ]
+      }
+    ]
+  }
+]

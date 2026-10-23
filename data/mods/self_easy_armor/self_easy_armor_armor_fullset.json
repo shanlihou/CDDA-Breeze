@@ -1,0 +1,1760 @@
+[
+  {
+    "id": "self_easy_armor_1",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-木头",
+    "description": "一套由处理过的材料制成的全身装甲。\n增加生命20。",
+    "weight": "10200 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "wood", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 3 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 6, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "wood", "covered_by_mat": 100, "thickness": 3 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 5 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 9, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "wood", "covered_by_mat": 100, "thickness": 4.5 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 8, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "wood", "covered_by_mat": 100, "thickness": 4 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 5, "material": [
+      { "type": "wood", "covered_by_mat": 100, "thickness": 2.5 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 14,
+    "flags": [ "VARSIZE", "STURDY", "OUTER", "WATERPROOF", "RAINPROOF", "ELECTRIC_IMMUNE" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "MAX_HP", "add": 20 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_2",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-皮革",
+    "description": "一套由处理过的材料制成的全身装甲。\n增加2躲闪次数。",
+    "weight": "6800 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "leather", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 2 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 3, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "leather", "covered_by_mat": 100, "thickness": 3 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 3 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 6, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "leather", "covered_by_mat": 100, "thickness": 4.5 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 5, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "leather", "covered_by_mat": 100, "thickness": 4 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 2, "material": [
+      { "type": "leather", "covered_by_mat": 100, "thickness": 2.5 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 1 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 14,
+    "flags": [ "VARSIZE", "STURDY", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "BONUS_DODGE", "add": 2 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_3",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-铁",
+    "description": "一套由处理过的材料制成的全身装甲。\n降低30%物理伤害。",
+    "weight": "13426 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "iron", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 5 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 9, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "iron", "covered_by_mat": 100, "thickness": 4 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 8 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 15, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "iron", "covered_by_mat": 100, "thickness": 5.5 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 13, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "iron", "covered_by_mat": 100, "thickness": 5 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 7, "material": [
+      { "type": "iron", "covered_by_mat": 100, "thickness": 3.5 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 15,
+    "flags": [ "VARSIZE", "STURDY", "OUTER", "RAD_PROOF", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "ARMOR_CUT", "multiply": -0.3 },
+            { "value": "ARMOR_BASH", "multiply": -0.3 },
+            { "value": "ARMOR_STAB", "multiply": -0.3 },
+            { "value": "ARMOR_BULLET", "multiply": -0.3 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_4",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-金",
+    "description": "一套由处理过的材料制成的全身装甲。\n增加50%魔力。",
+    "weight": "32640 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "gold", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 5 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 9, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "gold", "covered_by_mat": 100, "thickness": 3 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 8 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 15, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "gold", "covered_by_mat": 100, "thickness": 4.5 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 13, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "gold", "covered_by_mat": 100, "thickness": 4 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 7, "material": [
+      { "type": "gold", "covered_by_mat": 100, "thickness": 2.5 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 20,
+    "flags": [ "VARSIZE", "STURDY", "OUTER", "RAD_PROOF", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "MAX_MANA", "multiply": 0.5 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_5",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-钻石",
+    "description": "一套由处理过的材料制成的全身装甲。\n增加生命50。",
+    "weight": "10114 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "diamond", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 3 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 6, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "diamond", "covered_by_mat": 100, "thickness": 3 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 5 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 9, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "diamond", "covered_by_mat": 100, "thickness": 4.5 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 8, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "diamond", "covered_by_mat": 100, "thickness": 4 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 5, "material": [
+      { "type": "diamond", "covered_by_mat": 100, "thickness": 2.5 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 20,
+    "flags": [ "VARSIZE", "STURDY", "OUTER", "WATERPROOF", "RAD_PROOF", "RAINPROOF", "SWIM_GOGGLES" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "MAX_HP", "add": 50 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_6",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-铝",
+    "description": "一套由处理过的材料制成的全身装甲。\n增加20%+200魔力。",
+    "weight": "4590 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "aluminum", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 5 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 9, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "aluminum", "covered_by_mat": 100, "thickness": 3 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 8 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 15, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "aluminum", "covered_by_mat": 100, "thickness": 4.5 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 13, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "aluminum", "covered_by_mat": 100, "thickness": 4 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 7, "material": [
+      { "type": "aluminum", "covered_by_mat": 100, "thickness": 2.5 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 14,
+    "flags": [ "VARSIZE", "STURDY", "OUTER", "WATERPROOF", "RAD_PROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "MAX_MANA", "multiply": 0.2 },
+            { "value": "MAX_MANA", "add": 200 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_7",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-骨",
+    "description": "一套由处理过的材料制成的全身装甲。\n调节体温+-30。",
+    "weight": "15300 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "bone", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 3 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 6, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "bone", "covered_by_mat": 100, "thickness": 3 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 5 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 9, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "bone", "covered_by_mat": 100, "thickness": 4.5 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 8, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "bone", "covered_by_mat": 100, "thickness": 4 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 5, "material": [
+      { "type": "bone", "covered_by_mat": 100, "thickness": 2.5 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 17,
+    "flags": [ "VARSIZE", "STURDY", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "CLIMATE_CONTROL_HEAT", "add": 30 },
+    				{ "value": "CLIMATE_CONTROL_CHILL", "add": 30 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_8",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-铜",
+    "description": "一套由处理过的材料制成的全身装甲。\n增加生命20%+20。",
+    "weight": "15230 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "copper", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 5 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 9, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "copper", "covered_by_mat": 100, "thickness": 3 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 8 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 15, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "copper", "covered_by_mat": 100, "thickness": 4.5 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 13, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "copper", "covered_by_mat": 100, "thickness": 4 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 7, "material": [
+      { "type": "copper", "covered_by_mat": 100, "thickness": 2.5 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 10,
+    "flags": [ "VARSIZE", "STURDY", "OUTER", "WATERPROOF", "RAD_PROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "MAX_HP", "multiply": 0.2 },
+            { "value": "MAX_HP", "add": 20 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_9",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-硬纸板",
+    "description": "一套由处理过的材料制成的全身装甲。\n速度+20%。",
+    "weight": "6800 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "cardboard", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 2 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 4, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "cardboard", "covered_by_mat": 100, "thickness": 3 }, { "type": "kevlar", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 4 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 7, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "cardboard", "covered_by_mat": 100, "thickness": 4.5 }, { "type": "kevlar", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 6, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "cardboard", "covered_by_mat": 100, "thickness": 4 }, { "type": "kevlar", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 3, "material": [
+      { "type": "cardboard", "covered_by_mat": 100, "thickness": 2.5 }, { "type": "kevlar", "covered_by_mat": 100, "thickness": 1 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 11,
+    "flags": [ "VARSIZE", "STURDY", "OUTER", "TARDIS" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "SPEED", "multiply": 0.2 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_10",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-陶瓷",
+    "description": "一套由处理过的材料制成的全身装甲。\n调节体温+-200。",
+    "weight": "51000 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "ceramic", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 3 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 6, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "ceramic", "covered_by_mat": 100, "thickness": 3 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 5 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 9, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "ceramic", "covered_by_mat": 100, "thickness": 4.5 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 8, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "ceramic", "covered_by_mat": 100, "thickness": 4 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 5, "material": [
+      { "type": "ceramic", "covered_by_mat": 100, "thickness": 2.5 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 20,
+    "flags": [ "VARSIZE", "STURDY", "OUTER", "WATERPROOF", "RAD_PROOF", "RAINPROOF", "ELECTRIC_IMMUNE" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "CLIMATE_CONTROL_HEAT", "add": 200 },
+    				{ "value": "CLIMATE_CONTROL_CHILL", "add": 200 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_11",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-铅",
+    "description": "一套由处理过的材料制成的全身装甲。\n降低30%非物理伤害。",
+    "weight": "19040 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "lead", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 5 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 9, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "lead", "covered_by_mat": 100, "thickness": 3 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 8 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 15, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "lead", "covered_by_mat": 100, "thickness": 4.5 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 13, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "lead", "covered_by_mat": 100, "thickness": 4 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 7, "material": [
+      { "type": "lead", "covered_by_mat": 100, "thickness": 2.5 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 18,
+    "flags": [ "VARSIZE", "STURDY", "OUTER", "RAD_PROOF", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "ARMOR_ACID", "multiply": -0.3 },
+            { "value": "ARMOR_BIO", "multiply": -0.3 },
+            { "value": "ARMOR_COLD", "multiply": -0.3 },
+            { "value": "ARMOR_ELEC", "multiply": -0.3 },
+            { "value": "ARMOR_HEAT", "multiply": -0.3 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_12",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-塑料",
+    "description": "一套由处理过的材料制成的全身装甲。\n降低10%伤害。",
+    "weight": "17790 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "plastic", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 3 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 6, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "plastic", "covered_by_mat": 100, "thickness": 3 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 5 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 9, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "plastic", "covered_by_mat": 100, "thickness": 4.5 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 8, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "plastic", "covered_by_mat": 100, "thickness": 4 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 5, "material": [
+      { "type": "plastic", "covered_by_mat": 100, "thickness": 2.5 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 19,
+    "flags": [ "VARSIZE", "STURDY", "OUTER", "WATERPROOF", "RAD_PROOF", "RAINPROOF", "ELECTRIC_IMMUNE", "SWIM_GOGGLES" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+            { "value": "ARMOR_CUT", "multiply": -0.1 },
+            { "value": "ARMOR_BASH", "multiply": -0.1 },
+            { "value": "ARMOR_STAB", "multiply": -0.1 },
+            { "value": "ARMOR_BULLET", "multiply": -0.1 },
+            { "value": "ARMOR_ACID", "multiply": -0.1 },
+            { "value": "ARMOR_BIO", "multiply": -0.1 },
+            { "value": "ARMOR_COLD", "multiply": -0.1 },
+            { "value": "ARMOR_ELEC", "multiply": -0.1 },
+            { "value": "ARMOR_HEAT", "multiply": -0.1 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_13",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-银",
+    "description": "一套由处理过的材料制成的全身装甲。\n增加1000魔力。",
+    "weight": "17680 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "silver", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 5 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 9, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "silver", "covered_by_mat": 100, "thickness": 3 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 8 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 15, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "silver", "covered_by_mat": 100, "thickness": 4.5 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 13, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "silver", "covered_by_mat": 100, "thickness": 4 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 7, "material": [
+      { "type": "silver", "covered_by_mat": 100, "thickness": 2.5 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 20,
+    "flags": [ "VARSIZE", "STURDY", "OUTER", "WATERPROOF", "RAD_PROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "MAX_MANA", "add": 1000 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_14",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-铂金",
+    "description": "一套由处理过的材料制成的全身装甲。\n降低20伤害。",
+    "weight": "36720 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "platinum", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 5 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 9, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "platinum", "covered_by_mat": 100, "thickness": 3 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 8 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 15, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "platinum", "covered_by_mat": 100, "thickness": 4.5 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 13, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "platinum", "covered_by_mat": 100, "thickness": 4 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 7, "material": [
+      { "type": "platinum", "covered_by_mat": 100, "thickness": 2.5 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 20,
+    "flags": [ "VARSIZE", "STURDY", "OUTER", "WATERPROOF", "RAD_PROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "ARMOR_CUT", "add": -20 },
+            { "value": "ARMOR_BASH", "add": -20 },
+            { "value": "ARMOR_STAB", "add": -20 },
+            { "value": "ARMOR_BULLET", "add": -20 },
+            { "value": "ARMOR_ACID", "add": -20 },
+            { "value": "ARMOR_BIO", "add": -20 },
+            { "value": "ARMOR_COLD", "add": -20 },
+            { "value": "ARMOR_ELEC", "add": -20 },
+            { "value": "ARMOR_HEAT", "add": -20 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_15",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-石",
+    "description": "一套由处理过的材料制成的全身装甲。\n增加50kg负重。",
+    "weight": "44676 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "stone", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 3 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 6, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "stone", "covered_by_mat": 100, "thickness": 3 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 5 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 9, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "stone", "covered_by_mat": 100, "thickness": 4.5 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 8, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "stone", "covered_by_mat": 100, "thickness": 4 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 5, "material": [
+      { "type": "stone", "covered_by_mat": 100, "thickness": 2.5 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 18,
+    "flags": [ "VARSIZE", "STURDY", "OUTER", "WATERPROOF", "RAD_PROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "CARRY_WEIGHT", "add": 50000 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_16",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-锡",
+    "description": "一套由处理过的材料制成的全身装甲。\n增加20%+4感知。",
+    "weight": "12374 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "tin", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 5 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 9, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "tin", "covered_by_mat": 100, "thickness": 3 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 8 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 15, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "tin", "covered_by_mat": 100, "thickness": 4.5 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 13, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "tin", "covered_by_mat": 100, "thickness": 4 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 7, "material": [
+      { "type": "tin", "covered_by_mat": 100, "thickness": 2.5 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 12,
+    "flags": [ "VARSIZE", "STURDY", "OUTER", "WATERPROOF", "RAD_PROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "PERCEPTION", "multiply": 0.2 },
+            { "value": "PERCEPTION", "add": 4 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_17",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-青铜",
+    "description": "一套由处理过的材料制成的全身装甲。\n增加耐力50%。",
+    "weight": "14960 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "bronze", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 5 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 9, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "bronze", "covered_by_mat": 100, "thickness": 3 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 8 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 15, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "bronze", "covered_by_mat": 100, "thickness": 4.5 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 13, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "bronze", "covered_by_mat": 100, "thickness": 4 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 7, "material": [
+      { "type": "bronze", "covered_by_mat": 100, "thickness": 2.5 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 11,
+    "flags": [ "VARSIZE", "STURDY", "OUTER", "WATERPROOF", "RAD_PROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "MAX_STAMINA", "multiply": 0.5 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_18",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-橡胶",
+    "description": "一套由处理过的材料制成的全身装甲。\n增加2格挡次数。",
+    "weight": "15300 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "rubber", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 2 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 4, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "rubber", "covered_by_mat": 100, "thickness": 3 }, { "type": "kevlar", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 4 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 7, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "rubber", "covered_by_mat": 100, "thickness": 4.5 }, { "type": "kevlar", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 6, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "rubber", "covered_by_mat": 100, "thickness": 4 }, { "type": "kevlar", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 3, "material": [
+      { "type": "rubber", "covered_by_mat": 100, "thickness": 2.5 }, { "type": "kevlar", "covered_by_mat": 100, "thickness": 1 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 15,
+    "flags": [ "VARSIZE", "STURDY", "OUTER", "WATERPROOF", "RAD_PROOF", "RAINPROOF", "TARDIS", "ELECTRIC_IMMUNE" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "BONUS_BLOCK", "add": 2 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_19",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-植物",
+    "description": "一套由处理过的材料制成的全身装甲。\n降低移动消耗-10%。",
+    "weight": "5440 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "dry_plant", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 2 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 3, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "dry_plant", "covered_by_mat": 100, "thickness": 3 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 3 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 6, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "dry_plant", "covered_by_mat": 100, "thickness": 4.5 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 5, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "dry_plant", "covered_by_mat": 100, "thickness": 4 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 2, "material": [
+      { "type": "dry_plant", "covered_by_mat": 100, "thickness": 2.5 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 1 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 11,
+    "flags": [ "VARSIZE", "STURDY", "OUTER", "RAINPROOF", "GAS_PROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "MOVE_COST", "multiply": -0.1 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_20",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-化纤",
+    "description": "一套由处理过的材料制成的全身装甲。\n再生魔力+50%。",
+    "weight": "17000 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "nylon", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 2 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 3, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "nylon", "covered_by_mat": 100, "thickness": 3 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 3 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 6, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "nylon", "covered_by_mat": 100, "thickness": 4.5 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 5, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "nylon", "covered_by_mat": 100, "thickness": 4 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 2, "material": [
+      { "type": "nylon", "covered_by_mat": 100, "thickness": 2.5 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 1 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 19,
+    "flags": [ "VARSIZE", "STURDY", "OUTER" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "REGEN_MANA", "multiply": 0.5 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_21",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-锌",
+    "description": "一套由处理过的材料制成的全身装甲。\n增加耐力5000。",
+    "weight": "12134 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "zinc", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 5 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 9, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "zinc", "covered_by_mat": 100, "thickness": 3 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 8 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 15, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "zinc", "covered_by_mat": 100, "thickness": 4.5 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 13, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "zinc", "covered_by_mat": 100, "thickness": 4 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 7, "material": [
+      { "type": "zinc", "covered_by_mat": 100, "thickness": 2.5 }, { "type": "iron", "covered_by_mat": 100, "thickness": 1 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 0.5 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 14,
+    "flags": [ "VARSIZE", "STURDY", "OUTER", "WATERPROOF", "RAD_PROOF", "RAINPROOF" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "MAX_STAMINA", "add": 5000 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_22",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-外星树脂",
+    "description": "一套由处理过的材料制成的全身装甲。\n增加10%四维。",
+    "weight": "4760 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "alien_resin", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 2 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 4, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "alien_resin", "covered_by_mat": 100, "thickness": 3 }, { "type": "kevlar", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 4 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 7, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "alien_resin", "covered_by_mat": 100, "thickness": 4.5 }, { "type": "kevlar", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 6, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "alien_resin", "covered_by_mat": 100, "thickness": 4 }, { "type": "kevlar", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 3, "material": [
+      { "type": "alien_resin", "covered_by_mat": 100, "thickness": 2.5 }, { "type": "kevlar", "covered_by_mat": 100, "thickness": 1 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 30,
+    "flags": [ "VARSIZE", "STURDY", "OUTER", "WATERPROOF", "RAD_PROOF", "RAINPROOF", "TARDIS" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "STRENGTH", "multiply": 0.1 },
+            { "value": "DEXTERITY", "multiply": 0.1 },
+            { "value": "INTELLIGENCE", "multiply": 0.1 },
+            { "value": "PERCEPTION", "multiply": 0.1 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_23",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-硅化甲壳",
+    "description": "一套由处理过的材料制成的全身装甲。\n增加5力量。",
+    "weight": "7546 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "acidchitin", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 3 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 6, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "acidchitin", "covered_by_mat": 100, "thickness": 3 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 5 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 9, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "acidchitin", "covered_by_mat": 100, "thickness": 4.5 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 8, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "acidchitin", "covered_by_mat": 100, "thickness": 4 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 5, "material": [
+      { "type": "acidchitin", "covered_by_mat": 100, "thickness": 2.5 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 26,
+    "flags": [ "VARSIZE", "STURDY", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "STRENGTH", "add": 5 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_24",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-甲壳",
+    "description": "一套由处理过的材料制成的全身装甲。\n增加20%+4力量。",
+    "weight": "6052 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "chitin", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 3 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 6, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "chitin", "covered_by_mat": 100, "thickness": 3 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 5 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 9, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "chitin", "covered_by_mat": 100, "thickness": 4.5 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 8, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "chitin", "covered_by_mat": 100, "thickness": 4 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 5, "material": [
+      { "type": "chitin", "covered_by_mat": 100, "thickness": 2.5 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 16,
+    "flags": [ "VARSIZE", "STURDY", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "STRENGTH", "multiply": 0.2 },
+    				{ "value": "STRENGTH", "add": 4 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_25",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-黏土",
+    "description": "一套由处理过的材料制成的全身装甲。\n增加100kg负重。",
+    "weight": "36040 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "clay", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 3 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 6, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "clay", "covered_by_mat": 100, "thickness": 3 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 5 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 9, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "clay", "covered_by_mat": 100, "thickness": 4.5 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 8, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "clay", "covered_by_mat": 100, "thickness": 4 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 5, "material": [
+      { "type": "clay", "covered_by_mat": 100, "thickness": 2.5 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 16,
+    "flags": [ "VARSIZE", "STURDY", "OUTER", "WATERPROOF", "RAD_PROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "CARRY_WEIGHT", "add": 100000 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_26",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-棉布",
+    "description": "一套由处理过的材料制成的全身装甲。\n增加20%+4智力。",
+    "weight": "28320 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "cotton", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 2 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 3, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "cotton", "covered_by_mat": 100, "thickness": 4 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 3 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 6, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "cotton", "covered_by_mat": 100, "thickness": 5.5 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 5, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "cotton", "covered_by_mat": 100, "thickness": 5 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 2, "material": [
+      { "type": "cotton", "covered_by_mat": 100, "thickness": 3.5 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 13,
+    "flags": [ "VARSIZE", "STURDY", "OUTER" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "INTELLIGENCE", "multiply": 0.2 },
+    				{ "value": "INTELLIGENCE", "add": 4 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_27",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-宝石",
+    "description": "一套由处理过的材料制成的全身装甲。\n增加生命50%。",
+    "weight": "49470 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "gemstone", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 3 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 6, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "gemstone", "covered_by_mat": 100, "thickness": 3 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 5 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 9, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "gemstone", "covered_by_mat": 100, "thickness": 4.5 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 8, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "gemstone", "covered_by_mat": 100, "thickness": 4 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 5, "material": [
+      { "type": "gemstone", "covered_by_mat": 100, "thickness": 2.5 }, { "type": "leather", "covered_by_mat": 100, "thickness": 1 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 20,
+    "flags": [ "VARSIZE", "STURDY", "OUTER", "WATERPROOF", "RAD_PROOF", "RAINPROOF", "SWIM_GOGGLES" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "MAX_HP", "multiply": 0.5 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_28",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-毛皮",
+    "description": "一套由处理过的材料制成的全身装甲。\n增加20%+4敏捷。",
+    "weight": "7752 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "fur", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 2 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 3, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "fur", "covered_by_mat": 100, "thickness": 3 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 3 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 6, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "fur", "covered_by_mat": 100, "thickness": 4.5 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 5, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "fur", "covered_by_mat": 100, "thickness": 4 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 2, "material": [
+      { "type": "fur", "covered_by_mat": 100, "thickness": 2.5 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 1 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 13,
+    "flags": [ "VARSIZE", "STURDY", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "DEXTERITY", "multiply": 0.2 },
+    				{ "value": "DEXTERITY", "add": 4 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_29",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-人造毛皮",
+    "description": "一套由处理过的材料制成的全身装甲。\n再生魔力+100%。",
+    "weight": "3773 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "faux_fur", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 2 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 3, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "faux_fur", "covered_by_mat": 100, "thickness": 3 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 3 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 6, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "faux_fur", "covered_by_mat": 100, "thickness": 4.5 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 5, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "faux_fur", "covered_by_mat": 100, "thickness": 4 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 2, "material": [
+      { "type": "faux_fur", "covered_by_mat": 100, "thickness": 2.5 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 1 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 14,
+    "flags": [ "VARSIZE", "STURDY", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "REGEN_MANA", "multiply": 1.0 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_30",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-凯夫拉",
+    "description": "一套由处理过的材料制成的全身装甲。\n体力再生+100%。",
+    "weight": "28320 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "kevlar", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 2 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 4, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "kevlar", "covered_by_mat": 100, "thickness": 4 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 4 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 7, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "kevlar", "covered_by_mat": 100, "thickness": 5.5 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 6, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "kevlar", "covered_by_mat": 100, "thickness": 5 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 3, "material": [
+      { "type": "kevlar", "covered_by_mat": 100, "thickness": 3.5 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 15,
+    "flags": [ "VARSIZE", "STURDY", "OUTER", "WATERPROOF", "RAINPROOF", "TARDIS" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+    				{ "value": "REGEN_STAMINA", "multiply": 1.0 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_31",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-多层凯夫拉",
+    "description": "一套由处理过的材料制成的全身装甲。\n体力再生+100%。",
+    "weight": "23658 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "kevlar_layered", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 4 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 7, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },{ "type": "kevlar_layered", "covered_by_mat": 100, "thickness": 4.4 }, { "type": "kevlar", "covered_by_mat": 100, "thickness": 1.5 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 5 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 10, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },{ "type": "kevlar_layered", "covered_by_mat": 100, "thickness": 4.4 }, { "type": "kevlar", "covered_by_mat": 100, "thickness": 1.5 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 9, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },{ "type": "kevlar_layered", "covered_by_mat": 100, "thickness": 4.4 }, { "type": "kevlar", "covered_by_mat": 100, "thickness": 1.5 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 6, "material": [ { "type": "kevlar_layered", "covered_by_mat": 100, "thickness": 4.4 }, { "type": "kevlar", "covered_by_mat": 100, "thickness": 1.5 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 15,
+    "flags": [ "VARSIZE", "STURDY", "OUTER", "WATERPROOF", "RAINPROOF", "TARDIS" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+    				{ "value": "REGEN_STAMINA", "multiply": 1.0 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_32",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-硬凯夫拉",
+    "description": "一套由处理过的材料制成的全身装甲。\n体力再生+100%。",
+    "weight": "17000 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "kevlar_rigid", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 2 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 4, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "kevlar_rigid", "covered_by_mat": 100, "thickness": 3 }, { "type": "kevlar", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 4 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 7, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "kevlar_rigid", "covered_by_mat": 100, "thickness": 4.5 }, { "type": "kevlar", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 6, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "kevlar_rigid", "covered_by_mat": 100, "thickness": 4 }, { "type": "kevlar", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 3, "material": [
+      { "type": "kevlar_rigid", "covered_by_mat": 100, "thickness": 2.5 }, { "type": "kevlar", "covered_by_mat": 100, "thickness": 1 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 15,
+    "flags": [ "VARSIZE", "STURDY", "OUTER", "WATERPROOF", "RAINPROOF", "TARDIS" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+    				{ "value": "REGEN_STAMINA", "multiply": 1.0 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_33",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-氨纶",
+    "description": "一套由处理过的材料制成的全身装甲。\n速度+20。",
+    "weight": "17000 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "lycra", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 2 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 3, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "lycra", "covered_by_mat": 100, "thickness": 3 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 3 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 6, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "lycra", "covered_by_mat": 100, "thickness": 4.5 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 5, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "lycra", "covered_by_mat": 100, "thickness": 4 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 2, "material": [
+      { "type": "lycra", "covered_by_mat": 100, "thickness": 2.5 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 1 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 19,
+    "flags": [ "VARSIZE", "STURDY", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "SPEED", "add": 20 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_34",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-氯丁橡胶",
+    "description": "一套由处理过的材料制成的全身装甲。\n增加2格挡次数。",
+    "weight": "34000 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "neoprene", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 2 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 4, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "neoprene", "covered_by_mat": 100, "thickness": 3 }, { "type": "kevlar", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 4 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 7, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "neoprene", "covered_by_mat": 100, "thickness": 4.5 }, { "type": "kevlar", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 6, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "neoprene", "covered_by_mat": 100, "thickness": 4 }, { "type": "kevlar", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 3, "material": [
+      { "type": "neoprene", "covered_by_mat": 100, "thickness": 2.5 }, { "type": "kevlar", "covered_by_mat": 100, "thickness": 1 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 11,
+    "flags": [ "VARSIZE", "STURDY", "OUTER", "WATERPROOF", "RAD_PROOF", "RAINPROOF", "TARDIS", "ELECTRIC_IMMUNE" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "BONUS_BLOCK", "add": 2 }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "self_easy_armor_35",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-芳纶",
+    "description": "一套由处理过的材料制成的全身装甲。\n再生魔力+200%。",
+    "weight": "28320 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "nomex", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 2 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 4, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "nomex", "covered_by_mat": 100, "thickness": 3 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 4 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 7, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "nomex", "covered_by_mat": 100, "thickness": 4.5 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 6, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "nomex", "covered_by_mat": 100, "thickness": 4 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 3, "material": [
+      { "type": "nomex", "covered_by_mat": 100, "thickness": 2.5 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 1 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 15,
+    "flags": [ "VARSIZE", "STURDY", "OUTER", "WATERPROOF", "RAINPROOF" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+            { "value": "REGEN_MANA", "multiply": 2.0 }
+    			]
+    		}
+    	]
+    }
+  },
+  {
+    "id": "self_easy_armor_36",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "全套装甲-纸",
+    "description": "一套由处理过的材料制成的全身装甲。\n攻击消耗-10%。",
+    "weight": "10200 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "copy-from": "self_easy_armor_full_base",
+    "looks_like": "power_armor_basic",
+    "longest_side": "10 cm",
+    "material": [ { "type": "paper", "portion": 100 }, { "type": "yessoft", "portion": 0 }, { "type": "nosoft", "portion": 0 } ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "mouth", "eyes" ], "coverage": 100 , "encumbrance": 2 },
+      { "covers": [ "head" ], "coverage": 100,
+      	"encumbrance": 3, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "paper", "covered_by_mat": 100, "thickness": 3 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 , "encumbrance": 3 },
+      { "covers": [ "torso" ], "coverage": 100,
+      	"encumbrance": 6, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "paper", "covered_by_mat": 100, "thickness": 4.5 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 5, "material": [ { "type": "yessoft", "covered_by_mat": 100, "thickness": 0 }, { "type": "nosoft", "covered_by_mat": 100, "thickness": 0 },
+      { "type": "paper", "covered_by_mat": 100, "thickness": 4 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 1 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 2, "material": [
+      { "type": "paper", "covered_by_mat": 100, "thickness": 2.5 }, { "type": "cotton", "covered_by_mat": 100, "thickness": 1 }] }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 11,
+    "flags": [ "VARSIZE", "STURDY", "OUTER" ],
+    "relic_data": {
+    	"passive_effects": [
+    		{
+    			"has": "WORN", 
+    			"condition": "ALWAYS",
+    			"values": [
+    				{ "value": "ATTACK_SPEED", "multiply": -0.1 }
+    			]
+    		}
+    	]
+    }
+  }
+]

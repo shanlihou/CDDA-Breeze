@@ -1,0 +1,428 @@
+[
+  {
+    "id": "spell_craft_sorcerer_mace_1",
+    "type": "GUN",
+    "name": { "str": "权杖-木杖端" },
+    "description": "权杖是应急用的近战及施法工具。\n不同于魔杖和法杖，权杖并不自带法术，但可以将法术转化为纯粹的魔力射出，特定状况下或许有用。\n+10%法力恢复速度",
+    "symbol": "|",
+    "color": "yellow",
+    "price": 3000,
+    "price_postapoc": 3000,
+    "skill": "throw",
+    "material": [ "wood" ],
+    "weight": "600 g",
+    "volume": "800 ml",
+    "longest_side": "65 cm",
+    "techniques": [ "WBLOCK_1", "PRECISE" ],
+    "flags": [
+    	"NONCONDUCTIVE",
+    	"MAGIC_FOCUS",
+      "RELOAD_AND_SHOOT",
+      "SHEATH_SWORD",
+      "DURABLE_MELEE"
+    ],
+    "reload_noise_volume": 1,
+    "loudness": 0,
+    "melee_damage": { "bash": 12 },
+    "to_hit": 2,
+    "dispersion": 50,
+    "durability": 9,
+    "clip_size": 1,
+    "range": 12,
+    "ranged_damage": { "damage_type": "pure", "amount": 12 },
+    "relic_data": { "passive_effects": [ { "has": "WIELD", "condition": "ALWAYS", "values": [ { "value": "REGEN_MANA", "multiply": 0.1 } ] } ] },
+    "ammo": [ "sorcerer_item" ],
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "sorcerer_item": 1 } } ]
+  },
+  {
+    "id": "spell_craft_sorcerer_mace_2",
+    "type": "GUN",
+    "name": { "str": "权杖-石杖端" },
+    "description": "权杖是应急用的近战及施法工具。\n不同于魔杖和法杖，权杖并不自带法术，但可以将法术转化为纯粹的魔力射出，特定状况下或许有用。\n+10%法力恢复速度",
+    "symbol": "|",
+    "color": "yellow",
+    "price": 3000,
+    "price_postapoc": 3000,
+    "skill": "throw",
+    "material": [ "wood", "stone" ],
+    "weight": "600 g",
+    "volume": "800 ml",
+    "longest_side": "65 cm",
+    "techniques": [ "WBLOCK_1", "PRECISE" ],
+    "flags": [
+    	"NONCONDUCTIVE",
+    	"MAGIC_FOCUS",
+      "RELOAD_AND_SHOOT",
+      "SHEATH_SWORD",
+      "DURABLE_MELEE"
+    ],
+    "reload_noise_volume": 1,
+    "loudness": 0,
+    "melee_damage": { "bash": 16 },
+    "to_hit": 2,
+    "dispersion": 50,
+    "durability": 9,
+    "clip_size": 1,
+    "range": 12,
+    "ranged_damage": { "damage_type": "pure", "amount": 14 },
+    "relic_data": { "passive_effects": [ { "has": "WIELD", "condition": "ALWAYS", "values": [ { "value": "REGEN_MANA", "multiply": 0.1 } ] } ] },
+    "ammo": [ "sorcerer_item" ],
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "sorcerer_item": 1 } } ]
+  },
+  {
+    "id": "spell_craft_sorcerer_mace_3",
+    "type": "GUN",
+    "name": { "str": "权杖-铜杖端" },
+    "description": "权杖是应急用的近战及施法工具。\n不同于魔杖和法杖，权杖并不自带法术，但可以将法术转化为纯粹的魔力射出，特定状况下或许有用。\n+10%法力恢复速度",
+    "symbol": "|",
+    "color": "yellow",
+    "price": 3000,
+    "price_postapoc": 3000,
+    "skill": "throw",
+    "material": [ "wood", "copper" ],
+    "weight": "600 g",
+    "volume": "800 ml",
+    "longest_side": "65 cm",
+    "techniques": [ "WBLOCK_1", "PRECISE" ],
+    "flags": [
+    	"NONCONDUCTIVE",
+    	"MAGIC_FOCUS",
+      "RELOAD_AND_SHOOT",
+      "SHEATH_SWORD",
+      "DURABLE_MELEE"
+    ],
+    "reload_noise_volume": 1,
+    "loudness": 0,
+    "melee_damage": { "bash": 28 },
+    "to_hit": 2,
+    "dispersion": 50,
+    "durability": 9,
+    "clip_size": 1,
+    "range": 12,
+    "ranged_damage": { "damage_type": "pure", "amount": 20 },
+    "relic_data": { "passive_effects": [ { "has": "WIELD", "condition": "ALWAYS", "values": [ { "value": "REGEN_MANA", "multiply": 0.1 } ] } ] },
+    "ammo": [ "sorcerer_item" ],
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "sorcerer_item": 1 } } ]
+  },
+  {
+    "id": "spell_craft_sorcerer_mace_4",
+    "type": "GUN",
+    "name": { "str": "权杖-铁杖端" },
+    "description": "权杖是应急用的近战及施法工具。\n不同于魔杖和法杖，权杖并不自带法术，但可以将法术转化为纯粹的魔力射出，特定状况下或许有用。\n+10%法力恢复速度",
+    "symbol": "|",
+    "color": "yellow",
+    "price": 3000,
+    "price_postapoc": 3000,
+    "skill": "throw",
+    "material": [ "wood", "steel" ],
+    "weight": "600 g",
+    "volume": "800 ml",
+    "longest_side": "65 cm",
+    "techniques": [ "WBLOCK_1", "PRECISE" ],
+    "flags": [
+    	"NONCONDUCTIVE",
+    	"MAGIC_FOCUS",
+      "RELOAD_AND_SHOOT",
+      "SHEATH_SWORD",
+      "DURABLE_MELEE"
+    ],
+    "reload_noise_volume": 1,
+    "loudness": 0,
+    "melee_damage": { "bash": 32 },
+    "to_hit": 2,
+    "dispersion": 50,
+    "durability": 9,
+    "clip_size": 1,
+    "range": 12,
+    "ranged_damage": { "damage_type": "pure", "amount": 16 },
+    "relic_data": { "passive_effects": [ { "has": "WIELD", "condition": "ALWAYS", "values": [ { "value": "REGEN_MANA", "multiply": 0.1 } ] } ] },
+    "ammo": [ "sorcerer_item" ],
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "sorcerer_item": 1 } } ]
+  },
+  {
+    "id": "spell_craft_sorcerer_mace_5",
+    "type": "GUN",
+    "name": { "str": "权杖-银杖端" },
+    "description": "权杖是应急用的近战及施法工具。\n不同于魔杖和法杖，权杖并不自带法术，但可以将法术转化为纯粹的魔力射出，特定状况下或许有用。\n+10%法力恢复速度",
+    "symbol": "|",
+    "color": "yellow",
+    "price": 3000,
+    "price_postapoc": 3000,
+    "skill": "throw",
+    "material": [ "wood", "silver" ],
+    "weight": "600 g",
+    "volume": "800 ml",
+    "longest_side": "65 cm",
+    "techniques": [ "WBLOCK_1", "PRECISE" ],
+    "flags": [
+    	"NONCONDUCTIVE",
+    	"MAGIC_FOCUS",
+      "RELOAD_AND_SHOOT",
+      "SHEATH_SWORD",
+      "DURABLE_MELEE"
+    ],
+    "reload_noise_volume": 1,
+    "loudness": 0,
+    "melee_damage": { "bash": 20 },
+    "to_hit": 2,
+    "dispersion": 50,
+    "durability": 9,
+    "clip_size": 1,
+    "range": 12,
+    "ranged_damage": { "damage_type": "pure", "amount": 22 },
+    "relic_data": { "passive_effects": [ { "has": "WIELD", "condition": "ALWAYS", "values": [ { "value": "REGEN_MANA", "multiply": 0.1 } ] } ] },
+    "ammo": [ "sorcerer_item" ],
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "sorcerer_item": 1 } } ]
+  },
+  {
+    "id": "spell_craft_sorcerer_mace_6",
+    "type": "GUN",
+    "name": { "str": "权杖-金杖端" },
+    "description": "权杖是应急用的近战及施法工具。\n不同于魔杖和法杖，权杖并不自带法术，但可以将法术转化为纯粹的魔力射出，特定状况下或许有用。\n+10%法力恢复速度",
+    "symbol": "|",
+    "color": "yellow",
+    "price": 3000,
+    "price_postapoc": 3000,
+    "skill": "throw",
+    "material": [ "wood", "gold" ],
+    "weight": "600 g",
+    "volume": "800 ml",
+    "longest_side": "65 cm",
+    "techniques": [ "WBLOCK_1", "PRECISE" ],
+    "flags": [
+    	"NONCONDUCTIVE",
+    	"MAGIC_FOCUS",
+      "RELOAD_AND_SHOOT",
+      "SHEATH_SWORD",
+      "DURABLE_MELEE"
+    ],
+    "reload_noise_volume": 1,
+    "loudness": 0,
+    "melee_damage": { "bash": 24 },
+    "to_hit": 2,
+    "dispersion": 50,
+    "durability": 9,
+    "clip_size": 1,
+    "range": 12,
+    "ranged_damage": { "damage_type": "pure", "amount": 24 },
+    "relic_data": { "passive_effects": [ { "has": "WIELD", "condition": "ALWAYS", "values": [ { "value": "REGEN_MANA", "multiply": 0.1 } ] } ] },
+    "ammo": [ "sorcerer_item" ],
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "sorcerer_item": 1 } } ]
+  },
+  {
+    "id": "spell_craft_sorcerer_mace_7",
+    "type": "GUN",
+    "name": { "str": "权杖-宝石杖端" },
+    "description": "权杖是应急用的近战及施法工具。\n不同于魔杖和法杖，权杖并不自带法术，但可以将法术转化为纯粹的魔力射出，特定状况下或许有用。\n+10%法力恢复速度",
+    "symbol": "|",
+    "color": "yellow",
+    "price": 3000,
+    "price_postapoc": 3000,
+    "skill": "throw",
+    "material": [ "wood", "gemstone" ],
+    "weight": "600 g",
+    "volume": "800 ml",
+    "longest_side": "65 cm",
+    "techniques": [ "WBLOCK_1", "PRECISE" ],
+    "flags": [
+    	"NONCONDUCTIVE",
+    	"MAGIC_FOCUS",
+      "RELOAD_AND_SHOOT",
+      "SHEATH_SWORD",
+      "DURABLE_MELEE"
+    ],
+    "reload_noise_volume": 1,
+    "loudness": 0,
+    "melee_damage": { "bash": 18 },
+    "to_hit": 2,
+    "dispersion": 50,
+    "durability": 9,
+    "clip_size": 1,
+    "range": 12,
+    "ranged_damage": { "damage_type": "pure", "amount": 36 },
+    "relic_data": { "passive_effects": [ { "has": "WIELD", "condition": "ALWAYS", "values": [ { "value": "REGEN_MANA", "multiply": 0.1 } ] } ] },
+    "ammo": [ "sorcerer_item" ],
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "sorcerer_item": 1 } } ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "spell_craft_sorcerer_mace_1",
+    "components": [
+    	[
+    		[ "log", 1 ]
+    	],
+    	[
+    		[ "stick", 1 ]
+    	],
+    	[
+    		[ "spell_sorcerer_item_0", 1000 ]
+    	]
+    ],
+    "qualities": [ { "id": "CUT_FINE", "level": 1 } ],
+    "time": "6 h",
+    "skill_used": "spellcraft",
+    "difficulty": 1,
+    "category": "CC_ENCHANTED",
+    "subcategory": "CSC_ENCHANTED_TOOLS",
+    "autolearn": true
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "spell_craft_sorcerer_mace_2",
+    "components": [
+    	[
+    		[ "rock", 1 ]
+    	],
+    	[
+    		[ "stick", 1 ]
+    	],
+    	[
+    		[ "spell_sorcerer_item_0", 1000 ]
+    	]
+    ],
+    "qualities": [ { "id": "HAMMER_FINE", "level": 1 }, { "id": "CUT_FINE", "level": 1 } ],
+    "time": "6 h",
+    "skill_used": "spellcraft",
+    "difficulty": 1,
+    "category": "CC_ENCHANTED",
+    "subcategory": "CSC_ENCHANTED_TOOLS",
+    "autolearn": true
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "spell_craft_sorcerer_mace_3",
+    "components": [
+    	[
+    		[ "cu_pipe", 1 ]
+    	],
+    	[
+    		[ "stick", 1 ]
+    	],
+    	[
+    		[ "spell_sorcerer_item_0", 1000 ]
+    	]
+    ],
+    "qualities": [ { "id": "HAMMER_FINE", "level": 1 }, { "id": "CUT_FINE", "level": 1 } ],
+    "tools": [ [ [ "surface_heat", 10, "LIST" ] ] ],
+    "time": "6 h",
+    "skill_used": "spellcraft",
+    "difficulty": 1,
+    "category": "CC_ENCHANTED",
+    "subcategory": "CSC_ENCHANTED_TOOLS",
+    "autolearn": true
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "spell_craft_sorcerer_mace_4",
+    "components": [
+    	[
+    		[ "steel_lump", 1 ]
+    	],
+    	[
+    		[ "stick", 1 ]
+    	],
+    	[
+    		[ "spell_sorcerer_item_0", 1000 ]
+    	]
+    ],
+    "qualities": [ { "id": "HAMMER_FINE", "level": 1 }, { "id": "CUT_FINE", "level": 1 } ],
+    "tools": [ [ [ "surface_heat", 10, "LIST" ] ] ],
+    "time": "6 h",
+    "skill_used": "spellcraft",
+    "difficulty": 1,
+    "category": "CC_ENCHANTED",
+    "subcategory": "CSC_ENCHANTED_TOOLS",
+    "autolearn": true
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "spell_craft_sorcerer_mace_5",
+    "components": [
+    	[
+    		[ "silver_small", 200 ]
+    	],
+    	[
+    		[ "stick", 1 ]
+    	],
+    	[
+    		[ "spell_sorcerer_item_0", 1000 ]
+    	]
+    ],
+    "qualities": [ { "id": "HAMMER_FINE", "level": 1 }, { "id": "CUT_FINE", "level": 1 } ],
+    "tools": [ [ [ "surface_heat", 10, "LIST" ] ] ],
+    "time": "6 h",
+    "skill_used": "spellcraft",
+    "difficulty": 1,
+    "category": "CC_ENCHANTED",
+    "subcategory": "CSC_ENCHANTED_TOOLS",
+    "autolearn": true
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "spell_craft_sorcerer_mace_6",
+    "components": [
+    	[
+    		[ "gold_small", 200 ]
+    	],
+    	[
+    		[ "stick", 1 ]
+    	],
+    	[
+    		[ "spell_sorcerer_item_0", 1000 ]
+    	]
+    ],
+    "qualities": [ { "id": "HAMMER_FINE", "level": 1 }, { "id": "CUT_FINE", "level": 1 } ],
+    "tools": [ [ [ "surface_heat", 10, "LIST" ] ] ],
+    "time": "6 h",
+    "skill_used": "spellcraft",
+    "difficulty": 1,
+    "category": "CC_ENCHANTED",
+    "subcategory": "CSC_ENCHANTED_TOOLS",
+    "autolearn": true
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "spell_craft_sorcerer_mace_7",
+    "components": [
+    	[
+        [ "garnet", 1 ],
+        [ "amethyst", 1 ],
+        [ "aquamarine", 1 ],
+        [ "emerald", 1 ],
+        [ "alexandrite", 1 ],
+        [ "malachite", 1 ],
+        [ "pearl", 1 ],
+        [ "ruby", 1 ],
+        [ "peridot", 1 ],
+        [ "sapphire", 1 ],
+        [ "opal", 1 ],
+        [ "tourmaline", 1 ],
+        [ "citrine", 1 ],
+        [ "blue_topaz", 1 ],
+        [ "onyx", 1 ],
+        [ "diamond", 1 ],
+        [ "spell_craft_sorcerer_wand_gem", 1 ]
+    	],
+    	[
+    		[ "stick", 1 ]
+    	],
+    	[
+    		[ "spell_sorcerer_item_0", 1000 ]
+    	]
+    ],
+    "qualities": [ { "id": "HAMMER_FINE", "level": 1 }, { "id": "CUT_FINE", "level": 1 }, { "id": "CHISEL", "level": 1 } ],
+    "time": "6 h",
+    "skill_used": "spellcraft",
+    "difficulty": 1,
+    "category": "CC_ENCHANTED",
+    "subcategory": "CSC_ENCHANTED_TOOLS",
+    "autolearn": true
+  }
+]

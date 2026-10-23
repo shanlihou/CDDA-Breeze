@@ -1,0 +1,428 @@
+[
+  {
+    "id": "secro_flesh_back_holster",
+    "type": "ARMOR",
+    "name": {
+      "str": "枪套（背）"
+    },
+    "description": "一个枪套，大到可以容纳步枪或其他大枪。这这个枪套设计紧贴背部的样式。虽然最初很麻烦，但它实际使用的时候会变得更简单。激活它来收拔枪械。",
+    "weight": "300 g",
+    "volume": "1250 ml",
+    "material": [
+      "secro_flesh_artificial"
+    ],
+    "valid_mods": [
+      "secro_flesh_reinforced_coat"
+    ],
+    "symbol": "[",
+    "looks_like": "quiver_large",
+    "color": "red",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "min_item_volume": "1500 ml",
+        "max_contains_volume": "9 L",
+        "max_contains_weight": "10 kg",
+        "max_item_length": "60 cm",
+        "moves": 150
+      }
+    ],
+    "use_action": {
+      "type": "holster"
+    },
+    "flags": [
+      "BELTED",
+      "OVERSIZE",
+      "NO_QUICKDRAW"
+    ],
+    "armor": [
+      {
+        "encumbrance": [
+          3,
+          15
+        ],
+        "coverage": 5,
+        "covers": [
+          "torso"
+        ],
+        "material": [
+          "secro_flesh_artificial"
+        ],
+        "material_thickness": 1
+      }
+    ]
+  },
+  {
+    "id": "secro_flesh_baldric_holster",
+    "type": "ARMOR",
+    "name": {
+      "str": "枪套（肩）"
+    },
+    "description": "一种能装六支手枪大小的枪的安全带，可供快速拔枪使用。历史上，海盗使用类似的安全带一次携带多把装有子弹的燧石手枪，因为重新装子弹是一个漫长的过程。启动枪套/拔枪。",
+    "weight": "1650 g",
+    "volume": "3 L",
+    "price": 20000,
+    "price_postapoc": 2000,
+    "material": [
+      "secro_flesh_artificial"
+    ],
+    "valid_mods": [
+      "secro_flesh_reinforced_coat"
+    ],
+    "symbol": "[",
+    "looks_like": "quiver_large",
+    "color": "red",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "min_item_volume": "300 ml",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "35 cm",
+        "moves": 50
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "min_item_volume": "300 ml",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "35 cm",
+        "moves": 50
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "min_item_volume": "300 ml",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "35 cm",
+        "moves": 50
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "min_item_volume": "300 ml",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "35 cm",
+        "moves": 50
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "min_item_volume": "300 ml",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "35 cm",
+        "moves": 50
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "min_item_volume": "300 ml",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "35 cm",
+        "moves": 50
+      }
+    ],
+    "use_action": {
+      "type": "holster"
+    },
+    "flags": [
+      "WATER_FRIENDLY",
+      "BELTED",
+      "OVERSIZE"
+    ],
+    "armor": [
+      {
+        "encumbrance": 2,
+        "coverage": 20,
+        "covers": [
+          "torso"
+        ],
+        "material": [
+          "secro_flesh_artificial"
+        ],
+        "material_thickness": 1
+      }
+    ]
+  },
+  {
+    "id": "secro_flesh_bootstrap",
+    "type": "ARMOR",
+    "name": {
+      "str": "枪套（脚）"
+    },
+    "description": "一个穿在脚踝上的枪套。不经过练习用起来很笨拙。激活它来收拔手枪。",
+    "weight": "250 g",
+    "volume": "250 ml",
+    "price": 7400,
+    "price_postapoc": 500,
+    "material": [
+      "secro_flesh_artificial"
+    ],
+    "valid_mods": [
+      "secro_flesh_reinforced_coat"
+    ],
+    "symbol": "[",
+    "looks_like": "holster",
+    "color": "red",
+    "sided": true,
+    "flags": [
+      "BELTED",
+      "OVERSIZE",
+      "ALLOWS_NATURAL_ATTACKS"
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "200 ml",
+        "pocket_type": "CONTAINER",
+        "min_item_volume": "100 ml",
+        "max_contains_volume": "400 ml",
+        "max_contains_weight": "1 kg",
+        "max_item_length": "20 cm",
+        "moves": 150
+      }
+    ],
+    "use_action": {
+      "type": "holster"
+    },
+    "armor": [
+      {
+        "encumbrance": [
+          3,
+          4
+        ],
+        "coverage": 5,
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ],
+        "specifically_covers": [
+          "foot_ankle_l",
+          "foot_ankle_r"
+        ],
+        "material": [
+          "secro_flesh_artificial"
+        ],
+        "material_thickness": 1,
+        "layers": [
+          "BELTED"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "secro_flesh_holster",
+    "type": "ARMOR",
+    "name": {
+      "str": "枪套（腰）"
+    },
+    "description": "一个挂在臀部的肉质枪套，可以放一把手枪尺寸的枪械。使用它来收拔枪械。",
+    "weight": "275 g",
+    "volume": "500 ml",
+    "price": 9000,
+    "price_postapoc": 500,
+    "material": [
+      "secro_flesh_artificial"
+    ],
+    "valid_mods": [
+      "secro_flesh_reinforced_coat"
+    ],
+    "symbol": "[",
+    "looks_like": "sheath",
+    "color": "light_red",
+    "sided": true,
+    "pocket_data": [
+      {
+        "magazine_well": "350 ml",
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "min_item_volume": "300 ml",
+        "max_contains_volume": "1000 ml",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "30 cm",
+        "moves": 50
+      }
+    ],
+    "use_action": {
+      "type": "holster"
+    },
+    "flags": [
+      "BELTED",
+      "OVERSIZE"
+    ],
+    "armor": [
+      {
+        "encumbrance": [
+          3,
+          4
+        ],
+        "coverage": 5,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "material": [
+          "secro_flesh_artificial"
+        ],
+        "material_thickness": 1
+      }
+    ]
+  },
+  {
+    "id": "secro_flesh_survivor_vest",
+    "type": "ARMOR",
+    "name": {
+      "str": "幸存者背带",
+      "str_pl": "幸存者背带"
+    },
+    "description": "一个自制的轻型背带，缝了不少口袋的同时还有一个集成战术吊索用于小型步枪及此类武器。值得信赖的手工技术将它打造得至为舒适耐用。激活它来收拔武器。",
+    "weight": "400 g",
+    "volume": "1250 ml",
+    "material": [
+      "secro_flesh_artificial"
+    ],
+    "valid_mods": [
+      "secro_flesh_reinforced_coat"
+    ],
+    "symbol": "[",
+    "looks_like": "tacvest",
+    "color": "red",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "min_item_volume": "1250 ml",
+        "max_contains_volume": "8 L",
+        "max_contains_weight": "8200 g",
+        "max_item_length": "120 cm",
+        "moves": 50
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1500 ml",
+        "max_contains_weight": "5 kg",
+        "max_item_length": "20 cm",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1500 ml",
+        "max_contains_weight": "5 kg",
+        "max_item_length": "20 cm",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1500 ml",
+        "max_contains_weight": "5 kg",
+        "max_item_length": "20 cm",
+        "moves": 80
+      }
+    ],
+    "use_action": {
+      "type": "holster"
+    },
+    "flags": [
+      "WATER_FRIENDLY",
+      "STURDY",
+      "BELTED"
+    ],
+    "armor": [
+      {
+        "encumbrance": [
+          4,
+          12
+        ],
+        "coverage": 20,
+        "covers": [
+          "torso"
+        ],
+        "material": [
+          "secro_flesh_artificial"
+        ],
+        "material_thickness": 1
+      }
+    ]
+  },
+  {
+    "id": "secro_flesh_xl_survivor_vest",
+    "type": "ARMOR",
+    "copy-from": "secro_flesh_survivor_vest",
+    "name": {
+      "str": "幸存者背带（XL）",
+      "str_pl": "幸存者背带（XL）"
+    },
+    "description": "一个自制的轻型背带，缝了不少口袋的同时还有一个集成战术吊索用于小型步枪及此类武器。值得信赖的手工技术将它打造得至为舒适耐用，适合大个子使用。激活它来收拔武器。",
+    "proportional": {
+      "weight": 1.25,
+      "volume": 1.13
+    },
+    "flags": [
+      "WATER_FRIENDLY",
+      "BELTED",
+      "STURDY",
+      "OVERSIZE"
+    ]
+  },
+  {
+    "id": "secro_flesh_XL_holster",
+    "type": "ARMOR",
+    "name": {
+      "str": "枪套（XL）"
+    },
+    "description": "一个挂在臀部的皮枪套，包含用于大型枪械的皮带及锁扣。由于枪械被皮带平放在腿旁，使得它比标准枪套要更加累赘。激活它来收拔武器。",
+    "weight": "400 g",
+    "volume": "250 ml",
+    "material": [
+      "secro_flesh_artificial"
+    ],
+    "valid_mods": [
+      "secro_flesh_reinforced_coat"
+    ],
+    "symbol": "[",
+    "looks_like": "quiver_large",
+    "color": "light_red",
+    "sided": true,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "min_item_volume": "500 ml",
+        "max_contains_volume": "1500 ml",
+        "max_contains_weight": "5 kg",
+        "max_item_length": "45 cm",
+        "moves": 70
+      }
+    ],
+    "use_action": {
+      "type": "holster"
+    },
+    "flags": [
+      "BELTED",
+      "OVERSIZE"
+    ],
+    "armor": [
+      {
+        "encumbrance": [
+          2,
+          7
+        ],
+        "coverage": 10,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "material": [
+          "secro_flesh_artificial"
+        ],
+        "material_thickness": 1
+      }
+    ]
+  }
+]

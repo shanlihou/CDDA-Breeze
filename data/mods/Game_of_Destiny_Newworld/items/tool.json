@@ -1,0 +1,1430 @@
+[
+  {
+    "id": "OXYTORCH",
+    "type": "item_action",
+    "name": "焊枪切割"
+  },
+  {
+    "id": "GS_tool_welder",
+    "sub": "oxy_torch",
+    "type": "TOOL",
+    "category": "GS_tool",
+    "name": { "str": "超凡者焊枪" },
+    "description": "智力系机械专长的特制工具，用于焊接、锻造、修复金属，也用于破坏金属障碍物，使用一般电池。",
+    "weight": "1500 g",
+    "volume": "5 L",
+    "material": [ "super_mt" ],
+    "symbol": ";",
+    "color": "light_red",
+    "charges_per_use": 1,
+    "ammo": [ "battery" ],
+    "qualities": [ [ "WELD", 3 ], [ "GLARE", 2 ] ],
+    "use_action": [
+      {
+        "type": "repair_item",
+        "item_action_type": "repair_metal",
+        "materials": [ "kevlar", "iron", "steel", "hardsteel", "aluminum", "copper", "plastic" ],
+        "skill": "mechanics",
+        "cost_scaling": 0.1,
+        "move_cost": 250,
+        "tool_quality": 10
+      },
+      "OXYTORCH"
+    ],
+    "pocket_data": [
+      { "pocket_type": "MAGAZINE_WELL", "flag_restriction": [ "BATTERY_HEAVY", "BATTERY_MEDIUM" ], "default_magazine": "heavy_battery_cell" }
+    ]
+  },
+  {
+    "id": "GS_eq_toolbelt",
+    "looks_like": "webbing_belt",
+    "type": "ARMOR",
+    "category": "GS_equipment",
+    "name": { "str": "超凡者工具腰带" },
+    "description": "智力专长具现的辅助装备，装有各式工具的腰带，背后有收藏武器用的战术绑带，附取火、开锁、时钟、温度计等功能，应付各种生存挑战。",
+    "weight": "1500 g",
+    "volume": 12,
+    "material": [ "super_mt", "steel" ],
+    "symbol": "[",
+    "color": "brown",
+    "pocket_data": [
+    {
+      "holster": true,
+      "moves": 30,
+      "flag_restriction": [
+        "SHEATH_SPEAR"
+      ],
+      "max_contains_volume": "4000 ml",
+      "max_contains_weight": "4 kg",
+      "max_item_length": "200 cm"
+    }
+  ],
+    "use_action": [
+      {
+       "type": "holster",
+       "holster_prompt": "收鞘",
+       "holster_msg": "你将你的%s收鞘。"
+      },
+      { "type": "firestarter", "moves": 200, "moves_slow": 5000 },
+      "HAMMER"
+    ],
+    "qualities": [
+      [ "HAMMER", 3 ],
+      [ "HAMMER_FINE", 1 ],
+      [ "SAW_W", 2 ],
+      [ "SAW_M", 2 ],
+      [ "SAW_M_FINE", 1 ],
+      [ "WRENCH", 2 ],
+      [ "WRENCH_FINE", 1 ],
+      [ "SCREW", 1 ],
+      [ "SCREW_FINE", 1 ],
+      [ "CUT", 1 ],
+      [ "CUT_FINE", 2 ],
+      [ "BUTCHER", 20 ],
+      [ "LOCKPICK", 20 ]
+    ],
+    "flags": [ "BELTED", "FANCY", "THERMOMETER", "WATCH" ],
+    "material_thickness": 2.5,
+    "armor": [ { "encumbrance": [ 1, 5 ], "coverage": 100, "covers": [ "torso" ], "specifically_covers": [ "torso_waist" ] } ]
+  },
+  {
+    "id": "GS_eq_toolbelt2",
+    "looks_like": "webbing_belt",
+    "type": "ARMOR",
+    "category": "GS_equipment",
+    "name": { "str": "超凡者战术腰带" },
+    "description": "智力专长具现的辅助装备，更强的工具性能、收纳2把武器的战术空间，以及一个刀鞘。具取火、开锁、时钟、气侯计等功能。“总有人为空间棱锥的就业空间担心，那说明他们并不理解0躯干累赘对某些人的意义。”",
+    "weight": "1200 g",
+    "volume": 10,
+    "material": [ "super_mt", "steel" ],
+    "symbol": "[",
+    "color": "brown",
+    "pocket_data": [
+    {
+      "holster": true,
+      "max_contains_volume": "3000 ml",
+      "max_contains_weight": "6000 g",
+      "max_item_length": "120 cm",
+      "moves": 20,
+      "description": "这是个空间剑鞘，可以收纳中型的矛类和剑类武器。",
+      "flag_restriction": [
+      "SHEATH_SPEAR",
+      "SHEATH_SWORD"
+    ]
+    },
+    {
+      "holster": true,
+      "max_contains_volume": "3000 ml",
+      "max_contains_weight": "6000 g",
+      "max_item_length": "100 cm",
+      "moves": 20,
+      "description": "这是个很稳定的挂钩，可以收纳中型的棍类和矛类武器。",
+      "flag_restriction": [ "SHEATH_SPEAR","BELT_CLIP" ]
+    },
+    {
+      "magazine_well": "350 ml",
+      "holster": true,
+      "max_contains_volume": "750 ml",
+      "max_contains_weight": "2 kg",
+      "max_item_length": "70 cm",
+      "moves": 20,
+      "flag_restriction": [
+        "SHEATH_KNIFE"
+      ]
+    }
+  ],
+    "use_action": [
+      {
+       "type": "holster",
+       "holster_prompt": "Store item",
+       "holster_msg": "你将你的%1$s存入你的%2$s。"
+      },
+      { "type": "firestarter", "moves": 100, "moves_slow": 2000 },
+      "HAMMER"
+    ],
+    "qualities": [
+      [ "HAMMER", 3 ],
+      [ "HAMMER_FINE", 2 ],
+      [ "SAW_W", 3 ],
+      [ "SAW_M", 3 ],
+      [ "SAW_M_FINE", 2 ],
+      [ "WRENCH", 3 ],
+      [ "WRENCH_FINE", 2 ],
+      [ "SCREW", 2 ],
+      [ "SCREW_FINE", 2 ],
+      [ "CUT", 2 ],
+      [ "CUT_FINE", 3 ],
+      [ "BUTCHER", 30 ],
+      [ "LOCKPICK", 20 ]
+    ],
+    "flags": [ "ALARMCLOCK", "BAROMETER", "BELTED", "SUPER_FANCY", "WATCH", "THERMOMETER", "HYGROMETER" ],
+    "material_thickness": 2.5,
+    "armor": [ { "encumbrance": [ 1, 7 ], "coverage": 100, "covers": [ "torso" ], "specifically_covers": [ "torso_waist" ] } ]
+  },
+  {
+    "id": "GS_tool_repairkit",
+    "type": "TOOL",
+    "category": "GS_tool",
+    "name": { "str": "超凡维修组（金工模式）" },
+    "description": "智力向制造专长的特级工具组，能强化超凡材质、校准枪械、修复各种物件，有两种模式对应不同材质，使用「开启」功能切换模式。\n \n※金工模式：校准枪械、修复金属材质。\n※细工模式：强化超凡装备、修复柔性物质。",
+    "weight": "1200 g",
+    "volume": 6,
+    "material": [ "super_mt" ],
+    "symbol": ";",
+    "color": "light_gray",
+    "ammo": [
+    "battery"
+  ],
+  "charges_per_use": 1,
+    "bashing": 15,
+    "to_hit": -2,
+    "qualities": [ [ "WELD", 3 ], [ "CHISEL", 3 ], [ "HAMMER_FINE", 3 ], [ "SAW_M_FINE", 3 ], [ "WRENCH_FINE", 3 ], [ "SCREW_FINE", 3 ] ],
+    "use_action": [
+      { "type": "transform", "msg": "你将维修组调整为细工模式", "target": "GS_tool_repairkit2" },
+      "GUN_REPAIR",
+      {
+        "type": "repair_item",
+        "item_action_type": "repair_metal",
+        "materials": [ "iron", "steel", "kevlar", "gold", "silver", "copper", "aluminum", "plastic" ],
+        "skill": "mechanics",
+        "cost_scaling": 0.1,
+        "move_cost": 250,
+        "tool_quality": 10
+      }
+      ],
+      "pocket_data": [
+    {
+      "pocket_type": "MAGAZINE_WELL",
+      "rigid": true,
+      "flag_restriction": [
+        "BATTERY_LIGHT",
+        "BATTERY_MEDIUM",
+        "BATTERY_HEAVY"
+      ],
+      "default_magazine": "medium_battery_cell"
+    }
+    ]
+  },
+  {
+    "id": "GS_tool_repairkit2",
+    "type": "TOOL",
+    "category": "GS_tool",
+    "name": { "str": "超凡维修组(细工模式)" },
+    "description": "智力向制造专长的特级工具组，能强化超凡材质、校准枪械、修复各种物件，有两种模式对应不同材质，使用「开启」功能切换模式。\n \n※金工模式：校准枪械、修复金属/基础材质。\n※细工模式：强化超凡装备、修复柔性物质。",
+    "weight": "1200 g",
+    "volume": 6,
+    "material": [ "super_mt" ],
+    "symbol": ";",
+    "color": "light_gray",
+    "ammo": [
+    "battery"
+  ],
+  "charges_per_use": 1,
+    "bashing": 15,
+    "to_hit": -2,
+    "qualities": [ [ "SEW", 3 ], [ "KNIT", 3 ] ],
+    "use_action": [
+      { "type": "transform", "msg": "你将维修组调整为金工模式", "target": "GS_tool_repairkit" },
+      {
+        "type": "repair_item",
+        "item_action_type": "repair_fabric",
+        "materials": [ "cotton", "leather", "wool", "fur", "nomex", "neoprene" ],
+        "skill": "tailor",
+        "cost_scaling": 0.1,
+        "tool_quality": 10,
+        "move_cost": 400
+      },
+      {
+        "type": "repair_item",
+        "item_action_type": "repair_metal",
+        "materials": [ "super_mt", "merit_mt", "GS_int_sheild" ],
+        "skill": "GS_int",
+        "cost_scaling": 0.5,
+        "move_cost": 500,
+        "tool_quality": 10
+      }
+      ],
+      "pocket_data": [
+    {
+      "pocket_type": "MAGAZINE_WELL",
+      "rigid": true,
+      "flag_restriction": [
+        "BATTERY_LIGHT",
+        "BATTERY_MEDIUM",
+        "BATTERY_HEAVY"
+      ],
+      "default_magazine": "medium_battery_cell"
+    }
+    ]
+  },
+  {
+    "id": "GS_SWP1_bag",
+    "looks_like": "copper_ring",
+    "type": "ARMOR",
+    "category": "GS_equipment",
+    "name": { "str": "SWP空间戒初代" },
+    "description": "通过超凡智力联通SWP计划，以天命拟造的空间戒。外观是一个朴实无华的小铜戒，刚好可以戴在无名指上。是SWP计划的首款产品，也是超凡游戏中流传最广的一款。通过空间压缩技术实现储物，内部空间约为10L，可惜的是，它并不能减轻内容物的重量。",
+    "weight": "10 g",
+    "volume": "2 ml",
+    "price": 5000,
+    "price_postapoc": 1500,
+    "symbol": "[",
+    "color": "white",
+    "material": [ "super_mt", "copper" ],
+     "sided": true,
+    "armor": [
+    {
+      "coverage": 0,
+      "covers": [ "hand_l", "hand_r" ],
+      "specifically_covers": [ "hand_fingers_l", "hand_fingers_r" ]
+    }
+   ],
+   "pocket_data": [
+     {
+      "pocket_type": "CONTAINER",
+      "rigid": true,
+      "max_contains_volume": "10200 ml",
+      "max_contains_weight": "25 kg",
+      "max_item_length": "46 cm",
+      "moves": 40
+     }
+    ],
+    "flags": [
+     "TARDIS",
+     "NO_WEAR_EFFECT",
+     "SKINTIGHT"
+     ]
+  },
+  {
+   "id": "GS_SWP2_traveler",
+   "looks_like": "ruby_silver_ring",
+   "type": "ARMOR",
+   "name": { "str": "旅行者II型戒" },
+   "description": "SWP计划推出的众多“实用型II型戒”中最受欢迎的一款，外观是一个镶有红宝石的银戒指(然而这颗宝石是超凡材料幻化的)，功能十分简单：可以随时随地变形为一个屠宰架，并且附带屠宰套件。(可收回，变回戒指形态）\n“并不是所有旅者都会把时间全部花在收取战利品上，而我们为他们提供了一个两全的方案。”",
+    "weight": "10 g",
+    "volume": "2 ml",
+    "price": 5000,
+    "price_postapoc": 1500,
+    "symbol": "[",
+    "color": "white",
+    "material": [ "super_mt", "silver" ],
+     "sided": true,
+    "armor": [
+    {
+      "coverage": 0,
+      "covers": [ "hand_l", "hand_r" ],
+      "specifically_covers": [ "hand_fingers_l", "hand_fingers_r" ]
+    }
+   ],
+   "use_action": {
+    "type": "deploy_furn",
+    "furn_type": "SWP_f_butcher_rack"
+    },
+    "flags": [
+     "NO_WEAR_EFFECT",
+     "SKINTIGHT"
+     ]
+  },
+  {
+    "id": "GS_SWP3_luckier",
+    "looks_like": "diamond_ring",
+    "type": "TOOL_ARMOR",
+    "name": { "str": "幸运者III型戒" },
+    "description": "<color_red>注：抽奖系统目前处于测试阶段，非常不稳定，同时也不平衡。\n</color>所有III型戒中毫无疑问最受欢迎的一款(同时也是风评最差的一款)，外观是一个镶钻金戒，投入天命铜币即可进行抽奖，120枚十五抽(10普通+4稀有+1史诗)。\n\n“不要让理性主宰你的人生，惊喜与乐趣才是你应该得到的！”他们说这句广告词的时候估计都快憋不住笑了。\n\n目前获得“不稳定决心”的唯一方式。”",
+    "weight": "10 g",
+    "volume": "2 ml",
+    "price": 5000,
+    "price_postapoc": 1500,
+    "symbol": "[",
+    "color": "white",
+    "material": [ "super_mt", "gold", "diamond" ],
+    "sided": true,
+    "ammo": ["destiny_copper_type"],
+    "relic_data": {
+     "passive_effects": [ { "has": "WIELD", "condition": "ALWAYS", "values": [ { "value": "REGEN_MANA", "multiply": 2 } ] } ] },
+    "pocket_data": [
+     {
+     "pocket_type": "MAGAZINE",
+     "rigid": true,
+     "ammo_restriction": { "destiny_copper_type": 777 }
+     }
+    ],
+    "flags": [
+     "TARDIS",
+     "NO_WEAR_EFFECT",
+     "SKINTIGHT"
+     ],
+    "armor": [
+    {
+      "coverage": 0,
+      "covers": [ "hand_l", "hand_r" ],
+      "specifically_covers": [ "hand_fingers_l", "hand_fingers_r" ]
+    }
+   ],
+   "charges_per_use": 120,
+   "use_action": [
+    {
+     "type": "cast_spell",
+     "spell_id": "summon_SWP_box1",
+     "level": 0,
+     "no_fail": true,
+     "msg": "<color_green>你按下戒指上的抽奖按钮，一个球形机器出现在你面前！</color>"
+     }
+    ]
+  },
+  {
+    "id": "GS_SWP4_controller",
+    "looks_like": "sapphire_platinum_ring",
+    "type": "TOOL_ARMOR",
+    "name": { "str": "掌控者IV型戒" },
+    "description": "由于价格问题，IV型戒的产出与售卖数量都极少，对于它们的评价也各有不同。掌控者是唯一一款不在明面售卖的IV型戒，外观是低调而奢华的蓝宝石铂金戒。其作用十分强大却又有些灰暗。不过在这种特殊时机，这些都无所谓了。\n可召唤一块用于召唤NPC的时空晶体，一次充能耗时两天。\n\n“我要你在哪里，你就得在哪里，你没得选。”",
+    "weight": "10 g",
+    "volume": "3 ml",
+    "price": 2000000,
+    "price_postapoc": 720000,
+    "symbol": "[",
+    "color": "white",
+    "material": [ "super_mt", "platinum", "gemstone" ],
+    "sided": true,
+    "armor": [
+    {
+      "coverage": 0,
+      "covers": [ "hand_l", "hand_r" ],
+      "specifically_covers": [ "hand_fingers_l", "hand_fingers_r" ]
+    }
+   ],
+    "pocket_data": [
+     {
+     "pocket_type": "MAGAZINE", "holster": true, "rigid": true, "ammo_restriction": { "destiny_fortune_type": 256 }
+     }
+    ],
+    "flags": [
+     "TARDIS",
+     "NO_WEAR_EFFECT",
+     "SKINTIGHT",
+     "NO_UNLOAD",
+     "NO_RELOAD"
+     ],
+    "charges_per_use": 48,
+    "relic_data": {
+     "charge_info": { "recharge_type": "periodic", "time": "2 h", "regenerate_ammo": true }
+    },
+    "use_action": [
+    {
+     "type": "cast_spell",
+     "spell_id": "summon_TAS_stone",
+     "level": 0,
+     "no_fail": true
+    }
+   ]
+  },
+  {
+    "//": "采用其他材质是为了在上面刻字、标签",
+    "type": "ARMOR",
+    "id": "GS_eq_support_sword",
+    "looks_like": "art_pyramid",
+    "category": "GS_weapon",
+    "name": { "str": "空间棱锥" },
+    "description": "空间系辅助装备，可以收纳任意近战武器，外观是一个悬浮的棱锥体，穿戴时会跟着你。“你不需要担心它会在你急停时把你刺穿……理论上来说。”",
+    "weight": "500 g",
+    "volume": "1000 ml",
+    "material": [ "super_mt", "steel" ],
+    "symbol": "#",
+    "color": "light_gray",
+    "pocket_data": [ 
+    {
+    "rigid": true,
+    "holster": true,
+    "max_contains_volume": "6000 ml",
+    "max_contains_weight": "10 kg",
+    "max_item_length": "450 cm",
+    "moves": 30,
+    "description": "容纳任意近战武器。由于结构问题，可能有些奇怪的东西也能够放入。",
+      "flag_restriction": [ "SHEATH_SWORD", "SHEATH_KNIFE", "SHEATH_SPEAR", "NONCONDUCTIVE", "DURABLE_MELEE", "SHEATH_AXE" ]
+    }
+  ],
+    "use_action": {
+      "type": "holster",
+      "holster_prompt": "收鞘",
+      "holster_msg": "你以一种匪夷所思的方式将%s放入这个锥体。"
+    },
+   "flags": [ "WATER_FRIENDLY", "TARDIS" ]
+  },
+  {
+    "id": "GS_eq_support_gun",
+    "looks_like": "architect_cube",
+    "type": "ARMOR",
+    "category": "GS_weapon",
+    "name": { "str": "空间立方体" },
+    "description": "空间系辅助装备，可以收纳一把任意大小的远程武器，外观是一个悬浮的立方体，穿戴时会跟着你。“空间系装备会与主人心灵相通，所以它浮空时依然会将重量计算到你身上……我绝对不是在狡辩。”",
+    "weight": "800 g",
+    "volume": "1200 ml",
+    "material": [ "super_mt", "steel" ],
+    "symbol": "#",
+    "color": "light_gray",
+    "pocket_data": [
+    {
+      "holster": true,
+      "max_contains_volume": "7600 ml",
+      "max_contains_weight": "15 kg",
+      "max_item_length": "200 cm",
+      "moves": 30,
+      "description": "容纳任意远程武器。由于空间压缩结构限制，弓可以直接放入，而枪/弩需要安装背带，手枪需要安装皮带夹。",
+      "flag_restriction": [ "IS_ARMOR", "SHEATH_BOW" ]
+    }
+  ],
+    "use_action": {
+      "type": "holster",
+      "holster_prompt": "收枪",
+      "holster_msg": "你以一种匪夷所思的的方式将%s放入这个立方体。"
+    },
+    "flags": [ "WATER_FRIENDLY", "TARDIS" ]
+  },
+  {
+    "id": "GS_eq_support_quiver",
+    "looks_like": "art_spiral",
+    "type": "ARMOR",
+    "category": "GS_equipment",
+    "name": { "str": "空间螺旋" },
+    "description": "空间系辅助装备，可容纳40支箭或飞刀，外观类似于一个铁质麻花，穿戴时会依附在你腰间方便取箭。“它不仅仅是看起来像麻花。我是认真的。”",
+    "weight": "400 g",
+    "volume": "800 ml",
+    "material": [ "super_mt", "steel" ],
+    "symbol": "[",
+    "color": "brown",
+    "flags": [ "BELTED", "OVERSIZE", "WATER_FRIENDLY", "TARDIS" ],
+    "pocket_data": [
+    { "ammo_restriction":
+    { "arrow": 40, "bolt": 40, "thrown": 40, "GOS_merit_ammo": 40 }, "moves": 20,    "rigid":true } ],
+    "armor": [
+    { "encumbrance": 5, "coverage": 30, "covers": [ "torso" ], "specifically_covers": [ "torso_waist" ] } ],
+    "material_thickness": 1,
+    "use_action": {
+    "type": "transform",
+    "target": "super_fried_dough_twist",
+    "menu_text": "变形",
+    "msg": "随着一阵炫酷的音乐，一个超级无敌七彩炫光暗黑酷炫重金属华丽至尊摇滚的麻花出现了。"
+  }
+  },
+  {
+    "id": "GS_eq_support_magpouch",
+    "looks_like": "altered_rubicks_cube",
+    "type": "ARMOR",
+    "category": "GS_equipment",
+    "name": { "str": "空间微立方" },
+    "description": "空间系辅助装备，可以收纳3组弹匣。外观是个巧夺天工的小立方体，穿戴时会依附在你腰间方便取弹匣。“当你没事做的时候，你甚至可以把它当做一个真正的魔方来玩。”",
+    "weight": "180 g",
+    "volume": "210 ml",
+    "material": [ "super_mt", "steel" ],
+    "symbol": "[",
+    "color": "brown",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid" :true,
+        "max_item_length": "300 mm",
+        "max_contains_volume": "1500 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 40,
+        "flag_restriction": [ "MAG_BULKY", "MAG_COMPACT", "MAG_BELT" ],
+        "volume_encumber_modifier": 0.3
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "rigid" :true,
+        "max_item_length": "300 mm",
+        "max_contains_volume": "1500 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 40,
+        "flag_restriction": [ "MAG_BULKY", "MAG_COMPACT" ],
+        "volume_encumber_modifier": 0.3
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "rigid" :true,
+        "max_item_length": "300 mm",
+        "max_contains_volume": "1500 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 40,
+        "flag_restriction": [ "MAG_BULKY", "MAG_COMPACT" ],
+        "volume_encumber_modifier": 0.3
+      }
+    ],
+    "use_action": { "type": "holster", "holster_prompt": "Stash ammo", "holster_msg": "You stash your %s." },
+    "flags": [ "WATER_FRIENDLY", "BELTED", "PALS_LARGE", "OVERSIZE", "TARDIS" ],
+    "armor": [ { "encumbrance": 2, "coverage": 20, "covers": [ "torso" ], "specifically_covers": [ "torso_waist" ] } ],
+    "material_thickness": 1
+  },
+  {
+    "id": "GS_eq_support_bandolier",
+    "looks_like": "art_beads",
+    "type": "ARMOR",
+    "category": "GS_equipment",
+    "name": { "str": "空间连珠手镯" },
+    "description": "空间系辅助装备，收纳25发子弹。穿戴在手上以方便取弹药。“以前总是有人会把它戴在没拿枪的那只手上，一个很蠢却又很常犯的错误。”",
+    "weight": "82 g",
+    "volume": "51 ml",
+    "material": [ "super_mt", "steel" ],
+    "symbol": "[",
+    "color": "brown",
+    "pocket_data": [
+      {
+      "ammo_restriction": {
+          "32": 25,
+          "762x25": 25,
+          "38": 25,
+          "40": 25,
+          "44": 25,
+          "45": 25,
+          "9x18": 25,
+          "9mm": 25,
+          "454": 25,
+          "500": 25,
+          "22": 25,
+          "223": 25,
+          "5x50": 25,
+          "545x39": 25,
+          "3006": 25,
+          "308": 25,
+          "300": 25,
+          "762": 25,
+          "762R": 25,
+          "8x40mm": 25,
+          "shot": 25,
+          "20x66mm": 25,
+          "metal_rail": 25,
+          "Element_bullet_type": 25
+        },
+        "moves": 20, "rigid":true
+      }
+    ],
+    "flags": [ "WATER_FRIENDLY", "BELTED", "OVERSIZE", "FANCY", "TARDIS" ],
+    "sided": true,
+    "armor": [ { "encumbrance": 2, "coverage": 20, "covers": [ "hand_l", "hand_r" ], "specifically_covers": [ "hand_wrist_l", "hand_wrist_r" ] } ],
+    "material_thickness": 1
+  },
+  {
+    "id": "GS_tool_shovel_WJQ500",
+    "looks_like": "e_tool",
+    "type": "TOOL",
+    "category": "GS_tool",
+    "name": { "str": "万能军铲WJQ500" },
+    "description": "制造专长具现的多功能工兵铲，参考华国军铲WJQ308设计，集挖坑、伐木、凿壁、剪钳、翻土等功能，折叠设计让它可以收纳到剑鞘里。",
+    "weight": "1100 g",
+    "volume": "500 ml",
+    "material": [ "super_mt" ],
+    "symbol": "/",
+    "color": "dark_gray",
+    "to_hit": 1,
+    "bashing": 12,
+    "cutting": 12,
+    "techniques": [ "WBLOCK_1", "BRUTAL" ],
+    "qualities": [
+      [ "CUT", 1 ],
+      [ "DIG", 3 ],
+      [ "AXE", 2 ],
+      [ "SAW_W", 2 ],
+      [ "PRY", 3 ],
+      [ "COOK", 1 ],
+      [ "HAMMER", 3 ],
+      [ "BUTCHER", 10 ]
+    ],
+    "use_action": [ "CROWBAR", "BOLTCUTTERS", "PICKAXE", "MAKEMOUND" ],
+    "flags": [ "DURABLE_MELEE", "SHEATH_SWORD", "BELT_CLIP" ]
+  },
+  {
+    "id": "GS_tool_fire",
+    "looks_like": "ref_lighter_on",
+    "type": "TOOL",
+    "sub": "fire",
+    "category": "GS_tool",
+    "name": { "str": "永不熄灭的火机" },
+    "description": "超凡感性渲染的具现……打火机。激活时提供照明，亦可点燃物品。顺带一提，它的火焰还可以用来打僵尸。\n\n“很遗憾，你不能借此获得无限的液态丁烷。”",
+    "weight": "22 g",
+    "volume": "31 ml",
+    "material": [ "super_mt" ],
+    "symbol": "$",
+    "color": "red",
+    "cutting": 4,
+    "to_hit": 1,
+    "relic_data": {
+     "passive_effects": [
+     { "has": "WIELD",
+       "condition": "ALWAYS",
+       "values": [
+        { "value":
+          "ITEM_DAMAGE_HEAT", "add": 10 }
+       ] }
+    ]
+   },
+    "use_action": [
+     { "type": "transform",
+      "target": "GS_tool_fire_act",
+      "msg": "你将不灭火机的翻盖打开。",
+      "active": true },
+     { "type": "firestarter", "moves": 25 },
+     "HOTPLATE" ],
+    "flags": [ "FIRE", "FLAMING", "UNBREAKABLE_MELEE", "UNARMED_WEAPON" ]
+  },
+  {
+    "id": "GS_tool_fire_act",
+    "looks_like": "ref_lighter",
+    "type": "TOOL",
+    "sub": "fire",
+    "category": "GS_tool",
+    "name": { "str": "永不熄灭的火机" },
+    "description": "已经打开翻盖的不灭火机。这样的亮度足够你制造东西，但对于探索未知区域来说，范围太小了。",
+    "weight": "22 g",
+    "volume": "31 ml",
+    "material": [ "super_mt" ],
+    "symbol": "$",
+    "color": "red",
+    "cutting": 4,
+    "to_hit": 1,
+    "relic_data": {
+     "passive_effects": [
+     { "has": "WIELD",
+       "condition": "ALWAYS",
+       "values": [
+        { "value":
+          "ITEM_DAMAGE_HEAT", "add": 10 }
+       ] }
+    ]
+   },
+    "use_action": [
+     { "type": "transform",
+      "target": "GS_tool_fire",
+      "msg": "你将不灭火机的翻盖关上。",
+      "menu_text": "关闭"
+      },
+     { "type": "firestarter", "moves": 25 } ],
+    "flags": [ "FIRE", "FLAMING", "UNBREAKABLE_MELEE", "UNARMED_WEAPON", "LIGHT_30" ]
+  },
+  {
+    "id": "GS_tool_fireblock",
+    "type": "TOOL",
+    "category": "GS_item",
+    "name": { "str": "烧烤宝典" },
+    "description": "超凡道具，使用者暂时免疫接近高温的负面状态(着火、水泡)，但无法免除火焰直伤，激活消耗15天命铜币，效果持续3分钟。\n \n“任何有机体都无法抵抗的伤害。血肉苦弱，机械飞升！”",
+    "material": [ "super_mt" ],
+    "symbol": "?",
+    "color": "red",
+    "ammo": "destiny_copper_type",
+    "charges_per_use": 15,
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "holster": true, "rigid": true, "ammo_restriction": { "destiny_copper_type": 30 } } ],
+    "flags": [ "ZERO_WEIGHT" ],
+    "use_action": [
+      {
+        "type": "consume_drug",
+        "activation_message": "烧烤宝典启动！时效3分钟。",
+        "effects": [ { "id": "book_fireblock", "duration": "3 m" } ],
+        "moves": 0
+      }
+    ]
+  },
+  {
+    "id": "GS_tool_acidblock",
+    "type": "TOOL",
+    "category": "GS_item",
+    "name": { "str": "酸灼宝典" },
+    "description": "超凡道具，使用者暂时免疫酸液腐蚀的负面持续状态，但无法免除酸液直伤，激活时消耗10天命铜币，效果持续3分钟。\n \n“机械飞升的家伙们最反感的东西之一。”",
+    "material": [ "super_mt" ],
+    "symbol": "?",
+    "color": "green",
+    "ammo": "destiny_copper_type",
+    "charges_per_use": 10,
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "holster": true, "rigid": true, "ammo_restriction": { "destiny_copper_type": 30 } } ],
+    "flags": [ "ZERO_WEIGHT" ],
+    "use_action": [
+      {
+        "type": "consume_drug",
+        "activation_message": "酸灼宝典启动！时效1分钟。",
+        "effects": [ { "id": "book_acidblock", "duration": "3 m" } ],
+        "moves": 0
+      }
+    ]
+  },
+  {
+    "id": "GS_tool_shockblock",
+    "type": "TOOL",
+    "category": "GS_item",
+    "name": { "str": "电击宝典" },
+    "description": "超凡道具，使用者暂时免疫电击造成的状态与伤害，激活后每2回合消耗1天命币。\n \n“有句话怎么说，你最需要的，就是伤你最多的。”",
+    "volume": "250 ml",
+    "material": [ "super_mt" ],
+    "symbol": "?",
+    "color": "green",
+    "ammo": "destiny_copper_type",
+    "flags": [ "ZERO_WEIGHT" ],
+    "relic_data": {
+     "passive_effects": [
+      {
+       "has": "HELD",
+       "condition": "ACTIVE",
+       "values": [
+        {
+        "value": "ARMOR_ELEC",
+         "multiply": -1
+         }
+        ]
+       }
+      ]
+     },
+    "pocket_data": [
+     {
+      "pocket_type": "MAGAZINE",
+      "rigid": true,
+      "ammo_restriction": {
+       "destiny_copper_type": 30
+       }
+      }
+     ],
+    "use_action": {
+      "type": "transform",
+      "msg": "现在没有电眼能勾走你的心了。",
+      "target": "GS_tool_shockblock_act",
+      "active": true,
+      "need_charges_msg": "电击宝典需要足够的天命币才能启动。"
+    }
+  },
+  {
+    "id": "GS_tool_shockblock_act",
+    "type": "TOOL",
+    "category": "GS_item",
+    "name": { "str": "电击宝典" },
+    "description": "超凡道具，使用者暂时免疫电击，每2回合消耗1天命币。",
+    "material": [ "super_mt" ],
+    "symbol": "?",
+    "color": "green",
+    "ammo": "destiny_copper_type",
+    "charges_per_use": 1,
+    "turns_per_charge": 2,
+    "flags": [ "ZERO_WEIGHT" ],
+    "relic_data": {
+     "passive_effects": [
+      {
+       "has": "HELD",
+       "condition": "ACTIVE",
+        "values": [
+         {
+         "value": "ARMOR_ELEC",
+         "multiply": -1
+         }
+        ]
+       }
+      ]
+     },
+    "pocket_data": [
+     {
+      "pocket_type": "MAGAZINE",
+      "rigid": true,
+      "ammo_restriction": {
+       "destiny_copper_type": 30
+       }
+      }
+     ],
+    "use_action": {
+     "type": "transform",
+     "msg": "电击宝典的效果关闭。",
+     "target": "GS_tool_shockblock"
+     },
+    "revert_to": "GS_tool_shockblock"
+  },
+  {
+    "id": "GS_tool_block_hot",
+    "type": "TOOL",
+    "category": "GS_item",
+    "name": { "str": "凝冰符" },
+    "description": "感性特质凝聚的符箓，渲染水气环绕周身，暂时压制高温造成的热状态，对既有的烧烫伤没有效果(水泡、着火)，激活时消耗10天命铜币，持续20分钟。",
+    "material": [ "super_mt" ],
+    "symbol": "?",
+    "color": "red",
+    "ammo": "destiny_copper_type",
+    "charges_per_use": 10,
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "holster": true, "rigid": true, "ammo_restriction": { "destiny_copper_type": 30 } } ],
+    "flags": [ "ZERO_WEIGHT" ],
+    "use_action": [
+      {
+        "type": "consume_drug",
+        "activation_message": "凝冰符启动，水雾在体表周围流转。",
+        "effects": [ { "id": "GOS_block_hot", "duration": "20 m" } ],
+        "moves": 0
+      }
+    ]
+  },
+  {
+    "id": "GS_tool_block_cold",
+    "type": "TOOL",
+    "category": "GS_item",
+    "name": { "str": "升阳符" },
+    "description": "感性特质凝聚的符箓，能唤起阳气，暂时压制低温造成的负面状态(寒冷、冻伤)，激活时消耗10天命铜币，持续20分钟。",
+    "material": [ "super_mt" ],
+    "symbol": "?",
+    "color": "red",
+    "ammo": "destiny_copper_type",
+    "charges_per_use": 10,
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "holster": true, "rigid": true, "ammo_restriction": { "destiny_copper_type": 30 } } ],
+    "flags": [ "ZERO_WEIGHT" ],
+    "use_action": [
+      {
+        "type": "consume_drug",
+        "activation_message": "升阳符启动，一股暖劲驱除了寒意。",
+        "effects": [ { "id": "GOS_block_cold", "duration": "20 m" } ],
+        "moves": 0
+      }
+    ]
+  },
+  {
+    "id": "GS_eq_per1_mp3",
+    "type": "TOOL_ARMOR",
+    "category": "GS_equipment",
+    "name": { "str": "天天静听" },
+    "description": "感性特质具现的音乐播放器，依使用者的意念演奏，感知越强心情加成越高，使用时速度-10，与乐器/MP3的效果不叠加。\n \n※立體環繞音效，周围的人都听得到！",
+    "volume": "10 ml",
+    "material": [ "super_mt" ],
+    "symbol": "#",
+    "color": "blue",
+    "flags": [ "ZERO_WEIGHT" ],
+    "use_action": {
+      "type": "musical_instrument",
+      "speed_penalty": 10,
+      "volume": 5,
+      "fun": -5,
+      "fun_bonus": 3,
+      "description_frequency": 100,
+      "descriptions": [
+       "天天静听正在播放：『It's my life~It's now or never.』",
+       "天天静听正在播放:『死了都要爱，不淋漓尽致不痛快~』",
+       "天天静听正在播放:『修炼爱情的悲欢、我们这些努力不简单，快乐炼成泪水 是一种勇敢。』",
+       "天天静听正在播放:『I'm the one I couldn't save…』",
+        "天天静听正在播放:『I can't go back, it's too late…』"
+      ]
+    }
+  },
+  {
+    "id": "GS_eq_per3_mp3",
+    "type": "TOOL_ARMOR",
+    "category": "GS_equipment",
+    "name": { "str": "天天静听（专业版）" },
+    "description": "感性特质具现的音乐播放器v2.0，依使用者的意念演奏，感知强化心情加成，使用时速度-5，与乐器/MP3的效果不叠加。\n \n※该装备等级已封顶。",
+    "volume": "10 ml",
+    "material": [ "super_mt" ],
+    "symbol": "#",
+    "color": "blue",
+    "flags": [ "ZERO_WEIGHT" ],
+    "use_action": {
+      "type": "musical_instrument",
+      "speed_penalty": 5,
+      "volume": 8,
+      "fun": -5,
+      "fun_bonus": 4,
+      "description_frequency": 100,
+      "descriptions": [
+        "天天静听正在播放：『谁知道我们 该梦归何处』",
+        "天天静听正在播放：『翻转誓言到过去，你我是否能再延续？』",
+        "天天静听正在播放：『狂风在呼袭 我充满决心』",
+        "天天静听正在播放：『I LOVE THE WAY, I LOVE THE WAY. I love the way you keep on trying~』",
+        "天天静听正在播放：『死了都要爱，不淋漓尽致不痛快~』",
+        "天天静听正在播放：『眼前荒沙瀰漫了等候、耳边传来孱弱的呼救，追赶要我爱的不保留』",
+        "天天静听正在播放：『修炼爱情的悲欢、我们这些努力不简单，快乐炼成泪水 是一种勇敢。』",
+        "天天静听正在播放：『我们插手已发生的过去、挥霍大好现在，却指望不一定的未来。』"
+      ]
+    }
+  },
+  {
+    "id": "GS_PER_earmuff",
+    "type": "ARMOR",
+    "category": "GS_equipment",
+    "name": { "str": "听觉耳饰" },
+    "description": "精通听觉的超凡者必备，透过反向声波抵免伤害性的巨响，避免过度敏锐的感官受到伤害，装备(W)生效。",
+    "volume": "10 ml",
+    "material": [ "super_mt" ],
+    "symbol": "[",
+    "color": "light_gray",
+    "flags": [ "PARTIAL_DEAF", "ZERO_WEIGHT" ]
+  },
+  {
+    "id": "GS_tool_per3_crystal",
+    "looks_like": "oil_lamp",
+    "type": "TOOL",
+    "category": "GS_tool",
+    "name": { "str": "灵视水晶-勘探模式" },
+    "description": "特质「天眼」凝聚的水晶球，增幅使用者的超感知，随时间自动充能。使用它能勘查大地图，消耗10能量。激活以转为侦查模式。\n \n“既然只是为了多放个法术才做转换，那么这和新做了一个物品有什么区别？”",
+    "volume": "80 ml",
+    "material": [ "glass", "super_mt" ],
+    "symbol": "@",
+    "color": "light_cyan",
+    "charges_per_use": 10,
+    "pocket_data": [
+     {
+      "pocket_type": "MAGAZINE",
+      "rigid": true,
+      "ammo_restriction": {
+      "destiny_fortune_type": 60
+     }
+    }
+   ],
+   "use_action": [
+    {
+     "type": "cast_spell",
+     "spell_id": "AEA_MAP",
+     "level": 1,
+     "no_fail": true
+    },
+    {
+    "type": "transform",
+    "target": "GS_tool_per3_crystal_2",
+    "menu_text": "开启侦查模式",
+    "msg": "你将灵视水晶转为侦查模式。",
+    "ammo_scale": 0
+    }
+   ],
+    "relic_data": {
+      "charge_info": {
+      "regenerate_ammo": true,
+      "recharge_type": "periodic",
+      "time": "2 h"
+      }
+    },
+    "flags": [
+     "NO_UNLOAD",
+     "FRAGILE",
+     "NO_RELOAD",
+     "ZOOM",
+     "ZERO_WEIGHT"
+     ]
+  },
+  {
+    "id": "GS_tool_per3_crystal_2",
+    "looks_like": "oil_lamp",
+    "type": "TOOL",
+    "category": "GS_tool",
+    "name": { "str": "灵视水晶-侦查模式" },
+    "description": "特质「天眼」凝聚的水晶球，增幅使用者的超感知，随时间自动充能，使用它能施展透视术，消耗2充能，该回合拥有20半径内的真实视野（无视黑暗和阻挡物，移动后失效）\n \n“这是独属于开发者的执念，如果我做成两个物品，那就不叫“修了bug”。即使这实际上并没有什么区别。",
+    "volume": "80 ml",
+    "material": [ "glass", "super_mt" ],
+    "symbol": "@",
+    "color": "light_cyan",
+    "charges_per_use": 2,
+    "pocket_data": [
+     {
+      "pocket_type": "MAGAZINE",
+      "rigid": true,
+      "ammo_restriction": {
+      "destiny_fortune_type": 60
+     }
+    }
+   ],
+   "use_action": [
+    {
+     "type": "cast_spell",
+     "menu_text": "玻璃世界",
+     "spell_id": "GS_spell_glassworld",
+     "level": 1,
+     "no_fail": true
+    },
+    {
+    "type": "transform",
+    "target" : "GS_tool_per3_crystal",
+    "menu_text": "开启勘探模式",
+    "msg": "你将灵视水晶转为勘探模式。",
+    "ammo_scale": 0
+    }
+   ],
+    "relic_data": {
+      "charge_info": {
+      "regenerate_ammo": true,
+      "recharge_type": "periodic",
+      "time": "2 h"
+      }
+    },
+    "flags": [
+     "NO_UNLOAD",
+     "FRAGILE",
+     "NO_RELOAD",
+     "ZOOM",
+     "ZERO_WEIGHT"
+     ]
+  },
+  {
+    "id": "GS_item_per4_godeye",
+    "looks_like": "petrified_eye",
+    "type": "TOOL_ARMOR",
+    "category": "GS_item",
+    "name": { "str": "天人之眼" },
+    "description": "特质「天眼」凝聚的……显而易见，这是只天眼。呃，字面意义上的一只眼。它似乎要按在你额头上才能发挥作用……可以保护你的眼睛，激活状态下可以让你看穿墙壁，每分钟消耗2天命气运。\n\n“很明显，被沙子迷眼的概率增加了50%。”",
+    "volume": "20 ml",
+    "weight": "23 g",
+    "material": [ "super_mt" ],
+    "symbol": "!",
+    "color": "cyan",
+    "pocket_data": [
+      {
+       "pocket_type": "MAGAZINE",
+       "rigid": true,
+       "ammo_restriction": {
+        "destiny_copper_type": 200
+       }
+      }
+     ],
+    "relic_data": {
+    "passive_effects": [
+     {
+      "has": "WORN",
+      "condition": "ACTIVE",
+      "mutations": [
+       "GS_tool_skyeye"
+      ]
+     }
+    ]
+   },
+   "material_thickness": 2.5,
+    "armor": [
+     {
+        "encumbrance": 0,
+        "coverage": 90,
+        "covers": [
+          "eyes"
+        ]
+      }
+    ],
+    "use_action": {
+     "type": "transform",
+     "msg": "<color_green>没有墙壁能阻挡你的视线了。</color>",
+     "target": "GS_item_per4_godeye_active",
+     "active": true,
+     "ammo_scale": 1
+    },
+    "flags": [
+     "SEMITANGIBLE",
+     "WATERPROOF"
+    ]
+  },
+  {
+    "id": "GS_item_per4_godeye_active",
+    "looks_like": "petrified_eye",
+    "type": "TOOL_ARMOR",
+    "category": "GS_item",
+    "name": { "str": "天人之眼" },
+    "description": "天眼已经睁开，并与你融为一体，现在你可以通过它来探查墙壁后面。\n\n“如果再配条大型犬就更合适了。”",
+    "volume": "20 ml",
+    "weight": "23 g",
+    "material": [ "super_mt" ],
+    "symbol": "@",
+    "color": "cyan",
+    "turns_per_charge": 30,
+    "charges_per_use": 1,
+    "pocket_data": [
+     {
+      "pocket_type": "MAGAZINE",
+      "rigid": true,
+      "ammo_restriction": {
+      "destiny_copper_type": 200
+     }
+    }
+   ],
+    "relic_data": {
+     "passive_effects": [
+      {
+       "has": "WORN",
+       "condition": "ACTIVE",
+       "mutations": [
+       "GS_tool_skyeye"
+       ]
+      } 
+     ]
+    },
+    "armor": [
+     {
+        "encumbrance": 0,
+        "coverage": 90,
+        "covers": [
+          "eyes"
+        ]
+      }
+    ],
+    "use_action": {
+     "type": "transform",
+     "menu_text": "关闭",
+     "msg": "你关闭了天眼。",
+     "target": "GS_item_per4_godeye",
+     "ammo_scale": 0
+    },
+    "revert_to": "GS_item_per4_godeye",
+    "flags": [
+     "SEMITANGIBLE",
+     "WATERPROOF"
+    ]
+  },
+  {
+    "id": "GS_eq_legended_badge",
+    "looks_like": "rad_badge",
+    "type": "TOOL_ARMOR",
+    "category": "GS_equipment",
+    "name": { "str": "传说徽章" },
+    "description": "在超凡者游戏登峰造极的玩家之证，配戴时全属性+2，附带传说技能。\n \n主动技：传说光辉，全属性+5，速度+40，體力恢复+8，时效10分钟，冷却时间12小时。",
+    "volume": "15 ml",
+    "material": [ "super_mt" ],
+    "symbol": "[",
+    "color": "light_gray",
+    "max_charges": 12,
+    "initial_charges": 12,
+    "charges_per_use": 12,
+    "pocket_data": [
+     {
+      "pocket_type": "MAGAZINE",
+      "rigid": true,
+      "ammo_restriction": {
+      "destiny_fortune_type": 12
+     }
+    }
+   ],
+   "relic_data": {
+    "charge_info": {
+     "recharge_type": "periodic",
+     "time": "120 m",
+     "regenerate_ammo": true
+     },
+    "passive_effects": [
+      {
+       "has": "WORN",
+       "condition": "ALWAYS",
+       "values": [
+        {"value": "STRENGTH","add": 2},
+        {"value": "DEXTERITY","add": 2},
+        {"value": "INTELLIGENCE","add": 2},
+        {"value": "PERCEPTION","add": 2}
+       ]
+      } 
+     ]
+    },
+    "use_action": {
+      "type": "consume_drug",
+      "moves": 0,
+      "activation_message": "传说的光辉发动，10分钟内大幅提升全属性！",
+      "effects": [
+       {
+        "id": "Legend_light",
+        "duration": 100
+       }
+      ]
+    },
+    "flags": [ "SUPER_FANCY", "ZERO_WEIGHT" ]
+  },
+  {
+    "id": "soul_refining_furnace1",
+    "looks_like": "char_forge",
+    "type": "TOOL",
+    "symbol": ";",
+    "color": "dark_gray",
+    "name": { "str": "基础炼魂炉" },
+    "description": "炼制灵体和魂器所需要的炉子，巨大而沉重。这个功能非常简陋，只能进行一些简单的魂器制作，但价格低廉，在灵体融炼这类需要消耗炉子的情况下非常合适。是炼魂师使用最多的版本。",
+    "weight": "40 kg",
+    "volume": "25 L",
+    "longest_side": "30 cm",
+    "material": [ "steel", "copper", "NW_soul" ],
+    "repairs_with": [ "steel", "copper" ],
+    "bashing": 30,
+    "to_hit": -1,
+    "pocket_data": [ { "pocket_type": "MAGAZINE","ammo_restriction": { "neww_soul_type": 1500 },"watertight": true } ],
+    "flags": [ "ALLOWS_REMOTE_USE" ]
+  },
+  {
+    "id": "SWP_cartool_basic",
+    "looks_like": "toolbox_workshop_empty",
+    "type": "TOOL_ARMOR",
+    "name": { "str": "SWP基础车辆维修套组" },
+    "description": "沉甸甸的金属箱子，足以装下修理车辆所需的所有工具。上面刻着SWP的字母标识，内置一套制作SWP车辆部件必需的空间工具。箱身上有条带子，让你可以像腰带一样将它挂在身上，同时会很累赘。除此之外就是一个普通的工具箱。作为SWP的产品，出奇的没有采用任何空间微缩技术。\n\n“这是对旧时代的缅怀。”\n“当然，我们同时提供高级缩小版，价格只需要基础版的十倍。”",
+    "material": [ "steel", "super_mt", "rubber" ],
+    "symbol": ";",
+    "color": "light_gray",
+    "weight": "4523 g",
+    "volume": "31200 ml",
+    "longest_side": "24 cm",
+    "price": 300000,
+    "price_postapoc": 30000,
+    "bashing": 24,
+    "to_hit": -2,
+    "pocket_data": [
+    {
+      "pocket_type": "CONTAINER",
+      "rigid": true,
+      "max_contains_volume": "30 L",
+      "max_contains_weight": "50 kg",
+      "max_item_length": "32 cm",
+      "volume_encumber_modifier": 0.3
+    }
+  ],
+  "armor": [
+    { 
+      "coverage": 100,
+      "covers": [ "torso" ],
+      "specifically_covers": [ "torso_waist" ],
+      "encumbrance": [ 20, 20 ]
+    }
+   ],
+   "material_thickness": 2.5,
+   "flags": [
+    "STURDY",
+    "BELTED",
+    "OVERSIZE"
+    ]
+  },
+  {
+  "id": "NW_vacutainer",
+  "looks_like": "vacutainer",
+  "type": "GENERIC",
+  "category": "tools",
+  "name": {"str": "新世界采血管"},
+  "description": "世界通道连通之后，当地幸存者结合某张新世界图纸研发的新型采血工具，结合了空间微缩技术和次元壁通道技术，能容纳20份血液或者其他液体。尽管只是照葫芦画瓢，但也足够用了。\n\n“理论上来说，它应该只用于高级用途。”",
+  "weight": "29 g",
+  "volume": "426 ml",
+  "longest_side": "9 cm",
+  "price": 400000,
+  "price_postapoc": 80000,
+  "to_hit": -3,
+  "cutting": 6,
+  "material": [
+    "plastic","DT_dt"
+  ],
+  "symbol": ";",
+  "color": "light_cyan",
+  "use_action": [
+    "BLOOD_DRAW",
+    {
+    "type":"transform",
+    "target": "God_vacutainer",
+    "msg": "你滴入一滴鲜血，采血管展现了它的正常形态。"
+     }
+  ],
+  "pocket_data": [
+    {
+      "pocket_type": "CONTAINER",
+      "watertight": true,
+      "rigid": true,
+      "max_contains_volume": "5 L",
+      "max_contains_weight": "6 kg",
+      "max_length": "7 cm"
+    }
+   ],
+   "flags": ["TARDIS"]
+  },
+  {
+  "id": "God_vacutainer",
+  "looks_like": "vacutainer",
+  "type": "GENERIC",
+  "category": "tools",
+  "name": {"str": "神明采血工具"},
+  "description": "世界通道连通之后，当地幸存者结合某张新世界图纸研发的新型采血工具，结合了空间微缩技术和次元壁通道技术。现在上面多了一个金色的@标志。看起来现在才是它原本应有的样子。激活以采血，但它现在貌似只接受你的血。\n\n<color_red>“告诉我，神会流血吗？”</color>",
+  "weight": "29 g",
+  "volume": "426 ml",
+  "longest_side": "9 cm",
+  "price": 400000,
+  "price_postapoc": 80000,
+  "to_hit": -3,
+  "cutting": 6,
+  "material": [
+    "plastic","DT_dt"
+  ],
+  "symbol": ";",
+  "color": "light_cyan",
+  "use_action": [
+    {
+     "type":"cast_spell",
+     "spell_id": "NW_spl_godblood",
+     "no_fail": true,
+     "level": 0
+     },
+    {
+     "type":"transform",
+     "target": "NW_vacutainer",
+     "msg": "你滴入一滴鲜血，采血管恢复原貌。"
+     }
+  ],
+  "pocket_data": [
+    {
+      "pocket_type": "CONTAINER",
+      "watertight": true,
+      "rigid": true,
+      "max_contains_volume": "5 L",
+      "max_contains_weight": "6 kg",
+      "max_length": "7 cm"
+    }
+   ],
+   "flags": ["TARDIS"]
+  },
+  {
+   "id": "NW_DsRtool",
+   "type": "TOOL",
+   "name": { "str": "化学整合套组（生物）" },
+   "description": "一套用于生物化学处理的工具，整合了炊具，屠宰工具，化学用具。经过新世界技术的巧妙结合，它还可以用于进行一些复杂的超凡加工。",
+   "looks_like": "box_medium",
+   "weight": "7200 g",
+   "volume": "4120 ml",
+   "price": 200000,
+   "price_postapoc": 26000,
+   "to_hit": -2,
+   "bashing": 8,
+   "material": [ "glass", "cotton", "steel" ],
+  "symbol": ";",
+  "color": "light_gray",
+  "ammo": [ "lamp_oil" ],
+  "sub": "hotplate",
+  "charges_per_use": 1,
+  "qualities": [
+   [ "DISTILL", 1 ],
+   [ "CHEM", 3 ],
+   [ "BOIL", 2 ],
+   [ "COOK", 3 ],
+   [ "CONTAIN", 3 ],
+   [ "CUT", 2 ],
+   [ "CUT_FINE", 3 ],
+   [ "BUTCHER", 50 ],
+   [ "FABRIC_CUT", 1 ]
+  ],
+  "use_action": [ "HOTPLATE" ],
+  "pocket_data": [
+   {
+    "pocket_type": "MAGAZINE",
+    "ammo_restriction": { "lamp_oil": 1200 },
+    "watertight": true,
+    "rigid": true
+   }
+  ]
+ },
+ {
+   "id": "NW_Writetool",
+   "looks_like": "toolbox_empty",
+   "type": "TOOL",
+   "name": { "str": "多功能写作工具" },
+   "description": "一个装着各种各样写作用笔的盒子，附有一个特殊的全彩颜料墨水罐，通过旧世界尘埃来补充。\n\n“在这套工具正式进入市场后，我们才意识到买椟还珠的合理性。”",
+   "weight": "920 g",
+   "volume": "1250 ml",
+   "price": 50000,
+   "price_postapoc": 15000,
+   "to_hit": -2,
+   "bashing": 8,
+   "material": [ "glass", "cotton", "steel" ],
+  "symbol": ";",
+  "color": "light_gray",
+  "ammo": [ "DT_dust_type" ],
+  "charges_per_use": 1,
+  "pocket_data": [
+   {
+    "pocket_type": "MAGAZINE",
+    "ammo_restriction": { "DT_dust_type": 3000 },
+    "rigid": true
+   }
+  ],
+  "use_action": [
+   {
+    "type": "inscribe",
+    "verb": "Write",
+    "gerund": "Written",
+    "on_terrain": true,
+    "material_restricted": true
+   }
+  ],
+  "flags": [ "WRITE_MESSAGE" ]
+ }
+]

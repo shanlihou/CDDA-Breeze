@@ -1,0 +1,37 @@
+[
+  {
+    "id": "f_anvil_stone",
+    "type": "furniture",
+    "name": "石砧",
+    "description": "一个铁砧，看起来坚如磐石。",
+    "symbol": "^",
+    "color": [
+      "dark_gray"
+    ],
+    "move_cost_mod": 3,
+    "required_str": 8,
+    "crafting_pseudo_item": "boulder_anvil_leveled",
+    "bash": {
+      "str_min": 12,
+      "str_max": 36,
+      "sound": "smash!",
+      "sound_fail": "thump.",
+      "items": [
+        {
+          "item": "rock",
+          "count": [
+            1,
+            5
+          ]
+        }
+      ]
+    },
+    "flags": [
+      "TRANSPARENT",
+      "MINEABLE",
+      "NOITEM",
+      "MOUNTABLE",
+      "TINY"
+    ]
+  }
+]

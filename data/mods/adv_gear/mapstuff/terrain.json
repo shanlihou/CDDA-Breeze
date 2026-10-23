@@ -1,0 +1,137 @@
+[
+  {
+    "type": "terrain",
+    "id": "t_nano_floor",
+    "name": "纳米科技地板",
+    "description": "一个完美光滑的地板，配合由纳米材料组成的屋顶，几乎可以承受任何东西。",
+    "symbol": ".",
+    "max_volume": 4000,
+    "color": "light_gray",
+    "move_cost": 2,
+    "flags": [ "TRANSPARENT", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "ROAD" ],
+    "bash": {
+      "str_min": 500,
+      "str_max": 1500,
+      "sound": "sssssssss!",
+      "sound_fail": "whump!",
+      "sound_vol": 2,
+      "sound_fail_vol": 7,
+      "ter_set": "t_null",
+      "items": [ { "item": "nanite_cluster", "count": [ 2, 12 ] } ]
+    },
+    "deconstruct": {
+      "ter_set": "t_pit_shallow",
+      "items": [
+        { "item": "xl_nanite_cluster" }
+      ]
+    }
+  },{
+    "type": "terrain",
+    "id": "t_nano_wall",
+    "name": "纳米科技墙",
+    "description": "由纳米材料制作成的坚固墙体。它不仅能支撑屋顶，而且几乎能挡住任何东西。",
+    "symbol": "LINE_OXOX",
+    "color": "light_gray",
+    "move_cost": 0,
+    "coverage": 100,
+    "roof": "t_nano_roof",
+    "flags": [ "NOITEM", "SUPPORTS_ROOF", "WALL", "AUTO_WALL_SYMBOL", "BLOCK_WIND" ],
+    "connects_to": "WALL",
+    "bash": {
+      "str_min": 500,
+      "str_max": 1500,
+      "sound": "sssssssss!",
+      "sound_fail": "whump!",
+      "sound_vol": 2,
+      "sound_fail_vol": 7,
+      "ter_set": "t_pit_shallow",
+      "items": [ { "item": "nanite_cluster", "count": [ 2, 12 ] } ]
+    },
+    "deconstruct": {
+      "ter_set": "t_pit_shallow",
+      "items": [
+        { "item": "xl_nanite_cluster" }
+      ]
+    }
+  },{
+    "type": "terrain",
+    "id": "t_nano_door_c",
+    "name": "纳米科技门 (关)",
+    "description": "这扇门是由纳米材料建造而成，几乎可以承受任何东西。",
+    "symbol": "+",
+    "color": "light_gray",
+    "move_cost": 0,
+    "roof": "t_nano_roof",
+    "flags": [ "DOOR", "NOITEM", "CONNECT_TO_WALL" ],
+    "open": "t_nano_door_o",
+    "bash": {
+      "str_min": 500,
+      "str_max": 1500,
+      "sound": "sssssssss!",
+      "sound_fail": "whump!",
+      "sound_vol": 2,
+      "sound_fail_vol": 7,
+      "ter_set": "t_pit_shallow",
+      "items": [ { "item": "nanite_cluster", "count": [ 2, 12 ] } ]
+    },
+    "deconstruct": {
+      "ter_set": "t_pit_shallow",
+      "items": [
+        { "item": "xl_nanite_cluster" }
+      ]
+    }
+  },{
+    "type": "terrain",
+    "id": "t_nano_door_o",
+    "name": "纳米科技门 (开)",
+    "description": "这扇门是由纳米材料建造而成，几乎可以承受任何东西。",
+    "symbol": "'",
+    "color": "light_gray",
+    "move_cost": 2,
+    "roof": "t_nano_roof",
+    "flags": [ "TRANSPARENT", "FLAT", "CONNECT_TO_WALL", "ROAD" ],
+    "close": "t_nano_door_c",
+    "bash": {
+      "str_min": 500,
+      "str_max": 1500,
+      "sound": "sssssssss!",
+      "sound_fail": "whump!",
+      "sound_vol": 2,
+      "sound_fail_vol": 7,
+      "ter_set": "t_pit_shallow",
+      "items": [ { "item": "nanite_cluster", "count": [ 2, 12 ] } ]
+    },
+    "deconstruct": {
+      "ter_set": "t_pit_shallow",
+      "items": [
+        { "item": "xl_nanite_cluster" }
+      ]
+    }
+  },{
+    "type": "terrain",
+    "id": "t_nano_roof",
+    "name": "纳米科技屋顶",
+    "description": "由纳米材料构成的完美光滑的屋顶，几乎可以轻易地承受任何东西。",
+    "symbol": ".",
+    "color": "light_gray",
+    "move_cost": 2,
+    "flags": [ "TRANSPARENT", "FLAT" ],
+    "bash": {
+      "str_min": 500,
+      "str_max": 1500,
+      "sound": "sssssssss!",
+      "sound_fail": "whump!",
+      "sound_vol": 2,
+      "sound_fail_vol": 7,
+      "ter_set": "t_open_air",
+      "bash_below": true,
+      "items": [ { "item": "nanite_cluster", "count": [ 2, 12 ] } ]
+    },
+    "deconstruct": {
+      "ter_set": "t_open_air",
+      "items": [
+        { "item": "xl_nanite_cluster" }
+      ]
+    }
+  }
+]

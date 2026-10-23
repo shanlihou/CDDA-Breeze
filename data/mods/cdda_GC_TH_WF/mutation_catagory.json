@@ -1,0 +1,38 @@
+[
+    {
+        "type": "mutation_category",
+        "id": "TH_white_fog",
+        "name": "Humanoid (White Fog)",
+        "threshold_mut": "THRESH_TH_WF",
+        "mutagen_message": "you dream of bing a fatal fog.",
+        "memorial_message": "Clean the world!",
+        "vitamin": "TH_white_fog"
+    },
+    {
+        "id": "TH_white_fog",
+        "type": "vitamin",
+        "vit_type": "counter",
+        "name": { "str": "Fog Mutants" },
+        "excess": "TH_WF",
+        "min": 0,
+        "max": 2500,
+        "rate": "1 h",
+        "disease_excess": [ [ 100, 500 ], [ 501, 2199 ], [ 2200, 2500 ] ]
+    },
+    {
+        "type": "effect_type",
+        "id": "TH_WF",
+        "name": [ "Light Fog", "Fatal Fog", "Pale Knight" ],
+        "desc": [
+          "You make the evolution.",
+          "You make the evolution.",
+          "You make the evolution."
+        ],
+        "max_intensity": 3,
+        "resist_traits": [ "THRESH_TH_WF" ],
+        "base_mods": { "str_mod": [ 0, 1 ], "per_mod": [ 0, 1 ], "dex_mod": [ 0, 1 ], "int_mod": [ 0, 1 ] },
+        "scaling_mods": { "str_mod": [ 0, 3 ], "per_mod": [ 0, 1 ], "dex_mod": [ 0, 2 ], "int_mod": [ 0, 1 ] },
+        "rating": "bad",
+        "blood_analysis_description": "TH_white_fog"
+    }
+]

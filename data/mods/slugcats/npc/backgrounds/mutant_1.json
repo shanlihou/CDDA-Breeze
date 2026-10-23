@@ -1,0 +1,23 @@
+[
+  {
+    "id": "BGSS_MUTANT_1_STORY1",
+    "type": "talk_topic",
+    "dynamic_line": "我曾是实验室里的一个实验对象。正如你从我外表看出来的那样，我体内塞满了各种乱七八糟的东西。有一天，那些书呆子准备了一些他们所谓的蜗牛和猫科引物，然后把我带到一个有巨大机器的房间。他们把那混合物注射进我体内，把我塞进机器，按下了按钮。",
+    "responses": [
+      { "text": "然后发生了什么？", "topic": "BGSS_MUTANT_1_STORY2" },
+      { "text": "<done_conversation_section>", "topic": "TALK_FRIEND" }
+    ]
+  },
+  {
+    "id": "BGSS_MUTANT_1_STORY2",
+    "type": "talk_topic",
+    "dynamic_line": "机器亮了起来。我感到一阵撕裂般的感觉，然后发现自己身处一个奇怪的类地世界。那里湿得要命。我看见一个小生物，高到我肩膀，看起来非常像一只拿着长矛的猫。它注意到了我，盯着我看。",
+    "responses": [ { "text": "那生物做了什么吗？", "topic": "BGSS_MUTANT_1_STORY3" },{ "text": "<done_conversation_section>", "topic": "TALK_FRIEND" }, { "text": "<end_talking>", "topic": "TALK_DONE" } ]
+  },
+  {
+    "id": "BGSS_MUTANT_1_STORY3",
+    "type": "talk_topic",
+    "dynamic_line": "它发出一种咕噜咕噜的尖叫声，然后把长矛朝我扔了过来！幸好它射得不准，不然我就死了。接着我又感到一阵撕裂感，但我没有回到实验室。我到了这里。至少我现在自由了。",
+    "responses": [ { "text": "<done_conversation_section>", "topic": "TALK_FRIEND" }, { "text": "<end_talking>", "topic": "TALK_DONE" } ]
+  }
+]

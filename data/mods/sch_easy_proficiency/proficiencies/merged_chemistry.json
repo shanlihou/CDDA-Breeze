@@ -1,0 +1,1608 @@
+[
+  {
+    "type": "proficiency",
+    "id": "prof_intro_chemistry",
+    "category": "prof_chem",
+    "name": { "str": "Principles of Chemistry" },
+    "description": "You are beginning to grasp a general idea of how elements and compounds react with each other.",
+    "can_learn": true,
+    "default_time_multiplier": 1.5,
+    "default_fail_multiplier": 1.4,
+    "time_to_learn": "12 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_intro_biology",
+    "category": "prof_chem",
+    "name": { "str": "Principles of Biology" },
+    "description": "You are beginning to gain a general idea of how various living beings function.",
+    "can_learn": true,
+    "default_time_multiplier": 1.5,
+    "default_fail_multiplier": 1.4,
+    "time_to_learn": "12 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_organic_chemistry",
+    "category": "prof_chem",
+    "name": { "str": "Organic Chemistry" },
+    "description": "Knowledge of the branch of chemistry that studies and uses carbon-containing compounds.",
+    "can_learn": true,
+    "default_time_multiplier": 1.5,
+    "default_fail_multiplier": 1.25,
+    "required_proficiencies": [ "prof_intro_chemistry" ],
+    "time_to_learn": "8 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_inorganic_chemistry",
+    "category": "prof_chem",
+    "name": { "str": "Inorganic Chemistry" },
+    "description": "Knowledge of the branch of chemistry that studies and uses compounds not containing carbon.",
+    "can_learn": true,
+    "default_time_multiplier": 1.5,
+    "default_fail_multiplier": 1.25,
+    "required_proficiencies": [ "prof_intro_chemistry" ],
+    "time_to_learn": "8 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_biochemistry",
+    "category": "prof_chem",
+    "name": { "str": "Biochemistry" },
+    "description": "The understanding of the chemistry of living things.",
+    "can_learn": true,
+    "default_time_multiplier": 1.5,
+    "default_fail_multiplier": 1.25,
+    "required_proficiencies": [ "prof_organic_chemistry", "prof_intro_biology" ],
+    "time_to_learn": "8 s",
+    "default_weakpoint_bonus": 2,
+    "default_weakpoint_penalty": 0
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_physiology",
+    "category": "prof_misc_craft",
+    "name": { "str": "Physiology" },
+    "description": "An in-depth understanding of how humans and animals operate.",
+    "can_learn": true,
+    "default_time_multiplier": 1.5,
+    "default_fail_multiplier": 1.25,
+    "required_proficiencies": [ "prof_intro_biology" ],
+    "time_to_learn": "12 s",
+    "default_weakpoint_bonus": 2,
+    "default_weakpoint_penalty": 0
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_misc_craft",
+    "category": "prof_misc_craft",
+    "name": { "str": "Xenology" },
+    "description": "You are beginning to grasp a general idea of how alien and post-Cataclysm mutated creatures function and operate.",
+    "can_learn": true,
+    "default_time_multiplier": 2.0,
+    "default_fail_multiplier": 1.3,
+    "required_proficiencies": [ "prof_intro_biology" ],
+    "time_to_learn": "12 s",
+    "default_weakpoint_bonus": 4,
+    "default_weakpoint_penalty": -2
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_intro_chem_synth",
+    "category": "prof_chem",
+    "name": { "str": "Principles of Chemical Synthesis" },
+    "description": "You're beginning to grasp the basics of chemical production.",
+    "can_learn": true,
+    "default_time_multiplier": 1.5,
+    "default_fail_multiplier": 1.5,
+    "required_proficiencies": [ "prof_intro_chemistry" ],
+    "time_to_learn": "12 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_chem_synth",
+    "category": "prof_chem",
+    "name": { "str": "Complex Chemical Synthesis" },
+    "description": "The proper understanding of safe chemical synthesization and how to clean your tools used for the next batch.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.25,
+    "required_proficiencies": [ "prof_intro_chem_synth" ],
+    "time_to_learn": "16 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_distilling",
+    "category": "prof_chem",
+    "name": { "str": "Distillation" },
+    "description": "The process of separating two mixed liquids by their different boiling points.",
+    "can_learn": true,
+    "default_time_multiplier": 1.1,
+    "default_fail_multiplier": 1.5,
+    "time_to_learn": "6 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_metallurgy",
+    "category": "prof_chem",
+    "name": { "str": "Metallurgy" },
+    "description": "An understanding of the chemistry of metalworking and alloys.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.25,
+    "time_to_learn": "6 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_pharmaceutical",
+    "category": "prof_chem",
+    "name": { "str": "Pharmaceutical Production" },
+    "description": "An understanding of how to produce various natural and chemical substances pure enough for human consumption.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.25,
+    "required_proficiencies": [ "prof_intro_chemistry", "prof_intro_biology" ],
+    "time_to_learn": "8 s"
+  }
+]
+[
+  {
+    "type": "proficiency",
+    "id": "prof_food_prep",
+    "category": "prof_food",
+    "name": { "str": "Food Preparation" },
+    "description": "You've done enough cooking to know the basics about how to quickly and efficiently sort your ingredients.",
+    "can_learn": true,
+    "default_time_multiplier": 1.1,
+    "default_fail_multiplier": 1,
+    "time_to_learn": "6 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_knife_skills",
+    "category": "prof_food",
+    "name": { "str": "Knife Skills" },
+    "description": "You're quite skilled at culinary knife work, making you noticeably faster at preparing meals that involve a lot of chopping.",
+    "can_learn": true,
+    "default_time_multiplier": 1.25,
+    "default_fail_multiplier": 1,
+    "time_to_learn": "10 s",
+    "required_proficiencies": [ "prof_food_prep" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_baking",
+    "category": "prof_food",
+    "name": { "str": "Principles of Baking" },
+    "description": "You know the basics of baking - proportions, leavening, and things - and are less likely to make a dramatic mistake when working from memory.",
+    "can_learn": true,
+    "default_time_multiplier": 1.5,
+    "default_fail_multiplier": 1.5,
+    "time_to_learn": "10 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_baking_bread",
+    "category": "prof_food",
+    "name": { "str": "Breadmaking" },
+    "description": "You've baked enough bread to consider yourself an expert.  May your yeast be ever frothy.",
+    "can_learn": true,
+    "default_time_multiplier": 1.25,
+    "default_fail_multiplier": 1.25,
+    "time_to_learn": "6 s",
+    "required_proficiencies": [ "prof_baking" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_baking_desserts_1",
+    "category": "prof_food",
+    "name": { "str": "Dessert Baking" },
+    "description": "Anyone can make a cookie, but you can make it look amazing.  Cakes and other fluffies are also no longer a barrier.",
+    "can_learn": true,
+    "default_time_multiplier": 1.5,
+    "default_fail_multiplier": 1.25,
+    "time_to_learn": "4 s",
+    "required_proficiencies": [ "prof_baking" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_baking_desserts_2",
+    "category": "prof_food",
+    "name": { "str": "Patisserie Expert" },
+    "description": "You could have been a professional baker before the Cataclysm.  Your profiteroles are the envy of the wastelands.",
+    "can_learn": true,
+    "default_time_multiplier": 1.25,
+    "default_fail_multiplier": 1.5,
+    "time_to_learn": "8 s",
+    "required_proficiencies": [ "prof_baking_desserts_1" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_frying",
+    "category": "prof_food",
+    "name": { "str": "Principles of Frying" },
+    "description": "Anyone can toss stuff into deep fryer oil.  You know more about selecting oil, keeping the food from burning, and the like.",
+    "can_learn": true,
+    "default_time_multiplier": 1.1,
+    "default_fail_multiplier": 1.1,
+    "time_to_learn": "2 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_frying_bread",
+    "category": "prof_food",
+    "name": { "str": "Breading & Battering" },
+    "description": "You know enough about deep frying breads and batters to do it easily without thinking about it.",
+    "can_learn": true,
+    "default_time_multiplier": 1.1,
+    "default_fail_multiplier": 1.1,
+    "time_to_learn": "4 s",
+    "required_proficiencies": [ "prof_frying" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_frying_dessert",
+    "category": "prof_food",
+    "name": { "str": "Fried Desserts" },
+    "description": "You know the vaunted secrets of creating delicious deep fried sweets.",
+    "can_learn": true,
+    "default_time_multiplier": 1.1,
+    "default_fail_multiplier": 1.1,
+    "time_to_learn": "4 s",
+    "required_proficiencies": [ "prof_frying", "prof_baking_desserts_1" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_fermenting",
+    "category": "prof_food",
+    "name": { "str": "Culinary Fermentation" },
+    "description": "The basics of fermenting for human consumption, including sanitary technique, avoiding harmful molds, and identifying common problems.",
+    "can_learn": true,
+    "default_time_multiplier": 1.25,
+    "default_fail_multiplier": 1.5,
+    "time_to_learn": "10 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_beverage_distilling",
+    "category": "prof_food",
+    "name": { "str": "Beverage Distillation" },
+    "description": "Applying the science of distillation to alcoholic beverages to get something tasty.",
+    "can_learn": true,
+    "default_time_multiplier": 1.1,
+    "default_fail_multiplier": 1.5,
+    "time_to_learn": "10 s",
+    "required_proficiencies": [ "prof_distilling" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_brewing",
+    "category": "prof_food",
+    "name": { "str": "Brewing" },
+    "description": "The fine art of brewing grains into beers.",
+    "can_learn": true,
+    "default_time_multiplier": 1.1,
+    "default_fail_multiplier": 1.25,
+    "time_to_learn": "10 s",
+    "required_proficiencies": [ "prof_fermenting" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_winemaking",
+    "category": "prof_food",
+    "name": { "str": "Winemaking" },
+    "description": "The knowledge of how to turn sugary fruits, and occasionally vegetables, into fermented beverages.",
+    "can_learn": true,
+    "default_time_multiplier": 1.1,
+    "default_fail_multiplier": 1.25,
+    "time_to_learn": "10 s",
+    "required_proficiencies": [ "prof_fermenting" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_lactofermenting",
+    "category": "prof_food",
+    "name": { "str": "Lactofermentation" },
+    "description": "The microbiology of most non-alcoholic fermented edibles, from sauerkraut to sourdough.",
+    "can_learn": true,
+    "default_time_multiplier": 1.1,
+    "default_fail_multiplier": 1.25,
+    "time_to_learn": "8 s",
+    "required_proficiencies": [ "prof_fermenting" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_cheesemaking_1",
+    "category": "prof_food",
+    "name": { "str": "Principles of Cheesemaking" },
+    "description": "The basics of curdling and coagulating milk and similar things without the wrong kinds of bacteria and mold winning out.",
+    "can_learn": true,
+    "default_time_multiplier": 1.1,
+    "default_fail_multiplier": 1.5,
+    "time_to_learn": "6 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_cheesemaking_2",
+    "category": "prof_food",
+    "name": { "str": "Cheesemaking Expert" },
+    "description": "Taking the basics of curdled milk and making it delicious.",
+    "can_learn": true,
+    "default_time_multiplier": 1.1,
+    "default_fail_multiplier": 1.5,
+    "time_to_learn": "8 s",
+    "required_proficiencies": [ "prof_cheesemaking_1" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_preservation",
+    "category": "prof_food",
+    "name": { "str": "Food Preservation" },
+    "description": "The basic knowledge of ways to keep food safe for long periods of time in a post-refrigeration world.",
+    "can_learn": true,
+    "default_time_multiplier": 1.1,
+    "default_fail_multiplier": 1.5,
+    "time_to_learn": "6 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_food_curing",
+    "category": "prof_food",
+    "name": { "str": "Curing and Drying Food" },
+    "description": "Using salt, smoke, and similar agents to cure or dehydrate food.",
+    "can_learn": true,
+    "default_time_multiplier": 1.1,
+    "default_fail_multiplier": 1.25,
+    "time_to_learn": "8 s",
+    "required_proficiencies": [ "prof_preservation" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_food_canning",
+    "category": "prof_food",
+    "name": { "str": "Canning Food" },
+    "description": "Using pressure canning or tinning to safely store food in sealed containers.",
+    "can_learn": true,
+    "default_time_multiplier": 1.1,
+    "default_fail_multiplier": 1.5,
+    "time_to_learn": "8 s",
+    "required_proficiencies": [ "prof_preservation" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_scav_cooking",
+    "category": "prof_food",
+    "name": { "str": "Scavenger Cooking" },
+    "description": "You know the secrets of cooking tasty food using strange substitutions and weird things you found in a cabinet in an abandoned house.",
+    "can_learn": true,
+    "default_time_multiplier": 1.1,
+    "default_fail_multiplier": 1.1,
+    "time_to_learn": "8 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_forage_cooking",
+    "category": "prof_food",
+    "name": { "str": "Forager Cooking" },
+    "description": "Cooking with foraged ingredients that you wouldn't find in most cookbooks.",
+    "can_learn": true,
+    "default_time_multiplier": 1.1,
+    "default_fail_multiplier": 1.1,
+    "time_to_learn": "8 s"
+  }
+]
+[
+  {
+    "type": "proficiency",
+    "id": "prof_elec_soldering",
+    "category": "prof_electronic",
+    "name": { "str": "Electronics Soldering" },
+    "description": "An understanding of the skills and tools needed to create durable, effective soldered electrical connections.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.5,
+    "time_to_learn": "5 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_elec_circuits",
+    "category": "prof_electronic",
+    "name": { "str": "Electrical Circuits" },
+    "description": "Practical experience building electrical circuits, and a grasp of the principles of electrical continuity, current, voltage, and resistance.",
+    "can_learn": true,
+    "default_time_multiplier": 1.5,
+    "default_fail_multiplier": 1.4,
+    "time_to_learn": "10 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_elec_semiconductors",
+    "category": "prof_electronic",
+    "name": { "str": "Semiconductors" },
+    "description": "Basic working knowledge of using semiconductors such as diodes and transistors in electrical circuits, for switching or amplifying electrical signals.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.2,
+    "required_proficiencies": [ "prof_elec_circuits" ],
+    "time_to_learn": "12 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_elec_integrated_circuits",
+    "category": "prof_electronic",
+    "name": { "str": "Integrated Circuits" },
+    "description": "Familiarity with the role of IC chips in circuit design, and ability to identify many common pre-Cataclysm ICs and understand how to use them in functional circuits.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.3,
+    "required_proficiencies": [ "prof_elec_semiconductors" ],
+    "time_to_learn": "16 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_electromagnetics",
+    "category": "prof_electronic",
+    "name": { "str": "Electromagnetics" },
+    "description": "A practical working knowledge of electromagnetic fields and their creation and application.",
+    "can_learn": true,
+    "default_time_multiplier": 2.5,
+    "default_fail_multiplier": 1.25,
+    "time_to_learn": "8 s",
+    "default_weakpoint_bonus": 2,
+    "default_weakpoint_penalty": 0
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_shock_weapons",
+    "category": "prof_electronic",
+    "name": { "str": "Electroshock Weapons" },
+    "description": "An understanding of how to use high voltage, low-current devices to cause debilitating muscle spasms.  Includes some theoretical knowledge of how to protect yourself from these.",
+    "can_learn": true,
+    "default_time_multiplier": 2.5,
+    "default_fail_multiplier": 1.3,
+    "time_to_learn": "10 s"
+  }
+]
+[
+  {
+    "type": "proficiency",
+    "id": "prof_gunsmithing_basic",
+    "category": "prof_gunmaking",
+    "name": { "str": "Principles of Gunsmithing" },
+    "description": "A basic understanding of how guns are put together and what tools and materials are needed for the job.",
+    "can_learn": true,
+    "default_time_multiplier": 1.5,
+    "default_fail_multiplier": 1.5,
+    "time_to_learn": "4 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_gunsmithing_improv",
+    "category": "prof_gunmaking",
+    "name": { "str": "Improvised Gunmaking" },
+    "description": "You've become an expert at putting together guns and launchers from makeshift parts.",
+    "can_learn": true,
+    "default_time_multiplier": 2.5,
+    "default_fail_multiplier": 1.25,
+    "time_to_learn": "10 s",
+    "//": "Intentionally does not require basic gunsmithing"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_gunsmithing_antique",
+    "category": "prof_gunmaking",
+    "name": { "str": "Antique Gunsmithing" },
+    "description": "You're specifically skilled at building and repairing antique guns.",
+    "can_learn": true,
+    "default_time_multiplier": 2.5,
+    "default_fail_multiplier": 1.3,
+    "time_to_learn": "10 s",
+    "required_proficiencies": [ "prof_metalworking", "prof_gunsmithing_basic" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_gunsmithing_spring",
+    "category": "prof_gunmaking",
+    "name": { "str": "Spring-powered Guns and Crossbows" },
+    "description": "Similar to bowyery, the art of making guns that are powered by elastic mechanisms.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.4,
+    "time_to_learn": "6 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_gunsmithing_revolver",
+    "category": "prof_gunmaking",
+    "name": { "str": "Revolver Gunsmithing" },
+    "description": "You've got the know-how to make a classic Western revolver, and its many variants.",
+    "can_learn": true,
+    "default_time_multiplier": 2.5,
+    "default_fail_multiplier": 1.3,
+    "time_to_learn": "10 s",
+    "required_proficiencies": [ "prof_gunsmithing_basic" ]
+  }
+]
+[
+  {
+    "type": "proficiency",
+    "id": "prof_wound_care",
+    "category": "prof_firstaid",
+    "name": { "str": "Wound Care" },
+    "description": "You know how to bandage wounds and understand basic principles of wound care.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.5,
+    "time_to_learn": "2 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_wound_care_expert",
+    "category": "prof_firstaid",
+    "name": { "str": "Wound Care Expert" },
+    "description": "Your extensive field experience in bandaging and wound care is on par with that of a paramedic.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.25,
+    "time_to_learn": "14 s",
+    "required_proficiencies": [ "prof_wound_care" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_burn_care",
+    "category": "prof_firstaid",
+    "name": { "str": "Burn Care" },
+    "description": "You have some basic understanding of how burns work and (potentially) how they could be treated.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.25,
+    "time_to_learn": "12 s",
+    "default_weakpoint_bonus": 2,
+    "default_weakpoint_penalty": 0
+  }
+]
+[
+  {
+    "type": "proficiency",
+    "id": "prof_basic_engines",
+    "category": "prof_mechanic",
+    "name": { "str": "Simple Engines" },
+    "description": "Maintaining and building simple engines.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.25,
+    "time_to_learn": "8 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_high_pressure_systems",
+    "category": "prof_mechanic",
+    "name": { "str": "High Pressure Systems" },
+    "description": "You know how to safely and efficiently build, repair, maintain and use various appliances that make use of high pressure.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.25,
+    "time_to_learn": "12 s",
+    "required_proficiencies": [ "prof_plumbing", "prof_basic_engines", "prof_appliance_repair", "prof_pneumatics" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_chemical_engineering",
+    "category": "prof_mechanic",
+    "name": { "str": "Chemical Engineering" },
+    "description": "You know how to safely and efficiently build, repair, maintain and use various complex machinery that makes use of chemical processes.",
+    "can_learn": true,
+    "default_time_multiplier": 2.5,
+    "default_fail_multiplier": 1.5,
+    "time_to_learn": "20 s",
+    "required_proficiencies": [ "prof_high_pressure_systems", "prof_chem_synth" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_pneumatics",
+    "category": "prof_mechanic",
+    "name": { "str": "Pneumatics" },
+    "description": "Maintaining and building compressed-air powered machines.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.4,
+    "time_to_learn": "8 s"
+  }
+]
+[
+  {
+    "type": "proficiency",
+    "id": "prof_metalworking",
+    "category": "prof_smithing",
+    "name": { "str": "Principles of Metalworking" },
+    "description": "A basic understanding of the properties of metal as a material, and the concepts behind smithing, die casting, and other metalworking techniques.",
+    "can_learn": true,
+    "default_time_multiplier": 1.5,
+    "default_fail_multiplier": 1.5,
+    "time_to_learn": "2 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_welding_basic",
+    "category": "prof_smithing",
+    "name": { "str": "Principles of Welding" },
+    "description": "A basic understanding of the different types of welding, welding tools and fuels, how to weld different materials, and more.",
+    "can_learn": true,
+    "default_time_multiplier": 1.5,
+    "default_fail_multiplier": 1.5,
+    "time_to_learn": "6 s",
+    "required_proficiencies": [ "prof_metalworking" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_welding",
+    "category": "prof_smithing",
+    "name": { "str": "Skilled Welding" },
+    "description": "You are an experienced welder.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.25,
+    "time_to_learn": "10 s",
+    "required_proficiencies": [ "prof_welding_basic" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_blacksmithing",
+    "category": "prof_smithing",
+    "name": { "str": "Blacksmithing" },
+    "description": "The craft of working metal into tools and other items of use.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.25,
+    "time_to_learn": "10 s",
+    "required_proficiencies": [ "prof_metalworking" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_redsmithing",
+    "category": "prof_smithing",
+    "name": { "str": "Redsmithing" },
+    "description": "Working copper and bronze shares a lot of techniques with blacksmithing, but the more ductile copper-containing metals have a trick all their own.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.25,
+    "time_to_learn": "10 s",
+    "required_proficiencies": [ "prof_metalworking" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_fine_metalsmithing",
+    "category": "prof_smithing",
+    "name": { "str": "Fine Metalsmithing" },
+    "description": "How to make jewelry from precious metals like gold and silver.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.2,
+    "time_to_learn": "14 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_armorsmithing",
+    "category": "prof_smithing",
+    "name": { "str": "Armorsmithing" },
+    "description": "How to make articulated armor from pieces of metal.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.15,
+    "time_to_learn": "12 s",
+    "required_proficiencies": [ "prof_blacksmithing" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_bladesmith",
+    "category": "prof_smithing",
+    "name": { "str": "Bladesmithing" },
+    "description": "How to fabricate sharp and reliable blades from scratch.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.15,
+    "time_to_learn": "12 s",
+    "required_proficiencies": [ "prof_blacksmithing" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_toolsmithing",
+    "category": "prof_smithing",
+    "name": { "str": "Manual Tooling" },
+    "description": "How to make high-quality tools and parts by hand.  Includes techniques like threading, durable articulation points, and using appropriate metals for appropriate tasks.  Also applies to making blunt instruments that can withstand a severe beating without distortion.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.15,
+    "time_to_learn": "10 s",
+    "required_proficiencies": [ "prof_blacksmithing" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_wiremaking",
+    "category": "prof_smithing",
+    "name": { "str": "Wire Making" },
+    "description": "How to turn raw ingots and metals into usable wire.  Includes both drawing and extruding.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.5,
+    "time_to_learn": "10 s",
+    "required_proficiencies": [ "prof_metalworking" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_case_hardening",
+    "category": "prof_smithing",
+    "name": { "str": "Case Hardening" },
+    "description": "Heating steel packed in charcoal at high temperatures to cause a hard case of higher carbon steel around the lower carbon core.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.5,
+    "time_to_learn": "10 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_quenching",
+    "category": "prof_smithing",
+    "name": { "str": "Quenching & Tempering" },
+    "description": "Quenching involves repeatedly heating the steel, quenching it in water, then tempering it to create extremely tough metal.",
+    "can_learn": true,
+    "default_time_multiplier": 3,
+    "default_fail_multiplier": 1.25,
+    "time_to_learn": "20 s"
+  }
+]
+[
+  {
+    "type": "proficiency",
+    "id": "prof_knapping",
+    "category": "prof_survival",
+    "name": { "str": "Basic Knapping" },
+    "description": "You know the basic principles of turning stones into more useful tools.",
+    "can_learn": true,
+    "default_time_multiplier": 1.5,
+    "default_fail_multiplier": 1.8,
+    "time_to_learn": "8 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_knapping_speed",
+    "category": "prof_survival",
+    "name": { "str": "Speed Knapping" },
+    "description": "You've banged rocks together so much and for so long, you've become extremely fast at it.",
+    "can_learn": true,
+    "default_time_multiplier": 5,
+    "default_fail_multiplier": 1.15,
+    "time_to_learn": "12 s",
+    "required_proficiencies": [ "prof_knapping" ],
+    "ignore_focus": true
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_glassblowing",
+    "category": "prof_misc_craft",
+    "name": { "str": "Glassblowing" },
+    "description": "Working with glass and heat without poisoning or perforating yourself.",
+    "can_learn": true,
+    "default_time_multiplier": 1.5,
+    "default_fail_multiplier": 1.5,
+    "time_to_learn": "8 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_plumbing",
+    "category": "prof_mechanic",
+    "name": { "str": "Plumbing" },
+    "description": "Working with pipes and pipe fittings to transport fluids without leakage.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.25,
+    "time_to_learn": "8 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_pottery",
+    "category": "prof_misc_craft",
+    "name": { "str": "Pottery" },
+    "description": "Basic pottery, from shaping to working with slip to fuse pieces.",
+    "can_learn": true,
+    "default_time_multiplier": 1.5,
+    "default_fail_multiplier": 1.5,
+    "time_to_learn": "6 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_bowyery",
+    "category": "prof_archery",
+    "name": { "str": "Bowyery" },
+    "description": "The ability to make durable, effective bows.",
+    "can_learn": true,
+    "default_time_multiplier": 2.5,
+    "default_fail_multiplier": 1.5,
+    "time_to_learn": "10 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_fletching",
+    "category": "prof_archery",
+    "name": { "str": "Fletching" },
+    "description": "The skill involved in making arrows that fly true.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.25,
+    "time_to_learn": "8 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_basketweaving",
+    "category": "prof_misc_craft",
+    "name": { "str": "Basketweaving" },
+    "description": "Forming coarse fibers into shapes.",
+    "can_learn": true,
+    "default_time_multiplier": 2.5,
+    "default_fail_multiplier": 1.2,
+    "time_to_learn": "6 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_pottery_glazing",
+    "category": "prof_misc_craft",
+    "name": { "str": "Pottery Glazing" },
+    "description": "Adding glazes to pottery to make them waterproof.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.2,
+    "time_to_learn": "5 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_plasticworking",
+    "category": "prof_misc_craft",
+    "name": { "str": "Plastic Working" },
+    "description": "Working with plastic using your hands, including carving, molding, and gluing it.  You know how to identify thermoplastics that are suitable for mold casting, and how to identify the right plastic for the right job.",
+    "can_learn": true,
+    "default_time_multiplier": 1.5,
+    "default_fail_multiplier": 1.5,
+    "time_to_learn": "6 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_carving",
+    "category": "prof_survival",
+    "name": { "str": "Carving" },
+    "description": "Shaping wood, bone, and similar materials with a cutting implement.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.2,
+    "time_to_learn": "10 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_helicopter_pilot",
+    "category": "prof_mechanic",
+    "name": { "str": "Helicopter Piloting" },
+    "description": "Before the Cataclysm, you were a helicopter pilot.  Now, you just hope you can fly again.",
+    "can_learn": false
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_aircraft_mechanic",
+    "category": "prof_mechanic",
+    "name": { "str": "Airframe and Powerplant Mechanic" },
+    "description": "You've been trained and certified to repair aircraft.  You're not really sure how that could help you survive now.",
+    "can_learn": false
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_gem_setting",
+    "category": "prof_misc_craft",
+    "name": { "str": "Gem Setting" },
+    "description": "How to add gemstones to jewelry.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.2,
+    "time_to_learn": "10 s",
+    "required_proficiencies": [ "prof_fine_metalsmithing", "prof_redsmithing" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_handloading",
+    "category": "prof_gunmaking",
+    "name": { "str": "Handloading" },
+    "description": "You know how to accurately measure powder and projectile weights for reloading firearm cartridges.",
+    "can_learn": true,
+    "default_time_multiplier": 1.5,
+    "default_fail_multiplier": 1.5,
+    "time_to_learn": "8 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_parkour",
+    "category": "prof_survival",
+    "name": { "str": "Parkour Expert" },
+    "description": "You're skilled at clearing obstacles; terrain like railings or counters are as easy for you to move on as solid ground.",
+    "can_learn": true,
+    "time_to_learn": "8 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_appliance_repair",
+    "category": "prof_mechanic",
+    "name": { "str": "General Appliance Repair" },
+    "description": "A base knowledge of how to put together and take apart common appliances, diagnose problems, and replace parts.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.1,
+    "time_to_learn": "8 s"
+  }
+]
+[
+  {
+    "type": "proficiency_category",
+    "id": "prof_chem",
+    "name": "Applied Science",
+    "description": "Proficiencies for scientific understanding and working with certain chemicals and substances."
+  },
+  {
+    "type": "proficiency_category",
+    "id": "prof_food",
+    "name": "Food Handling",
+    "description": "Proficiencies for cooking and food preparation, as well as experience with food handling tools."
+  },
+  {
+    "type": "proficiency_category",
+    "id": "prof_electronic",
+    "name": "Electronics",
+    "description": "Proficiencies for building and maintaining electronics and powered devices."
+  },
+  {
+    "type": "proficiency_category",
+    "id": "prof_gunmaking",
+    "name": "Projectile Weaponry",
+    "description": "Proficiencies for creating and modifying projectile weapons."
+  },
+  {
+    "type": "proficiency_category",
+    "id": "prof_firstaid",
+    "name": "Health Care",
+    "description": "Proficiencies for treating injuries and general health care knowledge."
+  },
+  {
+    "type": "proficiency_category",
+    "id": "prof_mechanic",
+    "name": "Mechanics",
+    "description": "Proficiencies for building and maintaining vehicles, engines, and similar equipment."
+  },
+  {
+    "type": "proficiency_category",
+    "id": "prof_smithing",
+    "name": "Metalworking",
+    "description": "Proficiencies for welding, casting and shaping metal."
+  },
+  {
+    "type": "proficiency_category",
+    "id": "prof_woodworking",
+    "name": "Woodworking",
+    "description": "Proficiencies for creating and modifying wood-based crafts."
+  },
+  {
+    "type": "proficiency_category",
+    "id": "prof_devices",
+    "name": "Device Manipulation",
+    "description": "Proficiencies for lockpicking, cracking safes, and general tinkering."
+  },
+  {
+    "type": "proficiency_category",
+    "id": "prof_survival",
+    "name": "Wilderness",
+    "description": "Proficiencies for surviving out in the wild."
+  },
+  {
+    "type": "proficiency_category",
+    "id": "prof_archery",
+    "name": "Archery",
+    "description": "Proficiencies for all things bow and arrows.  Includes knowledge and experience of making and modifying bows, as well as archery form and posture."
+  },
+  {
+    "type": "proficiency_category",
+    "id": "prof_misc_craft",
+    "name": "Miscellaneous Crafts",
+    "description": "Proficiencies for various domain-specific crafts."
+  },
+  {
+    "type": "proficiency_category",
+    "id": "prof_fleshcraft",
+    "name": "Fleshcraft",
+    "description": "Proficiencies for fleshcrafting and bio-engineering."
+  },
+  {
+    "type": "proficiency_category",
+    "id": "prof_tailoring",
+    "name": "Fabrics and Tailoring",
+    "description": "Proficiencies for sewing, binding and mending fabrics and clothing materials."
+  }
+]
+[
+  {
+    "type": "proficiency",
+    "id": "prof_articulation",
+    "category": "prof_tailoring",
+    "name": { "str": "Joint Articulation" },
+    "description": "Making flexible items out of hard materials is tricky.  You've done enough of it to understand how to make smoothly articulated joints out of rigid or semi-rigid materials.",
+    "//": "while specifically made for tailoring, I think this could also apply to things like making robot legs.  For tailoring this is mostly a speed boost skill.",
+    "can_learn": true,
+    "default_time_multiplier": 1.5,
+    "default_fail_multiplier": 1.15,
+    "time_to_learn": "6 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_closures",
+    "category": "prof_tailoring",
+    "name": { "str": "Garment Closures" },
+    "description": "You are familiar with the adjustments and tricks needed to make properly functional buttons, zippers, and other closures on garments.",
+    "can_learn": true,
+    "default_time_multiplier": 1.5,
+    "default_fail_multiplier": 1.5,
+    "time_to_learn": "6 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_closures_waterproofing",
+    "category": "prof_tailoring",
+    "name": { "str": "Fabric Waterproofing" },
+    "description": "You know how to make garments and fabric containers sealed against water.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.25,
+    "time_to_learn": "10 s",
+    "//": "The 'closures' part of the name is historical."
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_elastics",
+    "category": "prof_tailoring",
+    "name": { "str": "Stretch Fabric" },
+    "description": "Making elastic bands is easy enough, but making a whole garment from stretchy cloth takes a bit of finesse.  You're good at it.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.25,
+    "time_to_learn": "6 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_cobbling",
+    "category": "prof_tailoring",
+    "name": { "str": "Cobbling" },
+    "description": "Like a magical elf, you've learned how to construct footwear by hand.",
+    "can_learn": true,
+    "time_to_learn": "10 s",
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.25,
+    "required_proficiencies": [ "prof_closures", "prof_leatherworking_basic" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_spinning",
+    "category": "prof_tailoring",
+    "name": { "str": "Spinning" },
+    "description": "The art of spinning fiber into thread.",
+    "//": "In the future, having this proficiency could give a boost to learning rope making and vice versa",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.4,
+    "time_to_learn": "6 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_weaving",
+    "category": "prof_tailoring",
+    "name": { "str": "Weaving" },
+    "description": "You've learned how to use a loom to produce sheets of fabric from thread.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.4,
+    "time_to_learn": "6 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_millinery",
+    "category": "prof_tailoring",
+    "name": { "str": "Millinery" },
+    "description": "Like a solitary mouse, you've learned how to construct hats by hand.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.25,
+    "time_to_learn": "10 s",
+    "required_proficiencies": [ "prof_leatherworking_basic" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_knitting",
+    "category": "prof_tailoring",
+    "name": { "str": "Skilled Knitting" },
+    "description": "Knitting, one of the oldest ways of tying knots in fiber until it is fabric.",
+    "can_learn": true,
+    "default_time_multiplier": 1.5,
+    "default_fail_multiplier": 1.5,
+    "time_to_learn": "8 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_knitting_speed",
+    "category": "prof_tailoring",
+    "name": { "str": "Speed Knitting" },
+    "description": "You have knitted and knitted and knitted some more, and have the consistent string tension to show for it.  When you get going, the clicking of your needles is like a metronome.",
+    "can_learn": true,
+    "default_time_multiplier": 5,
+    "default_fail_multiplier": 1,
+    "time_to_learn": "20 s",
+    "required_proficiencies": [ "prof_knitting" ],
+    "ignore_focus": true
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_leatherworking_basic",
+    "category": "prof_tailoring",
+    "name": { "str": "Principles of Leatherworking" },
+    "description": "You've got a basic familiarity with how to work with leather, furs, hides, and similar materials.",
+    "can_learn": true,
+    "default_time_multiplier": 1.5,
+    "default_fail_multiplier": 1.5,
+    "time_to_learn": "4 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_leatherworking",
+    "category": "prof_tailoring",
+    "name": { "str": "Skilled Leatherworking" },
+    "description": "Working with leather requires a specific set of skills and tools… a set you are familiar with.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.25,
+    "time_to_learn": "10 s",
+    "required_proficiencies": [ "prof_leatherworking_basic" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_furriery",
+    "category": "prof_tailoring",
+    "name": { "str": "Furriery" },
+    "description": "Working with fur and faux fur is a skill all its own.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.25,
+    "time_to_learn": "8 s",
+    "required_proficiencies": [ "prof_leatherworking_basic" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_chitinworking",
+    "category": "prof_tailoring",
+    "name": { "str": "Chitinworking" },
+    "description": "It seems unlikely that anyone prior to the Cataclysm knew how to work with the shells of giant bugs as well as you do now.",
+    "//": "Given that nobody has ever written a guide for this, it should be particularly tough to master.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.3,
+    "time_to_learn": "16 s",
+    "required_proficiencies": [ "prof_leatherworking_basic" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_chain_armour",
+    "category": "prof_tailoring",
+    "name": { "str": "Chain Garments" },
+    "description": "Turning sheets of chain links into effective, wearable clothing that doesn't bind up.",
+    "can_learn": true,
+    "default_time_multiplier": 3,
+    "default_fail_multiplier": 1.15,
+    "time_to_learn": "10 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_polymerworking",
+    "category": "prof_tailoring",
+    "name": { "str": "Advanced Polymer Sewing" },
+    "description": "You know the tricks for working with Kevlar, Nomex, and other advanced polymer cloth.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.25,
+    "time_to_learn": "10 s"
+  }
+]
+[
+  {
+    "type": "proficiency",
+    "id": "prof_lockpicking",
+    "category": "prof_devices",
+    "name": { "str": "Lockpicking" },
+    "description": "You know how to pick a lock, at least in theory.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.5,
+    "time_to_learn": "2 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_lockpicking_expert",
+    "category": "prof_devices",
+    "name": { "str": "Locksmith" },
+    "description": "You can pick a lock in the dark, blindfolded.  Although that doesn't make it all that much harder.  You're good at locks, OK?",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.25,
+    "time_to_learn": "14 s",
+    "required_proficiencies": [ "prof_lockpicking" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_safecracking",
+    "category": "prof_devices",
+    "name": { "str": "Safecracking" },
+    "description": "Opening safes is an exacting skill, one that you are proficient at.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.25,
+    "time_to_learn": "10 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_traps",
+    "category": "prof_devices",
+    "name": { "str": "Principles of Trapping" },
+    "description": "You know the basics of setting and taking down traps safely.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.25,
+    "time_to_learn": "3 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_trapsetting",
+    "category": "prof_devices",
+    "name": { "str": "Trap Setting" },
+    "description": "You're specifically quite skilled at setting effective traps.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.2,
+    "time_to_learn": "8 s",
+    "required_proficiencies": [ "prof_traps" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_disarming",
+    "category": "prof_devices",
+    "name": { "str": "Trap Disarming" },
+    "description": "You know how to take down a trap safely.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.3,
+    "time_to_learn": "8 s",
+    "required_proficiencies": [ "prof_traps" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_spotting",
+    "category": "prof_survival",
+    "name": { "str": "Spotting and Awareness" },
+    "description": "You are skilled at spotting things out of the ordinary, like traps or ambushes.",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.3,
+    "time_to_learn": "3 s"
+  }
+]
+[
+  {
+    "type": "proficiency",
+    "id": "prof_debug_weakpoint",
+    "category": "prof_misc_craft",
+    "name": { "str": "Debug Weakpoint" },
+    "description": "Basic improvement on the chance of hitting the Weakpoint Monster's weak points.",
+    "can_learn": true,
+    "time_to_learn": "30 m",
+    "default_weakpoint_bonus": 4,
+    "default_weakpoint_penalty": 1
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_debug_weakpoint_expert",
+    "category": "prof_misc_craft",
+    "name": { "str": "Expert Debug Weakpoint" },
+    "description": "Expert improvement on the chance of hitting the Weakpoint Monster's weak points.",
+    "can_learn": true,
+    "time_to_learn": "12 s",
+    "required_proficiencies": [ "prof_debug_weakpoint" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_wp_zombie",
+    "category": "prof_misc_craft",
+    "name": { "str": "Principles of Zombie Biology" },
+    "description": "Very basic familiarity with various types of undead creatures.",
+    "can_learn": true,
+    "time_to_learn": "6 s",
+    "required_proficiencies": [ "prof_intro_biology" ],
+    "default_weakpoint_bonus": 2,
+    "default_weakpoint_penalty": 0
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_wp_demihuman",
+    "category": "prof_misc_craft",
+    "name": { "str": "Principles of Near Human Biology" },
+    "description": "Very basic familiarity with various types of demihuman creatures.",
+    "can_learn": true,
+    "time_to_learn": "6 s",
+    "required_proficiencies": [ "prof_intro_biology" ],
+    "default_weakpoint_bonus": 2,
+    "default_weakpoint_penalty": 0
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_wp_amalgamation",
+    "category": "prof_misc_craft",
+    "name": { "str": "Anatomy of Amalgamations" },
+    "description": "You are familiar with the common anatomy of these purpose-built abominations, as far as they have one.",
+    "can_learn": true,
+    "time_to_learn": "20 s",
+    "default_weakpoint_bonus": 4,
+    "default_weakpoint_penalty": -2
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_wp_syn_armored",
+    "category": "prof_misc_craft",
+    "name": { "str": "Synthetic Armors" },
+    "description": "Understanding of man-made armors and ways to exploit them.  You're able to find openings in certain kinds of body armor.",
+    "can_learn": true,
+    "time_to_learn": "6 s",
+    "default_weakpoint_bonus": 4,
+    "default_weakpoint_penalty": -4
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_wp_nat_armored",
+    "category": "prof_misc_craft",
+    "name": { "str": "Natural Armors" },
+    "description": "You're somewhat familiar with naturally armored creatures.  You're able to find openings in certain kinds of hardened shells.",
+    "can_learn": true,
+    "time_to_learn": "8 s",
+    "default_weakpoint_bonus": 4,
+    "default_weakpoint_penalty": -4
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_wp_cyborg",
+    "category": "prof_misc_craft",
+    "name": { "str": "Cyborg Anatomy" },
+    "description": "You're somewhat familiar with cybernetic creatures.  You're able to find openings and gaps that aren't as hardened.",
+    "can_learn": true,
+    "time_to_learn": "19 s",
+    "default_weakpoint_bonus": 4,
+    "default_weakpoint_penalty": -4
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_wp_basic_bird",
+    "category": "prof_misc_craft",
+    "name": { "str": "Bird Biology" },
+    "description": "Basic familiarity with various types of birds.",
+    "can_learn": true,
+    "time_to_learn": "8 s",
+    "required_proficiencies": [ "prof_intro_biology" ],
+    "default_weakpoint_bonus": 1,
+    "default_weakpoint_penalty": 0
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_wp_basic_bug",
+    "category": "prof_misc_craft",
+    "name": { "str": "Invertebrate Biology" },
+    "description": "Basic familiarity with various types of insects, arachnids, and worms.",
+    "can_learn": true,
+    "time_to_learn": "8 s",
+    "required_proficiencies": [ "prof_intro_biology" ],
+    "default_weakpoint_bonus": 1,
+    "default_weakpoint_penalty": 0
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_wp_beetle",
+    "category": "prof_misc_craft",
+    "name": { "str": "Beetle Anatomy" },
+    "description": "You are familiar with the anatomy of mutated beetles - bypassing their thick armor should be easier.",
+    "can_learn": true,
+    "time_to_learn": "12 s",
+    "required_proficiencies": [ "prof_wp_basic_bug" ],
+    "default_weakpoint_bonus": 4,
+    "default_weakpoint_penalty": -2
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_wp_centipede",
+    "category": "prof_misc_craft",
+    "name": { "str": "Centipede Anatomy" },
+    "description": "You are familiar with the anatomy of mutated centipedes, letting you target their less-deadly parts with ease.",
+    "can_learn": true,
+    "time_to_learn": "12 s",
+    "required_proficiencies": [ "prof_wp_basic_bug" ],
+    "default_weakpoint_bonus": 4,
+    "default_weakpoint_penalty": -2
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_wp_hymenoptera",
+    "category": "prof_misc_craft",
+    "//": "Technically Apocritan Anatomy would be sufficient, but let's not geek out too much",
+    "name": { "str": "Hymenopteran Anatomy" },
+    "description": "Familiarity with the comparative anatomy of mutant Hymenopterans - ants, bees, and wasps of all kinds.  You find it easier to exploit their weak points, and possibly disable their natural weaponry.",
+    "can_learn": true,
+    "time_to_learn": "12 s",
+    "required_proficiencies": [ "prof_wp_basic_bug" ],
+    "default_weakpoint_bonus": 4,
+    "default_weakpoint_penalty": -2
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_wp_spider",
+    "category": "prof_misc_craft",
+    "name": { "str": "Arachnid Anatomy" },
+    "description": "You are familiar with the anatomy of mutated spiders of all shapes and sizes.",
+    "can_learn": true,
+    "time_to_learn": "12 s",
+    "required_proficiencies": [ "prof_wp_basic_bug" ],
+    "default_weakpoint_bonus": 4,
+    "default_weakpoint_penalty": -2
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_wp_flying",
+    "category": "prof_misc_craft",
+    "name": { "str": "Creatures of Flight" },
+    "description": "Basic understanding of what's needed for certain creatures to fly, as well as ways of preventing it.",
+    "can_learn": true,
+    "time_to_learn": "6 s",
+    "default_weakpoint_bonus": 1,
+    "default_weakpoint_penalty": 0
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_wp_skeleton",
+    "category": "prof_misc_craft",
+    "name": { "str": "Ossified Exoskeletons" },
+    "description": "You're familiar with creatures presenting unsettling bones on their outer structure.",
+    "can_learn": true,
+    "time_to_learn": "6 s",
+    "default_weakpoint_bonus": 4,
+    "default_weakpoint_penalty": -2
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_wp_child",
+    "category": "prof_misc_craft",
+    "name": { "str": "Small Humanoids" },
+    "description": "You have some practice in fighting small humanoids like children.  You don't necessarily feel good about it.",
+    "can_learn": true,
+    "time_to_learn": "4 s",
+    "required_proficiencies": [ "prof_intro_biology" ],
+    "default_weakpoint_bonus": 2,
+    "default_weakpoint_penalty": 0
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_wp_hulk",
+    "category": "prof_misc_craft",
+    "name": { "str": "Large Humanoids" },
+    "description": "You have some practice in fighting large hulking humanoids.  You're better at reaching certain weak points.",
+    "can_learn": true,
+    "time_to_learn": "6 s",
+    "required_proficiencies": [ "prof_intro_biology" ],
+    "default_weakpoint_bonus": 4,
+    "default_weakpoint_penalty": -2
+  }
+]
+[
+  {
+    "type": "proficiency",
+    "id": "prof_fibers",
+    "category": "prof_survival",
+    "name": { "str": "Fiber Twisting" },
+    "description": "You've got a basic grasp of the theory of how to twist and arrange fibers into a more durable cord.",
+    "can_learn": true,
+    "default_time_multiplier": 1.5,
+    "default_fail_multiplier": 1.5,
+    "//": "Experimental data: I actually went camping and just sat around twisting cordage until I felt like I had a good handle on it.",
+    "time_to_learn": "4 s"
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_fibers_rope",
+    "category": "prof_survival",
+    "name": { "str": "Ropemaking" },
+    "description": "Making twisted fibers into durable and useful rope.",
+    "can_learn": true,
+    "time_to_learn": "8 s",
+    "default_time_multiplier": 3,
+    "default_fail_multiplier": 1.15,
+    "required_proficiencies": [ "prof_fibers" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_tanning_basic",
+    "category": "prof_survival",
+    "name": { "str": "Basic Tanning" },
+    "description": "You're familiar with the theory behind turning raw hides into leather.",
+    "can_learn": true,
+    "time_to_learn": "4 s",
+    "default_time_multiplier": 1.5,
+    "default_fail_multiplier": 1.5
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_tanning",
+    "category": "prof_survival",
+    "name": { "str": "Skilled Tanning" },
+    "description": "You have a lot of practice and experience with processing hides to leather, as well as related techniques like making boiled leather.",
+    "can_learn": true,
+    "time_to_learn": "8 s",
+    "default_time_multiplier": 2,
+    "default_fail_multiplier": 1.2,
+    "required_proficiencies": [ "prof_tanning_basic" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_bow_basic",
+    "category": "prof_archery",
+    "name": { "str": "Basic Archer's Form" },
+    "description": "You have grasped some basic understanding on archery, and find handling bows easier.",
+    "can_learn": true,
+    "time_to_learn": "5 s",
+    "default_time_multiplier": 1.5,
+    "default_fail_multiplier": 1.2,
+    "bonuses": { "archery": [ { "type": "strength", "value": 1 } ] },
+    "ignore_focus": true
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_bow_expert",
+    "category": "prof_archery",
+    "name": { "str": "Expert Archer's Form" },
+    "description": "After significant practice, you have become an expert in the movements used in drawing and firing a bow, and have strengthened those muscles considerably.",
+    "can_learn": true,
+    "time_to_learn": "10 s",
+    "default_time_multiplier": 1.5,
+    "default_fail_multiplier": 1.2,
+    "required_proficiencies": [ "prof_bow_basic" ],
+    "bonuses": { "archery": [ { "type": "strength", "value": 1 } ] },
+    "ignore_focus": true
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_bow_master",
+    "category": "prof_archery",
+    "name": { "str": "Master Archer's Form" },
+    "description": "You have drawn and fired a bow so many times, you probably have a bit of a twist in your spine from it.  You've developed what would once have been a world class understanding of the pose and motion of effective archery.",
+    "can_learn": true,
+    "time_to_learn": "20 s",
+    "default_time_multiplier": 1.5,
+    "default_fail_multiplier": 1.2,
+    "required_proficiencies": [ "prof_bow_expert" ],
+    "bonuses": { "archery": [ { "type": "strength", "value": 1 } ] },
+    "ignore_focus": true
+  }
+]
+[
+  {
+    "type": "proficiency",
+    "id": "prof_carpentry_basic",
+    "category": "prof_woodworking",
+    "name": { "str": "Basic Carpentry" },
+    "description": "Simple projects involving holding planks and panels of wood together with nails or similar fasteners.",
+    "can_learn": true,
+    "default_time_multiplier": 1.5,
+    "default_fail_multiplier": 1.15,
+    "time_to_learn": "4 s"
+  }
+]

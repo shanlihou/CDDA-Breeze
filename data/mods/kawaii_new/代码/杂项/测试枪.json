@@ -31,7 +31,7 @@
     "symbol": ":", "color": "dark_gray",
     "location": "sights", "mod_targets": [ "rifle", "crossbow", "launcher" ],
     "sight_dispersion": 0, "aim_speed_modifier": -1, "field_of_view": 270,
-    "install_time": "5 m",
+    "install_time": "5 m", "min_skills": [ [ "weapon", 2 ], [ "gun", 4 ] ],
     "flags": [ "DISABLE_SIGHTS", "ZOOM", "flag_sights_cs" ]
   },
   {
@@ -46,7 +46,7 @@
     "symbol": ":", "color": "dark_gray",
     "location": "grip", "mod_targets": [ "smg", "rifle", "pistol", "shotgun", "crossbow", "launcher", "bow" ],
     "handling_modifier": 2,
-    "install_time": "10 m",
+    "install_time": "10 m", "min_skills": [ [ "weapon", 2 ] ],
     "flags": [ "flag_grip_cs" ]
   },
   {
@@ -61,7 +61,7 @@
     "symbol": ":", "color": "dark_gray",
     "location": "stock", "mod_targets": [ "smg", "rifle", "shotgun", "launcher" ],
     "handling_modifier": 4,
-    "install_time": "5 m",
+    "install_time": "5 m", "min_skills": [ [ "weapon", 2 ] ],
     "to_hit": 1, "melee_damage": { "bash": 6 },
     "flags": [ "flag_stock_cs" ]
   },

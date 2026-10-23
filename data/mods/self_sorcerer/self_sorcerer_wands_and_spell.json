@@ -1,0 +1,1334 @@
+[
+  {
+    "type": "ammunition_type",
+    "id": "sorcerer_wand_ammo",
+    "name": "法术充能",
+    "default": "sorcerer_wand_ammo_0"
+  },
+  {
+    "type": "AMMO",
+    "id": "sorcerer_wand_ammo_0",
+    "category": "spare_parts",
+    "name": {
+      "str_sp": "法术充能"
+    },
+    "symbol": "=",
+    "color": "yellow",
+    "description": "魔杖充能数量，没有充能的魔杖就是根木棍。",
+    "flags": [
+      "MAGIC_FOCUS"
+    ],
+    "weight": "1 mg",
+    "volume": "1 ml",
+    "price": 100,
+    "price_postapoc": 100,
+    "ammo_type": "sorcerer_wand_ammo",
+    "material": [
+      "sorcerer_item"
+    ],
+    "count": 1,
+    "stack_size": 1,
+    "looks_like": "battery"
+  },
+  {
+    "type": "ammunition_type",
+    "id": "sorcerer_gem",
+    "name": "魔力宝石",
+    "default": "spell_craft_sorcerer_wand_gem"
+  },
+  {
+    "type": "AMMO",
+    "id": "spell_craft_sorcerer_wand_gem",
+    "category": "spare_parts",
+    "name": {
+      "str": "魔力宝石"
+    },
+    "description": "一颗从魔杖上拆下来的宝石，它仍然有微弱的魔力，手持时可以提供微量的魔力恢复。\n+30%法力恢复速度",
+    "symbol": "o",
+    "color": "yellow",
+    "flags": [
+      "BELT_CLIP",
+      "NONCONDUCTIVE",
+      "MAGIC_FOCUS",
+      "FRAGILE_MELEE",
+      "NO_REPAIR"
+    ],
+    "weight": "10 g",
+    "volume": "5 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "melee_damage": {
+      "bash": 2
+    },
+    "to_hit": -1,
+    "ammo_type": "sorcerer_gem",
+    "material": [
+      "gemstone"
+    ],
+    "count": 1,
+    "stack_size": 1,
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "REGEN_MANA",
+              "multiply": 0.3
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "recipe",
+    "result": "spell_craft_sorcerer_wand_gem",
+    "components": [
+      [
+        [
+          "spell_sorcerer_item_0",
+          100
+        ]
+      ],
+      [
+        [
+          "garnet",
+          1
+        ],
+        [
+          "amethyst",
+          1
+        ],
+        [
+          "aquamarine",
+          1
+        ],
+        [
+          "emerald",
+          1
+        ],
+        [
+          "alexandrite",
+          1
+        ],
+        [
+          "malachite",
+          1
+        ],
+        [
+          "pearl",
+          1
+        ],
+        [
+          "ruby",
+          1
+        ],
+        [
+          "peridot",
+          1
+        ],
+        [
+          "sapphire",
+          1
+        ],
+        [
+          "opal",
+          1
+        ],
+        [
+          "tourmaline",
+          1
+        ],
+        [
+          "citrine",
+          1
+        ],
+        [
+          "blue_topaz",
+          1
+        ],
+        [
+          "onyx",
+          1
+        ],
+        [
+          "diamond",
+          1
+        ]
+      ]
+    ],
+    "batch_time_factors": [
+      50,
+      2
+    ],
+    "time": "10 m",
+    "skill_used": "spellcraft",
+    "activity_level": "LIGHT_EXERCISE",
+    "difficulty": 3,
+    "category": "CC_ENCHANTED",
+    "subcategory": "CSC_ENCHANTED_OTHER",
+    "autolearn": true
+  },
+  {
+    "id": "spell_craft_sorcerer_base_wand_0",
+    "name": {
+      "str": "封装的魔杖-Lv0-戏法"
+    },
+    "description": "魔杖是一次性施法道具，具有一定的充能次数，相对的用魔杖施法需要更少时间。\n+30%法力恢复速度\n这把魔杖还差最后一步就能完成了。",
+    "type": "TOOL",
+    "weight": "250 g",
+    "volume": "400 ml",
+    "longest_side": "25 cm",
+    "price": 2000,
+    "price_postapoc": 2000,
+    "melee_damage": {
+      "bash": 6
+    },
+    "to_hit": 1,
+    "material": [
+      "wood"
+    ],
+    "symbol": "|",
+    "color": "yellow",
+    "flags": [
+      "BELT_CLIP",
+      "NONCONDUCTIVE",
+      "MAGIC_FOCUS",
+      "FRAGILE_MELEE",
+      "NO_REPAIR"
+    ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "REGEN_MANA",
+              "multiply": 0.3
+            }
+          ]
+        }
+      ]
+    },
+    "use_action": {
+      "type": "unpack",
+      "group": "group_sorcerer_wand_0"
+    }
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_base_wand_0",
+    "type": "TOOL",
+    "id": "spell_craft_sorcerer_base_wand_1",
+    "name": {
+      "str": "封装的魔杖-Lv1-魔法飞弹"
+    },
+    "use_action": {
+      "type": "unpack",
+      "group": "group_sorcerer_wand_1"
+    }
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_base_wand_0",
+    "type": "TOOL",
+    "id": "spell_craft_sorcerer_base_wand_1_1",
+    "name": {
+      "str": "封装的魔杖-Lv1-燃烧之手"
+    },
+    "use_action": {
+      "type": "unpack",
+      "group": "group_sorcerer_wand_1_1"
+    }
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_base_wand_0",
+    "type": "TOOL",
+    "id": "spell_craft_sorcerer_base_wand_1_2",
+    "name": {
+      "str": "封装的魔杖-Lv1-污泥术"
+    },
+    "use_action": {
+      "type": "unpack",
+      "group": "group_sorcerer_wand_1_2"
+    }
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_base_wand_0",
+    "type": "TOOL",
+    "id": "spell_craft_sorcerer_base_wand_2",
+    "name": {
+      "str": "封装的魔杖-Lv2-灼热射线"
+    },
+    "use_action": {
+      "type": "unpack",
+      "group": "group_sorcerer_wand_2"
+    }
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_base_wand_0",
+    "type": "TOOL",
+    "id": "spell_craft_sorcerer_base_wand_2_1",
+    "name": {
+      "str": "封装的魔杖-Lv2-蛛网术"
+    },
+    "use_action": {
+      "type": "unpack",
+      "group": "group_sorcerer_wand_2_1"
+    }
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_base_wand_0",
+    "type": "TOOL",
+    "id": "spell_craft_sorcerer_base_wand_3",
+    "name": {
+      "str": "封装的魔杖-Lv3-火球术"
+    },
+    "use_action": {
+      "type": "unpack",
+      "group": "group_sorcerer_wand_3"
+    }
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_base_wand_0",
+    "type": "TOOL",
+    "id": "spell_craft_sorcerer_base_wand_3_1",
+    "name": {
+      "str": "封装的魔杖-Lv3-闪电束"
+    },
+    "use_action": {
+      "type": "unpack",
+      "group": "group_sorcerer_wand_3_1"
+    }
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_base_wand_0",
+    "type": "TOOL",
+    "id": "spell_craft_sorcerer_base_wand_4",
+    "name": {
+      "str": "封装的魔杖-Lv4-冰风暴"
+    },
+    "use_action": {
+      "type": "unpack",
+      "group": "group_sorcerer_wand_4"
+    }
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_base_wand_0",
+    "type": "TOOL",
+    "id": "spell_craft_sorcerer_base_wand_4_1",
+    "name": {
+      "str": "封装的魔杖-Lv4-飞弹风暴"
+    },
+    "use_action": {
+      "type": "unpack",
+      "group": "group_sorcerer_wand_4_1"
+    }
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_base_wand_0",
+    "type": "TOOL",
+    "id": "spell_craft_sorcerer_base_wand_5",
+    "name": {
+      "str": "封装的魔杖-Lv5-龙息术（火）"
+    },
+    "use_action": {
+      "type": "unpack",
+      "group": "group_sorcerer_wand_5"
+    }
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_base_wand_0",
+    "type": "TOOL",
+    "id": "spell_craft_sorcerer_base_wand_5_1",
+    "name": {
+      "str": "封装的魔杖-Lv5-龙息术（冰）"
+    },
+    "use_action": {
+      "type": "unpack",
+      "group": "group_sorcerer_wand_5_1"
+    }
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_base_wand_0",
+    "type": "TOOL",
+    "id": "spell_craft_sorcerer_base_wand_5_2",
+    "name": {
+      "str": "封装的魔杖-Lv5-龙息术（电）"
+    },
+    "use_action": {
+      "type": "unpack",
+      "group": "group_sorcerer_wand_5_2"
+    }
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_base_wand_0",
+    "type": "TOOL",
+    "id": "spell_craft_sorcerer_base_wand_5_3",
+    "name": {
+      "str": "封装的魔杖-Lv5-龙息术（毒）"
+    },
+    "use_action": {
+      "type": "unpack",
+      "group": "group_sorcerer_wand_5_3"
+    }
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_base_wand_0",
+    "type": "TOOL",
+    "id": "spell_craft_sorcerer_base_wand_5_4",
+    "name": {
+      "str": "封装的魔杖-Lv5-龙息术（酸）"
+    },
+    "use_action": {
+      "type": "unpack",
+      "group": "group_sorcerer_wand_5_4"
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_wand_0",
+    "name": {
+      "str": "魔杖-Lv0-戏法"
+    },
+    "description": "魔杖是一次性施法道具，具有一定的充能次数，相对的用魔杖施法需要更少时间。\n+30%法力恢复速度",
+    "type": "TOOL",
+    "weight": "250 g",
+    "volume": "400 ml",
+    "longest_side": "25 cm",
+    "price": 25000,
+    "price_postapoc": 25000,
+    "melee_damage": {
+      "bash": 6
+    },
+    "to_hit": 1,
+    "material": [
+      "wood"
+    ],
+    "symbol": "|",
+    "color": "yellow",
+    "flags": [
+      "BELT_CLIP",
+      "NONCONDUCTIVE",
+      "NO_UNLOAD",
+      "NO_RELOAD",
+      "MAGIC_FOCUS",
+      "FRAGILE_MELEE",
+      "NO_REPAIR"
+    ],
+    "ammo": [
+      "sorcerer_wand_ammo"
+    ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "REGEN_MANA",
+              "multiply": 0.3
+            }
+          ]
+        }
+      ]
+    },
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "sorcerer_wand_ammo": 200
+        }
+      }
+    ],
+    "charges_per_use": 1,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv0_rnd_spell",
+      "no_fail": true,
+      "level": 0,
+      "need_wielding": true
+    }
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_wand_0",
+    "id": "spell_craft_sorcerer_wand_1",
+    "name": {
+      "str": "魔杖-Lv1-魔法飞弹"
+    },
+    "description": "魔杖是一次性施法道具，具有一定的充能次数，相对的用魔杖施法需要更少时间。\n+30%法力恢复速度",
+    "type": "TOOL",
+    "price": 35000,
+    "price_postapoc": 35000,
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "REGEN_MANA",
+              "multiply": 0.3
+            }
+          ]
+        }
+      ]
+    },
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "sorcerer_wand_ammo": 100
+        }
+      }
+    ],
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv1_missile_nocom",
+      "no_fail": true,
+      "level": 0,
+      "need_wielding": true
+    }
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_wand_0",
+    "id": "spell_craft_sorcerer_wand_1_1",
+    "name": {
+      "str": "魔杖-Lv1-燃烧之手"
+    },
+    "description": "魔杖是一次性施法道具，具有一定的充能次数，相对的用魔杖施法需要更少时间。\n+30%法力恢复速度",
+    "type": "TOOL",
+    "price": 35000,
+    "price_postapoc": 35000,
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "REGEN_MANA",
+              "multiply": 0.3
+            }
+          ]
+        }
+      ]
+    },
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "sorcerer_wand_ammo": 100
+        }
+      }
+    ],
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv1_burning_hands_nocom",
+      "no_fail": true,
+      "level": 0,
+      "need_wielding": true
+    }
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_wand_0",
+    "id": "spell_craft_sorcerer_wand_1_2",
+    "name": {
+      "str": "魔杖-Lv1-污泥术"
+    },
+    "description": "魔杖是一次性施法道具，具有一定的充能次数，相对的用魔杖施法需要更少时间。\n+30%法力恢复速度",
+    "type": "TOOL",
+    "price": 35000,
+    "price_postapoc": 35000,
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "REGEN_MANA",
+              "multiply": 0.3
+            }
+          ]
+        }
+      ]
+    },
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "sorcerer_wand_ammo": 100
+        }
+      }
+    ],
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv1_sludged_nocom",
+      "no_fail": true,
+      "level": 0,
+      "need_wielding": true
+    }
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_wand_0",
+    "id": "spell_craft_sorcerer_wand_2",
+    "name": {
+      "str": "魔杖-Lv2-灼热射线"
+    },
+    "description": "魔杖是一次性施法道具，具有一定的充能次数，相对的用魔杖施法需要更少时间。\n+30%法力恢复速度",
+    "type": "TOOL",
+    "price": 55000,
+    "price_postapoc": 55000,
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "REGEN_MANA",
+              "multiply": 0.3
+            }
+          ]
+        }
+      ]
+    },
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "sorcerer_wand_ammo": 80
+        }
+      }
+    ],
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv2_fire_nocom",
+      "no_fail": true,
+      "level": 0,
+      "need_wielding": true
+    }
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_wand_0",
+    "id": "spell_craft_sorcerer_wand_2_1",
+    "name": {
+      "str": "魔杖-Lv2-蛛网术"
+    },
+    "description": "魔杖是一次性施法道具，具有一定的充能次数，相对的用魔杖施法需要更少时间。\n+30%法力恢复速度",
+    "type": "TOOL",
+    "price": 55000,
+    "price_postapoc": 55000,
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "REGEN_MANA",
+              "multiply": 0.3
+            }
+          ]
+        }
+      ]
+    },
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "sorcerer_wand_ammo": 80
+        }
+      }
+    ],
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv2_web_nocom",
+      "no_fail": true,
+      "level": 0,
+      "need_wielding": true
+    }
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_wand_0",
+    "id": "spell_craft_sorcerer_wand_3",
+    "name": {
+      "str": "魔杖-Lv3-火球术"
+    },
+    "description": "魔杖是一次性施法道具，具有一定的充能次数，相对的用魔杖施法需要更少时间。\n+30%法力恢复速度",
+    "type": "TOOL",
+    "price": 75000,
+    "price_postapoc": 75000,
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "REGEN_MANA",
+              "multiply": 0.3
+            }
+          ]
+        }
+      ]
+    },
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "sorcerer_wand_ammo": 60
+        }
+      }
+    ],
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv3_fireball_nocom",
+      "no_fail": true,
+      "level": 0,
+      "need_wielding": true
+    }
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_wand_0",
+    "id": "spell_craft_sorcerer_wand_3_1",
+    "name": {
+      "str": "魔杖-Lv3-闪电束"
+    },
+    "description": "魔杖是一次性施法道具，具有一定的充能次数，相对的用魔杖施法需要更少时间。\n+30%法力恢复速度",
+    "type": "TOOL",
+    "price": 75000,
+    "price_postapoc": 75000,
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "REGEN_MANA",
+              "multiply": 0.3
+            }
+          ]
+        }
+      ]
+    },
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "sorcerer_wand_ammo": 60
+        }
+      }
+    ],
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv3_lightning_bolt_nocom",
+      "no_fail": true,
+      "level": 0,
+      "need_wielding": true
+    }
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_wand_0",
+    "id": "spell_craft_sorcerer_wand_4",
+    "name": {
+      "str": "魔杖-Lv4-冰风暴"
+    },
+    "description": "魔杖是一次性施法道具，具有一定的充能次数，相对的用魔杖施法需要更少时间。\n+30%法力恢复速度",
+    "type": "TOOL",
+    "price": 125000,
+    "price_postapoc": 125000,
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "REGEN_MANA",
+              "multiply": 0.3
+            }
+          ]
+        }
+      ]
+    },
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "sorcerer_wand_ammo": 40
+        }
+      }
+    ],
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv4_ice_storm_nocom",
+      "no_fail": true,
+      "level": 0,
+      "need_wielding": true
+    }
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_wand_0",
+    "id": "spell_craft_sorcerer_wand_4_1",
+    "name": {
+      "str": "魔杖-Lv4-飞弹风暴"
+    },
+    "description": "魔杖是一次性施法道具，具有一定的充能次数，相对的用魔杖施法需要更少时间。\n+30%法力恢复速度",
+    "type": "TOOL",
+    "price": 125000,
+    "price_postapoc": 125000,
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "REGEN_MANA",
+              "multiply": 0.3
+            }
+          ]
+        }
+      ]
+    },
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "sorcerer_wand_ammo": 40
+        }
+      }
+    ],
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv4_missile_nocom",
+      "no_fail": true,
+      "level": 0,
+      "need_wielding": true
+    }
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_wand_0",
+    "id": "spell_craft_sorcerer_wand_5",
+    "name": {
+      "str": "魔杖-Lv5-龙息术（火）"
+    },
+    "description": "魔杖是一次性施法道具，具有一定的充能次数，相对的用魔杖施法需要更少时间。\n+30%法力恢复速度",
+    "type": "TOOL",
+    "price": 225000,
+    "price_postapoc": 225000,
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "REGEN_MANA",
+              "multiply": 0.3
+            }
+          ]
+        }
+      ]
+    },
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "sorcerer_wand_ammo": 20
+        }
+      }
+    ],
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv5_dragon_fire_nocom",
+      "no_fail": true,
+      "level": 0,
+      "need_wielding": true
+    }
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_wand_0",
+    "id": "spell_craft_sorcerer_wand_5_1",
+    "name": {
+      "str": "魔杖-Lv5-龙息术（冰）"
+    },
+    "description": "魔杖是一次性施法道具，具有一定的充能次数，相对的用魔杖施法需要更少时间。\n+30%法力恢复速度",
+    "type": "TOOL",
+    "price": 225000,
+    "price_postapoc": 225000,
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "REGEN_MANA",
+              "multiply": 0.3
+            }
+          ]
+        }
+      ]
+    },
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "sorcerer_wand_ammo": 20
+        }
+      }
+    ],
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv5_dragon_cold_nocom",
+      "no_fail": true,
+      "level": 0,
+      "need_wielding": true
+    }
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_wand_0",
+    "id": "spell_craft_sorcerer_wand_5_2",
+    "name": {
+      "str": "魔杖-Lv5-龙息术（电）"
+    },
+    "description": "魔杖是一次性施法道具，具有一定的充能次数，相对的用魔杖施法需要更少时间。\n+30%法力恢复速度",
+    "type": "TOOL",
+    "price": 225000,
+    "price_postapoc": 225000,
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "REGEN_MANA",
+              "multiply": 0.3
+            }
+          ]
+        }
+      ]
+    },
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "sorcerer_wand_ammo": 20
+        }
+      }
+    ],
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv5_dragon_electric_nocom",
+      "no_fail": true,
+      "level": 0,
+      "need_wielding": true
+    }
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_wand_0",
+    "id": "spell_craft_sorcerer_wand_5_3",
+    "name": {
+      "str": "魔杖-Lv5-龙息术（毒）"
+    },
+    "description": "魔杖是一次性施法道具，具有一定的充能次数，相对的用魔杖施法需要更少时间。\n+30%法力恢复速度",
+    "type": "TOOL",
+    "price": 225000,
+    "price_postapoc": 225000,
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "REGEN_MANA",
+              "multiply": 0.3
+            }
+          ]
+        }
+      ]
+    },
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "sorcerer_wand_ammo": 20
+        }
+      }
+    ],
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv5_dragon_bio_nocom",
+      "no_fail": true,
+      "level": 0,
+      "need_wielding": true
+    }
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_wand_0",
+    "id": "spell_craft_sorcerer_wand_5_4",
+    "name": {
+      "str": "魔杖-Lv5-龙息术（酸）"
+    },
+    "description": "魔杖是一次性施法道具，具有一定的充能次数，相对的用魔杖施法需要更少时间。\n+30%法力恢复速度",
+    "type": "TOOL",
+    "price": 225000,
+    "price_postapoc": 225000,
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "REGEN_MANA",
+              "multiply": 0.3
+            }
+          ]
+        }
+      ]
+    },
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "sorcerer_wand_ammo": 20
+        }
+      }
+    ],
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv5_dragon_acid_nocom",
+      "no_fail": true,
+      "level": 0,
+      "need_wielding": true
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv0_rnd_spell",
+    "type": "SPELL",
+    "name": "戏法魔杖",
+    "description": "对目标释放随机的戏法。\n高概率0级，中概率2级，低概率4级。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "NO_FAIL",
+      "NO_HANDS",
+      "NO_LEGS",
+      "SILENT",
+      "WONDER"
+    ],
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 8,
+    "base_energy_cost": 0,
+    "spell_class": "NONE",
+    "difficulty": 1,
+    "max_level": 0,
+    "base_casting_time": 150,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack",
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_lv0_acid_wand"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv0_cold_wand"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv0_electric_wand"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv0_heat_wand"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv0_acid_wand"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv0_cold_wand"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv0_electric_wand"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv0_heat_wand"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv0_acid_wand"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv0_cold_wand"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv0_electric_wand"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv0_heat_wand"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv0_acid_wand2"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv0_cold_wand2"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv0_electric_wand2"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv0_heat_wand2"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv0_acid_wand2"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv0_cold_wand2"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv0_electric_wand2"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv0_heat_wand2"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv0_acid_wand4"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv0_cold_wand4"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv0_electric_wand4"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv0_heat_wand4"
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv0_acid_wand",
+    "type": "SPELL",
+    "name": "戏法魔杖-随机酸液球",
+    "description": "对目标造成随机酸性伤害。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "NO_FAIL",
+      "NO_HANDS",
+      "NO_LEGS",
+      "SILENT",
+      "RANDOM_DAMAGE"
+    ],
+    "message": "",
+    "damage_type": "acid",
+    "min_damage": 2,
+    "max_damage": 8,
+    "min_range": 8,
+    "base_energy_cost": 0,
+    "spell_class": "NONE",
+    "difficulty": 1,
+    "max_level": 0,
+    "base_casting_time": 0,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_lv0_acid_wand",
+    "id": "spell_craft_sorcerer_lv0_cold_wand",
+    "type": "SPELL",
+    "name": "戏法魔杖-随机寒冰箭",
+    "description": "对目标造成随机寒冰伤害。",
+    "damage_type": "cold",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_lv0_acid_wand",
+    "id": "spell_craft_sorcerer_lv0_electric_wand",
+    "type": "SPELL",
+    "name": "戏法魔杖-随机闪电球",
+    "description": "对目标造成随机电击伤害。",
+    "damage_type": "electric",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_lv0_acid_wand",
+    "id": "spell_craft_sorcerer_lv0_heat_wand",
+    "type": "SPELL",
+    "name": "戏法魔杖-随机火焰球",
+    "description": "对目标造成随机火焰伤害。",
+    "damage_type": "heat",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_lv0_acid_wand",
+    "id": "spell_craft_sorcerer_lv0_acid_wand2",
+    "type": "SPELL",
+    "name": "戏法魔杖-随机酸液球",
+    "description": "对目标造成随机酸性伤害。",
+    "min_damage": 4,
+    "max_damage": 16,
+    "damage_type": "acid",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_lv0_acid_wand2",
+    "id": "spell_craft_sorcerer_lv0_cold_wand2",
+    "type": "SPELL",
+    "name": "戏法魔杖-随机寒冰箭",
+    "description": "对目标造成随机寒冰伤害。",
+    "damage_type": "cold",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_lv0_acid_wand2",
+    "id": "spell_craft_sorcerer_lv0_electric_wand2",
+    "type": "SPELL",
+    "name": "戏法魔杖-随机闪电球",
+    "description": "对目标造成随机电击伤害。",
+    "damage_type": "electric",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_lv0_acid_wand2",
+    "id": "spell_craft_sorcerer_lv0_heat_wand2",
+    "type": "SPELL",
+    "name": "戏法魔杖-随机火焰球",
+    "description": "对目标造成随机火焰伤害。",
+    "damage_type": "heat",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_lv0_acid_wand",
+    "id": "spell_craft_sorcerer_lv0_acid_wand4",
+    "type": "SPELL",
+    "name": "戏法魔杖-随机酸液球",
+    "description": "对目标造成随机酸性伤害。",
+    "min_damage": 6,
+    "max_damage": 24,
+    "damage_type": "acid",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_lv0_acid_wand4",
+    "id": "spell_craft_sorcerer_lv0_cold_wand4",
+    "type": "SPELL",
+    "name": "戏法魔杖-随机寒冰箭",
+    "description": "对目标造成随机寒冰伤害。",
+    "damage_type": "cold",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_lv0_acid_wand4",
+    "id": "spell_craft_sorcerer_lv0_electric_wand4",
+    "type": "SPELL",
+    "name": "戏法魔杖-随机闪电球",
+    "description": "对目标造成随机电击伤害。",
+    "damage_type": "electric",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_lv0_acid_wand4",
+    "id": "spell_craft_sorcerer_lv0_heat_wand4",
+    "type": "SPELL",
+    "name": "戏法魔杖-随机火焰球",
+    "description": "对目标造成随机火焰伤害。",
+    "damage_type": "heat",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv1_sludged_nocom",
+    "type": "SPELL",
+    "name": "物品-Lv1-污泥术",
+    "description": "在目标地点造成污泥地形。",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "NO_FAIL",
+      "NO_HANDS",
+      "NO_LEGS",
+      "SILENT"
+    ],
+    "damage_type": "pure",
+    "min_range": 15,
+    "min_aoe": 3,
+    "field_id": "fd_sludge",
+    "field_chance": 1,
+    "min_field_intensity": 2,
+    "max_field_intensity": 2,
+    "base_energy_cost": 0,
+    "spell_class": "NONE",
+    "difficulty": 1,
+    "max_level": 0,
+    "base_casting_time": 150,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv2_web_nocom",
+    "type": "SPELL",
+    "name": "物品-Lv2-蛛网术",
+    "description": "在目标地点造成蛛网地形。",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "NO_FAIL",
+      "NO_HANDS",
+      "NO_LEGS",
+      "SILENT"
+    ],
+    "damage_type": "pure",
+    "min_range": 15,
+    "min_aoe": 4,
+    "field_id": "fd_web",
+    "field_chance": 1,
+    "min_field_intensity": 2,
+    "max_field_intensity": 2,
+    "base_energy_cost": 0,
+    "spell_class": "NONE",
+    "difficulty": 2,
+    "max_level": 0,
+    "base_casting_time": 150,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack"
+  }
+]

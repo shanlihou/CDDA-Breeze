@@ -1,0 +1,41 @@
+[
+  {
+    "id": "psionic_instability_remover",
+    "name": { "str": "形态韧性乳霜" },
+    "description": "一种极其浓稠的乳霜，如果你将其涂抹在皮肤上，它将“增强你对XE037过度暴露的有害效应的抵抗力”。它闻起来像是指甲油变质了的味道，甚至仅仅接触就会让指尖奇痒无比。",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "weight": "265 g",
+    "volume": "250ml",
+    "charges": 1,
+    "price": 3000,
+    "price_postapoc": 3000,
+    "fun": -3,
+    "symbol": "q",
+    "container": "bottle_plastic_small",
+    "color": "blue",
+    "flags": [ "EATEN_COLD" ],
+    "phase": "solid",
+    "use_action": { "type": "effect_on_conditions", "description": "将乳霜涂抹在皮肤上。", "effect_on_conditions": [ "EOC_INSTABILITY_CREAM" ] }
+  },
+  {
+    "id": "psionic_purifier_vita",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": { "str": "形态逆转血清" },
+    "description": "一种微微发光的绿色液体，你找到的文件告诉你，这将“将你的形态恢复至基线”，无论这意味着什么。",
+    "weight": "20 g",
+    "volume": "10ml",
+    "price": 1200000,
+    "price_postapoc": 3000,
+    "material": [ "nether_crystal", "alien_liquid" ],
+    "phase": "liquid",
+    "container": "flask_glass",
+    "symbol": "!",
+    "color": "green",
+    "vitamins": [  ],
+    "healthy": -4,
+    "flags": [ "SINGLE_USE" ],
+    "use_action": [ "PURIFY_SMART" ]
+  }
+]

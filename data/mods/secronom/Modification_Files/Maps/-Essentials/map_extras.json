@@ -1,0 +1,131 @@
+[
+  {
+    "id": "mx_secro_carrion_spawn",
+    "type": "map_extra",
+    "name": {
+      "str": "腐肉"
+    },
+    "description": "这里有腐肉。",
+    "generator": {
+      "generator_method": "update_mapgen",
+      "generator_id": "mx_secro_carrion"
+    }
+  },
+  {
+    "id": "mx_secro_carrion_massacre_spawn",
+    "type": "map_extra",
+    "name": {
+      "str": "腐肉"
+    },
+    "description": "腐肉入侵了这里。",
+    "generator": {
+      "generator_method": "update_mapgen",
+      "generator_id": "mx_secro_carrion_massacre"
+    }
+  },
+  {
+    "id": "mx_secro_carrion_massacre_smol_spawn",
+    "type": "map_extra",
+    "name": {
+      "str": "腐肉"
+    },
+    "description": "腐肉入侵了这里。",
+    "generator": {
+      "generator_method": "update_mapgen",
+      "generator_id": "mx_secro_carrion_massacre_smol"
+    }
+  },
+  {
+    "id": "mx_secro_vector_spawn",
+    "type": "map_extra",
+    "name": {
+      "str": "载体"
+    },
+    "description": "这里有一个载体簇。",
+    "generator": {
+      "generator_method": "update_mapgen",
+      "generator_id": "mx_secro_vector"
+    }
+  },
+  {
+    "id": "mx_secro_fleshweaver_spawn",
+    "type": "map_extra",
+    "name": {
+      "str": "肉织工"
+    },
+    "description": "一个血肉织工在这里。",
+    "generator": {
+      "generator_method": "update_mapgen",
+      "generator_id": "mx_secro_fleshweaver"
+    }
+  },
+  {
+    "id": "mx_flesh_biome_extra_spawn",
+    "type": "map_extra",
+    "name": {
+      "str": "肌肉肿瘤"
+    },
+    "description": "这里有奇怪的血肉建筑",
+    "generator": {
+      "generator_method": "update_mapgen",
+      "generator_id": "mx_flesh_biome_extra"
+    }
+  },
+  {
+    "id": "mx_secro_saddler_victims_spawn",
+    "type": "map_extra",
+    "name": {
+      "str": "尸体"
+    },
+    "description": "无头尸体在这里。",
+    "generator": {
+      "generator_method": "update_mapgen",
+      "generator_id": "mx_secro_saddler_victims"
+    },
+    "sym": "S",
+    "color": "green",
+    "autonote": true
+  },
+  {
+    "id": "mx_secro_saddler_infest_spawn",
+    "type": "map_extra",
+    "name": {
+      "str": "鞍具"
+    },
+    "description": "鞍具遍布了这个地区。",
+    "generator": {
+      "generator_method": "update_mapgen",
+      "generator_id": "mx_secro_saddler_infest"
+    },
+    "sym": "S",
+    "color": "light_green",
+    "autonote": true
+  },
+  {
+    "id": "mx_secro_fleshbuilding_spawn",
+    "type": "map_extra",
+    "name": {
+      "str": "肉"
+    },
+    "description": "它被血肉所覆盖。",
+    "generator": {
+      "generator_method": "update_mapgen",
+      "generator_id": "mx_secro_fleshbuilding"
+    },
+    "sym": "&",
+    "color": "light_red",
+    "autonote": true
+  },
+  {
+    "id": "mx_secro_snatcherzed_spawn",
+    "type": "map_extra",
+    "name": {
+      "str": "诱拐者"
+    },
+    "description": "这里有一个掠夺丧尸。",
+    "generator": {
+      "generator_method": "update_mapgen",
+      "generator_id": "mx_secro_snatcherzed"
+    }
+  }
+]

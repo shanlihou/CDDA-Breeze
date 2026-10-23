@@ -1,0 +1,35 @@
+[
+	{
+		"type": "COMESTIBLE",
+		"id": "fishery_egg_rockbass",
+		"name": { "str": "鱼卵（岩钝鲈）" },
+		"copy-from": "fishery_egg",
+		"spoils_in": "10 days",
+		"description": "一些可以食用，也可以等他们孵化出小鱼的岩钝鲈鱼卵。",
+		"rot_spawn": "FISHERY_GROUP_EGG_rockbass",
+		"rot_spawn_chance": 50
+	},
+	{
+		"name": "FISHERY_GROUP_EGG_rockbass",
+		"type": "monstergroup",
+		"default": "fishery_mon_rockbass_juvenile",
+		"monsters": [ ]
+	},
+	{
+		"id": "fishery_mon_rockbass_juvenile",
+		"type": "MONSTER",
+		"name": { "str": "岩钝鲈鱼苗" },
+		"description": "一条岩钝鲈幼鱼，过一段时间就会变成成鱼。",
+		"copy-from": "fishery_mon_juvenile",
+		"harvest": "fish_tiny",
+		"upgrades": { "age_grow": 20, "into": "mon_fish_rock_bass" }
+	},
+	{
+		"id": "mon_fish_rock_bass",
+		"type": "MONSTER",
+		"copy-from": "mon_fish_rock_bass",
+		"name": { "str": "岩钝鲈" },
+		"reproduction": { "baby_egg": "fishery_egg_rockbass", "baby_count": 10, "baby_timer": 20 },
+		"baby_flags": [ "SPRING" ]
+	}
+]

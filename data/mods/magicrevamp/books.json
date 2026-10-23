@@ -1,0 +1,23 @@
+[
+  {
+    "id": "sonic_force_book",
+    "type": "GENERIC",
+    "name": {
+      "str": "音力之书",
+      "str_pl": "音速力之书"
+    },
+    "//": "2 Earthshaper spells",
+    "description": "封面描绘了一场严重的爆炸，将大地表面撕裂开来",
+    "weight": "355 g",
+    "volume": "500 ml",
+    "symbol": "?",
+    "color": "yellow",
+    "use_action": {
+      "type": "learn_spell",
+      "spells": [
+        "sonic_blast",
+        "sonic_demolition"
+      ]
+    }
+  }
+]

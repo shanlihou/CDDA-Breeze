@@ -1,0 +1,72 @@
+[
+  {
+    "id": "zhizuoygj",
+    "type": "construction",
+    "group": "build_ab",
+    "required_skills": [ [ "fabrication", 0 ] ],
+    "category": "FURN",
+    "time": 120,
+    "tools": [
+      [
+        [
+          "oxy_torch",
+          4
+        ],
+        [
+          "welder",
+          20
+        ],
+        [
+          "welder_crude",
+          30
+        ],
+        [
+          "toolset",
+          30
+        ]
+      ]
+    ],
+    "qualities": [
+      [
+        {
+          "id": "HAMMER",
+          "level": 2
+        }
+      ],
+      [
+        {
+          "id": "SCREW",
+          "level": 1
+        }
+      ],
+      [
+        {
+          "id": "GLARE",
+          "level": 2
+        }
+      ]
+    ],
+    "components": [
+      [
+        [
+          "scrap",
+          100
+        ]
+      ],
+      [
+        [
+          "spring",
+          10
+        ]
+      ],
+      [
+        [
+          "anvil",
+          2
+        ]
+      ]
+    ],
+    "pre_special": "check_empty",
+    "post_terrain": "t_recycler"
+  }
+]

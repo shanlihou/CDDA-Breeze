@@ -1,0 +1,226 @@
+[
+ {
+  "id": "CCdoor",
+  "type": "vehicle_part",
+  "name": {
+   "str": "CC舱门"
+  },
+  "looks_like": "door",
+  "item": "wood_plate",
+  "location": "center",
+  "variants": [
+   {
+    "symbols": "+",
+    "symbols_broken": "&"
+   }
+  ],
+  "color": "light_green",
+  "broken_color": "light_green",
+  "durability": 1500,
+  "damage_reduction": {
+   "all": 999999
+  },
+  "damage_modifier": 10,
+  "size": "10000 L",
+  "cargo_weight_modifier": 0,
+  "folded_volume": "150 ml",
+  "breaks_into": [
+   {
+    "item": "wood_plate"
+   }
+  ],
+  "description": "CC系列的车门。即使关上门你也可以透过其上的透镜来观察。",
+  "requirements": {
+   "install": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "removal": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "repair": {
+    "skills": [
+     [
+      "tailor",
+      1
+     ]
+    ],
+    "time": "150 s",
+    "using": [
+     [
+      "adhesive",
+      1
+     ]
+    ]
+   }
+  },
+  "flags": [
+   "CARGO",
+   "OBSTACLE",
+   "OPENABLE",
+   "BOARDABLE",
+   "WINDOW",
+   "DOOR"
+  ],
+  "symbol": "&"
+ },
+ {
+  "id": "CCdoor_opaque",
+  "type": "vehicle_part",
+  "name": {
+   "str": "CC舱门不透明"
+  },
+  "item": "wood_plate",
+  "location": "center",
+  "variants": [
+   {
+    "symbols": "+",
+    "symbols_broken": "&"
+   }
+  ],
+  "color": "light_green",
+  "broken_color": "light_green",
+  "durability": 1500,
+  "damage_reduction": {
+   "all": 999999
+  },
+  "damage_modifier": 10,
+  "size": "10000 L",
+  "folded_volume": "250 ml",
+  "breaks_into": [
+   {
+    "item": "wood_plate"
+   }
+  ],
+  "description": "CC系列的车门。它是实心的，所以关上门时你不能透过它来观察。",
+  "requirements": {
+   "install": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "removal": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "repair": {
+    "skills": [
+     [
+      "tailor",
+      1
+     ]
+    ],
+    "time": "150 s",
+    "using": [
+     [
+      "adhesive",
+      1
+     ]
+    ]
+   }
+  },
+  "flags": [
+   "CARGO",
+   "OBSTACLE",
+   "OPENABLE",
+   "BOARDABLE",
+   "WINDOW",
+   "DOOR"
+  ],
+  "symbol": "&"
+ },
+ {
+  "id": "CCdoor_0",
+  "type": "vehicle_part",
+  "name": {
+   "str": "CC舱门（无储物间）"
+  },
+  "looks_like": "door",
+  "item": "wood_plate",
+  "location": "center",
+  "variants": [
+   {
+    "symbols": "+",
+    "symbols_broken": "&"
+   }
+  ],
+  "color": "light_green",
+  "broken_color": "light_green",
+  "durability": 1500,
+  "damage_reduction": {
+   "all": 999999
+  },
+  "damage_modifier": 10,
+  "cargo_weight_modifier": 0,
+  "folded_volume": "50 ml",
+  "breaks_into": [
+   {
+    "item": "wood_plate"
+   }
+  ],
+  "description": "CC系列的车门。即使关上门你也可以透过其上的透镜来观察。",
+  "requirements": {
+   "install": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "removal": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "repair": {
+    "skills": [
+     [
+      "tailor",
+      1
+     ]
+    ],
+    "time": "150 s",
+    "using": [
+     [
+      "adhesive",
+      1
+     ]
+    ]
+   }
+  },
+  "flags": [
+   "OBSTACLE",
+   "OPENABLE",
+   "BOARDABLE",
+   "WINDOW",
+   "DOOR"
+  ],
+  "symbol": "&"
+ }
+]

@@ -1,0 +1,111 @@
+[
+  {
+    "type": "GENERIC",
+    "id": "glass_shard",
+    "stackable": true,
+    "symbol": ",",
+    "color": "light_cyan",
+    "name": {
+      "str": "glass shard"
+    },
+    "category": "other",
+    "description": "A broken shard of glass covered in sharp edges.  You could use it as a weapon, but you might want to wear gloves.",
+    "material": [
+      "glass"
+    ],
+    "weight": "75 g",
+    "volume": "30 ml",
+    "cutting": 6,
+    "use_action": {
+      "type": "place_trap",
+      "trap": "tr_glass",
+      "moves": 150,
+      "practice": 2,
+      "done_message": "You carefully place the shards on the ground, ready to be cracked by something passing by."
+    },
+    "flags": [
+      "HURT_WHEN_WIELDED",
+      "TRADER_AVOID"
+    ],
+    "to_hit": -1
+  },
+  {
+    "id": "ceramic_shard",
+    "copy-from": "ceramic_shard",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str_sp": "ceramic shard" }
+  },
+  {
+    "id": "superglue",
+    "copy-from": "superglue",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str_sp": "superglue" }
+  },
+  {
+    "id": "bone_glue",
+    "copy-from": "bone_glue",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str": "bone glue" }
+  },
+  {
+    "id": "plastic_chunk",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "stackable": true,
+    "name": {
+      "str": "plastic chunk"
+    },
+    "description": "This is a piece of plastic.  It could be used to fabricate, repair, or reinforce plastic items.",
+    "weight": "50 g",
+    "volume": "95 ml",
+    "//": "Based on a density around 1.05 grams/mL, like PLA and ABS, + 100% for being rigid and probably oddly-shaped.",
+    "price": 0,
+    "price_postapoc": 10,
+    "material": [
+      "plastic"
+    ],
+    "symbol": ",",
+    "color": "light_blue",
+    "flags": [
+      "NO_SALVAGE"
+    ]
+  },
+  {
+    "id": "skewer_bone",
+    "copy-from": "skewer_bone",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str": "bone skewer" }
+  },
+  {
+    "id": "endochitin",
+    "copy-from": "endochitin",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str": "strand of endochitin" }
+  },
+  {
+    "id": "e_scrap",
+    "copy-from": "e_scrap",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str": "electronic scrap" }
+  },
+  {
+    "id": "scrap_copper",
+    "copy-from": "scrap_copper",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str": "scrap copper" }
+  },
+  {
+    "id": "scrap_aluminum",
+    "copy-from": "scrap_aluminum",
+    "type": "GENERIC",
+    "stackable": true,
+    "name": { "str": "scrap aluminum" }
+  }
+]

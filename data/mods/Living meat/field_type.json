@@ -1,0 +1,40 @@
+[
+  {
+    "id": "酸解气",
+    "type": "field_type",
+    "legacy_enum_id": 256,
+    "intensity_levels": [
+      {
+        "name": "酸解气",
+        "sym": "256",
+        "dangerous": true,
+        "translucency": 1,
+        "effects": [
+          {
+            "effect_id": "酸解气",
+            "body_part": "torso",
+            "intensity": 10,
+            "min_duration": "2 minutes",
+            "max_duration": "2 minutes",
+            "immune_inside_vehicle": true,
+            "message": "你的身体开始分解",
+            "message_type": "bad"
+          }
+        ]
+      }
+    ],
+    "decay_amount_factor": 0,
+    "gas_absorption_factor": 1200,
+    "percent_spread": 500,
+    "outdoor_age_speedup": "3 minutes",
+    "dirty_transparency_cache": true,
+    "has_fume": true,
+    "immunity_data": { "body_part_env_resistance": [ [ "torso", 2000 ] ] },
+    "priority": 8,
+    "half_life": "10 minutes",
+    "phase": "liquid",
+    "display_items": false,
+    "display_field": true,
+    "looks_like": "fd_nuke_gas"
+  }
+]

@@ -1,0 +1,188 @@
+[
+	{
+		"id":"mon_ncard_ev1_r4_no_01",
+		"type":"MONSTER",
+		"copy-from":"mon_ncard_r4_no_00",
+		"name":{"str": "No.23 圣诞娘","str_pl":"No.23 圣诞娘"},
+		"description":"一个从异次元中召唤出来的生物。",
+		"symbol":"S",
+		"chat_topics":["TALK_ev1_r4_no_01"],
+		"death_drops":{"subtype": "distribution","items":[{ "item": "ncard_ev1_r4_no_01_C" , "count": 1, "prob": 100}]},
+		"death_function":{ "corpse_type": "NO_CORPSE", "message": "The %s fades away." },
+		"emit_fields":[ { "emit_id": "emit_fd_ncard_ev1_xmas_box2", "delay": "4 d" } ],
+		"special_attacks":[{"type": "spell","spell_data": { "id": "spell_ncard_ev1_holy_cocktail", "min_level": 0 },"cooldown": 70,"monster_message": "<color_yellow>%1$s扔出了一瓶神圣鸡尾酒！</color>"}],
+		"flags":[ "SEES", "HEARS", "SMELLS", "WARM", "PATH_AVOID_FALL", "FIREPROOF","ACIDPROOF","COLDPROOF","ALWAYS_SEES_YOU"  ],
+		"path_settings":{ "max_dist": 50,"avoid_traps": true, "avoid_sharp": true }
+	}
+,
+	{
+		"id":"mon_ncard_ev1_r4_no_02",
+		"type":"MONSTER",
+		"copy-from":"mon_ncard_r4_no_00",
+		"name":{"str": "No.24 圣诞娘","str_pl":"No.24 圣诞娘"},
+		"description":"一个从异次元中召唤出来的生物。",
+		"symbol":"S",
+		"chat_topics":["TALK_ev1_r4_no_02"],
+		"death_drops":{"subtype": "distribution","items":[{ "item": "ncard_ev1_r4_no_02_C" , "count": 1, "prob": 100}]},
+		"death_function":{ "corpse_type": "NO_CORPSE", "message": "The %s fades away." },
+		"emit_fields":[ { "emit_id": "emit_fd_ncard_ev1_xmas_box2", "delay": "4 d" } ],
+		"special_attacks":[{"type": "spell","spell_data": { "id": "spell_ncard_ev1_holy_cocktail", "min_level": 0 },"cooldown": 70,"monster_message": "<color_yellow>%1$s扔出了一瓶神圣鸡尾酒！</color>"}],
+		"flags":[ "SEES", "HEARS", "SMELLS", "WARM", "PATH_AVOID_FALL", "FIREPROOF","ACIDPROOF","COLDPROOF","ALWAYS_SEES_YOU"  ],
+		"path_settings":{ "max_dist": 50,"avoid_traps": true, "avoid_sharp": true }
+	}
+,
+	{
+		"id":"mon_ncard_ev2_r4_no_01",
+		"type":"MONSTER",
+		"copy-from":"mon_ncard_r4_no_00",
+		"name":{"str": "No.29 虎娘","str_pl":"No.29 虎娘"},
+		"description":"一个从异次元中召唤出来的生物。",
+		"symbol":"T",
+		"chat_topics":["TALK_ev2_r4_no_01"],
+		"death_drops":{"subtype": "distribution","items":[{ "item": "ncard_ev2_r4_no_01_C" , "count": 1, "prob": 100}]},
+		"death_function":{ "corpse_type": "NO_CORPSE", "message": "The %s fades away." },
+		"special_attacks":[{"type": "spell","spell_data": { "id": "spell_ncard_ev2_dashslash", "min_level": 0 },"cooldown": 70,"monster_message": "<color_yellow>%1$s大跳起来不断砍向四周！</color>"}],
+		"flags":[ "SEES", "HEARS", "SMELLS", "WARM", "PATH_AVOID_FALL", "FIREPROOF","ACIDPROOF","COLDPROOF","ALWAYS_SEES_YOU"  ],
+		"path_settings":{ "max_dist": 50,"avoid_traps": true, "avoid_sharp": true }
+	}
+,
+	{
+		"id":"mon_ncard_ev2_r4_no_02",
+		"type":"MONSTER",
+		"copy-from":"mon_ncard_r4_no_00",
+		"name":{"str": "No.30 虎娘","str_pl":"No.30 虎娘"},
+		"description":"一个从异次元中召唤出来的生物。",
+		"symbol":"T",
+		"chat_topics":["TALK_ev2_r4_no_02"],
+		"death_drops":{"subtype": "distribution","items":[{ "item": "ncard_ev2_r4_no_02_C" , "count": 1, "prob": 100}]},
+		"death_function":{ "corpse_type": "NO_CORPSE", "message": "The %s fades away." },
+		"special_attacks":[{"type": "spell","spell_data": { "id": "spell_ncard_ev2_dashslash", "min_level": 0 },"cooldown": 70,"monster_message": "<color_yellow>%1$s大跳起来不断砍向四周！</color>"}],
+		"flags":[ "SEES", "HEARS", "SMELLS", "WARM", "PATH_AVOID_FALL", "FIREPROOF","ACIDPROOF","COLDPROOF","ALWAYS_SEES_YOU"  ],
+		"path_settings":{ "max_dist": 50,"avoid_traps": true, "avoid_sharp": true }
+	}
+,
+	{
+		"id":"mon_ncard_ev3_r4_no_01",
+		"type":"MONSTER",
+		"copy-from":"mon_ncard_r4_no_00",
+		"name":{"str": "No.35 剑圣","str_pl":"No.35 剑圣"},
+		"description":"来自妖狐村传说中的剑圣。据传如果有妖狐能够通过最终的试炼后，她将会得到一股完全属于自己的力量，同时她也会拿到樱花之剑。力量与剑双双契合，能够打出极其强烈的，来自樱花的力量。",
+		"symbol":"F",
+		"chat_topics":["TALK_ev3_r4_no_01"],
+		"death_drops":{"subtype": "distribution","items":[{ "item": "ncard_ev3_r4_no_01_C" , "count": 1, "prob": 100}]},
+		"death_function":{ "corpse_type": "NO_CORPSE", "message": "The %s fades away." },
+		"special_attacks":[{"type": "spell","spell_data": { "id": "spell_ncard_ev3_sanoubu", "min_level": 0 },"cooldown": 70,"monster_message": "<color_yellow>%1$s手中出现了一道樱花色的光柱！</color>"}],
+		"flags":[ "SEES", "HEARS", "SMELLS", "WARM", "PATH_AVOID_FALL", "FIREPROOF","ACIDPROOF","COLDPROOF","ALWAYS_SEES_YOU"  ],
+		"path_settings":{ "max_dist": 50,"avoid_traps": true, "avoid_sharp": true }
+	}
+,
+	{
+		"id":"mon_ncard_ev3_r4_no_02",
+		"type":"MONSTER",
+		"copy-from":"mon_ncard_r4_no_00",
+		"name":{"str": "No.36 剑圣","str_pl":"No.36 剑圣"},
+		"description":"来自妖狐村传说中的剑圣。据传如果有妖狐能够通过最终的试炼后，她将会得到一股完全属于自己的力量，同时她也会拿到樱花之剑。力量与剑双双契合，能够打出极其强烈的，来自樱花的力量。",
+		"symbol":"F",
+		"chat_topics":["TALK_ev3_r4_no_02"],
+		"death_drops":{"subtype": "distribution","items":[{ "item": "ncard_ev3_r4_no_02_C" , "count": 1, "prob": 100}]},
+		"death_function":{ "corpse_type": "NO_CORPSE", "message": "The %s fades away." },
+		"special_attacks":[{"type": "spell","spell_data": { "id": "spell_ncard_ev3_sanoubu", "min_level": 0 },"cooldown": 70,"monster_message": "<color_yellow>%1$s手中出现了一道樱花色的光柱！</color>"}],
+		"flags":[ "SEES", "HEARS", "SMELLS", "WARM", "PATH_AVOID_FALL", "FIREPROOF","ACIDPROOF","COLDPROOF","ALWAYS_SEES_YOU"  ],
+		"path_settings":{ "max_dist": 50,"avoid_traps": true, "avoid_sharp": true }
+	}
+,
+	{
+		"id":"mon_ncard_ev4_r4_no_01",
+		"type":"MONSTER",
+		"copy-from":"mon_ncard_r4_no_00",
+		"name":{"str": "No.41 行商","str_pl":"No.41 行商"},
+		"description":"一直背着大包的行商在你掏出那笔巨款后就完全只属于你了，她也难得的有了一个可以放松身心展示自己的地方。不过话说回来，她只是个行商，为啥这么能打？",
+		"symbol":"@",
+		"chat_topics":["TALK_ev4_r4_no_01"],
+		"death_drops":{"subtype": "distribution","items":[{ "item": "ncard_ev4_r4_no_01_C" , "count": 1, "prob": 100}]},
+		"death_function":{ "corpse_type": "NO_CORPSE", "message": "The %s fades away." },
+		"emit_fields":[ { "emit_id": "emit_fd_ncard_nosell", "delay": "1 s" } ],
+		"special_attacks":[{"type": "spell","spell_data": { "id": "spell_ncard_ev4_potion", "min_level": 0 },"cooldown": 70,"monster_message": "<color_yellow>%1$s扔出了一个装有液体的瓶子！</color>"}],
+		"flags":[ "SEES", "HEARS", "SMELLS", "WARM", "PATH_AVOID_FALL", "FIREPROOF","ACIDPROOF","COLDPROOF","ALWAYS_SEES_YOU"  ],
+		"path_settings":{ "max_dist": 50,"avoid_traps": true, "avoid_sharp": true }
+	}
+,
+	{
+		"id":"mon_ncard_ev4_r4_no_02",
+		"type":"MONSTER",
+		"copy-from":"mon_ncard_r4_no_00",
+		"name":{"str": "No.42 行商","str_pl":"No.42 行商"},
+		"description":"一直背着大包的行商在你掏出那笔巨款后就完全只属于你了，她也难得的有了一个可以放松身心展示自己的地方。不过话说回来，她只是个行商，为啥这么能打？",
+		"symbol":"@",
+		"chat_topics":["TALK_ev4_r4_no_02"],
+		"death_drops":{"subtype": "distribution","items":[{ "item": "ncard_ev4_r4_no_02_C" , "count": 1, "prob": 100}]},
+		"death_function":{ "corpse_type": "NO_CORPSE", "message": "The %s fades away." },
+		"emit_fields":[ { "emit_id": "emit_fd_ncard_nosell", "delay": "1 s" } ],
+		"special_attacks":[{"type": "spell","spell_data": { "id": "spell_ncard_ev4_potion", "min_level": 0 },"cooldown": 70,"monster_message": "<color_yellow>%1$s扔出了一个装有液体的瓶子！</color>"}],
+		"flags":[ "SEES", "HEARS", "SMELLS", "WARM", "PATH_AVOID_FALL", "FIREPROOF","ACIDPROOF","COLDPROOF","ALWAYS_SEES_YOU"  ],
+		"path_settings":{ "max_dist": 50,"avoid_traps": true, "avoid_sharp": true }
+	}
+,
+	{
+		"id":"mon_ncard_ev5_r4_no_01",
+		"type":"MONSTER",
+		"copy-from":"mon_ncard_r4_no_00",
+		"name":{"str": "No.49 魅魔女王","str_pl":"No.49 魅魔女王"},
+		"description":"邪恶，美丽，优雅却又贪恋，这就是魅魔的一生。但她绝对与众不同，强大的气场仿佛可以压倒任何事物，轻巧却又富有魔力的嘴巴里面仿佛蕴含着无尽的催眠之力。你不想跟她打的，但还好，你是她的“朋友”，也许吧。",
+		"symbol":"@",
+		"chat_topics":["TALK_ev5_r4_no_01"],
+		"death_drops":{"subtype": "distribution","items":[{ "item": "ncard_ev5_r4_no_01_C" , "count": 1, "prob": 100}]},
+		"death_function":{ "corpse_type": "NO_CORPSE", "message": "The %s fades away." },
+		"special_attacks":[{"type": "spell","spell_data": { "id": "spell_ncard_ev5_somno", "min_level": 0 },"cooldown": 70,"monster_message": "<color_yellow>%1$s微笑着的时候，周围的空气仿佛泥沼一般不断内陷！</color>"}],
+		"flags":[ "SEES", "HEARS", "SMELLS", "WARM", "PATH_AVOID_FALL", "FIREPROOF","ACIDPROOF","COLDPROOF","ALWAYS_SEES_YOU"  ],
+		"path_settings":{ "max_dist": 50,"avoid_traps": true, "avoid_sharp": true }
+	}
+,
+	{
+		"id":"mon_ncard_ev5_r4_no_02",
+		"type":"MONSTER",
+		"copy-from":"mon_ncard_r4_no_00",
+		"name":{"str": "No.50 魅魔女王","str_pl":"No.50 魅魔女王"},
+		"description":"邪恶，美丽，优雅却又贪恋，这就是魅魔的一生。但她绝对与众不同，强大的气场仿佛可以压倒任何事物，轻巧却又富有魔力的嘴巴里面仿佛蕴含着无尽的催眠之力，巨大而又柔软的双峰可以轻易的挤出乳汁。你不想跟她打的，但还好，你是她的“朋友”，也许吧。",
+		"symbol":"@",
+		"chat_topics":["TALK_ev5_r4_no_02"],
+		"death_drops":{"subtype": "distribution","items":[{ "item": "ncard_ev5_r4_no_02_C" , "count": 1, "prob": 100}]},
+		"death_function":{ "corpse_type": "NO_CORPSE", "message": "The %s fades away." },
+		"starting_ammo":{ "milk_raw": 40 },
+		"special_attacks":[{"type": "spell","spell_data": { "id": "spell_ncard_ev5_somno", "min_level": 0 },"cooldown": 70,"monster_message": "<color_yellow>%1$s微笑着的时候，周围的空气仿佛泥沼一般不断内陷！</color>"}],
+		"flags":[ "SEES", "HEARS", "SMELLS", "WARM", "PATH_AVOID_FALL", "FIREPROOF","ACIDPROOF","COLDPROOF","MILKABLE","ALWAYS_SEES_YOU"  ],
+		"path_settings":{ "max_dist": 50,"avoid_traps": true, "avoid_sharp": true }
+	}
+,
+	{
+		"id":"mon_ncard_ev6_r4_no_01",
+		"type":"MONSTER",
+		"copy-from":"mon_ncard_r4_no_00",
+		"name":{"str": "No.55 兔娘","str_pl":"No.55 兔娘"},
+		"description":"一个从异次元中召唤出来的生物。",
+		"symbol":"R",
+		"chat_topics":["TALK_ev6_r4_no_01"],
+		"death_drops":{"subtype": "distribution","items":[{ "item": "ncard_ev6_r4_no_01_C" , "count": 1, "prob": 100}]},
+		"death_function":{ "corpse_type": "NO_CORPSE", "message": "The %s fades away." },
+		"special_attacks":[{"type": "spell","spell_data": { "id": "spell_ncard_ev6_springheel", "min_level": 0 },"cooldown": 70,"monster_message": "<color_yellow>%1$s宛如闪电般的踢了过去！</color>"}, { "id": "smash", "throw_strength": 96 }],
+		"flags":[ "SEES", "HEARS", "SMELLS", "WARM", "PATH_AVOID_FALL", "FIREPROOF","ACIDPROOF","COLDPROOF","ALWAYS_SEES_YOU"  ],
+		"path_settings":{ "max_dist": 50,"avoid_traps": true, "avoid_sharp": true }
+	}
+,
+	{
+		"id":"mon_ncard_ev6_r4_no_02",
+		"type":"MONSTER",
+		"copy-from":"mon_ncard_r4_no_00",
+		"name":{"str": "No.56 兔娘","str_pl":"No.56 兔娘"},
+		"description":"一个从异次元中召唤出来的生物。",
+		"symbol":"R",
+		"chat_topics":["TALK_ev6_r4_no_02"],
+		"death_drops":{"subtype": "distribution","items":[{ "item": "ncard_ev6_r4_no_02_C" , "count": 1, "prob": 100}]},
+		"death_function":{ "corpse_type": "NO_CORPSE", "message": "The %s fades away." },
+		"special_attacks":[{"type": "spell","spell_data": { "id": "spell_ncard_ev6_springheel", "min_level": 0 },"cooldown": 70,"monster_message": "<color_yellow>%1$sが宛如闪电般的踢了过去！</color>"}, { "id": "smash", "throw_strength": 96 }],
+		"flags":[ "SEES", "HEARS", "SMELLS", "WARM", "PATH_AVOID_FALL", "FIREPROOF","ACIDPROOF","COLDPROOF","ALWAYS_SEES_YOU"  ],
+		"path_settings":{ "max_dist": 50,"avoid_traps": true, "avoid_sharp": true }
+	}
+
+
+]

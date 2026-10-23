@@ -1,0 +1,93 @@
+[
+  {
+    "id": "muzzle_pgm",
+    "type": "GUNMOD",
+    "name": {
+      "str": "PGM Hécate 枪口制退器"
+    },
+    "copy-from": "muzzle_brake",
+    "description": "PGM Hécate II 反器材步枪的一体式枪口制退器，可大幅降低后坐力，使其接近射击 .308 武器时的水平，但会增加枪声并略微降低精准度。",
+    "volume": "400 ml",
+    "weight": "400 g",
+    "longest_side": "6 cm",
+    "integral_longest_side": "6 cm",
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "none",
+      "length": "hand",
+      "surface": "any"
+    },
+    "bashing": 2,
+    "material": [
+      "steel"
+    ],
+    "symbol": ":",
+    "color": "dark_gray",
+    "dispersion_modifier": 10,
+    "handling_modifier": 2,
+    "location": "muzzle",
+    "loudness_modifier": 5,
+    "min_skills": [
+      [
+        "weapon",
+        3
+      ]
+    ],
+    "mod_targets": [
+      "rifle"
+    ],
+    "//": " 'recoil_modifier: -19500' is not recognized as a field"
+  },
+  {
+    "id": "suppressor_vss",
+    "type": "GUNMOD",
+    "name": {
+      "str": "VSS Vintorez 消音器"
+    },
+    "description": "一个长钢制消音器，用于“特种”小组武器。",
+    "volume": "264 ml",
+    "weight": "847 g",
+    "longest_side": "21 cm",
+    "integral_volume": "251 ml",
+    "integral_longest_side": "20 cm",
+    "price": 77000,
+    "price_postapoc": 1500,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "solid",
+      "length": "hand",
+      "surface": "any"
+    },
+    "bashing": 3,
+    "material": [
+      "steel"
+    ],
+    "symbol": ":",
+    "color": "dark_gray",
+    "location": "muzzle",
+    "install_time": "30 s",
+    "handling_modifier": 2,
+    "loudness_modifier": -19,
+    "min_skills": [
+      [
+        "weapon",
+        1
+      ]
+    ],
+    "mod_targets": [
+      "rifle"
+    ]
+  },
+  {
+    "id": "suppressor_vss2",
+    "type": "GUNMOD",
+    "name": {
+      "str": "VSS Vintorez 消音器（固定式）"
+    },
+    "copy-from": "suppressor_vss",
+    "description": "一个长钢制消音器，用于\"特种\"小组武器。它固定在武器上，因此无法拆卸。",
+    "flags": [
+      "IRREMOVABLE"
+    ]
+  }
+]

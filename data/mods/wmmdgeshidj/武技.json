@@ -1,0 +1,16 @@
+[
+{
+  "type": "technique",
+  "id": "tec_swift_strike",
+  "name": "迅猛打击",
+  "melee_allowed": true,
+  "messages": [ "你发动迅猛打击，快如闪电！", "<npcname>发动迅猛打击！" ],
+  "mult_bonuses": [
+    { "stat": "movecost", "scale": 0.6 },
+    { "stat": "damage", "type": "bash", "scale": 1.2 },
+    { "stat": "damage", "type": "cut", "scale": 1.2 },
+    { "stat": "damage", "type": "stab", "scale": 1.2 }
+  ],
+  "description": "攻击耗时变为60%，伤害变为120%。"
+}
+]

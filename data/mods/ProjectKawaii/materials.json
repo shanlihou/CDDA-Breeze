@@ -1,0 +1,75 @@
+[
+  {
+    "type": "material",
+    "id": "kawaii_glass",
+    "name": "A&M 钢化玻璃",
+    "density": 30,
+    "specific_heat_liquid": 0.82,
+    "specific_heat_solid": 0.45,
+    "latent_heat": 273,
+    "bash_resist": 3,
+    "cut_resist": 15,
+    "acid_resist": 10,
+    "fire_resist": 10,
+    "chip_resist": 5,
+    "bullet_resist": 12,
+    "repaired_with": "glass_shard",
+    "dmg_adj": [
+      "划伤",
+      "凹损",
+      "砸扁",
+      "破碎"
+    ],
+    "bash_dmg_verb": "凹损",
+    "cut_dmg_verb": "刮花"
+  },
+  {
+    "type": "material",
+    "id": "kawaii_amsteel",
+    "name": "A&M 合金",
+    "density": 45,
+    "specific_heat_liquid": 0.82,
+    "specific_heat_solid": 0.45,
+    "latent_heat": 273,
+    "bash_resist": 15,
+    "cut_resist": 15,
+    "acid_resist": 7,
+    "fire_resist": 5,
+    "chip_resist": 30,
+    "bullet_resist": 12,
+    "conductive": true,
+    "repaired_with": "scrap",
+    "dmg_adj": [
+      "划伤",
+      "凹损",
+      "砸扁",
+      "破碎"
+    ],
+    "bash_dmg_verb": "凹损",
+    "cut_dmg_verb": "刮花"
+  },
+  {
+    "type": "material",
+    "id": "kawaii_amplastic",
+    "name": "A&M 特制塑料",
+    "density": 12,
+    "specific_heat_liquid": 0.82,
+    "specific_heat_solid": 0.45,
+    "latent_heat": 273,
+    "bash_resist": 3,
+    "cut_resist": 3,
+    "acid_resist": 10,
+    "fire_resist": 3,
+    "chip_resist": 10,
+    "bullet_resist": 2,
+    "repaired_with": "plastic_chunk",
+    "dmg_adj": [
+      "刮花",
+      "斩击",
+      "裂纹",
+      "破碎"
+    ],
+    "bash_dmg_verb": "凹损",
+    "cut_dmg_verb": "穿孔"
+  }
+]

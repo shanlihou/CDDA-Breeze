@@ -1,0 +1,72 @@
+[
+  {
+    "id": "CCbatterying",
+    "type": "TOOL",
+    "subtypes": [ "TOOL", "ARMOR", "ARTIFACT" ], 
+    "name": { "str": "CC多功能充电宝" },
+    "description": "盛世或许表现平平无奇，但无论是荒野求生还是末世生存，都必备的多功能电池充电器。能通过多种渠道获取电能，插线大功率充电，风光互补，手摇发电，虽然电量微小，但是胜在可再生。有一个小绳子可以挂在身上。\n原装的手电功能被改成了激活爆闪功能，效果类似于闪光弹，改装过可施放电击效果。（装载空的电池充电和使用）\n此技术最初由材料商人所在的贸易联盟里，其中幸存者在某个神秘未知的<无名猫>秘境中所发现而来",
+    "weight": "120 g",
+    "volume": "120 ml",
+    "longest_side": "15 cm",
+    "price": "30 USD",
+    "price_postapoc": "50 USD",
+    "environmental_protection": 1,
+    "to_hit": -1,
+    "melee_damage": { "bash": 1, "cut": 1 },
+    "material": [ "steel", "copper", "plastic", "cotton", "wood" ],
+    "symbol": ";",
+    "color": "light_gray",
+    "charges_per_use": 100,
+    "charge_info": { "regenerate_ammo": true, "recharge_type": "periodic", "time": "1 m" },
+    "flags": [ "NONCONDUCTIVE", "TWO_WAY_RADIO", "WATCH", "ALARMCLOCK", "THERMOMETER", "WATERPROOF", "POWERARMOR_COMPATIBLE", "SEMITANGIBLE" ],
+    "use_action":[ 
+     { "type": "link_up", "cable_length": 60, "charge_rate": "2000 W" },
+     { "type": "cast_spell", "spell_id": "bio_taser_spell", "no_fail": true, "level": 0 },
+    { "type": "explosion", "do_flashbang": true }
+     ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "light_minus_battery_cell", 
+          "solar_cell",
+          "light_minus_battery_cell",
+          "heavy_battery_cell",
+          "heavy_plus_battery_cell",
+          "small_storage_battery", 
+          "medium_storage_battery", 
+          "battery_motorbike_small",
+          "battery_motorbike",
+          "battery_car",
+          "light_minus_disposable_cell", 
+          "light_battery_cell"
+        ]
+      }
+    ]
+  },
+    {
+        "type" : "recipe",
+    "result": "CCbatterying",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC武器装备",
+    "skill_used": "survival",
+    "time": "1second",
+    "reversible": true,
+    "autolearn": true,
+    "components": [ [ [ "CCMODcoin", 230 ] ] ]
+  },
+  {
+        "type": "ammunition_type",
+        "id": "battery",
+        "name": {
+            "str": "储能电池"
+        },
+        "default": "battery"
+  }
+]

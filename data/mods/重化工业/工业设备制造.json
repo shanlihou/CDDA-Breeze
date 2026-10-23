@@ -1,0 +1,1212 @@
+[
+  {
+    "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
+    "result": "hd_pipe_fittings",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MATERIALS",
+    "skill_used": "fabrication",
+    "difficulty": 6,
+    "time": "6 h",
+    "autolearn": true,
+    "using": [
+      [
+        "blacksmithing_standard",
+        8
+      ],
+      [
+        "steel_standard",
+        2
+      ]
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_metalworking"
+      },
+      {
+        "proficiency": "prof_blacksmithing"
+      },
+      {
+        "proficiency": "prof_toolsmithing"
+      }
+    ],
+    "tools": [
+      [
+        [
+          "swage",
+          -1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
+    "result": "hd_pipe",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MATERIALS",
+    "skill_used": "fabrication",
+    "difficulty": 5,
+    "time": "4 h",
+    "autolearn": true,
+    "using": [
+      [
+        "blacksmithing_standard",
+        12
+      ],
+      [
+        "steel_standard",
+        3
+      ]
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_metalworking"
+      },
+      {
+        "proficiency": "prof_blacksmithing"
+      }
+    ],
+    "tools": [
+      [
+        [
+          "hotcut",
+          -1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
+    "result": "hd_valve",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_PARTS",
+    "skill_used": "fabrication",
+    "skills_required": [
+      "mechanics",
+      1
+    ],
+    "difficulty": 6,
+    "time": "4 h",
+    "autolearn": true,
+    "qualities": [
+      {
+        "id": "HAMMER",
+        "level": 2
+      },
+      {
+        "id": "SAW_M",
+        "level": 1
+      }
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_metalworking",
+        "required": false,
+        "time_multiplier": 1.5
+      },
+      {
+        "proficiency": "prof_plumbing",
+        "required": false,
+        "time_multiplier": 3,
+        "skill_penalty": 0.5
+      }
+    ],
+    "components": [
+      [
+        [
+          "hd_pipe",
+          1
+        ]
+      ],
+      [
+        [
+          "sheet_metal_small",
+          1
+        ]
+      ],
+      [
+        [
+          "hd_pipe_fittings",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
+    "result": "large_pressure_vessel",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MATERIALS",
+    "skill_used": "fabrication",
+    "difficulty": 9,
+    "time": "4 d",
+    "autolearn": true,
+    "qualities": [
+      {
+        "id": "SCREW",
+        "level": 1
+      },
+      {
+        "id": "WRENCH",
+        "level": 1
+      },
+      {
+        "id": "DRILL",
+        "level": 2
+      },
+      {
+        "id": "SAW_M",
+        "level": 2
+      }
+    ],
+    "using": [
+      [
+        "blacksmithing_standard",
+        500
+      ],
+      [
+        "steel_standard",
+        250
+      ]
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_metalworking"
+      },
+      {
+        "proficiency": "prof_blacksmithing"
+      },
+      {
+        "proficiency": "prof_plumbing"
+      },
+      {
+        "proficiency": "prof_basic_engines"
+      },
+      {
+        "proficiency": "prof_appliance_repair"
+      },
+      {
+        "proficiency": "prof_high_pressure_systems"
+      }
+    ],
+    "tools": [
+      [
+        [
+          "swage",
+          -1
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "hd_pipe",
+          2
+        ]
+      ],
+      [
+        [
+          "hd_valve",
+          1
+        ]
+      ],
+      [
+        [
+          "hd_pipe_fittings",
+          2
+        ]
+      ],
+      [
+        [
+          "chunk_rubber",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
+    "result": "small_pressure_vessel",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MATERIALS",
+    "skill_used": "fabrication",
+    "difficulty": 8,
+    "time": "18 h",
+    "autolearn": true,
+    "qualities": [
+      {
+        "id": "SCREW",
+        "level": 1
+      },
+      {
+        "id": "WRENCH",
+        "level": 1
+      },
+      {
+        "id": "DRILL",
+        "level": 2
+      },
+      {
+        "id": "SAW_M",
+        "level": 2
+      }
+    ],
+    "using": [
+      [
+        "blacksmithing_standard",
+        40
+      ],
+      [
+        "steel_standard",
+        20
+      ]
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_metalworking"
+      },
+      {
+        "proficiency": "prof_blacksmithing"
+      },
+      {
+        "proficiency": "prof_plumbing"
+      },
+      {
+        "proficiency": "prof_basic_engines"
+      },
+      {
+        "proficiency": "prof_appliance_repair"
+      },
+      {
+        "proficiency": "prof_high_pressure_systems"
+      }
+    ],
+    "tools": [
+      [
+        [
+          "swage",
+          -1
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "hd_pipe",
+          2
+        ]
+      ],
+      [
+        [
+          "hd_valve",
+          1
+        ]
+      ],
+      [
+        [
+          "hd_pipe_fittings",
+          2
+        ]
+      ],
+      [
+        [
+          "chunk_rubber",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "result": "hd_compressor",
+    "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "fabrication",
+    "difficulty": 9,
+    "skills_required": [
+      [
+        "mechanics",
+        8
+      ]
+    ],
+    "time": "12 h",
+    "reversible": true,
+    "book_learn": [
+      [
+        "carpentry_book",
+        7
+      ]
+    ],
+    "using": [
+      [
+        "welding_standard",
+        25
+      ],
+      [
+        "blacksmithing_standard",
+        8
+      ],
+      [
+        "steel_standard",
+        2
+      ]
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_metalworking"
+      },
+      {
+        "proficiency": "prof_welding_basic"
+      },
+      {
+        "proficiency": "prof_welding"
+      },
+      {
+        "proficiency": "prof_plumbing"
+      },
+      {
+        "proficiency": "prof_basic_engines"
+      },
+      {
+        "proficiency": "prof_appliance_repair"
+      },
+      {
+        "proficiency": "prof_high_pressure_systems"
+      }
+    ],
+    "qualities": [
+      {
+        "id": "HAMMER",
+        "level": 2
+      },
+      {
+        "id": "SCREW",
+        "level": 1
+      },
+      {
+        "id": "WRENCH",
+        "level": 1
+      },
+      {
+        "id": "DRILL",
+        "level": 2
+      },
+      {
+        "id": "SAW_M",
+        "level": 2
+      }
+    ],
+    "tools": [
+      [
+        [
+          "swage",
+          -1
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "hd_pipe",
+          2
+        ]
+      ],
+      [
+        [
+          "pipe",
+          4
+        ]
+      ],
+      [
+        [
+          "hd_pipe_fittings",
+          1
+        ]
+      ],
+      [
+        [
+          "hd_valve",
+          1
+        ]
+      ],
+      [
+        [
+          "pipe_fittings",
+          2
+        ]
+      ],
+      [
+        [
+          "metal_tank_little",
+          1
+        ]
+      ],
+      [
+        [
+          "sheet_metal_small",
+          6
+        ]
+      ],
+      [
+        [
+          "cable",
+          10
+        ]
+      ],
+      [
+        [
+          "motor_small",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "result": "pressure_gauge",
+    "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "mechanics",
+    "difficulty": 6,
+    "skills_required": [
+      [
+        "fabrication",
+        4
+      ]
+    ],
+    "time": "2 h",
+    "book_learn": [
+      [
+        "carpentry_book",
+        5
+      ]
+    ],
+    "using": [
+      [
+        "welding_standard",
+        20
+      ],
+      [
+        "blacksmithing_standard",
+        1
+      ],
+      [
+        "steel_tiny",
+        1
+      ]
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_metalworking"
+      },
+      {
+        "proficiency": "prof_welding_basic"
+      },
+      {
+        "proficiency": "prof_welding"
+      },
+      {
+        "proficiency": "prof_plumbing"
+      },
+      {
+        "proficiency": "prof_appliance_repair"
+      }
+    ],
+    "qualities": [
+      {
+        "id": "HAMMER",
+        "level": 2
+      },
+      {
+        "id": "SCREW",
+        "level": 1
+      },
+      {
+        "id": "WRENCH",
+        "level": 1
+      },
+      {
+        "id": "DRILL",
+        "level": 2
+      },
+      {
+        "id": "SAW_M",
+        "level": 2
+      }
+    ],
+    "components": [
+      [
+        [
+          "hd_pipe",
+          1
+        ]
+      ],
+      [
+        [
+          "hd_pipe_fittings",
+          1
+        ]
+      ],
+      [
+        [
+          "cable",
+          2
+        ],
+        [
+          "wire",
+          2
+        ]
+      ]
+    ]
+  },
+  {
+    "result": "pressure_gauge",
+    "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "electronics",
+    "difficulty": 1,
+    "time": "15 m",
+    "autolearn": true,
+    "using": [
+      [
+        "soldering_standard",
+        4
+      ]
+    ],
+    "qualities": [
+      {
+        "id": "SCREW",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "scrap",
+          1
+        ]
+      ],
+      [
+        [
+          "copper",
+          5
+        ]
+      ],
+      [
+        [
+          "cable",
+          5
+        ]
+      ],
+      [
+        [
+          "amplifier",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
+    "result": "generator_7500w",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_PARTS",
+    "skill_used": "fabrication",
+    "skills_required": [
+      "electronics",
+      5
+    ],
+    "difficulty": 5,
+    "time": "8 h",
+    "reversible": true,
+    "decomp_learn": 2,
+    "autolearn": true,
+    "book_learn": [
+      [
+        "manual_electronics",
+        7
+      ],
+      [
+        "textbook_electronics",
+        6
+      ],
+      [
+        "advanced_electronics",
+        6
+      ]
+    ],
+    "using": [
+      [
+        "welding_standard",
+        100
+      ],
+      [
+        "soldering_standard",
+        35
+      ]
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_metalworking"
+      },
+      {
+        "proficiency": "prof_basic_engines"
+      },
+      {
+        "proficiency": "prof_elec_soldering"
+      }
+    ],
+    "qualities": [
+      {
+        "id": "SCREW",
+        "level": 1
+      },
+      {
+        "id": "HAMMER",
+        "level": 2
+      },
+      {
+        "id": "SAW_M",
+        "level": 2
+      },
+      {
+        "id": "WRENCH",
+        "level": 2
+      }
+    ],
+    "components": [
+      [
+        [
+          "power_supply",
+          4
+        ]
+      ],
+      [
+        [
+          "cable",
+          400
+        ]
+      ],
+      [
+        [
+          "bearing",
+          8
+        ]
+      ],
+      [
+        [
+          "frame",
+          4
+        ]
+      ],
+      [
+        [
+          "sheet_metal",
+          2
+        ]
+      ]
+    ]
+  },
+  {
+    "result": "nitrogen_membrane_filter",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ARMOR",
+    "subcategory": "CSC_ARMOR_HEAD",
+    "skill_used": "fabrication",
+    "difficulty": 4,
+    "time": " 2 h",
+    "autolearn": true,
+    "proficiencies": [
+      {
+        "proficiency": "prof_plasticworking"
+      }
+    ],
+    "tools": [
+      [
+        [
+          "wire_draw_machine",
+          100
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "pipe",
+          1
+        ]
+      ],
+      [
+        [
+          "plastic_chunk",
+          5
+        ]
+      ]
+    ]
+  },
+  {
+    "result": "catalytic_cracking_reactor",
+    "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "fabrication",
+    "difficulty": 9,
+    "skills_required": [
+      [
+        "mechanics",
+        8
+      ],
+      [
+        "chemistry",
+        6
+      ],
+      [
+        "electronics",
+        3
+      ]
+    ],
+    "time": "20 h",
+    "reversible": true,
+    "book_learn": [
+      [
+        "adv_chemistry",
+        7
+      ],
+      [
+        "recipe_labchem",
+        7
+      ]
+    ],
+    "using": [
+      [
+        "welding_standard",
+        200
+      ],
+      [
+        "soldering_standard",
+        10
+      ]
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_metalworking"
+      },
+      {
+        "proficiency": "prof_welding_basic"
+      },
+      {
+        "proficiency": "prof_welding"
+      },
+      {
+        "proficiency": "prof_plumbing"
+      },
+      {
+        "proficiency": "prof_basic_engines"
+      },
+      {
+        "proficiency": "prof_appliance_repair"
+      },
+      {
+        "proficiency": "prof_high_pressure_systems"
+      },
+      {
+        "proficiency": "prof_elec_soldering"
+      },
+      {
+        "proficiency": "prof_elec_circuits"
+      },
+      {
+        "proficiency": "prof_intro_chemistry"
+      },
+      {
+        "proficiency": "prof_intro_chem_synth"
+      },
+      {
+        "proficiency": "prof_chem_synth"
+      },
+      {
+        "proficiency": "prof_chemical_engineering"
+      }
+    ],
+    "qualities": [
+      {
+        "id": "HAMMER",
+        "level": 2
+      },
+      {
+        "id": "SCREW",
+        "level": 1
+      },
+      {
+        "id": "WRENCH",
+        "level": 1
+      },
+      {
+        "id": "DRILL",
+        "level": 2
+      },
+      {
+        "id": "SAW_M",
+        "level": 2
+      }
+    ],
+    "components": [
+      [
+        [
+          "hd_pipe",
+          18
+        ]
+      ],
+      [
+        [
+          "pipe",
+          4
+        ]
+      ],
+      [
+        [
+          "hd_pipe_fittings",
+          6
+        ]
+      ],
+      [
+        [
+          "hd_valve",
+          1
+        ]
+      ],
+      [
+        [
+          "pressure_gauge",
+          1
+        ]
+      ],
+      [
+        [
+          "pipe_fittings",
+          2
+        ]
+      ],
+      [
+        [
+          "metal_tank_little",
+          1
+        ]
+      ],
+      [
+        [
+          "small_pressure_vessel",
+          1
+        ]
+      ],
+      [
+        [
+          "large_pressure_vessel",
+          1
+        ]
+      ],
+      [
+        [
+          "sheet_metal_small",
+          6
+        ]
+      ],
+      [
+        [
+          "cable",
+          300
+        ]
+      ],
+      [
+        [
+          "power_supply",
+          4
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
+    "result": "welder",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "electronics",
+    "difficulty": 3,
+    "time": "1 h",
+    "reversible": true,
+    "decomp_learn": 3,
+    "autolearn": [
+      [
+        "mechanics",
+        3
+      ],
+      [
+        "electronics",
+        3
+      ]
+    ],
+    "book_learn": [
+      [
+        "manual_mechanics",
+        3
+      ],
+      [
+        "textbook_mechanics",
+        3
+      ],
+      [
+        "welding_book",
+        2
+      ]
+    ],
+    "using": [
+      [
+        "steel_tiny",
+        2
+      ],
+      [
+        "soldering_standard",
+        20
+      ],
+      [
+        "welding_standard",
+        10
+      ]
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_welding_basic"
+      },
+      {
+        "proficiency": "prof_welding",
+        "time_multiplier": 1.1,
+        "learning_time_multiplier": 0.25,
+        "skill_penalty": 0.1
+      }
+    ],
+    "qualities": [
+      {
+        "id": "SCREW",
+        "level": 1
+      },
+      {
+        "id": "SAW_M",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "power_supply",
+          4
+        ]
+      ],
+      [
+        [
+          "copper_rod",
+          1
+        ]
+      ],
+      [
+        [
+          "cable",
+          80
+        ]
+      ],
+      [
+        [
+          "circuit",
+          1
+        ]
+      ],
+      [
+        [
+          "e_scrap",
+          3
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "hydraulic_press",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "fabrication",
+    "difficulty": 9,
+    "skills_required": [
+      [
+        "mechanics",
+        7
+      ]
+    ],
+    "time": "6 h",
+    "book_learn": [
+      [
+        "textbook_mechanics",
+        7
+      ]
+    ],
+    "using": [
+      [
+        "welding_standard",
+        100
+      ],
+      [
+        "soldering_standard",
+        10
+      ]
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_metalworking"
+      },
+      {
+        "proficiency": "prof_welding_basic"
+      },
+      {
+        "proficiency": "prof_welding"
+      },
+      {
+        "proficiency": "prof_plumbing"
+      },
+      {
+        "proficiency": "prof_basic_engines"
+      },
+      {
+        "proficiency": "prof_appliance_repair"
+      },
+      {
+        "proficiency": "prof_elec_soldering"
+      }
+    ],
+    "qualities": [
+      {
+        "id": "HAMMER",
+        "level": 2
+      },
+      {
+        "id": "SCREW",
+        "level": 1
+      },
+      {
+        "id": "WRENCH",
+        "level": 1
+      },
+      {
+        "id": "DRILL",
+        "level": 2
+      },
+      {
+        "id": "SAW_M",
+        "level": 2
+      }
+    ],
+    "components": [
+      [
+        [
+          "frame",
+          1
+        ]
+      ],
+      [
+        [
+          "motor_small",
+          1
+        ]
+      ],
+      [
+        [
+          "chain",
+          2
+        ]
+      ],
+      [
+        [
+          "pipe",
+          4
+        ]
+      ],
+      [
+        [
+          "cable",
+          20
+        ]
+      ],
+      [
+        [
+          "steel_plate",
+          2
+        ]
+      ],
+      [
+        [
+          "jack",
+          1
+        ]
+      ],
+      [
+        [
+          "chem_glycerol",
+          96
+        ]
+      ],
+      [
+        [
+          "water_clean",
+          6
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "TOOL",
+    "name": {
+      "str": "hydraulic press",
+      "str_pl": "hydraulic presses"
+    },
+    "description": "Dummy item.",
+    "//": "Include ZERO_WEIGHT flag to avoid errors when instantiating pseudo items.",
+    "flags": [
+      "ZERO_WEIGHT",
+      "TRADER_AVOID",
+      "ALLOWS_REMOTE_USE",
+      "PSEUDO"
+    ],
+    "weight": "1 g",
+    "volume": "1 ml",
+    "symbol": "@",
+    "color": "red",
+    "copy-from": "fake_appliance_tool",
+    "ammo": [
+      "battery"
+    ],
+    "charges_per_use": 20,
+    "charged_qualities": [
+      [
+        "CHONGYA",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "default_magazine": "pseudo_battery"
+      }
+    ],
+    "id": "hydraulic_press_tool"
+  }
+]

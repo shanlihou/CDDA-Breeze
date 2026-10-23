@@ -1,0 +1,43 @@
+[
+  {
+    "type": "mod_tileset",
+    "compatibility": [
+            "UNDEAD_PEOPLE_BASE_v2",
+			"MSX++DEAD_PEOPLE",
+			"UNDEAD_PEOPLE",
+			"UNDEAD_PEOPLE_BASE",
+			"MshockXottoplus"
+         ],
+    "tiles-new": [
+      {
+        "file": "0.png",
+        "sprite_width": 32,
+        "sprite_height": 32,
+        "sprite_offset_x": 0,
+        "sprite_offset_y": 0,
+        "tiles": [ 
+         {
+         "id": "f_freezer", 
+         "fg": 0, 
+         "rotates": false
+         },
+         {
+         "id": "freezer", 
+         "fg": 0, 
+         "rotates": false
+         },
+         {
+         "id": "overlay_wielded_freezer", 
+         "fg": 0, 
+         "rotates": false
+         },
+         { 
+          "id": "vp_ap_freezer", 
+          "fg": 0, 
+          "rotates": false 
+         }
+         ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,35 @@
+[
+	{
+		"type": "COMESTIBLE",
+		"id": "fishery_egg_chinooksalmon",
+		"name": { "str": "鱼卵（王鲑）" },
+		"copy-from": "fishery_egg",
+		"spoils_in": "10 days",
+		"description": "一些可以食用，也可以等他们孵化出小鱼的王鲑鱼卵。",
+		"rot_spawn": "FISHERY_GROUP_EGG_chinooksalmon",
+		"rot_spawn_chance": 50
+	},
+	{
+		"name": "FISHERY_GROUP_EGG_chinooksalmon",
+		"type": "monstergroup",
+		"default": "fishery_mon_chinooksalmon_juvenile",
+		"monsters": [ ]
+	},
+	{
+		"id": "fishery_mon_chinooksalmon_juvenile",
+		"type": "MONSTER",
+		"name": { "str": "王鲑鱼苗" },
+		"description": "一条王鲑幼鱼，过一段时间就会变成成鱼。",
+		"copy-from": "fishery_mon_juvenile",
+		"harvest": "fish_tiny",
+		"upgrades": { "age_grow": 20, "into": "mon_fish_chinook_salmon" }
+	},
+	{
+		"id": "mon_fish_chinook_salmon",
+		"type": "MONSTER",
+		"copy-from": "mon_fish_chinook_salmon",
+		"name": { "str": "王鲑" },
+		"reproduction": { "baby_egg": "fishery_egg_chinooksalmon", "baby_count": 10, "baby_timer": 20 },
+		"baby_flags": [ "AUTUMN", "WINTER" ]
+	}
+]

@@ -1,0 +1,1195 @@
+[
+  {
+    "id": "CELESTIAL_SPECIES",
+    "type": "mutation",
+    "name": "天人",
+    "description": "你的身体韧性和伤害抗性超凡脱俗。",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "armor": [
+      {
+        "parts": "ALL",
+        "bash": 8,
+        "cut": 8,
+        "stab": 8,
+        "bullet": 16,
+        "acid": 8,
+        "cold": 8,
+        "electric": 8,
+        "heat": 8
+      }
+    ],
+    "bleed_resist": 8,
+    "stamina_regen_modifier": 0.5,
+    "wet_protection": [
+      {
+        "part": "LEG_L",
+        "neutral": 3
+      },
+      {
+        "part": "LEG_R",
+        "neutral": 3
+      },
+      {
+        "part": "ARM_L",
+        "neutral": 3
+      },
+      {
+        "part": "ARM_R",
+        "neutral": 3
+      },
+      {
+        "part": "TORSO",
+        "neutral": 3
+      }
+    ],
+    "cancels": [
+      "FLIMSY",
+      "FLIMSY2",
+      "FLIMSY3",
+      "THICKSKIN",
+      "THINSKIN",
+      "TOUGH",
+      "TOUGH2"
+    ],
+    "//": "Ideally she should have minor reduction to pain, half of PAINRESIST if not 66%. More ideally, she should gain pain resist buffs while fighting on melee"
+  },
+  {
+    "id": "GYOKUTO_SPECIES",
+    "type": "mutation",
+    "name": "玉兔",
+    "description": "你是月兔。你的种族被月人[已编辑]当作工具使唤。不过你并不太介意，因为你天生无忧无虑。真方便。",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "dodge_modifier": 2,
+    "movecost_modifier": 0.95,
+    "ugliness": -2,
+    "weight_capacity_modifier": 0.8,
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [
+          {
+            "value": "DEXTERITY",
+            "add": 2
+          },
+          {
+            "value": "PERCEPTION",
+            "add": 2
+          }
+        ]
+      }
+    ],
+    "cancels": [
+      "BADHEARING",
+      "PRETTY",
+      "BEAUTIFUL",
+      "BEAUTIFUL2",
+      "BEAUTIFUL3",
+      "UGLY",
+      "DEFORMED",
+      "DEFORMED2",
+      "DEFORMED3"
+    ],
+    "//": "This trait should also grant immunity to mental effects, like the taint and visuals effects"
+  },
+  {
+    "id": "GYOKUTO_EARS",
+    "type": "mutation",
+    "name": "玉兔耳朵",
+    "description": "你的一对兔耳在你看来很正常，但在其他人眼里却与众不同。",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "ugliness": -2,
+    "visibility": 3,
+    "cancels": [
+      "FELINE_EARS",
+      "URSINE_EARS",
+      "ELFA_EARS",
+      "CANINE_EARS",
+      "LUPINE_EARS"
+    ]
+  },
+  {
+    "id": "GYOKUTO_TAIL",
+    "type": "mutation",
+    "name": "玉兔尾巴",
+    "description": "你有一条毛茸茸的小兔尾巴。",
+    "points": 0,
+    "profession": false,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "ugliness": 0,
+    "visibility": 2,
+    "cancels": [
+      "TAIL_CATTLE",
+      "TAIL_CLUB",
+      "TAIL_FIN",
+      "TAIL_FLUFFY",
+      "TAIL_LONG",
+      "TAIL_RAPTOR",
+      "TAIL_RAT",
+      "TAIL_STING",
+      "TAIL_STUB",
+      "TAIL_THICK"
+    ]
+  },
+  {
+    "id": "HALF_PHANTOM_SPECIES",
+    "type": "mutation",
+    "name": "半人半灵",
+    "description": "既不是完整的人类,也不是完全的非人存在, 你是两个世界的绝佳平衡. 你的半灵会永远跟在你身边.",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "ugliness": 2,
+    "visibility": 8,
+    "bodytemp_modifiers": [
+      -1333,
+      0
+    ],
+    "//": "Recheck mutation after adding the ghosts and youkai enemies"
+  },
+  {
+    "id": "HELLRAVEN_SPECIES",
+    "type": "mutation",
+    "name": "地狱鸦",
+    "description": "你是来自（旧）地狱的鸦妖怪。",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "armor": [
+      {
+        "parts": "ALL",
+        "heat": 6
+      }
+    ],
+    "//": "Can't find how to use percentage dmg reduction, this value should be 66% of all received fire damage + base say, 4, so it blocks minor fire attacks instead of being completely immune",
+    "movecost_modifier": 0.8,
+    "weakness_to_water": 1,
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [
+          {
+            "value": "INTELLIGENCE",
+            "add": -2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HOURAI_SPECIES",
+    "type": "mutation",
+    "name": "蓬莱人",
+    "description": "你很久以前曾喝过那个受诅咒的蓬莱之药.自那以后,你的容颜不会衰老,也不会生病,永远不会死去.至少在大灾变爆发前是这样的.",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "healing_awake": 1,
+    "healing_resting": 1,
+    "flags": [
+      "BIO_IMMUNE",
+      "NO_DISEASE",
+      "NO_RADIATION",
+      "PARAIMMUNE"
+    ]
+  },
+  {
+    "id": "KASHA_SPECIES",
+    "type": "mutation",
+    "name": "火车",
+    "description": "你是来自（旧）地狱的猫形妖怪。目前你伪装成人类。激活突变以切换为妖怪形态。",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "active": true,
+    "armor": [
+      {
+        "parts": "ALL",
+        "heat": 6
+      }
+    ],
+    "ugliness": 3,
+    "visibility": 4,
+    "weakness_to_water": 1,
+    "transform": {
+      "target": "KASHA_SPECIES_active",
+      "active": false,
+      "moves": 100
+    },
+    "cancels": [
+      "FRESHWATEROSMOSIS",
+      "GILLS",
+      "MEMBRANE",
+      "SCALES",
+      "SLEEK_SCALES",
+      "SLIMY",
+      "WATERSLEEPER",
+      "WEBBED",
+      "WEBBED_FEET"
+    ],
+    "//": "If only there was a way to instead block all animalistic mutations instead..."
+  },
+  {
+    "id": "KASHA_SPECIES_active",
+    "type": "mutation",
+    "name": "火车（妖怪形态）",
+    "copy-from": "KASHA_SPECIES",
+    "description": "你是来自（旧）地狱的猫形妖怪。目前你已变身为猫形形态。激活突变以切换形态。",
+    "active": true,
+    "movecost_modifier": 0.9,
+    "social_modifiers": {
+      "persuade": -4
+    },
+    "stamina_regen_modifier": 0.2,
+    "ugliness": 0,
+    "visibility": 0,
+    "rand_cut_bonus": {
+      "min": 2,
+      "max": 4
+    },
+    "weakness_to_water": 2,
+    "weight_capacity_modifier": 0.33,
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [
+          {
+            "value": "FOOTSTEP_NOISE",
+            "multiply": -0.67
+          },
+          {
+            "value": "MELEE_DAMAGE",
+            "multiply": -0.5
+          },
+          {
+            "value": "METABOLISM",
+            "multiply": -0.5
+          }
+        ]
+      }
+    ],
+    "transform": {
+      "target": "KASHA_SPECIES",
+      "active": false,
+      "moves": 100
+    },
+    "extend": {
+      "flags": [
+        "SMALL"
+      ]
+    }
+  },
+  {
+    "id": "KASHA_EARS",
+    "type": "mutation",
+    "name": "火车耳朵",
+    "description": "你有一对额外的黑色猫耳。实际上，这才是你真正的耳朵。",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "ugliness": -2,
+    "visibility": 3,
+    "cancels": [
+      "FELINE_EARS",
+      "URSINE_EARS",
+      "ELFA_EARS",
+      "CANINE_EARS",
+      "LUPINE_EARS"
+    ]
+  },
+  {
+    "id": "KASHA_TAILS",
+    "type": "mutation",
+    "name": "火车尾巴",
+    "description": "你有一对黑色猫尾巴。",
+    "points": 0,
+    "profession": false,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "ugliness": 0,
+    "visibility": 3,
+    "cancels": [
+      "TAIL_CATTLE",
+      "TAIL_CLUB",
+      "TAIL_FIN",
+      "TAIL_FLUFFY",
+      "TAIL_LONG",
+      "TAIL_RAPTOR",
+      "TAIL_RAT",
+      "TAIL_STING",
+      "TAIL_STUB",
+      "TAIL_THICK"
+    ]
+  },
+  {
+    "id": "NON_HUMAN_SPECIES",
+    "type": "mutation",
+    "name": "非人类",
+    "description": "尽管你看起来像人类，但你从根本上就不是人类，因此不受他们的习俗和规则约束。在真正的人类看来，你只是‘有点’‘不对劲’。",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "visibility": 2,
+    "//": "I need to set the penalty (and bonus) of eating human flesh to 0",
+    "cancels": [
+      "PSYCHOPATH",
+      "PACIFIST"
+    ]
+  },
+  {
+    "id": "OARFISH_SPECIES",
+    "type": "mutation",
+    "name": "龙宫使者",
+    "description": "你是被称为龙宫使者的妖怪,来自妖怪之海的空中使者.",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "flags": [
+      "ELECTRIC_IMMUNE"
+    ]
+  },
+  {
+    "id": "TENGUCROW_SPECIES",
+    "type": "mutation",
+    "name": "鸦天狗",
+    "description": "作为古老且尊从严密的等级制度的鸦天狗一族,你身手敏捷,擅长搜集信息.",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "stamina_regen_modifier": 0.25,
+    "movecost_modifier": 0.8,
+    "ugliness": -2,
+    "weight_capacity_modifier": 0.8,
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [
+          {
+            "value": "DEXTERITY",
+            "add": 2
+          },
+          {
+            "value": "INTELLIGENCE",
+            "add": 1
+          }
+        ],
+        "mutations": [
+          "TOLERANCE"
+        ]
+      }
+    ],
+    "cancels": [
+      "PRETTY",
+      "UGLY",
+      "DEFORMED",
+      "DEFORMED2",
+      "DEFORMED3",
+      "CLUMSY",
+      "SLOWRUNNER",
+      "LIGHT_BONES"
+    ],
+    "//": "TOLERANCE because I can't find a way to set alcohol resistance only to something like 95%"
+  },
+  {
+    "id": "TSUCHIGUMO_SPECIES",
+    "type": "mutation",
+    "name": "土蜘蛛 (人类形态)",
+    "description": "你是一只源自于地底风穴和黑暗洞窟的蜘蛛妖怪,目前伪装成人类的外表.激活变异可以切换为妖怪形态.",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "active": true,
+    "armor": [
+      {
+        "parts": "ALL",
+        "acid": 6
+      }
+    ],
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "mutations": [
+          "WEB_WALKER"
+        ]
+      }
+    ],
+    "transform": {
+      "target": "TSUCHIGUMO_SPECIES_active",
+      "active": false,
+      "moves": 100
+    },
+    "flags": [
+      "BIO_IMMUNE",
+      "NO_DISEASE",
+      "PARAIMMUNE"
+    ],
+    "//": "Also, add some kind of social bonus for enemies with the YOUKAI trait or plus ARACHNID. In fact I should probably check all social interactions of Youkai in general at some point",
+    "//2": "This needs some sort of small bonus over the active form below, so she has a reason to switch forms at all"
+  },
+  {
+    "id": "TSUCHIGUMO_SPECIES_active",
+    "type": "mutation",
+    "name": "土蜘蛛 (妖怪形态)",
+    "copy-from": "TSUCHIGUMO_SPECIES",
+    "description": "你是一只源自于地底风穴和黑暗洞窟的蜘蛛妖怪. 现在你展露出了你的 (一部分) 妖怪形态,隐藏的腿也伸展出来了. 激活变异以切换人类形态.",
+    "active": true,
+    "movecost_obstacle_modifier": 0.5,
+    "movecost_swim_modifier": 1.5,
+    "social_modifiers": {
+      "intimidate": 4,
+      "persuade": -4
+    },
+    "ugliness": 4,
+    "visibility": 8,
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "mutations": [
+          "WEB_WALKER"
+        ],
+        "values": [
+          {
+            "value": "METABOLISM",
+            "multiply": 0.2
+          }
+        ]
+      }
+    ],
+    "transform": {
+      "target": "TSUCHIGUMO_SPECIES",
+      "active": false,
+      "moves": 100
+    },
+    "extend": {
+      "flags": [
+        "CLIMB_NO_LADDER",
+        "LARGE",
+        "WEB_RAPPEL"
+      ]
+    }
+  },
+  {
+    "id": "VAMPIRE_SPECIES",
+    "type": "mutation",
+    "name": "吸血鬼",
+    "description": "你是一种非常出名的西方妖怪,必须以人类为食才能生存.你非常强大,但也有很多弱点.",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "healing_awake": 4,
+    "healing_resting": 4,
+    "mending_modifier": 2,
+    "//": "Should be (1, 1, 0.5), then and double or triple that by 'digesting' human blood, with an active ability",
+    "movecost_modifier": 0.8,
+    "ugliness": -4,
+    "visibility": 1,
+    "vitamins_absorb_multi": [
+      [
+        "veggy",
+        [
+          [
+            "vitA",
+            0.33
+          ],
+          [
+            "vitB",
+            0.33
+          ],
+          [
+            "vitC",
+            0.33
+          ],
+          [
+            "calcium",
+            0.33
+          ],
+          [
+            "iron",
+            0.33
+          ]
+        ]
+      ]
+    ],
+    "weakness_to_water": 2,
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [
+          {
+            "value": "DEXTERITY",
+            "add": 2
+          },
+          {
+            "value": "INTELLIGENCE",
+            "add": 2
+          },
+          {
+            "value": "PERCEPTION",
+            "add": 2
+          },
+          {
+            "value": "STRENGTH",
+            "add": 2
+          }
+        ],
+        "mutations": [
+          "CANNIBAL",
+          "SUNBURN"
+        ]
+      }
+    ],
+    "cancels": [
+      "ANIMALEMPATH",
+      "ANIMALEMPATH2",
+      "LIAR",
+      "PACIFIST",
+      "PRETTY",
+      "PSYCHOPATH",
+      "UGLY",
+      "DEFORMED",
+      "DEFORMED2",
+      "DEFORMED3",
+      "VEGETARIAN",
+      "HERBIVORE"
+    ],
+    "//2": "I need to set the penalty (and bonus) of eating human flesh to 0"
+  },
+  {
+    "id": "VAMPIRE_BAT_REMI",
+    "type": "mutation",
+    "name": "吸血鬼变形（人类）",
+    "description": "你有着变身的能力.你现在正在伪装成人类的外表,尽管你的蝙蝠翅膀仍然可见.激活变异以转换妖怪形态.",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "active": true,
+    "activated_eocs": [
+      "WINGS_BAT_REMI_activate"
+    ],
+    "ugliness": 1,
+    "visibility": 8,
+    "transform": {
+      "target": "VAMPIRE_BAT_REMI_active",
+      "active": false,
+      "moves": 100
+    },
+    "cancels": [
+      "WINGS_BAT",
+      "WINGS_BIRD",
+      "WINGS_BUTTERFLY",
+      "WINGS_INSECT",
+      "WINGS_STUB"
+    ]
+  },
+  {
+    "id": "VAMPIRE_BAT_REMI_active",
+    "type": "mutation",
+    "name": "吸血鬼变形（蝙蝠）",
+    "copy-from": "VAMPIRE_BAT_REMI",
+    "description": "没有什么事情能比这个姿态更能证明你是一个吸血鬼.你目前处于蝙蝠形态.激活变异以切换形态.",
+    "active": true,
+    "ugliness": 4,
+    "visibility": 6,
+    "weight_capacity_modifier": 0.33,
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "ench_effects": [
+          {
+            "effect": "remi_levitation",
+            "intensity": 1
+          }
+        ],
+        "values": [
+          {
+            "value": "FOOTSTEP_NOISE",
+            "multiply": -0.8
+          },
+          {
+            "value": "MELEE_DAMAGE",
+            "multiply": -0.5
+          },
+          {
+            "value": "METABOLISM",
+            "multiply": -0.5
+          }
+        ]
+      }
+    ],
+    "transform": {
+      "target": "VAMPIRE_BAT_REMI",
+      "active": false,
+      "moves": 100
+    },
+    "extend": {
+      "flags": [
+        "SMALL"
+      ]
+    },
+    "cancels": [
+      "WINGS_BAT",
+      "WINGS_BIRD",
+      "WINGS_BUTTERFLY",
+      "WINGS_INSECT",
+      "WINGS_STUB"
+    ]
+  },
+  {
+    "id": "YOUKAI_SPECIES",
+    "type": "mutation",
+    "name": "妖怪",
+    "description": "尽管你的样子类似于人类,但你和人类完全不一样,因此你不受他们的习俗和规则的约束.自然的也会觉得它们很开胃.",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "social_modifiers": {
+      "intimidate": 4
+    },
+    "visibility": 1,
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "mutations": [
+          "CANNIBAL"
+        ]
+      }
+    ],
+    "cancels": [
+      "MORE_PAIN",
+      "PAINRESIST",
+      "MORE_PAIN2",
+      "MORE_PAIN3",
+      "PACIFIST",
+      "PSYCHOPATH",
+      "VEGETARIAN",
+      "HERBIVORE"
+    ],
+    "//": "I need to set the penalty (and bonus) of eating human flesh to 0",
+    "//2": "There are peaceful youkai, so I need to further divide this into subspecies such as 'Vampire' "
+  },
+  {
+    "id": "SPIRIT_USER",
+    "type": "mutation",
+    "name": "精神能量使用者",
+    "description": "法力,魔力,气,能量,所有的这些存在都可以被描述为精神能量.随着时间的推移,你会自然而然地产生这些.",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "mana_regen_multiplier": 12,
+    "cancels": [],
+    "//": "This equals a full mana pool every 40 minutes or so"
+  },
+  {
+    "id": "SPIRIT_HERMIT",
+    "type": "mutation",
+    "name": "自然能量使用者",
+    "description": "你随时间自然吸收并积累自然能量。与普通能量使用者相比，你的恢复速度较慢，但你的经验和精细控制弥补了这一点。",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "mana_regen_multiplier": 6,
+    "cancels": [],
+    "//": "This equals a full mana pool every 1 h 20 minutes or so. Should have some extra benefit to compensate, but what?"
+  },
+  {
+    "id": "SPIRIT_UNTRAINED",
+    "type": "mutation",
+    "name": "精神能量使用者（未训练）",
+    "description": "虽然你能使用精神能量，但缺乏训练使你随时间恢复它的速度慢得多，不过仍比普通人快得多。",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "mana_regen_multiplier": 4,
+    "cancels": [],
+    "//": "This equals a full mana pool every 2 h or so"
+  },
+  {
+    "id": "PROF_AYA",
+    "type": "mutation",
+    "name": "风神少女",
+    "description": "你是天狗的一员，具体来说是鸦天狗。",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "movecost_modifier": 0.9399,
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [
+          {
+            "value": "DEXTERITY",
+            "add": 2
+          },
+          {
+            "value": "INTELLIGENCE",
+            "add": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "PROF_FLAN",
+    "type": "mutation",
+    "name": "恶魔的破坏性妹妹",
+    "description": "你是蕾米莉亚大小姐的妹妹.",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "bash_dmg_bonus": 4,
+    "ugliness": -2,
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [
+          {
+            "value": "STRENGTH",
+            "add": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "PROF_IKU",
+    "type": "mutation",
+    "name": "绯色使者",
+    "description": "你是负责幻想乡的龙宫使者，最近也负责比那名居一族。",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "initial_ma_styles": [
+      "style_celestial_brawling_iku"
+    ]
+  },
+  {
+    "id": "PROF_KAENBYOU",
+    "type": "mutation",
+    "name": "运尸欢呼的地狱猫",
+    "description": "你是地灵殿（旧地狱宅邸）主人的宠物之一。你的工作是用你可靠的运尸车将尸体运往炽热地狱（即：炽热地狱遗迹），以调节其热量。",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "//": "Add like 2 - 4 soul dmg reduction when I implement that"
+  },
+  {
+    "id": "PROF_MEILING",
+    "type": "mutation",
+    "name": "彩虹门卫",
+    "description": "你是红魔馆悠闲、嗜睡却忠诚的门卫兼园丁。",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "fatigue_modifier": 0.25,
+    "fatigue_regen_modifier": 0.25,
+    "initial_ma_styles": [
+      "style_meiling"
+    ],
+    "cancels": [
+      "EASYSLEEPER2",
+      "SLEEPY",
+      "SLEEPY2"
+    ]
+  },
+  {
+    "id": "PROF_MOKOU",
+    "type": "mutation",
+    "name": "竹林的不死向导",
+    "description": "你与对手无数年的战斗赋予了你大量的战斗技巧，主要是踢击和强力的直接打击。",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "initial_ma_styles": [
+      "style_mokou"
+    ],
+    "cancels": [
+      "NOPAIN",
+      "PAINRESIST"
+    ],
+    "flags": [
+      "HEAT_IMMUNE"
+    ]
+  },
+  {
+    "id": "PROF_OKUU",
+    "type": "mutation",
+    "name": "八咫乌之器",
+    "description": "你是地灵殿（旧地狱宅邸）主人的宠物。你的工作本是帮助阿燐调节炽热地狱，但在吸收了八咫乌的残骸后，你被“提拔”为地下核反应堆的关键组件，后来还帮助河童开发更自动化的聚变版本。真是狂野的人生。",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [
+          {
+            "value": "INTELLIGENCE",
+            "add": -1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "PROF_REMI",
+    "type": "mutation",
+    "name": "永远鲜红的幼月",
+    "description": "你是红魔馆的女主人.",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "ugliness": -1
+  },
+  {
+    "id": "PROF_TENKO",
+    "type": "mutation",
+    "name": "感知球体之间的少女",
+    "description": "你是比那名居一族的长女。非常无忧无虑，非常有问题，非常受宠，你随时随地做你想做的事。",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "initial_ma_styles": [
+      "style_celestial_brawling_tenko"
+    ]
+  },
+  {
+    "id": "PROF_YAMAME",
+    "type": "mutation",
+    "name": "暗洞中的明亮蛛网",
+    "description": "你是住在妖怪之山地下入口的善良土蜘蛛妖怪。",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false
+  },
+  {
+    "id": "PROF_YOUMU",
+    "type": "mutation",
+    "name": "半人半灵的二刀流庭师",
+    "description": "你是白玉楼（冥界宅邸）的庭师兼守卫。",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "social_modifiers": {
+      "lie": -2
+    },
+    "initial_ma_styles": [
+      "style_youmu"
+    ]
+  },
+  {
+    "id": "LUNARDIET",
+    "type": "mutation",
+    "name": {
+      "str": "月之饮食"
+    },
+    "description": "在此之前，吃食物不是问题。你可以吃来自地球和其他不洁之地的食物，但从中获得的营养会略少。",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "vitamins_absorb_multi": [
+      [
+        "cured_meat",
+        [
+          [
+            "calcium",
+            0.85
+          ],
+          [
+            "iron",
+            0.85
+          ],
+          [
+            "vitA",
+            0.85
+          ],
+          [
+            "vitB",
+            0.85
+          ],
+          [
+            "vitC",
+            0.85
+          ]
+        ]
+      ],
+      [
+        "flesh",
+        [
+          [
+            "calcium",
+            0.85
+          ],
+          [
+            "iron",
+            0.85
+          ],
+          [
+            "vitA",
+            0.85
+          ],
+          [
+            "vitB",
+            0.85
+          ],
+          [
+            "vitC",
+            0.85
+          ]
+        ]
+      ],
+      [
+        "processed_food",
+        [
+          [
+            "calcium",
+            0.95
+          ],
+          [
+            "iron",
+            0.95
+          ],
+          [
+            "vitA",
+            0.95
+          ],
+          [
+            "vitB",
+            0.95
+          ],
+          [
+            "vitC",
+            0.95
+          ]
+        ]
+      ],
+      [
+        "veggy",
+        [
+          [
+            "calcium",
+            0.95
+          ],
+          [
+            "iron",
+            0.95
+          ],
+          [
+            "vitA",
+            0.95
+          ],
+          [
+            "vitB",
+            0.95
+          ],
+          [
+            "vitC",
+            0.95
+          ]
+        ]
+      ]
+    ]
+  },
+  {
+    "id": "MYSTERIOUS",
+    "type": "mutation",
+    "name": "神秘",
+    "points": 0,
+    "description": "你有一个神秘的过去。",
+    "profession": false,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": true
+  },
+  {
+    "id": "WINGS_HELLRAVEN",
+    "type": "mutation",
+    "name": "地狱鸦翅膀",
+    "description": "你有一对巨大的鸦翼。激活突变以展开翅膀，使你能够飞行。",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "active": true,
+    "activated_eocs": [
+      "WINGS_HELLRAVEN_activate"
+    ],
+    "ugliness": 2,
+    "visibility": 8,
+    "transform": {
+      "target": "WINGS_HELLRAVEN_spread",
+      "active": false,
+      "moves": 100
+    },
+    "cancels": [
+      "WINGS_BAT",
+      "WINGS_BIRD",
+      "WINGS_BUTTERFLY",
+      "WINGS_INSECT",
+      "WINGS_STUB"
+    ]
+  },
+  {
+    "id": "WINGS_HELLRAVEN_spread",
+    "type": "mutation",
+    "name": "地狱鸦翅膀（飞行）",
+    "copy-from": "WINGS_HELLRAVEN",
+    "description": "你的翅膀现已准备好飞行。激活突变以收起翅膀，禁用飞行。",
+    "active": true,
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "ench_effects": [
+          {
+            "effect": "utsuho_levitation",
+            "intensity": 1
+          }
+        ]
+      }
+    ],
+    "transform": {
+      "target": "WINGS_HELLRAVEN",
+      "active": false,
+      "moves": 100
+    }
+  },
+  {
+    "id": "WINGS_TENGUCROW",
+    "type": "mutation",
+    "name": "鸦翼",
+    "description": "你有一对相对较小的鸦翼。激活突变以启用飞行。",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "active": true,
+    "activated_eocs": [
+      "WINGS_TENGUCROW_activate"
+    ],
+    "visibility": 4,
+    "transform": {
+      "target": "WINGS_TENGUCROW_spread",
+      "msg_transform": "You prepare your wings to fly.",
+      "active": false,
+      "moves": 100
+    },
+    "cancels": [
+      "WINGS_BAT",
+      "WINGS_BIRD",
+      "WINGS_BUTTERFLY",
+      "WINGS_INSECT",
+      "WINGS_STUB"
+    ]
+  },
+  {
+    "id": "WINGS_TENGUCROW_spread",
+    "type": "mutation",
+    "name": "鸦翼（飞行）",
+    "copy-from": "WINGS_TENGUCROW",
+    "description": "你的翅膀现已准备好飞行。激活以禁用飞行。",
+    "active": true,
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "ench_effects": [
+          {
+            "effect": "aya_levitation",
+            "intensity": 1
+          }
+        ]
+      }
+    ],
+    "transform": {
+      "target": "WINGS_TENGUCROW",
+      "msg_transform": "You relax your wings.",
+      "active": false,
+      "moves": 100
+    }
+  },
+  {
+    "id": "YATAGARASU_VESSEL",
+    "type": "mutation",
+    "name": "八咫乌之器",
+    "description": "你是八咫乌的活体容器，太阳的化身。",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "flags": [
+      "GLARE_RESIST",
+      "HEAT_IMMUNE",
+      "NO_RADIATION",
+      "PARAIMMUNE"
+    ]
+  }
+]

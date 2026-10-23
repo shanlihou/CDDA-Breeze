@@ -1,0 +1,75 @@
+[
+  
+  {
+    "id": "G_B_E",
+    "type": "GUN",
+    "color": "light_gray",
+	"looks_like": "tazer",
+    "symbol": "┓",
+    "name": {
+      "str": "重力子放射线射出装置"
+    },
+    "description": "东亚重工科技，使用超构造体作为材料。能临时产生重力子束，并以极高的速度放射，几乎没有什么可以抵抗。有多种射击模式，默认为扩散模式，瞄准目标聚焦射击。如果能源不足，这把枪的出力会很低。",
+    "price": "65536 USD",
+    "material": [
+      "s_arcthitecture"
+    ],
+    "weight": "1000 g",
+    "volume": "500 ml",
+    "longest_side": "20 cm",
+    "bashing": 13,
+    "to_hit": 1,
+    "ammo_effects": [
+      "Graviton_Beam_LASER","Graviton_Beam_Fusion","INCENDIARY","DRAW_AS_LINE","HEAVY_HIT"
+    ],
+    "flags": [
+      "NO_UNLOAD",
+	  "NO_RELOAD",
+      "NEVER_JAMS",
+	  "NON_FOULING",
+      "NEEDS_NO_LUBE",
+      "UNBREAKABLE",
+      "WATERPROOF_GUN"
+    ],
+    "ups_charges": 10,
+    "skill": "pistol",
+    "ranged_damage": 
+	[ 
+	{
+      "damage_type": "bash",
+      "amount": 6,
+	  "armor_penetration": 65536
+    },
+	{
+      "damage_type": "heat",
+      "amount": 6,
+	  "armor_penetration": 65536
+    }
+	],
+    "range": 60,
+    "dispersion": 0,
+    "sight_dispersion": 0,
+    "recoil": 1,
+    "min_cycle_recoil": 0,
+    "durability": 10,
+    "modes": [ 
+			[ "DEFAULT", "-1％出力-", 10,"SIMULTANEOUS" ],
+			[ "AUTO", "-10％出力-", 100,"SIMULTANEOUS" ],
+			[ "BURST", "-50％出力-", 500, "SIMULTANEOUS" ] ,
+			[ "ONE", "-100％出力-", 1000, "SIMULTANEOUS" ],
+			[ "DOUBLE", "-300％出力-", 3000, "SIMULTANEOUS" ]
+			  ],
+    "reload": 0,
+    "loudness": 13,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        1
+      ],
+      [
+        "sights",
+        1
+      ]
+    ]
+  }
+]

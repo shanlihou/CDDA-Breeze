@@ -1,0 +1,314 @@
+[
+ {
+  "id": "CC_floodlight_omnicam",
+  "type": "vehicle_part",
+  "name": {
+   "str": "CC泛光灯摄像头"
+  },
+  "item": "floodlight",
+  "categories": [
+   "lighting",
+   "operations"
+  ],
+  "color": "white",
+  "broken_color": "blue",
+  "damage_reduction": {
+   "all": 99999999
+  },
+  "durability": 1000,
+  "description": "改装到车底的一个安全隐蔽的摄像头，相对不容易被敌人攻击破坏。和原版摄像头相比，改装集成了泛光灯，启动摄像头同时打开泛光灯，夜晚摄像头视野不再受限。",
+  "epower": -100,
+  "bonus": 8000,
+  "damage_modifier": 10,
+  "folded_volume": "200 ml",
+  "breaks_into": [
+   {
+    "item": "cable",
+    "count": [
+     1,
+     4
+    ]
+   },
+   {
+    "item": "steel_chunk",
+    "count": [
+     0,
+     2
+    ]
+   },
+   {
+    "item": "scrap",
+    "count": [
+     1,
+     2
+    ]
+   }
+  ],
+  "requirements": {
+   "install": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "removal": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "repair": {
+    "skills": [
+     [
+      "tailor",
+      1
+     ]
+    ],
+    "time": "150 s",
+    "using": [
+     [
+      "adhesive",
+      1
+     ]
+    ]
+   }
+  },
+  "flags": [
+   "VISION",
+   "CIRCLE_LIGHT",
+   "CAMERA",
+   "ENABLED_DRAINS_EPOWER"
+  ],
+  "variants": [
+   {
+    "symbols": "*",
+    "symbols_broken": "-"
+   }
+  ],
+  "symbol": "&"
+ },
+ {
+  "type": "vehicle_part",
+  "id": "CComnicam",
+  "name": {
+   "str": "CC摄像头"
+  },
+  "looks_like": "omnicam",
+  "categories": [
+   "operations"
+  ],
+  "color": "light_red",
+  "broken_color": "red",
+  "damage_modifier": 10,
+  "damage_reduction": {
+   "all": 999999999
+  },
+  "durability": 1000,
+  "description": "改装到车底的一个安全隐蔽的车底摄像头，相对不容易被敌人攻击破坏。",
+  "folded_volume": "50 ml",
+  "bonus": 24,
+  "item": "omnicamera",
+  "//": "Cameras without a DVR can run on under 10W",
+  "epower": -10,
+  "requirements": {
+   "install": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "removal": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "repair": {
+    "skills": [
+     [
+      "tailor",
+      1
+     ]
+    ],
+    "time": "150 s",
+    "using": [
+     [
+      "adhesive",
+      1
+     ]
+    ]
+   }
+  },
+  "flags": [
+   "VISION",
+   "CAMERA",
+   "ENABLED_DRAINS_EPOWER"
+  ],
+  "breaks_into": [
+   {
+    "item": "e_scrap",
+    "count": [
+     4,
+     16
+    ]
+   },
+   {
+    "item": "plastic_chunk",
+    "count": [
+     2,
+     8
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "symbols": "o",
+    "symbols_broken": "#"
+   }
+  ],
+  "symbol": "&"
+ },
+ {
+  "type": "recipe",
+  "result": "omnicamera",
+  "activity_level": "LIGHT_EXERCISE",
+  "category": "CC_CC小作坊",
+  "id_suffix": "CC_SSS_0",
+  "subcategory": "CSC_CC小作坊_CC物品材料",
+  "skill_used": "survival",
+  "time": "1second",
+  "reversible": true,
+  "autolearn": true,
+  "components": [
+   [
+    [
+     "CCMODcoin",
+     20
+    ]
+   ]
+  ]
+ },
+ {
+  "id": "CCfloodlight",
+  "type": "vehicle_part",
+  "name": {
+   "str": "CC泛光车灯"
+  },
+  "item": "floodlight",
+  "categories": [
+   "lighting"
+  ],
+  "color": "white",
+  "broken_color": "blue",
+  "damage_reduction": {
+   "all": 99999999
+  },
+  "durability": 1000,
+  "description": "车顶泛光灯容易被攻击破坏，因此将其改装到车底装甲板内部，不易被攻击并加固。",
+  "epower": -80,
+  "bonus": 8000,
+  "damage_modifier": 10,
+  "folded_volume": "150 ml",
+  "breaks_into": [
+   {
+    "item": "cable",
+    "count": [
+     1,
+     4
+    ]
+   },
+   {
+    "item": "steel_chunk",
+    "count": [
+     0,
+     2
+    ]
+   },
+   {
+    "item": "scrap",
+    "count": [
+     1,
+     2
+    ]
+   }
+  ],
+  "requirements": {
+   "install": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "removal": {
+    "skills": [
+     [
+      "mechanics",
+      1
+     ]
+    ],
+    "time": "5 m"
+   },
+   "repair": {
+    "skills": [
+     [
+      "tailor",
+      1
+     ]
+    ],
+    "time": "150 s",
+    "using": [
+     [
+      "adhesive",
+      1
+     ]
+    ]
+   }
+  },
+  "flags": [
+   "CIRCLE_LIGHT",
+   "ENABLED_DRAINS_EPOWER"
+  ],
+  "variants": [
+   {
+    "symbols": "*",
+    "symbols_broken": "-"
+   }
+  ],
+  "symbol": "&"
+ },
+ {
+  "type": "recipe",
+  "result": "floodlight",
+  "activity_level": "LIGHT_EXERCISE",
+  "category": "CC_CC小作坊",
+  "id_suffix": "CC_SSS_0",
+  "subcategory": "CSC_CC小作坊_CC物品材料",
+  "skill_used": "survival",
+  "time": "1second",
+  "reversible": true,
+  "autolearn": true,
+  "components": [
+   [
+    [
+     "CCMODcoin",
+     20
+    ]
+   ]
+  ]
+ }
+]

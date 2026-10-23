@@ -1,0 +1,31 @@
+[
+  {
+    "id": "henshin_box",
+    "type": "GENERIC",
+    "category": "container",
+	"name": { "str": "异界储存箱", "str_pl": "异界储存箱" },
+	"looks_like": "briefcase",
+    "description": "以异界金属为材料制成的流体用存储箱，非常方便携带。（注意：由于0.G版本特性，请勿给当前能量大于0的异界装备充能！）",
+	"weight": "50 g",
+    "volume": "550 ml",
+    "price": 0,
+    "to_hit": -1,
+    "bashing": 5,
+    "material": [ "alien_material", "plastic" ],
+    "symbol": "o",
+    "color": "cyan",
+    "broken_symbol": "#",
+    "broken_color": "cyan",
+	"pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+		"watertight": true,
+		"max_contains_volume": "500 ml",
+        "max_contains_weight": "2 kg"
+      }
+    ],
+    "qualities": [ [ "CONTAIN", 1 ] ],
+	"flags": [ "TRADER_AVOID" ]
+  }
+]

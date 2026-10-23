@@ -1,0 +1,56 @@
+[
+  {
+    "type": "vehicle_part",
+    "id": "cargo_space",
+    "name": { "str": "cargo space" },
+    "symbol": "=",
+    "looks_like": "box",
+    "categories": [ "cargo" ],
+    "color": "light_gray",
+    "broken_symbol": "#",
+    "broken_color": "dark_gray",
+    "durability": 250,
+    "size": "1000 L",
+    "cargo_weight_modifier": 50,
+    "//": "Based roughly on a quarter of a 2m x 1.2m pickup truck bed, assuming a reasonable amount of piling up (about 80cm, ie. sticking up around 20cm over the sides if really stacked).  Could definitely use more subtypes.",
+    "item": "cargo_rack",
+    "location": "center",
+    "requirements": {
+      "install": { "skills": [ [ "mechanics", 1 ] ], "time": "60 m", "using": [ [ "welding_standard", 5 ] ] },
+      "removal": { "skills": [ [ "mechanics", 2 ] ], "time": "30 m", "using": [ [ "vehicle_weld_removal", 1 ] ] },
+      "repair": { "skills": [ [ "mechanics", 2 ] ], "time": "60 m", "using": [ [ "repair_welding_standard", 4 ] ] }
+    },
+    "flags": [ "BOARDABLE", "CARGO", "COVERED" ],
+    "breaks_into": [
+      { "item": "steel_lump", "count": [ 6, 8 ] },
+      { "item": "steel_chunk", "count": [ 6, 8 ] },
+      { "item": "scrap", "count": [ 6, 8 ] }
+    ],
+    "damage_reduction": { "all": 28 }
+  },
+  {
+    "type": "vehicle_part",
+    "id": "trunk",
+    "name": { "str": "trunk" },
+    "symbol": "H",
+    "looks_like": "f_locker",
+    "categories": [ "cargo" ],
+    "color": "brown",
+    "broken_symbol": "#",
+    "broken_color": "brown",
+    "damage_modifier": 80,
+    "durability": 350,
+    "size": "400 L",
+    "//": "400 L storage based on an average sedan trunk being around 400 L, and our cars having two tiles.  We should get a taller trunk for SUVs and similar.",
+    "item": "frame",
+    "location": "center",
+    "requirements": {
+      "install": { "skills": [ [ "mechanics", 1 ] ], "time": "60 m", "using": [ [ "welding_standard", 5 ] ] },
+      "removal": { "skills": [ [ "mechanics", 2 ] ], "time": "30 m", "using": [ [ "vehicle_weld_removal", 1 ] ] },
+      "repair": { "skills": [ [ "mechanics", 2 ] ], "time": "60 m", "using": [ [ "repair_welding_standard", 2 ] ] }
+    },
+    "flags": [ "CARGO", "LOCKABLE_CARGO", "COVERED", "BOARDABLE", "SIMPLE_PART" ],
+    "breaks_into": "ig_vp_frame",
+    "damage_reduction": { "all": 30 }
+  }
+]

@@ -1,0 +1,79 @@
+[
+  {
+    "type": "overmap_special",
+    "id": "self_random_chuansongmen_land",
+    "overmaps": [ { "point": [ 0, 0, 0 ], "overmap": "self_random_chuansongmen" } ],
+    "locations": [ "land" ],
+    "city_distance": [ 10, -1 ],
+    "city_sizes": [ 0, -1 ],
+    "occurrences": [ 1, 5 ],
+    "flags": [ "WILDERNESS" ]
+  },
+  {
+    "type": "overmap_special",
+    "id": "self_random_chuansongmen",
+    "overmaps": [ { "point": [ 0, 0, 0 ], "overmap": "self_random_chuansongmen" } ],
+    "locations": [ "wilderness" ],
+    "city_distance": [ 20, -1 ],
+    "city_sizes": [ 0, -1 ],
+    "occurrences": [ 5, 10 ],
+    "flags": [ "WILDERNESS" ]
+  },
+  {
+    "type": "overmap_terrain",
+    "id": [ "self_random_chuansongmen" ],
+    "name": "野外传送门",
+    "sym": "n",
+    "color": "yellow",
+    "flags": [ "NO_ROTATE" ],
+    "see_cost": 5
+  },
+  {
+    "type": "mapgen",
+    "method": "json",
+    "om_terrain": "self_random_chuansongmen",
+    "object": {
+      "fill_ter": "t_grass",
+      "rows": [
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "___________c____________",
+        "________c_____c_________",
+        "_________cc_cc__________",
+        "_________c___c__________",
+        "_______c___u___c________",
+        "_________c___c__________",
+        "_________cc_cc__________",
+        "________c_____c_________",
+        "___________c____________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________"
+      ],
+      "terrain": { "_": [ [ "t_grass", 20 ], [ "t_dirt", 5 ] ] },
+      "furniture": {
+        "u": [ "f_magiclysm_translocator_gate" ],
+        "c": [
+          [ "f_null", 6 ],
+          [ "f_huge_mana_crystal", 2 ],
+          [ "f_glow_boulder", 2 ]
+        ],
+        "_": [
+          [ "f_null", 200 ],
+          [ "f_huge_mana_crystal", 1 ],
+          [ "f_glow_boulder", 1 ]
+        ]
+      }
+    }
+  }
+]

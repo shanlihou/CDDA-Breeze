@@ -1,0 +1,252 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_hand_female_check",
+    "condition":{
+      "and":[
+        {
+          "compare_int":[
+            { "u_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" },
+            "<=",
+            { "const": 75 }
+          ]
+        },
+        "u_female"
+      ]
+    },
+    "effect": [
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" },
+          "=",
+          { "const": 75 }
+        ]
+      },
+      {
+        "u_add_var": "desc", "type": "string", "context": "文本", "value": "你将手指伸入下体中搅动。"
+      }
+    ]
+  },
+  
+{
+    "type": "effect_on_condition",
+    "id": "EOC_hand_male_check",
+    "condition":{
+      "and":[
+        {
+          "compare_int":[
+            { "u_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" },
+            "<=",
+            { "const": 75 }
+          ]
+        },
+        "u_male"
+      ]
+    },
+    "effect": [
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" },
+          "=",
+          { "const": 75 }
+        ]
+      },
+      {
+        "u_add_var": "desc", "type": "string", "context": "文本", "value": "你握住自己的下体上下撸动。"
+      }
+    ]
+  },
+  
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_vibrator_female_check",
+    "condition":{
+      "and":[
+        {
+          "or":[
+            { "u_has_item": "vibrator_on" },
+            { "u_has_item": "atomic_vibrator" }
+          ]
+        },
+        {
+          "compare_int":[
+            { "u_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" },
+            "<=",
+            { "const": 88 }
+          ]
+        },
+        "u_female"
+      ]
+    },
+    "effect": [
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" },
+          "=",
+          { "const": 88 }
+        ]
+      },
+      {
+        "u_add_var": "desc", "type": "string", "context": "文本", "value": "你将震动中的的按摩棒插入下体上下撸动。"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_masturbator_male_check",
+    "condition":{
+      "and":[
+        {
+          "or":[
+            { "u_has_item": "masturbator" },
+            { "u_has_item": "electric_masturbator" }
+          ]
+        },
+        {
+          "compare_int":[
+            { "u_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" },
+            "<=",
+            { "const": 85 }
+          ]
+        },
+        "u_male"
+      ]
+    },
+    "effect": [
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" },
+          "=",
+          { "const": 85 }
+        ]
+      },
+      {
+        "u_add_var": "desc", "type": "string", "context": "文本", "value": "你用飞机杯包住自己的下体。"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_electric_masturbator_on_male_check",
+    "condition":{
+      "and":[
+        {
+          "u_has_item": "electric_masturbator_on"
+        },
+        {
+          "compare_int":[
+            { "u_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" },
+            "<=",
+            { "const": 88 }
+          ]
+        },
+        "u_male"
+      ]
+    },
+    "effect": [
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" },
+          "=",
+          { "const": 88 }
+        ]
+      },
+      {
+        "u_add_var": "desc", "type": "string", "context": "文本", "value": "你用温热的飞机杯包住了自己的下体，并打开自动模式。"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_water_ass_mould_male_check",
+    "condition":{
+      "and":[
+        {
+          "u_has_item": "water_ass_mould"
+        },
+        {
+          "compare_int":[
+            { "u_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" },
+            "<=",
+            { "const": 80 }
+          ]
+        },
+        "u_male"
+      ]
+    },
+    "effect": [
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" },
+          "=",
+          { "const": 80 }
+        ]
+      },
+      {
+        "u_add_var": "desc", "type": "string", "context": "文本", "value": "你把下体塞入水屁股里抽插。"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_wood_dick_female_check",
+    "condition":{
+      "and":[
+        {
+          "u_has_item": "wood_dick"
+        },
+        {
+          "compare_int":[
+            { "u_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" },
+            "<=",
+            { "const": 80 }
+          ]
+        },
+        "u_female"
+      ]
+    },
+    "effect": [
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" },
+          "=",
+          { "const": 80 }
+        ]
+      },
+      {
+        "u_add_var": "desc", "type": "string", "context": "文本", "value": "你把假屌插进下体。"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_ass_mould_male_check",
+    "condition":{
+      "and":[
+        {
+          "u_has_item": "ass_mould"
+        },
+        {
+          "compare_int":[
+            { "u_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" },
+            "<=",
+            { "const": 90 }
+          ]
+        },
+        "u_male"
+      ]
+    },
+    "effect": [
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" },
+          "=",
+          { "const": 90 }
+        ]
+      },
+      {
+        "u_add_var": "desc", "type": "string", "context": "文本", "value": "你把下体塞入硅胶屁股里抽插。"
+      }
+    ]
+  }
+]

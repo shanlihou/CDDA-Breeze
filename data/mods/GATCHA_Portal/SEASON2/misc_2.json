@@ -1,0 +1,131 @@
+[
+	{
+		"id":"ncard_misc_call_cthlhu",
+		"type":"TOOL",
+		"looks_like":"card_call_crate_1",
+		"name":"异界眼球",
+		"description":"这是一块圆形的石头，有着令人难以置信的细致雕刻。细致到我觉得这块石头仿佛在盯着我看...",
+		"weight":"1 kg",
+		"volume":"1000 ml",
+		"material":[ "stone" ],
+		"symbol":"o",
+		"color":"light_gray",
+		"flags":[ "TRADER_AVOID","UNBREAKABLE_MELEE" ],
+		"chat_topics":["TALK_S3_EVENT"],
+		"use_action":{
+      "type": "effect_on_conditions",
+      "description": "查看",
+      "effect_on_conditions": [
+        {
+          "id": "eoc_ncard_S3_event",
+          "effect": [
+            { "u_message": "我感觉到了来自另一个世界的目光..." },
+            
+            "open_dialogue"
+          ]
+        }
+      ]
+    },
+		"to_hit":-1
+	}
+,
+	{
+		"id":"TALK_S3_EVENT",
+		"type":"talk_topic",
+		"dynamic_line":"...（感觉手上的这块石头在死死盯着我看...）",
+		"responses":[ { "text": "回头查看", "topic": "TALK_S3_EVENT2" }, { "text": "移开视线", "topic": "TALK_DONE" } ] 
+	}
+,
+	{
+		"id":"TALK_S3_EVENT2",
+		"type":"talk_topic",
+		"dynamic_line":"...（一股奇怪的气体从四周开始冒出...）",
+		"responses":[ { "text": "盯着那些气体", "topic": "TALK_S3_EVENT3" }, { "text": "移开视线", "topic": "TALK_DONE" } ] 
+	}
+,
+	{
+		"id":"TALK_S3_EVENT3",
+		"type":"talk_topic",
+		"dynamic_line":"...（一阵恐怖的恶臭从周围飘来！）",
+		"speaker_effect": { "effect": [{ "u_add_var": "counter_s3_attack", "type": "counter", "context": "attack", "value": "1" },
+      { "queue_eocs": "eoc_s3_attack1", "time_in_future": [ "4 s", "4 s" ]}                                            ]
+		                            },
+
+		"responses":[ { "text": "怪物开始从四面八方涌过来了！准备战斗！", "topic": "TALK_DONE" } ] 
+	}
+,
+{
+    "id":"eoc_s3_attack1",
+    "type":"effect_on_condition",
+    "condition": { "u_compare_var": "counter_s3_attack","type": "counter","context": "attack","op": "<","value": 20 },
+    "false_effect": [
+    { "run_eocs": "eoc_s3_attack2" },
+    { "u_message": "怪物似乎已经蓄势待发！" }
+    ],
+    "effect": [
+    { "u_adjust_var": "counter_s3_attack", "type": "counter", "context": "attack", "adjustment": 1 },
+    { "u_make_sound": "(地面震动声)", "volume": 120, "type": "alert" },
+    { "queue_eocs": "eoc_s3_attack1", "time_in_future": [ "30 s", "1 m" ]},
+    {
+      "u_spawn_monster": "mon_zombie",
+      "real_count": 7,
+      "hallucination_count": 3,
+      "outdoor_only": false,
+      "min_radius": 40,
+      "max_radius": 50,
+      "lifespan": [ "3 minutes", "3 minutes" ],
+      "spawn_message": "一群怪物正在接近这里！",
+      "spawn_message_plural": "一群怪物正在向这里逼近！"
+    }]
+}
+,
+{
+    "id":"eoc_s3_attack2",
+    "type":"effect_on_condition",
+    "condition": { "u_compare_var": "counter_s3_attack","type": "counter","context": "attack","op": "<","value": 40 },
+    "false_effect": [
+    { "run_eocs": "eoc_s3_attack3" },
+    { "u_message": "怪物似乎已经蓄势待发！" }
+    ],
+    "effect": [
+    { "u_adjust_var": "counter_s3_attack", "type": "counter", "context": "attack", "adjustment": 1 },
+    { "u_make_sound": "(地面震动声)", "volume": 120, "type": "alert" },
+    { "queue_eocs": "eoc_s3_attack1", "time_in_future": [ "30 s", "1 m" ]},
+    {
+      "u_spawn_monster": "mon_zombie_tough",
+      "real_count": 7,
+      "hallucination_count": 3,
+      "outdoor_only": false,
+      "min_radius": 40,
+      "max_radius": 50,
+      "lifespan": [ "3 minutes", "3 minutes" ],
+      "spawn_message": "一群怪物正在接近这里！",
+      "spawn_message_plural": "一群怪物正在向这里逼近！"
+    }]
+}
+,
+{
+    "id":"eoc_s3_attack3",
+    "type":"effect_on_condition",
+    "condition": { "u_compare_var": "counter_s3_attack","type": "counter","context": "attack","op": "<","value": 60 },
+    "false_effect": [
+    { "u_message": "怪物的气息正在消失..." }
+    ],
+    "effect": [
+    { "u_adjust_var": "counter_s3_attack", "type": "counter", "context": "attack", "adjustment": 1 },
+    { "u_make_sound": "(地面震动声)", "volume": 120, "type": "alert" },
+    { "queue_eocs": "eoc_s3_attack1", "time_in_future": [ "30 s", "1 m" ]},
+    {
+      "u_spawn_monster": "mon_zombie_bio_op",
+      "real_count": 7,
+      "hallucination_count": 3,
+      "outdoor_only": false,
+      "min_radius": 40,
+      "max_radius": 50,
+      "lifespan": [ "3 minutes", "3 minutes" ],
+      "spawn_message": "一群怪物正在接近这里！",
+      "spawn_message_plural": "一群怪物正在向这里逼近！"
+    }]
+}
+
+]

@@ -1,0 +1,426 @@
+[
+  {
+    "id": "spell_craft_sorcerer_lv8_firestorm",
+    "type": "SPELL",
+    "name": "术士-lv8-火焰风暴",
+    "description": "在目标点引发火焰风暴，对受到影响的目标造成4秒伤害，无视阻挡。",
+    "components": "spell_sorcerer_use_item_8",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "NO_PROJECTILE"
+    ],
+    "max_level": 0,
+    "min_damage": 71,
+    "max_damage": 207,
+    "min_aoe": 9,
+    "min_dot": 138,
+    "max_dot": 138,
+    "min_duration": 400,
+    "max_duration": 400,
+    "min_range": 60,
+    "spell_class": "spell_craft_sorcerer_8",
+    "base_casting_time": 300,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 8,
+    "damage_type": "heat"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv8_polar_ray",
+    "type": "SPELL",
+    "name": "术士-lv8-极地射线",
+    "description": "发射一道可以穿透敌人和墙壁的极寒射线。",
+    "components": "spell_sorcerer_use_item_8",
+    "effect": "attack",
+    "shape": "line",
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "IGNORE_WALLS"
+    ],
+    "max_level": 0,
+    "min_damage": 203,
+    "max_damage": 615,
+    "min_range": 30,
+    "difficulty": 8,
+    "min_aoe": 2,
+    "spell_class": "spell_craft_sorcerer_8",
+    "base_casting_time": 300,
+    "base_energy_cost": 0,
+    "damage_type": "cold",
+    "energy_source": "MANA"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv8_missile",
+    "type": "SPELL",
+    "name": "术士-Lv8-高等飞弹风暴",
+    "description": "随机发射最多12发魔法飞弹，对目标及周围的随机敌人造成真实伤害，无视阻挡。",
+    "components": "spell_sorcerer_use_item_8",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "NO_PROJECTILE"
+    ],
+    "min_damage": 21,
+    "max_damage": 67,
+    "damage_type": "pure",
+    "min_range": 30,
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_8",
+    "difficulty": 8,
+    "max_level": 0,
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack",
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_lv8_missile_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv8_missile_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv8_missile_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv8_missile_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv8_missile_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv8_missile_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv8_missile_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv8_missile_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv8_missile_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv8_missile_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv8_missile_1"
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv8_missile_1",
+    "type": "SPELL",
+    "name": "术士-Lv8-高等飞弹风暴（地面）",
+    "description": "随机选择一个地面，再触发随机选择一个敌人。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "RANDOM_TARGET",
+      "NO_EXPLOSION_SFX",
+      "NO_PROJECTILE"
+    ],
+    "min_damage": 0,
+    "max_damage": 0,
+    "damage_type": "pure",
+    "min_range": 5,
+    "spell_class": "spell_craft_sorcerer_8",
+    "difficulty": 8,
+    "max_level": 0,
+    "base_casting_time": 300,
+    "energy_source": "NONE",
+    "shape": "blast",
+    "effect": "attack",
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_lv8_missile_2"
+      }
+    ],
+    "base_energy_cost": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv8_missile_2",
+    "type": "SPELL",
+    "name": "术士-Lv8-高等飞弹风暴（敌人）",
+    "description": "对范围内随机敌人造成真实伤害。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "RANDOM_TARGET",
+      "RANDOM_DAMAGE",
+      "NO_PROJECTILE"
+    ],
+    "min_damage": 21,
+    "max_damage": 67,
+    "damage_type": "pure",
+    "min_range": 7,
+    "spell_class": "spell_craft_sorcerer_8",
+    "difficulty": 8,
+    "max_level": 0,
+    "base_casting_time": 300,
+    "energy_source": "NONE",
+    "shape": "blast",
+    "effect": "attack",
+    "base_energy_cost": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv8_summon_monster",
+    "type": "SPELL",
+    "name": "术士-Lv8-召唤怪物 VIII",
+    "description": "在目标范围内召唤1-3怪物8，或者2-5怪物7，或者3-7怪物6，持续10分钟。",
+    "components": "spell_sorcerer_use_item_8",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "WONDER"
+    ],
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 8,
+    "min_aoe": 3,
+    "spell_class": "spell_craft_sorcerer_8",
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "max_level": 0,
+    "min_duration": 60000,
+    "max_duration": 60000,
+    "difficulty": 8,
+    "base_energy_cost": 0,
+    "shape": "blast",
+    "effect": "attack",
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_lv8_summon_monster_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv8_summon_monster_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv8_summon_monster_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv8_summon_monster_2"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv8_summon_monster_2"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv8_summon_monster_3"
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv8_summon_monster_1",
+    "type": "SPELL",
+    "name": "术士-Lv8-召唤怪物8",
+    "description": "在目标范围内召唤1-3只怪物8，持续10分钟。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "message": "",
+    "min_damage": 1,
+    "max_damage": 3,
+    "min_range": 8,
+    "min_aoe": 3,
+    "spell_class": "spell_craft_sorcerer_8",
+    "base_casting_time": 0,
+    "energy_source": "NONE",
+    "max_level": 0,
+    "min_duration": 60000,
+    "max_duration": 60000,
+    "difficulty": 8,
+    "shape": "blast",
+    "effect": "summon",
+    "effect_str": "mon_sor_summon_8",
+    "base_energy_cost": 0
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_lv8_summon_monster_1",
+    "id": "spell_craft_sorcerer_lv8_summon_monster_2",
+    "type": "SPELL",
+    "name": "术士-Lv8-召唤怪物7",
+    "description": "在目标范围内召唤2-5只怪物7，持续10分钟。",
+    "effect_str": "mon_sor_summon_7",
+    "min_damage": 2,
+    "max_damage": 5,
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_lv8_summon_monster_1",
+    "id": "spell_craft_sorcerer_lv8_summon_monster_3",
+    "type": "SPELL",
+    "name": "术士-Lv8-召唤怪物6",
+    "description": "在目标范围内召唤3-7只怪物6，持续10分钟。",
+    "effect_str": "mon_sor_summon_6",
+    "min_damage": 3,
+    "max_damage": 7,
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv8_magic_armor",
+    "type": "SPELL",
+    "name": "术士-Lv8-持久大师法师护甲",
+    "description": "使你被一道可以抵挡伤害的强力无形立场包裹，可以和法师护甲叠加，持续24小时+24x智力分钟。",
+    "components": "spell_sorcerer_use_item_8",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "spawn_item",
+    "effect_str": "sor_magic_master_armor",
+    "min_damage": 1,
+    "max_damage": 1,
+    "shape": "blast",
+    "affected_body_parts": [
+      "head",
+      "torso",
+      "leg_l",
+      "leg_r",
+      "arm_r",
+      "arm_l"
+    ],
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_8",
+    "difficulty": 8,
+    "max_level": 0,
+    "base_energy_cost": 0,
+    "min_duration": 10656000,
+    "max_duration": 10656000
+  },
+  {
+    "id": "spell_craft_sorcerer_lv8_stun",
+    "type": "SPELL",
+    "name": "术士-Lv8-律令震慑",
+    "description": "使目标震慑，持续30秒+0.5x智力秒至120秒+2x智力秒，无视阻挡。",
+    "components": "spell_sorcerer_use_item_8",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "NO_HANDS",
+      "RANDOM_DURATION",
+      "NO_PROJECTILE"
+    ],
+    "min_range": 30,
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_8",
+    "difficulty": 8,
+    "max_level": 0,
+    "base_casting_time": 50,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack",
+    "effect_str": "sor_magic_stun",
+    "min_duration": 3700,
+    "max_duration": 14800
+  },
+  {
+    "id": "sor_magic_stun",
+    "type": "effect_type",
+    "name": [
+      "被震慑"
+    ],
+    "desc": [
+      "被震慑"
+    ],
+    "apply_message": "无法行动。",
+    "remove_message": "恢复行动。",
+    "max_intensity": 999,
+    "int_dur_factor": "5 m",
+    "rating": "bad",
+    "base_mods": {
+      "speed_mod": [
+        -200
+      ],
+      "str_mod": [
+        -20
+      ],
+      "dex_mod": [
+        -20
+      ],
+      "int_mod": [
+        -20
+      ],
+      "per_mod": [
+        -20
+      ]
+    },
+    "flags": [
+      "IMMOBILE"
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv8_jackhammer",
+    "type": "SPELL",
+    "name": "术士-Lv8-高等冲击破",
+    "description": "对最大45格直线范围内的地形或家具造成240+智力x4至240+智力x8强度的冲击。",
+    "components": "spell_sorcerer_use_item_8",
+    "effect": "bash",
+    "shape": "line",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DURATION",
+      "IGNORE_WALLS"
+    ],
+    "max_level": 0,
+    "min_damage": 296,
+    "max_damage": 352,
+    "min_range": 45,
+    "min_aoe": 2,
+    "difficulty": 8,
+    "spell_class": "spell_craft_sorcerer_8",
+    "base_casting_time": 300,
+    "base_energy_cost": 0,
+    "energy_source": "MANA"
+  }
+]

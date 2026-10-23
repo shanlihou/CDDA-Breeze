@@ -1,0 +1,267 @@
+[
+	{
+	"type":"recipe",
+	"result":"henshin_book",
+    "category":"CC_异界",
+	"subcategory":"CSC_异界_书籍",
+	"skill_used":"fabrication",
+	"difficulty": 4,
+	"time": "24 m",
+	"autolearn": true,
+	"reversible":false,
+	"tools":[
+		[
+		["permanent_marker",100],
+		["survival_marker",100]
+		]
+	],
+	"components": [ 
+		[ [ "alien_energy_part", 5 ] ], 
+		[ [ "paper",40 ] ]
+	],
+    "flags": [ "BLIND_HARD" ]
+	},{
+	"type":"recipe",
+	"result":"manual_henshin",
+    "category":"CC_异界",
+	"subcategory":"CSC_异界_书籍",
+	"book_learn": [ [ "henshin_book", 5 ] ],
+	"skill_used":"melee",
+	"difficulty": 5,
+	"time": "24 m",
+	"autolearn": false,
+	"reversible":false,
+	"tools":[
+		[
+		["permanent_marker",100],
+		["survival_marker",100]
+		]
+	],
+	"components": [ [ [ "alien_energy_part", 10 ] ], [ [ "paper",20 ] ] ],
+    "flags": [ "BLIND_HARD" ]
+	},
+	{
+    "type":"recipe",
+	"result": "henshin_belt_makeshift",
+    "category": "CC_异界",
+    "subcategory": "CSC_异界_装甲",
+    "skill_used": "fabrication",
+    "difficulty": 7,
+	"book_learn": [ [ "henshin_book", 7 ] ],
+    "skills_required": [ [ "electronics", 5 ], [ "tailor", 3 ] ],
+    "time": "8 h",
+	"autolearn": false,
+	"reversible":false,
+    "qualities": [ { "id": "SAW_M", "level": 1 }, { "id": "SCREW", "level": 1 }, { "id": "WRENCH", "level": 1 } ],
+    "tools": [ [ [ "boltcutters", -1 ], [ "toolset", -1 ] ], [ ["henshin_repairkit",40], ["henshin_repairkit_good",40] ] ],
+	"using": [ [ "sewing_standard", 15 ] ],
+    "components": [
+      [ [ "leather", 8 ], [ "tanned_hide", 1 ] ], 
+	  [ [ "alien_energy_full", 9 ] ]
+    ],
+    "flags": [ "BLIND_HARD" ]
+    },
+	{
+	"type":"recipe",
+	"result":"henshin_belt_true_od",
+    "category": "CC_异界",
+    "subcategory": "CSC_异界_装甲",
+	"book_learn": [ [ "henshin_book", 5 ] ],
+	"skill_used":"fabrication",
+	"skills_required": [ [ "electronics", 4 ], [ "mechanics", 3  ] ],
+	"difficulty": 5,
+	"time": "1 h",
+	"autolearn": false,
+	"reversible":false,
+	"tools":[
+		[
+			["henshin_repairkit",10],
+			["henshin_repairkit_good",10]
+		]
+	],
+	"components": [ [ [ "henshin_belt_true", 1 ] ], [ [ "alien_energy_full", 1 ] ] ],
+    "flags": [ "BLIND_HARD" ]
+	},
+	{
+	"type":"recipe",
+	"result":"henshin_belt_true",
+    "category": "CC_异界",
+    "subcategory": "CSC_异界_装甲",
+	"book_learn": [ [ "henshin_book", 5 ] ],
+	"skill_used":"fabrication",
+	"skills_required": [ [ "electronics", 4 ], [ "mechanics", 3  ] ],
+	"difficulty": 5,
+	"time": "1 h",
+	"autolearn": false,
+	"reversible":false,
+	"tools":[
+		[
+			["henshin_repairkit",10],
+			["henshin_repairkit_good",10]
+		]
+	],
+	"components": [ [ [ "henshin_belt_true_od", 1 ] ], [ [ "alien_energy_full", 1 ] ] ],
+    "flags": [ "BLIND_HARD" ]
+	},
+	{
+	"type": "recipe",
+    "result": "henshin_power_knuckles",
+    "category":"CC_异界",
+	"subcategory":"CSC_异界_武装",
+	"book_learn": [ [ "henshin_book", 7 ] ],
+    "skill_used": "fabrication",
+	"skills_required": [ [ "mechanics", 5 ], ["electronics", 3  ] ],
+    "difficulty": 7,
+    "time": "4 h",
+    "autolearn": false,
+	"reversible": false,
+	"qualities":[
+     { "id": "ANVIL", "level": 3 },
+     {"id":"HAMMER","level":3},
+     { "id": "CHISEL", "level": 3 }
+   ],
+   "tools":[
+		[
+			["tongs", -1]
+		],
+		[
+			["swage", -1]
+		],
+		[
+			["henshin_repairkit",30],
+			["henshin_repairkit_good",30]
+		],
+		[
+			["forge", 450],
+			[ "oxy_torch", 90]
+		]
+	],
+    "components": [ 
+	  [ [ "cestus", 1 ], [ "armguard_lightplate", 1 ]  ],
+	  [ [ "alien_energy_full", 5 ] ]
+	  ],
+    "flags": [ "BLIND_HARD" ]
+	},
+	{
+    "result": "henshin_smartphone",
+    "type": "recipe",
+    "category":"CC_异界",
+	"subcategory":"CSC_异界_武装",
+	"book_learn": [ [ "henshin_book", 7 ] ],
+	"skill_used":"fabrication",
+	"skills_required": [ [ "electronics", 5 ], ["mechanics",3 ] ],
+    "difficulty": 7,
+    "time": "6 h",
+    "autolearn": false,
+	"reversible": false,
+    "qualities":[
+     { "id": "ANVIL", "level": 3 },
+     { "id":"HAMMER","level": 3 },
+     { "id": "CHISEL", "level": 3 }
+    ],
+	"tools":[
+		[
+			["tongs", -1]
+		],
+		[
+			["swage", -1]
+		],
+		[
+			["henshin_repairkit",50],
+			["henshin_repairkit_good",50]
+		],
+		[
+			["forge", 500],
+			[ "oxy_torch", 100]
+		]
+	],
+    "components": [ 
+	  [ [ "armguard_metal", 1 ], [ "armguard_lightplate", 1 ] ],
+	  [ [ "alien_energy_full", 7 ] ]
+	],
+    "flags": [ "BLIND_HARD" ]
+    },
+	{
+	"type": "recipe",
+    "result": "henshin_box",
+    "category": "CC_异界",
+    "subcategory": "CSC_异界_容器",
+	"book_learn": [ [ "henshin_book", 4 ] ],
+    "skill_used": "tailor",
+	"skills_required": [ [ "survival", 3 ] ],
+    "difficulty": 4,
+    "time": "36 m",
+    "autolearn": false,
+	"reversible": false,
+	"qualities": [ { "id": "SEW", "level": 1 } ],
+    "components": [ 
+	  [ [ "briefcase", 1 ], [ "suitcase_m", 1 ], [ "suitcase_l", 1 ]  ],
+	  [ [ "alien_energy_full", 1 ] ]
+	  ]
+	},
+	{
+	"type": "recipe",
+    "result": "henshin_repairkit",
+    "category": "CC_异界",
+    "subcategory": "CSC_异界_工具",
+	"book_learn": [ [ "henshin_book", 5 ] ],
+    "skill_used": "fabrication",
+	"skills_required": [ [ "mechanics", 4 ] ],
+    "difficulty": 5,
+    "time": "48 m",
+    "autolearn": false,
+	"reversible": false,
+    "components": [ 
+	  [ [ "misc_repairkit", 1 ] ],
+	  [ [ "alien_energy_full", 3 ] ]
+	  ]
+	},{
+	"type": "recipe",
+    "result": "henshin_repairkit_good",
+    "category": "CC_异界",
+    "subcategory": "CSC_异界_工具",
+	"book_learn": [ [ "henshin_book", 6 ] ],
+    "skill_used": "fabrication",
+	"skills_required": [ [ "mechanics", 4 ] ],
+    "difficulty": 6,
+    "time": "1 h",
+    "autolearn": false,
+	"reversible": false,
+    "components": [ 
+	  [ [ "henshin_repairkit", 1 ] ],
+	  [ [ "alien_energy_full", 5 ] ]
+	  ]
+	},
+	{
+	"type":"recipe",
+	"result":"alien_energy_full",
+    "category":"CC_异界",
+	"subcategory":"CSC_异界_能源",
+	"book_learn": [ [ "henshin_book", 3 ] ],
+	"skill_used":"fabrication",
+	"skills_required": [ [ "cooking", 2 ] ],
+	"difficulty": 3,
+	"time": "6 m",
+	"autolearn": false,
+	"reversible":true,
+	"qualities": [ { "id": "HAMMER", "level": 1 } ],
+	"components": [ [ [ "alien_energy_part", 4 ] ] ],
+    "flags": [ "BLIND_HARD" ]
+	},
+	{
+	"type":"recipe",
+	"result":"alien_energy_liquid",
+    "category":"CC_异界",
+	"subcategory":"CSC_异界_能源",
+	"book_learn": [ [ "henshin_book", 4 ] ],
+	"skill_used":"fabrication",
+	"skills_required": [ [ "cooking", 3 ] ],
+	"difficulty": 4,
+	"time": "12 m",
+	"autolearn": false,
+	"reversible":false,
+	"qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "BOIL", "level": 2 }, { "id": "CHEM", "level": 1 }, { "id": "CONTAIN", "level": 1 } ],
+	"components": [ [ [ "alien_energy_full", 1 ], [ "alien_energy_part", 5 ] ] ],
+    "flags": [ "BLIND_HARD" ]
+	}
+]

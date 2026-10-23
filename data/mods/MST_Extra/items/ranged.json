@@ -1,0 +1,103 @@
+[
+  {
+    "id": "atlatl",
+    "type": "GUN",
+    "name": {
+      "str": "阿兹特克掷矛器"
+    },
+    "description": "一个用于支撑投矛的木制工具，比起纯用手，他能投得更有效率。",
+    "weight": "116 g",
+    "volume": "250 ml",
+    "price": 500,
+    "to_hit": -1,
+    "bashing": 1,
+    "material": [
+      "wood"
+    ],
+    "symbol": "(",
+    "color": "brown",
+    "ammo": "atlatl",
+    "skill": "throw",
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 15
+    },
+    "range": 15,
+    "dispersion": 1000,
+    "durability": 6,
+    "clip_size": 1,
+    "reload": 100,
+    "flags": [
+      "WATERPROOF_GUN",
+      "RELOAD_AND_SHOOT",
+      "NEVER_JAMS",
+      "PRIMITIVE_RANGED_WEAPON"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "atlatl": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "crossbow_makeshift",
+    "type": "GUN",
+    "name": {
+      "str": "简易弩"
+    },
+    "description": "一把自制简易弩，可以看出是依据瑞典斯科讷风格自制而成的。有一个木制的弦钮，从下往上拉让弓弦射出。没有其它的弩威力大，但是更容易把弓拉回来。这把弩射出来的箭很高概率会保持完好，可以再次使用。",
+    "weight": "2185 g",
+    "volume": "1 L",
+    "price": 1500,
+    "price_postapoc": 1000,
+    "bashing": 7,
+    "material": [
+      "wood"
+    ],
+    "symbol": "(",
+    "color": "green",
+    "ammo": "bolt",
+    "skill": "rifle",
+    "range": 6,
+    "loudness": 8,
+    "//": "What the green fuck have they done to crossbows in DDA?",
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 3
+    },
+    "dispersion": 500,
+    "durability": 5,
+    "clip_size": 1,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "bolt": 1
+        }
+      }
+    ],
+    "reload": 300,
+    "valid_mod_locations": [
+      [
+        "underbarrel",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "accessories",
+        2
+      ]
+    ],
+    "flags": [
+      "WATERPROOF_GUN",
+      "NEVER_JAMS",
+      "PRIMITIVE_RANGED_WEAPON"
+    ]
+  }
+]

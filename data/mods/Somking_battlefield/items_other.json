@@ -1,0 +1,68 @@
+[
+  {
+    "id": "bp_assemble_line",
+    "type": "TOOL",
+    "name": { "str": "综合火药生产套件" },
+    "description": "一套微型火药生产线设备，这套设备可以生产少量的氯酸钾火药，通过恰当计算和处理完全可以替代硝酸钾火药。同时这套设备也可以用于很多其他药剂的生产",
+    "weight": "50000 g",
+    "volume": "80 L",
+    "longest_side": "240 cm",
+    "price": 8000000,
+    "material": ["steel", "plastic"],
+    "symbol": ";",
+    "color": "black"
+  },
+  {
+    "id": "tool_bp_sp_bomb",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": { "str": "大型黑火药药包" },
+    "description": "这个硕大的药包里面装满了足以掀开一座足球场的黑火药。",
+    "weight": "124000 g",
+    "volume": "75 L",
+    "longest_side": "90 cm",
+    "price": 1000000,
+    "to_hit": -2,
+    "material": [ "cotton", "powder" ],
+    "symbol": "*",
+    "color": "red",
+    "explode_in_fire": true,
+    "explosion": { "power": 66000 },
+    "use_action": {
+      "target": "tool_bp_sp_bomb_act",
+      "target_charges": 120,
+      "active": true,
+      "menu_text": "Light fuse",
+      "type": "transform"
+    },
+    "flags": [ "RADIO_MODABLE", "RADIO_INVOKE_PROC", "BOMB" ]
+  },
+  {
+    "id": "tool_bp_sp_bomb_act",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": { "str": "点燃的大型黑火药药包" },
+    "description": "请务必在爆炸前跑出一个足球场远。",
+    "weight": "124000 g",
+    "volume": "75 L",
+    "longest_side": "90 cm",
+    "price": 0,
+    "to_hit": -2,
+    "material": [ "cotton", "powder" ],
+    "symbol": "*",
+    "color": "light_red",
+    "initial_charges": 120,
+    "max_charges": 120,
+    "turns_per_charge": 1,
+    "explode_in_fire": true,
+    "explosion": { "power": 66000 },
+    "use_action": {
+      "type": "explosion",
+      "sound_volume": 0,
+      "sound_msg": "Kshhh.",
+      "no_deactivate_msg": "You've already lit the fuse - run!",
+      "explosion": { "power": 66000 }
+       },
+    "flags": [ "BOMB", "TRADER_AVOID" ]
+  }
+]

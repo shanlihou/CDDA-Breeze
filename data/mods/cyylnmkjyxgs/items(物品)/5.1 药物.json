@@ -1,0 +1,583 @@
+[
+  {
+    "id": "cyyl_lly",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "material": [
+      "powder"
+    ],
+    "symbol": "o",
+    "color": "red",
+    "name": {
+      "str": "力量药"
+    },
+    "description": "次元医疗公司研发的增加力量的药片,有兴奋效果不要多吃哦。",
+    "looks_like": "vitamins",
+    "price": "5000 USD",
+    "price_postapoc": "500 USD",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "container": "bottle_plastic_small",
+    "sealed": true,
+    "charges": 2,
+    "stack_size": 20,
+    "fun": 2,
+    "healthy": -1,
+    "calories": 0,
+    "quench": 0,
+    "freezing_point": -9999,
+    "stim": 1,
+    "use_action": [
+      {
+        "type": "consume_drug",
+        "activation_message": "力量+5，持续24小时，多次服用效果不叠加。",
+        "effects": [
+          {
+            "id": "lly_zt",
+            "duration": "24 h"
+          }
+        ]
+      }
+    ],
+    "extend": {
+      "flags": [
+        "EDIBLE_FROZEN"
+      ]
+    }
+  },
+  {
+    "id": "cyyl_mjy",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "material": [
+      "powder"
+    ],
+    "symbol": "o",
+    "color": "green",
+    "name": {
+      "str": "敏捷药"
+    },
+    "description": "次元医疗公司研发的增加敏捷的药片,有兴奋效果不要多吃哦。",
+    "looks_like": "vitamins",
+    "price": "5000 USD",
+    "price_postapoc": "500 USD",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "container": "bottle_plastic_small",
+    "sealed": true,
+    "charges": 2,
+    "stack_size": 20,
+    "fun": 2,
+    "healthy": -1,
+    "calories": 0,
+    "quench": 0,
+    "freezing_point": -9999,
+    "stim": 1,
+    "use_action": [
+      {
+        "type": "consume_drug",
+        "activation_message": "敏捷+5，持续24小时，多次服用效果不叠加。",
+        "effects": [
+          {
+            "id": "mjy_zt",
+            "duration": "24 h"
+          }
+        ]
+      }
+    ],
+    "extend": {
+      "flags": [
+        "EDIBLE_FROZEN"
+      ]
+    }
+  },
+  {
+    "id": "cyyl_gzy",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "material": [
+      "powder"
+    ],
+    "symbol": "o",
+    "color": "blue",
+    "name": {
+      "str": "感知药"
+    },
+    "description": "次元医疗公司研发的增加感知的药片,有兴奋效果不要多吃哦。",
+    "looks_like": "vitamins",
+    "price": "5000 USD",
+    "price_postapoc": "500 USD",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "container": "bottle_plastic_small",
+    "sealed": true,
+    "charges": 2,
+    "stack_size": 20,
+    "fun": 2,
+    "healthy": -1,
+    "calories": 0,
+    "quench": 0,
+    "freezing_point": -9999,
+    "stim": 1,
+    "use_action": [
+      {
+        "type": "consume_drug",
+        "activation_message": "感知+5，持续24小时，多次服用效果不叠加。",
+        "effects": [
+          {
+            "id": "gzy_zt",
+            "duration": "24 h"
+          }
+        ]
+      }
+    ],
+    "extend": {
+      "flags": [
+        "EDIBLE_FROZEN"
+      ]
+    }
+  },
+  {
+    "id": "cyyl_zly",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "material": [
+      "powder"
+    ],
+    "symbol": "o",
+    "color": "yellow",
+    "name": {
+      "str": "智力药"
+    },
+    "description": "次元医疗公司研发的增加智力的药片,有兴奋效果不要多吃哦。",
+    "looks_like": "vitamins",
+    "price": "5000 USD",
+    "price_postapoc": "500 USD",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "container": "bottle_plastic_small",
+    "sealed": true,
+    "charges": 2,
+    "stack_size": 20,
+    "fun": 2,
+    "healthy": -1,
+    "calories": 0,
+    "quench": 0,
+    "freezing_point": -9999,
+    "stim": 1,
+    "use_action": [
+      {
+        "type": "consume_drug",
+        "activation_message": "智力+5，持续24小时，多次服用效果不叠加。",
+        "effects": [
+          {
+            "id": "zly_zt",
+            "duration": "24 h"
+          }
+        ]
+      }
+    ],
+    "extend": {
+      "flags": [
+        "EDIBLE_FROZEN"
+      ]
+    }
+  },
+  {
+    "id": "cyyl_lly_1",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "material": [
+      "powder"
+    ],
+    "symbol": "o",
+    "color": "red",
+    "name": {
+      "str": "体魄药"
+    },
+    "description": "次元医疗公司研发的增加体魄的药片,有兴奋效果不要多吃哦。",
+    "looks_like": "vitamins",
+    "price": "10000 USD",
+    "price_postapoc": "1000 USD",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "container": "bottle_plastic_small",
+    "sealed": true,
+    "charges": 2,
+    "stack_size": 20,
+    "fun": 2,
+    "healthy": -1,
+    "calories": 0,
+    "quench": 0,
+    "freezing_point": -9999,
+    "stim": 1,
+    "use_action": [
+      {
+        "type": "consume_drug",
+        "activation_message": "生命+20、耐力+2000，持续6小时，多次服用效果不叠加。",
+        "effects": [
+          {
+            "id": "lly_zt_1",
+            "duration": "6 h"
+          }
+        ]
+      }
+    ],
+    "extend": {
+      "flags": [
+        "EDIBLE_FROZEN"
+      ]
+    }
+  },
+  {
+    "id": "ARMOR_30_0",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "material": [
+      "powder"
+    ],
+    "symbol": "o",
+    "color": "yellow",
+    "name": {
+      "str": "抗伤药"
+    },
+    "description": "次元医疗公司研发的抗击打药片,有兴奋效果不要多吃哦。",
+    "looks_like": "vitamins",
+    "price": "10000 USD",
+    "price_postapoc": "1000 USD",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "container": "bottle_plastic_small",
+    "sealed": true,
+    "charges": 2,
+    "stack_size": 20,
+    "fun": 2,
+    "healthy": -1,
+    "calories": 0,
+    "quench": 0,
+    "freezing_point": -9999,
+    "stim": 1,
+    "use_action": [
+      {
+        "type": "consume_drug",
+        "activation_message": "全伤害-30点，持续6小时，多次服用效果不叠加。",
+        "effects": [
+          {
+            "id": "ARMOR-30_0",
+            "duration": "6 h"
+          }
+        ]
+      }
+    ],
+    "extend": {
+      "flags": [
+        "EDIBLE_FROZEN"
+      ]
+    }
+  },
+  {
+    "id": "pkill_12_0",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "material": [
+      "powder"
+    ],
+    "symbol": "o",
+    "color": "yellow",
+    "name": {
+      "str": "瞬间去痛药"
+    },
+    "description": "次元医疗公司研发的瞬间减少疼痛的药片,有兴奋效果不要多吃哦。",
+    "looks_like": "vitamins",
+    "price": "10000 USD",
+    "price_postapoc": "1000 USD",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "container": "bottle_plastic_small",
+    "sealed": true,
+    "charges": 2,
+    "stack_size": 20,
+    "fun": 2,
+    "healthy": -1,
+    "calories": 0,
+    "quench": 0,
+    "freezing_point": -9999,
+    "stim": 1,
+    "use_action": [
+      {
+        "type": "consume_drug",
+        "activation_message": "瞬间减少120点疼痛。警告！12小时内请勿再次服用，如果有血液过滤请无视。",
+        "effects": [
+          {
+            "id": "pkill_12_120",
+            "duration": "1 s"
+          }
+        ]
+      }
+    ],
+    "extend": {
+      "flags": [
+        "EDIBLE_FROZEN"
+      ]
+    }
+  },
+  {
+    "id": "cyyl_sdy",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "material": [
+      "powder"
+    ],
+    "symbol": "o",
+    "color": "yellow",
+    "name": {
+      "str": "速度药"
+    },
+    "description": "次元医疗公司研发的增加速度的药片,有兴奋效果不要多吃哦。",
+    "looks_like": "vitamins",
+    "price": "10000 USD",
+    "price_postapoc": "1000 USD",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "container": "bottle_plastic_small",
+    "sealed": true,
+    "charges": 2,
+    "stack_size": 20,
+    "fun": 2,
+    "healthy": -1,
+    "calories": 0,
+    "quench": 0,
+    "freezing_point": -9999,
+    "stim": 1,
+    "use_action": [
+      {
+        "type": "consume_drug",
+        "activation_message": "耐力回复+2、速度+25，持续12小时，多次服用效果不叠加。",
+        "effects": [
+          {
+            "id": "sdy_zt",
+            "duration": "12 h"
+          }
+        ]
+      }
+    ],
+    "extend": {
+      "flags": [
+        "EDIBLE_FROZEN"
+      ]
+    }
+  },
+  {
+    "id": "cyyl_nly",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "material": [
+      "powder"
+    ],
+    "symbol": "o",
+    "color": "yellow",
+    "name": {
+      "str": "耐力药"
+    },
+    "description": "次元医疗公司研发的快速回复耐力的药片,有兴奋效果不要多吃哦。",
+    "looks_like": "vitamins",
+    "price": "10000 USD",
+    "price_postapoc": "1000 USD",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "container": "bottle_plastic_small",
+    "sealed": true,
+    "charges": 2,
+    "stack_size": 20,
+    "fun": 2,
+    "healthy": -1,
+    "calories": 0,
+    "quench": 0,
+    "freezing_point": -9999,
+    "stim": 1,
+    "use_action": [
+      {
+        "type": "consume_drug",
+        "activation_message": "速度+2、耐力回复+20，持续12小时，多次服用效果不叠加。",
+        "effects": [
+          {
+            "id": "nly_zt",
+            "duration": "12 h"
+          }
+        ]
+      }
+    ],
+    "extend": {
+      "flags": [
+        "EDIBLE_FROZEN"
+      ]
+    }
+  },
+  {
+    "id": "cyyl_wx_nly",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "material": [
+      "powder"
+    ],
+    "symbol": "o",
+    "color": "brown",
+    "name": {
+      "str": "无限耐力药"
+    },
+    "description": "次元医疗公司研发的无限耐力的药,有兴奋效果不要多吃哦。",
+    "looks_like": "vitamins",
+    "price": "99999 USD",
+    "price_postapoc": "99999 USD",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "container": "bottle_plastic_small",
+    "sealed": true,
+    "charges": 2,
+    "stack_size": 20,
+    "fun": 2,
+    "healthy": -1,
+    "calories": 0,
+    "quench": 0,
+    "freezing_point": -9999,
+    "stim": 1,
+    "use_action": [
+      {
+        "type": "consume_drug",
+        "activation_message": "速度+10、全伤害-50点、耐力回复+1000，持续1小时，多次服用效果不叠加。",
+        "effects": [
+          {
+            "id": "wx_nly_zt",
+            "duration": "1 h"
+          }
+        ]
+      }
+    ],
+    "extend": {
+      "flags": [
+        "EDIBLE_FROZEN"
+      ]
+    }
+  },
+  {
+    "id": "cyyl_hxy",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "material": [
+      "powder"
+    ],
+    "symbol": "o",
+    "color": "magenta",
+    "name": {
+      "str": "回复药"
+    },
+    "description": "次元医疗公司研发的回复生命能量的药片。",
+    "looks_like": "vitamins",
+    "price": "99999 USD",
+    "price_postapoc": "99999 USD",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "container": "bottle_plastic_small",
+    "sealed": true,
+    "charges": 2,
+    "stack_size": 20,
+    "fun": 2,
+    "healthy": 1,
+    "calories": 0,
+    "quench": 0,
+    "freezing_point": -9999,
+    "stim": 1,
+    "use_action": [
+      {
+        "type": "consume_drug",
+        "activation_message": "生命恢复+2，持续1小时。耐力回复+10、速度+10、攻击耗时-10点、疲劳/新陈代谢消耗-25%、口渴/饥饿每1秒-2点，持续6小时，多次服用时间/效果不叠加。",
+        "effects": [
+          {
+            "id": "hxy_fzy",
+            "duration": "6 h"
+          }
+        ],
+        "damage_over_time": [
+          {
+            "damage_type": "pure",
+            "duration": "1 h",
+            "amount": -2,
+            "bodyparts": [
+              "head",
+              "torso",
+              "arm_l",
+              "arm_r",
+              "leg_l",
+              "leg_r"
+            ]
+          }
+        ]
+      }
+    ],
+    "extend": {
+      "flags": [
+        "EDIBLE_FROZEN"
+      ]
+    }
+  },
+  {
+    "id": "cyyl_llyS",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "material": [
+      "powder"
+    ],
+    "symbol": "o",
+    "color": "red",
+    "name": {
+      "str": "超神源质"
+    },
+    "description": "某未知存在利用宇宙源质，炼制的增加全属性的能量物质！",
+    "looks_like": "vitamins",
+    "price": "99999999 USD",
+    "price_postapoc": "99999999 USD",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "container": "bottle_plastic_small",
+    "sealed": true,
+    "charges": 2,
+    "stack_size": 20,
+    "fun": 2,
+    "healthy": -1,
+    "calories": 0,
+    "quench": 0,
+    "freezing_point": -9999,
+    "stim": 1,
+    "use_action": [
+      {
+        "type": "consume_drug",
+        "activation_message": "无限体力、无限恢复、无限状态、无限免伤、全属性+999点，持续1分钟，多次服用效果不叠加。",
+        "effects": [
+          { "id": "yh_yly_fmqc_zt",
+      "duration": "10 s" },
+          { "id": "lly_ztS", "duration": "60 s" }
+        ],
+        "damage_over_time": [
+          {
+            "damage_type": "pure",
+            "duration": "60 s",
+            "amount": -1000,
+            "bodyparts": [
+              "head",
+              "torso",
+              "arm_l",
+              "arm_r",
+              "leg_l",
+              "leg_r"
+            ]
+          }
+        ]
+      }
+    ],
+    "extend": {
+      "flags": [
+        "EDIBLE_FROZEN"
+      ]
+    }
+  }
+]

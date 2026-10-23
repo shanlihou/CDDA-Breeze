@@ -1,0 +1,78 @@
+[
+  {
+    "id": "camera_aya",
+    "type": "TOOL",
+    "category": "tools",
+    "name": {
+      "str": "老式相机",
+      "str_pl": "老式相机"
+    },
+    "description": "一个外表看上去很有年代感的相机.你可以在屏幕上查看你的照片.使用普通电池供电.",
+    "volume": "650 ml",
+    "weight": "1000 g",
+    "longest_side": "12 cm",
+    "price_postapoc": 50,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "solid",
+      "length": "hand",
+      "surface": "any"
+    },
+    "material": [
+      "plastic",
+      "steel"
+    ],
+    "symbol": ";",
+    "color": "black",
+    "bashing": 2,
+    "charges_per_use": 5,
+    "use_action": [
+      {
+        "type": "cast_spell",
+        "spell_id": "camera_aya_flash",
+        "no_fail": true,
+        "level": 1
+      }
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "flag_restriction": [
+          "BATTERY_ULTRA_LIGHT",
+          "BATTERY_LIGHT"
+        ],
+        "default_magazine": "light_plus_battery_cell"
+      }
+    ],
+    "flags": [
+      "BELT_CLIP"
+    ]
+  },
+  {
+    "id": "camera_aya_flash",
+    "type": "SPELL",
+    "name": "闪光灯",
+    "description": "老式相机的闪光效果",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "ally",
+      "ground",
+      "hostile"
+    ],
+    "effect": "flashbang",
+    "shape": "cone",
+    "min_damage": 10,
+    "max_damage": 12,
+    "min_aoe": 90,
+    "max_aoe": 90,
+    "min_range": 5,
+    "max_range": 5,
+    "flags": [
+      "NO_LEGS",
+      "NO_HANDS",
+      "NO_PROJECTILE",
+      "RANDOM_DAMAGE"
+    ]
+  }
+]

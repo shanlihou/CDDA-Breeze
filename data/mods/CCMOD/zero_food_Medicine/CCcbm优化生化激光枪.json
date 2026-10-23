@@ -1,0 +1,130 @@
+[
+  {
+  "type": "BIONIC_ITEM",
+  "category": "bionics",
+  "name": {
+    "str": "指端激光枪2型CBM"
+  },
+  "weight": "300 g",
+  "volume": "1500 ml",
+  "bashing": 8,
+  "material": [
+    "steel",
+    "plastic"
+  ],
+  "symbol": ":",
+  "color": "yellow",
+  "price_postapoc": 1500,
+  "use_action": [
+    "install_bionic"
+  ],
+  "flags": [
+    "CBM",
+    "BIONIC_NPC_USABLE"
+  ],
+  "is_upgrade": false,
+  "faults": [
+    "fault_bionic_salvaged"
+  ],
+  "copy-from": "bio_laser",
+  "id": "bio_laserS",
+  "looks_like": "bio_int_enhancer",
+  "description": "一枚小型高能激光发射器，可植入指尖。这件远程武器杀伤力不算极强，但精准度很高，并且有引燃可燃物的能力。",
+  "price": 720000,
+  "difficulty": 3
+  },
+  {
+  "id": "bio_laserS",
+  "copy-from": "bio_laser",
+  "type": "bionic",
+  "name": {
+    "str": "指端激光枪2型"
+  },
+  "description": "你的一根手指内通过手术植入了一枚小型高能激光发射器。这件远程武器杀伤力不算极强，但精准度很高，并且有引燃可燃物的能力。",
+  "occupied_bodyparts": [
+    [
+      "hand_r",
+      1
+    ]
+  ],
+  "act_cost": "5 kJ",
+  "fake_weapon": "bio_laser_gunS",
+  "flags": [
+    "BIONIC_GUN",
+    "BIONIC_NPC_USABLE",
+    "USES_BIONIC_POWER"
+    ]
+  },
+  {
+  "id": "bio_laser_gunS",
+  "copy-from": "bio_laser_gun",
+  "type": "GUN",
+  "name": {
+    "str": "激光指2型"
+  },
+  "description": "这是一件虚拟物品",
+  "volume": "1 L",
+  "price": 0,
+  "material": [
+    "steel",
+    "plastic"
+  ],
+  "symbol": "(",
+  "looks_like": "v29",
+  "color": "magenta",
+  "skill": "pistol",
+  "range": 60,
+  "ranged_damage": {
+    "damage_type": "heat",
+    "amount": 25,
+    "armor_penetration": 15
+  },
+  "dispersion": 10,
+  "durability": 10,
+  "loudness": 7,
+  "ammo_effects": [
+    "LASER",
+    "ROBOT_DAZZLE",
+    "EMP",
+    "SHOT",
+    "BEANBAG",
+    "BLINDS_EYES",
+    "INCENDIARY"
+  ],
+  "flags": [
+    "NEVER_JAMS",
+    "TRADER_AVOID",
+    "BIONIC_WEAPON",
+    "FIRESTARTER",
+    "ZERO_WEIGHT"
+    ]
+  },
+  {
+        "type" : "recipe",
+    "result": "bio_laser",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC供应CBM",
+    "skill_used": "firstaid",
+    "difficulty": 3,
+    "time": "1second",
+    "reversible": true,
+    "autolearn": true,
+    "components": [ [ [ "CCMODcoin", 230 ] ] ]
+  },
+  {
+        "type" : "recipe",
+    "result": "bio_laserS",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC供应CBM",
+    "skill_used": "firstaid",
+    "difficulty": 3,
+    "time": "1second",
+    "reversible": true,
+    "autolearn": true,
+    "components": [ [ [ "CCMODcoin", 230 ] ] ]
+  }
+]

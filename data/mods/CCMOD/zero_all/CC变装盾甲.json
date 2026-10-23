@@ -1,0 +1,111 @@
+[
+  {
+    "type": "ARMOR",
+    "subtypes": [ "TOOL", "ARMOR", "ARTIFACT" ],
+    "id": "CCarmor_riot",
+    "looks_like": "kevlar",
+    "category": "armor",
+    "name": { "str": "CCF7重装防暴服" },
+    "description": "一个结构简单强度高的重型大板甲。CC重装防爆盾展开调整，可简单穿挂在身上作为一个大型防弹护甲。可重新回装为防爆盾模式，随时准备战斗。\n若同时装配并启动了主动防御模式的CC防御模组，此护甲自动脱离无法穿戴。启动CC防御模组的主动防御系统前，请先将此护甲切换为重盾模式。",
+    "weight": "3200 g",
+    "color": "dark_gray",
+    "price": "550 USD",
+    "price_postapoc": "55 USD",
+    "warmth": 2,
+    "environmental_protection": 4,
+    "material": [ "carbide","nanotubes", "chitin", "cotton", "nylon", "qt_steel_chain" ],
+    "volume": "5500 ml",
+    "to_hit": -2,
+    "melee_damage": { "bash": 8 },
+    "symbol": "{", 
+    "passive_effects": [ { "id": "ench_meteor_armor" } ], 
+    "flags": [ "VARSIZE", "NONCONDUCTIVE", "ALLOWS_NATURAL_ATTACKS", "STURDY", "OUTER", "WATER_FRIENDLY", "PADDED", "BLOCK_WHILE_WORN", "POWERARMOR_COMPATIBLE" ],
+    "armor": [
+      {
+        "coverage": 95,
+        "encumbrance": 8,
+        "covers": [ "head", "mouth", "eyes", "torso", "arm_l", "arm_r", "leg_l", "leg_r" ], 
+        "material": [ 
+        { "type": "chitin", "covered_by_mat": 100, "thickness": 1 },
+        { "type": "nanotubes", "covered_by_mat": 100, "thickness": 1 },
+        { "type": "qt_steel_chain", "covered_by_mat": 100, "thickness": 1.2 },
+        { "type": "nylon", "covered_by_mat": 100, "thickness": 2 },
+        { "type": "carbide", "covered_by_mat": 100, "thickness": 1 }
+          ]
+      }
+    ],
+    "use_action": { "menu_text": "变装", "type": "transform", "target": "CCshield_riot", "msg": "护甲回装，重盾模式" }
+  },
+  {
+    "id": "CCshield_riot",
+    "looks_like": "kevlar",
+    "type": "ARMOR",
+    "subtypes": [ "TOOL", "ARMOR", "ARTIFACT" ],
+    "category": "armor",
+    "name": { "str": "CCD6重装防暴盾" },
+    "description": "又名 重装浮游盾，由CC特种复合材料制成，这是一个重点保护要害区域的高防浮游盾牌。一个结构简单强度高的重型大板盾。\n与主动防御模式下的CC防御模组，联动成为一个强大的防御套装。",
+    "use_action": { "menu_text": "变装", "type": "transform", "target": "CCarmor_riot", "msg": "重盾展开，护甲模式" },
+    "weight": "3200 g",
+    "volume": "3200 ml",
+    "price": "550 USD",
+    "price_postapoc": "55 USD",
+    "to_hit": -2,
+    "melee_damage": { "bash": 78 },
+    "material": [ "carbide","nanotubes", "chitin", "cotton", "nylon", "qt_steel_chain" ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "armor": [
+      {
+        "coverage": 100,
+        "encumbrance": 18,
+        "covers": [ "head", "mouth", "eyes", "torso" ],
+        "material": [ 
+        { "type": "chitin", "covered_by_mat": 100, "thickness": 4 },
+        { "type": "nanotubes", "covered_by_mat": 100, "thickness": 2 },
+        { "type": "qt_steel_chain", "covered_by_mat": 100, "thickness": 2.4 },
+        { "type": "nylon", "covered_by_mat": 100, "thickness": 3 },
+        { "type": "carbide", "covered_by_mat": 100, "thickness": 2 }
+          ]
+      }
+    ],
+    "techniques": [ "tec_break", "WBLOCK_3", "BRUTAL" ],
+    "passive_effects": [ { "id": "ench_meteor_armor" } ], 
+    "flags": [
+      "WATERPROOF",
+      "OVERSIZE", "NONCONDUCTIVE", 
+      "BELTED",
+      "RESTRICT_HANDS",
+      "BULLET_IMMUNE",
+      "STAB_IMMUNE",
+      "TRADER_AVOID",
+      "STURDY",
+      "POWERARMOR_COMPATIBLE"
+    ]
+  },
+    {
+        "type" : "recipe",
+    "result": "CCarmor_riot",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC武器装备",
+    "skill_used": "survival",
+    "time": "100second",
+    "reversible": true,
+    "autolearn": true,
+    "components": [ [ [ "CCMODcoin", 260 ] ] ]
+  },
+    {
+        "type" : "recipe",
+    "result": "CCshield_riot",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC武器装备",
+    "skill_used": "survival",
+    "time": "100second",
+    "reversible": true,
+    "autolearn": true,
+    "components": [ [ [ "CCMODcoin", 260 ] ] ]
+  }
+]

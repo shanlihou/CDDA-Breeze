@@ -1,0 +1,32 @@
+[
+	{
+		"id":"ef_ncard_ev1_cm_holy_cocktail",
+		"type":"effect_type",
+		"name":[ "神圣活力" ],
+		"desc":[ "你的身体受到了神圣鸡尾酒的影响！" ],
+		"apply_message":"你的身体受到了神圣鸡尾酒的影响！",
+		"rating":"good",
+		"max_duration":"20 m",
+		"max_intensity":1,
+		"int_dur_factor":"20 m",
+		"base_mods":{ "speed_mod": [ 10 ], "dodge_mod": [ 1 ], "str_mod": [ 1 ],"per_mod": [ 1 ], "bash_mod": [ 1 ],"health_min": [ 1 ], "health_chance": [ 120 ] },
+		"show_in_info":true,
+		"removes_effects":[ "frostbite","frostbite_recovery","cold","shakes","fungus","common_cold","onfire","hot","hot_speed","relax_gas"]
+	}
+,
+	{
+		"id":"ef_ncard_ev2_cm_omochi",
+		"type":"effect_type",
+		"name":[ "力之糕饼" ],
+		"desc":[ "你的身体受到了糕饼的影响！" ],
+		"apply_message":"你的身体受到了糕饼的影响！",
+		"rating":"good",
+		"max_duration":"20 m",
+		"max_intensity":1,
+		"int_dur_factor":"30 m",
+		"base_mods":{ "dodge_mod": [ 1 ], "str_mod": [ 3 ], "health_min": [ 1 ], "health_chance": [ 120 ] },
+		"show_in_info":true
+	}
+
+
+]

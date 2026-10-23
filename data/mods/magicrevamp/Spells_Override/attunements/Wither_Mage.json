@@ -1,0 +1,78 @@
+[
+  {
+    "type": "SPELL",
+    "id": "assassin_teleport",
+    "name": {
+      "str": "刺客传送术"
+    },
+    "description": "这个是刺杀术的附属法术。它可以传送你。",
+    "effect": "short_range_teleport",
+    "shape": "blast",
+    "valid_targets": [
+      "none"
+    ],
+    "flags": [
+      "SILENT"
+    ],
+    "min_range": 8,
+    "max_range": 8
+  },
+  {
+    "type": "SPELL",
+    "id": "assassin_toxic_smoke",
+    "name": {
+      "str": "刺客毒烟术"
+    },
+    "description": "这个是刺杀术的附属法术。它在一个区域产生有毒烟雾。",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
+    "field_id": "fd_toxic_gas",
+    "min_field_intensity": 2,
+    "max_field_intensity": 3,
+    "min_aoe": 4,
+    "max_aoe": 4
+  },
+  {
+    "type": "SPELL",
+    "id": "assassin_strike",
+    "name": {
+      "str": "刺杀术"
+    },
+    "description": "你猛烈一击，然后消失在一股有毒的烟雾中。",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "hostile"
+    ],
+    "min_damage": 35,
+    "max_damage": 594,
+    "damage_increment": 13,
+    "min_range": 1,
+    "max_range": 1,
+    "damage_type": "biological",
+    "min_dot": 35,
+    "max_dot": 594,
+    "dot_increment": 13,
+    "max_level": 43,
+    "min_duration": 500,
+    "max_duration": 500,
+    "spell_class": "WITHER_MAGE",
+    "base_casting_time": 30,
+    "energy_source": "MANA",
+    "base_energy_cost": 1200,
+    "difficulty": 8,
+    "extra_effects": [
+      {
+        "id": "assassin_toxic_smoke",
+        "hit_self": true
+      },
+      {
+        "id": "assassin_teleport"
+      }
+    ]
+  }
+]

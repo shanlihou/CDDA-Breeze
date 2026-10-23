@@ -1,0 +1,156 @@
+[
+  {
+    "id": "BGSS_LONEVAMP_S1",
+    "type": "talk_topic",
+    "dynamic_line": "当时是我正在追捕猎物。月亮在上，一切都很平静…但是在那天晚上，当看到那个女人在林间小路上哭泣，照看着她那严重的伤口时，一切都崩溃了。",
+    "responses": [
+      {
+        "text": "她怎么了？。",
+        "topic": "BGSS_LONEVAMP_S1_CURIOUS",
+        "effect": {
+          "npc_add_trait": "lonevamp_s1_her"
+        },
+        "condition": {
+          "not": {
+            "npc_has_trait": "lonevamp_s1_her"
+          }
+        }
+      },
+      {
+        "text": "她的伤口？",
+        "topic": "BGSS_LONEVAMP_S1_WOUND",
+        "effect": {
+          "npc_add_trait": "lonevamp_s1_wound"
+        },
+        "condition": {
+          "not": {
+            "npc_has_trait": "lonevamp_s1_wound"
+          }
+        }
+      },
+      {
+        "text": "<done_conversation_section>",
+        "topic": "TALK_FRIEND"
+      },
+      {
+        "text": "<end_talking>",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "BGSS_LONEVAMP_S1_CURIOUS",
+    "type": "talk_topic",
+    "dynamic_line": "据我观察，她已经中年了，穿着整齐，包里装满了补给品。",
+    "responses": [
+      {
+        "text": "她的伤口是怎么回事？",
+        "topic": "BGSS_LONEVAMP_S1_WOUND",
+        "effect": {
+          "npc_add_trait": "lonevamp_s1_wound"
+        },
+        "condition": {
+          "not": {
+            "npc_has_trait": "lonevamp_s1_wound"
+          }
+        }
+      },
+      {
+        "text": "<done_conversation_section>",
+        "topic": "TALK_FRIEND"
+      },
+      {
+        "text": "<end_talking>",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "BGSS_LONEVAMP_S1_WOUND",
+    "type": "talk_topic",
+    "dynamic_line": "我没走近看，但我看的很清楚，有一种粘稠的黑色物质，正缓慢地流注入她的体内。",
+    "responses": [
+      {
+        "text": "她怎么了？。",
+        "topic": "BGSS_LONEVAMP_S1_CURIOUS",
+        "effect": {
+          "npc_add_trait": "lonevamp_s1_her"
+        },
+        "condition": {
+          "not": {
+            "npc_has_trait": "lonevamp_s1_her"
+          }
+        }
+      },
+      {
+        "text": "你知道这是怎么回事吗？",
+        "topic": "BGSS_LONEVAMP_S1_WHAT",
+        "effect": {
+          "npc_add_trait": "lonevamp_s1_what"
+        },
+        "condition": {
+          "not": {
+            "npc_has_trait": "lonevamp_s1_what"
+          }
+        }
+      },
+      {
+        "text": "<done_conversation_section>",
+        "topic": "TALK_FRIEND"
+      },
+      {
+        "text": "<end_talking>",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "BGSS_LONEVAMP_S1_WHAT",
+    "type": "talk_topic",
+    "dynamic_line": "不，不过我认为这应该是一种从宿主那里吸取生命的寄生虫。",
+    "responses": [
+      {
+        "text": "所以，那之后你又做了什么？",
+        "topic": "BGSS_LONEVAMP_S1_NEXT"
+      },
+      {
+        "text": "<done_conversation_section>",
+        "topic": "TALK_FRIEND"
+      },
+      {
+        "text": "<end_talking>",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "BGSS_LONEVAMP_S1_NEXT",
+    "type": "talk_topic",
+    "dynamic_line": "我跟踪着她穿过了小路。我的好奇心压制住了我的饥渴，直到她突然抽搐倒地。我走近她检查她的活力，发现她已经死了。她的血管逐渐变黑，眼睛里渗出粘液。我试着闭上她的眼皮，但她立刻咬了我的<swear>手！",
+    "responses": [
+      {
+        "text": "我的天，这可真吓人。",
+        "topic": "BGSS_LONEVAMP_S1_DONE"
+      },
+      {
+        "text": "<done_conversation_section>",
+        "topic": "TALK_FRIEND"
+      },
+      {
+        "text": "<end_talking>",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "BGSS_LONEVAMP_S1_DONE",
+    "type": "talk_topic",
+    "dynamic_line": "我迅速做出反应，把她的<swear>头撞在地上，炸成一团血迹！\n恩，幸好她咬得没那么深，但我发誓在我再靠近他们之前，我会<swear>打破他们的头骨！",
+    "responses": [
+      {
+        "text": "<end_talking>",
+        "topic": "TALK_DONE"
+      }
+    ]
+  }
+]

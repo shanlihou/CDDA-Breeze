@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_UNA_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"呜呜呜...这是哪里啊？",
+    "responses":[
+      { "text": "要不要一起行动呢？(邀请加入队伍)", "topic": "TALK_UNA_SAN_2" },
+      { "text": "奇怪的家伙…", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_UNA_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"谢谢你呢！",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

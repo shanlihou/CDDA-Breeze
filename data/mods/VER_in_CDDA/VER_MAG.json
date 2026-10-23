@@ -1,0 +1,158 @@
+[
+    {
+  "id": "VERMAG_30rd",
+  "type": "MAGAZINE",
+  "name": {
+    "str": "VER专用30发弹夹"
+  },
+  "description": "VER专用能装30发6x49mm子弹的弹夹.",
+  "weight": "250 g",
+  "volume": "250 ml",
+  "looks_like": "stanag30",
+  "longest_side": "190 mm",
+  "price": 800,
+  "price_postapoc": 1500,
+  "material": [
+    "steel",
+    "plastic"
+  ],
+  "symbol": "#",
+  "color": "light_gray",
+  "ammo_type": [
+    "VER_6x49"
+  ],
+  "reload_time":100,
+  "flags": [
+    "MAG_COMPACT",
+    "BELT_CLIP"
+  ],
+  "pocket_data": [
+    {
+      "pocket_type": "MAGAZINE",
+      "rigid": true,
+      "allowed_speedloaders": [
+        "VERMAG_10rd"
+      ],
+      "ammo_restriction": {
+        "VER_6x49": 30
+      }
+    }
+  ]
+},{
+    "id": "VERMAG_60rd",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "VER专用60发弹夹"
+    },
+    "description": "VER专用能装60发6x49mm子弹的弹夹.",
+    "weight": "320 g",
+    "looks_like": "stanag30",
+    "volume": "500 ml",
+    "longest_side": "320 mm",
+    "price": 1000,
+    "price_postapoc": 4000,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [
+      "VER_6x49"
+    ],
+    "reload_time":115,
+    "flags": [
+      "MAG_COMPACT",
+      "BELT_CLIP"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "allowed_speedloaders": [
+          "VERMAG_10rd"
+        ],
+        "ammo_restriction": {
+          "VER_6x49": 60
+        }
+      }
+    ]
+  },
+  {
+    "id": "VERMAG_150rd",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "VER专用150发弹夹"
+    },
+    "description": "VER专用能装150发6x49mm子弹的弹夹.",
+    "weight": "800 g",
+    "looks_like": "stanag30",
+    "volume": "1200 ml",
+    "longest_side": "600 mm",
+    "price": 3000,
+    "price_postapoc": 12000,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [
+      "VER_6x49"
+    ],
+    "reload_time":125,
+    "flags": [
+      "MAG_COMPACT",
+      "BELT_CLIP"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+
+        "ammo_restriction": {
+          "VER_6x49": 150
+        }
+      }
+    ]
+  },
+  {
+    "id": "VERMAG_10rd",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "VER专用10发弹夹"
+    },
+    "description": "VER专用能装10发6x49mm子弹的弹夹.",
+    "weight": "50 g",
+    "looks_like": "stanag30",
+    "volume": "120 ml",
+    "longest_side": "80 mm",
+    "price": 200,
+    "price_postapoc": 750,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [
+      "VER_6x49"
+    ],
+    "reload_time":50,
+    "flags": [
+      "MAG_COMPACT",
+      "BELT_CLIP",
+      "SPEEDLOADER"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "VER_6x49": 10
+        }
+      }
+    ]
+  }
+
+]

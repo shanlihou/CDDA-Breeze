@@ -1,0 +1,78 @@
+[
+  {
+    "copy-from": "religious_books",
+    "id": "religious_books",
+    "type": "item_group",
+    "subtype": "distribution",
+    "extend": {
+	    "entries": [
+      	{ "group": "sor_scribe_scroll_any", "prob": 5 }
+	    ]
+	  }
+  },
+  {
+    "copy-from": "novels",
+    "id": "novels",
+    "type": "item_group",
+    "subtype": "distribution",
+    "extend": {
+	    "entries": [
+      	{ "group": "sor_scribe_scroll_any", "prob": 5 }
+	    ]
+	  }
+  },
+  {
+    "copy-from": "kids_books",
+    "id": "kids_books",
+    "type": "item_group",
+    "subtype": "distribution",
+    "extend": {
+	    "entries": [
+      	{ "group": "sor_scribe_scroll_any", "prob": 5 }
+	    ]
+	  }
+  },
+  {
+    "copy-from": "homebooks",
+    "id": "homebooks",
+    "type": "item_group",
+    "subtype": "distribution",
+    "extend": {
+	    "entries": [
+      	{ "group": "sor_scribe_scroll_any", "prob": 5 }
+	    ]
+	  }
+  },
+  {
+    "type": "item_group",
+    "id": "sor_scribe_scroll_any",
+    "subtype": "distribution",
+	  "entries": [
+	    { "item": "sor_scribe_scroll_1_1", "prob": 9 },
+	    { "item": "sor_scribe_scroll_1_2", "prob": 9 },
+	    { "item": "sor_scribe_scroll_2_1", "prob": 8 },
+	    { "item": "sor_scribe_scroll_2_2", "prob": 8 },
+	    { "item": "sor_scribe_scroll_3_1", "prob": 7 },
+	    { "item": "sor_scribe_scroll_3_2", "prob": 7 },
+	    { "item": "sor_scribe_scroll_4_1", "prob": 6 },
+	    { "item": "sor_scribe_scroll_4_2", "prob": 6 },
+	    { "item": "sor_scribe_scroll_4_3", "prob": 6 },
+	    { "item": "sor_scribe_scroll_5_1", "prob": 5 },
+	    { "item": "sor_scribe_scroll_5_2", "prob": 5 },
+	    { "item": "sor_scribe_scroll_5_3", "prob": 5 },
+	    { "item": "sor_scribe_scroll_5_4", "prob": 5 },
+	    { "item": "sor_scribe_scroll_5_5", "prob": 5 },
+	    { "item": "sor_scribe_scroll_6_1", "prob": 4 },
+	    { "item": "sor_scribe_scroll_6_2", "prob": 4 },
+	    { "item": "sor_scribe_scroll_7_1", "prob": 3 },
+	    { "item": "sor_scribe_scroll_7_2", "prob": 3 },
+	    { "item": "sor_scribe_scroll_7_3", "prob": 3 },
+	    { "item": "sor_scribe_scroll_8_1", "prob": 2 },
+	    { "item": "sor_scribe_scroll_8_2", "prob": 2 },
+	    { "item": "sor_scribe_scroll_8_3", "prob": 2 },
+	    { "item": "sor_scribe_scroll_9_1", "prob": 1 },
+	    { "item": "sor_scribe_scroll_9_2", "prob": 1 },
+	    { "item": "spell_scroll_sorcerer_0", "prob": 1 }
+	  ]
+  }
+]

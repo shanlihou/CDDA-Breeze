@@ -1,0 +1,1745 @@
+[
+  {
+    "abstract": "ram_blaze",
+    "type": "vehicle_part",
+    "categories": [ "warfare" ],
+    "location": "structure",
+    "damage_modifier": 150,
+    "description": "A reinforced ram.  Place at the edge of vehicle to reduce damage taken in collisions, and to increase damaged delivered in collisions, if the ram is the first vehicle part to collide.",
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "40 m",
+        "using": [ [ "welding_standard", 200 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "15 m",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": { "skills": [ [ "mechanics", 3 ] ], "time": "10 m", "using": [ [ "repair_welding_standard", 5 ] ] }
+    },
+    "flags": [ "PROTRUSION", "OBSTACLE" ],
+    "variants": [
+      { "id": "front", "label": "Front", "symbols": "^^<vvv>^", "symbols_broken": "*" },
+      { "id": "rear", "label": "Rear", "symbols": "vv>^^^<v", "symbols_broken": "*" },
+      { "id": "left", "label": "Left", "symbols": "<<v>>>^<", "symbols_broken": "*" },
+      { "id": "right", "label": "Right", "symbols": ">>^<<<v>", "symbols_broken": "*" }
+    ]
+  },
+  {
+    "abstract": "board_abstract",
+    "copy-from": "base_board_abstract",
+    "type": "vehicle_part",
+    "item": "sheet_metal",
+    "durability": 120,
+    "breaks_into": "ig_vp_sheet_metal",
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 1 ] ],
+        "time": "40 m",
+        "using": [ [ "welding_standard", 200 ] ]
+      },
+      "removal": { "skills": [ [ "mechanics", 2 ] ], "time": "15 m", "using": [ [ "vehicle_weld_removal", 1 ] ] },
+      "repair": { "skills": [ [ "mechanics", 2 ] ], "time": "10 m", "using": [ [ "repair_welding_standard", 5 ] ] }
+    },
+    "damage_reduction": { "all": 7 }
+  },
+  {
+    "id": "board",
+    "type": "vehicle_part",
+    "copy-from": "board_abstract",
+    "name": { "str": "board" },
+    "description": "A metal wall.  Keeps zombies outside the vehicle and prevents people from seeing through it.",
+    "extend": { "flags": [ "OPAQUE", "FULL_BOARD" ] }
+  },
+  {
+    "id": "halfboard",
+    "copy-from": "board_abstract",
+    "type": "vehicle_part",
+    "name": { "str": "quarterpanel" },
+    "description": "A half-height metal wall.  Keeps zombies outside the vehicle but allows people to see over it.",
+    "proportional": { "durability": 0.8 },
+    "extend": { "flags": [ "HALF_BOARD" ] }
+  },
+  {
+    "abstract": "hdboard_abstract",
+    "type": "vehicle_part",
+    "copy-from": "base_board_abstract",
+    "item": "steel_plate",
+    "color": "dark_gray",
+    "durability": 450,
+    "description": "A strong metal wall.  Keeps zombies outside the vehicle and prevents people from seeing through it.",
+    "breaks_into": "ig_vp_steel_plate",
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 1 ] ],
+        "time": "100 m",
+        "using": [ [ "welding_standard", 40 ] ]
+      },
+      "removal": { "skills": [ [ "mechanics", 2 ] ], "time": "24 m", "using": [ [ "vehicle_weld_removal", 1 ] ] },
+      "repair": { "skills": [ [ "mechanics", 2 ] ], "time": "10 m", "using": [ [ "repair_welding_standard", 5 ] ] }
+    },
+    "damage_reduction": { "all": 20 }
+  },
+  {
+    "id": "hdboard",
+    "type": "vehicle_part",
+    "copy-from": "hdboard_abstract",
+    "name": { "str": "heavy-duty board" },
+    "extend": { "flags": [ "OPAQUE", "FULL_BOARD" ] }
+  },
+  {
+    "id": "hdhalfboard",
+    "copy-from": "hdboard_abstract",
+    "type": "vehicle_part",
+    "name": { "str": "heavy-duty quarterpanel" },
+    "description": "A half-height strong metal wall.  Keeps zombies outside the vehicle but allows people to see over it.",
+    "proportional": { "durability": 0.8 },
+    "extend": { "flags": [ "HALF_BOARD" ] }
+  },
+  {
+    "abstract": "clothboard_abstract",
+    "copy-from": "base_board_abstract",
+    "type": "vehicle_part",
+    "item": "sheet",
+    "broken_color": "dark_gray",
+    "durability": 15,
+    "folded_volume": "3750 ml",
+    "breaks_into": "ig_vp_cloth",
+    "requirements": {
+      "install": {
+        "skills": [ [ "fabrication", 1 ] ],
+        "time": "5 m",
+        "using": [ [ "vehicle_nail_install", 1 ] ]
+      },
+      "removal": { "skills": [ [ "fabrication", 2 ] ], "time": "1 m", "using": [ [ "vehicle_nail_removal", 1 ] ] },
+      "repair": { "skills": [ [ "fabrication", 2 ] ], "time": "1 m", "using": [ [ "adhesive", 2 ] ] }
+    },
+    "damage_reduction": { "all": 0, "bash": 3 }
+  },
+  {
+    "id": "clothboard",
+    "copy-from": "clothboard_abstract",
+    "type": "vehicle_part",
+    "name": { "str": "cloth board" },
+    "description": "A cloth wall.  Keeps zombies outside the vehicle and prevents people from seeing through it.",
+    "extend": { "flags": [ "OPAQUE", "FULL_BOARD" ] }
+  },
+  {
+    "id": "xlhalfboard",
+    "type": "vehicle_part",
+    "copy-from": "base_board_abstract",
+    "name": { "str": "extra light quarterpanel" },
+    "item": "pipe",
+    "looks_like": "halfboard",
+    "durability": 70,
+    "description": "A half-height thin metal wall.  Keeps zombies outside the vehicle but allows people to see over it.",
+    "breaks_into": [ { "item": "pipe", "prob": 50 } ],
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 1 ] ],
+        "time": "20 m",
+        "using": [ [ "welding_standard", 120 ] ]
+      },
+      "removal": { "skills": [ [ "mechanics", 2 ] ], "time": "10 m", "using": [ [ "vehicle_weld_removal", 1 ] ] },
+      "repair": { "skills": [ [ "mechanics", 2 ] ], "time": "5 m", "using": [ [ "repair_welding_standard", 3 ] ] }
+    },
+    "extend": { "flags": [ "HALF_BOARD" ] },
+    "damage_reduction": { "all": 5 }
+  },
+  {
+    "id": "xlframe",
+    "type": "vehicle_part",
+    "copy-from": "frame_abstract",
+    "name": { "str": "extra light frame" },
+    "item": "xlframe",
+    "durability": 150,
+    "description": "A light metal framework.  Other vehicle components can be mounted on it, and it can be attached to other frames to increase the vehicle's size.",
+    "breaks_into": [ { "item": "scrap_aluminum", "count": [ 5, 30 ] } ],
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 1 ] ],
+        "time": "60 m",
+        "using": [ [ "welding_alloys", 200 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "10 m",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": { "skills": [ [ "mechanics", 2 ] ], "time": "9 m", "using": [ [ "repair_welding_alloys", 5 ] ] }
+    },
+    "damage_reduction": { "all": 7 }
+  },
+  {
+    "id": "foldxlframe",
+    "type": "vehicle_part",
+    "copy-from": "frame_abstract",
+    "name": { "str": "foldable extra light frame" },
+    "item": "foldxlframe",
+    "durability": 150,
+    "description": "A light metal framework.  Other vehicle components can be mounted on it, and it can be attached to other frames to increase the vehicle's size.",
+    "folded_volume": "2500 ml",
+    "breaks_into": [ { "item": "scrap_aluminum", "count": [ 5, 30 ] } ],
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 1 ] ],
+        "time": "60 m",
+        "using": [ [ "welding_alloys", 200 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "10 m",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": { "skills": [ [ "mechanics", 2 ] ], "time": "9 m", "using": [ [ "repair_welding_alloys", 5 ] ] }
+    },
+    "damage_reduction": { "all": 7 }
+  },
+  {
+    "id": "frame",
+    "type": "vehicle_part",
+    "copy-from": "frame_abstract",
+    "item": "frame",
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 1 ] ],
+        "time": "60 m",
+        "using": [ [ "welding_standard", 200 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 1 ] ],
+        "time": "15 m",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": { "skills": [ [ "mechanics", 1 ] ], "time": "9 m", "using": [ [ "repair_welding_standard", 5 ] ] }
+    }
+  },
+  {
+    "id": "hdframe",
+    "type": "vehicle_part",
+    "copy-from": "frame_abstract",
+    "name": { "str": "heavy-duty frame" },
+    "item": "hdframe",
+    "color": "dark_gray",
+    "durability": 760,
+    "description": "A heavy metal framework.  Other vehicle components can be mounted on it, and it can be attached to other frames to increase the vehicle's size.  Increased mass makes it more resistant to damage in collisions.",
+    "breaks_into": "ig_vp_hdframe",
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 3 ] ],
+        "time": "120 m",
+        "using": [ [ "welding_standard", 400 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 1 ] ],
+        "time": "30 m",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": { "skills": [ [ "mechanics", 3 ] ], "time": "18 m", "using": [ [ "repair_welding_standard", 10 ] ] }
+    },
+    "damage_reduction": { "all": 30 }
+  },
+  {
+    "id": "stowboard",
+    "type": "vehicle_part",
+    "copy-from": "base_board_abstract",
+    "name": { "str": "stow board" },
+    "item": "sheet_metal",
+    "color": "white",
+    "durability": 80,
+    "description": "A metal wall with a storage locker.  Keeps zombies outside the vehicle and prevents people from seeing through it.",
+    "size": "62500 ml",
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "100 m",
+        "using": [ [ "welding_standard", 40 ] ]
+      },
+      "removal": { "skills": [ [ "mechanics", 2 ] ], "time": "15 m", "using": [ [ "vehicle_weld_removal", 1 ] ] },
+      "repair": { "skills": [ [ "mechanics", 3 ] ], "time": "10 m", "using": [ [ "repair_welding_standard", 5 ] ] }
+    },
+    "extend": { "categories": [ "cargo" ], "flags": [ "OPAQUE", "CARGO", "COVERED", "FULL_BOARD", "LOCKABLE_CARGO" ] },
+    "damage_reduction": { "all": 7 }
+  },
+  {
+    "id": "hdstowboard",
+    "copy-from": "stowboard",
+    "type": "vehicle_part",
+    "name": { "str": "heavy-duty stow board" },
+    "item": "steel_plate",
+    "color": "brown",
+    "broken_color": "dark_gray",
+    "proportional": { "durability": 4.15, "size": 0.76 },
+    "damage_reduction": { "all": 20 }
+  },
+  {
+    "type": "vehicle_part",
+    "abstract": "basketlg_abstract",
+    "name": { "str": "shopping cart basket" },
+    "categories": [ "cargo" ],
+    "looks_like": "basketsm",
+    "color": "brown",
+    "broken_color": "brown",
+    "damage_modifier": 60,
+    "durability": 75,
+    "size": "150 L",
+    "item": "basket",
+    "location": "center",
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 1 ] ],
+        "time": "20 m",
+        "using": [ [ "welding_standard", 120 ] ]
+      },
+      "removal": { "skills": [ [ "mechanics", 1 ] ], "time": "5 m", "using": [ [ "vehicle_weld_removal", 1 ] ] },
+      "repair": { "skills": [ [ "mechanics", 1 ], [ "fabrication", 2 ] ], "time": "5 m", "using": [ [ "repair_welding_standard", 3 ] ] }
+    },
+    "flags": [ "CARGO", "OBSTACLE" ],
+    "damage_reduction": { "all": 6 },
+    "variants": [ { "symbols": "o", "symbols_broken": "#" } ]
+  },
+  {
+    "copy-from": "basketlg_abstract",
+    "id": "basketlg",
+    "type": "vehicle_part",
+    "variants_bases": [ { "id": "cart", "label": "Cart" } ],
+    "variants": [ { "symbols": "o", "symbols_broken": "#" } ]
+  },
+  {
+    "id": "cargo_space_external",
+    "type": "vehicle_part",
+    "name": { "str": "external cargo rack" },
+    "item": "cargo_rack",
+    "location": "structure",
+    "categories": [ "cargo" ],
+    "broken_color": "dark_gray",
+    "durability": 250,
+    "description": "Storage space, mounted outside your vehicle's armor and vulnerable to damage.",
+    "size": "250 L",
+    "breaks_into": [  ],
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 3 ] ],
+        "time": "12 m",
+        "using": [ [ "welding_standard", 100 ] ]
+      },
+      "removal": { "skills": [ [ "mechanics", 2 ] ], "time": "30 m", "using": [ [ "vehicle_weld_removal", 1 ] ] },
+      "repair": { "skills": [ [ "mechanics", 4 ] ], "time": "6 m", "using": [ [ "repair_welding_standard", 5 ] ] }
+    },
+    "flags": [ "UNMOUNT_ON_DAMAGE", "CARGO", "PROTRUSION", "COVERED", "BOARDABLE" ],
+    "damage_reduction": { "all": 26 },
+    "variants": [ { "symbols": "=", "symbols_broken": "#" } ]
+  },
+  {
+    "id": "door",
+    "breaks_into": "ig_vp_frame",
+    "broken_color": "cyan",
+    "categories": [ "hull" ],
+    "color": "cyan",
+    "damage_modifier": 80,
+    "damage_reduction": { "all": 20 },
+    "description": "A door.  Has a window so you can see out of it, even when closed.",
+    "durability": 225,
+    "flags": [ "CARGO", "OBSTACLE", "OPENABLE", "BOARDABLE", "WINDOW", "DOOR", "LOCKABLE_DOOR" ],
+    "item": "frame",
+    "location": "center",
+    "looks_like": "t_door_metal_c",
+    "name": { "str": "door" },
+    "requirements": {
+      "install": { "skills": [ [ "mechanics", 2 ] ], "time": "60 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
+      "removal": { "skills": [ [ "mechanics", 2 ] ], "time": "30 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
+      "repair": { "skills": [ [ "mechanics", 3 ] ], "time": "5 m", "using": [ [ "repair_welding_standard", 3 ] ] }
+    },
+    "size": "2500 ml",
+    "type": "vehicle_part",
+    "variants_bases": [ { "id": "full", "label": "Full" } ],
+    "variants": [
+      { "id": "front", "label": "Front", "symbols": "+", "symbols_broken": "&" },
+      { "id": "front_left", "label": "Front Left", "symbols": "+", "symbols_broken": "&" },
+      { "id": "front_right", "label": "Front Right", "symbols": "+", "symbols_broken": "&" },
+      { "id": "left", "label": "Left", "symbols": "+", "symbols_broken": "&" },
+      { "id": "right", "label": "Right", "symbols": "+", "symbols_broken": "&" },
+      { "id": "rear", "label": "Rear", "symbols": "+", "symbols_broken": "&" },
+      { "id": "vertical_left", "label": "Left Vertical", "symbols": "+", "symbols_broken": "&" },
+      { "id": "vertical_right", "label": "Right Vertical", "symbols": "+", "symbols_broken": "&" },
+      { "id": "horizontal_front", "label": "Front Horizontal", "symbols": "+", "symbols_broken": "&" },
+      { "id": "horizontal_2", "label": "Thick Horizontal", "symbols": "+", "symbols_broken": "&" },
+      { "id": "horizontal_rear", "label": "Rear Horizontal", "symbols": "+", "symbols_broken": "&" },
+      { "id": "ne", "label": "Front Right", "symbols": "+", "symbols_broken": "&" },
+      { "id": "nw", "label": "Front Left", "symbols": "+", "symbols_broken": "&" },
+      { "id": "se", "label": "Rear Right", "symbols": "+", "symbols_broken": "&" },
+      { "id": "sw", "label": "Rear Left", "symbols": "+", "symbols_broken": "&" },
+      { "id": "wheel_left", "label": "Wheel Left", "symbols": "+", "symbols_broken": "&" },
+      { "id": "wheel_right", "label": "Wheel Right", "symbols": "+", "symbols_broken": "&" }
+    ]
+  },
+  {
+    "copy-from": "door",
+    "id": "cloth_flap_door",
+    "type": "vehicle_part",
+    "name": { "str": "cloth flap door" },
+    "description": "A cloth sheet that can be fastened into a closed position to act as a door.",
+    "item": "sheet",
+    "durability": 15,
+    "folded_volume": "2500 ml",
+    "breaks_into": "ig_vp_cloth",
+    "requirements": {
+      "install": { "skills": [ [ "fabrication", 1 ] ], "time": "10 m", "using": [ [ "vehicle_nail_install", 1 ] ] },
+      "removal": { "skills": [ [ "fabrication", 2 ] ], "time": "5 m", "using": [ [ "vehicle_nail_removal", 1 ] ] },
+      "repair": { "skills": [ [ "fabrication", 2 ] ], "time": "5 m", "using": [ [ "adhesive", 2 ] ] }
+    },
+    "damage_reduction": { "all": 0, "bash": 3 },
+    "delete": { "flags": [ "LOCKABLE_DOOR", "WINDOW" ] }
+  },
+  {
+    "copy-from": "cloth_flap_door",
+    "id": "cloth_curtain_door",
+    "looks_like": "door",
+    "type": "vehicle_part",
+    "name": { "str": "cloth curtain door" },
+    "description": "A cloth sheet that can be slid into a closed position to act as a door."
+  },
+  {
+    "id": "door_opaque",
+    "copy-from": "door",
+    "description": "A door.  Solid construction means you can't see through it when closed.",
+    "durability": 240,
+    "name": { "str": "opaque door" },
+    "extend": { "flags": [ "OPAQUE" ] },
+    "delete": { "flags": [ "WINDOW" ] },
+    "type": "vehicle_part",
+    "variants_bases": [ { "id": "full", "label": "Full" } ]
+  },
+  {
+    "id": "door_internal",
+    "copy-from": "door_opaque",
+    "damage_modifier": 75,
+    "description": "An interior door.  Solid construction means you can't see through it when closed.",
+    "name": { "str": "internal door" },
+    "type": "vehicle_part",
+    "requirements": {
+      "install": { "skills": [ [ "mechanics", 2 ] ], "time": "60 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
+      "removal": { "skills": [ [ "mechanics", 2 ] ], "time": "30 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
+      "repair": { "skills": [ [ "mechanics", 3 ] ], "time": "5 m", "using": [ [ "repair_welding_standard", 3 ] ] }
+    }
+  },
+  {
+    "id": "hddoor",
+    "copy-from": "door",
+    "breaks_into": "ig_vp_hdframe",
+    "damage_reduction": { "all": 30 },
+    "description": "A strong door.  Has a window so you can see out of it, even when closed.",
+    "durability": 600,
+    "item": "hdframe",
+    "name": { "str": "heavy-duty door" },
+    "requirements": {
+      "install": { "skills": [ [ "mechanics", 2 ] ], "time": "60 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
+      "removal": { "skills": [ [ "mechanics", 2 ] ], "time": "30 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
+      "repair": { "skills": [ [ "mechanics", 3 ] ], "time": "8 m", "using": [ [ "repair_welding_standard", 4 ] ] }
+    },
+    "type": "vehicle_part",
+    "variants_bases": [ { "id": "full", "label": "Full" } ]
+  },
+  {
+    "id": "hddoor_opaque",
+    "copy-from": "hddoor",
+    "description": "A strong door.  Solid construction means you can't see through it when closed.",
+    "durability": 660,
+    "looks_like": "door_opaque",
+    "name": { "str": "heavy-duty opaque door" },
+    "extend": { "flags": [ "OPAQUE" ] },
+    "delete": { "flags": [ "WINDOW" ] },
+    "type": "vehicle_part",
+    "variants_bases": [ { "id": "full", "label": "Full" } ]
+  },
+  {
+    "id": "hatch",
+    "copy-from": "door",
+    "description": "A strong door.  A window lets you see through it when closed.",
+    "durability": 420,
+    "name": { "str": "hatch" },
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "60 m",
+        "using": [ [ "welding_standard", 120 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "15 m",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": { "skills": [ [ "mechanics", 3 ] ], "time": "5 m", "using": [ [ "repair_welding_standard", 3 ] ] }
+    },
+    "size": "37500 ml",
+    "extend": { "flags": [ "LOCKABLE_CARGO", "MULTISQUARE", "COVERED" ] },
+    "type": "vehicle_part"
+  },
+  {
+    "id": "hatch_opaque",
+    "copy-from": "hatch",
+    "description": "A strong door.  Solid construction means you can't see through it when closed.",
+    "durability": 450,
+    "looks_like": "door_opaque",
+    "name": { "str": "opaque hatch" },
+    "extend": { "flags": [ "OPAQUE" ] },
+    "delete": { "flags": [ "WINDOW" ] },
+    "type": "vehicle_part"
+  },
+  {
+    "id": "hdhatch",
+    "copy-from": "hatch",
+    "breaks_into": "ig_vp_hdframe",
+    "damage_reduction": { "all": 30 },
+    "description": "A very strong door.  A window lets you see through it when closed.",
+    "durability": 900,
+    "item": "hdframe",
+    "name": { "str": "heavy-duty hatch" },
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 3 ] ],
+        "time": "80 m",
+        "using": [ [ "welding_standard", 160 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "30 m",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": { "skills": [ [ "mechanics", 4 ] ], "time": "8 m", "using": [ [ "repair_welding_standard", 4 ] ] }
+    },
+    "type": "vehicle_part"
+  },
+  {
+    "id": "hdhatch_opaque",
+    "copy-from": "hdhatch",
+    "description": "A very strong door.  Solid construction means you can't see through it when closed.",
+    "durability": 1000,
+    "looks_like": "hatch_opaque",
+    "name": { "str": "heavy-duty opaque hatch" },
+    "extend": { "flags": [ "OPAQUE" ] },
+    "delete": { "flags": [ "WINDOW" ] },
+    "type": "vehicle_part"
+  },
+  {
+    "id": "crane_medium",
+    "type": "vehicle_part",
+    "name": { "str": "boom crane" },
+    "item": "cantilever_medium",
+    "location": "structure",
+    "categories": [ "utility" ],
+    "broken_color": "light_blue",
+    "durability": 200,
+    "description": "A rigid steel boom crane.  If it is in your line of sight and within two tiles of another vehicle, you will automatically use it when you want to jack up the other vehicle to change its wheels.  To use it to lift a heavy component like an engine that you are installing or removing, the crane must have line of sight to where it is going and it must be within four tiles of it.",
+    "breaks_into": [ { "item": "pipe", "count": [ 8, 32 ] }, { "item": "scrap", "count": [ 8, 24 ] } ],
+    "qualities": [ [ "LIFT", 40 ], [ "JACK", 40 ] ],
+    "requirements": {
+      "install": { "skills": [ [ "mechanics", 5 ] ], "time": "60 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
+      "removal": { "skills": [ [ "mechanics", 3 ] ], "time": "30 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
+      "repair": { "skills": [ [ "mechanics", 6 ] ], "time": "5 m", "using": [ [ "repair_welding_standard", 3 ] ] }
+    },
+    "flags": [ "PROTRUSION" ],
+    "pseudo_tools": [ { "id": "crane_pseudo_item" } ],
+    "damage_reduction": { "all": 48 },
+    "variants": [ { "symbols": "=", "symbols_broken": "*" } ]
+  },
+  {
+    "id": "crane_medium_internal",
+    "type": "vehicle_part",
+    "categories": [ "utility" ],
+    "copy-from": "crane_medium",
+    "name": { "str": "internal boom crane" },
+    "location": "center",
+    "delete": { "flags": [ "PROTRUSION" ] },
+    "extend": { "flags": [ "OBSTACLE" ] }
+  },
+  {
+    "id": "crane_small",
+    "type": "vehicle_part",
+    "name": { "str": "telescopic crane" },
+    "item": "cantilever_small",
+    "location": "center",
+    "categories": [ "utility" ],
+    "broken_color": "light_blue",
+    "durability": 100,
+    "description": "An extendable cantilever crane.  If it is in your line of sight and within two tiles of another vehicle, you will automatically use it when you want to jack up the other vehicle to change its wheels.  To use it to lift a heavy component like an engine that you are installing or removing, the crane must have line of sight to where it is going and it must be within four tiles of it.",
+    "folded_volume": "3 L",
+    "breaks_into": [ { "item": "pipe", "count": [ 2, 8 ] }, { "item": "scrap", "count": [ 2, 6 ] } ],
+    "qualities": [ [ "LIFT", 7 ], [ "JACK", 7 ] ],
+    "requirements": {
+      "install": { "skills": [ [ "mechanics", 2 ] ], "time": "60 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
+      "removal": { "skills": [ [ "mechanics", 2 ] ], "time": "30 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
+      "repair": { "skills": [ [ "mechanics", 3 ] ], "time": "5 m", "using": [ [ "repair_welding_standard", 3 ] ] }
+    },
+    "flags": [ "PROTRUSION" ],
+    "pseudo_tools": [ { "id": "crane_pseudo_item" } ],
+    "damage_reduction": { "all": 42 },
+    "variants": [ { "symbols": "=", "symbols_broken": "*" } ]
+  },
+  {
+    "id": "crane_tiny",
+    "type": "vehicle_part",
+    "name": { "str": "pallet lifter" },
+    "item": "pallet_lifter",
+    "location": "center",
+    "categories": [ "utility" ],
+    "broken_color": "light_blue",
+    "durability": 100,
+    "description": "A small pallet lifter.  If it is in your line of sight and within two tiles of another vehicle, you will automatically use it when you want to jack up the other vehicle to change its wheels.  To use it to lift a heavy component like an engine that you are installing or removing, the crane must have line of sight to where it is going and it must be within four tiles of it.",
+    "folded_volume": "3 L",
+    "breaks_into": [ { "item": "pipe", "count": [ 1, 4 ] }, { "item": "scrap", "count": [ 2, 6 ] } ],
+    "qualities": [ [ "LIFT", 1 ], [ "JACK", 1 ] ],
+    "requirements": {
+      "install": { "skills": [ [ "mechanics", 2 ] ], "time": "60 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
+      "removal": { "skills": [ [ "mechanics", 2 ] ], "time": "30 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
+      "repair": { "skills": [ [ "mechanics", 3 ] ], "time": "5 m", "using": [ [ "repair_welding_standard", 3 ] ] }
+    },
+    "flags": [ "PROTRUSION" ],
+    "damage_reduction": { "all": 40 },
+    "variants": [ { "symbols": "=", "symbols_broken": "*" } ]
+  },
+  {
+    "id": "forklift_fork",
+    "type": "vehicle_part",
+    "name": { "str": "forklift arm" },
+    "item": "frame",
+    "location": "structure",
+    "categories": [ "utility" ],
+    "damage_modifier": 200,
+    "durability": 300,
+    "description": "A pair of forklift arms.  If it is in your line of sight and within two tiles of another vehicle, you will automatically use it when you want to jack up the other vehicle to change its wheels.  To use it to lift a heavy component like an engine that you are installing or removing, the crane must have line of sight to where it is going and it must be within four tiles of it.",
+    "size": "12500 ml",
+    "breaks_into": [
+      { "item": "steel_lump", "count": [ 4, 6 ] },
+      { "item": "steel_chunk", "count": [ 4, 6 ] },
+      { "item": "scrap", "count": [ 4, 6 ] }
+    ],
+    "qualities": [ [ "LIFT", 2 ], [ "JACK", 6 ] ],
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "30 m",
+        "using": [ [ "welding_standard", 60 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "30 m",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": { "skills": [ [ "mechanics", 3 ] ], "time": "5 m", "using": [ [ "repair_welding_standard", 3 ] ] }
+    },
+    "flags": [ "CARGO", "PROTRUSION" ],
+    "pseudo_tools": [ { "id": "crane_pseudo_item" } ],
+    "damage_reduction": { "all": 42 },
+    "variants": [ { "symbols": "|", "symbols_broken": "x" } ]
+  },
+  {
+    "id": "rockwheel",
+    "type": "vehicle_part",
+    "name": { "str": "rockwheel" },
+    "item": "v_rockwheel_item",
+    "location": "structure",
+    "categories": [ "utility" ],
+    "looks_like": "crane_medium",
+    "durability": 300,
+    "description": "A large metal disc, powered by the vehicle's engines.  Use the vehicle controls to turn it on or off.  When turned on, it will stop the vehicle unless it has a strong engine.  When turned on, it will dig a shallow pit in dirt.  Mount it on the edge of your vehicle.",
+    "power": "-70000 W",
+    "breaks_into": [
+      { "item": "steel_lump", "count": [ 4, 6 ] },
+      { "item": "steel_chunk", "count": [ 4, 6 ] },
+      { "item": "scrap", "count": [ 4, 6 ] }
+    ],
+    "transform_terrain": { "pre_flags": [ "DIGGABLE" ], "post_terrain": "t_pit_shallow" },
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 5 ] ],
+        "time": "60 m",
+        "using": [ [ "welding_standard", 100 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 3 ] ],
+        "time": "30 m",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": { "skills": [ [ "mechanics", 6 ] ], "time": "8 m", "using": [ [ "repair_welding_standard", 4 ] ] }
+    },
+    "flags": [ "PROTRUSION", "EXTRA_DRAG", "ROCKWHEEL", "TRANSFORM_TERRAIN" ],
+    "damage_reduction": { "all": 132 },
+    "variants": [ { "symbols": "&", "symbols_broken": "x" } ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "air_jack",
+    "name": { "str": "air jack system" },
+    "item": "v_airjack_item",
+    "location": "under",
+    "categories": [ "utility" ],
+    "broken_color": "light_blue",
+    "looks_like": "crane_small",
+    "durability": 200,
+    "description": "An extendable metal pylon used to replace a portable jack.  If mounted to a vehicle, it could be used to lift it up.",
+    "breaks_into": [
+      { "item": "pipe", "count": [ 4, 12 ] },
+      { "item": "scrap", "count": [ 8, 24 ] },
+      { "item": "jack", "count": [ 1, 1 ] }
+    ],
+    "qualities": [ [ "SELF_JACK", 17 ] ],
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "60 m",
+        "using": [ [ "welding_standard", 120 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "30 m",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": { "skills": [ [ "mechanics", 3 ] ], "time": "5 m", "using": [ [ "repair_welding_standard", 3 ] ] }
+    },
+    "flags": [ "PROTRUSION", "SELF_JACK" ],
+    "damage_reduction": { "all": 36 },
+    "variants": [ { "symbols": "[", "symbols_broken": "/" } ]
+  },
+  {
+    "id": "ram_alloy",
+    "copy-from": "ram_blaze",
+    "type": "vehicle_part",
+    "name": { "str": "superalloy ram" },
+    "item": "alloy_plate",
+    "color": "dark_gray",
+    "broken_color": "dark_gray",
+    "durability": 750,
+    "breaks_into": [
+      { "item": "steel_lump", "count": [ 4, 6 ] },
+      { "item": "steel_chunk", "count": [ 4, 6 ] },
+      { "item": "scrap", "count": [ 4, 6 ] }
+    ],
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 4 ] ],
+        "time": "40 m",
+        "using": [ [ "welding_standard", 200 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "15 m",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": { "skills": [ [ "mechanics", 5 ] ], "time": "10 m", "using": [ [ "repair_welding_standard", 5 ] ] }
+    },
+    "damage_reduction": { "all": 70 }
+  },
+  {
+    "id": "ram_hardsteel",
+    "copy-from": "ram_blaze",
+    "type": "vehicle_part",
+    "name": { "str": "heavy steel ram" },
+    "item": "hard_plate",
+    "color": "cyan",
+    "broken_color": "cyan",
+    "durability": 860,
+    "breaks_into": [
+      { "item": "steel_lump", "count": [ 4, 6 ] },
+      { "item": "steel_chunk", "count": [ 4, 6 ] },
+      { "item": "scrap", "count": [ 4, 6 ] }
+    ],
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 4 ] ],
+        "time": "50 m",
+        "using": [ [ "welding_standard", 200 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "15 m",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": { "skills": [ [ "mechanics", 5 ] ], "time": "15 m", "using": [ [ "repair_welding_standard", 6 ] ] }
+    },
+    "damage_reduction": { "all": 87 }
+  },
+  {
+    "id": "ram_military",
+    "copy-from": "ram_blaze",
+    "type": "vehicle_part",
+    "name": { "str": "military composite ram" },
+    "item": "mil_plate",
+    "color": "green",
+    "broken_color": "green",
+    "durability": 875,
+    "breaks_into": [
+      { "item": "steel_lump", "count": [ 4, 6 ] },
+      { "item": "steel_chunk", "count": [ 4, 6 ] },
+      { "item": "scrap", "count": [ 4, 6 ] },
+      { "item": "ceramic_armor", "count": [ 0, 4 ] }
+    ],
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 6 ] ],
+        "time": "50 m",
+        "using": [ [ "welding_standard", 200 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 4 ] ],
+        "time": "20 m",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": {  }
+    },
+    "extend": { "flags": [ "NO_REPAIR" ] },
+    "damage_reduction": { "all": 75, "bullet": 131 }
+  },
+  {
+    "id": "ram_spiked",
+    "copy-from": "ram_blaze",
+    "type": "vehicle_part",
+    "name": { "str": "spiked ram" },
+    "item": "spiked_plate",
+    "color": "red",
+    "broken_color": "red",
+    "durability": 775,
+    "damage_modifier": 200,
+    "breaks_into": [
+      { "item": "steel_lump", "count": [ 4, 6 ] },
+      { "item": "steel_chunk", "count": [ 4, 6 ] },
+      { "item": "scrap", "count": [ 4, 6 ] },
+      { "item": "spike", "count": [ 0, 2 ] }
+    ],
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 3 ] ],
+        "time": "45 m",
+        "using": [ [ "welding_standard", 200 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "15 m",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": { "skills": [ [ "mechanics", 4 ] ], "time": "10 m", "using": [ [ "repair_welding_standard", 5 ] ] }
+    },
+    "damage_reduction": { "all": 60 }
+  },
+  {
+    "id": "tearer",
+    "type": "vehicle_part",
+    "copy-from": "ram_blaze",
+    "name": { "str": "shredder" },
+    "item": "tearer",
+    "color": "dark_gray",
+    "broken_color": "dark_gray",
+    "durability": 450,
+    "power": "-1750 W",
+    "damage_modifier": 500,
+    "breaks_into": [  ],
+    "description": "A circular blade, powered by the vehicle's engine.  It will dramatically increase the damage the vehicle delivers in collisions.  Mount on the edges of the vehicle, preferably the front.",
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 5 ] ],
+        "time": "60 m",
+        "using": [ [ "welding_standard", 120 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 3 ] ],
+        "time": "30 m",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": { "skills": [ [ "mechanics", 6 ] ], "time": "15 m", "using": [ [ "repair_welding_standard", 6 ] ] }
+    },
+    "extend": { "flags": [ "SHARP", "UNMOUNT_ON_DAMAGE" ] },
+    "delete": { "flags": [ "OBSTACLE" ] },
+    "damage_reduction": { "all": 40 },
+    "variants": [ { "symbols": "*", "symbols_broken": "x" } ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "trunk_floor",
+    "name": { "str": "floor trunk" },
+    "looks_like": "t_carpet_red",
+    "categories": [ "cargo" ],
+    "color": "white",
+    "durability": 400,
+    "description": "An aisle.  A hatch lets you access a cargo space beneath it.",
+    "size": "87500 ml",
+    "item": "cargo_aisle",
+    "location": "center",
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 1 ] ],
+        "time": "30 m",
+        "using": [ [ "welding_standard", 200 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "30 m",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": { "skills": [ [ "mechanics", 2 ] ], "time": "10 m", "using": [ [ "repair_welding_standard", 6 ] ] }
+    },
+    "flags": [ "AISLE", "BOARDABLE", "CARGO", "LOCKABLE_CARGO", "COVERED" ],
+    "breaks_into": "ig_vp_sheet_metal",
+    "damage_reduction": { "all": 28 },
+    "variants": [ { "symbols": "=", "symbols_broken": "#" } ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "aisle",
+    "name": { "str": "aisle" },
+    "looks_like": "t_metal_floor",
+    "categories": [ "hull", "passengers" ],
+    "color": "white",
+    "durability": 400,
+    "description": "An aisle.",
+    "item": "sheet_metal",
+    "location": "center",
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 1 ] ],
+        "time": "30 m",
+        "using": [ [ "welding_standard", 200 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "30 m",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": { "skills": [ [ "mechanics", 2 ] ], "time": "6 m", "using": [ [ "repair_welding_standard", 5 ] ] }
+    },
+    "flags": [ "AISLE", "BOARDABLE" ],
+    "breaks_into": "ig_vp_sheet_metal",
+    "damage_reduction": { "all": 28 },
+    "variants": [
+      { "id": "horizontal", "label": "Horizontal", "symbols": "┃┃━┃┃┃━┃", "symbols_broken": "#" },
+      { "id": "vertical", "label": "Vertical", "symbols": "━━┃━━━┃━", "symbols_broken": "#" }
+    ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "hdroof",
+    "name": { "str": "heavy-duty roof" },
+    "categories": [ "hull" ],
+    "color": "dark_gray",
+    "broken_color": "dark_gray",
+    "durability": 1000,
+    "description": "A thick metal roof.",
+    "item": "steel_plate",
+    "location": "roof",
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 1 ] ],
+        "time": "50 m",
+        "using": [ [ "welding_standard", 300 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "30 m",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": { "skills": [ [ "mechanics", 2 ] ], "time": "10 m", "using": [ [ "repair_welding_standard", 6 ] ] }
+    },
+    "flags": [ "ROOF" ],
+    "breaks_into": "ig_vp_steel_plate",
+    "damage_reduction": { "all": 30 },
+    "variants": [ { "symbols": "#", "symbols_broken": "#" } ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "roof",
+    "name": { "str": "roof" },
+    "categories": [ "hull" ],
+    "broken_color": "dark_gray",
+    "durability": 240,
+    "description": "A metal roof.",
+    "item": "sheet_metal",
+    "location": "roof",
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 1 ] ],
+        "time": "30 m",
+        "using": [ [ "welding_standard", 200 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "30 m",
+        "using": [ [ "vehicle_weld_removal", 1 ], [ "vehicle_wrench_2", 1 ] ]
+      },
+      "repair": { "skills": [ [ "mechanics", 2 ] ], "time": "6 m", "using": [ [ "repair_welding_standard", 5 ] ] }
+    },
+    "flags": [ "ROOF" ],
+    "breaks_into": "ig_vp_sheet_metal",
+    "damage_reduction": { "all": 20 },
+    "variants": [ { "symbols": "#", "symbols_broken": "#" } ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "storage_battery_mount",
+    "name": { "str": "swappable storage battery case" },
+    "categories": [ "energy" ],
+    "broken_color": "red",
+    "damage_modifier": 80,
+    "durability": 300,
+    "description": "A battery case for storage batteries.  Allows quick removal or addition of a storage battery, if you can lift the battery.",
+    "item": "it_battery_mount",
+    "location": "fuel_source",
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "10 m",
+        "using": [ [ "welding_standard", 40 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "10 m",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": { "skills": [ [ "mechanics", 3 ] ], "time": "5 m", "using": [ [ "repair_welding_standard", 1 ] ] }
+    },
+    "flags": [ "BATTERY_MOUNT" ],
+    "breaks_into": [
+      { "item": "steel_lump", "prob": 50 },
+      { "item": "steel_chunk", "count": [ 1, 2 ] },
+      { "item": "scrap", "count": [ 0, 3 ] }
+    ],
+    "damage_reduction": { "all": 8, "bash": 10 },
+    "variants": [ { "symbols": "O", "symbols_broken": "#" } ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "minireactor",
+    "name": { "str": "minireactor" },
+    "categories": [ "energy" ],
+    "color": "light_green",
+    "broken_color": "red",
+    "damage_modifier": 80,
+    "durability": 580,
+    "description": "A small nuclear reactor.  When loaded with plutonium cells and turned on, will generate a lot of electrical power.",
+    "power": "100 W",
+    "epower": "149200 W",
+    "fuel_type": "plut_cell",
+    "item": "minireactor",
+    "location": "fuel_source",
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 6 ] ],
+        "time": "30 m",
+        "using": [ [ "welding_standard", 5 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 4 ] ],
+        "time": "30 m",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": {
+        "skills": [ [ "mechanics", 7 ] ],
+        "time": "60 m",
+        "using": [ [ "repair_welding_standard", 5 ], [ "repair_welding_alloys", 2 ], [ "vehicle_wrench_2", 1 ], [ "vehicle_screw", 1 ] ]
+      }
+    },
+    "flags": [ "REACTOR" ],
+    "breaks_into": [
+      { "item": "steel_lump", "count": [ 6, 11 ] },
+      { "item": "steel_chunk", "count": [ 6, 11 ] },
+      { "item": "scrap", "count": [ 6, 11 ] }
+    ],
+    "damage_reduction": { "all": 50 },
+    "variants": [ { "symbols": "O", "symbols_broken": "#" } ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "trunk",
+    "name": { "str": "trunk" },
+    "looks_like": "f_locker",
+    "categories": [ "cargo" ],
+    "color": "brown",
+    "broken_color": "brown",
+    "damage_modifier": 80,
+    "durability": 350,
+    "size": "200 L",
+    "item": "frame",
+    "location": "center",
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 1 ] ],
+        "time": "20 m",
+        "using": [ [ "welding_standard", 120 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "20 m",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": { "skills": [ [ "mechanics", 2 ] ], "time": "5 m", "using": [ [ "repair_welding_standard", 3 ] ] }
+    },
+    "flags": [ "CARGO", "LOCKABLE_CARGO", "COVERED", "BOARDABLE", "SIMPLE_PART" ],
+    "breaks_into": "ig_vp_frame",
+    "damage_reduction": { "all": 30 },
+    "variants": [ { "symbols": "H", "symbols_broken": "#" } ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "metal_boat_hull",
+    "name": { "str": "metal boat hull" },
+    "description": "A metal sheet that keeps the water out of your boat.",
+    "categories": [ "hull" ],
+    "color": "dark_gray",
+    "looks_like": "boat_board",
+    "damage_modifier": 50,
+    "durability": 240,
+    "item": "sheet_metal",
+    "location": "under",
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 4 ] ],
+        "time": "40 m",
+        "using": [ [ "welding_standard", 240 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "30 m",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": { "skills": [ [ "mechanics", 5 ] ], "time": "10 m", "using": [ [ "repair_welding_standard", 6 ] ] }
+    },
+    "flags": [ "FLOATS" ],
+    "breaks_into": "ig_vp_sheet_metal",
+    "damage_reduction": { "all": 28 },
+    "variants": [ { "symbols": "o", "symbols_broken": "x" } ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "controls",
+    "name": { "str": "controls" },
+    "categories": [ "operations" ],
+    "broken_color": "red",
+    "damage_modifier": 10,
+    "durability": 250,
+    "description": "A steering wheel and accelerator and brake pedals.",
+    "bonus": 10,
+    "folded_volume": "1500 ml",
+    "item": "vehicle_controls",
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "60 m",
+        "using": [ [ "welding_standard", 120 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "15 m",
+        "using": [ [ "vehicle_weld_removal", 15 ] ]
+      },
+      "repair": {
+        "skills": [ [ "mechanics", 3 ] ],
+        "time": "30 m",
+        "using": [ [ "repair_welding_standard", 3 ], [ "soldering_standard", 8 ], [ "vehicle_wrench_1", 1 ], [ "vehicle_screw", 1 ] ]
+      }
+    },
+    "flags": [ "CONTROLS" ],
+    "breaks_into": [
+      { "item": "steel_lump" },
+      { "item": "steel_chunk", "count": [ 1, 3 ] },
+      { "item": "scrap", "count": [ 1, 3 ] },
+      { "item": "cable", "charges": [ 0, 4 ] }
+    ],
+    "damage_reduction": { "all": 6 },
+    "variants": [ { "symbols": "$", "symbols_broken": "$" } ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "muffler",
+    "name": { "str": "muffler" },
+    "categories": [ "other" ],
+    "damage_modifier": 10,
+    "durability": 50,
+    "description": "A metal pipe that somewhat reduces engine noise.  Also vents heat from an installed vehicle cooler.",
+    "bonus": 40,
+    "item": "muffler",
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "45 m",
+        "using": [ [ "welding_standard", 80 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "30 m",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": { "skills": [ [ "mechanics", 3 ] ], "time": "10 m", "using": [ [ "repair_welding_standard", 2 ] ] }
+    },
+    "flags": [ "MUFFLER" ],
+    "breaks_into": [
+      { "item": "steel_lump", "count": [ 3, 5 ] },
+      { "item": "steel_chunk", "count": [ 3, 5 ] },
+      { "item": "scrap", "count": [ 3, 5 ] }
+    ],
+    "damage_reduction": { "all": 9 },
+    "variants": [ { "symbols": "/", "symbols_broken": "/" } ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "plating_steel",
+    "name": { "str": "steel plating" },
+    "categories": [ "warfare" ],
+    "color": "light_cyan",
+    "broken_color": "light_cyan",
+    "durability": 660,
+    "item": "steel_plate",
+    "location": "armor",
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "50 m",
+        "using": [ [ "welding_standard", 240 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "30 m",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": { "skills": [ [ "mechanics", 3 ] ], "time": "10 m", "using": [ [ "repair_welding_standard", 6 ] ] }
+    },
+    "flags": [ "ARMOR" ],
+    "breaks_into": "ig_vp_steel_plate",
+    "damage_reduction": { "all": 56 },
+    "variants": [ { "symbols": ")", "symbols_broken": ")" } ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "plating_superalloy",
+    "name": { "str": "superalloy plating" },
+    "categories": [ "warfare" ],
+    "color": "dark_gray",
+    "broken_color": "dark_gray",
+    "durability": 600,
+    "item": "alloy_plate",
+    "location": "armor",
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 4 ] ],
+        "time": "50 m",
+        "using": [ [ "welding_standard", 240 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "30 m",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": { "skills": [ [ "mechanics", 5 ] ], "time": "10 m", "using": [ [ "repair_welding_standard", 6 ] ] }
+    },
+    "flags": [ "ARMOR" ],
+    "breaks_into": [
+      { "item": "steel_lump", "count": [ 4, 6 ] },
+      { "item": "steel_chunk", "count": [ 4, 6 ] },
+      { "item": "scrap", "count": [ 4, 6 ] }
+    ],
+    "damage_reduction": { "all": 56 },
+    "variants": [ { "symbols": ")", "symbols_broken": ")" } ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "plating_spiked",
+    "name": { "str": "spiked plating" },
+    "categories": [ "warfare" ],
+    "color": "red",
+    "broken_color": "red",
+    "damage_modifier": 150,
+    "durability": 620,
+    "description": "A spiked plate that will increase the damage delivered to someone else in collisions.",
+    "item": "spiked_plate",
+    "location": "armor",
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 3 ] ],
+        "time": "50 m",
+        "using": [ [ "welding_standard", 240 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "30 m",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": { "skills": [ [ "mechanics", 4 ] ], "time": "10 m", "using": [ [ "repair_welding_standard", 6 ] ] }
+    },
+    "flags": [ "ARMOR", "SHARP" ],
+    "breaks_into": [
+      { "item": "steel_lump", "count": [ 4, 6 ] },
+      { "item": "steel_chunk", "count": [ 4, 6 ] },
+      { "item": "scrap", "count": [ 4, 6 ] },
+      { "item": "spike", "count": [ 0, 2 ] }
+    ],
+    "damage_reduction": { "all": 48 },
+    "variants": [ { "symbols": ")", "symbols_broken": ")" } ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "plating_hard",
+    "name": { "str": "hard plating" },
+    "categories": [ "warfare" ],
+    "color": "cyan",
+    "broken_color": "cyan",
+    "durability": 780,
+    "item": "hard_plate",
+    "location": "armor",
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 4 ] ],
+        "time": "60 m",
+        "using": [ [ "welding_standard", 300 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "30 m",
+        "using": [ [ "vehicle_weld_removal_cut_resistant", 1 ] ]
+      },
+      "repair": { "skills": [ [ "mechanics", 5 ] ], "time": "15 m", "using": [ [ "repair_welding_standard", 8 ] ] }
+    },
+    "flags": [ "ARMOR" ],
+    "breaks_into": [
+      { "item": "steel_lump", "count": [ 4, 6 ] },
+      { "item": "steel_chunk", "count": [ 4, 6 ] },
+      { "item": "scrap", "count": [ 4, 6 ] }
+    ],
+    "damage_reduction": { "all": 70 },
+    "variants": [ { "symbols": ")", "symbols_broken": ")" } ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "plating_military",
+    "name": { "str": "military composite armor plating" },
+    "categories": [ "warfare" ],
+    "color": "green",
+    "broken_color": "green",
+    "durability": 700,
+    "item": "mil_plate",
+    "location": "armor",
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 6 ] ],
+        "time": "60 m",
+        "using": [ [ "welding_standard", 300 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 4 ] ],
+        "time": "30 m",
+        "using": [ [ "vehicle_weld_removal_cut_resistant", 1 ] ]
+      }
+    },
+    "flags": [ "ARMOR", "NO_REPAIR" ],
+    "breaks_into": [
+      { "item": "steel_lump", "count": [ 4, 6 ] },
+      { "item": "steel_chunk", "count": [ 4, 6 ] },
+      { "item": "scrap", "count": [ 4, 6 ] },
+      { "item": "ceramic_armor", "count": [ 0, 4 ] }
+    ],
+    "damage_reduction": { "all": 60, "bullet": 105 },
+    "variants": [ { "symbols": ")", "symbols_broken": ")" } ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "cargo_space",
+    "name": { "str": "cargo space" },
+    "looks_like": "box",
+    "categories": [ "cargo" ],
+    "broken_color": "dark_gray",
+    "durability": 250,
+    "size": "500 L",
+    "item": "cargo_rack",
+    "location": "center",
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 1 ] ],
+        "time": "40 m",
+        "using": [ [ "welding_standard", 240 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "30 m",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": { "skills": [ [ "mechanics", 2 ] ], "time": "20 m", "using": [ [ "repair_welding_standard", 12 ] ] }
+    },
+    "flags": [ "BOARDABLE", "CARGO", "COVERED" ],
+    "breaks_into": [
+      { "item": "steel_lump", "count": [ 6, 8 ] },
+      { "item": "steel_chunk", "count": [ 6, 8 ] },
+      { "item": "scrap", "count": [ 6, 8 ] }
+    ],
+    "damage_reduction": { "all": 28 },
+    "variants": [ { "symbols": "=", "symbols_broken": "#" } ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "livestock_stall",
+    "name": { "str": "livestock stall" },
+    "categories": [ "passengers", "cargo" ],
+    "looks_like": "cargo_space",
+    "broken_color": "dark_gray",
+    "durability": 250,
+    "description": "A cargo space for carrying livestock.  'e'xamine it to capture an animal next to you, or to release the animal currently contained.  When selecting an animal to capture, choose its tile relative to you, not the part.",
+    "size": "200 L",
+    "item": "livestock_carrier",
+    "location": "center",
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 1 ] ],
+        "time": "40 m",
+        "using": [ [ "welding_standard", 240 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 1 ] ],
+        "time": "30 m",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": { "skills": [ [ "mechanics", 2 ] ], "time": "20 m", "using": [ [ "repair_welding_standard", 12 ] ] }
+    },
+    "flags": [ "BOARDABLE", "CARGO", "COVERED", "CAPTURE_MONSTER_VEH" ],
+    "breaks_into": [
+      { "item": "steel_lump", "count": [ 6, 8 ] },
+      { "item": "steel_chunk", "count": [ 6, 8 ] },
+      { "item": "scrap", "count": [ 6, 8 ] }
+    ],
+    "damage_reduction": { "all": 30 },
+    "variants": [ { "symbols": "=", "symbols_broken": "#" } ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "animal_compartment",
+    "copy-from": "livestock_stall",
+    "name": { "str": "animal compartment" },
+    "durability": 125,
+    "description": "A large locker for transporting smaller animals.  'e'xamine it to capture an animal next to you, or to release the animal currently contained.  When selecting an animal to capture, choose its tile relative to you, not the part.",
+    "size": "50 L",
+    "item": "animal_locker",
+    "flags": [ "CARGO", "COVERED", "CAPTURE_MONSTER_VEH", "OBSTACLE" ],
+    "breaks_into": [ { "item": "steel_chunk", "count": [ 1, 2 ] }, { "item": "scrap", "count": [ 3, 4 ] } ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "drive_by_wire_controls",
+    "name": { "str": "drive by wire controls" },
+    "categories": [ "operations" ],
+    "color": "light_red",
+    "broken_color": "red",
+    "damage_modifier": 10,
+    "durability": 200,
+    "description": "A sophisticated set of electronic controls that allow you to control the vehicle from a vehicle remote while you are not in it.  You can 'e'xamine the tile to access the controls, or use the vehicle control key (default '^').",
+    "folded_volume": "2500 ml",
+    "item": "drive_by_wire_controls",
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 3 ] ],
+        "time": "60 m",
+        "using": [ [ "welding_standard", 120 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "30 m",
+        "using": [ [ "vehicle_weld_removal", 1 ], [ "vehicle_wrench_2", 1 ] ]
+      },
+      "repair": {
+        "skills": [ [ "mechanics", 4 ] ],
+        "time": "20 m",
+        "using": [ [ "repair_welding_standard", 6 ], [ "soldering_standard", 5 ] ]
+      }
+    },
+    "flags": [ "CONTROLS", "REMOTE_CONTROLS" ],
+    "breaks_into": [ { "item": "motor_tiny" }, { "item": "steel_chunk", "count": [ 1, 3 ] }, { "item": "scrap", "count": [ 1, 3 ] } ],
+    "variants": [ { "symbols": "$", "symbols_broken": "$" } ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "robot_controls",
+    "name": { "str": "robot controls" },
+    "categories": [ "operations" ],
+    "color": "white",
+    "damage_modifier": 10,
+    "durability": 300,
+    "description": "A set of controls to allow a vehicle to drive itself, or you to drive it remotely using a controller.",
+    "item": "robot_controls",
+    "folded_volume": "1250 ml",
+    "location": "center",
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 4 ] ],
+        "time": "60 m",
+        "using": [ [ "welding_standard", 120 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "30 m",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": {
+        "skills": [ [ "mechanics", 5 ] ],
+        "time": "20 m",
+        "using": [ [ "repair_welding_standard", 3 ], [ "soldering_standard", 3 ] ]
+      }
+    },
+    "flags": [ "REMOTE_CONTROLS", "OBSTACLE", "CABLE_PORTS" ],
+    "breaks_into": [
+      { "item": "motor_tiny", "count": [ 1, 3 ] },
+      { "item": "steel_chunk", "count": [ 1, 3 ] },
+      { "item": "e_scrap", "count": [ 1, 5 ] }
+    ],
+    "variants": [ { "symbols": "&", "symbols_broken": "x" } ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "vehicle_scoop",
+    "name": { "str": "scoop" },
+    "categories": [ "utility" ],
+    "broken_color": "dark_gray",
+    "durability": 100,
+    "description": "A scoop.  Use the vehicle controls to turn it on or off.  When turned on, it will scoop up loose items that it travels over until it's full.",
+    "epower": "-10 W",
+    "size": "100 L",
+    "damage_modifier": 10,
+    "item": "v_scoop_item",
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 1 ] ],
+        "time": "50 m",
+        "using": [ [ "welding_standard", 100 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 1 ] ],
+        "time": "30 m",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": { "skills": [ [ "mechanics", 2 ] ], "time": "12 m", "using": [ [ "repair_welding_standard", 3 ] ] }
+    },
+    "flags": [ "SCOOP", "CARGO", "ENABLED_DRAINS_EPOWER" ],
+    "location": "under",
+    "breaks_into": [ { "item": "scrap", "count": [ 2, 5 ] }, { "item": "plastic_chunk", "count": [ 1, 5 ] } ],
+    "damage_reduction": { "all": 24 },
+    "variants": [ { "symbols": "R", "symbols_broken": ";" } ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "plow",
+    "name": { "str": "plow" },
+    "categories": [ "utility" ],
+    "color": "blue",
+    "broken_color": "light_blue",
+    "damage_modifier": 40,
+    "durability": 200,
+    "description": "A plow.  Use the vehicle controls to turn it on or off.  When turned on, it will create a furrow in any dirt it travels over, making it suitable for planting seeds.  It should be placed in front of any seed drills on the vehicle.",
+    "item": "v_plow_item",
+    "location": "under",
+    "power": "-300 W",
+    "transform_terrain": { "pre_flags": [ "PLOWABLE" ], "post_terrain": "t_dirtmound" },
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 4 ] ],
+        "time": "40 m",
+        "using": [ [ "welding_standard", 200 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "30 m",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": { "skills": [ [ "mechanics", 5 ] ], "time": "10 m", "using": [ [ "repair_welding_standard", 6 ] ] }
+    },
+    "flags": [ "TRANSFORM_TERRAIN", "PLOW", "EXTRA_DRAG" ],
+    "breaks_into": [ { "item": "plastic_chunk", "count": [ 1, 2 ] } ],
+    "damage_reduction": { "all": 46 },
+    "variants": [ { "symbols": "&", "symbols_broken": "*" } ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "seed_drill_advanced",
+    "name": { "str": "advanced seed drill" },
+    "categories": [ "utility" ],
+    "color": "blue",
+    "broken_color": "light_blue",
+    "damage_modifier": 40,
+    "durability": 200,
+    "description": "A seed drill.  Use the vehicle controls to turn it on or off.  You can load it with seeds by examining it.  When turned on, it will drop seeds as the vehicle moves, or plant them in furrowed dirt.  It should be placed behind any plows on the vehicle, and any wheels should be placed so they won't run over the plants.",
+    "item": "v_planter_item_advanced",
+    "location": "structure",
+    "power": "-700 W",
+    "size": "17500 ml",
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 4 ] ],
+        "time": "40 m",
+        "using": [ [ "welding_standard", 200 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "30 m",
+        "using": [ [ "vehicle_weld_removal", 1 ], [ "vehicle_wrench_2", 1 ] ]
+      },
+      "repair": { "skills": [ [ "mechanics", 5 ] ], "time": "10 m", "using": [ [ "repair_welding_standard", 6 ] ] }
+    },
+    "flags": [ "PLANTER", "PROTRUSION", "CARGO", "ADVANCED_PLANTER", "EXTRA_DRAG" ],
+    "breaks_into": [
+      { "item": "cable", "charges": [ 3, 6 ] },
+      { "item": "e_scrap", "count": [ 4, 10 ] },
+      { "item": "plastic_chunk", "count": [ 1, 2 ] },
+      { "item": "scrap", "count": [ 1, 2 ] }
+    ],
+    "damage_reduction": { "all": 18 },
+    "variants": [ { "symbols": "8", "symbols_broken": "*" } ]
+  },
+    {
+    "type": "vehicle_part",
+    "id": "seed_drill",
+    "name": { "str": "seed drill" },
+    "categories": [ "utility" ],
+    "color": "blue",
+    "broken_color": "light_blue",
+    "damage_modifier": 40,
+    "durability": 200,
+    "description": "A seed drill.  Use the vehicle controls to turn it on or off.  You can load it with seeds by examining it.  When turned on, it will drop seeds as the vehicle moves, or plant them in furrowed dirt.  It should be placed behind any plows on the vehicle, and any wheels should be placed so they won't run over the plants.",
+    "item": "v_planter_item",
+    "location": "structure",
+    "size": "12500 ml",
+    "power": "-700 W",
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 4 ] ],
+        "time": "40 m",
+        "using": [ [ "welding_standard", 200 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "30 m",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": { "skills": [ [ "mechanics", 5 ] ], "time": "10 m", "using": [ [ "repair_welding_standard", 6 ] ] }
+    },
+    "flags": [ "PLANTER", "PROTRUSION", "CARGO", "EXTRA_DRAG" ],
+    "breaks_into": [ { "item": "plastic_chunk", "count": [ 1, 2 ] }, { "item": "scrap", "count": [ 1, 2 ] } ],
+    "damage_reduction": { "all": 16 },
+    "variants": [ { "symbols": "8", "symbols_broken": "*" } ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "reaper_advanced",
+    "name": { "str": "advanced reaper" },
+    "categories": [ "utility" ],
+    "broken_color": "light_blue",
+    "damage_modifier": 120,
+    "bonus": 7,
+    "power": "-1050 W",
+    "durability": 200,
+    "description": "An automatic reaper.  Use the vehicle controls to turn it on or off.  When on, it will cut down plants and store them in the vehicle's cargo.  It should be placed in front of any plows in the vehicle for efficient operation.  It has internal cargo space for collecting the harvest.",
+    "item": "v_reaper_item_advanced",
+    "location": "under",
+    "size": "87500 ml",
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 5 ] ],
+        "time": "40 m",
+        "using": [ [ "welding_standard", 200 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 3 ] ],
+        "time": "30 m",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": { "skills": [ [ "mechanics", 6 ] ], "time": "10 m", "using": [ [ "repair_welding_standard", 6 ] ] }
+    },
+    "flags": [ "REAPER", "CARGO", "EXTRA_DRAG" ],
+    "breaks_into": [
+      { "item": "motor_small" },
+      { "item": "cable", "charges": [ 3, 6 ] },
+      { "item": "e_scrap", "count": [ 4, 10 ] },
+      { "item": "plastic_chunk", "count": [ 1, 3 ] },
+      { "item": "scrap", "count": [ 2, 6 ] }
+    ],
+    "damage_reduction": { "all": 12 },
+    "variants": [ { "symbols": "=", "symbols_broken": "*" } ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "reaper",
+    "name": { "str": "reaper" },
+    "categories": [ "utility" ],
+    "broken_color": "light_blue",
+    "damage_modifier": 120,
+    "bonus": 7,
+    "power": "-700 W",
+    "durability": 200,
+    "description": "An automatic reaper.  Use the vehicle controls to turn it on or off.  When on, it will cut down plants that it travels over.  It should be placed in front of any plows in the vehicle for efficient operation.  It does not include cargo space, so harvested plants will end up on the ground.",
+    "item": "v_reaper_item",
+    "location": "structure",
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 4 ] ],
+        "time": "40 m",
+        "using": [ [ "welding_standard", 200 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "30 m",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": { "skills": [ [ "mechanics", 5 ] ], "time": "10 m", "using": [ [ "repair_welding_standard", 6 ] ] }
+    },
+    "flags": [ "REAPER", "PROTRUSION", "EXTRA_DRAG" ],
+    "breaks_into": [ { "item": "plastic_chunk", "count": [ 1, 2 ] }, { "item": "scrap", "count": [ 2, 4 ] } ],
+    "damage_reduction": { "all": 10 },
+    "variants": [ { "symbols": "/", "symbols_broken": "*" } ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "turret_mount",
+    "name": { "str": "turret mount" },
+    "categories": [ "warfare" ],
+    "damage_modifier": 80,
+    "durability": 320,
+    "description": "A rotating, universal mount for a weapon.  If your hands are empty, you can stand on the same tile as a turret mount and 'f'ire the weapon.",
+    "folded_volume": "2500 ml",
+    "item": "turret_mount",
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 1 ] ],
+        "time": "20 m",
+        "using": [ [ "welding_standard", 30 ] ]
+      },
+      "removal": { "skills": [ [ "mechanics", 1 ] ], "time": "10 m", "using": "vehicle_weld_removal" },
+      "repair": { "skills": [ [ "mechanics", 1 ] ], "time": "3 m", "using": [ [ "repair_welding_standard", 1 ] ] }
+    },
+    "flags": [ "TURRET_MOUNT" ],
+    "breaks_into": [ { "item": "scrap", "count": [ 1, 4 ] } ],
+    "damage_reduction": { "all": 54 },
+    "variants": [ { "symbols": "X", "symbols_broken": "X" } ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "aluminum_boat_hull",
+    "name": { "str": "aluminum boat hull" },
+    "description": "An aluminum hull that keeps the water out of your boat.",
+    "categories": [ "hull" ],
+    "color": "dark_gray",
+    "looks_like": "boat_board",
+    "damage_modifier": 50,
+    "durability": 200,
+    "item": "aluminum_boat_hull",
+    "location": "under",
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 4 ] ],
+        "time": "50 m",
+        "using": [ [ "welding_alloys", 240 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 2 ] ],
+        "time": "30 m",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": { "skills": [ [ "mechanics", 5 ] ], "time": "10 m", "using": [ [ "repair_welding_alloys", 6 ] ] }
+    },
+    "flags": [ "FLOATS" ],
+    "breaks_into": "ig_vp_sheet_metal",
+    "damage_reduction": { "all": 18 },
+    "variants": [ { "symbols": "o", "symbols_broken": "x" } ]
+  }
+]

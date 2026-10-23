@@ -1,0 +1,42 @@
+[
+  {
+    "type": "mod_tileset",
+    "compatibility": [ "UNDEAD_PEOPLE_BASE", "UNDEAD_PEOPLE", "MshockXottoplus", "MshockRealXotto", "Chibi_Ultica" ],
+	"rotates": false,
+    "tiles-new": [
+      {
+        "file": "tileset//32x32//Henshin-0001.png",
+		"sprite_width":32,
+		"sprite_height":32,
+		"sprite_offset_x":0,
+		"sprite_offset_y":0,
+        "tiles": [
+		  { "id": "henshin_belt_makeshift_on", "fg": 0},
+		  { "id": "henshin_belt_true_on", "fg": 0},
+		  { "id": "henshin_belt_true_overdrive", "fg": 0},
+		  { "id": "overlay_worn_henshin_belt_makeshift_on", "fg": 0},
+		  { "id": "overlay_worn_henshin_belt_true_on", "fg": 0},
+		  { "id": "overlay_worn_henshin_belt_true_overdrive", "fg": 0},
+		  
+		  { "id": "overlay_worn_henshin_belt_makeshift", "fg": 1 },
+		  { "id": "overlay_worn_henshin_belt_true", "fg": 1 },
+		  { "id": "overlay_worn_henshin_belt_true_od", "fg": 1 },
+		  { "id": "overlay_worn_henshin_belt_false", "fg": 1 },
+		  
+		  { "id": "henshin_belt_makeshift", "fg": 2 },
+		  { "id": "henshin_belt_true", "fg": 2 },
+		  { "id": "henshin_belt_true_od", "fg": 2 },
+		  { "id": "henshin_belt_false", "fg": 2 },
+		  { "id": "overlay_wielded_henshin_belt_makeshift", "fg": 2 },
+		  { "id": "overlay_wielded_henshin_belt_true", "fg": 2 },
+		  { "id": "overlay_wielded_henshin_belt_true_od", "fg": 2 },
+		  { "id": "overlay_wielded_henshin_belt_false", "fg": 2 },
+		  
+		  { "id": "overlay_wielded_henshin_power_knuckles_overdrive", "fg": 3 },
+		  { "id": "overlay_wielded_henshin_smartphone", "fg": 3 },
+		  { "id": "overlay_wielded_henshin_smartphone_shoot", "fg": 3 }
+        ]
+      }
+    ]
+  }
+]

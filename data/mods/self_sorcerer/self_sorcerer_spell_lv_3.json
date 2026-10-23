@@ -1,0 +1,766 @@
+[
+  {
+    "id": "spell_craft_sorcerer_lv3_fireball",
+    "type": "SPELL",
+    "name": "术士-Lv3-火球术",
+    "description": "发射火球，在目标点爆炸。",
+    "components": "spell_sorcerer_use_item_3",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "self",
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "max_level": 0,
+    "min_damage": 40,
+    "max_damage": 122,
+    "min_aoe": 3,
+    "min_range": 15,
+    "spell_class": "spell_craft_sorcerer_3",
+    "base_casting_time": 300,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 3,
+    "damage_type": "heat"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv3_lightning_bolt",
+    "type": "SPELL",
+    "name": "术士-Lv3-闪电束",
+    "description": "发射一道可以穿透敌人的闪电束。",
+    "components": "spell_sorcerer_use_item_3",
+    "effect": "attack",
+    "shape": "line",
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "max_level": 0,
+    "min_damage": 40,
+    "max_damage": 122,
+    "min_range": 30,
+    "difficulty": 3,
+    "min_aoe": 0,
+    "spell_class": "spell_craft_sorcerer_3",
+    "base_casting_time": 300,
+    "base_energy_cost": 0,
+    "damage_type": "electric",
+    "sound_description": "a crackle",
+    "energy_source": "MANA"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv3_speedup",
+    "type": "SPELL",
+    "name": "术士-Lv3-加速术",
+    "description": "获得20速度，持续20分钟+20x智力秒。",
+    "components": "spell_sorcerer_use_item_3",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "effect_str": "effect_sorcerer_speedup",
+    "shape": "blast",
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_3",
+    "difficulty": 3,
+    "min_range": 8,
+    "max_level": 0,
+    "base_energy_cost": 0,
+    "min_duration": 148000,
+    "max_duration": 148000
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_sorcerer_speedup",
+    "name": [
+      "加速术"
+    ],
+    "desc": [
+      "你的速度提高了。"
+    ],
+    "apply_message": "你的速度提高了！",
+    "remove_message": "你的速度恢复了。",
+    "max_intensity": 999,
+    "int_dur_factor": "5 m",
+    "rating": "good",
+    "base_mods": {
+      "speed_mod": [
+        20
+      ]
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv3_speeddown",
+    "type": "SPELL",
+    "name": "术士-Lv3-减速术",
+    "description": "降低50速度，持续1分钟+1x智力秒。",
+    "components": "spell_sorcerer_use_item_3",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "effect_sorcerer_speeddown",
+    "damage_type": "pure",
+    "min_damage": 0,
+    "base_casting_time": 50,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_3",
+    "difficulty": 3,
+    "min_range": 15,
+    "max_level": 0,
+    "base_energy_cost": 0,
+    "min_duration": 7400,
+    "max_duration": 7400
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_sorcerer_speeddown",
+    "name": [
+      "减速术"
+    ],
+    "desc": [
+      "你的速度降低了。"
+    ],
+    "apply_message": "速度降低了！",
+    "remove_message": "速度恢复了。",
+    "max_intensity": 999,
+    "int_dur_factor": "5 m",
+    "rating": "bad",
+    "base_mods": {
+      "speed_mod": [
+        -50
+      ]
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv3_light",
+    "type": "SPELL",
+    "name": "术士-Lv3-白昼术",
+    "description": "使目标发出强烈的光亮，持续2小时+2x智力分钟。",
+    "components": "spell_sorcerer_use_item_3",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "min_range": 8,
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_3",
+    "difficulty": 3,
+    "max_level": 0,
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack",
+    "effect_str": "sorcerer_lv3_light",
+    "min_duration": 888000,
+    "max_duration": 888000
+  },
+  {
+    "id": "sorcerer_lv3_light",
+    "type": "effect_type",
+    "name": [
+      "白昼术"
+    ],
+    "desc": [
+      "正在发出强光。"
+    ],
+    "apply_message": "正在发出强光。",
+    "remove_message": "强光消失了。",
+    "max_intensity": 999,
+    "int_dur_factor": "5 m",
+    "rating": "good",
+    "enchantments": [
+      {
+        "values": [
+          {
+            "value": "LUMINATION",
+            "add": 2000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv3_ciyuanmen",
+    "type": "SPELL",
+    "name": "术士-Lv3-次级次元门",
+    "description": "在短距离内传送。",
+    "components": "spell_sorcerer_use_item_3",
+    "effect": "short_range_teleport",
+    "shape": "blast",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "TARGET_TELEPORT"
+    ],
+    "min_range": 9,
+    "max_level": 0,
+    "difficulty": 3,
+    "spell_class": "spell_craft_sorcerer_3",
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "base_energy_cost": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv3_team_food",
+    "type": "SPELL",
+    "name": "术士-Lv3-小队旅粮",
+    "description": "制造8团魔法火焰，40份魔法食物，12瓶拥有8份净水的容器，持续24小时。",
+    "components": "spell_sorcerer_use_item_3",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "spawn_item",
+    "effect_str": "sor_magic_fire",
+    "min_damage": 8,
+    "max_damage": 8,
+    "shape": "blast",
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_3",
+    "difficulty": 3,
+    "max_level": 0,
+    "base_energy_cost": 0,
+    "min_duration": 8640000,
+    "max_duration": 8640000,
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_lv3_team_food_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv3_team_food_2"
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv3_team_food_1",
+    "type": "SPELL",
+    "name": "术士-Lv3-小队旅粮（食物）",
+    "description": "",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "spawn_item",
+    "effect_str": "sor_magic_food",
+    "min_damage": 40,
+    "max_damage": 40,
+    "shape": "blast",
+    "base_casting_time": 300,
+    "energy_source": "NONE",
+    "spell_class": "spell_craft_sorcerer_3",
+    "difficulty": 3,
+    "max_level": 0,
+    "base_energy_cost": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv3_team_food_2",
+    "type": "SPELL",
+    "name": "术士-Lv3-小队旅粮（净水）",
+    "description": "",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "spawn_item",
+    "effect_str": "sor_magic_water",
+    "min_damage": 12,
+    "max_damage": 12,
+    "shape": "blast",
+    "base_casting_time": 300,
+    "energy_source": "NONE",
+    "spell_class": "spell_craft_sorcerer_3",
+    "difficulty": 3,
+    "max_level": 0,
+    "min_duration": 8640000,
+    "max_duration": 8640000,
+    "base_energy_cost": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv3_summon_monster",
+    "type": "SPELL",
+    "name": "术士-Lv3-召唤怪物 III",
+    "description": "在目标范围内召唤1-3怪物3，或者2-5怪物2，或者3-7怪物1，持续10分钟。",
+    "components": "spell_sorcerer_use_item_3",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "WONDER"
+    ],
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 8,
+    "min_aoe": 3,
+    "spell_class": "spell_craft_sorcerer_3",
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "max_level": 0,
+    "min_duration": 60000,
+    "max_duration": 60000,
+    "difficulty": 3,
+    "base_energy_cost": 0,
+    "shape": "blast",
+    "effect": "attack",
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_lv3_summon_monster_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv3_summon_monster_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv3_summon_monster_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv3_summon_monster_2"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv3_summon_monster_2"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv3_summon_monster_3"
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv3_summon_monster_1",
+    "type": "SPELL",
+    "name": "术士-Lv3-召唤怪物3",
+    "description": "在目标范围内召唤1-3只怪物3，持续10分钟。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "message": "",
+    "min_damage": 1,
+    "max_damage": 3,
+    "min_range": 8,
+    "min_aoe": 3,
+    "spell_class": "spell_craft_sorcerer_3",
+    "base_casting_time": 0,
+    "energy_source": "NONE",
+    "max_level": 0,
+    "min_duration": 60000,
+    "max_duration": 60000,
+    "difficulty": 3,
+    "shape": "blast",
+    "effect": "summon",
+    "effect_str": "mon_sor_summon_3",
+    "base_energy_cost": 0
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_lv3_summon_monster_1",
+    "id": "spell_craft_sorcerer_lv3_summon_monster_2",
+    "type": "SPELL",
+    "name": "术士-Lv3-召唤怪物2",
+    "description": "在目标范围内召唤2-5只怪物2，持续10分钟。",
+    "effect_str": "mon_sor_summon_2",
+    "min_damage": 2,
+    "max_damage": 5,
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_lv3_summon_monster_1",
+    "id": "spell_craft_sorcerer_lv3_summon_monster_3",
+    "type": "SPELL",
+    "name": "术士-Lv3-召唤怪物1",
+    "description": "在目标范围内召唤3-7只怪物1，持续10分钟。",
+    "effect_str": "mon_sor_summon_1",
+    "min_damage": 3,
+    "max_damage": 7,
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv3_create_enchanted_item",
+    "type": "SPELL",
+    "name": "术士-Lv3-制造魔法装备 I",
+    "description": "制造一件随机部位的魔法装备。",
+    "components": "spell_sorcerer_use_enchanted_item_1",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "CONCENTRATE",
+      "PERMANENT"
+    ],
+    "effect": "spawn_item",
+    "effect_str": "sor_enchanted_item_rnd_1",
+    "min_damage": 1,
+    "max_damage": 1,
+    "shape": "blast",
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_3",
+    "difficulty": 6,
+    "max_level": 0,
+    "base_energy_cost": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv3_door_open",
+    "type": "SPELL",
+    "name": "术士-Lv3-强行开门术",
+    "description": "不管一扇门可不可以被打开，都可能被这个法术打开。",
+    "components": "spell_sorcerer_use_item_3",
+    "valid_targets": [
+      "hostile",
+      "ground",
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "damage_type": "pure",
+    "min_range": 15,
+    "min_aoe": 0,
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_3",
+    "difficulty": 3,
+    "max_level": 0,
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "ter_transform",
+    "effect_str": "trans_lv3_door_open"
+  },
+  {
+    "type": "ter_furn_transform",
+    "id": "trans_lv3_door_open",
+    "terrain": [
+      {
+        "result": "t_door_o",
+        "valid_terrain": [
+          "t_door_elocked",
+          "t_door_elocked_alarm",
+          "t_door_locked_interior",
+          "t_door_locked",
+          "t_door_locked_alarm"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_o_peep",
+        "valid_terrain": [
+          "t_door_elocked_peep",
+          "t_door_locked_peep"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_metal_o",
+        "valid_terrain": [
+          "t_door_metal_elocked",
+          "t_door_metal_locked",
+          "t_door_metal_interior_locked",
+          "t_door_metal_pickable"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_bar_o",
+        "valid_terrain": [
+          "t_door_bar_locked"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_laminated_door_glass_o",
+        "valid_terrain": [
+          "t_laminated_door_glass_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_ballistic_door_glass_o",
+        "valid_terrain": [
+          "t_ballistic_door_glass_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_reinforced_door_glass_o",
+        "valid_terrain": [
+          "t_reinforced_door_glass_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_reinforced_door_glass_lab_o",
+        "valid_terrain": [
+          "t_reinforced_door_glass_lab_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_o",
+        "valid_terrain": [
+          "t_door_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_lab_o",
+        "valid_terrain": [
+          "t_door_lab_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_white_o",
+        "valid_terrain": [
+          "t_door_white_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_gray_o",
+        "valid_terrain": [
+          "t_door_gray_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_red_o",
+        "valid_terrain": [
+          "t_door_red_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_green_o",
+        "valid_terrain": [
+          "t_door_green_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_glass_red_o",
+        "valid_terrain": [
+          "t_door_glass_red_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_glass_green_o",
+        "valid_terrain": [
+          "t_door_glass_green_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_glass_white_o",
+        "valid_terrain": [
+          "t_door_glass_white_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_glass_gray_o",
+        "valid_terrain": [
+          "t_door_glass_gray_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_lighthouse_lens_o",
+        "valid_terrain": [
+          "t_door_lighthouse_lens_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_o_peep",
+        "valid_terrain": [
+          "t_door_c_peep"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_rdoor_o",
+        "valid_terrain": [
+          "t_rdoor_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_curtain_o",
+        "valid_terrain": [
+          "t_door_curtain_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_makeshift_o",
+        "valid_terrain": [
+          "t_door_makeshift_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_grass_curtain_o",
+        "valid_terrain": [
+          "t_door_grass_curtain_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_metal_o",
+        "valid_terrain": [
+          "t_door_metal_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_metal_corrugated_o",
+        "valid_terrain": [
+          "t_door_metal_corrugated_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_secretdoor_metal_o",
+        "valid_terrain": [
+          "t_secretdoor_metal_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_secretdoor_concrete_o",
+        "valid_terrain": [
+          "t_secretdoor_concrete_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_metal_lab_o",
+        "valid_terrain": [
+          "t_door_metal_lab_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_metal_o_peep",
+        "valid_terrain": [
+          "t_door_metal_c_peep"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_metal_o",
+        "valid_terrain": [
+          "t_door_metal_pickable"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_bar_o",
+        "valid_terrain": [
+          "t_door_bar_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_glass_o",
+        "valid_terrain": [
+          "t_door_glass_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_glass_lab_o",
+        "valid_terrain": [
+          "t_door_glass_lab_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_glass_frosted_o",
+        "valid_terrain": [
+          "t_door_glass_frosted_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_glass_frosted_lab_o",
+        "valid_terrain": [
+          "t_door_glass_frosted_lab_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_metal_bulkhead_o",
+        "valid_terrain": [
+          "t_door_metal_bulkhead_c"
+        ],
+        "message": "门开了。"
+      }
+    ]
+  }
+]

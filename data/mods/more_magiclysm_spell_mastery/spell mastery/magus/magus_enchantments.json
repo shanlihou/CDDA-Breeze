@@ -1,0 +1,57 @@
+[
+  {
+    "id": "MM_magus_mana_mastery_recover_energy",
+    "type": "SPELL",
+    "name": "奥术掌握·魔力回复",
+    "description": "奥术掌握系列法术专精的变异附魔的附属法术。",
+    "valid_targets": [ "self" ],
+    "min_damage": 1,
+    "max_damage": 10,
+    "max_level": 1,
+    "effect": "recover_energy",
+    "effect_str": "MANA",
+    "shape": "blast",
+    "flags": [ "SILENT", "NO_LEGS", "NO_HANDS", "RANDOM_DAMAGE" ]
+  },
+  {
+    "id": "MM_creat_arcane_en",
+    "type": "SPELL",
+    "name": "奥术掌握·奥能生成",
+    "description": "奥术掌握系列法术专精的变异附魔的附属法术。",
+    "shape": "blast",
+    "valid_targets": [ "self" ],
+    "effect": "spawn_item",
+    "effect_str": "MM_arcane_en",
+    "flags": [ "SILENT", "PERMANENT" ],
+    "min_damage": 1,
+    "max_damage": 1
+  },
+  {
+    "type": "enchantment",
+    "id": "ench_MM_magus_mana_mastery_1",
+    "hit_me_effect": [ 
+          { "id": "MM_magus_mana_mastery_recover_energy", "hit_self": true, "once_in": 2, "message": "奥术反馈。" },
+          { "id": "MM_creat_arcane_en", "hit_self": true, "once_in": 2, "message": "奥能生成。" }
+     ]
+  },
+  {
+    "type": "enchantment",
+    "id": "ench_MM_magus_mana_mastery_2",
+    "hit_you_effect": [ 
+          { "id": "MM_magus_mana_mastery_recover_energy", "hit_self": true, "once_in": 2, "message": "奥术反馈。" },
+          { "id": "MM_creat_arcane_en", "hit_self": true, "once_in": 2, "message": "奥能生成。" }
+     ]
+  },
+  {
+    "type": "enchantment",
+    "id": "ench_MM_magus_mana_mastery_3",
+    "hit_you_effect": [ 
+          { "id": "MM_magus_mana_mastery_recover_energy", "hit_self": true, "once_in": 2, "message": "奥术反馈。" },
+          { "id": "MM_creat_arcane_en", "hit_self": true, "once_in": 2, "message": "奥能生成。" }
+     ],
+    "hit_me_effect": [ 
+          { "id": "MM_magus_mana_mastery_recover_energy", "hit_self": true, "once_in": 2, "message": "奥术反馈。" },
+          { "id": "MM_creat_arcane_en", "hit_self": true, "once_in": 2, "message": "奥能生成。" }
+     ]
+  }
+]

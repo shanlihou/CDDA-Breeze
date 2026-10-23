@@ -1,0 +1,111 @@
+[
+  {
+  "type": "BIONIC_ITEM",
+  "category": "bionics",
+  "name": {
+    "str": "CCX85燃料重质聚能CBM"
+  },
+  "weight": "500 g",
+  "volume": "2400 ml",
+  "bashing": 8,
+  "material": [
+    "steel",
+    "plastic"
+  ],
+  "symbol": ":",
+  "color": "yellow",
+  "price_postapoc": 2000,
+  "use_action": [
+    "install_bionic"
+  ],
+  "flags": [
+    "CBM"
+  ],
+  "is_upgrade": false,
+  "faults": [
+    "fault_bionic_salvaged"
+  ],
+  "id": "bio_fuel_cell_gasolineS",
+  "copy-from": "bio_fuel_cell_gasoline",
+  "looks_like": "bio_int_enhancer",
+  "description": "CCX85燃料重质聚能，配备两种型号的燃料供能装置，可适用于多种环境。",
+  "price": 450000,
+  "difficulty": 3
+  },
+  {
+    "id": "bio_fuel_cell_gasolineS",
+    "copy-from": "bio_fuel_cell_gasoline",
+    "type": "bionic",
+    "name": { "str": "CCX85燃料重质聚能" },
+    "description": "你体内搭载了一套CCX85燃料聚能组，配备两种型号的燃料供能装置，可适用于多种环境。",
+    "occupied_bodyparts": [ [ "torso", 3 ] ],
+    "encumbrance": [ [ "torso", 2 ] ],
+    "fuel_options": [ "gasoline" ],
+    "fuel_efficiency": 0.5,
+    "exothermic_power_gen": true,
+    "time": "1 s",
+    "flags": [
+    "BIONIC_TOGGLED",
+    "BIONIC_POWER_SOURCE"
+    ],
+    "passive_pseudo_items": [ "internal_gasoline_tankS" ] 
+  },
+  {
+    "id": "internal_gasoline_tankS",
+    "copy-from": "internal_gasoline_tank",
+    "type": "TOOL_ARMOR",
+    "category": "container",
+    "name": { "str": "CCX85燃料重质仓" },
+    "description": "专为仿生聚能系统设计的体内燃料仓，可以存放各种液体物质作为燃料。",
+    "volume": "1001 ml",
+    "weight": "1 g",
+    "price": 0,
+    "material": [ "plastic" ],
+    "symbol": "(",
+    "color": "magenta",
+    "flags": [
+    "INTEGRATED",
+    "UNBREAKABLE",
+    "PERSONAL",
+    "NO_REPAIR",
+    "TARDIS",
+    "ALLOWS_NATURAL_ATTACKS",
+    "BIONIC_FUEL_SOURCE"
+    ], 
+  "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "watertight": true,
+        "rigid": true,
+        "max_contains_volume": "200000 ml",
+        "max_item_volume": "200000 ml",
+        "max_contains_weight": "200000 g",
+        "material_restriction": [
+        "crude_lamp_oil",
+        "diesel",
+        "biodiesel",
+        "lamp_oil",
+        "motor_oil",
+        "alcohol",
+        "gasoline",
+        "jp8",
+        "avgas"
+        ]
+      }
+    ] 
+  },
+  {
+        "type" : "recipe",
+    "result": "bio_fuel_cell_gasolineS",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC供应CBM",
+    "skill_used": "firstaid",
+    "difficulty": 3,
+    "time": "1second",
+    "reversible": true,
+    "autolearn": true,
+    "components": [ [ [ "CCMODcoin", 330 ] ] ]
+  }
+]

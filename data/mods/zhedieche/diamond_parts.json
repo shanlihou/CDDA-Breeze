@@ -1,0 +1,1134 @@
+[
+  {
+    "abstract": "气球",
+    "type": "vehicle_part",
+    "location": "anywhere",
+    "color": "light_blue",
+    "looks_like": "inflatable_airbag",
+    "symbol": "O",
+    "broken_symbol": "o",
+    "flags": [
+      "PROTRUSION",
+      "EXTENDABLE",
+      "BALLOON",
+      "SHOCK_IMMUNE"
+    ],
+    "description": "一个提供升力的气囊，但需要飞机螺旋桨来实现水平运动。"
+  },
+  {
+    "id": "wmchejia",
+    "type": "vehicle_part",
+    "name": {
+      "str": "光粒子框架"
+    },
+    "item": "scrap",
+    "location": "structure",
+    "standard_symbols": true,
+    "color": "white",
+    "broken_color": "white",
+    "description": "坚固耐用可折叠，M78星云光粒子技术支持。",
+    "durability": 99999999,
+    "folded_volume": 1,
+    "breaks_into": [
+      {
+        "item": "scrap"
+      }
+    ],
+    "requirements": {
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            6
+          ]
+        ],
+        "time": "1 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            4
+          ]
+        ],
+        "time": "1 m",
+        "using": [
+          [
+            "vehicle_weld_removal",
+            1
+          ]
+        ]
+      },
+      "repair": {
+        "skills": [
+          [
+            "mechanics",
+            7
+          ]
+        ],
+        "time": "1 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "MOUNTABLE",
+      "INITIAL_PART",
+      "FLOATS",
+      "FOLDABLE",
+      "BALLOON",
+      "SHOCK_IMMUNE"
+    ]
+  },
+  {
+    "id": "wmzhuangchui",
+    "type": "vehicle_part",
+    "name": {
+      "str": "佐菲防爆盾"
+    },
+    "item": "steel_plate",
+    "location": "structure",
+    "symbol": "X",
+    "broken_symbol": "0",
+    "color": "light_blue",
+    "broken_color": "light_blue",
+    "durability": 99999999,
+    "damage_modifier": 99999,
+    "folded_volume": "1 ml",
+    "breaks_into": [
+      {
+        "item": "frostiegrow"
+      }
+    ],
+    "description": "由奥特警备队队长佐菲，将光之能量依附在普通零件上，形成的终极护卫盾。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "OBSTACLE",
+      "PROTRUSION",
+      "SHARP",
+      "FLOATS",
+      "FOLDABLE"
+    ]
+  },
+  {
+    "id": "wmyinqing",
+    "copy-from": "engine_motor",
+    "type": "vehicle_part",
+    "name": {
+      "str": "小型人造光能核心"
+    },
+    "item": "motor_super",
+    "durability": 99999999,
+    "power": 9999999,
+    "folded_volume": 1,
+    "energy_consumption": 1,
+    "damage_modifier": 9999999,
+    "flags": [
+      "ENGINE",
+      "E_HIGHER_SKILL",
+      "E_HEATER",
+      "FOLDABLE"
+    ],
+    "requirements": {
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            5
+          ]
+        ],
+        "time": "1 m",
+        "using": [
+          [
+            "vehicle_wrench_2",
+            1
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            3
+          ]
+        ],
+        "time": "1 m",
+        "using": [
+          [
+            "vehicle_wrench_2",
+            1
+          ]
+        ]
+      },
+      "repair": {
+        "skills": [
+          [
+            "mechanics",
+            6
+          ]
+        ],
+        "time": "1 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      }
+    },
+    "breaks_into": [
+      {
+        "item": "steel_lump",
+        "count": [
+          15,
+          20
+        ]
+      },
+      {
+        "item": "steel_chunk",
+        "count": [
+          6,
+          10
+        ]
+      },
+      {
+        "item": "scrap",
+        "count": [
+          6,
+          10
+        ]
+      },
+      {
+        "item": "e_scrap",
+        "count": [
+          5,
+          15
+        ]
+      },
+      {
+        "item": "bearing",
+        "count": [
+          25,
+          60
+        ]
+      },
+      {
+        "item": "cable",
+        "charges": [
+          20,
+          30
+        ]
+      }
+    ],
+    "damage_reduction": {
+      "all": 999999
+    }
+  },
+  {
+    "abstract": "turret",
+    "type": "vehicle_part",
+    "symbol": "t",
+    "durability": 400,
+    "damage_modifier": 80,
+    "location": "on_roof",
+    "folded_volume": 1,
+    "categories": [
+      "warfare"
+    ],
+    "requirements": {
+      "install": {
+        "time": "100 s"
+      },
+      "removal": {
+        "time": "50 s"
+      }
+    },
+    "flags": [
+      "TURRET",
+      "FOLDABLE"
+    ]
+  },
+  {
+    "id": "wmboliban",
+    "type": "vehicle_part",
+    "breaks_into": [
+      {
+        "count": [
+          25,
+          50
+        ],
+        "item": "glass_shard"
+      },
+      {
+        "count": [
+          4,
+          8
+        ],
+        "item": "wire"
+      }
+    ],
+    "symbol": "\"",
+    "symbols": {
+      "nw": "y",
+      "ne": "u",
+      "sw": "b",
+      "se": "n",
+      "nw_edge": "y",
+      "ne_edge": "u",
+      "sw_edge": "b",
+      "se_edge": "n",
+      "vertical": "j",
+      "vertical_left": "j",
+      "vertical_right": "H",
+      "horizontal_front": "T",
+      "horizontal_front_edge": "^",
+      "horizontal_rear": "B",
+      "horizontal_rear_edge": "="
+    },
+    "broken_color": "light_gray",
+    "broken_symbol": "0",
+    "categories": [
+      "hull"
+    ],
+    "color": "light_blue",
+    "folded_volume": 1,
+    "damage_modifier": 9999999,
+    "damage_reduction": {
+      "all": 9999999
+    },
+    "description": "用赛文奥特曼力量构建的相当坚固的屏障，不阻挡视线。",
+    "durability": 99999999,
+    "flags": [
+      "WINDSHIELD",
+      "OBSTACLE",
+      "FOLDABLE",
+      "WINDOW"
+    ],
+    "item": "reinforced_glass_sheet",
+    "location": "center",
+    "looks_like": "windshield",
+    "name": {
+      "str": "赛文屏障"
+    },
+    "requirements": {
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            4
+          ]
+        ],
+        "time": "60 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            2
+          ]
+        ],
+        "time": "30 m",
+        "using": [
+          [
+            "vehicle_weld_removal",
+            1
+          ]
+        ]
+      },
+      "repair": {
+        "skills": [
+          [
+            "mechanics",
+            5
+          ]
+        ],
+        "time": "60 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "type": "vehicle_part",
+    "id": "wmcwugui",
+    "copy-from": "livestock_stall",
+    "looks_like": "livestock_stall",
+    "name": {
+      "str": "高斯宠物空间"
+    },
+    "durability": 99999999,
+    "description": "仿造高斯奥特曼能力制作的宠物空间。",
+    "size": 200,
+    "item": "animal_locker",
+    "flags": [
+      "CARGO",
+      "COVERED",
+      "FOLDABLE",
+      "CAPTURE_MONSTER_VEH",
+      "OBSTACLE"
+    ],
+    "breaks_into": [
+      {
+        "item": "steel_chunk",
+        "count": [
+          1,
+          2
+        ]
+      },
+      {
+        "item": "scrap",
+        "count": [
+          3,
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "autoclave",
+    "name": {
+      "str": "高压灭菌釜"
+    },
+    "symbol": "A",
+    "looks_like": "dishwasher",
+    "categories": [
+      "utility"
+    ],
+    "color": "yellow",
+    "broken_symbol": "#",
+    "broken_color": "light_blue",
+    "damage_modifier": 80,
+    "durability": 100,
+    "folded_volume": "1 ml",
+    "description": "这是一个高压灭菌釜，用于对 CBM 之类的物品进行灭菌。暗羿(按e)后选择该部件所在位置来使用它。",
+    "epower": -1500,
+    "size": 11,
+    "item": "vh_autoclave",
+    "location": "center",
+    "requirements": {
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            3
+          ]
+        ],
+        "time": "60 m",
+        "using": [
+          [
+            "vehicle_wrench_2",
+            1
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            2
+          ]
+        ],
+        "time": "30 m",
+        "using": [
+          [
+            "vehicle_wrench_2",
+            1
+          ]
+        ]
+      },
+      "repair": {
+        "skills": [
+          [
+            "mechanics",
+            4
+          ]
+        ],
+        "time": "60 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "CARGO",
+      "OBSTACLE",
+      "AUTOCLAVE",
+      "COVERED",
+      "ENABLED_DRAINS_EPOWER",
+      "FOLDABLE"
+    ],
+    "breaks_into": [
+      {
+        "item": "steel_lump",
+        "count": [
+          6,
+          10
+        ]
+      },
+      {
+        "item": "steel_chunk",
+        "count": [
+          6,
+          10
+        ]
+      },
+      {
+        "item": "scrap",
+        "count": [
+          6,
+          10
+        ]
+      },
+      {
+        "item": "hose",
+        "prob": 50
+      }
+    ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "wmbingxiang",
+    "name": {
+      "str": "冰冻次元"
+    },
+    "symbol": "H",
+    "categories": [
+      "cargo"
+    ],
+    "color": "light_blue",
+    "broken_symbol": "#",
+    "broken_color": "blue",
+    "looks_like": "minifridge",
+    "damage_modifier": 80,
+    "durability": 100,
+    "epower": -100,
+    "size": "1000 L",
+    "item": "minifreezer",
+    "location": "center",
+    "requirements": {
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            3
+          ]
+        ],
+        "time": "60 m",
+        "using": [
+          [
+            "vehicle_wrench_2",
+            1
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            2
+          ]
+        ],
+        "time": "30 m",
+        "using": [
+          [
+            "vehicle_wrench_2",
+            1
+          ]
+        ]
+      },
+      "repair": {
+        "skills": [
+          [
+            "mechanics",
+            4
+          ]
+        ],
+        "time": "60 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "CARGO",
+      "OBSTACLE",
+      "FOLDABLE",
+      "FREEZER",
+      "COVERED",
+      "ENABLED_DRAINS_EPOWER"
+    ],
+    "breaks_into": [
+      {
+        "item": "steel_lump",
+        "count": [
+          8,
+          13
+        ]
+      },
+      {
+        "item": "steel_chunk",
+        "count": [
+          8,
+          13
+        ]
+      },
+      {
+        "item": "scrap",
+        "count": [
+          8,
+          13
+        ]
+      },
+      {
+        "item": "hose",
+        "prob": 50
+      },
+      {
+        "item": "motor_tiny",
+        "prob": 25
+      }
+    ],
+    "damage_reduction": {
+      "all": 9999
+    }
+  },
+  {
+    "id": "wmmzuoyi",
+    "type": "vehicle_part",
+    "name": {
+      "str": "光之棱镜控制台"
+    },
+    "item": "seat",
+    "location": "center",
+    "symbol": "#",
+    "broken_symbol": "*",
+    "color": "light_green",
+    "broken_color": "light_green",
+    "durability": 999999,
+    "damage_modifier": 99999,
+    "folded_volume": "1 ml",
+    "comfort": 99999,
+    "floor_bedding_warmth": 500,
+    "rotor_diameter": -1,
+    "breaks_into": [
+      {
+        "item": "scrap"
+      }
+    ],
+    "description": "有着床的舒适座椅的功能 你可以坐在这个座椅上睡觉，他比床舒适几百倍，他拥有几乎所有控制车辆的功能比如驾驶控制电子部件等等，安装这个座椅之后按<可以芜湖起飞，反之降落，如果不能飞行可能是收到了损伤或者马力不足，这是奥特之力的终极产物!",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "SEAT",
+      "BED",
+      "BOARDABLE",
+      "BELTABLE",
+      "REMOTE_CONTROLS",
+      "CONTROLS",
+      "FOLDABLE",
+      "ROTOR",
+      "CTRL_ELECTRONIC",
+      "VISION",
+      "CAMERA",
+      "CAMERA_CONTROL",
+      "ENABLED_DRAINS_EPOWER",
+      "PROPELLER",
+      "BALLOON"
+    ],
+    "epower": -100
+  },
+  {
+    "type": "vehicle_part",
+    "id": "zhediebanxczgzt",
+    "//": "抄写的C++MOD载具部件，只加了个折叠功能",
+    "name": {
+      "str": "幸存者车载工作台"
+    },
+    "description": "一个由很多设施组成的车载工具，所有工具都压缩精简成一个紧凑部件。比原版多一些功能(C++MOD)",
+    "symbol": "&",
+    "color": "light_red",
+    "broken_symbol": "x",
+    "broken_color": "light_red",
+    "damage_modifier": 80,
+    "durability": 100,
+    "folded_volume": 8,
+    "item": "workbench",
+    "location": "center",
+    "flags": [
+      "OBSTACLE",
+      "FOLDABLE",
+      "STEREO"
+    ],
+    "pseudo_tools": [
+      {
+        "id": "vac_sealer"
+      },
+      {
+        "id": "dehydrator"
+      },
+      {
+        "id": "water_purifier",
+        "hotkey": "p"
+      },
+      {
+        "id": "food_processor"
+      },
+      {
+        "id": "press"
+      },
+      {
+        "id": "puller"
+      },
+      {
+        "id": "chemistry_set"
+      },
+      {
+        "id": "electrolysis_kit"
+      },
+      {
+        "id": "water_faucet"
+      },
+      {
+        "id": "forge"
+      },
+      {
+        "id": "hotplate",
+        "hotkey": "h"
+      },
+      {
+        "id": "pot"
+      },
+      {
+        "id": "pan"
+      },
+      {
+        "id": "welder",
+        "hotkey": "w"
+      },
+      {
+        "id": "soldering_iron",
+        "hotkey": "s"
+      }
+    ],
+    "breaks_into": [
+      {
+        "item": "steel_lump",
+        "count": [
+          30,
+          40
+        ]
+      },
+      {
+        "item": "steel_chunk",
+        "count": [
+          30,
+          40
+        ]
+      },
+      {
+        "item": "scrap",
+        "count": [
+          30,
+          40
+        ]
+      },
+      {
+        "item": "circuit",
+        "count": [
+          30,
+          40
+        ]
+      },
+      {
+        "item": "e_scrap",
+        "count": [
+          30,
+          40
+        ]
+      },
+      {
+        "item": "amplifier",
+        "count": [
+          30,
+          40
+        ]
+      }
+    ],
+    "requirements": {
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            6
+          ]
+        ],
+        "time": "60 m",
+        "using": [
+          [
+            "vehicle_wrench_2",
+            1
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            5
+          ]
+        ],
+        "time": "30 m",
+        "using": [
+          [
+            "vehicle_wrench_2",
+            1
+          ]
+        ]
+      },
+      "repair": {
+        "skills": [
+          [
+            "mechanics",
+            7
+          ]
+        ],
+        "time": "60 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "bike_rack",
+    "type": "vehicle_part",
+    "name": {
+      "str": "bike rack"
+    },
+    "item": "bike_rack",
+    "location": "anywhere",
+    "symbol": "=",
+    "broken_symbol": "#",
+    "categories": [
+      "cargo"
+    ],
+    "color": "light_gray",
+    "folded_volume": 1,
+    "broken_color": "dark_gray",
+    "durability": 99999999,
+    "description": "操作指南：如果托架跟车辆平行那么托架格子多少，可以托上的车子就可以越长，你可以做出插件车，比如购物车加炮塔就可以托上带走，需要的时候推着乱杀，按e托架即可查看一些功能。",
+    "breaks_into": [
+      {
+        "item": "steel_lump",
+        "count": [
+          6,
+          8
+        ]
+      },
+      {
+        "item": "steel_chunk",
+        "count": [
+          6,
+          8
+        ]
+      },
+      {
+        "item": "scrap",
+        "count": [
+          6,
+          8
+        ]
+      }
+    ],
+    "requirements": {
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            1
+          ]
+        ],
+        "time": "60 m",
+        "using": [
+          [
+            "vehicle_wrench_2",
+            1
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            2
+          ]
+        ],
+        "time": "30 m",
+        "using": [
+          [
+            "vehicle_wrench_2",
+            1
+          ]
+        ]
+      },
+      "repair": {
+        "skills": [
+          [
+            "mechanics",
+            2
+          ]
+        ],
+        "time": "60 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "BIKE_RACK_VEH",
+      "FOLDABLE",
+      "MULTISQUARE"
+    ],
+    "damage_reduction": {
+      "all": 999999
+    }
+  },
+  {
+    "type": "vehicle_part",
+    "id": "wmzhuangjiaban",
+    "name": {
+      "str": "折叠光能装甲板"
+    },
+    "symbol": ")",
+    "categories": [
+      "warfare"
+    ],
+    "color": "red",
+    "broken_symbol": ")",
+    "broken_color": "red",
+    "folded_volume": "1 ml",
+    "damage_modifier": 999999999,
+    "durability": 999999999,
+    "bonus": 999999,
+    "description": "又硬伤害又高，记住光的内涵。",
+    "item": "alloy_plate",
+    "location": "armor",
+    "requirements": {
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            3
+          ]
+        ],
+        "time": "30 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            2
+          ]
+        ],
+        "time": "30 m",
+        "using": [
+          [
+            "vehicle_weld_removal",
+            1
+          ]
+        ]
+      },
+      "repair": {
+        "skills": [
+          [
+            "mechanics",
+            4
+          ]
+        ],
+        "time": "30 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "ARMOR",
+      "SHOCK_ABSORBER",
+      "FOLDABLE",
+      "BALLOON"
+    ],
+    "breaks_into": [
+      {
+        "item": "steel_lump",
+        "count": [
+          4,
+          6
+        ]
+      },
+      {
+        "item": "steel_chunk",
+        "count": [
+          4,
+          6
+        ]
+      },
+      {
+        "item": "scrap",
+        "count": [
+          4,
+          6
+        ]
+      },
+      {
+        "item": "spike",
+        "count": [
+          0,
+          2
+        ]
+      }
+    ],
+    "damage_reduction": {
+      "all": 999999999
+    }
+  },
+  {
+    "type": "vehicle_part",
+    "id": "wmfadianji",
+    "name": {
+      "str": "小型人造太阳"
+    },
+    "symbol": "Y",
+    "looks_like": "wind_turbine",
+    "categories": [
+      "energy"
+    ],
+    "color": "yellow",
+    "broken_symbol": "X",
+    "broken_color": "yellow",
+    "fuel_type": "null",
+    "damage_modifier": 1000000,
+    "durability": 9999999,
+    "description": "仿造光之国制作的能源核心，人造太阳，可以源源不断的提供能量，可以用一亿年。请不要装填，本部件无消耗可以直接启动",
+    "epower": 9999999,
+    "item": "minireactor",
+    "location": "on_roof",
+    "folded_volume": "1 ml",
+    "power": 100,
+    "requirements": {
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            3
+          ]
+        ],
+        "time": "450 s",
+        "qualities": [
+          {
+            "id": "WRENCH",
+            "level": 1
+          }
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            3
+          ]
+        ],
+        "time": "450 s",
+        "qualities": [
+          {
+            "id": "WRENCH",
+            "level": 1
+          }
+        ]
+      },
+      "repair": {
+        "skills": [
+          [
+            "mechanics",
+            3
+          ]
+        ],
+        "time": "1 m",
+        "using": [
+          [
+            "welding_standard",
+            15
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "REACTOR",
+      "PERPETUAL",
+      "FOLDABLE"
+    ],
+    "damage_reduction": {
+      "all": 99999
+    }
+  }
+]

@@ -1,0 +1,156 @@
+[
+  {
+    "type": "profession",
+    "id": "nec_doll_stacy",
+    "name": "史黛西人偶",
+    "description": "你是一个人偶，是人类尸体神秘复活的产物。你是这些人偶中最基础的型号，但也是人偶中肉体最为结实的，同时也配备了其他的实用技能。",
+    "points": 2,
+    "traits": [ "PAINREC1" ],
+    "skills": [
+      { "level": 2, "name": "fabrication" },
+      { "level": 1, "name": "tailor" },
+      { "level": 1, "name": "mechanics" },
+      { "level": 1, "name": "melee" },
+      { "level": 1, "name": "bashing" }
+    ],
+    "items": {
+      "both": [ "socks", "sneakers", "tool_belt", "leather_pouch", "backpack", "wrench" ],
+      "male": [ "jeans", "longshirt", "briefs" ],
+      "female": [ "panties", "bra", "dress" ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "nec_doll_requiem",
+    "name": "安魂曲人偶",
+    "description": "你是一个人偶，是人类尸体神秘复活的产物。作为安魂曲人偶的你被设计为具有熟练运用枪械的能力。",
+    "points": 2,
+    "traits": [  ],
+    "skills": [
+      { "level": 2, "name": "gun" },
+      { "level": 2, "name": "pistol" },
+      { "level": 1, "name": "melee" },
+      { "level": 1, "name": "stabbing" }
+    ],
+    "items": {
+      "both": {
+        "items": [ "dress_shirt", "boots", "leather_pouch", "gold_ring" ],
+        "entries": [
+          { "item": "glock_19", "ammo-item": "9mm", "container-item": "holster", "charges": 15 },
+          { "item": "9mm", "charges": 45 },
+          { "item": "knife_combat", "container-item": "sheath" }
+        ]
+      },
+      "male": [ "pants", "briefs", "socks" ],
+      "female": [ "skirt", "stockings", "bra", "panties" ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "nec_doll_thanatos",
+    "name": "塔纳托斯人偶",
+    "description": "你是一个人偶，是人类尸体神秘复活的产物。你被设计成了能在近距离战斗中应对最大威胁的强悍战士。",
+    "points": 2,
+    "traits": [ "TOUGH" ],
+    "skills": [
+      { "level": 2, "name": "melee" },
+      { "level": 1, "name": "bashing" },
+      { "level": 2, "name": "cutting" },
+      { "level": 1, "name": "stabbing" }
+    ],
+    "items": {
+      "both": { "entries": [ { "item": "fire_ax", "container-item": "fireman_belt" } ] },
+      "male": [ "boxer_shorts", "longshirt", "jeans", "socks", "dress_shoes" ],
+      "female": [ "panties", "bra", "nec_panier", "stockings", "dress_shoes", "nec_gothic_dress", "nec_gothic_headdress" ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "nec_doll_romanesque",
+    "name": "罗马式人偶",
+    "description": "你是一个人偶，是人类尸体神秘复活的产物。你被设计成一位优雅的舞者，你的优美的舞蹈无与伦比。",
+    "points": 2,
+    "CBMs": [ "bio_carbon" ],
+    "skills": [ { "level": 2, "name": "melee" }, { "level": 2, "name": "unarmed" }, { "level": 2, "name": "dodge" } ],
+    "items": {
+      "both": [ "dance_shoes", "knit_scarf" ],
+      "male": [ "briefs", "tux", "socks" ],
+      "female": [ "bra", "panties", "gown", "stockings" ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "nec_doll_baroque",
+    "name": "巴洛克人偶",
+    "description": "你是一个人偶，是人类尸体神秘复活的产物。巴洛克人偶被设计成了拥有着异形肉体的存在，你是否能够驾驭你的肉体？",
+    "points": 2,
+    "traits": [ "ROBUST", "CHAOTIC" ],
+    "items": {
+      "both": [ "tank_top", "shorts", "socks", "sneakers", "nec_teddy" ],
+      "male": [ "briefs" ],
+      "female": [ "bra", "panties" ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "nec_doll_gothic",
+    "name": "哥特式人偶",
+    "description": "你是一个人偶，是人类尸体神秘复活的产物。被设计成用于猎杀其他不死生物并吞噬它们的人偶，吞噬一切贪得无厌，这就是哥特式。",
+    "points": 2,
+    "traits": [ "EATDEAD", "CANNIBAL", "FLIMSY", "FASTHEALER", "HUNGER3" ],
+    "skills": [ { "level": 2, "name": "melee" }, { "level": 2, "name": "unarmed" }, { "level": 2, "name": "dodge" } ],
+    "items": {
+      "both": [ "tank_top", "shorts", "socks", "sneakers" ],
+      "male": [ "briefs" ],
+      "female": [ "bra", "panties" ]
+    }
+  },
+    {
+    "type": "profession",
+    "id": "nec_doll_psychedelic",
+    "name": "迷幻人偶",
+    "description": "你是一个人偶，是人类尸体神秘复活的产物。迷幻人偶是一种稀有的人偶，被设计成以身体的机能换来奇特的超能力的状态。",
+    "points": 2,
+    "skills": [ { "level": 2, "name": "spellcraft" } ],
+    "items": {
+      "both": {
+        "items": [ "socks", "sneakers", "dress", "tshirt" ]
+      },
+      "male": [ "boxer_shorts" ],
+      "female": [ "panties", "bra" ]
+    },
+    "spells": [
+               { "id": "NEC_forces_of_distortion", "level": 5 },
+               { "id": "NEC_distortion_of_destiny", "level": 5 },
+               { "id": "NEC_will_to_refuse", "level": 2 },
+               { "id": "NEC_voidthrone", "level": 3 }
+    ],
+    "traits": [ "ESP" ]
+  },
+    {
+    "type": "profession",
+    "id": "nec_doll_psychedelic2",
+    "name": "迷幻人偶(强化)",
+    "description": "你是一个人偶，是人类尸体神秘复活的产物。迷幻人偶是一种稀有的人偶，被设计成以身体的机能换来奇特的超能力的状态。而你经过了更进一步的强化，这使得你比同类型的人偶更加强大。",
+    "points": 4,
+    "skills": [ { "level": 5, "name": "spellcraft" } ],
+    "items": {
+      "both": {
+        "items": [ "socks", "sneakers", "dress", "tshirt" ]
+      },
+      "male": [ "boxer_shorts" ],
+      "female": [ "panties", "bra" ]
+    },
+    "spells": [
+               { "id": "NEC_forces_of_distortion", "level": 10 },
+               { "id": "NEC_distortion_of_destiny", "level": 10 },
+               { "id": "NEC_will_to_refuse", "level": 5 },
+               { "id": "NEC_voidthrone", "level": 10 },
+               { "id": "NEC_sharing_of_loss", "level": 10 },
+               { "id": "NEC_pieces_on_the_board", "level": 5 },
+               { "id": "NEC_destructive_vortex", "level": 5 }
+    ],
+    "traits": [ "ESP" ]
+  }
+
+]

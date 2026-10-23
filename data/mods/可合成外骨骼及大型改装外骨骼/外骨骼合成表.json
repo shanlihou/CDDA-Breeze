@@ -1,0 +1,497 @@
+[
+  {
+    "type": "recipe",
+    "activity_level": "ACTIVE_EXERCISE",
+    "result": "power_armor_light",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "mechanics",
+    "difficulty": 7,
+    "skills_required": [ "electronics", 5 ],
+    "time": "40 h",
+    "reversible": true,
+    "decomp_learn": 4,
+    "autolearn": true,
+    "book_learn": [ [ "recipe_caseless", 4 ] ],
+    "using": [ [ "welding_standard", 500 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_welding_basic", "fail_multiplier": 6.0 },
+      { "proficiency": "prof_welding" },
+      { "proficiency": "prof_closures", "time_multiplier": 1.1 },
+      { "proficiency": "prof_metalworking" },
+      { "proficiency": "prof_blacksmithing" },
+      { "proficiency": "prof_armorsmithing" },
+      { "proficiency": "prof_articulation" },
+      { "proficiency": "prof_quenching", "fail_multiplier": 2 }
+    ],
+    "qualities": [
+      { "id": "HAMMER", "level": 2 },
+      { "id": "SCREW", "level": 1 },
+      { "id": "WRENCH", "level": 1 },
+      { "id": "SAW_M", "level": 10 }
+    ],
+    "tools": [ [ [ "tongs", -1 ] ], [ [ "hotcut", -1 ] ] ],
+    "components": [
+      [ [ "depowered_armor", 1 ] ],
+      [ [ "motor_small", 4 ] ],
+      [ [ "medium_storage_battery", 1 ] ],
+      [ [ "mc_steel_lump", 16 ], [ "mc_steel_chunk", 64 ] ],
+      [ [ "jumper_cable", 2 ] ],
+      [ [ "sheet_kevlar", 40 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "ACTIVE_EXERCISE",
+    "result": "power_armor_basic",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "mechanics",
+    "difficulty": 8,
+    "skills_required": [ "electronics", 6 ],
+    "time": "50 h",
+    "reversible": true,
+    "decomp_learn": 4,
+    "autolearn": true,
+    "book_learn": [ [ "recipe_caseless", 4 ] ],
+    "using": [ [ "welding_standard", 700 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_welding_basic", "fail_multiplier": 6.0 },
+      { "proficiency": "prof_welding" },
+      { "proficiency": "prof_closures", "time_multiplier": 1.1 },
+      { "proficiency": "prof_metalworking" },
+      { "proficiency": "prof_blacksmithing" },
+      { "proficiency": "prof_armorsmithing" },
+      { "proficiency": "prof_articulation" },
+      { "proficiency": "prof_quenching", "fail_multiplier": 2 }
+    ],
+    "qualities": [
+      { "id": "HAMMER", "level": 2 },
+      { "id": "SCREW", "level": 1 },
+      { "id": "WRENCH", "level": 1 },
+      { "id": "SAW_M", "level": 10 }
+    ],
+    "tools": [ [ [ "tongs", -1 ] ], [ [ "hotcut", -1 ] ] ],
+    "components": [
+      [ [ "depowered_armor", 1 ] ],
+      [ [ "motor_small", 6 ] ],
+      [ [ "medium_storage_battery", 1 ] ],
+      [ [ "mc_steel_lump", 32 ], [ "mc_steel_chunk", 128 ] ],
+      [ [ "jumper_cable", 2 ] ],
+      [ [ "sheet_kevlar", 60 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "ACTIVE_EXERCISE",
+    "result": "power_armor_heavy",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "mechanics",
+    "difficulty": 9,
+    "skills_required": [ "electronics", 7 ],
+    "time": "60 h",
+    "reversible": true,
+    "decomp_learn": 4,
+    "autolearn": true,
+    "book_learn": [ [ "recipe_caseless", 4 ] ],
+    "using": [ [ "welding_standard", 900 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_welding_basic", "fail_multiplier": 6.0 },
+      { "proficiency": "prof_welding" },
+      { "proficiency": "prof_closures", "time_multiplier": 1.1 },
+      { "proficiency": "prof_metalworking" },
+      { "proficiency": "prof_blacksmithing" },
+      { "proficiency": "prof_armorsmithing" },
+      { "proficiency": "prof_articulation" },
+      { "proficiency": "prof_quenching", "fail_multiplier": 2 }
+    ],
+    "qualities": [
+      { "id": "HAMMER", "level": 2 },
+      { "id": "SCREW", "level": 1 },
+      { "id": "WRENCH", "level": 1 },
+      { "id": "SAW_M", "level": 10 }
+    ],
+    "tools": [ [ [ "tongs", -1 ] ], [ [ "hotcut", -1 ] ] ],
+    "components": [
+      [ [ "depowered_armor", 1 ] ],
+      [ [ "motor_small", 8 ] ],
+      [ [ "medium_storage_battery", 1 ] ],
+      [ [ "mc_steel_lump", 64 ], [ "mc_steel_chunk", 256 ] ],
+      [ [ "jumper_cable", 2 ] ],
+      [ [ "sheet_kevlar", 120 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "ACTIVE_EXERCISE",
+    "result": "utility_exoskeleton_off",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "mechanics",
+    "difficulty": 7,
+    "skills_required": [ "electronics", 5 ],
+    "time": "10 h",
+    "reversible": true,
+    "decomp_learn": 4,
+    "autolearn": true,
+    "book_learn": [ [ "recipe_caseless", 4 ] ],
+    "using": [ [ "welding_standard", 500 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_welding_basic", "fail_multiplier": 6.0 },
+      { "proficiency": "prof_welding" },
+      { "proficiency": "prof_closures", "time_multiplier": 1.1 },
+      { "proficiency": "prof_metalworking" },
+      { "proficiency": "prof_blacksmithing" },
+      { "proficiency": "prof_armorsmithing" },
+      { "proficiency": "prof_articulation" },
+      { "proficiency": "prof_quenching", "fail_multiplier": 2 }
+    ],
+    "qualities": [
+      { "id": "HAMMER", "level": 2 },
+      { "id": "SCREW", "level": 1 },
+      { "id": "WRENCH", "level": 1 },
+      { "id": "SAW_M", "level": 10 }
+    ],
+    "tools": [ [ [ "tongs", -1 ] ], [ [ "hotcut", -1 ] ] ],
+    "components": [
+      [ [ "depowered_armor", 1 ] ],
+      [ [ "motor_small", 4 ] ],
+      [ [ "medium_storage_battery", 1 ] ],
+      [ [ "jumper_cable", 2 ] ],
+      [ [ "sheet_kevlar", 40 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "ACTIVE_EXERCISE",
+    "result": "ice_utility_exoskeleton_off",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "mechanics",
+    "difficulty": 7,
+    "skills_required": [ "electronics", 5 ],
+    "time": "10 h",
+    "reversible": true,
+    "decomp_learn": 4,
+    "autolearn": true,
+    "book_learn": [ [ "recipe_caseless", 4 ] ],
+    "using": [ [ "welding_standard", 500 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_welding_basic", "fail_multiplier": 6.0 },
+      { "proficiency": "prof_welding" },
+      { "proficiency": "prof_closures", "time_multiplier": 1.1 },
+      { "proficiency": "prof_metalworking" },
+      { "proficiency": "prof_blacksmithing" },
+      { "proficiency": "prof_armorsmithing" },
+      { "proficiency": "prof_articulation" },
+      { "proficiency": "prof_quenching", "fail_multiplier": 2 }
+    ],
+    "qualities": [
+      { "id": "HAMMER", "level": 2 },
+      { "id": "SCREW", "level": 1 },
+      { "id": "WRENCH", "level": 1 },
+      { "id": "SAW_M", "level": 10 }
+    ],
+    "tools": [ [ [ "tongs", -1 ] ], [ [ "hotcut", -1 ] ] ],
+    "components": [
+      [ [ "depowered_armor", 1 ] ],
+      [ [ "1cyl_combustion_small", 1 ] ],
+      [ [ "metal_tank_little", 5 ] ],
+      [ [ "jumper_cable", 2 ] ],
+      [ [ "sheet_kevlar", 40 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "ACTIVE_EXERCISE",
+    "result": "大型改装外骨骼",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "mechanics",
+    "difficulty": 1,
+    "skills_required": [ "electronics", 8 ],
+    "time": "120 h",
+    "reversible": true,
+    "decomp_learn": 4,
+    "autolearn": true,
+    "book_learn": [ [ "recipe_caseless", 4 ] ],
+    "using": [ [ "welding_standard", 1800 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_welding_basic", "fail_multiplier": 6.0 },
+      { "proficiency": "prof_welding" },
+      { "proficiency": "prof_closures", "time_multiplier": 1.1 },
+      { "proficiency": "prof_metalworking" },
+      { "proficiency": "prof_blacksmithing" },
+      { "proficiency": "prof_armorsmithing" },
+      { "proficiency": "prof_articulation" },
+      { "proficiency": "prof_quenching", "fail_multiplier": 2 }
+    ],
+    "qualities": [
+      { "id": "HAMMER", "level": 2 },
+      { "id": "SCREW", "level": 1 },
+      { "id": "WRENCH", "level": 1 },
+      { "id": "SAW_M", "level": 10 }
+    ],
+    "tools": [ [ [ "tongs", -1 ] ], [ [ "hotcut", -1 ] ] ],
+    "components": [
+      [ [ "depowered_armor", 1 ] ],
+      [ [ "motor_small", 16 ] ],
+      [ [ "medium_storage_battery", 4 ] ],
+      [ [ "mc_steel_lump", 320 ], [ "mc_steel_chunk", 1280 ] ],
+      [ [ "jumper_cable", 4 ] ],
+      [ [ "sheet_kevlar", 400 ] ],
+      [ [ "mil_plate", 16 ] ],
+      [ [ "compact_ASRG_containment", 1 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "ACTIVE_EXERCISE",
+    "result": "power_armor_helmet_light",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "mechanics",
+    "difficulty": 7,
+    "skills_required": [ "electronics", 5 ],
+    "time": "4 h",
+    "reversible": true,
+    "decomp_learn": 4,
+    "autolearn": true,
+    "book_learn": [ [ "recipe_caseless", 4 ] ],
+    "using": [ [ "welding_standard", 50 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_welding_basic", "fail_multiplier": 6.0 },
+      { "proficiency": "prof_welding" },
+      { "proficiency": "prof_closures", "time_multiplier": 1.1 },
+      { "proficiency": "prof_metalworking" },
+      { "proficiency": "prof_blacksmithing" },
+      { "proficiency": "prof_armorsmithing" },
+      { "proficiency": "prof_articulation" },
+      { "proficiency": "prof_quenching", "fail_multiplier": 2 }
+    ],
+    "qualities": [
+      { "id": "HAMMER", "level": 2 },
+      { "id": "SCREW", "level": 1 },
+      { "id": "WRENCH", "level": 1 },
+      { "id": "SAW_M", "level": 10 }
+    ],
+    "tools": [ [ [ "tongs", -1 ] ], [ [ "hotcut", -1 ] ] ],
+    "components": [
+      [ [ "depowered_helmet", 1 ] ],
+      [ [ "sheet_kevlar", 10 ] ],
+      [ [ "reinforced_glass_pane", 1 ] ],
+      [ [ "mc_steel_lump", 4 ], [ "mc_steel_chunk", 16 ] ],
+      [ [ "jumper_cable", 1 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "ACTIVE_EXERCISE",
+    "result": "power_armor_helmet_basic",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "mechanics",
+    "difficulty": 8,
+    "skills_required": [ "electronics", 6 ],
+    "time": "6 h",
+    "reversible": true,
+    "decomp_learn": 4,
+    "autolearn": true,
+    "book_learn": [ [ "recipe_caseless", 4 ] ],
+    "using": [ [ "welding_standard", 70 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_welding_basic", "fail_multiplier": 6.0 },
+      { "proficiency": "prof_welding" },
+      { "proficiency": "prof_closures", "time_multiplier": 1.1 },
+      { "proficiency": "prof_metalworking" },
+      { "proficiency": "prof_blacksmithing" },
+      { "proficiency": "prof_armorsmithing" },
+      { "proficiency": "prof_articulation" },
+      { "proficiency": "prof_quenching", "fail_multiplier": 2 }
+    ],
+    "qualities": [
+      { "id": "HAMMER", "level": 2 },
+      { "id": "SCREW", "level": 1 },
+      { "id": "WRENCH", "level": 1 },
+      { "id": "SAW_M", "level": 10 }
+    ],
+    "tools": [ [ [ "tongs", -1 ] ], [ [ "hotcut", -1 ] ] ],
+    "components": [
+      [ [ "depowered_helmet", 1 ] ],
+      [ [ "sheet_kevlar", 20 ] ],
+      [ [ "reinforced_glass_pane", 1 ] ],
+      [ [ "mc_steel_lump", 8 ], [ "mc_steel_chunk", 32 ] ],
+      [ [ "jumper_cable", 1 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "ACTIVE_EXERCISE",
+    "result": "power_armor_helmet_heavy",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "mechanics",
+    "difficulty": 9,
+    "skills_required": [ "electronics", 7 ],
+    "time": "8 h",
+    "reversible": true,
+    "decomp_learn": 4,
+    "autolearn": true,
+    "book_learn": [ [ "recipe_caseless", 4 ] ],
+    "using": [ [ "welding_standard", 90 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_welding_basic", "fail_multiplier": 6.0 },
+      { "proficiency": "prof_welding" },
+      { "proficiency": "prof_closures", "time_multiplier": 1.1 },
+      { "proficiency": "prof_metalworking" },
+      { "proficiency": "prof_blacksmithing" },
+      { "proficiency": "prof_armorsmithing" },
+      { "proficiency": "prof_articulation" },
+      { "proficiency": "prof_quenching", "fail_multiplier": 2 }
+    ],
+    "qualities": [
+      { "id": "HAMMER", "level": 2 },
+      { "id": "SCREW", "level": 1 },
+      { "id": "WRENCH", "level": 1 },
+      { "id": "SAW_M", "level": 10 }
+    ],
+    "tools": [ [ [ "tongs", -1 ] ], [ [ "hotcut", -1 ] ] ],
+    "components": [
+      [ [ "depowered_helmet", 1 ] ],
+      [ [ "sheet_kevlar", 30 ] ],
+      [ [ "reinforced_glass_pane", 1 ] ],
+      [ [ "mc_steel_lump", 12 ], [ "mc_steel_chunk", 48 ] ],
+      [ [ "jumper_cable", 1 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "ACTIVE_EXERCISE",
+    "result": "大型改装外骨骼头盔",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "mechanics",
+    "difficulty": 10,
+    "skills_required": [ "electronics", 8 ],
+    "time": "10 h",
+    "reversible": true,
+    "decomp_learn": 4,
+    "autolearn": true,
+    "book_learn": [ [ "recipe_caseless", 4 ] ],
+    "using": [ [ "welding_standard", 180 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_welding_basic", "fail_multiplier": 6.0 },
+      { "proficiency": "prof_welding" },
+      { "proficiency": "prof_closures", "time_multiplier": 1.1 },
+      { "proficiency": "prof_metalworking" },
+      { "proficiency": "prof_blacksmithing" },
+      { "proficiency": "prof_armorsmithing" },
+      { "proficiency": "prof_articulation" },
+      { "proficiency": "prof_quenching", "fail_multiplier": 2 }
+    ],
+    "qualities": [
+      { "id": "HAMMER", "level": 2 },
+      { "id": "SCREW", "level": 1 },
+      { "id": "WRENCH", "level": 1 },
+      { "id": "SAW_M", "level": 10 }
+    ],
+    "tools": [ [ [ "tongs", -1 ] ], [ [ "hotcut", -1 ] ] ],
+    "components": [
+      [ [ "depowered_helmet", 1 ] ],
+      [ [ "sheet_kevlar", 100 ] ],
+      [ [ "reinforced_glass_pane", 3 ] ],
+      [ [ "mc_steel_lump", 120 ], [ "mc_steel_chunk", 480 ] ],
+      [ [ "jumper_cable", 1 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "ACTIVE_EXERCISE",
+    "result": "power_armor_generator",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "mechanics",
+    "difficulty": 7,
+    "skills_required": [ "electronics", 5 ],
+    "time": "8 h",
+    "reversible": true,
+    "decomp_learn": 4,
+    "autolearn": true,
+    "book_learn": [ [ "recipe_caseless", 4 ] ],
+    "using": [ [ "welding_standard", 100 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_metalworking" },
+      { "proficiency": "prof_welding_basic", "fail_multiplier": 6.0 },
+      { "proficiency": "prof_welding" }
+    ],
+    "qualities": [
+      { "id": "HAMMER", "level": 2 },
+      { "id": "SCREW", "level": 1 },
+      { "id": "WRENCH", "level": 1 },
+      { "id": "SAW_M", "level": 10 }
+    ],
+    "components": [
+      [ [ "1cyl_combustion_small", 1 ] ],
+      [ [ "mc_steel_lump", 4 ], [ "mc_steel_chunk", 16 ] ],
+      [ [ "metal_tank_little", 5 ] ],
+      [ [ "jumper_cable", 3 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "ACTIVE_EXERCISE",
+    "result": "power_armor_frame",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "mechanics",
+    "difficulty": 7,
+    "skills_required": [ "electronics", 5 ],
+    "time": "8 h",
+    "reversible": true,
+    "decomp_learn": 4,
+    "autolearn": true,
+    "book_learn": [ [ "recipe_caseless", 4 ] ],
+    "using": [ [ "welding_standard", 50 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_metalworking" },
+      { "proficiency": "prof_welding_basic", "fail_multiplier": 6.0 },
+      { "proficiency": "prof_welding" }
+    ],
+    "qualities": [
+      { "id": "HAMMER", "level": 2 },
+      { "id": "SCREW", "level": 1 },
+      { "id": "WRENCH", "level": 1 },
+      { "id": "SAW_M", "level": 10 }
+    ],
+    "components": [ [ [ "backpack_tactical_large", 1 ] ], [ [ "mc_steel_lump", 4 ], [ "mc_steel_chunk", 16 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "ACTIVE_EXERCISE",
+    "result": "大型改装外骨骼携行具",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "mechanics",
+    "difficulty": 7,
+    "skills_required": [ "electronics", 5 ],
+    "time": "8 h",
+    "reversible": true,
+    "decomp_learn": 4,
+    "autolearn": true,
+    "book_learn": [ [ "recipe_caseless", 4 ] ],
+    "using": [ [ "welding_standard", 50 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_metalworking" },
+      { "proficiency": "prof_welding_basic", "fail_multiplier": 6.0 },
+      { "proficiency": "prof_welding" }
+    ],
+    "qualities": [
+      { "id": "HAMMER", "level": 2 },
+      { "id": "SCREW", "level": 1 },
+      { "id": "WRENCH", "level": 1 },
+      { "id": "SAW_M", "level": 10 }
+    ],
+    "components": [ [ [ "sheet_kevlar", 30 ] ], [ [ "mc_steel_lump", 48 ], [ "mc_steel_chunk", 192 ] ] ]
+  }
+]

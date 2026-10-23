@@ -1,0 +1,513 @@
+[
+  {
+    "id": "iku_dragonstrike",
+    "type": "SPELL",
+    "name": "龙神之击",
+    "description": "凝聚静电并释放，伤害你前方的生物。",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "ally",
+      "ground",
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "line",
+    "min_damage": 35,
+    "max_damage": 185,
+    "damage_increment": 15,
+    "damage_type": "electric",
+    "min_range": 3,
+    "max_range": 3,
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 65,
+    "base_energy_cost": 200,
+    "energy_source": "MANA",
+    "flags": [
+      "LOUD",
+      "NO_HANDS",
+      "NO_LEGS",
+      "SOMATIC"
+    ]
+  },
+  {
+    "id": "iku_elekiter",
+    "type": "SPELL",
+    "name": "龙宫电光",
+    "description": "手指向天空，召唤闪电击中你周围的随机敌人。",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
+    "effect": "attack",
+    "extra_effects": [
+      {
+        "id": "iku_elekiter2"
+      }
+    ],
+    "shape": "blast",
+    "damage_type": "electric",
+    "min_damage": 2,
+    "max_damage": 7,
+    "damage_increment": 0.5,
+    "min_range": 0,
+    "max_range": 0,
+    "min_aoe": 4,
+    "max_aoe": 10,
+    "aoe_increment": 0.6,
+    "field_id": "fd_electricity",
+    "field_chance": 1,
+    "min_field_intensity": 1,
+    "max_field_intensity": 1,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 125,
+    "base_energy_cost": 200,
+    "energy_source": "MANA",
+    "flags": [
+      "LOUD",
+      "NO_LEGS",
+      "RANDOM_TARGET",
+      "SOMATIC",
+      "WONDER"
+    ]
+  },
+  {
+    "id": "iku_elekiter2",
+    "type": "SPELL",
+    "name": "龙宫电光",
+    "description": "iku_elekiter 的闪电法术组件",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "damage_type": "electric",
+    "min_damage": 10,
+    "max_damage": 60,
+    "damage_increment": 5,
+    "min_range": 0,
+    "max_range": 0,
+    "min_aoe": 4,
+    "max_aoe": 10,
+    "aoe_increment": 0.6,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 125,
+    "base_energy_cost": 200,
+    "energy_source": "MANA",
+    "flags": [
+      "LOUD",
+      "NO_LEGS",
+      "RANDOM_TARGET",
+      "SOMATIC"
+    ]
+  },
+  {
+    "id": "iku_staticfield",
+    "type": "SPELL",
+    "name": "静电场",
+    "description": "逆转目标区域的电流。对依赖电力的生物造成少量伤害，并眩晕部分敌人。",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "ally",
+      "ground",
+      "hostile"
+    ],
+    "effect": "attack",
+    "extra_effects": [
+      {
+        "id": "iku_staticfield2"
+      }
+    ],
+    "shape": "cone",
+    "damage_type": "electric",
+    "min_damage": 0,
+    "max_damage": 10,
+    "damage_increment": 1,
+    "min_range": 6,
+    "max_range": 24,
+    "range_increment": 1.8,
+    "min_aoe": 90,
+    "max_aoe": 90,
+    "field_id": "fd_electricity",
+    "field_chance": 4,
+    "min_field_intensity": 1,
+    "max_field_intensity": 1,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 150,
+    "base_energy_cost": 200,
+    "energy_source": "MANA",
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "PERCENTAGE_DAMAGE",
+      "SOMATIC"
+    ]
+  },
+  {
+    "id": "iku_staticfield2",
+    "type": "SPELL",
+    "name": "静电场（EMP）",
+    "description": "iku_staticfield 的 EMP 效果",
+    "valid_targets": [
+      "hostile"
+    ],
+    "targeted_monster_ids": [
+      "mon_broken_cyborg",
+      "mon_prototype_cyborg",
+      "mon_exodii_worker",
+      "mon_exodii_quad",
+      "mon_zomborg",
+      "mon_copbot",
+      "mon_riotbot",
+      "mon_secubot",
+      "mon_talon_m202a1",
+      "mon_secubot_america",
+      "mon_skitterbot",
+      "mon_science_bot",
+      "mon_robofac_prototype",
+      "mon_dispatch",
+      "mon_dispatch_military",
+      "mon_EMP_hack",
+      "mon_c4_hack",
+      "mon_flashbang_hack",
+      "mon_gasbomb_hack",
+      "mon_grenade_hack",
+      "mon_manhack",
+      "mon_mininuke_hack",
+      "mon_tazer_hack",
+      "mon_lab_security_drone_GM",
+      "mon_lab_security_drone_YM",
+      "mon_lab_security_drone_BM",
+      "mon_lab_security_drone_BM2",
+      "mon_lab_security_drone_GR",
+      "mon_lab_security_drone_BS",
+      "mon_mech_recon",
+      "mon_mech_combat",
+      "mon_mech_lifter",
+      "mon_leech_blossom",
+      "mon_leech_stalk",
+      "mon_leech_radio",
+      "mon_leech_pod_cluster",
+      "mon_leech_root_runner",
+      "mon_leech_root_drone",
+      "mon_robofac_laserturret_mk1",
+      "mon_robofac_camspy",
+      "mon_turret",
+      "mon_turret_searchlight",
+      "mon_turret_bmg",
+      "mon_turret_rifle",
+      "mon_crows_m240",
+      "mon_turret_riot",
+      "mon_turret_speaker",
+      "mon_exodii_turret",
+      "mon_turret_artisans",
+      "mon_eyebot",
+      "mon_grocerybot",
+      "mon_grocerybot_busted",
+      "mon_hazmatbot",
+      "mon_molebot",
+      "mon_nursebot",
+      "mon_nursebot_defective",
+      "mon_zombie_brute_shocker",
+      "mon_zombie_electric",
+      "mon_zombie_nullfield",
+      "mon_zombie_static",
+      "mon_zombie_rust",
+      "mon_zombie_shell",
+      "mon_zombie_plated",
+      "mon_zombie_urchin",
+      "mon_zombie_hammer_hands",
+      "mon_zombie_technician",
+      "mon_yrax_trifacet"
+    ],
+    "effect": "mod_moves",
+    "shape": "cone",
+    "min_damage": -2666,
+    "max_damage": -6000,
+    "damage_increment": -334,
+    "min_range": 6,
+    "max_range": 24,
+    "range_increment": 1.8,
+    "min_aoe": 90,
+    "max_aoe": 90,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "//": "Any electric, magnetic, robotic or similar creature should go here"
+  },
+  {
+    "id": "iku_stickleback",
+    "type": "SPELL",
+    "name": "雷云刺鱼",
+    "description": "用电场环绕自身并释放两道脉冲。第一道将附近的敌人击退；第二道充当反应屏障，对来袭攻击进行反击。",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "ally",
+      "ground",
+      "hostile"
+    ],
+    "effect": "attack",
+    "extra_effects": [
+      {
+        "id": "iku_stickleback2"
+      },
+      {
+        "id": "iku_stickleback3"
+      }
+    ],
+    "shape": "blast",
+    "damage_type": "electric",
+    "min_damage": 22,
+    "max_damage": 33,
+    "damage_increment": 1.1,
+    "min_aoe": 2,
+    "max_aoe": 2,
+    "field_id": "fd_electricity",
+    "field_chance": 2,
+    "min_field_intensity": 1,
+    "max_field_intensity": 3,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 150,
+    "base_energy_cost": 133,
+    "energy_source": "MANA",
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "//": "Dmg should be stickleback_shock x2"
+  },
+  {
+    "id": "iku_stickleback2",
+    "type": "SPELL",
+    "name": "雷云刺鱼（第一段击退）",
+    "description": "iku_stickleback 的击退组件",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
+    "effect": "directed_push",
+    "shape": "blast",
+    "damage_type": "electric",
+    "min_damage": 3,
+    "max_damage": 3,
+    "min_aoe": 2,
+    "max_aoe": 2,
+    "max_level": 1,
+    "difficulty": -10,
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "flags": [
+      "LOUD",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ]
+  },
+  {
+    "id": "iku_stickleback3",
+    "type": "SPELL",
+    "name": "雷云刺鱼（生成物品）",
+    "description": "iku_thundercloud 的子法术",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "attack",
+    "effect_str": "aura_stickleback",
+    "shape": "blast",
+    "min_duration": 1066,
+    "max_duration": 2400,
+    "duration_increment": 134,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "NO_HANDS",
+      "NO_LEGS"
+    ]
+  },
+  {
+    "id": "iku_thunderfish_base",
+    "type": "SPELL",
+    "name": "雷云鱼弹",
+    "description": "发射一道小型电火花，在随机敌人之间弹跳，伤害随弹跳次数增加。",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "damage_type": "electric",
+    "min_damage": 13,
+    "max_damage": 33,
+    "damage_increment": 2,
+    "min_range": 5,
+    "max_range": 5,
+    "field_id": "fd_electricity",
+    "field_chance": 1,
+    "min_field_intensity": 1,
+    "max_field_intensity": 1,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 100,
+    "base_energy_cost": 200,
+    "energy_source": "MANA",
+    "flags": [
+      "SOMATIC",
+      "NO_LEGS"
+    ]
+  },
+  {
+    "id": "iku_thunderfish",
+    "type": "SPELL",
+    "name": "雷云鱼弹",
+    "copy-from": "iku_thunderfish_base",
+    "description": "雷云鱼弹",
+    "extra_effects": [
+      {
+        "id": "iku_thunderfish2"
+      }
+    ],
+    "min_damage": 14,
+    "max_damage": 44,
+    "damage_increment": 3,
+    "flags": [
+      "RANDOM_TARGET"
+    ]
+  },
+  {
+    "id": "iku_thunderfish2",
+    "type": "SPELL",
+    "name": "雷云鱼弹（第二跳）",
+    "copy-from": "iku_thunderfish_base",
+    "description": "雷云鱼弹第二跳",
+    "extra_effects": [
+      {
+        "id": "iku_thunderfish3"
+      }
+    ],
+    "min_damage": 14,
+    "max_damage": 44,
+    "damage_increment": 3,
+    "flags": [
+      "RANDOM_TARGET"
+    ]
+  },
+  {
+    "id": "iku_thunderfish3",
+    "type": "SPELL",
+    "name": "雷云鱼弹（第三跳）",
+    "copy-from": "iku_thunderfish_base",
+    "description": "雷云鱼弹第三跳",
+    "extra_effects": [
+      {
+        "id": "iku_thunderfish4"
+      }
+    ],
+    "min_damage": 15,
+    "max_damage": 55,
+    "damage_increment": 4,
+    "flags": [
+      "RANDOM_TARGET"
+    ]
+  },
+  {
+    "id": "iku_thunderfish4",
+    "type": "SPELL",
+    "name": "雷云鱼弹（第四跳）",
+    "copy-from": "iku_thunderfish_base",
+    "description": "雷云鱼弹第四跳",
+    "min_damage": 16,
+    "max_damage": 66,
+    "damage_increment": 5,
+    "flags": [
+      "RANDOM_TARGET"
+    ]
+  },
+  {
+    "id": "iku_waterveil",
+    "type": "SPELL",
+    "name": "薄纱如水",
+    "description": "快速为你的面纱充能，在你面前挥动两次。",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
+    "components": "spell_components_ikuscarf",
+    "effect": "attack",
+    "extra_effects": [
+      {
+        "id": "iku_waterveil2"
+      }
+    ],
+    "shape": "cone",
+    "damage_type": "electric",
+    "min_damage": 15,
+    "max_damage": 45,
+    "damage_increment": 3,
+    "min_range": 3,
+    "max_range": 3,
+    "min_aoe": 105,
+    "max_aoe": 105,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 66,
+    "base_energy_cost": 120,
+    "energy_source": "MANA",
+    "flags": [
+      "NO_LEGS"
+    ]
+  },
+  {
+    "id": "iku_waterveil2",
+    "type": "SPELL",
+    "name": "薄纱如水（第二鞭）",
+    "description": "iku_waterveil 的第二击",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
+    "components": "spell_components_ikuscarf",
+    "effect": "attack",
+    "shape": "cone",
+    "damage_type": "electric",
+    "min_damage": 15,
+    "max_damage": 45,
+    "damage_increment": 3,
+    "min_range": 3,
+    "max_range": 3,
+    "min_aoe": 105,
+    "max_aoe": 105,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "flags": [
+      "NO_LEGS"
+    ]
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "id": "AMMO_25MM_HEI",
+    "type": "ammo_effect",
+    "aoe": {
+      "field_type": "fd_fire",
+      "intensity_min": 1,
+      "intensity_max": 3,
+      "size": 1,
+      "radius": 1,
+      "chance": 30
+    },
+    "explosion": {
+      "power": 90,
+      "distance_factor": 2
+    }
+  },
+  {
+    "id": "AMMO_SHRAPNEL",
+    "type": "ammo_effect",
+    "explosion": {
+      "power": 1,
+      "distance_factor": 0.1,
+      "shrapnel": {
+        "casing_mass": 1,
+        "fragment_mass": 0.1
+      }
+    }
+  },
+  {
+    "id": "AMMO_SHRAPNELS",
+    "type": "ammo_effect",
+    "explosion": {
+      "power": 3,
+      "distance_factor": 0.1,
+      "shrapnel": {
+        "casing_mass": 3,
+        "fragment_mass": 0.1
+      }
+    }
+  },
+  {
+    "id": "AMMO_105MM_FRAG",
+    "type": "ammo_effect",
+    "aoe": {
+      "field_type": "fd_fire",
+      "intensity_min": 1,
+      "intensity_max": 3,
+      "size": 1,
+      "radius": 2,
+      "chance": 30
+    },
+    "explosion": {
+      "power": 600,
+      "distance_factor": 4
+    }
+  },
+  {
+    "id": "AMMO_120MM_FRAG",
+    "type": "ammo_effect",
+    "aoe": {
+      "field_type": "fd_fire",
+      "intensity_min": 1,
+      "intensity_max": 3,
+      "size": 1,
+      "radius": 2,
+      "chance": 30
+    },
+    "explosion": {
+      "power": 750,
+      "distance_factor": 4
+    }
+  },
+  {
+    "id": "AMMO_155MM_FRAG",
+    "type": "ammo_effect",
+    "aoe": {
+      "field_type": "fd_fire",
+      "intensity_min": 1,
+      "intensity_max": 3,
+      "size": 1,
+      "radius": 2,
+      "chance": 30
+    },
+    "explosion": {
+      "power": 1000,
+      "distance_factor": 5
+    }
+  },
+  {
+    "id": "AMMO_999MM_FRAG",
+    "type": "ammo_effect",
+    "explosion": {
+      "power": 10000000,
+      "distance_factor": 16
+    }
+  }
+]

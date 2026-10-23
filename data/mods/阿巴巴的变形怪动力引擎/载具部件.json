@@ -1,0 +1,86 @@
+[
+  {
+    "id": "变形怪动力引擎（小型）",
+    "copy-from": "engine_motor",
+    "type": "vehicle_part",
+    "name": { "str": "变形怪动力引擎（小型）" },
+    "item": "变形怪动力引擎（小型）",
+    "description": "一条自制的小型的变形怪动力引擎，使用变形怪糊和变异肉块带动发动机,其动力相当于一台单缸引擎",
+    "durability": 300,
+    "epower": 0,
+    "power": 8000,
+    "energy_consumption": "0 W",
+    "folded_volume": "500 ml",
+    "breaks_into": [ { "item": "slime_scrap", "count": [ 10, 15 ] } ],
+    "requirements": {
+      "install": { "skills": [ [ "mechanics", 1 ], [ "firstaid", 1 ] ], "time": "20 s" },
+      "removal": { "skills": [ [ "mechanics", 1 ], [ "firstaid", 1 ] ], "time": "20 s" },
+      "repair": { "skills": [ [ "mechanics", 1 ], [ "firstaid", 1 ] ], "time": "10 m" }
+    },
+    "damage_reduction": { "all": 400 },
+    "flags": [ "ENGINE", "E_HIGHER_SKILL", "E_HEATER" ]
+  },
+  {
+    "id": "变形怪动力引擎（中型）",
+    "copy-from": "engine_motor",
+    "type": "vehicle_part",
+    "name": { "str": "变形怪动力引擎（中型）" },
+    "item": "变形怪动力引擎（中型）",
+    "description": "一条自制的中型的变形怪动力引擎，使用变形怪糊和变异肉块带动发动机,其动力相当于一台大型单缸引擎",
+    "durability": 600,
+    "epower": 0,
+    "power": 40000,
+    "energy_consumption": "0 W",
+    "folded_volume": "1000 ml",
+    "breaks_into": [ { "item": "slime_scrap", "count": [ 20, 35 ] } ],
+    "requirements": {
+      "install": { "skills": [ [ "mechanics", 2 ], [ "firstaid", 2 ] ], "time": "20 s" },
+      "removal": { "skills": [ [ "mechanics", 2 ], [ "firstaid", 2 ] ], "time": "20 s" },
+      "repair": { "skills": [ [ "mechanics", 2 ], [ "firstaid", 2 ] ], "time": "15 m" }
+    },
+    "damage_reduction": { "all": 400 },
+    "flags": [ "ENGINE", "E_HIGHER_SKILL", "E_HEATER" ]
+  },
+  {
+    "id": "变形怪动力引擎（大型）",
+    "copy-from": "engine_motor",
+    "type": "vehicle_part",
+    "name": { "str": "变形怪动力引擎（大型）" },
+    "item": "变形怪动力引擎（大型）",
+    "description": "一条自制的大型的变形怪动力引擎，使用变形怪糊和变异肉块带动发动机,其动力相当于一台四缸引擎",
+    "durability": 1500,
+    "epower": 0,
+    "power": 100000,
+    "energy_consumption": "0 W",
+    "folded_volume": "5000 ml",
+    "breaks_into": [ { "item": "slime_scrap", "count": [ 30, 45 ] } ],
+    "requirements": {
+      "install": { "skills": [ [ "mechanics", 3 ], [ "firstaid", 2 ] ], "time": "20 s" },
+      "removal": { "skills": [ [ "mechanics", 3 ], [ "firstaid", 2 ] ], "time": "20 s" },
+      "repair": { "skills": [ [ "mechanics", 3 ], [ "firstaid", 2 ] ], "time": "20 m" }
+    },
+    "damage_reduction": { "all": 400 },
+    "flags": [ "ENGINE", "E_HIGHER_SKILL", "E_HEATER" ]
+  },
+  {
+    "id": "变形怪动力引擎（超大型）",
+    "copy-from": "engine_motor",
+    "type": "vehicle_part",
+    "name": { "str": "变形怪动力引擎（超大型）" },
+    "item": "变形怪动力引擎（超大型）",
+    "description": "一条自制的超大型的变形怪动力引擎，使用变形怪糊和变异肉块带动发动机,其动力相当于一台六缸引擎",
+    "durability": 2000,
+    "epower": 0,
+    "power": 150000,
+    "energy_consumption": "0 W",
+    "folded_volume": "10000 ml",
+    "breaks_into": [ { "item": "slime_scrap", "count": [ 50, 65 ] } ],
+    "requirements": {
+      "install": { "skills": [ [ "mechanics", 3 ], [ "firstaid", 3 ] ], "time": "40 s" },
+      "removal": { "skills": [ [ "mechanics", 3 ], [ "firstaid", 3 ] ], "time": "40 s" },
+      "repair": { "skills": [ [ "mechanics", 3 ], [ "firstaid", 3 ] ], "time": "30 m" }
+    },
+    "damage_reduction": { "all": 400 },
+    "flags": [ "ENGINE", "E_HIGHER_SKILL", "E_HEATER" ]
+  }
+]

@@ -1,0 +1,43 @@
+[
+	{
+		"type": "profession",
+		"ident": "fisher",
+		"name": "Fisher",
+		"description": "You spent most of your days just fishing in the swamps getting by quietly on what you caught.  You found the buzzing of insects enjoyable, but they got bigger and more mean.  Now their horrible noises have you spooked- you just hope the fish aren't as nasty.",
+		"points": 0,
+		"skills": [ { "level": 2, "name": "swimming" }, { "level": 2, "name": "survival" } ],
+		"items": {
+			"both": {
+				"items": [
+					"jeans",
+					"tank_top",
+					"socks",
+					"fishing_waders",
+					"knit_scarf",
+					"fishing_rod_professional",
+					"vest",
+					"hat_boonie",
+					"wristwatch",
+					"jacket_flannel",
+					"fishery_egg_whitebass",
+					"fishery_egg_pumpkinseed",
+					"fishery_egg_brooktrout",
+					"fishery_egg_greensunfish",
+					"fishery_egg_trout",
+					"fishery_mobile_fishponds_folded",
+					"fishery_mobile_fishponds_folded",
+					"fishery_mobile_fishingnets_folding"
+				],
+				"entries": [
+					{ "group": "charged_cell_phone" },
+					{ "item": "fish_trap", "ammo-item": "fish_bait", "charges": 5 },
+					{ "item": "fish_bait", "charges": 15 },
+					{ "item": "lighter", "charges": 100 },
+					{ "item": "knife_hunting", "container-item": "sheath" }
+				]
+			},
+			"male": [ "boxer_shorts" ],
+			"female": [ "bra", "panties" ]
+		}
+	}
+]

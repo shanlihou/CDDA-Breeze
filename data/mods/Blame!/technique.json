@@ -1,0 +1,327 @@
+[
+  {
+    "type": "technique",
+    "id": "tec_SG_counter",
+    "name": "快速格挡",
+    "messages": [ "你快速格挡了敌人的攻击，并将其踢翻在地。", "<npcname>快速格挡了敌人的攻击，并将其踢翻在地。" ],
+    "skill_requirements": [ { "name": "melee", "level": 1 } ],
+    "melee_allowed": true,
+    "unarmed_allowed": true,
+    "block_counter": true,
+    "down_dur": 1,
+    "knockback_dist": 1,
+    "weighting": 4,
+    "mult_bonuses": [
+      { "stat": "movecost", "scale": 0.1 },
+      { "stat": "damage", "type": "bash", "scale": 0.3 }
+    ],
+    "attack_vectors": [ "WEAPON", "HAND" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_SG_disarm",
+    "name": "击落武器",
+    "messages": [ "你出手将%s的武器击落。", "<npcname>出手将%s的武器击落。" ],
+    "skill_requirements": [ { "name": "melee", "level": 3 } ],
+    "melee_allowed": true,
+    "unarmed_allowed": true,
+    "disarms": true,
+    "attack_vectors": [ "WEAPON", "HAND" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_SG_takedown",
+    "name": "踢倒",
+    "messages": [ "你将%s踢倒在地。", "<npcname>将%s踢倒在地。" ],
+    "skill_requirements": [ { "name": "melee", "level": 2 } ],
+    "unarmed_allowed": true,
+    "melee_allowed": true,
+    "mult_bonuses": [ { "stat": "damage", "type": "bash", "scale": 1.5 } ],
+    "down_dur": 3,
+    "stun_dur": 1,
+    "knockback_dist": 1,
+    "powerful_knockback": true,
+    "attack_vectors": [ "FOOT" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_SG_wide",
+    "name": "下旋踢",
+    "messages": [ "你快速的对%s及目标周围扫腿踢下。", "<npcname>快速的对%s及目标周围扫腿踢下" ],
+    "skill_requirements": [ { "name": "melee", "level": 2 } ],
+    "unarmed_allowed": true,
+    "melee_allowed": true,
+    "mult_bonuses": [ { "stat": "damage", "type": "bash", "scale": 0.6 } ],
+    "down_dur": 1,
+    "aoe": "wide",
+    "attack_vectors": [ "FOOT" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_SG_break",
+    "name": "挣脱踢击",
+    "messages": [ "%s试图抓住你，但是被你一脚踢开了。", "%s试图抓住<npcname>，但是被<npcname>一脚踢开了。" ],
+    "skill_requirements": [ { "name": "melee", "level": 2 } ],
+    "unarmed_allowed": true,
+    "melee_allowed": true,
+    "defensive": true,
+    "weighting": 2,
+    "mult_bonuses": [ { "stat": "damage", "type": "bash", "scale": 1.3 } ],
+    "stun_dur": 1,
+    "knockback_dist": 2,
+    "powerful_knockback": true,
+    "grab_break": true,
+    "attack_vectors": [ "FOOT" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_SG_punch",
+    "name": "强击",
+    "messages": [ "你使出强力一击将%s瘫痪在地。", "<npcname>使出强力一击将%s瘫痪在地。" ],
+    "skill_requirements": [ { "name": "melee", "level": 3 } ],
+    "unarmed_allowed": true,
+    "melee_allowed": true,
+    "stun_dur": 5,
+    "down_dur": 6,
+    "mult_bonuses": [ { "stat": "damage", "type": "bash", "scale": 2.0 } ],
+    "attack_vectors": [ "ARM" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_SG_Kick",
+    "name": "猛踹",
+    "messages": [ "你猛地把%s踹了出去。", "<npcname>猛地把%s踹了出去。" ],
+    "skill_requirements": [ { "name": "melee", "level": 3 } ],
+    "unarmed_allowed": true,
+    "melee_allowed": true,
+    "stun_dur": 2,
+    "down_dur": 3,
+    "knockback_dist": 6,
+    "powerful_knockback": true,
+    "mult_bonuses": [ { "stat": "damage", "type": "bash", "scale": 3.0 } ],
+    "attack_vectors": [ "FOOT" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_SG_swee_past",
+    "name": "掠过",
+    "messages": [ "你快速的对%s划出一刀。", "<npcname>快速的对%s划出一刀。" ],
+    "skill_requirements": [ { "name": "melee", "level": 2 } ],
+    "melee_allowed": true,
+    "mult_bonuses": [ 
+      { "stat": "movecost", "scale": 0.3 },
+      { "stat": "damage", "type": "cut", "scale": 0.3 } ],
+    "attack_vectors": [ "WEAPON" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_SG_Down_poke",
+    "name": "下戳",
+    "messages": [ "你快速的对%s戳了一刀。", "<npcname>快速的对%s戳了一刀。" ],
+    "skill_requirements": [ { "name": "melee", "level": 1 } ],
+    "melee_allowed": true,
+    "mult_bonuses": [ 
+      { "stat": "movecost", "scale": 0.5 },
+      { "stat": "damage", "type": "stab", "scale": 1.0 } ],
+    "attack_vectors": [ "WEAPON" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_SG_Heavy_chop",
+    "name": "重砍",
+    "messages": [ "你对%s用力劈砍下去。", "<npcname>对%s用力劈砍下去。" ],
+    "skill_requirements": [ { "name": "melee", "level": 3 } ],
+    "melee_allowed": true,
+    "mult_bonuses": [ 
+      { "stat": "movecost", "scale": 1.5 },
+      { "stat": "damage", "type": "cut", "scale": 2.0 } ],
+    "attack_vectors": [ "WEAPON" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_SG_Split",
+    "name": "剖开",
+    "messages": [ "你将刀刺入%s体内，剖开一个裂口。", "<npcname>将刀刺入%s体内，剖开一个裂口。" ],
+    "skill_requirements": [ { "name": "melee", "level": 4 } ],
+    "melee_allowed": true,
+    "mult_bonuses": [ 
+      { "stat": "movecost", "scale": 2.0 },
+      { "stat": "damage", "type": "stab", "scale": 1.0 },
+      { "stat": "damage", "type": "cut", "scale": 2.0 } ],
+    "attack_vectors": [ "WEAPON" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_SG_Strangle_stab",
+    "name": "扼杀戳刺",
+    "messages": [ "你将%s勒住，用力戳刺。", "<npcname>将%s勒住，对其弱点戳刺下去。" ],
+    "skill_requirements": [ { "name": "melee", "level": 3 } ],
+    "melee_allowed": true,
+    "weighting": -1,
+    "crit_ok": true,
+    "crit_tec": true,
+    "mult_bonuses": [ 
+      { "stat": "movecost", "scale": 3.0 },
+      { "stat": "damage", "type": "stab", "scale": 2.0 } ],
+    "attack_vectors": [ "WEAPON" ]
+  },
+  {
+    "type": "technique",
+    "id": "katana_ARTTT_VORPAL",
+    "name": "斩切",
+    "melee_allowed": true,
+    "mult_bonuses": [ { "stat": "damage", "type": "cut", "scale": 256 } ],
+    "flat_bonuses": [
+      { "stat": "arpen", "type": "electric", "scale": 100 },
+      { "stat": "arpen", "type": "cut", "scale": 100 }
+    ],
+    "crit_tec": true,
+    "weighting": 6,
+    "skill_requirements": [ { "name": "melee", "level": 6 } ],
+    "messages": [
+      "斩！\n你将%s一分为二！",
+      "斩！\n<npcname>将%s一分为二！"
+    ],
+    "description": "256倍切割伤害，仅暴击，至少 6 级近战",
+    "attack_vectors": [ "WEAPON" ]
+  },
+  {
+    "type": "technique",
+    "id": "ARTTT_RAPID_cut",
+    "name": "疾速切割",
+    "melee_allowed": true,
+	"crit_ok": true,
+    "weighting": 80,
+    "skill_requirements": [ { "name": "melee", "level": 3 } ],
+    "mult_bonuses": [
+      { "stat": "movecost", "scale": 0.15 },
+      { "stat": "damage", "type": "bash", "scale": 0.1 },
+      { "stat": "damage", "type": "cut", "scale": 0.15 },
+      { "stat": "damage", "type": "stab", "scale": 0.1 }
+    ],
+    "flat_bonuses": [
+      { "stat": "arpen", "type": "electric", "scale": 15 },
+      { "stat": "arpen", "type": "cut", "scale": 15 }
+    ],
+    "messages": [ "你疾速切割%s", "<npcname>疾速切割%s" ],
+    "description": "15% 耗时, 15% 伤害，至少 3 级近战",
+    "attack_vectors": [ "WEAPON" ]
+  },
+  {
+    "type": "technique",
+    "id": "ARTTT_SPIN_Chop",
+    "name": "回转斩",
+    "melee_allowed": true,
+	"crit_ok": true,
+    "weighting": 30,
+    "skill_requirements": [ { "name": "melee", "level": 6 } ],
+    "mult_bonuses": [
+      { "stat": "movecost", "scale": 0.3 },
+      { "stat": "damage", "type": "bash", "scale": 0.15 },
+      { "stat": "damage", "type": "cut", "scale": 0.3 },
+      { "stat": "damage", "type": "stab", "scale": 0.1 }
+    ],
+    "flat_bonuses": [
+      { "stat": "arpen", "type": "electric", "scale": 30 },
+      { "stat": "arpen", "type": "cut", "scale": 30 }
+    ],
+    "messages": [ "你快速回旋斩击周身与%s", "<npcname>快速回旋斩击周身与%s" ],
+    "aoe": "spin",
+    "description": "30% 耗时, 30% 伤害，攻击所有近身敌人，至少 6 级近战",
+    "attack_vectors": [ "WEAPON" ]
+  },
+  {
+    "type": "technique",
+    "id": "ARTTT_fast_Slash",
+    "name": "快斩",
+    "melee_allowed": true,
+	"crit_ok": true,
+    "weighting": 100,
+    "skill_requirements": [ { "name": "melee", "level": 6 } ],
+    "mult_bonuses": [ 
+      { "stat": "damage", "type": "bash", "scale": 0.2 },
+      { "stat": "damage", "type": "cut", "scale": 0.2 },
+      { "stat": "arpen", "type": "cut", "scale": 0.2 },
+      { "stat": "movecost", "scale": 0.01 }
+    ],
+	"flat_bonuses": [ 
+	  { "stat": "hit", "scale": 20 }, 
+	  { "stat": "block", "scale": 20 },
+      { "stat": "dodge", "scale": 20 }
+	],
+    "messages": [ "你快速挥砍%s", "<npcname>快速挥砍%s" ],
+    "description": "1% 耗时, 20% 伤害，至少 6 级近战，可暴击",
+    "attack_vectors": [ "WEAPON" ]
+  },
+  {
+    "type": "technique",
+    "id": "ARTTT_transverse_Slash",
+    "name": "横斩",
+    "melee_allowed": true,
+    "crit_tec": true,
+    "stun_dur": 3,
+    "knockback_dist": 3,
+    "weighting": 20,
+    "skill_requirements": [ { "name": "melee", "level": 7 } ],
+    "messages": [ "你蛮力挥砍%s", "<npcname>蛮力挥砍%s" ],
+    "description": "4% 耗时,击晕 3 回合, 击退 3 格，至少 7 级近战, 仅暴击",
+    "attack_vectors": [ "WEAPON" ],
+    "mult_bonuses": [
+      { "stat": "movecost", "scale": 0.04 }
+    ],
+	"flat_bonuses": [ 
+	  { "stat": "hit", "scale": 10 }, 
+	  { "stat": "block", "scale": 10 },
+      { "stat": "dodge", "scale": 10 }
+	]
+  },
+  {
+    "type": "technique",
+    "id": "ARTTT_vertical_Slash",
+    "name": "纵斩",
+    "melee_allowed": true,
+    "skill_requirements": [ { "name": "melee", "level": 8 } ],
+    "crit_tec": true,
+    "stun_dur": 3,
+    "knockback_dist": 1,
+    "weighting": 60,
+    "messages": [ "你暴力劈砍%s", "<npcname>暴力劈砍%s" ],
+    "description": "5% 耗时,击晕 3 回合, 击退 1 格, 穿透攻击，至少 8 级近战，仅暴击",
+    "aoe": "impale",
+    "mult_bonuses": [
+      { "stat": "movecost", "scale": 0.05 }
+    ],
+	"flat_bonuses": [ 
+	  { "stat": "hit", "scale": 10 }, 
+	  { "stat": "block", "scale": 10 },
+      { "stat": "dodge", "scale": 10 }
+	],
+    "attack_vectors": [ "WEAPON" ]
+  },
+  {
+    "type": "technique",
+    "id": "ARTTT_cyclone_Slash",
+    "name": "旋风斩",
+    "melee_allowed": true,
+	"crit_tec": true,
+    "stun_dur": 2,
+    "knockback_dist": 3,
+    "weighting": 80,
+    "skill_requirements": [ { "name": "melee", "level": 9 } ],
+    "mult_bonuses": [
+      { "stat": "damage", "type": "bash", "scale": 1.5 },
+      { "stat": "damage", "type": "cut", "scale": 1.5 },
+      { "stat": "arpen", "type": "cut", "scale": 1.5 },
+      { "stat": "movecost", "scale": 0.06 }
+    ],
+	"flat_bonuses": [ 
+	  { "stat": "hit", "scale": 20 }, 
+	  { "stat": "block", "scale": 10 },
+      { "stat": "dodge", "scale": 50 }
+	],
+    "messages": [ "你旋转一圈，扫击%s与周身", "<npcname>旋转一圈，扫击%s与周身" ],
+    "aoe": "spin",
+    "description": "6% 耗时,150% 伤害，击晕 2 回合, 击退 3 格，攻击所有近身敌人，至少 9 级近战，仅暴击",
+    "attack_vectors": [ "WEAPON" ]
+  }
+]

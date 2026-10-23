@@ -1,0 +1,461 @@
+[
+  {
+    "abstract": "nanoturretgun",
+    "type": "GUN",
+    "name": "nanotech turret gun",
+    "description": "You shouldn't see this. nanoturretgun",
+    "symbol": "(",
+    "color": "light_gray",
+    "price": 500000,
+    "material": "nanite",
+    "ammo": "metal_nanopowder",
+    "flags": [
+      "NEVER_JAMS",
+      "UNBREAKABLE_MELEE",
+      "NONCONDUCTIVE",
+      "TRADER_AVOID",
+      "WATERPROOF_GUN",
+      "MOUNTED_GUN"
+    ],
+    "volume": 1,
+    "bashing": 0,
+    "cutting": 0,
+    "to_hit": 0,
+    "durability": 10,
+    "clip_size": 100,
+    "reload": 0
+  },
+  {
+    "abstract": "nanoturret",
+    "type": "TOOL",
+    "name": "nanotech turret",
+    "description": "You shouldn't see this. nanoturret",
+    "symbol": "(",
+    "color": "light_gray",
+    "price": 500000,
+    "material": "nanite",
+    "flags": [
+      "NEVER_JAMS",
+      "UNBREAKABLE_MELEE",
+      "NONCONDUCTIVE",
+      "TRADER_AVOID"
+    ],
+    "volume": 1,
+    "bashing": 0,
+    "cutting": 0,
+    "to_hit": 0
+  },
+  {
+    "id": "nanoturret_shredder",
+    "copy-from": "nanoturret",
+    "type": "TOOL",
+    "name": "纳米霰弹枪炮塔 (i)",
+    "description": "纳米科技制作的霰弹枪炮塔，射击出巨大的单分子飞镖云。每一次射击都是基础版的10倍弹药，可以射击更远距离和更大的伤害。它使用一个类似于液体传输的系统，粉末状金属为原料，然后根据需要将其压缩成弹药。",
+    "looks_like": "nano_turret_shredder",
+    "weight": 4375,
+    "volume": 8,
+    "use_action": [
+      {
+        "type": "place_monster",
+        "monster_id": "mon_nano_turret_pistol",
+        "difficulty": 0,
+        "moves": 100,
+        "skill": "computer"
+      },
+      {
+        "type": "transform",
+        "target": "nano_turret_pistol",
+        "active": false,
+        "menu_text": "Switch to vehicle mode",
+        "msg": "Turret state switched."
+      }
+    ]
+  },
+  {
+    "id": "nanoturret_pistol",
+    "copy-from": "nanoturret",
+    "type": "TOOL",
+    "name": "纳米科技手枪炮塔 (i)",
+    "description": "纳米科技制作的手枪炮塔，射击出巨大的单分子飞镖云。每一次射击都是基础版的10倍弹药，可以射击更远距离和更大的伤害。它使用一个类似于液体传输的系统，粉末状金属为原料，然后根据需要将其压缩成弹药。",
+    "looks_like": "nano_turret_pistol",
+    "weight": 3627,
+    "volume": 4,
+    "use_action": [
+      {
+        "type": "place_monster",
+        "monster_id": "mon_nano_turret_pistol",
+        "difficulty": 0,
+        "moves": 100,
+        "skill": "computer"
+      },
+      {
+        "type": "transform",
+        "target": "nano_turret_pistol",
+        "active": false,
+        "menu_text": "Switch to vehicle mode",
+        "msg": "Turret state switched."
+      }
+    ]
+  },
+  {
+    "id": "nanoturret_rifle",
+    "copy-from": "nanoturret",
+    "type": "TOOL",
+    "name": "纳米科技步枪炮塔 (i)",
+    "description": "纳米科技制作的步枪炮塔，射击出巨大的单分子飞镖云。每一次射击都是基础版的10倍弹药，可以射击更远距离和更大的伤害。它使用一个类似于液体传输的系统，粉末状金属为原料，然后根据需要将其压缩成弹药。",
+    "weight": 4375,
+    "volume": 8,
+    "use_action": [
+      {
+        "type": "place_monster",
+        "monster_id": "mon_nano_turret_rifle",
+        "difficulty": 0,
+        "moves": 100,
+        "skill": "computer"
+      },
+      {
+        "type": "transform",
+        "target": "nano_turret_rifle",
+        "active": false,
+        "menu_text": "Switch to vehicle mode",
+        "msg": "Turret state switched."
+      }
+    ]
+  },
+  {
+    "id": "nanoturret_smg",
+    "copy-from": "nanoturret",
+    "type": "TOOL",
+    "name": "纳米科技冲锋枪炮塔 (i)",
+    "description": "纳米科技制作的冲锋枪炮塔，射击出巨大的单分子飞镖云。每一次射击都是基础版的10倍弹药，可以射击更远距离和更大的伤害。它使用一个类似于液体传输的系统，粉末状金属为原料，然后根据需要将其压缩成弹药。",
+    "looks_like": "nano_turret_smg",
+    "weight": 4523,
+    "price": 375000,
+    "volume": 6,
+    "use_action": [
+      {
+        "type": "place_monster",
+        "monster_id": "mon_nano_turret_smg",
+        "difficulty": 0,
+        "moves": 100,
+        "skill": "computer"
+      },
+      {
+        "type": "transform",
+        "target": "nano_turret_smg",
+        "active": false,
+        "menu_text": "Switch to vehicle mode",
+        "msg": "Turret state switched."
+      }
+    ]
+  },
+  {
+    "id": "nano_turret_shredder",
+    "type": "GUN",
+    "name": "纳米霰弹枪炮塔 (v)",
+    "copy-from": "nanoturretgun",
+    "description": "纳米技术霰弹枪炮塔,发射出大片单分子飞镖，每发子弹是普通弹匣子弹的10倍,拥有更长的射击距离和射击伤害.它通过车辆传递系统来传递纳米粉末金属,然后根据需要将其压缩成弹药.",
+    "looks_like": "rm614_lmg",
+    "weight": 4375,
+    "skill": "shotgun",
+    "volume": 8,
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": 18
+    },
+    "range": 4,
+    "dispersion": 400,
+    "sight_dispersion": 80,
+    "aim_speed": 4,
+    "recoil": 900,
+    "modes": [
+      [
+        "DEFAULT",
+        "blast",
+        5,
+        "SIMULTANEOUS"
+      ],
+      [
+        "BURST",
+        "auto",
+        20
+      ]
+    ],
+    "use_action": {
+      "type": "transform",
+      "target": "nanoturret_shredder",
+      "active": false,
+      "menu_text": "切换到独立模式",
+      "msg": "切换炮塔状态。"
+    }
+  },
+  {
+    "id": "nano_turret_pistol",
+    "type": "GUN",
+    "name": "纳米手枪炮塔 (v)",
+    "copy-from": "nanoturretgun",
+    "description": "纳米技术霰弹枪炮塔,发射出大片单分子飞镖，每发子弹是普通弹匣子弹的10倍,拥有更长的射击距离和射击伤害.它通过车辆传递系统来传递纳米粉末金属,然后根据需要将其压缩成弹药.",
+    "looks_like": "needlepistol",
+    "weight": 3627,
+    "price": 250000,
+    "skill": "pistol",
+    "volume": 4,
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": 2
+    },
+    "range": 8,
+    "dispersion": 60,
+    "sight_dispersion": 20,
+    "aim_speed": 6,
+    "recoil": 100,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "BURST",
+        "burst",
+        5,
+        "SIMULTANEOUS"
+      ],
+      [
+        "AUTO",
+        "auto",
+        15
+      ]
+    ],
+    "use_action": {
+      "type": "transform",
+      "target": "nanoturret_pistol",
+      "active": false,
+      "menu_text": "切换到独立模式",
+      "msg": "切换炮塔状态"
+    }
+  },
+  {
+    "id": "nano_turret_rifle",
+    "type": "GUN",
+    "name": "纳米步枪炮塔 (v)",
+    "copy-from": "nanoturretgun",
+    "description": "纳米技术步枪炮塔,发射出大片单分子飞镖，每发子弹是普通弹匣子弹的10倍,拥有更长的射击距离和射击伤害.它通过车辆传递系统来传递纳米粉末金属,然后根据需要将其压缩成弹药.",
+    "looks_like": "rm11b_sniper_rifle",
+    "weight": 4375,
+    "skill": "rifle",
+    "volume": 8,
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": 2
+    },
+    "range": 24,
+    "dispersion": 0,
+    "sight_dispersion": 0,
+    "aim_speed": 20,
+    "recoil": 100,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "BURST",
+        "burst",
+        10,
+        "SIMULTANEOUS"
+      ],
+      [
+        "AUTO",
+        "auto",
+        25
+      ]
+    ],
+    "use_action": {
+      "type": "transform",
+      "target": "nanoturret_rifle",
+      "active": false,
+      "menu_text": "切换到独立模式",
+      "msg": "切换炮塔状态"
+    }
+  },
+  {
+    "id": "nano_turret_smg",
+    "type": "GUN",
+    "name": "纳米冲锋枪炮塔",
+    "copy-from": "nanoturretgun",
+    "description": "纳米技术步枪炮塔,发射出大片单分子飞镖，每发子弹是普通弹匣子弹的10倍,拥有更长的射击距离和射击伤害.它通过车辆传递系统来传递纳米粉末金属,然后根据需要将其压缩成弹药.",
+    "looks_like": "rm360_carbine",
+    "weight": 4523,
+    "price": 375000,
+    "skill": "smg",
+    "volume": 6,
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": 8
+    },
+    "range": 4,
+    "dispersion": 200,
+    "sight_dispersion": 20,
+    "aim_speed": 4,
+    "recoil": 400,
+    "modes": [
+      [
+        "DEFAULT",
+        "burst",
+        5,
+        "SIMULTANEOUS"
+      ],
+      [
+        "BURST",
+        "auto",
+        25
+      ],
+      [
+        "FULL",
+        "maximum",
+        50
+      ]
+    ],
+    "use_action": {
+      "type": "transform",
+      "target": "nanoturret_smg",
+      "active": false,
+      "menu_text": "切换到独立模式",
+      "msg": "切换炮塔状态"
+    }
+  },
+  {
+    "type": "GENERIC",
+    "id": "xl_nanite_cluster",
+    "name": "xl 纳米粒子块",
+    "description": "一块非常大的纳米粒子,可以很容易地编程成多种不同的形式.",
+    "looks_like": "slime_scrap",
+    "weight": 1200,
+    "to_hit": -2,
+    "color": "light_cyan",
+    "symbol": ":",
+    "material": "nanite",
+    "volume": 8,
+    "bashing": 1,
+    "cutting": 0,
+    "category": "veh_parts",
+    "flags": [
+      "UNBREAKABLE_MELEE",
+      "NONCONDUCTIVE",
+      "TRADER_AVOID"
+    ],
+    "price": 600000
+  },
+  {
+    "type": "GENERIC",
+    "id": "xl_nanite_ai",
+    "name": "xl 纳米粒子块(ai)",
+    "description": "包含智能核心的大块纳米粒子,可以很容易的编程成多种不同的形式.",
+    "looks_like": "slime_scrap",
+    "weight": 1469,
+    "to_hit": -2,
+    "color": "light_cyan",
+    "symbol": ":",
+    "material": "nanite",
+    "volume": 8,
+    "bashing": 1,
+    "cutting": 0,
+    "category": "veh_parts",
+    "flags": [
+      "UNBREAKABLE_MELEE",
+      "NONCONDUCTIVE",
+      "TRADER_AVOID"
+    ],
+    "price": 600000
+  },
+  {
+    "type": "GENERIC",
+    "id": "nanotech_generator",
+    "category": "veh_parts",
+    "name": "纳米发电机",
+    "description": "大量纳米粒子组成的机械发电机,为蓄电池提供电力支持.",
+    "weight": 36000,
+    "volume": 40,
+    "price": 2000000,
+    "price_postapoc": 240000,
+    "to_hit": -2,
+    "color": "light_cyan",
+    "symbol": ":",
+    "material": "nanite",
+    "flags": [
+      "UNBREAKABLE_MELEE",
+      "NONCONDUCTIVE",
+      "TRADER_AVOID"
+    ],
+    "bashing": 1,
+    "cutting": 0
+  },
+  {
+    "id": "nanotech_battery",
+    "type": "MAGAZINE",
+    "category": "veh_parts",
+    "name": "纳米蓄电池",
+    "name_plural": "nanotech storage arrays",
+    "description": "大量纳米粒子组成的蓄电池,可以存储超大容量电力.",
+    "weight": 3600,
+    "volume": 6,
+    "price": 600000,
+    "material": [
+      "nanite"
+    ],
+    "symbol": ":",
+    "color": "light_cyan",
+    "ammo_type": "battery",
+    "capacity": 1000000,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "battery": 1000000
+        }
+      }
+    ],
+    "flags": [
+      "NO_SALVAGE",
+      "NO_UNLOAD",
+      "NO_RELOAD",
+      "RECHARGE",
+      "UNBREAKABLE_MELEE",
+      "NONCONDUCTIVE",
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "nano_crawler",
+    "type": "WHEEL",
+    "category": "veh_parts",
+    "name": "纳米履带",
+    "description": "大量纳米材料制作的履带轮胎,可以穿越任何地形.",
+    "weight": 1469,
+    "volume": 25,
+    "price": 75500,
+    "to_hit": -3,
+    "bashing": 30,
+    "material": [
+      "nanite"
+    ],
+    "flags": [
+      "UNBREAKABLE_MELEE",
+      "NONCONDUCTIVE",
+      "TRADER_AVOID"
+    ],
+    "qualities": [
+      [
+        "SELF_JACK",
+        40
+      ]
+    ],
+    "symbol": "]",
+    "color": "white",
+    "diameter": 60,
+    "width": 30
+  }
+]

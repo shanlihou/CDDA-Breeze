@@ -1,0 +1,114 @@
+[
+    {
+		"type": "construction",
+		"id": "forestry_constr_fertilising_shrubs_blueberry",
+		"group": "compost_cg_fertilising_shrubs",
+		"category": "FARM_WOOD",
+		"required_skills": [ [ "survival", 3 ] ],
+		"time": "20 m",
+		"components": [
+			[
+                [ "fertilizer_liquid", 3 ],
+                [ "fertilizer_commercial", 3 ]
+            ]
+		],
+		"byproducts": [],
+		"qualities": [
+			[
+				{
+					"id": "DIG",
+					"level": 2
+				}
+			]
+		],
+		"pre_terrain": "t_shrub_blueberry",
+		"post_flags": [ "keep_items" ],
+		"post_terrain": "forestry_t_shrub_blueberry_fertilized"
+	},
+    {
+		"type": "construction",
+		"id": "forestry_constr_fertilising_pruned_shrubs_blueberry",
+		"group": "compost_cg_fertilising_shrubs",
+		"category": "FARM_WOOD",
+		"required_skills": [ [ "survival", 3 ] ],
+		"time": "20 m",
+		"components": [
+			[
+                [ "fertilizer_liquid", 3 ],
+                [ "fertilizer_commercial", 3 ]
+            ]
+		],
+		"byproducts": [],
+		"qualities": [
+			[
+				{
+					"id": "DIG",
+					"level": 2
+				}
+			]
+		],
+		"pre_terrain": "forestry_t_shrub_blueberry_pruned",
+		"post_flags": [ "keep_items" ],
+		"post_terrain": "forestry_t_shrub_blueberry_fertilized_pruned"
+	},
+
+
+	{
+		"type": "construction",
+		"id": "compost_constr_pruning_shrubs_blueberry",
+		"group": "compost_cg_pruning_shrubs",
+		"category": "FARM_WOOD",
+		"required_skills": [ [ "survival", 5 ] ],
+		"time": "20 m",
+		"byproducts": [
+            {
+                "item": "stick",
+                "count": [ 0, 2 ]
+            },
+            {
+                "item": "withered",
+                "count": [ 7, 15 ]
+            }
+        ],
+		"qualities": [
+			[
+				{
+					"id": "CUT",
+					"level": 1
+				}
+			]
+		],
+		"pre_terrain": "t_shrub_blueberry",
+		"post_flags": [ "keep_items" ],
+		"post_terrain": "forestry_t_shrub_blueberry_pruned"
+	},
+    {
+		"type": "construction",
+		"id": "compost_constr_pruning_fertilized_shrubs_blueberry",
+		"group": "compost_cg_pruning_shrubs",
+		"category": "FARM_WOOD",
+		"required_skills": [ [ "survival", 5 ] ],
+		"time": "20 m",
+		"byproducts": [
+            {
+                "item": "stick",
+                "count": [ 0, 2 ]
+            },
+            {
+                "item": "withered",
+                "count": [ 7, 15 ]
+            }
+        ],
+		"qualities": [
+			[
+				{
+					"id": "CUT",
+					"level": 1
+				}
+			]
+		],
+		"pre_terrain": "forestry_t_shrub_blueberry_fertilized",
+		"post_flags": [ "keep_items" ],
+		"post_terrain": "forestry_t_shrub_blueberry_fertilized_pruned"
+	}
+]

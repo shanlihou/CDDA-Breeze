@@ -1,0 +1,316 @@
+[
+    {
+        "type" : "item_group",
+        "id" : "VER_group",
+        "subtype": "collection",
+        "items": [
+            {
+                "collection": [
+                  { "item": "VER_railgun_version", "count": 1 },
+                  { "item": "VER_recipe", "count": 1 }
+                ]
+              }
+           ]
+        
+    },
+    {
+      "type" : "item_group",
+      "id" : "VER_group_ammo",
+      "subtype": "collection",
+      "items": [
+          {
+              "collection": [
+                {"item":"VERMAG_10rd", "ammo-item": "VER_6x49HE", "charges": 10,"count":1,"prob":20 },
+                {"item":"VERMAG_10rd", "ammo-item": "VER_6x49AP", "charges": 10,"count":[1,2],"prob":40 },
+                {"item":"VERMAG_10rd", "ammo-item": "VER_6x49API", "charges": 10,"count":[1,2],"prob":40 },
+                {"item":"VERMAG_10rd", "ammo-item": "VER_6x49FMJ", "charges": 10,"count":[2,6],"prob":60 },
+                {"item":"VERMAG_10rd", "ammo-item": "VER_6x49SHELL", "charges": 10,"count":[1,5],"prob":60 }
+              ]
+            }
+         ]
+      
+  },
+    {"id": "SUS_exodii_storage_lowvalue",
+    "type": "item_group",
+    "extend": {
+      "items": [
+        { "group": "VER_group", "prob":0.125},
+        { "group": "VER_group_ammo", "prob":5},
+        { "item": "Revia_blood_stone","count":3,"prob":1.25}
+      ]
+    }
+  },
+  {"id": "SUS_exodii_storage_medvalue",
+    "type": "item_group",
+    "extend": {
+      "items": [
+        { "group": "VER_group", "prob":0.25},
+        { "group": "VER_group_ammo", "prob":7.5},
+        { "item": "Revia_blood_stone","count":3,"prob":2.5}
+      ]
+    }
+  },
+  {"id": "SUS_exodii_storage_highvalue",
+    "type": "item_group",
+    "extend": {
+      "items": [
+        { "group": "VER_group",  "prob":0.5},
+        { "group": "VER_group_ammo", "prob":10},
+        { "item": "Revia_blood_stone","count":3,"prob":5}
+      ]
+    }
+  },
+  {
+    "id":"VER_group_sell_exodii",
+    "//":"在鲁比克处出售的VER相关物品",
+    "type":"item_group",
+    "subtype":"collection",
+    "items":[
+      {"item":"VER_railgun_version","prob":50},
+      {"item":"VER_recipe","prob":50},
+      { "item": "VER_6x49HE", "container-item": "box_small",  "count": [ 1, 2 ], "sealed": true,"prob":10 },
+      { "item": "VER_6x49SHELL", "container-item": "box_small",  "count": [ 1, 3 ], "sealed": true,"prob":60 },
+      { "item": "VER_6x49API", "container-item": "box_small",  "count": [ 1, 2 ], "sealed": true,"prob":40 },
+      { "item": "VER_6x49AP", "container-item": "box_small",  "count": [ 1, 2 ], "sealed": true,"prob":60 },
+      { "item": "VER_6x49FMJ", "container-item": "box_small",  "count": [ 1, 3 ], "sealed": true,"prob":100 },
+      { "item": "VERMAG_30rd","count": [ 1, 2 ], "prob":100},
+      { "item": "VERMAG_60rd","count": [ 1, 2 ], "prob":50},
+      { "item": "VERMAG_150rd","count": 1, "prob":25}
+    ]
+    
+
+  },
+  {
+    "id":"EXODII_strage_sell",
+    "//":"流亡族的小道具",
+    "type":"item_group",
+    "subtype":"collection",
+    "items":[
+      { "item": "stimpak_s","count":[2,6],"prob":100},
+      { "item": "stimpak_m","count":[1,3],"prob":60},
+      { "item": "stimpak_H","count":[1,2],"prob":40}
+    ]
+  },
+  {
+    "id":"Soviet_E_Modified_group",
+    "//":"苏联被流亡族改装过的武器",
+    "type":"item_group",
+    "subtype":"collection",
+    "items":[
+      { "item": "VOL-25","count":[2,3],"prob":100},
+      { "item": "VOL-25","count":[2,5],"prob":60},
+      { "item": "VOL-25_EMP","count":[2,3],"prob":100},
+      { "item": "VOL-25_EMP","count":[1,3],"prob":30}
+    ]
+  },
+  {
+    "id":"Soviet_E_Modified_group_OTs-14_EXODII",
+    "//":"苏联被流亡族改装过的武器,配套的武器和弹夹",
+    "type":"item_group",
+    "subtype":"collection",
+    "items":[
+      { "item": "OTs-14_EXODII","count":1,"prob":100},
+      { "item": "exodiimag_OTs-14","count":[2,3],"prob":100}
+    ]
+  },
+  {
+    "id":"Soviet_weapon_group",
+    "//":"苏联/俄武器",
+    "type":"item_group",
+    "subtype":"collection",
+    "items":[
+      { "item": "NRS_R_Daggerl","prob":30},
+      { "item": "GP-25","count":1,"prob":5},
+      { "item": "VOL-25","count":[1,2],"prob":100},
+      { "item": "VOL-25","count":[2,5],"prob":30},
+      { "item": "9x39SP5", "count": [ 1, 5 ], "sealed": true,"prob":80 },
+      { "item": "9x39SP6", "count": [ 1, 3 ], "sealed": true,"prob":60 },
+      { "item": "9x39SPP", "count": [ 1, 2 ], "sealed": true,"prob":40 },
+      { "item":"RPG","count":1,"prob":30},
+      { "item":"RPG-7_tbg7v","count":1,"prob":20},
+      { "item":"RPG-7_pg7vr","count":1,"prob":20},
+      { "item":"RPG-7_ammo","count":1,"prob":20},
+      { "item":"RPG-7_og7v","count":1,"prob":20}
+    ]
+  },
+  {
+    "id":"Soviet_weapon_group_OTs-14",
+    "//":"苏联/俄武器，OTS14",
+    "type":"item_group",
+    "subtype":"collection",
+    "items":[
+      { "item": "OTs-14","prob":100},
+      { "item": "9x39MAG_rd20","count": [ 2, 3 ], "prob":100}
+    ]
+  },
+  {
+    "id":"Soviet_weapon_group_VSS",
+    "//":"苏联/俄武器，VSS",
+    "type":"item_group",
+    "subtype":"collection",
+    "items":[
+      { "item": "VSS","prob":100},
+      { "item": "9x39MAG_rd10","count": [ 1, 2 ], "prob":100}
+    ]
+  },
+  {
+    "id":"Soviet_weapon_group_Soviet_NKVD_pistol",
+    "//":"苏联/俄武器，内务部手枪",
+    "type":"item_group",
+    "subtype":"collection",
+    "items":[
+      { "item": "Soviet_NKVD_pistol","prob":100},
+      { "item": "9x39MAG_rd9","count": [ 2, 3 ], "prob":100}
+    ]
+  },
+  {
+    "id":"Soviet_weapon_group_VER_HAR",
+    "//":"苏联/俄武器，霍特步枪（至少用的子弹是7.62x54R）",
+    "type":"item_group",
+    "subtype":"collection",
+    "items":[
+      { "item": "VER_HAR","prob":100},
+      { "item": "HARMAG_rd25","count": [ 1, 3 ], "prob":100}
+    ]
+  },
+  {
+    "id":"VER_AA12_group",
+    "//":"AA12",
+    "type":"item_group",
+    "subtype":"collection",
+    "items":[
+      { "item":"VER_AA12","count":1,"prob":40},
+      { "item":"AA12MAG_rd8","count":[1,2],"prob":100},
+      { "item":"AA12MAG_rd20","count":[1,2],"prob":50},
+      { "item":"AA12MAG_rd32","count":1,"prob":25}
+    ]
+  },
+  {
+    "id":"bow_special_group",
+    "//":"特殊的弓弩，以及增加的箭之类的",
+    "type":"item_group",
+    "subtype":"collection",
+    "items":[
+      {"item":"dragonbreath_bow","count":1,"prob":80},
+      {"item":"rep_crossbow_plus","count":1,"prob":50},
+      {"item":"arrow_cf","count":[10,20],"prob":100},
+      {"item":"bolt_cf","count":[15,25],"prob":100},
+      {"item":"carbonfiber_boat_hull","count":[3,6],"prob":100}
+    ]
+  },
+  {
+    "id":"VER_HUB_SPBOX",
+    "//":"HUB01特殊武器的弹药补给箱",
+    "type":"item_group",
+    "subtype":"collection",
+    "items":[
+      {"item":"heavy_atomic_battery_cell","count":[1,2],"prob":20},
+      {"item":"hydrogen_can","count":[1,2],"prob":20},
+      {"item":"coolant","container-item": "coolant_tank","count":[1,2],"prob":20},
+      {"item":"heavy_atomic_battery_cell","count":1},
+      {"item":"hydrogen_can","count":1},
+      {"item":"coolant","container-item": "coolant_tank","count":1}
+    ]
+  },
+  {
+        "type" : "item_group",
+        "id" : "Revia_group",
+        "//":"雷维亚变异物品组",
+        "subtype": "collection",
+        "items": [
+            {
+                "collection": [
+                  { "item": "Revia_Skarne_signal", "count": 1 ,"prob":100},
+                  { "item": "Revia_bloodbook", "count": 1 ,"prob":100},
+                  { "item": "Revia_blood_stone","count":3,"prob":5}
+                ]
+              }
+           ]
+        
+    },
+  {
+    "type": "item_group",
+    "id": "EXODII_Store_Salvage_Tech",
+    "//": "At this point the Exodii trust you enough to sell you the materials to bootstrap some of their salvaged tech onto your own tech.",
+    "extend":{
+      "items":[
+        {
+          "collection": [
+        {"group":"VER_group_sell_exodii","count":1,"prob":100},
+        {"group":"Soviet_E_Modified_group","count":1,"prob":100},
+        {"group":"Soviet_E_Modified_group_OTs-14_EXODII","count":1,"prob":80},
+        {"group":"EXODII_strage_sell","count":1,"prob":100},
+        {"group":"Revia_group","count":1,"prob":10}
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "item_group",
+    "id": "JAY_RUCKERS_trade",
+    "copy-from":"JAY_RUCKERS_trade",
+    "subtype": "collection",
+    "extend": {
+      "entries":[
+        {"group":"Soviet_weapon_group_OTs-14","count":1,"prob":70},
+        {"group":"Soviet_weapon_group_VSS","count":1,"prob":40},
+        {"group":"Soviet_weapon_group_Soviet_NKVD_pistol","count":1,"prob":60},
+        {"group":"VER_AA12_group","count":1,"prob":50},
+        {"group":"Soviet_weapon_group","count":1,"prob":100}
+      ]
+    }
+  },
+  {
+    "type": "item_group",
+    "id": "CODY_MILLER_trade",
+    "copy-from":"CODY_MILLER_trade",
+    "subtype": "collection",
+    "extend": {
+      "entries":[
+        {"group":"bow_special_group","count":1,"prob":100}
+      ]
+    }
+  },
+  {
+    "type": "item_group",
+    "id": "NC_ROBOFAC_INTERCOM_trade",
+    "copy-from":"NC_ROBOFAC_INTERCOM_trade",
+    "subtype": "collection",
+    "extend": {
+      "entries":[
+        {"group":"VER_HUB_SPBOX","count":1,"prob":100},
+        {"group":"VER_HUB_SPBOX","count":1,"prob":100}
+      ]
+    }
+  },
+  {
+    "type": "item_group",
+    "id": "robofac_gun_mags",
+    "copy-from":"robofac_gun_mags",
+    "subtype": "collection",
+    "extend":{
+      "items": [
+        { "item": "robofac40_40", "count": 5, "prob": 100 },
+        { "item": "robofac40_45", "count": 5, "prob": 100 }
+      ]
+    }
+  },
+  {
+    "type": "item_group",
+    "id": "robofac_gun_kit",
+    "copy-from":"robofac_gun_kit",
+    "subtype": "collection",
+    "extend":{
+      "items": [
+        {
+          "collection": [
+            { "item": "robofac_gun_smg_45", "prob": 100, "count": 1 },
+            { "item": "robofac_gun_smg_40", "prob": 100, "count": 1 }
+          ],
+          "prob": 25
+        }
+      ]
+    }
+  }
+]

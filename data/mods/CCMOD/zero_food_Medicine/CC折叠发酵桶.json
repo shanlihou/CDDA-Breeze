@@ -1,0 +1,81 @@
+[
+  {
+           "type" : "recipe",
+    "result": "CCfvat_empty",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC食品医疗",
+    "skill_used": "survival",
+    "time": "1second",
+    "reversible": true,
+    "autolearn": true,
+    "components": [ [ [ "CCMODcoin", 60 ] ] ]
+    },
+  {
+    "id": "CCfvat_empty",
+    "type": "TOOL",
+    "subtypes": [ "TOOL" ],
+    "name": { "str": "CC折叠发酵桶" },
+    "description": "像金属烟熏架一样，可便携带走和安装的折叠发酵桶。（建造选项简单家具收回）",
+    "weight": "5000 g",
+    "volume": "25 L",
+    "longest_side": "90 cm",
+    "price": "50 USD",
+    "price_postapoc": "10 USD",
+    "to_hit": -4,
+    "material": [ "steel" ],
+    "symbol": "=",
+    "color": "light_gray",
+    "use_action": { "type": "deploy_furn", "furn_type": "CCf_fvat_empty" },
+    "melee_damage": { "bash": 7 }
+  },
+  {
+    "type": "furniture",
+    "id": "CCf_fvat_empty",
+    "name": "fermenting vat",
+    "looks_like": "f_standing_tank",
+    "description": "一个可密封的50升发酵罐，用于酿造醋和各种酒精饮品。（建造选项简单家具收回）",
+    "symbol": "O",
+    "color": "brown",
+    "move_cost_mod": -1,
+    "required_str": -1,
+    "flags": [ "NOITEM", "SEALED", "TRANSPARENT", "CONTAINER", "DONT_REMOVE_ROTTEN", "EASY_DECONSTRUCT" ],
+    "deployed_item": "CCfvat_empty",
+    "deconstruct": { "items": [ { "item": "CCfvat_empty", "count": 1 } ] },
+    "examine_action": "fvat_empty",
+    "bash": {
+      "str_min": 12,
+      "str_max": 45,
+      "sound": "smash!",
+      "sound_fail": "whump.",
+      "items": [
+        { "item": "CCfvat_empty", "count": 1 }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "CCf_fvat_full",
+    "name": "filled fermenting vat",
+    "looks_like": "CCf_fvat_empty",
+    "description": "一个可密封的50升发酵罐，用于酿造醋和各种酒精饮品。（建造选项简单家具收回）",
+    "symbol": "O",
+    "color": "brown_cyan",
+    "move_cost_mod": -1,
+    "required_str": -1,
+    "flags": [ "NOITEM", "SEALED", "TRANSPARENT", "CONTAINER", "DONT_REMOVE_ROTTEN", "EASY_DECONSTRUCT" ],
+    "deployed_item": "CCfvat_empty",
+    "deconstruct": { "items": [ { "item": "CCfvat_empty", "count": 1 } ] },
+    "examine_action": "fvat_full",
+    "bash": {
+      "str_min": 12,
+      "str_max": 50,
+      "sound": "smash!",
+      "sound_fail": "whump.",
+      "items": [
+        { "item": "CCfvat_empty", "count": 1 }
+      ]
+    }
+  }
+]

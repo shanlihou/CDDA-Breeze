@@ -1,0 +1,174 @@
+[
+	{
+		"id":"kz_ncard_r3_base",
+		"type":"TOOL_ARMOR",
+		"looks_like":"gold_ring",
+		"copy-from":"ncard_misc_yukari",
+		"name":{"str": "<color_light_green>誓约戒指(No.r3_base)</color>","str_pl":"<color_light_green>誓约戒指(No.r3_base)</color>"},
+		"description":"<color_light_green>一枚蕴含着爱情之力的戒指，通过它，你可以借用与你发布誓约之人的力量。随着时间的推移你可以再次借用力量。</color>",
+		"material":[ "ncard_material_dimensionsteel" ],
+		"color":"yellow",
+		"flags":[ "SUPER_FANCY","AURA","ONLY_ONE","TRADER_AVOID","UNBREAKABLE_MELEE","NO_RELOAD","NO_UNLOAD","POWERARMOR_COMPATIBLE" ],
+		"use_action":{ "type": "cast_spell", "spell_id": "spell_ncard_holy", "no_fail": true, "level": 0 },
+		"relic_data":{ "charge_info": { "recharge_type": "periodic", "time": "4 h 48 m", "regenerate_ammo": true } },
+		"pocket_data":[ { "pocket_type": "MAGAZINE", "ammo_restriction": { "ncard_misc_powder_a": 20 } } ],
+		"price":1,
+		"charges_per_use":20,
+		"symbol":"o"
+	}
+,
+	{
+		"id":"kz_ncard_r3_no_01",
+		"type":"TOOL_ARMOR",
+		"copy-from":"kz_ncard_r3_base",
+		"name":{"str": "<color_light_green>誓约戒指(No.5 天使)</color>","str_pl":"<color_light_green>誓约戒指(No.5 天使)</color>"},
+		"use_action":{ "type": "cast_spell", "spell_id": "spell_ncard_holy", "no_fail": true, "level": 0 },
+		"symbol":"o"
+	}
+,
+	{
+		"id":"kz_ncard_r3_no_02",
+		"type":"TOOL_ARMOR",
+		"copy-from":"kz_ncard_r3_base",
+		"name":{"str": "<color_light_green>誓约戒指(No.6 天使)</color>","str_pl":"<color_light_green>誓约戒指(No.6 天使)</color>"},
+		"use_action":{ "type": "cast_spell", "spell_id": "spell_ncard_holy", "no_fail": true, "level": 0 },
+		"symbol":"o"
+	}
+,
+	{
+		"id":"kz_ncard_r3_no_03",
+		"type":"TOOL_ARMOR",
+		"copy-from":"kz_ncard_r3_base",
+		"name":{"str": "<color_light_green>誓约戒指(No.7 天使)</color>","str_pl":"<color_light_green>誓约戒指(No.7 天使)</color>"},
+		"use_action":{ "type": "cast_spell", "spell_id": "spell_ncard_holy", "no_fail": true, "level": 0 },
+		"symbol":"o"
+	}
+,
+	{
+		"id":"kz_ncard_r3_no_04",
+		"type":"TOOL_ARMOR",
+		"copy-from":"kz_ncard_r3_base",
+		"name":{"str": "<color_light_green>誓约戒指(No.8 女仆)</color>","str_pl":"<color_light_green>誓约戒指(No.8 女仆)</color>"},
+		"use_action":{ "type": "cast_spell", "spell_id": "spell_ncard_knife", "no_fail": true, "level": 0 },
+		"symbol":"o"
+	}
+,
+	{
+		"id":"kz_ncard_r3_no_05",
+		"type":"TOOL_ARMOR",
+		"copy-from":"kz_ncard_r3_base",
+		"name":{"str": "<color_light_green>誓约戒指(No.9 女仆)</color>","str_pl":"<color_light_green>誓约戒指(No.9 女仆)</color>"},
+		"use_action":{ "type": "cast_spell", "spell_id": "spell_ncard_knife", "no_fail": true, "level": 0 },
+		"symbol":"o"
+	}
+,
+	{
+		"id":"kz_ncard_r3_no_06",
+		"type":"TOOL_ARMOR",
+		"copy-from":"kz_ncard_r3_base",
+		"name":{"str": "<color_light_green>誓约戒指(No.10 丧尸少女)</color>","str_pl":"<color_light_green>誓约戒指(No.10 丧尸少女)</color>"},
+		"use_action":{ "type": "cast_spell", "spell_id": "spell_ncard_revive_aoe", "no_fail": true, "level": 0 },
+		"symbol":"o"
+	}
+,
+	{
+		"id":"kz_ncard_r3_no_07",
+		"type":"TOOL_ARMOR",
+		"copy-from":"kz_ncard_r3_base",
+		"name":{"str": "<color_light_green>誓约戒指(No.11 狐耳巫女)</color>","str_pl":"<color_light_green>誓约戒指(No.11 狐耳巫女)</color>"},
+		"use_action":{ "type": "cast_spell", "spell_id": "spell_ncard_kitunebi", "no_fail": true, "level": 0 },
+		"symbol":"o"
+	}
+,
+	{
+		"id":"kz_ncard_r3_no_08",
+		"type":"TOOL_ARMOR",
+		"copy-from":"kz_ncard_r3_base",
+		"name":{"str": "<color_light_green>誓约戒指(No.12 火精灵)</color>","str_pl":"<color_light_green>誓约戒指(No.12 火精灵)</color>"},
+		"use_action":{ "type": "cast_spell", "spell_id": "spell_ncard_r3_fire", "no_fail": true, "level": 0 },
+		"symbol":"o"
+	}
+,
+	{
+		"id":"kz_ncard_r3_no_09",
+		"type":"TOOL_ARMOR",
+		"copy-from":"kz_ncard_r3_base",
+		"name":{"str": "<color_light_green>誓约戒指(No.13 火精灵)</color>","str_pl":"<color_light_green>誓约戒指(No.13 火精灵)</color>"},
+		"use_action":{ "type": "cast_spell", "spell_id": "spell_ncard_r3_fire", "no_fail": true, "level": 0 },
+		"symbol":"o"
+	}
+,
+	{
+		"id":"kz_ncard_r3_no_10",
+		"type":"TOOL_ARMOR",
+		"copy-from":"kz_ncard_r3_base",
+		"name":{"str": "<color_light_green>誓约戒指(No.14 魔法少女)</color>","str_pl":"<color_light_green>誓约戒指(No.14 魔法少女)</color>"},
+		"use_action":{ "type": "cast_spell", "spell_id": "spell_ncard_heartcharge", "no_fail": true, "level": 0 },
+		"symbol":"o"
+	}
+,
+	{
+		"id":"kz_ncard_r3_no_11",
+		"type":"TOOL_ARMOR",
+		"copy-from":"kz_ncard_r3_base",
+		"name":{"str": "<color_light_green>誓约戒指(No.15 恶魔)</color>","str_pl":"<color_light_green>誓约戒指(No.15 恶魔)</color>"},
+		"use_action":{ "type": "cast_spell", "spell_id": "spell_ncard_charm", "no_fail": true, "level": 0 },
+		"symbol":"o"
+	}
+,
+	{
+		"id":"kz_ncard_r4_base",
+		"type":"TOOL_ARMOR",
+		"looks_like":"gold_ring",
+		"copy-from":"ncard_misc_yukari",
+		"name":{"str": "<color_light_green>誓约戒指(No.r4_base)</color>","str_pl":"<color_light_green>誓约戒指(No.r4_base)</color>"},
+		"description":"<color_light_green>一枚蕴含着爱情之力的戒指，通过它，你可以借用与你发布誓约之人的力量。随着时间的推移你可以再次借用力量。</color>",
+		"material":[ "ncard_material_dimensionsteel" ],
+		"color":"light_cyan",
+		"flags":[ "SUPER_FANCY","AURA","ONLY_ONE","TRADER_AVOID","UNBREAKABLE_MELEE","NO_RELOAD","NO_UNLOAD","POWERARMOR_COMPATIBLE" ],
+		"use_action":{ "type": "cast_spell", "spell_id": "spell_ncard_deathcross", "no_fail": true, "level": 0 },
+		"relic_data":{ "charge_info": { "recharge_type": "periodic", "time": "4 h 48 m", "regenerate_ammo": true } },
+		"pocket_data":[ { "pocket_type": "MAGAZINE", "ammo_restriction": { "ncard_misc_powder_a": 70 } } ],
+		"price":1,
+		"charges_per_use":70,
+		"symbol":"o"
+	}
+,
+	{
+		"id":"kz_ncard_r4_no_01",
+		"type":"TOOL_ARMOR",
+		"copy-from":"kz_ncard_r4_base",
+		"name":{"str": "<color_light_green>誓约戒指(No.1 堕天使)</color>","str_pl":"<color_light_green>誓约戒指(No.1 堕天使)</color>"},
+		"use_action":{ "type": "cast_spell", "spell_id": "spell_ncard_deathcross", "no_fail": true, "level": 0 },
+		"symbol":"o"
+	}
+,
+	{
+		"id":"kz_ncard_r4_no_02",
+		"type":"TOOL_ARMOR",
+		"copy-from":"kz_ncard_r4_base",
+		"name":{"str": "<color_light_green>誓约戒指(No.2 大天使)</color>","str_pl":"<color_light_green>誓约戒指(No.2 大天使)</color>"},
+		"use_action":{ "type": "cast_spell", "spell_id": "spell_ncard_holysword", "no_fail": true, "level": 0 },
+		"symbol":"o"
+	}
+,
+	{
+		"id":"kz_ncard_r4_no_03",
+		"type":"TOOL_ARMOR",
+		"copy-from":"kz_ncard_r4_base",
+		"name":{"str": "<color_light_green>誓约戒指(No.3 土木工程机械)</color>","str_pl":"<color_light_green>誓约戒指(No.3 土木工程机械)</color>"},
+		"use_action":{ "type": "cast_spell", "spell_id": "spell_ncard_pilebunker", "no_fail": true, "level": 0 },
+		"symbol":"o"
+	}
+,
+	{
+		"id":"kz_ncard_r4_no_04",
+		"type":"TOOL_ARMOR",
+		"copy-from":"kz_ncard_r4_base",
+		"name":{"str": "<color_light_green>誓约戒指(No.4 格斗女郎)</color>","str_pl":"<color_light_green>誓约戒指(No.4 格斗女郎)</color>"},
+		"use_action":{ "type": "cast_spell", "spell_id": "spell_ncard_risingstorm", "no_fail": true, "level": 0 },
+		"symbol":"o"
+	}
+
+
+]

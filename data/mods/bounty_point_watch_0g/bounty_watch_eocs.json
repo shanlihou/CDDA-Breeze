@@ -1,0 +1,101 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_BOUNTY_WATCH_TRACKER",
+    "recurrence": 1,
+    "global": true,
+    "condition": { "u_has_var": "initialized", "type": "dialogue", "context": "bounty_watch", "value": "yes" },
+    "effect": { "run_eocs": [ "EOC_BOUNTY_WATCH_COMPARE_XP" ] },
+    "false_effect": [
+      {
+        "arithmetic": [
+          { "u_val": "var", "var_name": "last_kill_xp", "type": "number", "context": "bounty_watch" },
+          "=",
+          { "u_val": "exp" }
+        ]
+      },
+      {
+        "arithmetic": [
+          { "u_val": "var", "var_name": "points", "type": "number", "context": "bounty_watch" },
+          "=",
+          { "const": 0 }
+        ]
+      },
+      { "u_add_var": "initialized", "type": "dialogue", "context": "bounty_watch", "value": "yes" }
+    ],
+    "//": "每秒运行一次。第一次加载只同步当前 kill_xp 并建立零积分账户，避免把安装 Mod 之前的历史击杀算进去。"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_BOUNTY_WATCH_COMPARE_XP",
+    "condition": {
+      "compare_int": [
+        { "u_val": "exp" },
+        ">",
+        { "u_val": "var", "var_name": "last_kill_xp", "type": "number", "context": "bounty_watch", "default": 0 }
+      ]
+    },
+    "effect": { "run_eocs": [ "EOC_BOUNTY_WATCH_AWARD_OR_SYNC" ] },
+    "false_effect": {
+      "arithmetic": [
+        { "u_val": "var", "var_name": "last_kill_xp", "type": "number", "context": "bounty_watch" },
+        "=",
+        { "u_val": "exp" }
+      ]
+    },
+    "//": "只在总击杀经验增加时尝试发放积分；经验相等或下降时仅重设基准，不会倒扣积分。"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_BOUNTY_WATCH_AWARD_OR_SYNC",
+    "condition": { "u_has_worn_with_flag": "BOUNTY_POINT_WATCH" },
+    "effect": [
+      {
+        "arithmetic": [
+          { "u_val": "var", "var_name": "points", "type": "number", "context": "bounty_watch", "default": 0 },
+          "+=",
+          {
+            "arithmetic": [
+              { "u_val": "exp" },
+              "-",
+              { "u_val": "var", "var_name": "last_kill_xp", "type": "number", "context": "bounty_watch", "default": 0 }
+            ]
+          }
+        ],
+        "max": 50000
+      },
+      {
+        "arithmetic": [
+          { "u_val": "var", "var_name": "last_kill_xp", "type": "number", "context": "bounty_watch" },
+          "=",
+          { "u_val": "exp" }
+        ]
+      }
+    ],
+    "false_effect": {
+      "arithmetic": [
+        { "u_val": "var", "var_name": "last_kill_xp", "type": "number", "context": "bounty_watch" },
+        "=",
+        { "u_val": "exp" }
+      ]
+    },
+    "//": "只有正在佩戴带 BOUNTY_POINT_WATCH 标志的物品才发放差额积分。积分软上限为 50000；未佩戴时仍更新基准以防补领。"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_BOUNTY_WATCH_DISPLAY_PREP",
+    "effect": [
+      {
+        "arithmetic": [
+          { "u_val": "var", "var_name": "display_credit_cents", "type": "number", "context": "bounty_watch" },
+          "=",
+          { "u_val": "var", "var_name": "points", "type": "number", "context": "bounty_watch", "default": 0 },
+          "*",
+          { "const": 50 }
+        ]
+      },
+      { "open_dialogue": { "topic": "TALK_BOUNTY_WATCH_DISPLAY" } }
+    ],
+    "//": "激活手表时先按每点 50 美分计算显示值，再打开只读余额界面。"
+  }
+]

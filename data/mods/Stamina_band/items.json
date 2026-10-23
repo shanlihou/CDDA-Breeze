@@ -1,0 +1,30 @@
+[
+    {
+    "type": "TOOL_ARMOR",
+    "id": "stamina_band",
+    "name": {
+      "str": "耐力手环"
+    },
+    "category": "clothing",
+    "color": "light_gray",
+    "sided": true,
+    "material": [ "plastic" ],
+    "use_action": {
+      "type": "effect_on_conditions",
+      "description": "显示当前耐力",
+      "effect_on_conditions": [
+        "EOC_staminashow"
+      ]
+    },
+    "volume": "100 ml",
+    "weight": "40 g",
+    "symbol": "[",
+    "flags": [
+      "UNBREAKABLE","WATCH", "WATER_FRIENDLY", "OVERSIZE"
+    ],
+    "armor": [ { "coverage": 0, "covers": [ "hand_l", "hand_r" ], "specifically_covers": [ "hand_wrist_l", "hand_wrist_r" ] } ],
+    "description": "一个能显示当前耐力的手环.",
+    "price": 5000,
+    "price_postapoc": 100
+    }
+]

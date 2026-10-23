@@ -1,0 +1,40 @@
+[
+  {
+    "id": "mon_nether_eater",
+    "type": "MONSTER",
+    "name": { "str": "噬灵者" },
+    "description": "一片乳白色半透明的叶状丛，在空中懒洋洋地摇曳，其中部分不断消失又重现。中央核心（如果存在的话）被它们的持续运动所遮蔽。没有明显的感官器官，但当你靠近时，叶状丛的运动会有轻微变化。",
+    "//": "This is like a flaming eye in that it flies and spams an attack, but different in that it's nearly immune to bullets but otherwise very fragile and its primary attack starts off as harmless (only draining mana) and progresses through stamina and then health.  The function is to make areas with eaters more dangerous, but eaters themselves only become very dangerous if there are a lot of them or you're too busy killing other things while they drain you.",
+    "default_faction": "nether",
+    "species": [ "NETHER" ],
+    "diff": 15,
+    "volume": "41500 ml",
+    "weight": "26500 g",
+    "hp": 30,
+    "speed": 100,
+    "material": [ "wind" ],
+    "symbol": "E",
+    "color": "red",
+    "morale": 100,
+    "aggression": 100,
+    "melee_damage": [ { "damage_type": "cut", "amount": 0 } ],
+    "dodge": 8,
+    "armor_stab": 10,
+    "armor_bullet": 100,
+    "bleed_rate": 0,
+    "vision_day": 30,
+    "vision_night": 40,
+    "tracking_distance": 15,
+    "harvest": "exempt",
+    "special_attacks": [
+      {
+        "type": "spell",
+        "spell_data": { "id": "eater_drain_monster", "min_level": 5 },
+        "cooldown": 3,
+        "monster_message": "噬灵者的叶状丛懒洋洋地朝你的方向飘动。"
+      }
+    ],
+    "death_function": { "corpse_type": "NO_CORPSE", "message": "%s消融了。" },
+    "flags": [ "SEES", "WARM", "FLIES", "NO_BREATHE", "NOHEAD", "NO_FUNG_DMG", "KEEP_DISTANCE", "PATH_AVOID_DANGER_2", "ACIDPROOF", "HARDTOSHOOT", "PLASTIC", "NOGIB" ]
+  }
+]

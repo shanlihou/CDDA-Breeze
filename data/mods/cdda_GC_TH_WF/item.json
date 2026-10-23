@@ -1,0 +1,15 @@
+[
+    {
+        "id": "mutagen_TH_WF",
+        "copy-from": "mutagen_flavor",
+        "type": "COMESTIBLE",
+        "name": {
+          "str": "变异血清 (white fog)"
+        },
+        "use_action": {
+          "type": "consume_drug",
+          "activation_message": "You drink the alpha mutagen.",
+          "vitamins": [ [ "TH_WF_Vitamin", 500 ], [ "mutagen", 500 ] ]
+        }
+    }
+]

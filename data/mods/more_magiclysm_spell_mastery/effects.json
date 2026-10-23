@@ -1,0 +1,18 @@
+[
+  {
+    "type": "effect_type",
+    "id": "MM_arcane_rebuild_effect",
+    "name": [ "以太失控" ],
+    "desc": [ "以太元素躁动不安，难以驾驭。" ],
+    "apply_message": "以太元素躁动不安，难以驾驭。",
+    "remove_message": "以太元素恢复有序的活跃状态。",
+    "rating": "bad",
+    "max_intensity": 10,
+    "int_add_val": 1,
+    "removes_effects": [ "onfire", "bleed", "bite", "dazed" ],
+    "blocks_effects": [ "onfire", "bleed", "bite", "zapped", "downed", "dazed" ],
+    "base_mods": { "hurt_min": [ -1 ], "hurt_chance": [ 1 ] },
+    "scaling_mods": { "hurt_min": [ 1 ] },
+    "show_in_info": true
+  }
+]

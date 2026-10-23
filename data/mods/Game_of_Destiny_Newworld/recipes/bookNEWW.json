@@ -1,0 +1,87 @@
+[
+  {
+    "type": "recipe",
+    "result": "DT_book_menu",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_世界之门",
+    "skill_used": "fabrication",
+    "difficulty": 0,
+    "autolearn": true,
+    "time": "59 m",
+    "tools": [
+    [ [ "pencil", 300 ], [ "NW_Writetool", 100 ] ],
+    [ [ "permanent_marker", 300 ] ],
+    [ [ "pen", 1000 ] ]
+    ],
+    "components":
+    [
+    [ [ "child_book", 1 ] ],
+    [ [ "bracelet_friendship", 1 ] ],
+    [ [ "destiny_silver", 5 ],
+    [ "money_strap_FMCNote", 1 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "DT_book_timelinerecord_2",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_世界之门",
+    "skill_used": "fabrication",
+    "skills_required": [ "NE_DT", 1 ],
+    "difficulty": 4,
+    "book_learn": [["DT_book_menu", 4]],
+    "time": "75 m",
+    "tools": [
+    [ [ "DT_f_branch", -1 ] ],
+    [ [ "red_pen", 150 ], [ "NW_Writetool", 50 ] ]
+    ],
+    "components":
+    [
+    [ [ "DT_heart_container", 1 ] ],
+    [ [ "DT_f_bandage", 1 ] ],
+    [ [ "DT_foodmt_melted", 10 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "DT_book_chara_diary1",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_世界之门",
+    "skill_used": "fabrication",
+    "skills_required": [ "NE_DT", 1 ],
+    "difficulty": 4,
+    "book_learn": [ ["DT_book_menu", 4] ],
+    "time": "65 m",
+    "tools": [
+    [ [ "pencil", 450 ], [ "NW_Writetool", 150 ] ],
+    [ [ "black_pen", 300 ], [ "NW_Writetool", 100 ] ]
+    ],
+    "components":
+    [
+    [ [ "leather_journal", 1 ] ],
+    [ [ "missing_poster_child", 1 ] ],
+    [ [ "DT_foodmt_melted", 10 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "OW_book_armwest",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_世界之门",
+    "skill_used": "fabrication",
+    "difficulty": 5,
+    "auto_learn": true,
+    "time": "55 m",
+    "tools": [ [ [ "pen", 600 ], [ "NW_Writetool", 200 ] ] ],
+    "components":
+    [
+     [ [ "OW_paper", 300 ] ],
+     [ [ "OW_cardboard", 2 ] ],
+     [ [ "DT_dust", 1500 ] ]
+    ]
+  }
+]

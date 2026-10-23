@@ -1,0 +1,41 @@
+[
+  {
+    "id": "bio_udonge_gun",
+    "type": "bionic",
+    "name": "狂气之枪",
+    "description": "你的能力，武器化。",
+    "occupied_bodyparts": [
+      [
+        "HAND_R",
+        1
+      ]
+    ],
+    "act_cost": 20,
+    "fake_weapon": "bio_udonge_shot",
+    "included": true,
+    "flags": [
+      "BIONIC_GUN"
+    ],
+    "//": "Note: these items come from /data/json/bionics.json NOT /data/json/items/bionics.json"
+  },
+  {
+    "id": "bio_reisen_gun",
+    "type": "bionic",
+    "name": {
+      "str": "狂气射击"
+    },
+    "description": "",
+    "occupied_bodyparts": [
+      [
+        "HAND_R",
+        1
+      ]
+    ],
+    "act_cost": 20,
+    "fake_weapon": "bio_reisen_shot",
+    "included": true,
+    "flags": [
+      "BIONIC_GUN"
+    ]
+  }
+]

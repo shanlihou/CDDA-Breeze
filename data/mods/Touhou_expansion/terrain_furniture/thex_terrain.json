@@ -1,0 +1,36 @@
+[
+  {
+    "id": "t_wooden_pillar",
+    "type": "terrain",
+    "name": "木制支架",
+    "description": "一根粗壮的木柱。",
+    "symbol": "I",
+    "looks_like": "t_support_l",
+    "color": "brown",
+    "coverage": 80,
+    "move_cost": 0,
+    "bash": {
+      "str_min": 20,
+      "str_max": 100,
+      "sound": "咚！",
+      "sound_fail": "砰！",
+      "items": [
+        {
+          "item": "splinter",
+          "count": [
+            50,
+            200
+          ]
+        }
+      ],
+      "ter_set": "t_floor"
+    },
+    "flags": [
+      "FLAMMABLE_HARD",
+      "NOITEM",
+      "REDUCE_SCENT",
+      "SUPPORTS_ROOF",
+      "WALL"
+    ]
+  }
+]

@@ -1,0 +1,410 @@
+[
+  {
+    "type": "mutation",
+    "id": "THRESH_SLUGCAT",
+    "name": { "str": "蛞蝓猫突变体" },
+    "points": 1,
+    "description": "当倾盆大雨来临时，你将在密封的巢穴中安然无恙。",
+    "valid": false,
+    "purifiable": false,
+    "threshold": true
+  },
+  {
+    "type": "mutation",
+    "id": "THRESH_SLUGCAT_NAT",
+    "name": { "str": "原生蛞蝓猫" },
+    "points": 1,
+    "description": "你来自一个被雨水鞭笞的世界。洪水雨季或许已降临你的新家园，但你依然存续，而那些无毛生物却在死去。",
+    "valid": false,
+    "purifiable": false,
+    "threshold": true,
+    "vitamin_rates": [[ "mutagen", 5000 ], [ "mutagen_alpha", 5000 ], [ "mutagen_batrachian", 5000 ], [ "mutagen_beast", 5000 ], [ "mutagen_bird", 5000 ], [ "mutagen_cattle", 5000 ], [ "mutagen_cephalopod", 5000 ], [ "mutagen_chimera", 5000 ], [ "mutagen_elfa", 5000 ], [ "mutagen_feline", 5000 ], [ "mutagen_fish", 5000 ], [ "mutagen_gastropod", 5000 ], [ "mutagen_human", 5000 ], [ "mutagen_insect", 5000 ], [ "mutagen_lizard", 5000 ], [ "mutagen_lupine", 5000 ], [ "mutagen_medical", 5000 ], [ "mutagen_mouse", 5000 ], [ "mutagen_plant", 5000 ], [ "mutagen_rabbit", 5000 ], [ "mutagen_raptor", 5000 ], [ "mutagen_rat", 5000 ], [ "mutagen_slime", 5000 ], [ "mutagen_slugcat", 5000 ], [ "mutagen_spider", 5000 ], [ "mutagen_snail", 5000 ], [ "mutagen_troglobite", 5000 ], [ "mutagen_ursine", 5000 ]],
+    "flags": [
+      "CANNIBAL"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "SLUGCAT_EARS",
+    "name": { "str": "蛞蝓猫耳朵" },
+    "points": 1,
+    "visibility": 2,
+    "ugliness": 3,
+    "description": "你的耳朵已经拉长并移到了头顶。它们仍然呈现出一种令人不适的肉色。",
+    "types": [ "EARS" ],
+    "category": [ "SLUGCAT" ],
+    "hearing_modifier": 1.25
+  },
+  {
+    "type": "mutation",
+    "id": "POISRESIST",
+    "copy-from": "POISRESIST",
+    "extend": { "category": [ "SLUGCAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "BENDY1",
+    "copy-from": "BENDY1",
+    "extend": { "category": [ "SLUGCAT", "SLUGCAT_NAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "SPINES",
+    "copy-from": "SPINES",
+    "extend": { "category": [ "SLUGCAT", "SLUGCAT_NAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "QUILLS",
+    "copy-from": "QUILLS",
+    "extend": { "category": [ "SLUGCAT", "SLUGCAT_NAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "DEFT",
+    "copy-from": "DEFT",
+    "extend": { "category": [ "SLUGCAT", "SLUGCAT_NAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "CHEMIMBALANCE",
+    "copy-from": "CHEMIMBALANCE",
+    "extend": { "category": [ "SLUGCAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "FASTHEALER",
+    "copy-from": "FASTHEALER",
+    "extend": { "category": [ "SLUGCAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "FAST_REFLEXES",
+    "copy-from": "FAST_REFLEXES",
+    "extend": { "category": [ "SLUGCAT", "SLUGCAT_NAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "PAINREC1",
+    "copy-from": "PAINREC1",
+    "extend": { "category": [ "SLUGCAT", "SLUGCAT_NAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "PAINREC2",
+    "copy-from": "PAINREC2",
+    "extend": { "category": [ "SLUGCAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "INT_UP",
+    "copy-from": "INT_UP",
+    "extend": { "category": [ "SLUGCAT_NAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "DEX_UP",
+    "copy-from": "DEX_UP",
+    "extend": { "category": [ "SLUGCAT", "SLUGCAT_NAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "DEX_UP_2",
+    "copy-from": "DEX_UP_2",
+    "extend": { "category": [ "SLUGCAT_NAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "THIRST",
+    "copy-from": "THIRST",
+    "extend": { "category": [ "SLUGCAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "SMALL",
+    "copy-from": "SMALL",
+    "extend": { "category": [ "SLUGCAT", "SLUGCAT_NAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "SMALL2",
+    "copy-from": "SMALL2",
+    "extend": { "category": [ "SLUGCAT", "SLUGCAT_NAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "SMALL_OK",
+    "copy-from": "SMALL_OK",
+    "extend": { "category": [ "SLUGCAT_NAT" ], "threshreq": [ "THRESH_SLUGCAT_NAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "CRAFTY",
+    "copy-from": "CRAFTY",
+    "extend": { "category": [ "SLUGCAT_NAT" ], "threshreq": [ "THRESH_SLUGCAT_NAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "NO_THIRST",
+    "copy-from": "NO_THIRST",
+    "extend": { "category": [ "SLUGCAT_NAT" ], "threshreq": [ "THRESH_SLUGCAT_NAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "GOODCARDIO",
+    "copy-from": "GOODCARDIO",
+    "extend": { "category": [ "SLUGCAT", "SLUGCAT_NAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "ANIMALDISCORD",
+    "copy-from": "ANIMALDISCORD",
+    "extend": { "category": [ "SLUGCAT", "SLUGCAT_NAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "ANIMALDISCORD2",
+    "copy-from": "ANIMALDISCORD2",
+    "extend": { "category": [ "SLUGCAT_NAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "SNOUT",
+    "copy-from": "SNOUT",
+    "extend": { "category": [ "SLUGCAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "PRETTY",
+    "copy-from": "PRETTY",
+    "extend": { "category": [ "SLUGCAT_NAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "HUNGER",
+    "copy-from": "HUNGER",
+    "extend": { "category": [ "SLUGCAT_NAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "UGLY",
+    "copy-from": "UGLY",
+    "extend": { "category": [ "SLUGCAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "DEFORMED",
+    "copy-from": "DEFORMED",
+    "extend": { "category": [ "SLUGCAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "LIGHT_BONES",
+    "copy-from": "LIGHT_BONES",
+    "extend": { "category": [ "SLUGCAT", "SLUGCAT_NAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "HOLLOW_BONES",
+    "copy-from": "HOLLOW_BONES",
+    "extend": { "category": [ "SLUGCAT_NAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "FLEET",
+    "copy-from": "FLEET",
+    "extend": { "category": [ "SLUGCAT", "SLUGCAT_NAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "FLEET2",
+    "copy-from": "FLEET2",
+    "extend": { "category": [ "SLUGCAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "FLIMSY",
+    "copy-from": "FLIMSY",
+    "extend": { "category": [ "SLUGCAT", "SLUGCAT_NAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "FLIMSY2",
+    "copy-from": "FLIMSY2",
+    "extend": { "category": [ "SLUGCAT_NAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "SLUGCAT_TAIL",
+    "name": { "str": "蛞蝓猫尾巴" },
+    "points": 0,
+    "visibility": 6,
+    "ugliness": 2,
+    "description": "你有一条粗壮结实的尾巴。它改善了你的平衡感，使你的闪避能力提高，但无法穿戴非布料的裤子。",
+    "types": [ "TAIL" ],
+    "category": [ "SLUGCAT" ],
+    "restricts_gear": [ "leg_hip_l", "leg_hip_r" ],
+    "allowed_items": [ "ALLOWS_TAIL" ],
+    "allow_soft_gear": true,
+    "dodge_modifier": 3
+  },
+  {
+    "type": "mutation",
+    "id": "SLUGCAT_EARS_NAT",
+    "name": { "str": "蛞蝓猫耳朵" },
+    "points": 0,
+    "visibility": 2,
+    "description": "两只长耳朵竖立在你的头顶。你发现更容易捕捉到远处的声响。",
+    "types": [ "EARS" ],
+    "category": [ "SLUGCAT_NAT" ],
+    "hearing_modifier": 1.25
+  },
+  {
+    "type": "mutation",
+    "id": "SLUGCAT_EYES_NAT",
+    "name": { "str": "蛞蝓猫眼睛" },
+    "points": 0,
+    "visibility": 1,
+    "description": "你的眼睛乌黑无瞳，如同夜空的颜色。",
+    "types": [ "EYES" ],
+    "category": [ "SLUGCAT_NAT" ]
+  },
+  {
+    "type": "mutation",
+    "id": "SLUGCAT_EYES",
+    "name": { "str": "蛞蝓猫眼睛" },
+    "points": 1,
+    "visibility": 2,
+    "ugliness": 2,
+    "description": "你的眼睛已经改变。虹膜和瞳孔扩大到了几乎占据整个眼窝的程度。不过你的视力似乎没有任何变化。",
+    "types": [ "EYES" ],
+    "category": [ "SLUGCAT" ]
+  },
+  {
+    "type": "mutation",
+    "id": "SLUGCAT_TAIL_NAT",
+    "name": { "str": "蛞蝓猫尾巴" },
+    "points": 0,
+    "visibility": 3,
+    "description": "你有一条粗壮结实的尾巴。它改善了你的平衡感，使你的闪避能力提高，但无法穿戴非布料的裤子。",
+    "types": [ "TAIL" ],
+    "category": [ "SLUGCAT_NAT" ],
+    "restricts_gear": [ "leg_hip_l", "leg_hip_r" ],
+    "allowed_items": [ "ALLOWS_TAIL" ],
+    "allow_soft_gear": true,
+    "dodge_modifier": 2
+  },
+  {
+    "type": "mutation",
+    "id": "SLUGCAT_SKIN",
+    "name": { "str": "蛞蝓猫皮肤" },
+    "points": 1,
+    "visibility": 4,
+    "ugliness": 3,
+    "description": "你的皮肤变成了半透明的乳白色，提供了惊人的防雨防水保护。",
+    "category": [ "SLUGCAT" ],
+    "wet_protection": [
+      { "part": "head", "ignored": 5 },
+      { "part": "leg_l", "ignored": 10 },
+      { "part": "leg_r", "ignored": 10 },
+      { "part": "foot_l", "ignored": 5 },
+      { "part": "foot_r", "ignored": 5 },
+      { "part": "arm_l", "ignored": 3 },
+      { "part": "arm_r", "ignored": 3 },
+      { "part": "hand_l", "ignored": 2 },
+      { "part": "hand_r", "ignored": 2 },
+      { "part": "torso", "ignored": 10 }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "SLIMY",
+    "copy-from": "SLIMY",
+    "extend": { "category": [ "SLUGCAT", "SLUGCAT_NAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "SLIME_HANDS",
+    "copy-from": "SLIME_HANDS",
+    "extend": { "category": [ "SLUGCAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "VISCOUS",
+    "copy-from": "VISCOUS",
+    "extend": { "category": [ "SLUGCAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "ANIMALEMPATH",
+    "copy-from": "ANIMALEMPATH",
+    "extend": { "category": [ "SLUGCAT_NAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "CARNIVORE",
+    "copy-from": "CARNIVORE",
+    "extend": { "category": [ "SLUGCAT_NAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "PRED1",
+    "copy-from": "PRED1",
+    "extend": { "category": [ "SLUGCAT_NAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "PRED2",
+    "copy-from": "PRED2",
+    "extend": { "category": [ "SLUGCAT_NAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "ROT1",
+    "copy-from": "ROT1",
+    "extend": { "category": [ "SLUGCAT_NAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "ROT2",
+    "copy-from": "ROT2",
+    "extend": { "category": [ "SLUGCAT_NAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "FANGS",
+    "copy-from": "FANGS",
+    "extend": { "category": [ "SLUGCAT_NAT" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "SLUGCAT_SKIN_NAT",
+    "name": { "str": "蛞蝓猫皮肤" },
+    "points": 1,
+    "visibility": 2,
+    "description": "你的皮肤柔韧且略带湿润，提供了少量防雨保护。",
+    "types": [ "SKIN" ],
+    "category": [ "SLUGCAT_NAT" ],
+    "wet_protection": [
+      { "part": "head", "ignored": 3 },
+      { "part": "leg_l", "ignored": 5 },
+      { "part": "leg_r", "ignored": 5 },
+      { "part": "foot_l", "ignored": 3 },
+      { "part": "foot_r", "ignored": 3 },
+      { "part": "arm_l", "ignored": 6 },
+      { "part": "arm_r", "ignored": 6 },
+      { "part": "hand_l", "ignored": 2 },
+      { "part": "hand_r", "ignored": 2 },
+      { "part": "torso", "ignored": 5 }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "STOMACH_CONT",
+    "name": { "str": "蛞蝓猫胃" },
+    "points": 1,
+    "description": "你的胃已经变成了一个可以储存小物品的容器。",
+    "category": [ "SLUGCAT", "SLUGCAT_NAT" ],
+    "integrated_armor": [ "integrated_stomach" ]
+  }
+]

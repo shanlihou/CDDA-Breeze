@@ -1,0 +1,328 @@
+[
+  {
+    "id": "armor_Security_Guard",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": { "str": "安全警卫套装" },
+    "description": "安全警卫配备的黑色战斗制服，腰部配备携行具。\n东亚重工科技，复杂工艺混入构造体制成，对多种伤害有强抗性。\n看起来像摩托服的一体化设计，能调节身体温度，手部有强化结构。\n左胸口处有安全警卫标识。",
+    "sub": "mask_gas",
+    "weight": "500 g",
+    "volume": "500 ml",
+    "price": 1000000,
+    "price_postapoc": 10000,
+    "to_hit": 3,
+    "bashing": 6,
+    "symbol": "[",
+    "looks_like": "touring_suit",
+    "color": "dark_gray",
+	"ammo": ["battery"],
+	"charges_per_use": 1,
+    "armor": [
+      {
+	   "material": [ 
+		{ "type": "arcthitecture", "covered_by_mat": 100, "thickness": 0.5 },
+		{ "type": "s_arcthitecture", "covered_by_mat": 100, "thickness": 0.01 }
+	    ],
+		"covers": [ "head","eyes","mouth" ],
+        "coverage": 100,
+        "encumbrance": 3
+      },
+      {
+	   "material": [ 
+		{ "type": "leather", "portion": 3, "covered_by_mat": 90, "thickness": 3 },
+		{ "type": "cotton", "portion": 2, "covered_by_mat": 80, "thickness": 1 },
+		{ "type": "nomex", "portion": 1, "covered_by_mat": 50, "thickness": 2 },
+		{ "type": "steel", "portion": 1, "covered_by_mat": 10, "thickness": 1 },
+		{ "type": "kevlar", "portion": 1, "covered_by_mat": 30, "thickness": 1 },
+		{ "type": "arcthitecture", "portion": 1, "covered_by_mat": 50, "thickness": 0.3 },
+		{ "type": "s_arcthitecture", "portion": 1, "covered_by_mat": 100, "thickness": 0.01 }
+	    ],
+		"covers": [ "torso" ],
+        "coverage": 100,
+        "encumbrance": 2
+      },
+      {
+	   "material": [ 
+		{ "type": "leather", "portion": 3, "covered_by_mat": 90, "thickness": 2 },
+		{ "type": "cotton", "portion": 2, "covered_by_mat": 80, "thickness": 2 },
+		{ "type": "nomex", "portion": 1, "covered_by_mat": 50, "thickness": 2 },
+		{ "type": "steel", "portion": 1, "covered_by_mat": 10, "thickness": 1 },
+		{ "type": "kevlar", "portion": 1, "covered_by_mat": 30, "thickness": 1 },
+		{ "type": "arcthitecture", "portion": 1, "covered_by_mat": 20, "thickness": 0.3 },
+		{ "type": "s_arcthitecture", "portion": 1, "covered_by_mat": 100, "thickness": 0.01 }
+	    ],
+		"covers": [ "arm_l", "arm_r" ],
+        "coverage": 100,
+        "encumbrance": 1
+      },
+      {
+	   "material": [ 
+		{ "type": "steel", "portion": 1, "covered_by_mat": 10, "thickness": 2 },
+		{ "type": "kevlar", "portion": 1, "covered_by_mat": 30, "thickness": 1 },
+		{ "type": "arcthitecture", "portion": 1, "covered_by_mat": 50, "thickness": 0.5 },
+		{ "type": "s_arcthitecture", "portion": 1, "covered_by_mat": 100, "thickness": 0.01 }
+	    ],
+		"covers": [ "hand_l", "hand_r" ],
+        "coverage": 100,
+        "encumbrance": 3
+      },
+      {
+	   "material": [ 
+		{ "type": "leather", "portion": 3, "covered_by_mat": 90, "thickness": 2 },
+		{ "type": "cotton", "portion": 2, "covered_by_mat": 80, "thickness": 2 },
+		{ "type": "nomex", "portion": 1, "covered_by_mat": 50, "thickness": 2 },
+		{ "type": "steel", "portion": 1, "covered_by_mat": 10, "thickness": 1 },
+		{ "type": "kevlar", "portion": 1, "covered_by_mat": 30, "thickness": 1 },
+		{ "type": "arcthitecture", "portion": 1, "covered_by_mat": 20, "thickness": 0.3 },
+		{ "type": "s_arcthitecture", "portion": 1, "covered_by_mat": 100, "thickness": 0.01 }
+	    ],
+		"covers": [ "leg_l", "leg_r" ],
+        "coverage": 100,
+        "encumbrance": 1
+      },
+      {
+	   "material": [ 
+		{ "type": "steel", "portion": 1, "covered_by_mat": 10, "thickness": 3 },
+		{ "type": "kevlar", "portion": 1, "covered_by_mat": 30, "thickness": 2 },
+		{ "type": "arcthitecture", "portion": 1, "covered_by_mat": 60, "thickness": 0.5 },
+		{ "type": "s_arcthitecture", "portion": 1, "covered_by_mat": 100, "thickness": 0.01 }
+	    ],
+		"covers": [ "foot_l", "foot_r" ],
+        "coverage": 100,
+        "encumbrance": 2
+      }
+    ],
+    "pocket_data": [
+      { "pocket_type": "CONTAINER", "max_contains_volume": "100 ml", "max_contains_weight": "1000 kg","max_item_length": "10 cm", "moves": 20 },
+      { "pocket_type": "CONTAINER", "max_contains_volume": "100 ml", "max_contains_weight": "1000 kg","max_item_length": "10 cm", "moves": 20 },
+      {
+        "rigid": true,
+        "holster": true,
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "100 kg",
+        "max_item_length": "30 cm",
+        "moves": 5,
+		"flag_restriction":["SHEATH_KNIFE"]
+      },
+      {
+        "rigid": true,
+        "holster": true,
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "100 kg",
+        "max_item_length": "20 cm",
+        "moves": 10
+      },
+      {
+        "rigid": true,
+        "holster": true,
+        "max_contains_volume": "3 L",
+        "max_contains_weight": "50 kg",
+        "max_item_length": "100 cm",
+        "moves": 10,
+		"flag_restriction":["BELT_CLIP"]
+      },
+      {
+        "rigid": true,
+        "holster": true,
+        "max_contains_volume": "3 L",
+        "max_contains_weight": "50 kg",
+        "max_item_length": "100 cm",
+        "moves": 10,
+		"flag_restriction":["BELT_CLIP"]
+      },
+      {
+        "rigid": true,
+        "holster": true,
+        "max_contains_volume": "3 L",
+        "max_contains_weight": "50 kg",
+        "max_item_length": "100 cm",
+        "moves": 10,
+		"flag_restriction":["BELT_CLIP"]
+      }
+    ],
+    "use_action": [
+	{"type": "transform",
+      "msg": "你打开了衣领上的灯光。",
+      "target": "armor_Security_Guard_on",
+      "active": true,
+      "need_charges": 1,
+      "need_charges_msg": "没有足够的能源启动灯光。"},
+	{ "type": "holster",  "holster_msg": "You holster your %s." },
+	{ "type": "holster", "holster_prompt": "Sheath knife", "holster_msg": "You sheath your %s" }
+	],
+    "warmth": 10,
+    "environmental_protection": 99,
+    "qualities": [ [ "GLARE", 13 ] ],
+    "flags": [ "ALLOWS_NATURAL_ATTACKS","BLOCK_WHILE_WORN","UNBREAKABLE","TRADER_AVOID","PSYSHIELD_PARTIAL","SUN_GLASSES", "SWIM_GOGGLES", "FLASH_PROTECTION","WATCH", "ALARMCLOCK", "THERMOMETER","STURDY", "SKINTIGHT", "NONCONDUCTIVE", "WATERPROOF", "WATER_FRIENDLY", "RAINPROOF", "COLLAR", "FANCY", "SUPER_FANCY", "ACID_IMMUNE", "HEAT_IMMUNE", "COLD_IMMUNE", "ELECTRIC_IMMUNE","BIO_IMMUNE", "RAD_PROOF", "GAS_PROOF", "TARDIS", "USE_UPS","PARTIAL_DEAF","BELTED","PADDED","ONLY_ONE","SOFT" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "CLIMATE_CONTROL_HEAT", "add": 500 },
+            { "value": "CLIMATE_CONTROL_CHILL", "add": 500 },
+			{ "value": "ITEM_DAMAGE_CUT", "add": 8 },
+			{ "value": "ITEM_DAMAGE_STAB", "add": 8 }
+          ]
+        }
+      ]
+  }
+  },
+  {
+    "id": "armor_Security_Guard_on",
+    "copy-from": "armor_Security_Guard",
+    "type": "ARMOR",
+    "category": "armor",
+    "looks_like": "touring_suit",
+    "name": { "str": "安全警卫套装" },
+    "sub": "mask_gas",
+    "revert_to": "armor_Security_Guard",
+	"ammo": ["battery"],
+    "use_action": [
+	{
+	  "ammo_scale": 0,
+      "menu_text": "关闭",
+      "type": "transform",
+      "msg": "你熄灭了衣领上的灯光",
+      "target": "armor_Security_Guard"
+    },
+	{ "type": "holster",  "holster_msg": "You holster your %s." },
+	{ "type": "holster", "holster_prompt": "Sheath knife", "holster_msg": "You sheath your %s" }
+	],
+    "qualities": [ [ "GLARE", 13 ] ],
+    "extend": { "flags": [ "LIGHT_300" ] },
+    "charges_per_use": 1,
+	"power_draw": "10 mW",
+    "relic_data": {
+      "passive_effects": [
+        {
+          "condition": "ALWAYS",
+          "values": [
+            { "value": "CLIMATE_CONTROL_HEAT", "add": 500 },
+            { "value": "CLIMATE_CONTROL_CHILL", "add": 500 }
+          ]
+        }
+      ]
+  }
+  },
+  {
+    "id": "armor_arcthitecture",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": { "str": "构造体装甲" },
+    "description": "使用构造体材料塑形的一体式封闭全身装甲。从头到脚包裹全身，造型冷酷，轻量化设计。各部位设有锁定机构方便穿戴，具备自体支撑结构。",
+    "weight": "15 kg",
+    "volume": "15 L",
+	"weight_capacity_bonus": "15 kg",
+    "price": 800000,
+    "price_postapoc": 80000,
+    "to_hit": -1,
+    "bashing": 24,
+    "material": [ "arcthitecture" ],
+    "symbol": "[",
+    "looks_like": "armor_hc_lightplate",
+    "color": "dark_gray",
+    "warmth": 30,
+    "longest_side": "60 cm",
+    "flags": [ "OUTER", "STURDY", "UNBREAKABLE","BLOCK_WHILE_WORN","SUN_GLASSES", "NONCONDUCTIVE", "WATERPROOF", "RAINPROOF", "SUPER_FANCY", "ACID_IMMUNE", "ELECTRIC_IMMUNE","RAD_RESIST","OVERSIZE","PADDED","ONLY_ONE" ],
+    "armor": [
+      {
+    "material": [{ "type": "arcthitecture", "covered_by_mat": 100, "thickness": 1 }],
+    "covers": [ "head","mouth" ],
+        "coverage": 100,
+        "encumbrance": 9
+      },
+      {
+    "material": [{ "type": "arcthitecture", "covered_by_mat": 100, "thickness": 1.5 }],
+    "covers": [ "torso" ],
+        "coverage": 100,
+        "encumbrance": 15
+      },
+      {
+    "material": [{ "type": "arcthitecture", "covered_by_mat": 100, "thickness": 0.5 }],
+    "covers": [ "arm_l", "arm_r" ],
+        "coverage": 100,
+        "encumbrance": 10
+      },
+      {
+    "material": [{ "type": "arcthitecture", "covered_by_mat": 100, "thickness": 1.5 }],
+    "covers": [ "hand_l", "hand_r" ],
+        "coverage": 100,
+        "encumbrance": 13
+      },
+      {
+    "material": [{ "type": "arcthitecture", "covered_by_mat": 100, "thickness": 0.5 }],
+    "covers": [ "leg_l", "leg_r" ],
+        "coverage": 100,
+        "encumbrance": 10
+      },
+      {
+    "material": [{ "type": "arcthitecture", "covered_by_mat": 100, "thickness": 1.5 }],
+    "covers": [ "foot_l", "foot_r" ],
+        "coverage": 100,
+        "encumbrance": 13
+      }
+    ]
+  },
+  {
+    "id": "armor_arcthitecture_combat",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": { "str": "构造体战斗装甲" },
+    "description": "使用构造体材料塑形的战斗装甲。一体式封闭结构，轻量化设计。装饰有大量钉刺结构，徒手伤害大大增加，各部位设有锁定和自体支撑结构。",
+    "weight": "21 kg",
+    "volume": "20 L",
+	"weight_capacity_bonus": "21 kg",
+    "price": 500000,
+    "price_postapoc": 50000,
+    "to_hit": -3,
+    "bashing": 42,
+    "material": [ "arcthitecture" ],
+    "symbol": "[",
+    "looks_like": "xl_armor_hc_heavyplate",
+    "sub": "mask_gas",
+    "color": "dark_gray",
+    "warmth": 30,
+    "longest_side": "60 cm",
+    "flags": [ "OUTER", "STURDY", "UNBREAKABLE","BLOCK_WHILE_WORN","SUN_GLASSES", "NONCONDUCTIVE", "WATERPROOF", "RAINPROOF", "FANCY", "SUPER_FANCY", "ACID_IMMUNE","HEAT_IMMUNE","BIO_IMMUNE", "COLD_IMMUNE", "ELECTRIC_IMMUNE","RAD_PROOF", "GAS_PROOF","PSYSHIELD_PARTIAL","OVERSIZE","PADDED","ONLY_ONE" ],
+    "qualities": [ [ "GLARE", 4 ] ],
+    "armor": [
+      {
+    "material": [{ "type": "arcthitecture", "covered_by_mat": 100, "thickness": 3 }],
+    "covers": [ "head","mouth","eyes" ],
+        "coverage": 100,
+        "encumbrance": 15
+      },
+      {
+    "material": [{ "type": "arcthitecture", "covered_by_mat": 100, "thickness": 4 }],
+    "covers": [ "torso" ],
+        "coverage": 100,
+        "encumbrance": 24
+      },
+      {
+    "material": [{ "type": "arcthitecture", "covered_by_mat": 100, "thickness": 2 }],
+    "covers": [ "arm_l", "arm_r" ],
+        "coverage": 100,
+        "encumbrance": 16
+      },
+      {
+    "material": [{ "type": "arcthitecture", "covered_by_mat": 100, "thickness": 4 }],
+    "covers": [ "hand_l", "hand_r" ],
+        "coverage": 100,
+        "encumbrance": 21
+      },
+      {
+    "material": [{ "type": "arcthitecture", "covered_by_mat": 100, "thickness": 2 }],
+    "covers": [ "leg_l", "leg_r" ],
+        "coverage": 100,
+        "encumbrance": 16
+      },
+      {
+    "material": [{ "type": "arcthitecture", "covered_by_mat": 100, "thickness": 3 }],
+    "covers": [ "foot_l", "foot_r" ],
+        "coverage": 100,
+        "encumbrance": 21
+      }
+    ]
+  }
+]

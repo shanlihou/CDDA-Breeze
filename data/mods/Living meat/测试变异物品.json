@@ -1,0 +1,28 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "红外视觉变异剂",
+    "effect": [ { "u_add_trait": "INFRARED" } ]
+  },
+  {
+    "id": "红外视觉变异剂",
+    "type": "TOOL",
+    "name": { "str": "红外视觉变异剂" },
+    "description": "使用后获得红外视觉变异",
+    "weight": "10 g",
+    "volume": "10 ml",
+    "price": 10,
+    "price_postapoc": 0,
+    "to_hit": -3,
+    "bashing": 8,
+    "material": [ "flesh" ],
+    "symbol": ";",
+    "color": "light_green",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "description": "使用获得红外视觉变异",
+      "effect_on_conditions": [ "红外视觉变异剂" ]
+    },
+    "flags": [ "SINGLE_USE" ]
+  }
+]

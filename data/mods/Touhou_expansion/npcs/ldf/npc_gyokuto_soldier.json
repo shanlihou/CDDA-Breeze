@@ -1,0 +1,29 @@
+[
+  {
+    "id": "ldf_generic",
+    "type": "npc",
+    "name_suffix": "士兵",
+    "class": "NC_LDFSOLDIER",
+    "attitude": 0,
+    "mission": 8,
+    "chat": "TALK_GYOKUTO_SOLDIER",
+    "faction": "faction_ldf"
+  },
+  {
+    "id": "TALK_GYOKUTO_SOLDIER",
+    "type": "talk_topic",
+    "dynamic_line": [
+      "抱歉，我现在不能说话。",
+      "在想麻糬的事……",
+      "你好，地球居民。",
+      "你应该和队长谈谈。",
+      "嗯？"
+    ],
+    "responses": [
+      {
+        "text": "再见！",
+        "topic": "TALK_DONE"
+      }
+    ]
+  }
+]

@@ -1,0 +1,299 @@
+[
+	{
+		"type" : "MONSTER",
+		"id" : "mon_zombie_gasbags", 
+		"copy-from" : "mon_zombie_gasbag",
+		"death_drops": {
+			"subtype": "collection",
+			"groups": [
+				[ "default_zombie_items", 100 ],
+				[ "space_copper_drops1", 100 ]
+			]
+		}
+	},{
+		"type" : "MONSTER",
+		"id" : "mon_zombie_smoker",
+		"copy-from" : "mon_zombie_smoker",
+		"death_drops": "space_copper_drops1"
+	},{
+		"type" : "MONSTER",
+		"id" : "mon_zombie_tough",
+		"copy-from" : "mon_zombie_tough",
+		"death_drops": {
+			"subtype": "collection",
+			"groups": [
+				[ "zed_death_drop", 100 ],
+				[ "space_copper_drops2", 100 ]
+			]
+		}
+	},{
+		"type" : "MONSTER",
+		"id" : "mon_zombie_scorched",
+		"copy-from" : "mon_zombie_scorched",
+		"death_drops": "space_copper_drops2"
+	},{
+		"type" : "MONSTER",
+		"id" : "mon_zombie_screecher",
+		"copy-from" : "mon_zombie_screecher",
+		"death_drops": "space_copper_drops2"
+	},{
+		"type" : "MONSTER",
+		"id" : "mon_boomer", 
+		"copy-from" : "mon_boomer",
+		"death_drops": {
+			"subtype": "collection",
+			"groups": [
+				[ "default_zombie_items", 100 ],
+				[ "space_copper_drops1", 100 ]
+			]
+		}
+	},{
+		"type" : "MONSTER",
+		"id" : "mon_boomer_huge", 
+		"copy-from" : "mon_boomer_huge",
+		"death_drops": {
+			"subtype": "collection",
+			"groups": [
+				[ "default_zombie_items", 100 ],
+				[ "space_copper_drops2", 100 ]
+			]
+		}
+	},{
+		"type" : "MONSTER",
+		"id" : "mon_zombie_runner", 
+		"copy-from" : "mon_zombie_runner",
+		"death_drops": {
+			"subtype": "collection",
+			"groups": [
+				[ "zed_death_drop", 100 ],
+				[ "space_copper_drops2", 100 ]
+			]
+		}
+	},{
+		"type" : "MONSTER",
+		"id" : "mon_zombie_acidic", 
+		"copy-from" : "mon_zombie_acidic",
+		"death_drops": {
+			"subtype": "collection",
+			"groups": [
+				[ "zed_death_drop", 100 ],
+				[ "space_copper_drops2", 100 ]
+			]
+		}
+	},{
+		"type" : "MONSTER",
+		"id" : "mon_zombie_spitter", 
+		"copy-from" : "mon_zombie_spitter",
+		"death_drops": {
+			"subtype": "collection",
+			"groups": [
+				[ "zed_death_drop", 100 ],
+				[ "space_copper_drops2", 100 ]
+			]
+		}
+	},{
+		"type" : "MONSTER",
+		"id" : "mon_zombie_corrosive",
+		"copy-from" : "mon_zombie_corrosive",
+		"death_drops": {
+			"subtype": "collection",
+			"groups": [
+				[ "zed_death_drop", 100 ],
+				[ "space_copper_drops3", 100 ]
+			]
+		}
+	},{
+		"type" : "MONSTER",
+		"id" : "mon_zombie_hunter", 
+		"copy-from" : "mon_zombie_hunter",
+		"death_drops": {
+			"subtype": "collection",
+			"groups": [
+				[ "zed_death_drop", 100 ],
+				[ "space_copper_drops2", 100 ]
+			]
+		}
+	},{
+		"type" : "MONSTER",
+		"id" : "mon_zombie_hollow",
+		"copy-from" : "mon_zombie_hollow",
+		"death_drops": "space_copper_drops2"
+	},{
+		"type" : "MONSTER",
+		"id" : "mon_zombie_grabber", 
+		"copy-from" : "mon_zombie_grabber",
+		"death_drops": {
+			"subtype": "collection",
+			"groups": [
+				[ "zed_death_drop", 100 ],
+				[ "space_copper_drops2", 100 ]
+			]
+		}
+	},{
+		"type" : "MONSTER",
+		"id" : "mon_zombie_grappler", 
+		"copy-from" : "mon_zombie_grappler",
+		"death_drops": {
+			"subtype": "collection",
+			"groups": [
+				[ "zed_death_drop", 100 ],
+				[ "space_copper_drops2", 100 ]
+			]
+		}
+	},{
+		"type" : "MONSTER",
+		"id" : "mon_zombie_biter", 
+		"copy-from" : "mon_zombie_biter",
+		"death_drops": {
+			"subtype": "collection",
+			"groups": [
+				[ "zed_death_drop", 100 ],
+				[ "space_copper_drops2", 100 ]
+			]
+		}
+	},{
+		"type" : "MONSTER",
+		"id" : "mon_zombie_predator",
+		"copy-from" : "mon_zombie_predator",
+		"death_drops": {
+			"subtype": "collection",
+			"groups": [
+				[ "zed_death_drop", 100 ],
+				[ "space_copper_drops3", 100 ]
+			]
+		}
+	},{
+		"type" : "MONSTER",
+		"id" : "mon_skeleton",
+		"copy-from" : "mon_skeleton",
+		"death_drops": "space_copper_drops1"
+	},{
+		"type" : "MONSTER",
+		"id" : "mon_zombie_fiend",
+		"copy-from" : "mon_zombie_fiend",
+		"death_drops": {
+			"subtype": "collection",
+			"groups": [
+				[ "space_copper_drops2", 100 ]
+			]
+		}
+	},{
+		"type" : "MONSTER",
+		"id" : "mon_zombie_electric", "//": "電擊Z",
+		"copy-from" : "mon_zombie_electric",
+		"death_drops": {
+			"subtype": "collection",
+			"groups": [
+				[ "zed_death_drop", 100 ],
+				[ "space_copper_drops3", 100 ]
+			]
+		}
+	},{
+		"type" : "MONSTER",
+		"id" : "mon_zombie_necro",
+		"copy-from" : "mon_zombie_necro",
+		"dodge":4,
+		"armor_bash":3,
+		"armor_cut":3,	
+		"hp":150,	
+		"special_attacks":
+			[
+			["RESURRECT", 0],
+			["PARA_STING", 30]
+			],	
+		"death_drops": {
+			"subtype": "collection",
+			"groups": [
+				[ "zed_death_drop", 100 ],
+				[ "space_copper_drops4", 100 ]
+			]
+		}
+	
+	},{
+		"type" : "MONSTER",
+		"id" : "mon_zombie_master",
+		"copy-from" : "mon_zombie_master",
+		"melee_dice":3,
+		"melee_dice_sides":5,
+		"melee_cut":2,	
+		"special_attacks":
+			[
+			["UPGRADE", 15],
+			["STRETCH_ATTACK", 25]
+			],		
+		"death_drops": {
+			"subtype": "collection",
+			"groups": [
+				[ "zed_death_drop", 100 ],
+				[ "space_copper_drops4", 100 ]
+			]
+		}
+	},{
+		"type" : "MONSTER",
+		"id" : "mon_zombie_brute",
+		"copy-from" : "mon_zombie_brute",
+		"death_drops": {
+			"subtype": "collection",
+			"groups": [
+				[ "zed_death_drop", 100 ],
+				[ "space_copper_drops4", 100 ]
+			]
+		}
+	},{
+		"type" : "MONSTER",
+		"id" : "mon_zombie_brute_grappler",
+		"copy-from" : "mon_zombie_brute_grappler",
+		"death_drops": {
+			"subtype": "collection",
+			"groups": [
+				[ "zed_death_drop", 100 ],		
+				[ "space_copper_drops5", 100 ]	
+			]
+		}
+	},{
+		"type" : "MONSTER",
+		"id" : "mon_zombie_brute_ninja",
+		"copy-from" : "mon_zombie_brute_ninja",
+		"death_drops": {
+			"subtype": "collection",
+			"groups": [
+				[ "zed_death_drop", 100 ],
+				[ "space_copper_drops5", 100 ]	
+			]
+		}
+	},{
+		"type" : "MONSTER",
+		"id" : "mon_zombie_brute_shocker",
+		"copy-from" : "mon_zombie_brute_shocker",
+		"death_drops": {
+			"subtype": "collection",
+			"groups": [
+				[ "zed_death_drop", 100 ],
+				[ "space_copper_drops5", 100 ]
+			]
+		}		
+	},{
+		"type" : "MONSTER",
+		"id" : "mon_zombie_hulk",
+		"copy-from" : "mon_zombie_hulk",
+		"death_drops": {
+			"subtype": "collection",
+			"groups": [
+				[ "mon_zombie_hulk_death_drops", 100 ],
+				[ "space_silver_drops6", 100 ]
+			]
+		}
+	},
+	{
+		"type" : "MONSTER",
+		"id" : "mon_devourer_lab_sec",
+		"copy-from" : "mon_devourer_lab_sec",
+		"death_drops": {
+			"subtype": "collection",
+			"groups": [
+				[ "mon_devourer_lab_sec_death_drops", 100 ],
+				[ "space_silver_drops6", 100 ]
+			]
+		}
+	}
+]

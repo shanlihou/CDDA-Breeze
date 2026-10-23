@@ -1,0 +1,50 @@
+[
+  {
+    "id": "fox223",
+    "copy-from": "rifle_semi",
+    "type": "GUN",
+    "name": { "str": "狐の不正义枪" },
+    "//": "This is assumed to be the standard model matching the (currently not in-game) M16. Tileset whitelist for rifles",
+    "description": "等下，这是什么做的，魔法！一定是魔法.",
+    "weight": "3170 g",
+    "volume": "3100 ml",
+    "longest_side": "930 mm",
+    "price": 125000,
+    "price_postapoc": 4000,
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [ "steel", "plastic" ],
+    "symbol": "(",
+    "color": "dark_gray",
+    "ammo": [ "223","300blk" ],
+    "dispersion": 150,
+    "durability": 7,
+    "min_cycle_recoil": 1350,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "item_restriction": [
+          "stanag30",
+          "stanag5",
+          "stanag5ranger",
+          "stanag10",
+          "stanag10ranger",
+          "stanag20",
+          "stanag20ranger",
+          "stanag30ranger",
+          "stanag40",
+          "stanag40ranger",
+          "stanag50",
+          "stanag60",
+          "stanag60drum",
+          "stanag90",
+          "stanag100",
+          "stanag100drum",
+          "stanag150",
+          "fox223mag",
+          "survivor223mag"
+        ]
+      }
+    ]
+  }
+]

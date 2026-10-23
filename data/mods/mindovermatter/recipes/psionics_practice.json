@@ -1,0 +1,98 @@
+[
+  {
+    "type": "recipe_category",
+    "id": "CC_PRACTICE",
+    "recipe_subcategories": [
+      "CSC_ALL",
+      "CSC_PRACTICE_SCIENCE",
+      "CSC_PRACTICE_ELECTRONICS",
+      "CSC_PRACTICE_FABRICATION",
+      "CSC_PRACTICE_FOOD",
+      "CSC_PRACTICE_SURVIVAL",
+      "CSC_PRACTICE_TAILORING",
+      "CSC_PRACTICE_ATHLETICS",
+      "CSC_PRACTICE_COMPUTERS",
+      "CSC_PRACTICE_DEVICES",
+      "CSC_PRACTICE_HEALTH",
+      "CSC_PRACTICE_MECHANICS",
+      "CSC_PRACTICE_SOCIAL",
+      "CSC_PRACTICE_COMBAT",
+      "CSC_PRACTICE_METAPHYSICS"
+    ]
+  },
+  {
+    "id": "prac_psionics_begin",
+    "type": "practice",
+    "activity_level": "NO_EXERCISE",
+    "category": "CC_PRACTICE",
+    "subcategory": "CSC_PRACTICE_METAPHYSICS",
+    "name": "冥想（初级）",
+    "description": "练习平静和清空你的思绪，让念头自然浮现，然后任由它们流过你的身心。",
+    "skill_used": "metaphysics",
+    "autolearn": [ [ "metaphysics", 1 ] ],
+    "time": "1 h",
+    "practice_data": { "min_difficulty": 0, "max_difficulty": 2, "skill_limit": 3 },
+    "book_learn": [ [ "manual_meditation", 0 ], [ "book_newage_inpsychic", 0 ], [ "occult_glimpses", 0 ], [ "book_newage_generic", 0 ], [ "book_newage_witchcraftbeg", 0] ],
+    "tools": [ 
+      [ 
+        
+      ] 
+    ],
+    "flags": [ "BLIND_EASY" ]
+  },
+  {
+    "id": "prac_psionics_inter",
+    "type": "practice",
+    "activity_level": "NO_EXERCISE",
+    "category": "CC_PRACTICE",
+    "subcategory": "CSC_PRACTICE_METAPHYSICS",
+    "name": "冥想（中级）",
+    "description": "即便身处不适之中也能清空心灵，保持冷静与镇定。",
+    "skill_used": "metaphysics",
+    "time": "1 h",
+    "practice_data": { "min_difficulty": 3, "max_difficulty": 5, "skill_limit": 6 },
+    "book_learn": [ [ "manual_meditation_int", 3 ],  [ "occult_glimpses", 3 ], [ "book_newage_witchcraftadv", 3 ] ],
+    "tools": [ 
+      [ 
+        
+      ] 
+    ],
+     "flags": [ "BLIND_EASY" ]
+  },
+  {
+    "id": "prac_psionics_advan",
+    "type": "practice",
+    "activity_level": "NO_EXERCISE",
+    "category": "CC_PRACTICE",
+    "subcategory": "CSC_PRACTICE_METAPHYSICS",
+    "name": "灵能修炼",
+    "description": "专注于你内在的精神力量，使你更容易唤醒灵能天赋。",
+    "skill_used": "metaphysics",
+    "time": "1 h",
+    "practice_data": { "min_difficulty": 6, "max_difficulty": 9, "skill_limit": 10 },
+    "book_learn": [ [ "manual_psionics_advan", 6 ] ],
+    "tools": [ 
+      [ 
+        
+      ] 
+    ],
+     "flags": [ "BLIND_EASY" ]
+  },
+  {
+    "id": "prac_psionics_prof_basic",
+    "type": "practice",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_PRACTICE",
+    "subcategory": "CSC_PRACTICE_METAPHYSICS",
+    "name": "灵能导引",
+    "description": "练习通过水晶介质聚焦你的能力。",
+    "skill_used": "metaphysics",
+    "practice_data": { "min_difficulty": 0, "max_difficulty": 1, "skill_limit": 2 },
+    "proficiencies": [ { "proficiency": "prof_psionic_basic", "time_multiplier": 1, "skill_penalty": 0 } ],
+    "time": "1 h",
+    "qualities": [ { "id": "MATRIX_CHANNEL", "level": 1 } ],
+    "components": [ [ [ "matrix_shard", 1 ], [ "matrix_crystal_drained", 1 ] ] ],
+    "byproducts": [ [ "matrix_crystal_drained_dust", 10 ] ],
+    "book_learn": [ [ "manual_psionics_advan", 3 ], [ "schematics_matrix_channeling", 3 ], [ "schematics_matrix_aligning", 3 ] ]
+  }
+]

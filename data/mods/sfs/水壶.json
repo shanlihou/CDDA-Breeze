@@ -1,0 +1,68 @@
+[
+  {
+    "id": "异界水壶",
+    "type": "GENERIC",
+    "category": "container",
+    "name": { "str": "异界水壶" },
+    "looks_like": "2lcanteen",
+    "description": "这个水壶已被异界力量祝福",
+    "weight": "155 g",
+    "volume": "1503 ml",
+    "price": 800,
+    "price_postapoc": 50,
+    "to_hit": 1,
+    "material": [ "superalloy" ],
+    "symbol": ")",
+    "color": "green",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "watertight": true,
+        "spoil_multiplier": 0.001,
+        "weight_multiplier": 0.000,
+        "volume_multiplier": 0.000,
+        "max_contains_volume": "20000 ml",
+        "max_item_volume": "20000 ml",
+        "max_contains_weight": "99 kg",
+        "max_item_length": "1 km"
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "watertight": true,
+        "spoil_multiplier": 0.001,
+        "weight_multiplier": 0.000,
+        "volume_multiplier": 0.000,
+        "max_contains_volume": "20000 ml",
+        "max_item_volume": "20000 ml",
+        "max_contains_weight": "99 kg",
+        "max_item_length": "1 km"
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "watertight": true,
+        "spoil_multiplier": 0.001,
+        "weight_multiplier": 0.000,
+        "volume_multiplier": 0.000,
+        "max_contains_volume": "20000 ml",
+        "max_item_volume": "20000 ml",
+        "max_contains_weight": "99 kg",
+        "max_item_length": "1 km"
+      }
+    ],
+    "armor_data": {
+      "armor": [
+        {
+          "encumbrance": 0,
+          "coverage": 5,
+          "covers": [ "leg_l", "leg_r" ],
+          "specifically_covers": [ "leg_hip_r", "leg_hip_l" ],
+          "material": [ { "type": "superalloy", "covered_by_mat": 100, "thickness": 2.0 } ]
+        }
+      ]
+    },
+    "flags": [  "OVERSIZE","TARDIS","AURA","ONLY_ONE","SUPER_FANCY","STURDY" ]
+  }
+]

@@ -1,0 +1,61 @@
+[
+  {
+    "type": "mod_tileset",
+    "compatibility": [
+      "Chibi_Ultica","UltimateCataclysm","MshockXottoplus",
+      "UNDEAD_PEOPLE","UNDEAD_PEOPLE_BASE","UNDEAD_PEOPLE_LEGACY",
+      "UlticaShell","MshockXottoplus12","MSX++DEAD_PEOPLE",
+      "MXplus12_for_cosmetics","MSXotto+"
+    ],
+    "tiles-new": [
+      {
+        "file": "法球/法球.png",
+        "sprite_width": 32, "sprite_height": 32,
+        "sprite_offset_x": 0, "sprite_offset_y": 0,
+        
+        "tiles": [ 
+          {
+            "id": "overlay_worn_物品_法球_冰",
+           "animated": true,
+           "fg":[
+           {"weight": 20,"sprite": 0 }, 
+           {"weight": 10,"sprite": 1 },
+           {"weight": 10,"sprite": 2 },
+           {"weight": 20,"sprite": 3 }, 
+           {"weight": 30,"sprite": 8 }  
+            ] 
+          },
+          {
+            "id": "overlay_worn_物品_法球_火",
+           "animated": true,
+           "fg":[
+           {"weight": 20,"sprite": 4 }, 
+           {"weight": 10,"sprite": 5 },
+           {"weight": 10,"sprite": 6 },
+           {"weight": 20,"sprite": 7 }, 
+           {"weight": 30,"sprite": 8 }  
+            ] 
+          },
+          {
+            "id": "overlay_worn_物品_法球_冰与火",
+           "animated": true,
+           "fg":[
+           {"weight": 20,"sprite": 0 }, 
+           {"weight": 10,"sprite": 5 },
+           {"weight": 10,"sprite": 2 },
+           {"weight": 20,"sprite": 7 }, 
+           {"weight": 30,"sprite": 8 },
+           {"weight": 20,"sprite": 4 }, 
+           {"weight": 10,"sprite": 1 },
+           {"weight": 10,"sprite": 6 },
+           {"weight": 20,"sprite": 3 }, 
+           {"weight": 30,"sprite": 8 }
+            ] 
+          }
+         
+         
+        ]
+      }
+    ]
+  }
+]

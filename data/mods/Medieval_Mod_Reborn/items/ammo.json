@@ -1,0 +1,67 @@
+[
+  {
+    "id": "lance_charge",
+    "type": "AMMO",
+    "name": {
+      "str": "火枪药"
+    },
+    "description": "一小撮用于简易枪械的火枪药。虽然射程短，但也能给人狠狠一击。",
+    "weight": "3 g",
+    "volume": "60 ml",
+    "price": "35 USD",
+    "price_postapoc": "40 cent",
+    "material": [
+      "paper",
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "red",
+    "ammo_type": "fire_lance",
+    "range": 3,
+    "damage": {
+      "damage_type": "heat",
+      "amount": 40
+    },
+    "recoil": 1200,
+    "effects": [
+      "COOKOFF",
+      "RECYCLED",
+      "INCENDIARY",
+      "MUZZLE_SMOKE",
+      "BLACKPOWDER"
+    ]
+  },
+  {
+    "id": "lance_charge_shot",
+    "type": "AMMO",
+    "name": {
+      "str": "火枪弹"
+    },
+    "description": "一小撮用于简易枪械的火药燃烧装药及一堆石子作弹药。虽然射程短，但也能给人狠狠一击。",
+    "weight": "5 g",
+    "volume": "120 ml",
+    "price": "50 USD",
+    "price_postapoc": "75 cent",
+    "material": [
+      "paper",
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "red",
+    "ammo_type": "fire_lance",
+    "range": 4,
+    "damage": {
+      "damage_type": "heat",
+      "amount": 50
+    },
+    "recoil": 1600,
+    "effects": [
+      "COOKOFF",
+      "SHOT",
+      "RECYCLED",
+      "INCENDIARY",
+      "MUZZLE_SMOKE",
+      "BLACKPOWDER"
+    ]
+  }
+]

@@ -1,0 +1,996 @@
+[
+  {
+    "id": "ear_firm",
+    "type": "mutation",
+    "name": {
+      "str": "月兔耳朵：挺立"
+    },
+    "description": "你有一对又长又细、挺立的月兔耳朵。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "ear_shape"
+    ]
+  },
+  {
+    "id": "ear_floppy",
+    "type": "mutation",
+    "name": {
+      "str": "月兔耳朵：下垂"
+    },
+    "description": "你有一对中等大小、肥厚、下垂的月兔耳朵。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "ear_shape"
+    ]
+  },
+  {
+    "id": "ear_rumpled",
+    "type": "mutation",
+    "name": {
+      "str": "月兔耳朵：褶皱"
+    },
+    "description": "你有一对又长又细、褶皱的月兔耳朵。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "ear_shape"
+    ]
+  },
+  {
+    "id": "eye_black",
+    "type": "mutation",
+    "name": {
+      "str": "眼睛颜色：黑"
+    },
+    "description": "你有一双黑色的眼睛。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "eye_color"
+    ]
+  },
+  {
+    "id": "eye_dark_purple",
+    "type": "mutation",
+    "name": {
+      "str": "眼睛颜色：深紫"
+    },
+    "description": "你有一双深紫色的眼睛。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "eye_color"
+    ]
+  },
+  {
+    "id": "eye_magenta",
+    "type": "mutation",
+    "name": {
+      "str": "眼睛颜色：品红"
+    },
+    "description": "你有一双品红色的眼睛。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "eye_color"
+    ]
+  },
+  {
+    "id": "eye_pink",
+    "type": "mutation",
+    "name": {
+      "str": "眼睛颜色：粉"
+    },
+    "description": "你有一双粉色的眼睛。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "eye_color"
+    ]
+  },
+  {
+    "id": "eye_red",
+    "type": "mutation",
+    "name": {
+      "str": "眼睛颜色：红"
+    },
+    "description": "你有一双红色的眼睛。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "eye_color"
+    ]
+  },
+  {
+    "id": "eye_redbrown",
+    "type": "mutation",
+    "name": {
+      "str": "眼睛颜色：红棕"
+    },
+    "description": "你有一双红棕色的眼睛。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "eye_color"
+    ],
+    "//": "I don't know the name for the color between red and brown, looking it up gave red-brown as it was named for X11 systems. Change for a Japanese term, if there's any"
+  },
+  {
+    "id": "hair_asagi_long",
+    "type": "mutation",
+    "name": {
+      "str": "头发：浅黄，长发"
+    },
+    "description": "长长的浅黄色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_asagi",
+      "hair_long"
+    ]
+  },
+  {
+    "id": "hair_asagi_medium",
+    "type": "mutation",
+    "name": {
+      "str": "头发：浅黄，中长"
+    },
+    "description": "中等长度的浅黄色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_asagi",
+      "hair_medium"
+    ]
+  },
+  {
+    "id": "hair_asagi_short",
+    "type": "mutation",
+    "name": {
+      "str": "头发：浅黄，短发"
+    },
+    "description": "短短的浅黄色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_asagi",
+      "hair_short"
+    ]
+  },
+  {
+    "id": "hair_blue_long",
+    "type": "mutation",
+    "name": {
+      "str": "头发：蓝，长发"
+    },
+    "description": "长长的蓝色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_blue",
+      "hair_long"
+    ]
+  },
+  {
+    "id": "hair_blue_medium",
+    "type": "mutation",
+    "name": {
+      "str": "头发：蓝，中长"
+    },
+    "description": "中等长度的蓝色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_blue",
+      "hair_medium"
+    ]
+  },
+  {
+    "id": "hair_blue_short",
+    "type": "mutation",
+    "name": {
+      "str": "头发：蓝，短发"
+    },
+    "description": "短短的蓝色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_blue",
+      "hair_short"
+    ]
+  },
+  {
+    "id": "hair_cinnabar_long",
+    "type": "mutation",
+    "name": {
+      "str": "头发：朱红，长发"
+    },
+    "description": "长长的朱红色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_cinnabar",
+      "hair_long"
+    ]
+  },
+  {
+    "id": "hair_cinnabar_medium",
+    "type": "mutation",
+    "name": {
+      "str": "头发：朱红，中长"
+    },
+    "description": "中等长度的朱红色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_cinnabar",
+      "hair_medium"
+    ]
+  },
+  {
+    "id": "hair_cinnabar_short",
+    "type": "mutation",
+    "name": {
+      "str": "头发：朱红，短发"
+    },
+    "description": "短短的朱红色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_cinnabar",
+      "hair_short"
+    ]
+  },
+  {
+    "id": "hair_lgreen_long",
+    "type": "mutation",
+    "name": {
+      "str": "头发：浅绿，长发"
+    },
+    "description": "长长的浅绿色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_lgreen",
+      "hair_long"
+    ]
+  },
+  {
+    "id": "hair_lgreen_medium",
+    "type": "mutation",
+    "name": {
+      "str": "头发：浅绿，中长"
+    },
+    "description": "中等长度的浅绿色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_lgreen",
+      "hair_medium"
+    ]
+  },
+  {
+    "id": "hair_lgreen_short",
+    "type": "mutation",
+    "name": {
+      "str": "头发：浅绿，短发"
+    },
+    "description": "短短的浅绿色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_lgreen",
+      "hair_short"
+    ]
+  },
+  {
+    "id": "hair_jacaranda_long",
+    "type": "mutation",
+    "name": {
+      "str": "头发：蓝花楹，长发"
+    },
+    "description": "长长的蓝花楹色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_jacaranda",
+      "hair_long"
+    ]
+  },
+  {
+    "id": "hair_jacaranda_medium",
+    "type": "mutation",
+    "name": {
+      "str": "头发：蓝花楹，中长"
+    },
+    "description": "中等长度的蓝花楹色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_jacaranda",
+      "hair_medium"
+    ]
+  },
+  {
+    "id": "hair_jacaranda_short",
+    "type": "mutation",
+    "name": {
+      "str": "头发：蓝花楹，短发"
+    },
+    "description": "短短的蓝花楹色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_jacaranda",
+      "hair_short"
+    ]
+  },
+  {
+    "id": "hair_lapis_long",
+    "type": "mutation",
+    "name": {
+      "str": "头发：靛蓝，长发"
+    },
+    "description": "长长的靛蓝色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_lapis",
+      "hair_long"
+    ]
+  },
+  {
+    "id": "hair_lapis_medium",
+    "type": "mutation",
+    "name": {
+      "str": "头发：靛蓝，中长"
+    },
+    "description": "中等长度的靛蓝色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_lapis",
+      "hair_medium"
+    ]
+  },
+  {
+    "id": "hair_lapis_short",
+    "type": "mutation",
+    "name": {
+      "str": "头发：靛蓝，短发"
+    },
+    "description": "短短的靛蓝色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_lapis",
+      "hair_short"
+    ]
+  },
+  {
+    "id": "hair_lblue_long",
+    "type": "mutation",
+    "name": {
+      "str": "头发：浅蓝，长发"
+    },
+    "description": "长长的浅蓝色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_lblue",
+      "hair_long"
+    ]
+  },
+  {
+    "id": "hair_lblue_medium",
+    "type": "mutation",
+    "name": {
+      "str": "头发：浅蓝，中长"
+    },
+    "description": "中等长度的浅蓝色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_lblue",
+      "hair_medium"
+    ]
+  },
+  {
+    "id": "hair_lblue_short",
+    "type": "mutation",
+    "name": {
+      "str": "头发：浅蓝，短发"
+    },
+    "description": "短短的浅蓝色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_lblue",
+      "hair_short"
+    ]
+  },
+  {
+    "id": "hair_lgray_long",
+    "type": "mutation",
+    "name": {
+      "str": "头发：浅灰，长发"
+    },
+    "description": "长长的浅灰色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_lgray",
+      "hair_long"
+    ]
+  },
+  {
+    "id": "hair_lgray_medium",
+    "type": "mutation",
+    "name": {
+      "str": "头发：浅灰，中长"
+    },
+    "description": "中等长度的浅灰色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_lgray",
+      "hair_medium"
+    ]
+  },
+  {
+    "id": "hair_lgray_short",
+    "type": "mutation",
+    "name": {
+      "str": "头发：浅灰，短发"
+    },
+    "description": "短短的浅灰色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_lgray",
+      "hair_short"
+    ]
+  },
+  {
+    "id": "hair_magenta_long",
+    "type": "mutation",
+    "name": {
+      "str": "头发：品红，长发"
+    },
+    "description": "长长的品红色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_magenta",
+      "hair_long"
+    ]
+  },
+  {
+    "id": "hair_magenta_medium",
+    "type": "mutation",
+    "name": {
+      "str": "头发：品红，中长"
+    },
+    "description": "中等长度的品红色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_magenta",
+      "hair_medium"
+    ]
+  },
+  {
+    "id": "hair_magenta_short",
+    "type": "mutation",
+    "name": {
+      "str": "头发：品红，短发"
+    },
+    "description": "短短的品红色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_magenta",
+      "hair_short"
+    ]
+  },
+  {
+    "id": "hair_midnight_long",
+    "type": "mutation",
+    "name": {
+      "str": "头发：午夜蓝，长发"
+    },
+    "description": "长长的午夜蓝色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_midnight",
+      "hair_long"
+    ]
+  },
+  {
+    "id": "hair_midnight_medium",
+    "type": "mutation",
+    "name": {
+      "str": "头发：午夜蓝，中长"
+    },
+    "description": "中等长度的午夜蓝色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_midnight",
+      "hair_medium"
+    ]
+  },
+  {
+    "id": "hair_midnight_short",
+    "type": "mutation",
+    "name": {
+      "str": "头发：午夜蓝，短发"
+    },
+    "description": "短短的午夜蓝色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_midnight",
+      "hair_short"
+    ]
+  },
+  {
+    "id": "hair_pink_long",
+    "type": "mutation",
+    "name": {
+      "str": "头发：粉，长发"
+    },
+    "description": "长长的粉色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_pink",
+      "hair_long"
+    ]
+  },
+  {
+    "id": "hair_pink_medium",
+    "type": "mutation",
+    "name": {
+      "str": "头发：粉，中长"
+    },
+    "description": "中等长度的粉色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_pink",
+      "hair_medium"
+    ]
+  },
+  {
+    "id": "hair_pink_short",
+    "type": "mutation",
+    "name": {
+      "str": "头发：粉，短发"
+    },
+    "description": "短短的粉色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_pink",
+      "hair_short"
+    ]
+  },
+  {
+    "id": "hair_purple_long",
+    "type": "mutation",
+    "name": {
+      "str": "头发：紫，长发"
+    },
+    "description": "长长的紫色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_purple",
+      "hair_long"
+    ]
+  },
+  {
+    "id": "hair_purple_medium",
+    "type": "mutation",
+    "name": {
+      "str": "头发：紫，中长"
+    },
+    "description": "中等长度的紫色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_purple",
+      "hair_medium"
+    ]
+  },
+  {
+    "id": "hair_purple_short",
+    "type": "mutation",
+    "name": {
+      "str": "头发：紫，短发"
+    },
+    "description": "短短的紫色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_purple",
+      "hair_short"
+    ]
+  },
+  {
+    "id": "hair_white_long",
+    "type": "mutation",
+    "name": {
+      "str": "头发：白，长发"
+    },
+    "description": "长长的白色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_white",
+      "hair_long"
+    ]
+  },
+  {
+    "id": "hair_white_medium",
+    "type": "mutation",
+    "name": {
+      "str": "头发：白，中长"
+    },
+    "description": "中等长度的白色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_white",
+      "hair_medium"
+    ]
+  },
+  {
+    "id": "hair_white_short",
+    "type": "mutation",
+    "name": {
+      "str": "头发：白，短发"
+    },
+    "description": "短短的白色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_white",
+      "hair_short"
+    ]
+  },
+  {
+    "id": "hair_yellow_long",
+    "type": "mutation",
+    "name": {
+      "str": "头发：黄，长发"
+    },
+    "description": "长长的黄色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_yellow",
+      "hair_long"
+    ]
+  },
+  {
+    "id": "hair_yellow_medium",
+    "type": "mutation",
+    "name": {
+      "str": "头发：黄，中长"
+    },
+    "description": "中等长度的黄色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_yellow",
+      "hair_medium"
+    ]
+  },
+  {
+    "id": "hair_yellow_short",
+    "type": "mutation",
+    "name": {
+      "str": "头发：黄，短发"
+    },
+    "description": "短短的黄色头发。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "player_display": false,
+    "vanity": false,
+    "types": [
+      "hair_style"
+    ],
+    "flags": [
+      "hair_yellow",
+      "hair_short"
+    ]
+  }
+]

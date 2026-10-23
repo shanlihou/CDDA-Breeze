@@ -1,0 +1,35 @@
+[
+	{
+		"type": "COMESTIBLE",
+		"id": "fishery_egg_blinky",
+		"name": { "str": "鱼卵（布林吉鱼）" },
+		"copy-from": "fishery_egg",
+		"spoils_in": "10 days",
+		"description": "一些可以食用，也可以等他们孵化出小鱼的布林吉鱼鱼卵。",
+		"rot_spawn": "FISHERY_GROUP_EGG_blinky",
+		"rot_spawn_chance": 50
+	},
+	{
+		"name": "FISHERY_GROUP_EGG_blinky",
+		"type": "monstergroup",
+		"default": "fishery_mon_blinky_juvenile",
+		"monsters": [ ]
+	},
+	{
+		"id": "fishery_mon_blinky_juvenile",
+		"type": "MONSTER",
+		"name": { "str": "布林吉鱼鱼苗" },
+		"description": "一条布林吉鱼幼鱼，过一段时间就会变成成鱼。",
+		"copy-from": "fishery_mon_juvenile",
+		"harvest": "fish_tiny",
+		"upgrades": { "age_grow": 20, "into": "mon_fish_blinky" }
+	},
+	{
+		"id": "mon_fish_blinky",
+		"type": "MONSTER",
+		"copy-from": "mon_fish_blinky",
+		"name": { "str": "布林吉鱼" },
+		"reproduction": { "baby_egg": "fishery_egg_blinky", "baby_count": 10, "baby_timer": 20 },
+		"baby_flags": [ "SPRING" ]
+	}
+]

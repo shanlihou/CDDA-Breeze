@@ -1,0 +1,160 @@
+[
+  {
+    "type": "mutation",
+    "id": "X孢子体质修复:坚韧生理",
+    "name": { "str": "X孢子体质修复:坚韧生理" },
+    "points": 3,
+    "description": "X孢子修复了你的体质，生命值增加50%，胃容量x2，心肺功能x2，疲劳恢复时间减半，耐力恢复速度加倍，给予变异疼痛麻木、急速疼痛恢复、急速自愈、肠道坚韧、耐酸血肉、酸性血液",
+    "stomach_size_multiplier": 2.0,
+    "hp_modifier_secondary": 0.5,
+    "cardio_multiplier": 2,
+    "fatigue_modifier": -0.5,
+    "stamina_regen_modifier": 1
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "X孢子体质修复:温度耐性",
+    "effect": [ { "u_add_trait": "RESISTWARM" }, { "u_add_trait": "RESISTCHILL" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "X孢子体质修复:药毒抗性",
+    "effect": [ { "u_add_trait": "POISRESIST" }, { "u_add_trait": "NONADDICTIVE" }, { "u_add_trait": "TOLERANCE" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "X孢子体质修复:超频免疫系统",
+    "effect": [ { "u_add_trait": "DISIMMUNE" }, { "u_add_trait": "INFIMMUNE" }, { "u_add_trait": "PARAIMMUNE" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "X孢子体质修复:坚韧生理",
+    "effect": [
+      { "u_add_trait": "X孢子体质修复:坚韧生理" },
+      { "u_add_trait": "NOPAIN" },
+      { "u_add_trait": "PAINREC3" },
+      { "u_add_trait": "REGEN" },
+      { "u_add_trait": "EATPOISON" },
+      { "u_add_trait": "ACIDPROOF" },
+      { "u_add_trait": "ACIDBLOOD" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "X孢子体质修复:神经重组",
+    "effect": [
+      { "u_add_trait": "GOODMEMORY" },
+      { "u_add_trait": "DEFT" },
+      { "u_add_trait": "QUICK" },
+      { "u_add_trait": "PSYCHOPATH" },
+      { "u_add_trait": "FASTREADER" },
+      { "u_add_trait": "FASTLEARNER" },
+      { "u_add_trait": "FAST_REFLEXES" }
+    ]
+  },
+  {
+    "id": "X孢子体质修复:温度耐性",
+    "type": "TOOL",
+    "name": { "str": "X孢子体质修复:温度耐性" },
+    "description": "X孢子体质修复阶段，X孢子会对人体的温度耐性进行强化，<color_yellow>给予变异耐寒体质、耐热体质</color>",
+    "weight": "10 g",
+    "volume": "10 ml",
+    "price": 10,
+    "price_postapoc": 0,
+    "to_hit": -3,
+    "bashing": 8,
+    "material": [ "flesh" ],
+    "symbol": ";",
+    "color": "light_green",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "description": "X孢子体质修复阶段，X孢子会对人体的温度耐性进行强化，<color_yellow>给予变异耐寒体质、耐热体质</color>",
+      "effect_on_conditions": [ "X孢子体质修复:温度耐性" ]
+    },
+    "flags": [ "SINGLE_USE" ]
+  },
+  {
+    "id": "X孢子体质修复:药毒抗性",
+    "type": "TOOL",
+    "name": { "str": "X孢子体质修复:药毒抗性" },
+    "description": "X孢子体质修复阶段，X孢子会对人体的药毒耐性进行强化，<color_yellow>给予变异抗瘾体质、抗毒体质、耐药体质</color>",
+    "weight": "10 g",
+    "volume": "10 ml",
+    "price": 10,
+    "price_postapoc": 0,
+    "to_hit": -3,
+    "bashing": 8,
+    "material": [ "flesh" ],
+    "symbol": ";",
+    "color": "light_green",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "description": "X孢子体质修复阶段，X孢子会对人体的药毒耐性进行强化，<color_yellow>给予变异抗瘾体质、抗毒体质、耐药体质</color>",
+      "effect_on_conditions": [ "X孢子体质修复:药毒抗性" ]
+    },
+    "flags": [ "SINGLE_USE" ]
+  },
+  {
+    "id": "X孢子体质修复:超频免疫系统",
+    "type": "TOOL",
+    "name": { "str": "X孢子体质修复:超频免疫系统" },
+    "description": "X孢子体质修复阶段，X孢子会对人体的免疫系统进行强化，<color_yellow>给予变异寄生免疫、疾病免疫、感染免疫</color>",
+    "weight": "10 g",
+    "volume": "10 ml",
+    "price": 10,
+    "price_postapoc": 0,
+    "to_hit": -3,
+    "bashing": 8,
+    "material": [ "flesh" ],
+    "symbol": ";",
+    "color": "light_green",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "description": "X孢子体质修复阶段，X孢子会对人体的温度耐性进行强化，<color_yellow>给予变异寄生免疫、疾病免疫、感染免疫</color>",
+      "effect_on_conditions": [ "X孢子体质修复:超频免疫系统" ]
+    },
+    "flags": [ "SINGLE_USE" ]
+  },
+  {
+    "id": "X孢子体质修复:坚韧生理",
+    "type": "TOOL",
+    "name": { "str": "X孢子体质修复:坚韧生理" },
+    "description": "X孢子体质修复阶段，X孢子会对人体的生理机构进行强化，<color_yellow>生命值增加50%，胃容量x2，心肺功能x2，疲劳恢复时间减半，耐力恢复速度加倍，给予变异疼痛麻木、急速疼痛恢复、急速自愈、肠道坚韧、耐酸血肉、酸性血液</color>",
+    "weight": "10 g",
+    "volume": "10 ml",
+    "price": 10,
+    "price_postapoc": 0,
+    "to_hit": -3,
+    "bashing": 8,
+    "material": [ "flesh" ],
+    "symbol": ";",
+    "color": "light_green",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "description": "X孢子体质修复阶段，X孢子会对人体的生理机构进行强化，<color_yellow>生命值增加50%，胃容量x2，心肺功能x2，疲劳恢复时间减半，耐力恢复速度加倍，给予变异疼痛麻木、急速疼痛恢复、急速自愈、肠道坚韧、耐酸血肉、酸性血液</color>",
+      "effect_on_conditions": [ "X孢子体质修复:坚韧生理" ]
+    },
+    "flags": [ "SINGLE_USE" ]
+  },
+  {
+    "id": "X孢子体质修复:神经重组",
+    "type": "TOOL",
+    "name": { "str": "X孢子体质修复:神经重组" },
+    "description": "X孢子体质修复阶段，X孢子会对人体的神经结构进行重组，<color_yellow>给予变异出色记忆、灵巧、迅捷、无情、快速阅读、快速学习、快速反应</color>",
+    "weight": "10 g",
+    "volume": "10 ml",
+    "price": 10,
+    "price_postapoc": 0,
+    "to_hit": -3,
+    "bashing": 8,
+    "material": [ "flesh" ],
+    "symbol": ";",
+    "color": "light_green",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "description": "X孢子体质修复阶段，X孢子会对人体的神经结构进行重组，<color_yellow>给予变异出色记忆、灵巧、迅捷、无情、快速阅读、快速学习、快速反应</color>",
+      "effect_on_conditions": [ "X孢子体质修复:神经重组" ]
+    },
+    "flags": [ "SINGLE_USE" ]
+  }
+]

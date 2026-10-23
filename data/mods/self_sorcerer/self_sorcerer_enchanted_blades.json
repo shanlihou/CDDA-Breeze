@@ -1,0 +1,425 @@
+[
+  {
+    "type": "TOOL",
+    "copy-from": "katana",
+    "id": "sor_blade_flame",
+    "name": {
+      "str": "术士之刃·烈焰"
+    },
+    "description": "刃身内部涌动着熔岩般的红光。挥砍时附带额外火焰伤害，命中时爆出一团火花。",
+    "color": "red",
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "ITEM_DAMAGE_HEAT",
+              "add": 10
+            }
+          ],
+          "hit_you_effect": [
+            {
+              "id": "spell_zz_blade_flame"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "TOOL",
+    "copy-from": "katana",
+    "id": "sor_blade_frost",
+    "name": {
+      "str": "术士之刃·寒霜"
+    },
+    "description": "刀刃上结着一层永不融化的白霜。挥砍时附带额外冰冷伤害，命中时散出寒雾。",
+    "color": "light_cyan",
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "ITEM_DAMAGE_COLD",
+              "add": 10
+            }
+          ],
+          "hit_you_effect": [
+            {
+              "id": "spell_zz_blade_frost"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "TOOL",
+    "copy-from": "katana",
+    "id": "sor_blade_storm",
+    "name": {
+      "str": "术士之刃·惊雷"
+    },
+    "description": "刀锋上不时跳起细小的电弧。挥砍时附带额外电击伤害，命中时引发一次放电。",
+    "color": "light_blue",
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "ITEM_DAMAGE_ELEC",
+              "add": 10
+            }
+          ],
+          "hit_you_effect": [
+            {
+              "id": "spell_zz_blade_storm"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "spell_zz_blade_flame",
+    "type": "SPELL",
+    "name": "烈焰迸发",
+    "description": "刀锋命中时爆开的火花。",
+    "effect": "attack",
+    "effect_str": "heat",
+    "valid_targets": [
+      "hostile"
+    ],
+    "shape": "blast",
+    "min_damage": 15,
+    "max_damage": 25,
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 1,
+    "max_range": 1,
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "NONE",
+    "flags": [
+      "SILENT",
+      "NO_PROJECTILE"
+    ],
+    "difficulty": 1,
+    "max_level": 0
+  },
+  {
+    "id": "spell_zz_blade_frost",
+    "type": "SPELL",
+    "name": "霜华爆散",
+    "description": "刀锋命中时喷出的寒气。",
+    "effect": "attack",
+    "effect_str": "cold",
+    "valid_targets": [
+      "hostile"
+    ],
+    "shape": "blast",
+    "min_damage": 12,
+    "max_damage": 22,
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 1,
+    "max_range": 1,
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "NONE",
+    "flags": [
+      "SILENT",
+      "NO_PROJECTILE"
+    ],
+    "difficulty": 1,
+    "max_level": 0
+  },
+  {
+    "id": "spell_zz_blade_storm",
+    "type": "SPELL",
+    "name": "厉雷",
+    "description": "刀锋命中时迸出的电弧。",
+    "effect": "attack",
+    "effect_str": "electric",
+    "valid_targets": [
+      "hostile"
+    ],
+    "shape": "blast",
+    "min_damage": 12,
+    "max_damage": 22,
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 1,
+    "max_range": 1,
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "NONE",
+    "flags": [
+      "SILENT",
+      "NO_PROJECTILE"
+    ],
+    "difficulty": 1,
+    "max_level": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv4_summon_undead",
+    "type": "SPELL",
+    "name": "术士-Lv4-召唤亡者",
+    "description": "从尸体堆里唤起一名亡者卫兵为你作战。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "summon",
+    "effect_str": "mon_zombie_soldier",
+    "shape": "blast",
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_aoe": 2,
+    "max_aoe": 2,
+    "min_range": 5,
+    "max_range": 5,
+    "min_duration": 300000,
+    "max_duration": 300000,
+    "base_casting_time": 400,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_4",
+    "difficulty": 4,
+    "max_level": 0,
+    "base_energy_cost": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_summon_shadow",
+    "type": "SPELL",
+    "name": "术士-Lv5-召唤暗影",
+    "description": "从阴影里拖出一团会动的黑暗。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "summon",
+    "effect_str": "mon_shadow",
+    "shape": "blast",
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_aoe": 2,
+    "max_aoe": 2,
+    "min_range": 6,
+    "max_range": 6,
+    "min_duration": 300000,
+    "max_duration": 300000,
+    "base_casting_time": 400,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_5",
+    "difficulty": 5,
+    "max_level": 0,
+    "base_energy_cost": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv6_summon_flame",
+    "type": "SPELL",
+    "name": "术士-Lv6-召唤炎眼",
+    "description": "一颗燃烧的眼球从虚空中睁开，替你烧尽敌人。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "summon",
+    "effect_str": "mon_flaming_eye",
+    "shape": "blast",
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_aoe": 2,
+    "max_aoe": 2,
+    "min_range": 6,
+    "max_range": 6,
+    "min_duration": 300000,
+    "max_duration": 300000,
+    "base_casting_time": 400,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_6",
+    "difficulty": 6,
+    "max_level": 0,
+    "base_energy_cost": 0
+  },
+  {
+    "type": "recipe",
+    "result": "sor_blade_flame",
+    "skill_used": "fabrication",
+    "skills_required": [
+      [
+        "fabrication",
+        6
+      ]
+    ],
+    "time": "60 m",
+    "book_learn": [
+      [
+        "spell_scroll_sorcerer_5",
+        5
+      ]
+    ],
+    "autolearn": false,
+    "qualities": [
+      {
+        "id": "HAMMER",
+        "level": 2
+      }
+    ],
+    "tools": [
+      [
+        [
+          "forge",
+          -1
+        ],
+        [
+          "char_forge",
+          -1
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "steel_lump",
+          2
+        ]
+      ],
+      [
+        [
+          "sor_enchanted_item_material_3",
+          1
+        ]
+      ]
+    ],
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_CUTTING",
+    "activity_level": "LIGHT_EXERCISE"
+  },
+  {
+    "type": "recipe",
+    "result": "sor_blade_frost",
+    "skill_used": "fabrication",
+    "skills_required": [
+      [
+        "fabrication",
+        6
+      ]
+    ],
+    "time": "60 m",
+    "book_learn": [
+      [
+        "spell_scroll_sorcerer_5",
+        5
+      ]
+    ],
+    "autolearn": false,
+    "qualities": [
+      {
+        "id": "HAMMER",
+        "level": 2
+      }
+    ],
+    "tools": [
+      [
+        [
+          "forge",
+          -1
+        ],
+        [
+          "char_forge",
+          -1
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "steel_lump",
+          2
+        ]
+      ],
+      [
+        [
+          "sor_enchanted_item_material_3",
+          1
+        ]
+      ]
+    ],
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_CUTTING",
+    "activity_level": "LIGHT_EXERCISE"
+  },
+  {
+    "type": "recipe",
+    "result": "sor_blade_storm",
+    "skill_used": "fabrication",
+    "skills_required": [
+      [
+        "fabrication",
+        6
+      ]
+    ],
+    "time": "60 m",
+    "book_learn": [
+      [
+        "spell_scroll_sorcerer_5",
+        5
+      ]
+    ],
+    "autolearn": false,
+    "qualities": [
+      {
+        "id": "HAMMER",
+        "level": 2
+      }
+    ],
+    "tools": [
+      [
+        [
+          "forge",
+          -1
+        ],
+        [
+          "char_forge",
+          -1
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "steel_lump",
+          2
+        ]
+      ],
+      [
+        [
+          "sor_enchanted_item_material_3",
+          1
+        ]
+      ]
+    ],
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_CUTTING",
+    "activity_level": "LIGHT_EXERCISE"
+  }
+]

@@ -1,0 +1,571 @@
+[
+  {
+    "//": "男孩。 具体什么意思就看个人理解了。",
+    "type": "mutation",
+    "id": "NEC_OTOKONOKO",
+    "name": { "str": "伪娘" },
+    "points": 0,
+    "description": "你的身体具有女性化的特征，但是你是男的。 这很少见很稀有，但在现在世界这种情况下没有任何意义可言。",
+    "starting_trait": true,
+    "valid": false
+  },
+  {
+    "//": "女孩。 这意味着什么取决于个人解释。为了对应最近的LGBT",
+    "type": "mutation",
+    "id": "NEC_ONNANOKO",
+    "name": { "str": "假小子" },
+    "points": 0,
+    "description": "你的身体虽然有着男子气概，但其实你是女性。 虽然这很罕见，但在现在世界这种情况下没什么好计较的。",
+    "starting_trait": true,
+    "valid": false
+  },
+  {
+    "//": "由于角色创建后背景不会保留，因此准备一个位置作为占位符",
+    "type": "mutation",
+    "id": "nec_Alice_MT",
+    "name": "爱丽丝",
+    "description": "你身处在一个一切都变了的世界，但你没有被改变。你是选择平静地接受这一切还是逃避这一切？",
+    "points": 0,
+    "starting_trait": true,
+    "purifiable": false,
+    "valid": false
+  },
+  {
+    "//": "由于角色创建后背景不会保留，因此准备一个位置作为占位符",
+    "type": "mutation",
+    "id": "nec_Holic_MT",
+    "name": "狂热者",
+    "description": "在一切都变了的世界里，你因欲望的驱使而行动着。 这是一切真的出自于你的欲望，还是单纯的疯了？",
+    "points": 0,
+    "starting_trait": true,
+    "purifiable": false,
+    "valid": false
+  },
+  {
+    "//": "由于角色创建后背景不会保留，因此准备一个位置作为占位符",
+    "type": "mutation",
+    "id": "nec_Automaton_MT",
+    "name": "自动人偶",
+    "description": "在一切都变了的世界里，你的心早已死去。到底是选择适应呢，还是干脆选择放弃呢。",
+    "points": 0,
+    "starting_trait": true,
+    "purifiable": false,
+    "valid": false
+  },
+  {
+    "//": "由于角色创建后背景不会保留，因此准备一个位置作为占位符",
+    "type": "mutation",
+    "id": "nec_Junk_MT",
+    "name": "废品",
+    "description": "在一切都变了的世界里的你依旧不肯放弃抗争。你是想要继续抗争下去，还是选择停止挣扎呢。",
+    "points": 0,
+    "starting_trait": true,
+    "purifiable": false,
+    "valid": false
+  },
+  {
+    "//": "由于角色创建后背景不会保留，因此准备一个位置作为占位符",
+    "type": "mutation",
+    "id": "nec_Court_MT",
+    "name": "参谋",
+    "description": "在一切都变了的世界里的你依旧在脑中分析着情况。你的分析究竟是冷静且正确的判断呢，还是纸上谈兵式的空谈呢",
+    "points": 0,
+    "starting_trait": true,
+    "purifiable": false,
+    "valid": false
+  },
+  {
+    "//": "由于角色创建后背景不会保留，因此准备一个位置作为占位符",
+    "type": "mutation",
+    "id": "nec_Sorority_MT",
+    "name": "队长",
+    "description": "在一切都变了的世界里的你意识到了你是为了领导他人走出困境而存在的。这份感觉是会引领着你勇挑大梁，抑或是只是你单纯的自以为是罢了。",
+    "points": 0,
+    "starting_trait": true,
+    "purifiable": false,
+    "valid": false
+  },
+  {
+    "//": "不死阈值突变",
+    "type": "mutation",
+    "id": "THRESH_NECROMANTIC",
+    "name": { "str": "不死者" },
+    "points": 1,
+    "description": "你那摇摇欲坠的肉体被身上各种补丁强行维持着稳定。即使被撕碎只要重新用补丁拼接回来的就没问题了。",
+    "valid": false,
+    "purifiable": false,
+    "threshold": true
+  },
+
+  {
+    "//": "----------------既存変異の追加変更----------------",
+    "type": "mutation",
+    "id": "CANNIBAL",
+    "copy-from": "CANNIBAL",
+    "extend": { "category": [ "NECROMANTIC" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "SLIMY",
+    "copy-from": "SLIMY",
+    "extend": { "category": [ "NECROMANTIC" ] }
+  },
+
+  {
+    "type": "mutation",
+    "id": "WINGS_STUB",
+    "copy-from": "WINGS_STUB",
+    "extend": { 
+      "category": [ "NECROMANTIC" ] ,
+      "changes_to": [ "NEC_WINGS" ]
+    }
+  },
+
+  {
+    "type": "mutation",
+    "id": "HEADBUMPS",
+    "copy-from": "HEADBUMPS",
+    "extend": { 
+      "category": [ "NECROMANTIC" ] ,
+      "changes_to": [ "NEC_HORNS" ]
+    }
+  },
+
+  {
+    "type": "mutation",
+    "id": "NAILS",
+    "copy-from": "NAILS",
+    "extend": { 
+      "category": [ "NECROMANTIC" ] ,
+      "changes_to": [ "NEC_HORNS" ]
+    }
+  },
+
+  {
+    "type": "mutation",
+    "id": "HUNGER",
+    "copy-from": "HUNGER",
+    "extend": { 
+      "category": [ "NECROMANTIC" ] 
+    }
+  },
+
+  {
+    "type": "mutation",
+    "id": "HUNGER2",
+    "copy-from": "HUNGER2",
+    "extend": { 
+      "category": [ "NECROMANTIC" ] 
+    }
+  },
+
+  {
+    "type": "mutation",
+    "id": "HUNGER3",
+    "copy-from": "HUNGER3",
+    "extend": { 
+      "category": [ "NECROMANTIC" ] 
+    }
+  },
+
+  {
+    "type": "mutation",
+    "id": "WEAKSTOMACH",
+    "copy-from": "WEAKSTOMACH",
+    "extend": { 
+      "category": [ "NECROMANTIC" ] 
+    }
+  },
+
+  {
+    "type": "mutation",
+    "id": "NAUSEA",
+    "copy-from": "NAUSEA",
+    "extend": { 
+      "category": [ "NECROMANTIC" ] 
+    }
+  },
+
+  {
+    "type": "mutation",
+    "id": "VOMITOUS",
+    "copy-from": "VOMITOUS",
+    "extend": { 
+      "category": [ "NECROMANTIC" ] 
+    }
+  },
+
+  {
+    "type": "mutation",
+    "id": "TAIL_STUB",
+    "copy-from": "TAIL_STUB",
+    "extend": { 
+      "category": [ "NECROMANTIC" ] 
+    }
+  },
+
+  {
+    "type": "mutation",
+    "id": "TAIL_THICK",
+    "copy-from": "TAIL_THICK",
+    "extend": { 
+      "category": [ "NECROMANTIC" ] 
+    }
+  },
+
+  {
+    "type": "mutation",
+    "id": "ANIMALDISCORD",
+    "copy-from": "ANIMALDISCORD",
+    "extend": { 
+      "category": [ "NECROMANTIC" ] 
+    }
+  },
+
+  {
+    "type": "mutation",
+    "id": "SMELLY",
+    "copy-from": "SMELLY",
+    "extend": { 
+      "category": [ "NECROMANTIC" ] 
+    }
+  },
+
+  {
+    "type": "mutation",
+    "id": "SMELLY2",
+    "copy-from": "SMELLY2",
+    "extend": { 
+      "category": [ "NECROMANTIC" ] 
+    }
+  },
+
+  {
+    "type": "mutation",
+    "id": "INSOMNIA",
+    "copy-from": "INSOMNIA",
+    "extend": { 
+      "category": [ "NECROMANTIC" ] 
+    }
+  },
+
+  {
+    "type": "mutation",
+    "id": "PAINRESIST",
+    "copy-from": "PAINRESIST",
+    "extend": { 
+      "category": [ "NECROMANTIC" ] 
+    }
+  },
+
+  {
+    "type": "mutation",
+    "id": "SAPROVORE",
+    "copy-from": "SAPROVORE",
+    "extend": { 
+      "category": [ "NECROMANTIC" ] 
+    }
+  },
+
+  {
+    "//": "----------------アンデッド専用変異----------------",
+    "type": "mutation",
+    "id": "NEC_ADD_EYE",
+    "name": { "str": "多目" },
+    "points": 1,
+    "visibility": 2,
+    "ugliness": 7,
+    "description": "一只新的眼睛从你身体里长出来了。你的视野变宽了，但看上去很恶心。感知+2",
+    "category": [ "NECROMANTIC" ],
+    "valid": false,
+    "passive_mods": { "per_mod": 2 }
+  },
+  {
+    "type": "mutation",
+    "id": "NEC_ADD_ARM",
+    "name": { "str": "附臂" },
+    "points": 3,
+    "visibility": 8,
+    "ugliness": 5,
+    "description": "你不再只有两条手臂了。现在你肩上有着额外的手臂。虽然这很难掌握，但你可以扩大你的战术范围。力量+1，敏捷+2",
+    "category": [ "NECROMANTIC" ],
+    "valid": false,
+    "passive_mods": { "dex_mod": 2 },
+    "attacks":[
+     {
+      "attack_text_u": "あなたはもう一つの腕で %s を殴りつけた",
+      "attack_text_npc": "%1$s は %2$s をもう一つの腕で殴りつけた",
+      "chance": 20,
+      "base_damage": { "damage_type": "bash", "amount": 6 },
+      "strength_damage": { "damage_type": "bash", "amount": 0.5 }
+     }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "NEC_ADD_LEG",
+    "name": { "str": "附腿" },
+    "points": 3,
+    "visibility": 4,
+    "ugliness": 5,
+    "description": "现在你的腿不止两条了，还有一对脚从腰上长出来。习惯了的话就能跑得很快。灵巧+2，速度获得加成。",
+    "category": [ "NECROMANTIC" ],
+    "passive_mods": { "dex_mod": 2 },
+    "enchantments": [ { "condition": "ALWAYS", "values": [ { "value": "SPEED", "multiply": 0.05 } ] } ],
+    "valid": false
+  },
+  {
+    "type": "mutation",
+    "id": "NEC_OOANA",
+    "name": { "str": "大窟窿" },
+    "points": 0,
+    "visibility": 3,
+    "ugliness": 2,
+    "description": "你身上有个大洞。然而，这对于你战斗时没有什么影响，就是看到它的人都很吃惊。",
+    "category": [ "NECROMANTIC" ],
+    "valid": false
+  },
+  {
+    "type": "mutation",
+    "id": "NEC_HORNS",
+    "name": { "str": "诡异犄角" },
+    "points": -2,
+    "visibility": 5,
+    "ugliness": 3,
+    "mixed_effect": true,
+    "description": "一个类似于犄角的巨大突起从你的身体中生长出来。 足以让你在近距离使出刺击和钩击。",
+    "prereqs": [ "HEADBUMPS", "NAILS" ],
+    "category": [ "NECROMANTIC" ],
+    "attacks": {
+      "attack_text_u": "你用你的角将 %s 刺穿了",
+      "attack_text_npc": "%1$s は %2$s 用角刺穿",
+      "chance": 20,
+      "base_damage": { "damage_type": "stab", "amount": 8 },
+      "strength_damage": { "damage_type": "bash", "amount": 0.5 }
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "NEC_BONESPEAR",
+    "name": { "str": "骨矛" },
+    "points": 2,
+    "visibility": 4,
+    "ugliness": 4,
+    "description": "你的骨头像矛一样从身体里伸出来。 它可以用作穿刺武器使用。",
+    "prereqs": [ "NEC_HORNS" ],
+    "category": [ "NECROMANTIC" ],
+    "attacks": {
+      "attack_text_u": "%s将锐利的骨头刺入了",
+      "attack_text_npc": "%1$sは%2$s将锐利的骨头刺入了",
+      "body_part": "mouth",
+      "chance": 10,
+      "base_damage": { "damage_type": "stab", "amount": 15 },
+      "strength_damage": { "damage_type": "bash", "amount": 0.5 }
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "NEC_TONGUE",
+    "name": { "str": "细长舌头" },
+    "points": 0,
+    "visibility": 1,
+    "ugliness": 1,
+    "changes_to": [ "NEC_TONGUE2" ],
+    "description": "你的舌头变成了细长且呈现出管状。并没有什么特别的效果。",
+    "category": [ "NECROMANTIC" ]
+  },
+  {
+    "type": "mutation",
+    "id": "NEC_TONGUE2",
+    "name": { "str": "垂唾长舌" },
+    "points": 2,
+    "visibility": 4,
+    "ugliness": 4,
+    "prereqs": [ "NEC_TONGUE" ],
+    "cancels": [ "BEAK", "BEAK_HUM", "BEAK_PECK", "PROBOSCIS", "MANDIBLES", "MUZZLE_LONG", "MUZZLE", "MINOTAUR" ],
+    "description": "你那长得离谱的舌头滴溜溜地淌着口水。虽然你的嘴不能再装备任何东西了，但是你的舌头能为敌人带来意想不到的奇袭攻击。",
+    "category": [ "NECROMANTIC" ],
+    "restricts_gear": [ "mouth" ],
+    "attacks": {
+      "attack_text_u": "你的舌头猛地抽打上%s",
+      "attack_text_npc": "%1$s的舌头猛地抽打上%2$s",
+      "body_part": "mouth",
+      "chance": 20,
+      "base_damage": { "damage_type": "stab", "amount": 15 },
+      "strength_damage": { "damage_type": "stab", "amount": 0.5 }
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "NEC_FAILED",
+    "name": { "str": "失败作品" },
+    "points": -2,
+    "visibility": 4,
+    "ugliness": 4,
+    "changes_to": [ "NEC_RUPTURE" ],
+    "description": "你试着摆弄身体，浑身感觉很是不顺畅。全身的累赘轻幅增加，防御力下降。",
+    "category": [ "NECROMANTIC" ],
+    "encumbrance_always": [
+      [ "torso", 3 ],
+      [ "head", 3 ],
+      [ "arm_l", 3 ],
+      [ "arm_r", 3 ],
+      [ "hand_l", 3 ],
+      [ "hand_r", 3 ],
+      [ "leg_l", 3 ],
+      [ "leg_r", 3 ],
+      [ "foot_l", 3 ],
+      [ "foot_r", 3 ]
+    ],
+    "armor": [
+      {
+        "parts": [ "torso", "head", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r", "mouth", "eyes" ],
+        "bash": -3,
+        "cut": -3
+      }
+    ],
+    "valid": false
+  },
+  {
+    "//": "----------------アンデッド閾変異----------------",
+    "type": "mutation",
+    "id": "NEC_WINGS",
+    "name": { "str": "腐肉翼膜" },
+    "points": 5,
+    "visibility": 12,
+    "ugliness": 6,
+    "threshreq": [ "THRESH_NECROMANTIC" ],
+    "description": "一层由尸肉组成的翼膜，宛如神话中那堕落天使的翅膀。 虽然不能在空中飞翔，但如果把它包裹在你身体周围则可以充当保护你免受攻击的盔甲。",
+    "prereqs": [ "WINGS_STUB" ],
+    "cancels": [ "WINGS_BIRD", "WINGS_INSECT", "WINGS_BUTTERFLY" ],
+    "category": [ "NECROMANTIC" ],
+    "wet_protection": [
+      { "part": "arm_l", "neutral": 5, "good": 10 },
+      { "part": "arm_r", "neutral": 5, "good": 10 },
+      { "part": "torso", "neutral": 10, "good": 20 }
+    ],
+    "encumbrance_always": [ [ "torso", 10 ] ],
+    "armor": [ { "parts": [ "torso", "arm_l", "arm_r" ], "bash": 14, "cut": 8 } ]
+  },
+  {
+    "type": "mutation",
+    "id": "NEC_ADD_HEAD",
+    "name": { "str": "另一个头" },
+    "points": 7,
+    "visibility": 15,
+    "ugliness": 10,
+    "threshreq": [ "THRESH_NECROMANTIC" ],
+    "category": [ "NECROMANTIC" ],
+    "description": "你肩膀上还有另一个脑袋。 你和另一位“你”相处得很好。 虽然你无法直接感觉到另一个“你”所看到的事物，但你能以某种方式理解另一个“你”所看到的事物。智力+5，感知+3",
+    "encumbrance_always": [ [ "head", 5 ] ],
+    "passive_mods": { "int_mod": 5, "per_mod": 3 }
+  },
+  {
+    "type": "mutation",
+    "id": "NEC_RUPTURE",
+    "name": { "str": "半毁" },
+    "points": -5,
+    "visibility": 6,
+    "ugliness": 8,
+    "threshreq": [ "THRESH_NECROMANTIC" ],
+    "description": "你的身体变得乱七八糟，感觉身体快要崩溃了。 全身的累赘度进一步增加，防御力进一步降低。",
+    "changes_to": [ "NEC_PATCH" ],
+    "prereqs": [ "NEC_FAILED" ],
+    "category": [ "NECROMANTIC" ],
+    "encumbrance_always": [
+      [ "torso", 9 ],
+      [ "head", 5 ],
+      [ "arm_l", 5 ],
+      [ "arm_r", 7 ],
+      [ "hand_l", 8 ],
+      [ "hand_r", 5 ],
+      [ "leg_l", 5 ],
+      [ "leg_r", 6 ],
+      [ "foot_l", 5 ],
+      [ "foot_r", 5 ]
+    ],
+    "armor": [
+      {
+        "parts": [ "torso", "head", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r", "mouth", "eyes" ],
+        "bash": -6,
+        "cut": -6
+      }
+    ],
+    "valid": false
+  },
+  {
+    "type": "mutation",
+    "id": "NEC_PATCH",
+    "name": { "str": "拼补之躯" },
+    "points": 7,
+    "visibility": 8,
+    "ugliness": 5,
+    "description": "你可以轻松地改变你的身体。虽然这使得抵挡攻击的能力弱了下来，但也让你总体的累赘度大大减轻。",
+    "category": [ "NECROMANTIC" ],
+    "threshreq": [ "THRESH_NECROMANTIC" ],
+    "prereqs": [ "NEC_RUPTURE" ],
+    "encumbrance_always": [
+      [ "torso", -10 ],
+      [ "head", -10 ],
+      [ "arm_l", -10 ],
+      [ "arm_r", -10 ],
+      [ "hand_l", -10 ],
+      [ "hand_r", -10 ],
+      [ "leg_l", -10 ],
+      [ "leg_r", -10 ],
+      [ "foot_l", -10 ],
+      [ "foot_r", -10 ]
+    ],
+    "armor": [
+      {
+        "parts": [ "torso", "head", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r", "mouth", "eyes" ],
+        "bash": -2,
+        "cut": -4
+      }
+    ],
+    "valid": false
+  },
+  {
+    "type": "mutation",
+    "id": "NEC_Tentacle",
+    "name": { "str": "血肉之鞭" },
+    "points": 2,
+    "visibility": 4,
+    "ugliness": 4,
+    "description": "长长的触手从你的身体上长了出来。 它好像可以像鞭子一样挥舞来进行攻击。",
+    "prereqs": [ "NEC_BONESPEAR" ],
+    "category": [ "NECROMANTIC" ],
+    "threshreq": [ "THRESH_NECROMANTIC" ],
+    "attacks": {
+      "attack_text_u": "你用触手鞭打%s",
+      "attack_text_npc": "%1$s用触手鞭打了%2$s",
+      "chance": 20,
+      "base_damage": { "damage_type": "bash", "amount": 15 },
+      "strength_damage": { "damage_type": "bash", "amount": 1 }
+    }
+  },
+    {
+    "type": "mutation",
+    "id": "NEC_LIQUIDROT",
+    "name": { "str": "腐毒之血" },
+    "points": 1,
+    "visibility": 1,
+    "ugliness": 1,
+    "description": "你身体里流淌着的体液混杂着奇特的毒素。 如果被攻击的话会飞溅出来伤害对方。",
+    "enchantments": [
+      {
+        "hit_me_effect": [
+          {
+            "id": "NEC_liquidrot_spray_1",
+            "once_in": 2,
+            "message": "混合着毒素的体液从身体中飞溅出来了！",
+            "npc_message": "%1$s混合着毒素的体液从身体中飞溅出来了！！"
+          }
+        ]
+      }
+    ],
+    "category": [ "NECROMANTIC" ],
+    "threshreq": [ "THRESH_NECROMANTIC" ]
+  }
+
+]

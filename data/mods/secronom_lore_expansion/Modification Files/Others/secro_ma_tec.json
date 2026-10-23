@@ -1,0 +1,654 @@
+[
+  {
+    "type": "technique",
+    "id": "tec_secro_morph_blades_slash",
+    "name": "斜线",
+    "messages": [
+      "你砍了%s",
+      "<npcname> 斩击 %s"
+    ],
+    "melee_allowed": true,
+    "weighting": -1,
+    "skill_requirements": [
+      {
+        "name": "secro_flesh_combat",
+        "level": 1
+      }
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 1.03
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scale": 1.1
+      }
+    ],
+    "description": "+10%斩击，+3% 移动耗时",
+    "attack_vectors": [
+      "HAND"
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_secro_morph_blades_slash_arc",
+    "name": "弧斜线",
+    "messages": [
+      "你大幅挥砍了%s",
+      "<npcname>在弧线上划%s"
+    ],
+    "melee_allowed": true,
+    "weighting": -3,
+    "crit_tec": true,
+    "aoe": "wide",
+    "skill_requirements": [
+      {
+        "name": "secro_flesh_combat",
+        "level": 2
+      }
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 1.1
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scale": 1.15
+      }
+    ],
+    "description": "+15%斩击，+10%移动消耗，仅暴击，大幅攻击",
+    "attack_vectors": [
+      "HAND"
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_secro_morph_blades_slash_precise",
+    "name": "精确斜杠",
+    "messages": [
+      "你精准的砍了%s",
+      "<npcname>精确地斩击%s"
+    ],
+    "melee_allowed": true,
+    "weighting": -7,
+    "crit_tec": true,
+    "stun_dur": 2,
+    "skill_requirements": [
+      {
+        "name": "secro_flesh_combat",
+        "level": 4
+      }
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 1.33
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scale": 1.5
+      }
+    ],
+    "flat_bonuses": [
+      {
+        "stat": "arpen",
+        "type": "cut",
+        "scaling-stat": "str",
+        "scale": 1
+      }
+    ],
+    "description": "+50% 斩击，+33% 移动消耗，击晕 2 回合，仅暴击",
+    "attack_vectors": [
+      "HAND"
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_secro_morph_blades_ravage",
+    "name": "猛刺",
+    "messages": [
+      "你砍残 %s",
+      "<npcname> 砍残 %s"
+    ],
+    "melee_allowed": true,
+    "weighting": -18,
+    "crit_tec": true,
+    "skill_requirements": [
+      {
+        "name": "secro_flesh_combat",
+        "level": 5
+      }
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 1.66
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scale": 1.99
+      }
+    ],
+    "description": "+66% 移动消耗，+99% 斩击，仅暴击",
+    "attack_vectors": [
+      "HAND"
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_secro_morph_tents_strike",
+    "name": "罢工",
+    "messages": [
+      "你的触手击打%s",
+      "<npcname>的触须打击了%s",
+      "你的触手拍打%s",
+      "<npcname>的触须拍击了%s",
+      "你的触角击中了%s",
+      "<npcname>的触须击中了%s"
+    ],
+    "weighting": 2,
+    "melee_allowed": true,
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 0.9
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 0.9
+      }
+    ],
+    "description": "-10% 钝击，-30% 移动耗时",
+    "attack_vectors": [
+      "HAND"
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_secro_morph_tents_strike_quick",
+    "name": "快攻",
+    "messages": [
+      "你的触角快速击打%s",
+      "<npcname>的触须打击了%s",
+      "你的触手在快速地拍打%s",
+      "<npcname>的触须拍击了%s",
+      "你的触手快速击中%s",
+      "<npcname>的触须击中了%s"
+    ],
+    "melee_allowed": true,
+    "skill_requirements": [
+      {
+        "name": "secro_flesh_combat",
+        "level": 1
+      }
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 0.5
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 0.8
+      }
+    ],
+    "description": "-10% 钝击，-30% 移动耗时",
+    "attack_vectors": [
+      "HAND"
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_secro_morph_tents_compact_swing",
+    "name": "紧凑摆动",
+    "messages": [
+      "当你的触手摆动到%s时，它就会形成一团",
+      "<npcname>在%s摆一个紧凑的触手"
+    ],
+    "melee_allowed": true,
+    "weighting": -4,
+    "crit_tec": true,
+    "down_dur": 2,
+    "skill_requirements": [
+      {
+        "name": "secro_flesh_combat",
+        "level": 3
+      }
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 1.66
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 2
+      }
+    ],
+    "description": "+100%钝击，+66%移动消耗，击倒2回合，仅暴击",
+    "attack_vectors": [
+      "HAND"
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_secro_morph_tents_barrage",
+    "name": "火力网",
+    "messages": [
+      "你的触手同时击打%s",
+      "<npcname>所有的触手击打%s"
+    ],
+    "melee_allowed": true,
+    "weighting": -20,
+    "crit_tec": true,
+    "stun_dur": 2,
+    "skill_requirements": [
+      {
+        "name": "secro_flesh_combat",
+        "level": 5
+      }
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 1.8
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 3
+      }
+    ],
+    "description": "+200%钝击，+80%移动消耗，击晕2回合，仅暴击",
+    "attack_vectors": [
+      "HAND"
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_secro_morph_fleshpound_slam",
+    "name": "猛击",
+    "messages": [
+      "你用手臂猛击%s",
+      "<npcname>用双臂猛击%s"
+    ],
+    "melee_allowed": true,
+    "weighting": 0,
+    "stun_dur": 1,
+    "crit_tec": true,
+    "skill_requirements": [
+      {
+        "name": "secro_flesh_combat",
+        "level": 1
+      }
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 1.4
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 1.3
+      }
+    ],
+    "description": "+30% 钝击，+40% 移动耗时，击晕 1 回合，仅暴击",
+    "attack_vectors": [
+      "HAND"
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_secro_morph_fleshpound_pound",
+    "name": "磅",
+    "messages": [
+      "你重重的打向%s",
+      "<npcname>英镑，%s英镑"
+    ],
+    "melee_allowed": true,
+    "weighting": -2,
+    "stun_dur": 2,
+    "crit_tec": true,
+    "skill_requirements": [
+      {
+        "name": "secro_flesh_combat",
+        "level": 3
+      }
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 1.9
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 1.7
+      }
+    ],
+    "description": "+70%钝击，+90%移动消耗，击晕2回合，仅暴击",
+    "attack_vectors": [
+      "HAND"
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_secro_morph_fleshpound_swing_heavy",
+    "name": "剧烈摆动",
+    "messages": [
+      "你在%s以巨大的动量挥动手臂",
+      "<npcname>在%s以巨大的动量摆动他们的手臂"
+    ],
+    "melee_allowed": true,
+    "weighting": -4,
+    "stun_dur": 3,
+    "knockback_dist": 2,
+    "crit_tec": true,
+    "skill_requirements": [
+      {
+        "name": "secro_flesh_combat",
+        "level": 4
+      }
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 2.25
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 2
+      }
+    ],
+    "description": "+100% 钝击，+125% 移动消耗，击晕3回合，击退2格，仅暴击",
+    "attack_vectors": [
+      "HAND"
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_secro_morph_fleshpound_quake",
+    "name": "地震术",
+    "messages": [
+      "你用巨大的力量将%s击倒在地。",
+      "<npcname>用巨大的力量将%s击倒在地。"
+    ],
+    "melee_allowed": true,
+    "weighting": -20,
+    "down_dur": 6,
+    "crit_tec": true,
+    "skill_requirements": [
+      {
+        "name": "secro_flesh_combat",
+        "level": 5
+      }
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 2.99
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 3.66
+      }
+    ],
+    "eocs": [
+      {
+        "id": "eoc_tec_secro_morph_fleshpound_quake",
+        "effect": [
+          {
+            "u_make_sound": "a tremor.",
+            "volume": 100,
+            "type": "combat"
+          },
+          {
+            "u_cast_spell": {
+              "id": "tec_secro_morph_fleshpound_quake_push"
+            }
+          }
+        ]
+      }
+    ],
+    "description": "+266%钝击，+199%移动消耗，击倒2回合，击倒相邻，仅暴击",
+    "attack_vectors": [
+      "HAND"
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_secro_morph_jawarms_bite",
+    "name": "咬伤",
+    "messages": [
+      "你的胳膊咬了%s",
+      "<npcname>的手臂咬向%s",
+      "你的手臂在啃%s",
+      "<npcname>的手臂啃住%s",
+      "你的手臂轻咬%s",
+      "<npcname>的手臂轻咬%s"
+    ],
+    "melee_allowed": true,
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 1.1
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 1.2
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scale": 1.2
+      }
+    ],
+    "description": "+20%钝击/斩击，+10% 移动耗时",
+    "attack_vectors": [
+      "HAND"
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_secro_morph_jawarms_crunch",
+    "name": "嚼",
+    "messages": [
+      "你的手臂在%s嘎吱作响",
+      "<npcname>的手臂嘎吱作响地咬着%s"
+    ],
+    "skill_requirements": [
+      {
+        "name": "secro_flesh_combat",
+        "level": 2
+      }
+    ],
+    "melee_allowed": true,
+    "weighting": -1,
+    "stun_dur": 1,
+    "crit_tec": true,
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 1.35
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 1.45
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scale": 1.45
+      }
+    ],
+    "description": "+45%钝击/斩击，+35%移动消耗，击晕1回合，仅暴击",
+    "attack_vectors": [
+      "HAND"
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_secro_morph_jawarms_munch",
+    "name": "用力咀嚼",
+    "messages": [
+      "你用胳膊咬下了%s",
+      "<npcname>的手臂咬下%s"
+    ],
+    "skill_requirements": [
+      {
+        "name": "secro_flesh_combat",
+        "level": 4
+      }
+    ],
+    "melee_allowed": true,
+    "weighting": -2,
+    "stun_dur": 1,
+    "down_dur": 2,
+    "crit_tec": true,
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 1.66
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 1.9
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scale": 1.9
+      }
+    ],
+    "description": "+90% 钝击/斩击，+66% 移动消耗，眩晕 1 回合，击倒 2 回合，仅暴击",
+    "attack_vectors": [
+      "HAND"
+    ]
+  },
+  {
+    "type": "martial_art",
+    "id": "secro_style_biomorph",
+    "name": {
+      "str": "肉机建模"
+    },
+    "description": "利用生物有机外骨骼“肉血管”力量的人获得的先天知识。这种风格专门用于控制称为武器的混合武器，并凭借你的力量装甲自身的意识充分发挥其潜力。",
+    "initiate": [
+      "当你采取防御姿态时，你的衣服会颤抖。",
+      "%s采取防御姿态。"
+    ],
+    "learn_difficulty": 10,
+    "primary_skill": "secro_flesh_combat",
+    "static_buffs": [
+      {
+        "id": "buff_secro_biomorph_biomass_static",
+        "name": "生物量保护",
+        "description": "你的西装总是试图通过增加你将要被击中的部位的质量来尽量减少对你造成的伤害。\n\n点来袭物理伤害减少2点，强度增加10%。",
+        "forbidden_buffs_all": [
+          "buff_secro_biomorph_augment_onpause"
+        ],
+        "melee_allowed": true,
+        "unarmed_allowed": true,
+        "flat_bonuses": [
+          {
+            "stat": "armor",
+            "type": "bash",
+            "scaling-stat": "str",
+            "scale": 0.1
+          },
+          {
+            "stat": "armor",
+            "type": "stab",
+            "scaling-stat": "str",
+            "scale": 0.1
+          },
+          {
+            "stat": "armor",
+            "type": "cut",
+            "scaling-stat": "str",
+            "scale": 0.1
+          },
+          {
+            "stat": "armor",
+            "type": "bash",
+            "scale": 2
+          },
+          {
+            "stat": "armor",
+            "type": "cut",
+            "scale": 2
+          },
+          {
+            "stat": "armor",
+            "type": "stab",
+            "scale": 2
+          }
+        ]
+      }
+    ],
+    "onpause_buffs": [
+      {
+        "id": "buff_secro_biomorph_augment_onpause",
+        "name": "Augmenting Distribution",
+        "description": "You channel your suit to enhance your armament. Disables suit's defensive capabilities as a cost.\n\nLasts for 10 turns",
+        "buff_duration": 10,
+        "melee_allowed": true
+      }
+    ],
+    "onhit_buffs": [
+      {
+        "id": "buff_secro_biomorph_augment_tent_onhit",
+        "name": "增强：扭曲静脉",
+        "description": "当你命中目标时，你的武器数量会增加。\n\n钝击伤害每层增加 2 点。物理防护每 3 层降低 1 点。持续 4 回合。可叠加 6 次。",
+        "buff_duration": 4,
+        "max_stacks": 6,
+        "melee_allowed": true,
+        "required_buffs_all": [
+          "buff_secro_biomorph_augment_onpause"
+        ],
+        "weapon_categories_allowed": [
+          "SECRO_BOW_MELEE_TV"
+        ],
+        "flat_bonuses": [
+          {
+            "stat": "damage",
+            "type": "bash",
+            "scale": 2
+          },
+          {
+            "stat": "armor",
+            "type": "bash",
+            "scale": -0.33
+          },
+          {
+            "stat": "armor",
+            "type": "cut",
+            "scale": -0.33
+          },
+          {
+            "stat": "armor",
+            "type": "stab",
+            "scale": -0.33
+          }
+        ]
+      }
+    ],
+    "weapon_category": [
+      "SECRO_BOW"
+    ]
+  }
+]

@@ -1,0 +1,83 @@
+[
+    {
+        "type": "AMMO",
+        "name": {
+          "str_sp": "VOL-25榴弹"
+        },
+        "volume": "150 ml",
+        "weight": "250 g",
+        "longest_side": "120 mm",
+        "price": 6000,
+        "price_postapoc": 8000,
+        "flags": [
+          "IRREPLACEABLE_CONSUMABLE",
+          "CASELESS_ROUNDS"
+        ],
+        "material": [
+          "steel",
+          "powder"
+        ],
+        "symbol": "=",
+        "color": "white",
+        "count": 2,
+        "stack_size": 2,
+        "ammo_type": "VOL",
+        "range": 40,
+        "dispersion": 30,
+        "recoil": 200,
+        "effects": [
+          "COOKOFF",
+          "NEVER_MISFIRES",
+          "EXPLOSIVE_VOL-25"
+        ],
+        "id": "VOL-25",
+        "description": "GP-25系列榴弹发射器发射一系列的特殊40毫米无弹壳榴弹弹药。这种榴弹的特色是它并没有弹壳，而是直接把发射药装填在弹体内部。发射药引燃之后燃烧气体就会从弹体尾部喷气出来，飞行原理比较类似火箭弹。",
+        "looks_like":"40x46mm_m433",
+        "damage": {
+          "damage_type": "bullet",
+          "amount": 50,
+          "armor_penetration": 25
+        }
+      },
+      {
+        "type": "AMMO",
+        "name": {
+          "str_sp": "VOL-25榴弹EMP版本"
+        },
+        "volume": "150 ml",
+        "weight": "250 g",
+        "longest_side": "120 mm",
+        "price": 6000,
+        "price_postapoc": 8000,
+        "flags": [
+          "IRREPLACEABLE_CONSUMABLE",
+          "CASELESS_ROUNDS"
+        ],
+        "material": [
+          "steel",
+          "powder"
+        ],
+        "symbol": "=",
+        "color": "red",
+        "count": 2,
+        "stack_size": 2,
+        "ammo_type": "VOL",
+        "range": 40,
+        "dispersion": 30,
+        "recoil": 200,
+        "effects": [
+          "COOKOFF",
+          "NEVER_MISFIRES",
+          "fd_electricity",
+          "EXPLOSIVE_VOL-25_EMPversion"
+        ],
+        "id": "VOL-25_EMP",
+        "description": "GP-25系列榴弹发射器发射一系列的特殊40毫米无弹壳榴弹弹药。这种榴弹的特色是它并没有弹壳，而是直接把发射药装填在弹体内部。发射药引燃之后燃烧气体就会从弹体尾部喷气出来，飞行原理比较类似火箭弹。这个VOL-25榴弹是流亡族改装型号，减少普通装药的但拥有EMP手雷的效果",
+        "looks_like":"40x46mm_m433",
+        "damage": {
+          "damage_type": "bullet",
+          "amount": 50,
+          "armor_penetration": 25
+        }
+      }
+]

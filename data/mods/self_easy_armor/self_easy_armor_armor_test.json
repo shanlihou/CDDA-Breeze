@@ -1,0 +1,200 @@
+[
+  {
+    "id": "self_easy_armor_test_a",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "test头盔",
+    "description": "一件由处理过的材料制成的头盔。",
+    "weight": "1500 g",
+    "volume": "2500 ml",
+    "price": 5000,
+    "price_postapoc": 5000,
+    "material": [ "wood" ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head" ], "coverage": 100, "encumbrance": 7 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 7 },
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 7 }
+    ],
+    "warmth": 0,
+    "material_thickness": 5,
+    "environmental_protection": 5,
+    "flags": [ "ABLATIVE_MEDIUM", "OUTER", "VARSIZE", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_test_b",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "test胸甲",
+    "description": "一件由处理过的材料制成的胸甲。",
+    "weight": "3840 g",
+    "volume": "6400 ml",
+    "price": 8000,
+    "price_postapoc": 8000,
+    "material": [ "wood" ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 10 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": 10 }
+    ],
+    "warmth": 0,
+    "material_thickness": 8,
+    "environmental_protection": 8,
+    "flags": [ "ABLATIVE_MEDIUM", "OUTER", "VARSIZE", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_test_c",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "test护腿",
+    "description": "一件由处理过的材料制成的护腿。",
+    "weight": "2940 g",
+    "volume": "4900 ml",
+    "price": 7000,
+    "price_postapoc": 7000,
+    "material": [ "wood" ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": 9 }
+    ],
+    "warmth": 0,
+    "material_thickness": 7,
+    "environmental_protection": 7,
+    "flags": [ "ABLATIVE_MEDIUM", "OUTER", "VARSIZE", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_test_d",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "test护手",
+    "description": "一双由处理过的材料制成的护手。",
+    "weight": "960 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ "wood" ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "hand_l", "hand_r" ], "coverage": 100, "encumbrance": 6 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 4,
+    "flags": [ "ABLATIVE_MEDIUM", "OUTER", "VARSIZE", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_test_e",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "test靴子",
+    "description": "一双由处理过的材料制成的靴子。",
+    "weight": "960 g",
+    "volume": "1600 ml",
+    "price": 4000,
+    "price_postapoc": 4000,
+    "material": [ "wood" ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "foot_l", "foot_r" ], "coverage": 100, "encumbrance": 6 }
+    ],
+    "warmth": 0,
+    "material_thickness": 4,
+    "environmental_protection": 4,
+    "flags": [ "ABLATIVE_MEDIUM", "OUTER", "VARSIZE", "WATERPROOF", "RAINPROOF" ]
+  },
+  {
+    "id": "self_easy_armor_test",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "test全套装甲",
+    "description": "。",
+    "weight": "10200 g",
+    "volume": "17000 ml",
+    "price": 31000,
+    "price_postapoc": 31000,
+    "longest_side": "10 cm",
+    "material": [ "wood" ],
+    "symbol": "H",
+    "color": "light_red",
+    "armor": [
+      { "covers": [ "head", "mouth", "eyes" ], "coverage": 100,
+      	"encumbrance": 6, "material": [
+      { "type": "wood", "covered_by_mat": 100, "thickness": 6 }, { "type": "leather", "covered_by_mat": 100, "thickness": 2 }] },
+      { "covers": [ "torso", "arm_l", "arm_r" ], "coverage": 100,
+      	"encumbrance": 9, "material": [
+      { "type": "wood", "covered_by_mat": 100, "thickness": 9 }, { "type": "leather", "covered_by_mat": 100, "thickness": 2 }] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100,
+      	"encumbrance": 8, "material": [
+      { "type": "wood", "covered_by_mat": 100, "thickness": 8 }, { "type": "leather", "covered_by_mat": 100, "thickness": 2 }] },
+      { "covers": [ "hand_l", "hand_r", "foot_l", "foot_r" ], "coverage": 100,
+      	"encumbrance": 5, "material": [
+      { "type": "wood", "covered_by_mat": 100, "thickness": 5 }, { "type": "leather", "covered_by_mat": 100, "thickness": 2 }] }
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "ablative": true,
+        "volume_encumber_modifier": 0,
+        "min_item_volume": "2500 ml",
+        "max_contains_volume": "2500 ml",
+        "max_contains_weight": "100 kg",
+        "moves": 200,
+        "description": "应该装个头",
+        "flag_restriction": [ "ABLATIVE_MEDIUM" ]
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "ablative": true,
+        "volume_encumber_modifier": 0,
+        "min_item_volume": "6400 ml",
+        "max_contains_volume": "6400 ml",
+        "max_contains_weight": "100 kg",
+        "moves": 200,
+        "description": "应该装个胸",
+        "flag_restriction": [ "ABLATIVE_MEDIUM" ]
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "ablative": true,
+        "volume_encumber_modifier": 0,
+        "min_item_volume": "4900 ml",
+        "max_contains_volume": "4900 ml",
+        "max_contains_weight": "100 kg",
+        "moves": 200,
+        "description": "应该装个腿",
+        "flag_restriction": [ "ABLATIVE_MEDIUM" ]
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "ablative": true,
+        "volume_encumber_modifier": 0,
+        "min_item_volume": "1600 ml",
+        "max_contains_volume": "1600 ml",
+        "max_contains_weight": "100 kg",
+        "moves": 200,
+        "description": "应该装个手",
+        "flag_restriction": [ "ABLATIVE_MEDIUM" ]
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "ablative": true,
+        "volume_encumber_modifier": 0,
+        "min_item_volume": "1600 ml",
+        "max_contains_volume": "1600 ml",
+        "max_contains_weight": "100 kg",
+        "moves": 200,
+        "description": "应该装个鞋",
+        "flag_restriction": [ "ABLATIVE_MEDIUM" ]
+      }
+    ],
+    "warmth": 0,
+    "material_thickness": 5,
+    "environmental_protection": 20,
+    "flags": [ "OUTER", "VARSIZE", "WATERPROOF", "RAINPROOF", "ELECTRIC_IMMUNE" ]
+  }
+]

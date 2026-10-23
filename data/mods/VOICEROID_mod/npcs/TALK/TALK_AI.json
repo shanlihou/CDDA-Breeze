@@ -1,0 +1,28 @@
+[
+  {
+    "id":"TALK_AI_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"是哥哥吗？",
+    "responses":[
+      { "text": "有个孩子竟然在这里......必须保护她", "topic": "TALK_AI_SAN_2" },
+      { "text": "现在带他走很危险......让她在这里等一会儿", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "//1": "１年目スタートだと年齢が+2になってしまってるので暫定対応として年齢-2を指定",
+    "id":"TALK_AI_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"哥哥去哪了呢？",
+    "responses":[ 
+      { 
+        "text": "…",
+        "effect": [ 
+          "follow", { "npc_first_topic": "    TALK_FRIEND" },
+          { "arithmetic": [ { "npc_val": "age" }, "=", { "const": 3 } ] },
+          { "arithmetic": [ { "npc_val": "height" }, "=", { "const": 100 } ] }
+        ], 
+        "topic": "TALK_DONE" 
+      }
+    ] 
+  }
+] 

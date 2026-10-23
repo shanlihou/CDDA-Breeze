@@ -1,0 +1,2136 @@
+[
+  {
+    "id": "sor_scribe_new_scroll_1_1",
+    "type": "TOOL",
+    "category": "weapon",
+    "name": "术士-卷轴lv1-魔法飞弹",
+    "description": "对目标造成少量真实伤害伤害，无视阻挡。",
+    "weight": "10 g",
+    "volume": "10 ml",
+    "longest_side": "10 cm",
+    "price": 10000,
+    "price_postapoc": 10000,
+    "material": [
+      "paper"
+    ],
+    "symbol": "?",
+    "color": "white",
+    "flags": [
+      "NONCONDUCTIVE",
+      "MAGIC_FOCUS",
+      "NO_UNLOAD",
+      "NO_RELOAD",
+      "NO_SALVAGE"
+    ],
+    "relic_data": {},
+    "charges_per_use": 1,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "holster": true,
+        "ammo_restriction": {
+          "sorcerer_wand_ammo": 1
+        }
+      }
+    ],
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv1_missile_nocom",
+      "no_fail": true,
+      "need_wielding": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv1_missile_nocom",
+    "type": "SPELL",
+    "message": "魔法飞弹!",
+    "name": "物品-Lv1-魔法飞弹",
+    "description": "对目标造成少量真实伤害伤害，无视阻挡。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "NO_PROJECTILE"
+    ],
+    "min_damage": 8,
+    "max_damage": 24,
+    "damage_type": "pure",
+    "min_range": 15,
+    "base_energy_cost": 0,
+    "spell_class": "NONE",
+    "difficulty": 1,
+    "max_level": 0,
+    "base_casting_time": 150,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack"
+  },
+  {
+    "copy-from": "sor_scribe_new_scroll_1_1",
+    "id": "sor_scribe_new_scroll_1_2",
+    "type": "TOOL",
+    "name": "术士-卷轴lv1-燃烧之手",
+    "description": "对锥形区域放出火焰。",
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv1_burning_hands_nocom",
+      "no_fail": true,
+      "need_wielding": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv1_burning_hands_nocom",
+    "type": "SPELL",
+    "message": "燃烧之手!",
+    "name": "物品-Lv1-燃烧之手",
+    "description": "对锥形区域放出火焰。",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "max_level": 0,
+    "min_damage": 10,
+    "max_damage": 30,
+    "min_range": 8,
+    "min_aoe": 45,
+    "spell_class": "NONE",
+    "base_casting_time": 150,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 1,
+    "damage_type": "heat"
+  },
+  {
+    "copy-from": "sor_scribe_new_scroll_1_1",
+    "id": "sor_scribe_new_scroll_2_1",
+    "type": "TOOL",
+    "name": "术士-卷轴lv2-灼热射线",
+    "description": "发射能穿透敌人的火焰射线。",
+    "price": 20000,
+    "price_postapoc": 20000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv2_fire_nocom",
+      "no_fail": true,
+      "need_wielding": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv2_fire_nocom",
+    "type": "SPELL",
+    "message": "灼热射线!",
+    "name": "物品-Lv2-灼热射线",
+    "description": "发射能穿透敌人的火焰射线。",
+    "effect": "attack",
+    "shape": "line",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "max_level": 0,
+    "min_damage": 22,
+    "max_damage": 68,
+    "min_range": 15,
+    "min_aoe": 0,
+    "spell_class": "NONE",
+    "base_casting_time": 150,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 2,
+    "damage_type": "heat"
+  },
+  {
+    "copy-from": "sor_scribe_new_scroll_1_1",
+    "id": "sor_scribe_new_scroll_2_2",
+    "type": "TOOL",
+    "name": "术士-卷轴lv2-次等复原术",
+    "description": "治愈咬伤。",
+    "price": 20000,
+    "price_postapoc": 20000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv2_lesser_restoration_nocom",
+      "no_fail": true,
+      "need_wielding": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv2_lesser_restoration_nocom",
+    "type": "SPELL",
+    "message": "次等复原术!",
+    "name": "物品-Lv2-次等复原术",
+    "description": "治愈咬伤。",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "min_range": 8,
+    "base_energy_cost": 0,
+    "spell_class": "NONE",
+    "difficulty": 2,
+    "max_level": 0,
+    "base_casting_time": 150,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack",
+    "effect_str": "sorcerer_les_res"
+  },
+  {
+    "copy-from": "sor_scribe_new_scroll_1_1",
+    "id": "sor_scribe_new_scroll_3_1",
+    "type": "TOOL",
+    "name": "术士-卷轴lv3-火球术",
+    "description": "发射火球，在目标点爆炸。",
+    "price": 35000,
+    "price_postapoc": 35000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv3_fireball_nocom",
+      "no_fail": true,
+      "need_wielding": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv3_fireball_nocom",
+    "type": "SPELL",
+    "message": "火球术!",
+    "name": "物品-Lv3-火球术",
+    "description": "发射火球，在目标点爆炸。",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "self",
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "max_level": 0,
+    "min_damage": 40,
+    "max_damage": 120,
+    "min_aoe": 3,
+    "min_range": 15,
+    "spell_class": "NONE",
+    "base_casting_time": 150,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 3,
+    "damage_type": "heat"
+  },
+  {
+    "copy-from": "sor_scribe_new_scroll_1_1",
+    "id": "sor_scribe_new_scroll_3_2",
+    "type": "TOOL",
+    "name": "术士-卷轴lv3-闪电束",
+    "description": "发射一道可以穿透敌人的闪电束。",
+    "price": 35000,
+    "price_postapoc": 35000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv3_lightning_bolt_nocom",
+      "no_fail": true,
+      "need_wielding": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv3_lightning_bolt_nocom",
+    "type": "SPELL",
+    "message": "闪电束!",
+    "name": "物品-Lv3-闪电束",
+    "description": "发射一道可以穿透敌人的闪电束。",
+    "effect": "attack",
+    "shape": "line",
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "max_level": 0,
+    "min_damage": 40,
+    "max_damage": 120,
+    "min_range": 30,
+    "difficulty": 3,
+    "min_aoe": 0,
+    "spell_class": "NONE",
+    "base_casting_time": 150,
+    "base_energy_cost": 0,
+    "damage_type": "electric",
+    "sound_description": "a crackle",
+    "energy_source": "MANA"
+  },
+  {
+    "copy-from": "sor_scribe_new_scroll_1_1",
+    "id": "sor_scribe_new_scroll_4_1",
+    "type": "TOOL",
+    "name": "术士-卷轴lv4-冰风暴",
+    "description": "在目标点制造一场冰风暴。",
+    "price": 65000,
+    "price_postapoc": 65000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv4_ice_storm_nocom",
+      "no_fail": true,
+      "need_wielding": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv4_ice_storm_nocom",
+    "type": "SPELL",
+    "message": "冰风暴!",
+    "name": "物品-Lv4-冰风暴",
+    "description": "在目标点制造一场冰风暴。",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "max_level": 0,
+    "min_damage": 62,
+    "max_damage": 188,
+    "min_aoe": 5,
+    "min_range": 30,
+    "spell_class": "NONE",
+    "base_casting_time": 150,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 4,
+    "damage_type": "cold"
+  },
+  {
+    "copy-from": "sor_scribe_new_scroll_1_1",
+    "id": "sor_scribe_new_scroll_4_2",
+    "type": "TOOL",
+    "name": "术士-卷轴lv4-飞弹风暴",
+    "description": "随机发射最多6发魔法飞弹，对目标及周围的随机敌人造成真实伤害，无视阻挡。",
+    "price": 65000,
+    "price_postapoc": 65000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv4_missile_nocom",
+      "no_fail": true,
+      "need_wielding": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv4_missile_nocom",
+    "type": "SPELL",
+    "message": "飞弹风暴!",
+    "name": "物品-Lv4-飞弹风暴",
+    "description": "随机发射最多6发魔法飞弹，对目标及周围的随机敌人造成真实伤害，无视阻挡。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "NO_PROJECTILE"
+    ],
+    "min_damage": 12,
+    "max_damage": 36,
+    "damage_type": "pure",
+    "min_range": 30,
+    "base_energy_cost": 0,
+    "spell_class": "NONE",
+    "difficulty": 4,
+    "max_level": 0,
+    "base_casting_time": 150,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack",
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_lv4_missile_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv4_missile_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv4_missile_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv4_missile_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv4_missile_1"
+      }
+    ]
+  },
+  {
+    "copy-from": "sor_scribe_new_scroll_1_1",
+    "id": "sor_scribe_new_scroll_4_3",
+    "type": "TOOL",
+    "name": "术士-卷轴lv4-复原术",
+    "description": "治愈咬伤，感染，真菌。",
+    "price": 65000,
+    "price_postapoc": 65000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv4_restoration_nocom",
+      "no_fail": true,
+      "need_wielding": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv4_restoration_nocom",
+    "type": "SPELL",
+    "message": "复原术!",
+    "name": "物品-Lv4-复原术",
+    "description": "治愈咬伤，感染，真菌。",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "min_range": 8,
+    "base_energy_cost": 0,
+    "spell_class": "NONE",
+    "difficulty": 4,
+    "max_level": 0,
+    "base_casting_time": 150,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack",
+    "effect_str": "sorcerer_res"
+  },
+  {
+    "copy-from": "sor_scribe_new_scroll_1_1",
+    "id": "sor_scribe_new_scroll_5_1",
+    "type": "TOOL",
+    "name": "术士-卷轴lv5-龙息术（火）",
+    "description": "对锥形区域吐出火焰。",
+    "price": 85000,
+    "price_postapoc": 85000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv5_dragon_fire_nocom",
+      "no_fail": true,
+      "need_wielding": true,
+      "level": 0
+    }
+  },
+  {
+    "copy-from": "sor_scribe_new_scroll_1_1",
+    "id": "sor_scribe_new_scroll_5_2",
+    "type": "TOOL",
+    "name": "术士-卷轴lv5-龙息术（冰）",
+    "description": "对锥形区域吐出寒冰。",
+    "price": 85000,
+    "price_postapoc": 85000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv5_dragon_cold_nocom",
+      "no_fail": true,
+      "need_wielding": true,
+      "level": 0
+    }
+  },
+  {
+    "copy-from": "sor_scribe_new_scroll_1_1",
+    "id": "sor_scribe_new_scroll_5_3",
+    "type": "TOOL",
+    "name": "术士-卷轴lv5-龙息术（电）",
+    "description": "对直线区域吐出闪电。",
+    "price": 85000,
+    "price_postapoc": 85000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv5_dragon_electric_nocom",
+      "no_fail": true,
+      "need_wielding": true,
+      "level": 0
+    }
+  },
+  {
+    "copy-from": "sor_scribe_new_scroll_1_1",
+    "id": "sor_scribe_new_scroll_5_4",
+    "type": "TOOL",
+    "name": "术士-卷轴lv5-龙息术（毒）",
+    "description": "对扇形区域吐出毒息。",
+    "price": 85000,
+    "price_postapoc": 85000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv5_dragon_bio_nocom",
+      "no_fail": true,
+      "need_wielding": true,
+      "level": 0
+    }
+  },
+  {
+    "copy-from": "sor_scribe_new_scroll_1_1",
+    "id": "sor_scribe_new_scroll_5_5",
+    "type": "TOOL",
+    "name": "术士-卷轴lv5-龙息术（酸）",
+    "description": "对扇形区域吐出酸液。",
+    "price": 85000,
+    "price_postapoc": 85000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv5_dragon_acid_nocom",
+      "no_fail": true,
+      "need_wielding": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_dragon_fire_nocom",
+    "type": "SPELL",
+    "message": "龙息术!",
+    "name": "物品-Lv5-龙息术（火）",
+    "description": "对锥形区域吐出火焰。",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "max_level": 0,
+    "min_damage": 90,
+    "max_damage": 270,
+    "min_range": 15,
+    "min_aoe": 45,
+    "spell_class": "NONE",
+    "base_casting_time": 150,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 5,
+    "damage_type": "heat"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_dragon_cold_nocom",
+    "type": "SPELL",
+    "message": "龙息术!",
+    "name": "物品-Lv5-龙息术（冰）",
+    "description": "对锥形区域吐出寒冰。",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "max_level": 0,
+    "min_damage": 90,
+    "max_damage": 270,
+    "min_range": 15,
+    "min_aoe": 45,
+    "spell_class": "NONE",
+    "base_casting_time": 150,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 5,
+    "damage_type": "cold"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_dragon_electric_nocom",
+    "type": "SPELL",
+    "message": "龙息术!",
+    "name": "物品-Lv5-龙息术（电）",
+    "description": "对直线区域吐出闪电。",
+    "effect": "attack",
+    "shape": "line",
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "max_level": 0,
+    "min_damage": 90,
+    "max_damage": 270,
+    "min_range": 15,
+    "min_aoe": 2,
+    "spell_class": "NONE",
+    "base_casting_time": 150,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 5,
+    "damage_type": "electric"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_dragon_bio_nocom",
+    "type": "SPELL",
+    "message": "龙息术!",
+    "name": "物品-Lv5-龙息术（毒）",
+    "description": "对扇形区域吐出毒息。",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "max_level": 0,
+    "min_damage": 90,
+    "max_damage": 270,
+    "min_range": 8,
+    "min_aoe": 90,
+    "spell_class": "NONE",
+    "base_casting_time": 150,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 5,
+    "damage_type": "biological"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_dragon_acid_nocom",
+    "type": "SPELL",
+    "message": "龙息术!",
+    "name": "物品-Lv5-龙息术（酸）",
+    "description": "对扇形区域吐出酸液。",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "max_level": 0,
+    "min_damage": 90,
+    "max_damage": 270,
+    "min_range": 8,
+    "min_aoe": 90,
+    "spell_class": "NONE",
+    "base_casting_time": 150,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 5,
+    "damage_type": "acid"
+  },
+  {
+    "copy-from": "sor_scribe_new_scroll_1_1",
+    "id": "sor_scribe_new_scroll_6_1",
+    "type": "TOOL",
+    "name": "术士-卷轴lv6-连锁闪电",
+    "description": "跳跃到命中目标5格范围内的敌人，每次跳跃都会降低伤害。",
+    "price": 115000,
+    "price_postapoc": 115000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv6_shocking_lash_1_nocom",
+      "no_fail": true,
+      "need_wielding": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv6_shocking_lash_1_nocom",
+    "type": "SPELL",
+    "message": "连锁闪电!",
+    "name": "物品-Lv6-连锁闪电",
+    "description": "跳跃到命中目标5格范围内的敌人，每次跳跃都会降低伤害。",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "max_level": 0,
+    "min_damage": 122,
+    "max_damage": 368,
+    "min_range": 60,
+    "spell_class": "NONE",
+    "base_casting_time": 150,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 6,
+    "sound_description": "a crackle",
+    "damage_type": "electric",
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_lv6_shocking_lash_2"
+      }
+    ]
+  },
+  {
+    "copy-from": "sor_scribe_new_scroll_1_1",
+    "id": "sor_scribe_new_scroll_6_2",
+    "type": "TOOL",
+    "name": "术士-卷轴lv6-冰封球",
+    "description": "发射一颗会爆炸的寒冰球。",
+    "price": 115000,
+    "price_postapoc": 115000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv6_iceball_nocom",
+      "no_fail": true,
+      "need_wielding": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv6_iceball_nocom",
+    "type": "SPELL",
+    "message": "冰封球!",
+    "name": "物品-Lv6-冰封球",
+    "description": "发射一颗会爆炸的寒冰球。",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "max_level": 0,
+    "min_damage": 122,
+    "max_damage": 368,
+    "min_aoe": 5,
+    "min_range": 60,
+    "spell_class": "NONE",
+    "base_casting_time": 150,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 6,
+    "damage_type": "cold"
+  },
+  {
+    "copy-from": "sor_scribe_new_scroll_1_1",
+    "id": "sor_scribe_new_scroll_7_1",
+    "type": "TOOL",
+    "name": "术士-卷轴lv7-死亡之指",
+    "description": "对目标造成真实伤害。",
+    "price": 175000,
+    "price_postapoc": 175000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv7_kill_nocom",
+      "no_fail": true,
+      "need_wielding": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv7_kill_nocom",
+    "type": "SPELL",
+    "message": "死亡之指!",
+    "name": "物品-Lv7-死亡之指",
+    "description": "对目标造成真实伤害。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "min_damage": 256,
+    "max_damage": 512,
+    "damage_type": "pure",
+    "min_range": 15,
+    "base_energy_cost": 0,
+    "spell_class": "NONE",
+    "difficulty": 7,
+    "max_level": 0,
+    "base_casting_time": 150,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack"
+  },
+  {
+    "copy-from": "sor_scribe_new_scroll_1_1",
+    "id": "sor_scribe_new_scroll_7_2",
+    "type": "TOOL",
+    "name": "术士-卷轴lv7-虹光喷射",
+    "description": "在目标范围造成随机效果。",
+    "price": 175000,
+    "price_postapoc": 175000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv7_rainbow_nocom",
+      "no_fail": true,
+      "need_wielding": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv7_rainbow_nocom",
+    "type": "SPELL",
+    "message": "虹光喷射!",
+    "name": "物品-Lv7-虹光喷射",
+    "description": "在目标范围造成随机效果。",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "WONDER",
+      "RANDOM_DAMAGE"
+    ],
+    "max_level": 0,
+    "min_damage": 1,
+    "max_damage": 7,
+    "min_range": 30,
+    "min_aoe": 30,
+    "spell_class": "NONE",
+    "base_casting_time": 150,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 7,
+    "damage_type": "pure",
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_lv7_rainbow_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv7_rainbow_2"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv7_rainbow_3"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv7_rainbow_4"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv7_rainbow_5"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv7_rainbow_6"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv7_rainbow_7"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv7_rainbow_8"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv7_rainbow_9"
+      }
+    ]
+  },
+  {
+    "copy-from": "sor_scribe_new_scroll_1_1",
+    "id": "sor_scribe_new_scroll_7_3",
+    "type": "TOOL",
+    "name": "术士-卷轴lv7-高等复原术",
+    "description": "如同万能药，但比那还要好。",
+    "price": 175000,
+    "price_postapoc": 175000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv7_greater_restoration_nocom",
+      "no_fail": true,
+      "need_wielding": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv7_greater_restoration_nocom",
+    "type": "SPELL",
+    "message": "高等复原术!",
+    "name": "物品-Lv7-高等复原术",
+    "description": "如同万能药，但比那还要好。",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "min_range": 8,
+    "base_energy_cost": 0,
+    "spell_class": "NONE",
+    "difficulty": 7,
+    "max_level": 0,
+    "base_casting_time": 150,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack",
+    "effect_str": "sorcerer_gre_res"
+  },
+  {
+    "copy-from": "sor_scribe_new_scroll_1_1",
+    "id": "sor_scribe_new_scroll_8_1",
+    "type": "TOOL",
+    "name": "术士-卷轴lv8-火焰风暴",
+    "description": "在目标点引发火焰风暴，对受到影响的目标造成4秒伤害，无视阻挡。",
+    "price": 225000,
+    "price_postapoc": 225000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv8_firestorm_nocom",
+      "no_fail": true,
+      "need_wielding": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv8_firestorm_nocom",
+    "type": "SPELL",
+    "message": "火焰风暴!",
+    "name": "物品-Lv8-火焰风暴",
+    "description": "在目标点引发火焰风暴，对受到影响的目标造成4秒伤害，无视阻挡。",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "NO_PROJECTILE"
+    ],
+    "max_level": 0,
+    "min_damage": 70,
+    "max_damage": 200,
+    "min_aoe": 9,
+    "min_dot": 135,
+    "max_dot": 135,
+    "min_duration": 400,
+    "max_duration": 400,
+    "min_range": 60,
+    "spell_class": "NONE",
+    "base_casting_time": 150,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 8,
+    "damage_type": "heat"
+  },
+  {
+    "copy-from": "sor_scribe_new_scroll_1_1",
+    "id": "sor_scribe_new_scroll_8_2",
+    "type": "TOOL",
+    "name": "术士-卷轴lv8-极地射线",
+    "description": "发射一道可以穿透敌人和墙壁的极寒射线。",
+    "price": 225000,
+    "price_postapoc": 225000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv8_polar_ray_nocom",
+      "no_fail": true,
+      "need_wielding": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv8_polar_ray_nocom",
+    "type": "SPELL",
+    "message": "极地射线!",
+    "name": "物品-Lv8-极地射线",
+    "description": "发射一道可以穿透敌人和墙壁的极寒射线。",
+    "effect": "attack",
+    "shape": "line",
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "IGNORE_WALLS"
+    ],
+    "max_level": 0,
+    "min_damage": 202,
+    "max_damage": 608,
+    "min_range": 30,
+    "difficulty": 8,
+    "min_aoe": 2,
+    "spell_class": "NONE",
+    "base_casting_time": 150,
+    "base_energy_cost": 0,
+    "damage_type": "cold",
+    "energy_source": "MANA"
+  },
+  {
+    "copy-from": "sor_scribe_new_scroll_1_1",
+    "id": "sor_scribe_new_scroll_8_3",
+    "type": "TOOL",
+    "name": "术士-卷轴lv8-高等飞弹风暴",
+    "description": "随机发射最多12发魔法飞弹，对目标及周围的随机敌人造成真实伤害。",
+    "price": 225000,
+    "price_postapoc": 225000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv8_missile_nocom",
+      "no_fail": true,
+      "need_wielding": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv8_missile_nocom",
+    "type": "SPELL",
+    "message": "高等飞弹风暴!",
+    "name": "物品-Lv8-高等飞弹风暴",
+    "description": "随机发射最多12发魔法飞弹，对目标及周围的随机敌人造成真实伤害，无视阻挡。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "NO_PROJECTILE"
+    ],
+    "min_damage": 20,
+    "max_damage": 60,
+    "damage_type": "pure",
+    "min_range": 30,
+    "base_energy_cost": 0,
+    "spell_class": "NONE",
+    "difficulty": 8,
+    "max_level": 0,
+    "base_casting_time": 150,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack",
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_lv8_missile_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv8_missile_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv8_missile_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv8_missile_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv8_missile_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv8_missile_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv8_missile_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv8_missile_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv8_missile_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv8_missile_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv8_missile_1"
+      }
+    ]
+  },
+  {
+    "copy-from": "sor_scribe_new_scroll_1_1",
+    "id": "sor_scribe_new_scroll_9_1",
+    "type": "TOOL",
+    "name": "术士-卷轴lv9-律令死亡",
+    "description": "对目标造成5%-125%当前血量的伤害，无视阻挡。",
+    "price": 355000,
+    "price_postapoc": 355000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv9_kill_nocom",
+      "no_fail": true,
+      "need_wielding": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv9_kill_nocom",
+    "type": "SPELL",
+    "message": "律令死亡!",
+    "name": "物品-Lv9-律令死亡",
+    "description": "对目标造成5%-125%当前血量的伤害，无视阻挡。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "NO_HANDS",
+      "RANDOM_DAMAGE",
+      "PERCENTAGE_DAMAGE",
+      "NO_PROJECTILE"
+    ],
+    "min_damage": 5,
+    "max_damage": 125,
+    "damage_type": "pure",
+    "min_range": 30,
+    "base_energy_cost": 0,
+    "spell_class": "NONE",
+    "difficulty": 9,
+    "max_level": 0,
+    "base_casting_time": 150,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack"
+  },
+  {
+    "copy-from": "sor_scribe_new_scroll_1_1",
+    "id": "sor_scribe_new_scroll_9_2",
+    "type": "TOOL",
+    "name": "术士-卷轴lv9-流星爆",
+    "description": "在目标范围内引发爆炸，并招来6颗陨石造成额外伤害，无视阻挡，穿透墙壁。",
+    "price": 355000,
+    "price_postapoc": 355000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv9_fireball_nocom",
+      "no_fail": true,
+      "need_wielding": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv9_fireball_nocom",
+    "type": "SPELL",
+    "message": "流星爆!",
+    "name": "物品-Lv9-流星爆",
+    "description": "在目标范围内引发爆炸，并招来6颗陨石造成额外伤害，无视阻挡，穿透墙壁。",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "NO_PROJECTILE",
+      "IGNORE_WALLS"
+    ],
+    "max_level": 0,
+    "min_damage": 250,
+    "max_damage": 750,
+    "min_aoe": 9,
+    "min_range": 60,
+    "spell_class": "NONE",
+    "base_casting_time": 150,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 9,
+    "damage_type": "heat",
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_lv9_fireball_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv9_fireball_2"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv9_fireball_3"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv9_fireball_4"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv9_fireball_5"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv9_fireball_6"
+      }
+    ]
+  },
+  {
+    "id": "sor_scribe_potion_1_1",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": "术士-药水Lv1-法师护甲",
+    "description": "使你被一道可以抵挡伤害的无形立场包裹，持续1小时。",
+    "weight": "50 g",
+    "volume": "50 ml",
+    "longest_side": "15 cm",
+    "price": 10000,
+    "price_postapoc": 10000,
+    "material": [
+      "glass",
+      "water"
+    ],
+    "symbol": ")",
+    "color": "white",
+    "flags": [
+      "NO_AUTO_CONSUME",
+      "NUTRIENT_OVERRIDE",
+      "NONCONDUCTIVE",
+      "MAGIC_FOCUS",
+      "NO_INGEST",
+      "EDIBLE_FROZEN"
+    ],
+    "stack_size": 1,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv1_magic_armor_nocom",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv1_magic_armor_nocom",
+    "type": "SPELL",
+    "message": "法师护甲！",
+    "name": "物品-Lv1-法师护甲",
+    "description": "使你被一道可以抵挡伤害的无形立场包裹，持续1小时。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "spawn_item",
+    "effect_str": "sor_magic_armor",
+    "min_damage": 1,
+    "max_damage": 1,
+    "shape": "blast",
+    "affected_body_parts": [
+      "head",
+      "torso",
+      "leg_l",
+      "leg_r",
+      "arm_r",
+      "arm_l"
+    ],
+    "base_casting_time": 150,
+    "energy_source": "MANA",
+    "spell_class": "NONE",
+    "difficulty": 1,
+    "max_level": 0,
+    "base_energy_cost": 0,
+    "min_duration": 360000,
+    "max_duration": 360000
+  },
+  {
+    "copy-from": "sor_scribe_potion_1_1",
+    "id": "sor_scribe_potion_1_2",
+    "type": "COMESTIBLE",
+    "name": "术士-药水Lv1-气泡术",
+    "description": "使你的头部被一个充满空气的小型气泡包裹，让你可以在水中呼吸，持续10分钟。",
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv1_air_bubble_selfnocom",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv1_air_bubble_selfnocom",
+    "type": "SPELL",
+    "message": "气泡术！",
+    "name": "物品-Lv1-气泡术",
+    "description": "使你的头部被一个充满空气的小型气泡包裹，让你可以在水中呼吸，持续10分钟。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "base_energy_cost": 0,
+    "spell_class": "NONE",
+    "difficulty": 1,
+    "max_level": 0,
+    "base_casting_time": 150,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "min_duration": 60000,
+    "max_duration": 60000,
+    "effect": "spawn_item",
+    "effect_str": "sorcerer_air_bubble"
+  },
+  {
+    "copy-from": "sor_scribe_potion_1_1",
+    "id": "sor_scribe_potion_2_1",
+    "type": "COMESTIBLE",
+    "name": "术士-药水Lv2-牛之力量",
+    "description": "使你的力量+4，持续20分钟。",
+    "price": 20000,
+    "price_postapoc": 20000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv2_str_selfnocom",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv2_str_selfnocom",
+    "type": "SPELL",
+    "message": "牛之力量!",
+    "name": "物品-Lv2-牛之力量",
+    "description": "使你的力量+4，持续20分钟。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "base_energy_cost": 0,
+    "spell_class": "NONE",
+    "difficulty": 2,
+    "max_level": 0,
+    "base_casting_time": 150,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack",
+    "effect_str": "sorcerer_lv2_str",
+    "min_duration": 120000,
+    "max_duration": 120000
+  },
+  {
+    "copy-from": "sor_scribe_potion_1_1",
+    "id": "sor_scribe_potion_2_2",
+    "type": "COMESTIBLE",
+    "name": "术士-药水Lv2-猫之优雅",
+    "description": "使你的敏捷+4，持续20分钟。",
+    "price": 20000,
+    "price_postapoc": 20000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv2_dex_selfnocom",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv2_dex_selfnocom",
+    "type": "SPELL",
+    "message": "猫之优雅!",
+    "name": "物品-Lv2-猫之优雅",
+    "description": "使你的敏捷+4，持续20分钟。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "base_energy_cost": 0,
+    "spell_class": "NONE",
+    "difficulty": 2,
+    "max_level": 0,
+    "base_casting_time": 150,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack",
+    "effect_str": "sorcerer_lv2_dex",
+    "min_duration": 120000,
+    "max_duration": 120000
+  },
+  {
+    "copy-from": "sor_scribe_potion_1_1",
+    "id": "sor_scribe_potion_2_3",
+    "type": "COMESTIBLE",
+    "name": "术士-药水Lv2-枭之睿智",
+    "description": "使你的智力+4，持续20分钟。",
+    "price": 20000,
+    "price_postapoc": 20000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv2_int_selfnocom",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv2_int_selfnocom",
+    "type": "SPELL",
+    "message": "枭之睿智!",
+    "name": "物品-Lv2-枭之睿智",
+    "description": "使你的智力+4，持续20分钟。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "base_energy_cost": 0,
+    "spell_class": "NONE",
+    "difficulty": 2,
+    "max_level": 0,
+    "base_casting_time": 150,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack",
+    "effect_str": "sorcerer_lv2_int",
+    "min_duration": 120000,
+    "max_duration": 120000
+  },
+  {
+    "copy-from": "sor_scribe_potion_1_1",
+    "id": "sor_scribe_potion_2_4",
+    "type": "COMESTIBLE",
+    "name": "术士-药水Lv2-鹰之威仪",
+    "description": "使你的感知+4，持续20分钟。",
+    "price": 20000,
+    "price_postapoc": 20000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv2_per_selfnocom",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv2_per_selfnocom",
+    "type": "SPELL",
+    "message": "鹰之威仪!",
+    "name": "物品-Lv2-鹰之威仪",
+    "description": "使你的感知+4，持续20分钟。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "base_energy_cost": 0,
+    "spell_class": "NONE",
+    "difficulty": 2,
+    "max_level": 0,
+    "base_casting_time": 150,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack",
+    "effect_str": "sorcerer_lv2_per",
+    "min_duration": 120000,
+    "max_duration": 120000
+  },
+  {
+    "copy-from": "sor_scribe_potion_1_1",
+    "id": "sor_scribe_potion_2_5",
+    "type": "COMESTIBLE",
+    "name": "术士-药水Lv2-熊之坚韧",
+    "description": "使你的体力增加25%，持续20分钟。",
+    "price": 20000,
+    "price_postapoc": 20000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv2_sta_selfnocom",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv2_sta_selfnocom",
+    "type": "SPELL",
+    "message": "熊之坚韧!",
+    "name": "物品-Lv2-熊之坚韧",
+    "description": "使你的体力增加25%，持续20分钟。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "base_energy_cost": 0,
+    "spell_class": "NONE",
+    "difficulty": 2,
+    "max_level": 0,
+    "base_casting_time": 150,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack",
+    "effect_str": "sorcerer_lv2_sta",
+    "min_duration": 120000,
+    "max_duration": 120000
+  },
+  {
+    "copy-from": "sor_scribe_potion_1_1",
+    "id": "sor_scribe_potion_2_6",
+    "type": "COMESTIBLE",
+    "name": "术士-药水Lv2-狐之狡黠",
+    "description": "使你的行动噪音降低，持续20分钟。",
+    "price": 20000,
+    "price_postapoc": 20000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv2_sly_selfnocom",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv2_sly_selfnocom",
+    "type": "SPELL",
+    "message": "狐之狡黠!",
+    "name": "物品-Lv2-狐之狡黠",
+    "description": "使你的行动噪音降低，持续20分钟。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "base_energy_cost": 0,
+    "spell_class": "NONE",
+    "difficulty": 2,
+    "max_level": 0,
+    "base_casting_time": 150,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack",
+    "effect_str": "sorcerer_lv2_sly",
+    "min_duration": 120000,
+    "max_duration": 120000
+  },
+  {
+    "copy-from": "sor_scribe_potion_1_1",
+    "id": "sor_scribe_potion_2_7",
+    "type": "COMESTIBLE",
+    "name": "术士-药水Lv2-防护箭矢",
+    "description": "使你获得对箭矢或子弹的抗性，持续20分钟。",
+    "price": 20000,
+    "price_postapoc": 20000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv2_armbull_selfnocom",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv2_armbull_selfnocom",
+    "type": "SPELL",
+    "message": "防护箭矢!",
+    "name": "物品-Lv2-防护箭矢",
+    "description": "使你获得对箭矢或子弹的抗性，持续20分钟。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "base_energy_cost": 0,
+    "spell_class": "NONE",
+    "difficulty": 2,
+    "max_level": 0,
+    "base_casting_time": 150,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack",
+    "effect_str": "sorcerer_lv2_armbull",
+    "min_duration": 120000,
+    "max_duration": 120000
+  },
+  {
+    "copy-from": "sor_scribe_potion_1_1",
+    "id": "sor_scribe_potion_2_8",
+    "type": "COMESTIBLE",
+    "name": "术士-药水Lv2-次等复原术",
+    "description": "治愈咬伤。",
+    "price": 20000,
+    "price_postapoc": 20000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv2_lesser_restoration_selfnocom",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv2_lesser_restoration_selfnocom",
+    "type": "SPELL",
+    "message": "次等复原术!",
+    "name": "物品-Lv2-次等复原术",
+    "description": "治愈咬伤。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "base_energy_cost": 0,
+    "spell_class": "NONE",
+    "difficulty": 2,
+    "max_level": 0,
+    "base_casting_time": 150,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack",
+    "effect_str": "sorcerer_les_res"
+  },
+  {
+    "copy-from": "sor_scribe_potion_1_1",
+    "id": "sor_scribe_potion_3_1",
+    "type": "COMESTIBLE",
+    "name": "术士-药水Lv3-加速术",
+    "description": "获得20速度，持续20分钟。",
+    "price": 35000,
+    "price_postapoc": 35000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv3_speedup_selfnocom",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv3_speedup_selfnocom",
+    "type": "SPELL",
+    "message": "加速术!",
+    "name": "物品-Lv3-加速术",
+    "description": "获得20速度，持续20分钟。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "effect_str": "effect_sorcerer_speedup",
+    "shape": "blast",
+    "base_casting_time": 150,
+    "energy_source": "MANA",
+    "spell_class": "NONE",
+    "difficulty": 3,
+    "max_level": 0,
+    "base_energy_cost": 0,
+    "min_duration": 120000,
+    "max_duration": 120000
+  },
+  {
+    "copy-from": "sor_scribe_potion_1_1",
+    "id": "sor_scribe_potion_4_1",
+    "type": "COMESTIBLE",
+    "name": "术士-药水Lv4-石肤术",
+    "description": "降低你受到的伤害，持续20分钟。",
+    "price": 65000,
+    "price_postapoc": 65000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv4_stoneskin_selfnocom",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv4_stoneskin_selfnocom",
+    "type": "SPELL",
+    "message": "石肤术!",
+    "name": "物品-Lv4-石肤术",
+    "description": "降低你受到的伤害，持续20分钟。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "effect_str": "effect_sorcerer_stoneskin",
+    "shape": "blast",
+    "base_casting_time": 150,
+    "energy_source": "MANA",
+    "spell_class": "NONE",
+    "difficulty": 4,
+    "max_level": 0,
+    "base_energy_cost": 0,
+    "min_duration": 120000,
+    "max_duration": 120000
+  },
+  {
+    "copy-from": "sor_scribe_potion_1_1",
+    "id": "sor_scribe_potion_4_3",
+    "type": "COMESTIBLE",
+    "name": "术士-药水Lv4-复原术",
+    "description": "治愈咬伤，感染，真菌。",
+    "price": 65000,
+    "price_postapoc": 65000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv4_restoration_selfnocom",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv4_restoration_selfnocom",
+    "type": "SPELL",
+    "message": "复原术!",
+    "name": "物品-Lv4-复原术",
+    "description": "治愈咬伤，感染，真菌。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "base_energy_cost": 0,
+    "spell_class": "NONE",
+    "difficulty": 4,
+    "max_level": 0,
+    "base_casting_time": 150,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack",
+    "effect_str": "sorcerer_res"
+  },
+  {
+    "copy-from": "sor_scribe_potion_1_1",
+    "id": "sor_scribe_potion_4_4",
+    "type": "COMESTIBLE",
+    "name": "术士-药水Lv4-行动自如",
+    "description": "使地形对你的影响大幅降低，持续1小时。",
+    "price": 65000,
+    "price_postapoc": 65000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv4_freedom_movement_selfnocom",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv4_freedom_movement_selfnocom",
+    "type": "SPELL",
+    "message": "行动自如!",
+    "name": "物品-Lv4-行动自如",
+    "description": "使地形对你的影响大幅降低，持续1小时。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "base_energy_cost": 0,
+    "spell_class": "NONE",
+    "difficulty": 4,
+    "max_level": 0,
+    "base_casting_time": 150,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "min_duration": 360000,
+    "max_duration": 360000,
+    "effect": "spawn_item",
+    "effect_str": "sorcerer_freedom_movement"
+  },
+  {
+    "copy-from": "sor_scribe_potion_1_1",
+    "id": "sor_scribe_potion_5_1",
+    "type": "COMESTIBLE",
+    "name": "术士-药水Lv5-维生气泡",
+    "description": "使你的身体被一个充满空气的气泡包裹，让你可以免疫或抵抗外界的恶劣环境，持续12小时。",
+    "price": 85000,
+    "price_postapoc": 85000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv5_life_bubble_selfnocom",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv5_life_bubble_selfnocom",
+    "type": "SPELL",
+    "message": "维生气泡!",
+    "name": "物品-Lv5-维生气泡",
+    "description": "使你的身体被一个充满空气的气泡包裹，让你可以免疫或抵抗外界的恶劣环境，持续12小时。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "base_energy_cost": 0,
+    "spell_class": "NONE",
+    "difficulty": 5,
+    "max_level": 0,
+    "base_casting_time": 150,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "min_duration": 4320000,
+    "max_duration": 4320000,
+    "effect": "spawn_item",
+    "effect_str": "sorcerer_life_bubble"
+  },
+  {
+    "copy-from": "sor_scribe_potion_1_1",
+    "id": "sor_scribe_potion_6_1",
+    "type": "COMESTIBLE",
+    "name": "术士-药水Lv6-医疗术",
+    "description": "治疗你大量生命，并治愈咬伤，感染，真菌。",
+    "price": 115000,
+    "price_postapoc": 115000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv6_heal_selfnocom",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv6_heal_selfnocom",
+    "type": "SPELL",
+    "message": "医疗术!",
+    "name": "物品-Lv6-医疗术",
+    "description": "治疗你大量生命，并治愈咬伤，感染，真菌。",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": -120,
+    "max_damage": -120,
+    "max_level": 0,
+    "effect": "attack",
+    "shape": "blast",
+    "base_casting_time": 150,
+    "base_energy_cost": 0,
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "spell_class": "NONE",
+    "difficulty": 6,
+    "energy_source": "MANA",
+    "effect_str": "sorcerer_res",
+    "extra_effects": [
+      {
+        "id": "spell_zz_heal_vigor"
+      }
+    ]
+  },
+  {
+    "copy-from": "sor_scribe_potion_1_1",
+    "id": "sor_scribe_potion_6_2",
+    "type": "COMESTIBLE",
+    "name": "术士-药水Lv6-大师法师护甲",
+    "description": "使你被一道可以抵挡伤害的强力无形立场包裹，可以和法师护甲叠加，持续1小时。",
+    "price": 115000,
+    "price_postapoc": 115000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv6_magic_armor_nocom",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv6_magic_armor_nocom",
+    "type": "SPELL",
+    "message": "大师法师护甲!",
+    "name": "物品-Lv6-大师法师护甲",
+    "description": "使你被一道可以抵挡伤害的强力无形立场包裹，可以和法师护甲叠加，持续1小时。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "spawn_item",
+    "effect_str": "sor_magic_master_armor",
+    "min_damage": 1,
+    "max_damage": 1,
+    "shape": "blast",
+    "affected_body_parts": [
+      "head",
+      "torso",
+      "leg_l",
+      "leg_r",
+      "arm_r",
+      "arm_l"
+    ],
+    "base_casting_time": 150,
+    "energy_source": "MANA",
+    "spell_class": "NONE",
+    "difficulty": 6,
+    "max_level": 0,
+    "base_energy_cost": 0,
+    "min_duration": 360000,
+    "max_duration": 360000
+  },
+  {
+    "copy-from": "sor_scribe_potion_1_1",
+    "id": "sor_scribe_potion_7_1",
+    "type": "COMESTIBLE",
+    "name": "术士-药水Lv7-高等防护箭矢",
+    "description": "使你获得对箭矢或子弹的强力抗性，持续20分钟。",
+    "price": 175000,
+    "price_postapoc": 175000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv7_armbull_selfnocom",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv7_armbull_selfnocom",
+    "type": "SPELL",
+    "message": "高等防护箭矢!",
+    "name": "物品-Lv7-高等防护箭矢",
+    "description": "使你获得对箭矢或子弹的强力抗性，持续20分钟。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "base_energy_cost": 0,
+    "spell_class": "NONE",
+    "difficulty": 7,
+    "max_level": 0,
+    "base_casting_time": 150,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack",
+    "effect_str": "sorcerer_lv7_armbull",
+    "min_duration": 120000,
+    "max_duration": 120000
+  },
+  {
+    "copy-from": "sor_scribe_potion_1_1",
+    "id": "sor_scribe_potion_7_2",
+    "type": "COMESTIBLE",
+    "name": "术士-药水Lv7-高等复原术",
+    "description": "如同万能药，但比那还要好。",
+    "price": 175000,
+    "price_postapoc": 175000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv7_greater_restoration_selfnocom",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv7_greater_restoration_selfnocom",
+    "type": "SPELL",
+    "message": "高等复原术!",
+    "name": "物品-Lv7-高等复原术",
+    "description": "如同万能药，但比那还要好。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "base_energy_cost": 0,
+    "spell_class": "NONE",
+    "difficulty": 7,
+    "max_level": 0,
+    "base_casting_time": 150,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack",
+    "effect_str": "sorcerer_gre_res"
+  },
+  {
+    "copy-from": "sor_scribe_potion_1_1",
+    "id": "sor_scribe_potion_4_2",
+    "type": "COMESTIBLE",
+    "name": "术士-药水Lv7-高等隐形",
+    "description": "你获得隐形，持续5分钟。",
+    "price": 65000,
+    "price_postapoc": 65000,
+    "relic_data": {},
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "spell_craft_sorcerer_lv4_invisibility_selfnocom",
+      "no_fail": true,
+      "level": 0
+    }
+  },
+  {
+    "id": "spell_craft_sorcerer_lv4_invisibility_selfnocom",
+    "type": "SPELL",
+    "message": "高等隐形!",
+    "name": "物品-Lv7-高等隐形",
+    "description": "你获得隐形，持续5分钟。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "effect_str": "effect_sorcerer_invisibility",
+    "shape": "blast",
+    "base_casting_time": 150,
+    "energy_source": "MANA",
+    "spell_class": "NONE",
+    "difficulty": 4,
+    "max_level": 0,
+    "base_energy_cost": 0,
+    "min_duration": 30000
+  }
+]

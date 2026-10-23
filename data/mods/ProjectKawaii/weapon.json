@@ -1,0 +1,1429 @@
+[
+  {
+    "id": "kawaii_selfbow",
+    "type": "GUN",
+    "symbol": "(",
+    "color": "yellow",
+    "name": {
+      "str": "简易长弓"
+    },
+    "description": "一种手工制作, 经过非常细致的装饰和喷漆的短弓，与其说是一个致命的武器, 不如说是一件精致的装饰。",
+    "price": "100 USD",
+    "material": [
+      "wood"
+    ],
+    "flags": [
+      "FIRE_TWOHAND",
+      "RELOAD_AND_SHOOT",
+      "PRIMITIVE_RANGED_WEAPON",
+      "FANCY",
+      "BELTED",
+      "WATER_FRIENDLY",
+      "WATERPROOF_GUN",
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES"
+    ],
+    "reload_noise_volume": 3,
+    "loudness": 8,
+    "skill": "archery",
+    "ammo": [
+      "arrow"
+    ],
+    "weight": "1000 g",
+    "volume": "2500 ml",
+    "longest_side": "140 cm",
+    "bashing": 6,
+    "armor_data": {
+      "armor": [
+        {
+          "material": [
+            {
+              "type": "wood",
+              "covered_by_mat": 100,
+              "thickness": 1
+            }
+          ],
+          "encumbrance": 20,
+          "coverage": 5,
+          "covers": [
+            "torso"
+          ],
+          "specifically_covers": [
+            "torso_hanging_back"
+          ]
+        }
+      ]
+    },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 1
+    },
+    "range": 5,
+    "dispersion": 1250,
+    "sight_dispersion": 3000,
+    "durability": 6,
+    "clip_size": 1,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "arrow": 1
+        }
+      }
+    ],
+    "reload": 50
+  },
+  {
+    "id": "kawaii_custombow_v1",
+    "type": "GUN",
+    "symbol": "(",
+    "color": "yellow",
+    "name": {
+      "str": "定制长弓 Mk1"
+    },
+    "description": "有经验的人用一堆拾荒捡到的材料组装的定制弓。",
+    "price": "200 USD",
+    "material": [
+      "wood"
+    ],
+    "flags": [
+      "FIRE_TWOHAND",
+      "STR_DRAW",
+      "RELOAD_AND_SHOOT",
+      "PRIMITIVE_RANGED_WEAPON",
+      "BELTED",
+      "SHEATH_BOW",
+      "WATER_FRIENDLY",
+      "WATERPROOF_GUN",
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES"
+    ],
+    "reload_noise_volume": 3,
+    "loudness": 6,
+    "skill": "archery",
+    "min_strength": 3,
+    "ammo": [
+      "arrow"
+    ],
+    "weight": "500 g",
+    "volume": "3 L",
+    "longest_side": "140 cm",
+    "bashing": 8,
+    "armor_data": {
+      "armor": [
+        {
+          "material": [
+            {
+              "type": "wood",
+              "covered_by_mat": 100,
+              "thickness": 1
+            }
+          ],
+          "encumbrance": 20,
+          "coverage": 5,
+          "covers": [
+            "torso"
+          ],
+          "specifically_covers": [
+            "torso_hanging_back"
+          ]
+        }
+      ]
+    },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 4
+    },
+    "range": 8,
+    "dispersion": 1000,
+    "sight_dispersion": 3000,
+    "durability": 8,
+    "clip_size": 1,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "arrow": 1
+        }
+      }
+    ],
+    "reload": 120
+  },
+  {
+    "id": "kawaii_custombow_v2",
+    "type": "GUN",
+    "symbol": "(",
+    "color": "yellow",
+    "name": {
+      "str": "定制长弓 Mk2"
+    },
+    "description": "定制弓Mk1的改进版本。用钢来加固弓的框架, 其性能大大提高。但也因此比以前要更大, 更重。",
+    "price": "250 USD",
+    "material": [
+      "wood",
+      "steel"
+    ],
+    "flags": [
+      "FIRE_TWOHAND",
+      "STR_DRAW",
+      "RELOAD_AND_SHOOT",
+      "PRIMITIVE_RANGED_WEAPON",
+      "BELTED",
+      "SHEATH_BOW",
+      "WATER_FRIENDLY",
+      "WATERPROOF_GUN",
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES"
+    ],
+    "reload_noise_volume": 3,
+    "loudness": 8,
+    "skill": "archery",
+    "min_strength": 4,
+    "ammo": [
+      "arrow"
+    ],
+    "weight": "700 g",
+    "volume": "3 L",
+    "longest_side": "150 cm",
+    "bashing": 11,
+    "armor_data": {
+      "armor": [
+        {
+          "material": [
+            {
+              "type": "wood",
+              "covered_by_mat": 100,
+              "thickness": 1
+            },
+            {
+              "type": "steel",
+              "covered_by_mat": 100,
+              "thickness": 1
+            }
+          ],
+          "encumbrance": 20,
+          "coverage": 5,
+          "covers": [
+            "torso"
+          ],
+          "specifically_covers": [
+            "torso_hanging_back"
+          ]
+        }
+      ]
+    },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 7
+    },
+    "range": 12,
+    "dispersion": 950,
+    "sight_dispersion": 3000,
+    "durability": 10,
+    "clip_size": 1,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "arrow": 1
+        }
+      }
+    ],
+    "reload": 110,
+    "valid_mod_locations": [
+      [
+        "underbarrel",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "accessories",
+        2
+      ]
+    ]
+  },
+  {
+    "id": "kawaii_custombow_v3",
+    "type": "GUN",
+    "symbol": "(",
+    "color": "yellow",
+    "name": {
+      "str": "定制长弓 Mk3"
+    },
+    "description": "定制长弓 Mk2的改进版本。整体框架被做的更大, 并使用了比前身更高质量的材料。因此, 这把弓看起来像是一把由大师级工艺制作而成的杰出产品。",
+    "price": "550 USD",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "flags": [
+      "FIRE_TWOHAND",
+      "STR_DRAW",
+      "RELOAD_AND_SHOOT",
+      "PRIMITIVE_RANGED_WEAPON",
+      "BELTED",
+      "SHEATH_BOW",
+      "WATER_FRIENDLY",
+      "WATERPROOF_GUN",
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES"
+    ],
+    "reload_noise_volume": 3,
+    "loudness": 10,
+    "skill": "archery",
+    "min_strength": 4,
+    "ammo": [
+      "arrow"
+    ],
+    "weight": "850 g",
+    "volume": "3500 ml",
+    "longest_side": "183 cm",
+    "bashing": 15,
+    "armor_data": {
+      "armor": [
+        {
+          "material": [
+            {
+              "type": "steel",
+              "covered_by_mat": 100,
+              "thickness": 1
+            },
+            {
+              "type": "plastic",
+              "covered_by_mat": 100,
+              "thickness": 1
+            }
+          ],
+          "encumbrance": 20,
+          "coverage": 5,
+          "covers": [
+            "torso"
+          ],
+          "specifically_covers": [
+            "torso_hanging_back"
+          ]
+        }
+      ]
+    },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 11
+    },
+    "range": 16,
+    "dispersion": 850,
+    "sight_dispersion": 3000,
+    "durability": 10,
+    "clip_size": 1,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "arrow": 1
+        }
+      }
+    ],
+    "reload": 100,
+    "to_hit": 1,
+    "valid_mod_locations": [
+      [
+        "underbarrel",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "accessories",
+        2
+      ],
+      [
+        "limbs",
+        1
+      ],
+      [
+        "string",
+        1
+      ],
+      [
+        "riser",
+        1
+      ],
+      [
+        "stabilizer",
+        1
+      ],
+      [
+        "dampening",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "kawaii_shieldbow",
+    "type": "GUN",
+    "symbol": "(",
+    "color": "yellow",
+    "name": {
+      "str": "盾弓"
+    },
+    "description": "这是一个非常沉重的弓，有一个尖锐的钢钉从前方突起。用这把弓来进行精确射击会很困难，但是比普通弓箭更能够接受近距离的战斗。",
+    "price": "250 USD",
+    "material": [
+      "wood",
+      "steel"
+    ],
+    "flags": [
+      "FIRE_TWOHAND",
+      "RELOAD_AND_SHOOT",
+      "PRIMITIVE_RANGED_WEAPON",
+      "BELTED",
+      "SHEATH_BOW",
+      "WATER_FRIENDLY",
+      "WATERPROOF_GUN",
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES"
+    ],
+    "reload_noise_volume": 3,
+    "loudness": 8,
+    "skill": "archery",
+    "techniques": [
+      "WBLOCK_2",
+      "DEF_DISARM"
+    ],
+    "min_strength": 6,
+    "ammo": [
+      "arrow"
+    ],
+    "weight": "1500 g",
+    "volume": "3 L",
+    "longest_side": "150 cm",
+    "bashing": 35,
+    "cutting": 15,
+    "armor_data": {
+      "armor": [
+        {
+          "material": [
+            {
+              "type": "wood",
+              "covered_by_mat": 100,
+              "thickness": 1
+            },
+            {
+              "type": "steel",
+              "covered_by_mat": 100,
+              "thickness": 1
+            }
+          ],
+          "encumbrance": 20,
+          "coverage": 5,
+          "covers": [
+            "torso"
+          ],
+          "specifically_covers": [
+            "torso_hanging_back"
+          ]
+        }
+      ]
+    },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 9
+    },
+    "range": 6,
+    "dispersion": 200,
+    "durability": 10,
+    "clip_size": 1,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "arrow": 1
+        }
+      }
+    ],
+    "reload": 600
+  },
+  {
+    "id": "kawaii_shelia_off",
+    "type": "GENERIC",
+    "symbol": "(",
+    "color": "yellow",
+    "name": {
+      "str": "特制长弓-谢莉亚 （刀形态）"
+    },
+    "description": "这是一个复杂的变型武器，可以变型为一个刀刃型的近战武器，也可以变型为一把强大的弓。这是世界著名女仆时尚品牌Alice&Maria推出的[可爱·战斗]系列时尚防护装备的首次公开亮相。事实证明，这种武器非常理想，因为它可以在远距离和近距离战斗中按照需求切换成适合与敌人交战的武器。然而，由于其过于复杂的设计使得它的价格极为昂贵, 不适合大众市场，最终得到了一个“Nighmarish Shelia”的绰号，并使其设计师破产了。",
+    "price": "99 USD",
+    "material": [
+      "kawaii_amsteel"
+    ],
+    "flags": [
+      "BELTED",
+      "FANCY"
+    ],
+    "techniques": [
+      "WBLOCK_2",
+      "DEF_DISARM"
+    ],
+    "min_strength": 99,
+    "weight": "250 g",
+    "volume": "500 ml",
+    "longest_side": "100 cm",
+    "bashing": 15,
+    "cutting": 35,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "arrow": 1
+        }
+      }
+    ],
+    "to_hit": 5,
+    "weapon_category": [
+      "MEDIUM_SWORDS",
+      "FENCING_WEAPONRY"
+    ],
+    "gun_data": {
+      "skill": "archery",
+      "ammo": [
+        "arrow"
+      ],
+      "ranged_damage": {
+        "damage_type": "stab",
+        "amount": -12
+      },
+      "range": 0,
+      "clip_size": 1,
+      "valid_mod_locations": [
+        [
+          "underbarrel",
+          1
+        ],
+        [
+          "sights",
+          1
+        ],
+        [
+          "accessories",
+          2
+        ],
+        [
+          "limbs",
+          1
+        ],
+        [
+          "string",
+          1
+        ],
+        [
+          "riser",
+          1
+        ],
+        [
+          "stabilizer",
+          1
+        ],
+        [
+          "dampening",
+          1
+        ]
+      ]
+    },
+    "use_action": {
+      "ammo_scale": 0,
+      "type": "transform",
+      "msg": "谢莉亚展开成弓形态。",
+      "target": "kawaii_shelia_on",
+      "active": false,
+      "moves": 200,
+      "menu_text": "变换武器"
+    }
+  },
+  {
+    "id": "kawaii_shelia_on",
+    "type": "GUN",
+    "symbol": "(",
+    "color": "yellow",
+    "name": {
+      "str": "特制长弓-谢莉亚 （弓形态）"
+    },
+    "description": "这是一个复杂的变型武器，可以变型为一个刀刃型的近战武器，也可以变型为一把强大的弓。这是世界著名女仆时尚品牌Alice&Maria推出的[可爱·战斗]系列时尚防护装备的首次公开亮相。事实证明，这种武器非常理想，因为它可以在远距离和近距离战斗中按照需求切换成适合与敌人交战的武器。然而，由于其过于复杂的设计使得它的价格极为昂贵, 不适合大众市场，最终得到了一个“Nighmarish Shelia”的绰号，并使其设计师破产了。",
+    "price": "99 USD",
+    "material": [
+      "kawaii_amsteel"
+    ],
+    "flags": [
+      "FIRE_TWOHAND",
+      "STR_DRAW",
+      "RELOAD_AND_SHOOT",
+      "PRIMITIVE_RANGED_WEAPON",
+      "BELTED",
+      "SHEATH_BOW",
+      "WATER_FRIENDLY",
+      "WATERPROOF_GUN",
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES"
+    ],
+    "reload_noise_volume": 3,
+    "loudness": 8,
+    "skill": "archery",
+    "min_strength": 5,
+    "ammo": [
+      "arrow"
+    ],
+    "weight": "250 g",
+    "volume": "1750 ml",
+    "longest_side": "180 cm",
+    "bashing": 15,
+    "armor_data": {
+      "armor": [
+        {
+          "material": [
+            {
+              "type": "kawaii_amsteel",
+              "covered_by_mat": 100,
+              "thickness": 1
+            }
+          ],
+          "encumbrance": 20,
+          "coverage": 5,
+          "covers": [
+            "torso"
+          ],
+          "specifically_covers": [
+            "torso_hanging_back"
+          ]
+        }
+      ]
+    },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 8
+    },
+    "range": 18,
+    "dispersion": 650,
+    "durability": 10,
+    "clip_size": 1,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "arrow": 1
+        }
+      }
+    ],
+    "reload": 100,
+    "to_hit": 5,
+    "valid_mod_locations": [
+      [
+        "underbarrel",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "accessories",
+        2
+      ],
+      [
+        "limbs",
+        1
+      ],
+      [
+        "string",
+        1
+      ],
+      [
+        "riser",
+        1
+      ],
+      [
+        "stabilizer",
+        1
+      ],
+      [
+        "dampening",
+        1
+      ]
+    ],
+    "use_action": {
+      "ammo_scale": 0,
+      "type": "transform",
+      "msg": "谢莉亚折叠回刀形态。",
+      "target": "kawaii_shelia_off",
+      "active": false,
+      "moves": 200,
+      "menu_text": "变换武器"
+    }
+  },
+  {
+    "id": "kawaii_leila",
+    "type": "GUN",
+    "symbol": "(",
+    "color": "yellow",
+    "name": {
+      "str": "特制长弓-莱利娅"
+    },
+    "description": "一种优雅的特制长弓，两端饰有天使般的羽毛，由一个坚固的金属护手控制弓身。这是全球著名女仆时尚品牌Alice&Maria推出的时尚自卫工具[可爱格斗]系列中的第二款产品。这个产品所用的金属板的材料与它同时公布，预计将是下一代的合金，重量轻, 具有优秀的灵活性和耐用性，但成本太高，无法批量生产。因此这种武器限量发售。",
+    "price": "300 USD",
+    "material": [
+      "kawaii_amsteel"
+    ],
+    "flags": [
+      "FIRE_TWOHAND",
+      "STR_DRAW",
+      "RELOAD_AND_SHOOT",
+      "PRIMITIVE_RANGED_WEAPON",
+      "BELTED",
+      "SHEATH_BOW",
+      "WATER_FRIENDLY",
+      "WATERPROOF_GUN",
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES"
+    ],
+    "reload_noise_volume": 3,
+    "loudness": 8,
+    "skill": "archery",
+    "min_strength": 5,
+    "ammo": [
+      "arrow"
+    ],
+    "weight": "450 g",
+    "volume": "1500 ml",
+    "longest_side": "180 cm",
+    "bashing": 15,
+    "armor_data": {
+      "armor": [
+        {
+          "material": [
+            {
+              "type": "kawaii_amsteel",
+              "covered_by_mat": 100,
+              "thickness": 1
+            }
+          ],
+          "encumbrance": 20,
+          "coverage": 5,
+          "covers": [
+            "torso"
+          ],
+          "specifically_covers": [
+            "torso_hanging_back"
+          ]
+        }
+      ]
+    },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 12
+    },
+    "range": 20,
+    "dispersion": 850,
+    "durability": 10,
+    "clip_size": 1,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "arrow": 1
+        }
+      }
+    ],
+    "reload": 120,
+    "to_hit": 3,
+    "valid_mod_locations": [
+      [
+        "underbarrel",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "accessories",
+        2
+      ],
+      [
+        "limbs",
+        1
+      ],
+      [
+        "string",
+        1
+      ],
+      [
+        "riser",
+        1
+      ],
+      [
+        "stabilizer",
+        1
+      ],
+      [
+        "dampening",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "kawaii_daikyu",
+    "type": "GUN",
+    "symbol": "(",
+    "color": "yellow",
+    "name": {
+      "str": "日式大弓"
+    },
+    "description": "大弓是一种日本传统的长弓。这是一种很难掌握的复杂武器，但是其威力足够穿透哪怕是最厚重的盔甲。",
+    "price": "500 USD",
+    "material": [
+      "wood"
+    ],
+    "flags": [
+      "FIRE_TWOHAND",
+      "STR_DRAW",
+      "RELOAD_AND_SHOOT",
+      "PRIMITIVE_RANGED_WEAPON",
+      "BELTED",
+      "SHEATH_BOW",
+      "WATER_FRIENDLY",
+      "WATERPROOF_GUN",
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES"
+    ],
+    "reload_noise_volume": 3,
+    "loudness": 8,
+    "skill": "archery",
+    "min_strength": 7,
+    "ammo": [
+      "arrow"
+    ],
+    "weight": "950 g",
+    "volume": "4500 ml",
+    "longest_side": "220 cm",
+    "bashing": 10,
+    "to_hit": 3,
+    "armor_data": {
+      "armor": [
+        {
+          "material": [
+            {
+              "type": "wood",
+              "covered_by_mat": 100,
+              "thickness": 1
+            }
+          ],
+          "encumbrance": 20,
+          "coverage": 5,
+          "covers": [
+            "torso"
+          ],
+          "specifically_covers": [
+            "torso_hanging_back"
+          ]
+        }
+      ]
+    },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 11,
+      "armor_penetration": 2
+    },
+    "range": 25,
+    "dispersion": 1250,
+    "sight_dispersion": 3000,
+    "durability": 10,
+    "clip_size": 1,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "arrow": 1
+        }
+      }
+    ],
+    "reload": 500
+  },
+  {
+    "id": "kawaii_glass_bow",
+    "type": "GUN",
+    "symbol": "(",
+    "color": "yellow",
+    "name": {
+      "str": "玻璃弓"
+    },
+    "description": "一种半透明的玻璃弓，它的结构中整合了碳纳米管素材。",
+    "price": "500 USD",
+    "material": [
+      "kawaii_glass",
+      "kevlar"
+    ],
+    "flags": [
+      "FIRE_TWOHAND",
+      "STR_DRAW",
+      "RELOAD_AND_SHOOT",
+      "PRIMITIVE_RANGED_WEAPON",
+      "BELTED",
+      "SHEATH_BOW",
+      "WATER_FRIENDLY",
+      "WATERPROOF_GUN",
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES"
+    ],
+    "reload_noise_volume": 3,
+    "loudness": 8,
+    "skill": "archery",
+    "min_strength": 3,
+    "ammo": [
+      "arrow"
+    ],
+    "weight": "1200 g",
+    "volume": "2500 ml",
+    "longest_side": "150 cm",
+    "bashing": 1,
+    "to_hit": 1,
+    "armor_data": {
+      "armor": [
+        {
+          "material": [
+            {
+              "type": "kawaii_glass",
+              "covered_by_mat": 100,
+              "thickness": 1
+            },
+            {
+              "type": "kevlar",
+              "covered_by_mat": 100,
+              "thickness": 1
+            }
+          ],
+          "encumbrance": 20,
+          "coverage": 10,
+          "covers": [
+            "torso"
+          ],
+          "specifically_covers": [
+            "torso_hanging_back"
+          ]
+        }
+      ]
+    },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 11
+    },
+    "range": 15,
+    "dispersion": 850,
+    "durability": 1,
+    "clip_size": 1,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "arrow": 1
+        }
+      }
+    ],
+    "reload": 100,
+    "valid_mod_locations": [
+      [
+        "underbarrel",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "accessories",
+        2
+      ],
+      [
+        "limbs",
+        1
+      ],
+      [
+        "string",
+        1
+      ],
+      [
+        "riser",
+        1
+      ],
+      [
+        "stabilizer",
+        1
+      ],
+      [
+        "dampening",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "kawaii_rita_and_rosa",
+    "type": "GENERIC",
+    "symbol": "/",
+    "color": "light_gray",
+    "name": {
+      "str": "剑盾-丽塔与罗莎 （防御模式）"
+    },
+    "description": "由引领世界的女仆时尚品牌Alice&Maria设计的一套剑和盾，由特制的高级合金制成。“丽塔”剑拥有着极长的刀身，可以让攻击范围扩大，但仍然保持着单手武器的轻便。“罗莎”盾则非常坚固，但重量很轻。防御力与钢铁相当，但重量足够轻, 甚至不会妨碍移动。",
+    "price": "1000 USD",
+    "material": [
+      "kawaii_amsteel"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "REACH_ATTACK",
+      "NONCONDUCTIVE"
+    ],
+    "techniques": [
+      "WBLOCK_2",
+      "RAPID"
+    ],
+    "weight": "1000 g",
+    "volume": "3 L",
+    "longest_side": "120 cm",
+    "bashing": 10,
+    "cutting": 35,
+    "to_hit": 1,
+    "weapon_category": [
+      "LONG_SWORDS",
+      "FENCING_WEAPONRY"
+    ],
+    "use_action": {
+      "type": "transform",
+      "msg": "你收起了罗莎藏起来，专注于攻击",
+      "target": "kawaii_rita_and_rosa_off",
+      "active": false,
+      "moves": 200,
+      "menu_text": "切换到攻击模式"
+    }
+  },
+  {
+    "id": "kawaii_rita_and_rosa_off",
+    "type": "GENERIC",
+    "symbol": "/",
+    "color": "light_gray",
+    "name": {
+      "str": "剑盾-丽塔与罗莎 （攻击模式）"
+    },
+    "description": "由引领世界的女仆时尚品牌Alice&Maria设计的一套剑和盾，由特制的高级合金制成。“丽塔”剑拥有着极长的刀身，可以让攻击范围扩大，但仍然保持着单手武器的轻便。“罗莎”盾则非常坚固，但重量很轻。防御力与钢铁相当，但重量足够轻, 甚至不会妨碍移动。",
+    "price": "1000 USD",
+    "material": [
+      "kawaii_amsteel"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "REACH_ATTACK",
+      "NONCONDUCTIVE"
+    ],
+    "techniques": [
+      "WIDE",
+      "SWEEP"
+    ],
+    "weight": "1000 g",
+    "volume": "3 L",
+    "longest_side": "120 cm",
+    "bashing": 10,
+    "cutting": 40,
+    "to_hit": 3,
+    "weapon_category": [
+      "LONG_SWORDS",
+      "FENCING_WEAPONRY"
+    ],
+    "use_action": {
+      "type": "transform",
+      "msg": "你装备罗莎，集中精力防守",
+      "target": "kawaii_rita_and_rosa",
+      "active": false,
+      "moves": 200,
+      "menu_text": "切换到防御模式"
+    }
+  },
+  {
+    "id": "kawaii_crystal_td",
+    "type": "GENERIC",
+    "symbol": "/",
+    "color": "light_gray",
+    "name": {
+      "str": "可爱双晶剑（对剑形态）"
+    },
+    "description": "这是一对透明而又光彩夺目的短剑",
+    "price": "1000 USD",
+    "material": [
+      "kawaii_glass"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "NONCONDUCTIVE"
+    ],
+    "techniques": [
+      "WBLOCK_2",
+      "RAPID"
+    ],
+    "weight": "1200 g",
+    "volume": "3500 ml",
+    "longest_side": "60 cm",
+    "bashing": 2,
+    "cutting": 35,
+    "to_hit": 3,
+    "weapon_category": [
+      "KNIVES"
+    ],
+    "use_action": {
+      "type": "transform",
+      "msg": "你把两个刀片连接在一起，形成一个长柄武器 。",
+      "target": "kawaii_crystal_tr",
+      "active": false,
+      "moves": 200,
+      "menu_text": "切换到长剑形态"
+    }
+  },
+  {
+    "id": "kawaii_crystal_tr",
+    "type": "GENERIC",
+    "symbol": "/",
+    "color": "light_gray",
+    "name": {
+      "str": "可爱双晶剑（长剑形态）"
+    },
+    "description": "一把两头剑，由两把漂亮的水晶剑组成，剑柄处连在一起。",
+    "price": "1000 USD",
+    "material": [
+      "kawaii_glass"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "REACH_ATTACK",
+      "NONCONDUCTIVE"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "IMPALE"
+    ],
+    "weight": "1200 g",
+    "volume": "3500 ml",
+    "longest_side": "120 cm",
+    "bashing": 5,
+    "cutting": 25,
+    "to_hit": 3,
+    "weapon_category": [
+      "POLEARMS",
+      "SPEARS"
+    ],
+    "use_action": {
+      "type": "transform",
+      "msg": "你把长柄武器分成两把刀",
+      "target": "kawaii_crystal_td",
+      "active": false,
+      "moves": 200,
+      "menu_text": "切换到对剑形态"
+    }
+  },
+  {
+    "id": "kawaii_crystal_tr_prot",
+    "type": "GENERIC",
+    "symbol": "/",
+    "color": "light_gray",
+    "name": {
+      "str": "可爱双晶剑（原型）"
+    },
+    "description": "一个两端有着美丽的水晶刀片的剑，不过它看起来很易碎。",
+    "price": 100,
+    "material": [
+      "glass"
+    ],
+    "flags": [
+      "REACH_ATTACK",
+      "NONCONDUCTIVE"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "IMPALE"
+    ],
+    "weight": "1200 g",
+    "volume": "3500 ml",
+    "longest_side": "120 cm",
+    "bashing": 15,
+    "cutting": 100,
+    "to_hit": 3,
+    "weapon_category": [
+      "POLEARMS",
+      "SPEARS"
+    ]
+  },
+  {
+    "id": "kawaii_customspear_v1",
+    "type": "GENERIC",
+    "symbol": "/",
+    "color": "light_gray",
+    "name": {
+      "str": "定制长矛 （Ver.1）"
+    },
+    "description": "一把生锈的铁制矛。尽管价格便宜，它仍然能让你与丧尸保持距离。",
+    "price": "20 USD",
+    "material": [
+      "steel"
+    ],
+    "flags": [
+      "SPEAR",
+      "REACH_ATTACK",
+      "SHEATH_SPEAR"
+    ],
+    "weight": "1000 g",
+    "volume": "1500 ml",
+    "bashing": 5,
+    "cutting": 9,
+    "weapon_category": [
+      "POLEARMS",
+      "SPEARS"
+    ]
+  },
+  {
+    "id": "kawaii_customspear_v2",
+    "type": "GENERIC",
+    "symbol": "/",
+    "color": "light_gray",
+    "name": {
+      "str": "定制长矛 （Ver.2）"
+    },
+    "description": "改进版的定制长矛（Ver.1）。这是一个实用的，易操作的武器，长矛的锈迹已经用一块玻璃磨掉了, 并且还进行了仔细的抛光。此外，它的握把也得到了加强，更加耐用。",
+    "price": "50 USD",
+    "material": [
+      "steel"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "SPEAR",
+      "REACH_ATTACK",
+      "NONCONDUCTIVE",
+      "SHEATH_SPEAR"
+    ],
+    "techniques": [
+      "WBLOCK_1"
+    ],
+    "weight": "1100 g",
+    "volume": "1500 ml",
+    "bashing": 5,
+    "cutting": 19,
+    "weapon_category": [
+      "POLEARMS",
+      "SPEARS"
+    ]
+  },
+  {
+    "id": "kawaii_customspear_v3",
+    "type": "GENERIC",
+    "symbol": "/",
+    "color": "light_gray",
+    "name": {
+      "str": "定制长矛 （Ver.3）"
+    },
+    "description": "改进版的定制长矛 （Ver.2）。矛头被进一步锐化和强化，攻击范围和杀伤力都得到了提升。一个改进的护手让它在近距离战斗中更有效率。上面还系着一条蓝色的丝带。",
+    "price": "100 USD",
+    "material": [
+      "steel"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "SPEAR",
+      "REACH_ATTACK",
+      "NONCONDUCTIVE",
+      "SHEATH_SPEAR",
+      "REACH3"
+    ],
+    "techniques": [
+      "WBLOCK_2",
+      "IMPALE"
+    ],
+    "weight": "1400 g",
+    "volume": "2 L",
+    "bashing": 10,
+    "cutting": 35,
+    "to_hit": 3,
+    "weapon_category": [
+      "POLEARMS",
+      "SPEARS"
+    ]
+  },
+  {
+    "id": "kawaii_death_scythe",
+    "type": "GENERIC",
+    "symbol": "/",
+    "color": "light_gray",
+    "name": {
+      "str": "死亡镰刀"
+    },
+    "description": "一把大镰刀，据传是死神（shinigami）曾经用过的。",
+    "price": "1000 USD",
+    "material": [
+      "kawaii_amsteel"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "REACH_ATTACK",
+      "REACH3",
+      "NONCONDUCTIVE"
+    ],
+    "techniques": [
+      "WIDE",
+      "SWEEP"
+    ],
+    "weight": "2000 g",
+    "volume": "4 L",
+    "longest_side": "200 cm",
+    "bashing": 3,
+    "cutting": 45,
+    "to_hit": -1,
+    "weapon_category": [
+      "BLADED_FARMING",
+      "HOOKING_WEAPONRY",
+      "POLEARMS"
+    ]
+  },
+  {
+    "id": "kawaii_knife_steak_twin",
+    "type": "TOOL",
+    "name": {
+      "str": "战斗厨刀"
+    },
+    "description": "这不是刀+叉的组合，而是一对刀的组合。这也许不是餐桌上的礼仪，但却是战斗中的礼仪。",
+    "weight": "800 g",
+    "volume": "500 ml",
+    "longest_side": "35 cm",
+    "price": 500,
+    "bashing": 2,
+    "cutting": 14,
+    "material": [
+      "steel"
+    ],
+    "symbol": ";",
+    "color": "light_gray",
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "CUT_FINE",
+        1
+      ],
+      [
+        "BUTCHER",
+        20
+      ]
+    ],
+    "flags": [
+      "STAB",
+      "SHEATH_KNIFE"
+    ],
+    "techniques": [
+      "RAPID"
+    ],
+    "weapon_category": [
+      "KNIVES"
+    ]
+  },
+  {
+    "id": "kawaii_sword_steel",
+    "type": "GENERIC",
+    "symbol": "!",
+    "color": "light_gray",
+    "name": {
+      "str": "简易短剑"
+    },
+    "description": "一把高质量的手工短剑。如果没有合适的锻造工具，这大概是能制作的最好的短剑了。",
+    "material": [
+      "steel"
+    ],
+    "volume": "2450 ml",
+    "weight": "1044 g",
+    "longest_side": "60 cm",
+    "price_postapoc": 250,
+    "bashing": 6,
+    "cutting": 8,
+    "flags": [
+      "SHEATH_SWORD"
+    ],
+    "techniques": [
+      "WBLOCK_1"
+    ],
+    "weapon_category": [
+      "SHORT_SWORDS"
+    ]
+  },
+  {
+    "id": "kawaii_crowbar_lance",
+    "type": "TOOL",
+    "name": {
+      "str": "简易特制长矛"
+    },
+    "description": "由爱丽丝和玛丽亚（A&M）特制的高级合金制作成的多个撬棍组成的长矛。简陋但实用",
+    "weight": "1500 g",
+    "volume": "1500 ml",
+    "longest_side": "165 cm",
+    "price": "12 USD",
+    "bashing": 15,
+    "cutting": 16,
+    "material": [
+      "kawaii_amsteel"
+    ],
+    "symbol": ";",
+    "color": "dark_gray",
+    "qualities": [
+      [
+        "PRY",
+        4
+      ],
+      [
+        "HAMMER",
+        2
+      ],
+      [
+        "DIG",
+        1
+      ]
+    ],
+    "use_action": "CROWBAR",
+    "techniques": [
+      "WBLOCK_1"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "SPEAR",
+      "REACH_ATTACK",
+      "NONCONDUCTIVE",
+      "SHEATH_SPEAR"
+    ],
+    "weapon_category": [
+      "POLEARMS",
+      "SPEARS"
+    ]
+  }
+]

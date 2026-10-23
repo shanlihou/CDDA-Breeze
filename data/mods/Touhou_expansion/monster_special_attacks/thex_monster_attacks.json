@@ -1,0 +1,694 @@
+[
+  {
+    "id": "bite_4d3",
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "cooldown": 1,
+    "move_cost": 100,
+    "damage_max_instance": [
+      {
+        "damage_type": "stab",
+        "amount": 20,
+        "armor_penetration": 3
+      }
+    ],
+    "min_mul": 0.2,
+    "max_mul": 0.6,
+    "hitsize_min": 1,
+    "effects": [
+      {
+        "id": "bleed",
+        "duration": 600,
+        "affect_hit_bp": true
+      }
+    ],
+    "hit_dmg_u": "%1$s 用它巨大的嘴咬碎了你的 %2$s！",
+    "hit_dmg_npc": "%1$s 用它巨大的嘴咬碎了 <npcname> 的 %2$s！",
+    "miss_msg_u": "%s 试图咬你的 %2$s！但你躲开了！",
+    "miss_msg_npc": "%s 试图咬 <npcname> 的 %2$s，但对方躲开了！",
+    "no_dmg_msg_u": "%1$s 咬向你的 %2$s，但你的护甲抵挡住了！",
+    "no_dmg_msg_npc": "%1$s 咬向 <npcname>，但护甲撑住了！",
+    "dodgeable": true,
+    "blockable": true,
+    "//": "Bite for Pristerognathus"
+  },
+  {
+    "id": "bite_5d3",
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "cooldown": 1,
+    "move_cost": 100,
+    "damage_max_instance": [
+      {
+        "damage_type": "stab",
+        "amount": 20,
+        "armor_penetration": 3
+      }
+    ],
+    "min_mul": 0.25,
+    "max_mul": 0.75,
+    "hitsize_min": 1,
+    "effects": [
+      {
+        "id": "bleed",
+        "duration": 600,
+        "affect_hit_bp": true
+      }
+    ],
+    "hit_dmg_u": "%1$s 用它巨大的嘴咬碎了你的 %2$s！",
+    "hit_dmg_npc": "%1$s 用它巨大的嘴咬碎了 <npcname> 的 %2$s！",
+    "miss_msg_u": "%s 试图咬你的 %2$s！但你躲开了！",
+    "miss_msg_npc": "%s 试图咬 <npcname> 的 %2$s，但对方躲开了！",
+    "no_dmg_msg_u": "%1$s 咬向你的 %2$s，但你的护甲抵挡住了！",
+    "no_dmg_msg_npc": "%1$s 咬向 <npcname>，但护甲撑住了！",
+    "dodgeable": true,
+    "blockable": true,
+    "//": "Bite for Pristerognathus"
+  },
+  {
+    "id": "bite_6d3",
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "cooldown": 1,
+    "move_cost": 100,
+    "damage_max_instance": [
+      {
+        "damage_type": "stab",
+        "amount": 20,
+        "armor_penetration": 3
+      }
+    ],
+    "min_mul": 0.3,
+    "max_mul": 0.9,
+    "hitsize_min": 1,
+    "effects": [
+      {
+        "id": "bleed",
+        "duration": 2400,
+        "affect_hit_bp": true
+      }
+    ],
+    "hit_dmg_u": "%1$s 用它巨大的嘴咬碎了你的 %2$s！",
+    "hit_dmg_npc": "%1$s 用它巨大的嘴咬碎了 <npcname> 的 %2$s！",
+    "miss_msg_u": "%s 试图咬你的 %2$s！但你躲开了！",
+    "miss_msg_npc": "%s 试图咬 <npcname> 的 %2$s，但对方躲开了！",
+    "no_dmg_msg_u": "%1$s 咬向你的 %2$s，但你的护甲抵挡住了！",
+    "no_dmg_msg_npc": "%1$s 咬向 <npcname>，但护甲撑住了！",
+    "dodgeable": true,
+    "blockable": true,
+    "//": "Bite for Inostrancevia. This actually should either cripple or kill, given the size of those things, but that's not kind so it just does slightly more damage than the dire wolf's bite"
+  },
+  {
+    "id": "bite_neck_6d4",
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "cooldown": 1,
+    "move_cost": 115,
+    "damage_max_instance": [
+      {
+        "damage_type": "stab",
+        "amount": 50,
+        "armor_penetration": 4
+      }
+    ],
+    "body_parts": [
+      [
+        "head",
+        10
+      ]
+    ],
+    "min_mul": 0.12,
+    "max_mul": 0.48,
+    "hitsize_min": 1,
+    "effects": [
+      {
+        "id": "bleed",
+        "duration": 600,
+        "affect_hit_bp": true
+      }
+    ],
+    "hit_dmg_u": "%1$s 用它巨大的嘴咬碎了你的 %2$s！",
+    "hit_dmg_npc": "%1$s 用它巨大的嘴咬碎了 <npcname> 的 %2$s！",
+    "miss_msg_u": "%s 试图咬你的 %2$s！但你躲开了！",
+    "miss_msg_npc": "%s 试图咬 <npcname> 的 %2$s，但对方躲开了！",
+    "no_dmg_msg_u": "%1$s 咬向你的 %2$s，但你的护甲抵挡住了！",
+    "no_dmg_msg_npc": "%1$s 咬向 <npcname>，但护甲撑住了！",
+    "dodgeable": true,
+    "blockable": false,
+    "//": "Neck bite from a huge thing, like the Beast of Gévaudan. Realistically should kill humans, but that's not really fair I guess"
+  },
+  {
+    "id": "charge_8d3",
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "cooldown": 1,
+    "move_cost": 100,
+    "damage_max_instance": [
+      {
+        "damage_type": "stab",
+        "amount": 50,
+        "armor_penetration": 2
+      }
+    ],
+    "min_mul": 0.16,
+    "max_mul": 0.48,
+    "range": 4,
+    "hitsize_min": 4,
+    "hit_dmg_u": "%1$s 向你冲锋！",
+    "hit_dmg_npc": "%1$s 向 <npcname> 冲锋！",
+    "miss_msg_u": "%s 试图向你冲锋！但没撞到！",
+    "miss_msg_npc": "%s 试图向 <npcname> 冲锋，但没撞到！",
+    "no_dmg_msg_u": "%1$s 向你冲锋，但你的护甲保护了你！",
+    "no_dmg_msg_npc": "%1$s 向 <npcname> 冲锋，但对方的护甲保护了对方！",
+    "dodgeable": true,
+    "blockable": true
+  },
+  {
+    "id": "claw_6d3",
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "cooldown": 1,
+    "move_cost": 200,
+    "damage_max_instance": [
+      {
+        "damage_type": "cut",
+        "amount": 50,
+        "armor_penetration": 3
+      }
+    ],
+    "min_mul": 0.12,
+    "max_mul": 0.36,
+    "range": 2,
+    "hitsize_min": 1,
+    "hit_dmg_u": "%1$s 抓向你！",
+    "hit_dmg_npc": "%1$s 抓向 <npcname>！",
+    "miss_msg_u": "%s 试图抓你！但没抓到！",
+    "miss_msg_npc": "%s 试图抓 <npcname>，但没抓到！",
+    "no_dmg_msg_u": "%1$s 抓向你，但你的护甲抵挡了伤害！",
+    "no_dmg_msg_npc": "%1$s 抓向 <npcname>，但对方的护甲抵挡了伤害！",
+    "dodgeable": true,
+    "blockable": true
+  },
+  {
+    "id": "headbutt_6d2",
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "cooldown": 1,
+    "move_cost": 100,
+    "damage_max_instance": [
+      {
+        "damage_type": "bash",
+        "amount": 20,
+        "armor_penetration": 2
+      }
+    ],
+    "min_mul": 0.3,
+    "max_mul": 0.6,
+    "hitsize_min": 1,
+    "range": 2,
+    "hit_dmg_u": "%1$s 用头撞你的 %2$s！",
+    "hit_dmg_npc": "%1$s 用头撞 <npcname> 的 %2$s！",
+    "miss_msg_u": "%s 试图用头撞你的 %2$s！但没撞到！",
+    "miss_msg_npc": "%s 试图用头撞 <npcname> 的 %2$s，但没撞到！",
+    "no_dmg_msg_u": "%1$s 用头撞向你的 %2$s，但力道不够！",
+    "no_dmg_msg_npc": "%1$s 用头撞向 <npcname>，但力道不够！",
+    "dodgeable": true,
+    "blockable": true,
+    "//": "Headbutt for Lystrosaurus"
+  },
+  {
+    "id": "headbutt_5d5",
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "cooldown": 1,
+    "move_cost": 100,
+    "damage_max_instance": [
+      {
+        "damage_type": "bash",
+        "amount": 50,
+        "armor_penetration": 5
+      }
+    ],
+    "min_mul": 0.1,
+    "max_mul": 0.5,
+    "hitsize_min": 1,
+    "range": 3,
+    "hit_dmg_u": "%1$s 用头撞你的 %2$s！",
+    "hit_dmg_npc": "%1$s 用头撞 <npcname> 的 %2$s！",
+    "miss_msg_u": "%s 试图用头撞你的 %2$s！但没撞到！",
+    "miss_msg_npc": "%s 试图用头撞 <npcname> 的 %2$s，但没撞到！",
+    "no_dmg_msg_u": "%1$s 用头撞向你的 %2$s，但力道不够！",
+    "no_dmg_msg_npc": "%1$s 用头撞向 <npcname>，但力道不够！",
+    "dodgeable": true,
+    "blockable": true,
+    "//": "Headbutt for Scutosaurus"
+  },
+  {
+    "id": "horn_7d3",
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "cooldown": 1,
+    "move_cost": 200,
+    "damage_max_instance": [
+      {
+        "damage_type": "stab",
+        "amount": 50,
+        "armor_penetration": 3.5
+      }
+    ],
+    "min_mul": 0.14,
+    "max_mul": 0.42,
+    "range": 2,
+    "hitsize_min": 1,
+    "hit_dmg_u": "%1$s 用角顶你的 %2$s！",
+    "hit_dmg_npc": "%1$s 用角顶 <npcname> 的 %2$s！",
+    "miss_msg_u": "%s 试图用角顶你的 %2$s！但没顶到！",
+    "miss_msg_npc": "%s 试图用角顶 <npcname> 的 %2$s，但没顶到！",
+    "no_dmg_msg_u": "%1$s 用角顶向你的 %2$s，但力道不够！",
+    "no_dmg_msg_npc": "%1$s 用角顶向 <npcname>，但力道不够！",
+    "dodgeable": true,
+    "blockable": true
+  },
+  {
+    "id": "heart_strike",
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "cooldown": 11,
+    "damage_max_instance": [
+      {
+        "damage_type": "cut",
+        "amount": 12,
+        "armor_penetration": 4
+      }
+    ],
+    "body_parts": [
+      [
+        "torso",
+        10
+      ]
+    ],
+    "move_cost": 100,
+    "hit_dmg_u": "%1$s 集中攻击你的躯干！",
+    "hit_dmg_npc": "%1$s 攻击 <npcname> 的上半身！",
+    "miss_msg_u": "%s 集中攻击你的躯干！你躲开了！",
+    "miss_msg_npc": "%s 攻击 <npcname> 的上半身，但对方躲开了！",
+    "no_dmg_msg_u": "%1$s 攻击你的躯干，但你的护甲保护了你！",
+    "no_dmg_msg_npc": "%1$s 攻击 <npcname>，但力道不够！",
+    "dodgeable": true,
+    "blockable": true
+  },
+  {
+    "id": "hug_11d3",
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "accuracy": 3,
+    "cooldown": 1,
+    "move_cost": 200,
+    "damage_max_instance": [
+      {
+        "damage_type": "bash",
+        "amount": 33
+      }
+    ],
+    "min_mul": 0.66,
+    "max_mul": 1,
+    "hitsize_min": 5,
+    "hit_dmg_u": "%1$s 熊抱了你, 过程中对你造成了重创!",
+    "hit_dmg_npc": "%1$s 熊抱<npcname>, 他/她被重创了!",
+    "no_dmg_msg_u": "%1$s 熊抱了你，但你身上的装甲抵挡了这次攻击!",
+    "no_dmg_msg_npc": "%1$s 熊抱了 <npcname>, 但他/她身上的装甲抵挡了这次攻击!",
+    "miss_msg_u": "%s 尝试熊抱你,但是你躲开了!",
+    "miss_msg_npc": "%s 尝试熊抱 <npcname>, 但是被躲开了!",
+    "dodgeable": true,
+    "blockable": true
+  },
+  {
+    "id": "leg_gore_4d2",
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "cooldown": 1,
+    "move_cost": 85,
+    "damage_max_instance": [
+      {
+        "damage_type": "stab",
+        "amount": 20,
+        "armor_penetration": 2
+      }
+    ],
+    "attack_upper": false,
+    "min_mul": 0.2,
+    "max_mul": 0.4,
+    "effects": [
+      {
+        "id": "bleed",
+        "duration": 300,
+        "affect_hit_bp": true
+      }
+    ],
+    "hit_dmg_u": "%1$s 用鹿角刺你的 %2$s！",
+    "hit_dmg_npc": "%1$s 用鹿角刺 <npcname> 的 %2$s！",
+    "miss_msg_u": "%s 试图用角刺你的 %2$s！你躲开了！",
+    "miss_msg_npc": "%s 试图用角刺 <npcname> 的 %2$s，但对方躲开了！",
+    "no_dmg_msg_u": "%1$s 用头撞向你的 %2$s，但你的护甲保护了你！",
+    "no_dmg_msg_npc": "%1$s 用头撞向 <npcname>，但护甲保护了对方！",
+    "dodgeable": true,
+    "blockable": true
+  },
+  {
+    "id": "oni_smash_7d4",
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "cooldown": 1,
+    "move_cost": 100,
+    "damage_max_instance": [
+      {
+        "damage_type": "bash",
+        "amount": 50,
+        "armor_penetration": 5
+      }
+    ],
+    "min_mul": 0.14,
+    "max_mul": 0.56,
+    "body_parts": [
+      [
+        "arm_l",
+        20
+      ],
+      [
+        "arm_r",
+        20
+      ],
+      [
+        "foot_l",
+        20
+      ],
+      [
+        "foot_r",
+        20
+      ],
+      [
+        "hand_l",
+        20
+      ],
+      [
+        "hand_r",
+        20
+      ],
+      [
+        "head",
+        10
+      ],
+      [
+        "leg_l",
+        20
+      ],
+      [
+        "leg_r",
+        20
+      ],
+      [
+        "torso",
+        15
+      ]
+    ],
+    "hit_dmg_u": "%1$s 猛击你的 %2$s！",
+    "hit_dmg_npc": "%1$s 猛击 <npcname> 的 %2$s！",
+    "miss_msg_u": "%1$s 试图猛击你，但你躲开了！",
+    "miss_msg_npc": "%1$s 试图猛击 <npcname>，但对方躲开了！",
+    "no_dmg_msg_u": "%1$s 击中你的 %2$s，但护甲撑住了！",
+    "no_dmg_msg_npc": "%1$s 击中 <npcname>，但对方的护甲撑住了！",
+    "dodgeable": true,
+    "blockable": true,
+    "//": "Oni SMASH for lesser oni"
+  },
+  {
+    "id": "oni_smash_9d4",
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "cooldown": 1,
+    "move_cost": 100,
+    "damage_max_instance": [
+      {
+        "damage_type": "bash",
+        "amount": 50,
+        "armor_penetration": 5
+      }
+    ],
+    "min_mul": 0.18,
+    "max_mul": 0.72,
+    "body_parts": [
+      [
+        "arm_l",
+        20
+      ],
+      [
+        "arm_r",
+        20
+      ],
+      [
+        "foot_l",
+        15
+      ],
+      [
+        "foot_r",
+        15
+      ],
+      [
+        "hand_l",
+        15
+      ],
+      [
+        "hand_r",
+        15
+      ],
+      [
+        "head",
+        20
+      ],
+      [
+        "leg_l",
+        11
+      ],
+      [
+        "leg_r",
+        11
+      ],
+      [
+        "torso",
+        25
+      ]
+    ],
+    "hit_dmg_u": "%1$s 猛击你的 %2$s！",
+    "hit_dmg_npc": "%1$s 猛击 <npcname> 的 %2$s！",
+    "miss_msg_u": "%1$s 试图猛击你，但你躲开了！",
+    "miss_msg_npc": "%1$s 试图猛击 <npcname>，但对方躲开了！",
+    "no_dmg_msg_u": "%1$s 击中你的 %2$s，但护甲撑住了！",
+    "no_dmg_msg_npc": "%1$s 击中 <npcname>，但对方的护甲撑住了！",
+    "dodgeable": true,
+    "blockable": true,
+    "//": "Oni SMASH for human-sized oni"
+  },
+  {
+    "id": "skinwalker_bite_9d2",
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "cooldown": 1,
+    "move_cost": 100,
+    "damage_max_instance": [
+      {
+        "damage_type": "stab",
+        "amount": 20,
+        "armor_penetration": 3
+      }
+    ],
+    "min_mul": 0.3,
+    "max_mul": 0.9,
+    "hitsize_min": 1,
+    "hit_dmg_u": "%1$s 用它的大嘴咬碎你的 %2$s！",
+    "hit_dmg_npc": "%1$s 用它的大嘴咬碎 <npcname> 的 %2$s！",
+    "miss_msg_u": "%s 试图咬你的 %2$s！你躲开了！",
+    "miss_msg_npc": "%s 试图咬 <npcname> 的 %2$s，但对方躲开了！",
+    "no_dmg_msg_u": "%1$s 咬向你的 %2$s，但你的护甲抵挡住了！",
+    "no_dmg_msg_npc": "%1$s 咬向 <npcname>，但护甲撑住了！",
+    "dodgeable": true,
+    "blockable": true
+  },
+  {
+    "id": "slash_base",
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "cooldown": 1,
+    "move_cost": 100,
+    "damage_max_instance": [
+      {
+        "damage_type": "cut",
+        "amount": 10,
+        "armor_penetration": 3
+      }
+    ],
+    "min_mul": 0.1,
+    "max_mul": 0.6,
+    "hitsize_min": 1,
+    "hitsize_max": 50,
+    "hit_dmg_u": "%1$s 砍向你的 %2$s！",
+    "hit_dmg_npc": "%1$s 砍向 <npcname>！",
+    "miss_msg_u": "%1$s 砍向你，但你躲开了！",
+    "miss_msg_npc": "%1$s 试图砍 <npcname>，但对方躲开了！",
+    "no_dmg_msg_u": "%1$s 砍向你的 %2$s，但未能穿透护甲。",
+    "no_dmg_msg_npc": "%1$s 试图砍 <npcname>，但力道不够！",
+    "dodgeable": true,
+    "blockable": true,
+    "//": "Base slash attack template, intended as replacement for default bash damage. 4 turn cooldown set arbitrarily, messages should be disabled the more spammable this is. hitsize_min 1 disables eyes and mouth from being targeted (use body_parts for specific targeting !!!). Arbitrary move_cost + damage + armorpen set + mul values set, these should be rechecked depending on the thing that uses the attack"
+  },
+  {
+    "id": "slash_2d3",
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "cooldown": 1,
+    "move_cost": 100,
+    "damage_max_instance": [
+      {
+        "damage_type": "cut",
+        "amount": 20,
+        "armor_penetration": 2
+      }
+    ],
+    "min_mul": 0.1,
+    "max_mul": 0.3,
+    "body_parts": [
+      [
+        "arm_l",
+        20
+      ],
+      [
+        "arm_r",
+        20
+      ],
+      [
+        "foot_l",
+        25
+      ],
+      [
+        "foot_r",
+        25
+      ],
+      [
+        "hand_l",
+        20
+      ],
+      [
+        "hand_r",
+        20
+      ],
+      [
+        "leg_l",
+        25
+      ],
+      [
+        "leg_r",
+        25
+      ],
+      [
+        "torso",
+        10
+      ],
+      [
+        "head",
+        10
+      ]
+    ],
+    "dodgeable": true,
+    "blockable": true,
+    "//": "Prioritizes lower limbs > arms + hands, torso and head because the thing using this jumps around"
+  },
+  {
+    "id": "slash_3d3",
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "cooldown": 1,
+    "move_cost": 100,
+    "damage_max_instance": [
+      {
+        "damage_type": "cut",
+        "amount": 20,
+        "armor_penetration": 3
+      }
+    ],
+    "min_mul": 0.15,
+    "max_mul": 0.45,
+    "body_parts": [
+      [
+        "arm_l",
+        15
+      ],
+      [
+        "arm_r",
+        15
+      ],
+      [
+        "foot_l",
+        25
+      ],
+      [
+        "foot_r",
+        25
+      ],
+      [
+        "hand_l",
+        20
+      ],
+      [
+        "hand_r",
+        20
+      ],
+      [
+        "leg_l",
+        25
+      ],
+      [
+        "leg_r",
+        25
+      ],
+      [
+        "torso",
+        10
+      ]
+    ],
+    "effects": [
+      {
+        "id": "bleed",
+        "duration": 400,
+        "affect_hit_bp": true
+      }
+    ],
+    "dodgeable": true,
+    "blockable": true,
+    "//": "Prioritizes lower limbs > hands > arms > torso, because the thing using this is more or less dog-sized. Should prioritize neck if you're down but how to do that"
+  },
+  {
+    "id": "smash_10d3",
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "accuracy": 5,
+    "cooldown": 1,
+    "move_cost": 200,
+    "damage_max_instance": [
+      {
+        "damage_type": "bash",
+        "amount": 30
+      }
+    ],
+    "min_mul": 0.66,
+    "max_mul": 1,
+    "hitsize_min": 4,
+    "throw_strength": 40,
+    "hit_dmg_u": "%1$s 拍到了你的 %2$s, 击退了你!",
+    "hit_dmg_npc": "%1$s 拍击<npcname>, 造成了击退!",
+    "no_dmg_msg_u": "%1$s 拍击你的 %2$s, 但是你接住了!",
+    "no_dmg_msg_npc": "%1$s 拍击 <npcname>, 但是被接住了!",
+    "miss_msg_u": "%s 尝试拍击你,但是你躲开了!",
+    "miss_msg_npc": "%s 尝试拍击<npcname>, 但是被躲开了!",
+    "dodgeable": true,
+    "blockable": true
+  }
+]

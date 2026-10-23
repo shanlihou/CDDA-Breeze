@@ -1,0 +1,47 @@
+[
+	{
+		"id": "hy_mobile_kitchen",
+		"type": "item_group",
+		"items": [
+			[ "hy_mobile_germination_box", 2 ],
+			[ "hy_mobile_adv_m_harvest_barley", 1 ],
+			[ "hy_mobile_adv_m_harvest_beans", 1 ],
+			[ "hy_mobile_adv_m_harvest_beebalm", 1 ],
+			[ "hy_mobile_adv_m_harvest_blackberries", 1 ],
+			[ "hy_mobile_adv_m_harvest_blueberries", 1 ],
+			[ "hy_mobile_adv_m_harvest_broccoli", 1 ],
+			[ "hy_mobile_adv_m_harvest_cabbage", 1 ],
+			[ "hy_mobile_adv_m_harvest_canolaseeds", 1 ],
+			[ "hy_mobile_adv_m_harvest_carrot", 1 ],
+			[ "hy_mobile_adv_m_harvest_celery", 1 ],
+			[ "hy_mobile_adv_m_harvest_cranberries", 1 ],
+			[ "hy_mobile_adv_m_harvest_cucumber", 1 ],
+			[ "hy_mobile_adv_m_harvest_elderberries", 1 ],
+			[ "hy_mobile_adv_m_harvest_garlic", 1 ],
+			[ "hy_mobile_adv_m_harvest_grapes", 1 ],
+			[ "hy_mobile_adv_m_harvest_huckleberries", 1 ],
+			[ "hy_mobile_adv_m_harvest_lettuce", 1 ],
+			[ "hy_mobile_adv_m_harvest_mulberries", 1 ],
+			[ "hy_mobile_adv_m_harvest_onion", 1 ],
+			[ "hy_mobile_adv_m_harvest_pepper", 1 ],
+			[ "hy_mobile_adv_m_harvest_potato", 1 ],
+			[ "hy_mobile_adv_m_harvest_pumpkin", 1 ],
+			[ "hy_mobile_adv_m_harvest_raspberries", 1 ],
+			[ "hy_mobile_adv_m_harvest_soybean", 1 ],
+			[ "hy_mobile_adv_m_harvest_strawberries", 1 ],
+			[ "hy_mobile_adv_m_harvest_sugarbeet", 1 ],
+			[ "hy_mobile_adv_m_harvest_tomato", 1 ],
+			[ "hy_mobile_adv_m_harvest_zucchini", 1 ]
+		]
+	},
+	{
+		"type": "item_group",
+		"id": "kitchen",
+		"ammo": 75,
+		"magazine": 100,
+		"subtype": "distribution",
+		"entries": [
+			{ "group": "hy_mobile_kitchen", "prob": 50 }
+		]
+	}
+]

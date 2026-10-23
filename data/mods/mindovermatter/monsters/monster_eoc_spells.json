@@ -1,0 +1,100 @@
+[
+  {
+    "id": "eater_drain_monster",
+    "type": "SPELL",
+    "name": "[Ψ]精华吸取",
+    "description": "噬灵者的吸取攻击。如果你拥有它，那是个bug。",
+    "valid_targets": [ "hostile" ],
+    "message": "",
+    "flags": [ "CONCENTRATE", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
+    "difficulty": 1,
+    "max_level": 20,
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_EATER_DRAIN",
+    "shape": "blast",
+    "min_range": 30
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_EATER_DRAIN",
+    "condition": { "compare_int": [ { "u_val": "mana" }, ">=", { "const": 150 } ] },
+    "effect": [
+      { "u_cast_spell": { "id": "eater_drain_mana" } },
+      { "u_message": "你感到一阵突如其来的空虚。", "type": "bad" }
+    ],
+    "false_effect": [
+      { "run_eocs": "EOC_EATER_DRAIN_2" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_EATER_DRAIN_2",
+    "condition": { "compare_int": [ { "u_val": "stamina" }, ">=", { "const": 200 } ] },
+    "effect": [
+      { "u_cast_spell": { "id": "eater_drain_stamina" } },
+      { "u_message": "有那么一瞬间，你感到筋疲力尽。", "type": "bad" }
+    ],
+    "false_effect": [
+      { "u_cast_spell": { "id": "eater_drain_health" } },
+      { "u_message": "你感到自己的生命在流逝！", "type": "bad" }
+    ]
+  },
+  {
+    "id": "eater_drain_mana",
+    "type": "SPELL",
+    "name": "[Ψ]噬灵者吸取法力",
+    "description": "噬灵者的法力吸取法术。如果你拥有它，那是个bug。",
+    "valid_targets": [ "self" ],
+    "flags": [ "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
+    "effect": "recover_energy",
+    "effect_str": "MANA",
+    "shape": "blast",
+    "max_level": 1,
+    "min_damage": -150,
+    "min_range": 30
+  },
+  {
+    "id": "eater_drain_stamina",
+    "type": "SPELL",
+    "name": "[Ψ]噬灵者吸取体力",
+    "description": "噬灵者的体力吸取法术。如果你拥有它，那是个bug。",
+    "valid_targets": [ "self" ],
+    "flags": [ "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
+    "effect": "recover_energy",
+    "effect_str": "STAMINA",
+    "extra_effects": [ { "id": "eater_drain_fatigue", "hit_self": false, "max_level": 3 } ],
+    "shape": "blast",
+    "max_level": 1,
+    "min_damage": -200,
+    "min_range": 30
+  },
+  {
+    "id": "eater_drain_fatigue",
+    "type": "SPELL",
+    "name": "[Ψ]噬灵者吸取疲劳",
+    "description": "噬灵者的疲劳吸取法术。如果你拥有它，那是个bug。",
+    "valid_targets": [ "self" ],
+    "flags": [ "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
+    "effect": "recover_energy",
+    "effect_str": "FATIGUE",
+    "shape": "blast",
+    "max_level": 1,
+    "min_damage": -2,
+    "min_range": 30
+  },
+  {
+    "id": "eater_drain_health",
+    "type": "SPELL",
+    "name": "[Ψ]噬灵者吸取生命",
+    "description": "噬灵者的生命吸取法术。如果你拥有它，那是个bug。",
+    "valid_targets": [ "self" ],
+    "flags": [ "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
+    "effect": "attack",
+    "shape": "blast",
+    "damage_type": "pure",
+    "max_level": 1,
+    "min_damage": 10,
+    "max_damage": 10,
+    "min_range": 30
+  }
+]

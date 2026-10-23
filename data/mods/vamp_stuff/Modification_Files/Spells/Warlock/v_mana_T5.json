@@ -1,0 +1,78 @@
+[
+  {
+    "id": "t5_mana_megamagic",
+    "type": "SPELL",
+    "name": {
+      "str": "超级魔术"
+    },
+    "description": "用毁灭性的亵渎魔法消灭所有敌人，在一个大圆锥体内造成巨大的<color_light_gray>点纯伤害</color>点。\n*25%的几率<color_yellow>精疲力竭</color>，耗尽你的耐力并在短时间内削弱自己。\n\n这是一个<color_red>第5层</color>法术。",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "effect": "attack",
+    "shape": "cone",
+    "extra_effects": [
+      {
+        "id": "t5_mana_megamagic_exhaust_maybe"
+      }
+    ],
+    "base_energy_cost": 100,
+    "energy_increment": 1250,
+    "energy_source": "MANA",
+    "spell_class": "VAMP_MANA_spellcaster",
+    "difficulty": 8,
+    "min_damage": 200,
+    "max_damage": 1000,
+    "damage_increment": 200,
+    "max_level": 5,
+    "min_range": 15,
+    "max_range": 15,
+    "range_increment": 2,
+    "min_aoe": 50,
+    "max_aoe": 50,
+    "aoe_increment": 10,
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "base_casting_time": 1250,
+    "damage_type": "pure"
+  },
+  {
+    "id": "t5_mana_danceofthesilhouettes",
+    "type": "SPELL",
+    "name": {
+      "str": "剪影之舞"
+    },
+    "description": "召唤<color_light_blue>以太轮廓</color>（s），快速跨越世界，不受身体伤害。\n*这些仆从不会以蛮力伤害敌人，但会在<color_light_gray>第1层</color>到<color_white>第3层</color>之间对敌人施放一个基本的术士法术。持续时间或施法后，它们消失。",
+    "valid_targets": [
+      "ground"
+    ],
+    "effect": "summon",
+    "shape": "blast",
+    "effect_str": "mon_ether_shadow",
+    "base_energy_cost": 375,
+    "energy_increment": 125,
+    "energy_source": "MANA",
+    "spell_class": "VAMP_MANA_spellcaster",
+    "difficulty": 5,
+    "max_level": 10,
+    "min_damage": 1,
+    "max_damage": 3,
+    "min_aoe": 2,
+    "max_aoe": 5,
+    "damage_increment": 0.2,
+    "min_duration": 3000,
+    "max_duration": 6000,
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "CONCENTRATE",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "base_casting_time": 500
+  }
+]

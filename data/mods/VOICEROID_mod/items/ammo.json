@@ -1,0 +1,19 @@
+[
+  {
+    "type" : "AMMO",
+    "id" : "voiro_arrow_zunda",
+    "copy-from": "arrow_wood",
+    "price" : 10000,
+    "name": { "str": "俊达箭 [voiro]" },
+    "description" : "这是一种在箭头上挂满了毛豆泥的俊达弓专用箭。虽然损失了部分命中精度，却不知为何拥有很高的贯穿性能和飞行距离。射出的箭会回到射手身边，俊达之力使得箭矢能够增殖。",
+    "material" : [ "wood", "veggy" ],
+    "weight" : "58 g",
+    "casing": "voiro_arrow_zunda",
+    "damage": { "damage_type": "stab", "armor_penetration": 3 },
+    "range" : 14,
+    "dispersion" : 160,
+    "loudness": 0,
+    "count" : 5,
+    "effects": [ "RECOVER_2" ]
+  }
+]

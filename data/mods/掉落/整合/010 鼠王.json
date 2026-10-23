@@ -1,0 +1,35 @@
+[
+
+ {
+    "type": "item_group",
+    "id": "zhenghe_010",
+    "subtype": "collection",
+    "entries": [
+    {"item": "bone_twisted",
+     "prob": 50
+    },
+    {"item": "essence_blood",
+     "prob": 75,
+    "count": [ 2, 4 ]
+    },
+      { "item": "destiny_copper", "count": [ 30, 40 ] }
+    ]
+  },
+ {
+    "id": "mon_rat_king",
+    "copy-from": "mon_rat_king",
+    "melee_skill": 6,
+    "melee_dice": 5,
+    "melee_dice_sides": 5,
+    "melee_cut": 5,
+    "extend": {
+      "categories": [
+        "CLASSIC"
+      ]
+    },
+    "type": "MONSTER",
+    "death_drops": "zhenghe_010"
+  }
+ 
+
+]

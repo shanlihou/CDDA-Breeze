@@ -1,0 +1,335 @@
+[
+  {
+    "id": "TALK_sex1",
+    "type": "talk_topic",
+    "dynamic_line": "你想要做什么？\"\n\n    \"--性爱行动栏--",
+    "responses": [
+      {
+        "text": "骑上<npc_name>的肉棒",
+        "topic": "TALK_NONE",
+        "condition": "npc_male",
+        "effect": [
+          { "arithmetic": [ { "u_val": "var", "var_name": "stb1", "type": "int", "context": "stb" }, "=", { "const": 1 } ] },
+          { "u_add_var": "sta1", "type": "str", "context": "sta", "value": "塞入了对方的肉棒" },
+          {
+            "set_string_var": { "u_val": "sta1", "type": "str", "context": "sta" },
+            "target_var": { "u_val": "sta1" }
+          }
+        ]
+      },
+      {
+        "text": "让<npc_name>舔",
+        "topic": "TALK_NONE",
+        "effect": [
+          { "arithmetic": [ { "u_val": "var", "var_name": "stb2", "type": "int", "context": "stb" }, "=", { "const": 2 } ] },
+          { "u_add_var": "sta1", "type": "str", "context": "sta", "value": "靠近了对方的嘴巴" },
+          {
+            "set_string_var": { "u_val": "sta1", "type": "str", "context": "sta" },
+            "target_var": { "u_val": "sta1" }
+          }
+        ]
+      },
+      {
+        "text": "让<npc_name>爱抚",
+        "topic": "TALK_NONE",
+        "effect": [
+          { "arithmetic": [ { "u_val": "var", "var_name": "stb1", "type": "int", "context": "stb" }, "=", { "const": 3 } ] },
+          { "u_add_var": "sta1", "type": "str", "context": "sta", "value": "靠近了对方的手" },
+          {
+            "set_string_var": { "u_val": "sta1", "type": "str", "context": "sta" },
+            "target_var": { "u_val": "sta1" }
+          }
+        ]
+      },
+      {
+        "text": "什么都不做",
+        "topic": "TALK_NONE",
+        "effect": [
+          { "arithmetic": [ { "u_val": "var", "var_name": "stb1", "type": "int", "context": "stb" }, "=", { "const": 0 } ] },
+          { "u_add_var": "sta1", "type": "str", "context": "sta", "value": "自由" },
+          {
+            "set_string_var": { "u_val": "sta1", "type": "str", "context": "sta" },
+            "target_var": { "u_val": "sta1" }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "TALK_sex2",
+    "type": "talk_topic",
+    "dynamic_line": "你想要做什么？\"\n\n    \"--性爱行动栏--",
+    "responses": [
+      {
+        "text": "插入<npc_name>的小穴",
+        "topic": "TALK_NONE",
+        "condition": "npc_female",
+        "effect": [
+          { "arithmetic": [ { "u_val": "var", "var_name": "stb2", "type": "int", "context": "stb" }, "=", { "const": 1 } ] },
+          { "u_add_var": "sta2", "type": "str", "context": "sta", "value": "插入了对方的小穴" },
+          {
+            "set_string_var": { "u_val": "sta2", "type": "str", "context": "sta" },
+            "target_var": { "u_val": "sta2" }
+          }
+        ]
+      },
+      {
+        "text": "插入<npc_name>的嘴巴",
+        "topic": "TALK_NONE",
+        "effect": [
+          { "arithmetic": [ { "u_val": "var", "var_name": "stb2", "type": "int", "context": "stb" }, "=", { "const": 2 } ] },
+          { "u_add_var": "sta2", "type": "str", "context": "sta", "value": "插入了对方的嘴巴" },
+          {
+            "set_string_var": { "u_val": "sta2", "type": "str", "context": "sta" },
+            "target_var": { "u_val": "sta2" }
+          }
+        ]
+      },
+      {
+        "text": "摩擦<npc_name>的脚",
+        "topic": "TALK_NONE",
+        "effect": [
+          { "arithmetic": [ { "u_val": "var", "var_name": "stb2", "type": "int", "context": "stb" }, "=", { "const": 3 } ] },
+          { "u_add_var": "sta2", "type": "str", "context": "sta", "value": "摩擦对方的脚" },
+          {
+            "set_string_var": { "u_val": "sta2", "type": "str", "context": "sta" },
+            "target_var": { "u_val": "sta2" }
+          }
+        ]
+      },
+      {
+        "text": "让<npc_name>爱抚",
+        "topic": "TALK_NONE",
+        "effect": [
+          { "arithmetic": [ { "u_val": "var", "var_name": "stb2", "type": "int", "context": "stb" }, "=", { "const": 4 } ] },
+          { "u_add_var": "sta2", "type": "str", "context": "sta", "value": "被对方爱抚" },
+          {
+            "set_string_var": { "u_val": "sta2", "type": "str", "context": "sta" },
+            "target_var": { "u_val": "sta2" }
+          }
+        ]
+      },
+      {
+        "text": "让<npc_name>用乳房包住",
+        "topic": "TALK_NONE",
+        "effect": [
+          { "arithmetic": [ { "u_val": "var", "var_name": "stb2", "type": "int", "context": "stb" }, "=", { "const": 4 } ] },
+          { "u_add_var": "sta2", "type": "str", "context": "sta", "value": "被对方用乳房包住" },
+          {
+            "set_string_var": { "u_val": "sta2", "type": "str", "context": "sta" },
+            "target_var": { "u_val": "sta2" }
+          }
+        ]
+      },
+      {
+        "text": "什么都不做",
+        "topic": "TALK_NONE",
+        "effect": [
+          { "arithmetic": [ { "u_val": "var", "var_name": "stb2", "type": "int", "context": "stb" }, "=", { "const": 0 } ] },
+          { "u_add_var": "sta2", "type": "str", "context": "sta", "value": "自由" },
+          {
+            "set_string_var": { "u_val": "sta2", "type": "str", "context": "sta" },
+            "target_var": { "u_val": "sta2" }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "TALK_sex3",
+    "type": "talk_topic",
+    "dynamic_line": "你想要做什么？\"\n\n    \"--性爱行动栏--",
+    "responses": [
+      {
+        "text": "踩<npc_name>的肉棒",
+        "topic": "TALK_NONE",
+        "condition": "npc_male",
+        "effect": [
+          { "arithmetic": [ { "u_val": "var", "var_name": "stb3", "type": "int", "context": "stb" }, "=", { "const": 1 } ] },
+          { "u_add_var": "sta3", "type": "str", "context": "sta", "value": "踩对方的肉棒" },
+          {
+            "set_string_var": { "u_val": "sta3", "type": "str", "context": "sta" },
+            "target_var": { "u_val": "sta3" }
+          }
+        ]
+      },
+      {
+        "text": "什么都不做",
+        "topic": "TALK_NONE",
+        "effect": [
+          { "arithmetic": [ { "u_val": "var", "var_name": "stb3", "type": "int", "context": "stb" }, "=", { "const": 0 } ] },
+          { "u_add_var": "sta3", "type": "str", "context": "sta", "value": "自由" },
+          {
+            "set_string_var": { "u_val": "sta3", "type": "str", "context": "sta" },
+            "target_var": { "u_val": "sta3" }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "TALK_sex4",
+    "type": "talk_topic",
+    "dynamic_line": "你想要做什么？\"\n\n    \"--性爱行动栏--",
+    "responses": [
+      {
+        "text": "爱抚<npc_name>的肉棒",
+        "topic": "TALK_NONE",
+        "condition": "npc_male",
+        "effect": [
+          { "arithmetic": [ { "u_val": "var", "var_name": "stb4", "type": "int", "context": "stb" }, "=", { "const": 1 } ] },
+          { "u_add_var": "sta4", "type": "str", "context": "sta", "value": "爱抚对方的肉棒" },
+          {
+            "set_string_var": { "u_val": "sta4", "type": "str", "context": "sta" },
+            "target_var": { "u_val": "sta4" }
+          }
+        ]
+      },
+      {
+        "text": "揉搓<npc_name>的乳房",
+        "topic": "TALK_NONE",
+        "condition": "npc_female",
+        "effect": [
+          { "arithmetic": [ { "u_val": "var", "var_name": "stb4", "type": "int", "context": "stb" }, "=", { "const": 1 } ] },
+          { "u_add_var": "sta4", "type": "str", "context": "sta", "value": "揉搓对方的乳房" },
+          {
+            "set_string_var": { "u_val": "sta4", "type": "str", "context": "sta" },
+            "target_var": { "u_val": "sta4" }
+          }
+        ]
+      },
+      {
+        "text": "爱抚<npc_name>的小穴",
+        "topic": "TALK_NONE",
+        "condition": "npc_female",
+        "effect": [
+          { "arithmetic": [ { "u_val": "var", "var_name": "stb4", "type": "int", "context": "stb" }, "=", { "const": 3 } ] },
+          { "u_add_var": "sta4", "type": "str", "context": "sta", "value": "爱抚对方的小穴" },
+          {
+            "set_string_var": { "u_val": "sta4", "type": "str", "context": "sta" },
+            "target_var": { "u_val": "sta4" }
+          }
+        ]
+      },
+      {
+        "text": "什么都不做",
+        "topic": "TALK_NONE",
+        "effect": [
+          { "arithmetic": [ { "u_val": "var", "var_name": "stb4", "type": "int", "context": "stb" }, "=", { "const": 0 } ] },
+          { "u_add_var": "sta4", "type": "str", "context": "sta", "value": "自由" },
+          {
+            "set_string_var": { "u_val": "sta4", "type": "str", "context": "sta" },
+            "target_var": { "u_val": "sta4" }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "TALK_sex5",
+    "type": "talk_topic",
+    "dynamic_line": "你想要做什么？\"\n\n    \"--性爱行动栏--",
+    "responses": [
+      {
+        "text": "包住<npc_name>的肉棒",
+        "topic": "TALK_NONE",
+        "condition": "npc_male",
+        "effect": [
+          { "arithmetic": [ { "u_val": "var", "var_name": "stb5", "type": "int", "context": "stb" }, "=", { "const": 1 } ] },
+          { "u_add_var": "sta5", "type": "str", "context": "sta", "value": "包住对方的肉棒" },
+          {
+            "set_string_var": { "u_val": "sta5", "type": "str", "context": "sta" },
+            "target_var": { "u_val": "sta5" }
+          }
+        ]
+      },
+      {
+        "text": "什么都不做",
+        "topic": "TALK_NONE",
+        "effect": [
+          { "arithmetic": [ { "u_val": "var", "var_name": "stb5", "type": "int", "context": "stb" }, "=", { "const": 0 } ] },
+          { "u_add_var": "sta5", "type": "str", "context": "sta", "value": "自由" },
+          {
+            "set_string_var": { "u_val": "sta5", "type": "str", "context": "sta" },
+            "target_var": { "u_val": "sta5" }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "TALK_sex6",
+    "type": "talk_topic",
+    "dynamic_line": "你想要做什么？\"\n\n    \"--性爱行动栏--",
+    "responses": [
+      {
+        "text": "什么都不做",
+        "topic": "TALK_NONE",
+        "effect": [
+          { "arithmetic": [ { "u_val": "var", "var_name": "stb6", "type": "int", "context": "stb" }, "=", { "const": 0 } ] },
+          { "u_add_var": "sta6", "type": "str", "context": "sta", "value": "自由" },
+          {
+            "set_string_var": { "u_val": "sta6", "type": "str", "context": "sta" },
+            "target_var": { "u_val": "sta6" }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "TALK_sex7",
+    "type": "talk_topic",
+    "dynamic_line": "你想要做什么？\"\n\n    \"--性爱行动栏--",
+    "responses": [
+      {
+        "text": "给<npc_name>的肉棒口交",
+        "topic": "TALK_NONE",
+        "condition": "npc_male",
+        "effect": [
+          { "arithmetic": [ { "u_val": "var", "var_name": "stb7", "type": "int", "context": "stb" }, "=", { "const": 0 } ] },
+          { "u_add_var": "sta7", "type": "str", "context": "sta", "value": "用口腔裹住对方的肉棒" },
+          {
+            "set_string_var": { "u_val": "sta7", "type": "str", "context": "sta" },
+            "target_var": { "u_val": "sta7" }
+          }
+        ]
+      },
+      {
+        "text": "舔<npc_name>的小穴",
+        "topic": "TALK_NONE",
+        "effect": [
+          { "arithmetic": [ { "u_val": "var", "var_name": "stb7", "type": "int", "context": "stb" }, "=", { "const": 0 } ] },
+          { "u_add_var": "sta7", "type": "str", "context": "sta", "value": "舔对方的小穴" },
+          {
+            "set_string_var": { "u_val": "sta7", "type": "str", "context": "sta" },
+            "target_var": { "u_val": "sta7" }
+          }
+        ]
+      },
+      {
+        "text": "舔<npc_name>的乳头",
+        "topic": "TALK_NONE",
+        "effect": [
+          { "arithmetic": [ { "u_val": "var", "var_name": "stb7", "type": "int", "context": "stb" }, "=", { "const": 0 } ] },
+          { "u_add_var": "sta7", "type": "str", "context": "sta", "value": "舔对方的乳头" },
+          {
+            "set_string_var": { "u_val": "sta7", "type": "str", "context": "sta" },
+            "target_var": { "u_val": "sta7" }
+          }
+        ]
+      },
+      {
+        "text": "什么都不做",
+        "topic": "TALK_NONE",
+        "effect": [
+          { "arithmetic": [ { "u_val": "var", "var_name": "stb7", "type": "int", "context": "stb" }, "=", { "const": 0 } ] },
+          { "u_add_var": "sta7", "type": "str", "context": "sta", "value": "自由" },
+          {
+            "set_string_var": { "u_val": "sta7", "type": "str", "context": "sta" },
+            "target_var": { "u_val": "sta7" }
+          }
+        ]
+      }
+    ]
+  }
+]

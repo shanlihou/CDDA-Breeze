@@ -1,0 +1,52 @@
+[
+  {
+   "id": "DT_heart_pendant",
+   "looks_like": "copper_locket",
+   "type": "TOOL_ARMOR",
+   "name": { "str": "心形挂坠" },
+   "description": "一个由新世界配方制作的挂坠，项链部分由铜制成，漆上了黑色。吊坠部分是一个红色的心形，背后刻着“Best Friend”，可能曾经属于某个孩子。\n\n<color_cyan>这件物品有着来自其他时空的力量。</color>随时间产生“决心”。穿戴时有效。",
+   "weight": "52 g",
+   "volume": "20 ml",
+   "price": 50000,
+   "price_postapoc": 3500,
+   "to_hit": -1,
+   "bashing": 6,
+   "material": [
+    "copper",
+    "DT_dt",
+    "DT_hate"
+    ],
+   "symbol": "[",
+   "color": "brown",
+   "flags": [
+     "ONLY_ONE",
+     "TARDIS",
+     "NO_RELOAD",
+     "NO_UNLOAD"
+    ],
+   "charges_per_use": 24,
+   "relic_data": {
+    "charge_info": { 
+      "recharge_type": "periodic",
+      "recharge_condition": "worn",
+      "time": "2 h",
+      "regenerate_ammo": true
+      }
+    },
+   "pocket_data": [
+     {
+       "pocket_type": "MAGAZINE",
+       "ammo_restriction":
+      {
+       "DT_ammo_my_dt": 120
+      }
+     }
+    ],
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "DT_item_summon_highdt",
+      "no_fail": true,
+      "level": 0
+    }
+  }
+]

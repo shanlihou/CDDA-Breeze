@@ -1,0 +1,101 @@
+[
+ {
+  "type": "vehicle_part",
+  "id": "vpart_radioisotope_generator",
+  "name": { "str": "车载同位素发电机" },
+  "looks_like": "t_plut_generator",
+  "symbol": "0",
+  "categories": [ "energy" ],
+  "color": "green_white",
+  "broken_symbol": "#",
+  "broken_color": "blue",
+  "damage_modifier": 80,
+  "durability": 500,
+  "location": "center",
+  "description": "利用核衰变产生的热量转换为电力的发电机，开启后能产生 <color_green>130W</color> 的电量",
+  "epower": 130,
+  "item": "compact_ASRG_containment",
+  "requirements": {
+   "install": { 
+   "skills": [ [ "mechanics", 6 ], [ "electronics", 4 ] ],
+   "time": "60 m", 
+   "qualities": [ { "id": "WRENCH", "level": 2 } ] 
+   },
+   "removal": { 
+   "skills": [ [ "mechanics", 6 ], [ "electronics", 4 ] ],
+   "time": "60 m", 
+   "qualities": [ { "id": "WRENCH", "level": 2 } ] 
+   },
+   "repair": { 
+   "skills": [ [ "mechanics", 8 ], [ "electronics", 6 ] ],
+   "time": "30 m",
+   "using": [ [ "repair_welding_standard", 5 ], [ "soldering_standard", 5 ] ]
+   }
+  },
+  "flags": [
+   "OPAQUE",
+   "OBSTACLE",
+   "PROTRUSION",
+   "LEAK_DAM",
+   "RADIOACTIVE",
+   "PERPETUAL",
+   "REACTOR"
+  ],
+  "breaks_into": [
+   { "item": "scrap", "count": [ 4, 16 ] },
+   { "item": "steel_chunk", "count": [ 1, 6 ] },
+   { "item": "plutonium", "charges": [ 0, 3 ] },
+   { "item": "lead", "charges": [ 12, 18 ] }
+  ],
+  "damage_reduction": { "all": 80 }
+ },
+ {
+  "type": "vehicle_part",
+  "id": "vp_roof_external_radioisotope_generator",
+  "name": { "str": "车顶同位素发电机" },
+  "looks_like": "t_plut_generator",
+  "symbol": "0",
+  "categories": [ "energy" ],
+  "color": "green_white",
+  "broken_symbol": "#",
+  "broken_color": "blue",
+  "damage_modifier": 80,
+  "durability": 500,
+  "location": "on_roof",
+  "description": "利用核衰变产生的热量转换为电力的发电机，开启后能产生 <color_green>130W</color> 的电量",
+  "epower": 130,
+  "item": "compact_ASRG_containment",
+  "requirements": {
+   "install": { 
+   "skills": [ [ "mechanics", 6 ], [ "electronics", 4 ] ],
+   "time": "60 m", 
+   "qualities": [ { "id": "WRENCH", "level": 2 } ] 
+   },
+   "removal": { 
+   "skills": [ [ "mechanics", 6 ], [ "electronics", 4 ] ],
+   "time": "60 m", 
+   "qualities": [ { "id": "WRENCH", "level": 2 } ] 
+   },
+   "repair": { 
+   "skills": [ [ "mechanics", 8 ], [ "electronics", 6 ] ],
+   "time": "30 m",
+   "using": [ [ "repair_welding_standard", 5 ], [ "soldering_standard", 5 ] ]
+   }
+  },
+  "flags": [
+   "ON_ROOF",
+   "PROTRUSION",
+   "LEAK_DAM",
+   "RADIOACTIVE",
+   "PERPETUAL",
+   "REACTOR"
+  ],
+  "breaks_into": [
+   { "item": "scrap", "count": [ 4, 16 ] },
+   { "item": "steel_chunk", "count": [ 1, 6 ] },
+   { "item": "plutonium", "charges": [ 0, 3 ] },
+   { "item": "lead", "charges": [ 12, 18 ] }
+  ],
+  "damage_reduction": { "all": 80 }
+ }
+]

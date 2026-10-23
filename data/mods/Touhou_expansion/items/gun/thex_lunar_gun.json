@@ -1,0 +1,601 @@
+[
+  {
+    "id": "lunar_bousan",
+    "type": "GUN",
+    "name": "月球防暴霰弹枪（真空模式）",
+    "copy-from": "shotgun_base",
+    "description": "“暴动散弹铳”是一种转轮式LDC自动霰弹枪。它介于用月都技术改装的旧人类武器和真正武器化的月都科技之间的中间层级，其极宽的枪管就是证明。除了正常的霰弹枪操作外，该武器还能在枪机机构中生成真空，在扣动扳机后释放短促而强大的冲击。通过按下拇指孔中的按钮来切换模式。",
+    "volume": "3400 ml",
+    "weight": "3000 g",
+    "longest_side": "900 mm",
+    "price_postapoc": 4500,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "none",
+      "length": "short",
+      "surface": "line"
+    },
+    "bashing": 12,
+    "material": [
+      "plastic",
+      "steel"
+    ],
+    "symbol": "(",
+    "looks_like": "streetsweeper",
+    "color": "white",
+    "ammo_effects": [
+      "BEANBAG",
+      "NEVER_MISFIRES",
+      "NOGIB",
+      "SHOT"
+    ],
+    "clip_size": 6,
+    "dispersion": 650,
+    "durability": 8,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ]
+    ],
+    "min_cycle_recoil": 800,
+    "ranged_damage": {
+      "damage_type": "bash",
+      "amount": 45,
+      "armor_penetration": 15
+    },
+    "reload": 100,
+    "reload_noise_volume": 6,
+    "skill": "shotgun",
+    "use_action": {
+      "type": "transform",
+      "menu_text": "切换模式：弹药",
+      "msg": "你在模式之间切换，让你的武器可以射击。",
+      "target": "lunar_bousan2"
+    },
+    "valid_mod_locations": [
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true
+      }
+    ],
+    "flags": [
+      "FIRE_TWOHAND",
+      "NEEDS_NO_LUBE",
+      "NEVER_JAMS",
+      "NON_FOULING",
+      "PUMP_ACTION",
+      "RELOAD_ONE",
+      "STURDY",
+      "TRADER_AVOID",
+      "WATERPROOF_GUN"
+    ]
+  },
+  {
+    "id": "lunar_bousan2",
+    "type": "GUN",
+    "name": "月球防暴霰弹枪（霰弹模式）",
+    "copy-from": "lunar_bousan",
+    "description": "“暴动散弹铳”是一种转轮式LDC自动霰弹枪。它介于用月都技术改装的旧人类武器和真正武器化的月都科技之间的中间层级，其极宽的枪管就是证明。除了正常的霰弹枪操作外，该武器还能在枪机机构中生成真空，在扣动扳机后释放强大而短程的冲击。通过按下拇指孔中的按钮来切换模式。",
+    "dispersion": 450,
+    "ranged_damage": {
+      "damage_type": "bash",
+      "amount": 0,
+      "armor_penetration": 0
+    },
+    "reload": 125,
+    "reload_noise_volume": 4,
+    "min_cycle_recoil": 1200,
+    "use_action": {
+      "type": "transform",
+      "menu_text": "切换模式：真空",
+      "msg": "你在模式之间切换，让你的武器可以生成真空。",
+      "target": "lunar_bousan"
+    },
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "shot": 6
+        }
+      }
+    ],
+    "flags": [
+      "NEEDS_NO_LUBE",
+      "NEVER_JAMS",
+      "NON_FOULING",
+      "PUMP_ACTION",
+      "RELOAD_ONE",
+      "STURDY",
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "lunar_chagyo",
+    "type": "GUN",
+    "name": "月球侦察步枪",
+    "copy-from": "tera_2",
+    "description": "“着陆玉兔”是一种模块化栓动LDC步枪。与其他月都式样枪一样，它基于旧人类武器，由月都技术制造并升级。它旨在供侦察和第一波部队使用，特点是相对紧凑的尺寸和部件的模块化特性。",
+    "volume": "2200 ml",
+    "weight": "2700 g",
+    "longest_side": "850 mm",
+    "price_postapoc": 7000,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "solid",
+      "length": "short",
+      "surface": "point"
+    },
+    "bashing": 10,
+    "material": [
+      "plastic",
+      "steel",
+      "wood"
+    ],
+    "symbol": "(",
+    "looks_like": "tera_2",
+    "color": "white",
+    "ammo": [
+      "ammo_lunar_medium"
+    ],
+    "ammo_effects": [
+      "LASER"
+    ],
+    "clip_size": 10,
+    "dispersion": 120,
+    "durability": 8,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ]
+    ],
+    "reload": 120,
+    "reload_noise_volume": 6,
+    "skill": "rifle",
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "ammo_lunar_medium": 10
+        }
+      }
+    ],
+    "flags": [
+      "NEEDS_NO_LUBE",
+      "NEVER_JAMS",
+      "NON_FOULING",
+      "RELOAD_ONE",
+      "STURDY",
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "lunar_suitai",
+    "type": "GUN",
+    "name": "月球手持火炮",
+    "description": "“水头大炮”是一种手持式LDC火炮装置。它介于用月都技术改装的旧人类武器和真正武器化的月都科技之间的中间层级，体现在为实现单兵火炮而进行的极端小型化上。它通过拧开顶部的把手来装填，使其看起来非常像保温瓶。",
+    "volume": "1900 ml",
+    "weight": "2000 g",
+    "longest_side": "30 cm",
+    "//": "9 * 30 cm thermos, the barrel is ~25 cm long",
+    "price_postapoc": 8000,
+    "to_hit": {
+      "balance": "uneven",
+      "grip": "solid",
+      "length": "short",
+      "surface": "any"
+    },
+    "bashing": 11,
+    "material": [
+      "steel"
+    ],
+    "symbol": "(",
+    "looks_like": "thermos",
+    "color": "light_blue",
+    "ammo": [
+      "ammo_lunar_big"
+    ],
+    "ammo_effects": [
+      "LASER"
+    ],
+    "clip_size": 3,
+    "dispersion": 120,
+    "durability": 7,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ]
+    ],
+    "reload": 600,
+    "reload_noise_volume": 6,
+    "skill": "launcher",
+    "valid_mod_locations": [
+      [
+        "sling",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "ammo_lunar_big": 3
+        }
+      }
+    ],
+    "flags": [
+      "FIRE_TWOHAND",
+      "NEEDS_NO_LUBE",
+      "NEVER_JAMS",
+      "NON_FOULING",
+      "STURDY",
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "lunar_fourdrifle_1",
+    "type": "GUN",
+    "name": {
+      "str": "开发中"
+    },
+    "copy-from": "rifle_auto",
+    "description": "“开发中”是一种自动LDC步枪。这是武器化月都科技的一个例子，被赋予了武器形状的容器以便在战场上更好地操作。它的特点是枪管稍宽、较长，带有七角星形直槽。枪机机构的内部运作尚未确定。",
+    "volume": "3000 ml",
+    "weight": "3000 g",
+    "longest_side": "1200 mm",
+    "price_postapoc": 12000,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "solid",
+      "length": "long",
+      "surface": "point"
+    },
+    "bashing": 10,
+    "material": [
+      "plastic",
+      "steel"
+    ],
+    "looks_like": "ak47",
+    "//": "Similar shape as the Mk47 Mutant, the barrel is fully metallic, longer and thiner",
+    "color": "light_gray",
+    "ammo": [
+      "ammo_lunar_4d_1"
+    ],
+    "dispersion": 120,
+    "durability": 9,
+    "min_cycle_recoil": 1600,
+    "modes": [
+      [
+        "DEFAULT",
+        "auto",
+        5
+      ],
+      [
+        "BURST",
+        "3 rd.",
+        3
+      ],
+      [
+        "SEMI-AUTO",
+        "semi-auto",
+        1
+      ]
+    ],
+    "reload": 420,
+    "reload_noise_volume": 5,
+    "valid_mod_locations": [
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "item_restriction": [
+          "lunar_4d_thorn_mag37"
+        ]
+      }
+    ],
+    "weapon_category": [
+      "AUTOMATIC_RIFLES"
+    ]
+  },
+  {
+    "id": "lunar_fourdrifle_2",
+    "type": "GUN",
+    "name": {
+      "str": "开发中"
+    },
+    "copy-from": "rifle_semi",
+    "description": "“开发中”是一种半自动LDC步枪。这是武器化月都科技的一个例子，被赋予了武器形状的容器以便在战场上更好地操作。从外面看，这把武器与任何战斗步枪没有区别，但一旦打开，就会露出错综复杂、重叠的机构在同一空间内移动，然后又退回去。",
+    "volume": "3000 ml",
+    "weight": "3000 g",
+    "longest_side": "900 mm",
+    "price_postapoc": 14000,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "solid",
+      "length": "long",
+      "surface": "point"
+    },
+    "bashing": 10,
+    "material": [
+      "plastic",
+      "steel"
+    ],
+    "looks_like": "ak47",
+    "color": "light_gray",
+    "ammo": [
+      "ammo_lunar_4d_2"
+    ],
+    "dispersion": 120,
+    "durability": 9,
+    "min_cycle_recoil": 1600,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "BURST",
+        "2 rd.",
+        2
+      ]
+    ],
+    "reload": 400,
+    "reload_noise_volume": 5,
+    "valid_mod_locations": [
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "item_restriction": [
+          "lunar_4d_claw_mag19"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lunar_fivedrifle_1",
+    "type": "GUN",
+    "name": {
+      "str": "开发中"
+    },
+    "copy-from": "rifle_auto",
+    "description": "“开发中”是一种自动解读型LDC步枪。这是武器化月都科技的一个例子，被赋予了武器形状的容器以便在战场上更好地操作。其机构“读取”弹药数据，在内部生成五维子弹组件，并将其通过枪管推出，而枪管从三维空间看像一根实心杆。武器框架允许在你选择的一侧安装特殊侧模块。整体柔和曲线的外观只能用舒适来形容。",
+    "//": "'generates' used due a lack of a better word, each ofuda has the 'bullet' component stored and is consumed in the process of the release, leaving it as a blank piece of paper",
+    "volume": "2800 ml",
+    "weight": "2800 g",
+    "longest_side": "1000 mm",
+    "price_postapoc": 20000,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "solid",
+      "length": "long",
+      "surface": "point"
+    },
+    "bashing": 10,
+    "material": [
+      "plastic",
+      "steel"
+    ],
+    "looks_like": "ak47",
+    "color": "light_gray",
+    "ammo": [
+      "ammo_lunar_5d_1"
+    ],
+    "ammo_effects": [
+      "NO_ITEM_DAMAGE"
+    ],
+    "dispersion": 15,
+    "durability": 9,
+    "min_cycle_recoil": 1600,
+    "modes": [
+      [
+        "DEFAULT",
+        "auto",
+        5
+      ],
+      [
+        "BURST",
+        "3 rd.",
+        3
+      ],
+      [
+        "AUTO",
+        "semi-auto",
+        1
+      ]
+    ],
+    "reload": 300,
+    "reload_noise_volume": 5,
+    "valid_mod_locations": [
+      [
+        "lunar module",
+        1
+      ],
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "item_restriction": [
+          "lunar_5d_ofuda_mag127"
+        ]
+      }
+    ],
+    "weapon_category": [
+      "AUTOMATIC_RIFLES"
+    ],
+    "//2": "Modules should allow trippy stuff: changing damage to elemental types, having a chance to not consume ammo, cc the target at the cost of a chunk of damage, extra pain to the target, etc"
+  },
+  {
+    "id": "lunar_psychicrifle_1",
+    "type": "GUN",
+    "name": {
+      "str": "开发中"
+    },
+    "copy-from": "smg_base",
+    "description": "“开发中”是一种特种作战半自动LDC冲锋枪。这把武器看起来非常紧凑，上面刻满了错综复杂、明亮的线状分支图案。它从使用者的灵能中汲取能量，将其聚焦在目标上以造成伤害（类似于放大镜），因此更接近于一种辅助工具而非真正的武器。",
+    "volume": "2500 ml",
+    "weight": "2200 g",
+    "longest_side": "420 mm",
+    "price_postapoc": 20000,
+    "to_hit": {
+      "balance": "good",
+      "grip": "solid",
+      "length": "short",
+      "surface": "line"
+    },
+    "bashing": 11,
+    "material": [
+      "plastic",
+      "steel"
+    ],
+    "//": "steel is a placeholder !!!",
+    "looks_like": "TDI",
+    "color": "dark_gray",
+    "ammo": [
+      "ammo_lunar_small"
+    ],
+    "ammo_effects": [
+      "NO_ITEM_DAMAGE"
+    ],
+    "dispersion": 12,
+    "//2": "*total* dispersion should be that value once mana drain is in place, as it's basically a hitscan weapon",
+    "durability": 8,
+    "loudness": 2,
+    "min_cycle_recoil": 600,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "BURST",
+        "3 rd.",
+        3
+      ]
+    ],
+    "reload": 50,
+    "reload_noise_volume": 5,
+    "valid_mod_locations": [
+      [
+        "lunar module",
+        1
+      ],
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "item_restriction": [
+          "lunar_small_mag13"
+        ]
+      }
+    ],
+    "//3": "When used by non-Gyokuto it should debuff the user by giving headaches, things like that. When used by non-elite Gyokuto it should consume rnd(1.5-2) times more mana",
+    "//4": "Stat loss should affect this weapon way more, i.e. DEX or PER red numbers when using it should translate to worse-than-usual penalties"
+  }
+]

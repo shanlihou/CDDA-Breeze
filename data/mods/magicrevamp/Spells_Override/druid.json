@@ -1,0 +1,581 @@
+[
+  {
+    "id": "druid_veggrasp",
+    "type": "SPELL",
+    "name": {
+      "str": "藤蔓缠绕"
+    },
+    "description": "这个法术会从地下长出藤蔓及树根，紧紧的抓住你的敌人，减慢他们的速度，并对他们造成少量的伤害。",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "LOUD",
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "effect": "attack",
+    "effect_str": "entangled",
+    "shape": "blast",
+    "spell_class": "DRUID",
+    "base_casting_time": 100,
+    "base_energy_cost": 175,
+    "energy_source": "MANA",
+    "difficulty": 2,
+    "max_level": 30,
+    "min_damage": 1,
+    "max_damage": 30,
+    "damage_increment": 1,
+    "min_aoe": 4,
+    "max_aoe": 22,
+    "aoe_increment": 1,
+    "min_range": 3,
+    "max_range": 10,
+    "range_increment": 1,
+    "min_dot": 0,
+    "max_dot": 3,
+    "dot_increment": 0.1,
+    "min_duration": 1000,
+    "max_duration": 15000,
+    "duration_increment": 500,
+    "min_pierce": 1,
+    "max_pierce": 8,
+    "pierce_increment": 0.25,
+    "damage_type": "stab"
+  },
+  {
+    "id": "druid_rootstrike",
+    "type": "SPELL",
+    "name": {
+      "str": "树根穿刺"
+    },
+    "description": "这个法术使树根刺穿地面，以弧形刺入你的敌人，刺穿他们。",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "LOUD",
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "effect_str": "root_impale",
+    "shape": "cone",
+    "spell_class": "DRUID",
+    "base_casting_time": 100,
+    "base_energy_cost": 100,
+    "energy_source": "MANA",
+    "difficulty": 4,
+    "max_level": 30,
+    "min_damage": 15,
+    "max_damage": 90,
+    "damage_increment": 2.5,
+    "min_aoe": 25,
+    "max_aoe": 65,
+    "aoe_increment": 1,
+    "min_range": 4,
+    "max_range": 15,
+    "range_increment": 0.5,
+    "min_dot": 1,
+    "max_dot": 3,
+    "dot_increment": 0.1,
+    "min_duration": 1000,
+    "max_duration": 15000,
+    "duration_increment": 500,
+    "min_pierce": 10,
+    "max_pierce": 30,
+    "pierce_increment": 0.5,
+    "damage_type": "stab"
+  },
+  {
+    "id": "druid_woodshaft",
+    "type": "SPELL",
+    "name": {
+      "str": "硬木投掷"
+    },
+    "description": "这个法术能召唤出一根硬木棍，从施法者的手中高速射出，刺伤敌人。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "LOUD",
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "spell_class": "DRUID",
+    "base_casting_time": 100,
+    "base_energy_cost": 50,
+    "energy_source": "MANA",
+    "difficulty": 1,
+    "max_level": 30,
+    "min_damage": 1,
+    "max_damage": 37,
+    "damage_increment": 1.5,
+    "min_range": 5,
+    "max_range": 22,
+    "range_increment": 0.75,
+    "min_pierce": 1,
+    "max_pierce": 8,
+    "pierce_increment": 0.5,
+    "damage_type": "bash"
+  },
+  {
+    "id": "druid_naturebow1",
+    "type": "SPELL",
+    "name": {
+      "str": "乌尔斯之弓"
+    },
+    "description": "这个法术可以召唤出一个魔法木弓，它可以发射无尽的箭，直到它持续时间结束。",
+    "valid_targets": [
+      "none"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "min_damage": 1,
+    "max_damage": 1,
+    "effect": "spawn_item",
+    "effect_str": "druid_recurve",
+    "shape": "blast",
+    "base_casting_time": 200,
+    "base_energy_cost": 250,
+    "min_duration": 10000,
+    "max_duration": 45000,
+    "duration_increment": 1000,
+    "difficulty": 6,
+    "max_level": 30,
+    "spell_class": "DRUID",
+    "energy_source": "MANA"
+  },
+  {
+    "id": "recover_fatigue",
+    "type": "SPELL",
+    "name": {
+      "str": "自然冥想"
+    },
+    "description": "你与其它生命的连接允许你进入一种魔法冥想状态。在这种状态下你会消耗魔法，加速疲劳恢复。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "CONCENTRATE",
+      "SILENT",
+      "NO_HANDS"
+    ],
+    "spell_class": "DRUID",
+    "energy_source": "MANA",
+    "effect": "recover_energy",
+    "effect_str": "FATIGUE",
+    "shape": "blast",
+    "base_casting_time": 10000,
+    "min_damage": 50,
+    "damage_increment": 10,
+    "max_damage": 450,
+    "max_level": 35,
+    "base_energy_cost": 500,
+    "energy_increment": 25,
+    "final_energy_cost": 1685,
+    "difficulty": 4
+  },
+  {
+    "id": "summon_cats",
+    "type": "SPELL",
+    "name": {
+      "str": "袋装猫咪"
+    },
+    "description": "你就是那个和猫讲话的怪婆婆吗？",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "LOUD",
+      "SOMATIC",
+      "SPAWN_GROUP"
+    ],
+    "min_damage": 1,
+    "max_damage": 18,
+    "damage_increment": 1,
+    "min_range": 3,
+    "range_increment": 0.8,
+    "max_range": 10,
+    "min_aoe": 3,
+    "max_aoe": 3,
+    "spell_class": "DRUID",
+    "base_casting_time": 250,
+    "energy_source": "MANA",
+    "max_level": 35,
+    "min_duration": 6000,
+    "max_duration": 90000,
+    "duration_increment": 1000,
+    "difficulty": 1,
+    "base_energy_cost": 265,
+    "shape": "blast",
+    "effect": "summon",
+    "effect_str": "GROUP_STRAY_CATS"
+  },
+  {
+    "id": "summon_bear",
+    "type": "SPELL",
+    "name": {
+      "str": "恐怖威熊"
+    },
+    "description": "这个法术看上去已被严重污染，你十分确定这法术的名字应该是“恐怖威能”，但是你也十分确定施放它不能造成恐怖，因为它的施放步骤脏到难以辨认。不过，现在是大灾变，没时间搞清楚了！",
+    "valid_targets": [
+      "ground"
+    ],
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 3,
+    "max_range": 8,
+    "spell_class": "DRUID",
+    "base_casting_time": 500,
+    "energy_source": "MANA",
+    "max_level": 35,
+    "difficulty": 10,
+    "min_duration": 6000,
+    "max_duration": 45000,
+    "base_energy_cost": 675,
+    "final_energy_cost": 425,
+    "energy_increment": -5,
+    "flags": [
+      "HOSTILE_50",
+      "CONCENTRATE",
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "shape": "blast",
+    "effect": "summon",
+    "effect_str": "mon_bear"
+  },
+  {
+    "id": "fungicide",
+    "type": "SPELL",
+    "name": {
+      "str": "真菌杀手"
+    },
+    "description": "消灭一片区域中的真菌感染。",
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
+    "effect": "ter_transform",
+    "effect_str": "fungicide",
+    "shape": "blast",
+    "min_aoe": 5,
+    "max_aoe": 35,
+    "aoe_increment": 1,
+    "max_level": 30,
+    "difficulty": 4,
+    "energy_source": "MANA",
+    "base_energy_cost": 175,
+    "base_casting_time": 550,
+    "flags": [
+      "CONCENTRATE",
+      "VERBAL",
+      "SOMATIC",
+      "NO_LEGS",
+      "NO_HANDS",
+      "NO_PROJECTILE"
+    ]
+  },
+  {
+    "id": "create_rune_druid",
+    "type": "SPELL",
+    "name": {
+      "str": "德鲁伊符文"
+    },
+    "description": "这仪式会创造出一块与德鲁伊共鸣的小石块。你可以将符文作为催化剂用于制造其它物品。",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 1,
+    "max_damage": 1,
+    "effect": "spawn_item",
+    "effect_str": "rune_druid",
+    "shape": "blast",
+    "base_casting_time": 5000,
+    "base_energy_cost": 5,
+    "min_duration": 1,
+    "max_duration": 2,
+    "duration_increment": 1,
+    "difficulty": 0,
+    "max_level": 0,
+    "spell_class": "DRUID",
+    "energy_source": "MANA",
+    "flags": [
+      "PERMANENT",
+      "NO_LEGS",
+      "CONCENTRATE"
+    ]
+  },
+  {
+    "id": "purify_seed",
+    "type": "SPELL",
+    "name": {
+      "str": "净化之种"
+    },
+    "description": "你召唤了大地的馈赠，可用于净水。若不及时使用很快就会变质。",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 1,
+    "max_damage": 1,
+    "effect": "spawn_item",
+    "effect_str": "druid_seed",
+    "shape": "blast",
+    "base_casting_time": 30000,
+    "final_casting_time": 6000,
+    "casting_time_increment": -1200,
+    "base_energy_cost": 1000,
+    "final_energy_cost": 1000,
+    "min_duration": 6000,
+    "max_duration": 6000,
+    "difficulty": 6,
+    "max_level": 20,
+    "spell_class": "DRUID",
+    "energy_source": "MANA",
+    "flags": [
+      "NO_LEGS",
+      "CONCENTRATE"
+    ]
+  },
+  {
+    "id": "druidic_regrowth",
+    "type": "SPELL",
+    "name": {
+      "str": "沃血重萌"
+    },
+    "description": "通过献祭自身生命力，你可以让附近枯萎贫瘠的植被重获新生。剩下的就得靠时间来尽复生机了。",
+    "valid_targets": [
+      "ground"
+    ],
+    "effect": "ter_transform",
+    "effect_str": "druidic_renewal",
+    "shape": "blast",
+    "flags": [
+      "CONCENTRATE",
+      "VERBAL",
+      "SOMATIC",
+      "NO_LEGS",
+      "NO_HANDS",
+      "NO_PROJECTILE"
+    ],
+    "spell_class": "DRUID",
+    "energy_source": "HP",
+    "difficulty": 6,
+    "base_casting_time": 600,
+    "base_energy_cost": 25,
+    "max_level": 30,
+    "min_aoe": 1,
+    "max_aoe": 8,
+    "aoe_increment": 0.2,
+    "min_range": 3,
+    "max_range": 9,
+    "range_increment": 0.3
+  },
+  {
+    "id": "druidic_healing",
+    "type": "SPELL",
+    "name": {
+      "str": "舍己济人"
+    },
+    "description": "将使用者自身部分生命力转化为医疗能量，施加于同伴。",
+    "valid_targets": [
+      "ally"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "flags": [
+      "CONCENTRATE",
+      "VERBAL",
+      "SOMATIC",
+      "NO_LEGS",
+      "NO_HANDS",
+      "NO_PROJECTILE"
+    ],
+    "spell_class": "DRUID",
+    "energy_source": "HP",
+    "difficulty": 5,
+    "base_casting_time": 400,
+    "base_energy_cost": 35,
+    "final_energy_cost": 10,
+    "energy_increment": -1.5,
+    "max_level": 15,
+    "min_damage": -4,
+    "max_damage": -18,
+    "damage_increment": -0.8,
+    "min_aoe": 0,
+    "max_aoe": 3,
+    "aoe_increment": 0.2,
+    "min_range": 2,
+    "max_range": 6,
+    "range_increment": 0.2
+  },
+  {
+    "id": "druid_tornskin",
+    "type": "SPELL",
+    "name": {
+      "str": "刺皮术"
+    },
+    "description": "这个法术，从卷轴上覆盖的汁液和尖刺看来，似乎像是棘皮术，但现在那些荆棘效果变成撕裂皮肤造成流血。也许那些被污染的单词可能改变了法术的效果。",
+    "valid_targets": [
+      "hostile",
+      "ground",
+      "ally",
+      "self"
+    ],
+    "flags": [
+      "SOMATIC"
+    ],
+    "effect": "attack",
+    "effect_str": "tornskin_pain",
+    "shape": "blast",
+    "affected_body_parts": [
+      "head",
+      "torso",
+      "mouth",
+      "eyes",
+      "arm_l",
+      "arm_r",
+      "hand_r",
+      "hand_l",
+      "leg_l",
+      "foot_l",
+      "foot_r"
+    ],
+    "min_dot": 1,
+    "max_dot": 6,
+    "dot_increment": 0.3,
+    "spell_class": "DRUID",
+    "base_casting_time": 300,
+    "base_energy_cost": 100,
+    "energy_source": "MANA",
+    "difficulty": 4,
+    "max_level": 15,
+    "min_damage": 1,
+    "max_damage": 6,
+    "damage_increment": 0.3,
+    "min_aoe": 1,
+    "max_aoe": 3,
+    "aoe_increment": 0.1,
+    "min_range": 1,
+    "max_range": 3,
+    "range_increment": 0.1,
+    "min_duration": 200,
+    "max_duration": 900,
+    "duration_increment": 40,
+    "min_pierce": 0,
+    "max_pierce": 5,
+    "pierce_increment": 0.3,
+    "damage_type": "cut"
+  },
+  {
+    "id": "druid_feralform",
+    "type": "SPELL",
+    "name": {
+      "str": "狂野形态"
+    },
+    "description": "这个法术释放出你内心暗藏的兽性，让你长出尖牙利爪，将你的敌人撕成碎片。",
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "spawn_item",
+    "effect_str": "aura_feral",
+    "shape": "blast",
+    "flags": [
+      "SOMATIC",
+      "VERBAL"
+    ],
+    "components": "spell_components_feralform",
+    "spell_class": "DRUID",
+    "energy_source": "MANA",
+    "difficulty": 4,
+    "base_casting_time": 400,
+    "base_energy_cost": 200,
+    "max_level": 22,
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_duration": 60000,
+    "max_duration": 225000,
+    "duration_increment": 6000
+  },
+  {
+    "id": "summon_wolf_druid",
+    "type": "SPELL",
+    "name": {
+      "str": "召唤狼"
+    },
+    "description": "向荒野呼唤，寻求狼群的援助。",
+    "valid_targets": [
+      "ground"
+    ],
+    "min_damage": 1,
+    "max_damage": 3,
+    "damage_increment": 0.08,
+    "min_range": 2,
+    "max_range": 9,
+    "min_aoe": 2,
+    "max_aoe": 2,
+    "range_increment": 0.2,
+    "spell_class": "DRUID",
+    "base_casting_time": 500,
+    "energy_source": "MANA",
+    "max_level": 37,
+    "difficulty": 6,
+    "min_duration": 9000,
+    "max_duration": 37000,
+    "duration_increment": 600,
+    "base_energy_cost": 400,
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "shape": "blast",
+    "effect": "summon",
+    "effect_str": "mon_wolf"
+  },
+  {
+    "id": "druid_growth",
+    "type": "SPELL",
+    "spell_class": "DRUID",
+    "name": {
+      "str": "成长之种"
+    },
+    "description": "在仪式中献出你的部分生命来换取成长的象征。",
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "spawn_item",
+    "effect_str": "druid_fertilizer",
+    "shape": "blast",
+    "base_casting_time": 360000,
+    "final_casting_time": 60000,
+    "casting_time_increment": -15000,
+    "base_energy_cost": 5,
+    "energy_source": "HP",
+    "difficulty": 4,
+    "max_level": 30,
+    "min_damage": 5,
+    "max_damage": 120,
+    "damage_increment": 4,
+    "//": "The spell can only be permanent without being at maximum level because of how items with charges work",
+    "flags": [
+      "SOMATIC",
+      "NO_LEGS",
+      "PERMANENT"
+    ]
+  }
+]

@@ -1,0 +1,724 @@
+[
+  {
+    "type": "GENERIC",
+    "id": "subspace_power",
+    "symbol": "?",
+    "color": "white",
+    "name": { "str": "神秘能量", "str_pl": "none" },
+    "description": "seeing this is a bug",
+    "stackable": true,
+    "price": 0,
+    "volume": "0 ml",
+    "material": [ "subspace_power" ],
+    "flags": [ "PSEUDO", "PERPETUAL" ]
+  },
+  {
+    "type": "material",
+    "id": "subspace_power",
+    "name": "神秘能量",
+    "copy-from": "pseudo_fuel",
+    "fuel_data": { "energy": "100 kJ", "perpetual": true }
+  },
+  {
+    "id": "bio_subspace_power",
+    "type": "bionic",
+    "name": { "str": "能量核心" },
+    "description": "以一种未知方式运作的动力源，似乎不需要补充燃料。",
+    "occupied_bodyparts": [ [ "head", 12 ] ],
+    "dupes_allowed": true,
+    "power_trickle": "1 kJ",
+    "flags": [ "BIONIC_POWER_SOURCE", "BIONIC_NPC_USABLE", "BIONIC_SHOCKPROOF" ]
+  },
+  {
+    "id": "bio_subspace_power",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "name": { "str": "能量核心 CBM" },
+    "looks_like": "bio_int_enhancer",
+    "description": "以一种未知方式运作的动力源，似乎不需要补充燃料。",
+    "price": 5000000,
+    "weight": "100 g",
+    "difficulty": 6
+  },
+  {
+    "type": "effect_type",
+    "id": "oolitic_kidney",
+    "removes_effects": [
+      "bite",
+      "infected",
+      "dermatik",
+      "tetanus",
+      "spores",
+      "fungus",
+      "nausea",
+      "poison",
+      "venom_dmg",
+      "venom_weaken",
+      "stung",
+      "badpoison",
+      "foodpoison",
+      "paralyzepoison",
+      "corroding"
+    ],
+    "blocks_effects": [
+      "bite",
+      "infected",
+      "dermatik",
+      "tetanus",
+      "spores",
+      "fungus",
+      "nausea",
+      "poison",
+      "venom_dmg",
+      "venom_weaken",
+      "stung",
+      "badpoison",
+      "foodpoison",
+      "paralyzepoison",
+      "corroding"
+    ],
+    "base_mods": { 
+    "health_min": [ 1 ],
+	"health_tick": [ 180 ],
+	"h_mod_min": [ 1 ],
+	"h_mod_tick": [ 120 ]
+    }
+  },
+  {
+    "type": "enchantment",
+    "id": "OOLITIC_KIDNEY",
+    "condition": "ALWAYS",
+    "ench_effects": [ { "effect": "oolitic_kidney", "intensity": 1 } ]
+  },
+  {
+    "id": "bio_oolitic_kidney",
+    "type": "bionic",
+    "name": { "str": "卵石肾" },
+    "description": "是个棕红色的心形器官，可以改善和调节循环系统，植入后拥有紧急解毒系统。",
+    "occupied_bodyparts": [ [ "torso", 6 ] ],
+    "enchantments": [ "OOLITIC_KIDNEY" ],
+    "flags": [ "BIONIC_SHOCKPROOF","BIONIC_NPC_USABLE" ]
+  },
+  {
+    "id": "bio_oolitic_kidney",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "name": { "str": "卵石肾 CBM" },
+    "looks_like": "bio_int_enhancer",
+    "description": "是个棕红色的心形器官，可以改善和调节循环系统，植入后拥有紧急解毒系统。",
+    "price": 2500000,
+    "weight": "100 g",
+    "difficulty": 5
+  },
+  {
+    "type": "effect_type",
+    "id": "mucranoid",
+    "removes_effects": [
+	  "hot",
+	  "hot_speed",
+	  "blisters",
+	  "cold",
+	  "common_cold",
+	  "frostbite"
+    ],
+    "blocks_effects": [
+	  "hot",
+	  "hot_speed",
+	  "blisters",
+	  "cold",
+	  "common_cold",
+	  "frostbite"
+    ]
+  },
+  {
+    "type": "enchantment",
+    "id": "MUCRANOID",
+    "condition": "ALWAYS",
+	"ench_effects": [ { "effect": "mucranoid", "intensity": 1 } ],
+    "values": [
+	{ "value": "ARMOR_HEAT", "multiply": -0.5 },
+	{ "value": "ARMOR_COLD", "multiply": -0.5 },
+	{ "value": "ARMOR_ACID", "multiply": -0.5 }
+	]
+  },
+  {
+    "id": "bio_mucranoid",
+    "type": "bionic",
+    "name": { "str": "汗腺改进器官" },
+    "description": "植入肠组织下方的小型器官，分泌被结肠吸收的激素，这种激素造成汗腺的变化，能在极端环境下提供些许保护。",
+    "occupied_bodyparts": [ [ "torso", 2 ] ],
+    "enchantments": [ "MUCRANOID" ],
+    "flags": [ "COLDPROOF","HEATPROOF","BIONIC_SHOCKPROOF","BIONIC_NPC_USABLE" ]
+  },
+  {
+    "id": "bio_mucranoid",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "name": { "str": "汗腺改进器官 CBM" },
+    "looks_like": "bio_int_enhancer",
+    "description": "植入肠组织下方的小型器官，分泌被结肠吸收的激素，这种激素造成汗腺的变化，能在极端环境下提供些许保护。",
+    "price": 2500000,
+    "weight": "100 g",
+    "difficulty": 5
+  },
+  {
+    "type": "enchantment",
+    "id": "SECONDARY_HEART",
+    "condition": "ALWAYS",
+    "values": [ { "value": "ARMOR_BIO", "multiply": -0.5 }, { "value": "REGEN_STAMINA", "multiply": 2 }, { "value": "REGEN_HP", "multiply": 1.5 } ]
+  },
+  {
+    "id": "bio_secondary_heart",
+    "type": "bionic",
+    "name": { "str": "第二心脏" },
+    "description": "第二心脏可以加快血液供应，也能在原有心脏受损后维持生理机能。",
+    "occupied_bodyparts": [ [ "torso", 4 ] ],
+    "enchantments": [ "SECONDARY_HEART" ],
+    "flags": [ "BIONIC_SHOCKPROOF","BIONIC_NPC_USABLE" ]
+  },
+  {
+    "id": "bio_secondary_heart",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "name": { "str": "第二心脏 CBM" },
+    "looks_like": "bio_int_enhancer",
+    "description": "第二心脏可以加快血液供应，也能在原有心脏受损后维持生理机能。",
+    "price": 2500000,
+    "weight": "100 g",
+    "difficulty": 5
+  },
+  {
+    "type": "effect_type",
+    "id": "Larraman_s_organ",
+    "removes_effects": [ "bleed" ],
+    "blocks_effects": [ "bleed" ]
+  },
+  {
+    "type": "enchantment",
+    "id": "LARRAMAN_S_ORGAN",
+    "condition": "ALWAYS",
+    "values": [ { "value": "REGEN_HP", "multiply": 2 } ],
+	"ench_effects": [ { "effect": "Larraman_s_organ", "intensity": 1 } ]
+  },
+  {
+    "id": "bio_larraman_s_organ",
+    "type": "bionic",
+    "name": { "str": "拉瑞曼器官" },
+    "description": "是个暗色肉质器官，形似肝脏，和一组复杂的血管一起植入胸腔，受伤时会释放特殊的细胞止血。",
+    "occupied_bodyparts": [ [ "torso", 8 ] ],
+    "enchantments": [ "LARRAMAN_S_ORGAN" ],
+    "flags": [ "BIONIC_SHOCKPROOF","BIONIC_NPC_USABLE" ]
+  },
+  {
+    "id": "bio_larraman_s_organ",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "name": { "str": "拉瑞曼器官 CBM" },
+    "looks_like": "bio_int_enhancer",
+    "description": "是个暗色肉质器官，形似肝脏，和一组复杂的血管一起植入胸腔，受伤时会释放特殊的细胞止血。",
+    "price": 2500000,
+    "weight": "100 g",
+    "difficulty": 5
+  },
+  {
+    "type": "effect_type",
+    "id": "multi_lung",
+    "removes_effects": [ "migo_atmosphere","smoke","relax_gas" ],
+    "blocks_effects": [ "migo_atmosphere","smoke","relax_gas" ]
+  },
+  {
+    "type": "enchantment",
+    "id": "MULTI_LUNG",
+    "condition": "ALWAYS",
+    "values": [ { "value": "REGEN_STAMINA", "multiply": 1.5 } ],
+	"ench_effects": [ { "effect": "multi_lung", "intensity": 1 } ]
+  },
+  {
+    "id": "bio_multi_lung",
+    "type": "bionic",
+    "name": { "str": "多肺" },
+    "description": "第三肺，是一个灰色的管状器官，能从毒气环境甚至是水下获取必要的氧气，由于高效的分解中和系统和再生系统它不会因为毒气受损。 #F版本水下呼吸不生效",
+    "occupied_bodyparts": [ [ "torso", 12 ] ],
+	"env_protec": [ [ "mouth", 30 ] ],
+    "enchantments": [ "MULTI_LUNG" ],
+    "flags": [ "GAS_PROOF","GILLS","BIONIC_SHOCKPROOF","BIONIC_NPC_USABLE" ]
+  },
+  {
+    "id": "bio_multi_lung",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "name": { "str": "多肺 CBM" },
+    "looks_like": "bio_int_enhancer",
+    "description": "第三肺，是一个灰色的管状器官，能从毒气环境甚至是水下获取必要的氧气，由于高效的分解中和系统和再生系统它不会因为毒气受损。 #F版本水下呼吸不生效",
+    "price": 2500000,
+    "weight": "100 g",
+    "difficulty": 5
+  },
+  {
+    "type": "enchantment",
+    "id": "OSSMODULA",
+    "condition": "ALWAYS",
+    "values": [ { "value": "ARMOR_BASH", "multiply": -0.3 },
+				{ "value": "ARMOR_CUT", "multiply": -0.3 },
+				{ "value": "ARMOR_STAB", "multiply": -0.3 },
+				{ "value": "ARMOR_BULLET", "multiply": -0.5 } 
+				]
+  },
+  {
+    "id": "bio_ossmodula",
+    "type": "bionic",
+    "name": { "str": "骨骼强化器官" },
+    "description": "一个管状器官，小巧的体积容纳了复杂的结构，骨骼强化器官监控并分泌影响骨骺愈合和骨化的激素。",
+    "occupied_bodyparts": [ [ "torso", 4 ] ],
+	"stat_bonus": [ [ "STR", 4 ], [ "DEX", 4 ] ],
+    "enchantments": [ "OSSMODULA" ],
+    "flags": [ "BIONIC_SHOCKPROOF","BIONIC_NPC_USABLE" ]
+  },
+  {
+    "id": "bio_ossmodula",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "name": { "str": "骨骼强化器官 CBM" },
+    "looks_like": "bio_int_enhancer",
+    "description": "一个管状器官，小巧的体积容纳了复杂的结构，骨骼强化器官监控并分泌影响骨骺愈合和骨化的激素。",
+    "price": 2500000,
+    "weight": "100 g",
+    "difficulty": 5
+  },
+  {
+    "type": "enchantment",
+    "id": "BISCOPEA",
+    "condition": "ALWAYS",
+    "values": [ { "value": "ARMOR_BASH", "multiply": -0.2 },
+				{ "value": "ARMOR_CUT", "multiply": -0.2 },
+				{ "value": "ARMOR_STAB", "multiply": -0.2 },
+				{ "value": "ARMOR_BULLET", "multiply": -0.35 } 
+				]
+  },
+  {
+    "id": "bio_Biscopea",
+    "type": "bionic",
+    "name": { "str": "肌肉强化器官" },
+    "description": "此器官植入胸腔，它的体积小巧，近似球体，其主要功能为激素调节，与骨骼强化模板类似，能够刺激人体肌肉的发育。",
+    "occupied_bodyparts": [ [ "torso", 4 ] ],
+	"stat_bonus": [ [ "STR", 4 ], [ "DEX", 4 ] ],
+    "enchantments": [ "BISCOPEA" ],
+    "flags": [ "BIONIC_SHOCKPROOF","BIONIC_NPC_USABLE" ]
+  },
+  {
+    "id": "bio_Biscopea",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "name": { "str": "肌肉强化器官 CBM" },
+    "looks_like": "bio_int_enhancer",
+    "description": "此器官植入胸腔，它的体积小巧，近似球体，其主要功能为激素调节，与骨骼强化模板类似，能够刺激人体肌肉的发育。",
+    "price": 2500000,
+    "weight": "100 g",
+    "difficulty": 5
+  },
+  {
+    "id": "bio_melanochromic",
+    "type": "bionic",
+    "name": { "str": "色素控制球" },
+    "description": "此器官呈黑色半球状，它侦测轰击皮肤的辐射水平和种类，并在必要时进行化学反应。",
+    "occupied_bodyparts": [ [ "torso", 4 ] ],
+    "flags": [ "RAD_PROOF","BIONIC_SHOCKPROOF","BIONIC_NPC_USABLE" ]
+  },
+  {
+    "id": "bio_melanochromic",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "name": { "str": "色素控制球 CBM" },
+    "looks_like": "bio_int_enhancer",
+    "description": "此器官呈黑色半球状，它侦测轰击皮肤的辐射水平和种类，并在必要时进行化学反应。",
+    "price": 2500000,
+    "weight": "100 g",
+    "difficulty": 5
+  },
+  {
+    "type": "effect_type",
+    "id": "Haemastamen",
+    "removes_effects": [ "hypovolemia","anemia","redcells_anemia" ],
+    "blocks_effects": [ "hypovolemia","anemia","redcells_anemia" ]
+  },
+  {
+    "type": "enchantment",
+    "id": "HAEMASTAMEN",
+    "condition": "ALWAYS",
+    "values": [ { "value": "ARMOR_BIO", "multiply": -0.25 },{ "value": "REGEN_HP", "multiply": 1.5 },{ "value": "REGEN_STAMINA", "multiply": 1.5 } ],
+	"ench_effects": [ { "effect": "Haemastamen", "intensity": 1 } ]
+  },
+  {
+    "id": "bio_Haemastamen",
+    "type": "bionic",
+    "name": { "str": "血液再造器官" },
+    "description": "这个细微的器官会被植入至一条主血管内，它的作用，其一是监视，在某种情况下监视第一阶段和第二阶段植入的器官，其二是改变受体的血液组分，使其变得高效。",
+    "occupied_bodyparts": [ [ "torso", 2 ] ],
+    "enchantments": [ "HAEMASTAMEN" ],
+    "flags": [ "BIONIC_SHOCKPROOF","BIONIC_NPC_USABLE" ]
+  },
+  {
+    "id": "bio_Haemastamen",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "name": { "str": "血液再造器官 CBM" },
+    "looks_like": "bio_int_enhancer",
+    "description": "这个细微的器官会被植入至一条主血管内，它的作用，其一是监视，在某种情况下监视第一阶段和第二阶段植入的器官，其二是改变受体的血液组分，使其变得高效。",
+    "price": 2500000,
+    "weight": "100 g",
+    "difficulty": 5
+  },
+  {
+    "id": "bio_occulobe",
+    "type": "bionic",
+    "name": { "str": "视觉控制器官" },
+    "description": "这个形似弹头的细小器官位于大脑底部，它能对眼的生长模式和视网膜感光细胞进行调节。",
+    "occupied_bodyparts": [ [ "head", 2 ] ],
+	"stat_bonus": [ [ "PER", 8 ] ],
+	"env_protec": [ [ "eyes", 30 ] ],
+    "active_flags": [ "NIGHT_VISION" ],
+    "flags": [ "SUN_GLASSES","SWIM_GOGGLES","BIONIC_TOGGLED","BIONIC_SHOCKPROOF","BIONIC_NPC_USABLE" ]
+  },
+  {
+    "id": "bio_occulobe",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "name": { "str": "视觉控制器官 CBM" },
+    "looks_like": "bio_int_enhancer",
+    "description": "这个形似弹头的细小器官位于大脑底部，它能对眼的生长模式和视网膜感光细胞进行调节。",
+    "price": 2500000,
+    "weight": "100 g",
+    "difficulty": 5
+  },
+  {
+    "type": "effect_type",
+    "id": "Membrane",
+    "removes_effects": [ "zapped" ],
+    "blocks_effects": [ "zapped" ],
+    "base_mods": { "pkill_tick": [ 0 ], "pkill_min": [ 0 ] }
+  },
+  {
+    "type": "enchantment",
+    "id": "MEMBRANE",
+    "condition": "ALWAYS",
+    "values": [ { "value": "ARMOR_ELEC", "multiply": -0.5 } ],
+	"ench_effects": [ { "effect": "Membrane", "intensity": 1 } ]
+  },
+  {
+    "id": "bio_Membrane",
+    "type": "bionic",
+    "name": { "str": "脑膜" },
+    "description": "这个扁平的圆形器官，植入大脑皮层顶部，该器官能提高受体的生存能力。",
+    "occupied_bodyparts": [ [ "head", 4 ] ],
+	"stat_bonus": [ [ "INT", 2 ] ],
+    "enchantments": [ "MEMBRANE" ],
+    "flags": [ "BIONIC_SHOCKPROOF","BIONIC_NPC_USABLE" ]
+  },
+  {
+    "id": "bio_Membrane",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "name": { "str": "脑膜 CBM" },
+    "looks_like": "bio_int_enhancer",
+    "description": "这个扁平的圆形器官，植入大脑皮层顶部，该器官能提高受体的生存能力。",
+    "price": 2500000,
+    "weight": "100 g",
+    "difficulty": 5
+  },
+  {
+    "type": "effect_type",
+    "id": "CBMPerception",
+    "removes_effects": [ "deaf","blind" ],
+    "blocks_effects": [ "deaf","blind" ]
+  },
+  {
+    "type": "enchantment",
+    "id": "CBMPERCEPTION",
+    "condition": "ALWAYS",
+	"ench_effects": [ { "effect": "CBMPerception", "intensity": 1 } ]
+  },
+  {
+    "id": "bio_omnidirectional",
+    "type": "bionic",
+    "name": { "str": "全向体优化" },
+    "description": "一种特殊的纳米机器，进入身体后随血液流动修复各类缺陷。",
+    "occupied_bodyparts": [ [ "torso", 2 ] ],
+    "enchantments": [ "CBMPERCEPTION" ],
+    "canceled_mutations": [
+      "ANTIFRUIT",
+      "ANTIJUNK",
+      "ANTIWHEAT",
+      "LACTOSE",
+      "CLUMSY",
+      "SMELLY",
+      "SMELLY2",
+      "ADDICTIVE",
+      "LIGHTWEIGHT",
+      "CHEMIMBALANCE",
+      "NARCOLEPTIC",
+      "SLEEPY",
+      "SLEEPY2",
+      "HYPEROPIC",
+      "MYOPIC",
+      "BADHEARING",
+      "DEAF",
+      "ASTHMA",
+      "SCHIZOPHRENIC",
+      "JITTERY",
+      "FORGETFUL",
+      "BADBACK",
+      "GLASSJAW",
+      "ALBINO",
+      "SPOTS",
+      "SORES",
+      "DEFORMED",
+      "DEFORMED2",
+      "DEFORMED3",
+      "FLIMSY",
+      "FLIMSY2",
+      "FLIMSY3",
+      "SLOWHEALER",
+      "SLOWHEALER2",
+      "SLOWHEALER3",
+      "ROT1",
+      "ROT2",
+      "ROT3"
+    ],
+    "flags": [ "BIONIC_NPC_USABLE","BIONIC_SHOCKPROOF" ]
+  },
+  {
+    "id": "bio_omnidirectional",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "name": { "str": "全向体优化 CBM" },
+    "looks_like": "bio_int_enhancer",
+    "description": "一种特殊的纳米机器，进入身体后随血液流动修复各类缺陷。",
+    "price": 1750000,
+    "weight": "100 g",
+    "difficulty": 5
+  },
+  {
+    "id": "bio_mininuke",
+    "type": "bionic",
+    "name": { "str": "人体核弹" },
+    "description": "把一颗微型核弹藏进人体，只有疯子能做到这种事情。",
+    "occupied_bodyparts": [ [ "torso", 32 ] ],
+    "fake_weapon": "bio_mininukeboom",
+    "flags": [ "BIONIC_NPC_USABLE","BIONIC_TOGGLED", "BIONIC_WEAPON" ]
+  },
+  {
+    "id": "bio_mininuke",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "name": { "str": "人体核弹 CBM" },
+    "looks_like": "bio_int_enhancer",
+    "description": "把一颗微型核弹藏进人体，只有疯子能做到这种事情。",
+    "price": 25000,
+    "weight": "100 g",
+    "difficulty": 5
+  },
+  {
+    "id": "bio_per2_enhancer",
+    "type": "bionic",
+    "name": { "str": "躯干雷达" },
+    "description": "高度集成的微型雷达，从鼻腔发射出微弱的超声波，并通过耳后植入的装置判断出目标的位置。 感知+4",
+    "occupied_bodyparts": [ [ "head", 2 ],[ "torso", 4 ] ],
+	"stat_bonus": [ [ "PER", 4 ] ],
+    "flags": [ "BIONIC_NPC_USABLE","INFRARED" ]
+  },
+  {
+    "id": "bio_per2_enhancer",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "name": { "str": "躯干雷达 CBM" },
+    "looks_like": "bio_int_enhancer",
+    "description": "高度集成的微型雷达，从鼻腔发射出微弱的超声波，并通过耳后植入的装置判断出目标的位置。 感知+4",
+    "price": 500000,
+    "weight": "100 g",
+    "difficulty": 5
+  },
+  {
+    "id": "bio_int2_enhancer",
+    "type": "bionic",
+    "name": { "str": "颈骨智能辅助" },
+    "description": "一个小型化的智能计算器，植入脊椎后方，提供副脑的服务。 智力+4",
+    "occupied_bodyparts": [ [ "head", 2 ],[ "torso", 4 ] ],
+	"stat_bonus": [ [ "INT", 4 ] ],
+    "flags": [ "BIONIC_NPC_USABLE","STUN_IMMUNE" ]
+  },
+  {
+    "id": "bio_int2_enhancer",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "name": { "str": "颈骨智能辅助 CBM" },
+    "looks_like": "bio_int_enhancer",
+    "description": "一个小型化的智能计算器，植入脊椎后方，提供副脑的服务。 智力+4",
+    "price": 500000,
+    "weight": "100 g",
+    "difficulty": 5
+  },
+  {
+    "id": "bio_str2_enhancer",
+    "type": "bionic",
+    "name": { "str": "动力臂" },
+    "description": "一只机械臂，出于对客户机体的考量，并未在设计中加入多少动力辅助设计，是左手的型号。 力量+4",
+    "occupied_bodyparts": [ [ "arm_l", 8 ] ],
+	"stat_bonus": [ [ "STR", 4 ] ],
+    "flags": [ "BIONIC_NPC_USABLE","UNARMED_BONUS" ],
+    "canceled_mutations": [
+      "ARM_FEATHERS",
+      "ARM_TENTACLES"
+    ]
+  },
+  {
+    "id": "bio_str2_enhancer",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "name": { "str": "动力臂 CBM" },
+    "looks_like": "bio_int_enhancer",
+    "description": "一只机械臂，出于对客户机体的考量，并未在设计中加入多少动力辅助设计，是左手的型号。 力量+4",
+    "price": 500000,
+    "weight": "100 g",
+    "difficulty": 5
+  },
+  {
+    "id": "bio_dex2_enhancer",
+    "type": "bionic",
+    "name": { "str": "弹力足" },
+    "description": "在腿部安置的弹簧、钢片、橡胶，参考了光圈科技公司出品防摔长筒靴。 敏捷+4",
+    "occupied_bodyparts": [ [ "leg_l", 4 ], [ "leg_r", 4 ] ],
+	"stat_bonus": [ [ "DEX", 4 ] ],
+    "flags": [ "BIONIC_NPC_USABLE","EFFECT_FEATHER_FALL" ]
+  },
+  {
+    "id": "bio_dex2_enhancer",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "name": { "str": "弹力足 CBM" },
+    "looks_like": "bio_int_enhancer",
+    "description": "在腿部安置的弹簧、钢片、橡胶，参考了光圈科技公司出品防摔长筒靴。 敏捷+4",
+    "price": 500000,
+    "weight": "100 g",
+    "difficulty": 5
+  },
+  {
+    "id": "bio_Energybarrier",
+    "type": "GENERIC",
+    "symbol": " ",
+    "color": "dark_gray",
+    "name": { "str": "能量屏障" },
+    "description": "以能量形成的菱形屏障，能抵挡大部分热能物理攻击，绝大多数高速飞行体，弱点是同样的能量。",
+	"longest_side": "250 cm",
+    "weight": "5 g",
+    "volume": "10 L",
+	"to_hit": 10,
+	"bashing": 8,
+    "material": [ "animal" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "ARMOR_ELEC",
+              "multiply": -0.25
+            },
+            {
+              "value": "ARMOR_BIO",
+              "multiply": -0.5
+            },
+            {
+              "value": "ARMOR_COLD",
+              "multiply": -0.75
+            },
+            {
+              "value": "ARMOR_HEAT",
+              "multiply": -0.75
+            },
+            {
+              "value": "ARMOR_ACID",
+              "multiply": -0.75
+            },
+            {
+              "value": "ARMOR_BASH",
+              "multiply": -0.75
+            },
+            {
+              "value": "ARMOR_CUT",
+              "multiply": -0.75
+            },
+            {
+              "value": "ARMOR_STAB",
+              "multiply": -0.95
+            },
+            {
+              "value": "ARMOR_BULLET",
+              "multiply": -1
+            }
+          ]
+        }
+      ]
+    },
+    "flags": [ "NO_UNWIELD", "UNBREAKABLE_MELEE", "TRADER_AVOID" ]
+  },
+  {
+    "id": "bio_Energy_barrier",
+    "type": "bionic",
+    "name": { "str": "能量屏障" },
+    "description": "能量盾型防御装置，旧型号在实验中被.22弹药击穿数次后改变思路将守护核心集中在正面，大大提高了格挡效率，但会占用双手作为支撑点。",
+    "occupied_bodyparts": [ [ "arm_l", 2 ], [ "hand_l", 1 ],[ "arm_r", 2 ], [ "hand_r", 1 ] ],
+    "act_cost": 10,
+    "react_cost": 1,
+    "time": 1,
+    "fake_weapon": "bio_Energybarrier",
+    "flags": [ "BIONIC_TOGGLED", "BIONIC_WEAPON", "BIONIC_NPC_USABLE" ]
+  },
+  {
+    "id": "bio_Energy_barrier",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "name": { "str": "能量屏障 CBM" },
+    "looks_like": "bio_int_enhancer",
+    "description": "能量盾型防御装置，旧型号在实验中被.22弹药击穿数次后改变思路将守护核心集中在正面，大大提高了格挡效率，但会占用双手作为支撑点。",
+    "price": 25000,
+    "weight": "100 g",
+    "difficulty": 5
+  },
+  {
+    "id": "bio_serratedwhip",
+    "copy-from": "bullwhip",
+    "type": "GENERIC",
+    "color": "dark_gray",
+    "name": { "str": "锯齿鞭" },
+    "description": "可伸缩的超合金长鞭，以化纤材料为脉络，超合金环带相扣，左右各有一排锯齿。",
+	"longest_side": "150 cm",
+    "weight": "1250 g",
+    "volume": "3 L",
+	"to_hit": 2,
+    "cutting": 32,
+    "material": [ "superalloy","nylon" ],
+    "flags": [ "NO_UNWIELD", "UNBREAKABLE_MELEE", "TRADER_AVOID", "REACH_ATTACK", "REACH3", "WHIP" ]
+  },
+  {
+    "id": "bio_serrated_whip",
+    "type": "bionic",
+    "name": { "str": "锯齿鞭" },
+    "description": "可伸缩的超合金长鞭，以化纤材料为脉络，超合金环带相扣，左右各有一排锯齿。",
+    "occupied_bodyparts": [ [ "arm_r", 5 ], [ "hand_r", 2 ] ],
+	"act_cost": "50 J",
+    "fake_weapon": "bio_serratedwhip",
+    "flags": [ "BIONIC_TOGGLED", "BIONIC_WEAPON", "BIONIC_NPC_USABLE" ]
+  },
+  {
+    "id": "bio_serrated_whip",
+    "copy-from": "bionic_general",
+    "type": "BIONIC_ITEM",
+    "name": { "str": "锯齿鞭 CBM" },
+    "looks_like": "bio_int_enhancer",
+    "description": "可伸缩的超合金长鞭，以化纤材料为脉络，超合金环带相扣，左右各有一排锯齿。",
+    "price": 25000,
+    "weight": "100 g",
+    "difficulty": 5
+  }
+]

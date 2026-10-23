@@ -1,0 +1,63 @@
+[
+  {
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "mon_zombie_scientist_death_drops",
+    "copy-from": "mon_zombie_scientist_death_drops",
+    "extend": {
+      "entries": [
+        {
+          "collection": [
+            { "group": "bionics", "prob": 10 }
+          ]
+        },
+        { "group": "wallets_science", "damage": [ 1, 4 ], "prob": 5 }
+      ]
+    }
+  },
+  {
+    "type": "item_group",
+    "id": "bionics_sci",
+    "subtype": "distribution",
+    "//": "High-tech bionics, handy for the harried researcher.  They get access to classified toys too, but only stuff a scientist would have use for.",
+    "entries": [
+      { "item": "burnt_out_bionic", "prob": 60 },
+      { "item": "bio_batteries", "prob": 30 },
+      { "item": "bio_power_storage", "prob": 30 },
+      { "item": "bio_metabolics", "prob": 5 },
+      { "item": "bio_ethanol", "prob": 5 },
+      { "item": "bio_ups", "prob": 10 },
+      { "item": "bio_torsionratchet", "prob": 30 },
+      { "item": "bio_tools", "prob": 10 },
+      { "item": "bio_flashlight", "prob": 30 },
+      { "item": "bio_lighter", "prob": 25 },
+      { "item": "bio_magnet", "prob": 20 },
+      { "item": "bio_memory", "prob": 15 },
+      { "item": "bio_ears", "prob": 10 },
+      { "item": "bio_sunglasses", "prob": 10 },
+      { "item": "bio_eye_optic", "prob": 10 },
+      { "item": "bio_eye_enhancer", "prob": 5 },
+      { "item": "bio_dex_enhancer", "prob": 5 },
+      { "item": "bio_int_enhancer", "prob": 10 },
+      { "item": "bio_night_vision", "prob": 1 },
+      { "item": "bio_infrared", "prob": 2 },
+      { "item": "bio_synaptic_regen", "prob": 12 },
+      { "item": "bio_gills", "prob": 5 },
+      { "item": "bio_climate", "prob": 2 },
+      { "item": "bio_heatsink", "prob": 2 },
+      { "item": "bio_blood_filter", "prob": 10 },
+      { "item": "bio_fingerhack", "prob": 2 },
+      { "item": "bio_lockpick", "prob": 2 },
+      { "item": "bio_surgical_razor", "prob": 8 },
+      { "item": "bio_nanobots", "prob": 15 },
+      { "item": "bio_blood_anal", "prob": 10 },
+      { "item": "bio_geiger", "prob": 15 },
+      { "item": "bio_radscrubber", "prob": 10 },
+      { "item": "bio_watch", "prob": 40 },
+      { "item": "bio_leukocyte", "prob": 15 },
+      { "item": "bio_syringe", "prob": 2 },
+      { "item": "bio_jointservo", "prob": 10 },
+      { "item": "bio_soporific", "prob": 2 }
+    ]
+  }
+]

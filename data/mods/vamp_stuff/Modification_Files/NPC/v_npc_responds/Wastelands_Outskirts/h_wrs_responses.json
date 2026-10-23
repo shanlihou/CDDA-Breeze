@@ -1,0 +1,126 @@
+[
+  {
+    "id": "TALK_HUMAN_RS_talk",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_has_trait": "wrsgo",
+      "yes": {
+        "u_has_trait": "wrsgoing",
+        "yes": {
+          "u_has_trait": "wrsdone",
+          "yes": "再见...",
+          "no": "别浪费时间和我说话了，把注意力集中在路上！"
+        },
+        "no": "你现在要带我去那里吗？"
+      },
+      "no": "嗨，你好吗？我好久没看见一个活人在这个该死的世界上行走了！"
+    },
+    "responses": [
+      {
+        "text": "我们需要你帮忙操作无线电塔。",
+        "topic": "TALK_HUMAN_RS_talked",
+        "condition": {
+          "not": {
+            "u_has_trait": "wrsgo"
+          }
+        }
+      },
+      {
+        "text": "好，我来吧。",
+        "topic": "TALK_MISSION_LIST",
+        "condition": {
+          "and": [
+            {
+              "u_has_trait": "wrsgo"
+            },
+            {
+              "not": {
+                "u_has_trait": "wrsgoing"
+              }
+            },
+            {
+              "not": {
+                "u_has_trait": "wrsdone"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "text": "好，我会去做的！",
+        "topic": "TALK_DONE",
+        "condition": {
+          "and": [
+            {
+              "u_has_trait": "wrsgoing"
+            },
+            {
+              "not": {
+                "u_has_trait": "wrsdone"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "text": "再见。",
+        "topic": "TALK_DONE",
+        "effect": {
+          "npc_change_class": "HUMAN_RADIOSPEC_WORKING"
+        },
+        "condition": {
+          "u_has_trait": "wrsdone"
+        }
+      }
+    ]
+  },
+  {
+    "id": "TALK_HUMAN_RS_talked",
+    "type": "talk_topic",
+    "dynamic_line": "无线电用起来太简单了，你为什么要我去做呢？",
+    "responses": [
+      {
+        "text": "减轻工作负担？",
+        "topic": "TALK_HUMAN_RS_nvm"
+      },
+      {
+        "text": "提高无线电的效率？",
+        "topic": "TALK_HUMAN_RS_nvm"
+      },
+      {
+        "text": "对我们来说其实是件复杂的事情...",
+        "topic": "TALK_HUMAN_RS_nvm"
+      }
+    ]
+  },
+  {
+    "id": "TALK_HUMAN_RS_nvm",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_has_trait": "wrsgo",
+      "yes": "我们得走了。",
+      "no": "算了，只要我能从这堆废话中得到好处，我就会来的！另外，我很感激你来接我。"
+    },
+    "responses": [
+      {
+        "text": "我们走吧！",
+        "topic": "TALK_DONE",
+        "condition": {
+          "u_has_trait": "wrsgo"
+        }
+      },
+      {
+        "text": "好的。",
+        "topic": "TALK_MISSION_OFFER",
+        "effect": {
+          "u_add_trait": "wrsgo"
+        },
+        "condition": {
+          "not": {
+            "u_has_trait": "wrsgo"
+          }
+        }
+      }
+    ]
+  }
+]

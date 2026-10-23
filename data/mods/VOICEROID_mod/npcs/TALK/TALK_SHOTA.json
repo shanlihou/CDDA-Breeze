@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_SHOTA_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"是小爱吗？",
+    "responses":[
+      { "text": "有孩子在这里...必须保护他", "topic": "TALK_SHOTA_SAN_2" },
+      { "text": "现在带走他太危险了...让他在这里再等一会吧", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_SHOTA_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"一定要找到小爱...",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

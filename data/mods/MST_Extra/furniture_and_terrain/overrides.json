@@ -1,0 +1,104 @@
+[
+  {
+    "type": "terrain",
+    "id": "t_tree_pine",
+    "name": "松树",
+    "looks_like": "t_tree",
+    "description": "一棵高耸入云的针叶树，分类学上属于松属，在新英格兰地区主要由刚松、北美红松、北美乔松组成。如果你仔细观察的话，你可以在这上面找到粘稠的松香和尚未收获的松塔。你可以用合适的工具砍倒它。",
+    "symbol": "4",
+    "color": "green",
+    "move_cost": 0,
+    "coverage": 80,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT"
+    ],
+    "transforms_into": "t_tree_pine_harvested",
+    "examine_action": "harvest_ter",
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "spring"
+        ],
+        "id": "pine_spring_harv"
+      },
+      {
+        "seasons": [
+          "summer",
+          "autumn",
+          "winter"
+        ],
+        "id": "pine_harv"
+      }
+    ],
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "ter_set": "t_dirt",
+      "items": [
+        {
+          "item": "stick_long",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "t_tree_birch_harvested",
+    "name": "桦树",
+    "looks_like": "t_tree_harvested",
+    "description": "一棵高大的落叶树，分类学上属于桦属，在新英格兰地区主要由北美黄桦、北美白桦、北美灰桦组成。看起来成熟的桦树皮都被撕光了。你可以用合适的工具砍倒它。",
+    "symbol": "7",
+    "color": "green",
+    "transforms_into": "t_tree_birch",
+    "examine_action": "harvested_plant",
+    "move_cost": 0,
+    "coverage": 80,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT"
+    ],
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "ter_set": "t_dirt",
+      "items": [
+        {
+          "item": "stick_long",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  }
+]

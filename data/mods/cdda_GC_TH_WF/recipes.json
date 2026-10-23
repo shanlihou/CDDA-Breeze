@@ -1,0 +1,22 @@
+[
+    {
+        "type": "recipe",
+        "activity_level": "LIGHT_EXERCISE",
+        "result": "mutagen_TH_WF",
+        "category": "CC_CHEM",
+        "subcategory": "CSC_CHEM_MUTAGEN",
+        "skill_used": "chemistry",
+        "skills_required": [ "firstaid", 1 ],
+        "difficulty": 8,
+        "time": "20 m",
+        "book_learn": [ [ "recipe_alpha", 7 ] ],
+        "using": [ [ "mutagen_production_standard", 50 ] ],
+        "components": [
+          [ [ "mutagen_spider", 3 ] ],
+          [ [ "mutagen_elfa", 3 ] ],
+          [ [ "mutagen_alpha", 3 ] ],
+          [ [ "mutagen_medical", 3 ] ]
+        ],
+        "flags": [ "SECRET" ]
+    }
+]

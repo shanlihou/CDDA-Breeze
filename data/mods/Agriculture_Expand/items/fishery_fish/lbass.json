@@ -1,0 +1,35 @@
+[
+	{
+		"type": "COMESTIBLE",
+		"id": "fishery_egg_lbass",
+		"name": { "str": "鱼卵（大嘴鲈）" },
+		"copy-from": "fishery_egg",
+		"spoils_in": "10 days",
+		"description": "一些可以食用，也可以等他们孵化出小鱼的大嘴鲈鱼卵。",
+		"rot_spawn": "FISHERY_GROUP_EGG_lbass",
+		"rot_spawn_chance": 50
+	},
+	{
+		"name": "FISHERY_GROUP_EGG_lbass",
+		"type": "monstergroup",
+		"default": "fishery_mon_lbass_juvenile",
+		"monsters": [ ]
+	},
+	{
+		"id": "fishery_mon_lbass_juvenile",
+		"type": "MONSTER",
+		"name": { "str": "大嘴鲈鱼苗" },
+		"description": "一条大嘴鲈幼鱼，过一段时间就会变成成鱼。",
+		"copy-from": "fishery_mon_juvenile",
+		"harvest": "fish_tiny",
+		"upgrades": { "age_grow": 20, "into": "mon_fish_lbass" }
+	},
+	{
+		"id": "mon_fish_lbass",
+		"type": "MONSTER",
+		"copy-from": "mon_fish_lbass",
+		"name": { "str": "大嘴鲈" },
+		"reproduction": { "baby_egg": "fishery_egg_lbass", "baby_count": 10, "baby_timer": 20 },
+		"baby_flags": [ "SPRING" ]
+	}
+]

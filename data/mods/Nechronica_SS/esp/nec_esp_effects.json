@@ -1,0 +1,25 @@
+[
+  {
+    "type": "effect_type",
+    "id": "nec_voidthrone",
+    "name": [ "虚空宝座" ],
+    "desc": [ "使肉体不再受到重力的束缚。" ],
+    "apply_message": "得到了宝座的力量",
+    "remove_message": "失去了宝座的力量",
+    "rating": "good",
+    "base_mods": { "per_mod": [ 1,5 ], "dex_mod": [ 1,5 ],  "speed_mod": [ 5,20 ] }
+  },
+  {
+    "type": "effect_type",
+    "id": "NEC_pieces_on_the_board",
+    "name": [ "盘上棋兵" ],
+    "desc": [ "让棋子随之舞动。" ],
+    "max_intensity": 4,
+    "int_add_val": 1,
+    "apply_message": "在力量的狂风中起舞。",
+    "remove_message": "力量正在平息。",
+    "base_mods": { "speed_mod": [ -70 ] },
+    "scaling_mods": { "speed_mod": [ -10 ] }
+  }
+
+]

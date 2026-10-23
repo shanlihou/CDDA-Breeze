@@ -1,0 +1,25 @@
+[
+  {
+    "id": "f_gap",
+    "type": "furniture",
+    "name": "裂隙",
+    "description": "空间结构上的一道裂口。",
+    "symbol": "u",
+    "looks_like": "fd_fatigue",
+    "color": "black",
+    "bash": {
+      "str_min": 200,
+      "str_max": 400,
+      "sound": "嗖。",
+      "sound_fail": "嗖。"
+    },
+    "examine_action": "translocator",
+    "move_cost_mod": 0,
+    "required_str": -1,
+    "flags": [
+      "ALLOW_FIELD_EFFECT",
+      "TRANSLOCATOR",
+      "TRANSPARENT"
+    ]
+  }
+]

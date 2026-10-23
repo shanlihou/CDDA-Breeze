@@ -1,0 +1,498 @@
+[
+  {
+    "id": "mon_eryops",
+    "type": "MONSTER",
+    "name": {
+      "str": "引螈",
+      "str_pl": "引螈"
+    },
+    "description": "一种自鸣得意的大型蛙状生物。它爬行着寻找附近的猎物，任何能塞进它那不成比例的大颚里的东西都不放过。别被它肥胖的外表欺骗，它是一种出奇敏捷的掠食者。",
+    "volume": "155 L",
+    "weight": "160 kg",
+    "default_faction": "touhou_amphibianancient_medium",
+    "bodytype": "gator",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "AMPHIBIAN"
+    ],
+    "harvest": "reptile_terrestrial_large_leather",
+    "hp": 135,
+    "speed": 100,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "e",
+    "looks_like": "mon_gator",
+    "color": "dark_gray_green",
+    "aggression": 5,
+    "morale": 50,
+    "melee_skill": 3,
+    "melee_dice": 3,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      }
+    ],
+    "dodge": 2,
+    "armor_bash": 4,
+    "armor_cut": 2,
+    "armor_bullet": 2,
+    "vision_night": 20,
+    "path_settings": {
+      "max_dist": 15
+    },
+    "reproduction": {
+      "baby_egg": "egg_eryops",
+      "baby_count": 24,
+      "baby_timer": 28
+    },
+    "baby_flags": [
+      "SPRING",
+      "SUMMER",
+      "AUTUMN",
+      "WINTER"
+    ],
+    "anger_triggers": [
+      "HURT",
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK",
+      "STALK"
+    ],
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        50
+      ]
+    ],
+    "flags": [
+      "ANIMAL",
+      "HEARS",
+      "SEES",
+      "SMELLS",
+      "SWIMS",
+      "WATER_CAMOUFLAGE"
+    ],
+    "//": "Based on Eryops megacephalus. No reproductive data. Weight based on 10.1111/pala.12629 ",
+    "//2": "Note: for ALL Temnospondyli, it's supposed they had bad hearing during the Carboniferous, decent enough towards the end of the Early Permian",
+    "//3": "Add 'grasping bite' attack"
+  },
+  {
+    "id": "mon_eryops_baby",
+    "type": "MONSTER",
+    "name": {
+      "str": "幼年引螈",
+      "str_pl": "幼年引螈"
+    },
+    "copy-from": "mon_eryops",
+    "description": "一只幼年引螈。大约有牛蛙的四倍大，饥饿程度则是八倍。",
+    "volume": "4 L",
+    "weight": "4 kg",
+    "hp": 12,
+    "speed": 80,
+    "color": "dark_gray",
+    "aggression": 0,
+    "morale": 15,
+    "melee_skill": 2,
+    "melee_dice": 1,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
+    "armor_bash": 1,
+    "armor_cut": 0,
+    "armor_bullet": 0,
+    "upgrades": {
+      "age_grow": 32,
+      "into": "mon_eryops"
+    },
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        20
+      ]
+    ],
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_pederpes",
+    "type": "MONSTER",
+    "name": {
+      "str": "佩德螈",
+      "str_pl": "佩德螈"
+    },
+    "description": "一种长尾两栖动物。除了隐约有些像蜥蜴的外表外，这只长蟾蜍相当不起眼。",
+    "volume": "9 L",
+    "weight": "10 kg",
+    "default_faction": "touhou_amphibianancient_medium",
+    "bodytype": "gator",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "AMPHIBIAN"
+    ],
+    "harvest": "reptile_terrestrial_large_leather",
+    "hp": 14,
+    "speed": 90,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "p",
+    "looks_like": "mon_gator",
+    "color": "light_gray_green",
+    "aggression": 0,
+    "morale": 25,
+    "melee_skill": 1,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 1
+      }
+    ],
+    "dodge": 2,
+    "armor_bash": 1,
+    "vision_night": 20,
+    "path_settings": {
+      "max_dist": 15
+    },
+    "reproduction": {
+      "baby_egg": "egg_pederpes",
+      "baby_count": 20,
+      "baby_timer": 32
+    },
+    "baby_flags": [
+      "SPRING",
+      "SUMMER",
+      "AUTUMN",
+      "WINTER"
+    ],
+    "anger_triggers": [
+      "HURT"
+    ],
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        50
+      ]
+    ],
+    "flags": [
+      "ANIMAL",
+      "HEARS",
+      "SEES",
+      "SMELLS",
+      "SWIMS",
+      "WATER_CAMOUFLAGE"
+    ],
+    "//": "Based on Pederpes sp. I couldn't find almost anything other than the size at 1 m average so most numbers are estimates",
+    "//2": "These tetrapods were more or less stem-tetrapods, a sister clade of actual tetrapods (containing amphibians + amniots + a bunch of other salamander slash frog animals), instead of being 'true' amphibians"
+  },
+  {
+    "id": "mon_pederpes_baby",
+    "type": "MONSTER",
+    "name": {
+      "str": "幼年佩德螈",
+      "str_pl": "幼年佩德螈"
+    },
+    "copy-from": "mon_pederpes",
+    "description": "一只佩德螈幼体。看起来像一只巨大的会走路的蝌蚪。",
+    "volume": "250 ml",
+    "weight": "250 g",
+    "hp": 2,
+    "speed": 80,
+    "color": "green",
+    "morale": 5,
+    "melee_skill": 1,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 0
+      }
+    ],
+    "dodge": 1,
+    "armor_bash": 0,
+    "upgrades": {
+      "age_grow": 40,
+      "into": "mon_pederpes"
+    },
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        35
+      ]
+    ],
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_platyoposaurus",
+    "type": "MONSTER",
+    "name": {
+      "str": "扁头螈",
+      "str_pl": "扁头螈"
+    },
+    "description": "一种看起来像短吻鳄的野兽。头部呈三角形，适合捕鱼。巨大的两栖身体仿佛用鳄类的概念加固过。这种动物潜伏着等待猎物靠近。",
+    "volume": "265 L",
+    "weight": "250 kg",
+    "default_faction": "touhou_amphibianancient_large",
+    "bodytype": "gator",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "AMPHIBIAN"
+    ],
+    "harvest": "reptile_terrestrial_large_leather",
+    "hp": 300,
+    "speed": 95,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "p",
+    "looks_like": "mon_gator",
+    "color": "dark_gray_green",
+    "aggression": 20,
+    "morale": 50,
+    "melee_skill": 4,
+    "melee_dice": 4,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      }
+    ],
+    "dodge": 1,
+    "armor_bash": 3,
+    "armor_cut": 2,
+    "armor_bullet": 2,
+    "vision_night": 20,
+    "path_settings": {
+      "max_dist": 15
+    },
+    "reproduction": {
+      "baby_egg": "egg_platyoposaurus",
+      "baby_count": 16,
+      "baby_timer": 32
+    },
+    "baby_flags": [
+      "SPRING",
+      "SUMMER",
+      "AUTUMN",
+      "WINTER"
+    ],
+    "anger_triggers": [
+      "HURT",
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK",
+      "STALK"
+    ],
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        65
+      ]
+    ],
+    "flags": [
+      "ANIMAL",
+      "HEARS",
+      "SEES",
+      "SMELLS",
+      "SWIMS",
+      "WATER_CAMOUFLAGE"
+    ],
+    "//": "Based on Platyoposaurus sp. I couldn't find almost anything other than the size at 2.5 m average so most data are estimates",
+    "//2": "Add 'grasping bite' attack",
+    "//3": "Should have no movement speed demerit while in water"
+  },
+  {
+    "id": "mon_platyoposaurus_baby",
+    "type": "MONSTER",
+    "name": {
+      "str": "幼年扁头螈",
+      "str_pl": "幼年扁头螈"
+    },
+    "copy-from": "mon_platyoposaurus",
+    "description": "一只幼年扁头螈。喜欢鱼和脚踝的味道。",
+    "volume": "6 L",
+    "weight": "6 kg",
+    "hp": 20,
+    "speed": 85,
+    "color": "green",
+    "aggression": 10,
+    "morale": 20,
+    "melee_skill": 2,
+    "melee_dice": 1,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
+    "dodge": 2,
+    "armor_bash": 1,
+    "armor_cut": 1,
+    "armor_bullet": 0,
+    "upgrades": {
+      "age_grow": 36,
+      "into": "mon_platyoposaurus"
+    },
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        45
+      ]
+    ],
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_prionosuchus",
+    "type": "MONSTER",
+    "name": {
+      "str": "锯齿螈",
+      "str_pl": "锯齿螈"
+    },
+    "description": "一种看起来像短吻鳄的野兽，大约有鳄鱼的两倍大。三角形的头部适合捕鱼，大到足以大幅扩展“鱼”的定义。巨大的身体覆盖着某种硬化皮革，看起来像原始鳞片。",
+    "volume": "1800 L",
+    "weight": "2000 kg",
+    "default_faction": "touhou_amphibianancient_large",
+    "bodytype": "gator",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "AMPHIBIAN"
+    ],
+    "harvest": "reptile_terrestrial_large_leather",
+    "hp": 800,
+    "speed": 115,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "p",
+    "looks_like": "mon_gator",
+    "color": "brown",
+    "aggression": 25,
+    "morale": 50,
+    "melee_skill": 4,
+    "melee_dice": 4,
+    "melee_dice_sides": 5,
+    "melee_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 6
+      }
+    ],
+    "dodge": 2,
+    "armor_bash": 2,
+    "armor_cut": 2,
+    "armor_bullet": 4,
+    "armor_stab": 2,
+    "vision_night": 25,
+    "path_settings": {
+      "max_dist": 12
+    },
+    "reproduction": {
+      "baby_egg": "egg_prionosuchus",
+      "baby_count": 8,
+      "baby_timer": 48
+    },
+    "baby_flags": [
+      "SPRING",
+      "SUMMER",
+      "AUTUMN",
+      "WINTER"
+    ],
+    "anger_triggers": [
+      "HURT",
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK",
+      "STALK"
+    ],
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        85
+      ]
+    ],
+    "flags": [
+      "ANIMAL",
+      "HEARS",
+      "SEES",
+      "SMELLS",
+      "SWIMS",
+      "WATER_CAMOUFLAGE"
+    ],
+    "//": "Based on Prionosuchus plummeri. No reproductive data",
+    "//2": "Add 'grasping bite' attack",
+    "//3": "Should have no movement speed demerit while in water"
+  },
+  {
+    "id": "mon_prionosuchus_baby",
+    "type": "MONSTER",
+    "name": {
+      "str": "幼年锯齿螈",
+      "str_pl": "幼年锯齿螈"
+    },
+    "copy-from": "mon_prionosuchus",
+    "description": "一只“小”锯齿螈. 它还会长大的，越长越大",
+    "volume": "25 L",
+    "weight": "25 kg",
+    "hp": 35,
+    "speed": 120,
+    "color": "green",
+    "aggression": 10,
+    "morale": 30,
+    "melee_skill": 2,
+    "melee_dice": 3,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 3
+      }
+    ],
+    "dodge": 3,
+    "armor_bash": 1,
+    "armor_cut": 0,
+    "armor_bullet": 1,
+    "armor_stab": 0,
+    "upgrades": {
+      "age_grow": 56,
+      "into": "mon_prionosuchus"
+    },
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        50
+      ]
+    ],
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  }
+]

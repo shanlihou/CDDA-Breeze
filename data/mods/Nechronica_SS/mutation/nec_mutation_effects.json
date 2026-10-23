@@ -1,0 +1,30 @@
+[
+  {
+    "type": "effect_type",
+    "id": "mutagen_necromancy",
+    "name": [ "变化(尸人)", "变异(尸人)", "变异(尸人)" ],
+    "desc": [
+      "你摄入了尸人诱变剂。",
+      "你感觉到心脏的动作越来越慢。",
+      "你感觉自己正在被深渊召唤着。"
+    ],
+    "max_intensity": 3,
+    "resist_traits": [ "THRESH_DRAGON_BLACK" ],
+    "base_mods": {
+      "hunger_min": [ 1 ],
+      "hunger_max": [ 3 ],
+      "hunger_tick": [ 300 ],
+      "hurt_min": [ 1 ],
+      "hurt_max": [ 2 ],
+      "hurt_chance": [ -22 ],
+      "hurt_tick": [ 75 ],
+      "pain_min": [ 1 ],
+      "pain_max": [ 2 ],
+      "pain_chance": [ 100 ],
+      "pain_tick": [ 75 ]
+    },
+    "scaling_mods": { "hunger_tick": [ -200 ], "hurt_chance": [ 21, 0 ], "pain_chance": [ -30 ] },
+    "rating": "bad",
+    "blood_analysis_description": "Necromancy Mutagen Contamination"
+  }
+]

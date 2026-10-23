@@ -1,0 +1,202 @@
+[
+  {
+    "type": "mutation",
+    "id": "嗯哼，所以你点进来是想改这里的什么东西吗？",
+    "name": "丧尸信息素",
+    "points": 114514,
+    "description": "臭，太臭了，你浑身散发着丧尸特有的腐败气味，这使得你更难以有效的说服npc，往好处想，丧尸把你当成它们的同类了，只要保持五米(格)以上的距离它们就绝对发现不了你，但是因此你也完全没办法分辨哪只丧尸已经识破了你的伪装",
+    "mixed_effect": true,
+    "category": [
+      "信息素"
+    ],
+    "social_modifiers": {
+      "persuade": -15,
+      "lie": -15
+    },
+    "anger_relations": [
+      [
+        "ZOMBIE",
+        -100
+      ]
+    ]
+  },
+  {
+    "type": "item_group",
+    "subtype": "collection",
+    "//": "contains cloth (always), a cash card (10% chance), and a random item (50% chance)",
+    "id": "default_zombie_death_drops",
+    "entries": [
+      {
+        "group": "default_zombie_clothes"
+      },
+      {
+        "item": "所以你又开调试了?",
+        "prob": 1
+      },
+      {
+        "group": "default_zombie_items",
+        "prob": 50
+      },
+      {
+        "group": "wallets",
+        "damage": [
+          1,
+          4
+        ],
+        "prob": 10
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "mon_zombie_armored_death_drops",
+    "entries": [
+      {
+        "item": "power_supply",
+        "count": [
+          0,
+          7
+        ],
+        "prob": 25
+      },
+      {
+        "item": "element",
+        "count": [
+          0,
+          3
+        ],
+        "prob": 40
+      },
+      {
+        "item": "cable",
+        "charges": [
+          0,
+          12
+        ],
+        "prob": 60
+      },
+      {
+        "item": "transponder",
+        "count": [
+          0,
+          1
+        ],
+        "prob": 25
+      },
+      {
+        "item": "circuit",
+        "count": [
+          0,
+          8
+        ],
+        "prob": 40
+      },
+      {
+        "item": "small_lcd_screen",
+        "count": [
+          0,
+          2
+        ],
+        "prob": 25
+      },
+      {
+        "item": "RAM",
+        "count": [
+          0,
+          1
+        ],
+        "prob": 25
+      },
+      {
+        "item": "depowered_helmet",
+        "count": [
+          0,
+          1
+        ],
+        "prob": 20
+      },
+      {
+        "item": "depowered_armor",
+        "count": [
+          0,
+          1
+        ],
+        "prob": 20
+      }
+    ]
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "所以你又开调试了?",
+    "category": "other",
+    "name": "奇怪的丧尸肉块",
+    "weight": "500 g",
+    "color": "light_green",
+    "spoils_in": "1 days",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "description": "诱变",
+      "effect_on_conditions": [
+        "EOC_ZZ_MUT_信息素"
+      ]
+    },
+    "flags": [
+      "TRADER_AVOID",
+      "NUTRIENT_OVERRIDE",
+      "BAD_TASTE"
+    ],
+    "comestible_type": "FOOD",
+    "symbol": "+",
+    "healthy": -10,
+    "looks_like": "meat_tainted",
+    "calories": 260,
+    "description": "一团还在蠕动的丧尸身上脱落的肉块，吃下它有可能导致产生特定的变异",
+    "price": 0,
+    "price_postapoc": 0,
+    "material": [
+      "flesh"
+    ],
+    "vitamins": [
+      [
+        "mutant_toxin",
+        30
+      ]
+    ],
+    "volume": "1 L",
+    "fun": -30
+  },
+  {
+    "type": "mutation_category",
+    "id": "信息素",
+    "name": {
+      "str": "???"
+    },
+    "threshold_mut": "嗯哼，所以你点进来是想改这里的什么东西吗？",
+    "mutagen_message": "你硬着头皮吃了下去",
+    "iv_message": "呕，吃从丧尸身上掉下来的东西?不会真有人能忍得住吧?不会吧不会吧?",
+    "memorial_message": "???"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_ZZ_MUT_信息素",
+    "condition": {
+      "compare_int": [
+        "moon",
+        ">=",
+        {
+          "const": 0
+        }
+      ]
+    },
+    "effect": [
+      {
+        "u_mutate_category": "信息素"
+      },
+      {
+        "u_message": "你感到体内发生了变化。",
+        "type": "good"
+      }
+    ]
+  }
+]

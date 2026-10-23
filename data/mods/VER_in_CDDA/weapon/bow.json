@@ -1,0 +1,83 @@
+[
+    {
+        "id": "dragonbreath_bow",
+        "looks_like": "longbow",
+        "type": "GUN",
+        "symbol": "(",
+        "color": "red",
+        "name": {
+          "str": "龙之息"
+        },
+        "description": "一把非常大和重的弓，形如消逝的光芒里的龙之息，本是作为观赏品设计，拉动它需要非常大的力气",
+        "price": 160000,
+        "material": [
+          "steel",
+          "plastic"
+        ],
+        "flags": [
+          "FIRE_TWOHAND",
+          "RELOAD_AND_SHOOT",
+          "PRIMITIVE_RANGED_WEAPON",
+          "SHEATH_BOW",
+          "WATERPROOF_GUN",
+          "NEVER_JAMS"
+        ],
+        "ammo_effects": [
+          "NEVER_MISFIRES"
+        ],
+        "skill": "archery",
+        "min_strength": 30,
+        "ammo": [
+          "arrow"
+        ],
+        "weight": "4000 g",
+        "volume": "6 L",
+        "longest_side": "250 cm",
+        "price_postapoc": 12000,
+        "reload_noise_volume": 4,
+        "loudness": 5,
+        "durability": 8,
+        "ranged_damage": {
+          "damage_type": "stab",
+          "amount": 10,
+          "armor_penetration": 6,
+          "damage_multiplier": 2
+        },
+        "range": 30,
+        "dispersion": 500,
+        "sight_dispersion": 100,
+        "clip_size": 1,
+        "valid_mod_locations": [
+          [
+            "underbarrel",
+            1
+          ],
+          [
+            "sights",
+            1
+          ],
+          [
+            "stabilizer",
+            1
+          ],
+          [
+            "dampening",
+            1
+          ],
+          [
+            "arrow rest",
+            1
+          ]
+        ],
+        "reload": 50,
+        "pocket_data": [
+          {
+            "pocket_type": "MAGAZINE",
+            "ammo_restriction": {
+              "arrow": 1
+            }
+          }
+        ],
+        "bashing":20
+    }
+]

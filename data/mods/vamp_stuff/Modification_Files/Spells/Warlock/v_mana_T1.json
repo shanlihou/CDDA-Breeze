@@ -1,0 +1,68 @@
+[
+  {
+    "id": "t1_mana_darkbolt",
+    "type": "SPELL",
+    "name": {
+      "str": "黑暗法球"
+    },
+    "description": "一道魔法般的世俗法力冲击你的敌人，造成<color_light_gray>点纯伤害</color>。\n\n这是一个<color_light_gray>一阶</color>法术。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "base_energy_cost": 100,
+    "final_energy_cost": 300,
+    "energy_source": "MANA",
+    "spell_class": "VAMP_MANA_spellcaster",
+    "difficulty": 2,
+    "min_damage": 25,
+    "max_damage": 65,
+    "damage_increment": 2,
+    "max_level": 30,
+    "min_range": 5,
+    "max_range": 15,
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "base_casting_time": 125,
+    "damage_type": "pure"
+  },
+  {
+    "id": "t1_mana_arcanebinding",
+    "type": "SPELL",
+    "name": {
+      "str": "奥术束缚"
+    },
+    "description": "用你灌输了以太奥术能量的武器攻击你的敌人，从内在打击你的敌人，造成<color_light_gray>真实伤害</color>并且<color_yellow>定身</color>他们。\n\n这是一个<color_light_gray>一阶</color>法术。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "v_spell_arcanebinding",
+    "base_energy_cost": 150,
+    "final_energy_cost": 300,
+    "energy_source": "MANA",
+    "spell_class": "VAMP_MANA_spellcaster",
+    "difficulty": 3,
+    "min_damage": 30,
+    "max_damage": 60,
+    "damage_increment": 3,
+    "max_level": 10,
+    "min_range": 1,
+    "max_range": 1,
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "base_casting_time": 100,
+    "min_duration": 500,
+    "max_duration": 1000,
+    "damage_type": "pure"
+  }
+]

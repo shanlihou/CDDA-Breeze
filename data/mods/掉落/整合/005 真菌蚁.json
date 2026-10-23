@@ -1,0 +1,33 @@
+[
+
+ {
+    "type": "item_group",
+    "id": "zhenghe_005",
+    "//": "真菌蚁",
+    "subtype": "collection",
+    "entries": [
+      {
+        "distribution": [
+          {
+            "item": "essence",
+            "prob": 50
+          },
+          {
+            "item": "essence_blood",
+            "prob": 50
+          }
+        ],
+        "prob": 5
+      },{ "item": "destiny_copper", "count": [ 6, 8 ] }
+    ]
+  },
+ {
+    "id": "mon_ant_fungus",
+    "//": "真菌蚁",
+    "copy-from": "mon_ant_fungus",
+    "type": "MONSTER",
+    "death_drops": "zhenghe_005"
+  }
+ 
+
+]

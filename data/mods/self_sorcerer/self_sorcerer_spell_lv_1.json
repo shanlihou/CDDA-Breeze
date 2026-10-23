@@ -1,0 +1,937 @@
+[
+  {
+    "id": "spell_craft_sorcerer_lv1_missile",
+    "type": "SPELL",
+    "name": "术士-Lv1-魔法飞弹",
+    "description": "对目标造成少量真实伤害伤害，无视阻挡。",
+    "components": "spell_sorcerer_use_item_1",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "NO_PROJECTILE"
+    ],
+    "min_damage": 8,
+    "max_damage": 25,
+    "damage_type": "pure",
+    "min_range": 15,
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_1",
+    "difficulty": 1,
+    "max_level": 0,
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv1_burning_hands",
+    "type": "SPELL",
+    "name": "术士-Lv1-燃烧之手",
+    "description": "对锥形区域放出火焰。",
+    "components": "spell_sorcerer_use_item_1",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "max_level": 0,
+    "min_damage": 10,
+    "max_damage": 31,
+    "min_range": 8,
+    "min_aoe": 45,
+    "spell_class": "spell_craft_sorcerer_1",
+    "base_casting_time": 300,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 1,
+    "damage_type": "heat"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv1_move",
+    "type": "SPELL",
+    "name": "术士-Lv1-脚底抹油",
+    "description": "移动消耗降低50%，持续30秒+0.5x智力秒。",
+    "components": "spell_sorcerer_use_item_1",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "effect_str": "effect_sor_lv1_move",
+    "shape": "blast",
+    "base_casting_time": 50,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_1",
+    "difficulty": 1,
+    "max_level": 0,
+    "base_energy_cost": 0,
+    "min_duration": 3700,
+    "max_duration": 3700
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_sor_lv1_move",
+    "name": [
+      "脚底抹油"
+    ],
+    "desc": [
+      "降低你的移动消耗。"
+    ],
+    "apply_message": "移动速度加快。",
+    "remove_message": "移动速度复原。",
+    "rating": "good",
+    "max_intensity": 999,
+    "int_dur_factor": "5 m",
+    "enchantments": [
+      {
+        "values": [
+          {
+            "value": "MOVE_COST",
+            "multiply": -0.5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv1_magic_armor",
+    "type": "SPELL",
+    "name": "术士-Lv1-法师护甲",
+    "description": "使你被一道可以抵挡伤害的无形立场包裹，持续1小时+1x智力分钟。",
+    "components": "spell_sorcerer_use_item_1",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "spawn_item",
+    "effect_str": "sor_magic_armor",
+    "min_damage": 1,
+    "max_damage": 1,
+    "shape": "blast",
+    "affected_body_parts": [
+      "head",
+      "torso",
+      "leg_l",
+      "leg_r",
+      "arm_r",
+      "arm_l"
+    ],
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_1",
+    "difficulty": 1,
+    "max_level": 0,
+    "base_energy_cost": 0,
+    "min_duration": 444000,
+    "max_duration": 444000
+  },
+  {
+    "id": "sor_magic_armor",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str_sp": "法师护甲"
+    },
+    "description": "无形的盔甲。",
+    "weight": "10 g",
+    "volume": "1 L",
+    "material": [
+      "sor_magic_armor"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "warmth": 0,
+    "material_thickness": 5,
+    "environmental_protection": 2,
+    "relic_data": {},
+    "flags": [
+      "AURA",
+      "SEMITANGIBLE",
+      "ONLY_ONE",
+      "OVERSIZE",
+      "TRADER_AVOID",
+      "STURDY"
+    ],
+    "armor": [
+      {
+        "material": [
+          {
+            "type": "sor_magic_armor",
+            "covered_by_mat": 100,
+            "thickness": 5
+          },
+          {
+            "type": "sor_magic_armor",
+            "covered_by_mat": 80,
+            "thickness": 4
+          },
+          {
+            "type": "sor_magic_armor",
+            "covered_by_mat": 60,
+            "thickness": 3
+          },
+          {
+            "type": "sor_magic_armor",
+            "covered_by_mat": 40,
+            "thickness": 2
+          },
+          {
+            "type": "sor_magic_armor",
+            "covered_by_mat": 20,
+            "thickness": 1
+          }
+        ],
+        "covers": [
+          "torso",
+          "head",
+          "eyes",
+          "mouth",
+          "leg_l",
+          "leg_r",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "foot_l",
+          "foot_r"
+        ],
+        "coverage": 100,
+        "encumbrance": 0
+      }
+    ]
+  },
+  {
+    "type": "material",
+    "id": "sor_magic_armor",
+    "name": "魔力护甲",
+    "density": 1,
+    "specific_heat_liquid": 1.5,
+    "specific_heat_solid": 1.2,
+    "latent_heat": 10,
+    "conductive": true,
+    "soft": true,
+    "chip_resist": 1,
+    "breathability": "SECOND_SKIN",
+    "dmg_adj": [
+      "lightly damaged",
+      "damaged",
+      "very damaged",
+      "thoroughly damaged"
+    ],
+    "bash_dmg_verb": "damaged",
+    "cut_dmg_verb": "damaged",
+    "bash_resist": 1,
+    "cut_resist": 1,
+    "acid_resist": 1,
+    "fire_resist": 1,
+    "bullet_resist": 1
+  },
+  {
+    "id": "spell_craft_sorcerer_lv1_sludged",
+    "type": "SPELL",
+    "name": "术士-Lv1-污泥术",
+    "description": "在目标地点造成污泥地形。",
+    "components": "spell_sorcerer_use_item_1",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "damage_type": "pure",
+    "min_range": 15,
+    "min_aoe": 3,
+    "field_id": "fd_sludge",
+    "field_chance": 1,
+    "min_field_intensity": 2,
+    "max_field_intensity": 2,
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_1",
+    "difficulty": 1,
+    "max_level": 0,
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv1_create_water",
+    "type": "SPELL",
+    "name": "术士-Lv1-制造净水",
+    "description": "制造一瓶包含有8份净水的水瓶供你饮用，这些净水理应满足一天的基本需求，持续12小时。",
+    "components": "spell_sorcerer_use_item_1",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "spawn_item",
+    "effect_str": "sor_magic_water",
+    "min_damage": 1,
+    "max_damage": 1,
+    "shape": "blast",
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_1",
+    "difficulty": 1,
+    "max_level": 0,
+    "base_energy_cost": 0,
+    "min_duration": 4320000,
+    "max_duration": 4320000
+  },
+  {
+    "id": "sor_magic_water",
+    "type": "GENERIC",
+    "category": "container",
+    "name": {
+      "str": "魔法水瓶",
+      "str_pl": "魔法水瓶"
+    },
+    "description": "打开就可以喝。",
+    "weight": "250 g",
+    "volume": "50 ml",
+    "price": 0,
+    "material": [
+      "stone"
+    ],
+    "symbol": "O",
+    "color": "blue",
+    "relic_data": {},
+    "use_action": {
+      "target": "water_clean",
+      "msg": "你拧开瓶盖，满满的清水在瓶内晃荡，喝吧。",
+      "container": "sor_magic_water_open",
+      "target_charges": 8,
+      "moves": 200,
+      "type": "transform"
+    }
+  },
+  {
+    "id": "sor_magic_water_open",
+    "type": "GENERIC",
+    "category": "container",
+    "name": {
+      "str": "魔法水瓶（开）",
+      "str_pl": "魔法水瓶（开）"
+    },
+    "description": "内部的容量比看起来要大得多。",
+    "weight": "50 g",
+    "volume": "50 ml",
+    "price": 0,
+    "material": [
+      "stone"
+    ],
+    "symbol": "U",
+    "color": "blue",
+    "flags": [
+      "TARDIS"
+    ],
+    "relic_data": {},
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "watertight": true,
+        "rigid": true,
+        "weight_multiplier": 0,
+        "item_restriction": [
+          "water_clean"
+        ],
+        "max_contains_volume": "2 L",
+        "max_contains_weight": "2 kg"
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv1_create_food",
+    "type": "SPELL",
+    "name": "术士-Lv1-制造干粮",
+    "description": "制造一些魔法食物供你食用，这些食物理应满足一天的基本需求。",
+    "components": "spell_sorcerer_use_item_1",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "spawn_item",
+    "effect_str": "sor_magic_food",
+    "min_damage": 4,
+    "max_damage": 4,
+    "shape": "blast",
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_1",
+    "difficulty": 1,
+    "max_level": 0,
+    "base_energy_cost": 0
+  },
+  {
+    "id": "sor_magic_food",
+    "type": "COMESTIBLE",
+    "comestible_type": "FOOD",
+    "name": "魔法食物",
+    "description": "味道一般，但是能满足需求。",
+    "material": [
+      "wheat"
+    ],
+    "price": 0,
+    "price_postapoc": 0,
+    "weight": "125 g",
+    "volume": "125 ml",
+    "longest_side": "4 cm",
+    "color": "white",
+    "symbol": "z",
+    "healthy": 0,
+    "calories": 720,
+    "spoils_in": "1 day",
+    "quench": -10,
+    "fun": -3,
+    "relic_data": {},
+    "vitamins": [
+      [
+        "calcium",
+        25
+      ],
+      [
+        "vitC",
+        25
+      ],
+      [
+        "iron",
+        25
+      ],
+      [
+        "bad_sor_food",
+        8
+      ]
+    ],
+    "flags": [
+      "EDIBLE_FROZEN"
+    ]
+  },
+  {
+    "id": "bad_sor_food",
+    "type": "vitamin",
+    "vit_type": "counter",
+    "name": {
+      "str": "魔力失衡"
+    },
+    "excess": "bad_sor_food_eff",
+    "min": 0,
+    "max": 500,
+    "rate": "4 h",
+    "flags": [
+      "NO_DISPLAY"
+    ],
+    "disease_excess": [
+      [
+        100,
+        199
+      ],
+      [
+        200,
+        299
+      ],
+      [
+        300,
+        399
+      ],
+      [
+        400,
+        500
+      ]
+    ]
+  },
+  {
+    "type": "effect_type",
+    "id": "bad_sor_food_eff",
+    "name": [
+      "轻微魔力失衡",
+      "中等魔力失衡",
+      "重度魔力失衡",
+      "完全魔力失衡"
+    ],
+    "desc": [
+      "你偶尔会走神。",
+      "你有时候会发现忘了刚才想做什么。",
+      "你经常会忘记面前的东西叫什么。",
+      "阿巴阿巴？"
+    ],
+    "base_mods": {
+      "int_mod": [
+        -5
+      ]
+    },
+    "scaling_mods": {
+      "int_mod": [
+        -10
+      ]
+    },
+    "max_intensity": 4,
+    "rating": "bad"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv1_air_bubble",
+    "type": "SPELL",
+    "name": "术士-Lv1-气泡术",
+    "description": "使你的头部被一个充满空气的小型气泡包裹，让你可以在水中呼吸，持续10分钟+10x智力秒。",
+    "components": "spell_sorcerer_use_item_1",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "min_range": 8,
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_1",
+    "difficulty": 1,
+    "max_level": 0,
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "min_duration": 74000,
+    "max_duration": 74000,
+    "effect": "spawn_item",
+    "effect_str": "sorcerer_air_bubble"
+  },
+  {
+    "type": "effect_type",
+    "id": "sorcerer_air_bubble",
+    "name": [
+      "无效效果"
+    ],
+    "desc": [
+      "一个无效了的效果。"
+    ]
+  },
+  {
+    "id": "ench_sorcerer_air_bubble",
+    "type": "enchantment",
+    "has": "WORN",
+    "condition": "ALWAYS",
+    "mutations": [
+      "sor_gills"
+    ]
+  },
+  {
+    "id": "sorcerer_air_bubble",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str_sp": "魔法气泡"
+    },
+    "description": "它充满了氧气！",
+    "weight": "10 g",
+    "volume": "10 ml",
+    "material": [
+      "sor_magic_armor"
+    ],
+    "symbol": "O",
+    "color": "light_gray",
+    "warmth": 0,
+    "material_thickness": 0,
+    "environmental_protection": 0,
+    "flags": [
+      "AURA",
+      "SEMITANGIBLE",
+      "OVERSIZE",
+      "TRADER_AVOID",
+      "STURDY",
+      "NO_TAKEOFF"
+    ],
+    "armor": [
+      {
+        "covers": [
+          "head"
+        ],
+        "coverage": 100,
+        "encumbrance": 0
+      }
+    ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "id": "ench_sorcerer_air_bubble"
+        }
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "sor_gills",
+    "name": {
+      "str": "水下呼吸"
+    },
+    "points": 0,
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": false,
+    "description": "使你可以水下呼吸。",
+    "flags": [
+      "GILLS"
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv1_summon_monster",
+    "type": "SPELL",
+    "name": "术士-Lv1-召唤怪物 I",
+    "description": "在目标范围内召唤1-3只怪物，持续10分钟。",
+    "components": "spell_sorcerer_use_item_1",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "min_damage": 1,
+    "max_damage": 3,
+    "min_range": 8,
+    "min_aoe": 3,
+    "spell_class": "spell_craft_sorcerer_1",
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "max_level": 0,
+    "min_duration": 60000,
+    "max_duration": 60000,
+    "difficulty": 1,
+    "base_energy_cost": 0,
+    "shape": "blast",
+    "effect": "summon",
+    "effect_str": "mon_sor_summon_1"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv1_summon_dummy",
+    "type": "SPELL",
+    "name": "术士-Lv1-召唤训练假人",
+    "description": "在目标召唤训练假人，持续1小时。",
+    "components": "spell_sorcerer_use_item_1",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "HOSTILE_SUMMON",
+      "SPAWN_GROUP"
+    ],
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 8,
+    "spell_class": "spell_craft_sorcerer_1",
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "max_level": 0,
+    "min_duration": 360000,
+    "max_duration": 360000,
+    "difficulty": 1,
+    "base_energy_cost": 0,
+    "shape": "blast",
+    "effect": "summon",
+    "effect_str": "GROUP_MON_SOR_DUMMY"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv1_door_open",
+    "type": "SPELL",
+    "name": "术士-Lv1-开门术",
+    "description": "如果一扇门可以被打开，就可能被这个法术打开。",
+    "components": "spell_sorcerer_use_item_1",
+    "valid_targets": [
+      "hostile",
+      "ground",
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "damage_type": "pure",
+    "min_range": 15,
+    "min_aoe": 0,
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_1",
+    "difficulty": 1,
+    "max_level": 0,
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "ter_transform",
+    "effect_str": "trans_lv1_door_open"
+  },
+  {
+    "type": "ter_furn_transform",
+    "id": "trans_lv1_door_open",
+    "terrain": [
+      {
+        "result": "t_laminated_door_glass_o",
+        "valid_terrain": [
+          "t_laminated_door_glass_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_ballistic_door_glass_o",
+        "valid_terrain": [
+          "t_ballistic_door_glass_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_reinforced_door_glass_o",
+        "valid_terrain": [
+          "t_reinforced_door_glass_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_reinforced_door_glass_lab_o",
+        "valid_terrain": [
+          "t_reinforced_door_glass_lab_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_o",
+        "valid_terrain": [
+          "t_door_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_lab_o",
+        "valid_terrain": [
+          "t_door_lab_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_white_o",
+        "valid_terrain": [
+          "t_door_white_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_gray_o",
+        "valid_terrain": [
+          "t_door_gray_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_red_o",
+        "valid_terrain": [
+          "t_door_red_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_green_o",
+        "valid_terrain": [
+          "t_door_green_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_glass_red_o",
+        "valid_terrain": [
+          "t_door_glass_red_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_glass_green_o",
+        "valid_terrain": [
+          "t_door_glass_green_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_glass_white_o",
+        "valid_terrain": [
+          "t_door_glass_white_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_glass_gray_o",
+        "valid_terrain": [
+          "t_door_glass_gray_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_lighthouse_lens_o",
+        "valid_terrain": [
+          "t_door_lighthouse_lens_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_o_peep",
+        "valid_terrain": [
+          "t_door_c_peep"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_rdoor_o",
+        "valid_terrain": [
+          "t_rdoor_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_curtain_o",
+        "valid_terrain": [
+          "t_door_curtain_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_makeshift_o",
+        "valid_terrain": [
+          "t_door_makeshift_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_grass_curtain_o",
+        "valid_terrain": [
+          "t_door_grass_curtain_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_metal_o",
+        "valid_terrain": [
+          "t_door_metal_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_metal_corrugated_o",
+        "valid_terrain": [
+          "t_door_metal_corrugated_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_secretdoor_metal_o",
+        "valid_terrain": [
+          "t_secretdoor_metal_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_secretdoor_concrete_o",
+        "valid_terrain": [
+          "t_secretdoor_concrete_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_metal_lab_o",
+        "valid_terrain": [
+          "t_door_metal_lab_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_metal_o_peep",
+        "valid_terrain": [
+          "t_door_metal_c_peep"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_metal_o",
+        "valid_terrain": [
+          "t_door_metal_pickable"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_bar_o",
+        "valid_terrain": [
+          "t_door_bar_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_glass_o",
+        "valid_terrain": [
+          "t_door_glass_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_glass_lab_o",
+        "valid_terrain": [
+          "t_door_glass_lab_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_glass_frosted_o",
+        "valid_terrain": [
+          "t_door_glass_frosted_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_glass_frosted_lab_o",
+        "valid_terrain": [
+          "t_door_glass_frosted_lab_c"
+        ],
+        "message": "门开了。"
+      },
+      {
+        "result": "t_door_metal_bulkhead_o",
+        "valid_terrain": [
+          "t_door_metal_bulkhead_c"
+        ],
+        "message": "门开了。"
+      }
+    ]
+  }
+]

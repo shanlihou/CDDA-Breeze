@@ -1,0 +1,40 @@
+[
+  {
+    "id": "SHIELDBASH",
+    "type": "technique",
+    "name": "盾击",
+    "description": "用盾牌猛击敌人，造成额外伤害并短暂眩晕。",
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 3
+      }
+    ],
+    "crit_ok": true,
+    "crit_tec": false,
+    "melee_allowed": true,
+    "messages": [
+      "你用盾牌猛击了%s",
+      "<npcname> 使用他们的盾狠狠地击打了%s"
+    ],
+    "stun_dur": 1,
+    "unarmed_weapons_allowed": true,
+    "mult_bonuses": [
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 2
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scale": 2
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 2
+      }
+    ]
+  }
+]

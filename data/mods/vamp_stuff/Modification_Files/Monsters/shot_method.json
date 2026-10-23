@@ -1,0 +1,89 @@
+[
+  {
+    "id": "bloodsurgeleechmouth",
+    "type": "GUN",
+    "copy-from": "fake_item",
+    "name": {
+      "str": "血涌口"
+    },
+    "description": "松弛耷拉的水蛭巨嘴，它可以喷出成升的血液。",
+    "flags": [
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES",
+      "NOGIB"
+    ],
+    "skill": "smg",
+    "dispersion": 350,
+    "sight_dispersion": 330,
+    "recoil": 20,
+    "durability": 10,
+    "loudness": -50,
+    "range": 5,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 3,
+      "armor_penetration": 2
+    },
+    "modes": [
+      [
+        "DEFAULT",
+        "auto",
+        5
+      ]
+    ]
+  },
+  {
+    "id": "eyedleechmouth",
+    "type": "GUN",
+    "copy-from": "fake_item",
+    "name": {
+      "str": "有眼水蛭的嘴"
+    },
+    "description": "有眼水蛭的形状奇特的嘴。可拆卸的齿膜覆盖在它下面。",
+    "skill": "pistol",
+    "range": 15,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 4,
+      "armor_penetration": 3
+    },
+    "dispersion": 290,
+    "sight_dispersion": 270,
+    "recoil": 50,
+    "durability": 10,
+    "loudness": -50,
+    "flags": [
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES",
+      "NOGIB"
+    ]
+  },
+  {
+    "id": "sharpshooterleechmouth",
+    "type": "GUN",
+    "copy-from": "fake_item",
+    "name": {
+      "str": "神射水蛭的嘴"
+    },
+    "description": "神射水蛭的嘴巴，覆满了可以当做弹药的尖锐的牙齿",
+    "skill": "rifle",
+    "range": 20,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 6,
+      "armor_penetration": 10
+    },
+    "dispersion": 295,
+    "sight_dispersion": 275,
+    "recoil": 245,
+    "durability": 10,
+    "loudness": -50,
+    "flags": [
+      "NEVER_JAMS"
+    ]
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "type": "construction",
+    "id": "挖掘空地",
+    "group": "挖掘空地",
+    "category": "APPLIANCE",
+    "required_skills": [ [ "survival", 3 ] ],
+    "time": "30 m",
+    "qualities": [ [ { "id": "DIG", "level": 2 } ] ],
+    "dark_craftable": true,
+    "pre_terrain": "t_pit",
+    "post_terrain": "t_hole",
+    "activity_level": "BRISK_EXERCISE"
+  },
+  {
+    "type": "construction",
+    "id": "填埋空地",
+    "group": "填埋空地",
+    "category": "CONSTRUCT",
+    "required_skills": [ [ "survival", 3 ] ],
+    "time": "10 m",
+    "qualities": [ [ { "id": "DIG", "level": 2 } ] ],
+    "components": [ [ [ "material_soil", 50 ] ] ],
+    "dark_craftable": true,
+    "pre_terrain": "t_hole",
+    "post_terrain": "t_pit",
+    "activity_level": "EXTRA_EXERCISE"
+  }
+]

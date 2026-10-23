@@ -1,0 +1,18 @@
+[
+  {
+    "type": "construction_group",
+    "id": "建造浴缸",
+    "name": "建造浴缸"
+  },
+  {
+    "type": "construction",
+    "id": "建造浴缸",
+    "group": "建造浴缸",
+    "category": "FURN",
+    "required_skills": [ [ "fabrication", 2 ] ],
+    "time": "10 m",
+    "components": [ [ [ "ceramic_shard", 18 ] ], [ [ "pipe_fittings", 2 ] ], [ [ "cu_pipe", 1 ] ], [ [ "water_faucet", 1 ] ] ],
+    "pre_special": "check_empty",
+    "post_terrain": "f_bathtub"
+  }
+]

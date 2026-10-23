@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_IA_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"啊，原来还有其他幸存者！",
+    "responses":[
+      { "text": "没事吗？需要帮助吗？(邀请加入队伍)", "topic": "TALK_IA_SAN_2" },
+      { "text": "我不这样认为", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_IA_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"真是救了我一命…谢谢！啊，暂时让我和你们一起行动吧！",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

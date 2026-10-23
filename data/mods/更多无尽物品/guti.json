@@ -1,0 +1,1377 @@
+[
+    {
+        "id": "endless egg carton_1",
+        "type": "GENERIC",
+        "copy-from": "carton_egg",
+        "category": "tools",
+        "name": {
+            "str": "无尽的鸡蛋盒 "
+        },
+        "description": "这个鸡蛋盒里竟然能够无限制地取出鸡蛋！再也不用担心鸡蛋不够用了！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "egg_chicken",
+            "msg": "不知道什么时候，盒子里空缺的地方再次出现鸡蛋，真好！",
+            "container": "endless egg carton_1",
+            "target_charges": 12,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_0",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（黄瓜三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "sandwich_cucumber",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_0",
+            "target_charges": 10,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_1",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（特级三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "pocket_data": [
+          {
+          "rigid": true,
+            "pocket_type": "CONTAINER",
+           "max_contains_volume": "2500 ml",
+            "max_contains_weight": "6 kg" 
+          }
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "sandwich_deluxe",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_1",
+            "target_charges": 20,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_2",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（鱼肉三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "fish_sandwich",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_2",
+            "target_charges": 10,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_3",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（鲁宾三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "pocket_data": [
+          {
+          "rigid": true,
+            "pocket_type": "CONTAINER",
+           "max_contains_volume": "2500 ml",
+            "max_contains_weight": "6 kg" 
+          }
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "sandwich_reuben",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_3",
+            "target_charges": 20,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_4",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（蜂蜜三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "sandwich_honey",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_4",
+            "target_charges": 10,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_5",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（火腿三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "pocket_data": [
+          {
+          "rigid": true,
+            "pocket_type": "CONTAINER",
+           "max_contains_volume": "3000 ml",
+            "max_contains_weight": "6 kg" 
+          }
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "sandwich_t",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_5",
+            "target_charges": 20,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_6",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（碎肉三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "pocket_data": [
+          {
+          "rigid": true,
+            "pocket_type": "CONTAINER",
+           "max_contains_volume": "3000 ml",
+            "max_contains_weight": "6100 g" 
+          }
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "sloppyjoe",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_6",
+            "target_charges": 10,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_7",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（奶酪三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "sandwich_cheese",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_7",
+            "target_charges": 10,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_8",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（蔬菜三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "sandwich_veggy",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_8",
+            "target_charges": 10,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_9",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（单调三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "pocket_data": [
+          {
+          "rigid": true,
+            "pocket_type": "CONTAINER",
+           "max_contains_volume": "2500 ml",
+            "max_contains_weight": "6 kg" 
+          }
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "sandwich_sauce",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_9",
+            "target_charges": 50,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_10",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（煎蛋三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "pocket_data": [
+          {
+          "rigid": true,
+            "pocket_type": "CONTAINER",
+           "max_contains_volume": "2500 ml",
+            "max_contains_weight": "6 kg" 
+          }
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "fried_egg_sandwich",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_10",
+            "target_charges": 20,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_11",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（果酱三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "sandwich_jam",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_11",
+            "target_charges": 10,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_12",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（烤奶酪三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "sandwich_cheese_grilled",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_12",
+            "target_charges": 10,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_13",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（鸡蛋沙拉三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "sandwich_egg_salad",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_13",
+            "target_charges": 10,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_14",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（花生酱三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "sandwich_pb",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_14",
+            "target_charges": 10,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_15",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（特级煎蛋三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "pocket_data": [
+          {
+          "rigid": true,
+            "pocket_type": "CONTAINER",
+           "max_contains_volume": "2500 ml",
+            "max_contains_weight": "6 kg" 
+          }
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "deluxe_fried_egg_sandwich",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_15",
+            "target_charges": 20,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_16",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（蔬菜奶酪三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "sandwich_veggy_cheese",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_16",
+            "target_charges": 10,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_17",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（无麸质特级三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "pocket_data": [           
+          {
+          "rigid": true,
+            "pocket_type": "CONTAINER",
+           "max_contains_volume": "2500 ml",
+            "max_contains_weight": "6 kg" 
+          }
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "sandwich_deluxe_wheat_free",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_17",
+            "target_charges": 20,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_18",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（果酱奶酪三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "sandwich_jam_cheese",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_18",
+            "target_charges": 10,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_19",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（无麸质鲁宾三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "pocket_data": [           
+          {
+            "rigid": true,
+            "pocket_type": "CONTAINER",
+             "max_contains_volume": "2500 ml",
+            "max_contains_weight": "6 kg" 
+          }
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "sandwich_reuben_wheat_free",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_19",
+            "target_charges": 20,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_20",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（无麸质鱼肉三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "fish_sandwich_wheat_free",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_20",
+            "target_charges": 10,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_21",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（无麸质奶酪三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "sandwich_cheese_wheat_free",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_21",
+            "target_charges": 10,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_22",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（无麸质蔬菜三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "sandwich_veggy_wheat_free",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_22",
+            "target_charges": 10,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_23",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（无麸质蜂蜜三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "sandwich_honey_wheat_free",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_23",
+            "target_charges": 10,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_24",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（无麸质火腿三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "pocket_data": [           
+          {
+            "rigid": true,
+            "pocket_type": "CONTAINER",
+            "max_contains_volume": "3000 ml",
+            "max_contains_weight": "6 kg" 
+          }
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "sandwich_t_wheat_free",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_24",
+            "target_charges": 20,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_25",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（黄油果酱三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "sandwich_jam_butter",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_25",
+            "target_charges": 10,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_26",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（鸡蛋鱼子酱三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "pocket_data": [           
+          {
+            "rigid": true,
+            "pocket_type": "CONTAINER",
+            "max_contains_volume": "2600 ml",
+            "max_contains_weight": "6 kg" 
+          }
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "caviar_egg_sandwich",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_26",
+            "target_charges": 4,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_27",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（单调无麸质三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "pocket_data": [           
+          {
+            "rigid": true,
+            "pocket_type": "CONTAINER",
+            "max_contains_volume": "2500 ml",
+            "max_contains_weight": "6 kg" 
+          }
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "sandwich_sauce_wheat_free",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_27",
+            "target_charges": 30,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_28",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（无麸质煎蛋三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "pocket_data": [           
+          {
+            "rigid": true,
+            "pocket_type": "CONTAINER",
+            "max_contains_volume": "2500 ml",
+            "max_contains_weight": "6 kg" 
+          }
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "fried_egg_sandwich_wheat_free",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_28",
+            "target_charges": 20,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_29",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（无麸质果酱三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "sandwich_jam_wheat_free",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_29",
+            "target_charges": 10,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_30",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（无麸质枫糖三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "sandwich_pbm",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_30",
+            "target_charges": 10,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_31",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（培根生菜番茄三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "pocket_data": [           
+          {
+           "rigid": true,
+            "pocket_type": "CONTAINER",
+            "max_contains_volume": "2500 ml",
+            "max_contains_weight": "6 kg" 
+          }
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "blt",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_31",
+            "target_charges": 20,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_32",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（无麸质花生酱三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "sandwich_pb_wheat_free",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_32",
+            "target_charges": 10,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_33",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（无麸质鸡蛋沙拉三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "sandwich_egg_salad_wheat_free",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_33",
+            "target_charges": 10,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_34",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（无麸质特级煎蛋三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "pocket_data": [           
+          {
+            "rigid": true,
+            "pocket_type": "CONTAINER",
+            "max_contains_volume": "2500 ml",
+            "max_contains_weight": "6 kg" 
+          }
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "deluxe_fried_egg_sandwich_wheat_free",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_34",
+            "target_charges": 20,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_35",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（无麸质蔬菜奶酪三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "sandwich_veggy_cheese_wheat_free",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_35",
+            "target_charges": 10,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_36",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（无麸质果酱奶酪三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "sandwich_jam_cheese_wheat_free",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_36",
+            "target_charges": 10,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_37",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（无麸质黄油果酱三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "sandwich_jam_butter_wheat_free",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_37",
+            "target_charges": 10,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_38",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（无麸质花生酱蜂蜜三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "sandwich_pbh_wheat_free",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_38",
+            "target_charges": 10,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_39",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（无麸质花生酱枫糖三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "sandwich_pbm_wheat_free",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_39",
+            "target_charges": 10,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_40",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（无麸质花生酱果酱三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "sandwich_pbj_wheat_free",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_40",
+            "target_charges": 10,
+            "moves": 50,
+            "type": "transform"
+        }
+    },
+    {
+        "id": "endless wrapper_41",
+        "type": "GENERIC",
+        "copy-from": "wrapper_1",
+        "category": "tools",
+        "name": {
+            "str": "无尽的包装纸（无麸质培根生菜番茄三明治） "
+        },
+        "description": "你能够从里面拿出无限量的三明治，吃到饱！",
+        "flags": [
+            "TARDIS"
+        ],
+        "pocket_data": [           
+          {
+           "rigid": true,
+            "pocket_type": "CONTAINER",
+            "max_contains_volume": "2500 ml",
+            "max_contains_weight": "6 kg" 
+          }
+        ],
+        "relic_data": {
+            "charge_info": {
+                "recharge_type": "periodic",
+                "time": "24 h",
+                "regenerate_ammo": true
+            }
+        },
+        "price_postapoc": "2500 USD",
+        "use_action": {
+            "target": "blt_wheat_free",
+            "msg": "空空如也的包装纸里面再次出现了三明治！",
+            "container": "endless wrapper_41",
+            "target_charges": 20,
+            "moves": 50,
+            "type": "transform"
+        }
+    }
+]

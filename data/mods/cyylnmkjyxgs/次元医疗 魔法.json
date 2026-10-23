@@ -1,0 +1,23 @@
+[
+  {
+    "id": "ZH_Boss_YH",
+    "type": "SPELL",
+    "name": { "str": "召唤BOSS:《永恒》" },
+    "description": "危险注意!此BOSS非常危险,请做好准备后再召唤。",
+    "valid_targets": [ "ground" ],
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "min_range": 5,
+    "max_range": 5,
+    "base_casting_time": 100,
+    "shape": "blast",
+    "effect": "summon",
+    "effect_str": "Boss_YH",
+    "flags": [
+      "HOSTILE_SUMMON",
+      "PERMANENT"
+    ]
+  }
+]

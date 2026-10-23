@@ -1,0 +1,223 @@
+[
+  {
+    "type": "recipe",
+    "result": "destiny_silver",
+    "//": "天命币兑换",
+    "id_suffix": "from destiny_copper",
+    "category": "CC_超凡",
+    "subcategory": "CSC_超凡_资源",
+    "skill_used": "speech",
+    "difficulty": 0,
+    "time": "1 m",
+    "batch_time_factors": [ 95, 2 ],
+    "autolearn": true,
+    "flags": [ "BLIND_EASY" ],
+    "components": [ [ [ "destiny_copper", 20 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "destiny_copper",
+    "charges": 1,
+    "id_suffix": "from destiny_silver",
+    "category": "CC_超凡",
+    "subcategory": "CSC_超凡_资源",
+    "skill_used": "speech",
+    "difficulty": 0,
+    "time": "1 m",
+    "batch_time_factors": [ 95, 2 ],
+    "autolearn": true,
+    "flags": [ "BLIND_EASY" ],
+    "components": [
+    [
+      [ "corpse", 1 ],
+      [ "space_copper", 1 ],
+      [ "destiny_silver", 1 ],
+      [ "destiny_gold", 1 ],
+      [ "steel_lump", 10 ],
+      [ "steel_chunk", 40 ],
+      [ "50bmg", 1 ],
+      [ "22_lr", 2 ],
+      [ "556", 2 ],
+      [ "762_51", 2 ],
+      [ "8mm_caseless", 2 ],
+      [ "shot_00", 2 ],
+      [ "grenade", 1 ],
+      [ "3006", 2 ],
+      [ "40x46mm_m433", 1 ],
+      [ "9mm", 2 ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "destiny_gold",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_资源",
+    "skill_used": "speech",
+    "skills_required": [ [ "GS_int", 8 ], [ "GS_per", 8 ] ],
+    "difficulty": 0,
+    "time": "2 h",
+    "batch_time_factors": [ 95, 2 ],
+    "autolearn": true,
+    "flags": [ "BLIND_EASY" ],
+    "components": [ [ [ "destiny_silver", 20 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "destiny_copper",
+    "//": "模拟七贪军吸收天命。",
+    "charges": 1,
+    "id_suffix": "from corpse",
+    "category": "CC_超凡",
+    "subcategory": "CSC_超凡_资源",
+    "skill_used": "survival",
+    "skills_required": [ "GS_str", 3 ],
+    "difficulty": 0,
+    "time": "2 m",
+    "batch_time_factors": [ 95, 2 ],
+    "autolearn": true,
+    "flags": [ "BLIND_EASY" ],
+    "components": [
+    [
+      [ "diamond", 1 ],
+      [ "sapphire", 1 ],
+      [ "ruby", 1 ],
+      [ "citrine", 1 ],
+      [ "gold_small", 1 ],
+      [ "silver_small", 1 ],
+      [ "platinum_small", 1 ],
+      [ "corpse", 1 ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "merit",
+    "//": "渡亡者集功德",
+    "id_suffix": "from corpse",
+    "category": "CC_超凡",
+    "subcategory": "CSC_超凡_资源",
+    "skill_used": "speech",
+    "skills_required": [ [ "speech", 3 ], [ "GS_per", 2 ] ],
+    "difficulty": 0,
+    "time": "1 m",
+    "batch_time_factors": [ 95, 2 ],
+    "flags": [ "BLIND_EASY" ],
+    "book_learn": [ [ "GS_book_merit1", 0 ], [ "GS_book_merit2", 0 ], [ "GS_book_merit3", 0 ] ],
+    "components": [
+    [
+      [ "corpse", 1 ],
+      [ "destiny_copper", 20 ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "destiny_silver",
+    "//": "功德兑换天命币，效率高于吸收尸体，不可逆。",
+    "id_suffix": "from merit",
+    "category": "CC_超凡",
+    "subcategory": "CSC_超凡_资源",
+    "skill_used": "speech",
+    "skills_required": [ [ "speech", 4 ], [ "GS_per", 4 ] ],
+    "difficulty": 0,
+    "time": "1 m",
+    "batch_time_factors": [ 95, 2 ],
+    "book_learn": [ [ "GS_book_merit2", 0 ], [ "GS_book_merit3", 0 ] ],
+    "flags": [ "BLIND_EASY" ],
+    "components": [ [ [ "merit", 2 ] ] ]
+  },
+  {
+  "type": "recipe",
+  "activity_level": "LIGHT_EXERCISE",
+  "result": "destiny_silver",
+  "category": "CC_超凡",
+  "id_suffix": "CC_SSS_0",
+  "subcategory": "CSC_超凡_资源",
+  "skill_used": "chemistry",
+  "time": "2 h",
+  "book_learn": [ ["NW_Dbook_Destiny", 5] ],
+  "difficulty": 8,
+  "batch_time_factors": [ 95, 2 ],
+  "qualities": [ {"id": "CHEM", "level": 3} ],
+  "tools": [
+   [[ "NW_DsRtool", 25 ]]
+  ],
+  "components":
+   [[[ "meat_red_raw", 35 ,"LIST" ]]]
+  },
+  {
+    "type": "recipe",
+    "result": "neww_reiki",
+    "//": "从功德中提取灵魂结晶，此配方采用工具较差，效率低。",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_资源",
+    "skill_used": "chemistry",
+    "skills_required": [ [ "chemistry", 3 ], [ "GS_int", 4 ] ],
+    "difficulty": 3,
+    "charges": 150,
+    "time": "9 m",
+    "batch_time_factors": [ 90, 2 ],
+    "byproducts": [ [ "DT_dust", 1 ] ],
+    "book_learn": [ [ "GS_book_merit1", 0 ], [ "GS_book_merit2", 0 ], [ "GS_book_merit3", 0 ] ],
+    "flags": [ "BLIND_EASY" ],
+    "qualities": [
+    [ { "id": "CHEM", "level": 1 } ],
+    [ { "id": "BOIL", "level": 2 } ]
+    ],
+    "tools": [
+    [ [ "surface_heat", 30, "LIST" ] ]
+    ],
+    "components": [
+     [ [ "merit", 30 ] ],
+     [ [ "water_clean", 5 ], [ "water", 5 ] ],
+     [ [ "weak_liquor_unmixed", 4, "LIST" ], [ "merit", 4 ] ]
+     ]
+  },
+  {
+    "type": "recipe",
+    "result": "neww_reiki",
+    "id_suffix": "chemistry_made",
+    "//": "从功德中提取灵魂结晶，高效率。",
+    "category": "CC_超凡",
+    "subcategory": "CSC_超凡_资源",
+    "skill_used": "chemistry",
+    "skills_required": [ [ "chemistry", 5 ], [ "GS_int", 6 ] ],
+    "difficulty": 3,
+    "charges": 240,
+    "time": "9 m",
+    "byproducts": [ [ "DT_dust", 1 ] ],
+    "batch_time_factors": [ 95, 2 ],
+    "book_learn": [ [ "GS_book_merit2", 0 ], [ "GS_book_merit2", 0 ] ],
+    "qualities": [
+    [ { "id": "CHEM", "level": 3 } ],
+    [ { "id": "DISTILL", "level": 1 } ],
+    [ { "id": "EXTRACT", "level": 1 } ]
+    ],
+    "tools": [
+    [ [ "surface_heat", 30, "LIST" ] ],
+    [ [ "funnel_separation", -1 ] ]
+    ],
+    "components": [
+     [ [ "merit", 30 ] ],
+     [ [ "denat_alcohol", 2 ], [ "hard_liquor_unmixed", 4, "LIST" ] ],
+     [ [ "oxy_powder", 20 ] ],
+     [ [ "lye_powder", 40 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "5ghost",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_道具",
+    "skill_used": "speech",
+    "skills_required": [ [ "speech", 4 ], [ "GS_per", 4 ] ],
+    "difficulty": 0,
+    "time": "50 m",
+    "book_learn": [ [ "GS_book_merit2", 0 ], [ "GS_book_merit3", 0 ] ],
+    "components": [ [ [ "neww_reiki", 60 ] ], [ [ "destiny_silver", 1 ] ] ]
+  }
+]

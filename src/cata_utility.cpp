@@ -702,6 +702,79 @@ static bool is_easter( int day, int month, int year )
     return false;
 }
 
+/* 0.H 兼容层：中秋（农历八月十五）判定。
+ * DDA 的 holiday 枚举只认公历固定月日的西方节日，中秋按农历走、每年公历日期都不同，
+ * 没法用固定月日表达，所以这里用一张离线生成的表：数值 = 「当年中秋距该年 9 月 1 日的天数」。
+ * 表由 tools/lunar_mid_autumn.py 用 Meeus 天文算法（朔望 + 太阳视黄经定冬至/中气，
+ * 闰月按「两冬至月之间第一个无中气之月」规则）生成，覆盖 1900-2100；
+ * 已用 2011-2026 全部中秋日期及 1995 闰八月等特殊年份核对。
+ * 取值范围 6..37，即 9/7 至 10/8。 */
+static constexpr int mid_autumn_first_year = 1900;
+static constexpr int mid_autumn_last_year = 2100;
+static const int mid_autumn_offsets[] = {
+    7, 26, 15, 34, 23, 12, 31, 21,  9, 27, 17, 35, 24, 14, 33, 22,
+    11, 29, 18,  7, 25, 15, 34, 24, 12, 31, 20,  9, 27, 16, 35, 25,
+    14, 33, 22, 11, 29, 18,  7, 26, 15, 34, 23, 13, 30, 19,  9, 28,
+    16, 35, 25, 14, 32, 21, 10, 29, 18,  7, 26, 16, 34, 23, 12, 31,
+    19,  9, 28, 17, 35, 25, 14, 32, 21, 10, 29, 19,  7, 26, 16, 34,
+    22, 11, 30, 20,  9, 28, 17, 36, 24, 13, 32, 21, 10, 29, 19,  8,
+    26, 15, 34, 23, 11, 30, 20, 10, 27, 17, 35, 24, 13, 32, 21, 11,
+    29, 18,  7, 26, 14, 33, 23, 12, 30, 20,  9, 28, 16, 35, 24, 14,
+    32, 21, 11, 30, 18,  7, 26, 15, 33, 23, 12, 31, 19,  9, 27, 16,
+    34, 24, 14, 33, 21, 10, 29, 18,  6, 25, 15, 34, 23, 12, 31, 20,
+    8, 27, 16, 35, 24, 14, 32, 22, 10, 28, 18,  7, 25, 15, 34, 23,
+    11, 30, 19,  9, 27, 16, 35, 25, 13, 32, 21, 10, 28, 17,  7, 26,
+    15, 34, 23, 12, 29, 19,  8, 28, 17,
+};
+
+static bool get_local_ymd( std::time_t time, int &year, int &month, int &day )
+{
+    std::time_t current_time = time == 0 ? std::time( nullptr ) : time;
+    std::tm local_time;
+#if defined(_WIN32)
+    if( localtime_s( &local_time, &current_time ) != 0 ) {
+        return false;
+    }
+#else
+    if( !localtime_r( &current_time, &local_time ) ) {
+        return false;
+    }
+#endif
+    year = local_time.tm_year + 1900;
+    month = local_time.tm_mon + 1;
+    day = local_time.tm_mday;
+    return true;
+}
+
+bool is_mid_autumn_holiday( std::time_t time )
+{
+    int year = 0;
+    int month = 0;
+    int day = 0;
+    if( !get_local_ymd( time, year, month, day ) ) {
+        return false;
+    }
+    if( year < mid_autumn_first_year || year > mid_autumn_last_year ) {
+        return false;
+    }
+    const int offset = mid_autumn_offsets[year - mid_autumn_first_year];
+    if( offset < 30 ) {
+        return month == 9 && day == offset + 1;
+    }
+    return month == 10 && day == offset - 30;
+}
+
+int mid_autumn_year( std::time_t time )
+{
+    int year = 0;
+    int month = 0;
+    int day = 0;
+    if( !get_local_ymd( time, year, month, day ) ) {
+        return 0;
+    }
+    return year;
+}
+
 holiday get_holiday_from_time( std::time_t time, bool force_refresh )
 {
     static holiday cached_holiday = holiday::none;

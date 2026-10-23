@@ -1,0 +1,112 @@
+[
+  {
+    "id": "bp_123ln",
+    "type": "AMMO",
+    "looks_like": "123ln",
+    "name": { "str_sp": "12.3ln复装弹(黑火药)" },
+    "description": "在另一个平行世界中，罗马尼亚在第二次喀尔巴阡山冲突后引进了 12.3ln 弹。使用这种弹药的 PA md.71 步枪迅速在东欧联盟以及世界各地流行起来。正因为如此，12.3ln 弹迅速成为欧亚大陆的标准弹药口径。因此流亡族在到达这个版本的地球时轻易储存了大量弹药。对你来说，它的外观和手感都非常类似于 .30-06 春田弹，但弹头稍显锋利。某人在手工重新为它装药时应当时运不济——里面装的是黑火药，而非无烟火药。这枚弹药射击时，估计会初速更慢、枪口发烟并弄脏枪管。",
+    "weight": "20 g",
+    "volume": "192 ml",
+    "price": 48,
+    "price_postapoc": 800,
+    "flags": [  ],
+    "material": ["brass",
+    "powder"],
+    "symbol": "=",
+    "color": "yellow",
+    "count": 20,
+    "stack_size": 20,
+    "ammo_type": "123ln",
+    "casing": "3006_casing",
+    "range": 61,
+    "damage": { "damage_type": "bullet", 
+    "amount": 43,
+     "armor_penetration": 5 },
+    "dispersion": 24,
+    "recoil": 2888,
+        "effects": [
+    "COOKOFF",
+    "RECYCLED",
+    "BLACKPOWDER",
+    "MUZZLE_SMOKE"
+  ],
+  "copy-from": "3006"
+  },
+  {
+    "type": "ammunition_type",
+    "id": "bp_123ln",
+    "name": "12.3ln复装弹(黑火药)",
+    "default": "123ln"
+  },
+  {
+  "result": "bp_123ln",
+  "type": "recipe",
+  "activity_level": "LIGHT_EXERCISE",
+  "category": "CC_AMMO",
+  "subcategory": "CSC_AMMO_RIFLE",
+  "skill_used": "fabrication",
+  "difficulty": 3,
+  "skills_required": [
+    "gun",
+    5
+  ],
+  "time": "2 m",
+  "batch_time_factors": [
+    60,
+    5
+  ],
+  "book_learn": [
+    [
+      "recipe_bullets",
+      3
+    ],
+    [
+      "mag_rifle",
+      4
+    ]
+  ],
+  "charges": 1,
+  "reversible": true,
+  "using": [
+    [
+      "bullet_forming",
+      4
+    ],
+    [
+      "ammo_bullet",
+      1
+    ]
+  ],
+  "proficiencies": [
+    {
+      "proficiency": "prof_handloading"
+    }
+  ],
+  "components": [
+    [
+      [
+        "3006_casing",
+        1
+      ]
+    ],
+    [
+      [
+        "lgrifle_primer",
+        1
+      ]
+    ],
+    [
+      [
+        "chem_black_powder",
+        32
+      ]
+    ],
+    [
+      [
+        "copper",
+        2
+      ]
+    ]
+  ]
+}
+]

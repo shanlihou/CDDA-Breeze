@@ -1,0 +1,34 @@
+[
+
+ {
+    "type": "item_group",
+    "id": "zhenghe_001",
+    "//": "利爪怪",
+    "subtype": "collection",
+    "entries": [
+      {
+        "distribution": [
+          {
+            "item": "iron_thorn",
+            "prob": 25
+          },
+          {
+            "item": "iridescent_plate",
+            "prob": 75
+          }
+        ],
+        "prob": 5
+      },
+      { "item": "destiny_copper", "count": [ 20, 25 ] }
+    ]
+  },
+ {
+    "id": "mon_razorclaw",
+    "//": "利爪怪",
+    "copy-from": "mon_razorclaw",
+    "type": "MONSTER",
+    "death_drops": "zhenghe_001"
+  }
+ 
+
+]

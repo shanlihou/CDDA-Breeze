@@ -1,0 +1,42 @@
+[
+  {
+    "id": "lucky_charm",
+    "type": "TOOL",
+    "name": {
+      "str": "幸运符",
+      "str_pl": "幸运符"
+    },
+    "description": "一个小护身符，外观和涂装都像一根胡萝卜。仅仅拥有它就让你感到更幸运。",
+    "volume": "5 ml",
+    "weight": "10 g",
+    "longest_side": "3 cm",
+    "price_postapoc": 25000,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "bad",
+      "length": "short",
+      "surface": "any"
+    },
+    "bashing": 1,
+    "material": [
+      "steel"
+    ],
+    "symbol": "🥕",
+    "looks_like": "carrot",
+    "color": "light_red",
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "HELD",
+          "condition": "ALWAYS",
+          "mutations": [
+            "lucky_charm_mut"
+          ]
+        }
+      ]
+    },
+    "flags": [
+      "DURABLE_MELEE"
+    ]
+  }
+]

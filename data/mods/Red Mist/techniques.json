@@ -1,0 +1,226 @@
+[
+    {
+    "id": "redmistbook",
+    "copy-from": "book_martial",
+    "type": "GENERIC",
+    "name": {
+      "str": "殷红迷雾之页",
+      "str_pl": "殷红迷雾之页"
+    },
+    "description": "一份手写的抄本，详细描述了殷红迷雾所使用的战斗方法。",
+    "price": "2000 USD",
+    "price_postapoc": "200 USD",
+    "looks_like": "manual_swordsmanship",
+    "book_data": {
+      "martial_art": "redmist_art"
+    }
+  },
+  {
+    "type": "technique",
+    "id": "redmist_shby",
+    "name": "尸横遍野",
+    "messages": [
+      "你巨力挥舞武器，猩红色的风暴肆虐。",
+      "<npcname>向%s提供了全面的打击"
+    ],
+    "skill_requirements": [
+      {
+        "name": "cutting",
+        "level": 7
+      }
+    ],
+    "melee_allowed": true,
+    "aoe": "spin",
+    "crit_tec": true,
+    "down_dur": 1,
+    "attack_vectors": [
+      "WEAPON"
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "redmist_bxns",
+    "name": "屏息凝神",
+    "messages": [
+      "%s试图抓住你，但你溜走了！",
+      "%s试图抢夺<npcname>，但是他们溜走了！"
+    ],
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 5
+      }
+    ],
+    "melee_allowed": true,
+    "unarmed_allowed": true,
+    "defensive": true,
+    "grab_break": true
+  },
+  {
+    "type": "technique",
+    "id": "redmist_hfzr1",
+    "name": "后发制人-闪避",
+    "messages": [
+      "你轻易地闪避并反击%s",
+      "<npcname>回避并计数器%s"
+    ],
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 5
+      }
+    ],
+    "melee_allowed": true,
+    "dodge_counter": true,
+    "crit_ok": true,
+    "stun_dur": 1,
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 0
+      }
+    ],
+    "attack_vectors": [
+      "WEAPON"
+    ]
+  },
+    {
+    "type": "technique",
+    "id": "redmist_hfzr2",
+    "name": "后发制人-格挡",
+    "messages": [
+      "你轻易地格挡并反击%s",
+      "<npcname>回避并计数器%s"
+    ],
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 5
+      }
+    ],
+    "melee_allowed": true,
+	"block_counter": true,
+    "crit_ok": true,
+    "stun_dur": 1,
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 0
+      }
+    ],
+    "attack_vectors": [
+      "WEAPON"
+    ]
+  },
+    {
+    "type": "technique",
+    "id": "redmist_ddzc",
+    "name": "大刀直刺",
+    "messages": [
+      "你用武器刺穿%s及其身后的敌人。",
+      "<npcname>向%s提供了全面的打击"
+    ],
+    "skill_requirements": [
+      {
+        "name": "cutting",
+        "level": 7
+      }
+    ],
+    "melee_allowed": true,
+    "aoe": "impale",
+
+    "attack_vectors": [
+      "WEAPON"
+    ]
+  },
+      {
+    "type": "technique",
+    "id": "redmist_ddhz",
+    "name": "大刀横斩",
+    "messages": [
+      "你用武器斩击%s及其附近的敌人。",
+      "<npcname>向%s提供了全面的打击"
+    ],
+    "skill_requirements": [
+      {
+        "name": "cutting",
+        "level": 7
+      }
+    ],
+    "melee_allowed": true,
+    "aoe": "wide",
+    "attack_vectors": [
+      "WEAPON"
+    ]
+  },
+      {
+    "type": "technique",
+    "id": "redmist_ddzq",
+    "name": "大刀纵切",
+    "messages": [
+      "你用武器砍杀%s。",
+      "<npcname>向%s提供了全面的打击"
+    ],
+    "skill_requirements": [
+      {
+        "name": "cutting",
+        "level": 7
+      }
+    ],
+    "melee_allowed": true,
+    "mult_bonuses": [{
+        "stat": "damage",
+		"type":"bash",
+        "scale": 1.3
+      },
+	  {
+        "stat": "damage",
+		"type":"cut",
+        "scale": 1.3
+      },
+	  {
+        "stat": "damage",
+		"type":"stab",
+        "scale": 1.3
+      }] ,
+    "attack_vectors": [
+      "WEAPON"
+    ]
+  },
+    {
+    "type": "technique",
+    "id": "redmist_xwmm",
+    "name": "血雾弥漫",
+    "messages": [
+      "血雾弥漫，尸横遍野。",
+      "<npcname>向%s提供了全面的打击"
+    ],
+    "skill_requirements": [
+      {
+        "name": "cutting",
+        "level": 7
+      }
+    ],
+    "melee_allowed": true,
+    "crit_tec": true,
+    "mult_bonuses": [{
+        "stat": "damage",
+		"type":"bash",
+        "scale": 3
+      },
+	  {
+        "stat": "damage",
+		"type":"cut",
+        "scale": 3
+      },
+	  {
+        "stat": "damage",
+		"type":"stab",
+        "scale": 3
+      }] ,
+    "down_dur": 3,
+    "attack_vectors": [
+      "WEAPON"
+    ]
+  }
+]

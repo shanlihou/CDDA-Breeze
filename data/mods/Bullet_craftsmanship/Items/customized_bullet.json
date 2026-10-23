@@ -1,0 +1,622 @@
+[
+  {
+    "id": "customized_22_lr",
+    "copy-from": "22_lr",
+    "type": "AMMO",
+    "name": { "str_sp": ".22 LR弹（定制）" },
+    "description": "40格令的 .22LR 铅制无被甲弹。.22 LR弹的威力极小，射程短，后坐力可忽略不计。这种型号的最大用处是用于训练枪法以及猎杀小型动物。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_22_fmj",
+    "copy-from": "22_fmj",
+    "type": "AMMO",
+    "name": { "str_sp": ".22 被甲弹（定制）" },
+    "description": "38格令的.22 LR 全金属被甲弹。.22 LR弹的威力极小，射程短，后坐力可忽略不计。这种型号穿透目标的能力稍微强一些，但因此造成的伤害更小。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_223",
+    "copy-from": "223",
+    "type": "AMMO",
+    "name": { "str_sp": ".223 雷明顿弹（定制）" },
+    "description": "55格令的.223 雷明顿全金属被甲艇尾弹，样式与M193弹相同。在过去近一个世纪以来，223口径在民用射击领域极受欢迎，能找到有许多使用这个口径弹药的枪械。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_270win_jsp",
+    "copy-from": "270win_jsp",
+    "type": "AMMO",
+    "name": { "str_sp": ".270 温切斯特软尖弹（定制）" },
+    "description": "130格令的 .270 口径温切斯特软尖弹。弹药威力强大，可以轻松摧毁目标。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_3006",
+    "copy-from": "3006",
+    "type": "AMMO",
+    "name": { "str_sp": ".30-06 春田弹（定制）" },
+    "description": "165格令的.30-06口径斯普林菲尔德(春田)软尖弹。.30-06口径弹药有优良的精准度、射程和停止作用，在民用和军用的精准射击领域都已流行了近一个世纪。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_3006fmj",
+    "copy-from": "3006fmj",
+    "type": "AMMO",
+    "name": { "str_sp": ".30-06 M2 穿甲弹（定制）" },
+    "description": "168格令的.30-06口径 M2 全金属被甲穿甲弹。高动能而且精准的子弹，但是这种型号的子弹通过降低致伤能力来提高穿甲性能。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_3006_incendiary",
+    "copy-from": "3006_incendiary",
+    "type": "AMMO",
+    "name": { "str_sp": ".30-06 曳光弹（定制）" },
+    "description": ".30-06 M14A1 曳光弹,有助于射击者锁定目标。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_30carbine",
+    "copy-from": "30carbine",
+    "type": "AMMO",
+    "name": { "str_sp": ".30 卡宾枪弹（定制）" },
+    "description": "110格令的.30 全金属被甲卡宾枪弹。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_300blk",
+    "copy-from": "300blk",
+    "type": "AMMO",
+    "name": { "str": ".300 BLK 弹（定制）", "str_pl": ".300 BLK 弹（定制）" },
+    "description": ".300 BLK弹是一种中间型弹药，其弹道学性能类似于7.62x39mm弹，但是能够用于AR-15平台。这种弹药是由5.56mm NATO子弹拓宽后制成，但是通过STANAG弹匣供弹。这种弹药需要特殊的枪管,因此无法用于标准M4或类似的卡宾枪型号。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_300_winmag",
+    "copy-from": "300_winmag",
+    "type": "AMMO",
+    "name": { "str_sp": ".300 温彻斯特马格南弹（定制）" },
+    "description": ".300 温彻斯特马格南弹药用途多样，许多射击学校都会对其进行教学。这类弹药通常被猎人、军队和执法部门使用。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_308",
+    "copy-from": "308",
+    "type": "AMMO",
+    "name": { "str_sp": ".308 温彻斯特弹（定制）" },
+    "description": "168格令的.308 温彻斯特空尖弹。308系列的威力与精准,令其成为世界上最受欢迎的狩猎步枪弹药之一。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_32_acp",
+    "copy-from": "32_acp",
+    "type": "AMMO",
+    "name": { "str_sp": ".32 ACP 弹（定制）" },
+    "description": ".32ACP 弹,曾是20世纪流行的手枪弹药。威力相比于.38弹或者9x19mm弹要更小。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_357mag_fmj",
+    "copy-from": "357mag_fmj",
+    "type": "AMMO",
+    "name": { "str_sp": ".357 马格南被甲弹（定制）" },
+    "description": ".357 马格南被甲弹。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_357mag_jhp",
+    "copy-from": "357mag_jhp",
+    "type": "AMMO",
+    "name": { "str_sp": ".357 马格南空尖弹（定制）" },
+    "description": ".357 马格南空尖弹。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_357sig_fmj",
+    "copy-from": "357sig_fmj",
+    "type": "AMMO",
+    "name": { "str_sp": ".357 西格被甲弹（定制）" },
+    "description": ".357 西格弹的全金属被甲弹型号。357 西格弹是一种高速手枪弹,相较于普通手枪弹药它的弹道更加平直。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_357sig_jhp",
+    "copy-from": "357sig_jhp",
+    "type": "AMMO",
+    "name": { "str_sp": ".357 西格空尖弹（定制）" },
+    "description": ".357 西格弹的空尖弹型号。357 西格弹是一种高速手枪弹,相较于普通手枪弹药它的弹道更加平直。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_38_fmj",
+    "copy-from": "38_fmj",
+    "type": "AMMO",
+    "name": { "str_sp": ".38 被甲弹（定制）" },
+    "description": "130格令的.38 黄铜被甲特制弹。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_38_special",
+    "copy-from": "38_special",
+    "type": "AMMO",
+    "name": { "str_sp": ".38 特制弹（定制）" },
+    "description": "90格令的.38 空尖特制弹。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_38_super",
+    "copy-from": "38_super",
+    "type": "AMMO",
+    "name": { "str_sp": ".38 超级弹（定制）" },
+    "description": "130格令的.38 全金属被甲特制弹。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_38super_fmj",
+    "copy-from": "38super_fmj",
+    "type": "AMMO",
+    "name": { "str_sp": ".38 超级被甲弹（定制）" },
+    "description": "147格令的.38 全金属被甲超级弹。.38超级弹于20世纪20年代在 .38ACP 弹的基础上研发而来，设计用于穿透当时的防弹衣。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_380_FMJ",
+    "copy-from": "380_FMJ",
+    "type": "AMMO",
+    "name": { "str_sp": ".380 ACP 被甲弹（定制）" },
+    "description": "90格令的.380 ACP 被甲空尖弹，超压型号。这些子弹是为了最大限度地提高性能而设计的，而且比训练弹更精确。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_380_JHP",
+    "copy-from": "380_JHP",
+    "type": "AMMO",
+    "name": { "str_sp": ".380 ACP 空尖弹（定制）" },
+    "description": "95格令的 .380 ACP 黄铜被甲弹。作为袖珍手枪的子弹流行了一个多世纪，该口径的子弹通常被认为是威力最弱的。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_380_p",
+    "copy-from": "380_p",
+    "type": "AMMO",
+    "name": { "str_sp": ".380 ACP +P弹（定制）" },
+    "description": "95格令的.380 ACP 被甲空尖弹。它是一种流行的袖珍防御手枪子弹，该口径的子弹通常被认为是威力最弱的。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_40fmj",
+    "copy-from": "40fmj",
+    "type": "AMMO",
+    "name": { "str_sp": ".40 S&W 被甲弹（定制）" },
+    "description": "180格令的.40 S&W 全金属被甲弹。.40 S&W 继承了10mm Auto弹的大多数优点，同时降低了后坐力，因而在执法部门和个人防卫中都非常受欢迎。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_40sw",
+    "copy-from": "40sw",
+    "type": "AMMO",
+    "name": { "str_sp": ".40 S&W 空尖弹（定制）" },
+    "description": "135格令的.40 S&W 被甲空尖弹。.40 S&W 继承了10mm Auto弹的大多数优点，同时降低了后坐力。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_44fmj",
+    "copy-from": "44fmj",
+    "type": "AMMO",
+    "name": { "str_sp": ".44 马格南被甲弹（定制）" },
+    "description": ".44口径的马格南弹的黄铜全被甲改装型号，通过牺牲弹头扩张所带来的破坏力，使其穿透力得以稍微提升。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_44magnum",
+    "copy-from": "44magnum",
+    "type": "AMMO",
+    "name": { "str_sp": ".44 马格南弹（定制）" },
+    "description": "240格令的.44口径马格南被甲空尖弹。.44马格南弹是目前手枪子弹中威力最大的弹种之一。它有着优异的停止力，但同时作为一种手枪弹药来说它的后坐力也非常高。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_4570_sp",
+    "copy-from": "4570_sp",
+    "type": "AMMO",
+    "name": { "str_sp": ".45-70 SP弹（定制）" },
+    "description": "305格令的 .45-70 软尖政府弹。它是目前仍在使用的最古老的弹药之一，依然是近距离狩猎大型猎物的首选弹药。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_4570_pen",
+    "copy-from": "4570_pen",
+    "type": "AMMO",
+    "name": { "str": ".45-70 +P 穿甲弹（定制）", "str_pl": ".45-70 +P 穿甲弹（定制）" },
+    "description": "305格令的 .45-70 铜芯穿甲政府弹，超压型号。设计在最大限度地保证穿透厚皮和骨头的同时，保持了理想的弹道伤害特性。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_4570_low",
+    "copy-from": "4570_low",
+    "type": "AMMO",
+    "name": { "str_sp": ".45-70 LFN 牛仔弹（定制）" },
+    "description": "405格令的 .45-70 铅芯平头政府弹，符合最初的设计规格，可安全用于古董枪械。虽然比现代弹药的威力要弱一些，但仍然有一战之力。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_45_acp",
+    "copy-from": "45_acp",
+    "type": "AMMO",
+    "name": { "str_sp": ".45 被甲弹（定制）" },
+    "description": "230格令的 .45 口径 ACP 全金属被甲弹。由于它高有效性的名声，.45 口径 ACP 手枪弹已经流行了将近一个世纪了。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_45_jhp",
+    "copy-from": "45_jhp",
+    "type": "AMMO",
+    "name": { "str_sp": ".45 ACP 空尖弹（定制）" },
+    "description": "185格令的.45 口径 ACP 被甲空尖弹。.45口径ACP弹是20世纪早期被研发出来,用于代替.38 长柯尔特弹，但随后它相比现代手枪弹药而言，越来越不受青睐。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_45_super",
+    "copy-from": "45_super",
+    "type": "AMMO",
+    "name": { "str_sp": ".45 ACP +P弹（定制）" },
+    "description": "185格令的.45口径 ACP 增压空尖弹。增压弹拥有更高的枪口动能，相比同口径普通弹有着更高伤害、精准度，和更大的后坐力。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_45colt_jhp",
+    "copy-from": "45colt_jhp",
+    "type": "AMMO",
+    "name": { "str_sp": ".45 柯尔特空尖弹（定制）" },
+    "description": "250格令的.45 柯尔特空尖弹,原本是为柯尔特单动式陆军左轮手枪设计的弹药，但仍然被用于现代重制版的左轮手枪中。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_454_Casull",
+    "copy-from": "454_Casull",
+    "type": "AMMO",
+    "name": { "str_sp": ".454 卡苏尔弹（定制）" },
+    "description": "300格令的.454口径卡苏尔被甲软尖弹。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_460_fmj",
+    "copy-from": "460_fmj",
+    "type": "AMMO",
+    "name": { "str_sp": ".460 罗兰德被甲弹（定制）" },
+    "description": ".460口径的罗兰德弹的平头硬质弹型号，通过牺牲弹头扩张所带来的破坏力，使其穿透力得以稍微提升。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_460_rowland",
+    "copy-from": "460_rowland",
+    "type": "AMMO",
+    "name": { "str_sp": ".460 罗兰德弹（定制）" },
+    "description": "185格令的.460口径罗兰德弹。.460罗兰德弹设计初衷是一款模拟.44 马格南弹特性的自动手枪弹。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_50_incendiary",
+    "copy-from": "50_incendiary",
+    "type": "AMMO",
+    "name": { "str_sp": ".50 BMG 曳光弹（定制）" },
+    "description": ".50 BMG的曳光弹型号。曳光弹可帮助保持对射击目标的瞄准，但同时也有引燃可燃物的风险。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_50bmg",
+    "copy-from": "50match",
+    "type": "AMMO",
+    "name": { "str_sp": ".50 BMG 竞赛弹（定制）" },
+    "description": ".50 BMG 弹,采用铅芯全金属被甲弹弹头。.50口径弹药是非常强悍的步枪弹，原本设计用于防空，但后来也被改用于反载具和反步兵等多种用途。它所拥有的惊人威力和穿甲力使它为有史以来最致命的弹药之一,但缺点是其震撼的后坐力以及发射时所带来的巨大噪声。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_50ss",
+    "copy-from": "50ss",
+    "type": "AMMO",
+    "name": { "str_sp": ".50 BMG 穿甲弹（定制）" },
+    "description": ".50 BMG穿甲弹，采用密度非常高、极为坚硬的钨钢穿甲弹芯。提升了穿甲能力，但伤害降低。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_500_Magnum",
+    "copy-from": "500_Magnum",
+    "type": "AMMO",
+    "name": { "str_sp": ".500 S&W 马格南弹（定制）" },
+    "description": "500格令的.500 S&W 马格南弹，这款子弹的威力无比巨大，足以一枪击杀大多数目标，还能让你像西部牛仔那样吹吹枪口冒出来的白烟。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_700nx",
+    "copy-from": "700nx",
+    "type": "AMMO",
+    "name": { "str_sp": ".700 NX 弹（定制）" },
+    "description": ".700 Nitro Express是一种非常强力的步枪子弹，设计用于远距离射击。它优秀的准确度和穿甲性能使其成为最致命的弹药之一，这足够弥补其巨大的后坐力和噪音所带来的负面影响。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_9x18mm",
+    "copy-from": "9x18mm",
+    "type": "AMMO",
+    "name": { "str_sp": "9x18mm 弹（定制）" },
+    "description": "9x18mm 马卡洛夫手枪弹，主要用于马卡洛夫PM手枪的前苏联制式子弹。正如其名所示，弹壳长度略短于9mm帕拉贝鲁姆弹。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_9x18mmP2",
+    "copy-from": "9x18mmP2",
+    "type": "AMMO",
+    "name": { "str_sp": "9x18mm +P+ 弹（定制）" },
+    "//": "9x18mm 马卡洛夫手枪弹，主要用于马卡洛夫PM手枪的前苏联制式子弹。这种弹药被重新装填，增加了内压，提供更高飞行稳定性及伤害。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_9x18mmfmj",
+    "copy-from": "9x18mmfmj",
+    "type": "AMMO",
+    "name": { "str_sp": "9x18mm 被甲弹（定制）" },
+    "description": "9x18m 马卡洛夫手枪弹，一种老式苏联手枪弹药，主要用于马卡洛夫PM型手枪。这种黄铜被甲型号可以提高少许穿甲性能，同时击中目标时弹头的碎裂伤害也减少了。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_9mm",
+    "copy-from": "9mm",
+    "type": "AMMO",
+    "name": { "str_sp": "9x19mm 空尖弹（定制）" },
+    "description": "116格令的 9x19mm 被甲空尖弹。被甲空尖弹的穿甲力比全金属被甲弹差一些，但是它们在遇到没有穿着护甲的目标时能迅速分散开，在敌人体内留下空腔，子弹也更容易留在目标体内 。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_9mmfmj",
+    "copy-from": "9mmfmj",
+    "type": "AMMO",
+    "name": { "str_sp": "9x19mm 被甲弹（定制）" },
+    "description": "115格令的 9x19mm 黄铜全金属被甲弹。即便已经生产了将近一个世纪，时至今日依然广泛使用在军队、执法部门和民用领域。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_9mmP",
+    "copy-from": "9mmP",
+    "type": "AMMO",
+    "name": { "str_sp": "9x19mm +P 弹（定制）" },
+    "description": "115格令的 9x19mm 口径增压弹。在增大后坐力的代价下，子弹的初速度更高，命中率也更高。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_9mmP2",
+    "copy-from": "9mmP2",
+    "type": "AMMO",
+    "name": { "str_sp": "9x19mm +P+ 弹（定制）" },
+    "description": "在9x19mm +P子弹的基础之上更进一步地提高了膛压，可以输出更高伤害、精准度和穿甲力。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_10mm_fmj",
+    "copy-from": "10mm_fmj",
+    "type": "AMMO",
+    "name": { "str_sp": "10mm Auto 被甲弹（定制）" },
+    "description": "180格令的10mm Auto弹是一种全金属被甲弹。10mm Auto弹与更加流行的 .40 S&W 弹相比,是一款威力更强的手枪弹,同时也是其前身。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_46mm",
+    "copy-from": "46mm",
+    "type": "AMMO",
+    "name": { "str_sp": "4.6x30mm 弹（定制）" },
+    "description": "31格令的4.6x30mm口径镀铜铅芯弹，4.6x30mm口径子弹是由黑克勒-科赫公司研制，用来与 FN 赫斯塔尔公司的5.7x28mm口径弹药竞争的弹种。该弹有着较低后坐力，但由于使用的是简单的铅芯而不是正规的工厂制造的穿甲弹芯，因此没有常规枪弹的对于装甲的穿透力。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_545",
+    "copy-from": "545",
+    "type": "AMMO",
+    "name": { "str_sp": "5.45x39mm 弹（定制）" },
+    "description": "5.45×39mm口径子弹是AK枪族自1974年以来的标准弹药。这种弹药受5.56x45mm NATO弹启发而制成。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_545_ap",
+    "copy-from": "545_ap",
+    "type": "AMMO",
+    "name": { "str_sp": "5.45x39mm 穿甲弹（定制）" },
+    "description": "57格令的5.45x39mm 7N22 钢芯穿甲弹。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_556",
+    "copy-from": "556",
+    "type": "AMMO",
+    "name": { "str_sp": "5.56 NATO 弹（定制）" },
+    "description": "62格令的5.56x45mm 全金属被甲钢芯弹。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_556_incendiary",
+    "copy-from": "556_incendiary",
+    "type": "AMMO",
+    "name": { "str_sp": "5.56 NATO 曳光弹（定制）" },
+    "description": "M856 曳光弹。传统做法是每隔四发普通子弹加入一发曳光弹，以帮助射手保持瞄准射击目标。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_57mm",
+    "copy-from": "57mm",
+    "type": "AMMO",
+    "name": { "str_sp": "5.7x28mm 弹（定制）" },
+    "description": "31格令的5.7x28mmSS190全金属被甲穿甲弹。5.7x28mm口径子弹是由 FN 赫斯塔尔公司设计,计划用来在北约中取代9x19mm帕拉贝鲁姆弹的弹种。尽管弹种取代计划被最终取消了，5.7x28m口径子弹也已经在许多地区冲突中得到了使用，并证明了它的可靠性能。该种弹药的后坐力很低，但由于使用的是简单的铅芯而不是正规的工厂制造的穿甲弹芯，因此没有常规枪弹的对于装甲的穿透力。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_762_25",
+    "copy-from": "762_25hot",
+    "type": "AMMO",
+    "name": { "str_sp": "7.62x25mm 弹（定制）" },
+    "description": "85格令的7.62x25mm 全金属被甲增压弹的民用版本。相比原版威力更加强大。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_762_m43",
+    "copy-from": "762_m43",
+    "type": "AMMO",
+    "name": { "str_sp": "7.62x39mm M43 弹（定制）" },
+    "description": "121.9格令的7.62x39mm 57-N-231 型全金属被甲钢芯弹。由二战时期的苏联研发，7.62x39m口径弹药迅速地流行全世界。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_762_m87",
+    "copy-from": "762_m87",
+    "type": "AMMO",
+    "name": { "str_sp": "7.62x39mm M67 弹（定制）" },
+    "description": "123格令的7-62x39mm M67 型子弹。它在击中目标之后会比M43型子弹更快地出现弹头翻滚，给目标造成更大的伤害。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_762_51",
+    "copy-from": "762_51",
+    "type": "AMMO",
+    "name": { "str_sp": "7.62x51mm 弹（定制）" },
+    "description": "147格令的7-62×51mmNAT0全金属被甲弹。高威力的步枪子弹,因其高精准度和远射程,被猎人和军方的狙击手们广泛使用。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_762_51_incendiary",
+    "copy-from": "762_51_incendiary",
+    "type": "AMMO",
+    "name": { "str_sp": "7.62x51mm 曳光弹（定制）" },
+    "description": "M62曳光弹。传统做法是每隔四发普通子弹加入一曳光弹,以帮助射手保持瞄准射击目标。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "customized_762_54R",
+    "copy-from": "762_54R",
+    "type": "AMMO",
+    "name": { "str_sp": "7.62x54mmR 弹（定制）" },
+    "description": "150格令的7.62x54mmR 全金属被甲弹。7.62x54mmR口径子弹是至今仍被广泛使用的最老式子弹之一，主要是因为它所配套的莫辛纳甘步枪的流行使得它经久不衰。这枚弹药应该是由幸存者或大灾变前的资深工匠手工重新装填的，采用了一枪一弹的定制工艺，威力与精度略强于原装子弹，同时由于其定制特性价值较低。",
+    "proportional": { "price": 0.5, "damage": { "damage_type": "bullet", "amount": 1.1 }, "dispersion": 0.8 },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  }
+]

@@ -1,0 +1,21 @@
+[
+  {
+    "type": "mutation",
+    "id": "SSS",
+    "name": "次元力量挑战者",
+    "points": 0,
+    "description": "希望掌握在手中！",
+    "starting_trait": false,
+    "player_display": true,
+    "valid": false,
+    "purifiable": false,
+    "hp_modifier": 10,
+    "weight_capacity_modifier": 11,
+    "healing_awake": 10,
+    "healing_multiplier": 11,
+    "mending_modifier": 11,
+    "armor": [ { "parts": [ "torso", "head", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r", "mouth", "eyes" ], "physical": 100 } ],
+    "passive_mods": { "dex_mod": 10, "str_mod": 10, "per_mod": 10, "int_mod": 10, "speed_mod": 10 },
+    "enchantments": [ { "condition": "ALWAYS", "values": [ { "value": "STRENGTH", "multiply": 1 }, { "value": "DEXTERITY", "multiply": 1 }, { "value": "PERCEPTION", "multiply": 1 }, { "value": "INTELLIGENCE", "multiply": 1 }, { "value": "SPEED", "multiply": 1 }, { "value": "ARMOR_BASH", "add": -100 }, { "value": "ARMOR_CUT", "add": -100 }, { "value": "ARMOR_STAB", "add": -100 }, { "value": "ARMOR_BULLET", "add": -100 }, { "value": "ARMOR_HEAT", "add": -100 }, { "value": "ARMOR_COLD", "add": -100 }, { "value": "ARMOR_ELEC", "add": -100 }, { "value": "ARMOR_ACID", "add": -100 }, { "value": "ARMOR_BIO", "add": -100 } ] } ]
+  }
+]

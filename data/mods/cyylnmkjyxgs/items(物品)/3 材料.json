@@ -1,0 +1,60 @@
+[
+  {
+    "id": "broken_Boss_YH",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "material": [
+      "cyylcaizhi"
+    ],
+    "symbol": "*",
+    "color": "blue",
+    "name": {
+      "str": "<永恒之心>"
+    },
+    "description": "Boss永恒掉落物,是制作物品的材料。",
+    "looks_like": "aquamarine",
+    "weight": "100 g",
+    "volume": "100 ml",
+    "to_hit": 1,
+    "flags": [
+      "TRADER_AVOID",
+      "NONCONDUCTIVE"
+    ]
+  },
+  {
+    "id": "cyyl_fenmo",
+    "type": "AMMO",
+    "material": [
+      "cyylcaizhi"
+    ],
+    "symbol": "+",
+    "color": "white",
+    "name": {
+      "str": "次元医疗粉末",
+      "str_pl": "次元医疗粉末"
+    },
+    "description": "次元医疗物品的制作材料。",
+    "looks_like": "meal_bone",
+    "price": "200 USD",
+    "price_postapoc": "20 USD",
+    "ammo_type": "cyyl_ammo",
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 0,
+      "armor_penetration": 0
+    },
+    "range": 0,
+    "dispersion": 0,
+    "recoil": 0,
+    "count": 50,
+    "stack_size": 100,
+    "weight": "1 g",
+    "volume": "10ml",
+    "effects": [
+      "NEVER_MISFIRES"
+    ],
+    "flags": [
+      "NONCONDUCTIVE"
+    ]
+  }
+]

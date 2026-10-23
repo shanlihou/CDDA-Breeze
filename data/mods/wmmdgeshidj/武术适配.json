@@ -1,0 +1,546 @@
+[
+ {
+  "type": "martial_art",
+  "id": "style_brawling",
+  "name": {
+   "str": "斗殴技"
+  },
+  "copy-from": "style_brawling",
+  "allow_all_weapons": true
+ },
+ {
+  "type": "martial_art",
+  "id": "style_aikido",
+  "name": {
+   "str": "合气道"
+  },
+  "copy-from": "style_aikido",
+  "extend": {
+   "weapons": [
+    "holy_nunchaku",
+    "holy_nunchaku_active",
+    "xczshayin_high_damage",
+    "xczshayin_dual"
+   ],
+   "weapon_category": [
+    "SN_MARTIAL"
+   ]
+  }
+ },
+ {
+  "type": "martial_art",
+  "id": "style_boxing",
+  "name": {
+   "str": "拳击"
+  },
+  "copy-from": "style_boxing",
+  "extend": {
+   "weapons": [
+    "holy_nunchaku",
+    "holy_nunchaku_active",
+    "xczshayin_high_damage",
+    "xczshayin_dual"
+   ],
+   "weapon_category": [
+    "SN_MARTIAL"
+   ]
+  }
+ },
+ {
+  "type": "martial_art",
+  "id": "style_capoeira",
+  "name": {
+   "str": "卡波耶拉"
+  },
+  "copy-from": "style_capoeira",
+  "extend": {
+   "weapons": [
+    "holy_nunchaku",
+    "holy_nunchaku_active",
+    "xczshayin_high_damage",
+    "xczshayin_dual"
+   ],
+   "weapon_category": [
+    "SN_MARTIAL"
+   ]
+  }
+ },
+ {
+  "type": "martial_art",
+  "id": "style_judo",
+  "name": {
+   "str": "柔道"
+  },
+  "copy-from": "style_judo",
+  "extend": {
+   "weapons": [
+    "holy_nunchaku",
+    "holy_nunchaku_active",
+    "xczshayin_high_damage",
+    "xczshayin_dual"
+   ],
+   "weapon_category": [
+    "SN_MARTIAL"
+   ]
+  }
+ },
+ {
+  "type": "martial_art",
+  "id": "style_karate",
+  "name": {
+   "str": "空手道"
+  },
+  "copy-from": "style_karate",
+  "extend": {
+   "weapons": [
+    "holy_nunchaku",
+    "holy_nunchaku_active",
+    "xczshayin_high_damage",
+    "xczshayin_dual"
+   ],
+   "weapon_category": [
+    "SN_MARTIAL"
+   ]
+  }
+ },
+ {
+  "type": "martial_art",
+  "id": "style_muay_thai",
+  "name": {
+   "str": "泰拳"
+  },
+  "copy-from": "style_muay_thai",
+  "extend": {
+   "weapons": [
+    "holy_nunchaku",
+    "holy_nunchaku_active",
+    "xczshayin_high_damage",
+    "xczshayin_dual"
+   ],
+   "weapon_category": [
+    "SN_MARTIAL"
+   ]
+  }
+ },
+ {
+  "type": "martial_art",
+  "id": "style_taekwondo",
+  "name": {
+   "str": "跆拳道"
+  },
+  "copy-from": "style_taekwondo",
+  "extend": {
+   "weapons": [
+    "holy_nunchaku",
+    "holy_nunchaku_active",
+    "xczshayin_high_damage",
+    "xczshayin_dual"
+   ],
+   "weapon_category": [
+    "SN_MARTIAL"
+   ]
+  }
+ },
+ {
+  "type": "martial_art",
+  "id": "style_tai_chi",
+  "name": {
+   "str": "太极拳"
+  },
+  "copy-from": "style_tai_chi",
+  "extend": {
+   "weapons": [
+    "holy_nunchaku",
+    "holy_nunchaku_active",
+    "xczshayin_high_damage",
+    "xczshayin_dual"
+   ],
+   "weapon_category": [
+    "SN_MARTIAL"
+   ]
+  }
+ },
+ {
+  "type": "martial_art",
+  "id": "style_zuiquan",
+  "name": {
+   "str": "醉拳"
+  },
+  "copy-from": "style_zuiquan",
+  "extend": {
+   "weapons": [
+    "holy_nunchaku",
+    "holy_nunchaku_active",
+    "xczshayin_high_damage",
+    "xczshayin_dual"
+   ],
+   "weapon_category": [
+    "SN_MARTIAL"
+   ]
+  }
+ },
+ {
+  "type": "martial_art",
+  "id": "style_krav_maga",
+  "name": {
+   "str": "马伽术"
+  },
+  "copy-from": "style_krav_maga",
+  "extend": {
+   "weapons": [
+    "xczshayin_high_damage",
+    "xczshayin_dual",
+    "snake_sword",
+    "snake_whip",
+    "holy_nunchaku",
+    "holy_nunchaku_active",
+    "snake_sword_base",
+    "snake_sword_para",
+    "snake_whip_base",
+    "snake_whip_para"
+   ],
+   "weapon_category": [
+    "SN_MARTIAL"
+   ]
+  }
+ },
+ {
+  "type": "martial_art",
+  "id": "style_fencing",
+  "name": {
+   "str": "击剑术"
+  },
+  "copy-from": "style_fencing",
+  "extend": {
+   "weapons": [
+    "snake_sword",
+    "snake_sword_base",
+    "snake_sword_para"
+   ],
+   "weapon_category": [
+    "SN_MARTIAL"
+   ]
+  }
+ },
+ {
+  "type": "martial_art",
+  "id": "style_kendo",
+  "name": {
+   "str": "剑道"
+  },
+  "copy-from": "style_kendo",
+  "extend": {
+   "weapons": [
+    "snake_sword",
+    "snake_sword_base",
+    "snake_sword_para"
+   ],
+   "weapon_category": [
+    "SN_MARTIAL"
+   ]
+  }
+ },
+ {
+  "type": "martial_art",
+  "id": "style_ninjutsu",
+  "name": {
+   "str": "忍术"
+  },
+  "copy-from": "style_ninjutsu",
+  "extend": {
+   "weapons": [
+    "snake_sword",
+    "snake_whip",
+    "snake_sword_base",
+    "snake_sword_para",
+    "snake_whip_base",
+    "snake_whip_para"
+   ],
+   "weapon_category": [
+    "SN_MARTIAL"
+   ]
+  }
+ },
+ {
+  "type": "martial_art",
+  "id": "style_swordsmanship",
+  "name": {
+   "str": "中世纪剑术"
+  },
+  "copy-from": "style_swordsmanship",
+  "extend": {
+   "weapons": [
+    "snake_sword",
+    "snake_sword_base",
+    "snake_sword_para"
+   ],
+   "weapon_category": [
+    "SN_MARTIAL"
+   ]
+  }
+ },
+ {
+  "type": "martial_art",
+  "id": "style_eskrima",
+  "name": {
+   "str": "菲律宾剑棍术"
+  },
+  "copy-from": "style_eskrima",
+  "extend": {
+   "weapons": [
+    "snake_sword",
+    "holy_nunchaku",
+    "holy_nunchaku_active"
+   ],
+   "weapon_category": [
+    "SN_MARTIAL"
+   ]
+  }
+ },
+ {
+  "type": "martial_art",
+  "id": "style_silat",
+  "name": {
+   "str": "班卡苏拉刀术"
+  },
+  "copy-from": "style_silat",
+  "extend": {
+   "weapons": [
+    "snake_sword",
+    "snake_whip",
+    "holy_nunchaku",
+    "holy_nunchaku_active"
+   ],
+   "weapon_category": [
+    "SN_MARTIAL"
+   ]
+  }
+ },
+ {
+  "type": "martial_art",
+  "id": "style_medievalpole",
+  "name": {
+   "str": "战斗之花"
+  },
+  "copy-from": "style_medievalpole",
+  "extend": {
+   "weapons": [
+    "snake_whip",
+    "holy_nunchaku",
+    "holy_nunchaku_active",
+    "snake_whip_base",
+    "snake_whip_para"
+   ],
+   "weapon_category": [
+    "SN_MARTIAL"
+   ]
+  }
+ },
+ {
+  "type": "martial_art",
+  "id": "style_centipede",
+  "name": {
+   "str": "蜈蚣功"
+  },
+  "copy-from": "style_centipede",
+  "extend": {
+   "weapons": [
+    "xczshayin_high_damage",
+    "xczshayin_dual",
+    "holy_nunchaku",
+    "holy_nunchaku_active"
+   ],
+   "weapon_category": [
+    "SN_MARTIAL"
+   ]
+  }
+ },
+ {
+  "type": "martial_art",
+  "id": "style_venom_snake",
+  "name": {
+   "str": "毒蛇功"
+  },
+  "copy-from": "style_venom_snake",
+  "extend": {
+   "weapons": [
+    "xczshayin_high_damage",
+    "xczshayin_dual",
+    "holy_nunchaku",
+    "holy_nunchaku_active"
+   ],
+   "weapon_category": [
+    "SN_MARTIAL"
+   ]
+  }
+ },
+ {
+  "type": "martial_art",
+  "id": "style_scorpion",
+  "name": {
+   "str": "蝎子功"
+  },
+  "copy-from": "style_scorpion",
+  "extend": {
+   "weapons": [
+    "xczshayin_high_damage",
+    "xczshayin_dual",
+    "holy_nunchaku",
+    "holy_nunchaku_active"
+   ],
+   "weapon_category": [
+    "SN_MARTIAL"
+   ]
+  }
+ },
+ {
+  "type": "martial_art",
+  "id": "style_lizard",
+  "name": {
+   "str": "蜥蜴功"
+  },
+  "copy-from": "style_lizard",
+  "extend": {
+   "weapons": [
+    "xczshayin_high_damage",
+    "xczshayin_dual",
+    "holy_nunchaku",
+    "holy_nunchaku_active"
+   ],
+   "weapon_category": [
+    "SN_MARTIAL"
+   ]
+  }
+ },
+ {
+  "type": "martial_art",
+  "id": "style_toad",
+  "name": {
+   "str": "蛤蟆功"
+  },
+  "copy-from": "style_toad",
+  "extend": {
+   "weapons": [
+    "xczshayin_high_damage",
+    "xczshayin_dual",
+    "holy_nunchaku",
+    "holy_nunchaku_active"
+   ],
+   "weapon_category": [
+    "SN_MARTIAL"
+   ]
+  }
+ },
+ {
+  "type": "martial_art",
+  "id": "style_tiger",
+  "name": {
+   "str": "虎拳"
+  },
+  "copy-from": "style_tiger",
+  "extend": {
+   "weapons": [
+    "xczshayin_high_damage",
+    "xczshayin_dual",
+    "holy_nunchaku",
+    "holy_nunchaku_active"
+   ],
+   "weapon_category": [
+    "SN_MARTIAL"
+   ]
+  }
+ },
+ {
+  "type": "martial_art",
+  "id": "style_crane",
+  "name": {
+   "str": "鹤拳"
+  },
+  "copy-from": "style_crane",
+  "extend": {
+   "weapons": [
+    "xczshayin_high_damage",
+    "xczshayin_dual",
+    "holy_nunchaku",
+    "holy_nunchaku_active"
+   ],
+   "weapon_category": [
+    "SN_MARTIAL"
+   ]
+  }
+ },
+ {
+  "type": "martial_art",
+  "id": "style_leopard",
+  "name": {
+   "str": "豹拳"
+  },
+  "copy-from": "style_leopard",
+  "extend": {
+   "weapons": [
+    "xczshayin_high_damage",
+    "xczshayin_dual",
+    "holy_nunchaku",
+    "holy_nunchaku_active"
+   ],
+   "weapon_category": [
+    "SN_MARTIAL"
+   ]
+  }
+ },
+ {
+  "type": "martial_art",
+  "id": "style_snake",
+  "name": {
+   "str": "蛇拳"
+  },
+  "copy-from": "style_snake",
+  "extend": {
+   "weapons": [
+    "xczshayin_high_damage",
+    "xczshayin_dual",
+    "holy_nunchaku",
+    "holy_nunchaku_active"
+   ],
+   "weapon_category": [
+    "SN_MARTIAL"
+   ]
+  }
+ },
+ {
+  "type": "martial_art",
+  "id": "style_dragon",
+  "name": {
+   "str": "龙拳"
+  },
+  "copy-from": "style_dragon",
+  "extend": {
+   "weapons": [
+    "xczshayin_high_damage",
+    "xczshayin_dual",
+    "holy_nunchaku",
+    "holy_nunchaku_active"
+   ],
+   "weapon_category": [
+    "SN_MARTIAL"
+   ]
+  }
+ },
+ {
+  "type": "martial_art",
+  "id": "style_pankration",
+  "name": {
+   "str": "古希腊搏击术"
+  },
+  "copy-from": "style_pankration",
+  "extend": {
+   "weapons": [
+    "holy_nunchaku",
+    "holy_nunchaku_active"
+   ],
+   "weapon_category": [
+    "SN_MARTIAL"
+   ]
+  }
+ }
+]

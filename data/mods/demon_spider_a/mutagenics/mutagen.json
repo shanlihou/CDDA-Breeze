@@ -1,0 +1,112 @@
+[
+  {
+    "type": "COMESTIBLE",
+    "id": "mutagen_orc",
+    "name": {
+      "str": "兽人诱变血清"
+    },
+    "weight": "250 g",
+    "color": "green",
+    "stim": 0,
+    "container": "flask_glass",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "healthy": 0,
+    "addiction_potential": 0,
+    "calories": 26,
+    "description": "一种深绿色的诱变物质，看起来充满了魔力。摄入它可能获得独特的变异。",
+    "price": "100 USD",
+    "volume": "250 ml",
+    "phase": "liquid",
+    "charges": 1,
+    "use_action": {
+      "type": "effect_on_conditions",
+      "description": "诱变",
+      "effect_on_conditions": [
+        "EOC_ZZ_MUT_ORC"
+      ]
+    },
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "freezing_point": -22,
+    "fun": 0
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "magicmutagen",
+    "name": {
+      "str": "魔法诱变血清"
+    },
+    "weight": "250 g",
+    "color": "blue",
+    "stim": 0,
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "container": "flask_glass",
+    "healthy": 0,
+    "addiction_potential": 0,
+    "calories": 26,
+    "description": "一种充满魔力的浅蓝色泥浆，散发着淡淡的光芒。",
+    "price": "100 USD",
+    "volume": "250 ml",
+    "phase": "liquid",
+    "charges": 1,
+    "use_action": {
+      "type": "effect_on_conditions",
+      "description": "诱变",
+      "effect_on_conditions": [
+        "EOC_ZZ_MUT_MAGIC"
+      ]
+    },
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "freezing_point": -22,
+    "fun": 0
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_ZZ_MUT_ORC",
+    "condition": {
+      "compare_int": [
+        "moon",
+        ">=",
+        {
+          "const": 0
+        }
+      ]
+    },
+    "effect": [
+      {
+        "u_mutate_category": "ORC"
+      },
+      {
+        "u_message": "你感到体内发生了变化。",
+        "type": "good"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_ZZ_MUT_MAGIC",
+    "condition": {
+      "compare_int": [
+        "moon",
+        ">=",
+        {
+          "const": 0
+        }
+      ]
+    },
+    "effect": [
+      {
+        "u_mutate_category": "MAGIC"
+      },
+      {
+        "u_message": "你感到体内发生了变化。",
+        "type": "good"
+      }
+    ]
+  }
+]

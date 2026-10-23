@@ -1,0 +1,27 @@
+[
+  {
+    "type": "effect_type",
+    "id": "effect_vita_no_sleep_dep",
+    "name": [ "清醒且精神焕发" ],
+    "desc": [ "一次冥想令你感觉神采奕奕、活力充沛。" ],
+    "rating": "good",
+    "flags": [ "STOP_SLEEP_DEPRIVATION"],
+    "removes_effects": [ "sleep_deprivation", "lack_sleep" ]
+  },
+  {
+    "id": "death_explosion_oneintwo",
+    "type": "SPELL",
+    "name": { "str": "念动火焰之死" },
+    "valid_targets": [ "ally", "ground", "hostile" ],
+    "description": "有1/2几率爆燃。",
+    "flags": [ "WONDER", "NO_EXPLOSION_SFX" ],
+    "shape": "blast",
+    "effect": "noise",
+    "min_damage": 1,
+    "max_damage": 1,
+    "extra_effects": [
+      { "id": "death_fakespell" },
+      { "id": "death_conflagration", "hit_self": true }
+    ]
+  }
+]

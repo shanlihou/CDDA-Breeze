@@ -1,0 +1,269 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_sex_npc",
+    "effect":[
+      {
+        "arithmetic": [ { "u_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "=", { "const": 0 } ]
+      },
+      {
+        "arithmetic": [ { "npc_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "=", { "const": 0 } ]
+      },
+      {
+        "switch": { "u_val": "var", "var_name": "stb1", "type": "int", "context": "stb" },
+        "cases": [
+          {
+            "case": 1,
+            "effect":[
+              {
+                "arithmetic": [ { "u_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "+=", { "const": 90 } ]
+              },
+              {
+                "arithmetic": [ { "npc_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "+=", { "const": 90 } ]
+              },
+              {
+                "u_lose_trait": "sex_0"
+              },
+              {
+                "npc_lose_trait": "sex_0"
+              }
+            ]
+          },
+          {
+            "case": 2,
+            "effect":[
+              {
+                "arithmetic": [ { "u_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "+=", { "const": 100 } ]
+              },
+              {
+                "arithmetic": [ { "npc_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "+=", { "const": 20 } ]
+              }
+            ]
+          },
+          {
+            "case": 3,
+            "effect":[
+              {
+                "arithmetic": [ { "u_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "+=", { "const": 100 } ]
+              },
+              {
+                "arithmetic": [ { "npc_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "+=", { "const": 10 } ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "switch": { "u_val": "var", "var_name": "stb2", "type": "int", "context": "stb" },
+        "cases": [
+          {
+            "case": 1,
+            "effect":[
+              {
+                "arithmetic": [ { "u_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "+=", { "const": 90 } ]
+              },
+              {
+                "arithmetic": [ { "npc_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "+=", { "const": 90 } ]
+              },
+              {
+                "u_lose_trait": "sex_0"
+              },
+              {
+                "npc_lose_trait": "sex_0"
+              }
+            ]
+          },
+          {
+            "case": 2,
+            "effect":[
+              {
+                "arithmetic": [ { "u_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "+=", { "const": 100 } ]
+              },
+              {
+                "arithmetic": [ { "npc_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "+=", { "const": 20 } ]
+              }
+            ]
+          },
+          {
+            "case": 3,
+            "effect":[
+              {
+                "arithmetic": [ { "u_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "+=", { "const": 100 } ]
+              },
+              {
+                "arithmetic": [ { "npc_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "+=", { "const": 20 } ]
+              }
+            ]
+          },
+          {
+            "case": 4,
+            "effect":[
+              {
+                "arithmetic": [ { "u_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "+=", { "const": 100 } ]
+              },
+              {
+                "arithmetic": [ { "npc_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "+=", { "const": 10 } ]
+              }
+            ]
+          },
+          {
+            "case": 5,
+            "effect":[
+              {
+                "arithmetic": [ { "u_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "+=", { "const": 100 } ]
+              },
+              {
+                "arithmetic": [ { "npc_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "+=", { "const": 40 } ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "switch": { "u_val": "var", "var_name": "stb3", "type": "int", "context": "stb" },
+        "cases": [
+          {
+            "case": 1,
+            "effect":[
+              {
+                "arithmetic": [ { "u_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "+=", { "const": 20 } ]
+              },
+              {
+                "arithmetic": [ { "npc_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "+=", { "const": 100 } ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "switch": { "u_val": "var", "var_name": "stb4", "type": "int", "context": "stb" },
+        "cases": [
+          {
+            "case": 1,
+            "effect":[
+              {
+                "arithmetic": [ { "u_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "+=", { "const": 10 } ]
+              },
+              {
+                "arithmetic": [ { "npc_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "+=", { "const": 100 } ]
+              }
+            ]
+          },
+          {
+            "case": 2,
+            "effect":[
+              {
+                "arithmetic": [ { "u_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "+=", { "const": 10 } ]
+              },
+              {
+                "arithmetic": [ { "npc_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "+=", { "const": 100 } ]
+              }
+            ]
+          },
+          {
+            "case": 3,
+            "effect":[
+              {
+                "arithmetic": [ { "u_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "+=", { "const": 10 } ]
+              },
+              {
+                "arithmetic": [ { "npc_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "+=", { "const": 100 } ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "switch": { "u_val": "var", "var_name": "stb5", "type": "int", "context": "stb" },
+        "cases": [
+          {
+            "case": 1,
+            "effect":[
+              {
+                "arithmetic": [ { "u_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "+=", { "const": 40 } ]
+              },
+              {
+                "arithmetic": [ { "npc_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "+=", { "const": 100 } ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "switch": { "u_val": "var", "var_name": "stb7", "type": "int", "context": "stb" },
+        "cases": [
+          {
+            "case": 1,
+            "effect":[
+              {
+                "arithmetic": [ { "u_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "+=", { "const": 20 } ]
+              },
+              {
+                "arithmetic": [ { "npc_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "+=", { "const": 100 } ]
+              }
+            ]
+          },
+          {
+            "case": 2,
+            "effect":[
+              {
+                "arithmetic": [ { "u_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "+=", { "const": 20 } ]
+              },
+              {
+                "arithmetic": [ { "npc_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "+=", { "const": 100 } ]
+              }
+            ]
+          },
+          {
+            "case": 3,
+            "effect":[
+              {
+                "arithmetic": [ { "u_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "+=", { "const": 20 } ]
+              },
+              {
+                "arithmetic": [ { "npc_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "+=", { "const": 100 } ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "u_assign_activity": "ACT_做爱", "duration": 300
+      },
+      {
+        "run_eocs": [ "EOC_effect_sex_lose","EOC_pleasant_rate_back","EOC_effect_sex_get" ]
+      },
+      {
+        "npc_lose_effect": "u_sex"
+      },
+      {
+        "arithmetic":[
+        { "npc_val": "var", "var_name": "pleasant_rate", "type": "int", "context": "快感获得速率" }, "-=", { "npc_val": "var", "var_name": "sex_worth_bak", "type": "int", "context": "性价值备份" }
+        ]
+      },
+      {
+        "arithmetic":[
+        { "npc_val": "var", "var_name": "sex_worth_bak", "type": "int", "context": "性价值备份" }, "=", { "const": 0 }
+        ]
+      },
+      {
+        "arithmetic":[
+          { "npc_val": "var", "var_name": "sex_worth_bak", "type": "int", "context": "性价值备份" },
+          "=",
+          { "arithmetic": [ { "npc_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "+", { "arithmetic": [ { "npc_val": "skill_level", "skill": "sex" }, "+", { "const": 1 } ] } ] }
+        ]
+      },
+      {
+        "arithmetic":[
+          { "npc_val": "var", "var_name": "pleasant_rate", "type": "int", "context": "快感获得速率" },
+          "+=",
+          { "npc_val": "var", "var_name": "sex_worth_bak", "type": "int", "context": "性价值备份" }
+        ]
+      },
+      {
+        "npc_add_effect":"u_sex",
+        "duration": 299
+      }
+    ]
+  }
+]

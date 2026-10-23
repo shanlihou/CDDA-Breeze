@@ -1,0 +1,126 @@
+ [ 
+    {
+    "id": "mutagen_jn_DD",
+    "copy-from": "mutagen_flavor",
+    "type": "COMESTIBLE",
+    "name": {
+      "str_sp": "驱逐舰娘转化药剂"
+    },
+    "description": "让你速速变成舰女人,你需要一根针管来注射它……",
+    "price": "20000 USD",
+    "price_postapoc": "30 USD",
+    "color": "red",
+    "charges": 2,
+    "stack_size": 1,
+    "healthy": -2,
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你注射了转化药剂。",
+      "tools_needed": {
+        "syringe": -1
+      },
+      "effects": [
+        {
+          "id": "jn_mutagen_trigger",
+          "duration": 5
+        }
+      ]
+    }
+  },
+    {
+    "type": "effect_type",
+    "id": "jn_mutagen_trigger",
+    "max_duration": "10 s",
+    "name": [
+      "测试效果名称"
+    ],
+    "desc": [
+      "这个只是确保舰娘转化药剂能正常工作。如果你在效果列表上看到这个，CDDA可能又被玩坏了。"
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "jn_mutagen_trigger",
+    "recurrence": [
+      "1 s",
+      "1 s"
+    ],
+    "condition": {
+      "u_has_effect": "jn_mutagen_trigger"
+    },
+    "effect": [
+      {
+        "u_message": "你感觉你的身体开始转变了",
+        "type": "mixed"
+      },
+      {
+        "run_eocs": [
+          "jn_mutagen_thresh_test"
+        ]
+      },
+      {
+        "u_mutate_category": "zjsn_DD",
+        "use_vitamins": false
+      },
+      {
+        "run_eocs": [
+          "jn_mutagen_trigger_bonus",
+          "jn_mutagen_trigger_bonus"
+        ]
+      },
+      {
+        "u_lose_effect": "jn_mutagen_trigger"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "jn_mutagen_trigger_bonus",
+    "condition": {
+      "one_in_chance": 2
+    },
+    "effect": [
+      {
+        "u_mutate_category": "jn_DD",
+        "use_vitamins": false
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "jn_mutagen_thresh_test",
+    "effect": [
+      {
+        "u_message": "变身！",
+        "type": "good"
+      },
+        {
+          "u_add_trait": "BEAUTIFUL3"
+        },
+        {
+          "u_add_trait": "0.7_inch"
+        },
+        {
+          "u_add_trait": "sunguan"
+        },
+        {
+          "u_add_trait": "lunji_lf"
+        },
+		{
+          "u_add_trait": "tuijinqi"
+        },
+		{
+          "u_add_trait": "leida"
+        },
+		{
+          "u_add_trait": "22niang"
+        },
+		{
+          "u_add_trait": "jianti_DD"
+        },
+		{
+          "u_add_trait": "zjsn"
+        }
+    ]
+  }
+ ]

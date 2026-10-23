@@ -1,0 +1,1115 @@
+[
+  {
+    "name": "GROUP_MON_SOR_DUMMY",
+    "type": "monstergroup",
+    "monsters": [
+      {
+        "monster": "mon_sor_dummy",
+        "weight": 100
+      },
+      {
+        "monster": "mon_sor_dummy_1",
+        "weight": 50
+      },
+      {
+        "monster": "mon_sor_dummy_2",
+        "weight": 50
+      }
+    ]
+  },
+  {
+    "id": "mon_sor_dummy",
+    "type": "MONSTER",
+    "name": "召唤出的训练假人",
+    "description": "一个训练假人，不会动，也不会攻击。",
+    "looks_like": "f_mannequin",
+    "default_faction": "zombie",
+    "species": [
+      "UNKNOWN"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "material": [
+      "wood"
+    ],
+    "aggression": 100,
+    "morale": 100,
+    "symbol": "T",
+    "color": "white",
+    "vision_day": 1,
+    "vision_night": 1,
+    "flags": [
+      "IMMOBILE",
+      "NO_BREATHE",
+      "STUN_IMMUNE",
+      "NOT_HALLUCINATION"
+    ],
+    "hp": 10000,
+    "speed": 100,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 0
+      }
+    ],
+    "death_function": {
+      "message": "%s 被摧毁了。",
+      "corpse_type": "NO_CORPSE"
+    }
+  },
+  {
+    "copy-from": "mon_sor_dummy",
+    "id": "mon_sor_dummy_1",
+    "type": "MONSTER",
+    "name": "召唤出的会闪避的训练假人",
+    "description": "一个训练假人，会闪避，但不会动，也不会攻击。",
+    "color": "green",
+    "dodge": 10
+  },
+  {
+    "copy-from": "mon_sor_dummy",
+    "id": "mon_sor_dummy_2",
+    "type": "MONSTER",
+    "name": "召唤出的装甲训练假人",
+    "description": "一个训练假人，有着厚厚的盔甲，但不会动，也不会攻击。",
+    "color": "blue",
+    "armor": {
+      "bash": 50,
+      "cut": 50,
+      "stab": 50,
+      "bullet": 50
+    }
+  },
+  {
+    "id": "mon_sor_summon_1",
+    "type": "MONSTER",
+    "name": "怪物1",
+    "description": "一个怪物，它有着人型的外表，但是没有面孔，体表覆盖着杂乱的毛发，你总感觉它就像是……你。",
+    "default_faction": "robot",
+    "bodytype": "human",
+    "species": [
+      "MAMMAL"
+    ],
+    "volume": "100 L",
+    "weight": "100 kg",
+    "material": [
+      "flesh"
+    ],
+    "symbol": "1",
+    "color": "light_red_green",
+    "aggression": 100,
+    "morale": 100,
+    "vision_day": 40,
+    "vision_night": 30,
+    "luminance": 1,
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "LOUDMOVES"
+    ],
+    "hp": 55,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      }
+    ],
+    "speed": 80,
+    "melee_skill": 1,
+    "dodge": 1,
+    "armor": {
+      "bash": 2,
+      "bullet": 2,
+      "cut": 2,
+      "stab": 2
+    },
+    "death_function": {
+      "message": "%s 消失了。",
+      "corpse_type": "NO_CORPSE"
+    },
+    "special_attacks": [
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "sor_mon_plus"
+        },
+        "cooldown": 70,
+        "monster_message": "%s 释放了 自我强化。"
+      }
+    ]
+  },
+  {
+    "id": "mon_sor_summon_2",
+    "type": "MONSTER",
+    "name": "怪物2",
+    "description": "一个怪物，它有着人型的外表，但是没有面孔，体表覆盖着杂乱的毛发，你总感觉它就像是……你。",
+    "default_faction": "robot",
+    "bodytype": "human",
+    "species": [
+      "MAMMAL"
+    ],
+    "volume": "100 L",
+    "weight": "100 kg",
+    "material": [
+      "flesh"
+    ],
+    "symbol": "2",
+    "color": "light_red_green",
+    "aggression": 100,
+    "morale": 100,
+    "vision_day": 40,
+    "vision_night": 30,
+    "luminance": 2,
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "LOUDMOVES"
+    ],
+    "hp": 70,
+    "melee_dice": 2,
+    "melee_dice_sides": 5,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 6
+      }
+    ],
+    "speed": 85,
+    "melee_skill": 2,
+    "dodge": 2,
+    "armor": {
+      "bash": 4,
+      "bullet": 4,
+      "cut": 4,
+      "stab": 4
+    },
+    "death_function": {
+      "message": "%s 消失了。",
+      "corpse_type": "NO_CORPSE"
+    },
+    "special_attacks": [
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "sor_mon_plus"
+        },
+        "cooldown": 65,
+        "monster_message": "%s 释放了 自我强化。"
+      }
+    ]
+  },
+  {
+    "id": "mon_sor_summon_3",
+    "type": "MONSTER",
+    "name": "怪物3",
+    "description": "一个怪物，它有着人型的外表，脸上覆盖着无法分离的面具，体表被鳞片包裹。",
+    "default_faction": "robot",
+    "bodytype": "human",
+    "species": [
+      "MAMMAL"
+    ],
+    "volume": "100 L",
+    "weight": "100 kg",
+    "material": [
+      "flesh"
+    ],
+    "symbol": "3",
+    "color": "light_red_green",
+    "aggression": 100,
+    "morale": 100,
+    "vision_day": 40,
+    "vision_night": 30,
+    "luminance": 3,
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "LOUDMOVES",
+      "NO_BREATHE"
+    ],
+    "hp": 95,
+    "melee_dice": 3,
+    "melee_dice_sides": 6,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 8
+      }
+    ],
+    "speed": 90,
+    "melee_skill": 3,
+    "dodge": 3,
+    "armor": {
+      "bash": 6,
+      "bullet": 6,
+      "cut": 6,
+      "stab": 6,
+      "acid": 1,
+      "heat": 1,
+      "electric": 1,
+      "cold": 1,
+      "pure": 1
+    },
+    "death_function": {
+      "message": "%s 消失了。",
+      "corpse_type": "NO_CORPSE"
+    },
+    "special_attacks": [
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "sor_mon_plus"
+        },
+        "cooldown": 60,
+        "monster_message": "%s 释放了 自我强化。"
+      }
+    ]
+  },
+  {
+    "id": "mon_sor_summon_4",
+    "type": "MONSTER",
+    "name": "怪物4",
+    "description": "一个怪物，它有着人型的外表，脸上覆盖着无法分离的面具，体表被鳞片包裹。",
+    "default_faction": "robot",
+    "bodytype": "human",
+    "species": [
+      "MAMMAL"
+    ],
+    "volume": "100 L",
+    "weight": "100 kg",
+    "material": [
+      "flesh"
+    ],
+    "symbol": "4",
+    "color": "light_red_green",
+    "aggression": 100,
+    "morale": 100,
+    "vision_day": 40,
+    "vision_night": 30,
+    "luminance": 4,
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "LOUDMOVES",
+      "NO_BREATHE"
+    ],
+    "hp": 130,
+    "melee_dice": 3,
+    "melee_dice_sides": 7,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 10
+      }
+    ],
+    "speed": 95,
+    "melee_skill": 4,
+    "dodge": 4,
+    "armor": {
+      "bash": 8,
+      "bullet": 8,
+      "cut": 8,
+      "stab": 8,
+      "acid": 2,
+      "heat": 2,
+      "electric": 2,
+      "cold": 2,
+      "pure": 2
+    },
+    "death_function": {
+      "message": "%s 消失了。",
+      "corpse_type": "NO_CORPSE"
+    },
+    "special_attacks": [
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "sor_mon_plus"
+        },
+        "cooldown": 55,
+        "monster_message": "%s 释放了 自我强化。"
+      }
+    ]
+  },
+  {
+    "id": "mon_sor_summon_5",
+    "type": "MONSTER",
+    "name": "怪物5",
+    "description": "一个怪物，它有着人型的外表，戴着全覆式头盔，身上不知该算是鳞片还是鳞甲，它看起来十分善战。",
+    "default_faction": "robot",
+    "bodytype": "human",
+    "species": [
+      "MAMMAL"
+    ],
+    "volume": "100 L",
+    "weight": "100 kg",
+    "material": [
+      "flesh"
+    ],
+    "symbol": "5",
+    "color": "light_red_green",
+    "aggression": 100,
+    "morale": 100,
+    "vision_day": 40,
+    "vision_night": 30,
+    "luminance": 5,
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "LOUDMOVES",
+      "NO_BREATHE",
+      "STUN_IMMUNE"
+    ],
+    "hp": 175,
+    "melee_dice": 3,
+    "melee_dice_sides": 8,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 12
+      }
+    ],
+    "speed": 100,
+    "melee_skill": 5,
+    "dodge": 5,
+    "armor": {
+      "bash": 10,
+      "bullet": 10,
+      "cut": 10,
+      "stab": 10,
+      "acid": 5,
+      "heat": 5,
+      "electric": 5,
+      "cold": 5,
+      "pure": 5
+    },
+    "death_function": {
+      "message": "%s 消失了。",
+      "corpse_type": "NO_CORPSE"
+    },
+    "special_attacks": [
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "sor_mon_plus"
+        },
+        "cooldown": 50,
+        "monster_message": "%s 释放了 自我强化。"
+      }
+    ]
+  },
+  {
+    "id": "mon_sor_summon_6",
+    "type": "MONSTER",
+    "name": "怪物6",
+    "description": "一个怪物，它有着人型的外表，戴着全覆式头盔，身上不知该算是鳞片还是鳞甲，它看起来十分善战。",
+    "default_faction": "robot",
+    "bodytype": "human",
+    "species": [
+      "MAMMAL"
+    ],
+    "volume": "100 L",
+    "weight": "100 kg",
+    "material": [
+      "flesh"
+    ],
+    "symbol": "6",
+    "color": "light_red_green",
+    "aggression": 100,
+    "morale": 100,
+    "vision_day": 40,
+    "vision_night": 30,
+    "luminance": 6,
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "LOUDMOVES",
+      "NO_BREATHE",
+      "STUN_IMMUNE"
+    ],
+    "hp": 230,
+    "melee_dice": 4,
+    "melee_dice_sides": 9,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 14
+      }
+    ],
+    "speed": 105,
+    "melee_skill": 6,
+    "dodge": 6,
+    "armor": {
+      "bash": 12,
+      "bullet": 12,
+      "cut": 12,
+      "stab": 12,
+      "acid": 6,
+      "heat": 6,
+      "electric": 6,
+      "cold": 6,
+      "pure": 6
+    },
+    "death_function": {
+      "message": "%s 消失了。",
+      "corpse_type": "NO_CORPSE"
+    },
+    "special_attacks": [
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "sor_mon_plus"
+        },
+        "cooldown": 45,
+        "monster_message": "%s 释放了 自我强化。"
+      }
+    ]
+  },
+  {
+    "id": "mon_sor_summon_7",
+    "type": "MONSTER",
+    "name": "怪物7",
+    "description": "一个怪物，它有着人型的外表，虽然没有面孔，但四肢修长，体态丰腴，你感觉它……是她？",
+    "default_faction": "robot",
+    "bodytype": "angel",
+    "species": [
+      "MAMMAL"
+    ],
+    "volume": "100 L",
+    "weight": "100 kg",
+    "material": [
+      "flesh"
+    ],
+    "symbol": "7",
+    "color": "light_red_green",
+    "aggression": 100,
+    "morale": 100,
+    "vision_day": 40,
+    "vision_night": 30,
+    "luminance": 7,
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "LOUDMOVES",
+      "NO_BREATHE",
+      "STUN_IMMUNE",
+      "FLIES"
+    ],
+    "hp": 295,
+    "melee_dice": 4,
+    "melee_dice_sides": 10,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 16
+      }
+    ],
+    "speed": 110,
+    "melee_skill": 7,
+    "dodge": 7,
+    "armor": {
+      "bash": 14,
+      "bullet": 14,
+      "cut": 14,
+      "stab": 14,
+      "acid": 14,
+      "heat": 14,
+      "electric": 14,
+      "cold": 14,
+      "pure": 14
+    },
+    "death_function": {
+      "message": "%s 消失了。",
+      "corpse_type": "NO_CORPSE"
+    },
+    "special_attacks": [
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "sor_mon_plus"
+        },
+        "cooldown": 40,
+        "monster_message": "%s 释放了 自我强化。"
+      }
+    ]
+  },
+  {
+    "id": "mon_sor_summon_8",
+    "type": "MONSTER",
+    "name": "怪物8",
+    "description": "一个怪物，它有着人型的外表，虽然没有面孔，但四肢修长，体态丰腴，你感觉它……是她？",
+    "default_faction": "robot",
+    "bodytype": "angel",
+    "species": [
+      "MAMMAL"
+    ],
+    "volume": "100 L",
+    "weight": "100 kg",
+    "material": [
+      "flesh"
+    ],
+    "symbol": "8",
+    "color": "light_red_green",
+    "aggression": 100,
+    "morale": 100,
+    "vision_day": 40,
+    "vision_night": 30,
+    "luminance": 8,
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "LOUDMOVES",
+      "NO_BREATHE",
+      "STUN_IMMUNE",
+      "FLIES"
+    ],
+    "hp": 370,
+    "melee_dice": 4,
+    "melee_dice_sides": 11,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 18
+      }
+    ],
+    "speed": 115,
+    "melee_skill": 8,
+    "dodge": 8,
+    "armor": {
+      "bash": 16,
+      "bullet": 16,
+      "cut": 16,
+      "stab": 16,
+      "acid": 16,
+      "heat": 16,
+      "electric": 16,
+      "cold": 16,
+      "pure": 16
+    },
+    "death_function": {
+      "message": "%s 消失了。",
+      "corpse_type": "NO_CORPSE"
+    },
+    "special_attacks": [
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "sor_mon_plus"
+        },
+        "cooldown": 35,
+        "monster_message": "%s 释放了 自我强化。"
+      }
+    ]
+  },
+  {
+    "id": "mon_sor_summon_9",
+    "type": "MONSTER",
+    "name": "怪物9",
+    "description": "一个怪物，它有着人型的外表，虽然没有面孔，但四肢修长，体态丰腴，你感觉它……是她？",
+    "default_faction": "robot",
+    "bodytype": "angel",
+    "species": [
+      "MAMMAL"
+    ],
+    "volume": "100 L",
+    "weight": "100 kg",
+    "material": [
+      "flesh"
+    ],
+    "symbol": "9",
+    "color": "light_red_green",
+    "aggression": 100,
+    "morale": 100,
+    "vision_day": 40,
+    "vision_night": 30,
+    "luminance": 10,
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "LOUDMOVES",
+      "NO_BREATHE",
+      "STUN_IMMUNE",
+      "FLIES"
+    ],
+    "hp": 550,
+    "melee_dice": 5,
+    "melee_dice_sides": 13,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 22
+      }
+    ],
+    "speed": 125,
+    "melee_skill": 10,
+    "dodge": 10,
+    "armor": {
+      "bash": 20,
+      "bullet": 20,
+      "cut": 20,
+      "stab": 20,
+      "acid": 20,
+      "heat": 20,
+      "electric": 20,
+      "cold": 20,
+      "pure": 20
+    },
+    "death_function": {
+      "message": "%s 消失了。",
+      "corpse_type": "NO_CORPSE"
+    },
+    "special_attacks": [
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "sor_mon_plus"
+        },
+        "cooldown": 25,
+        "monster_message": "%s 释放了 自我强化。"
+      }
+    ]
+  },
+  {
+    "id": "sor_mon_plus",
+    "type": "SPELL",
+    "name": "自我强化",
+    "description": "使你获得1-3次随机速度强化持续10-120秒。",
+    "valid_targets": [
+      "hostile",
+      "self",
+      "ally",
+      "ground"
+    ],
+    "flags": [
+      "WONDER",
+      "SILENT",
+      "NO_FAIL",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_EXPLOSION_SFX"
+    ],
+    "base_energy_cost": 0,
+    "spell_class": "NONE",
+    "difficulty": 0,
+    "max_level": 0,
+    "base_casting_time": 100,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack",
+    "min_range": 3,
+    "max_range": 3,
+    "min_damage": 1,
+    "max_damage": 3,
+    "extra_effects": [
+      {
+        "id": "sor_mon_plus_1"
+      },
+      {
+        "id": "sor_mon_plus_2"
+      },
+      {
+        "id": "sor_mon_plus_3"
+      },
+      {
+        "id": "sor_mon_plus_4"
+      },
+      {
+        "id": "sor_mon_plus_5"
+      },
+      {
+        "id": "sor_mon_plus_6"
+      },
+      {
+        "id": "sor_mon_plus_7"
+      },
+      {
+        "id": "sor_mon_plus_8"
+      },
+      {
+        "id": "sor_mon_plus_9"
+      },
+      {
+        "id": "sor_mon_plus_10"
+      },
+      {
+        "id": "sor_mon_plus_11"
+      },
+      {
+        "id": "sor_mon_plus_12"
+      }
+    ]
+  },
+  {
+    "id": "sor_mon_plus_0",
+    "type": "SPELL",
+    "name": "强化效果",
+    "description": "获得速度强化。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_FAIL",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DURATION",
+      "NO_EXPLOSION_SFX"
+    ],
+    "base_energy_cost": 0,
+    "message": "",
+    "spell_class": "NONE",
+    "difficulty": 0,
+    "max_level": 0,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack",
+    "base_casting_time": 0,
+    "min_aoe": 5,
+    "max_aoe": 5,
+    "min_duration": 1000,
+    "max_duration": 12000
+  },
+  {
+    "copy-from": "sor_mon_plus_0",
+    "type": "SPELL",
+    "id": "sor_mon_plus_1",
+    "effect_str": "effect_sor_mon_plus_1",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "sor_mon_plus_0",
+    "type": "SPELL",
+    "id": "sor_mon_plus_2",
+    "effect_str": "effect_sor_mon_plus_2",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "sor_mon_plus_0",
+    "type": "SPELL",
+    "id": "sor_mon_plus_3",
+    "effect_str": "effect_sor_mon_plus_3",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "sor_mon_plus_0",
+    "type": "SPELL",
+    "id": "sor_mon_plus_4",
+    "effect_str": "effect_sor_mon_plus_4",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "sor_mon_plus_0",
+    "type": "SPELL",
+    "id": "sor_mon_plus_5",
+    "effect_str": "effect_sor_mon_plus_5",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "sor_mon_plus_0",
+    "type": "SPELL",
+    "id": "sor_mon_plus_6",
+    "effect_str": "effect_sor_mon_plus_6",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "sor_mon_plus_0",
+    "type": "SPELL",
+    "id": "sor_mon_plus_7",
+    "effect_str": "effect_sor_mon_plus_7",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "sor_mon_plus_0",
+    "type": "SPELL",
+    "id": "sor_mon_plus_8",
+    "effect_str": "effect_sor_mon_plus_8",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "sor_mon_plus_0",
+    "type": "SPELL",
+    "id": "sor_mon_plus_9",
+    "effect_str": "effect_sor_mon_plus_9",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "sor_mon_plus_0",
+    "type": "SPELL",
+    "id": "sor_mon_plus_10",
+    "effect_str": "effect_sor_mon_plus_10",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "sor_mon_plus_0",
+    "type": "SPELL",
+    "id": "sor_mon_plus_11",
+    "effect_str": "effect_sor_mon_plus_11",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "sor_mon_plus_0",
+    "type": "SPELL",
+    "id": "sor_mon_plus_12",
+    "effect_str": "effect_sor_mon_plus_12",
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_sor_mon_plus_1",
+    "name": [
+      "强化"
+    ],
+    "base_mods": {
+      "speed_mod": [
+        5
+      ]
+    },
+    "max_intensity": 20,
+    "int_dur_factor": "15 s",
+    "scaling_mods": {
+      "speed_mod": [
+        1
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_sor_mon_plus_2",
+    "name": [
+      "强化"
+    ],
+    "base_mods": {
+      "speed_mod": [
+        5
+      ]
+    },
+    "max_intensity": 20,
+    "int_dur_factor": "14 s",
+    "scaling_mods": {
+      "speed_mod": [
+        1
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_sor_mon_plus_3",
+    "name": [
+      "强化"
+    ],
+    "base_mods": {
+      "speed_mod": [
+        5
+      ]
+    },
+    "max_intensity": 20,
+    "int_dur_factor": "13 s",
+    "scaling_mods": {
+      "speed_mod": [
+        1
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_sor_mon_plus_4",
+    "name": [
+      "强化"
+    ],
+    "base_mods": {
+      "speed_mod": [
+        5
+      ]
+    },
+    "max_intensity": 20,
+    "int_dur_factor": "12 s",
+    "scaling_mods": {
+      "speed_mod": [
+        1
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_sor_mon_plus_5",
+    "name": [
+      "强化"
+    ],
+    "base_mods": {
+      "speed_mod": [
+        5
+      ]
+    },
+    "max_intensity": 20,
+    "int_dur_factor": "11 s",
+    "scaling_mods": {
+      "speed_mod": [
+        1
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_sor_mon_plus_6",
+    "name": [
+      "强化"
+    ],
+    "base_mods": {
+      "speed_mod": [
+        5
+      ]
+    },
+    "max_intensity": 20,
+    "int_dur_factor": "10 s",
+    "scaling_mods": {
+      "speed_mod": [
+        1
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_sor_mon_plus_7",
+    "name": [
+      "强化"
+    ],
+    "base_mods": {
+      "speed_mod": [
+        5
+      ]
+    },
+    "max_intensity": 20,
+    "int_dur_factor": "9 s",
+    "scaling_mods": {
+      "speed_mod": [
+        1
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_sor_mon_plus_8",
+    "name": [
+      "强化"
+    ],
+    "base_mods": {
+      "speed_mod": [
+        5
+      ]
+    },
+    "max_intensity": 20,
+    "int_dur_factor": "8 s",
+    "scaling_mods": {
+      "speed_mod": [
+        1
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_sor_mon_plus_9",
+    "name": [
+      "强化"
+    ],
+    "base_mods": {
+      "speed_mod": [
+        5
+      ]
+    },
+    "max_intensity": 20,
+    "int_dur_factor": "7 s",
+    "scaling_mods": {
+      "speed_mod": [
+        1
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_sor_mon_plus_10",
+    "name": [
+      "强化"
+    ],
+    "base_mods": {
+      "speed_mod": [
+        5
+      ]
+    },
+    "max_intensity": 20,
+    "int_dur_factor": "6 s",
+    "scaling_mods": {
+      "speed_mod": [
+        1
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_sor_mon_plus_11",
+    "name": [
+      "强化"
+    ],
+    "base_mods": {
+      "speed_mod": [
+        5
+      ]
+    },
+    "max_intensity": 20,
+    "int_dur_factor": "5 s",
+    "scaling_mods": {
+      "speed_mod": [
+        1
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_sor_mon_plus_12",
+    "name": [
+      "强化"
+    ],
+    "base_mods": {
+      "speed_mod": [
+        5
+      ]
+    },
+    "max_intensity": 20,
+    "int_dur_factor": "4 s",
+    "scaling_mods": {
+      "speed_mod": [
+        1
+      ]
+    }
+  }
+]

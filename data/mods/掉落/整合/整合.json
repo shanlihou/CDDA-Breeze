@@ -1,0 +1,391 @@
+[
+
+
+  {
+    "//1": "阿米格拉",
+    "type": "MONSTER",
+    "id": "mon_amigara_horror",
+    "copy-from": "mon_amigara_horror",
+    "melee_dice": 2,
+    "melee_dice_sides": 15,
+    "armor_bash": 5,
+    "armor_cut": 10,
+    "extend": {
+      "categories": [
+        "CLASSIC"
+      ]
+    },
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_amigara_horror_death_drops", 100 ], [ "destiny_coin_drops5", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+
+  {
+    "//1": "血祭牺牲者",
+    "type": "MONSTER",
+    "id": "mon_blood_sacrifice",
+    "copy-from": "mon_blood_sacrifice",
+    "extend": {
+      "categories": [
+        "CLASSIC"
+      ]
+    },
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_blood_sacrifice_death_drops", 100 ], [ "default_zombie_clothes", 100 ], [ "default_merit_drops2", 100 ], [ "henshin_alien_death_drops", 100 ]  ] }
+  },
+
+  {
+    "//1": "地缚灵",
+    "type": "MONSTER",
+    "id": "mon_darkman",
+    "copy-from": "mon_darkman",
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "cold",
+        "amount": 9
+      }
+    ],
+    "extend": {
+      "flags": [
+        "COLDPROOF"
+      ],
+      "categories": [
+        "CLASSIC"
+      ]
+    },
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_darkman_death_drops", 100 ], [ "destiny_coin_drops7", 100 ], [ "destiny_coin_drops5", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "疯人怪",
+    "type": "MONSTER",
+    "id": "mon_dementia",
+    "copy-from": "mon_dementia",
+    "extend": {
+      "categories": [
+        "CLASSIC"
+      ]
+    },
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_dementia_death_drops", 100 ], [ "destiny_coin_drops2", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "燃烧之眼",
+    "type": "MONSTER",
+    "id": "mon_flaming_eye",
+    "copy-from": "mon_flaming_eye",
+    "dodge": 8,
+    "extend": {
+      "categories": [
+        "CLASSIC"
+      ]
+    },
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_flaming_eye_death_drops", 100 ], [ "destiny_coin_drops5", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "盲目者",
+    "type": "MONSTER",
+    "id": "mon_flying_polyp",
+    "copy-from": "mon_flying_polyp",
+    "extend": {
+      "categories": [
+        "CLASSIC"
+      ]
+    },
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_flying_polyp_death_drops", 100 ], [ "destiny_coin_drops6", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "牛头怪",
+    "type": "MONSTER",
+    "id": "mon_gozu",
+    "copy-from": "mon_gozu",
+    "extend": {
+      "categories": [
+        "CLASSIC"
+      ]
+    },
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_gozu_death_drops", 100 ], [ "destiny_coin_drops4", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "格拉肯",
+    "type": "MONSTER",
+    "id": "mon_gracke",
+    "copy-from": "mon_gracke",
+    "extend": {
+      "categories": [
+        "CLASSIC"
+      ]
+    },
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_gracke_death_drops", 100 ], [ "destiny_coin_drops3", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "触手变异犬",
+    "type": "MONSTER",
+    "id": "mon_headless_dog_thing",
+    "copy-from": "mon_headless_dog_thing",
+    "extend": {
+      "categories": [
+        "CLASSIC"
+      ]
+    },
+    "death_drops": { "subtype": "collection", "groups": [ [ "destiny_coin_drops3", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "人面蜗牛",
+    "type": "MONSTER",
+    "id": "mon_human_snail",
+    "copy-from": "mon_human_snail",
+    "extend": {
+      "categories": [
+        "CLASSIC"
+      ]
+    },
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_human_snail_death_drops", 100 ], [ "destiny_coin_drops2", 100 ] ] }
+  },
+  
+  {
+    "//1": "恐怖猎手",
+    "type": "MONSTER",
+    "id": "mon_hunting_horror",
+    "copy-from": "mon_hunting_horror",
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_hunting_horror_death_drops", 100 ], [ "destiny_coin_drops5", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "克雷克",
+    "type": "MONSTER",
+    "id": "mon_kreck",
+    "extend": {
+      "categories": [
+        "CLASSIC"
+      ]
+    },
+    "copy-from": "mon_kreck",
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_kreck_death_drops", 100 ], [ "destiny_coin_drops1", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "修格斯",
+    "type": "MONSTER",
+    "id": "mon_shoggoth",
+    "copy-from": "mon_shoggoth",
+    "extend": {
+      "categories": [
+        "CLASSIC"
+      ]
+    },
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_shoggoth_death_drops", 100 ], [ "destiny_coin_drops7", 100 ], [ "destiny_coin_drops5", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "怪形",
+    "type": "MONSTER",
+    "id": "mon_thing",
+    "copy-from": "mon_thing",
+    "extend": {
+      "categories": [
+        "CLASSIC"
+      ]
+    },
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_thing_death_drops", 100 ], [ "destiny_coin_drops5", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "扭曲人体",
+    "type": "MONSTER",
+    "id": "mon_twisted_body",
+    "copy-from": "mon_twisted_body",
+    "extend": {
+      "categories": [
+        "CLASSIC"
+      ]
+    },
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_twisted_body_death_drops", 100 ], [ "default_merit_drops1", 100 ], [ "destiny_coin_drops1", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "育格巨噬虫",
+    "type": "MONSTER",
+    "id": "mon_yugg",
+    "copy-from": "mon_yugg",
+    "extend": {
+      "categories": [
+        "CLASSIC"
+      ]
+    },
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_yugg_death_drops", 100 ], [ "destiny_coin_drops5", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "变形怪主脑",
+    "type": "MONSTER",
+    "id": "mon_blob_brain",
+    "copy-from": "mon_blob_brain",
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_blob_brain_death_drops", 100 ], [ "destiny_coin_drops6", 100 ] ] }
+  },
+  
+  {
+    "//1": "阿米巴原虫",
+    "type": "MONSTER",
+    "id": "mon_gelatin",
+    "copy-from": "mon_gelatin",
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_gelatin_death_drops", 100 ], [ "destiny_coin_drops2", 100 ], [ "henshin_alien_death_drops", 100 ] ] }
+  },
+  
+  {
+    "//1": "异形花",
+    "type": "MONSTER",
+    "id": "mon_biollante",
+    "copy-from": "mon_biollante",
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_biollante_death_drops", 100 ], [ "biollante", 8 ], [ "destiny_coin_drops2", 100 ] ] }
+  },
+  
+  {
+    "//1": "藤蔓中心",
+    "type": "MONSTER",
+    "id": "mon_creeper_hub",
+    "copy-from": "mon_creeper_hub",
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_creeper_hub_death_drops", 100 ], [ "destiny_coin_drops2", 100 ], [ "destiny_coin_drops1", 100 ] ] }
+  },
+  
+  {
+    "//1": "三尖树",
+    "type": "MONSTER",
+    "id": "mon_triffid",
+    "copy-from": "mon_triffid",
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_triffid_death_drops", 100 ], [ "destiny_coin_drops1", 100 ], [ "destiny_coin_drops1", 100 ] ] }
+  },
+  
+  {
+    "//1": "三尖树女王",
+    "type": "MONSTER",
+    "id": "mon_triffid_queen",
+    "copy-from": "mon_triffid_queen",
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_triffid_queen_death_drops", 100 ], [ "destiny_coin_drops6", 100 ] ] }
+  },
+  
+  {
+    "//1": "藤蔓兽",
+    "type": "MONSTER",
+    "id": "mon_vinebeast",
+    "copy-from": "mon_vinebeast",
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_vinebeast_death_drops", 100 ], [ "destiny_coin_drops3", 100 ], [ "destiny_coin_drops2", 100 ] ] }
+  },
+  
+  {
+    "//1": "抗真菌三尖树",
+    "type": "MONSTER",
+    "id": "mon_fungal_fighter",
+    "copy-from": "mon_fungal_fighter",
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_fungal_fighter_death_drops", 100 ], [ "fungal_sting", 80 ], [ "destiny_coin_drops2", 100 ] ] }
+  },
+  
+  {
+    "//1": "吐酸丧尸",
+    "type": "MONSTER",
+    "id": "mon_zombie_spitter",
+    "copy-from": "mon_zombie_spitter",
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_zombie_spitter_death_drops", 100 ], [ "zed_death_drop", 100 ], [ "destiny_coin_drops2", 100 ], [ "destiny_coin_drops1", 100 ] ] }
+  },
+  
+  {
+    "//1": "放电丧尸兽",
+    "type": "MONSTER",
+    "id": "mon_zombie_brute_shocker",
+    "copy-from": "mon_zombie_brute_shocker",
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_zombie_brute_shocker_death_drops", 100 ], [ "zed_death_drop", 100 ], [ "destiny_coin_drops5", 100 ] ] }
+  },
+  
+  {
+    "//1": "怪异爬行者",
+    "type": "MONSTER",
+    "id": "mon_crawler",
+    "copy-from": "mon_crawler",
+    "extend": {
+      "categories": [
+        "CLASSIC"
+      ]
+    },
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_crawler_death_drops", 100 ], [ "default_merit_drops1", 100 ],
+        [ "default_merit_drops1", 100 ],
+        [ "default_merit_drops1", 100 ],
+        [ "destiny_coin_drops3", 100 ] ] }
+  },
+  
+  {
+    "//1": "流涎啃蚀者",
+    "type": "MONSTER",
+    "id": "mon_zombie_biter",
+    "copy-from": "mon_zombie_biter",
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_zombie_biter_death_drops", 100 ], [ "zed_death_drop", 100 ], [ "destiny_coin_drops3", 100 ] ] }
+  },
+  
+  {
+    "//1": "丧尸夜魔",
+    "type": "MONSTER",
+    "id": "mon_zombie_brute_ninja",
+    "copy-from": "mon_zombie_brute_ninja",
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_zombie_brute_ninja_death_drops", 100 ], [ "zed_death_drop", 100 ], [ "destiny_coin_drops5", 100 ] ] }
+  },
+  
+  {
+    "//1": "变形丧尸",
+    "type": "MONSTER",
+    "id": "mon_zombie_hollow",
+    "copy-from": "mon_zombie_hollow",
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_zombie_hollow_death_drops", 100 ], [ "destiny_coin_drops2", 100 ] ] }
+  },
+  
+  {
+    "//1": "狩猎者丧尸",
+    "type": "MONSTER",
+    "id": "mon_zombie_hunter",
+    "copy-from": "mon_zombie_hunter",
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_zombie_hunter_death_drops", 100 ], [ "zed_death_drop", 100 ], [ "destiny_coin_drops1", 100 ], [ "destiny_coin_drops1", 100 ] ] }
+  },
+  
+  {
+    "//1": "类鱼丧尸",
+    "type": "MONSTER",
+    "id": "mon_zombie_mancroc",
+    "copy-from": "mon_zombie_mancroc",
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_zombie_mancroc_death_drops", 100 ], [ "mon_zombie_swimmer_death_drops", 100 ], [ "destiny_coin_drops3", 100 ] ] }
+  },
+  
+  {
+    "//1": "丧尸主宰",
+    "type": "MONSTER",
+    "id": "mon_zombie_master",
+    "copy-from": "mon_zombie_master",
+    "armor_bash": 6,
+    "armor_cut": 6,
+    "special_attacks": [ [ "UPGRADE", 15 ], [ "STRETCH_ATTACK", 10 ] ],
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_zombie_master_death_drops", 100 ], [ "zed_death_drop", 100 ], [ "destiny_coin_drops4", 100 ] ] }
+  },
+  
+  {
+    "//1": "死灵法师",
+    "type": "MONSTER",
+    "id": "mon_zombie_necro",
+    "copy-from": "mon_zombie_necro",
+    "dodge": 6,
+    "armor_bash": 3,
+    "armor_cut": 3,
+    "special_attacks": [ [ "RESURRECT", 0 ], [ "PARA_STING", 15 ] ],
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_zombie_necro_death_drops", 100 ], [ "zed_death_drop", 100 ], [ "destiny_coin_drops4", 100 ] ] }
+  },
+  
+  {
+    "//1": "捕猎着丧尸",
+    "type": "MONSTER",
+    "id": "mon_zombie_predator",
+    "copy-from": "mon_zombie_predator",
+    "hp": 105,
+    "death_drops": { "subtype": "collection", "groups": [ [ "mon_zombie_predator_death_drops", 100 ], [ "zed_death_drop", 100 ], [ "destiny_coin_drops4", 100 ] ] }
+  }
+ 
+
+]

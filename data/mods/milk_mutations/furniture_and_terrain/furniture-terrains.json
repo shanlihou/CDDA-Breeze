@@ -1,0 +1,37 @@
+[
+  {
+    "type": "furniture",
+    "id": "f_scavfort",
+    "name": "温暖的“狗窝”",
+    "looks_like": "f_pillow_fort",
+    "symbol": "^",
+    "description": "金窝银窝不如自家狗窝，作为你在这片骇人废土最温暖的的归宿，你恨不得把收集到的一切温柔美好的事物都装饰到这座小小的藏身处中。",
+    "color": "pink",
+    "move_cost_mod": 3,
+    "coverage": 90,
+    "comfort": 6,
+    "floor_bedding_warmth": 1500,
+    "required_str": -1,
+    "deconstruct": { "items": [ { "item": "pillow", "count": 19 }, { "item": "blanket", "count": 3 }, { "item": "sleeping_bag_fur_roll", "count": 1 }, { "item": "box_large", "count": 1 }, { "item": "tourist_table", "count": 1 } ] },
+    "flags": [
+      "TRANSPARENT",
+      "FLAMMABLE_ASH",
+      "PLACE_ITEM",
+      "ORGANIC",
+      "REDUCE_SCENT",
+      "EASY_DECONSTRUCT",
+      "BASHABLE",
+	  "FLAT_SURF",
+      "HIDE_PLACE",
+	  "CAN_SIT",
+      "NO_SIGHT"
+    ],
+    "bash": {
+      "str_min": 1,
+      "str_max": 1,
+      "sound": "paf!",
+      "sound_fail": "poof.",
+      "items": [ { "item": "pillow", "count": 19 }, { "item": "blanket", "count": 3 }, { "item": "sleeping_bag_fur_roll", "count": 1 }, { "item": "box_large", "count": 1 }, { "item": "tourist_table", "count": 1 } ]
+    }
+  }
+]

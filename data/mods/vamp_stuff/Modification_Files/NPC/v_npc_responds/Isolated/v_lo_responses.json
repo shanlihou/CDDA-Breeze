@@ -1,0 +1,360 @@
+[
+  {
+    "id": "TALK_MISSION_INQUIRE",
+    "type": "talk_topic",
+    "responses": [
+      {
+        "text": "这是你要的血液",
+        "topic": "TALK_MISSION_SUCCESS",
+        "effect": [
+          "mission_success",
+          {
+            "u_consume_item": "blood",
+            "count": 15
+          }
+        ],
+        "condition": {
+          "and": [
+            {
+              "u_has_items": {
+                "item": "blood",
+                "count": 15
+              }
+            },
+            {
+              "u_has_mission": "VAMP_LONELY_quest1"
+            }
+          ]
+        }
+      },
+      {
+        "text": "这是你要的血符文石。",
+        "topic": "TALK_MISSION_SUCCESS",
+        "effect": [
+          "mission_success",
+          {
+            "u_consume_item": "bloodrune"
+          }
+        ],
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "bloodrune"
+            },
+            {
+              "u_has_mission": "VAMP_LONELY_quest3"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "TALK_VAMP_LONELY",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_is_wearing": "blood_necklace",
+      "yes": "你好，人类。",
+      "no": [
+        "这是什么，人类？",
+        "说吧，凡人。"
+      ]
+    },
+    "responses": [
+      {
+        "text": "跟我说说你的情况吧。",
+        "topic": "TALK_VAMP_LONELY_introduce",
+        "effect": {
+          "u_add_trait": "isolatedintro"
+        },
+        "condition": {
+          "not": {
+            "u_has_trait": "isolatedintro"
+          }
+        }
+      },
+      {
+        "text": "你为什么在这里？",
+        "topic": "TALK_VAMP_LONELY_here",
+        "effect": {
+          "u_add_trait": "isolatedhere"
+        },
+        "condition": {
+          "not": {
+            "u_has_trait": "isolatedhere"
+          }
+        }
+      },
+      {
+        "text": "你好，我的朋友。",
+        "topic": "TALK_VAMP_LONELY_fakevamp",
+        "//": "A hidden joke response.",
+        "effect": {
+          "u_add_trait": "isolatedurfake"
+        },
+        "condition": {
+          "and": [
+            {
+              "u_has_trait": "THRESH_VAMP"
+            },
+            {
+              "not": {
+                "u_has_trait": "isolatedurfake"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "text": "关于那个任务...",
+        "topic": "TALK_MISSION_INQUIRE",
+        "condition": "has_assigned_mission"
+      },
+      {
+        "text": "嗯...你想和我一起走吗？",
+        "topic": "TALK_VAMP_LONELY_wego"
+      },
+      {
+        "text": "我正需要你的帮助。",
+        "topic": "TALK_VAMP_LONELY_testsdone",
+        "condition": {
+          "and": [
+            {
+              "npc_has_trait": "isolatedtestsdone"
+            },
+            {
+              "not": {
+                "u_has_trait": "isolatedvampmark"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "text": "我正需要你的帮助。",
+        "topic": "TALK_MISSION_LIST",
+        "condition": "has_available_mission"
+      },
+      {
+        "text": "抱歉打扰",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_VAMP_LONELY_introduce",
+    "type": "talk_topic",
+    "dynamic_line": "我是一个吸血鬼，大概活了了几个世纪。但是，你明白的，我把自己藏在过去的影子里。",
+    "responses": [
+      {
+        "text": "活了几个世纪？",
+        "topic": "TALK_VAMP_LONELY_preserved"
+      },
+      {
+        "text": "好的。",
+        "topic": "TALK_VAMP_LONELY"
+      }
+    ]
+  },
+  {
+    "id": "TALK_VAMP_LONELY_here",
+    "type": "talk_topic",
+    "dynamic_line": "我在这里住了很长一段时间，作为我和平的庇护所。虽然世界一片混乱，但我并没有被这些东西打扰和攻击。",
+    "responses": [
+      {
+        "text": "有这样的地方吗？",
+        "topic": "TALK_VAMP_LONELY_there"
+      },
+      {
+        "text": "好吧...继续",
+        "topic": "TALK_VAMP_LONELY"
+      }
+    ]
+  },
+  {
+    "id": "TALK_VAMP_LONELY_wego",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_has_trait": "isolatedvampmark",
+      "yes": "那个标记...我知道你一直在帮我的亲戚们解决他们的麻烦。",
+      "no": "就像其他人一样，如果你想让我当你的奴隶...我拒绝，人类..."
+    },
+    "responses": [
+      {
+        "text": "我只想把你当作一个朋友...抱歉。",
+        "topic": "TALK_VAMP_LONELY",
+        "condition": {
+          "not": {
+            "u_has_trait": "isolatedvampmark"
+          }
+        }
+      },
+      {
+        "text": "我想要你和我一起去旅行",
+        "topic": "TALK_VAMP_LONELY_joinparty",
+        "condition": {
+          "u_has_trait": "isolatedvampmark"
+        }
+      },
+      {
+        "text": "不，我想要你和我一起去旅行。",
+        "trial": {
+          "type": "PERSUADE",
+          "difficulty": 3
+        },
+        "condition": {
+          "not": {
+            "u_has_trait": "isolatedvampmark"
+          }
+        },
+        "success": {
+          "opinion": {
+            "trust": 3,
+            "fear": -1,
+            "value": 1,
+            "anger": -1
+          },
+          "topic": "TALK_VAMP_LONELY_wegonow"
+        },
+        "failure": {
+          "opinion": {
+            "trust": -10,
+            "fear": -10,
+            "value": -10,
+            "anger": 10
+          },
+          "topic": "TALK_VAMP_LONELY_wegokill"
+        }
+      }
+    ]
+  },
+  {
+    "id": "TALK_VAMP_LONELY_preserved",
+    "type": "talk_topic",
+    "dynamic_line": "这是所有长生种都拥有的能力，我们往往通过这种方式从人潮之中隐藏自己。",
+    "responses": [
+      {
+        "text": "太糟了。",
+        "topic": "TALK_VAMP_LONELY"
+      }
+    ]
+  },
+  {
+    "id": "TALK_VAMP_LONELY_there",
+    "type": "talk_topic",
+    "dynamic_line": "的确如此，这是一个由夜间生物组成的小社群，他们倾向于自己平静地生活。",
+    "responses": [
+      {
+        "text": "所以，我可以在哪里找到这个地方？",
+        "topic": "TALK_VAMP_LONELY_farthere"
+      },
+      {
+        "text": "好的。",
+        "topic": "TALK_VAMP_LONELY"
+      }
+    ]
+  },
+  {
+    "id": "TALK_VAMP_LONELY_wegonow",
+    "type": "talk_topic",
+    "dynamic_line": "别把我带向死亡。我将离开我的领土，希望跟着你能有好处。",
+    "responses": [
+      {
+        "text": "我承诺我会的。。",
+        "trial": {
+          "type": "NONE"
+        },
+        "success": {
+          "effect": "follow",
+          "opinion": {
+            "trust": 3,
+            "fear": -10,
+            "value": 2,
+            "anger": -5
+          },
+          "topic": "TALK_DONE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "TALK_VAMP_LONELY_wegokill",
+    "type": "talk_topic",
+    "dynamic_line": "我已经说过我拒绝…现在，我必须杀了你，因为你的无知！",
+    "responses": [
+      {
+        "text": "如果你做得到，你就来杀了我吧！！！",
+        "//": "Oof! don't be greedy persuading a vampire to join you so early.",
+        "effect": "insult_combat",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_VAMP_LONELY_farthere",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_has_trait": "isolatedvampmark",
+      "yes": "这些地方可能离人类文明很远。",
+      "no": "不，就算我知道我也不会告诉你的。"
+    },
+    "responses": [
+      {
+        "text": "谢谢，我想…",
+        "topic": "TALK_VAMP_LONELY"
+      }
+    ]
+  },
+  {
+    "id": "TALK_VAMP_LONELY_joinparty",
+    "type": "talk_topic",
+    "//": "You can immediately put any isolated vampires you meet into your roster if you've done all the quest by one of them.",
+    "dynamic_line": "你确定吗？",
+    "responses": [
+      {
+        "text": "是的。",
+        "effect": "follow",
+        "topic": "TALK_DONE",
+        "opinion": {
+          "trust": 5,
+          "fear": -2,
+          "value": 3,
+          "anger": -2
+        }
+      },
+      {
+        "text": "我收回之前我说的话",
+        "topic": "TALK_VAMP_LONELY"
+      }
+    ]
+  },
+  {
+    "id": "TALK_VAMP_LONELY_testsdone",
+    "type": "talk_topic",
+    "dynamic_line": "不，我没有更多的要求了。你帮了我很多，证明了你的价值。作为回报，我会给予你我的信任。",
+    "responses": [
+      {
+        "text": "谢谢你的标记，我们走吧！",
+        "topic": "TALK_DONE",
+        "effect": [
+          "follow",
+          {
+            "u_add_trait": "isolatedvampmark"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "//": "Vampire rants about your non-traditional way of transformation. Yes, they're talking about C.R.I.T mod's vampire mutation branch.",
+    "id": "TALK_VAMP_LONELY_fakevamp",
+    "type": "talk_topic",
+    "dynamic_line": "你认为我会蠢到相信你是我的同类吗？相信我，人类，我们吸血鬼不是天生就喝人造毒品的。",
+    "responses": [
+      {
+        "text": "至少我比你强大多了。",
+        "topic": "TALK_VAMP_LONELY"
+      }
+    ]
+  }
+]

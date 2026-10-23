@@ -1,0 +1,112 @@
+[
+	{
+		"id": "hy_hydroponic_power_system",
+		"copy-from": "spare_part",
+		"type": "GENERIC",
+		"name": { "str": "水培电力模块", "str_pl": "水培电力模块" },
+		"description": "一个电力供应模块，内含一个钚电池，可保持电力供应长达20-50年，是专业水培箱和快装水培架的必备部件。",
+		"material": "plastic",
+		"weight": "200 g",
+		"volume": "500 ml",
+		"price": 1800
+	},
+	{
+		"id": "hy_nutrient_solution_tank",
+		"copy-from": "spare_part",
+		"type": "GENERIC",
+		"name": { "str": "营养液储存罐", "str_pl": "营养液储存罐" },
+		"description": "一个用来盛放营养液的塑料罐子，是制作各类营养供给模块的必备部件。",
+		"material": "plastic",
+		"weight": "200 g",
+		"volume": "2 L",
+		"price": 1800
+	},
+	{
+		"id": "hy_nutrient_solution_circulating_device",
+		"copy-from": "spare_part",
+		"type": "GENERIC",
+		"name": { "str": "营养液循环装置", "str_pl": "营养液循环装置" },
+		"description": "负责营养液的循环，以免水培箱内营养物质缺失。",
+		"material": "iron",
+		"weight": "500 g",
+		"volume": "1 L",
+		"price": 1800
+	},
+	{
+		"id": "hy_simple_hy_nutrition_supply_device",
+		"copy-from": "spare_part",
+		"type": "GENERIC",
+		"name": { "str": "简易营养供给模块", "str_pl": "简易营养供给模块" },
+		"description": "一个手工制作的简易营养供给模块，通过加入水和缓释复合肥来为植物提供营养，并且通过滤网来过滤复合肥缓释颗粒。",
+		"material": [ "plastic", "steel" ],
+		"weight": "300 g",
+		"volume": "2 L",
+		"price": 1800
+	},
+	{
+		"id": "hy_nutrition_supply_device",
+		"copy-from": "spare_part",
+		"type": "GENERIC",
+		"name": { "str": "专业营养供给模块", "str_pl": "专业营养供给模块" },
+		"description": "根据书籍中提供的设计图制作的比较专业的营养供给模块，通过加入缓释复合肥或堆肥液来为植物提供营养，并且通过ph计和简单的电脑程序来控制营养液的释放。",
+		"material": [ "plastic", "iron" ],
+		"weight": "800 g",
+		"volume": "3 L",
+		"price": 1800
+	},
+	{
+		"id": "hy_sunlamp",
+		"copy-from": "spare_part",
+		"type": "GENERIC",
+		"name": { "str": "太阳灯", "str_pl": "太阳灯" },
+		"description": "根据书籍中提供的设计图制作的全光谱太阳灯，虽然不能真的像太阳一样亮，但用在植物生长上已经够用了。",
+		"material": [ "steel", "iron" ],
+		"weight": "800 g",
+		"volume": "2 L",
+		"price": 1800
+	},
+	{
+		"id": "hy_temperature_control_system",
+		"copy-from": "spare_part",
+		"type": "GENERIC",
+		"name": { "str": "温控模块", "str_pl": "温控模块" },
+		"description": "通过将温度计、加热元件和一部分车载冷却器部件结合制作出的温度控制装置。",
+		"material": [ "plastic", "iron", "copper" ],
+		"weight": "1 kg",
+		"volume": "1500 ml",
+		"price": 1800
+	},
+	{
+		"id": "hy_aerator",
+		"copy-from": "spare_part",
+		"type": "GENERIC",
+		"name": { "str": "增氧机", "str_pl": "增氧机" },
+		"description": "一个类似鱼缸增氧泵的机器，功率不大，可以增加水中溶氧量。",
+		"material": [ "steel", "iron", "copper" ],
+		"weight": "500 g",
+		"volume": "1 L",
+		"price": 1800
+	},
+	{
+		"id": "hy_hydroponic_tank_shell",
+		"copy-from": "spare_part",
+		"type": "GENERIC",
+		"name": { "str": "水培箱外壳", "str_pl": "水培箱外壳" },
+		"description": "水培箱的承载外壳，用于容纳各个部件以及水培植物和营养液。",
+		"material": [ "steel", "plastic" ],
+		"weight": "1000 g",
+		"volume": "10 L",
+		"price": 1800
+	},
+	{
+		"id": "hy_hydroponic_control_system",
+		"copy-from": "spare_part",
+		"type": "GENERIC",
+		"name": { "str": "水培调控系统", "str_pl": "水培调控系统" },
+		"description": "水培箱的大脑，用来处理温度、光照、营养、溶氧量等方面的调控事务。",
+		"material": [ "copper", "plastic" ],
+		"weight": "100 g",
+		"volume": "500 ml",
+		"price": 1800
+	}
+]

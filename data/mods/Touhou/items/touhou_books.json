@@ -1,0 +1,80 @@
+[
+  {
+    "id": "aya_notes",
+    "type": "BOOK",
+    "name": {
+      "str": "八卦笔记",
+      "str_pl": "八卦笔记"
+    },
+    "description": "一本小笔记本，写满了最新未发表的独家新闻。",
+    "volume": "600 ml",
+    "weight": "250 g",
+    "price_postapoc": 5,
+    "material": [
+      "paper"
+    ],
+    "symbol": "}",
+    "looks_like": "story_book",
+    "color": "brown",
+    "intelligence": 8,
+    "time": "2 m",
+    "chapters": 17,
+    "fun": 1,
+    "flags": [
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "lunar_guide1",
+    "type": "BOOK",
+    "name": {
+      "str": "LDC野战指南",
+      "str_pl": "《LDC野战指南》多本"
+    },
+    "description": "一本小书，包含 LDC*应征者应掌握的所有知识。\n（*月球防卫队（Lunar Defense Corp），“月之使者”的简写）",
+    "volume": "400 ml",
+    "weight": "100 g",
+    "price": 0,
+    "price_postapoc": 0,
+    "material": [
+      "paper"
+    ],
+    "symbol": "☽",
+    "color": "green",
+    "skill": "tailor",
+    "max_level": 1,
+    "intelligence": 8,
+    "time": "1 m",
+    "fun": 0,
+    "flags": [
+      "TRADER_AVOID"
+    ],
+    "//": "Temporary (?) fix to the newly added recipes. Check /data/json/items/book for reference"
+  },
+  {
+    "id": "kasha_book",
+    "type": "BOOK",
+    "name": {
+      "str": "火车的知识",
+      "str_pl": "《火车的知识》多本"
+    },
+    "description": "一本小书，包含一个 火车*应掌握的所有知识。\n（*火车是一只可怕的恶魔猫，会在闪电和烟雾中从天而降，在恶人尸体被埋葬前偷走它们。）",
+    "volume": "400 ml",
+    "weight": "100 g",
+    "price": 0,
+    "price_postapoc": 0,
+    "material": [
+      "paper"
+    ],
+    "symbol": "🔥",
+    "color": "green",
+    "skill": "tailor",
+    "max_level": 1,
+    "intelligence": 8,
+    "time": "1 m",
+    "fun": 0,
+    "flags": [
+      "TRADER_AVOID"
+    ]
+  }
+]

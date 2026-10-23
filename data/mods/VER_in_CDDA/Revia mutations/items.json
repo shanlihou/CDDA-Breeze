@@ -1,0 +1,101 @@
+[
+    {
+        "id": "Revia_blood_stone",
+        "type": "COMESTIBLE",
+        "name": {
+          "str_sp": "血石"
+        },
+        "symbol": "!",
+        "volume":1,
+        "weight":100,
+        "comestible_type": "MED",
+        "description": "一块由你献祭得到的血石，能破开世界的壁垒，传递斯卡恩的祝福",
+        "price": "100000 USD",
+        "price_postapoc": "1000 USD",
+        "color": "red",
+        "healthy": 100,
+        "use_action": {
+          "type": "consume_drug",
+          "activation_message": "你将血石放在心脏前，默默祈祷着。世界间的壁垒开始松动......",
+          "effects": [
+            {
+              "id": "Revia_mutagen_trigger",
+              "duration": 5
+            }
+          ]
+        },
+        "flags":["MUTAGEN_CATALYST"]
+      },
+      {
+        "id": "Revia_white_stone",
+        "type": "COMESTIBLE",
+        "name": {
+          "str_sp": "苍石"
+        },
+        "symbol": "!",
+        "volume":1,
+        "weight":100,
+        "comestible_type": "MED",
+        "description": "一块由你献祭得到的苍石，勉强能破开世界的壁垒，传递斯卡恩的祝福",
+        "price": "10000 USD",
+        "price_postapoc": "0 USD",
+        "color": "white",
+        "healthy": 30,
+        "use_action": {
+          "type": "consume_drug",
+          "activation_message": "你将苍石放在心脏前，默默祈祷着。世界间的壁垒开始松动......",
+          "effects": [
+            {
+              "id": "Revia_pre_mutagen_trigger",
+              "duration": 5
+            }
+          ]
+        },
+        "flags":["MUTAGEN_CATALYST"]
+      },
+    {
+      "id": "Revia_Skarne_signal",
+      "type": "TOOL",
+      "name": {
+        "str": "斯卡恩符号"
+      },
+      "description": "一个刻着精美花纹的石雕，你抚摸它的时候感到一阵温暖,似乎感觉到了某个高维存在对你的温柔注视。或许可以通过它与高维存在进行沟通？",
+      "weight": "100 g",
+      "volume": "100 ml",
+      "longest_side": "5 cm",
+      "price": 100000,
+      "price_postapoc": 5000000,
+      "to_hit": -2,
+      "material": [
+        "stone"
+      ],
+      "symbol": ";",
+      "color": "dark_gray",
+      "flags":["TRADER_AVOID"]
+    },
+    {
+      "id": "Revia_bloodbook",
+      "type": "BOOK",
+      "category": "manuals",
+      "name": {
+        "str": "血之书"
+      },
+      "description": "一本用不属于这个世界的文字写的书，但奇妙的是你能读得懂。上面记录了如何献祭给血神————斯卡恩女神祭品，获得女神给予的祝福(PS:用苍石到无法整出新变异为止！！！用血石搞苍石能做到的太浪费了，血石加的健康比苍石要多的多)",
+      "weight": "1454 g",
+      "volume": "1500 ml",
+      "price": 100000,
+      "price_postapoc": 5000000,
+      "material": [
+        "stone"
+      ],
+      "looks_like":"recipe_caseless",
+      "symbol": "?",
+      "color": "red",
+      "skill": "cooking",
+      "required_level": 6,
+      "max_level": 10,
+      "intelligence": 12,
+      "time": "120 m",
+      "flags":["TRADER_AVOID"]
+  }
+]

@@ -1,0 +1,89 @@
+[
+  {
+    "id": "TELELIXIRDOWN",
+    "type": "mutation",
+    "name": { "str": "灵药·念动力涌动" },
+    "description": "得益于水晶灵药，你可以释放无序的念动力冲击波。",
+    "points": 5,
+    "visibility": 0,
+    "ugliness": 0,
+    "active": true,
+    "player_display": true,
+    "transform": { "target": "TELELIXIRDOWN_active", "msg_transform": "你释放了你的力量。", "active": true, "moves": 10 }
+  },
+  {
+    "id": "TELELIXIRDOWN_active",
+    "type": "mutation",
+    "name": { "str": "灵药·念动力涌动（激活）" },
+    "copy-from": "TELELIXIRDOWN",
+    "description": "你正在释放灵药赋予你的念动力力量。",
+    "fatigue": true,
+    "cost": 1,
+    "time": "1 m",
+    "activated_eocs": [ "EOC_TELELIXIR_CAST" ],
+    "transform": { "target": "TELELIXIRDOWN", "msg_transform": "你暂时收回了你的力量。", "active": false, "moves": 10 }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_TELELIXIR_CAST",
+    "condition": { "u_has_trait": "TELELIXIRDOWN_active" },
+    "deactivate_condition": { "not": { "u_has_trait": "TELELIXIRDOWN_active" } },
+    "recurrence": [ "2 seconds", "5 seconds" ],
+    "effect": [
+      {
+        "u_cast_spell": {
+          "id": "telelixir_random",
+          "message": "你的水晶之力被激活了！"
+        },
+        "targeted": true
+      }
+    ]
+  },
+  {
+    "id": "telelixir_random",
+    "type": "SPELL",
+    "name": "[Ψ]灵药·随机施法",
+    "description": "念动力灵药法术的一部分，用于选择另一个法术施放。如果你拥有它，那是个bug。",
+    "flags": [ "WONDER", "NO_PROJECTILE", "RANDOM_TARGET", "NO_EXPLOSION_SFX" ],
+    "valid_targets": [ "hostile" ],
+    "message": "",
+    "effect": "none",
+    "shape": "blast",
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 8,
+    "max_range": 15,
+    "extra_effects": [
+      { "id": "telelixir_slam" },
+      { "id": "telelixir_push" }
+    ]
+  },
+  {
+    "id": "telelixir_slam",
+    "type": "SPELL",
+    "name": "[Ψ]灵药·猛击",
+    "description": "念动力灵药突变的一个法术。如果你拥有它，那是个bug。",
+    "valid_targets": [ "hostile" ],
+    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS" ],
+    "messsage": "",
+    "effect": "attack",
+    "effect_str": "downed",
+    "shape": "blast",
+    "difficulty": 1,
+    "min_duration": 200
+  },
+  {
+    "id": "telelixir_push",
+    "type": "SPELL",
+    "name": "[Ψ]灵药·推挤",
+    "description": "念动力灵药突变的一个法术。如果你拥有它，那是个bug。",
+    "valid_targets": [ "hostile" ],
+    "flags": [ "SILENT", "RANDOM_DAMAGE", "NO_HANDS", "NO_LEGS" ],
+    "messsage": "",
+    "effect": "directed_push",
+    "shape": "blast",
+    "difficulty": 1,
+    "min_damage": 3,
+    "max_damage": 8
+  }
+]

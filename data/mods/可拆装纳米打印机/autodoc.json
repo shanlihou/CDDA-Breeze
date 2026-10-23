@@ -1,0 +1,205 @@
+[
+  {
+    "type": "GENERIC",
+    "category": "other",
+    "id": "纳米制造机",
+    "name": { "str": "纳米制造机" },
+    "looks_like": "t_nanofab_body",
+    "description": "纳米制造机",
+    "weight": "100 kg",
+    "to_hit": -10,
+    "material": [ "plastic", "steel" ],
+    "volume": "100 L",
+    "longest_side": "100 cm",
+    "bashing": 5,
+    "price": 10000000,
+    "price_postapoc": 120000,
+    "symbol": "M",
+    "color": "red",
+    "flags": [ "NO_SALVAGE" ]
+  },
+  {
+    "type": "GENERIC",
+    "category": "other",
+    "id": "纳米制造机控制面板",
+    "name": { "str": "纳米制造机控制面板" },
+    "looks_like": "t_nanofab",
+    "description": "纳米制造机控制面板",
+    "weight": "100 kg",
+    "to_hit": -5,
+    "material": [ "plastic", "steel" ],
+    "volume": "100 L",
+    "longest_side": "1000 cm",
+    "bashing": 1,
+    "price": 1000000,
+    "price_postapoc": 200000,
+    "symbol": "C",
+    "color": "red",
+    "flags": [ "NO_SALVAGE" ]
+  },
+  {
+    "id": "纳米制造机",
+    "type": "construction",
+    "group": "放置纳米制造机",
+    "category": "FURN",
+    "required_skills": [ [ "electronics", 7 ], [ "computer", 7 ], [ "fabrication", 7 ] ],
+    "time": "20 m",
+    "qualities": [
+      [ { "id": "HAMMER", "level": 3 } ],
+      [ { "id": "HAMMER_FINE", "level": 1 } ],
+      [ { "id": "WRENCH", "level": 2 } ],
+      [ { "id": "WRENCH_FINE", "level": 1 } ],
+      [ { "id": "SCREW", "level": 1 } ],
+      [ { "id": "SCREW_FINE", "level": 1 } ]
+    ],
+    "components": [ [ [ "纳米制造机", 1 ] ] ],
+    "pre_special": "check_empty",
+    "post_terrain": "t_nanofab_body"
+  },
+  {
+    "id": "纳米制造机控制面板",
+    "type": "construction",
+    "group": "放置纳米制造机控制面板",
+    "category": "FURN",
+    "required_skills": [ [ "electronics", 7 ], [ "computer", 7 ], [ "fabrication", 7 ] ],
+    "time": "10 m",
+    "qualities": [ [ { "id": "WRENCH", "level": 2 } ], [ { "id": "SCREW", "level": 1 } ] ],
+    "components": [ [ [ "纳米制造机控制面板", 1 ] ] ],
+    "pre_special": "check_empty",
+    "post_terrain": "t_nanofab"
+  },
+  {
+    "type": "construction",
+    "id": "拆卸纳米制造机",
+    "group": "拆卸纳米制造机",
+    "category": "OTHER",
+    "required_skills": [ [ "electronics", 7 ], [ "computer", 7 ], [ "fabrication", 7 ] ],
+    "time": "30 m",
+    "qualities": [
+      [ { "id": "HAMMER", "level": 3 } ],
+      [ { "id": "HAMMER_FINE", "level": 1 } ],
+      [ { "id": "WRENCH", "level": 2 } ],
+      [ { "id": "WRENCH_FINE", "level": 1 } ],
+      [ { "id": "SCREW", "level": 1 } ],
+      [ { "id": "SCREW_FINE", "level": 1 } ]
+    ],
+    "byproducts": [ { "item": "纳米制造机", "count": 1 } ],
+    "pre_terrain": "t_nanofab_body",
+    "post_terrain": "t_dirt"
+  },
+  {
+    "type": "construction",
+    "id": "拆卸纳米制造机控制面板",
+    "group": "拆卸纳米制造机控制面板",
+    "category": "OTHER",
+    "required_skills": [ [ "electronics", 7 ], [ "computer", 7 ], [ "fabrication", 7 ] ],
+    "time": "10 m",
+    "qualities": [ [ { "id": "WRENCH", "level": 2 } ], [ { "id": "SCREW", "level": 1 } ] ],
+    "byproducts": [ { "item": "纳米制造机控制面板", "count": 1 } ],
+    "pre_terrain": "t_nanofab",
+    "post_terrain": "t_dirt"
+  },
+  {
+    "id": "构建纳米制造机",
+    "type": "construction",
+    "group": "构建纳米制造机",
+    "category": "FURN",
+    "required_skills": [ [ "electronics", 7 ], [ "computer", 7 ], [ "fabrication", 10 ] ],
+    "time": "600 m",
+    "qualities": [
+      [ { "id": "HAMMER", "level": 3 } ],
+      [ { "id": "HAMMER_FINE", "level": 1 } ],
+      [ { "id": "WRENCH", "level": 2 } ],
+      [ { "id": "WRENCH_FINE", "level": 1 } ],
+      [ { "id": "SCREW", "level": 1 } ],
+      [ { "id": "SCREW_FINE", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "pipe", 12 ] ],
+      [ [ "sheet_metal", 12 ] ],
+      [ [ "processor", 4 ] ],
+      [ [ "RAM", 36 ] ],
+      [ [ "cable", 1 ] ],
+      [ [ "small_lcd_screen", 2 ] ],
+      [ [ "circuit", 10 ] ],
+      [ [ "power_supply", 4 ] ],
+      [ [ "amplifier", 4 ] ]
+    ],
+    "pre_special": "check_empty",
+    "post_terrain": "t_nanofab_body"
+  },
+  {
+    "id": "构建纳米制造机控制面板",
+    "type": "construction",
+    "group": "构建纳米制造机控制面板",
+    "category": "FURN",
+    "required_skills": [ [ "electronics", 7 ], [ "computer", 10 ], [ "fabrication", 7 ] ],
+    "time": "400 m",
+    "qualities": [
+      [ { "id": "HAMMER", "level": 3 } ],
+      [ { "id": "HAMMER_FINE", "level": 1 } ],
+      [ { "id": "WRENCH", "level": 2 } ],
+      [ { "id": "WRENCH_FINE", "level": 1 } ],
+      [ { "id": "SCREW", "level": 1 } ],
+      [ { "id": "SCREW_FINE", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "pipe", 12 ] ],
+      [ [ "sheet_metal", 12 ] ],
+      [ [ "processor", 14 ] ],
+      [ [ "RAM", 88 ] ],
+      [ [ "cable", 1 ] ],
+      [ [ "small_lcd_screen", 12 ] ],
+      [ [ "circuit", 10 ] ],
+      [ [ "power_supply", 4 ] ],
+      [ [ "amplifier", 4 ] ]
+    ],
+    "pre_special": "check_empty",
+    "post_terrain": "t_nanofab"
+  },
+  {
+    "type": "construction_group",
+    "id": "放置纳米制造机",
+    "name": "放置纳米制造机"
+  },
+  {
+    "type": "construction_group",
+    "id": "放置纳米制造机控制面板",
+    "name": "放置纳米制造机控制面板"
+  },
+  {
+    "type": "construction_group",
+    "id": "拆卸纳米制造机",
+    "name": "拆卸纳米制造机"
+  },
+  {
+    "type": "construction_group",
+    "id": "拆卸纳米制造机控制面板",
+    "name": "拆卸纳米制造机控制面板"
+  },
+  {
+    "type": "construction_group",
+    "id": "构建纳米制造机",
+    "name": "构建纳米制造机"
+  },
+  {
+    "type": "construction_group",
+    "id": "构建纳米制造机控制面板",
+    "name": "构建纳米制造机控制面板"
+  },
+  {
+    "type": "recipe",
+    "activity_level": "NO_EXERCISE",
+    "result": "nanomaterial",
+    "category": "CC_CHEM",
+    "subcategory": "CSC_CHEM_CHEMICALS",
+    "skill_used": "fabrication",
+    "skills_required": [ "chemistry", 10 ],
+    "difficulty": 10,
+    "time": "60 m",
+    "charges": 2,
+    "autolearn": true,
+    "qualities": [ { "id": "PRESSURIZATION", "level": 2 } ],
+    "components": [ [ [ "nanomaterial", 1 ] ], [ [ "slime_scrap", 10 ] ] ]
+  }
+]

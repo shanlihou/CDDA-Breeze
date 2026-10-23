@@ -1,0 +1,392 @@
+[
+  {
+    "id": "Y_space",
+    "width": 1,
+    "height": 1,
+    "style": "symbol",
+    "string": " ",
+    "colors": [ "c_black" ],
+    "type": "widget"
+  },
+  {
+    "id": "space6",
+    "width": 6,
+    "height": 1,
+    "style": "symbol",
+    "string": "xxxxxx",
+    "colors": [ "c_black" ],
+    "type": "widget"
+  },
+  {
+    "id": "a_vert_divider_",
+    "width": 1,
+    "style": "layout",
+    "arrange": "rows",
+    "widgets": [ "Y_space" ],
+    "type": "widget"
+  },
+  {
+    "id": "a_x_divider_",
+    "width": 1,
+    "style": "layout",
+    "label": " 空",
+    "arrange": "colomns",
+    "widgets": [ "Y_space" ],
+    "type": "widget"
+  },
+  {
+    "id": "compass_←",
+    "type": "widget",
+    "style": "text",
+    "width": 2,
+    "direction": "W",
+    "default_clause": { "text": "西", "color": "c_dark_gray" },
+    "clauses": [
+      { "id": "safe_mode_trigger", "text": "西", "color": "c_light_red", "condition": { "u_safe_mode_trigger": "W" } },
+      { "id": "danger", "text": "西", "color": "c_white", "condition": { "u_monsters_in_direction": "W" } }
+    ]
+  },
+  {
+    "id": "compass_↓",
+    "type": "widget",
+    "style": "text",
+    "width": 2,
+    "direction": "S",
+    "default_clause": { "text": "南", "color": "c_dark_gray" },
+    "clauses": [
+      { "id": "safe_mode_trigger", "text": "南", "color": "c_light_red", "condition": { "u_safe_mode_trigger": "S" } },
+      { "id": "danger", "text": "南", "color": "c_white", "condition": { "u_monsters_in_direction": "S" } }
+    ]
+  },
+  {
+    "id": "compass_↑",
+    "type": "widget",
+    "style": "text",
+    "width": 2,
+    "direction": "N",
+    "default_clause": { "text": "北", "color": "c_dark_gray" },
+    "clauses": [
+      { "id": "safe_mode_trigger", "text": "北", "color": "c_light_red", "condition": { "u_safe_mode_trigger": "N" } },
+      { "id": "danger", "text": "北", "color": "c_white", "condition": { "u_monsters_in_direction": "N" } }
+    ]
+  },
+  {
+    "id": "compass_→",
+    "type": "widget",
+    "style": "text",
+    "width": 2,
+    "direction": "E",
+    "default_clause": { "text": "东", "color": "c_dark_gray" },
+    "clauses": [
+      { "id": "safe_mode_trigger", "text": "东", "color": "c_light_red", "condition": { "u_safe_mode_trigger": "E" } },
+      { "id": "danger", "text": "东", "color": "c_white", "condition": { "u_monsters_in_direction": "E" } }
+    ]
+  },
+  {
+    "id": "compass_!",
+    "type": "widget",
+    "style": "text",
+    "width": 2,
+    "direction": "L",
+    "default_clause": { "text": "！", "color": "c_dark_gray" },
+    "clauses": [
+      { "id": "safe_mode_trigger", "text": "！", "color": "c_light_red", "condition": { "u_safe_mode_trigger": "L" } },
+      { "id": "danger", "text": "！", "color": "c_white", "condition": { "u_monsters_in_direction": "L" } }
+    ]
+  },
+  {
+    "id": "compass_↖",
+    "type": "widget",
+    "style": "text",
+    "width": 2,
+    "direction": "NW",
+    "default_clause": { "text": " ↖", "color": "c_dark_gray" },
+    "clauses": [
+      { "id": "safe_mode_trigger", "text": " ↖", "color": "c_light_red", "condition": { "u_safe_mode_trigger": "NW" } },
+      { "id": "danger", "text": " ↖", "color": "c_white", "condition": { "u_monsters_in_direction": "NW" } }
+    ]
+  },
+  {
+    "id": "compass_↙",
+    "type": "widget",
+    "style": "text",
+    "width": 2,
+    "direction": "SW",
+    "default_clause": { "text": " ↙", "color": "c_dark_gray" },
+    "clauses": [
+      { "id": "safe_mode_trigger", "text": " ↙", "color": "c_light_red", "condition": { "u_safe_mode_trigger": "SW" } },
+      { "id": "danger", "text": " ↙", "color": "c_white", "condition": { "u_monsters_in_direction": "SW" } }
+    ]
+  },
+  {
+    "id": "compass_↘",
+    "type": "widget",
+    "style": "text",
+    "width": 2,
+    "direction": "SE",
+    "default_clause": { "text": "↘ ", "color": "c_dark_gray" },
+    "clauses": [
+      { "id": "safe_mode_trigger", "text": "↘ ", "color": "c_light_red", "condition": { "u_safe_mode_trigger": "SE" } },
+      { "id": "danger", "text": "↘ ", "color": "c_white", "condition": { "u_monsters_in_direction": "SE" } }
+    ]
+  },
+  {
+    "id": "compass_↗",
+    "type": "widget",
+    "style": "text",
+    "width": 2,
+    "direction": "NE",
+    "default_clause": { "text": "↗ ", "color": "c_dark_gray" },
+    "clauses": [
+      { "id": "safe_mode_trigger", "text": "↗ ", "color": "c_light_red", "condition": { "u_safe_mode_trigger": "NE" } },
+      { "id": "danger", "text": "↗ ", "color": "c_white", "condition": { "u_monsters_in_direction": "NE" } }
+    ]
+  },
+  {
+    "id": "Y_compass_1",
+    "type": "widget",
+    "style": "layout",
+    "arrange": "minimum_columns",
+    "widgets": [
+      "compass_↖",
+      "compass_↑",
+      "compass_↗"
+    ]
+  },
+  {
+    "id": "Y_compass_2",
+    "type": "widget",
+    "style": "layout",
+    "arrange": "minimum_columns",
+    "widgets": [
+      "compass_←",
+      "compass_!",
+      "compass_→"
+    ]
+  },
+  {
+    "id": "Y_compass_3",
+    "type": "widget",
+    "style": "layout",
+    "arrange": "minimum_columns",
+    "widgets": [
+      "compass_↙",
+      "compass_↓",
+      "compass_↘"
+    ]
+  },
+  {
+    "id": "Y_safe_mode_text",
+    "type": "widget",
+    "style": "text",
+    "text_align":"left",
+    "var": "safe_mode_classic_text",
+    "width": 0,
+    "flags": [ "W_LABEL_NONE" ]
+  },
+  {
+    "id": "Y_safe_mode",
+    "type": "widget",
+    "style": "layout",
+    "arrange": "minimum_columns",
+    "widgets": [
+      "Y_space",
+      "Y_safe_mode_text"
+    ]
+  },
+  {
+    "id": "Y_compass_",
+    "type": "widget",
+    "style": "layout",
+    "width": 8,
+    "arrange": "rows",
+    "widgets": [
+      "Y_compass_1",
+      "Y_compass_2",
+      "Y_compass_3",
+      "Y_safe_mode"
+    ]
+  },
+  {
+    "id": "Y_compass_legend_text_alt",
+    "type": "widget",
+    "label": "Compass Legend",
+    "style": "text",
+    "var": "compass_legend_text",
+    "width": 0,
+    "height": 4,
+    "text_align": "left",
+    "flags": [ "W_LABEL_NONE", "W_DYNAMIC_HEIGHT" ]
+  },
+  {
+    "id": "Y_compass",
+    "type": "widget",
+    "label": "compass",
+    "style": "layout",
+    "arrange": "minimum_columns",
+    "widgets": [
+      "Y_compass_",
+      "a_vert_divider_",
+      "Y_compass_legend_text_alt"
+    ]
+  },
+  {
+    "id": "Y_wield",
+    "width": 15,
+    "height": 1,
+    "style": "layout",
+    "widgets": [ "wielding_desc" ],
+    "type": "widget"
+  },
+  {
+    "id": "Y_ma_buff_legend",
+    "type": "widget",
+    "style": "legend",
+    "label": "效果",
+    "copy-from": "ma_buff_indicator_template",
+    "width": 8,
+    "height": 1,
+    "text_align": "left",
+    "flags": [ "W_DYNAMIC_HEIGHT" ]
+  },
+  {
+    "id": "Y_info_l",
+    "type": "widget",
+    "style": "layout",
+    "arrange": "rows",
+    "width": 15,
+    "widgets": [ "Y_wield","style_desc", "Y_ma_buff_legend", "move_count_mode_desc", "stamina_num_label", "speed_num", "sound_num" ]
+  },
+  {
+    "id": "Y_info_m",
+    "width": 7,
+    "height": 7,
+    "style": "text",
+    "var": "overmap_text",
+    "type": "widget"
+  },
+  {
+    "id": "Y_info_r",
+    "type": "widget",
+    "style": "layout",
+    "arrange": "rows",
+    "width": 0,
+    "widgets": [ "lighting_desc","date_desc_label", "time_desc_label", "weather_desc", "moon_phase_desc", "wind_desc", "env_temp_desc" ]
+  },
+  {
+    "id": "Y_info_b",
+    "style": "layout",
+    "arrange": "minimum_columns",
+    "label": "info",
+    "widgets": [ "Y_info_l", "a_vert_divider_", "Y_info_m", "a_vert_divider_", "Y_info_r" ],
+    "type": "widget"
+  },
+  {
+    "id": "Y_vehicle",
+    "type": "widget",
+    "style": "layout",
+    "label": "\"空\"",
+    "arrange": "columns",
+    "widgets": [ "vehicle_fuel_desc_no_label","a_vert_divider_","vehicle_azimuth_desc_no_label", "a_vert_divider_","vehicle_cruise_desc_no_label" ]
+  },
+  {
+    "id": "Y_place_desc_no_label",
+    "type": "widget",
+    "copy-from": "place_desc",
+    "flags": [ "W_LABEL_NONE","W_NO_PADDING" ]
+  },
+  {
+    "id": "Y_info_t",
+    "style": "layout",
+    "arrange": "columns",
+    "widgets": [ "a_vert_divider_","a_vert_divider_","Y_place_desc_no_label" ],
+    "type": "widget"
+  },
+  {
+    "id": "Y_info",
+    "type": "widget",
+    "style": "layout",
+    "label": "info",
+    "arrange": "rows",
+    "widgets": [ "Y_info_t","Y_info_b" ]
+  },
+  {
+    "id": "Y_body_l",
+    "type": "widget",
+    "style": "layout",
+    "arrange": "rows",
+    "width": 10,
+    "widgets": [ "hp_head_num_label","hp_torso_num_label","hp_left_arm_num_label","hp_right_arm_num_label","hp_left_leg_num_label","hp_right_leg_num_label" ]
+  },
+  {
+    "id": "Y_body_m",
+    "type": "widget",
+    "style": "layout",
+    "arrange": "rows",
+    "width": 17,
+    "widgets": [
+      "mood_desc_label",
+      "pain_num_label",
+      "hunger_desc_label",
+      "thirst_desc_label",
+      "fatigue_desc_label",
+      "body_temp_desc_label"
+    ]
+  },
+  {
+    "id": "Y_body_r",
+    "type": "widget",
+    "style": "layout",
+    "label": "Stats",
+    "label_align": "right",
+    "arrange": "rows",
+    "width": 13,
+    "widgets": [ "focus_num","str_num", "dex_num", "int_num", "per_num", "power_short_desc" ]
+  },
+  {
+    "id": "Y_body_t",
+    "style": "layout",
+    "arrange": "columns",
+    "label": "body",
+    "widgets": [ "Y_body_l", "a_vert_divider_", "Y_body_m", "Y_body_r" ],
+    "type": "widget"
+  },
+  {
+    "id": "Y_weariness_transition_graph",
+    "type": "widget",
+    "style": "graph",
+    "symbols": ".oO",
+    "width": 5,
+    "colors": [ "c_red", "c_light_red", "c_yellow", "c_light_green", "c_green" ],
+    "var": "weary_transition_level",
+    "flags": [ "W_LABEL_NONE", "W_NO_PADDING" ]
+  },
+  {
+    "id": "Y_body_b",
+    "type": "widget",
+    "style": "layout",
+    "arrange": "minimum_columns", 
+    "widgets": [ "weariness_desc", "a_vert_divider_", "Y_weariness_transition_graph","a_vert_divider_","weary_malus_desc_no_label","space6","activity_desc" ],
+    "flags": [ "W_NO_PADDING" ]
+  },
+  {
+    "id": "Y_body",
+    "type": "widget",
+    "label": "body",
+    "style": "layout",
+    "arrange": "rows",
+    "width": 12,
+    "widgets": [ "Y_body_t", "Y_body_b" ]
+  },
+  {
+    "id": "sidebar-customized(by ylsggk)",
+    "width": 43,
+    "style": "sidebar",
+    "description": "This one is customized by ylsggk for private preference. Fixed data takes 26 lines and 43 symbols width. \n我是本侧边栏拼凑者ylsggk\n由于这侧边栏是我缝合的\n布局都焊死了(懒得模块细分)\n分享给大家顺便炫耀我设计的罗盘\n(｡･ω･｡)",
+    "separator": ": ",
+    "padding": 0,
+    "label": { "str": "ylsggk的侧边栏", "ctxt": "UI sidebar" },
+    "widgets": [ "a_x_divider_","a_x_divider_","a_x_divider_","Y_vehicle","Y_compass","Y_info", "Y_body" ],
+    "type": "widget"
+  }
+]

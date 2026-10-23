@@ -1,0 +1,367 @@
+[
+  {
+    "id": "secro_flesh_baldric",
+    "type": "ARMOR",
+    "name": {
+      "str": "大刀鞘（肩）"
+    },
+    "description": "一个肉质刀鞘，大小足够容纳一把长剑，或是比它稍大的武器。刀鞘穿在腰间，加以肩带系稳。使用它来收拔武器。",
+    "weight": "2031 g",
+    "volume": "2 L",
+    "bashing": 4,
+    "material": [
+      "secro_flesh_artificial"
+    ],
+    "valid_mods": [
+      "secro_flesh_reinforced_coat"
+    ],
+    "symbol": "[",
+    "looks_like": "sheath",
+    "color": "red",
+    "pocket_data": [
+      {
+        "magazine_well": "1500 ml",
+        "max_contains_volume": "3 L",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "130 cm",
+        "moves": 30,
+        "holster": true,
+        "flag_restriction": [
+          "SHEATH_SWORD"
+        ]
+      }
+    ],
+    "use_action": {
+      "type": "holster",
+      "holster_prompt": "收刀",
+      "holster_msg": "你将%s收鞘"
+    },
+    "flags": [
+      "BELTED",
+      "OVERSIZE",
+      "WATER_FRIENDLY"
+    ],
+    "armor": [
+      {
+        "encumbrance": [
+          3,
+          5
+        ],
+        "coverage": 10,
+        "covers": [
+          "torso"
+        ],
+        "material": [
+          "secro_flesh_artificial"
+        ],
+        "material_thickness": 1
+      }
+    ]
+  },
+  {
+    "id": "secro_flesh_bootsheath",
+    "type": "ARMOR",
+    "name": {
+      "str": "小刀鞘（脚）"
+    },
+    "description": "一个穿在脚踝上的小型刀鞘。不经过练习用起来很笨拙。使用它来收拔武器。",
+    "weight": "200 g",
+    "volume": "500 ml",
+    "to_hit": -1,
+    "material": [
+      "secro_flesh_artificial"
+    ],
+    "valid_mods": [
+      "secro_flesh_reinforced_coat"
+    ],
+    "symbol": "[",
+    "looks_like": "sheath",
+    "color": "red",
+    "sided": true,
+    "pocket_data": [
+      {
+        "magazine_well": "200 ml",
+        "holster": true,
+        "flag_restriction": [
+          "SHEATH_KNIFE"
+        ],
+        "moves": 30,
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1 kg",
+        "max_item_length": "30 cm"
+      }
+    ],
+    "use_action": {
+      "type": "holster",
+      "holster_prompt": "插入刀鞘",
+      "holster_msg": "你将%s收鞘"
+    },
+    "flags": [
+      "BELTED",
+      "OVERSIZE",
+      "ALLOWS_NATURAL_ATTACKS",
+      "WATER_FRIENDLY"
+    ],
+    "armor": [
+      {
+        "encumbrance": [
+          2,
+          3
+        ],
+        "coverage": 5,
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ],
+        "specifically_covers": [
+          "foot_ankle_l",
+          "foot_ankle_r"
+        ],
+        "material": [
+          "secro_flesh_artificial"
+        ],
+        "material_thickness": 1,
+        "layers": [
+          "BELTED"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "secro_flesh_bscabbard",
+    "type": "ARMOR",
+    "name": {
+      "str": "刀鞘（背）"
+    },
+    "description": "一个肉质刀鞘，足够容纳大部分刀剑类武器，刀鞘通过肩带系在后背，不经过一定练习很难将武器快速拔出。使用它来收拔武器。",
+    "weight": "2363 g",
+    "volume": "2250 ml",
+    "bashing": 4,
+    "material": [
+      "secro_flesh_artificial"
+    ],
+    "valid_mods": [
+      "secro_flesh_reinforced_coat"
+    ],
+    "symbol": "[",
+    "looks_like": "baldric",
+    "color": "red",
+    "pocket_data": [
+      {
+        "magazine_well": "1750 ml",
+        "max_contains_volume": "3750 ml",
+        "max_contains_weight": "5 kg",
+        "max_item_length": "180 cm",
+        "holster": true,
+        "moves": 60,
+        "flag_restriction": [
+          "SHEATH_SWORD"
+        ]
+      }
+    ],
+    "use_action": {
+      "type": "holster",
+      "holster_prompt": "收刀",
+      "holster_msg": "你将%s收鞘"
+    },
+    "flags": [
+      "BELTED",
+      "OVERSIZE",
+      "WATER_FRIENDLY"
+    ],
+    "armor": [
+      {
+        "encumbrance": [
+          6,
+          10
+        ],
+        "coverage": 10,
+        "covers": [
+          "torso"
+        ],
+        "material": [
+          "secro_flesh_artificial"
+        ],
+        "material_thickness": 1
+      }
+    ]
+  },
+  {
+    "id": "secro_flesh_scabbard",
+    "type": "ARMOR",
+    "name": {
+      "str": "大刀鞘（腰）"
+    },
+    "description": "一个巨大的、用来放置大型刀剑类武器的可调整剑鞘。使用它来收拔武器。",
+    "weight": "1700 g",
+    "volume": "1750 ml",
+    "bashing": 4,
+    "material": [
+      "secro_flesh_artificial"
+    ],
+    "valid_mods": [
+      "secro_flesh_reinforced_coat"
+    ],
+    "symbol": "[",
+    "looks_like": "holster",
+    "color": "red",
+    "sided": true,
+    "pocket_data": [
+      {
+        "magazine_well": "1250 ml",
+        "max_contains_volume": "2 L",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "100 cm",
+        "holster": true,
+        "moves": 30,
+        "flag_restriction": [
+          "SHEATH_SWORD"
+        ]
+      }
+    ],
+    "use_action": {
+      "type": "holster",
+      "holster_prompt": "收刀",
+      "holster_msg": "你将%s收鞘"
+    },
+    "flags": [
+      "BELTED",
+      "OVERSIZE",
+      "WATER_FRIENDLY"
+    ],
+    "armor": [
+      {
+        "encumbrance": [
+          3,
+          4
+        ],
+        "coverage": 15,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "material": [
+          "secro_flesh_artificial"
+        ],
+        "material_thickness": 1
+      }
+    ]
+  },
+  {
+    "id": "secro_flesh_sheath",
+    "type": "ARMOR",
+    "name": {
+      "str": "小刀鞘（腰）",
+      "str_pl": "小刀鞘（腰）"
+    },
+    "description": "一个肉质小刀鞘，大小足够容纳匕首，或是类似的小型刀具。它很容易使用，不需要太多练习。使用它来收拔武器。",
+    "weight": "250 g",
+    "volume": "500 ml",
+    "material": [
+      "secro_flesh_artificial"
+    ],
+    "valid_mods": [
+      "secro_flesh_reinforced_coat"
+    ],
+    "symbol": "|",
+    "looks_like": "scabbard",
+    "color": "red",
+    "sided": true,
+    "pocket_data": [
+      {
+        "magazine_well": "350 ml",
+        "holster": true,
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "70 cm",
+        "moves": 20,
+        "flag_restriction": [
+          "SHEATH_KNIFE"
+        ]
+      }
+    ],
+    "use_action": {
+      "type": "holster",
+      "holster_prompt": "插入刀鞘",
+      "holster_msg": "你将%s收鞘"
+    },
+    "flags": [
+      "BELTED",
+      "OVERSIZE",
+      "WATER_FRIENDLY"
+    ],
+    "armor": [
+      {
+        "coverage": 5,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "encumbrance": [
+          0,
+          1
+        ],
+        "material": [
+          "secro_flesh_artificial"
+        ],
+        "material_thickness": 1
+      }
+    ]
+  },
+  {
+    "id": "secro_flesh_spearsling",
+    "type": "ARMOR",
+    "name": {
+      "str": "长矛背带"
+    },
+    "description": "一根系在身上的肉质带子，可以拴住长矛，解放双手。小心别卡在门框上。使用它来收拔武器。",
+    "weight": "200 g",
+    "volume": "500 ml",
+    "to_hit": -1,
+    "material": [
+      "secro_flesh_artificial"
+    ],
+    "valid_mods": [
+      "secro_flesh_reinforced_coat"
+    ],
+    "symbol": "[",
+    "looks_like": "bscabbard",
+    "color": "red",
+    "pocket_data": [
+      {
+        "holster": true,
+        "moves": 30,
+        "flag_restriction": [
+          "SHEATH_SPEAR"
+        ],
+        "max_contains_volume": "4000 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "200 cm"
+      }
+    ],
+    "use_action": {
+      "type": "holster",
+      "holster_prompt": "收起长矛",
+      "holster_msg": "你套好%s。"
+    },
+    "flags": [
+      "BELTED",
+      "OVERSIZE",
+      "ALLOWS_NATURAL_ATTACKS",
+      "WATER_FRIENDLY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 2,
+        "coverage": 5,
+        "covers": [
+          "torso"
+        ],
+        "material": [
+          "secro_flesh_artificial"
+        ],
+        "material_thickness": 1
+      }
+    ]
+  }
+]

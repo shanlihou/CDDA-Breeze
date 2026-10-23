@@ -1,0 +1,246 @@
+[
+  {
+    "id": "IMPURE",
+    "type": "mutation",
+    "name": {
+      "str": "不洁"
+    },
+    "description": "好吧，就是这样。你获得了不洁。好消息是，地球食物不再感觉那么……空洞了。",
+    "points": 0,
+    "profession": false,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": true,
+    "triggers": [
+      [
+        {
+          "condition": {
+            "and": [
+              {
+                "u_has_trait": "LUNARDIET"
+              },
+              {
+                "compare_int": [
+                  {
+                    "u_val": "vitamin",
+                    "name": "impurity"
+                  },
+                  ">",
+                  {
+                    "const": 504
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    ],
+    "//": "Should copy and paste everything except the triggers field every time there's an update, as the extend field doesn't work with mutations"
+  },
+  {
+    "id": "LUNARDIET",
+    "type": "mutation",
+    "name": {
+      "str": "月之饮食"
+    },
+    "description": "直到此刻之前，进食都不是问题。你可以吃来自地球和其他不洁地方的食物，但你从中获得的营养会更少。",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "triggers": [
+      [
+        {
+          "condition": {
+            "and": [
+              {
+                "u_has_trait": "IMPURE"
+              },
+              {
+                "compare_int": [
+                  {
+                    "u_val": "vitamin",
+                    "name": "impurity"
+                  },
+                  "<=",
+                  {
+                    "const": 503
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    ],
+    "vitamins_absorb_multi": [
+      [
+        "cured_meat",
+        [
+          [
+            "calcium",
+            0.66
+          ],
+          [
+            "iron",
+            0.66
+          ],
+          [
+            "vitA",
+            0.66
+          ],
+          [
+            "vitB",
+            0.66
+          ],
+          [
+            "vitC",
+            0.66
+          ]
+        ]
+      ],
+      [
+        "flesh",
+        [
+          [
+            "calcium",
+            0.66
+          ],
+          [
+            "iron",
+            0.66
+          ],
+          [
+            "vitA",
+            0.66
+          ],
+          [
+            "vitB",
+            0.66
+          ],
+          [
+            "vitC",
+            0.66
+          ]
+        ]
+      ],
+      [
+        "processed_food",
+        [
+          [
+            "calcium",
+            0.9
+          ],
+          [
+            "iron",
+            0.9
+          ],
+          [
+            "vitA",
+            0.9
+          ],
+          [
+            "vitB",
+            0.9
+          ],
+          [
+            "vitC",
+            0.9
+          ]
+        ]
+      ],
+      [
+        "veggy",
+        [
+          [
+            "calcium",
+            0.95
+          ],
+          [
+            "iron",
+            0.95
+          ],
+          [
+            "vitA",
+            0.95
+          ],
+          [
+            "vitB",
+            0.95
+          ],
+          [
+            "vitC",
+            0.95
+          ]
+        ]
+      ]
+    ],
+    "//": "Should copy and paste everything except the triggers AND vitamins_absorb_multi fields every time there's an update, as the extend field doesn't work with mutations"
+  },
+  {
+    "id": "PROF_KAENBYOU",
+    "type": "mutation",
+    "name": "运尸欢呼地狱猫",
+    "description": "你是千灵殿（旧地狱公馆）女主人的宠物之一。你的工作是用你可靠的手推车将尸体运往炽热地狱（即炽热地狱遗迹），以调节其热量。",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "anger_relations": [
+      [
+        "GHOST_TOUHOU",
+        -20
+      ],
+      [
+        "PHANTOM_TOUHOU",
+        -20
+      ],
+      [
+        "JIANGSHI_TOUHOU",
+        -20
+      ]
+    ],
+    "//": "Should copy and paste everything except the anger_relations field every time there's an update, as the extend field doesn't work with mutations"
+  },
+  {
+    "id": "PROF_YAMAME",
+    "type": "mutation",
+    "name": "暗洞中的明亮蛛网",
+    "description": "你是住在地底入口的善良土蜘蛛妖怪。",
+    "points": 0,
+    "profession": true,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": false,
+    "anger_relations": [
+      [
+        "ONI_TOUHOU",
+        -25
+      ],
+      [
+        "YOUKAI_FEMALE_TOUHOU",
+        -25
+      ],
+      [
+        "YOUKAI_HOSTILE_TOUHOU",
+        -25
+      ],
+      [
+        "YOUKAI_NEUTRAL_TOUHOU",
+        -25
+      ],
+      [
+        "YOUKAI_PSEUDO",
+        -25
+      ],
+      [
+        "YOUKAI_SKINWALKER_TOUHOU",
+        -25
+      ]
+    ],
+    "//": "Should copy and paste everything except the anger_relations field every time there's an update, as the extend field doesn't work with mutations"
+  }
+]

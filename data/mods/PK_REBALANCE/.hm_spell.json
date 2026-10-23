@@ -1,0 +1,17 @@
+[
+  {
+    "id": "death_fungus_guilt",
+    "type": "SPELL",
+    "name": { "str": "Pouf" },
+    "description": "Fungal pouf.",
+    "valid_targets": [ "ground", "self" ],
+    "effect": "fungalize",
+    "flags": [ "SILENT" ],
+    "min_damage": 2500,
+    "max_damage": 2500,
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "shape": "blast",
+    "extra_effects": [ { "id": "death_pouf", "hit_self": true },{ "id": "death_guilt" } ]
+  }
+]

@@ -1,0 +1,49 @@
+[
+  {
+    "type": "GENERIC",
+    "id": "MM_magic_force_energy",
+    "name": { "str": "力场能量" },
+    "description": "一个假物品，用来给力场类载具提供重量。它不会出现在正常游戏里。",
+    "symbol": "%",
+    "color": "cyan",
+    "material": [ "MM_ether_energy" ],
+    "weight": "20000 kg",
+    "volume": "500 ml",
+    "category": "spare_parts"
+  },
+  {
+    "id": "MM_magic_force_wall",
+    "type": "vehicle_part",
+    "name": { "str": "力场障壁" },
+    "breaks_into": [ { "count": [ 25, 50 ], "item": "glass_shard" } ],
+    "symbol": "*",
+    "broken_color": "light_gray",
+    "broken_symbol": "0",
+    "categories": [ "hull" ],
+    "color": "light_cyan",
+    "damage_modifier": 70,
+    "description": "一层透明的能量力场。",
+    "durability": 300,
+    "flags": [ "OVER", "OBSTACLE", "WINDOW" ],
+    "item": "MM_magic_force_energy",
+    "location": "center",
+    "looks_like": "t_wall_glass"
+  },
+  {
+    "type": "vehicle_part",
+    "id": "MM_magic_force_section",
+    "name": "力场空间",
+    "description": "一层透明的能量力场",
+    "symbol": "*",
+    "looks_like": "t_wall_glass",
+    "color": "light_cyan",
+    "broken_symbol": "O",
+    "broken_color": "light_gray",
+    "durability": 300,
+    "item": "MM_magic_force_energy",
+    "location": "structure",
+    "flags": [ "MOUNTABLE", "INITIAL_PART" ],
+    "breaks_into": [ { "count": [ 25, 50 ], "item": "glass_shard" } ],
+    "damage_reduction": { "bash": 10 }
+  }
+]

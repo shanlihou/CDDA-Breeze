@@ -1,0 +1,156 @@
+[
+  {
+    "type": "AMMO",
+    "id": "wujin_hexin",
+    "category": "spare_parts",
+    "price": 1000,
+    "name": { "str_sp": "无尽核心" },
+    "symbol": "=",
+    "color": "pink",
+    "description": "这似乎是制作无尽的核心所在，不过除此以外，你并不清楚还能做些什么。",
+    "flags": [ "TRADER_AVOID" ],
+    "weight": "10 g",
+    "volume": "100 ml",
+    "ammo_type": "crystallized_mana",
+    "material": [ "crystallized_mana" ],
+    "count": 100,
+    "looks_like": "battery"
+  },
+  {
+    "id": "endless_box_small_folded_5.56",
+    "type": "GENERIC",
+    "copy-from": "box_small_folded",
+    "category": "tools",
+    "name": {
+      "str": "无尽的5.56盒(5.56 NATO M855) "
+    },
+    "pocket_data": [
+      {
+        "rigid": true,
+        "ammo_restriction": {
+          "223": 60
+        },
+        "moves": 35
+      }
+    ],
+    "description": "不知道是哪个家伙往这个盒子塞入了5.56子弹，现在它无穷无尽了！",
+    "relic_data": {
+      "charge_info": {
+        "recharge_type": "periodic",
+        "time": "24 h",
+        "regenerate_ammo": true
+      }
+    },
+    "price_postapoc": "2500 USD",
+    "use_action": {
+      "target": "556",
+      "msg": "打开盒子，空荡荡的盒子里瞬间装满子弹，这非常不错！",
+      "container": "endless_box_small_folded_5.56",
+      "target_charges": 60,
+      "moves": 50,
+      "type": "transform"
+    }
+  },
+  {
+    "id": "endless_plastic_jerrycan",
+    "type": "GENERIC",
+    "copy-from": "jerrycan",
+    "category": "tools",
+    "name": {
+      "str": "无尽的塑料油桶(汽油) "
+    },
+    "description": "这个油桶里面仿佛有这无穷无尽的汽油，好家伙，无尽能源了！",
+    "relic_data": {
+      "charge_info": {
+        "recharge_type": "periodic",
+        "time": "24 h",
+        "regenerate_ammo": true
+      }
+    },
+    "price_postapoc": "2500 USD",
+    "use_action": {
+      "target": "gasoline",
+      "msg": "打开油桶，里面汽油早已补充，随时可用！",
+      "container": "endless_plastic_jerrycan",
+      "target_charges": 10000,
+      "moves": 50,
+      "type": "transform"
+    }
+  },
+  {
+    "id": "endless_dianchi_box",
+    "type": "GENERIC",
+    "copy-from": "carton_milk",
+    "category": "tools",
+    "name": {
+      "str": "无尽电池盒 "
+    },
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "battery": 1000
+        }
+      }
+    ],
+    "flags": [
+      "IS_UPS"
+    ],
+    "description": "无尽电？？？",
+    "relic_data": {
+      "charge_info": {
+        "recharge_type": "periodic",
+        "time": "24 h",
+        "regenerate_ammo": true
+      }
+    },
+    "price_postapoc": "2500 USD",
+    "use_action": {
+      "target": "battery",
+      "msg": "不知道什么原理充满电了！！！",
+      "container": "endless_dianchi_box",
+      "target_charges": 1000,
+      "moves": 50,
+      "type": "transform"
+    }
+  },
+  {
+    "id": "endless_hantiao_box",
+    "type": "GENERIC",
+    "copy-from": "box_small_folded",
+    "category": "tools",
+    "name": {
+      "str": "无尽的焊条盒"
+    },
+    "flags": [
+      "TARDIS"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "max_contains_volume": "120 ml",
+        "max_contains_weight": "280 g",
+        "max_item_length": "35 cm"
+      }
+    ],
+    "description": "当盒子里面充满焊条，很高兴！",
+    "relic_data": {
+      "charge_info": {
+        "recharge_type": "periodic",
+        "time": "24 h",
+        "regenerate_ammo": true
+      }
+    },
+    "price_postapoc": "2500 USD",
+    "use_action": {
+      "target": "welding_rod_steel",
+      "msg": "焊条补充完成！",
+      "container": "endless_hantiao_box",
+      "target_charges": 100,
+      "moves": 50,
+      "type": "transform"
+    }
+  }
+]

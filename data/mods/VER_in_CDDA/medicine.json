@@ -1,0 +1,171 @@
+[
+    {
+        "type": "effect_type",
+        "id": "healcost",
+        "name": [
+          "治愈代价"
+        ],
+        "base_mods": {
+          "hunger_min": [
+            1
+          ],
+          "hunger_tick": [
+            0.5
+          ],
+          "thirst_min": [
+            1
+          ],
+          "thirst_tick": [
+            5
+          ],
+          "fatigue_min": [
+            1
+          ],
+          "fatigue_tick": [
+            16
+          ]
+        },
+        "enchantments": [
+          {
+            "condition": "ALWAYS",
+            "values": [
+              {
+                "value": "METABOLISM",
+                "multiply": 9
+              }
+            ]
+          }
+        ]
+    },
+    {
+      "id":"heal_p0",
+      "type":"effect_type",
+      "name":["加强治愈"],
+      "removes_effects": [
+        "poison",
+        "badpoison"
+      ],
+      "base_mods":{
+        "pain_tick": [
+          5
+        ],
+        "pain_min": [
+          -1
+        ]
+      }
+    },
+    {
+      "id":"heal_p1",
+      "type":"effect_type",
+      "name":["加强治愈+"],
+      "removes_effects": [
+        "bite",
+        "bleed",
+        "poison",
+        "badpoison",
+        "spores",
+        "fungus"
+      ],
+      "base_mods":{
+        "pain_tick": [
+          2
+        ],
+        "pain_min": [
+          -1
+        ]
+      }
+    },
+    {
+        "id": "stimpak_s",
+        "type": "COMESTIBLE",
+        "comestible_type": "MED",
+        "looks_like":"syringe",
+        "description":"一个可疑的微创注射器，鲁比克声称这里面的液体具有治疗效果，是从某个世界带来的特产，这一支是小型治疗针",
+        "name": { "str": "治疗针（小）", "str_pl": "治疗针（小）" },
+        "symbol": "!",
+        "weight": "20 g",
+        "volume": "5 ml",
+        "color": "red",
+        "price": "2 kUSD",
+        "price_postapoc": "20 USD",
+        "material": [
+          "plastic"
+        ],
+        "use_action": {
+          "type": "consume_drug",
+          "activation_message": "这一针让你觉得还不错，伤口在消除,但是似乎身体的新陈代谢被加速了",
+          "effects": [{"id":"healcost","duration":"1 m"} ],
+          "damage_over_time": [
+            {
+              "damage_type": "pure",
+              "duration": "5 s",
+              "amount": -2,
+              "bodyparts": [ "torso", "head", "arm_l", "leg_l", "arm_r", "leg_r" ]
+            }
+          ]
+        },
+        "flags": [ "NPC_SAFE", "IRREPLACEABLE_CONSUMABLE" ]
+      },
+      {
+        "id": "stimpak_m",
+        "looks_like":"syringe",
+        "type": "COMESTIBLE",
+        "comestible_type": "MED",
+        "description":"一个可疑的微创注射器，鲁比克声称这里面的液体具有治疗效果，是从某个世界带来的特产，这一支是中型治疗针，有解毒功能",
+        "name": { "str": "治疗针（中）", "str_pl": "治疗针（中）" },
+        "symbol": "!",
+        "weight": "30 g",
+        "volume": "10 ml",
+        "color": "red",
+        "price": "5 kUSD",
+        "price_postapoc": "50 USD",
+        "material": [
+          "plastic"
+        ],
+        "use_action": {
+          "type": "consume_drug",
+          "activation_message": "这一针让你觉得还不错，伤痛在消除,但是似乎身体的新陈代谢被加速了",
+          "effects": [{"id":"healcost","duration":"2 m"},{"id":"heal_p0","duration":"10 s"} ],
+          "damage_over_time": [
+            {
+              "damage_type": "pure",
+              "duration": "10 s",
+              "amount": -3,
+              "bodyparts": [ "torso", "head", "arm_l", "leg_l", "arm_r", "leg_r" ]
+            }
+          ]
+        },
+        "flags": [ "NPC_SAFE", "IRREPLACEABLE_CONSUMABLE" ]
+      },
+      {
+        "id": "stimpak_H",
+        "looks_like":"syringe",
+        "type": "COMESTIBLE",
+        "comestible_type": "MED",
+        "description":"一个可疑的微创注射器，鲁比克声称这里面的液体具有治疗效果，是从某个世界带来的特产，这一支是特效型治疗针，有解毒功能，急速止血，治愈咬伤和真菌感染",
+        "name": { "str": "治疗针（大）", "str_pl": "治疗针（大）" },
+        "symbol": "!",
+        "weight": "30 g",
+        "volume": "10 ml",
+        "color": "red",
+        "price": "8 kUSD",
+        "price_postapoc": "110 USD",
+        "material": [
+          "plastic"
+        ],
+        "use_action": {
+          "type": "consume_drug",
+          "activation_message": "这一针让你觉得还不错，伤痛在消除,但是似乎身体的新陈代谢被加速了",
+          "effects": [{"id":"healcost","duration":"3 m"},{"id":"heal_p1","duration":"20 s"} ],
+          "damage_over_time": [
+            {
+              "damage_type": "pure",
+              "duration": "12 s",
+              "amount": -5,
+              "bodyparts": [ "torso", "head", "arm_l", "leg_l", "arm_r", "leg_r" ]
+            }
+          ] 
+      },
+    "flags": [ "NPC_SAFE", "IRREPLACEABLE_CONSUMABLE" ]
+    }
+]

@@ -1,0 +1,432 @@
+[
+  {
+    "type": "material",
+    "id": "ovo_dragon_bone",
+    "name": "龙骨",
+    "density": 3.0,
+    "specific_heat_liquid": 5.4,
+    "specific_heat_solid": 5.4,
+    "latent_heat": 1000,
+    "chip_resist": 100,
+    "wind_resist": 90,
+    "repaired_with": "ovo_dragon_bone",
+    "salvaged_into": "ovo_dragon_bone_piece",
+    "dmg_adj": [
+      "scratched",
+      "cut",
+      "cracked",
+      "shattered"
+    ],
+    "bash_dmg_verb": "cracked",
+    "cut_dmg_verb": "chipped",
+    "breathability": "AVERAGE",
+    "bash_resist": 6,
+    "cut_resist": 8,
+    "acid_resist": 18,
+    "fire_resist": 6,
+    "bullet_resist": 10,
+    "electric_resist": 4
+  },
+  {
+    "type": "ammunition_type",
+    "id": "ovo_dragon_bone",
+    "name": "龙骨",
+    "default": "ovo_dragon_bone"
+  },
+  {
+    "id": "ovo_dragon_bone",
+    "type": "AMMO",
+    "category": "spare_parts",
+    "symbol": "/",
+    "color": "white",
+    "name": "龙骨",
+    "description": "一根坚韧的龙骨，必要时候可以拿来敲人，或者丧尸。",
+    "price": 100,
+    "price_postapoc": 100,
+    "to_hit": 1,
+    "melee_damage": {
+      "bash": 16
+    },
+    "weight": "200 g",
+    "volume": "200 ml",
+    "count": 1,
+    "stack_size": 1,
+    "ammo_type": "ovo_dragon_bone",
+    "longest_side": "40 cm",
+    "material": [
+      "ovo_dragon_bone"
+    ],
+    "flags": [
+      "NO_SALVAGE"
+    ],
+    "relic_data": {}
+  },
+  {
+    "result": "ovo_dragon_bone",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MATERIALS",
+    "skill_used": "fabrication",
+    "difficulty": 0,
+    "autolearn": true,
+    "time": "5 m",
+    "proficiencies": [
+      {
+        "proficiency": "ovo_dragon_bone_working_base"
+      }
+    ],
+    "batch_time_factors": [
+      50,
+      2
+    ],
+    "tools": [
+      [
+        [
+          "surface_heat",
+          5,
+          "LIST"
+        ]
+      ]
+    ],
+    "qualities": [
+      {
+        "id": "CONTAIN",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "meat_dragon",
+          20
+        ],
+        [
+          "ovo_dragon_meat_cooked",
+          10
+        ]
+      ],
+      [
+        [
+          "bone",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "result": "ovo_dragon_bone",
+    "type": "recipe",
+    "result_mult": 8,
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MATERIALS",
+    "skill_used": "fabrication",
+    "difficulty": 0,
+    "id_suffix": "with_dragon_essence",
+    "autolearn": true,
+    "time": "50 m",
+    "proficiencies": [
+      {
+        "proficiency": "ovo_dragon_bone_working_base"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_plus"
+      }
+    ],
+    "batch_time_factors": [
+      50,
+      2
+    ],
+    "tools": [
+      [
+        [
+          "surface_heat",
+          50,
+          "LIST"
+        ]
+      ]
+    ],
+    "qualities": [
+      {
+        "id": "CONTAIN",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "dragon_essence",
+          1
+        ]
+      ],
+      [
+        [
+          "bone",
+          8
+        ]
+      ]
+    ]
+  },
+  {
+    "id": "ovo_dragon_bone_piece",
+    "type": "AMMO",
+    "category": "spare_parts",
+    "symbol": "-",
+    "color": "white",
+    "name": "龙骨碎片",
+    "description": "一些龙骨的碎片，适合缝缝补补。",
+    "price": 10,
+    "price_postapoc": 10,
+    "to_hit": -5,
+    "weight": "10 g",
+    "volume": "10 ml",
+    "count": 1,
+    "stack_size": 1,
+    "ammo_type": "ovo_dragon_bone_piece",
+    "material": [
+      "ovo_dragon_bone"
+    ],
+    "flags": [
+      "NO_SALVAGE"
+    ],
+    "relic_data": {}
+  },
+  {
+    "type": "ammunition_type",
+    "id": "ovo_dragon_bone_piece",
+    "name": "龙骨碎片",
+    "default": "ovo_dragon_bone_piece"
+  },
+  {
+    "result": "ovo_dragon_bone_piece",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MATERIALS",
+    "skill_used": "fabrication",
+    "difficulty": 0,
+    "charges": 20,
+    "batch_time_factors": [
+      60,
+      2
+    ],
+    "autolearn": true,
+    "time": "5 m",
+    "proficiencies": [
+      {
+        "proficiency": "ovo_dragon_bone_working_base"
+      }
+    ],
+    "qualities": [
+      {
+        "id": "HAMMER",
+        "level": 1
+      },
+      {
+        "id": "GRIND",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "ovo_dragon_bone",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "id": "ovo_dragon_bone_repairkit",
+    "type": "TOOL",
+    "name": "龙骨修理包",
+    "description": "用来修理龙骨制品。",
+    "weight": "400 g",
+    "volume": "400 ml",
+    "longest_side": "80 cm",
+    "price": 200,
+    "price_postapoc": 200,
+    "to_hit": 1,
+    "melee_damage": {
+      "bash": 32
+    },
+    "material": [
+      "ovo_dragon_bone"
+    ],
+    "symbol": "|",
+    "color": "white",
+    "ammo": [
+      "ovo_dragon_bone_piece"
+    ],
+    "relic_data": {},
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "ovo_dragon_bone_piece": 100
+        }
+      }
+    ],
+    "charges_per_use": 1,
+    "use_action": [
+      {
+        "type": "repair_item",
+        "item_action_type": "repair_fabric",
+        "materials": [
+          "bone",
+          "ovo_dragon_bone"
+        ],
+        "skill": "fabrication",
+        "tool_quality": 5,
+        "cost_scaling": 0.1,
+        "move_cost": 1000
+      }
+    ],
+    "flags": [
+      "ALLOWS_REMOTE_USE"
+    ]
+  },
+  {
+    "result": "ovo_dragon_bone_repairkit",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "fabrication",
+    "difficulty": 0,
+    "autolearn": true,
+    "time": "10 m",
+    "proficiencies": [
+      {
+        "proficiency": "ovo_dragon_bone_working_base"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_plus"
+      },
+      {
+        "proficiency": "ovo_dragon_bone_working_master"
+      }
+    ],
+    "qualities": [
+      {
+        "id": "HAMMER",
+        "level": 1
+      },
+      {
+        "id": "CUT",
+        "level": 1
+      },
+      {
+        "id": "ANVIL",
+        "level": 1
+      },
+      {
+        "id": "GRIND",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "ovo_dragon_bone",
+          20
+        ],
+        [
+          "ovo_dragon_bone_piece",
+          400
+        ]
+      ]
+    ]
+  },
+  {
+    "id": "ovo_dragon_meat_cooked",
+    "copy-from": "meat",
+    "type": "COMESTIBLE",
+    "symbol": "o",
+    "color": "blue",
+    "name": "烹饪龙肉",
+    "description": "龙肉，但是熟（？）的。",
+    "price": 500,
+    "price_postapoc": 500,
+    "weight": "250 g",
+    "volume": "250 ml",
+    "material": [
+      "flesh"
+    ],
+    "parasites": 0,
+    "healthy": 8,
+    "calories": 888,
+    "quench": 8,
+    "spoils_in": 0,
+    "fun": 8,
+    "flags": [
+      "NUTRIENT_OVERRIDE",
+      "EDIBLE_FROZEN"
+    ],
+    "relic_data": {}
+  },
+  {
+    "result": "ovo_dragon_meat_cooked",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_MEAT",
+    "skill_used": "cooking",
+    "difficulty": 0,
+    "autolearn": true,
+    "time": "20 m",
+    "tools": [
+      [
+        [
+          "surface_heat",
+          20,
+          "LIST"
+        ]
+      ]
+    ],
+    "qualities": [
+      {
+        "id": "HAMMER",
+        "level": 1
+      },
+      {
+        "id": "CONTAIN",
+        "level": 1
+      },
+      {
+        "id": "COOK",
+        "level": 1
+      },
+      {
+        "id": "CUT",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "meat_dragon",
+          2
+        ]
+      ],
+      [
+        [
+          "water",
+          1
+        ],
+        [
+          "water_clean",
+          1
+        ]
+      ],
+      [
+        [
+          "mana_dust",
+          1
+        ]
+      ]
+    ]
+  }
+]

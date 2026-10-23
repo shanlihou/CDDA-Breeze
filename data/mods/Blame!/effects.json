@@ -1,0 +1,201 @@
+[
+  {
+    "type": "effect_type",
+    "id": "arcthitecture_effect",
+    "desc": [
+      "将身体的绝大部分大部分结构，更替成一种名为“构造体”的特殊物质，可以如人体般再生，且异常坚韧，还具有很强的环境抗性。\n 核心要害位置则使用更加强韧的“超构造体”加固保护。"
+    ],
+    "blocks_effects": [
+      "stung",
+      "poison",
+      "venom_dmg",
+      "venom_weaken",
+      "bite",
+      "spores",
+      "dermatik",
+      "corroding",
+      "bleed",
+	  "hot",
+      "cold",
+      "fungus",
+      "beartrap",
+      "formication",
+      "zapped",
+	  "frostbite",
+	  "blisters"
+    ],
+    "show_in_info": false
+  },
+  {
+    "type": "effect_type",
+    "id": "Security_Guard_effect",
+    "name": [
+      "安全警卫改造"
+    ],
+    "desc": [
+      "你的身体经受特殊改造。\n大部分人类生理的缺陷都不复存在，营养物质需求大幅减少，生存能力也大为加强。"
+    ],
+    "blocks_effects": [
+      "depressants",
+      "stunned",
+      "sensor_stun",
+      "dazed",
+      "badpoison",
+      "foodpoison",
+      "paralyzepoison",
+      "nausea",
+      "glare",
+      "snow_glare",
+      "smoke",
+      "teargas",
+      "infected",
+      "taint",
+      "motor_seizure",
+      "common_cold",
+      "flu",
+      "fearparalyze",
+      "asthma",
+      "relax_gas",
+      "tapeworm",
+      "bloodworms",
+      "brainworms",
+      "paincysts",
+      "tetanus",
+      "datura",
+      "hypocalcemia",
+      "anemia",
+      "hypovolemia",
+      "redcells_anemia",
+      "hypovitA",
+      "hypovitB",
+      "scurvy",
+      "hypervitaminosis",
+      "migo_atmosphere",
+      "fetid_goop",
+      "weary_1",
+      "weary_2",
+      "weary_3",
+      "weary_4",
+      "weary_5",
+      "weary_6",
+      "weary_7",
+      "weary_8",
+	  "hunger_blank",
+      "hunger_full",
+      "hunger_engorged",
+	  "hunger_satisfied",
+	  "hunger_hungry",
+      "hunger_very_hungry",
+      "hunger_near_starving",
+      "hunger_starving",
+      "hunger_famished",
+      "sleep_deprived",
+      "lack_sleep",
+	  "sleep",
+	  "winded",
+	  "zombie_virus"
+    ],
+    "base_mods": { "healing_rate": [ 3 ],"pain_min": [ -3 ],"health_min": [ 10 ],"rad_min": [ -3 ] }
+  },
+  {
+    "type": "effect_type",
+    "id": "SG_hibernate",
+    "name": [
+      "休眠状态"
+    ],
+    "desc": [
+      "休眠系统让身体的需求与反应大大降低，并停止视听功能，恢复能力大幅提高。\n手动停止休眠请激活紧急休眠中止装置！"
+    ],
+    "apply_message": "系统进入休眠状态………………",
+    "remove_message": "休眠系统已关闭。",
+    "max_intensity": 1,
+    "base_mods": { "str_mod": [ -7 ],"dex_mod": [ -8 ],"per_mod": [ -13 ],"int_mod": [ -5 ],"health_min": [ 1 ],"h_mod_min": [ 1 ],"pain_min": [ -100 ],"rad_min": [ -1000 ] },
+    "enchantments": [ 
+      {
+        "condition": "ALWAYS",
+        "values": [
+          { "value": "METABOLISM", "multiply": -0.24 },
+          { "value": "SPEED", "multiply": -0.9 },
+          { "value": "REGEN_HP", "multiply": 5 }
+        ]
+      }
+    ],
+    "flags": [ "INVISIBLE","DEAF","BLIND" ]
+  },
+  {
+    "type": "effect_type",
+    "id": "SG_hibernate_DEATH",
+    "name": [
+      "机体严重受损"
+    ],
+    "desc": [
+      "机体严重受损！请等待系统上线！"
+    ],
+    "apply_message": "机体严重受损！\n进入修复程序！",
+    "remove_message": "系统已上线……修复完毕。",
+    "max_intensity": 1,
+    "base_mods": { "str_mod": [ -9 ],"dex_mod": [ -9 ],"per_mod": [ -15 ],"int_mod": [ -6 ],"health_min": [ 1 ],"h_mod_min": [ 1 ],"pain_min": [ -100 ],"rad_min": [ -1000 ] },
+    "enchantments": [ 
+      {
+        "condition": "ALWAYS",
+        "values": [
+          { "value": "METABOLISM", "multiply": -0.24 },
+          { "value": "SPEED", "multiply": -0.9 },
+          { "value": "REGEN_HP", "multiply": 0.5 }
+        ]
+      }
+    ],
+    "flags": [ "INVISIBLE","DEAF","BLIND" ]
+  },
+  {
+    "type": "effect_type",
+    "id": "SG_hibernate_status_detection",
+    "desc": [
+      "用于检测休眠状态效果，不该看的到。"
+    ],
+    "apply_message": "休眠程序启动中……请保持安全位置………",
+    "max_duration": "3 s",
+    "max_intensity": 1,
+    "show_in_info": false
+  },
+  {
+    "type": "effect_type",
+    "id": "SG_hibernate_clos",
+    "name": [
+      "紧急休眠中止"
+    ],
+    "desc": [
+      "紧急中止休眠状态，请等待系统功能恢复。"
+    ],
+    "apply_message": "休眠已关闭……系统恢复中……",
+    "remove_message": "系统恢复完成。",
+    "max_duration": "30 s",
+    "max_intensity": 1,
+    "rating": "bad",
+    "show_in_info": true,
+    "removes_effects": [ "SG_hibernate" ],
+    "base_mods": { "str_mod": [ -5 ],"dex_mod": [ -6 ],"per_mod": [ -9 ],"int_mod": [ -3 ],"health_min": [ 13 ],"h_mod_min": [ 13 ],"healing_rate": [ 13 ] },
+    "enchantments": [ 
+      {
+        "condition": "ALWAYS",
+        "values": [
+          { "value": "SPEED", "multiply": -0.6 }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_GB_fusion",
+    "name": [ "灼烧" ],
+    "desc": [ "你被点燃了！" ],
+    "apply_message": "你被点燃了！",
+    "rating": "bad",
+    "max_duration": "15 s",
+    "max_intensity": 5,
+    "resist_traits": [ "HEAT_IMMUNE" ],
+    "base_mods": { "hurt_min": [ 1 ], "hurt_chance": [ 1 ], "hurt_chance_bot": [ 13 ],"speed_mod": [ -3 ] },
+    "scaling_mods": { "pain_max_val": [ 10 ], "pain_chance": [ 100 ] },
+    "show_in_info": true
+  }
+]

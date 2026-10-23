@@ -1,0 +1,606 @@
+[
+  {
+    "id": "mini_hakkero_replica",
+    "type": "TOOL",
+    "name": {
+      "str": "迷你八卦炉（复制品）"
+    },
+    "description": "一个小型木制魔法炉。不过这一件显然是复制品，用现代材料进行了\"改良\"。",
+    "volume": "500 ml",
+    "weight": "500 g",
+    "longest_side": "12 cm",
+    "price_postapoc": 25000,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "none",
+      "length": "hand",
+      "surface": "any"
+    },
+    "material": [
+      "plastic",
+      "steel",
+      "wood"
+    ],
+    "symbol": "☲",
+    "color": "light_blue",
+    "charges_per_use": 1,
+    "qualities": [
+      [
+        "COOK",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "battery": 5
+        }
+      }
+    ],
+    "relic_data": {
+      "charge_info": {
+        "regenerate_ammo": true,
+        "recharge_type": "periodic",
+        "time": "30 s"
+      }
+    },
+    "use_action": [
+      "HOTPLATE",
+      {
+        "target": "mini_hakkero_replica_on",
+        "type": "transform",
+        "msg": "你将迷你八卦炉用作光源。",
+        "menu_text": "开启",
+        "active": true
+      },
+      {
+        "type": "cast_spell",
+        "spell_id": "mini_hakkero_replica_mspark",
+        "no_fail": true,
+        "level": 1
+      },
+      {
+        "type": "cast_spell",
+        "spell_id": "mini_hakkero_replica_mmissile",
+        "no_fail": true,
+        "level": 1
+      }
+    ],
+    "flags": [
+      "BELT_CLIP",
+      "NO_RELOAD",
+      "NO_UNLOAD",
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "mini_hakkero_replica_on",
+    "type": "TOOL",
+    "name": {
+      "str": "迷你八卦炉（复制品）（开启）"
+    },
+    "copy-from": "mini_hakkero_replica",
+    "description": "一个小型木制魔法炉。它当前正作为光源工作。",
+    "power_draw": 0,
+    "revert_to": "mini_hakkero_replica",
+    "use_action": [
+      {
+        "target": "mini_hakkero_replica",
+        "type": "transform",
+        "msg": "你关闭了迷你八卦炉。",
+        "menu_text": "关闭",
+        "ammo_scale": 0
+      }
+    ],
+    "flags": [
+      "BELT_CLIP",
+      "LIGHT_200",
+      "TRADER_AVOID",
+      "USE_PLAYER_ENERGY"
+    ]
+  },
+  {
+    "id": "mini_hakkero_replica_mspark",
+    "type": "SPELL",
+    "name": "极限火花（复制品）",
+    "description": "发射一道非常大、非常强的激光。至少理论上应该如此。",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
+    "effect": "attack",
+    "extra_effects": [
+      {
+        "id": "spell_misfire"
+      },
+      {
+        "id": "minispark_replica"
+      },
+      {
+        "id": "minispark_replica"
+      },
+      {
+        "id": "mspark_cold"
+      },
+      {
+        "id": "mspark_cold"
+      },
+      {
+        "id": "mspark_electric"
+      },
+      {
+        "id": "mspark_electric"
+      },
+      {
+        "id": "mspark_electric"
+      },
+      {
+        "id": "mspark_electric"
+      },
+      {
+        "id": "mspark_electric"
+      },
+      {
+        "id": "mspark_electric"
+      },
+      {
+        "id": "mspark_electric"
+      },
+      {
+        "id": "mspark_electric"
+      },
+      {
+        "id": "mspark_electric"
+      },
+      {
+        "id": "mspark_electric"
+      },
+      {
+        "id": "mspark_electric"
+      },
+      {
+        "id": "mspark_electric"
+      },
+      {
+        "id": "mspark_electric"
+      },
+      {
+        "id": "mspark_electric"
+      },
+      {
+        "id": "mspark_electric"
+      }
+    ],
+    "//": "5% chance to misfire, 10% chance to shoot a mini master spark, 10% chance to shoot a cold master spark",
+    "shape": "line",
+    "damage_type": "electric",
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 35,
+    "max_range": 45,
+    "range_increment": 1,
+    "min_aoe": 8,
+    "max_aoe": 8,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 200,
+    "base_energy_cost": 200,
+    "energy_source": "MANA",
+    "flags": [
+      "LOUD",
+      "NO_LEGS",
+      "WONDER"
+    ]
+  },
+  {
+    "id": "spell_misfire",
+    "type": "SPELL",
+    "name": "法术失败",
+    "description": "法术失败",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "line",
+    "message": "迷你八卦炉发出嘶嘶声",
+    "damage_type": "electric",
+    "min_damage": 0,
+    "max_damage": 0,
+    "damage_increment": 0,
+    "min_range": 35,
+    "max_range": 45,
+    "range_increment": 1,
+    "min_aoe": 8,
+    "max_aoe": 8,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA"
+  },
+  {
+    "id": "minispark_replica",
+    "type": "SPELL",
+    "name": "迷你火花（复制品）",
+    "description": "发射一道非常小、稍弱的激光。",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "line",
+    "message": "迷你八卦炉发出嘶嘶声，并射出一道……强光",
+    "damage_type": "bash",
+    "min_damage": 27,
+    "max_damage": 60,
+    "damage_increment": 3.3,
+    "min_range": 35,
+    "max_range": 45,
+    "range_increment": 1,
+    "min_aoe": 2,
+    "max_aoe": 2,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA"
+  },
+  {
+    "id": "mspark_cold",
+    "type": "SPELL",
+    "name": "极限火花（复制品）",
+    "description": "发射一道非常大、非常强的激光。",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "line",
+    "message": "迷你八卦炉射出了一道寒冷的火花！",
+    "damage_type": "cold",
+    "min_damage": 110,
+    "max_damage": 240,
+    "damage_increment": 13,
+    "min_range": 35,
+    "max_range": 45,
+    "range_increment": 1,
+    "min_aoe": 8,
+    "max_aoe": 8,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA"
+  },
+  {
+    "id": "mspark_electric",
+    "type": "SPELL",
+    "name": "极限火花（复制品）",
+    "description": "发射一道非常大、非常强的激光。",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "line",
+    "message": "迷你八卦炉射出了一道极限火花复制品！",
+    "damage_type": "electric",
+    "min_damage": 110,
+    "max_damage": 240,
+    "damage_increment": 13,
+    "min_range": 35,
+    "max_range": 45,
+    "range_increment": 1,
+    "min_aoe": 8,
+    "max_aoe": 8,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA"
+  },
+  {
+    "id": "mini_hakkero_replica_mmissile",
+    "type": "SPELL",
+    "name": "魔法飞弹（复制品）",
+    "description": "发射数枚看起来像导弹的魔法弹丸。至少理论上应该如此。",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
+    "effect": "attack",
+    "extra_effects": [
+      {
+        "id": "spell_misfire2"
+      },
+      {
+        "id": "spell_misfire2"
+      },
+      {
+        "id": "mmissile_flame"
+      },
+      {
+        "id": "mmissile_flame"
+      },
+      {
+        "id": "mmissile_flame"
+      },
+      {
+        "id": "mmissile_cold"
+      },
+      {
+        "id": "mmissile_cold"
+      },
+      {
+        "id": "mmissile_electric"
+      },
+      {
+        "id": "mmissile_electric"
+      },
+      {
+        "id": "mmissile_electric"
+      },
+      {
+        "id": "mmissile_electric"
+      },
+      {
+        "id": "mmissile_electric"
+      },
+      {
+        "id": "mmissile_electric"
+      },
+      {
+        "id": "mmissile_electric"
+      },
+      {
+        "id": "mmissile_electric"
+      },
+      {
+        "id": "mmissile_electric"
+      },
+      {
+        "id": "mmissile_electric"
+      },
+      {
+        "id": "mmissile_electric"
+      },
+      {
+        "id": "mmissile_electric"
+      },
+      {
+        "id": "mmissile_electric"
+      }
+    ],
+    "//": "10% chance to misfire, 15% chance to shoot flaming missiles, 10% chance to shoot cold missiles",
+    "shape": "line",
+    "damage_type": "electric",
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 10,
+    "max_range": 24,
+    "range_increment": 1.4,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 50,
+    "base_energy_cost": 50,
+    "energy_source": "MANA",
+    "flags": [
+      "LOUD",
+      "NO_LEGS",
+      "WONDER"
+    ]
+  },
+  {
+    "id": "spell_misfire2",
+    "type": "SPELL",
+    "name": "法术失败",
+    "description": "法术失败",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "line",
+    "message": "迷你八卦炉射出了……小树？",
+    "damage_type": "electric",
+    "min_damage": 0,
+    "max_damage": 0,
+    "damage_increment": 0,
+    "min_range": 10,
+    "max_range": 24,
+    "range_increment": 1.4,
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA"
+  },
+  {
+    "id": "mmissile_flame",
+    "type": "SPELL",
+    "name": "魔法飞弹（火焰）",
+    "description": "发射数枚看起来像导弹的魔法弹丸。",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
+    "effect": "attack",
+    "extra_effects": [
+      {
+        "id": "mmissile_flame2"
+      }
+    ],
+    "shape": "blast",
+    "message": "迷你八卦炉射出了由火焰魔法构成的导弹！",
+    "damage_type": "heat",
+    "min_damage": 28,
+    "max_damage": 100,
+    "damage_increment": 7.2,
+    "min_range": 10,
+    "max_range": 24,
+    "range_increment": 1.4,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "flags": [
+      "IGNITE_FLAMMABLE"
+    ],
+    "//": "Add a non-damaging AoE effect"
+  },
+  {
+    "id": "mmissile_flame2",
+    "type": "SPELL",
+    "name": "魔法飞弹（火焰）（范围）",
+    "description": "mmissile_flame 的范围效果组件",
+    "spell_class": "NONE",
+    "effect": "attack",
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
+    "shape": "blast",
+    "damage_type": "heat",
+    "min_damage": 1,
+    "max_damage": 1,
+    "damage_increment": 0,
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "flags": [
+      "IGNITE_FLAMMABLE"
+    ]
+  },
+  {
+    "id": "mmissile_cold",
+    "type": "SPELL",
+    "name": "魔法飞弹（寒冷）",
+    "description": "发射数枚看起来像导弹的魔法弹丸。",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
+    "effect": "attack",
+    "extra_effects": [
+      {
+        "id": "mmissile_cold2"
+      }
+    ],
+    "shape": "blast",
+    "message": "迷你八卦炉射出了由寒冷魔法构成的导弹！",
+    "damage_type": "cold",
+    "min_damage": 28,
+    "max_damage": 100,
+    "damage_increment": 7.2,
+    "min_range": 10,
+    "max_range": 24,
+    "range_increment": 1.4,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA"
+  },
+  {
+    "id": "mmissile_cold2",
+    "type": "SPELL",
+    "name": "魔法飞弹（寒冷）（范围）",
+    "description": "mmissile_cold 的范围效果组件",
+    "spell_class": "NONE",
+    "effect": "attack",
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
+    "shape": "blast",
+    "damage_type": "cold",
+    "min_damage": 0,
+    "max_damage": 0,
+    "damage_increment": 0,
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA"
+  },
+  {
+    "id": "mmissile_electric",
+    "type": "SPELL",
+    "name": "魔法飞弹（复制品）",
+    "description": "发射数枚看起来像导弹的魔法弹丸。",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
+    "effect": "attack",
+    "extra_effects": [
+      {
+        "id": "mmissile_electric2"
+      }
+    ],
+    "message": "迷你八卦炉射出了由闪电魔法构成的导弹！",
+    "shape": "blast",
+    "damage_type": "electric",
+    "min_damage": 28,
+    "max_damage": 100,
+    "damage_increment": 7.2,
+    "min_range": 10,
+    "max_range": 24,
+    "range_increment": 1.4,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "flags": [
+      "LOUD",
+      "NO_LEGS"
+    ],
+    "//": "Add a non-damaging AoE effect"
+  },
+  {
+    "id": "mmissile_electric2",
+    "type": "SPELL",
+    "name": "魔法飞弹（复制品）（范围）",
+    "description": "mmissile_electric 的范围效果组件",
+    "spell_class": "NONE",
+    "effect": "attack",
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
+    "shape": "blast",
+    "damage_type": "electric",
+    "min_damage": 0,
+    "max_damage": 0,
+    "damage_increment": 0,
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA"
+  }
+]

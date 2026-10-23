@@ -1,0 +1,1401 @@
+[
+    {
+        "type": "mutation",
+        "id": "Revia_tail_I",
+        "name": {
+          "str": "雷维亚之征：壹尾"
+        },
+        "points": 4,
+        "description": "你获得了第一条雷维亚尾巴，这是斯卡恩对她孩子的爱的象征与赐福。它会给你闪避增加，伤害减免，血量增加，自愈速度增加行动点增加的微量效果",
+        "changes_to": [
+          "Revia_tail_II"
+        ],
+        "category": [
+          "Revia"
+        ],
+        "threshreq": [
+            "THRESH_Revia"
+        ],
+        "ugliness": -2,
+        "dodge_modifier": 0.5,
+        "hp_modifier_secondary": 0.05,
+        "enchantments": [
+            {
+              "condition": "ALWAYS",
+              "values": [
+                { "value": "ARMOR_ACID", "multiply": -0.05 },
+                { "value": "ARMOR_BASH", "multiply": -0.05 },
+                { "value": "ARMOR_BIO", "multiply": -0.05 },
+                { "value": "ARMOR_BULLET", "multiply": -0.05 },
+                { "value": "ARMOR_COLD", "multiply": -0.05 },
+                { "value": "ARMOR_CUT", "multiply": -0.05 },
+                { "value": "ARMOR_ELEC", "multiply": -0.05 },
+                { "value": "ARMOR_HEAT", "multiply": -0.05 },
+                { "value": "ARMOR_STAB", "multiply": -0.05 },
+                { "value": "SPEED",      "multiply": 0.01   }
+              ]
+            }
+        ],
+        "healing_awake": 0.2,
+        "healing_multiplier": 1.5,
+        "mending_modifier": 1
+
+    },
+    {
+        "type": "mutation",
+        "id": "Revia_tail_II",
+        "name": {
+          "str": "雷维亚之征：贰尾"
+        },
+        "points": 6,
+        "description": "你已经获得了两条雷维亚尾巴，这是斯卡恩对她孩子的爱的象征与赐福。它会给你闪避增加，伤害减免，血量增加，自愈速度增加行动点增加的微量效果",
+        "prereqs": [
+            "Revia_tail_I"
+          ],
+        "changes_to": [
+          "Revia_tail_III"
+        ],
+        "category": [
+          "Revia"
+        ],
+        "threshreq": [
+            "THRESH_Revia"
+        ],
+        "ugliness": -4,
+        "dodge_modifier": 1,
+        "hp_modifier_secondary": 0.1,
+        "enchantments": [
+            {
+              "condition": "ALWAYS",
+              "values": [
+                { "value": "ARMOR_ACID", "multiply": -0.1 },
+                { "value": "ARMOR_BASH", "multiply": -0.1 },
+                { "value": "ARMOR_BIO", "multiply": -0.1 },
+                { "value": "ARMOR_BULLET", "multiply": -0.1 },
+                { "value": "ARMOR_COLD", "multiply": -0.1 },
+                { "value": "ARMOR_CUT", "multiply": -0.1 },
+                { "value": "ARMOR_ELEC", "multiply": -0.1 },
+                { "value": "ARMOR_HEAT", "multiply": -0.1 },
+                { "value": "ARMOR_STAB", "multiply": -0.1 },
+                { "value": "SPEED",      "multiply": 0.02   }
+              ]
+            }
+        ],
+        "healing_awake": 0.2,
+        "healing_multiplier": 1.5,
+        "mending_modifier": 2
+
+    },
+    {
+        "type": "mutation",
+        "id": "Revia_tail_III",
+        "name": {
+          "str": "雷维亚之征：叁尾"
+        },
+        "points": 8,
+        "description": "你已经获得了三条雷维亚尾巴，这是斯卡恩对她孩子的爱的象征与赐福。它会给你闪避增加，伤害减免，血量增加，自愈速度增加行动点增加的较少量效果",
+        "prereqs": [
+            "Revia_tail_II"
+          ],
+        "changes_to": [
+          "Revia_tail_IV"
+        ],
+        "category": [
+          "Revia"
+        ],
+        "threshreq": [
+            "THRESH_Revia"
+        ],
+        "ugliness": -6,
+        "dodge_modifier": 1.5,
+        "hp_modifier_secondary": 0.15,
+        "enchantments": [
+            {
+              "condition": "ALWAYS",
+              "values": [
+                { "value": "ARMOR_ACID", "multiply": -0.15 },
+                { "value": "ARMOR_BASH", "multiply": -0.15 },
+                { "value": "ARMOR_BIO", "multiply": -0.15 },
+                { "value": "ARMOR_BULLET", "multiply": -0.15 },
+                { "value": "ARMOR_COLD", "multiply": -0.15 },
+                { "value": "ARMOR_CUT", "multiply": -0.15 },
+                { "value": "ARMOR_ELEC", "multiply": -0.15 },
+                { "value": "ARMOR_HEAT", "multiply": -0.15 },
+                { "value": "ARMOR_STAB", "multiply": -0.15 },
+                { "value": "SPEED",      "multiply": 0.03   }
+              ]
+            }
+        ],
+        "healing_awake": 0.2,
+        "healing_multiplier": 1.5,
+        "mending_modifier": 3
+
+    },
+    {
+        "type": "mutation",
+        "id": "Revia_tail_IV",
+        "name": {
+          "str": "雷维亚之征：肆尾"
+        },
+        "points": 10,
+        "description": "你已经获得了四条雷维亚尾巴，这是斯卡恩对她孩子的爱的象征与赐福。它会给你四维增加，闪避增加，伤害减免，血量增加，自愈速度增加行动点增加的少量效果",
+        "prereqs": [
+            "Revia_tail_III"
+          ],
+        "changes_to": [
+          "Revia_tail_V"
+        ],
+        "category": [
+          "Revia"
+        ],
+        "threshreq": [
+            "THRESH_Revia"
+        ],
+        "ugliness": -8,
+        "dodge_modifier": 2.5,
+        "hp_modifier_secondary": 0.2,
+        "enchantments": [
+            {
+              "condition": "ALWAYS",
+              "values": [
+                { "value": "ARMOR_ACID", "multiply": -0.2 },
+                { "value": "ARMOR_BASH", "multiply": -0.2 },
+                { "value": "ARMOR_BIO", "multiply": -0.2 },
+                { "value": "ARMOR_BULLET", "multiply": -0.2 },
+                { "value": "ARMOR_COLD", "multiply": -0.2 },
+                { "value": "ARMOR_CUT", "multiply": -0.2 },
+                { "value": "ARMOR_ELEC", "multiply": -0.2 },
+                { "value": "ARMOR_HEAT", "multiply": -0.2 },
+                { "value": "ARMOR_STAB", "multiply": -0.2 },
+                { "value": "SPEED",      "multiply": 0.05   }
+              ]
+            }
+        ],
+        "healing_awake": 0.44,
+        "healing_multiplier": 2.5,
+        "mending_modifier": 5,
+        "passive_mods": {
+            "str_mod": 1,
+            "dex_mod": 1,
+            "int_mod": 1,
+            "per_mod": 1
+          }
+
+    },
+    {
+        "type": "mutation",
+        "id": "Revia_tail_V",
+        "name": {
+          "str": "雷维亚之征：伍尾"
+        },
+        "points": 12,
+        "description": "你已经获得了五条雷维亚尾巴，这是斯卡恩对她孩子的爱的象征与赐福,在雷维亚族中也算的上是中流砥柱了。它会给你四维增加，闪避增加，伤害减免，血量增加，自愈速度增加行动点增加的中量效果",
+        "prereqs": [
+            "Revia_tail_IV"
+          ],
+        "changes_to": [
+          "Revia_tail_VI"
+        ],
+        "category": [
+          "Revia"
+        ],
+        "threshreq": [
+            "THRESH_Revia"
+        ],
+        "ugliness": -10,
+        "dodge_modifier": 3.5,
+        "hp_modifier_secondary": 0.25,
+        "enchantments": [
+            {
+              "condition": "ALWAYS",
+              "values": [
+                { "value": "ARMOR_ACID", "multiply": -0.25 },
+                { "value": "ARMOR_BASH", "multiply": -0.25 },
+                { "value": "ARMOR_BIO", "multiply": -0.25 },
+                { "value": "ARMOR_BULLET", "multiply": -0.25 },
+                { "value": "ARMOR_COLD", "multiply": -0.25 },
+                { "value": "ARMOR_CUT", "multiply": -0.25 },
+                { "value": "ARMOR_ELEC", "multiply": -0.25 },
+                { "value": "ARMOR_HEAT", "multiply": -0.25 },
+                { "value": "ARMOR_STAB", "multiply": -0.25 },
+                { "value": "SPEED",      "multiply": 0.07   }
+              ]
+            }
+        ],
+        "healing_awake": 0.44,
+        "healing_multiplier": 2.5,
+        "mending_modifier": 7,
+        "passive_mods": {
+            "str_mod": 2,
+            "dex_mod": 2,
+            "int_mod": 2,
+            "per_mod": 2
+          }
+
+    },
+    {
+        "type": "mutation",
+        "id": "Revia_tail_VI",
+        "name": {
+          "str": "雷维亚之征：陆尾"
+        },
+        "points": 14,
+        "description": "你已经获得了六条雷维亚尾巴，这是斯卡恩对她孩子的爱的象征与赐福,在雷维亚族中也算的上是中流砥柱了。它会给你四维增加，闪避增加，伤害减免，血量增加，自愈速度增加行动点增加的稍大量效果",
+        "prereqs": [
+            "Revia_tail_V"
+          ],
+        "changes_to": [
+          "Revia_tail_VII"
+        ],
+        "category": [
+          "Revia"
+        ],
+        "threshreq": [
+            "THRESH_Revia"
+        ],
+        "ugliness": -12,
+        "dodge_modifier": 4.5,
+        "hp_modifier_secondary": 0.3,
+        "enchantments": [
+            {
+              "condition": "ALWAYS",
+              "values": [
+                { "value": "ARMOR_ACID", "multiply": -0.3 },
+                { "value": "ARMOR_BASH", "multiply": -0.3 },
+                { "value": "ARMOR_BIO", "multiply": -0.3 },
+                { "value": "ARMOR_BULLET", "multiply": -0.3 },
+                { "value": "ARMOR_COLD", "multiply": -0.3 },
+                { "value": "ARMOR_CUT", "multiply": -0.3 },
+                { "value": "ARMOR_ELEC", "multiply": -0.3 },
+                { "value": "ARMOR_HEAT", "multiply": -0.3 },
+                { "value": "ARMOR_STAB", "multiply": -0.3 },
+                { "value": "SPEED",      "multiply": 0.09   }
+              ]
+            }
+        ],
+        "healing_awake": 0.44,
+        "healing_multiplier": 2.5,
+        "mending_modifier": 9,
+        "passive_mods": {
+            "str_mod": 4,
+            "dex_mod": 4,
+            "int_mod": 4,
+            "per_mod": 4
+          }
+
+    },
+    {
+        "type": "mutation",
+        "id": "Revia_tail_VII",
+        "name": {
+          "str": "雷维亚之征：柒尾"
+        },
+        "points": 16,
+        "description": "你已经获得了七条雷维亚尾巴，这是斯卡恩对她孩子的爱的象征与赐福,在雷维亚族中也算的上是少数精英。它会给你四维增加，闪避增加，伤害减免，血量增加，自愈速度增加行动点增加的大量效果",
+        "prereqs": [
+            "Revia_tail_VI"
+          ],
+        "changes_to": [
+          "Revia_tail_VIII"
+        ],
+        "category": [
+          "Revia"
+        ],
+        "threshreq": [
+            "THRESH_Revia"
+        ],
+        "ugliness": -14,
+        "dodge_modifier": 6.5,
+        "hp_modifier_secondary": 0.35,
+        "enchantments": [
+            {
+              "condition": "ALWAYS",
+              "values": [
+                { "value": "ARMOR_ACID", "multiply": -0.35 },
+                { "value": "ARMOR_BASH", "multiply": -0.35 },
+                { "value": "ARMOR_BIO", "multiply": -0.35},
+                { "value": "ARMOR_BULLET", "multiply": -0.35 },
+                { "value": "ARMOR_COLD", "multiply": -0.35 },
+                { "value": "ARMOR_CUT", "multiply": -0.35 },
+                { "value": "ARMOR_ELEC", "multiply": -0.35 },
+                { "value": "ARMOR_HEAT", "multiply": -0.35 },
+                { "value": "ARMOR_STAB", "multiply": -0.35 },
+                { "value": "SPEED",      "multiply": 0.11   }
+              ]
+            }
+        ],
+        "healing_awake": 0.8,
+        "healing_multiplier": 3,
+        "mending_modifier": 12,
+        "passive_mods": {
+            "str_mod": 6,
+            "dex_mod": 6,
+            "int_mod": 6,
+            "per_mod": 6
+          },
+          "encumbrance_always": [
+            ["torso",-5],["head",-5],
+            ["arm_l",-5],["arm_r",-5],
+            ["hand_l",-5],["hand_r",-5],
+            ["leg_l",-5],["leg_r",-5],
+            ["foot_l",-5],["foot_r",-5],
+            ["eyes",-5],["mouth",-5]
+          ]
+
+    },
+    {
+        "type": "mutation",
+        "id": "Revia_tail_VIII",
+        "name": {
+          "str": "雷维亚之征：捌尾"
+        },
+        "points": 18,
+        "description": "你已经获得了八条雷维亚尾巴，这是斯卡恩对她孩子的爱的象征与赐福,在雷维亚族中算是独当一面的人了。它会给你四维增加，闪避增加，伤害减免，血量增加，自愈速度，累赘减少，增加行动点增加的巨量效果",
+        "prereqs": [
+            "Revia_tail_VII"
+          ],
+        "changes_to": [
+          "Revia_tail_IX"
+        ],
+        "category": [
+          "Revia"
+        ],
+        "threshreq": [
+            "THRESH_Revia"
+        ],
+        "ugliness": -16,
+        "dodge_modifier": 8.5,
+        "hp_modifier_secondary": 0.4,
+        "enchantments": [
+            {
+              "condition": "ALWAYS",
+              "values": [
+                { "value": "ARMOR_ACID", "multiply": -0.4 },
+                { "value": "ARMOR_BASH", "multiply": -0.4 },
+                { "value": "ARMOR_BIO", "multiply": -0.4},
+                { "value": "ARMOR_BULLET", "multiply": -0.4 },
+                { "value": "ARMOR_COLD", "multiply": -0.4 },
+                { "value": "ARMOR_CUT", "multiply": -0.4 },
+                { "value": "ARMOR_ELEC", "multiply": -0.4 },
+                { "value": "ARMOR_HEAT", "multiply": -0.4 },
+                { "value": "ARMOR_STAB", "multiply": -0.4 },
+                { "value": "SPEED",      "multiply": 0.15   }
+              ]
+            }
+        ],
+        "healing_awake": 0.8,
+        "healing_multiplier": 3,
+        "mending_modifier": 15,
+        "passive_mods": {
+            "str_mod": 9,
+            "dex_mod": 9,
+            "int_mod": 9,
+            "per_mod": 9
+          },
+          "encumbrance_always": [
+            ["torso",-10],["head",-10],
+            ["arm_l",-10],["arm_r",-10],
+            ["hand_l",-10],["hand_r",-10],
+            ["leg_l",-10],["leg_r",-10],
+            ["foot_l",-10],["foot_r",-10],
+            ["eyes",-10],["mouth",-10]
+          ]
+
+    },
+    {
+        "type": "mutation",
+        "id": "Revia_tail_IX",
+        "name": {
+          "str": "雷维亚之征：玖尾"
+        },
+        "points": 20,
+        "description": "你已经获得了九条雷维亚尾巴，这是斯卡恩对她孩子的爱的象征与赐福,在雷维亚族中也是顶尖人物，能当血神的祭司了。它会给你四维增加，闪避增加，伤害减免，血量增加，自愈速度，累赘减少，增加行动点增加的超量效果",
+        "prereqs": [
+            "Revia_tail_VIII"
+          ],
+        "category": [
+          "Revia"
+        ],
+        "threshreq": [
+            "THRESH_Revia"
+        ],
+        "ugliness": -18,
+        "dodge_modifier": 10.5,
+        "hp_modifier_secondary": 0.5,
+        "enchantments": [
+            {
+              "condition": "ALWAYS",
+              "values": [
+                { "value": "ARMOR_ACID", "multiply": -0.5 },
+                { "value": "ARMOR_BASH", "multiply": -0.5 },
+                { "value": "ARMOR_BIO", "multiply": -0.5},
+                { "value": "ARMOR_BULLET", "multiply": -0.5 },
+                { "value": "ARMOR_COLD", "multiply": -0.5 },
+                { "value": "ARMOR_CUT", "multiply": -0.5 },
+                { "value": "ARMOR_ELEC", "multiply": -0.5 },
+                { "value": "ARMOR_HEAT", "multiply": -0.5 },
+                { "value": "ARMOR_STAB", "multiply": -0.5 },
+                { "value": "SPEED",      "multiply": 0.2   }
+              ]
+            }
+        ],
+        "healing_awake": 0.8,
+        "healing_multiplier": 3,
+        "mending_modifier": 18,
+        "passive_mods": {
+            "str_mod": 12,
+            "dex_mod": 12,
+            "int_mod": 12,
+            "per_mod": 12
+          },
+          "encumbrance_always": [
+            ["torso",-15],["head",-15],
+            ["arm_l",-15],["arm_r",-15],
+            ["hand_l",-15],["hand_r",-15],
+            ["leg_l",-15],["leg_r",-15],
+            ["foot_l",-15],["foot_r",-15],
+            ["eyes",-15],["mouth",-15]
+          ]
+
+    },
+    {
+        "type": "mutation",
+        "id": "STRONGBACK2",
+        "name": {
+          "str": "力能扛鼎"
+        },
+        "points": 4,
+        "description": "你的背部肌肉发达的快能开鬼背了,负重增加70%.",
+        "valid": false,
+        "prereqs": [
+            "Revia_tail_II","Revia_tail_III","Revia_tail_IV","Revia_tail_V","Revia_tail_VI","Revia_tail_VII","Revia_tail_VIII","Revia_tail_IX"
+          ],
+        "prereqs2": [
+            "STRONGBACK"
+          ],
+        "changes_to": [
+            "STRONGBACK3"
+        ],
+        "threshreq": [
+            "THRESH_Revia"
+        ],
+        "category": [
+          "Revia"
+        ],
+        "cancels": [
+          "BADBACK"
+        ],
+        "weight_capacity_modifier": 1.7
+      },
+      {
+        "type": "mutation",
+        "id": "STRONGBACK3",
+        "name": {
+          "str": "盘古之肩"
+        },
+        "points": 6,
+        "description": "你背部肌肉在保持美观的情况下，发达的能开鬼背了（不过没有鬼背主动技能（））,负重增加120%.",
+        "valid": false,
+        "prereqs": [
+            "Revia_tail_V","Revia_tail_VI","Revia_tail_VII","Revia_tail_VIII","Revia_tail_IX"
+          ],
+        "prereqs2": [
+            "STRONGBACK2"
+          ],
+        "threshreq": [
+            "THRESH_Revia"
+        ],
+        "category": [
+          "Revia"
+        ],
+        "cancels": [
+          "BADBACK"
+        ],
+        "weight_capacity_modifier": 2.2
+      },
+      {
+        "type": "mutation",
+        "id": "Revia_QUICK",
+        "name": {
+          "str": "极限反射"
+        },
+        "points": 5,
+        "description": "你的神经反射能力几乎到达了常人的极限，你比普通人行动更快20%。",
+        "prereqs": [
+            "Revia_tail_IV","Revia_tail_V","Revia_tail_VI","Revia_tail_VII","Revia_tail_VIII","Revia_tail_IX"
+          ],
+        "prereqs2": [
+            "QUICK"
+          ],
+          "category": [
+            "Revia"
+          ],
+        "threshreq": [
+            "THRESH_Revia"
+        ],
+        "changes_to": [
+            "Revia_QUICK2"
+          ],
+        "enchantments": [
+          {
+            "condition": "ALWAYS",
+            "values": [
+              {
+                "value": "SPEED",
+                "multiply": 0.2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type":"mutation",
+        "id":"Revia_QUICK2",
+        "name":{
+            "str":"子弹时间（伪？）"
+        },
+        "points": 8,
+        "description": "你的神经反射能力超越了人类，能精确捕捉到敌人开枪的动作，在被射击前躲过瞄准。你比普通人行动更快35%。",
+        "prereqs": [
+            "Revia_tail_VII","Revia_tail_VIII","Revia_tail_IX"
+          ],
+        "prereqs2": [
+            "Revia_QUICK"
+          ],
+        "threshreq": [
+            "THRESH_Revia"
+        ],
+        "category": [
+          "Revia"
+        ],
+        "enchantments": [
+          {
+            "condition": "ALWAYS",
+            "values": [
+              {
+                "value": "SPEED",
+                "multiply": 0.35
+              }
+            ]
+          }
+        ]
+      },
+    {
+            "type": "mutation",
+            "id": "ELE_SENSORY",
+            "name": {
+              "str": "电磁感官"
+            },
+            "points": 4,
+            "description":"你获得了电磁感应的直感，，可以让你透过墙壁看到带电的机器人和生物",
+            "prereqs": [
+                "Revia_tail_II","Revia_tail_III","Revia_tail_IV","Revia_tail_V","Revia_tail_VI","Revia_tail_VII","Revia_tail_VIII","Revia_tail_IX"
+              ],
+            "threshreq": [
+                "THRESH_Revia"
+            ],
+            "category": [
+              "Revia"
+            ],
+            "enchantments": [
+                {
+                  "condition": "ALWAYS",
+                  "values": [
+                    {
+                      "value": "SIGHT_RANGE_ELECTRIC",
+                      "add": 1000
+                    }
+                  ]
+                }
+              ],
+          "mixed_effect": true
+
+    },
+    {
+        "type": "mutation",
+        "id": "Glore_for_Skarne",
+        "name": {
+          "str": "血神之祐"
+        },
+        "points": 6,
+        "description":"因你为斯卡恩女神献上了足够的鲜血与颅骨，她为你增加了防护光环，对所有伤害有10点防御,免疫精神污染。为了斯卡恩的荣耀！",
+        "prereqs": [
+            "Revia_tail_VIII","Revia_tail_IX"
+          ],
+          "prereqs2":["Leap_of_faith2"],
+          "changes_to": [
+            "Glore_for_Skarne2"
+          ],
+        "threshreq": [
+            "THRESH_Revia"
+        ],
+        "category": [
+          "Revia"
+        ],
+        "armor": [{ "parts": ["torso","head","arm_l","arm_r","hand_l","hand_r","leg_l","leg_r","foot_l","foot_r","mouth","eyes"],
+                    "cut": 10,"bash": 10,"stab":10,"heat":10,"acid":10,"bullet":10,"cold":10
+            }
+          ],
+        "flags":["DIMENSIONAL_ANCHOR"]
+
+    },
+    {
+        "type": "mutation",
+        "id": "Glore_for_Skarne2",
+        "name": {
+          "str": "斯卡恩之眷"
+        },
+        "points": 10,
+        "description":"因你在鲜血与杀戮之道上的进步，斯卡恩女神进一步为你加强了光环，对所有伤害有25点防御，并且免疫传送和精神污染。为了斯卡恩的荣耀！",
+        "prereqs": [
+            "Revia_tail_IX"
+          ],
+        "prereqs2":[
+            "Glore_for_Skarne"
+        ],
+        "category": [
+          "Revia"
+        ],
+        "threshreq": [
+            "THRESH_Revia"
+        ],
+        "armor": [{ "parts": ["torso","head","arm_l","arm_r","hand_l","hand_r","leg_l","leg_r","foot_l","foot_r","mouth","eyes"],
+                    "cut": 25,"bash": 25,"stab":25,"heat":25,"acid":25,"bullet":25,"cold":25
+            }
+          ],
+        "flags":["PORTAL_PROOF","DIMENSIONAL_ANCHOR"]
+
+    },
+    {
+        "type": "mutation",
+        "id": "Revia_GOODCARDIO",
+        "name": {
+          "str": "永不疲惫"
+        },
+        "points": 6,
+        "description": "你的身体效率有如一台小型蒸汽机一般，极大地提升了你的心肺功能和耐力上限。",
+        "types": [
+          "CARDIO"
+        ],
+        "prereqs":[
+            "Revia_tail_V","Revia_tail_VI","Revia_tail_VII","Revia_tail_VIII","Revia_tail_IX"
+        ],
+        "prereqs2": [
+          "GOODCARDIO2"
+        ],
+        "category": [
+          "Revia"
+        ],
+        "changes_to": [
+            "Revia_GOODCARDIO2"
+          ],
+        "threshreq": [
+            "THRESH_Revia"
+        ],
+        "cardio_multiplier": 3
+      },
+      {
+        "type": "mutation",
+        "id": "Revia_GOODCARDIO2",
+        "name": {
+          "str": "真.永不疲惫"
+        },
+        "points": 8,
+        "description": "你的身体效率有如一台小型内燃机一般，极大地提升了你的心肺功能和耐力上限。",
+        "types": [
+          "CARDIO"
+        ],
+        "prereqs":[
+          "Revia_tail_VIII","Revia_tail_IX"
+        ],
+        "prereqs2": [
+          "Revia_GOODCARDIO"
+        ],
+        "threshreq": [
+            "THRESH_Revia"
+        ],
+        "category": [
+          "Revia"
+        ],
+        "cardio_multiplier": 4
+      },
+    {
+        "type": "mutation",
+        "id": "Leap_of_faith",
+        "name": {
+          "str": "信仰之跃"
+        },
+        "points": 2,
+        "description": "在你需要跳下高楼时，对斯卡恩的信仰能让你安然无恙......至少是一半的机会",
+        "prereqs": [
+            "Revia_tail_I","Revia_tail_II","Revia_tail_III","Revia_tail_IV","Revia_tail_V","Revia_tail_VI","Revia_tail_VII","Revia_tail_VIII","Revia_tail_IX"
+        ],
+        "threshreq": [
+            "THRESH_Revia"
+            ],
+        "changes_to": [
+                "Leap_of_faith2"
+              ],
+        "category": [
+                "Revia"
+              ],
+        "flags": [
+          "WINGS_1"
+        ]
+      },
+    {
+        "type": "mutation",
+        "id": "Leap_of_faith2",
+        "name": {
+          "str": "真.信仰之跃"
+        },
+        "points": 2,
+        "ugliness": -2,
+        "description": "在你需要跳下高楼时，斯卡恩的祝福会让你临时长出光翼，让你安然无恙的回到地面",
+        "prereqs": [
+            "Revia_tail_VII","Revia_tail_VIII","Revia_tail_IX"
+        ],
+        "prereqs2": [
+            "Leap_of_faith"
+          ],
+        "threshreq": [
+            "THRESH_Revia"
+            ],
+        "category": [
+            "Revia"
+          ],
+        "flags": [
+          "WINGS_2"
+        ]
+      },
+    {
+        "type": "mutation",
+        "id": "ReviaEyes",
+        "name": {
+          "str": "雷维亚之眼"
+        },
+        "points": 3,
+        "ugliness": -2,
+        "description": "你的瞳孔颜色变成了血红，格外漂亮，能让你在白天看的更远（望远镜功能）,不会被阳光晃眼，能略微铺助瞄准",
+        "types": [
+          "EYES"
+        ],
+        "changes_to": [
+          "ReviaEyes2"
+        ],
+        "category": [
+          "Revia",
+          "Revia_pre"
+        ],
+        "social_modifiers": {
+          "lie": 5,
+          "persuade": 5,
+          "intimidate": 5
+        },
+        "enchantments": [
+            {
+              "condition": "ALWAYS",
+              "values": [
+                {
+                  "value": "WEAPON_DISPERSION",
+                  "multiply": -0.05
+                }
+              ]
+            }
+          ],
+        "flags": [
+            "Revia_signal_1",
+            "SUN_GLASSES",
+            "ENHANCED_VISION"
+          ]
+      },
+    {
+        "type": "mutation",
+        "id": "ReviaEyes2",
+        "name": {
+          "str": "祝.雷维亚之眼"
+        },
+        "points": 3,
+        "ugliness": -4,
+        "description": "你的瞳孔颜色变成了血红，瞳孔内圈是亮金色，格外漂亮，能让你在白天的更远（望远镜）,不会被阳光晃眼，有强光防护,红外视野，稍微铺助瞄准",
+        "types": [
+          "EYES"
+        ],
+        "prereqs": [
+            "ReviaEyes"
+        ],
+        "prereqs2":["Revia_tail_IV","Revia_tail_V","Revia_tail_VI","Revia_tail_VII","Revia_tail_VIII","Revia_tail_IX"],
+        "threshreq": [
+          "THRESH_Revia"
+      ],
+        "category": [
+          "Revia"
+        ],
+        "social_modifiers": {
+          "lie": 10,
+          "persuade": 10,
+          "intimidate": 10
+        },
+        "enchantments": [
+            {
+              "condition": "ALWAYS",
+              "values": [
+                {
+                  "value": "WEAPON_DISPERSION",
+                  "multiply": -0.1
+                }
+              ]
+            }
+          ],
+        "flags": [
+            "Revia_signal_1",
+            "SUN_GLASSES",
+            "ENHANCED_VISION",
+            "FLASH_PROTECTION",
+            "INFRARED"
+          ]
+      },
+    {
+        "type": "mutation",
+        "id": "ReviaEars",
+        "name": {
+            "str": "雷维亚之耳"
+            },
+        "points": 3,
+
+        "description": "你的头顶“长出”了新的一双狐朵，摸起来手感很好，不过这是血神祝福的一部分投影，不会真的变成四声道，让你更容易说服别人，更容易听到偷袭的声音，略微增加闪避",
+        "types": [
+            "EARS"
+        ],
+        "changes_to": [
+            "ReviaEars2"
+          ],
+        "ugliness": -4,
+        "category": [
+            "Revia",
+            "Revia_pre"
+        ],
+        "social_modifiers": {
+            "lie": 5,
+            "persuade": 5,
+            "intimidate": 5
+          },
+        "dodge_modifier": 0.5,
+        "hearing_modifier": 1.5,
+        "flags":["Revia_signal_2"]
+    },
+    {
+        "type": "mutation",
+        "id": "ReviaEars2",
+        "name": {
+            "str": "祝.雷维亚之耳"
+            },
+        "points": 5,
+        "prereqs": [
+            "ReviaEars"
+          ],
+        "prereqs2":["Revia_tail_V","Revia_tail_VI","Revia_tail_VII","Revia_tail_VIII","Revia_tail_IX"],
+          "threshreq": [
+            "THRESH_Revia"
+        ],
+        "description": "你的头顶“长出”的新狐朵毛发边缘泛着金光，摸起来手感很好，不过这是血神祝福的一部分投影，不会真的变成四声道，让你更容易说服别人，更容易听到偷袭的声音，稍微增加闪避，会自动降低损害听力的声音",
+        "types": [
+            "EARS"
+        ],
+        "ugliness": -6,
+        "category": [
+            "Revia"
+        ],
+        "social_modifiers": {
+            "lie": 10,
+            "persuade": 10,
+            "intimidate": 10
+          },
+        "dodge_modifier": 1.5,
+        "hearing_modifier": 2,
+        "flags":["PARTIAL_DEAF ","Revia_signal_2"]
+    },
+    {
+        "type": "mutation",
+        "id": "Reviaclaw",
+        "name": {
+          "str": "雷维亚之手"
+        },
+        "points": 3,
+        "pierce_dmg_bonus": 6,
+        "attacks": {
+          "attack_text_u": "你集中精力，绕道 %s 的背后，对它进行了一次内脏攻击！",
+          "attack_text_npc": "%1$s 对 %2$s 进行了内脏暴击!",
+          "chance": 10,
+          "strength_damage": {
+            "damage_type": "cut",
+            "amount": 1.5
+          }
+        },
+        "description": "你的手变得细腻白嫩，更擅长与精细操作与取出物品，如果不带手套，能刺伤人",
+        "types": [
+          "CLAWS"
+        ],
+        "changes_to": [
+          "Reviaclaw2"
+        ],
+        "category": [
+          "Revia",
+          "Revia_pre"
+        ],
+        "crafting_speed_multiplier": 1.1,
+        "obtain_cost_multiplier": 0.90,
+        "flags":["Revia_signal_3"]
+      },
+      {
+        "type": "mutation",
+        "id": "Reviaclaw2",
+        "name": {
+          "str": "祝.雷维亚之手"
+        },
+        "points": 5,
+        "pierce_dmg_bonus": 12,
+        "attacks": {
+          "attack_text_u": "你集中精力，如幽灵般闪现到 %s 的背后，对它进行了一次内脏攻击！",
+          "attack_text_npc": "%1$s 对 %2$s 进行了内脏暴击!",
+          "chance": 15,
+          "strength_damage": {
+            "damage_type": "pure",
+            "amount": 3
+          }
+        },
+        "description": "你的手变得细腻白嫩，非常擅长与精细操作与取出物品，如果不带手套，很容易刺伤人",
+        "types": [
+          "CLAWS"
+        ],
+        "prereqs": [
+            "Reviaclaw"
+          ],
+        "prereqs2":["Revia_tail_II","Revia_tail_III","Revia_tail_IV","Revia_tail_V","Revia_tail_VI","Revia_tail_VII","Revia_tail_VIII","Revia_tail_IX"],
+          "threshreq": [
+            "THRESH_Revia"
+        ],
+        "category": [
+          "Revia"
+        ],
+        "crafting_speed_multiplier": 1.2,
+        "obtain_cost_multiplier": 0.80,
+        "flags":["Revia_signal_3"]
+      },
+      {
+        "type": "mutation",
+        "id": "Envprotect",
+        "name": {
+          "str": "环境保护I"
+        },
+        "points": 4,
+        "description": "血神祝福减少了酸驻留的时间，不会让你在雨里被淋湿，防止你受到毒气与烟雾与地上的酸液的影响",
+        "changes_to": [
+          "Envprotect2"
+        ],
+        "category": [
+          "Revia"
+        ],
+        "prereqs":["ELE_SENSORY"],
+        "prereqs2":["Revia_tail_III","Revia_tail_IV","Revia_tail_V","Revia_tail_VI","Revia_tail_VII","Revia_tail_VIII","Revia_tail_IX"],
+        "threshreq": [
+          "THRESH_Revia"
+      ],
+        "wet_protection": [
+          {
+            "part": "head",
+            "neutral": 4,
+            "good": 5
+          },
+          {
+            "part": "leg_l",
+            "neutral": 6,
+            "good": 15
+          },
+          {
+            "part": "leg_r",
+            "neutral": 8,
+            "good": 15
+          },
+          {
+            "part": "foot_l",
+            "neutral": 3,
+            "good": 5
+          },
+          {
+            "part": "foot_r",
+            "neutral": 3,
+            "good": 5
+          },
+          {
+            "part": "arm_l",
+            "neutral": 8,
+            "good": 13
+          },
+          {
+            "part": "arm_r",
+            "neutral": 7,
+            "good": 13
+          },
+          {
+            "part": "hand_l",
+            "neutral": 3,
+            "good": 4
+          },
+          {
+            "part": "hand_r",
+            "neutral": 3,
+            "good": 4
+          },
+          {
+            "part": "torso",
+            "neutral": 15,
+            "good": 27
+          }
+        ],
+        "armor": [{ "parts": ["torso","head","arm_l","arm_r","hand_l","hand_r","leg_l","leg_r","foot_l","foot_r","mouth","eyes"],
+        "biological":12
+            }
+        ],
+        "flags":["WATERPROOF","GAS_PROOF"]
+    },
+    {
+        "type": "mutation",
+        "id": "Envprotect2",
+        "name": {
+          "str": "环境保护II"
+        },
+        "points": 8,
+        "description": "血神祝福减少了酸驻留的时间，不会让你在雨里被淋湿，防止你收到毒气与烟雾与地上的酸液的影响。让你免受电击和环境辐射的影响",
+        "changes_to": [
+          "Envprotect3"
+        ],
+        "threshreq": [
+          "THRESH_Revia"
+      ],
+        "prereqs": [
+            "Envprotect"
+          ],
+        "prereqs2":["Revia_tail_V","Revia_tail_VI","Revia_tail_VII","Revia_tail_VIII","Revia_tail_IX"],
+        "category": [
+          "Revia"
+        ],
+        "wet_protection": [
+            {
+              "part": "head",
+              "neutral": 4,
+              "good": 5
+            },
+            {
+              "part": "leg_l",
+              "neutral": 6,
+              "good": 15
+            },
+            {
+              "part": "leg_r",
+              "neutral": 8,
+              "good": 15
+            },
+            {
+              "part": "foot_l",
+              "neutral": 3,
+              "good": 5
+            },
+            {
+              "part": "foot_r",
+              "neutral": 3,
+              "good": 5
+            },
+            {
+              "part": "arm_l",
+              "neutral": 8,
+              "good": 13
+            },
+            {
+              "part": "arm_r",
+              "neutral": 7,
+              "good": 13
+            },
+            {
+              "part": "hand_l",
+              "neutral": 3,
+              "good": 4
+            },
+            {
+              "part": "hand_r",
+              "neutral": 3,
+              "good": 4
+            },
+            {
+              "part": "torso",
+              "neutral": 15,
+              "good": 27
+            }
+          ],
+          "armor": [{ "parts": ["torso","head","arm_l","arm_r","hand_l","hand_r","leg_l","leg_r","foot_l","foot_r","mouth","eyes"],
+          "biological":12
+              }],
+        "enchantments": [
+            {
+              "condition": "ALWAYS",
+              "values": [
+                {
+                  "value": "CLIMATE_CONTROL_CHILL",
+                  "add": 20
+                },
+                {
+                    "value": "CLIMATE_CONTROL_HEAT",
+                    "add": 20
+                }
+              ]
+            }
+          ],
+        "movecost_swim_modifier": 0.75,
+        "flags":["WATERPROOF","GAS_PROOF","ELECTRIC_IMMUNE","RAD_PROOF"]
+        
+    },
+    {
+        "type": "mutation",
+        "id": "Envprotect3",
+        "name": {
+          "str": "环境保护III"
+        },
+        "points": 12,
+        "description": "血神祝福减少了酸驻留的时间，不会让你在雨里被淋湿，防止你收到毒气与烟雾与地上的酸液的影响。让你免受电击和环境辐射的影响,阻止火焰对你的伤害",
+        "threshreq": [
+          "THRESH_Revia"
+      ],
+        "prereqs": [
+            "Envprotect2"
+          ],
+        "prereqs2":["Revia_tail_VIII","Revia_tail_IX"],
+        "category": [
+          "Revia"
+        ],
+        "enchantments": [
+            {
+              "condition": "ALWAYS",
+              "values": [
+                {
+                  "value": "CLIMATE_CONTROL_CHILL",
+                  "add": 40
+                },
+                {
+                    "value": "CLIMATE_CONTROL_HEAT",
+                    "add": 80
+                }
+              ]
+            }
+          ],
+          "wet_protection": [
+            {
+              "part": "head",
+              "neutral": 4,
+              "good": 5
+            },
+            {
+              "part": "leg_l",
+              "neutral": 6,
+              "good": 15
+            },
+            {
+              "part": "leg_r",
+              "neutral": 8,
+              "good": 15
+            },
+            {
+              "part": "foot_l",
+              "neutral": 3,
+              "good": 5
+            },
+            {
+              "part": "foot_r",
+              "neutral": 3,
+              "good": 5
+            },
+            {
+              "part": "arm_l",
+              "neutral": 8,
+              "good": 13
+            },
+            {
+              "part": "arm_r",
+              "neutral": 7,
+              "good": 13
+            },
+            {
+              "part": "hand_l",
+              "neutral": 3,
+              "good": 4
+            },
+            {
+              "part": "hand_r",
+              "neutral": 3,
+              "good": 4
+            },
+            {
+              "part": "torso",
+              "neutral": 15,
+              "good": 27
+            }
+          ],
+          "armor": [{ "parts": ["torso","head","arm_l","arm_r","hand_l","hand_r","leg_l","leg_r","foot_l","foot_r","mouth","eyes"],
+          "biological":15
+              }],
+        "flags":["WATERPROOF","GAS_PROOF","ELECTRIC_IMMUNE","RAD_PROOF","HEAT_IMMUNE"]
+    },
+    {
+        "type": "mutation",
+        "id": "Reviameta",
+        "name": {
+          "str": "高效代谢I"
+        },
+        "points": 2,
+        "description": "血神祝福使你能更高效的利用营养，耐力回复更快",
+        "changes_to": [
+          "Reviameta2"
+        ],
+        "prereqs":["HUNGER3"],
+        "prereqs2":["Revia_tail_V","Revia_tail_VI","Revia_tail_VII","Revia_tail_VIII","Revia_tail_IX"],
+        "threshreq": [
+          "THRESH_Revia"
+      ],
+        "category": [
+          "Revia"
+        ],
+        "metabolism_modifier": -0.1,
+        "stamina_regen_modifier": 0.5
+    },
+    {
+        "type": "mutation",
+        "id": "Reviameta2",
+        "name": {
+          "str": "高效代谢II"
+        },
+        "points": 3,
+        "description": "血神祝福使你能更高效的利用营养，耐力回复更快",
+        "prereqs": [
+          "Reviameta"
+        ],
+        "prereqs2":["Revia_tail_VI","Revia_tail_VII","Revia_tail_VIII","Revia_tail_IX"],
+        "changes_to": [
+          "Reviameta3"
+        ],
+        "threshreq": [
+          "THRESH_Revia"
+      ],
+        "category": [
+          "Revia"
+        ],
+        "metabolism_modifier": -0.25,
+        "stamina_regen_modifier": 0.25
+    },
+    {
+        "type": "mutation",
+        "id": "Reviameta3",
+        "name": {
+          "str": "高效代谢III"
+        },
+        "points": 4,
+        "description": "血神祝福使你能更高效的利用营养，耐力回复更快",
+        "prereqs": [
+          "Reviameta2"
+        ],
+        "prereqs2":["Revia_tail_VII","Revia_tail_VIII","Revia_tail_IX"],
+        "threshreq": [
+          "THRESH_Revia"
+      ],
+        "category": [
+          "Revia"
+        ],
+        "metabolism_modifier": -0.5,
+        "stamina_regen_modifier": 0.5
+    },
+    {
+        "type": "effect_type",
+        "id": "Reviaphys_effect",
+        "removes_effects": [
+          "fungus",
+          "dermatik",
+          "bloodworms",
+          "paincysts",
+          "brainworms",
+          "tapeworm",
+          "blind",
+          "poison",
+          "badpoison",
+          "paralyzepoison",
+          "venom_dmg",
+          "venom_weaken",
+          "relax_gas",
+          "migo_atmosphere",
+          "pkill1",
+          "pkill2",
+          "pkill3",
+          "pkill_l",
+          "pkill",
+          "drunk",
+          "high",
+          "weed_high",
+          "depressants"
+        ]
+      },
+    {
+        "type": "enchantment",
+        "id": "Reviaphys_Effect",
+        "condition": "ALWAYS",
+        "ench_effects": [
+          {
+            "effect": "Reviaphys_effect",
+            "intensity": 1
+          }
+        ]
+      },
+    {
+        "type": "mutation",
+        "id": "Reviagene",
+        "name": {
+          "str": "受祝基因"
+        },
+        "points": 3,
+        "description": "血神的祝福很好的维护了你的基因链,并且是你对真菌感染有极强的抗性,免疫大多数毒素和镇静剂",
+        "category": [
+          "Revia"
+        ],
+        "prereqs":["ROBUST"],
+        "prereqs2":["Revia_tail_VI","Revia_tail_VII","Revia_tail_VIII","Revia_tail_IX"],
+        "vitamin_rates": [
+          [
+            "instability",
+            28800
+          ]
+        ],
+        "threshreq": [
+          "THRESH_Revia"
+      ],
+        "enchantments": [
+            "Reviaphys_Effect"
+          ]
+      },
+      {
+        "type": "mutation",
+        "id": "Revia_Fleet",
+        "name": {
+          "str": "疾步如飞"
+        },
+        "points": 3,
+        "description": "对你而言小跑和散步没有区别，在平地上，你移动能快50%。",
+        "prereqs": [
+          "FLEET2"
+        ],
+        "prereqs2":["Revia_tail_IV","Revia_tail_V","Revia_tail_VI","Revia_tail_VII","Revia_tail_VIII","Revia_tail_IX"],
+        "threshreq":["THRESH_Revia"],
+        "types": [
+          "RUNNING"
+        ],
+        "category": [
+          "Revia"
+        ],
+        "movecost_flatground_modifier": 0.5
+      }
+]

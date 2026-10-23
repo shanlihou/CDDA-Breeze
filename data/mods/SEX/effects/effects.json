@@ -1,0 +1,38 @@
+[
+  {
+    "type": "effect_type",
+    "id": "downsexmed",
+    "name": [ "抑性素片" ],
+    "desc": [
+      "你的性欲在慢慢消退。"
+    ],
+    "max_duration": 100800,
+    "dur_add_perc": 60,
+    "rating": "good",
+    "blood_analysis_description": "抑性素片"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_downsexmed",
+    "condition": { "u_has_effect": "downsexmed" },
+    "effect": [
+      {
+        "arithmetic": [
+          { "u_val": "var", "var_name": "desire_level", "type": "int", "context": "欲望指数" },
+          "-=",
+          { "rand": 3 }
+          
+        ],
+        "min": 0
+      },
+      {
+        "arithmetic": [
+          { "u_val": "var", "var_name": "desire", "type": "int", "context": "欲望" },
+          "-=",
+          { "const": 3 }
+        ],
+        "min": 0
+      }
+    ]
+  }
+]

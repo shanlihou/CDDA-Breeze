@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_TAKAHASHI_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"你—在—做—什—么？",
+    "responses":[
+      { "text": "招人(邀请加入队伍)", "topic": "TALK_TAKAHASHI_SAN_2" },
+      { "text": "没什么", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_TAKAHASHI_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"你—在—做—什—么？",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

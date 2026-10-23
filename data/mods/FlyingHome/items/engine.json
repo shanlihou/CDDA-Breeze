@@ -1,0 +1,30 @@
+[
+    {
+        "id": "FH_engine",
+        "copy-from": "engine_gasoline",
+        "type": "ENGINE",
+        "name": { "str": "F-H 引擎" },
+        "description": "在末世之前仅仅少量生产的大型引擎，完全可以驱动一座飞行堡垒。",
+        "//": "喵喵喵喵？",
+        "weight": "200 kg",
+        "volume": "200 L",
+        "price": 960000,
+        "price_postapoc": 7500,
+        "displacement": 20000
+    },
+    {
+        "id": "FH_rotor",
+        "type": "GENERIC",
+        "category": "veh_parts",
+        "name": { "str": "飞行堡垒旋翼", "str_pl": "飞行堡垒旋翼" },
+        "description": "一组旋翼，是时候夺回天空了",
+        "price": 23400,
+        "price_postapoc": 500,
+        "weight": "452000 g",
+        "volume": "452000 ml",
+        "looks_like": "xl_wind_turbine",
+        "material": [ "steel" ],
+        "symbol": "X",
+        "color": "dark_gray"
+    }
+]

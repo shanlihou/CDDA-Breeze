@@ -1,0 +1,36 @@
+{
+  "type": "furniture",
+  "id": "SWP_f_butcher_rack",
+  "looks_like": "f_arcfurnace_full",
+  "name": "SWP猎物处理组具",
+  "description": "旅行者II戒展开得来，外观类似高炉的屠宰架。由内部的三根带钩钢索，一套完整的屠宰工具，以及下方的木炭烤架组成。据说选用木炭烤架而非常用的电炉，是为了方便进行烟熏。但很明显，没有哪个急着赶路的旅行者会选择原地熏半天肉。大概只是为了推销他们积存的I型固态燃料储戒吧。",
+  "symbol": "^",
+  "bgcolor": "light_gray",
+  "move_cost_mod": 2,
+  "required_str": -1,
+  "deployed_item": "GS_SWP2_traveler",
+  "examine_action": "deployed_furniture",
+  "flags": [
+    "PLACE_ITEM",
+    "TRANSPARENT",
+    "MOUNTABLE",
+    "ALLOW_FIELD_EFFECT",
+    "BUTCHER_EQ"
+  ],
+  "crafting_pseudo_item": "SWP_fake_butcher_rack",
+  "deconstruct": {
+    "items": [
+      { "item": "GS_SWP2_traveler", "count": 1 }
+    ]
+   },
+  "bash": {
+    "str_min": 20,
+    "str_max": 50,
+    "sound": "metal screeching!",
+    "sound_fail": "clang!",
+    "items": [
+      { "item": "scrap", "count": [ 1, 3 ] },
+      { "item": "pipe", "count": [ 1, 3 ] }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_YUKARISAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"本人可是天才呢，就不考虑让我加入吗？",
+    "responses":[
+      { "text": "请成为我的伙伴", "topic": "TALK_YUKARISAN_2" },
+      { "text": "嗯…", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_YUKARISAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"从现在开始要好好相处哦",
+    "responses":[ 
+      { "text": "やったね","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

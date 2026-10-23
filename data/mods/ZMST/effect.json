@@ -1,0 +1,26 @@
+[
+  {
+    "type": "effect_type",
+    "id": "mutagen_death_apostle",
+    "name": [ "丧尸诱变剂" ],
+    "desc": [
+      "你注射了丧尸诱变剂",
+      "你默默祈祷着"
+    ],
+    "max_intensity": 3,
+    "resist_traits": [ "THRESH_DEATH_APOSTLE" ],
+    "base_mods": {
+      "hurt_min": [ 1 ],
+      "hurt_max": [ 2 ],
+      "hurt_chance": [ -22 ],
+      "hurt_tick": [ 150 ],
+      "pain_min": [ 1 ],
+      "pain_max": [ 2 ],
+      "pain_chance": [ 100 ],
+      "pain_tick": [ 75 ]
+    },
+    "scaling_mods": { "str_mod": [ -2 ], "per_mod": [ 1.5 ], "speed_mod": [ 3.5 ], "hurt_chance": [ 21, 0 ], "pain_chance": [ -30 ] },
+    "rating": "bad",
+    "blood_analysis_description": "丧尸诱变剂污染"
+  }
+]

@@ -1,0 +1,198 @@
+[
+  {
+    "type": "TOOL",
+    "id": "tool_formwork_summon",
+    "name": { "str": "召唤工具模板" },
+    "description": "你不应该看到这个",
+    "weight": "10 g",
+    "volume": "25 ml",
+    "color": "light_gray",
+    "price": 500,
+    "price_postapoc": 100,
+    "material": [ "steel" ],
+    "flags": [ "TRADER_AVOID" ],
+    "symbol": "["
+  },
+  {
+    "type": "TOOL",
+    "id": "summon_mon_zombie",
+    "copy-from": "tool_formwork_summon",
+    "name": { "str": "丧尸召唤器" },
+    "description": "可以召唤一个丧尸为你战斗",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_zombie",
+      "msg": "你召唤了丧尸",
+      "moves": 1
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "summon_mon_zombie_tough",
+    "copy-from": "tool_formwork_summon",
+    "name": { "str": "健壮丧尸召唤器" },
+    "description": "可以召唤一个健壮丧尸为你战斗",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_zombie_tough",
+      "msg": "你召唤了健壮丧尸",
+      "moves": 1
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "summon_mon_zombie_child",
+    "copy-from": "tool_formwork_summon",
+    "name": { "str": "儿童丧尸召唤器" },
+    "description": "可以召唤一个儿童丧尸为你战斗",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_zombie_child",
+      "msg": "你召唤了儿童丧尸",
+      "moves": 1
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "summon_mon_zombie_soldier",
+    "copy-from": "tool_formwork_summon",
+    "name": { "str": "士兵丧尸召唤器" },
+    "description": "可以召唤一个士兵丧尸为你战斗",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_zombie_soldier",
+      "msg": "你召唤了士兵丧尸",
+      "moves": 1
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "summon_mon_zombie_fireman",
+    "copy-from": "tool_formwork_summon",
+    "name": { "str": "消防员丧尸召唤器" },
+    "description": "可以召唤一个消防员丧尸为你战斗",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_zombie_fireman",
+      "msg": "你召唤了消防员丧尸",
+      "moves": 1
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "summon_mon_zombie_shady",
+    "copy-from": "tool_formwork_summon",
+    "name": { "str": "黑雾丧尸召唤器" },
+    "description": "可以召唤一个黑雾丧尸为你战斗",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_zombie_shady",
+      "msg": "你召唤了黑雾丧尸",
+      "moves": 1
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "summon_mon_zombie_static",
+    "copy-from": "tool_formwork_summon",
+    "name": { "str": "静电丧尸召唤器" },
+    "description": "可以召唤一个静电丧尸为你战斗",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_zombie_static",
+      "msg": "你召唤了静电丧尸",
+      "moves": 1
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "summon_mon_zombie_hazmat",
+    "copy-from": "tool_formwork_summon",
+    "name": { "str": "防化员丧尸召唤器" },
+    "description": "可以召唤一个防化员丧尸为你战斗",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_zombie_hazmat",
+      "msg": "你召唤了防化员丧尸",
+      "moves": 1
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "summon_mon_zombie_cop",
+    "copy-from": "tool_formwork_summon",
+    "name": { "str": "警察丧尸召唤器" },
+    "description": "可以召唤一个警察丧尸为你战斗",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_zombie_cop",
+      "msg": "你召唤了警察丧尸",
+      "moves": 1
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "summon_mon_skeleton",
+    "copy-from": "tool_formwork_summon",
+    "name": { "str": "骷髅丧尸召唤器" },
+    "description": "可以召唤一个骷髅丧尸为你战斗",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_skeleton",
+      "msg": "你召唤了骷髅丧尸",
+      "moves": 1
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "mon_zombie_runner",
+    "copy-from": "tool_formwork_summon",
+    "name": { "str": "追猎者丧尸召唤器" },
+    "description": "可以召唤一个追猎者丧尸为你战斗",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_zombie_runner",
+      "msg": "你召唤了追猎者丧尸",
+      "moves": 1
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "summon_mon_feral_human_pipe",
+    "copy-from": "tool_formwork_summon",
+    "name": { "str": "野性疯人召唤器" },
+    "description": "可以召唤一个野性疯人为你战斗",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_feral_human_pipe",
+      "msg": "你召唤了野性疯人",
+      "moves": 1
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "summon_mon_dog_skeleton",
+    "copy-from": "tool_formwork_summon",
+    "name": { "str": "骷髅犬召唤器" },
+    "description": "可以召唤一个骷髅犬为你战斗",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_mon_dog_skeleton",
+      "msg": "你召唤了骷髅犬",
+      "moves": 1
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "summon_mon_zombie_dog",
+    "copy-from": "tool_formwork_summon",
+    "name": { "str": "丧尸犬召唤器" },
+    "description": "可以召唤一个丧尸犬为你战斗",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_zombie_dog",
+      "msg": "你召唤了丧尸犬",
+      "moves": 1
+    }
+  }
+]

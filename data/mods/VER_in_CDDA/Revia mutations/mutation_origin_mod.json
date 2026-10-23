@@ -1,0 +1,477 @@
+[
+    {
+        "type": "mutation",
+        "id": "QUICK",
+        "name": {
+          "str": "Quick"
+        },
+        "changes_to":[
+            "Revia_QUICK"
+        ],
+        "copy-from":"QUICK",
+        "extend":{
+            "category":[
+                "Revia_pre",
+                "Revia"
+            ]
+        }
+    },
+    {
+        "type": "mutation",
+        "id": "OPTIMISTIC",
+        "name": {
+            "str": "Optimist"
+        },
+        "copy-from":"OPTIMISTIC",
+        "extend":{
+            "category":[
+                "Revia_pre",
+                "Revia"
+            ]
+        }
+    },
+    {
+        "type": "mutation",
+        "id": "DEFT",
+        "name": {
+            "str": "Deft"
+        },
+        "copy-from":"DEFT",
+        "extend":{
+            "category":[
+                "Revia_pre",
+                "Revia"
+            ]
+        }
+    },
+    {
+        "type": "mutation",
+        "id": "FLEET",
+        "name": {
+            "str": "Fleet-Footed"
+        },
+        "copy-from":"FLEET",
+        "extend":{
+            "category":[
+                "Revia_pre",
+                "Revia"
+            ]
+        }
+    },
+    {
+        "type": "mutation",
+        "id": "FLEET2",
+        "name": {
+            "str": "Road-Runner"
+        },
+        "copy-from":"FLEET2",
+        "changes_to":["Revia_Fleet"],
+        "extend":{
+            "category":[
+                "Revia_pre",
+                "Revia"
+            ]
+        },
+        "flags":["Revia_signal_5"]
+    },
+    {
+        "type": "mutation",
+        "id": "FAST_REFLEXES",
+        "name": {
+            "str": "Fast Reflexes"
+        },
+        
+        "copy-from":"FAST_REFLEXES",
+        "extend":{
+            "category":[
+                "Revia_pre",
+                "Revia"
+            ]
+        }
+    },
+    {
+        "type": "mutation",
+        "id": "ADRENALINE",
+        "name": {
+            "str": "High Adrenaline"
+        },
+        
+        "copy-from":"ADRENALINE",
+        "extend":{
+            "category":[
+                "Revia_pre",
+                "Revia"
+            ]
+        }
+    },
+    {
+        "type": "mutation",
+        "id": "ADRENALINE2",
+        "name": {
+            "str": "Combat Adaptation"
+        },
+        
+        "copy-from":"ADRENALINE2",
+        "extend":{
+            "category":[
+                "Revia_pre",
+                "Revia"
+            ]
+        }
+    },
+    {
+        "type": "mutation",
+        "id": "GOURMAND",
+        "name": {
+            "str": "Gourmand"
+        },
+        
+        "copy-from":"GOURMAND",
+        "extend":{
+            "category":[
+                "Revia_pre",
+                "Revia"
+            ]
+        }
+    },
+    {
+        "type": "mutation",
+        "id": "SAPROVORE",
+        "name": {
+            "str": "Saprovore"
+        },
+        
+        "copy-from":"SAPROVORE",
+        "extend":{
+            "category":[
+                "Revia_pre",
+                "Revia"
+            ]
+        }
+    },
+    {
+        "type": "mutation",
+        "id": "FASTREADER",
+        "name": {
+            "str": "Fast Reader"
+        },
+        
+        "copy-from":"FASTREADER",
+        "extend":{
+            "category":[
+                "Revia_pre",
+                "Revia"
+            ]
+        }
+    },
+    {
+        "type": "mutation",
+        "id": "GOODMEMORY",
+        "name": {
+            "str": "Good Memory"
+        },
+        
+        "copy-from":"GOODMEMORY",
+        "extend":{
+            "category":[
+                "Revia_pre",
+                "Revia"
+            ]
+        }
+    },
+    {
+        "type": "mutation",
+        "id": "HUNGER",
+        "name": {
+            "str": "Fast Metabolism"
+        },
+        
+        "copy-from":"HUNGER",
+        "extend":{
+            "category":[
+                "Revia_pre",
+                "Revia"
+            ]
+        }
+    },
+    {
+        "type": "mutation",
+        "id": "HUNGER2",
+        "name": {
+            "str": "Very Fast Metabolism"
+        },
+        "copy-from":"HUNGER2",
+        "extend":{
+            "category":[
+                "Revia_pre",
+                "Revia"
+            ]
+        }
+    },
+    {
+        "type": "mutation",
+        "id": "HUNGER3",
+        "name": {
+            "str": "Extreme Metabolism"
+        },
+        
+        "copy-from":"HUNGER3",
+        "extend":{
+            "category":[
+                "Revia_pre",
+                "Revia"
+            ]
+        },
+        "flags":["Revia_signal_4"]
+    },
+    {
+        "type": "mutation",
+        "id": "STRONGBACK",
+        "name": {
+            "str": "Strong Back"
+        },
+        "changes_to":["STRONGBACK2"],
+        "copy-from":"STRONGBACK",
+        "extend":{
+            "category":[
+                "Revia_pre",
+                "Revia"
+            ]
+        }
+    },
+    {
+        "type": "mutation",
+        "id": "RESISTWARM",
+        "name": {
+            "str": "Heat Tolerance"
+        },
+        
+        "copy-from":"RESISTWARM",
+        "extend":{
+            "category":[
+                "Revia_pre",
+                "Revia"
+            ]
+        }
+    },
+    {
+        "type": "mutation",
+        "id": "PSYCHOPATH",
+        "name": {
+            "str": "Psychopath"
+        },
+        
+        "copy-from":"PSYCHOPATH",
+        "extend":{
+            "category":[
+                "Revia_pre",
+                "Revia"
+            ]
+        }
+    },
+    {
+        "type": "mutation",
+        "id": "RESISTCHILL",
+        "name": {
+            "str": "Cold Tolerance"
+        },
+        
+        "copy-from":"RESISTCHILL",
+        "extend":{
+            "category":[
+                "Revia_pre",
+                "Revia"
+            ]
+        }
+    },
+    {
+        "type": "mutation",
+        "id": "TABLEMANNERS",
+        "name": {
+            "str": "Rigid Table Manners"
+        },
+        
+        "copy-from":"TABLEMANNERS",
+        "extend":{
+            "category":[
+                "Revia_pre",
+                "Revia"
+            ]
+        }
+    },
+    {
+        "type": "mutation",
+        "id": "STRONGSTOMACH",
+        "name": {
+            "str": "Strong Stomach"
+        },
+        
+        "copy-from":"STRONGSTOMACH",
+        "extend":{
+            "category":[
+                "Revia_pre",
+                "Revia"
+            ]
+        }
+    },
+    {
+        "type": "mutation",
+        "id": "ROBUST",
+        "name": {
+            "str": "Robust Genetics"
+        },
+        "changes_to":["Reviagene"],
+        "copy-from":"ROBUST",
+        "extend":{
+            "category":[
+                "Revia_pre",
+                "Revia"
+            ]
+        }
+    },
+    {
+        "type": "mutation",
+        "id": "PROJUNK",
+        "name": {
+            "str": "Sweet Tooth"
+        },
+        
+        "copy-from":"PROJUNK",
+        "extend":{
+            "category":[
+                "Revia_pre",
+                "Revia"
+            ]
+        }
+    },
+    {
+        "type": "mutation",
+        "id": "PROJUNK2",
+        "name": {
+            "str": "Sugar-Loving"
+        },
+        
+        "copy-from":"PROJUNK2",
+        "extend":{
+            "category":[
+                "Revia_pre",
+                "Revia"
+            ]
+        }
+    },
+    {
+        "type": "mutation",
+        "id": "STYLISH",
+        "name": {
+            "str": "Stylish"
+        },
+        
+        "copy-from":"STYLISH",
+        "extend":{
+            "category":[
+                "Revia_pre",
+                "Revia"
+            ]
+        }
+    },
+    {
+        "type": "mutation",
+        "id": "GOODCARDIO",
+        "name": {
+            "str": "Indefatigable"
+        },
+        
+        "copy-from":"GOODCARDIO",
+        "extend":{
+            "category":[
+                "Revia_pre",
+                "Revia"
+            ]
+        }
+    },
+    {
+        "type": "mutation",
+        "id": "GOODCARDIO2",
+        "name": {
+            "str": "Hyperactive"
+        },
+        "changes_to": [
+            "Revia_GOODCARDIO"
+          ],
+        "copy-from":"GOODCARDIO2",
+        "extend":{
+            "threshreq": [
+                "THRESH_Revia"
+            ],
+            "category":[
+                "Revia"
+            ]
+        }
+    },
+    {
+        "type": "mutation",
+        "id": "PRETTY",
+        "name": {
+            "str": "Pretty"
+        },
+        
+        "copy-from":"PRETTY",
+        "extend":{
+            "category":[
+                "Revia_pre",
+                "Revia"
+            ]
+        }
+    },
+    {
+        "type": "mutation",
+        "id": "BEAUTIFUL",
+        "name": {
+            "str": "Beautiful"
+        },
+        
+        "copy-from":"BEAUTIFUL",
+        "extend":{
+            "category":[
+                "Revia_pre",
+                "Revia"
+            ]
+        }
+    },
+    {
+        "type": "mutation",
+        "id": "BEAUTIFUL2",
+        "name": {
+            "str": "Very Beautiful"
+        },
+        
+        "copy-from":"BEAUTIFUL2",
+        "extend":{
+            "category":[
+                "Revia_pre",
+                "Revia"
+            ],
+            "threshreq": [
+                "THRESH_Revia"
+            ]
+        }
+    },
+    {
+        "type": "mutation",
+        "id": "BEAUTIFUL3",
+        "name": {
+            "str": "Glorious"
+        },
+        
+        "copy-from":"BEAUTIFUL3",
+        "extend":{
+            "category":[
+                "Revia_pre",
+                "Revia"
+            ],
+            "threshreq": [
+                "THRESH_Revia"
+            ]
+        }
+    }
+]

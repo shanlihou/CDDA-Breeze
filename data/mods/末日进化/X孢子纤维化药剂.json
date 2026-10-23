@@ -1,0 +1,195 @@
+[
+  {
+    "id": "硬化皮肤",
+    "type": "TOOL_ARMOR",
+    "category": "armor",
+    "name": { "str": "硬化皮肤" },
+    "description": "X孢子强化了你的皮肤，使其变的更加有保护性，但也妨碍了你的行动",
+    "weight": "1000 g",
+    "volume": "1 L",
+    "price": 0,
+    "price_postapoc": 0,
+    "to_hit": 1,
+    "bashing": 1,
+    "material": [ "超细胞" ],
+    "symbol": "[",
+    "looks_like": "depowered_armor",
+    "color": "light_gray",
+    "warmth": 10,
+    "material_thickness": 0.5,
+    "environmental_protection": 5,
+    "flags": [
+      "WATERPROOF",
+      "UNBREAKABLE_MELEE",
+      "PADDED",
+      "POWERARMOR_COMPATIBLE",
+      "SKINTIGHT",
+      "OVERSIZE",
+      "INTEGRATED",
+      "ALLOWS_NATURAL_ATTACKS",
+      "PERSONAL",
+      "WATER_FRIENDLY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 5,
+        "coverage": 100,
+        "covers": [
+          "head",
+          "eyes",
+          "mouth",
+          "hand_l",
+          "hand_r",
+          "torso",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "X孢子纤维化:硬化皮肤",
+    "name": { "str": "X孢子纤维化:硬化皮肤" },
+    "points": 3,
+    "description": "X孢子强化了你的皮肤，使其变的更加有保护性，但也妨碍了你的行动",
+    "integrated_armor": [ "硬化皮肤" ],
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [ { "value": "CLIMATE_CONTROL_HEAT", "add": 10 }, { "value": "CLIMATE_CONTROL_CHILL", "add": 10 } ]
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "X孢子纤维化:强化骨骼",
+    "name": { "str": "X孢子纤维化:强化骨骼" },
+    "points": 1,
+    "description": "X孢子纤维化了你的骨骼，使其更加强韧，力量+3，负重能力x1.5，全身累赘+3",
+    "encumbrance_always": [
+      [ "hand_l", 3 ],
+      [ "hand_r", 3 ],
+      [ "head", 3 ],
+      [ "eyes", 3 ],
+      [ "mouth", 3 ],
+      [ "torso", 3 ],
+      [ "arm_l", 3 ],
+      [ "arm_r", 3 ],
+      [ "leg_l", 3 ],
+      [ "leg_r", 3 ],
+      [ "foot_l", 3 ],
+      [ "foot_r", 3 ]
+    ],
+    "passive_mods": { "str_mod": 3 },
+    "weight_capacity_modifier": 1.5
+  },
+  {
+    "type": "mutation",
+    "id": "X孢子纤维化:纤维肌肉",
+    "name": { "str": "X孢子纤维化:纤维肌肉" },
+    "points": 1,
+    "description": "X孢子纤维化了你的肌肉，使其更加强韧，力量+5，负重能力x1.7，全身累赘+2",
+    "encumbrance_always": [
+      [ "hand_l", 2 ],
+      [ "hand_r", 2 ],
+      [ "head", 2 ],
+      [ "eyes", 2 ],
+      [ "mouth", 2 ],
+      [ "torso", 2 ],
+      [ "arm_l", 2 ],
+      [ "arm_r", 2 ],
+      [ "leg_l", 2 ],
+      [ "leg_r", 2 ],
+      [ "foot_l", 2 ],
+      [ "foot_r", 2 ]
+    ],
+    "passive_mods": { "str_mod": 5 },
+    "weight_capacity_modifier": 1.7,
+    "hp_modifier_secondary": 0.5
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "X孢子纤维化:硬化皮肤",
+    "effect": [ { "u_add_trait": "X孢子纤维化:硬化皮肤" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "X孢子纤维化:强化骨骼",
+    "effect": [ { "u_add_trait": "X孢子纤维化:强化骨骼" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "X孢子纤维化:纤维肌肉",
+    "effect": [ { "u_add_trait": "X孢子纤维化:纤维肌肉" } ]
+  },
+  {
+    "id": "X孢子纤维化:硬化皮肤",
+    "type": "TOOL",
+    "name": { "str": "X孢子纤维化:硬化皮肤" },
+    "description": "X孢子纤维化阶段，X孢子强化了你的皮肤，使其变的更加有保护性，但也妨碍了你的行动",
+    "weight": "10 g",
+    "volume": "10 ml",
+    "price": 10,
+    "price_postapoc": 0,
+    "to_hit": -3,
+    "bashing": 8,
+    "material": [ "flesh" ],
+    "symbol": ";",
+    "color": "light_green",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "description": "X孢子纤维化阶段，X孢子强化了你的皮肤，使其变的更加有保护性，但也妨碍了你的行动",
+      "effect_on_conditions": [ "X孢子纤维化:硬化皮肤" ]
+    },
+    "flags": [ "SINGLE_USE" ]
+  },
+  {
+    "id": "X孢子纤维化:强化骨骼",
+    "type": "TOOL",
+    "name": { "str": "X孢子纤维化:强化骨骼" },
+    "description": "X孢子纤维化阶段，X孢子纤维化了你的骨骼，使其更加强韧，<color_yellow>力量+3，负重能力x1.5，全身累赘+3</color>",
+    "weight": "10 g",
+    "volume": "10 ml",
+    "price": 10,
+    "price_postapoc": 0,
+    "to_hit": -3,
+    "bashing": 8,
+    "material": [ "flesh" ],
+    "symbol": ";",
+    "color": "light_green",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "description": "X孢子纤维化阶段，X孢子纤维化了你的骨骼，使其更加强韧，<color_yellow>力量+3，负重能力x1.5，全身累赘+3</color>",
+      "effect_on_conditions": [ "X孢子纤维化:强化骨骼" ]
+    },
+    "flags": [ "SINGLE_USE" ]
+  },
+  {
+    "id": "X孢子纤维化:纤维肌肉",
+    "type": "TOOL",
+    "name": { "str": "X孢子纤维化:纤维肌肉" },
+    "description": "X孢子纤维化阶段，X孢子纤维化了你的肌肉，使其更加强韧，<color_yellow>力量+5，负重能力x1.7，全身累赘+2</color>",
+    "weight": "10 g",
+    "volume": "10 ml",
+    "price": 10,
+    "price_postapoc": 0,
+    "to_hit": -3,
+    "bashing": 8,
+    "material": [ "flesh" ],
+    "symbol": ";",
+    "color": "light_green",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "description": "X孢子纤维化阶段，X孢子纤维化了你的肌肉，使其更加强韧，<color_yellow>力量+5，负重能力x1.7，全身累赘+2</color>",
+      "effect_on_conditions": [ "X孢子纤维化:纤维肌肉" ]
+    },
+    "flags": [ "SINGLE_USE" ]
+  }
+]

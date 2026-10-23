@@ -1,0 +1,67 @@
+[
+    {
+        "id": "rep_crossbow_plus",
+        "looks_like": "crossbow",
+        "type": "GUN",
+        "reload_noise_volume": 10,
+        "symbol": "(",
+        "color": "green",
+        "name": {
+          "str": "特列洛克弩"
+        },
+        "description": "一把使用特殊机械结构供弹的弩，上面似乎有着第七天堂的logo，准头和射程俱佳，上弹较快",
+        "price": 324000,
+        "material": [
+          "steel",
+          "wood"
+        ],
+        "flags": [
+          "RELOAD_ONE",
+          "FIRE_TWOHAND",
+          "PRIMITIVE_RANGED_WEAPON",
+          "TRADER_AVOID"
+        ],
+        "skill": "rifle",
+        "ammo": [
+          "bolt"
+        ],
+        "weight": "3628 g",
+        "volume": "2500 ml",
+        "longest_side": "70 cm",
+        "price_postapoc": 60000,
+        "to_hit": -1,
+        "ranged_damage": {
+          "damage_type": "stab",
+          "amount": 12
+        },
+        "min_strength": 12,
+        "min_skills": [
+          [
+            "gun",
+            4
+          ]
+        ],
+        "range": 25,
+        "dispersion": 100,
+        "sight_dispersion": 90,
+        "recoil": 300,
+        "durability": 10,
+        "clip_size": 10,
+        "reload": 250,
+        "valid_mod_locations": [
+          [
+            "dampening",
+            1
+          ]
+        ],
+        "pocket_data": [
+          {
+            "pocket_type": "MAGAZINE",
+            "ammo_restriction": {
+              "bolt": 10
+            }
+          }
+        ],
+        "bashing":12
+      }
+]

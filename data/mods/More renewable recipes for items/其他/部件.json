@@ -1,0 +1,31 @@
+[
+  {
+   "result": "refrigerant_tank",
+    "type": "recipe",
+    "id_suffix":"from_mrrfi_refrigerant_tank",
+    "activity_level": "MODERATE_EXERCISE",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MATERIALS",
+    "skill_used": "mechanics",
+    "difficulty": 3,
+    "skills_required": [ "fabrication", 2 ],
+    "time": "40 m",
+    "autolearn": true,
+    "result_mult": 1,
+    "batch_time_factors": [ 80, 4 ],
+    "qualities": [{ "id": "CUT_FINE", "level":1  },{ "id": "CUT", "level": 1 },{ "id": "CHURN", "level": 1 }],
+    "using": [ [ "soldering_standard", 20 ] ],
+    "components": 
+    [
+      [
+       ["sheet_metal_small",2]
+      ],
+      [
+       ["scrap",1]
+      ],
+      [
+       ["chunk_rubber",1]
+      ]
+    ]
+ }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "type": "furniture",
+    "id": "f_bush_flashbang",
+    "name": "发光灌木",
+    "description": "一种奇怪的异星灌木，长着柔和发光的蓝色果实。",
+    "symbol": "#",
+    "color": "blue",
+    "move_cost_mod": 1,
+    "required_str": -1,
+    "flags": [ "TRANSPARENT", "FLAMMABLE_ASH", "NOCOLLIDE" ],
+    "examine_action": "harvest_furn_nectar",
+    "harvest_by_season": [ { "seasons": [ "spring", "summer", "autumn" ], "id": "flashbang_harv" } ],
+    "bash": { "str_min": 2, "str_max": 6, "sound": "crunch.", "sound_fail": "brush." }
+  },
+  {
+    "type": "furniture",
+    "id": "f_bush_explosive",
+    "name": "发光灌木",
+    "symbol": "#",
+    "description": "一种奇怪的异星灌木，黑色茎干上长着几颗红色小浆果。果实似乎柔和地发光。",
+    "color": "red",
+    "move_cost_mod": 1,
+    "required_str": -1,
+    "flags": [ "TRANSPARENT", "FLAMMABLE_ASH", "NOCOLLIDE" ],
+    "examine_action": "harvest_furn_nectar",
+    "harvest_by_season": [ { "seasons": [ "spring", "summer", "autumn" ], "id": "explosive_harv" } ],
+    "bash": { "str_min": 2, "str_max": 6, "sound": "crunch.", "sound_fail": "brush." }
+  }
+]

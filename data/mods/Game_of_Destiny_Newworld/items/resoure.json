@@ -1,0 +1,169 @@
+[
+  {
+    "type": "ammunition_type",
+    "id": "destiny_copper_type",
+    "name": { "str": "天命铜币" },
+    "default": "destiny_copper"
+  },
+  {
+    "type": "ammunition_type",
+    "id": "destiny_silver_type",
+    "name": { "str": "天命银币" },
+    "default": "destiny_silver"
+  },
+  {
+    "type": "ammunition_type",
+    "id": "destiny_gold_type",
+    "name": { "str": "天命金币" },
+    "default": "destiny_gold"
+  },
+  {
+    "type": "ammunition_type",
+    "id": "merit_type",
+    "name": { "str": "功德之气" },
+    "default": "merit"
+  },
+  {
+    "type": "ammunition_type",
+    "id": "destiny_fortune_type",
+    "name": { "str": "天命气运" },
+    "default": "destiny_fortune"
+  },
+  {
+    "type": "ammunition_type",
+    "id": "neww_soul_type",
+    "name": { "str": "灵魂结晶" },
+    "default": "neww_reiki"
+  },
+  {
+    "id": "destiny_copper",
+    "type": "AMMO",
+    "ammo_type": "destiny_copper_type",
+    "category": "GS_resoure",
+    "name": { "str": "天命铜币" },
+    "description": "时空能量凝结的货币单位，代表着天地间的气运与命数。",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "material": "super_mt",
+    "symbol": "$",
+    "color": "brown"
+  },
+  {
+    "id": "destiny_silver",
+    "type": "AMMO",
+    "ammo_type": "destiny_silver_type",
+    "category": "GS_resoure",
+    "name": { "str": "天命银币" },
+    "description": "时空能量凝结的进阶货币，代表着天地间的气运与命数。",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "material": "super_mt",
+    "symbol": "$",
+    "color": "light_gray"
+  },
+  {
+    "id": "destiny_gold",
+    "type": "AMMO",
+    "ammo_type": "destiny_gold_type",
+    "category": "GS_resoure",
+    "name": { "str": "天命金币" },
+    "description": "时空能量凝结的最高货币，代表着天地间的气运与命数，原本它不应该出在这这个世界。用途不明。",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "material": "super_mt",
+    "symbol": "$",
+    "color": "yellow"
+  },
+  {
+    "id": "merit",
+    "type": "AMMO",
+    "ammo_type": "merit_type",
+    "category": "GS_resoure",
+    "name": { "str": "功德之气" },
+    "description": "修福德、行惠施、利众生，具慈悲心的善行所累积的信仰之力，克制一切邪魇之物，特殊的装备或功法能导引其力量，缺点是难以收集。",
+    "volume": "1 ml",
+    "material": "merit_mt",
+    "symbol": "!",
+    "color": "yellow",
+    "effects": [ "NEVER_MISFIRES" ],
+    "flags": [ "ZERO_WEIGHT" ]
+  },
+  {
+    "id": "destiny_fortune",
+    "type": "AMMO",
+    "ammo_type": "destiny_fortune_type",
+    "category": "GS_resoure",
+    "name": { "str": "天命气运" },
+    "description": "于高维世界散发世间的天命气运，在时空联通之后充盈在世间，举手投足间都能与它接触，然而却是超凡游戏中极其稀有的物品。只能以极低的效率转化为天命货币，因此纯净的天命气运价值连城但有价无市。",
+    "volume": "1 ml",
+    "material": "super_mt",
+    "symbol": "?",
+    "color": "blue",
+    "flags": [ "ZERO_WEIGHT" ]
+  },
+  {
+    "id": "destiny_fortune_1",
+    "type": "AMMO",
+    "ammo_type": "destiny_fortune_type",
+    "category": "GS_resoure",
+    "name": { "str_sp": "天命气运（12%）" },
+    "description": "于高维世界散发世间的天命气运，在时空联通之后充盈在世间，举手投足间都能与它接触，然而却是极其稀有的物品。只能以极低的效率从空气中转化为天命货币，因此纯净的天命气运有价无市。这一份加压储存的天命气运净含量只有12%，依然十分昂贵。由于杂质过多，遇火会爆炸。",
+     "weight": "10 g",
+     "volume": "200 ml",
+     "material": "super_mt",
+     "symbol": "?",
+     "color": "blue",
+     "price": 600000,
+     "price_postapoc": 60000,
+     "count": 100,
+     "stack_size": 100,
+     "phase": "liquid",
+     "explode_in_fire": true,
+     "explosion": {
+      "power": 40,
+      "shrapnel": 0
+      },
+      "flags": [
+       "NO_DROP",
+       "IRREMOVABLE"
+      ]
+  },
+  {
+    "id": "neww_reiki",
+    "type": "AMMO",
+    "ammo_type": "neww_soul_type",
+    "name": { "str": "灵力结晶" },
+    "description": "由灵力凝聚而来的结晶，蕴含着强大的精神力量。可用于制造，或作为某些武器的弹药使用。",
+    "weight": "1 g",
+    "volume": "200 ml",
+    "count": 200,
+    "stack_size": 200,
+    "material": "NW_soul",
+    "symbol": "?",
+    "color": "dark_gray"
+  },
+  {
+    "//": "曾经重量可以设为负数，仅以这行代码缅怀那段时光。",
+    "id": "5ghost",
+    "type": "GENERIC",
+    "category": "GS_resoure",
+    "name": { "str": "五鬼搬运" },
+    "description": "以功德之力洗涤炼化的五方魂鬼，能施展搬运秘法增加负重上限。\n \n※只有一次效果，重复持有无效！",
+    "volume": "1 ml",
+    "material": [ "merit_mt" ],
+    "symbol": "g",
+    "color": "white",
+    "relic_data": {
+     "passive_effects": [
+      {
+       "has": "HELD",
+       "condition": "ALWAYS",
+       "mutations": [
+        "well_distributed"
+       ]
+      }
+     ]
+  },
+    "flags": [ "NO_SALVAGE", "ZERO_WEIGHT" ]
+  } 
+]

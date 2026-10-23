@@ -1,0 +1,53 @@
+[
+  {
+    "type": "effect_type",
+    "id": "mutagen_slugcat",
+    "name": [ "蛞蝓猫突变", "蛞蝓猫转化", "蛞蝓猫蜕变" ],
+    "desc": [
+      "你摄入了蛞蝓猫引物。",
+      "一个密封的巢穴会不错。",
+      "洪水雨季要来了。这肯定能帮到你。一定会的。"
+    ],
+    "main_parts_only": true,
+    "max_intensity": 3,
+    "resist_traits": [ "THRESH_SLUGCAT" ],
+    "base_mods": {
+      "vomit_chance": [ 1150 ],
+      "vomit_tick": [ 120 ],
+      "hurt_min": [ 1 ],
+      "hurt_max": [ 2 ],
+      "hurt_chance": [ 500 ],
+      "hurt_tick": [ 150 ],
+      "pain_min": [ 1 ],
+      "pain_max": [ 2 ],
+      "pain_chance": [ 90 ],
+      "pain_tick": [ 50 ]
+    },
+    "scaling_mods": {
+      "vomit_chance": [ -450 ],
+      "str_mod": [ 1 ],
+      "per_mod": [ 1 ],
+      "dex_mod": [ 1 ],
+      "int_mod": [ 1 ],
+      "hurt_chance": [ -240, -50 ],
+      "hurt_tick": [ -25 ],
+      "pain_chance": [ -30 ]
+    },
+    "rating": "bad",
+    "blood_analysis_description": "蛞蝓猫引物污染"
+  },
+  {
+    "type": "effect_type",
+    "id": "rain_aversion",
+    "name": [ "雨水厌恶" ],
+    "desc": [ "你感觉自己仿佛要被冲走了。" ],
+    "apply_message": "雨落下时，你的心脏砰砰直跳。",
+    "rating": "bad",
+    "max_intensity": 10,
+    "max_duration": "10 m",
+    "int_add_val": 2,
+    "base_mods": { "per_mod": [ -5 ], "dex_mod": [ -2 ] },
+    "scaling_mods": { "speed_mod": [ -3 ] },
+    "show_in_info": true
+  }
+]

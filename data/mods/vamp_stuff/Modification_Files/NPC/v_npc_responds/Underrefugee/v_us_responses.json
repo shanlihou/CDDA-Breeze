@@ -1,0 +1,385 @@
+[
+  {
+    "id": "TALK_VAMP_UNDERSEEKER",
+    "type": "talk_topic",
+    "dynamic_line": "…",
+    "responses": [
+      {
+        "text": "你是谁？",
+        "topic": "TALK_VAMP_UNDERSEEKER_none",
+        "condition": {
+          "and": [
+            {
+              "not": {
+                "u_has_trait": "undertradervampmark"
+              }
+            },
+            {
+              "not": {
+                "u_has_trait": "commandovampmark"
+              }
+            },
+            {
+              "not": {
+                "u_has_trait": "underseekermeet"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "text": "你是谁？",
+        "topic": "TALK_VAMP_UNDERSEEKER_notice",
+        "condition": {
+          "and": [
+            {
+              "u_has_trait": "undertradervampmark"
+            },
+            {
+              "not": {
+                "u_has_trait": "commandovampmark"
+              }
+            },
+            {
+              "not": {
+                "u_has_trait": "underseekermeet"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "text": "你是谁？",
+        "topic": "TALK_VAMP_UNDERSEEKER_attention",
+        "condition": {
+          "and": [
+            {
+              "u_has_trait": "undertradervampmark"
+            },
+            {
+              "u_has_trait": "commandovampmark"
+            },
+            {
+              "not": {
+                "u_has_trait": "underseekermeet"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "text": "你能告诉我你是谁吗？",
+        "topic": "TALK_VAMP_UNDERSEEKER_introduce",
+        "effect": {
+          "u_add_trait": "underseekerwhou"
+        },
+        "condition": {
+          "and": [
+            {
+              "u_has_trait": "underseekermeet"
+            },
+            {
+              "not": {
+                "u_has_trait": "underseekerwhou"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "text": "关于我们的旅程...",
+        "topic": "TALK_MISSION_INQUIRE",
+        "condition": "has_assigned_mission"
+      },
+      {
+        "text": "有什么工作吗？",
+        "topic": "TALK_MISSION_LIST",
+        "condition": {
+          "and": [
+            {
+              "u_has_trait": "underseekermeet"
+            },
+            {
+              "not": {
+                "u_has_trait": "underseekerdone"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "text": "他们让我帮他们解决麻烦。",
+        "topic": "TALK_VAMP_UNDERSEEKER_umehelp",
+        "effect": {
+          "u_add_trait": "underseekerwehelp"
+        },
+        "condition": {
+          "and": [
+            {
+              "u_has_trait": "wsg2hired"
+            },
+            {
+              "not": {
+                "u_has_trait": "underseekerwehelp"
+              }
+            },
+            {
+              "not": {
+                "u_has_trait": "underseekerhelpvampirus"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "text": "我们得去吸血鬼聚集地。",
+        "topic": "TALK_VAMP_UNDERSEEKER_vampirus",
+        "effect": [
+          {
+            "u_add_trait": "underseekerhelpvampirus"
+          },
+          {
+            "add_mission": "VAMP_UNDERSEEKER_quest_vampirus1"
+          }
+        ],
+        "condition": {
+          "and": [
+            {
+              "u_has_trait": "wsg2vampirushelp"
+            },
+            {
+              "not": {
+                "u_has_trait": "underseekerhelpvampirus"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "text": "关于我的任务...",
+        "topic": "TALK_VAMP_UNDERSEEKER_vampirus_hints",
+        "condition": {
+          "and": [
+            {
+              "u_has_trait": "underseekerhelpvampirus"
+            },
+            {
+              "not": {
+                "u_has_trait": "underseekerhelpvampirusdone"
+              }
+            },
+            {
+              "not": {
+                "npc_has_effect": "underseeker_unsealing"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "text": "我现在要走了...",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_VAMP_UNDERSEEKER_none",
+    "type": "talk_topic",
+    "dynamic_line": "…",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_VAMP_UNDERSEEKER_notice",
+    "type": "talk_topic",
+    "dynamic_line": "...?",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_VAMP_UNDERSEEKER_attention",
+    "type": "talk_topic",
+    "dynamic_line": "我看到你一直在努力帮助我们解决问题…很高兴见到你，我很抱歉从一开始就我瞥了你一眼之后就忽视了你。",
+    "responses": [
+      {
+        "text": "就像我之前说的一样...",
+        "topic": "TALK_DONE",
+        "//": "Rep up by 5.",
+        "effect": [
+          {
+            "u_faction_rep": 5
+          },
+          {
+            "u_add_trait": "underseekermeet"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "TALK_VAMP_UNDERSEEKER_introduce",
+    "type": "talk_topic",
+    "dynamic_line": "我是这个洞穴的探索者，我的工作是侦察周围地区可能存在的威胁。",
+    "responses": [
+      {
+        "text": "什么样的威胁？",
+        "topic": "TALK_VAMP_UNDERSEEKER_threat"
+      },
+      {
+        "text": "好吧……",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_VAMP_UNDERSEEKER_threat",
+    "type": "talk_topic",
+    "dynamic_line": "没什么危险的，一切都一成不变。",
+    "responses": [
+      {
+        "text": "好吧，好吧。",
+        "topic": "TALK_VAMP_UNDERSEEKER"
+      }
+    ]
+  },
+  {
+    "id": "TALK_VAMP_UNDERSEEKER_umehelp",
+    "type": "talk_topic",
+    "dynamic_line": "很好。如果你需要我一起去，就告诉我，我会帮你解决你的困难。",
+    "responses": [
+      {
+        "text": "跟上我。",
+        "topic": "TALK_VAMP_UNDERSEEKER_umehelp_yes"
+      },
+      {
+        "text": "这个工作很简单，不需要麻烦你。",
+        "topic": "TALK_VAMP_UNDERSEEKER_umehelp_no"
+      }
+    ]
+  },
+  {
+    "id": "TALK_VAMP_UNDERSEEKER_umehelp_yes",
+    "type": "talk_topic",
+    "dynamic_line": "带路吧，后裔。",
+    "responses": [
+      {
+        "text": "走吧！",
+        "topic": "TALK_DONE",
+        "effect": "follow"
+      }
+    ]
+  },
+  {
+    "id": "TALK_VAMP_UNDERSEEKER_umehelp_no",
+    "type": "talk_topic",
+    "dynamic_line": "正如你所说，后裔...",
+    "responses": [
+      {
+        "text": "再见。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_VAMP_UNDERSEEKER_vampirus",
+    "type": "talk_topic",
+    "dynamic_line": "后裔，你确定吗？",
+    "responses": [
+      {
+        "text": "是。",
+        "topic": "TALK_MISSION_OFFER"
+      }
+    ]
+  },
+  {
+    "id": "TALK_VAMP_UNDERSEEKER_vampirus_hints",
+    "type": "talk_topic",
+    "dynamic_line": "告诉我有什么问题，后裔。",
+    "responses": [
+      {
+        "text": "我们不能下坡",
+        "topic": "TALK_VAMP_UNDERSEEKER_vampirus_hints_enter",
+        "condition": {
+          "and": [
+            {
+              "u_at_om_location": "vampirus"
+            },
+            {
+              "not": {
+                "u_has_trait": "underseekerhelpvampirus_enter"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "text": "算了...",
+        "topic": "TALK_VAMP_UNDERSEEKER"
+      }
+    ]
+  },
+  {
+    "id": "TALK_VAMP_UNDERSEEKER_vampirus_hints_enter",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_has_trait": "underseekerhelpvampirusunseal",
+      "yes": "干这个需要一些时间...",
+      "no": "嗯，这些混蛋封锁了入口。我没想到他们还会使用咒语，即使他们深受魔法的影响…"
+    },
+    "responses": [
+      {
+        "text": "所以，你能够解封这个入口吗？",
+        "trial": {
+          "type": "CONDITION",
+          "condition": {
+            "and": [
+              {
+                "npc_at_om_location": "vampirus"
+              },
+              {
+                "not": {
+                  "u_has_trait": "underseekerhelpvampirusunseal"
+                }
+              },
+              {
+                "not": "is_day"
+              }
+            ]
+          }
+        },
+        "success": {
+          "topic": "TALK_MISSION_OFFER"
+        },
+        "failure": {
+          "topic": "TALK_VAMP_UNDERSEEKER_vampirus_hints_enter_not"
+        }
+      },
+      {
+        "text": "好的。",
+        "topic": "TALK_VAMP_UNDERSEEKER",
+        "condition": {
+          "u_has_trait": "underseekerhelpvampirusunseal"
+        }
+      }
+    ]
+  },
+  {
+    "id": "TALK_VAMP_UNDERSEEKER_vampirus_hints_enter_not",
+    "type": "talk_topic",
+    "dynamic_line": "今天晚上我必须要在这个入口工作了。",
+    "responses": [
+      {
+        "text": "好吧...继续",
+        "topic": "TALK_VAMP_UNDERSEEKER"
+      }
+    ]
+  }
+]

@@ -1,0 +1,3530 @@
+[
+  {
+    "//": "Monsters that doesn't spawn directly in cities and has no upgrade paths (except the stray zombie). Rarely spawns in the wilds, in some parts of cities and/or other special conditions.",
+    "id": "mon_zombie_nautilus",
+    "looks_like": "mon_zombie_mancroc",
+    "type": "MONSTER",
+    "name": {
+      "str": "螺母丧尸"
+    },
+    "description": "一种病态的大僵尸由于长时间暴露在受辐射的水中而发生了严重的变异，它的大部分身体部位都变成了类似软体动物的东西。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE",
+      "SECROZED_2"
+    ],
+    "volume": "92500 ml",
+    "weight": "120000 g",
+    "hp": 385,
+    "speed": 40,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "⛣",
+    "color": "i_cyan",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 8,
+    "melee_dice": 4,
+    "melee_dice_sides": 8,
+    "attack_cost": 325,
+    "harvest": "zombie",
+    "armor_bash": 14,
+    "armor_cut": 4,
+    "armor_bullet": 4,
+    "armor_stab": 4,
+    "vision_day": 10,
+    "vision_night": 18,
+    "weakpoints": [
+      {
+        "name": "the head",
+        "armor_mult": {
+          "bash": 0.9,
+          "cut": 0.8,
+          "stab": 0.8
+        },
+        "armor_penalty": {
+          "bash": 10,
+          "cut": 5,
+          "stab": 5
+        },
+        "difficulty": {
+          "melee": 3,
+          "bash": 3
+        },
+        "coverage": 10,
+        "coverage_mult": {
+          "all": 0.75
+        },
+        "effects": [
+          {
+            "effect": "stunned",
+            "duration": [
+              2,
+              2
+            ],
+            "intensity": [
+              1,
+              1
+            ],
+            "damage_required": [
+              10,
+              100
+            ],
+            "message": "The %s is disorientated."
+          }
+        ]
+      },
+      {
+        "name": "underneath the belly",
+        "armor_mult": {
+          "cut": 0.5,
+          "stab": 0.5,
+          "bullet": 0.8
+        },
+        "armor_penalty": {
+          "cut": 20,
+          "stab": 20
+        },
+        "difficulty": {
+          "melee": 3,
+          "cut": 3
+        },
+        "damage_mult": {
+          "all": 1.2
+        },
+        "coverage": 20,
+        "required_effects": [
+          "stunned"
+        ],
+        "effects": [
+          {
+            "effect": "bleed",
+            "duration": [
+              10,
+              10
+            ],
+            "intensity": [
+              5,
+              5
+            ],
+            "damage_required": [
+              25,
+              100
+            ],
+            "message": "The %s is rapidly losing health."
+          }
+        ]
+      }
+    ],
+    "special_attacks": [
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "mon_zombie_nautilus_disturbance_check"
+        },
+        "cooldown": 33,
+        "monster_message": "<color_dark_gray> %1$s淹没…</color>"
+      }
+    ],
+    "flags": [
+      "HEARS",
+      "SEES",
+      "SMELLS",
+      "WARM",
+      "AQUATIC",
+      "GRABS",
+      "BASHES",
+      "REVIVES",
+      "LOUDMOVES",
+      "NOHEAD",
+      "SWIMS",
+      "STUMBLES"
+    ]
+  },
+  {
+    "id": "mon_zombie_nautilus_pedo",
+    "looks_like": "mon_zombieworm_noxeater",
+    "type": "MONSTER",
+    "name": {
+      "str": "变异寄生虫T"
+    },
+    "description": "乌贼，或某种有触角的蛆。它身材娇小、虚弱、寿命短暂，在与人交往的过程中寻找一位活泼的主人。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE"
+    ],
+    "volume": "750 ml",
+    "weight": "1000 g",
+    "hp": 18,
+    "speed": 80,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "⛢",
+    "color": "blue",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 1,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "harvest": "exempt",
+    "armor_bash": 2,
+    "vision_day": 12,
+    "vision_night": 20,
+    "special_attacks": [
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "mon_zombie_nautilus_pedo_restraint_check"
+        },
+        "cooldown": 1,
+        "monster_message": "<color_yellow>%1$s锁上了%3$s！</color>"
+      }
+    ],
+    "death_function": {
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s melts away."
+    },
+    "flags": [
+      "HEARS",
+      "SEES",
+      "SMELLS",
+      "WARM",
+      "AQUATIC",
+      "GRABS",
+      "BASHES",
+      "NOHEAD",
+      "SWIMS",
+      "LARVA",
+      "PACIFIST",
+      "HARDTOSHOOT"
+    ]
+  },
+  {
+    "//": "Support-type zed that uses an aura to inflict debuffs.",
+    "id": "mon_zombie_disser",
+    "type": "MONSTER",
+    "looks_like": "mon_zombie_shrieker",
+    "name": {
+      "str": "尖叫丧尸"
+    },
+    "description": "一种瘦高的丧尸，嘴巴肿胀，下颚拉长，渗出黑色的软泥。它刺耳、高亢的声音使它变得异常危险。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE",
+      "SECROZED_1"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "harvest": "zombie",
+    "hp": 70,
+    "speed": 60,
+    "material": [
+      "flesh"
+    ],
+    "emit_fields": [
+      "secro_shout",
+      "secro_scream"
+    ],
+    "symbol": "♭",
+    "color": "magenta_red",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 2,
+    "melee_dice": 2,
+    "melee_dice_sides": 2,
+    "armor_bash": 1,
+    "special_attacks": [
+      [
+        "SHRIEK_ALERT",
+        8
+      ]
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "PUSH_MON",
+      "FILTHY"
+    ]
+  },
+  {
+    "//": "Summoner-type electric zed. Uses an aura to spawn minions.",
+    "id": "mon_zombie_jolt",
+    "type": "MONSTER",
+    "name": {
+      "str": "雷电丧尸"
+    },
+    "description": "苍白的尸体，外表模糊。流经它身体的是一股巨大的电流。",
+    "default_faction": "zombie",
+    "bodytype": "human",
+    "species": [
+      "ZOMBIE",
+      "SECROZED_2"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 185,
+    "speed": 30,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "⛤",
+    "color": "cyan_white",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 4,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "damage_type": "electric",
+        "amount": 5
+      }
+    ],
+    "vision_night": 2,
+    "luminance": 20,
+    "harvest": "zombie",
+    "emit_fields": [
+      "emit_jolt_ing",
+      "emit_jolt_blanket"
+    ],
+    "special_when_hit": [
+      "ZAPBACK",
+      100
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "WARM",
+      "POISON",
+      "ELECTRIC",
+      "NO_BREATHE",
+      "REVIVES",
+      "ELECTRIC_FIELD",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_jolt_bolt_smol",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型雷电球"
+    },
+    "description": "一个电的噼啪作响的球，在空中自由漂浮。",
+    "default_faction": "zombie",
+    "bodytype": "human",
+    "species": [
+      "UNKNOWN"
+    ],
+    "volume": "3 ml",
+    "weight": "3 g",
+    "hp": 4,
+    "speed": 105,
+    "material": [
+      "secro_null"
+    ],
+    "symbol": "○",
+    "color": "cyan",
+    "aggression": 100,
+    "morale": 100,
+    "phase": "GAS",
+    "melee_skill": 1,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "vision_night": 11,
+    "dodge": 6,
+    "vision_day": 11,
+    "luminance": 4,
+    "emit_fields": [
+      "emit_bolt_crackle_smol"
+    ],
+    "special_attacks": [
+      [
+        "DISAPPEAR",
+        75
+      ]
+    ],
+    "special_when_hit": [
+      "ZAPBACK",
+      20
+    ],
+    "death_function": {
+      "message": "The %s disintegrates!",
+      "corpse_type": "NO_CORPSE"
+    },
+    "flags": [
+      "SEES",
+      "PACIFIST",
+      "ACIDPROOF",
+      "ELECTRIC",
+      "NO_BREATHE",
+      "FLIES"
+    ]
+  },
+  {
+    "id": "mon_zombie_jolt_bolt_big",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型雷电球"
+    },
+    "description": "一个巨大的，电的爆裂的球，自由地漂浮在空中。",
+    "default_faction": "zombie",
+    "bodytype": "human",
+    "species": [
+      "UNKNOWN"
+    ],
+    "volume": "3 ml",
+    "weight": "3 g",
+    "hp": 8,
+    "diff": 10,
+    "speed": 90,
+    "material": [
+      "secro_null"
+    ],
+    "symbol": "◯",
+    "color": "light_blue",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 1,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "vision_night": 15,
+    "vision_day": 15,
+    "luminance": 12,
+    "dodge": 6,
+    "phase": "GAS",
+    "emit_fields": [
+      "emit_bolt_crackle_big"
+    ],
+    "special_attacks": [
+      [
+        "DISAPPEAR",
+        150
+      ]
+    ],
+    "special_when_hit": [
+      "ZAPBACK",
+      50
+    ],
+    "death_function": {
+      "message": "The %s disintegrates!",
+      "corpse_type": "NO_CORPSE"
+    },
+    "flags": [
+      "SEES",
+      "PACIFIST",
+      "ACIDPROOF",
+      "ELECTRIC",
+      "NO_BREATHE",
+      "FLIES"
+    ]
+  },
+  {
+    "//": "Aggro-type zed that morphs into a lethal counterpart on-death.",
+    "id": "mon_zombie_fake_ichorus",
+    "type": "MONSTER",
+    "name": {
+      "str": "丧尸"
+    },
+    "description": "一个人类的身体，随着它的移动而摇摆，从它油腻的红眼睛里可以看到一种无法抑制的愤怒..",
+    "default_faction": "zombie",
+    "bodytype": "human",
+    "species": [
+      "ZOMBIE",
+      "SECROZED_1"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 80,
+    "speed": 70,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "Z",
+    "color": "light_green",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 2,
+    "melee_dice": 2,
+    "melee_dice_sides": 2,
+    "vision_day": 4,
+    "vision_night": 4,
+    "harvest": "zombie",
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 5
+      },
+      [
+        "GRAB",
+        7
+      ],
+      [
+        "scratch",
+        20
+      ]
+    ],
+    "death_function": {
+      "corpse_type": "NO_CORPSE",
+      "message": "<color_light_red>%s mutates into an ichorus!</color>",
+      "effect": {
+        "id": "mon_zombie_fake_ichorus_death",
+        "hit_self": true
+      }
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "PUSH_MON",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_ichorus",
+    "type": "MONSTER",
+    "name": {
+      "str": "伪装蛇颈丧尸"
+    },
+    "description": "成堆的绿色肉瘤取代了它起伏的球状躯干下的头部。行动缓慢并且受到严重阻碍，但腐蚀性体液使其依旧是一个巨大的威胁。",
+    "default_faction": "zombie",
+    "bodytype": "human",
+    "species": [
+      "ZOMBIE",
+      "SECROZED_2"
+    ],
+    "volume": "92500 ml",
+    "weight": "120000 g",
+    "hp": 320,
+    "speed": 65,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "⚳",
+    "color": "green",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 6,
+    "melee_dice": 6,
+    "melee_dice_sides": 6,
+    "armor_bash": 10,
+    "armor_cut": 5,
+    "armor_bullet": 3,
+    "armor_stab": 3,
+    "dodge": 1,
+    "attack_cost": 220,
+    "melee_damage": [
+      {
+        "damage_type": "acid",
+        "amount": 6
+      }
+    ],
+    "harvest": "zombie",
+    "special_attacks": [
+      [
+        "ACID",
+        20
+      ]
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "death_function": {
+      "effect": {
+        "id": "death_acid",
+        "hit_self": true
+      },
+      "message": "The %s's body leaks acid."
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "ACIDPROOF",
+      "ACID_BLOOD",
+      "NO_BREATHE",
+      "REVIVES",
+      "PUSH_MON",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_fake_psyrus",
+    "type": "MONSTER",
+    "name": {
+      "str": "丧尸"
+    },
+    "description": "一个人类的身体，随着它的移动而摇摆，从它油腻的红眼睛里可以看到一种无法抑制的愤怒..",
+    "default_faction": "zombie",
+    "bodytype": "human",
+    "species": [
+      "ZOMBIE",
+      "SECROZED_1"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 80,
+    "speed": 70,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "Z",
+    "color": "light_green",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 2,
+    "melee_dice": 2,
+    "melee_dice_sides": 2,
+    "vision_day": 4,
+    "vision_night": 4,
+    "harvest": "zombie",
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 5
+      },
+      [
+        "GRAB",
+        7
+      ],
+      [
+        "scratch",
+        20
+      ]
+    ],
+    "death_function": {
+      "corpse_type": "NO_CORPSE",
+      "message": "<color_light_red>%s mutates into a psyrus!</color>",
+      "effect": {
+        "id": "mon_zombie_fake_psyrus_death",
+        "hit_self": true
+      }
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "PUSH_MON",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_psyrus",
+    "type": "MONSTER",
+    "name": {
+      "str": "伪装变异丧尸"
+    },
+    "description": "一个大而邪恶的尸体，在它肮脏的嘴下有触手。当它对肉体的强烈欲望点燃它时，它的血管会发光。",
+    "default_faction": "zombie",
+    "bodytype": "human",
+    "species": [
+      "ZOMBIE",
+      "SECROZED_2"
+    ],
+    "volume": "92500 ml",
+    "weight": "120000 g",
+    "hp": 205,
+    "speed": 95,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "⚵",
+    "color": "light_red",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 8,
+    "melee_dice": 2,
+    "melee_dice_sides": 6,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 6
+      }
+    ],
+    "armor_bash": 8,
+    "armor_cut": 4,
+    "armor_bullet": 4,
+    "armor_stab": 4,
+    "dodge": 3,
+    "attack_cost": 180,
+    "harvest": "zombie",
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 4
+      },
+      [
+        "GRAB",
+        4
+      ],
+      [
+        "scratch",
+        4
+      ]
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "PUSH_VEH",
+      "PUSH_MON",
+      "FILTHY"
+    ]
+  },
+  {
+    "//": "Specialized summoner. Slim chance to call a zed of random type using its aura, but becomes frequent when a target is in sight.",
+    "id": "mon_zombie_uruxis",
+    "type": "MONSTER",
+    "name": {
+      "str": "漆黑丧尸"
+    },
+    "description": "笼罩在不祥的黑色薄雾中，这具尸体可怕的面容使有意识的人感到恐惧。",
+    "default_faction": "zombie",
+    "bodytype": "human",
+    "species": [
+      "ZOMBIE",
+      "SECROZED_2"
+    ],
+    "diff": 20,
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 205,
+    "speed": 70,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "☥",
+    "color": "dark_gray_white",
+    "aggression": 5,
+    "morale": 100,
+    "emit_fields": [
+      "emit_urixis_aura"
+    ],
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 6,
+    "dodge": 3,
+    "armor_bash": 6,
+    "armor_cut": 2,
+    "armor_bullet": 2,
+    "vision_day": 24,
+    "vision_night": 12,
+    "harvest": "zombie",
+    "path_settings": {
+      "max_dist": 10
+    },
+    "special_attacks": [
+      [
+        "UPGRADE",
+        48
+      ],
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "mon_zombie_uruxis_spawn_target"
+        },
+        "cooldown": 24,
+        "monster_message": "<color_yellow>%1$s诅咒周围的区域，并将它自己笼罩在阴影中！</color>"
+      }
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "BASHES",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "PATH_AVOID_DANGER_2",
+      "PRIORITIZE_TARGETS",
+      "FILTHY"
+    ]
+  },
+  {
+    "//": "Support-type zed. Becomes a worn item, bringing movement debuffs that lasts until it is removed. Its ability only affects the player, and nothing else. If it does the ability on something, the item is transferred onto you, no matter how far you are.",
+    "id": "mon_zombie_cling",
+    "type": "MONSTER",
+    "name": {
+      "str": "克林杰"
+    },
+    "description": "浑身恶臭难闻，这只令人难以捉摸的4条腿生物在移动时摇摇晃晃，抓住并啃咬周围的任何东西。",
+    "default_faction": "zombie",
+    "bodytype": "dog",
+    "species": [
+      "ZOMBIE",
+      "SECROZED_1"
+    ],
+    "volume": "600 ml",
+    "weight": "1300 g",
+    "hp": 10,
+    "speed": 45,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "⨨",
+    "color": "yellow",
+    "aggression": 0,
+    "morale": 100,
+    "melee_skill": 1,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 1
+      }
+    ],
+    "dodge": 3,
+    "vision_day": 16,
+    "vision_night": 6,
+    "harvest": "zombie",
+    "anger_triggers": [
+      "PLAYER_CLOSE"
+    ],
+    "special_attacks": [
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "mon_zombie_cling_cling"
+        },
+        "cooldown": 111,
+        "monster_message": "<color_yellow>%1$s跳向了%3$s！</color>"
+      }
+    ],
+    "death_function": {
+      "message": "The %s disintegrates!",
+      "corpse_type": "NO_CORPSE"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "HARDTOSHOOT"
+    ]
+  },
+  {
+    "//": "Aggro-type zed. Like a shady zombie, but much stronger and tougher.",
+    "id": "mon_zombie_nocturne",
+    "type": "MONSTER",
+    "name": {
+      "str": "漆黑鬼影丧尸"
+    },
+    "description": "隐藏在超自然的阴影中，这具邪恶的尸体给它不幸的猎物带来了恐惧。一排排剃须刀般的指甲在黑暗中隐约发光，邪恶的眼睛悬浮在上空。",
+    "default_faction": "zombie",
+    "bodytype": "human",
+    "species": [
+      "ZOMBIE",
+      "SECROZED_3"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 230,
+    "speed": 80,
+    "material": [
+      "flesh",
+      "bone"
+    ],
+    "symbol": "⫝",
+    "color": "dark_gray",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 8,
+    "melee_dice": 2,
+    "melee_dice_sides": 6,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 8
+      }
+    ],
+    "armor_stab": 8,
+    "dodge": 3,
+    "armor_bash": 3,
+    "armor_cut": 5,
+    "armor_bullet": 3,
+    "vision_day": 6,
+    "vision_night": 26,
+    "harvest": "zombie",
+    "special_attacks": [
+      [
+        "nocturne_nsweep",
+        24
+      ],
+      [
+        "nocturne_sstrike",
+        38
+      ],
+      {
+        "id": "scratch",
+        "damage_max_instance": [
+          {
+            "damage_type": "cut",
+            "amount": 16,
+            "armor_multiplier": 0.8
+          }
+        ]
+      }
+    ],
+    "regenerates": 3,
+    "regenerates_in_dark": true,
+    "death_drops": "default_zombie_death_drops",
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "NIGHT_INVISIBILITY",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "HARDTOSHOOT",
+      "FILTHY",
+      "SUNDEATH"
+    ]
+  },
+  {
+    "//": "Support-type zed that uses an aura to cause fear to the targets.",
+    "id": "mon_zombie_nix",
+    "type": "MONSTER",
+    "name": {
+      "str": "中空丧尸"
+    },
+    "description": "一具中空的尸体，由于肉的严重退化而显得完全骨瘦如柴。它可怕的面容让人看了不舒服，靠近它是最糟糕的。",
+    "default_faction": "zombie",
+    "bodytype": "human",
+    "species": [
+      "ZOMBIE",
+      "SECROZED_2"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 50,
+    "diff": 10,
+    "speed": 45,
+    "material": [
+      "flesh",
+      "bone"
+    ],
+    "symbol": "⚲",
+    "color": "dark_gray_yellow",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 2,
+    "melee_dice": 0,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
+    "dodge": 1,
+    "armor_bash": 3,
+    "armor_cut": 23,
+    "armor_bullet": 15,
+    "vision_day": 20,
+    "vision_night": 3,
+    "harvest": "mr_bones",
+    "emit_fields": [
+      "emit_nix_pressence"
+    ],
+    "special_attacks": [
+      [
+        "FEAR_PARALYZE",
+        12
+      ]
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "HARDTOSHOOT",
+      "FILTHY"
+    ]
+  },
+  {
+    "//": "Support-type zed aberration that heals nearby allies. It uses its own health to perform its healing ability.",
+    "id": "mon_zombie_fleshmonger",
+    "type": "MONSTER",
+    "name": {
+      "str": "血肉蒙哥"
+    },
+    "description": "A gigantic mound of putrid flesh, with assortments of limbs and writhing tendrils reemerging back and forth. Dark, oozing pus constantly erupts from its swollen body.",
+    "default_faction": "zombie",
+    "bodytype": "migo",
+    "species": [
+      "ZOMBIE",
+      "SECROZED_3",
+      "ABERRATION"
+    ],
+    "volume": "1320 L",
+    "weight": "2430000 g",
+    "hp": 2120,
+    "speed": 40,
+    "material": [
+      "flesh",
+      "bone"
+    ],
+    "symbol": "♺",
+    "color": "magenta_yellow",
+    "attack_cost": 1000,
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 10,
+    "melee_dice": 8,
+    "melee_dice_sides": 8,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 1
+      }
+    ],
+    "armor_bash": 30,
+    "armor_cut": 2,
+    "armor_bullet": 2,
+    "vision_day": 22,
+    "vision_night": 12,
+    "harvest": "zombie",
+    "emit_fields": [
+      "emit_down_immunity"
+    ],
+    "tracking_distance": 3,
+    "special_attacks": [
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "mon_zombie_fleshmonger_reflesh_check"
+        },
+        "cooldown": 18,
+        "monster_message": "<color_magenta>%1$s is trembling…</color>"
+      }
+    ],
+    "regenerates": 10,
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "SWARMS",
+      "STUMBLES",
+      "WARM",
+      "POISON",
+      "NO_BREATHE",
+      "LOUDMOVES",
+      "NOHEAD",
+      "DESTROYS",
+      "PUSH_MON",
+      "PUSH_VEH",
+      "PLASTIC",
+      "STUN_IMMUNE",
+      "RANGED_ATTACKER",
+      "KEEP_DISTANCE"
+    ]
+  },
+  {
+    "//": "Summoner-type monster whose purpose is to send out minions. Its basically a 3-tile wide monster: the center is its hitbox and the adjacent `mouth` causes damage when a creature steps on it.",
+    "id": "mon_zombie_gorepit",
+    "type": "MONSTER",
+    "name": {
+      "str": "戈雷普特"
+    },
+    "description": "一个诡异的坑，主要由腐烂的肉组成，有一个独特的巨大缺口，露出数千块骨头和其他有机材料排列在它的墙壁上。粗而有力的织带支撑着一个以稳定速度跳动的中央球状球体。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE",
+      "SECROZED_ULTIMATE"
+    ],
+    "diff": 50,
+    "volume": "69420 L",
+    "weight": "6669420 g",
+    "hp": 2620,
+    "speed": 50,
+    "material": [
+      "flesh",
+      "bone"
+    ],
+    "symbol": "☀",
+    "color": "red",
+    "aggression": 100,
+    "morale": 100,
+    "emit_fields": [
+      "emit_down_immunity",
+      "emit_gorepit_edge"
+    ],
+    "melee_skill": 0,
+    "melee_dice": 0,
+    "melee_dice_sides": 0,
+    "armor_bash": 1,
+    "armor_stab": 2,
+    "armor_cut": 4,
+    "armor_bullet": 2,
+    "vision_day": 30,
+    "vision_night": 6,
+    "harvest": "exempt",
+    "bleed_rate": 0,
+    "weakpoints": [
+      {
+        "name": "the orb",
+        "armor_mult": {
+          "cut": 0,
+          "stab": 0,
+          "bullet": 0
+        },
+        "difficulty": {
+          "point": 6
+        },
+        "coverage": 30,
+        "damage_mult": {
+          "all": 1.5
+        },
+        "effects": [
+          {
+            "effect": "secro_gorepit_absorb",
+            "duration": [
+              30,
+              45
+            ],
+            "damage_required": [
+              8,
+              18
+            ],
+            "//": "Around 130 damage. Will trigger another ability if this effect is active.",
+            "message": "<color_light_red>The %s unleashes an ear-splitting screech!</color>\n<color_magenta>The %s's orb is absorbing its surrounding flesh, replenishing itself.</color>"
+          },
+          {
+            "effect": "secro_gorepit_explode",
+            "permanent": true,
+            "damage_required": [
+              19,
+              100
+            ],
+            "//": "Around 500 damage.",
+            "message": "The %s's orb exploded!"
+          }
+        ]
+      }
+    ],
+    "special_attacks": [
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "mon_zombie_gorepit_spawn_target"
+        },
+        "cooldown": 38,
+        "monster_message": "<color_red>你感到%1$s方向的地面正在不断地震动</color>\n<color_yellow>%1$s发出一声清脆的尖叫声！</color>"
+      }
+    ],
+    "death_function": {
+      "message": "The %s collapses!",
+      "corpse_type": "NO_CORPSE",
+      "effect": {
+        "id": "mon_zombie_gorepit_death",
+        "hit_self": true
+      }
+    },
+    "flags": [
+      "SEES",
+      "WARM",
+      "IMMOBILE",
+      "POISON",
+      "NO_BREATHE",
+      "PRIORITIZE_TARGETS",
+      "STUN_IMMUNE",
+      "FLIES",
+      "NOHEAD"
+    ]
+  },
+  {
+    "//": "Gorepit's main damage dealer.",
+    "id": "mon_zombie_gorepit_tent",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型触手"
+    },
+    "description": "卷须一种粗壮的、蜿蜒的卷须，由肉和骨头组成。它的血管与球体同步发光。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE"
+    ],
+    "volume": "420 L",
+    "weight": "690000 g",
+    "hp": 210,
+    "speed": 50,
+    "diff": 100,
+    "material": [
+      "flesh",
+      "bone"
+    ],
+    "symbol": "?",
+    "color": "red",
+    "emit_fields": [
+      "emit_down_immunity"
+    ],
+    "aggression": 100,
+    "morale": 100,
+    "attack_cost": 425,
+    "melee_skill": 8,
+    "melee_dice": 4,
+    "melee_dice_sides": 6,
+    "armor_bash": 1,
+    "armor_stab": 1,
+    "armor_cut": 2,
+    "armor_bullet": 2,
+    "bleed_rate": 0,
+    "vision_day": 13,
+    "vision_night": 13,
+    "harvest": "exempt",
+    "special_attacks": [
+      [
+        "gorepit_tent_hswing",
+        30
+      ],
+      [
+        "gorepit_tent_stab",
+        22
+      ],
+      [
+        "gorepit_tent_slam",
+        40
+      ],
+      [
+        "DISAPPEAR",
+        250
+      ]
+    ],
+    "death_function": {
+      "message": "The %s disappears into the ground.",
+      "corpse_type": "NO_CORPSE"
+    },
+    "flags": [
+      "SEES",
+      "WARM",
+      "IMMOBILE",
+      "POISON",
+      "NO_BREATHE",
+      "NOHEAD",
+      "STUN_IMMUNE",
+      "PRIORITIZE_TARGETS",
+      "NOHEAD"
+    ]
+  },
+  {
+    "id": "mon_zombie_gorepit_tent_massive",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨大的触手"
+    },
+    "description": "一根巨大的触手，颜色较深，几乎是普通变种的两倍大。与其他人不同的是，这一次是从戈雷普特的深处出现的。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE"
+    ],
+    "volume": "1000 L",
+    "weight": "1000000 g",
+    "hp": 500,
+    "speed": 50,
+    "diff": 100,
+    "material": [
+      "flesh",
+      "bone"
+    ],
+    "symbol": "?",
+    "color": "white_red",
+    "emit_fields": [
+      "emit_down_immunity"
+    ],
+    "aggression": 100,
+    "morale": 100,
+    "attack_cost": 600,
+    "melee_skill": 10,
+    "melee_dice": 10,
+    "melee_dice_sides": 10,
+    "armor_bash": 3,
+    "armor_stab": 3,
+    "armor_cut": 6,
+    "armor_bullet": 6,
+    "bleed_rate": 0,
+    "vision_day": 13,
+    "vision_night": 13,
+    "harvest": "exempt",
+    "special_attacks": [
+      [
+        "gorepit_tent_hswing",
+        25
+      ],
+      [
+        "gorepit_tent_stab",
+        19
+      ],
+      [
+        "gorepit_tent_slam",
+        33
+      ],
+      [
+        "DISAPPEAR",
+        600
+      ]
+    ],
+    "death_function": {
+      "message": "The %s disappears into the pit.",
+      "corpse_type": "NO_CORPSE"
+    },
+    "flags": [
+      "SEES",
+      "WARM",
+      "IMMOBILE",
+      "POISON",
+      "NO_BREATHE",
+      "NOHEAD",
+      "STUN_IMMUNE",
+      "PRIORITIZE_TARGETS",
+      "NOHEAD"
+    ]
+  },
+  {
+    "//": "Aggro-type zed, both durable and lethal. Unlike other zed mutants, this one's very dependant on healing for itself whilst dealing damage, in addition to its unique debuff-inflicting acid.",
+    "id": "mon_zombie_cordev",
+    "type": "MONSTER",
+    "name": {
+      "str": "腐化吞噬者"
+    },
+    "description": "这是一具巨大的人形尸体，与它看似易变的环状肿块截然不同，一具无头上衣和一组眼睛肿胀的咬人手臂连在一起。",
+    "default_faction": "zombie",
+    "bodytype": "human",
+    "species": [
+      "ZOMBIE",
+      "SECROZED_3",
+      "ABERRATION"
+    ],
+    "volume": "970 L",
+    "weight": "1125000 g",
+    "hp": 1325,
+    "speed": 65,
+    "material": [
+      "flesh",
+      "bone"
+    ],
+    "symbol": "⨊",
+    "color": "light_red",
+    "aggression": 100,
+    "morale": 100,
+    "attack_cost": 225,
+    "melee_skill": 10,
+    "melee_dice": 4,
+    "melee_dice_sides": 8,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 6
+      }
+    ],
+    "armor_bash": 20,
+    "armor_cut": 13,
+    "armor_bullet": 10,
+    "armor_stab": 15,
+    "vision_day": 15,
+    "vision_night": 5,
+    "harvest": "zombie",
+    "special_attacks": [
+      {
+        "type": "gun",
+        "cooldown": 55,
+        "move_cost": 125,
+        "gun_type": "cordev_mouth",
+        "fake_skills": [
+          [
+            "gun",
+            2
+          ],
+          [
+            "rifle",
+            2
+          ]
+        ],
+        "ranges": [
+          [
+            1,
+            9,
+            "N"
+          ]
+        ],
+        "require_targeting_player": false,
+        "require_targeting_npc": false,
+        "require_targeting_monster": false,
+        "description": "腐败的吞食者吐出一团酸！"
+      },
+      {
+        "cooldown": 15,
+        "damage_max_instance": [
+          {
+            "amount": 12,
+            "armor_multiplier": 0.3,
+            "armor_penetration": 10,
+            "damage_type": "bash"
+          },
+          {
+            "amount": 12,
+            "armor_multiplier": 0.6,
+            "armor_penetration": 20,
+            "damage_type": "stab"
+          }
+        ],
+        "effects": [
+          {
+            "bp": "arm_l",
+            "duration": 30,
+            "id": "grabbed"
+          },
+          {
+            "bp": "arm_r",
+            "duration": 30,
+            "id": "grabbed"
+          }
+        ],
+        "type": "bite"
+      }
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "POISON",
+      "NO_BREATHE",
+      "LOUDMOVES",
+      "ACIDPROOF",
+      "NOHEAD",
+      "DESTROYS",
+      "PUSH_MON",
+      "ATTACKMON",
+      "PUSH_VEH",
+      "REVIVES"
+    ]
+  },
+  {
+    "//": "Aggro-type zed aberration, extremely tough, durable and full of deadly ranged capabilities, unique to its drastic movement speed gain as long as it sees a target. One of the true end-game monsters.",
+    "id": "mon_zombie_fleshysnaky",
+    "type": "MONSTER",
+    "name": {
+      "str": "蛇形肉像"
+    },
+    "description": "巨蟒一种由厚而腐烂的肉组成的巨大团块，形成一个蛇形的雕像，其头部类似于龙。可怕的灾难是，它的整个身体覆盖着骨鳞，下面是类似材料的刺。",
+    "default_faction": "zombie",
+    "bodytype": "snake",
+    "species": [
+      "ZOMBIE",
+      "SECROZED_ULTIMATE",
+      "ABERRATION"
+    ],
+    "volume": "2680 L",
+    "weight": "3300500 g",
+    "hp": 2160,
+    "speed": 40,
+    "diff": 100,
+    "material": [
+      "flesh",
+      "bone"
+    ],
+    "symbol": "⚶",
+    "emit_fields": [
+      "emit_down_immunity"
+    ],
+    "color": "magenta",
+    "aggression": 100,
+    "morale": 100,
+    "attack_cost": 675,
+    "melee_skill": 10,
+    "melee_dice": 8,
+    "melee_dice_sides": 10,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 6
+      }
+    ],
+    "armor_bash": 30,
+    "armor_cut": 34,
+    "armor_bullet": 27,
+    "armor_stab": 26,
+    "vision_day": 23,
+    "vision_night": 3,
+    "harvest": "zombie",
+    "weakpoints": [
+      {
+        "name": "the head",
+        "armor_mult": {
+          "bash": 0.8,
+          "cut": 1.1,
+          "stab": 1.1,
+          "bullet": 1.1
+        },
+        "difficulty": {
+          "melee": 3,
+          "ranged": 3
+        },
+        "coverage": 5,
+        "damage_mult": {
+          "all": 1.15
+        }
+      }
+    ],
+    "special_attacks": [
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "mon_zombie_fleshysnaky_devastate_check"
+        },
+        "cooldown": 101,
+        "monster_message": "<color_yellow>%1$s猛击%3$s！</color>"
+      },
+      {
+        "type": "gun",
+        "cooldown": 101,
+        "move_cost": 400,
+        "gun_type": "fleshysnaky_bn_shower",
+        "fake_skills": [
+          [
+            "gun",
+            1
+          ],
+          [
+            "rifle",
+            1
+          ]
+        ],
+        "ranges": [
+          [
+            3,
+            4,
+            "N"
+          ]
+        ],
+        "require_targeting_player": false,
+        "require_targeting_npc": false,
+        "require_targeting_monster": false,
+        "description": "Flesilik盘绕并随后释放，投掷数百根骨针！"
+      },
+      {
+        "cooldown": 31,
+        "damage_max_instance": [
+          {
+            "amount": 32,
+            "armor_penetration": 5,
+            "damage_type": "bash"
+          },
+          {
+            "amount": 16,
+            "armor_penetration": 30,
+            "damage_type": "stab"
+          }
+        ],
+        "type": "bite"
+      }
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "POISON",
+      "NO_BREATHE",
+      "LOUDMOVES",
+      "NOHEAD",
+      "DESTROYS",
+      "PUSH_MON",
+      "ATTACKMON",
+      "PUSH_VEH",
+      "STUN_IMMUNE",
+      "REVIVES"
+    ]
+  },
+  {
+    "//": "Support-type zed who weakens the target by applying debuffs that intensifies for as long as it acquire LOS, while empowering nearby allies. Feeble, yet a great nuisance behind its meat wall. One of the true end-game monsters.",
+    "id": "mon_zombie_akin",
+    "type": "MONSTER",
+    "name": {
+      "str": "同质丧尸"
+    },
+    "description": "一具怪诞邪恶的尸体，在空气中回荡着纯粹的恐惧，它急切地沿着自己的路径摇摆。内脏的卷须在其附近自由滑动，像向导一样感应不幸的宿主。",
+    "default_faction": "zombie",
+    "bodytype": "human",
+    "species": [
+      "ZOMBIE",
+      "SECROZED_3"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 130,
+    "speed": 60,
+    "diff": 100,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "⚨",
+    "color": "dark_gray",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 4,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 1
+      }
+    ],
+    "armor_bash": 3,
+    "armor_cut": 1,
+    "armor_bullet": 1,
+    "vision_day": 25,
+    "vision_night": 5,
+    "harvest": "zombie",
+    "path_settings": {
+      "max_dist": 9
+    },
+    "tracking_distance": 9,
+    "special_attacks": [
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "mon_zombie_akin_sattach_check"
+        },
+        "cooldown": 21,
+        "monster_message": "<color_yellow>%1$s的内脏卷须群向%3$s！</color>"
+      }
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "death_function": {
+      "effect": {
+        "id": "mon_zombie_akin_death",
+        "hit_self": true
+      }
+    },
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "KEENNOSE",
+      "HEARS",
+      "STUMBLES",
+      "WARM",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "FILTHY",
+      "RANGED_ATTACKER",
+      "KEEP_DISTANCE"
+    ]
+  },
+  {
+    "//": "Summoner-type monster that excels at quickly sending out agile minions. One of the true end-game monsters.",
+    "id": "mon_zombie_equinox",
+    "type": "MONSTER",
+    "name": {
+      "str": "探界者"
+    },
+    "description": "一块巨大的、类似于大脑的肉，不断地从其突出的、像shroom一样的突起物中释放出汽化的毒气。巨大、中空的缝隙只露出阴暗的阴影。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE",
+      "SECROZED_ULTIMATE",
+      "ABERRATION"
+    ],
+    "bodytype": "blob",
+    "diff": 100,
+    "volume": "5940 L",
+    "weight": "3228500 g",
+    "hp": 3475,
+    "speed": 50,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "❄",
+    "color": "red",
+    "aggression": 100,
+    "morale": 100,
+    "emit_fields": [
+      "emit_down_immunity",
+      "emit_equinox_toxic_weak",
+      "emit_equinox_toxic_normal",
+      "emit_equinox_toxic_strong",
+      "emit_equinox_para"
+    ],
+    "melee_skill": 0,
+    "melee_dice": 0,
+    "melee_dice_sides": 0,
+    "armor_bash": 22,
+    "armor_stab": 2,
+    "armor_cut": 3,
+    "armor_bullet": 2,
+    "vision_day": 40,
+    "vision_night": 12,
+    "special_attacks": [
+      {
+        "type": "gun",
+        "cooldown": 66,
+        "move_cost": 1000,
+        "gun_type": "equinox_hole",
+        "fake_skills": [
+          [
+            "gun",
+            7
+          ],
+          [
+            "rifle",
+            1
+          ]
+        ],
+        "ranges": [
+          [
+            1,
+            40,
+            "N"
+          ]
+        ],
+        "require_targeting_player": false,
+        "require_targeting_npc": false,
+        "require_targeting_monster": false,
+        "description": "死肉从春分开始蔓延！"
+      },
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "mon_zombie_equinox_summon_check_target_random"
+        },
+        "cooldown": 33,
+        "monster_message": "<color_yellow>个扭曲的可憎生物爬出%1$s！</color>"
+      }
+    ],
+    "harvest": "zombie",
+    "flags": [
+      "SEES",
+      "WARM",
+      "IMMOBILE",
+      "NOHEAD",
+      "POISON",
+      "STUN_IMMUNE",
+      "NO_BREATHE"
+    ]
+  },
+  {
+    "//": "Four types of crawlies the equinox will actively spawns. These crawlies are vulnerable, yet a great threat to their paralizing debuffs",
+    "id": "mon_zombie_equinox_necros",
+    "type": "MONSTER",
+    "name": {
+      "str": "腐坏怪"
+    },
+    "description": "一块变异的坏死的肉，可怕地扭曲成一个多刺的生物。它的四肢末端有一种神经毒性物质，这种物质与空气接触后几乎会立即发生反应。",
+    "default_faction": "zombie",
+    "bodytype": "spider",
+    "diff": 5,
+    "species": [
+      "ZOMBIE",
+      "ABERRATION"
+    ],
+    "volume": "30000 ml",
+    "weight": "40750 g",
+    "hp": 35,
+    "speed": 100,
+    "material": [
+      "flesh",
+      "bone"
+    ],
+    "symbol": "⨯",
+    "color": "light_red",
+    "aggression": 100,
+    "morale": 100,
+    "emit_fields": [
+      "emit_equinox_necros_para"
+    ],
+    "attack_effs": [
+      {
+        "id": "secro_necros_para",
+        "duration": 5,
+        "bp": "torso"
+      }
+    ],
+    "melee_skill": 6,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      }
+    ],
+    "armor_bash": 2,
+    "armor_cut": 1,
+    "armor_bullet": 1,
+    "dodge": 2,
+    "vision_day": 24,
+    "vision_night": 3,
+    "harvest": "exempt",
+    "death_function": {
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s melts away."
+    },
+    "flags": [
+      "SEES",
+      "CLIMBS",
+      "WARM",
+      "NOHEAD",
+      "POISON",
+      "NO_BREATHE"
+    ]
+  },
+  {
+    "id": "mon_zombie_equinox_necros_stab",
+    "type": "MONSTER",
+    "name": {
+      "str": "腐坏毒刺怪"
+    },
+    "description": "一块变异的坏死的肉，可怕地扭曲成一个多刺的生物。一条又长又厚的扭曲组织从缝隙中伸出，你只能分辨出它的嘴。鞭子的末端分泌出一种浓缩的毒素。",
+    "default_faction": "zombie",
+    "bodytype": "spider",
+    "diff": 10,
+    "species": [
+      "ZOMBIE",
+      "ABERRATION"
+    ],
+    "volume": "30000 ml",
+    "weight": "40750 g",
+    "hp": 40,
+    "speed": 95,
+    "material": [
+      "flesh",
+      "bone"
+    ],
+    "symbol": "⨰",
+    "color": "light_red",
+    "aggression": 100,
+    "morale": 100,
+    "attack_effs": [
+      {
+        "id": "secro_necros_para",
+        "duration": 10,
+        "bp": "torso"
+      }
+    ],
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      },
+      {
+        "damage_type": "stab",
+        "amount": 5
+      }
+    ],
+    "melee_skill": 6,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "armor_bash": 2,
+    "armor_cut": 1,
+    "armor_bullet": 1,
+    "vision_day": 24,
+    "vision_night": 3,
+    "dodge": 2,
+    "harvest": "exempt",
+    "death_function": {
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s melts away."
+    },
+    "flags": [
+      "SEES",
+      "CLIMBS",
+      "WARM",
+      "NOHEAD",
+      "POISON",
+      "NO_BREATHE"
+    ]
+  },
+  {
+    "id": "mon_zombie_equinox_necros_cut",
+    "type": "MONSTER",
+    "name": {
+      "str": "腐坏锯割者"
+    },
+    "description": "一块变异的坏死的肉，可怕地扭曲成一个多刺的生物。它的前肢形成了一对镰刀形的刀片，它多余的附属物从尖端滴下神经毒素时不停地扭动。",
+    "default_faction": "zombie",
+    "bodytype": "spider",
+    "diff": 10,
+    "species": [
+      "ZOMBIE",
+      "ABERRATION"
+    ],
+    "volume": "30000 ml",
+    "weight": "40750 g",
+    "hp": 40,
+    "speed": 80,
+    "material": [
+      "flesh",
+      "bone"
+    ],
+    "symbol": "⨱",
+    "color": "light_red",
+    "aggression": 100,
+    "morale": 100,
+    "emit_fields": [
+      "emit_equinox_necros_cut_para"
+    ],
+    "attack_effs": [
+      {
+        "id": "secro_necros_para",
+        "duration": 5,
+        "bp": "torso"
+      },
+      {
+        "id": "secro_necros_para",
+        "duration": 2,
+        "chance": 10,
+        "bp": "torso"
+      },
+      {
+        "id": "secro_necros_para",
+        "duration": 2,
+        "chance": 10,
+        "bp": "torso"
+      },
+      {
+        "id": "secro_necros_para",
+        "duration": 2,
+        "chance": 10,
+        "bp": "torso"
+      }
+    ],
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 9
+      }
+    ],
+    "melee_skill": 6,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "armor_bash": 2,
+    "armor_cut": 1,
+    "armor_bullet": 1,
+    "vision_day": 24,
+    "vision_night": 3,
+    "dodge": 2,
+    "harvest": "exempt",
+    "death_function": {
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s melts away."
+    },
+    "flags": [
+      "SEES",
+      "CLIMBS",
+      "WARM",
+      "NOHEAD",
+      "POISON",
+      "NO_BREATHE"
+    ]
+  },
+  {
+    "id": "mon_zombie_equinox_necros_emit",
+    "type": "MONSTER",
+    "name": {
+      "str": "腐坏污染怪"
+    },
+    "description": "一块变异的坏死的肉，可怕地扭曲成一个多刺的生物。它的体型更大，产生的毒素过多，已经成为它散发浓雾的源头，但同时也是它身体不稳定的原因。",
+    "default_faction": "zombie",
+    "bodytype": "spider",
+    "diff": 20,
+    "species": [
+      "ZOMBIE",
+      "ABERRATION"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 25,
+    "speed": 50,
+    "material": [
+      "flesh",
+      "bone"
+    ],
+    "symbol": "ⓧ",
+    "color": "light_red",
+    "aggression": 100,
+    "morale": 100,
+    "emit_fields": [
+      "emit_equinox_necros_emit_weak_para",
+      "emit_equinox_necros_emit_mode_para",
+      "emit_equinox_necros_emit_stro_para"
+    ],
+    "attack_effs": [
+      {
+        "id": "secro_necros_para",
+        "duration": 30,
+        "bp": "torso"
+      }
+    ],
+    "melee_skill": 4,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
+    "armor_bash": 2,
+    "armor_cut": 1,
+    "armor_bullet": 1,
+    "vision_day": 24,
+    "vision_night": 3,
+    "dodge": 1,
+    "harvest": "exempt",
+    "death_function": {
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s melts away."
+    },
+    "flags": [
+      "SEES",
+      "CLIMBS",
+      "WARM",
+      "STUMBLES",
+      "NOHEAD",
+      "POISON",
+      "NO_BREATHE"
+    ]
+  },
+  {
+    "//": "Aggro-type zed who's revival can be a great nuisance to the target. An end-game prize.",
+    "id": "mon_zombie_relinquish",
+    "type": "MONSTER",
+    "name": {
+      "str": "被弃丧尸"
+    },
+    "description": "一个被稀释的丧尸，令人震惊，因为它邪恶的眼睛只显示出它所看的人的活力的表情。一个人可以轻易地夺走他的生命，但是一些不人道的东西在这个腐烂的容器周围徘徊…",
+    "default_faction": "zombie",
+    "bodytype": "human",
+    "species": [
+      "ZOMBIE",
+      "SECROZED_1"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 40,
+    "speed": 40,
+    "material": [
+      "flesh",
+      "bone"
+    ],
+    "symbol": "Z",
+    "color": "green",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 1,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 1
+      }
+    ],
+    "armor_bash": 1,
+    "armor_cut": 1,
+    "armor_bullet": 1,
+    "armor_stab": 1,
+    "vision_day": 15,
+    "vision_night": 5,
+    "harvest": "exempt",
+    "death_function": {
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s melts away."
+    },
+    "death_drops": {
+      "subtype": "collection",
+      "groups": [
+        "default_zombie_death_drops",
+        "mon_zombie_relinquish_death_drop"
+      ]
+    },
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "STUMBLES",
+      "WARM",
+      "POISON",
+      "NO_BREATHE"
+    ]
+  },
+  {
+    "//": "An OP version rises from killing the weakling! This zombie constantly becomes stronger after its revival, and if it gathers too much, one should stay away from getting a direct hit.",
+    "id": "mon_zombie_relinquish_revived",
+    "type": "MONSTER",
+    "name": {
+      "str": "坚决丧尸"
+    },
+    "description": "在死亡的边缘，生命再次出现，无情地带来愤怒。一个没有皮肤，残暴的丧尸不断增长，其男性化的身体看到慢慢增加质量。由于发展的有限性，一个国家必须执行这场即将到来的灾难。",
+    "default_faction": "zombie",
+    "bodytype": "human",
+    "species": [
+      "ZOMBIE",
+      "SECROZED_3"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 485,
+    "speed": 80,
+    "emit_fields": [
+      "emit_resolute_grow"
+    ],
+    "material": [
+      "flesh",
+      "bone"
+    ],
+    "symbol": "Ⓩ",
+    "color": "green_magenta",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 10,
+    "melee_dice": 4,
+    "melee_dice_sides": 4,
+    "armor_bash": 14,
+    "armor_cut": 4,
+    "armor_bullet": 4,
+    "armor_stab": 14,
+    "harvest": "zombie",
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "POISON",
+      "NO_BREATHE",
+      "DESTROYS",
+      "PUSH_MON",
+      "PUSH_VEH",
+      "STUN_IMMUNE",
+      "REVIVES"
+    ]
+  },
+  {
+    "//": "Aggro-type zed. This zombie obtains various abilities and spells (from nature, etc.).",
+    "id": "mon_zombie_stray",
+    "type": "MONSTER",
+    "looks_like": "mon_zombie",
+    "name": {
+      "str": "酸液离群丧尸"
+    },
+    "description": "一个丧尸，没什么特别的。然而，它只是一个普通的日行者，它被认为是一只孤独的狼，拖着脚步走向虚无。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE",
+      "SECROZED_1"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "harvest": "zombie",
+    "hp": 80,
+    "speed": 75,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "Z",
+    "color": "white",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 4,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "vision_night": 3,
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 5
+      },
+      [
+        "GRAB",
+        7
+      ],
+      [
+        "scratch",
+        20
+      ]
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "upgrades": {
+      "half_life": 30,
+      "into_group": "GROUP_STRAY_ELEMENT"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "PUSH_MON",
+      "FILTHY"
+    ]
+  },
+  {
+    "//": "Stray with nature element. Tier 1 provides a subtle hint, to tell what element they are heading to.",
+    "id": "mon_zombie_stray_w_leaf_weak",
+    "type": "MONSTER",
+    "looks_like": "mon_zombie",
+    "name": {
+      "str": "酸液离群丧尸"
+    },
+    "description": "一个丧尸，没什么特别的。然而，它只是一个普通的日行者，它被认为是一只孤独的狼，拖着脚步走向虚无。藤蔓在它的衣服下是可见的，但它似乎既没有好处也没有困扰泽德。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE",
+      "SECROZED_1"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "harvest": "zombie",
+    "hp": 90,
+    "speed": 75,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "Z",
+    "color": "light_gray",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 4,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "vision_night": 3,
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 5
+      },
+      [
+        "GRAB",
+        7
+      ],
+      [
+        "scratch",
+        20
+      ]
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "upgrades": {
+      "half_life": 26,
+      "into": "mon_zombie_stray_w_leaf_mode"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "PUSH_MON",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_stray_w_leaf_mode",
+    "type": "MONSTER",
+    "looks_like": "mon_zombie",
+    "name": {
+      "str": "酸液离群丧尸"
+    },
+    "description": "成堆的充满活力的藤蔓和茎覆盖着这只流浪狗的身体，把它腐烂的肉固定住。它几乎是静止不动的，对于一个好奇的人来说，这是一种奇特的景象。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE",
+      "SECROZED_1"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "harvest": "zombie",
+    "hp": 155,
+    "speed": 25,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "Z",
+    "color": "green",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 4,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "armor_bash": 14,
+    "armor_cut": 4,
+    "armor_bullet": 6,
+    "armor_stab": 6,
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 5
+      },
+      [
+        "GRAB",
+        7
+      ],
+      [
+        "scratch",
+        20
+      ]
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "upgrades": {
+      "half_life": 22,
+      "into": "mon_zombie_stray_w_leaf_stro1"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "PUSH_MON",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_stray_w_leaf_stro1",
+    "type": "MONSTER",
+    "looks_like": "mon_zombie",
+    "name": {
+      "str": "酸液离群丧尸"
+    },
+    "description": "在大自然的恩典下，这个流浪汉与植物合而为一。皮肤像树皮一样坚硬，藤蔓引导着不死生物笨拙的行动，但为了寻找肉，流浪者操纵着。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE",
+      "SECROZED_1",
+      "HUMAN",
+      "PLANT"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "harvest": "zombie_thorny",
+    "hp": 240,
+    "speed": 105,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "Z",
+    "color": "green",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 6,
+    "melee_dice": 4,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      }
+    ],
+    "armor_bash": 22,
+    "armor_cut": 16,
+    "armor_bullet": 10,
+    "armor_stab": 10,
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 5
+      },
+      [
+        "GRAB",
+        7
+      ],
+      [
+        "scratch",
+        20
+      ],
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "mon_zombie_stray_w_leaf_stro1_razorl"
+        },
+        "cooldown": 24,
+        "monster_message": "%1$s用它的锋利的叶刀刮向%3$s！"
+      }
+    ],
+    "upgrades": {
+      "half_life": 18,
+      "into": "mon_zombie_stray_w_leaf_stro2"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "PUSH_MON",
+      "FILTHY",
+      "SWIMS",
+      "PARALYZEVENOM"
+    ]
+  },
+  {
+    "id": "mon_zombie_stray_w_leaf_stro2",
+    "type": "MONSTER",
+    "looks_like": "mon_zombie",
+    "name": {
+      "str": "酸液离群丧尸"
+    },
+    "description": "在它的时代，树叶，藤蔓，一切，都变得更大，更坚韧。一个流浪的，上升的自然，培育了一些美丽的，但奇怪的花朵盛开。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE",
+      "SECROZED_1",
+      "HUMAN",
+      "PLANT"
+    ],
+    "volume": "92500 ml",
+    "weight": "120000 g",
+    "harvest": "zombie_thorny",
+    "hp": 315,
+    "speed": 95,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "Z",
+    "color": "light_green",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 6,
+    "melee_dice": 4,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      }
+    ],
+    "armor_bash": 26,
+    "armor_cut": 18,
+    "armor_bullet": 12,
+    "armor_stab": 12,
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 5
+      },
+      [
+        "GRAB",
+        7
+      ],
+      [
+        "scratch",
+        20
+      ],
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "mon_zombie_stray_w_leaf_stro2_wildo"
+        },
+        "cooldown": 44,
+        "monster_message": "%1$s猛击地面，然后一个快速生长的野生藤蔓树枝从%3$s脚下爆出！"
+      }
+    ],
+    "upgrades": {
+      "half_life": 14,
+      "into": "mon_zombie_stray_w_leaf_stro3"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "PUSH_MON",
+      "FILTHY",
+      "SWIMS",
+      "PARALYZEVENOM"
+    ]
+  },
+  {
+    "id": "mon_zombie_stray_w_leaf_stro3",
+    "type": "MONSTER",
+    "looks_like": "mon_zombie",
+    "name": {
+      "str": "酸液离群丧尸"
+    },
+    "description": "它每走一步，都会从它梦寐以求的花朵上吸引孢子。这个全能的大自然流浪者，成功地升为可怕的藤蔓野兽。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE",
+      "SECROZED_3",
+      "HUMAN",
+      "PLANT"
+    ],
+    "volume": "92500 ml",
+    "weight": "120000 g",
+    "harvest": "zombie_thorny",
+    "hp": 335,
+    "speed": 105,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "Z",
+    "color": "light_green_magenta",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 8,
+    "melee_dice": 4,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 6
+      }
+    ],
+    "armor_bash": 30,
+    "armor_cut": 20,
+    "armor_bullet": 15,
+    "armor_stab": 15,
+    "emit_fields": [
+      "secro_nstro3_ss"
+    ],
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 5
+      },
+      [
+        "GRAB",
+        7
+      ],
+      [
+        "scratch",
+        20
+      ],
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "mon_summon_stray_w_leaf_stro3_triffid"
+        },
+        "cooldown": 59,
+        "monster_message": "%1$s猛击地面，然后一个快速生长的野生藤蔓树枝从%3$s脚下爆出！\n三尖树也爆开了出来！"
+      }
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "PUSH_MON",
+      "FILTHY",
+      "SWIMS",
+      "PARALYZEVENOM"
+    ]
+  },
+  {
+    "id": "mon_zombie_stray_w_leaf_stro3_triffid",
+    "type": "MONSTER",
+    "looks_like": "mon_zombie",
+    "name": {
+      "str": "三尖树"
+    },
+    "description": "一种缓慢爬行的怪异植物，长得和一头驼鹿一般高。主体是一根被厚树皮覆盖着的茎部，上面支撑着内含麻痹毒刺的花冠状头部。",
+    "default_faction": "zombie",
+    "species": [
+      "PLANT"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 80,
+    "speed": 50,
+    "material": [
+      "veggy"
+    ],
+    "symbol": "F",
+    "color": "light_green",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 5,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 6
+      }
+    ],
+    "armor_bash": 10,
+    "armor_cut": 4,
+    "armor_bullet": 4,
+    "harvest": "exempt",
+    "death_function": {
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s melts away."
+    },
+    "//": "It must MELT, to prevent ppl farming for the precious vegan food.",
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "BASHES",
+      "GROUP_BASH",
+      "NOHEAD",
+      "PARALYZEVENOM"
+    ]
+  },
+  {
+    "//": "Stray with acid element.",
+    "id": "mon_zombie_stray_w_acid_weak",
+    "type": "MONSTER",
+    "looks_like": "mon_zombie",
+    "name": {
+      "str": "酸液离群丧尸"
+    },
+    "description": "一个丧尸，没什么特别的。然而，它只是一个普通的日行者，它被认为是一只孤独的狼，拖着脚步走向虚无。手臂上一条绿色的静脉隐约发光。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE",
+      "SECROZED_1"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "harvest": "zombie",
+    "hp": 75,
+    "speed": 75,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "Z",
+    "color": "light_gray",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 4,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "vision_night": 3,
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 5
+      },
+      [
+        "GRAB",
+        7
+      ],
+      [
+        "scratch",
+        20
+      ]
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "upgrades": {
+      "half_life": 26,
+      "into": "mon_zombie_stray_w_acid_mode"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "PUSH_MON",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_stray_w_acid_mode",
+    "type": "MONSTER",
+    "looks_like": "mon_zombie",
+    "name": {
+      "str": "酸液离群丧尸"
+    },
+    "description": "在绿色液体中渗出，这个流浪者-蹒跚而行-被自己的血液玷污。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE",
+      "SECROZED_1"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "harvest": "zombie",
+    "hp": 80,
+    "speed": 50,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "Z",
+    "color": "green",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 4,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "acid",
+        "amount": 2
+      }
+    ],
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 5
+      },
+      [
+        "GRAB",
+        7
+      ],
+      [
+        "scratch",
+        20
+      ]
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "upgrades": {
+      "half_life": 22,
+      "into": "mon_zombie_stray_w_acid_stro1"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "PUSH_MON",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_stray_w_acid_stro1",
+    "type": "MONSTER",
+    "looks_like": "mon_zombie",
+    "name": {
+      "str": "酸液离群丧尸"
+    },
+    "description": "由于血液中酸性物质持续时间过长，导致皮肤下垂，但它似乎已经适应了这种严酷的物质。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE",
+      "SECROZED_1"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "harvest": "zombie",
+    "hp": 145,
+    "speed": 60,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "Z",
+    "color": "green",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "acid",
+        "amount": 4
+      }
+    ],
+    "armor_bash": 2,
+    "armor_cut": 2,
+    "armor_bullet": 2,
+    "armor_stab": 2,
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 5
+      },
+      [
+        "GRAB",
+        7
+      ],
+      [
+        "scratch",
+        20
+      ],
+      [
+        "ACID_BARF",
+        30
+      ]
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "upgrades": {
+      "half_life": 18,
+      "into": "mon_zombie_stray_w_acid_stro2"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "PUSH_MON",
+      "FILTHY",
+      "ACID_BLOOD",
+      "ACIDPROOF"
+    ]
+  },
+  {
+    "id": "mon_zombie_stray_w_acid_stro2",
+    "type": "MONSTER",
+    "looks_like": "mon_zombie",
+    "name": {
+      "str": "酸液离群丧尸"
+    },
+    "description": "一个酸液游荡者，现在它可以随心所欲的操纵自己的体液。他决定漫无目的游荡着传播腐蚀，并在身后留下一道酸液的痕迹。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE",
+      "SECROZED_1"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "harvest": "zombie",
+    "hp": 170,
+    "speed": 80,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "Z",
+    "color": "light_green",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 8,
+    "melee_dice": 2,
+    "melee_dice_sides": 5,
+    "melee_damage": [
+      {
+        "damage_type": "acid",
+        "amount": 6
+      }
+    ],
+    "armor_bash": 4,
+    "armor_cut": 4,
+    "armor_bullet": 4,
+    "armor_stab": 4,
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 5
+      },
+      [
+        "GRAB",
+        7
+      ],
+      [
+        "scratch",
+        20
+      ],
+      [
+        "ACID_BARF",
+        28
+      ],
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "mon_zombie_stray_w_acid_stro2_acoat"
+        },
+        "cooldown": 38,
+        "monster_message": "%1$s向%3$s输送大量浓酸！"
+      }
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "upgrades": {
+      "half_life": 14,
+      "into": "mon_zombie_stray_w_acid_stro3"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "PUSH_MON",
+      "FILTHY",
+      "ACID_BLOOD",
+      "ACIDPROOF"
+    ]
+  },
+  {
+    "id": "mon_zombie_stray_w_acid_stro3",
+    "type": "MONSTER",
+    "looks_like": "mon_zombie",
+    "name": {
+      "str": "酸液离群丧尸"
+    },
+    "description": "这具腐蚀性的流浪者，终于提升并发展出一种平衡，并因老化而产生更致命的体液，在其富有弹性、透明的皮肤下肿胀的绿色静脉上明显地咯咯作响。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE",
+      "SECROZED_3"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "harvest": "zombie",
+    "hp": 225,
+    "speed": 90,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "Z",
+    "color": "light_green_magenta",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 8,
+    "melee_dice": 4,
+    "melee_dice_sides": 6,
+    "melee_damage": [
+      {
+        "damage_type": "acid",
+        "amount": 10
+      }
+    ],
+    "armor_bash": 12,
+    "armor_cut": 12,
+    "armor_bullet": 12,
+    "armor_stab": 12,
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 5
+      },
+      [
+        "GRAB",
+        7
+      ],
+      [
+        "scratch",
+        20
+      ],
+      [
+        "ACID_BARF",
+        25
+      ],
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "mon_zombie_stray_w_acid_stro3_arain"
+        },
+        "cooldown": 69,
+        "monster_message": "%1$s往%3$s上方发出一个巨大的酸液球，然后剧烈爆炸！"
+      }
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "PUSH_MON",
+      "FILTHY",
+      "ACID_BLOOD",
+      "ACIDPROOF",
+      "PLASTIC"
+    ]
+  },
+  {
+    "id": "mon_zombie_fleshknot_weak",
+    "type": "MONSTER",
+    "name": {
+      "str": "血肉疣"
+    },
+    "description": "一大堆肉被牢牢地粘在地板和天花板上，在此之前，生长过程中散发出可怕的恶臭。大部分的肉结合成一个中心的、结状的生长，有节奏地跳动和波动；类似于可怕变异生物的心脏。",
+    "default_faction": "zombie",
+    "volume": "1800 L",
+    "weight": "465000 g",
+    "species": [
+      "ZOMBIE",
+      "SECROZED_2",
+      "ABERRATION"
+    ],
+    "diff": 100,
+    "hp": 735,
+    "speed": 100,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "☣",
+    "color": "pink",
+    "emit_fields": [
+      "emit_fleshknot_tents_smol"
+    ],
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 10,
+    "melee_dice": 4,
+    "melee_dice_sides": 7,
+    "vision_day": 30,
+    "vision_night": 30,
+    "harvest": "zombie",
+    "special_attacks": [
+      [
+        "FLESH_TENDRIL",
+        1
+      ],
+      {
+        "type": "gun",
+        "cooldown": 25,
+        "move_cost": 500,
+        "gun_type": "fleshknot_tent_cluster",
+        "fake_skills": [
+          [
+            "gun",
+            1
+          ],
+          [
+            "rifle",
+            1
+          ]
+        ],
+        "description": "血肉疣伸出了一团触手！",
+        "ranges": [
+          [
+            2,
+            6,
+            "N"
+          ],
+          [
+            7,
+            14,
+            "M"
+          ]
+        ],
+        "require_targeting_player": false,
+        "require_targeting_npc": false,
+        "require_targeting_monster": false
+      },
+      {
+        "type": "gun",
+        "cooldown": 15,
+        "move_cost": 100,
+        "gun_type": "fleshknot_tent_striker",
+        "fake_skills": [
+          [
+            "gun",
+            1
+          ],
+          [
+            "rifle",
+            1
+          ]
+        ],
+        "description": "血肉疣刺出了它的触手！",
+        "ranges": [
+          [
+            1,
+            4,
+            "N"
+          ],
+          [
+            5,
+            10,
+            "M"
+          ]
+        ],
+        "require_targeting_player": false,
+        "require_targeting_npc": false,
+        "require_targeting_monster": false
+      }
+    ],
+    "upgrades": {
+      "half_life": 10,
+      "into": "mon_zombie_fleshknot_mode"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "IMMOBILE",
+      "WARM",
+      "POISON",
+      "IMMOBILE",
+      "NOHEAD",
+      "NO_BREATHE"
+    ]
+  },
+  {
+    "id": "mon_zombie_fleshknot_mode",
+    "type": "MONSTER",
+    "name": {
+      "str": "血肉疣"
+    },
+    "description": "一大堆肉被牢牢地粘在地板和天花板上，在此之前，生长过程中散发出可怕的恶臭。大部分的肉结合成一个中心的、结状的生长，有节奏地跳动和波动；类似于可怕变异生物的心脏。",
+    "default_faction": "zombie",
+    "volume": "1800 L",
+    "weight": "465000 g",
+    "species": [
+      "ZOMBIE",
+      "SECROZED_3",
+      "ABERRATION"
+    ],
+    "diff": 100,
+    "hp": 1215,
+    "speed": 100,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "☣",
+    "color": "light_red",
+    "emit_fields": [
+      "emit_fleshknot_tents_med"
+    ],
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 10,
+    "melee_dice": 6,
+    "melee_dice_sides": 8,
+    "vision_day": 30,
+    "vision_night": 30,
+    "harvest": "zombie",
+    "special_attacks": [
+      [
+        "FLESH_TENDRIL",
+        1
+      ],
+      {
+        "type": "gun",
+        "cooldown": 23,
+        "move_cost": 500,
+        "gun_type": "fleshknot_tent_cluster",
+        "fake_skills": [
+          [
+            "gun",
+            2
+          ],
+          [
+            "rifle",
+            2
+          ]
+        ],
+        "description": "血肉疣伸出了一团触手！",
+        "ranges": [
+          [
+            2,
+            6,
+            "N"
+          ],
+          [
+            7,
+            15,
+            "M"
+          ]
+        ],
+        "require_targeting_player": false,
+        "require_targeting_npc": false,
+        "require_targeting_monster": false
+      },
+      {
+        "type": "gun",
+        "cooldown": 14,
+        "move_cost": 100,
+        "gun_type": "fleshknot_tent_striker",
+        "fake_skills": [
+          [
+            "gun",
+            2
+          ],
+          [
+            "rifle",
+            2
+          ]
+        ],
+        "description": "血肉疣刺出了它的触手！",
+        "ranges": [
+          [
+            1,
+            4,
+            "N"
+          ],
+          [
+            5,
+            11,
+            "M"
+          ]
+        ],
+        "require_targeting_player": false,
+        "require_targeting_npc": false,
+        "require_targeting_monster": false
+      }
+    ],
+    "upgrades": {
+      "half_life": 15,
+      "into": "mon_zombie_fleshknot_stro"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "IMMOBILE",
+      "WARM",
+      "POISON",
+      "IMMOBILE",
+      "NOHEAD",
+      "NO_BREATHE"
+    ]
+  },
+  {
+    "id": "mon_zombie_fleshknot_stro",
+    "type": "MONSTER",
+    "name": {
+      "str": "血肉疣"
+    },
+    "description": "一大堆肉被牢牢地粘在地板和天花板上，在此之前，生长过程中散发出可怕的恶臭。大部分的肉结合成一个中心的、结状的生长，有节奏地跳动和波动；类似于可怕变异生物的心脏。",
+    "default_faction": "zombie",
+    "volume": "1800 L",
+    "weight": "465000 g",
+    "species": [
+      "ZOMBIE",
+      "SECROZED_3",
+      "ABERRATION"
+    ],
+    "diff": 100,
+    "hp": 1995,
+    "speed": 100,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "☣",
+    "color": "red",
+    "emit_fields": [
+      "emit_fleshknot_tents_big"
+    ],
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 10,
+    "melee_dice": 8,
+    "melee_dice_sides": 9,
+    "vision_day": 30,
+    "vision_night": 30,
+    "harvest": "zombie",
+    "special_attacks": [
+      [
+        "FLESH_TENDRIL",
+        1
+      ],
+      {
+        "type": "gun",
+        "cooldown": 21,
+        "move_cost": 500,
+        "gun_type": "fleshknot_tent_cluster",
+        "fake_skills": [
+          [
+            "gun",
+            4
+          ],
+          [
+            "rifle",
+            4
+          ]
+        ],
+        "description": "血肉疣伸出了一团触手！",
+        "ranges": [
+          [
+            2,
+            6,
+            "N"
+          ],
+          [
+            7,
+            16,
+            "M"
+          ]
+        ],
+        "require_targeting_player": false,
+        "require_targeting_npc": false,
+        "require_targeting_monster": false
+      },
+      {
+        "type": "gun",
+        "cooldown": 13,
+        "move_cost": 100,
+        "gun_type": "fleshknot_tent_striker",
+        "fake_skills": [
+          [
+            "gun",
+            4
+          ],
+          [
+            "rifle",
+            4
+          ]
+        ],
+        "description": "血肉疣刺出了它的触手！",
+        "ranges": [
+          [
+            1,
+            4,
+            "N"
+          ],
+          [
+            5,
+            12,
+            "M"
+          ]
+        ],
+        "require_targeting_player": false,
+        "require_targeting_npc": false,
+        "require_targeting_monster": false
+      }
+    ],
+    "upgrades": {
+      "half_life": 20,
+      "into": "mon_zombie_fleshknot_vstro"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "IMMOBILE",
+      "WARM",
+      "POISON",
+      "IMMOBILE",
+      "NOHEAD",
+      "NO_BREATHE"
+    ]
+  },
+  {
+    "id": "mon_zombie_fleshknot_vstro",
+    "type": "MONSTER",
+    "name": {
+      "str": "戈雷克诺"
+    },
+    "description": "一大堆肉被牢牢地粘在地板和天花板上，在此之前，生长过程中散发出可怕的恶臭。一个有点像人的形象被塑造在这个可憎的中心，伴随着巨大的膜状触须。",
+    "default_faction": "zombie",
+    "volume": "2000 L",
+    "weight": "498000 g",
+    "species": [
+      "ZOMBIE",
+      "SECROZED_ULTIMATE",
+      "ABERRATION"
+    ],
+    "diff": 200,
+    "hp": 3355,
+    "speed": 100,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "☣",
+    "color": "magenta_red",
+    "emit_fields": [
+      "emit_fleshknot_tents_vbig"
+    ],
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 10,
+    "melee_dice": 10,
+    "melee_dice_sides": 10,
+    "vision_day": 30,
+    "vision_night": 30,
+    "harvest": "zombie",
+    "weakpoints": [
+      {
+        "name": "the core",
+        "armor_mult": {
+          "bash": 1.2,
+          "cut": 0.8,
+          "stab": 0.8
+        },
+        "coverage": 10,
+        "damage_mult": {
+          "all": 1.33
+        },
+        "crit_mult": {
+          "all": 1.22
+        },
+        "effects": [
+          {
+            "effect": "stunned",
+            "duration": [
+              1,
+              2
+            ],
+            "damage_required": [
+              0,
+              100
+            ],
+            "message": "The %s trembles."
+          }
+        ]
+      }
+    ],
+    "special_attacks": [
+      [
+        "FLESH_TENDRIL",
+        1
+      ],
+      {
+        "type": "gun",
+        "cooldown": 19,
+        "move_cost": 500,
+        "gun_type": "fleshknot_tent_cluster",
+        "fake_skills": [
+          [
+            "gun",
+            8
+          ],
+          [
+            "rifle",
+            8
+          ]
+        ],
+        "description": "血肉疣伸出了一团触手！",
+        "ranges": [
+          [
+            2,
+            6,
+            "N"
+          ],
+          [
+            7,
+            17,
+            "M"
+          ]
+        ],
+        "require_targeting_player": false,
+        "require_targeting_npc": false,
+        "require_targeting_monster": false
+      },
+      {
+        "type": "gun",
+        "cooldown": 12,
+        "move_cost": 100,
+        "gun_type": "fleshknot_tent_striker",
+        "fake_skills": [
+          [
+            "gun",
+            8
+          ],
+          [
+            "rifle",
+            8
+          ]
+        ],
+        "description": "血肉疣刺出了它的触手！",
+        "ranges": [
+          [
+            1,
+            4,
+            "N"
+          ],
+          [
+            5,
+            13,
+            "M"
+          ]
+        ],
+        "require_targeting_player": false,
+        "require_targeting_npc": false,
+        "require_targeting_monster": false
+      }
+    ],
+    "//": "The core is exposed, so critical hits are available.",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "IMMOBILE",
+      "WARM",
+      "POISON",
+      "IMMOBILE",
+      "NO_BREATHE"
+    ]
+  }
+]

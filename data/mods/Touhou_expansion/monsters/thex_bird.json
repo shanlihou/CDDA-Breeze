@@ -1,0 +1,458 @@
+[
+  {
+    "id": "mon_chicken",
+    "type": "MONSTER",
+    "name": {
+      "str": "鸡"
+    },
+    "copy-from": "mon_chicken",
+    "harvest": "bird_small",
+    "//": "Improved harvest for chickens"
+  },
+  {
+    "id": "mon_dodo",
+    "type": "MONSTER",
+    "name": {
+      "str": "渡渡鸟"
+    },
+    "description": "一种非常著名的鸟，看起来没有你想象的那么滑稽。它大部分呈浅灰色，四肢处的羽毛颜色更深，有些个体腰部呈棕色。头部秃裸，眼睛看起来像鸽子的眼睛，当你盯着它们看时，它们显得有些害怕（但不太多）。喙不太寻常，足够大，且前端变得更厚。味道如何尚有争议。",
+    "volume": "35 L",
+    "weight": "15000 g",
+    "default_faction": "small_animal",
+    "bodytype": "bird",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "BIRD"
+    ],
+    "harvest": "bird_large_nonmutant_harvest",
+    "hp": 40,
+    "speed": 90,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "ḋ",
+    "color": "light_gray",
+    "aggression": -15,
+    "morale": 15,
+    "melee_skill": 1,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
+    "dodge": 2,
+    "vision_day": 40,
+    "vision_night": 15,
+    "path_settings": {
+      "max_dist": 10
+    },
+    "fear_triggers": [
+      "FIRE",
+      "FRIEND_DIED",
+      "HURT"
+    ],
+    "reproduction": {
+      "baby_egg": "egg_dodo",
+      "baby_count": 1,
+      "baby_timer": 12
+    },
+    "baby_flags": [
+      "SPRING",
+      "SUMMER",
+      "AUTUMN",
+      "WINTER"
+    ],
+    "biosignature": {
+      "biosig_item": "feces_bird",
+      "biosig_timer": 8
+    },
+    "flags": [
+      "ANIMAL",
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "PATH_AVOID_DANGER_1",
+      "SWARMS",
+      "WARM"
+    ],
+    "//": "Most data about the dodo is unknown, I'm trying to get the values as realistic as possible using turkeys as reference"
+  },
+  {
+    "id": "mon_dodo_chick",
+    "type": "MONSTER",
+    "name": {
+      "str": "幼年渡渡鸟"
+    },
+    "copy-from": "mon_dodo",
+    "description": "一只较小的渡渡鸟，与父母不同，它大部分呈棕色，带有灰色痕迹。它四处走动的样子温暖了你的心，也许还刺激了你的胃。",
+    "volume": "2 L",
+    "weight": "1500 g",
+    "harvest": "bird_small",
+    "hp": 6,
+    "speed": 40,
+    "color": "brown",
+    "aggression": -20,
+    "morale": 8,
+    "melee_skill": 2,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 0
+      }
+    ],
+    "dodge": 1,
+    "path_settings": {
+      "max_dist": 6
+    },
+    "upgrades": {
+      "age_grow": 14,
+      "into": "mon_dodo"
+    },
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_ectopistes",
+    "type": "MONSTER",
+    "name": {
+      "str": "旅鸽"
+    },
+    "description": "一种小型鸽子，颜色为偏蓝的灰色，胸部略带红色。背部有虹彩羽毛，会随角度变化颜色。在地面上有些笨拙，经常鸣叫。",
+    "volume": "650 ml",
+    "weight": "300 g",
+    "default_faction": "small_animal",
+    "bodytype": "bird",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "BIRD"
+    ],
+    "harvest": "bird_tiny",
+    "hp": 3,
+    "speed": 150,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "ṿ",
+    "color": "dark_gray",
+    "aggression": -99,
+    "morale": 5,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 0
+      }
+    ],
+    "dodge": 4,
+    "fear_triggers": [
+      "FIRE",
+      "FRIEND_ATTACKED",
+      "FRIEND_DIED",
+      "HURT",
+      "PLAYER_CLOSE",
+      "SOUND"
+    ],
+    "reproduction": {
+      "baby_egg": "egg_ectopistes",
+      "baby_count": 4,
+      "baby_timer": 32
+    },
+    "baby_flags": [
+      "SPRING"
+    ],
+    "biosignature": {
+      "biosig_item": "feces_bird",
+      "biosig_timer": 6
+    },
+    "special_attacks": [
+      [
+        "EAT_CROP",
+        85
+      ],
+      [
+        "PARROT",
+        6
+      ]
+    ],
+    "flags": [
+      "ANIMAL",
+      "FLIES",
+      "HEARS",
+      "PATH_AVOID_DANGER_1",
+      "SEES",
+      "SMELLS",
+      "SWARMS",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_ectopistes_chick",
+    "type": "MONSTER",
+    "name": {
+      "str": "幼年旅鸽"
+    },
+    "copy-from": "mon_chicken_chick",
+    "description": "一只旅鸽雏鸟。看起来像小鸡雏鸟。",
+    "volume": "250 ml",
+    "weight": "50 g",
+    "color": "yellow",
+    "special_attacks": [
+      [
+        "EAT_CROP",
+        105
+      ],
+      [
+        "PARROT",
+        8
+      ]
+    ],
+    "upgrades": {
+      "age_grow": 24,
+      "into": "mon_ectopistes"
+    },
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_icadyptes",
+    "type": "MONSTER",
+    "name": {
+      "str": "伊卡企鹅"
+    },
+    "description": "一只高一米五的大企鹅，除了身高和灵活的脖颈以外一无是处",
+    "volume": "62 L",
+    "weight": "60 kg",
+    "default_faction": "touhou_piscivore",
+    "bodytype": "bear",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "BIRD"
+    ],
+    "harvest": "bird_larger_nonmutant_harvest",
+    "hp": 55,
+    "speed": 65,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "ṗ",
+    "color": "light_gray_white",
+    "aggression": -20,
+    "morale": 10,
+    "melee_skill": 2,
+    "melee_dice": 2,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      }
+    ],
+    "dodge": 1,
+    "vision_day": 30,
+    "vision_night": 10,
+    "path_settings": {
+      "max_dist": 15
+    },
+    "anger_triggers": [
+      "HURT",
+      "FRIEND_ATTACKED"
+    ],
+    "fear_triggers": [
+      "FIRE",
+      "FRIEND_DIED"
+    ],
+    "reproduction": {
+      "baby_egg": "egg_icadyptes",
+      "baby_count": 1,
+      "baby_timer": 32
+    },
+    "baby_flags": [
+      "AUTUMN",
+      "WINTER"
+    ],
+    "biosignature": {
+      "biosig_item": "feces_bird",
+      "biosig_timer": 10
+    },
+    "flags": [
+      "ANIMAL",
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "PATH_AVOID_DANGER_1",
+      "SWARMS",
+      "WARM"
+    ],
+    "//2": "Based on Icadyptes salasi. No data about its reproduction habits, that part is based on Aptenodytes forsteri "
+  },
+  {
+    "id": "mon_icadyptes_chick",
+    "type": "MONSTER",
+    "name": {
+      "str": "幼年伊卡企鹅"
+    },
+    "copy-from": "mon_icadyptes",
+    "description": "一只伊卡企鹅雏鸟。在它叫出声之前都很可爱。",
+    "volume": "1500 ml",
+    "weight": "2000 g",
+    "harvest": "bird_small",
+    "hp": 4,
+    "speed": 55,
+    "color": "light_gray",
+    "aggression": -20,
+    "morale": 8,
+    "melee_skill": 1,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 1
+      }
+    ],
+    "dodge": 2,
+    "path_settings": {
+      "max_dist": 8
+    },
+    "upgrades": {
+      "age_grow": 28,
+      "into": "mon_icadyptes"
+    },
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_moa",
+    "type": "MONSTER",
+    "name": {
+      "str": "恐鸟"
+    },
+    "description": "这只鸟友好地提醒你，鸟类字面意义上就是恐龙。它高3米，走路像一只威风凛凛的食肉雏鸟，肌肉发达、覆有鳞片的爬行动物腿末端长着巨大而锋利的爪子。身体呈蛋形，覆盖着羽毛，至少看不出有尾巴。头部很小，移动时朝向前方，除非它在环顾四周。",
+    "volume": "175 L",
+    "weight": "168 kg",
+    "//": "Huge sexual dimorphism, males reach up to 88 Kg, females up to 249 Kg, those values are the average",
+    "default_faction": "small_animal",
+    "bodytype": "ostrich",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "BIRD"
+    ],
+    "harvest": "bird_largest_nonmutant_harvest",
+    "hp": 80,
+    "speed": 135,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "ṁ",
+    "color": "dark_gray",
+    "aggression": -15,
+    "morale": 15,
+    "melee_skill": 3,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      }
+    ],
+    "dodge": 3,
+    "vision_day": 40,
+    "vision_night": 15,
+    "path_settings": {
+      "max_dist": 10
+    },
+    "fear_triggers": [
+      "FIRE",
+      "FRIEND_DIED",
+      "HURT"
+    ],
+    "reproduction": {
+      "baby_egg": "egg_moa",
+      "baby_count": 1,
+      "baby_timer": 24
+    },
+    "baby_flags": [
+      "SPRING",
+      "SUMMER",
+      "AUTUMN",
+      "WINTER"
+    ],
+    "biosignature": {
+      "biosig_item": "feces_bird",
+      "biosig_timer": 10
+    },
+    "flags": [
+      "ANIMAL",
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "PATH_AVOID_DANGER_1",
+      "SWARMS",
+      "WARM"
+    ],
+    "//2": "Based on Dinornis novaezealandiae. No data about its reproduction habits",
+    "//3": "Base attack is pecking. ADD WEAK-ISH LEG ATTACK !!!"
+  },
+  {
+    "id": "mon_moa_chick",
+    "type": "MONSTER",
+    "name": {
+      "str": "幼年恐鸟"
+    },
+    "copy-from": "mon_moa",
+    "description": "一只“小”恐鸟,就像一只大了一点点的鸡，经常成群出现",
+    "volume": "3500 L",
+    "weight": "2500 kg",
+    "harvest": "bird_small",
+    "hp": 7,
+    "speed": 65,
+    "aggression": -20,
+    "morale": 8,
+    "melee_skill": 2,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 0
+      }
+    ],
+    "dodge": 2,
+    "path_settings": {
+      "max_dist": 6
+    },
+    "upgrades": {
+      "age_grow": 24,
+      "into": "mon_moa"
+    },
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  }
+]

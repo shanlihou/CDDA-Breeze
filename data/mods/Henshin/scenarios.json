@@ -1,0 +1,35 @@
+[
+  {
+    "type": "scenario",
+    "ident": "scenario_henshin_loster",
+    "name": "苏醒 - Awaken -",
+    "points": -6,
+    "description": "你从沉眠中苏醒，不幸地发现自己熟悉的世界已经毁于一旦。但目前看来，至少你不必担心自己的身份证明问题了。",
+    "allowed_locs": [
+      "wakening_land_s",
+      "cabin_strange_s",
+	  "sloc_private_resort",
+      "sloc_lab_random",
+      "sloc_lab_escape_cells",
+      "sloc_prison_alcatraz",
+      "sloc_prison_island",
+	  "sloc_mi-go_camp"
+    ],
+    "professions": [ "Henshin_Chosen_One", "Henshin_Loster", "Henshin_Loster_true" ],
+	"traits": [
+	  "FANGS",
+      "LUPINE_FUR",
+	  "CLAWS",
+      "TAIL_FLUFFY",
+      "LUPINE_EARS",
+      "MUZZLE",
+      "CARNIVORE",
+      "GROWL",
+      "SHOUT1",
+      "THRESH_LUPINE"
+    ],
+    "start_name": "遗忘之地",
+	"surround_groups": [ [ "GROUP_HENSHIN_SUR", 6 ], [ "GROUP_BLACK_ROAD", 66 ] ],
+    "flags": [ "CHALLENGE", "LONE_START", "SUR_START" ]
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_TUINA_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"我已经是个大人了！",
+    "responses":[
+      { "text": "请成为我们的伙伴(邀请加入队伍)", "topic": "TALK_TUINA_SAN_2" },
+      { "text": "嗯…", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_TUINA_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"好吧！那么，我们就去闯闯吧！",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

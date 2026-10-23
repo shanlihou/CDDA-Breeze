@@ -1,0 +1,77 @@
+[
+  {
+    "type": "GENERIC",
+    "id": "CCing_charcoal",
+    "name": "CC秘法制炭(烧制中)",
+    "description": "原始条件情况下，烧制炭。用黏土等原始材料制作模具进行烧制炭。效率比不上现代炭窑，但是更加容易获取炭。",
+    "weight": "19800 g",
+    "symbol": ")",
+    "color": "brown",
+    "price": "50 USD",
+    "material": ["wood", "freshclay"],
+    "volume": "20000 ml",
+    "category": "other",
+    "to_hit": 0,
+    "use_action": {
+      "type": "delayed_transform",
+      "transform_age": 87200,
+      "not_ready_msg": "正在烧制。",
+      "msg": "烧制完成了！",
+      "moves": 0,
+      "target": "CC_charcoal"
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "CC_charcoal",
+    "name": "CC秘法制炭(烧制完毕)",
+    "description": "原始条件情况下，烧制炭。用黏土等原始材料制作模具进行烧制炭。效率比不上现代炭窑，但是更加容易获取炭。（配方菜单加工）",
+    "weight": "19800 g",
+    "symbol": ")",
+    "color": "brown",
+    "price": "50 USD",
+    "material": ["wood", "freshclay"],
+    "volume": "20000 ml",
+    "category": "other",
+    "to_hit": 0
+  },
+  {
+    "type": "recipe",
+    "result": "CCing_charcoal",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC物品材料",
+    "skill_used": "survival",
+    "difficulty": 1,
+    "time": "30 s",
+    "reversible": false,
+    "autolearn": true,
+    "components": [ 
+      [ [ "clay_lump", 10] ], 
+      [ [ "splinter", 40 ],
+        [ "2x4", 6 ],
+        [ "stick", 8 ],
+        [ "bone_any", 40, "LIST" ],
+        [ "skewer_bone", 1000 ],
+        [ "pine_bough", 20 ],
+        [ "log", 1 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "coal_lump",
+    "activity_level": "LIGHT_EXERCISE",
+    "byproducts": [ [ "clay_lump", 10] ],
+    "charges": 4000,
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC物品材料",
+    "skill_used": "survival",
+    "difficulty": 1,
+    "time": "30 s",
+    "reversible": false,
+    "autolearn": true,
+    "components": [ [ [ "CC_charcoal", 1] ] ]
+  }
+]

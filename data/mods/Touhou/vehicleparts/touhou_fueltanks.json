@@ -1,0 +1,90 @@
+[
+  {
+    "id": "tank_corpsecart",
+    "type": "vehicle_part",
+    "categories": [
+      "energy",
+      "movement"
+    ],
+    "name": {
+      "str": "尸体反应堆罐"
+    },
+    "description": "kaenbyou_wheelbarrow 的测试用尸体反应堆罐",
+    "symbol": "X",
+    "color": "brown",
+    "broken_color": "red",
+    "item": "tank_corpsecart",
+    "location": "fuel_source",
+    "durability": 200,
+    "damage_reduction": {
+      "all": 10
+    },
+    "folded_volume": "2500 ml",
+    "breaks_into": [
+      {
+        "item": "splinter",
+        "count": [
+          7,
+          9
+        ]
+      },
+      {
+        "item": "nail",
+        "charges": [
+          5,
+          10
+        ]
+      }
+    ],
+    "requirements": {
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            2
+          ]
+        ],
+        "time": "30 m",
+        "using": [
+          [
+            "vehicle_nail_install",
+            1
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            2
+          ]
+        ],
+        "time": "15 m",
+        "using": [
+          [
+            "vehicle_nail_removal",
+            1
+          ]
+        ]
+      },
+      "repair": {
+        "skills": [
+          [
+            "mechanics",
+            2
+          ]
+        ],
+        "time": "30 m",
+        "using": [
+          [
+            "adhesive",
+            2
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "FLUIDTANK"
+    ]
+  }
+]

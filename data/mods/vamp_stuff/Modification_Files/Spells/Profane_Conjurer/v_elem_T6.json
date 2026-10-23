@@ -1,0 +1,77 @@
+[
+  {
+    "id": "t6_elem_exerxium",
+    "type": "SPELL",
+    "name": {
+      "str": "行使权"
+    },
+    "description": "一道亵渎之火冲击圆锥体内的所有敌人，造成<color_red>火焰伤害</color>并<color_yellow>诅咒</color>敌人。\n*在受影响区域诅咒火焰传播的几率很小。\n\n这是<color_magenta>六阶</color>法术。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "cone",
+    "effect_str": "v_spell_elem_curse",
+    "base_energy_cost": 250,
+    "final_energy_cost": 625,
+    "energy_source": "MANA",
+    "spell_class": "VAMP_ELEM_spellcaster",
+    "difficulty": 6,
+    "min_damage": 0,
+    "max_damage": 20,
+    "damage_increment": 0.2,
+    "max_level": 20,
+    "min_range": 3,
+    "max_range": 5,
+    "range_increment": 0.1,
+    "min_aoe": 5,
+    "max_aoe": 35,
+    "aoe_increment": 2,
+    "field_id": "fd_fire_curse",
+    "field_chance": 50,
+    "min_field_intensity": 1,
+    "max_field_intensity": 1,
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DURATION"
+    ],
+    "base_casting_time": 175,
+    "min_duration": 250,
+    "max_duration": 1000,
+    "damage_type": "heat"
+  },
+  {
+    "id": "t6_elem_elemward",
+    "type": "SPELL",
+    "name": {
+      "str": "元素防护"
+    },
+    "description": "创造一道屏障，保护你或你的盟友免受所有<color_yellow>元素枯萎</color>的伤害。\n*不会消除现有的枯萎病。\n\n这是<color_magenta>第6层的咒语。",
+    "valid_targets": [
+      "ally"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "v_spell_elem_bar",
+    "base_energy_cost": 300,
+    "final_energy_cost": 450,
+    "energy_source": "MANA",
+    "spell_class": "VAMP_ELEM_spellcaster",
+    "difficulty": 6,
+    "max_level": 5,
+    "min_range": 3,
+    "max_range": 8,
+    "min_duration": 3000,
+    "max_duration": 4500,
+    "duration_increment": 500,
+    "base_casting_time": 200,
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ]
+  }
+]

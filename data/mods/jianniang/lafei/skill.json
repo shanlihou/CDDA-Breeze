@@ -1,0 +1,232 @@
+[
+  {
+   "type": "TOOL",
+    "id": "jianmiemoshi",
+    "name": { "str": "歼灭模式" },
+    "category": "tools",
+    "description": "所罗门的疯狗,速度加倍（每分钟可以启动一次）",
+    "color": "brown",
+    "symbol": "/",
+	"weight": "1 g",
+    "volume": "1 ml",
+    "material": [ "steel", "wood" ],
+    "techniques": [ "WBLOCK_1", "DEF_DISARM" ],
+    "bashing": 1,
+     "charges_per_use": 1,
+       "pocket_data": [
+        {
+            "pocket_type": "MAGAZINE",
+            "ammo_restriction": {
+                "battery": 1
+            }
+        }
+    ],
+    "relic_data": {
+    "charge_info": {
+    "regenerate_ammo": true,
+    "recharge_type": "periodic",
+    "time": "1 m"
+        }
+    },
+     "use_action": {
+        "type": "cast_spell",
+        "spell_id": "jianmiemoshishifa",
+        "no_fail": true,
+        "level": 0
+    },
+    "flags": [ "NO_UNLOAD", "NO_RELOAD"],
+    "price": 1,
+    "price_postapoc": 1
+  },
+  {
+    "id": "jianmiemoshishifa",
+    "type": "SPELL",
+    "name": "开启歼灭模式",
+    "description": "阿巴",
+    "valid_targets": [ "none" ],
+    "flags": [ "NO_LEGS"],
+    "effect": "spawn_item",
+    "shape": "blast",
+    "effect_str": "jianmiemoshiguanghuan",
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_duration": 2000,
+    "max_duration": 2000
+    },
+    {
+     "id": "jianmiemoshiguanghuan",
+    "type": "ARMOR",
+    "name": "!!!歼灭模式开启!!!",
+    "description": "。",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "symbol": "o",
+    "color": "white",
+    "flags": [ "PERSONAL", "SEMITANGIBLE", "OVERSIZE", "ONLY_ONE", "TRADER_AVOID", "NO_TAKEOFF", "NONCONDUCTIVE" ],
+    "relic_data": {
+        "passive_effects": [
+            {
+               "has": "WORN",
+                "condition": "ALWAYS",
+                "values": [ { "value": "SPEED", "multiply": 6 } ] } ] }
+    },
+    {
+   "type": "TOOL",
+    "id": "jianniangzhitong",
+    "name": { "str": "舰娘止痛" },
+    "category": "tools",
+    "description": "钢铁做成的身体，就要有钢铁的意志（每小时可以启动一次）",
+    "color": "brown",
+    "symbol": "/",
+	"weight": "1 g",
+    "volume": "1 ml",
+    "material": [ "steel", "wood" ],
+    "techniques": [ "WBLOCK_1", "DEF_DISARM" ],
+    "bashing": 1,
+     "charges_per_use": 1,
+       "pocket_data": [
+        {
+            "pocket_type": "MAGAZINE",
+            "ammo_restriction": {
+                "battery": 1
+            }
+        }
+    ],
+    "relic_data": {
+    "charge_info": {
+    "regenerate_ammo": true,
+    "recharge_type": "periodic",
+    "time": "1 h"
+        }
+    },
+     "use_action": {
+        "type": "cast_spell",
+        "spell_id": "jiangditengtong_jianniang",
+        "no_fail": true,
+        "level": 0
+    },
+    "flags": [ "NO_UNLOAD", "NO_RELOAD"],
+    "price": 1,
+    "price_postapoc": 1
+  },
+  {
+	"id": "jiangditengtong_jianniang",
+    "type": "SPELL",
+    "name": "降低疼痛",
+    "description": "降低疼痛",
+    "valid_targets": [ "self" ],
+    "min_damage": 1000,
+    "max_damage": 1000,
+    "effect": "recover_energy",
+    "effect_str": "PAIN",
+    "shape": "blast",
+    "difficulty": -50,
+    "flags": ["PAIN_NORESIST" ]
+	},
+	{
+   "type": "TOOL",
+    "id": "zhuanshudanmu_lafei",
+    "name": { "str": "专属弹幕-拉菲" },
+    "category": "tools",
+    "description": "拉菲的弹幕（每分钟可以启动一次）",
+    "color": "brown",
+    "symbol": "/",
+	"weight": "1 g",
+    "volume": "1 ml",
+    "material": [ "steel", "wood" ],
+    "techniques": [ "WBLOCK_1", "DEF_DISARM" ],
+    "bashing": 1,
+     "charges_per_use": 1,
+       "pocket_data": [
+        {
+            "pocket_type": "MAGAZINE",
+            "ammo_restriction": {
+                "battery": 1
+            }
+        }
+    ],
+    "relic_data": {
+    "charge_info": {
+    "regenerate_ammo": true,
+    "recharge_type": "periodic",
+    "time": "1 m"
+        }
+    },
+     "use_action": {
+        "type": "cast_spell",
+        "spell_id": "zhuanshudanmulafei",
+        "no_fail": true,
+        "level": 0
+    },
+    "flags": [ "NO_UNLOAD", "NO_RELOAD"],
+    "price": 1,
+    "price_postapoc": 1
+  },
+  {
+    "id": "zhuanshudanmulafei",
+    "type": "SPELL",
+    "name": { "str": "专属弹幕-拉菲" },
+    "description": " ",
+    "valid_targets": [ "ground" ],
+    "flags": [ "SILENT", "RANDOM_TARGET"],
+    "shape": "blast",
+    "min_range": 1,
+    "max_range": 1,
+    "difficulty": -50,
+    "min_damage": 0,
+    "max_damage": 0,
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "extra_effects":[
+      {"id":"miaozhunlafei"}, 
+      {"id":"miaozhunlafei"}, 
+      {"id":"miaozhunlafei"}, 
+      {"id":"miaozhunlafei"}, 
+      {"id":"miaozhunlafei"}, 
+      {"id":"miaozhunlafei"}, 
+      {"id":"miaozhunlafei"}, 
+      {"id":"miaozhunlafei"}, 
+      {"id":"miaozhunlafei"}, 
+      {"id":"miaozhunlafei"}
+    ],
+    "effect": "attack",
+    "damage_type": "bash"
+    },
+    {
+       "id": "miaozhunlafei",
+    "type": "SPELL",
+    "name": { "str": "瞄准" },
+    "description": " ",
+    "valid_targets": [ "hostile" ],
+    "flags": [ "SILENT", "RANDOM_TARGET"],
+    "shape": "blast",
+    "min_range": 40,
+    "max_range": 40,
+    "min_damage": 0,
+    "max_damage": 0,
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "extra_effects":[
+      {"id":"shejilafei"}
+    ],
+    "effect": "attack",
+    "damage_type": "bash"
+  },
+  {
+     "id": "shejilafei",
+    "type": "SPELL",
+    "name": { "str": "射击" },
+    "description": " ",
+    "valid_targets": [ "hostile","ground" ],
+    "flags": [ "SILENT", "RANDOM_TARGET"],
+    "shape": "blast",
+    "min_range": 1,
+    "max_range": 1,
+    "min_damage": 2000,
+    "max_damage": 2000,
+    "min_aoe": 3,
+    "max_aoe": 3,
+    "effect": "attack",
+    "damage_type": "bash"
+  }
+]

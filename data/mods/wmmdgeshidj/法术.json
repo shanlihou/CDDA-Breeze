@@ -1,0 +1,248 @@
+[
+{
+  "id": "mmhfsf",
+    "type": "SPELL",
+    "name": {
+      "str": "蜗牛恢复施法"
+    },
+    "description": "?",
+    "message": "施法成功",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "mmhf",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+    },
+    {
+       "id": "mmtbmf",
+    "type": "SPELL",
+    "name": {
+      "str": "蜗牛隐蔽施法"
+    },
+    "description": "麻了，第一次写这种变异，本来准备直接复制bl9物品改改，结果还要写魔法，麻了",
+    "message": "你看不见我，你看不见我，你看不见我~",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "mmxy",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+    },
+    {
+        "id": "mmnlsf",
+    "type": "SPELL",
+    "name": {
+      "str": "蜗牛耐力施法"
+    },
+    "description": "。",
+    "message": "施法成功",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "mmnl",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+      ]
+      },
+      {
+  "id": "mmzlsf",
+    "type": "SPELL",
+    "name": {
+      "str": "蜗牛智力施法"
+    },
+    "description": "。",
+    "message": "施法成功",
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 10000,
+    "max_damage": 10000,
+    "effect": "mutate",
+    "shape": "blast",
+    "effect_str": "mmzl",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "MUTATE_TRAIT"
+    ]
+    },
+    {
+  "type": "SPELL",
+  "id": "black_fire_burn",
+  "name": "不净之炎",
+  "description": "用凡人的嗟怨为燃料点燃目标，造成持续伤害。",
+  "valid_targets": [ "hostile" ],
+  "effect": "attack",
+  "shape": "blast",
+  "aoe": 0,
+  "effect_str": "onfire",
+  "min_damage": 90,
+  "max_damage": 180,
+  "damage_increment": 2,
+  "damage_type": "pure",
+  "min_duration": 6000,
+  "max_duration": 18000,
+  "duration_increment": 600,
+  "min_range": 1,
+  "max_range": 1
+    },
+    {
+  "type": "SPELL",
+  "id": "holy_nunchaku_fireball",
+  "name": "不净火球",
+  "description": "从棍身甩出一团不净之炎，在目标处爆炸。",
+  "valid_targets": [ "hostile", "ground" ],
+  "effect": "attack",
+  "shape": "blast",
+  "effect_str": "onfire",
+  "message": "一团不净之炎呼啸而出，在%2$s处炸开！",
+  "min_damage": 120,
+  "max_damage": 200,
+  "damage_increment": 3,
+  "damage_type": "pure",
+  "min_range": 30,
+  "max_range": 30,
+  "min_aoe": 3,
+  "max_aoe": 4,
+  "aoe_increment": 1,
+  "min_duration": 6000,
+  "max_duration": 12000,
+  "duration_increment": 100,
+  "base_casting_time": 1,
+  "base_energy_cost": 40,
+  "energy_source": "STAMINA",
+  "flags": [ "VERBAL", "SOMATIC" ]
+},
+    {
+  "type": "SPELL",
+  "id": "holy_fetch_wide_hostile",
+  "name": "空手道念力·敌（范围）",
+  "description": "将周围8格内的所有敌人拉向自己。",
+  "valid_targets": [ "hostile" ],
+  "effect": "area_pull",
+  "shape": "blast",
+  "message": "空手道念力将周围的敌人拉向你！",
+  "min_range": 0,
+  "max_range": 0,
+  "min_aoe": 15,
+  "max_aoe": 15,
+  "base_casting_time": 1,
+  "base_energy_cost": 25,
+  "energy_source": "STAMINA"
+    },
+    {
+  "type": "SPELL",
+  "id": "holy_fetch_wide_ally",
+  "name": "空手道念力·友（范围）",
+  "description": "将周围8格内的所有友方单位拉向自己。",
+  "valid_targets": [ "ally" ],
+  "effect": "area_pull",
+  "shape": "blast",
+  "message": "空手道念力将周围的友方拉向你！",
+  "min_range": 0,
+  "max_range": 0,
+  "min_aoe": 15,
+  "max_aoe": 15,
+  "base_casting_time": 1,
+  "base_energy_cost": 25,
+  "energy_source": "STAMINA"
+    },
+    {
+  "type": "SPELL",
+  "id": "holy_fetch_wide_item",
+  "name": "空手道念力·物（范围）",
+  "description": "将周围8格内的所有物品拉向自己。",
+  "valid_targets": [ "item" ],
+  "effect": "area_pull",
+  "shape": "blast",
+  "message": "空手道念力将周围的物品拉向你！",
+  "min_range": 0,
+  "max_range": 0,
+  "min_aoe": 15,
+  "max_aoe": 15,
+  "base_casting_time": 1,
+  "base_energy_cost": 25,
+  "energy_source": "STAMINA"
+    },
+    {
+  "type": "SPELL",
+  "id": "holy_gauntlets_push",
+  "name": "空手道斥力",
+  "description": "释放空手道斥力，将周围所有敌人推开。",
+  "valid_targets": [ "hostile", "ground" ],
+  "effect": "area_push",
+  "shape": "blast",
+  "message": "空手道斥力爆发，将周围的敌人震退！",
+  "min_range": 0,
+  "max_range": 0,
+  "min_aoe": 30,
+  "max_aoe": 30,
+  "min_push": 10,
+  "max_push": 10,
+  "base_casting_time": 1,
+  "base_energy_cost": 30,
+  "energy_source": "STAMINA",
+  "flags": [ "SILENT" ]
+    },
+    {
+  "type": "SPELL",
+  "id": "snake_venom_strike",
+  "name": "蛇毒侵袭",
+  "description": "剑刃上的蛇毒渗入目标体内，造成持续伤害。",
+  "valid_targets": [ "hostile" ],
+  "effect": "attack",
+  "shape": "blast",
+  "aoe": 0,
+  "effect_str": "poison",
+  "min_damage": 8,
+  "max_damage": 16,
+  "damage_increment": 1,
+  "damage_type": "biological",
+  "min_duration": 3000,
+  "max_duration": 6000,
+  "duration_increment": 100,
+  "min_range": 1,
+  "max_range": 1
+    },
+    {
+  "type": "SPELL",
+  "id": "snake_paralyze_only",
+  "name": "蛇毒麻痹",
+  "description": "剑刃上的麻痹毒素渗入目标体内，使其无法行动。",
+  "valid_targets": [ "hostile" ],
+  "effect": "attack",
+  "shape": "blast",
+  "aoe": 0,
+  "effect_str": "paralyzepoison",
+  "min_duration": 2000,
+  "max_duration": 5000,
+  "duration_increment": 100,
+  "min_range": 1,
+  "max_range": 1
+}
+    ]

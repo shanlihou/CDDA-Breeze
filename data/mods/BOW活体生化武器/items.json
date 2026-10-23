@@ -1,0 +1,404 @@
+[
+  {
+    "id": "生化特战服",
+    "repairs_like": "fsurvivor_suit",
+    "type": "ARMOR",
+    "name": { "str": "生化特战服" },
+    "description": "专门为量产型丧尸士兵BOW准备的生化特战服，整体为柔性材料，方便后续进行模块化武装配置",
+    "weight": "4000 g",
+    "volume": "14 L",
+    "price": 17500,
+    "price_postapoc": 2000,
+    "material": [ "nomex", "kevlar", "hc_steel", "thermo_resin", "lycra" ],
+    "symbol": "[",
+    "looks_like": "hazmat_suit",
+    "color": "brown",
+    "armor": [
+      {
+        "material": [
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 1.5 },
+          {
+            "type": "kevlar",
+            "covered_by_mat": 100,
+            "thickness": 1.5,
+            "//": "Back of hand from the wrist to the knuckles can be stiffer but still needs a little flexibility. This area can afford the most thickness on gloves."
+          }
+        ],
+        "covers": [ "hand_l", "hand_r" ],
+        "specifically_covers": [ "hand_back_r", "hand_back_l" ],
+        "coverage": 100,
+        "encumbrance": [ 5, 5 ]
+      },
+      {
+        "material": [
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 1.5 },
+          {
+            "type": "kevlar",
+            "covered_by_mat": 100,
+            "thickness": 1.5,
+            "//": "Back of hand from the wrist to the knuckles can be stiffer but still needs a little flexibility. This area can afford the most thickness on gloves."
+          }
+        ],
+        "covers": [ "hand_l", "hand_r" ],
+        "specifically_covers": [ "hand_palm_r", "hand_wrist_r", "hand_palm_l", "hand_wrist_l" ],
+        "coverage": 100,
+        "//": "encumbrance accounted for above",
+        "encumbrance": [ 0, 0 ]
+      },
+      {
+        "material": [
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 1.5 },
+          {
+            "type": "kevlar",
+            "covered_by_mat": 100,
+            "thickness": 1.5,
+            "//": "Back of hand from the wrist to the knuckles can be stiffer but still needs a little flexibility. This area can afford the most thickness on gloves."
+          }
+        ],
+        "covers": [ "hand_l", "hand_r" ],
+        "specifically_covers": [ "hand_fingers_r", "hand_fingers_l" ],
+        "coverage": 100,
+        "//": "encumbrance accounted for above",
+        "encumbrance": [ 0, 0 ]
+      },
+      {
+        "material": [
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 1.5 },
+          {
+            "type": "kevlar",
+            "covered_by_mat": 100,
+            "thickness": 1.5,
+            "//": "Back of hand from the wrist to the knuckles can be stiffer but still needs a little flexibility. This area can afford the most thickness on gloves."
+          }
+        ],
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_ankle_l", "foot_heel_l", "foot_ankle_r", "foot_heel_r" ],
+        "coverage": 100,
+        "encumbrance": [ 5, 5 ]
+      },
+      {
+        "material": [
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 1.5 },
+          {
+            "type": "kevlar",
+            "covered_by_mat": 100,
+            "thickness": 1.5,
+            "//": "Back of hand from the wrist to the knuckles can be stiffer but still needs a little flexibility. This area can afford the most thickness on gloves."
+          }
+        ],
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_arch_l", "foot_arch_r" ],
+        "coverage": 100,
+        "//": "encumbrance accounted for above",
+        "encumbrance": [ 0, 0 ]
+      },
+      {
+        "material": [
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 1.5 },
+          {
+            "type": "kevlar",
+            "covered_by_mat": 100,
+            "thickness": 1.5,
+            "//": "Back of hand from the wrist to the knuckles can be stiffer but still needs a little flexibility. This area can afford the most thickness on gloves."
+          }
+        ],
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_toes_l", "foot_toes_r" ],
+        "coverage": 100,
+        "//": "encumbrance accounted for above",
+        "encumbrance": [ 0, 0 ]
+      },
+      {
+        "material": [
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 1.5 },
+          {
+            "type": "kevlar",
+            "covered_by_mat": 100,
+            "thickness": 1.5,
+            "//": "Back of hand from the wrist to the knuckles can be stiffer but still needs a little flexibility. This area can afford the most thickness on gloves."
+          }
+        ],
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_sole_l", "foot_sole_r" ],
+        "coverage": 100,
+        "//": "encumbrance accounted for above",
+        "encumbrance": [ 0, 0 ]
+      },
+      {
+        "material": [
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 2 },
+          {
+            "type": "kevlar",
+            "covered_by_mat": 100,
+            "thickness": 2,
+            "//": "Back of hand from the wrist to the knuckles can be stiffer but still needs a little flexibility. This area can afford the most thickness on gloves."
+          }
+        ],
+        "covers": [ "head", "torso", "leg_l", "leg_r", "arm_l", "arm_r" ],
+        "coverage": 100,
+        "encumbrance": [ 7, 7 ]
+      }
+    ],
+    "pocket_data": [
+      { "pocket_type": "CONTAINER", "max_contains_volume": "750 ml", "max_contains_weight": "3 kg", "moves": 40 },
+      { "pocket_type": "CONTAINER", "max_contains_volume": "750 ml", "max_contains_weight": "3 kg", "moves": 40 }
+    ],
+    "warmth": 40,
+    "environmental_protection": 20,
+    "flags": [ "VARSIZE", "WATERPROOF", "RAINPROOF", "GAS_PROOF", "RAD_PROOF", "ELECTRIC_IMMUNE", "STURDY" ]
+  },
+  {
+    "id": "生化特战全覆盖头盔",
+    "type": "ARMOR",
+    "repairs_like": "power_armor_helmet_basic",
+    "category": "armor",
+    "name": { "str": "生化特战全覆盖头盔" },
+    "description": "专门为量产型丧尸士兵BOW准备的生化特战全覆盖头盔，全方位保护头部，配备有永固空气过滤器，红外辐射检测镜片。",
+    "weight": "4500 g",
+    "volume": "6000 ml",
+    "price": 45000,
+    "price_postapoc": 2000,
+    "material": [ "nomex", "kevlar" ],
+    "symbol": "[",
+    "color": "green",
+    "warmth": 20,
+    "material_thickness": 5,
+    "environmental_protection": 95,
+    "flags": [
+      "IR_EFFECT",
+      "WATERPROOF",
+      "STURDY",
+      "PADDED",
+      "SUN_GLASSES",
+      "PARTIAL_DEAF",
+      "GAS_PROOF",
+      "ELECTRIC_IMMUNE",
+      "RAD_PROOF",
+      "ALARMCLOCK",
+      "THERMOMETER",
+      "WATCH"
+    ],
+    "armor": [
+      {
+        "material": [
+          { "type": "kevlar", "covered_by_mat": 100, "thickness": 10.0 },
+          { "type": "nomex", "covered_by_mat": 100, "thickness": 6 }
+        ],
+        "covers": [ "head" ],
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "encumbrance": 5
+      },
+      {
+        "material": [ { "type": "kevlar", "covered_by_mat": 100, "thickness": 9 } ],
+        "covers": [ "eyes", "mouth" ],
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "encumbrance": 10,
+        "layers": [ "OUTER" ]
+      }
+    ]
+  },
+  {
+    "//": "Tier 3 vambraces",
+    "id": "生化特战臂甲",
+    "type": "ARMOR",
+    "copy-from": "robofac_vambraces",
+    "name": { "str": "生化特战臂甲", "str_pl": "生化特种臂甲" },
+    "description": "专门为量产型丧尸士兵BOW准备的生化特战臂甲，主体为刚性材料，可以有效的格挡伤害",
+    "material": [
+      { "type": "thermo_resin", "portion": 1.5 },
+      { "type": "steel", "portion": 1 },
+      { "type": "kevlar_rigid", "portion": 1.5 }
+    ],
+    "extend": { "flags": [ "STURDY" ] },
+    "proportional": { "weight": 2 }
+  },
+  {
+    "id": "生化特战护腿靴",
+    "repairs_like": "boots_survivor",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": { "str": "生化特战护腿靴", "str_pl": "生化特战护腿靴" },
+    "description": "专门为量产型丧尸士兵BOW准备的生化特战护腿靴，主体为刚性材料，可以有效的格挡伤害",
+    "weight": "1060 g",
+    "volume": "2 L",
+    "price": 7000,
+    "price_postapoc": 1500,
+    "material": [ "kevlar", "hc_steel" ],
+    "to_hit": -1,
+    "bashing": 1,
+    "symbol": "[",
+    "looks_like": "boots",
+    "color": "dark_gray",
+    "warmth": 25,
+    "material_thickness": 2.5,
+    "environmental_protection": 2,
+    "flags": [ "VARSIZE", "WATERPROOF", "STURDY" ],
+    "armor": [
+      {
+        "covers": [ "leg_l", "leg_r", "foot_l", "foot_r" ],
+        "specifically_covers": [
+          "leg_knee_l",
+          "leg_knee_r",
+          "leg_lower_l",
+          "leg_lower_r",
+          "foot_toes_r",
+          "foot_toes_l",
+          "foot_ankle_r",
+          "foot_ankle_l",
+          "foot_heel_r",
+          "foot_heel_l",
+          "foot_arch_r",
+          "foot_arch_l",
+          "foot_sole_r",
+          "foot_sole_l"
+        ],
+        "material": [
+          { "type": "hc_steel", "covered_by_mat": 100, "thickness": 1.25 },
+          { "type": "kevlar", "covered_by_mat": 100, "thickness": 3 }
+        ],
+        "encumbrance": 12,
+        "coverage": 100
+      }
+    ]
+  },
+  {
+    "id": "生化特战防弹衣",
+    "type": "ARMOR",
+    "category": "ARMOR",
+    "repairs_like": "coat_rain",
+    "looks_like": "poncho",
+    "name": { "str": "生化特战防弹衣" },
+    "description": "专门为量产型丧尸士兵BOW准备的生化特战防弹衣，主体为刚性材料，可以有效的格挡伤害，其上方有许多口袋和挂钩，可以放置一把大型步枪",
+    "weight": "960 g",
+    "volume": "250 ml",
+    "price": 4000,
+    "price_postapoc": 750,
+    "symbol": "[",
+    "material": [ "hc_steel", "kevlar" ],
+    "color": "light_gray",
+    "warmth": 5,
+    "flags": [ "STURDY", "OUTER", "WATERPROOF", "VARSIZE", "RAINPROOF", "HOOD", "TARDIS" ],
+    "material_thickness": 3,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "200 mm",
+        "holster": true,
+        "flag_restriction": [ "MAG_COMPACT", "MAG_BULKY" ],
+        "description": "Spring-loaded clamp.",
+        "moves": 60
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "200 mm",
+        "holster": true,
+        "flag_restriction": [ "MAG_COMPACT", "MAG_BULKY" ],
+        "description": "Spring-loaded clamp.",
+        "moves": 60
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "200 mm",
+        "holster": true,
+        "flag_restriction": [ "MAG_COMPACT", "MAG_BULKY" ],
+        "description": "Spring-loaded clamp.",
+        "moves": 60
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "200 mm",
+        "holster": true,
+        "flag_restriction": [ "MAG_COMPACT", "MAG_BULKY" ],
+        "description": "Spring-loaded clamp.",
+        "moves": 60
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "max_contains_volume": "1100 ml",
+        "max_contains_weight": "2 kg",
+        "description": "Compartment for grenades.",
+        "moves": 30,
+        "flag_restriction": [ "GRENADE" ]
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "max_contains_volume": "15 L",
+        "max_contains_weight": "26500 g",
+        "max_item_length": "240 cm",
+        "description": "Integrated rifle case.",
+        "moves": 60
+      }
+    ],
+    "armor": [
+      {
+        "encumbrance": [ 4, 8 ],
+        "coverage": 100,
+        "cover_vitals": 90,
+        "material": [
+          { "type": "kevlar", "covered_by_mat": 100, "thickness": 6.0 },
+          { "type": "hc_steel", "covered_by_mat": 100, "thickness": 1 }
+        ],
+        "covers": [ "torso" ],
+        "layers": [ "OUTER", "BELTED" ]
+      },
+      {
+        "encumbrance": [ 4, 4 ],
+        "coverage": 100,
+        "cover_vitals": 90,
+        "material": [
+          { "type": "kevlar", "covered_by_mat": 100, "thickness": 6.0 },
+          { "type": "hc_steel", "covered_by_mat": 100, "thickness": 1 }
+        ],
+        "covers": [ "arm_l", "arm_r" ],
+        "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r", "arm_upper_l", "arm_upper_r" ]
+      },
+      {
+        "encumbrance": [ 4, 4 ],
+        "coverage": 100,
+        "cover_vitals": 90,
+        "material": [
+          { "type": "kevlar", "covered_by_mat": 100, "thickness": 6.0 },
+          { "type": "hc_steel", "covered_by_mat": 100, "thickness": 1 }
+        ],
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_hip_l", "leg_hip_r", "leg_upper_r", "leg_upper_l" ]
+      }
+    ]
+  },
+  {
+    "id": "BOW研究应用报告书",
+    "type": "BOOK",
+    "category": "manuals",
+    "name": { "str": "BOW研究应用报告书", "str_pl": "BOW研究应用报告书" },
+    "description": "BOW研究应用报告书，该计划书详细的列举了bow的应用场景以及研究报告，你甚至怀疑一个生物学家看完这篇报告后，可以手搓一套BOW生产线，如果你的计算机技能足够高，你可以通过笔记本电脑黑入旧世界的系统来得到这本报告书",
+    "weight": "50 g",
+    "volume": "500 ml",
+    "price": 125000,
+    "price_postapoc": 5000,
+    "material": [ "paper" ],
+    "symbol": "?",
+    "color": "light_green",
+    "skill": "firstaid",
+    "required_level": 6,
+    "max_level": 10,
+    "intelligence": 10,
+    "time": "45 m",
+    "fun": -2
+  }
+]

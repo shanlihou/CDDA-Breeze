@@ -1,0 +1,364 @@
+[
+  {
+    "type": "technique",
+    "id": "UPRIGHT_SLASH",
+    "name": "升龙斩",
+    "description": "将敌人击到空中，knockback 6，down 5，stun 2，crit only",
+    "unarmed_allowed": false,
+    "melee_allowed": true,
+    "crit_tec": true,
+    "stun_dur": 2,
+    "knockback_dist": 6,
+    "down_dur": 5,
+    "weighting": -4,
+    "messages": [
+      "这一记斩击将%s送上了天。",
+      "%s被送上了天",
+      "<npcname>将%s斩上了天，然后落了下来。"
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 1.33
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scaling-stat": "str",
+        "scale": 1.33
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scaling-stat": "str",
+        "scale": 1.66
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scaling-stat": "str",
+        "scale": 0.66
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "DOWNWARD_SLASH",
+    "name": "下劈斩",
+    "description": "把敌人打在地上，down 6，stun 2，crit only",
+    "unarmed_allowed": false,
+    "melee_allowed": true,
+    "crit_tec": true,
+    "weighting": -3,
+    "down_dur": 6,
+    "stun_dur": 2,
+    "messages": [
+      "%s面朝地面",
+      "下劈斩将%s打到地面",
+      "<npcname>将%s摔到地面。"
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 1.33
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scaling-stat": "str",
+        "scale": 1.66
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scaling-stat": "str",
+        "scale": 1.33
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scaling-stat": "str",
+        "scale": 0.66
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "VAMP_WRATH",
+    "name": "吸血鬼之怒",
+    "description": "快速攻击，33%行动点消耗，66%伤害。",
+    "unarmed_allowed": false,
+    "melee_allowed": true,
+    "crit_tec": false,
+    "weighting": 1,
+    "messages": [
+      "快速打击",
+      "%s在瞬间被打击了",
+      "<npcname>快速攻击了%s"
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 0.33
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scaling-stat": "str",
+        "scale": 0.66
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scaling-stat": "str",
+        "scale": 0.66
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scaling-stat": "str",
+        "scale": 0.66
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "BOW_VAMP_SWEEP",
+    "name": "吸血鬼弓挥",
+    "description": "击退怪物，横扫打击 3 格，击倒 4 回合，击退 1 格。",
+    "unarmed_allowed": false,
+    "melee_allowed": true,
+    "knockback_dist": 1,
+    "down_dur": 1,
+    "crit_tec": false,
+    "weighting": 1,
+    "messages": [
+      "你的扫击将%s击退并绊倒。",
+      "<npcname>水平挥动着弓！"
+    ],
+    "aoe": "wide"
+  },
+  {
+    "type": "technique",
+    "id": "WEAK_HITCRIT",
+    "name": "弱点突刺",
+    "description": "精确的命中造成2倍伤害，击倒1回合，仅暴击",
+    "unarmed_allowed": false,
+    "melee_allowed": true,
+    "crit_tec": true,
+    "weighting": -8,
+    "down_dur": 1,
+    "messages": [
+      "%s的弱点被穿刺了",
+      "<npcname>瞄准了%s的弱点并刺过去"
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scaling-stat": "str",
+        "scale": 2
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "STRONG_HITCRIT",
+    "name": "弱点穿透",
+    "description": "精确的命中造成4倍伤害，击倒2回合，仅暴击",
+    "unarmed_allowed": false,
+    "melee_allowed": true,
+    "crit_tec": true,
+    "weighting": -16,
+    "down_dur": 2,
+    "messages": [
+      "你向%s的弱点来了一记致命的刺击",
+      "<npcname>的致命一击击中了%s."
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scaling-stat": "str",
+        "scale": 4
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "VAMP_TRICK",
+    "name": "吸血鬼的诡计",
+    "description": "绊倒敌人，持续3回合。",
+    "unarmed_allowed": false,
+    "melee_allowed": true,
+    "crit_tec": false,
+    "weighting": 1,
+    "down_dur": 3,
+    "messages": [
+      "%s被暗算了",
+      "<npcname>暗算了%s"
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 0.75
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scaling-stat": "str",
+        "scale": 1
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "BOW_VAMP_THRUST",
+    "name": "吸血鬼弓推",
+    "description": "击退敌人，击倒1回合，击退2格。",
+    "unarmed_allowed": false,
+    "melee_allowed": true,
+    "knockback_dist": 2,
+    "down_dur": 1,
+    "crit_tec": false,
+    "weighting": 0,
+    "messages": [
+      "你刺向%s并使其跌倒",
+      "%s被<npcname>一击击倒了。"
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "HEAD_GRIND",
+    "name": "处决",
+    "description": "秒杀，仅暴击",
+    "unarmed_allowed": false,
+    "melee_allowed": true,
+    "crit_tec": true,
+    "weighting": -100,
+    "messages": [
+      "%s的头从它的脖子撕下来了。",
+      "%s的头被<npcname>撕裂，滚落到地上。"
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 2
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scaling-stat": "str",
+        "scale": 99.99
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "UPRIGHT_BASH",
+    "name": "升龙斩",
+    "description": "将敌人击向空中，击退8格，击倒4回合，击晕3回合，仅暴击",
+    "unarmed_allowed": false,
+    "melee_allowed": true,
+    "crit_tec": true,
+    "stun_dur": 3,
+    "knockback_dist": 8,
+    "down_dur": 4,
+    "weighting": -5,
+    "messages": [
+      "T向上猛击将%s带到空中。",
+      "%s被送上了天空！",
+      "你把%s击到天空，然后掉下来了。"
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 1.33
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scaling-stat": "str",
+        "scale": 1.66
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scaling-stat": "str",
+        "scale": 0.66
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scaling-stat": "str",
+        "scale": 1.33
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "DOWNWARD_BASH",
+    "name": "深渊一击",
+    "description": "猛击敌人使其倒地，击倒2回合，击晕5回合，仅暴击",
+    "unarmed_allowed": false,
+    "melee_allowed": true,
+    "crit_tec": true,
+    "stun_dur": 5,
+    "down_dur": 2,
+    "weighting": -6,
+    "messages": [
+      "猛烈的一击将%s击倒在地",
+      "<npcname>的猛击将%s击落在地"
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 1.33
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scaling-stat": "str",
+        "scale": 1.66
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scaling-stat": "str",
+        "scale": 0.66
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scaling-stat": "str",
+        "scale": 1.66
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "TRENCH",
+    "name": "断痕",
+    "description": "碾碎敌人，一击必杀，仅暴击",
+    "unarmed_allowed": false,
+    "melee_allowed": true,
+    "crit_tec": true,
+    "weighting": -100,
+    "messages": [
+      "%s被压碎了",
+      "<npcname>砸碎了%s"
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 2
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scaling-stat": "str",
+        "scale": 99.99
+      }
+    ]
+  }
+]

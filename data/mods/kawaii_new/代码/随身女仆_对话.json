@@ -1,90 +1,37 @@
 [
-  {
-    "type": "effect_type",
-    "id": "a0'0_00a"
-  },
-  {
-    "type": "effect_type",
-    "id": "a0'0_00b"
-  },
-  {
-    "type": "effect_type",
-    "id": "a0'0_00c"
-  },
+  //a0'0_00a —— a0场景号 0第几NPC 00几次对话 a对话选项
+  { "type": "effect_type","id": "a0'0_00a"},
+  { "type": "effect_type","id": "a0'0_00b"},
+  { "type": "effect_type","id": "a0'0_00c"},
   {
     "type": "talk_topic",
     "id": "a0'0_00a",
-    "dynamic_line": {
-      "concatenate": [
-        {
-          "u_has_effect": "a0'0_00a",
-          "no": "(慌张的看向四周) (!发现了你)\n我来和你汇合了 <u_name>大人！"
-        },
-        {
-          "u_has_effect": "a0'0_00b",
-          "yes": "距之前通信中断，直到现在也没有恢复\n那些活尸也越来越多了，<u_name>大人 我们该撤了!"
-        },
-        {
-          "u_has_effect": "a0'0_00c",
-          "yes": "对了，我还收集了一些吃的，拿上吧"
-        }
-      ]
-    },
+    "dynamic_line": { "concatenate": [
+      { "u_has_effect": "a0'0_00a","no": "(慌张的看向四周) (!发现了你)\n我来和你汇合了 <u_name>大人！" },
+      { "u_has_effect": "a0'0_00b","yes": "距之前通信中断，直到现在也没有恢复\n那些活尸也越来越多了，<u_name>大人 我们该撤了!" },
+      { "u_has_effect": "a0'0_00c","yes": "对了，我还收集了一些吃的，拿上吧" }
+    ] },
     "responses": [
-      {
-        "text": "发生什么了？",
-        "topic": "a0'0_00a",
-        "condition": {
-          "not": {
-            "u_has_effect": "a0'0_00a"
-          }
-        },
+      { "text": "发生什么了？", "topic": "a0'0_00a",
+        "condition": { "not": { "u_has_effect": "a0'0_00a" } },
         "effect": [
-          {
-            "u_add_effect": "a0'0_00a",
-            "duration": "1 s"
-          },
-          {
-            "u_add_effect": "a0'0_00b",
-            "duration": "PERMANENT"
-          }
+          { "u_add_effect": "a0'0_00a", "duration": "1 s" },
+          { "u_add_effect": "a0'0_00b", "duration": "PERMANENT" }
         ]
       },
-      {
-        "text": "撤吧",
-        "topic": "a0'0_00a",
-        "condition": {
-          "u_has_effect": "a0'0_00b"
-        },
+      { "text": "撤吧", "topic": "a0'0_00a",
+        "condition": { "u_has_effect": "a0'0_00b" },
         "effect": [
-          {
-            "u_lose_effect": "a0'0_00b"
-          },
-          {
-            "u_add_effect": "a0'0_00c",
-            "duration": "PERMANENT"
-          }
+          { "u_lose_effect": "a0'0_00b" },
+          { "u_add_effect": "a0'0_00c", "duration": "PERMANENT" }
         ]
       },
-      {
-        "text": "[收下]",
-        "topic": "TALK_DONE",
-        "condition": {
-          "u_has_effect": "a0'0_00c"
-        },
+      { "text": "[收下]", "topic": "TALK_DONE",
+        "condition": { "u_has_effect": "a0'0_00c" },
         "effect": [
-          {
-            "u_lose_effect": "a0'0_00c"
-          },
-          {
-            "u_spawn_item": "can_spam",
-            "container": "box_small_metal",
-            "count": 10,
-            "suppress_message": false
-          },
-          {
-            "npc_first_topic": "a0'0_01a"
-          }
+          { "u_lose_effect": "a0'0_00c" },
+          { "u_spawn_item": "can_spam", "container": "box_small_metal", "count": 10, "suppress_message": false },
+          { "npc_first_topic": "a0'0_01a" }
         ]
       }
     ]
@@ -92,19 +39,9 @@
   {
     "type": "talk_topic",
     "id": "a0'0_01a",
-    "dynamic_line": {
-      "concatenate": [
-        [
-          "那么 <u_name>大人一起走吧"
-        ]
-      ]
-    },
-    "responses": [
-      {
-        "text": "[加入你]",
-        "topic": "TALK_DONE",
-        "effect": "follow"
-      }
-    ]
+    "dynamic_line": { "concatenate": [
+      ["那么 <u_name>大人一起走吧"]
+    ] },
+    "responses": [ { "text": "[加入你]", "topic": "TALK_DONE", "effect": "follow" } ]
   }
 ]

@@ -1,0 +1,522 @@
+[
+  {
+    "type": "recipe",
+    "result": "0.5lb_cannon",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_RANGED",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "mechanics", 6 ] ],
+    "using": [
+      [ "soldering_standard", 50 ],
+      [ "welding_standard", 50 ],
+      [ "steel_standard", 20 ]
+    ],
+    "difficulty": 5,
+    "time": "30 m",
+    "autolearn": true,
+    "tools": [ [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ], [ [ "tongs", -1 ] ], [ [ "small_cannon_mould", -1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "0.5lb_ball",
+    "category": "CC_AMMO",
+    "subcategory": "CSC_AMMO_OTHER",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "mechanics", 2 ] ],
+    "using": [
+      [ "blacksmithing_standard", 2 ],
+      [ "surface_heat", 2 ]
+    ],
+    "difficulty": 2,
+    "counts":2,
+    "time": "10 m",
+    "charge":2,
+    "batch_time_factors": [ 75, 2 ],
+    "autolearn": true,
+    "reversible": true,
+    "tools": [ [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ] ],
+    "components": [ [ [ "steel_chunk", 1 ] ], [ [ "chem_black_powder", 216 ] ], [ [ "cotton_patchwork", 1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "1lb_cannon",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_RANGED",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "mechanics", 6 ] ],
+    "using": [
+      [ "soldering_standard", 50 ],
+      [ "welding_standard", 50 ],
+      [ "steel_standard", 21 ]
+    ],
+    "difficulty": 5,
+    "time": "30 m",
+    "autolearn": true,
+    "tools": [ [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ], [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "1lb_ball",
+    "category": "CC_AMMO",
+    "subcategory": "CSC_AMMO_OTHER",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "mechanics", 2 ] ],
+    "using": [
+      [ "blacksmithing_standard", 5 ],
+      [ "surface_heat", 5 ]
+    ],
+    "difficulty": 2,
+    "counts":2,
+    "time": "10 m",
+    "charge":2,
+    "batch_time_factors": [ 75, 2 ],
+    "autolearn": true,
+    "reversible": true,
+    "tools": [ [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ] ],
+    "components": [ [ [ "steel_chunk", 1 ] ], [ [ "chem_black_powder", 329 ] ], [ [ "cotton_patchwork", 1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "2lb_cannon",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_RANGED",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "mechanics", 6 ] ],
+    "using": [
+      [ "blacksmithing_standard", 40 ],
+      [ "steel_standard", 50 ]
+    ],
+    "difficulty": 6,
+    "time": "60 m",
+    "autolearn": true,
+    "tools": [ [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ], [ [ "small_cannon_mould", -1 ] ], [ [ "tongs", -1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "2lb_ball",
+    "category": "CC_AMMO",
+    "subcategory": "CSC_AMMO_OTHER",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "mechanics", 2 ] ],
+    "using": [
+      [ "blacksmithing_standard", 10 ],
+      [ "surface_heat", 10 ]
+    ],
+    "difficulty": 2,
+    "time": "10 m",
+    "batch_time_factors": [ 75, 2 ],
+    "autolearn": true,
+    "reversible": true,
+    "tools": [ [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ] ],
+    "components": [ [ [ "steel_chunk", 2 ] ], [ [ "chem_black_powder", 640 ] ], [ [ "cotton_patchwork", 3 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "3lb_cannon",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_RANGED",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "mechanics", 6 ] ],
+    "using": [
+      [ "blacksmithing_standard", 300 ],
+      [ "steel_standard", 125 ]
+    ],
+    "difficulty": 6,
+    "time": "10 m",
+    "autolearn": true,
+    "tools": [ [ [ "small_cannon_mould", -1 ] ], [ [ "blast_furnace", -1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "3lb_ball",
+    "category": "CC_AMMO",
+    "subcategory": "CSC_AMMO_OTHER",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "mechanics", 2 ] ],
+    "using": [
+      [ "blacksmithing_standard", 15 ],
+      [ "surface_heat", 15 ]
+    ],
+    "difficulty": 2,
+    "time": "10m",
+    "batch_time_factors": [ 75, 2 ],
+    "autolearn": true,
+    "reversible": true,
+    "tools": [ [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ] ],
+    "components": [ [ [ "steel_chunk", 3 ] ], [ [ "chem_black_powder", 948 ] ], [ [ "rag", 2 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "6lb_cannon",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_RANGED",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "mechanics", 6 ] ],
+    "using": [
+      [ "blacksmithing_standard", 600 ],
+      [ "steel_standard", 250 ]
+    ],
+    "difficulty": 8,
+    "time": "10 m",
+    "autolearn": true,
+    "tools": [ [ [ "middle_cannon_mould", -1 ] ], [ [ "blast_furnace", -1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "6lb_ball",
+    "category": "CC_AMMO",
+    "subcategory": "CSC_AMMO_OTHER",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "mechanics", 2 ] ],
+    "using": [
+      [ "blacksmithing_standard", 15 ],
+      [ "surface_heat", 15 ]
+    ],
+    "difficulty": 2,
+    "time": "12m",
+    "batch_time_factors": [ 75, 2 ],
+    "autolearn": true,
+    "reversible": true,
+    "tools": [ [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ] ],
+    "components": [ [ [ "steel_lump", 3 ] ], [ [ "chem_black_powder", 1860 ] ], [ [ "sheet_cotton_patchwork", 1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "12lb_cannon",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_RANGED",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "mechanics", 8 ] ],
+    "using": [
+      [ "blacksmithing_standard", 1200 ],
+      [ "steel_standard", 500 ]
+    ],
+    "difficulty": 8,
+    "time": "10 m",
+    "autolearn": true,
+    "tools": [ [ [ "middle_cannon_mould", -1 ] ], [ [ "blast_furnace", -1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "12lb_ball",
+    "category": "CC_AMMO",
+    "subcategory": "CSC_AMMO_OTHER",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "mechanics", 3 ] ],
+    "using": [
+      [ "blacksmithing_standard", 20 ],
+      [ "surface_heat", 30 ]
+    ],
+    "difficulty": 3,
+    "time": "15m",
+    "batch_time_factors": [ 75, 2 ],
+    "autolearn": true,
+    "reversible": true,
+    "tools": [ [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ] ],
+    "components": [ [ [ "steel_lump", 6 ] ], [ [ "chem_black_powder", 3662 ] ], [ [ "sheet_cotton_patchwork", 2 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "24lb_cannon",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_RANGED",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "mechanics", 10 ] ],
+    "using": [
+      [ "blacksmithing_standard", 2400 ],
+      [ "steel_standard", 1000 ]
+    ],
+    "difficulty": 10,
+    "time": "10 m",
+    "autolearn": true,
+    "tools": [ [ [ "large_cannon_mould", -1 ] ], [ [ "blast_furnace", -1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "24lb_ball",
+    "category": "CC_AMMO",
+    "subcategory": "CSC_AMMO_OTHER",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "mechanics", 3 ] ],
+    "using": [
+      [ "blacksmithing_standard", 50 ],
+      [ "surface_heat", 60 ]
+    ],
+    "difficulty": 3,
+    "time": "18m",
+    "batch_time_factors": [ 75, 2 ],
+    "autolearn": true,
+    "reversible": true,
+    "tools": [ [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ] ],
+    "components": [ [ [ "steel_lump", 11 ] ], [ [ "chem_black_powder", 13021 ] ], [ [ "sheet_cotton_patchwork", 4 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "48lb_cannon",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_RANGED",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "mechanics", 10 ] ],
+    "using": [
+      [ "blacksmithing_standard", 4000 ],
+      [ "steel_standard", 2000 ]
+    ],
+    "difficulty": 10,
+    "time": "10 m",
+    "autolearn": true,
+    "tools": [ [ [ "huge_cannon_mould", -1 ] ], [ [ "blast_furnace", -1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "48lb_ball",
+    "category": "CC_AMMO",
+    "subcategory": "CSC_AMMO_OTHER",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "mechanics", 4 ] ],
+    "using": [
+      [ "blacksmithing_standard", 60 ],
+      [ "surface_heat", 100 ]
+    ],
+    "difficulty": 4,
+    "time": "20m",
+    "batch_time_factors": [ 75, 2 ],
+    "autolearn": true,
+    "reversible": true,
+    "tools": [ [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ] ],
+    "components": [ [ [ "steel_lump", 19 ] ], [ [ "chem_black_powder", 25782 ] ], [ [ "sheet_cotton_patchwork", 8 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "1kg_mortar",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_RANGED",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "mechanics", 5 ] ],
+    "using": [
+      [ "blacksmithing_standard", 45 ],
+      [ "steel_standard", 30 ]
+    ],
+    "difficulty": 10,
+    "time": "1 h",
+    "autolearn": true,
+    "tools": [ [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ], [ [ "tongs", -1 ] ], [ [ "small_cannon_mould", -1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "1kg_he",
+    "category": "CC_AMMO",
+    "subcategory": "CSC_AMMO_OTHER",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "mechanics", 5 ] ],
+    "using": [
+      [ "blacksmithing_standard", 5 ],
+      [ "surface_heat", 5 ]
+    ],
+    "difficulty": 3,
+    "time": "20m",
+    "batch_time_factors": [ 75, 2 ],
+    "autolearn": true,
+    "reversible": true,
+    "tools": [ [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ] ],
+    "components": [ [ [ "steel_chunk", 3 ] ], [ [ "chem_black_powder", 3508 ] ], [ [ "sheet_cotton_patchwork", 1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "5kg_mortar",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_RANGED",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "mechanics", 6 ] ],
+    "using": [
+      [ "blacksmithing_standard", 225 ],
+      [ "steel_standard", 150 ]
+    ],
+    "difficulty": 10,
+    "time": "1 h",
+    "autolearn": true,
+    "tools": [ [ [ "middle_cannon_mould", -1 ] ], [ [ "blast_furnace", -1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "5kg_he",
+    "category": "CC_AMMO",
+    "subcategory": "CSC_AMMO_OTHER",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "mechanics", 5 ] ],
+    "using": [
+      [ "blacksmithing_standard", 9 ],
+      [ "surface_heat", 9 ]
+    ],
+    "difficulty": 3,
+    "time": "24m",
+    "batch_time_factors": [ 75, 2 ],
+    "autolearn": true,
+    "reversible": true,
+    "tools": [ [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ] ],
+    "components": [ [ [ "steel_chunk", 14 ] ], [ [ "chem_black_powder", 17541 ] ], [ [ "sheet_cotton_patchwork", 2 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "10kg_mortar",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_RANGED",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "mechanics", 8 ] ],
+    "using": [
+      [ "blacksmithing_standard", 450 ],
+      [ "steel_standard", 300 ]
+    ],
+    "difficulty": 10,
+    "time": "2 h",
+    "autolearn": true,
+    "tools": [ [ [ "large_cannon_mould", -1 ] ], [ [ "blast_furnace", -1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "10kg_he",
+    "category": "CC_AMMO",
+    "subcategory": "CSC_AMMO_OTHER",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "mechanics", 6 ] ],
+    "using": [
+      [ "blacksmithing_standard", 18 ],
+      [ "surface_heat", 18 ]
+    ],
+    "difficulty": 3,
+    "time": "24m",
+    "batch_time_factors": [ 75, 2 ],
+    "autolearn": true,
+    "reversible": true,
+    "tools": [ [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ] ],
+    "components": [ [ [ "steel_lump", 7 ] ], [ [ "chem_black_powder", 35083 ] ], [ [ "sheet_cotton_patchwork", 5 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "25kg_mortar",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_RANGED",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "mechanics", 8 ] ],
+    "using": [
+      [ "blacksmithing_standard", 1350 ],
+      [ "steel_standard", 750 ]
+    ],
+    "difficulty": 10,
+    "time": "3 h",
+    "autolearn": true,
+    "tools": [ [ [ "small_cannon_mould", -1 ] ], [ [ "blast_furnace", -1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "25kg_he",
+    "category": "CC_AMMO",
+    "subcategory": "CSC_AMMO_OTHER",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "mechanics", 6 ] ],
+    "using": [
+      [ "blacksmithing_standard", 40 ],
+      [ "surface_heat", 40 ]
+    ],
+    "difficulty": 3,
+    "time": "30m",
+    "batch_time_factors": [ 75, 2 ],
+    "autolearn": true,
+    "reversible": true,
+    "tools": [ [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ] ],
+    "components": [ [ [ "steel_lump", 18 ] ], [ [ "chem_black_powder", 87706 ] ], [ [ "sheet_cotton_patchwork", 9 ] ] ]
+  },
+  {
+    "result": "tool_bp_sp_bomb",
+    "type": "recipe",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_EXPLOSIVE",
+    "skill_used": "fabrication",
+    "difficulty": 6,
+    "time": "60 m",
+    "autolearn": true,
+    "reversible": true,
+    "qualities": [ { "id": "SAW_M", "level": 1 } ],
+    "components": [ [ [ "chem_black_powder", 794701 ] ], [ [ "sheet", 10 ] ], [ [ "string_36", 1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "30mm_steel_plate",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_VEHICLE",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "mechanics", 4 ] ],
+    "using": [ [ "blacksmithing_standard", 600 ],[ "steel_standard", 240 ] ],
+    "difficulty": 4,
+    "time": "60 m",
+    "autolearn": true,
+    "tools": [ [ [ "blast_furnace", -1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "30mm_lcement_steel",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_VEHICLE",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "mechanics", 6 ] ],
+    "using": [ [ "blacksmithing_standard", 200 ] ],
+    "difficulty": 6,
+    "time": "30 m",
+    "autolearn": true,
+    "tools": [ [ [ "carburizing_systerm", -1 ] ] ],
+    "components": [ [ [ "charcoal", 50 ] ], [ [ "30mm_steel_plate", 1 ] ], [ [ "carburizing_mould", 1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "50mm_steel_plate",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_VEHICLE",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "mechanics", 5 ] ],
+    "using": [ [ "blacksmithing_standard", 1000 ], [ "steel_standard", 400 ] ],
+    "difficulty": 5,
+    "time": "60 m",
+    "autolearn": true,
+    "tools": [ [ [ "blast_furnace", -1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "50mm_lcement_steel",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_VEHICLE",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "mechanics", 6 ] ],
+    "using": [ [ "blacksmithing_standard", 300 ] ],
+    "difficulty": 6,
+    "time": "30 m",
+    "autolearn": true,
+    "tools": [ [ [ "carburizing_systerm", -1 ] ] ],
+    "components": [ [ [ "charcoal", 80 ] ], [ [ "50mm_steel_plate", 1 ] ], [ [ "carburizing_mould", 1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "100mm_steel_plate",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_VEHICLE",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "mechanics", 5 ] ],
+    "using": [ [ "blacksmithing_standard", 2000 ], [ "steel_standard", 800 ] ],
+    "difficulty": 5,
+    "time": "60 m",
+    "autolearn": true,
+    "tools": [ [ [ "blast_furnace", -1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "result": "100mm_lcement_steel",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_VEHICLE",
+    "skill_used": "fabrication",
+    "skills_required": [ [ "mechanics", 6 ] ],
+    "using": [ [ "blacksmithing_standard", 600 ] ],
+    "difficulty": 6,
+    "time": "30 m",
+    "autolearn": true,
+    "tools": [ [ [ "carburizing_systerm", -1 ] ] ],
+    "components": [ [ [ "charcoal", 100 ] ], [ [ "100mm_steel_plate", 1 ] ], [ [ "carburizing_mould", 1 ] ] ]
+  }
+]

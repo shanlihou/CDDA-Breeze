@@ -1,0 +1,545 @@
+[
+  {
+    "id": "792x57_clip",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "7.92x57mm 5发弹夹"
+    },
+    "copy-from": "762R_clip",
+    "material": [
+      "brass"
+    ],
+    "looks_like": "762R_clip",
+    "color": "dark_gray",
+    "ammo_type": [
+      "792x57"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "792x57": 5
+        }
+      }
+    ],
+    "flags": [
+      "SPEEDLOADER"
+    ]
+  },
+  {
+    "id": "9x39mag10",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "9x39mm 10发弹匣"
+    },
+    "description": "以聚合物制成的10发紧凑型弹匣供特别行动组使用",
+    "volume": "171 ml",
+    "weight": "153 g",
+    "price": 3000,
+    "price_postapoc": 3000,
+    "material": [
+      "plastic"
+    ],
+    "symbol": "#",
+    "looks_like": "akmag10",
+    "color": "light_gray",
+    "ammo_type": [
+      "9x39"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "9x39": 10
+        }
+      }
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ]
+  },
+  {
+    "id": "9x39mag20",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "9x39mm 20发弹匣"
+    },
+    "description": "以聚合物制成的20发紧凑型弹匣供特别行动组使用",
+    "volume": "265 ml",
+    "weight": "218 g",
+    "price": 4000,
+    "price_postapoc": 4500,
+    "material": [
+      "plastic"
+    ],
+    "symbol": "#",
+    "looks_like": "akmag20",
+    "color": "light_gray",
+    "ammo_type": [
+      "9x39"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "9x39": 20
+        }
+      }
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ]
+  },
+  {
+    "id": "9x39mag30",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "9x39mm 30发弹匣"
+    },
+    "description": "以聚合物制成的30发紧凑型弹匣供特别行动组使用",
+    "volume": "335 ml",
+    "weight": "272 g",
+    "price": 5000,
+    "price_postapoc": 6000,
+    "material": [
+      "plastic"
+    ],
+    "symbol": "#",
+    "looks_like": "9x39mag20",
+    "color": "light_gray",
+    "ammo_type": [
+      "9x39"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "9x39": 30
+        }
+      }
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ]
+  },
+  {
+    "id": "idwmag20",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "IDW 20发弹匣"
+    },
+    "copy-from": "tec9mag_20rd",
+    "description": "一个紧凑型的20发IDW弹匣，采用机加工钢工艺",
+    "volume": "280 ml",
+    "weight": "160 g",
+    "price": 3300,
+    "price_postapoc": 100,
+    "material": [
+      "steel"
+    ],
+    "symbol": "#",
+    "looks_like": "uzimag_20rd",
+    "color": "light_gray",
+    "ammo_type": [
+      "9mm"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "9mm": 20
+        }
+      }
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ]
+  },
+  {
+    "id": "idwmag28",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "IDW 28发弹匣"
+    },
+    "copy-from": "idwmag20",
+    "description": "供IDW使用的28发弹匣，采用机加工工艺制成",
+    "volume": "290 ml",
+    "weight": "170 g",
+    "looks_like": "uzimag_25rd",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "9mm": 28
+        }
+      }
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ]
+  },
+  {
+    "id": "idwmag32",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "IDW 32发弹匣"
+    },
+    "copy-from": "idwmag20",
+    "description": "供IDW使用的32发弹匣，采用机加工工业制成",
+    "volume": "300 ml",
+    "weight": "180 g",
+    "looks_like": "uzimag",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "9mm": 32
+        }
+      }
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ]
+  },
+  {
+    "id": "m76mag10",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "M76 Zastava 10发弹匣"
+    },
+    "copy-from": "akmag10",
+    "description": "供M76 Zastava使用的10发紧凑型弹匣，采用冲压工艺制成",
+    "volume": "151 ml",
+    "weight": "130 g",
+    "price": 3000,
+    "price_postapoc": 100,
+    "material": [
+      "steel"
+    ],
+    "symbol": "#",
+    "looks_like": "akmag10",
+    "color": "light_gray",
+    "ammo_type": [
+      "792x57"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "792x57": 10
+        }
+      }
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ]
+  },
+  {
+    "id": "pgmmag7",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "PGM 7发弹匣"
+    },
+    "description": "供PGM Hécate II反器材狙击步枪使用的7发弹匣",
+    "volume": "485 ml",
+    "weight": "650 g",
+    "price": 10000,
+    "price_postapoc": 250,
+    "material": [
+      "steel"
+    ],
+    "symbol": "#",
+    "looks_like": "m107a1mag",
+    "color": "black",
+    "ammo_type": [
+      "50"
+    ],
+    "reload_time": 130,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "50": 7
+        }
+      }
+    ],
+    "flags": [
+      "MAG_BULKY"
+    ]
+  },
+  {
+    "id": "sig550mag5",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "SIG 550 5发弹匣"
+    },
+    "copy-from": "stanag5",
+    "description": "一个非常紧凑的5发聚合物盒式弹匣，供SIG 550使用。",
+    "weight": "60 g",
+    "price": 4000,
+    "material": [
+      "plastic"
+    ],
+    "looks_like": "stanag5",
+    "color": "light_gray"
+  },
+  {
+    "id": "sig550mag10",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "SIG 550 10发弹匣"
+    },
+    "copy-from": "stanag5",
+    "description": "供SIG 550使用的10发聚合物紧凑型弹匣",
+    "weight": "73 g",
+    "price": 4000,
+    "material": [
+      "plastic"
+    ],
+    "looks_like": "stanag10",
+    "color": "light_gray"
+  },
+  {
+    "id": "sig550mag20",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "SIG 550 20发弹匣"
+    },
+    "copy-from": "stanag20",
+    "description": "一个紧凑型的20发聚合物SIG 550弹匣",
+    "weight": "105 g",
+    "price": 4000,
+    "material": [
+      "plastic"
+    ],
+    "looks_like": "stanag20",
+    "color": "light_gray"
+  },
+  {
+    "id": "sig550mag30",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "SIG 550 30发弹匣"
+    },
+    "copy-from": "stanag20",
+    "description": "一个紧凑型的30发聚合物SIG 550弹匣",
+    "weight": "133 g",
+    "price": 4000,
+    "material": [
+      "plastic"
+    ],
+    "looks_like": "stanag30",
+    "color": "light_gray"
+  },
+  {
+    "id": "stg44mag25",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "StG 25发“香蕉弹匣”"
+    },
+    "description": "供StG 44使用的25发弹匣，采用冲压钢工艺，出于一些“明显”的原因又被称为香蕉弹匣",
+    "volume": "320 ml",
+    "weight": "294 g",
+    "price": 2800,
+    "price_postapoc": 250,
+    "material": [
+      "steel"
+    ],
+    "symbol": "#",
+    "looks_like": "akmag20",
+    "color": "light_gray",
+    "ammo_type": [
+      "792x33"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "792x33": 25
+        }
+      }
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ]
+  },
+  {
+    "id": "stg44mag30",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "StG 30发“香蕉弹匣”"
+    },
+    "description": "供StG 44使用的30发弹匣，采用冲压钢工艺，出于一些“明显”的原因又被称为香蕉弹匣",
+    "volume": "380 ml",
+    "weight": "350 g",
+    "price": 2800,
+    "price_postapoc": 250,
+    "material": [
+      "steel"
+    ],
+    "symbol": "#",
+    "looks_like": "akmag30",
+    "color": "light_gray",
+    "ammo_type": [
+      "792x33"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "792x33": 30
+        }
+      }
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ],
+    "//": "This mag should have problems such as wear out after some use, unlike the stg44mag25 "
+  },
+  {
+    "id": "svdmag10",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "SVD-63 10发弹匣"
+    },
+    "copy-from": "akmag10",
+    "description": "供SVD-63使用的10发紧凑型聚合物弹匣",
+    "volume": "151 ml",
+    "weight": "65 g",
+    "price": 3000,
+    "price_postapoc": 100,
+    "material": [
+      "plastic"
+    ],
+    "symbol": "#",
+    "looks_like": "akmag10",
+    "color": "light_gray",
+    "ammo_type": [
+      "762R"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "762R": 10
+        }
+      }
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ]
+  },
+  {
+    "id": "svdmag20",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "SVD-63 20发弹匣"
+    },
+    "copy-from": "akmag20",
+    "description": "一个紧凑型的20发聚合物SVD-63弹匣",
+    "volume": "265 ml",
+    "weight": "142 g",
+    "price": 3000,
+    "price_postapoc": 100,
+    "material": [
+      "plastic"
+    ],
+    "symbol": "#",
+    "looks_like": "akmag10",
+    "color": "light_gray",
+    "ammo_type": [
+      "762R"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "762R": 20
+        }
+      }
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ]
+  },
+  {
+    "id": "wa2000mag6",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "Walther WA 2000 6发弹匣"
+    },
+    "copy-from": "hk417mag_10rd",
+    "description": "一个紧凑型的6发钢制瓦尔特WA 2000弹匣",
+    "volume": "160 ml",
+    "weight": "400 g",
+    "price": 5000,
+    "price_postapoc": 100,
+    "material": [
+      "steel"
+    ],
+    "symbol": "#",
+    "looks_like": "hk417mag_10rd",
+    "color": "light_gray",
+    "ammo_type": [
+      "300"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "300": 6
+        }
+      }
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ]
+  },
+  {
+    "id": "wa2000mag10",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "Walther WA 2000 10发弹匣"
+    },
+    "copy-from": "hk417mag_10rd",
+    "description": "供瓦尔特WA 2000使用的10发紧凑型钢制弹匣",
+    "volume": "220 ml",
+    "weight": "650 g",
+    "price": 5000,
+    "price_postapoc": 100,
+    "material": [
+      "steel"
+    ],
+    "symbol": "#",
+    "looks_like": "hk417mag_10rd",
+    "color": "light_gray",
+    "ammo_type": [
+      "300"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "300": 10
+        }
+      }
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ]
+  }
+]

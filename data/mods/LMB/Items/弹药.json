@@ -1,0 +1,35 @@
+[
+    {
+        "id": "6.8mm",
+        "type": "AMMO",
+        "name": { "str_sp": "6.8mm通用弹" },
+        "description": "美国陆军的新式弹药，并以此为基础开始了NGSW计划。这种弹药的装药量要比5.56和7.62都要大，威力和声音也更大。",
+        "weight": "18 g",
+        "volume": "158 ml",
+        "longest_side": "71 mm",
+        "price": 500,
+        "price_postapoc": 1200,
+        "flags": [ "IRREPLACEABLE_CONSUMABLE" ],
+        "material": [ "brass", "lead", "powder" ],
+        "symbol": "=",
+        "color": "yellow",
+        "count": 20,
+        "stack_size": 20,
+        "ammo_type": "6.8mm_type",
+        "range": 75,
+        "damage": {
+          "damage_type": "bullet",
+          "amount": 64,
+          "armor_penetration": 10
+        },
+        "dispersion": 35,
+        "recoil": 3500,
+        "effects": [ "COOKOFF" ]
+      },
+      {
+        "id": "6.8mm_type",
+        "name": "6.8mm全威力弹",
+        "default": "6.8mm",
+        "type": "ammunition_type"
+      }
+]

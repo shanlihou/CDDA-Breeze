@@ -2,77 +2,37 @@
   {
     "id": "armor_npts",
     "type": "ARMOR",
-    "name": {
-      "str": "女仆头饰"
-    },
+    "name": {"str": "女仆头饰"},
     "description": "女仆装中最重要的部分之一。无论是什么样的天气，女佣都不能把它脱下来。",
-    "weight": "10 g",
-    "volume": "250 ml",
-    "price": "35 USD",
-    "price_postapoc": "80 cent",
-    "material": [
-      "cotton"
-    ],
-    "symbol": "[",
-    "color": "white",
+    "weight": "10 g", "volume": "250 ml",
+    "price": "35 USD", "price_postapoc": "80 cent",
+    "material": ["cotton"],
+    "symbol": "[", "color": "white",
     "warmth": 5,
     "material_thickness": 0.1,
-    "flags": [
-      "VARSIZE",
-      "FANCY",
-      "BELTED"
-    ],
+    "flags": ["VARSIZE", "FANCY", "BELTED"],
     "armor": [
-      {
-        "covers": [
-          "head"
-        ],
-        "specifically_covers": [
-          "head_crown",
-          "head_ear_r",
-          "head_ear_l"
-        ],
-        "coverage": 60,
-        "encumbrance_modifiers": [
-          "NONE"
-        ]
-      }
-    ]
+      { "covers": [ "head"],"specifically_covers": [ "head_crown", "head_ear_r", "head_ear_l" ],
+        "coverage": 60,"encumbrance_modifiers": [ "NONE" ]
+      } ]
   },
   {
     "id": "armor_npts1",
     "type": "TOOL_ARMOR",
     "category": "clothing",
-    "name": {
-      "str": "保暖女仆头饰（关）"
-    },
+    "name": {"str": "保暖女仆头饰（关）"},
     "description": "女仆头饰是女仆制服最重要的部分之一。这个头饰包含了一个用电池供电的保暖系统。不管它看起来怎么样, 戴上它会让你有个女仆的样子。",
-    "weight": "100 g",
-    "volume": "250 ml",
-    "price": "50 USD",
-    "price_postapoc": "5 USD",
-    "material": [
-      "cotton"
-    ],
+    "weight": "100 g", "volume": "250 ml",
+    "price": "50 USD", "price_postapoc": "5 USD",
+    "material": ["cotton"],
     "material_thickness": 1,
-    "symbol": "[",
-    "color": "white",
+    "symbol": "[", "color": "white",
     "warmth": 10,
-    "flags": [
-      "VARSIZE",
-      "FANCY",
-      "WATERPROOF",
-      "RAINPROOF",
-      "BELTED"
-    ],
+    "flags": ["VARSIZE", "FANCY", "WATERPROOF", "RAINPROOF", "BELTED"],
     "pocket_data": [
-      {
-        "pocket_type": "MAGAZINE_WELL",
+      { "pocket_type": "MAGAZINE_WELL",
         "rigid": true,
-        "flag_restriction": [
-          "BATTERY_LIGHT",
-          "BATTERY_ULTRA_LIGHT"
-        ],
+        "flag_restriction": ["BATTERY_LIGHT", "BATTERY_ULTRA_LIGHT"],
         "default_magazine": "light_battery_cell"
       }
     ],
@@ -88,41 +48,20 @@
       "need_charges_msg": "%s没有足够的电源。"
     },
     "armor": [
-      {
-        "covers": [
-          "head"
-        ],
-        "specifically_covers": [
-          "head_crown",
-          "head_ear_r",
-          "head_ear_l"
-        ],
-        "coverage": 60,
-        "encumbrance": [
-          2,
-          2
-        ]
-      }
-    ]
+      { "covers": [ "head"],"specifically_covers": [ "head_crown", "head_ear_r", "head_ear_l" ],
+        "coverage": 60,"encumbrance": [ 2, 2 ]
+      } ]
   },
   {
     "id": "armor_npts1on",
     "copy-from": "armor_npts1",
     "repairs_like": "armor_npts1",
     "type": "TOOL_ARMOR",
-    "name": {
-      "str": "保暖女仆头饰（开）"
-    },
+    "name": {"str": "保暖女仆头饰（开）"},
     "warmth": 80,
     "power_draw": "75 W",
     "revert_to": "armor_npts1",
-    "flags": [
-      "VARSIZE",
-      "FANCY",
-      "WATERPROOF",
-      "RAINPROOF",
-      "TRADER_AVOID"
-    ],
+    "flags": ["VARSIZE", "FANCY", "WATERPROOF", "RAINPROOF", "TRADER_AVOID"],
     "use_action": {
       "ammo_scale": 0,
       "type": "transform",
@@ -135,186 +74,113 @@
     "id": "armor_npts2",
     "type": "TOOL_ARMOR",
     "category": "armor",
-    "name": {
-      "str": "战斗女仆头饰（关）"
-    },
+    "name": {"str": "战斗女仆头饰（关）"},
     "description": "无论环境多么恶劣，女仆都必须保持她们身为女仆的自尊，尽职尽责。女仆的头饰不仅仅是制服的一部分，它是女仆骄傲的象征。",
-    "weight": "200 g",
-    "volume": "500 ml",
-    "price": "100 USD",
-    "price_postapoc": "30 USD",
-    "material": [
-      "kevlar_layered",
-      "cotton"
-    ],
+    "weight": "200 g", "volume": "500 ml",
+    "price": "100 USD", "price_postapoc": "30 USD",
+    "material": ["kevlar_layered", "cotton"],
     "material_thickness": 4,
     "environmental_protection": 3,
-    "symbol": "[",
-    "color": "white",
+    "symbol": "[", "color": "white",
     "warmth": 20,
-    "flags": [
-      "VARSIZE",
-      "FANCY",
-      "WATERPROOF",
-      "RAINPROOF",
-      "STURDY",
-      "BELTED"
-    ],
+    "flags": ["VARSIZE", "FANCY", "WATERPROOF", "RAINPROOF", "STURDY", "BELTED"],
     "pocket_data": [
       {
         "pocket_type": "MAGAZINE_WELL",
         "rigid": true,
-        "flag_restriction": [
-          "BATTERY_LIGHT",
-          "BATTERY_ULTRA_LIGHT"
-        ],
+        "flag_restriction": ["BATTERY_LIGHT", "BATTERY_ULTRA_LIGHT"],
         "default_magazine": "light_battery_cell"
       }
     ],
     "charges_per_use": 1,
     "ammo": "battery",
     "use_action": [
-      {
-        "ammo_scale": 0,
-        "type": "transform",
-        "msg": "你开启了 %s 的保暖模式",
-        "target": "armor_npts2on1",
-        "menu_text": "保暖模式/65"
-      },
-      {
-        "type": "delayed_transform",
-        "menu_text": "冷却模式/0",
-        "msg": "你开启了 %s 的冷却模式",
-        "target": "armor_npts2on2",
-        "need_charges": 1,
-        "need_charges_msg": "%s 没有足够的电了",
-        "transform_age": 0,
-        "not_ready_msg": "无."
-      }
+     { "ammo_scale": 0,
+       "type": "transform",
+       "msg": "你开启了 %s 的保暖模式",
+       "target": "armor_npts2on1",
+       "menu_text": "保暖模式/65"},
+     { "type" : "delayed_transform",
+       "menu_text": "冷却模式/0",
+       "msg": "你开启了 %s 的冷却模式",
+       "target": "armor_npts2on2",
+       "need_charges": 1,
+       "need_charges_msg": "%s 没有足够的电了",
+       "transform_age" : 0,
+       "not_ready_msg" : "无."}
     ],
     "armor": [
-      {
-        "encumbrance": 10,
+      { "encumbrance": 10,
         "coverage": 100,
-        "covers": [
-          "head"
-        ],
-        "specifically_covers": [
-          "head_crown",
-          "head_ear_r",
-          "head_ear_l"
-        ],
+        "covers": ["head"],"specifically_covers": [ "head_crown", "head_ear_r", "head_ear_l" ],
         "material": [
-          {
-            "type": "cotton",
-            "thickness": 2
-          },
-          {
-            "type": "kevlar_layered",
-            "thickness": 4.4
-          }
-        ]
-      }
-    ]
+         { "type": "cotton", "thickness": 2 },
+         { "type": "kevlar_layered", "thickness": 4.4 } ]
+      } ]
   },
   {
     "id": "armor_npts2on1",
     "copy-from": "armor_npts2",
     "type": "TOOL_ARMOR",
-    "name": {
-      "str": "战斗女仆头饰（保暖）"
-    },
+    "name": {"str": "战斗女仆头饰（保暖）"},
     "warmth": 120,
     "power_draw": "75 W",
     "revert_to": "armor_npts2",
-    "flags": [
-      "VARSIZE",
-      "FANCY",
-      "WATERPROOF",
-      "RAINPROOF",
-      "STURDY",
-      "TRADER_AVOID"
-    ],
+    "flags": ["VARSIZE", "FANCY", "WATERPROOF", "RAINPROOF", "STURDY", "TRADER_AVOID"],
     "use_action": [
-      {
-        "ammo_scale": 0,
-        "type": "transform",
-        "msg": "你关闭了 %s 的保暖模式",
-        "target": "armor_npts2",
-        "menu_text": "关闭保暖/20"
-      },
-      {
-        "type": "delayed_transform",
-        "menu_text": "冷却模式/0",
-        "msg": "你开启了 %s 的冷却模式",
-        "target": "armor_npts2on2",
-        "need_charges": 1,
-        "need_charges_msg": "%s 没有足够的电了",
-        "transform_age": 0,
-        "not_ready_msg": "无."
-      }
+     { "ammo_scale": 0,
+       "type": "transform",
+       "msg": "你关闭了 %s 的保暖模式",
+       "target": "armor_npts2",
+       "menu_text": "关闭保暖/20"},
+     { "type" : "delayed_transform",
+       "menu_text": "冷却模式/0",
+       "msg": "你开启了 %s 的冷却模式",
+       "target": "armor_npts2on2",
+       "need_charges": 1,
+       "need_charges_msg": "%s 没有足够的电了",
+       "transform_age" : 0,
+       "not_ready_msg" : "无."}
     ]
   },
   {
     "id": "armor_npts2on2",
     "copy-from": "armor_npts2",
     "type": "TOOL_ARMOR",
-    "name": {
-      "str": "战斗女仆头饰（冷却）"
-    },
+    "name": {"str": "战斗女仆头饰（冷却）"},
     "warmth": 0,
     "power_draw": "75 W",
     "revert_to": "armor_npts2",
-    "flags": [
-      "VARSIZE",
-      "FANCY",
-      "WATERPROOF",
-      "RAINPROOF",
-      "STURDY",
-      "TRADER_AVOID"
-    ],
+    "flags": ["VARSIZE", "FANCY", "WATERPROOF", "RAINPROOF", "STURDY", "TRADER_AVOID"],
     "use_action": [
-      {
-        "ammo_scale": 0,
-        "type": "transform",
-        "msg": "你关闭了 %s 的冷却模式",
-        "target": "armor_npts2",
-        "menu_text": "关闭冷却/20"
-      },
-      {
-        "type": "delayed_transform",
-        "menu_text": "保暖模式/65",
-        "msg": "你开启了 %s 的保暖模式",
-        "target": "armor_npts2on1",
-        "need_charges": 1,
-        "need_charges_msg": "%s 没有足够的电了",
-        "transform_age": 0,
-        "not_ready_msg": "无."
-      }
+     { "ammo_scale": 0,
+       "type": "transform",
+       "msg": "你关闭了 %s 的冷却模式",
+       "target": "armor_npts2",
+       "menu_text": "关闭冷却/20"},
+     { "type" : "delayed_transform",
+       "menu_text": "保暖模式/65",
+       "msg": "你开启了 %s 的保暖模式",
+       "target": "armor_npts2on1",
+       "need_charges": 1,
+       "need_charges_msg": "%s 没有足够的电了",
+       "transform_age" : 0,
+       "not_ready_msg" : "无."}
     ]
   },
+  
   {
     "id": "armor_npz",
     "type": "ARMOR",
-    "name": {
-      "str": "女仆装"
-    },
+    "name": {"str": "女仆装"},
     "description": "来自绅士们的希望与梦想。",
-    "weight": "200 g",
-    "volume": "500 ml",
-    "price": "100 USD",
-    "price_postapoc": "5 USD",
-    "material": [
-      "cotton"
-    ],
-    "symbol": "[",
-    "color": "dark_gray",
+    "weight": "200 g", "volume": "500 ml",
+    "price": "100 USD", "price_postapoc": "5 USD",
+    "material": [ "cotton" ],
+    "symbol": "[", "color": "dark_gray",
     "warmth": 10,
     "material_thickness": 0.1,
-    "flags": [
-      "VARSIZE",
-      "FANCY"
-    ],
+    "flags": [ "VARSIZE", "FANCY" ],
     "pocket_data": [
       {
         "pocket_type": "CONTAINER",
@@ -334,121 +200,56 @@
       }
     ],
     "armor": [
-      {
-        "covers": [
-          "torso"
-        ],
-        "specifically_covers": [
-          "torso_lower"
-        ],
-        "coverage": 100,
-        "encumbrance": [
-          4,
-          5
-        ]
+      { "covers": ["torso"],"specifically_covers": ["torso_lower"],
+        "coverage": 100,"encumbrance": [ 4, 5 ]
       },
-      {
-        "covers": [
-          "torso"
-        ],
-        "specifically_covers": [
-          "torso_upper"
-        ],
+      { "covers": ["torso"],"specifically_covers": ["torso_upper"],
         "coverage": 90
       },
-      {
-        "covers": [
-          "leg_l",
-          "leg_r"
-        ],
-        "specifically_covers": [
-          "leg_hip_l",
-          "leg_hip_r"
-        ],
-        "coverage": 100,
-        "encumbrance": [
-          2,
-          2
-        ]
+      { "covers": ["leg_l", "leg_r"],"specifically_covers": ["leg_hip_l", "leg_hip_r"],
+        "coverage": 100,"encumbrance": [2, 2]
       },
-      {
-        "covers": [
-          "leg_l",
-          "leg_r"
-        ],
-        "specifically_covers": [
-          "leg_upper_l",
-          "leg_upper_r"
-        ],
+      { "covers": ["leg_l", "leg_r"],"specifically_covers": ["leg_upper_l","leg_upper_r"],
         "coverage": 50
       },
-      {
-        "covers": [
-          "arm_l",
-          "arm_r"
-        ],
-        "specifically_covers": [
-          "arm_shoulder_l",
-          "arm_shoulder_r"
-        ],
-        "coverage": 30,
-        "encumbrance": [
-          2,
-          2
-        ]
-      }
-    ]
+      { "covers": ["arm_l", "arm_r"],"specifically_covers": ["arm_shoulder_l", "arm_shoulder_r"],
+        "coverage": 30,"encumbrance": [2, 2]
+      } ]
   },
   {
     "id": "armor_npz1",
     "type": "ARMOR",
-    "name": {
-      "str": "精致女仆装 （夏季版）"
-    },
+    "name": {"str": "精致女仆装 （夏季版）"},
     "description": "数百年的女仆缝纫技术被荟萃到了这件女仆装的技术中。一套根据季节不同可以改变样式的服装。可以适应任何天气和季节。",
-    "weight": "550 g",
-    "volume": "700 ml",
-    "price": "180 USD",
-    "price_postapoc": "10 USD",
-    "material": [
-      "cotton"
-    ],
+    "weight": "550 g", "volume": "700 ml",
+    "price": "180 USD", "price_postapoc": "10 USD",
+    "material": ["cotton"],
     "material_thickness": 0.3,
     "environmental_protection": 1,
-    "symbol": "[",
-    "color": "dark_gray",
+    "symbol": "[", "color": "dark_gray",
     "pocket_data": [
-      {
-        "pocket_type": "CONTAINER",
+      { "pocket_type": "CONTAINER",
         "max_contains_volume": "2 L",
         "max_contains_weight": "4 kg",
         "moves": 80
       },
-      {
-        "pocket_type": "CONTAINER",
+      { "pocket_type": "CONTAINER",
         "max_contains_volume": "2 L",
         "max_contains_weight": "4 kg",
         "moves": 80
       },
-      {
-        "pocket_type": "CONTAINER",
+      { "pocket_type": "CONTAINER",
         "max_contains_volume": "1 L",
         "max_contains_weight": "2 kg",
         "moves": 120
       },
-      {
-        "pocket_type": "CONTAINER",
+      { "pocket_type": "CONTAINER",
         "max_contains_volume": "1 L",
         "max_contains_weight": "2 kg",
         "moves": 120
-      }
-    ],
+      } ],
     "warmth": 2,
-    "flags": [
-      "VARSIZE",
-      "POCKETS",
-      "FANCY"
-    ],
+    "flags": ["VARSIZE", "POCKETS", "FANCY"],
     "use_action": {
       "type": "transform",
       "msg": "你修改了女仆的服装，以更好地抵御寒冷。",
@@ -456,79 +257,28 @@
       "menu_text": "添加防寒衬里"
     },
     "armor": [
-      {
-        "covers": [
-          "torso"
-        ],
-        "specifically_covers": [
-          "torso_lower"
-        ],
-        "coverage": 100,
-        "encumbrance": [
-          5,
-          6
-        ]
+      { "covers": ["torso"],"specifically_covers": ["torso_lower"],
+        "coverage": 100,"encumbrance": [5, 6]
       },
-      {
-        "covers": [
-          "torso"
-        ],
-        "specifically_covers": [
-          "torso_upper"
-        ],
+      { "covers": ["torso"],"specifically_covers": ["torso_upper"],
         "coverage": 50
       },
-      {
-        "covers": [
-          "leg_l",
-          "leg_r"
-        ],
-        "specifically_covers": [
-          "leg_hip_l",
-          "leg_hip_r"
-        ],
-        "coverage": 100,
-        "encumbrance": [
-          4,
-          4
-        ]
+      { "covers": ["leg_l", "leg_r"],"specifically_covers": ["leg_hip_l", "leg_hip_r"],
+        "coverage": 100,"encumbrance": [4, 4]
       },
-      {
-        "covers": [
-          "leg_l",
-          "leg_r"
-        ],
-        "specifically_covers": [
-          "leg_upper_l",
-          "leg_upper_r"
-        ],
+      { "covers": ["leg_l", "leg_r"],"specifically_covers": ["leg_upper_l", "leg_upper_r"],
         "coverage": 50
       },
-      {
-        "covers": [
-          "arm_l",
-          "arm_r"
-        ],
-        "specifically_covers": [
-          "arm_shoulder_l",
-          "arm_shoulder_r"
-        ],
-        "coverage": 30,
-        "encumbrance": [
-          4,
-          4
-        ]
-      }
-    ]
+      { "covers": ["arm_l", "arm_r"],"specifically_covers": ["arm_shoulder_l","arm_shoulder_r"],
+        "coverage": 30,"encumbrance": [4, 4]
+      } ]
   },
   {
     "id": "armor_npz1on",
     "copy-from": "armor_npz1",
     "looks_like": "armor_npz1",
     "type": "ARMOR",
-    "name": {
-      "str": "精致女仆装 （冬季版）"
-    },
+    "name": {"str": "精致女仆装 （冬季版）"},
     "description": "数百年的女仆缝纫技术被荟萃到了这件女仆装的技术中。一套根据季节不同可以改变样式的服装。可以适应任何天气和季节。",
     "warmth": 40,
     "use_action": {
@@ -538,428 +288,219 @@
       "menu_text": "移除防寒衬里"
     },
     "armor": [
-      {
-        "covers": [
-          "torso"
-        ],
-        "coverage": 100,
-        "encumbrance": [
-          8,
-          16
-        ]
+      { "covers": ["torso"],
+        "coverage": 100,"encumbrance": [8, 16]
       },
-      {
-        "covers": [
-          "leg_l",
-          "leg_r"
-        ],
-        "specifically_covers": [
-          "leg_hip_l",
-          "leg_hip_r"
-        ],
-        "coverage": 100,
-        "encumbrance": [
-          4,
-          4
-        ]
+      { "covers": ["leg_l", "leg_r"],"specifically_covers": ["leg_hip_l", "leg_hip_r"],
+        "coverage": 100,"encumbrance": [4, 4]
       },
-      {
-        "covers": [
-          "leg_l",
-          "leg_r"
-        ],
-        "specifically_covers": [
-          "leg_upper_l",
-          "leg_upper_r"
-        ],
+      { "covers": ["leg_l", "leg_r"],"specifically_covers": ["leg_upper_l", "leg_upper_r"],
         "coverage": 80
       },
-      {
-        "covers": [
-          "arm_l",
-          "arm_r"
-        ],
-        "coverage": 100,
-        "encumbrance": [
-          4,
-          4
-        ]
-      }
-    ]
+      { "covers": ["arm_l", "arm_r"],
+        "coverage": 100,"encumbrance": [4, 4]
+      } ]
   },
   {
     "id": "armor_npz2",
     "type": "TOOL_ARMOR",
     "category": "armor",
-    "name": {
-      "str": "战斗女仆制服(关)"
-    },
+    "name": {"str": "战斗女仆制服(关)"},
     "description": "普通的女仆装可能不足以在这个危险的新世界生存。这一改进版外表看起来仍然可爱, 而且还有褶边，但实际上隐藏了先进的装甲衬里和气温控制系统以及负重结构，以更好地抵御恶劣的环境。",
-    "weight": "1200 g",
-    "volume": "1 L",
+    "weight": "1200 g", "volume": "1 L",
     "charges_per_use": 1,
     "ammo": "battery",
-    "price": "300 USD",
-    "price_postapoc": "80 USD",
-    "material": [
-      "kevlar_layered",
-      "cotton"
-    ],
+    "price": "300 USD", "price_postapoc": "80 USD",
+    "material": ["kevlar_layered", "cotton"],
     "material_thickness": 4,
     "environmental_protection": 3,
-    "symbol": "[",
-    "color": "green",
+    "symbol": "[", "color": "green",
     "pocket_data": [
-      {
-        "pocket_type": "CONTAINER",
+      { "pocket_type": "CONTAINER",
         "max_contains_volume": "2 L",
         "max_contains_weight": "6 kg",
         "moves": 70
       },
-      {
-        "pocket_type": "CONTAINER",
+      { "pocket_type": "CONTAINER",
         "max_contains_volume": "2 L",
         "max_contains_weight": "6 kg",
         "moves": 70
       },
-      {
-        "pocket_type": "CONTAINER",
+      { "pocket_type": "CONTAINER",
         "max_contains_volume": "1500 ml",
         "max_contains_weight": "3 kg",
         "moves": 60
       },
-      {
-        "pocket_type": "CONTAINER",
+      { "pocket_type": "CONTAINER",
         "max_contains_volume": "1500 ml",
         "max_contains_weight": "3 kg",
         "moves": 60
       },
-      {
-        "pocket_type": "MAGAZINE_WELL",
+      { "pocket_type": "MAGAZINE_WELL",
         "rigid": true,
-        "flag_restriction": [
-          "BATTERY_LIGHT",
-          "BATTERY_MEDIUM"
-        ],
+        "flag_restriction": ["BATTERY_LIGHT", "BATTERY_MEDIUM"],
         "default_magazine": "medium_battery_cell"
-      }
-    ],
+      }],
     "warmth": 10,
-    "flags": [
-      "VARSIZE",
-      "WATERPROOF",
-      "POCKETS",
-      "RAINPROOF",
-      "STURDY",
-      "FANCY"
-    ],
+    "flags": ["VARSIZE", "WATERPROOF", "POCKETS", "RAINPROOF", "STURDY", "FANCY"],
     "use_action": [
-      {
-        "ammo_scale": 0,
-        "type": "transform",
-        "msg": "你将制服的温度提升至30保暖",
-        "target": "armor_npz2on1",
-        "menu_text": "提升至30保暖"
-      },
-      {
-        "type": "delayed_transform",
-        "menu_text": "提升至60保暖",
-        "msg": "你将制服的温度提升至60保暖",
-        "target": "armor_npz2on2",
-        "need_charges": 1,
-        "need_charges_msg": "%s 没有足够的电了",
-        "transform_age": 0,
-        "not_ready_msg": "无."
-      }
+     {"ammo_scale": 0,
+      "type": "transform",
+      "msg": "你将制服的温度提升至30保暖",
+      "target": "armor_npz2on1",
+      "menu_text": "提升至30保暖"},
+     { "type" : "delayed_transform",
+       "menu_text": "提升至60保暖",
+       "msg": "你将制服的温度提升至60保暖",
+       "target": "armor_npz2on2",
+       "need_charges": 1,
+       "need_charges_msg": "%s 没有足够的电了",
+       "transform_age" : 0,
+       "not_ready_msg" : "无."}
     ],
     "armor": [
-      {
-        "covers": [
-          "torso"
-        ],
+      {"covers": ["torso"],
         "coverage": 100,
-        "encumbrance": [
-          8,
-          16
-        ],
+        "encumbrance": [8, 16],
         "material": [
-          {
-            "type": "cotton",
-            "thickness": 2.0
-          },
-          {
-            "type": "kevlar_layered",
-            "thickness": 4.4
-          }
-        ]
+         { "type": "cotton", "thickness": 2.0 },
+         { "type": "kevlar_layered", "thickness": 4.4 } ]
       },
-      {
-        "covers": [
-          "leg_l",
-          "leg_r"
-        ],
-        "specifically_covers": [
-          "leg_hip_l",
-          "leg_hip_r"
-        ],
+      { "covers": ["leg_l", "leg_r"],
+        "specifically_covers": ["leg_hip_l", "leg_hip_r"],
         "coverage": 100,
-        "encumbrance": [
-          8,
-          8
-        ],
+        "encumbrance": [8, 8],
         "material": [
-          {
-            "type": "cotton",
-            "thickness": 2.0
-          },
-          {
-            "type": "kevlar_layered",
-            "thickness": 4.4
-          }
-        ]
+         { "type": "cotton", "thickness": 2.0 },
+         { "type": "kevlar_layered", "thickness": 4.4 } ]
       },
-      {
-        "covers": [
-          "leg_l",
-          "leg_r"
-        ],
-        "specifically_covers": [
-          "leg_upper_l",
-          "leg_upper_r"
-        ],
+      { "covers": ["leg_l", "leg_r"],
+        "specifically_covers": ["leg_upper_l", "leg_upper_r"],
         "coverage": 50,
         "material": [
-          {
-            "type": "cotton",
-            "thickness": 2.0
-          },
-          {
-            "type": "kevlar_layered",
-            "thickness": 4.4
-          }
-        ]
+         { "type": "cotton", "thickness": 2.0 },
+         { "type": "kevlar_layered", "thickness": 4.4 } ]
       },
-      {
-        "covers": [
-          "arm_l",
-          "arm_r"
-        ],
+      { "covers": ["arm_l", "arm_r"],
         "coverage": 100,
-        "encumbrance": [
-          8,
-          8
-        ],
+        "encumbrance": [8, 8],
         "material": [
-          {
-            "type": "cotton",
-            "thickness": 2.0
-          },
-          {
-            "type": "kevlar_layered",
-            "thickness": 4.4
-          }
-        ]
-      }
-    ]
+         { "type": "cotton", "thickness": 2.0 },
+         { "type": "kevlar_layered", "thickness": 4.4 } ]
+      } ]
   },
   {
     "id": "armor_npz2on1",
     "copy-from": "armor_npz2",
     "type": "TOOL_ARMOR",
-    "name": {
-      "str": "战斗女仆制服(30保暖)"
-    },
+    "name": {"str": "战斗女仆制服(30保暖)"},
     "description": "普通的女仆装可能不足以在这个危险的新世界生存。这一改进版外表看起来仍然可爱, 而且还有褶边，但实际上隐藏了先进的装甲衬里和气温控制系统，以更好地抵御恶劣的环境。",
-    "flags": [
-      "VARSIZE",
-      "WATERPROOF",
-      "POCKETS",
-      "RAINPROOF",
-      "STURDY",
-      "FANCY",
-      "TRADER_AVOID"
-    ],
+    "flags": ["VARSIZE", "WATERPROOF", "POCKETS", "RAINPROOF", "STURDY", "FANCY", "TRADER_AVOID"],
     "warmth": 30,
     "power_draw": "200 W",
     "revert_to": "armor_npz2",
     "use_action": [
-      {
-        "ammo_scale": 0,
-        "type": "transform",
-        "msg": "你关掉制服的温控系统",
-        "target": "armor_npz2",
-        "menu_text": "关闭"
-      },
-      {
-        "type": "delayed_transform",
-        "menu_text": "提升至60保暖",
-        "msg": "你将制服的温度提升至60保暖",
-        "target": "armor_npz2on2",
-        "need_charges": 1,
-        "need_charges_msg": "%s 没有足够的电了",
-        "transform_age": 0,
-        "not_ready_msg": "无."
-      }
+     {"ammo_scale": 0,
+      "type": "transform",
+      "msg": "你关掉制服的温控系统",
+      "target": "armor_npz2",
+      "menu_text": "关闭"},
+     { "type" : "delayed_transform",
+       "menu_text": "提升至60保暖",
+       "msg": "你将制服的温度提升至60保暖",
+       "target": "armor_npz2on2",
+       "need_charges": 1,
+       "need_charges_msg": "%s 没有足够的电了",
+       "transform_age" : 0,
+       "not_ready_msg" : "无."}
     ]
   },
   {
     "id": "armor_npz2on2",
     "copy-from": "armor_npz2",
     "type": "TOOL_ARMOR",
-    "name": {
-      "str": "战斗女仆制服(60保暖)"
-    },
+    "name": {"str": "战斗女仆制服(60保暖)"},
     "description": "普通的女仆装可能不足以在这个危险的新世界生存。这一改进版外表看起来仍然可爱, 而且还有褶边，但实际上隐藏了先进的装甲衬里和气温控制系统，以更好地抵御恶劣的环境。",
-    "flags": [
-      "VARSIZE",
-      "WATERPROOF",
-      "POCKETS",
-      "RAINPROOF",
-      "STURDY",
-      "FANCY",
-      "TRADER_AVOID"
-    ],
+    "flags": ["VARSIZE", "WATERPROOF", "POCKETS", "RAINPROOF", "STURDY", "FANCY", "TRADER_AVOID"],
     "warmth": 60,
     "power_draw": "400 W",
     "revert_to": "armor_npz2",
     "use_action": [
-      {
-        "ammo_scale": 0,
-        "type": "transform",
-        "msg": "你关掉制服的温控系统",
-        "target": "armor_npz2",
-        "menu_text": "关闭"
-      },
-      {
-        "type": "delayed_transform",
-        "menu_text": "降低至30保暖",
-        "msg": "你将制服的温度降低至30保暖",
-        "target": "armor_npz2on1",
-        "need_charges": 1,
-        "need_charges_msg": "%s 没有足够的电了",
-        "transform_age": 0,
-        "not_ready_msg": "无."
-      }
+     {"ammo_scale": 0,
+      "type": "transform",
+      "msg": "你关掉制服的温控系统",
+      "target": "armor_npz2",
+      "menu_text": "关闭"},
+     { "type" : "delayed_transform",
+       "menu_text": "降低至30保暖",
+       "msg": "你将制服的温度降低至30保暖",
+       "target": "armor_npz2on1",
+       "need_charges": 1,
+       "need_charges_msg": "%s 没有足够的电了",
+       "transform_age" : 0,
+       "not_ready_msg" : "无."}
     ]
   },
+  
   {
     "id": "armor_nppx",
     "type": "ARMOR",
-    "name": {
-      "str": "女仆皮鞋"
-    },
+    "name": { "str": "女仆皮鞋" },
     "description": "与女仆装非常搭配的黑色皮鞋。",
-    "weight": "500 g",
-    "volume": "1250 ml",
-    "price": "120 USD",
-    "price_postapoc": "2 USD",
-    "material": [
-      "leather"
-    ],
+    "weight": "500 g", "volume": "1250 ml",
+    "price": "120 USD", "price_postapoc": "2 USD",
+    "material": [ "leather" ],
     "material_thickness": 2,
     "symbol": "[",
     "color": "dark_gray",
     "warmth": 10,
-    "flags": [
-      "VARSIZE",
-      "FANCY"
-    ],
+    "flags": [ "VARSIZE", "FANCY" ],
     "armor": [
-      {
-        "covers": [
-          "foot_l",
-          "foot_r"
-        ],
-        "specifically_covers": [
-          "foot_sole_r",
-          "foot_sole_l"
-        ],
+      { "covers": [ "foot_l", "foot_r" ],"specifically_covers": [ "foot_sole_r", "foot_sole_l" ],
         "material": [
-          {
-            "type": "leather",
-            "covered_by_mat": 100,
-            "thickness": 0.1
-          },
-          {
-            "type": "rubber",
-            "covered_by_mat": 100,
-            "thickness": 4.0
-          }
-        ],
-        "coverage": 100,
-        "encumbrance": 5
+          { "type": "leather", "covered_by_mat": 100, "thickness": 0.1 },
+          { "type": "rubber", "covered_by_mat": 100, "thickness": 4.0 } ],
+        "coverage": 100,"encumbrance": 5
       },
       {
-        "covers": [
-          "foot_l",
-          "foot_r"
-        ],
+        "covers": [ "foot_l", "foot_r" ],
         "specifically_covers": [
-          "foot_heel_r",
-          "foot_heel_l",
-          "foot_arch_r",
-          "foot_arch_l",
-          "foot_toes_r",
-          "foot_toes_l",
-          "foot_ankle_l",
-          "foot_ankle_r"
+          "foot_heel_r","foot_heel_l","foot_arch_r","foot_arch_l",
+          "foot_toes_r","foot_toes_l","foot_ankle_l","foot_ankle_r"
         ],
-        "material": [
-          {
-            "type": "leather",
-            "covered_by_mat": 100,
-            "thickness": 2
-          }
-        ],
+        "material": [ { "type": "leather", "covered_by_mat": 100, "thickness": 2 } ],
         "coverage": 60
-      }
-    ]
+      } ]
   },
+  
   {
     "id": "armor_npst",
     "type": "ARMOR",
     "name": "女仆手套",
     "description": "一副用蕾丝装饰的手套。",
-    "weight": "63 g",
-    "volume": "250 ml",
-    "price": 1100,
-    "price_postapoc": 250,
-    "material": [
-      "cotton"
-    ],
-    "symbol": "[",
-    "color": "light_blue",
+    "weight": "63 g","volume": "250 ml",
+    "price": 1100,"price_postapoc": 250,
+    "material": ["cotton"],
+    "symbol": "[","color": "light_blue",
     "warmth": 20,
     "material_thickness": 0.2,
     "armor": [
-      {
-        "encumbrance": 2,
-        "coverage": 95,
-        "covers": [
-          "hand_l",
-          "hand_r"
-        ]
+      { "encumbrance": 2,"coverage": 95,
+        "covers": ["hand_l","hand_r"]
       }
     ],
-    "flags": [
-      "VARSIZE",
-      "WATER_FRIENDLY",
-      "FANCY"
-    ]
+    "flags": ["VARSIZE","WATER_FRIENDLY","FANCY"]
   },
+  
   {
     "id": "职业女仆",
     "type": "nested_category",
     "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_萌化",
-    "subcategory": "CSC_ALL",
+    "category": "CC_萌化", "subcategory": "CSC_ALL",
     "name": "女仆",
     "description": "女仆",
     "skill_used": "tailor",
-    "nested_category_data": [
-      "女仆头饰",
-      "女仆装"
-    ],
+    "nested_category_data": [ "女仆头饰", "女仆装" ],
     "difficulty": 0
   },
   {
@@ -971,11 +512,7 @@
     "name": "女仆头饰",
     "description": "女仆系列",
     "skill_used": "tailor",
-    "nested_category_data": [
-      "armor_npts",
-      "armor_npts1",
-      "armor_npts2"
-    ],
+    "nested_category_data": [ "armor_npts", "armor_npts1", "armor_npts2" ],
     "difficulty": 0
   },
   {
@@ -987,401 +524,186 @@
     "name": "女仆装",
     "description": "女仆系列",
     "skill_used": "tailor",
-    "nested_category_data": [
-      "armor_npz",
-      "armor_npz1",
-      "armor_npz2",
-      "armor_npst",
-      "armor_nppx"
-    ],
+    "nested_category_data": [ "armor_npz", "armor_npz1", "armor_npz2", "armor_npst", "armor_nppx" ],
     "difficulty": 0
   },
+  
+  //帽子
   {
     "result": "armor_npts",
     "activity_level": "LIGHT_EXERCISE",
     "type": "recipe",
-    "category": "CC_萌化",
-    "subcategory": "CSC_ALL",
+    "category": "CC_萌化","subcategory": "CSC_ALL",
     "skill_used": "tailor",
     "difficulty": 0,
     "time": "10 m",
     "autolearn": true,
-    "flags": [
-      "NO_RESIZE"
-    ],
+    "flags": ["NO_RESIZE"],
     "components": [
-      [
-        [
-          "maid_hat",
-          1
-        ],
-        [
-          "rag",
-          5
-        ]
-      ]
+      [ ["maid_hat",1],["rag",5] ]
     ]
   },
   {
     "result": "armor_npts1",
     "activity_level": "LIGHT_EXERCISE",
     "type": "recipe",
-    "category": "CC_萌化",
-    "subcategory": "CSC_ALL",
+    "category": "CC_萌化","subcategory": "CSC_ALL",
     "skill_used": "electronics",
     "difficulty": 4,
-    "skills_required": [
-      "tailor",
-      2
-    ],
+    "skills_required": ["tailor",2],
     "time": "2 h",
     "autolearn": true,
     "using": [
-      [
-        "sewing_standard",
-        24
-      ],
-      [
-        "soldering_standard",
-        20
-      ],
-      [
-        "fabric_standard_nostretch",
-        2
-      ]
+      ["sewing_standard",24],
+      ["soldering_standard",20],
+      ["fabric_standard_nostretch",2]
     ],
-    "proficiencies": [
-      {
-        "proficiency": "prof_elec_soldering"
-      }
-    ],
+    "proficiencies": [{"proficiency": "prof_elec_soldering"}],
     "components": [
-      [
-        [
-          "armor_npts",
-          1
-        ]
-      ],
-      [
-        [
-          "element",
-          4
-        ]
-      ],
-      [
-        [
-          "cable",
-          12
-        ]
-      ]
+      [ ["armor_npts",1] ],
+      [ ["element",4] ],
+      [ ["cable",12] ]
     ]
   },
   {
     "result": "armor_npts2",
     "type": "recipe",
     "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_萌化",
-    "subcategory": "CSC_ALL",
+    "category": "CC_萌化","subcategory": "CSC_ALL",
     "skill_used": "tailor",
     "difficulty": 5,
-    "skills_required": [
-      [
-        "electronics",
-        4
-      ]
-    ],
+    "skills_required": [["electronics",4]],
     "time": "6 h",
     "autolearn": true,
     "using": [
-      [
-        "sewing_standard",
-        40
-      ],
-      [
-        "soldering_standard",
-        20
-      ]
+      ["sewing_standard",40],
+      ["soldering_standard",20]
     ],
-    "qualities": [
-      {
-        "id": "FABRIC_CUT",
-        "level": 2
-      }
-    ],
+    "qualities": [ {"id": "FABRIC_CUT","level": 2} ],
     "proficiencies": [
-      {
-        "proficiency": "prof_millinery"
-      },
-      {
-        "proficiency": "prof_plasticworking"
-      },
-      {
-        "proficiency": "prof_polymerworking"
-      },
-      {
-        "proficiency": "prof_elec_soldering"
-      }
+      {"proficiency": "prof_millinery"},
+      {"proficiency": "prof_plasticworking"},
+      {"proficiency": "prof_polymerworking"},
+      {"proficiency": "prof_elec_soldering"}
     ],
     "components": [
+      [ ["armor_npts1",1],["armor_npts1on",1] ],
+      [ ["sheet_kevlar_layered",5] ],
       [
-        [
-          "armor_npts1",
-          1
-        ],
-        [
-          "armor_npts1on",
-          1
-        ]
+        ["hood_rain",1],
+        ["bag_plastic",2],
+        ["hood_gut",1]
       ],
-      [
-        [
-          "sheet_kevlar_layered",
-          5
-        ]
-      ],
-      [
-        [
-          "hood_rain",
-          1
-        ],
-        [
-          "bag_plastic",
-          2
-        ],
-        [
-          "hood_gut",
-          1
-        ]
-      ],
-      [
-        [
-          "element",
-          6
-        ]
-      ],
-      [
-        [
-          "cable",
-          12
-        ]
-      ]
+      [ ["element",6] ],
+      [ ["cable",12 ] ]
     ]
   },
+  //衣服
   {
     "result": "armor_npz",
     "type": "recipe",
     "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_萌化",
-    "subcategory": "CSC_ALL",
+    "category": "CC_萌化","subcategory": "CSC_ALL",
     "skill_used": "tailor",
     "difficulty": 3,
     "time": "3 h",
     "autolearn": true,
     "reversible": true,
     "using": [
-      [
-        "sewing_standard",
-        15
-      ],
-      [
-        "fabric_standard_nostretch",
-        6
-      ]
+      ["sewing_standard",15],
+      ["fabric_standard_nostretch",6]
     ]
   },
   {
     "type": "recipe",
     "activity_level": "LIGHT_EXERCISE",
     "result": "armor_npz1",
-    "category": "CC_萌化",
-    "subcategory": "CSC_ALL",
+    "category": "CC_萌化","subcategory": "CSC_ALL",
     "skill_used": "tailor",
     "difficulty": 4,
     "time": "5 h",
     "autolearn": true,
     "using": [
-      [
-        "sewing_standard",
-        23
-      ],
-      [
-        "fabric_standard_nostretch",
-        4
-      ],
-      [
-        "fastener_large",
-        1
-      ]
+      ["sewing_standard",23],
+      ["fabric_standard_nostretch",4],
+      ["fastener_large",1]
     ],
     "components": [
-      [
-        [
-          "armor_npz",
-          1
-        ]
-      ]
+      [ ["armor_npz",1] ]
     ],
     "proficiencies": [
-      {
-        "proficiency": "prof_closures_waterproofing"
-      },
-      {
-        "proficiency": "prof_closures"
-      }
+      {"proficiency": "prof_closures_waterproofing"},
+      {"proficiency": "prof_closures"}
     ]
   },
   {
     "result": "armor_npz2",
     "type": "recipe",
     "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_萌化",
-    "subcategory": "CSC_ALL",
+    "category": "CC_萌化","subcategory": "CSC_ALL",
     "skill_used": "tailor",
     "difficulty": 8,
-    "skills_required": [
-      [
-        "electronics",
-        6
-      ]
-    ],
+    "skills_required": [["electronics",6]],
     "time": "14 h",
     "autolearn": true,
     "using": [
-      [
-        "sewing_kevlar",
-        200
-      ],
-      [
-        "soldering_standard",
-        100
-      ],
-      [
-        "fabric_standard_nostretch",
-        5
-      ]
+      ["sewing_kevlar",200],
+      ["soldering_standard",100],
+      ["fabric_standard_nostretch",5]
     ],
     "proficiencies": [
-      {
-        "proficiency": "prof_elec_soldering"
-      },
-      {
-        "proficiency": "prof_closures"
-      },
-      {
-        "proficiency": "prof_closures_waterproofing"
-      },
-      {
-        "proficiency": "prof_polymerworking"
-      },
-      {
-        "proficiency": "prof_elastics"
-      }
+      {"proficiency": "prof_elec_soldering"},
+      {"proficiency": "prof_closures"},
+      {"proficiency": "prof_closures_waterproofing"},
+      {"proficiency": "prof_polymerworking"},
+      {"proficiency": "prof_elastics"}
     ],
     "components": [
+      [ ["armor_npz1",1],["armor_npz1on",1] ],
       [
-        [
-          "armor_npz1",
-          1
-        ],
-        [
-          "armor_npz1on",
-          1
-        ]
+        ["coat_rain",1],
+        ["jacket_windbreaker",1],
+        ["jacket_evac",1],
+        ["coat_gut",1]
       ],
-      [
-        [
-          "coat_rain",
-          1
-        ],
-        [
-          "jacket_windbreaker",
-          1
-        ],
-        [
-          "jacket_evac",
-          1
-        ],
-        [
-          "coat_gut",
-          1
-        ]
-      ],
-      [
-        [
-          "sheet_kevlar_layered",
-          20
-        ]
-      ],
-      [
-        [
-          "element",
-          18
-        ]
-      ],
-      [
-        [
-          "cable",
-          35
-        ]
-      ]
+      [["sheet_kevlar_layered",20]],
+      [["element",18]],
+      [["cable",35]]
     ]
   },
+  
   {
     "result": "armor_npst",
     "activity_level": "LIGHT_EXERCISE",
     "type": "recipe",
-    "category": "CC_萌化",
-    "subcategory": "CSC_ALL",
+    "category": "CC_萌化","subcategory": "CSC_ALL",
     "skill_used": "tailor",
     "difficulty": 1,
     "time": "3 h 30 m",
     "autolearn": true,
-    "using": [
-      [
-        "tailoring_cotton_patchwork",
-        4
-      ]
-    ]
+    "using": [["tailoring_cotton_patchwork",4]]
   },
+  
   {
     "result": "armor_nppx",
     "activity_level": "LIGHT_EXERCISE",
     "type": "recipe",
-    "category": "CC_萌化",
-    "subcategory": "CSC_ALL",
+    "category": "CC_萌化","subcategory": "CSC_ALL",
     "skill_used": "tailor",
     "difficulty": 0,
     "time": "8 h",
     "autolearn": true,
     "reversible": true,
     "using": [
-      [
-        "tailoring_leather_small",
-        12
-      ],
-      [
-        "fastener_shoes",
-        2
-      ],
-      [
-        "shoe_rubber",
-        1
-      ],
-      [
-        "adhesive_rubber",
-        1
-      ]
+      ["tailoring_leather_small",12],
+      ["fastener_shoes",2],
+      [ "shoe_rubber", 1 ],
+      [ "adhesive_rubber", 1 ]
     ],
     "proficiencies": [
-      {
-        "proficiency": "prof_cobbling"
-      },
-      {
-        "proficiency": "prof_leatherworking_basic"
-      },
-      {
-        "proficiency": "prof_leatherworking"
-      }
+      {"proficiency": "prof_cobbling"},
+      {"proficiency": "prof_leatherworking_basic"},
+      {"proficiency": "prof_leatherworking"}
     ]
   }
 ]

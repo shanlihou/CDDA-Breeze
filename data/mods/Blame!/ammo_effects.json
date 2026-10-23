@@ -1,0 +1,21 @@
+[  
+  {
+    "id": "Graviton_Beam_LASER",
+    "type": "ammo_effect",
+    "trail": 
+      { 
+      "field_type": "fd_Graviton_Beam_LASER", 
+      "intensity_min": 1, 
+      "intensity_max": 1 , "chance": 20
+      },
+    "explosion": {
+      "power": 42,
+      "distance_factor": 0
+    }
+  },
+  {
+    "id": "Graviton_Beam_Fusion",
+    "type": "ammo_effect",
+    "trail": { "field_type": "fd_GB_fusion", "intensity_min": 1, "intensity_max": 1, "chance": 3 }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_KATUWO_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"…",
+    "responses":[
+      { "text": "成为我的伙伴吧", "topic": "TALK_KATUWO_SAN_2" },
+      { "text": "可疑...", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_KATUWO_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"…",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

@@ -1,0 +1,74 @@
+[
+	{
+		"id": "tools_hunting",
+		"type": "item_group",
+		"//": "Gear that hunters take on hunting trips.",
+		"items": [
+			[ "fishery_mobile_fishponds_folded", 100 ],
+			[ "fishery_mobile_fishingnets_folding", 100 ]
+		]
+	},
+	{
+		"type": "item_group",
+		"id": "sports",
+		"items": [
+			[ "fishery_mobile_fishponds_folded", 100 ],
+			[ "fishery_mobile_fishingnets_folding", 100 ],
+			[ "fishery_mobile_fishingnets_pieces", 100 ]
+		]
+	},
+	{
+		"type": "item_group",
+		"id": "camping",
+		"ammo": 75,
+		"magazine": 100,
+		"items": [
+			[ "fishery_mobile_fishponds_folded", 100 ],
+			[ "fishery_mobile_fishingnets_folding", 100 ],
+			[ "fishery_mobile_fishingnets_pieces", 100 ]
+		]
+	},
+	{
+		"type": "item_group",
+		"id": "home_hw",
+		"ammo": 50,
+		"magazine": 100,
+		"subtype": "distribution",
+		"entries": [
+			{ "item": "fishery_mobile_fishponds_folded", "prob": 100 },
+			{ "item": "fishery_mobile_fishingnets_folding", "prob": 100 },
+			{ "item": "fishery_mobile_fishingnets_pieces", "prob": 100 }
+		]
+	},
+	{
+		"id": "fishing_items",
+		"type": "item_group",
+		"//": "For fishing themed locations",
+		"items": [
+			[ "fishery_mobile_fishponds_folded", 100 ],
+			[ "fishery_mobile_fishingnets_folding", 100 ],
+			[ "fishery_mobile_fishingnets_pieces", 100 ]
+		]
+	},
+	{
+		"type": "item_group",
+		"id": "college_lake",
+		"items": [
+			[ "fishery_mobile_fishponds_folded", 100 ],
+			[ "fishery_mobile_fishingnets_folding", 100 ],
+			[ "fishery_mobile_fishingnets_pieces", 100 ]
+		]
+	},
+	{
+		"type": "item_group",
+		"id": "NC_JUNK_SHOPKEEP_misc",
+		"ammo": 75,
+		"magazine": 100,
+		"subtype": "collection",
+		"entries": [
+			{ "item": "fishery_mobile_fishponds_folded", "prob": 100 },
+			{ "item": "fishery_mobile_fishingnets_folding", "prob": 100 },
+			{ "item": "fishery_mobile_fishingnets_pieces", "prob": 100 }
+		]
+	}
+]

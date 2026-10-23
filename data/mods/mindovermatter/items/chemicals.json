@@ -1,0 +1,22 @@
+[
+  {
+    "id": "psionic_serum_base",
+    "type": "COMESTIBLE",
+    "comestible_type": "DRINK",
+    "name": { "str": "精神反应催化剂" },
+    "description": "一种粘稠液体，与研磨过的矩阵水晶混合，准备进行催化。在完全黑暗中，它会发出非常微弱的光芒。",
+    "material": [ "alien_liquid", "nether_crystal", "water" ],
+    "weight": "30 g",
+    "volume": "25 ml",
+    "phase": "liquid",
+    "count": 10,
+    "price": 10,
+    "price_postapoc": 1,
+    "container": "flask_glass",
+    "flags": [ "TRADER_AVOID" ],
+    "symbol": "~",
+    "color": "black",
+    "freezing_point": -8,
+    "use_action": [ "POISON" ]
+  }
+]

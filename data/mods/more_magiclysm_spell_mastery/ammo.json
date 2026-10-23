@@ -1,0 +1,40 @@
+[
+  {
+    "type": "ammunition_type",
+    "id": "MM_arcane_en",
+    "name": "奥能",
+    "default": "MM_arcane_en"
+  },
+  {
+    "type": "ammunition_type",
+    "id": "MM_star_ashes",
+    "name": "星尘",
+    "default": "MM_star_ashes"
+  },
+  {
+    "type": "AMMO",
+    "id": "MM_arcane_en",
+    "copy-from": "MM_mg_energy_abstract",
+    "name": { "str": "奥能", "str_pl": "奥能" },
+    "description": "一小团凝实的纯粹魔力，以太元素活跃的衍生物。",
+    "color": "pink",
+    "material": [ "MM_ether_energy" ],
+    "flags": [ "LIGHT_5", "MAGIC_FOCUS", "TRADER_AVOID", "NO_SALVAGE", "NO_UNLOAD", "ZERO_WEIGHT" ],
+    "range": 15,
+    "damage": { "damage_type": "pure", "amount": 15, "armor_penetration": 50 }
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "MM_star_ashes",
+    "copy-from": "MM_mg_energy_abstract",
+    "comestible_type": "FOOD",
+    "name": { "str": "星尘", "str_pl": "星尘" },
+    "description": "一小撮由以太元素构成的粉尘，来自星界。",
+    "color": "white",
+    "material": [ "MM_ether_energy" ],
+    "flags": [ "LIGHT_5", "MAGIC_FOCUS", "TRADER_AVOID", "NO_SALVAGE", "NO_UNLOAD", "ZERO_WEIGHT", "INEDIBLE", "NUTRIENT_OVERRIDE" ],
+   "ammo_data": { "ammo_type": "MM_star_ashes" },
+    "use_action": [ "PETFOOD" ],
+    "petfood": [ "STARFOOD" ]
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "brass_catcher_2",
+    "copy-from": "brass_catcher",
+    "type": "GUNMOD",
+    "name": { "str": "弹壳收集器（大型）" },
+    "description": "一个可以装在退弹口上的袋子，这样你就不必弯腰去捡弹壳了。这个型号比它的同类大得多。",
+    "weight": "250 g",
+    "volume": "1000 ml",
+    "price": 4000,
+    "price_postapoc": 100,
+    "pocket_data": [ { "pocket_type": "CONTAINER", "rigid": true, "max_contains_volume": "999 ml", "max_contains_weight": "4 kg" } ]
+  },
+  {
+    "id": "brass_catcher_3",
+    "copy-from": "brass_catcher",
+    "type": "GUNMOD",
+    "name": { "str": "弹壳收集器（巨型）" },
+    "description": "一个可以装在退弹口上的袋子，这样你就不必弯腰去捡弹壳了。这个型号大到可以承担机枪的弹壳收集任务。",
+    "weight": "500 g",
+    "volume": "3000 ml",
+    "price": 8000,
+    "price_postapoc": 200,
+    "pocket_data": [ { "pocket_type": "CONTAINER", "rigid": true, "max_contains_volume": "2999 ml", "max_contains_weight": "12 kg" } ]
+  }
+]

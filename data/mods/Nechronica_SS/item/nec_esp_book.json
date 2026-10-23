@@ -1,0 +1,23 @@
+[
+
+  {
+    "id": "NEC_ESP_spellbook",
+    "type": "BOOK",
+    "category": "manuals",
+    "name": { "str": "呪文書(/PE107 \"ESP\"实验记录)", "str_pl": "呪文書(/PE107 \"ESP\"实验记录)" },
+    "//": "ESP 呪文所",
+    "description": "这叠文件写于灾难开始前八天。 其内容中复杂的公式展示了如何使人类的身体爆发出各种不可思议的力量。",
+    "weight": "483 g",
+    "volume": "825 ml",
+    "price": 5000,
+    "material": [ "paper" ],
+    "looks_like": "cookbook",
+    "symbol": "?",
+    "color": "brown",
+    "use_action": {
+      "type": "learn_spell",
+      "spells": [ "NEC_forces_of_distortion", "NEC_distortion_of_destiny", "NEC_will_to_refuse", "NEC_voidthrone", "NEC_sharing_of_loss", "NEC_pieces_on_the_board","NEC_destructive_vortex" ]
+    }
+  }
+  
+]

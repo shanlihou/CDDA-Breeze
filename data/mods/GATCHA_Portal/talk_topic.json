@@ -1,0 +1,30 @@
+[
+    { 
+    "type": "talk_topic", 
+    "id": "TALK_chocolate", 
+    "dynamic_line": "？",
+    "responses": [ 
+      { "text": "<color_light_red>（给她一根巧克力棒）</color>", "topic": "TALK_chocolate1" }, 
+     { "text": "没什么", "topic": "TALK_DONE" } 
+    ] 
+  },
+      { 
+    "type": "talk_topic", 
+    "id": "TALK_chocolate1", 
+    "dynamic_line": "...",
+    "responses": [ 
+      { "text": "<color_light_red>（分发巧克力棒）</color>", "topic": "TALK_chocolate2","condition":  { "u_has_items": { "item": "chocolate", "count": 1 } }, "switch": false, "default": true }, 
+     { "text": "（算了吧）", "topic": "TALK_DONE" } 
+    ] 
+  },
+    { 
+    "type": "talk_topic", 
+    "id": "TALK_chocolate2", 
+    "dynamic_line": "♪",
+    "responses": [ 
+      { "text": "（给她吃）", "topic": "TALK_DONE","effect": [ {"u_message": "她吃掉了一根美味的巧克力棒。","type": "good","popup": true },{ "npc_add_effect": "ef_fd_ncard_regen" , "duration":1814400  },{ "npc_cast_spell": { "id": "spell_ncard_heal" }, "targeted": true },{ "u_consume_item": "chocolate", "count": 1  } ] }
+    ] 
+  }
+  
+ 
+]

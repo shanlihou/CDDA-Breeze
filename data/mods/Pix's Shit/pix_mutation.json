@@ -1,0 +1,158 @@
+[
+  {
+    "type": "mutation",
+    "id": "MILKABLE",
+    "name": {
+      "str": "胀奶巨乳"
+    },
+    "points": 3,
+    "description": "你拥有一对巨乳。激活以挤奶。",
+    "threshreq": [
+      "THRESH_CATTLE"
+    ],
+    "category": [
+      "CATTLE"
+    ],
+    "active": true,
+    "cost": 20,
+    "kcal": true,
+    "thirst": true,
+    "prereqs": [
+      "TAIL_CATTLE"
+    ],
+    "spawn_item": {
+      "type": "milk_unpasturized",
+      "message": "You milk yourself. Moo."
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "OVIPAROUS_LIZARD",
+    "name": {
+      "str": "产卵者"
+    },
+    "points": 3,
+    "description": "你的生殖和消化器官变成了产卵爬行动物的器官，在某些时候你只会感到想要产卵的冲动。激活以产卵。",
+    "threshreq": [
+      "THRESH_LIZARD"
+    ],
+    "category": [
+      "LIZARD"
+    ],
+    "active": true,
+    "cost": 38,
+    "kcal": true,
+    "thirst": false,
+    "prereqs": [
+      "TAIL_THICK"
+    ],
+    "spawn_item": {
+      "type": "egg_reptile",
+      "message": "You lay an egg. you release a pleased hiss."
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "OVIPAROUS_AVIAN",
+    "name": {
+      "str": "产卵者"
+    },
+    "points": 3,
+    "description": "你的生殖器官和消化器官变成了禽类的器官，有时你只会感到想要下蛋的冲动。激活以产卵。",
+    "threshreq": [
+      "THRESH_BIRD"
+    ],
+    "category": [
+      "BIRD"
+    ],
+    "active": true,
+    "cost": 38,
+    "kcal": true,
+    "thirst": false,
+    "prereqs": [
+      "FEATHERS"
+    ],
+    "spawn_item": {
+      "type": "egg_bird",
+      "message": "You lay an egg. you release a pleased chirp."
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "OVIPAROUS_Fish",
+    "name": {
+      "str": "产卵者"
+    },
+    "points": 3,
+    "description": "你的生殖和消化器官变成了鱼的器官，在某些时候你只会感到想要产卵的冲动。激活以产卵。",
+    "threshreq": [
+      "THRESH_FISH"
+    ],
+    "category": [
+      "FISH"
+    ],
+    "active": true,
+    "cost": 30,
+    "kcal": true,
+    "thirst": false,
+    "prereqs": [
+      "GILLS"
+    ],
+    "spawn_item": {
+      "type": "egg_fish",
+      "message": "you lay a mass of roe. Blub Blub"
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "OVIPAROUS_Spider",
+    "name": {
+      "str": "产卵者"
+    },
+    "points": 3,
+    "description": "你的生殖器官和消化器官变成了蜘蛛的器官，在某些时候你只会感到想要下蛋的冲动。激活以产卵。",
+    "threshreq": [
+      "THRESH_SPIDER"
+    ],
+    "category": [
+      "SPIDER"
+    ],
+    "active": true,
+    "cost": 25,
+    "kcal": true,
+    "thirst": true,
+    "prereqs": [
+      "WEB_WEAVER"
+    ],
+    "spawn_item": {
+      "type": "spider_egg",
+      "message": "You wiggle your rear in excitement! You lay an slimy egg."
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "OVIPAROUS_Plant",
+    "name": {
+      "str": "产果"
+    },
+    "points": 3,
+    "description": "你的花与那些水果植物相似，有时你只会感到想要产果的冲动。激活以产果。",
+    "threshreq": [
+      "THRESH_PLANT"
+    ],
+    "category": [
+      "PLANT"
+    ],
+    "active": true,
+    "cost": 25,
+    "kcal": true,
+    "thirst": true,
+    "prereqs": [
+      "FLOWERS"
+    ],
+    "spawn_item": {
+      "type": "Lootbox_fruit",
+      "message": "You wiggle your head in excitement! You produced an shelled fruit."
+    }
+  }
+]

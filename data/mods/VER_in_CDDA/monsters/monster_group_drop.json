@@ -1,0 +1,36 @@
+[
+    {
+        "type": "item_group",
+        "subtype": "collection",
+        "id": "ver_mon_zombie_armored_plus_death_drops",
+        "entries": [
+          { "item": "power_supply", "count": [ 0, 7 ], "prob": 25 },
+          { "item": "element", "count": [ 0, 3 ], "prob": 40 },
+          { "item": "cable", "charges": [ 0, 12 ], "prob": 60 },
+          { "item": "transponder", "count": [ 0, 1 ], "prob": 25 },
+          { "item": "circuit", "count": [ 0, 8 ], "prob": 40 },
+          { "item": "small_lcd_screen", "count": [ 0, 2 ], "prob": 25 },
+          { "item": "RAM", "count": [ 0, 1 ], "prob": 25 },
+          { "item": "power_armor_heavy_bloodmeat_repaired", "count": [ 0, 1 ], "prob": 40 },
+          { "item": "power_armor_helmet_heavy_bloodmeat_repaired", "count": [ 0, 1 ], "prob": 40 },
+          { "item": "ver_broken_A7_bloodmeat_repaired", "count":[0,1], "prob":40}
+        ]
+      },
+      {
+        "type": "item_group",
+        "subtype": "collection",
+        "id": "ver_mon_zombie_master_supermee_death_drops",
+        "entries": [
+          { "group": "default_zombie_death_drops", "count": 1, "prob": 100 },
+          { "item": "ver_zombie_master_supermee_left_core", "count":1, "prob":50}
+        ]
+      },
+      {
+        "type":"item_group",
+        "subtype":"collection",
+        "id":"mon_zombie_hulk_minion_drops",
+        "entries":[
+          {"group":"mon_zombie_hulk_death_drops","count":1,"prob":1}
+        ]
+      }
+]

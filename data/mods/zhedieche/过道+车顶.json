@@ -1,0 +1,169 @@
+[
+{
+    "type": "vehicle_part",
+    "id": "nano_aisle",
+    "name": "纳米过道",
+    "looks_like": "aisle_horizontal",
+    "copy-from": "nanovp_fold",
+    "symbol": "H",
+    "broken_symbol": "#",
+    "description": "通道纳米技术通道，能够协助提升附近物体。",
+    "location": "center",
+    "size": 200,
+    "flags": [ "AISLE", "BOARDABLE", "FLAT_SURF", "CARGO", "COVERED" ],
+    "qualities": [ [ "LIFT", 40 ] ]
+  },{
+    "type": "vehicle_part",
+    "id": "nano_roof",
+    "name": "纳米车顶盖",
+    "copy-from": "nanovp_fold",
+    "symbol": "#",
+    "broken_symbol": "#",
+    "description": "一片纳米车顶盖,可以在顶部安装炮台.",
+    "height": 900,
+    "location": "roof",
+    "flags": [ "ROOF", "TURRET_MOUNT", "FLAT_SURF" ,"BALLOON", "SHOCK_IMMUNE","PROTRUSION", "EXTENDABLE"]
+  },
+  {
+    "abstract": "绳梯",
+    "type": "vehicle_part",
+    "location": "under",
+    "color": "brown",
+    "looks_like": "f_rope_up",
+    "symbol": "<",
+    "broken_symbol": "O",
+    "folded_volume": 1,
+    "length": 4,
+    "flags": [ "LADDER", "SHOCK_IMMUNE", "BOARDABLE","FOLDABLE" ],
+    "description": "一把让你从高处下来用的梯子。"
+  },
+  {
+    "id": "绳梯_3",
+    "copy-from": "绳梯",
+    "type": "vehicle_part",
+    "name": "三节绳梯+",
+    "item": "rope_30",
+    "requirements": { "removal": { "skills": [ [ "mechanics", 2 ] ], "time": "1 m", "using": [  ] } },
+    "durability": 99999,
+    "damage_modifier": 80,
+    "breaks_into": [ { "item": "string_6", "count": [ 10, 20 ] } ],
+    "damage_reduction": { "bash": 10 }
+  },
+  {
+    "abstract": "nanoboard",
+    "type": "vehicle_part",
+    "name": "纳米隔板",
+    "item": "xl_nanite_cluster",
+    "location": "center",
+    "color": "dark_gray",
+    "difficulty": 0,
+    "durability": 5000,
+    "folded_volume": 25,
+    "size": 120,
+    "description": "坚固的纳米金属隔板,能够阻挡丧尸和人的视线。",
+    "breaks_into" : [
+      {"item": "xl_nanite_cluster", "min": 1, "max": 1}
+    ],
+    "requirements": {
+      "install": { "skills": [ [ "computer", 0 ] ], "time": 1},
+      "removal": { "skills": [ [ "computer", 0 ] ]},
+      "repair": { "skills": [ [ "computer", 0 ] ], "time": 1}
+    },
+    "flags": [ "AISLE", "OPAQUE", "OBSTACLE", "TOOL_NONE", "FLAT_SURF", "CARGO", "COVERED" ],
+    "damage_reduction" : {
+      "all" : 400
+    }
+  },
+  {
+    "abstract": "nanohalfboard",
+    "copy-from": "nanoboard",
+    "type": "vehicle_part",
+    "name": "纳米半隔板",
+    "description": "一块半高的纳米金属隔板,能够阻挡丧尸和人的视线.",
+    "delete": { "flags": [ "OPAQUE" ] }
+  },{
+    "id": "nanoboard_horizontal",
+    "copy-from": "nanoboard",
+    "type": "vehicle_part",
+    "looks_like": "hdboard_horizontal",
+    "symbol": "h"
+  },{
+    "id": "nanohalfboard_horizontal",
+    "copy-from": "nanohalfboard",
+    "type": "vehicle_part",
+    "looks_like": "hdhalfboard_horizontal",
+    "symbol": "h"
+  },{
+    "id": "nanohalfboard_horizontal_2",
+    "copy-from": "nanohalfboard",
+    "type": "vehicle_part",
+    "looks_like": "hdhalfboard_horizontal_2",
+    "symbol": "="
+  },{
+    "id": "nanoboard_ne",
+    "copy-from": "nanoboard",
+    "type": "vehicle_part",
+    "looks_like": "hdboard_ne",
+    "symbol": "u"
+  },{
+    "id": "nanohalfboard_ne",
+    "copy-from": "nanohalfboard",
+    "type": "vehicle_part",
+    "looks_like": "hdhalfboard_ne",
+    "symbol": "u"
+  },{
+    "id": "nanoboard_nw",
+    "copy-from": "nanoboard",
+    "type": "vehicle_part",
+    "looks_like": "hdboard_nw",
+    "symbol": "y"
+  },{
+    "id": "nanohalfboard_nw",
+    "copy-from": "nanohalfboard",
+    "type": "vehicle_part",
+    "looks_like": "hdhalfboard_nw",
+    "symbol": "y"
+  },{
+    "id": "nanoboard_se",
+    "copy-from": "nanoboard",
+    "type": "vehicle_part",
+    "looks_like": "hdboard_se",
+    "symbol": "n"
+  },{
+    "id": "nanohalfboard_se",
+    "copy-from": "nanohalfboard",
+    "type": "vehicle_part",
+    "looks_like": "hdhalfboard_se",
+    "symbol": "n"
+  },{
+    "id": "nanoboard_sw",
+    "copy-from": "nanoboard",
+    "type": "vehicle_part",
+    "looks_like": "hdboard_sw",
+    "symbol": "b"
+  },{
+    "id": "nanohalfboard_sw",
+    "copy-from": "nanohalfboard",
+    "type": "vehicle_part",
+    "looks_like": "hdhalfboard_sw",
+    "symbol": "b"
+  },{
+    "id": "nanoboard_vertical",
+    "copy-from": "nanoboard",
+    "type": "vehicle_part",
+    "looks_like": "hdboard_vertical",
+    "symbol": "j"
+  },{
+    "id": "nanohalfboard_vertical",
+    "copy-from": "nanohalfboard",
+    "type": "vehicle_part",
+    "looks_like": "hdhalfboard_vertical",
+    "symbol": "j"
+  },{
+    "id": "nanohalfboard_vertical_2",
+    "copy-from": "nanohalfboard",
+    "type": "vehicle_part",
+    "looks_like": "hdhalfboard_vertical_2",
+    "symbol": "H"
+  }
+]

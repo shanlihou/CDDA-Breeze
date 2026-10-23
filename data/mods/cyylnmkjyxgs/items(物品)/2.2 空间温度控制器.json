@@ -1,0 +1,188 @@
+[
+  {
+    "id": "cyyl_fd_cold_air_-10",
+    "type": "field_type",
+    "intensity_levels": [
+      {
+        "name": "冷空气-10°",
+        "sym": "&",
+        "color": "cyan",
+        "convection_temperature_mod": -18
+      }
+    ],
+    "decay_amount_factor": 5,
+    "percent_spread": 10,
+    "outdoor_age_speedup": "525600 minutes",
+    "priority": -1,
+    "half_life": "525600 minutes",
+    "phase": "gas"
+  },
+  {
+    "id": "cyyl_emit_cold_air_-10_20*20",
+    "type": "emit",
+    "field": "cyyl_fd_cold_air_-10",
+    "intensity": 1,
+    "qty": 400
+  },
+
+  {
+    "id": "cyyl_fd_cold_air_-20",
+    "type": "field_type",
+    "intensity_levels": [
+      {
+        "name": "冷空气-20°",
+        "sym": "&",
+        "color": "cyan",
+        "convection_temperature_mod": -36
+      }
+    ],
+    "decay_amount_factor": 5,
+    "percent_spread": 10,
+    "outdoor_age_speedup": "525600 minutes",
+    "priority": -1,
+    "half_life": "525600 minutes",
+    "phase": "gas"
+  },
+  {
+    "id": "cyyl_emit_cold_air_-20_20*20",
+    "type": "emit",
+    "field": "cyyl_fd_cold_air_-20",
+    "intensity": 1,
+    "qty": 400
+  },
+
+  {
+    "id": "cyyl_fd_cold_air_-30",
+    "type": "field_type",
+    "intensity_levels": [
+      {
+        "name": "冷空气-30°",
+        "sym": "&",
+        "color": "blue",
+        "convection_temperature_mod": -54
+      }
+    ],
+    "decay_amount_factor": 5,
+    "percent_spread": 10,
+    "outdoor_age_speedup": "525600 minutes",
+    "priority": -1,
+    "half_life": "525600 minutes",
+    "phase": "gas"
+  },
+  {
+    "id": "cyyl_emit_cold_air_-30_20*20",
+    "type": "emit",
+    "field": "cyyl_fd_cold_air_-30",
+    "intensity": 1,
+    "qty": 400
+  },
+  
+  
+  
+  
+  
+  {
+    "id": "cyyl_kjwdkzq_open",
+    "type": "TOOL",
+    "material": [
+      "cyylcaizhi"
+    ],
+    "symbol": ":",
+    "color": "blue",
+    "name": { "str": "次元医疗空间低温控制器(关闭)" },
+    "description": "控制空间里的温度,有降温一种模式,温度的高低可选择,作用范围大,并有无限的能源。",
+    "looks_like": "large_space_heater",
+    "price": "9999999 USD",
+    "price_postapoc": "9999999 USD",
+    "weight": "10 g",
+    "volume": "10 ml",
+    "bashing": 5,
+    "cutting": 0,
+    "to_hit": -3,
+    "flags": [
+      "TRADER_AVOID",
+      "NONCONDUCTIVE",
+      "ALLOWS_REMOTE_USE"
+    ],
+    "use_action": {
+      "type": "transform",
+      "menu_text": "调制-10度档",
+      "target": "cyyl_kjwdkzq_cold_-10",
+      "active": true,
+      "msg": "冷却空间温度中。"
+    }
+  },
+
+  {
+    "id": "cyyl_kjwdkzq_cold_-10",
+    "type": "TOOL",
+    "copy-from": "cyyl_kjwdkzq_close",
+    "name": {
+      "str": "次元医疗空间温度控制器(降温-10度)"
+    },
+    "description": "降低当前空间的温度-10度左右,作用范围大,并有无限的能源。",
+    "emits": [ "cyyl_emit_cold_air_-10_20*20" ],
+    "flags": [
+      "TRADER_AVOID",
+      "NONCONDUCTIVE",
+      "ALLOWS_REMOTE_USE",
+      "LIGHT_2"
+    ],
+    "use_action": {
+      "type": "transform",
+      "menu_text": "调制-20度档",
+      "target": "cyyl_kjwdkzq_cold_-20",
+      "active": true,
+      "msg": "冷却空间温度中。"
+    }
+  },
+  {
+    "id": "cyyl_kjwdkzq_cold_-20",
+    "type": "TOOL",
+    "copy-from": "cyyl_kjwdkzq_close",
+    "name": {
+      "str": "次元医疗空间温度控制器(降温-20度)"
+    },
+    "description": "降低当前空间的温度-20度左右,作用范围大,并有无限的能源。",
+    "emits": [ "cyyl_emit_cold_air_-20_20*20" ],
+    "flags": [
+      "TRADER_AVOID",
+      "NONCONDUCTIVE",
+      "ALLOWS_REMOTE_USE",
+      "LIGHT_2"
+    ],
+    "use_action": {
+      "type": "transform",
+      "menu_text": "调制-30度档",
+      "target": "cyyl_kjwdkzq_cold_-30",
+      "active": true,
+      "msg": "冷却空间温度中。"
+    }
+  },
+  {
+    "id": "cyyl_kjwdkzq_cold_-30",
+    "type": "TOOL",
+    "copy-from": "cyyl_kjwdkzq_close",
+    "name": {
+      "str": "次元医疗空间温度控制器(降温-30度)"
+    },
+    "description": "降低当前空间的温度-30度左右,作用范围大,并有无限的能源。",
+    "emits": [ "cyyl_emit_cold_air_-30_20*20" ],
+    "flags": [
+      "TRADER_AVOID",
+      "NONCONDUCTIVE",
+      "ALLOWS_REMOTE_USE",
+      "LIGHT_2"
+    ],
+    "use_action": {
+      "type": "transform",
+      "menu_text": "关闭温度控制器",
+      "target": "cyyl_kjwdkzq_close",
+      "active": false,
+      "msg": "关闭温度控制器中。"
+    }
+  }
+
+
+
+]

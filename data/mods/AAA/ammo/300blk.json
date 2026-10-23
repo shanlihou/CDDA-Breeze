@@ -1,0 +1,165 @@
+[
+  {
+    "id": "blk10",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "10发.300BLK弹匣"
+    },
+    "description": "紧凑的10发弹匣，适用于兼容STANAG的半自动步枪，可容纳.300BLK系列子弹。",
+    "weight": "100 g",
+    "volume": "250 ml",
+    "price": "50 USD",
+    "material": [
+      "steel"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [
+      "300blk"
+    ],
+    "capacity": 10,
+    "flags": [
+      "MAG_COMPACT"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "300blk": 10
+        }
+      }
+    ]
+  },
+  {
+    "id": "blk20",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "20发.300BLK弹匣"
+    },
+    "description": "紧凑的20发弹匣，适用于兼容STANAG的半自动步枪，可容纳.300BLK系列子弹。",
+    "weight": "100 g",
+    "volume": "250 ml",
+    "price": "50 USD",
+    "material": [
+      "steel"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [
+      "300blk"
+    ],
+    "capacity": 10,
+    "flags": [
+      "MAG_COMPACT"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "300blk": 10
+        }
+      }
+    ]
+  },
+  {
+    "id": "blk30",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "30发.300BLK弹匣"
+    },
+    "description": "标准容量弹匣，适用于兼容STANAG的步枪，可容纳.300BLK系列子弹。",
+    "weight": "360 g",
+    "volume": "500 ml",
+    "price": "80 USD",
+    "material": [
+      "steel"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [
+      "300blk"
+    ],
+    "capacity": 30,
+    "flags": [
+      "MAG_COMPACT"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "300blk": 30
+        }
+      }
+    ]
+  },
+  {
+    "id": "blk50",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "50发.300BLK弹鼓"
+    },
+    "description": "笨重的绿色弹鼓式50发弹匣，适用于兼容STANAG的步枪，可容纳.300BLK系列子弹。",
+    "weight": "600 g",
+    "volume": "1000 ml",
+    "price": "90 USD",
+    "to_hit": -2,
+    "bashing": 4,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "#",
+    "color": "light_green",
+    "ammo_type": [
+      "300blk"
+    ],
+    "capacity": 50,
+    "reload_time": 200,
+    "flags": [
+      "MAG_BULKY"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "300blk": 50
+        }
+      }
+    ]
+  },
+  {
+    "id": "stgmag300blk",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "STG-44 弹匣"
+    },
+    "description": "STG-44步枪的弹匣，可容纳.300BLK子弹。弹匣上的日期标签表明它是全新的",
+    "weight": "590 g",
+    "volume": "750 ml",
+    "material": [
+      "steel"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [
+      "300blk"
+    ],
+    "capacity": 30,
+    "flags": [
+      "MAG_COMPACT"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "300blk": 30
+        }
+      }
+    ]
+  }
+]

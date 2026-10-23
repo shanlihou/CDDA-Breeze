@@ -1,0 +1,59 @@
+[
+  {
+    "id": "wakening_land_item",
+    "type": "item_group",
+	"subtype": "collection",
+    "items": [
+	  { "item": "darksword" }
+    ]
+  },
+  {
+    "type": "mapgen",
+    "method": "json",
+    "om_terrain": [ "wakening_land" ],
+    "//": "Above ground",
+    "weight": 100,
+    "object": {
+      "fill_ter": "t_dirt",
+	  "rows": [
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "        $$$$$$$$        ",
+        "        $TTTTTT$        ",
+        "       $$T....T$$       ",
+        "       $$T.Z..T$$       ",
+        "       $$T....T$$       ",
+        "       $$T....T$$       ",
+        "        $TT++TT$        ",
+        "        $$$  $$$        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        "
+      ],
+      "terrain": {
+        " ": [ "t_dirt", "t_dirt", "t_grass" ],
+        "#": "t_rock",
+        "$": [ "t_tree", "t_tree_young", "t_tree_young", "t_shrub", "t_shrub", "t_shrub" ],
+        "+": "t_paper",
+        ".": "t_rock_floor",
+        "Z": "t_rock_floor",
+        "T": "t_tree"
+      },
+	  "furniture": { "Z": "f_coffin_o" },
+	  "place_items": [ 
+	    { "item": "wakening_land_item", "x": 11, "y": 10, "chance": 100 }
+	  ]
+    }
+  }
+]

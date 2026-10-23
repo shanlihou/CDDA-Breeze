@@ -1,0 +1,22 @@
+[
+    {
+        "id": "ver_blood_core_power_armor_generator",
+        "type": "TOOL_ARMOR",
+        "category": "armor",
+        "name": {
+          "str": "动力甲发电系统（装载血肉能量核心模块）"
+        },
+        "description": "一个与军用外骨骼配套使用的携行系统。这个型号牺牲了存储空间，用来安装一台柴油内燃发电机来为装甲提供动力。而你手上这个还使用了基于血肉能量核心研究的新模块，大大提高了能源转化效率",
+        "weight": "2000 g",
+        "volume": "48 L",
+        "price": 1000000,
+        "price_postapoc": 25000,
+        "to_hit": 1,
+        "material": [
+          "steel",
+          "flesh"
+        ],
+        "fuel_efficiency": 1,
+        "copy-from":"power_armor_generator"
+    }
+]

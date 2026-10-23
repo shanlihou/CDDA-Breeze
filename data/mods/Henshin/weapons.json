@@ -1,0 +1,304 @@
+[
+  {
+    "id": "Henshin_supercharged_spell",
+    "type": "SPELL",
+    "name": "超加速",
+    "description": "使加速装置生成的银色液态能量流转着装者全身，爆发性增幅着装者的身体运动能力。",
+    "valid_targets": [ "self" ],
+    "effect": "attack",
+    "effect_str": "Henshin_supercharged",
+    "shape": "blast",
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ],
+    "base_casting_time": 100,
+    "min_duration": 1900,
+    "max_duration": 1900
+  },
+  {
+    "type": "SPELL",
+    "id": "Henshin_dash_spell",
+    "name": "移形换影",
+    "description": "身随意动，来无影去无踪。用瞬移进行快速移动，并于沿途留下残音。",
+    "valid_targets": [ "hostile", "ground" ],
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ],
+    "effect": "dash",
+    "shape": "cone",
+    "min_damage": 0,
+    "max_damage": 0,
+    "min_range": 5,
+    "max_range": 5,
+    "field_id": "fd_direction",
+    "min_field_intensity": 1,
+    "max_field_intensity": 1,
+    "base_casting_time": 100
+  },
+  
+  
+  
+  {
+    "type": "SPELL",
+    "id": "HENSHIN_AEP_FATIGUE_OVERDRIVE",
+    "name": { "str": "激情燃烧" },
+    "description": "过载模式的强大出力不断灼烧着你的意志。",
+    "valid_targets": [ "self" ],
+    "effect": "recover_energy",
+	"effect_str": "FATIGUE",
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ],
+    "shape": "blast",
+    "min_damage": -5,
+    "max_damage": -5
+  },
+  {
+    "id": "henshin_effect_heat",
+    "type": "enchantment",
+    "has": "WIELD",
+    "condition": "ALWAYS",
+	"values": [ 
+      { "value": "ITEM_DAMAGE_HEAT", "add": 10 },
+	  { "value": "ITEM_DAMAGE_BASH", "add": -10, "multiply": -0.6 }
+	]
+  },
+  {
+    "id": "henshin_effect_overdrive",
+    "type": "enchantment",
+    "has": "WIELD",
+    "condition": "ALWAYS",
+	"intermittent_activation": { 
+      "effects": [
+        { "frequency": "1 s", "spell_effects": [ { "id": "HENSHIN_AEP_FATIGUE_OVERDRIVE" } ] },
+        { "frequency": "3 s", "spell_effects": [ { "id": "HENSHIN_AEP_PAIN" } ] },
+        { "frequency": "3 s", "spell_effects": [ { "id": "HENSHIN_AEP_LIFE" } ] }
+      ]
+	},
+	"mutations": [ "HENSHIN_MUTATION_4" ],
+	"values": [ 
+	  { "value": "ITEM_DAMAGE_HEAT", "add": 30 },
+	  { "value": "ITEM_DAMAGE_BASH", "add": -30, "multiply": -0.8 }
+	]
+  },
+  
+  
+  
+  {
+    "id": "darksword",
+    "type": "GENERIC",
+	"weapon_category": [ "CONSTRUCTED_SWORDS", "MEDIEVAL_SWORDS", "SHORT_SWORDS", "MEDIUM_SWORDS", "LONG_SWORDS", "GREAT_SWORDS" ],
+	"name": { "str": "黑暗剑", "str_pl": "黑暗剑" },
+    "description": "看不见摸不着的无形之物，仿佛有着剑的形状，既长又短，既重又轻。尽管威力欠佳，但有着绝对不会受损的优势。",
+    "volume": "0 ml",
+    "weight": "0 g",
+	"longest_side": "0 cm",
+	"to_hit": 4,
+    "cutting": 22,
+	"techniques": [ "WBLOCK_2", "BRUTAL", "SWEEP" ],
+    "symbol": " ",
+    "color": "dark_gray",
+	"qualities": [ [ "CUT", 2 ], [ "BUTCHER", 12 ] ],
+    "flags": [ "UNBREAKABLE_MELEE", "ZERO_WEIGHT", "TRADER_AVOID" ]
+  },
+  
+  
+  
+  {
+    "id": "henshin_power_knuckles",
+	"type": "TOOL",
+	"category": "weapons",
+	"weapon_category": [ "HENSHIN_KICK_WEAPON_OFF" ],
+    "symbol": "]",
+    "color": "light_gray",
+	"name": { "str": "异界动能装置", "str_pl": "异界动能装置" },
+	"looks_like": "cestus",
+    "description": "异界能源驱动的复合型武器，能够变形为指节铜环型作为拳套使用，也能够变形为数码手电型装至腿部输送能量提高腿力，在启动过载模式时拥有毁灭性的破坏力。（攻击威力35，破坏威力100）",
+    "material": [ "alien_material" ],
+	"volume": "550 ml",
+    "weight": "550 g",
+	"longest_side": "5 cm",
+	"to_hit": 3,
+    "bashing": 100,
+	"techniques": [ "WBLOCK_1", "tec_rider_power_knuckle", "tec_rider_power_knuckle_2", "tec_rider_power_knuckle_3" ],
+	"ammo": [ "alien_energy" ],
+	"pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "watertight": true, "ammo_restriction": { "alien_energy": 30 } } ],
+	"use_action": [
+	  {
+		"menu_text": "过载",
+		"type": "transform",
+        "target": "henshin_power_knuckles_overdrive",
+		"active":true,
+		"need_wielding": true,
+        "msg": "你启动过载模式，将动能装置的能源出力提升至极限。",
+        "need_charges": 10,
+        "need_charges_msg": "充能不足，无法启动过载模式。",
+		"moves": 100
+      }
+	],
+	"relic_data": {
+	  "passive_effects": [
+		{ "id": "henshin_effect_heat" }
+      ],
+	  "charge_info": { "recharge_type": "periodic", "time": "20 m", "regenerate_ammo": true }
+	},
+	"qualities": [ [ "HAMMER", 1 ], [ "BUTCHER", -5 ] ],
+    "flags": [ "NO_UNLOAD", "DURABLE_MELEE", "FLAMING", "TRADER_AVOID" ]
+  },
+  {
+    "id": "henshin_power_knuckles_overdrive",
+	"type": "TOOL",
+	"category": "weapons",
+	"weapon_category": [ "HENSHIN_KICK_WEAPON_ON" ],
+    "symbol": "]",
+    "color": "red",
+	"name": { "str": "异界动能装置（过载）", "str_pl": "异界动能装置（过载）" },
+	"looks_like": "cestus",
+    "description": "启动了过载模式的动能装置，装置上流动着散发强光的红色液态能量，不断释放出超高热猛烈灼烧敌人。（攻击威力100，破坏威力555）",
+    "material": [ "alien_material" ],
+    "volume": "550 ml",
+    "weight": "550 g",
+	"longest_side": "5 cm",
+	"to_hit": 5,
+    "bashing": 555,
+	"techniques": [ "WBLOCK_1" ],
+	"ammo": [ "alien_energy" ],
+	"pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "watertight": true, "ammo_restriction": { "alien_energy": 30 } } ],
+	"charges_per_use": 5,
+	"turns_per_charge": 1,
+	"revert_to": "henshin_power_knuckles",
+	"use_action": [
+	  {
+        "menu_text": "抑制",
+		"type": "transform",
+		"ammo_scale": 0,
+		"active":false,
+        "msg": "过载模式结束，动能装置的能源出力返回正常水平。",
+		"target": "henshin_power_knuckles",
+		"moves": 50
+      }
+	],
+	"relic_data": {
+	  "passive_effects": [
+		{ "id": "henshin_effect_overdrive" }
+      ]
+	},
+	"qualities": [ [ "HAMMER", 2 ], [ "BUTCHER", -5 ] ],
+    "flags": [ "NO_UNLOAD", "NO_RELOAD", "NO_UNWIELD", "NO_REPAIR", "UNBREAKABLE_MELEE", "LIGHT_5", "FLAMING", "TRADER_AVOID" ]
+  },
+  
+  
+  
+  {
+    "id": "henshin_smartphone",
+    "type": "TOOL_ARMOR",
+	"category": "armor",
+	"symbol": ";",
+    "color": "light_gray",
+	"name": { "str": "异界加速装置", "str_pl": "异界加速装置" },
+	"looks_like": "wristwatch",
+    "description": "异界能源驱动的腕表型加速装置，通过供给增幅过的银色液态能量，能够在10秒内极大程度强化穿戴者的运动反射神经，但同时也会对穿戴者的身体造成极大的负担。此外，亦可在手持后变形为光子爆破枪使用。",
+    "volume": "150 ml",
+    "weight": "250 g",
+	"longest_side": "5 cm",
+	"to_hit": 1,
+	"bashing": 5,
+	"charges_per_use": 30,
+	"material": [ "alien_material" ],
+	"sided": true,
+	"armor": [
+      {
+		"encumbrance": 0,
+        "coverage": 25,
+        "covers": [ "arm_l", "arm_r" ],
+        "specifically_covers": [ "arm_lower_l", "arm_lower_r" ]
+      }
+    ],
+	"material_thickness": 1.5,
+	"environmental_protection": 15,
+	"ammo": [ "alien_energy" ],
+	"pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "watertight": true, "ammo_restriction": { "alien_energy": 40 } } ],
+	"use_action": [
+	  {
+		"type": "cast_spell",
+		"spell_id": "Henshin_supercharged_spell",
+		"no_fail": true,
+		"need_worn": true,
+		"level": 0
+      },
+	  {
+		"menu_text": "变形",
+		"type": "transform",
+		"ammo_scale": 0,
+		"active":true,
+		"need_wielding": true,
+        "msg": "你将加速装置拿在手中，变形为光子爆破枪。",
+		"target": "henshin_smartphone_shoot",
+		"moves": 100
+      }
+	],
+	"relic_data": { "charge_info": { "recharge_type": "periodic", "time": "20 m", "regenerate_ammo": true } },
+    "flags": [ "NO_UNLOAD", "OVERSIZE", "DURABLE_MELEE", "BELTED", "PADDED", "WATER_FRIENDLY", "WATCH", "TRADER_AVOID" ]
+  },
+  {
+    "id": "henshin_smartphone_shoot",
+    "type": "GUN",
+	"weapon_category": [ "HENSHIN_SHOOT_WEAPON" ],
+	"symbol": ";",
+    "color": "light_gray",
+	"name": { "str": "异界光子爆破枪", "str_pl": "异界光子爆破枪" },
+	"looks_like": "smart_phone",
+    "description": "异界能源驱动的手机型光子爆破枪，可在精准射击出色的“单发模式”和扣动一次扳机便能三连射的“爆破模式”中随意切换，并且在手持时可发动“移形换影”，用瞬移进行快速移动。此外，亦可在穿戴后变形为加速装置使用。",
+    "volume": "150 ml",
+    "weight": "250 g",
+	"longest_side": "5 cm",
+	"to_hit": 2,
+	"bashing": 15,
+	"skill": "pistol",
+	"ranged_damage": { "damage_type": "heat", "amount": 30, "armor_penetration": 20 },
+	"range": 30,
+	"dispersion": 10,
+    "durability": 10,
+    "loudness": 7,
+    "reload": 100,
+	"blackpowder_tolerance": 6,
+	"ammo_to_fire": 3,
+	"valid_mod_locations": [  ],
+	"modes": [ [ "DEFAULT", "semi-auto", 1 ], [ "BURST", "3 rd.", 3 ] ],
+	"material": [ "alien_material" ],
+	"armor_data": {
+      "sided": true,
+	  "armor": [
+        {
+          "material": [
+            { "type": "alien_material", "covered_by_mat": 100, "thickness": 3.0 }
+          ],
+		  "encumbrance": 0,
+          "coverage": 25,
+          "covers": [ "arm_l", "arm_r" ],
+          "specifically_covers": [ "arm_lower_l", "arm_lower_r" ]
+        }
+      ]
+    },
+	"material_thickness": 1.5,
+	"environmental_protection": 15,
+	"ammo": [ "alien_energy" ],
+	"ammo_effects": [ "LASER", "INCENDIARY" ],
+	"pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "watertight": true, "ammo_restriction": { "alien_energy": 40 } } ],
+	"use_action": [
+	  {
+		"type": "cast_spell",
+		"spell_id": "Henshin_dash_spell",
+		"no_fail": true,
+		"need_wielding": true,
+		"level": 0
+      },
+	  {
+		"menu_text": "变形",
+		"type": "transform",
+		"ammo_scale": 0,
+		"active":false,
+		"need_worn": true,
+        "msg": "你将光子爆破枪变形为加速装置，佩戴在手臂上。",
+		"target": "henshin_smartphone",
+		"moves": 100
+      }
+	],
+	"relic_data": { "charge_info": { "recharge_type": "periodic", "time": "20 m", "regenerate_ammo": true } },
+    "flags": [ "WATERPROOF_GUN", "NEVER_JAMS", "NON_FOULING", "NEEDS_NO_LUBE", "NO_TURRET", "NO_UNLOAD", "OVERSIZE", "DURABLE_MELEE", "BELTED", "PADDED", "WATER_FRIENDLY", "TRADER_AVOID" ]
+  }
+]

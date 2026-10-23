@@ -1,0 +1,56 @@
+[
+  {
+    "type": "proficiency_category",
+    "id": "ovo_dragon_bone_working",
+    "name": "龙骨制作",
+    "description": "制作龙骨制品的专业知识。"
+  },
+  {
+    "type": "proficiency",
+    "id": "ovo_dragon_bone_working_base",
+    "category": "ovo_dragon_bone_working",
+    "name": {
+      "str": "龙骨制造学徒"
+    },
+    "description": "强大材料的制作经验。",
+    "can_learn": true,
+    "default_time_multiplier": 2,
+    "default_skill_penalty": 0.4,
+    "time_to_learn": "8 h",
+    "default_fail_multiplier": 1.0
+  },
+  {
+    "type": "proficiency",
+    "id": "ovo_dragon_bone_working_plus",
+    "category": "ovo_dragon_bone_working",
+    "name": {
+      "str": "龙骨制造专家"
+    },
+    "description": "强大材料的制作经验。",
+    "can_learn": true,
+    "default_time_multiplier": 1.5,
+    "default_skill_penalty": 0.2,
+    "time_to_learn": "16 h",
+    "required_proficiencies": [
+      "ovo_dragon_bone_working_base"
+    ],
+    "default_fail_multiplier": 1.0
+  },
+  {
+    "type": "proficiency",
+    "id": "ovo_dragon_bone_working_master",
+    "category": "ovo_dragon_bone_working",
+    "name": {
+      "str": "龙骨制造大师"
+    },
+    "description": "强大材料的制作经验。",
+    "can_learn": true,
+    "default_time_multiplier": 1.25,
+    "default_skill_penalty": 0.1,
+    "time_to_learn": "24 h",
+    "required_proficiencies": [
+      "ovo_dragon_bone_working_plus"
+    ],
+    "default_fail_multiplier": 1.0
+  }
+]

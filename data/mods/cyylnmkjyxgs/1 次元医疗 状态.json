@@ -1,0 +1,281 @@
+[
+  {
+    "id": "pkill_TX",
+    "type": "effect_type",
+    "name": [ "特效止痛药" ],
+    "desc": [ "你的疼痛-2点，持续60秒。" ],
+    "pkill_addict_reduces": false,
+    "rating": "good",
+    "base_mods": {
+      "pkill_min": [ 2 ]
+    },
+    "blood_analysis_description": "特效止痛药"
+  },
+
+  {
+    "id": "yh_yly_jkzj_zt",
+    "type": "effect_type",
+    "name": [ "医疗仪(永恒)效果" ],
+    "desc": [ "你的健康+2点，持续60秒。" ],
+    "apply_message": "医疗仪(永恒)在恢复你。",
+    "remove_message": "医疗仪(永恒)恢复停止。",
+    "rating": "good",
+    "base_mods": {
+      "health_min": [ 2 ]
+    }
+  },
+
+  {
+    "id": "yh_yly_fmqc_zt",
+    "type": "effect_type",
+    "rating": "good",
+    "removes_effects": [
+      "grabbed",
+      "frostbite",
+      "frostbite_recovery",
+      "cold",
+      "shakes",
+      "fungus",
+      "onfire",
+      "hot",
+      "hot_speed",
+      "relax_gas",
+      "dermatik",
+      "bloodworms",
+      "paincysts",
+      "brainworms",
+      "tapeworm",
+      "blind",
+      "poison",
+      "venom_dmg",
+      "venom_weaken",
+      "stung",
+      "badpoison",
+      "foodpoison",
+      "paralyzepoison",
+      "tetanus",
+      "rat_bite_fever",
+      "infected",
+      "asthma",
+      "flu"
+    ]
+  },
+
+  {
+    "id": "lly_zt",
+    "type": "effect_type",
+    "name": [ "力量药" ],
+    "desc": [ "你的力量+5点。" ],
+    "apply_message": "你服用了力量药。",
+    "remove_message": "力量药的效果消失了。",
+    "rating": "good",
+    "base_mods": {
+      "str_mod": [ 5 ]
+    }
+  },
+  {
+    "id": "mjy_zt",
+    "type": "effect_type",
+    "name": [ "敏捷药" ],
+    "desc": [ "你的敏捷+5点。" ],
+    "apply_message": "你服用了敏捷药。",
+    "remove_message": "敏捷药的效果消失了。",
+    "rating": "good",
+    "base_mods": {
+      "dex_mod": [ 5 ]
+    }
+  },
+  {
+    "id": "gzy_zt",
+    "type": "effect_type",
+    "name": [ "感知药" ],
+    "desc": [ "你的感知+5点。" ],
+    "apply_message": "你服用了感知药。",
+    "remove_message": "感知药的效果消失了。",
+    "rating": "good",
+    "base_mods": {
+      "per_mod": [ 5 ]
+    }
+  },
+  {
+    "id": "zly_zt",
+    "type": "effect_type",
+    "name": [ "智力药" ],
+    "desc": [ "你的智力+5点。" ],
+    "apply_message": "你服用了智力药。",
+    "remove_message": "智力药的效果消失了。",
+    "rating": "good",
+    "base_mods": {
+      "int_mod": [ 5 ]
+    }
+  },
+  {
+    "id": "lly_ztⅡ",
+    "type": "effect_type",
+    "name": [ "力量药Ⅱ" ],
+    "desc": [ "你的力量+50%。" ],
+    "apply_message": "你服用了力量药Ⅱ。",
+    "remove_message": "力量药Ⅱ的效果消失了。",
+    "rating": "good",
+    "enchantments": [ { "values": [ { "value": "STRENGTH", "multiply": 0.5 } ] } ]
+  },
+  {
+    "id": "mjy_ztⅡ",
+    "type": "effect_type",
+    "name": [ "敏捷药Ⅱ" ],
+    "desc": [ "你的敏捷+50%。" ],
+    "apply_message": "你服用了敏捷药Ⅱ。",
+    "remove_message": "敏捷药Ⅱ的效果消失了。",
+    "rating": "good",
+    "enchantments": [ { "values": [ { "value": "DEXTERITY", "multiply": 0.5 } ] } ]
+  },
+  {
+    "id": "gzy_ztⅡ",
+    "type": "effect_type",
+    "name": [ "感知药Ⅱ" ],
+    "desc": [ "你的感知+50%。" ],
+    "apply_message": "你服用了感知药Ⅱ。",
+    "remove_message": "感知药Ⅱ的效果消失了。",
+    "rating": "good",
+    "enchantments": [ { "values": [ { "value": "PERCEPTION", "multiply": 0.5 } ] } ]
+  },
+  {
+    "id": "zly_ztⅡ",
+    "type": "effect_type",
+    "name": [ "智力药Ⅱ" ],
+    "desc": [ "你的智力+50%。" ],
+    "apply_message": "你服用了智力药Ⅱ。",
+    "remove_message": "智力药Ⅱ的效果消失了。",
+    "rating": "good",
+    "enchantments": [ { "values": [ { "value": "INTELLIGENCE", "multiply": 0.5 } ] } ]
+  },
+  {
+    "id": "lly_zt_1",
+    "type": "effect_type",
+    "name": [ "体魄药" ],
+    "desc": [ "你的生命+20、耐力+2000。" ],
+    "apply_message": "你服用了体魄药。",
+    "remove_message": "体魄药的效果消失了。",
+    "rating": "good",
+    "enchantments": [ { "values": [ { "value": "MAX_STAMINA", "add": 2000 }, { "value": "MAX_HP", "add": 20 } ] } ]
+  },
+  {
+    "id": "lly_zt_Ⅱ",
+    "type": "effect_type",
+    "name": [ "体魄药Ⅱ" ],
+    "desc": [ "你的生命+50%、耐力+50%。" ],
+    "apply_message": "你服用了体魄药Ⅱ。",
+    "remove_message": "体魄药Ⅱ的效果消失了。",
+    "rating": "good",
+    "enchantments": [ { "values": [ { "value": "MAX_STAMINA", "multiply": 0.5 }, { "value": "MAX_HP", "multiply": 0.5 } ] } ]
+  },
+  {
+    "id": "pkill_12_120",
+    "type": "effect_type",
+    "name": [ "瞬间去痛药" ],
+    "desc": [ "瞬间减少120点疼痛。警告！12小时内请勿再次服用，如果有血液过滤请无视。" ],
+    "apply_message": "你服用了瞬间去痛药。",
+    "remove_message": "瞬间去痛药的效果消失了。",
+    "rating": "good",
+    "base_mods": {
+      "pkill_tick": [ 1 ],
+      "pkill_min": [ 60 ]
+    }
+  },
+  {
+    "id": "ARMOR-30_0",
+    "type": "effect_type",
+    "name": [ "抗伤药" ],
+    "desc": [ "你受到的全伤害-30点。" ],
+    "apply_message": "你服用了抗伤药。",
+    "remove_message": "抗伤药的效果消失了。",
+    "rating": "good",
+    "enchantments": [ { "values": [ { "value": "ARMOR_BASH", "add": -30 }, { "value": "ARMOR_CUT", "add": -30 }, { "value": "ARMOR_STAB", "add": -30 }, { "value": "ARMOR_BULLET", "add": -30 }, { "value": "ARMOR_HEAT", "add": -30 }, { "value": "ARMOR_COLD", "add": -30 }, { "value": "ARMOR_ELEC", "add": -30 }, { "value": "ARMOR_ACID", "add": -30 }, { "value": "ARMOR_BIO", "add": -30 } ] } ]
+  },
+  {
+    "id": "ARMOR-50%_Ⅱ",
+    "type": "effect_type",
+    "name": [ "抗伤药Ⅱ" ],
+    "desc": [ "你受到的全伤害-50%。" ],
+    "apply_message": "你服用了抗伤药Ⅱ。",
+    "remove_message": "抗伤药Ⅱ的效果消失了。",
+    "rating": "good",
+    "enchantments": [ { "values": [ { "value": "ARMOR_BASH", "multiply": -0.5 }, { "value": "ARMOR_CUT", "multiply": -0.5 }, { "value": "ARMOR_STAB", "multiply": -0.5 }, { "value": "ARMOR_BULLET", "multiply": -0.5 }, { "value": "ARMOR_HEAT", "multiply": -0.5 }, { "value": "ARMOR_COLD", "multiply": -0.5 }, { "value": "ARMOR_ELEC", "multiply": -0.5 }, { "value": "ARMOR_ACID", "multiply": -0.5 }, { "value": "ARMOR_BIO", "multiply": -0.5 } ] } ]
+  },
+  {
+    "id": "sdy_zt",
+    "type": "effect_type",
+    "name": [ "速度药" ],
+    "desc": [ "耐力回复+2、你的速度+25点。" ],
+    "apply_message": "你服用了速度药。",
+    "remove_message": "速度药的效果消失了。",
+    "rating": "good",
+    "base_mods": {
+      "stamina_min": [ 1 ],
+      "speed_mod": [ 25 ]
+    }
+  },
+  {
+    "id": "nly_zt",
+    "type": "effect_type",
+    "name": [ "耐力药" ],
+    "desc": [ "速度+2、你的耐力回复+20。" ],
+    "apply_message": "你服用了耐力药。",
+    "remove_message": "耐力药的效果消失了。",
+    "rating": "good",
+    "base_mods": {
+      "speed_mod": [ 2 ],
+      "stamina_min": [ 20 ]
+    }
+  },
+  {
+    "id": "wx_nly_zt",
+    "type": "effect_type",
+    "name": [ "无限耐力药" ],
+    "desc": [ "速度+10、全伤害-50点、你的耐力回复+1000。" ],
+    "apply_message": "你服用了无限耐力药。",
+    "remove_message": "无限耐力药的效果消失了。",
+    "rating": "good",
+    "base_mods": {
+      "speed_mod": [ 10 ],
+      "stamina_min": [ 1000 ]
+    },
+    "enchantments": [ { "values": [ { "value": "ARMOR_BASH", "add": -50 }, { "value": "ARMOR_CUT", "add": -50 }, { "value": "ARMOR_STAB", "add": -50 }, { "value": "ARMOR_BULLET", "add": -50 }, { "value": "ARMOR_HEAT", "add": -50 }, { "value": "ARMOR_COLD", "add": -50 }, { "value": "ARMOR_ELEC", "add": -50 }, { "value": "ARMOR_ACID", "add": -50 }, { "value": "ARMOR_BIO", "add": -50 } ] } ]
+  },
+  {
+    "id": "hxy_fzy",
+    "type": "effect_type",
+    "name": [ "回变药强益" ],
+    "desc": [ "速度+10、耐力回复+10、攻击耗时-10点、疲劳/新陈代谢消耗-25%、口渴/饥饿消耗每1秒-2点。" ],
+    "apply_message": "你服用了回复药。",
+    "remove_message": "回复药强益结束了。",
+    "rating": "good",
+    "max_duration": "6 h",
+    "base_mods": {
+      "hunger_min": [ -2 ],
+      "thirst_min": [ -2 ],
+      "speed_mod": [ 10 ],
+      "stamina_min": [ 10 ]
+    },
+    "enchantments": [ { "values": [ { "value": "ATTACK_SPEED", "add": -10 }, { "value": "FATIGUE", "multiply": -0.25 }, { "value": "METABOLISM", "multiply": -0.25 } ] } ]
+  },
+  {
+    "id": "lly_ztS",
+    "type": "effect_type",
+    "name": [ "超神源质" ],
+    "desc": [ "你的全属性+999、速度+999、耐力,生命/恢复速度+1万/1千、近战+1000真伤、攻击/移动耗时-75%、饥饿/口渴/疲劳/新陈代谢消耗-99%、极端温度适应+1万、全伤害-10万点。" ],
+    "apply_message": "你服用了超神源质。",
+    "remove_message": "超神源质的效果消失了。",
+    "rating": "good",
+    "base_mods": {
+      "str_mod": [ 999 ],
+      "dex_mod": [ 999 ],
+      "per_mod": [ 999 ],
+      "int_mod": [ 999 ],
+      "speed_mod": [ 999 ],
+      "stamina_min": [ 1000 ]
+    },
+    "flags": [ "SPATIAL_BARRIER" ],
+    "enchantments": [ { "values": [ { "value": "ITEM_DAMAGE_PURE", "add": 100 }, { "value": "ATTACK_SPEED", "multiply": -0.75 }, { "value": "MOVE_COST", "multiply": -0.75 }, { "value": "HUNGER", "multiply": -0.99 }, { "value": "THIRST", "multiply": -0.99 }, { "value": "FATIGUE", "multiply": -0.99 }, { "value": "METABOLISM", "multiply": -0.99 }, { "value": "MAX_STAMINA", "add": 10000 }, { "value": "MAX_HP", "add": 10000 }, { "value": "CLIMATE_CONTROL_HEAT", "add": 10000 }, { "value": "CLIMATE_CONTROL_CHILL", "add": 10000 }, { "value": "ARMOR_BASH", "add": -100000 }, { "value": "ARMOR_CUT", "add": -100000 }, { "value": "ARMOR_STAB", "add": -100000 }, { "value": "ARMOR_BULLET", "add": -100000 }, { "value": "ARMOR_HEAT", "add": -100000 }, { "value": "ARMOR_COLD", "add": -100000 }, { "value": "ARMOR_ELEC", "add": -100000 }, { "value": "ARMOR_ACID", "add": -100000 }, { "value": "ARMOR_BIO", "add": -100000 } ] } ]
+  }
+]

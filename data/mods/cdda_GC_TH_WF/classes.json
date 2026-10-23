@@ -1,0 +1,27 @@
+[
+  {
+    "type": "scenario",
+    "id": "lab_chal",
+    "copy-from": "lab_chal",
+    "extend": { "professions": [ "TH_WH_bio_test" ] }
+  },
+    {
+        "type": "profession",
+        "id": "TH_WH_bio_test",
+        "name": "实验血清测试员(WH)",
+        "description": "你是一只实验人形小白鼠，你一直被他们要求测试新的产品，这次他们让你去测试原型血清，经过数日的测试，你得到了一些东西同时也失去了什么。这天又到了你测试的时候，这时，门外传来惨叫。",
+        "points": 4,
+        "traits": [ "TH_WF_Body1", "TH_WF_Burn","TH_WF_Assimilate", "TH_WF_Crystallize" ],
+        "items": {
+          "both": {
+            "ammo": 100,
+            "items": [
+              "subsuit_xl",
+              "mutagen_TH_WF"
+                     ]
+          },
+          "male": [ "boxer_shorts" ],
+          "female": [ "sports_bra", "boxer_shorts" ]
+                }
+    }
+]

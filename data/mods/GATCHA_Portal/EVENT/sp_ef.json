@@ -1,0 +1,120 @@
+[
+	{
+		"id":"ef_ncard_ev1_holy_cocktail",
+		"type":"effect_type",
+		"name":[ "神圣鸡尾酒" ],
+		"desc":[ "你的身体受到了神圣鸡尾酒的影响！" ],
+		"apply_message":"你的身体受到了神圣鸡尾酒的影响！",
+		"rating":"bad",
+		"max_duration":"15 s",
+		"max_intensity":1,
+		"base_mods":{ "speed_mod": [ -15 ], "dodge_mod": [ -2 ], "bash_mod": [ -2 ],"hurt_min": [ 10 ], "hurt_chance": [ 0 ] },
+		"show_in_info":true
+	}
+,
+	{
+		"id":"ef_ncard_ev2_dashslash",
+		"type":"effect_type",
+		"name":[ "大出血" ],
+		"desc":[ "你的身体受到了大出血的影响！" ],
+		"apply_message":"你的身体受到了大出血的影响！",
+		"rating":"bad",
+		"max_duration":"10 s",
+		"max_intensity":1,
+		"base_mods":{ "speed_mod": [ -30 ], "dodge_mod": [ -5 ], "bash_mod": [ -5 ],"hurt_min": [ 5 ], "hurt_chance": [ 0 ] },
+		"show_in_info":true
+	}
+,
+	{
+		"id":"ef_ncard_ev3_sanoubu",
+		"type":"effect_type",
+		"name":[ "大裂伤" ],
+		"desc":[ "你受到了剧烈的撕裂伤影响！" ],
+		"apply_message":"你受到了剧烈的撕裂伤影响！",
+		"rating":"bad",
+		"max_duration":"15 s",
+		"max_intensity":1,
+		"base_mods":{ "speed_mod": [ -10 ], "dodge_mod": [ -2 ], "bash_mod": [ -2 ],"hurt_min": [ 10 ], "hurt_chance": [ 0 ] },
+		"show_in_info":true
+	}
+,
+	{
+		"id":"ef_ncard_ev3_issen",
+		"type":"effect_type",
+		"name":[ "裂伤" ],
+		"desc":[ "你的身体受到了撕裂伤的影响！" ],
+		"apply_message":"你受到了剧烈的撕裂伤影响！",
+		"rating":"bad",
+		"max_duration":"10 s",
+		"max_intensity":1,
+		"base_mods":{ "speed_mod": [ -10 ], "dodge_mod": [ -5 ], "bash_mod": [ -5 ],"hurt_min": [ 5 ], "hurt_chance": [ 0 ] },
+		"show_in_info":true
+	}
+,
+	{
+		"id":"ef_ncard_ev4_potion",
+		"type":"effect_type",
+		"name":[ "药水影响" ],
+		"desc":[ "你的身体受到了药水的影响！" ],
+		"apply_message":"你的身体受到了药水的影响！",
+		"rating":"bad",
+		"max_duration":"15 s",
+		"max_intensity":1,
+		"base_mods":{ "speed_mod": [ -15 ], "dodge_mod": [ -2 ], "bash_mod": [ -2 ],"hurt_min": [ 10 ], "hurt_chance": [ 0 ] },
+		"show_in_info":true
+	}
+,
+	{
+		"id":"ef_ncard_ev5_somno",
+		"type":"effect_type",
+		"name":[ "困倦" ],
+		"desc":[ "你的身体变得异常的困倦！" ],
+		"apply_message":"你的身体变得异常的困倦！",
+		"rating":"bad",
+		"max_duration":"40 s",
+		"max_intensity":1,
+		"base_mods":{ "speed_mod": [ -4000 ], "dodge_mod": [ -2 ], "bash_mod": [ -2 ] },
+		"show_in_info":true
+	}
+,
+	{
+		"id":"ef_ncard_ev5_ex",
+		"type":"effect_type",
+		"name":[ "诱惑" ],
+		"desc":[ "你的身体受到了诱惑的影响！" ],
+		"apply_message":"你的身体变得异常的困倦！",
+		"rating":"bad",
+		"max_duration":"30 s",
+		"max_intensity":1,
+		"base_mods":{ "speed_mod": [ -50 ], "dodge_mod": [ -2 ], "bash_mod": [ -2 ] },
+		"show_in_info":true
+	}
+,
+	{
+		"id":"ef_ncard_ev5_somno2",
+		"type":"effect_type",
+		"name":[ "困倦" ],
+		"desc":[ "你的身体变得异常的困倦！" ],
+		"apply_message":"你的身体变得异常的困倦！",
+		"rating":"bad",
+		"max_duration":"15 s",
+		"max_intensity":1,
+		"base_mods":{ "speed_mod": [ -100 ], "dodge_mod": [ -2 ], "bash_mod": [ -2 ] },
+		"show_in_info":true
+	}
+,
+	{
+		"id":"ef_ncard_ev6_springheel",
+		"type":"effect_type",
+		"name":[ "挫伤" ],
+		"desc":[ "你的身体受到了瘀伤的影响！" ],
+		"apply_message":"你的身体受到了瘀伤的影响！",
+		"rating":"bad",
+		"max_duration":"1 s",
+		"max_intensity":1,
+		"base_mods":{ "speed_mod": [ -15 ], "dodge_mod": [ -2 ], "bash_mod": [ -2 ],"hurt_min": [ 180 ], "hurt_chance": [ 0 ] },
+		"show_in_info":true
+	}
+
+
+]

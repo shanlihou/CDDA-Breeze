@@ -1,0 +1,213 @@
+[
+  {
+    "id": "MM_magic_missile_mastery",
+    "type": "SPELL",
+    "name": "飞弹掌握",
+    "description": "精研魔法飞弹，激活飞弹的法术模型，开启魔法飞弹专精。",
+    "effect": "spawn_item",
+    "effect_str": "MM_magic_missile_schema_1",
+    "shape": "blast",
+    "valid_targets": [ "none" ],
+    "flags": [ "SOMATIC", "SILENT", "NO_LEGS" ],
+    "max_level": 1,
+    "difficulty": 2,
+    "spell_class": "MAGUS",
+    "base_casting_time": 600,
+    "energy_source": "MANA",
+    "base_energy_cost": 100,
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_duration": 600,
+    "max_duration": 600
+  },
+  {
+    "type": "TOOL",
+    "copy-from": "MM_contract_spell_schema",
+    "id": "MM_magic_missile_schema_1",
+    "name": { "str": "⋘∞⊰※ 魔法飞弹法术模型 ※⊱∞⋙", "str_pl": "⋘∞⊰※ 魔法飞弹法术模型 ※⊱∞⋙" },
+    "description": "这枚法术模型由奥术能量构成。通过修改法术模型，熟练的施法者可以开启特定领域的法术专精。",
+    "color": "pink",
+    "material": [ "MM_ether_energy" ],
+    "chat_topics": [ "TALK_飞弹专精" ],
+    "use_action": {
+       "type": "effect_on_conditions",
+       "description": "激活模型，选择魔法飞弹专精类型。<color_red>切换专精类型后你会失去既有类型的专精经验。</color>",
+       "effect_on_conditions": [ { "id": "EOC_魔法飞弹法术模型对话", "effect": [ "open_dialogue" ] } ]
+     }
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_飞弹专精",
+    "dynamic_line": "法术模型微微发光，不断变幻。",
+    "responses": [
+      {
+        "condition": { "u_has_trait": "MAGUS" },
+        "text": "选择远射飞弹专精。",
+        "topic": "TALK_DONE",
+        "effect": [ { "u_add_trait": "MM_magic_missile_mastery_1" },
+                    { "u_lose_trait": "MM_magic_missile_mastery_2" },
+                    { "u_lose_trait": "MM_magic_missile_mastery_3" } ]
+       },
+      {
+        "condition": { "u_has_trait": "MAGUS" },
+        "text": "选择多重飞弹专精。",
+        "topic": "TALK_DONE",
+        "effect": [ { "u_add_trait": "MM_magic_missile_mastery_2" },
+                    { "u_lose_trait": "MM_magic_missile_mastery_1" },
+                    { "u_lose_trait": "MM_magic_missile_mastery_3" } ]
+       },
+      {
+        "condition": { "u_has_trait": "MAGUS" },
+        "text": "选择极效飞弹专精。",
+        "topic": "TALK_DONE",
+        "effect": [ { "u_add_trait": "MM_magic_missile_mastery_3" },
+                    { "u_lose_trait": "MM_magic_missile_mastery_1" },
+                    { "u_lose_trait": "MM_magic_missile_mastery_2" } ]
+       },
+      { "text": "保持原状。", "topic": "TALK_DONE" }
+     ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "eoc_MM_multi_magic_missile",
+    "condition": { "u_has_trait": "MM_magic_missile_mastery_2" },
+    "msg_on": { "text": "多重施法。", "rating": "mixed" },
+    "effect": [ { "u_cast_spell": { "id": "magic_missile", "min_level": 15, "max_level": 15 }, "targeted": true } ]
+  },
+  {
+    "id": "MM_magus_mana_mastery",
+    "type": "SPELL",
+    "name": "奥术掌握",
+    "description": "精研奥术，激活奥术基础法术模型，开启奥术专精。",
+    "effect": "spawn_item",
+    "effect_str": "MM_magus_mana_mastery_schema_1",
+    "shape": "blast",
+    "valid_targets": [ "none" ],
+    "flags": [ "SOMATIC", "SILENT", "NO_LEGS" ],
+    "max_level": 1,
+    "difficulty": 8,
+    "spell_class": "MAGUS",
+    "base_casting_time": 600,
+    "energy_source": "MANA",
+    "base_energy_cost": 100,
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_duration": 600,
+    "max_duration": 600
+  },
+  {
+    "type": "TOOL",
+    "copy-from": "MM_contract_spell_schema",
+    "id": "MM_magus_mana_mastery_schema_1",
+    "name": { "str": "⋘∞⊰※ 奥术基础法术模型 ※⊱∞⋙", "str_pl": "⋘∞⊰※ 奥术基础法术模型 ※⊱∞⋙" },
+    "description": "这枚法术模型由奥术能量构成。通过修改法术模型，熟练的施法者可以开启特定领域的法术专精。",
+    "color": "pink",
+    "material": [ "MM_ether_energy" ],
+    "chat_topics": [ "TALK_奥术专精" ],
+    "use_action": {
+       "type": "effect_on_conditions",
+       "description": "激活模型，选择奥术专精类型。<color_red>切换专精类型后你会失去既有类型的专精经验。</color>",
+       "effect_on_conditions": [ { "id": "EOC_奥术基础法术模型对话", "effect": [ "open_dialogue" ] } ]
+     }
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_奥术专精",
+    "dynamic_line": "法术模型微微发光，不断变幻。",
+    "responses": [
+      {
+        "condition": { "u_has_trait": "MAGUS" },
+        "text": "选择奥术反馈专精。",
+        "topic": "TALK_DONE",
+        "effect": [ { "u_add_trait": "MM_magus_mana_mastery_1" },
+                    { "u_lose_trait": "MM_magus_mana_mastery_2" },
+                    { "u_lose_trait": "MM_magus_mana_mastery_3" } ]
+       },
+      {
+        "condition": { "u_has_trait": "MAGUS" },
+        "text": "选择以太活跃专精。",
+        "topic": "TALK_DONE",
+        "effect": [ { "u_add_trait": "MM_magus_mana_mastery_2" },
+                    { "u_lose_trait": "MM_magus_mana_mastery_1" },
+                    { "u_lose_trait": "MM_magus_mana_mastery_3" } ]
+       },
+      {
+        "condition": { "u_has_trait": "MAGUS" },
+        "text": "选择以太之体专精。",
+        "topic": "TALK_DONE",
+        "effect": [ { "u_add_trait": "MM_magus_mana_mastery_3" },
+                    { "u_lose_trait": "MM_magus_mana_mastery_1" },
+                    { "u_lose_trait": "MM_magus_mana_mastery_2" } ]
+       },
+      { "text": "保持原状。", "topic": "TALK_DONE" }
+     ]
+  },
+  {
+    "id": "MM_magus_star_mastery",
+    "type": "SPELL",
+    "name": "群星掌握",
+    "description": "精研宇宙时空的奥秘，激活时空基础法术模型，开启星术专精。",
+    "effect": "spawn_item",
+    "effect_str": "MM_magus_star_mastery_schema_1",
+    "shape": "blast",
+    "valid_targets": [ "none" ],
+    "flags": [ "SOMATIC", "SILENT", "NO_LEGS" ],
+    "max_level": 1,
+    "difficulty": 2,
+    "spell_class": "MAGUS",
+    "base_casting_time": 600,
+    "energy_source": "MANA",
+    "base_energy_cost": 100,
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_duration": 600,
+    "max_duration": 600
+  },
+  {
+    "type": "TOOL",
+    "copy-from": "MM_contract_spell_schema",
+    "id": "MM_magus_star_mastery_schema_1",
+    "name": { "str": "⋘∞⊰※ 时空基础法术模型 ※⊱∞⋙", "str_pl": "⋘∞⊰※ 时空基础法术模型 ※⊱∞⋙" },
+    "description": "这枚法术模型由奥术能量构成。通过修改法术模型，熟练的施法者可以开启特定领域的法术专精。",
+    "color": "pink",
+    "material": [ "MM_ether_energy" ],
+    "chat_topics": [ "TALK_星术专精" ],
+    "use_action": {
+       "type": "effect_on_conditions",
+       "description": "激活模型，选择星术专精类型。<color_red>切换专精类型后你会失去既有类型的专精经验。</color>",
+       "effect_on_conditions": [ { "id": "EOC_时空基础法术模型对话", "effect": [ "open_dialogue" ] } ]
+     }
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_星术专精",
+    "dynamic_line": "空间力能与细砂般的星光在法术模型内部不停流转。",
+    "responses": [
+      {
+        "condition": { "u_has_trait": "MAGUS" },
+        "text": "【来自虚空之影】 专注于星界生物召唤。",
+        "topic": "TALK_DONE",
+        "effect": [ { "u_add_trait": "MM_magus_star_mastery_1" },
+                    { "u_lose_trait": "MM_magus_star_mastery_2" },
+                    { "u_lose_trait": "MM_magus_star_mastery_3" } ]
+       },
+      {
+        "condition": { "u_has_trait": "MAGUS" },
+        "text": "【相位漫步之人】 专注于空间相位和力场能量的运用。",
+        "topic": "TALK_DONE",
+        "effect": [ { "u_add_trait": "MM_magus_star_mastery_2" },
+                    { "u_lose_trait": "MM_magus_star_mastery_1" },
+                    { "u_lose_trait": "MM_magus_star_mastery_3" } ]
+       },
+      {
+        "condition": { "u_has_trait": "MAGUS" },
+        "text": "【群星罗列之智】 智者多思，繁思渴知。群星深处，不可占读。（该专精领域尚未实装）",
+        "topic": "TALK_DONE",
+        "effect": [ { "u_add_trait": "MM_magus_star_mastery_3" },
+                    { "u_lose_trait": "MM_magus_star_mastery_1" },
+                    { "u_lose_trait": "MM_magus_star_mastery_2" } ]
+       },
+      { "text": "保持原状。", "topic": "TALK_DONE" }
+     ]
+  }
+]

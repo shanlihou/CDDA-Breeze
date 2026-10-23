@@ -1,0 +1,62 @@
+[
+  {
+    "id": "henshin_repairkit",
+    "type": "TOOL",
+	"name": { "str": "异界修理装置", "str_pl": "异界修理装置" },
+	"looks_like": "misc_repairkit",
+    "description": "根据异界金属的性质特制，可修复受损的异界装备的便携式装置。每使用一次消耗1单位的异界能源。",
+	"weight": "350 g",
+    "volume": "750 ml",
+    "longest_side": "25 cm",
+    "bashing": 5,
+    "cutting": 5,
+    "material": [ "alien_material", "plastic" ],
+    "symbol": ",",
+    "color": "light_gray",
+    "ammo": [ "alien_energy" ],
+	"pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "watertight": true, "ammo_restriction": { "alien_energy": 40 } } ],
+    "charges_per_use": 1,
+    "use_action": [
+      {
+        "type": "repair_item",
+        "item_action_type": "repair_metal",
+        "materials": [ "alien_material" ],
+        "skill": "mechanics",
+		"tool_quality": -1,
+        "cost_scaling": 0.1,
+        "move_cost": 1200
+      }
+    ],
+    "flags": [ "TRADER_AVOID", "ALLOWS_REMOTE_USE" ]
+  },
+  {
+    "id": "henshin_repairkit_good",
+    "type": "TOOL",
+	"name": { "str": "高级异界修理装置", "str_pl": "高级异界修理装置" },
+	"looks_like": "misc_repairkit",
+    "description": "根据异界金属的性质特制，可修复受损的异界装备的便携式装置，比基础的异界修理装置更容易使用，每使用一次消耗1单位的异界能源。",
+    "weight": "350 g",
+    "volume": "750 ml",
+    "longest_side": "25 cm",
+    "bashing": 5,
+    "cutting": 5,
+    "material": [ "alien_material", "plastic" ],
+    "symbol": ",",
+    "color": "light_gray",
+    "ammo": [ "alien_energy" ],
+	"pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "watertight": true, "ammo_restriction": { "alien_energy": 40 } } ],
+    "charges_per_use": 1,
+    "use_action": [
+      {
+        "type": "repair_item",
+        "item_action_type": "repair_metal",
+        "materials": [ "alien_material" ],
+        "skill": "mechanics",
+		"tool_quality": 1,
+        "cost_scaling": 0.1,
+        "move_cost": 1000
+      }
+    ],
+    "flags": [ "TRADER_AVOID", "ALLOWS_REMOTE_USE" ]
+  }
+]

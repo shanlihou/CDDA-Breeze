@@ -1,0 +1,23 @@
+[
+  {
+    "type": "material",
+    "id": "纳米材料",
+    "//": "fictional carbon nanotubing, intended for bionic implants",
+    "density": 1,
+    "name": "Carbon Lattice",
+    "breathability": "SECOND_SKIN",
+    "specific_heat_liquid": 0.82,
+    "specific_heat_solid": 0.45,
+    "latent_heat": 273,
+    "soft": true,
+    "bash_resist": 20,
+    "cut_resist": 20,
+    "bullet_resist": 20,
+    "acid_resist": 20,
+    "fire_resist": 80,
+    "chip_resist": 80,
+    "dmg_adj": [ "marked", "dented", "smashed", "shattered" ],
+    "bash_dmg_verb": "dented",
+    "cut_dmg_verb": "scratched"
+  }
+]

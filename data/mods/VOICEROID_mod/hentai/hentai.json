@@ -1,0 +1,54 @@
+[
+  {
+    "//": "不指定部位就不会破损，覆盖率100%之后会变得容易破损。",
+    "id": "hentai_band_aid",
+    "type": "ARMOR",
+    "copy-from": "voiro_sarashi",
+    "category" : "tools",
+    "name": "乳贴(高位)[voiro]",
+    "description": "是为了隐藏胸部的突起，防止和衣服摩擦引起疼痛和出血而使用的保护器具。使用时，会稍微往下粘贴。",
+    "weight": "4 g",
+    "volume": "40 ml",
+    "price": 200,
+    "armor": [
+      { "coverage": 5, "covers": [ "torso" ] }
+    ],
+    "use_action": {
+        "type": "transform",
+        "menu_text": "重新粘贴",
+        "msg": "稍微往下贴了一下。",
+        "target": "hentai_band_aid2"
+    },
+    "flags": [ "SKINTIGHT" ]
+  },
+  {
+    "id": "hentai_band_aid2",
+    "type": "ARMOR",
+    "category" : "tools",
+    "copy-from": "hentai_band_aid",
+    "name": "乳贴(低位)[voiro]",
+    "description": "是为了隐藏胸部的突起，防止和衣服摩擦引起疼痛和出血而使用的保护器具。使用时，会稍微往上粘贴。",
+    "use_action": {
+        "type": "transform",
+        "menu_text": "重新粘贴",
+        "msg": "稍微往上贴了一下。",
+        "target": "hentai_band_aid"
+    },
+    "flags": [ "SKINTIGHT" ]
+  },
+  {
+    "id": "hentai_band_aid3",
+    "type": "ARMOR",
+    "category" : "tools",
+    "copy-from": "hentai_band_aid",
+    "name": "阴贴[voiro]",
+    "description": "是用人类的智慧来维护尊严最后的堡垒。",
+    "weight": "2 g",
+    "volume": "20 ml",
+    "price": 100,
+    "armor": [
+      { "coverage": 5, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_hip_l", "leg_hip_r" ] }
+    ],
+    "flags": [ "SKINTIGHT" ]
+  }
+]

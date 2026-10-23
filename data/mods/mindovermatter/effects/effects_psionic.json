@@ -1,0 +1,514 @@
+[
+	{
+		"type": "effect_type",
+		"id": "effect_biokin_physical",
+		"name": [ "增强体能" ],
+		"desc": [ "你正在增强你的体能。" ],
+		"apply_message": "",
+		"remove_message": "力量涌动逐渐消退。",
+		"decay_messages": [ 
+			[ "随着强化力量的消退，你变得越来越虚弱。", "bad" ],
+			[ "充斥你身体的力量开始消散。", "bad" ] 
+		],
+		"rating": "good",
+		"max_duration": "30 minutes",
+		"max_intensity": 100,
+		"dur_add_perc": 10,
+		"int_dur_factor": "19 s",
+		"removes_effects": [ "venom_weaken" ],
+		"base_mods": { "str_mod": [ 1 ], "dex_mod": [ 1 ] },
+		"enchantments": [
+			{  
+				"values": [ 
+					{ "value": "STRENGTH", "add": { "arithmetic": [ { "u_val": "spell_level", "spell": "biokin_physical_enhance" }, "/", { "const": 5 } ] } },
+					{ "value": "DEXTERITY", "add": { "arithmetic": [ { "u_val": "spell_level", "spell": "biokin_physical_enhance" }, "/", { "const": 5 } ] } }
+				]
+			}
+		]
+	},
+	{
+		"type": "effect_type",
+		"id": "effect_biokin_pkill_1",
+		"name": [ "克服轻微疼痛" ],
+		"desc": [ "你的能力略微减轻了你的痛感。" ],
+		"apply_message": "",
+		"remove_message": "你的伤口再次作痛。",	
+		"decay_messages": [ [ "你一直压制的疼痛开始悄悄回涌。", "bad" ] ],
+		"rating": "good",
+		"max_duration": "15 minutes",
+		"max_intensity": 100,
+		"dur_add_perc": 10,
+		"int_dur_factor": "9 s",
+		"base_mods": { "pkill_tick": [ 12 ], "pkill_min": [ 1 ], "pkill_max_val": [ 15 ] }
+	},
+	{
+		"type": "effect_type",
+		"id": "effect_biokin_pkill_2",
+		"name": [ "克服疼痛" ],
+		"desc": [ "你的能力减轻了你的痛感。" ],
+		"apply_message": "",
+		"remove_message": "你的伤口再次作痛。",
+		"decay_messages": [ [ "你一直压制的疼痛开始悄悄回涌。", "bad" ] ],
+		"rating": "good",
+		"max_duration": "20 minutes",
+		"max_intensity": 100,
+		"dur_add_perc": 10,
+		"int_dur_factor": "12 s",
+		"base_mods": { "pkill_tick": [ 10 ], "pkill_min": [ 2 ], "pkill_max_val": [ 30 ] }
+	},
+	{
+		"type": "effect_type",
+		"id": "effect_biokin_pkill_3",
+		"name": [ "克服疼痛" ],
+		"desc": [ "你的能力减轻了你的痛感。" ],
+		"apply_message": "",
+		"remove_message": "你的伤口再次作痛。",
+		"decay_messages": [ [ "你一直压制的疼痛开始悄悄回涌。", "bad" ] ],
+		"rating": "good",
+		"max_duration": "25 minutes",
+		"max_intensity": 100,
+		"dur_add_perc": 10,
+		"int_dur_factor": "15 s",
+		"base_mods": { "pkill_tick": [ 10 ], "pkill_min": [ 3 ], "pkill_max_val": [ 50 ] }
+	},
+	{
+		"type": "effect_type",
+		"id": "effect_biokin_pkill_4",
+		"name": [ "克服重度疼痛" ],
+		"desc": [ "你的能力大幅减轻了你的痛感。" ],
+		"apply_message": "",
+		"remove_message": "你的伤口再次作痛。",
+		"decay_messages": [ [ "你一直压制的疼痛开始悄悄回涌。", "bad" ] ],
+		"rating": "good",
+		"max_duration": "30 minutes",
+		"max_intensity": 100,
+		"dur_add_perc": 10,
+		"int_dur_factor": "18 s",
+		"base_mods": { "pkill_tick": [ 8 ], "pkill_min": [ 4 ], "pkill_max_val": [ 75 ] }
+	},
+	{
+		"type": "effect_type",
+		"id": "effect_biokin_pkill_5",
+		"name": [ "克服重度疼痛" ],
+		"desc": [ "你的能力大幅减轻了你的痛感。" ],
+		"apply_message": "",
+		"remove_message": "你的伤口再次作痛。",
+		"decay_messages": [ [ "你一直压制的疼痛开始悄悄回涌。", "bad" ] ],
+		"rating": "good",
+		"max_duration": "40 minutes",
+		"max_intensity": 100,
+		"dur_add_perc": 10,
+		"int_dur_factor": "21 s",
+		"base_mods": { "pkill_tick": [ 8 ], "pkill_min": [ 5 ], "pkill_max_val": [ 100 ] }
+		
+	},
+	{
+		"type": "effect_type",
+		"id": "effect_biokin_pkill_6",
+		"name": [ "克服极度疼痛" ],
+		"desc": [ "你的能力极大地减轻了你的痛感。" ],
+		"apply_message": "",
+		"remove_message": "你的伤口再次作痛。",
+		"decay_messages": [ [ "你一直压制的疼痛开始悄悄回涌。", "bad" ] ],
+		"rating": "good",
+		"max_duration": "45 minutes",
+		"max_intensity": 100,
+		"dur_add_perc": 10,
+		"int_dur_factor": "24 s",
+		"base_mods": { "pkill_tick": [ 6 ], "pkill_min": [ 6 ], "pkill_max_val": [ 130 ] }
+	},
+	{   
+		"type": "effect_type",
+		"id": "effect_biokin_reflex",
+		"name": [ "增强反射" ],
+		"desc": [ "你正在增强你的速度和感知。" ],
+		"apply_message": "",
+		"remove_message": "世界再次加速。",
+		"decay_messages": [ 
+			[ "你的强化速度几乎消失。", "bad" ],
+			[ "你的动作逐渐变得迟缓。", "bad" ] 
+		],
+		"rating": "good",
+		"max_duration": "30 minutes", 
+		"max_intensity": 39,
+		"dur_add_perc": 10,
+		"int_dur_factor": "47 s",
+		"removes_effects": [ "blind", "deaf" ],
+		"base_mods": { "per_mod": [ 1 ], "speed_mod": [5] },
+		"enchantments": [
+			{  
+				"values": [ 
+					{ "value": "PERCEPTION", "add": { "arithmetic": [ { "u_val": "spell_level", "spell": "biokin_reflex_enhance" }, "/", { "const": 5 } ] } },
+					{ "value": "SPEED", "add": { "arithmetic": [ { "u_val": "spell_level", "spell": "biokin_reflex_enhance" } ] } }
+				]
+			}
+		]
+	},
+	{
+		"type": "effect_type",
+		"id": "effect_biokin_armor_skin",
+		"name": [ "硬化皮肤" ],
+		"desc": [ "得益于灵能能量，你的皮肤更具韧性。" ],
+		"apply_message": "",
+		"remove_message": "刺痛感渐渐消失。",
+		"decay_messages": [ 
+			[ "随着你的能力消退，之前没在意的细微擦伤开始隐隐作痛。", "bad" ],
+			[ "你皮肤上的刺痛感开始减弱。", "bad" ] 
+		],
+		"rating": "good",		
+		"show_intensity": false,
+		"max_duration": "30 minutes", 
+		"max_intensity": 62,
+		"dur_add_perc": 10,
+		"int_dur_factor": "29 s",
+		"blocks_effects": [ "bleed", "hypovolemia", "dermatik" ],
+		"enchantments": [
+			{
+				"values": [ 
+					{ "value": "ARMOR_CUT", "add": -4 },
+					{ "value": "ARMOR_BASH", "add": -6 },
+					{ "value": "ARMOR_STAB", "add": -3 },
+					{ "value": "PAIN", "multiply": { "arithmetic": [ { "u_val": "spell_level", "spell": "biokin_armor_skin" }, "*", { "const": -0.02 } ] } } 
+				]
+			}
+		]
+	},
+	{
+		"type": "effect_type",
+		"id": "effect_biokin_sealed",
+		"name": [ "封闭系统" ],
+		"desc": [ "你已抵御了外界的危害。" ],
+		"apply_message": "",
+		"remove_message": "你猛地呼出一口气。",
+		"decay_messages": [ 
+			[ "你需要尽快换一口气！", "bad" ], 
+			[ "你的肺部正因屏息而费力支撑。", "bad" ] 
+		],
+		"rating": "good",
+		"show_intensity": false,
+		"max_duration": "8 minutes", 
+		"max_intensity": 50,
+		"dur_add_perc": 10,
+		"int_dur_factor": "9 s",
+		"blocks_effects": [ "smoke", "teargas", "boomered", "migo_atmosphere", "fetid_goop", "relax_gas", "spores", "dermatik", "tpollen", "poison", "badpoison" ],
+		"removes_effects": [ "bleed"],
+		"flags": [ "NO_SCENT", "ELECTRIC_IMMUNE", "RAD_RESIST" ]
+	},
+	{
+		"type": "effect_type",
+		"id": "effect_biokin_combat_dance",
+		"name": [ "战斗之舞" ],
+		"desc": [ "你是死亡的旋风。" ],
+		"apply_message": "",
+		"remove_message": "你的动作恢复正常。",
+		"decay_messages": [ 
+			[ "你增强的战斗能力几乎消失。", "bad" ],
+			[ "充盈你身体的力量开始消退。", "bad" ] 
+		],
+		"rating": "good",
+		"show_intensity": false,
+		"max_duration": "10 minutes", 
+		"max_intensity": 25,
+		"dur_add_perc": 10,
+		"int_dur_factor": "24 s",
+		"removes_effects": [ "stunned", "dazed" ],
+		"enchantments": [
+			{
+				"values": [
+					{ "value": "ATTACK_SPEED", "multiply": -0.3 },
+					{ "value": "MOVE_COST", "multiply": -0.2 },
+					{ "value": "RECOIL_MODIFIER", "add": -30 },
+					{ "value": "MELEE_DAMAGE", "multiply": 0.20},
+					{ "value": "FATIGUE", "add": 5},
+					{ "value": "HUNGER", "multiply": 3},
+					{ "value": "THIRST", "multiply": 3}
+				]
+			}
+		]
+	},
+	{
+		"type": "effect_type",
+		"id": "effect_clair_night_eyes",
+		"name": [ "夜视之眼" ],
+		"desc": [ "你可以在黑暗中感知周围环境。" ],
+		"apply_message": "",
+		"remove_message": "黑暗再次遮蔽了你的周围。",
+		"decay_messages": [ 
+			[ "在你眼中，阴影变得越来越浓重。", "bad" ],
+			[ "黑暗开始侵蚀你的视野。", "bad" ] 
+		],
+		"rating": "good",
+		"max_duration": "120 minutes", 
+		"max_intensity": 106,
+		"dur_add_perc": 10,
+		"int_dur_factor": "68 s",
+		"flags": [ "NIGHT_VISION", "INFRARED" ]
+	},
+	{
+		"type": "effect_type",
+		"id": "effect_clair_path",
+		"name": [ "循迹之路" ],
+		"desc": [ "你清楚地知道该往哪里走。" ],
+		"apply_message": "",
+		"remove_message": "轨迹线渐渐消失。",
+		"decay_messages": [ 
+			[ "你几乎看不清正确的路径。", "bad"],
+			[ "你一直追随的轨迹线越来越模糊。", "bad" ] 
+		],
+		"rating": "good",
+		"max_duration": "30 seconds", 
+		"max_intensity": 16,
+		"dur_add_perc": 10,
+		"int_dur_factor": "18 s",
+		"enchantments": [
+			{
+				"values": [
+					{ "value": "FOOTSTEP_NOISE", "multiply": -0.67 },
+					{ "value": "MOVE_COST", "multiply": -0.2 } 
+				] 
+			} 
+		] 
+	},
+	{
+		"type": "effect_type",
+		"id": "effect_clair_dodge",
+		"name": [ "预判攻击" ],
+		"desc": [ "你能提前看见敌人的攻击。" ],
+		"apply_message": "",
+		"remove_message": "影像渐渐消退。",
+		"decay_messages": [ 
+			[ "关于敌人行动的影像如今几乎不可见。", "bad"],
+			[ "你预见的敌人行动变得模糊不清。", "bad" ] 
+		],
+		"rating": "good",
+		"max_duration": "15 minutes", 
+		"max_intensity": 38,
+		"dur_add_perc": 10,
+		"int_dur_factor": "24 s",
+		"blocks_effects": [ "grabbed" ],
+		"enchantments": [
+			{
+				"values": [
+					{ "value": "BONUS_DODGE", "add": 3 }
+				] 
+			} 
+		],
+		"flags": [ "UNCANNY_DODGE" ]
+	},
+	{
+		"type": "effect_type",
+		"id": "effect_clair_clear_sight",
+		"name": [ "真实视域" ],
+		"desc": [ "你的能力让你得以看清现实的真实样貌。" ],
+		"apply_message": "",
+		"remove_message": "与之前相比，世界仿佛蒙上了薄纱。",
+		"decay_messages": [ 
+			[ "你增强的清晰视界几乎消失。", "bad" ],
+			[ "你越来越不确定世界的真实本质。", "bad" ] 
+		],
+		"rating": "good",
+		"max_duration": "15 minutes", 
+		"max_intensity": 43,
+		"dur_add_perc": 40,
+		"int_dur_factor": "21 s",
+		"removes_effects": [
+			"dazed",
+			"stunned",
+			"darkness",
+			"visuals",
+			"hallu",
+			"blind",
+			"hallucination_attacks",
+			"deaf",
+			"weed_high",
+			"High",
+			"drunk",
+			"no_sight",
+			"glare",
+			"snow_glare",
+			"venom_blind"
+			]
+	},
+	{
+    "type": "effect_type",
+    "id": "effect_pyrokinetic_flash",
+    "name": [ "失明" ],
+    "desc": [ "视野范围：0。你什么也看不见。" ],
+    "removes_effects": [ "glare", "snow_glare", "darkness" ],
+    "apply_message": "你失明了！",
+    "remove_message": "你的视力恢复了！",
+    "rating": "bad",
+		"max_duration": "15 minutes", 
+    "show_in_info": true,
+    "flags": [ "BLIND" ]
+	},
+	{
+		"type": "effect_type",
+		"id": "effect_pyrokinetic_cloak",
+		"name": [ "温暖斗篷" ],
+		"desc": [ "你周围的空气温度受到控制。" ],
+		"apply_message": "",
+		"remove_message": "一阵凉风吹拂你的皮肤。",
+		"decay_messages": [ 
+			[ "你环绕自身的暖空气几乎耗尽。", "bad"],
+			[ "你周围的空气开始逐渐变凉。", "bad" ] 
+		],
+		"rating": "good",
+		"max_duration": "60 minutes", 
+		"max_intensity": 77,
+		"dur_add_perc": 10,
+		"int_dur_factor": "46 s",
+		"enchantments": [ "enchant_pyrokin_cloak" ]
+	},
+	{
+		"type": "effect_type",
+		"id": "effect_pyrokinetic_aura",
+		"name": [ "烈焰光环" ],
+		"desc": [ "你被火焰环绕。"],
+		"apply_message": "",
+		"remove_message": "环绕你的火焰渐渐熄灭。",
+		"decay_messages": [ 
+			[ "你周围的火焰断断续续地闪烁。", "bad"],
+			[ "你的火焰光环开始消退。", "bad" ] 
+		],
+		"rating": "good",
+		"max_duration": "15 minutes", 
+		"max_intensity": 31,
+		"dur_add_perc": 10,
+		"int_dur_factor": "29 s",
+		"enchantments": [ "enchant_pyrokinetic_aura" ]
+	},
+	{
+		"type": "effect_type",
+		"id": "effect_telekinetic_armor",
+		"name": [ "惯性屏障" ],
+		"desc": [ "一道念动力屏障正在保护你。" ],
+		"//": "逻辑是这以与常规物理相反的方式运作——作用力接触面积越大，其强度越弱。",
+		"apply_message": "",
+		"remove_message": "你周围的力场屏障溃散。",
+		"decay_messages": [ 
+			[ "你周围的屏障几乎消失。", "bad" ],
+			[ "你能感觉到屏障正失去完整性。", "bad" ] 
+		],
+		"rating": "good",
+		"max_duration": "60 minutes", 
+		"max_intensity": 112,
+		"dur_add_perc": 10,
+		"int_dur_factor": "32 s",
+		"enchantments": [ 
+			{ "values": [
+				{ "value": "ARMOR_CUT", "add": {"arithmetic": [ { "u_val": "spell_level", "spell": "telekinetic_shield" }, "*", { "const": -1 } ] } },
+				{ "value": "ARMOR_CUT", "add": -3 },
+				{ "value": "ARMOR_BASH", "add": {"arithmetic": [ { "u_val": "spell_level", "spell": "telekinetic_shield" }, "*", { "const": -0.5 } ] } },
+				{ "value": "ARMOR_BASH", "add": -2 },
+				{ "value": "ARMOR_STAB", "add": {"arithmetic": [ { "u_val": "spell_level", "spell": "telekinetic_shield" }, "*", { "const": -1.5 } ] } },
+				{ "value": "ARMOR_STAB", "add": -5 },
+				{ "value": "ARMOR_BULLET", "add": {"arithmetic": [ { "u_val": "spell_level", "spell": "telekinetic_shield" }, "*", { "const": -2.5 } ] } }, 
+				{ "value": "ARMOR_BULLET", "add": -8 }
+			]
+		}
+		]
+	},
+	{
+		"type": "effect_type",
+		"id": "effect_telepathic_learning_bonus",
+		"name": [ "专注状态" ],
+		"desc": [ "你处于高度专注的精神状态，使学习更加轻松。" ],
+		"apply_message": "",
+		"remove_message": "你摇摇头，重新意识到外界的存在。",
+		"decay_messages": [ 
+			[ "你增强的专注力像梦一样消散。", "bad"],
+			[ "外界开始侵入你的意识。", "bad" ]
+		],
+		"rating": "good",
+		"max_duration": "180 minutes", 
+		"max_intensity": 100,
+		"dur_add_perc": 10,
+		"int_dur_factor": "95 s",
+		"enchantments": [ 
+			{ "values": [
+				{ "value": "LEARNING_FOCUS", "add": { "arithmetic": [ { "u_val": "spell_level", "spell": "telepathic_concentration" }, "*", { "const": 2.5 } ] } },
+				{ "value": "MOVE_COST", "multiply": 3 }
+			]
+			}
+		],
+		"flags": [ "MYOPIC" ]
+	},
+	{
+		"type": "effect_type",
+		"id": "effect_telepath_invisibility",
+		"name": [ "隐匿" ],
+		"desc": [ "你正在隐藏自己，不让敌人察觉。" ],
+		"apply_message": "",
+		"remove_message": "你再次变得可见且脆弱。",
+		"decay_messages": [ 
+			[ "你的隐匿几乎消失。", "bad" ],
+			[ "你注意到附近的敌人正朝你的方向瞥视。", "bad" ] 
+		],
+		"rating": "good",
+		"max_duration": "100 seconds", 
+		"max_intensity": 14,
+		"dur_add_perc": 10,
+		"int_dur_factor": "7 s",
+		"flags": [ "INVISIBLE", "NO_SCENT" ]
+	},
+	{
+		"type": "effect_type",
+		"id": "effect_telepathic_psi_armor",
+		"name": [ "灵能护盾" ],
+		"desc": [ "你的心智受到保护，免受灵能攻击。" ],
+		"apply_message": "",
+		"remove_message": "你的思绪再次失去防御。",
+		"decay_messages": [ 
+			[ "保护你思绪的屏障几乎消失。", "bad" ],
+			[ "守护你心智的护盾变得越来越薄弱。", "bad" ] 
+		],
+		"rating": "good",
+		"max_duration": "10 minutes", 
+		"max_intensity": 17,
+		"dur_add_perc": 10,
+		"int_dur_factor": "35 s",
+		"removes_effects": [
+			"taint", 
+			"tindrift", 
+			"hallu", 
+			"hallucination_attacks",
+			"visuals",
+			"fearparalyze",
+			"amigara"
+		],
+		"flags": [ "PORTAL_PROOF", "TEEPSHIELD" ]
+	},
+	{
+		"type": "effect_type",
+		"id": "effect_teleport_slow",
+		"name": [ "瞬步失调" ],
+		"desc": [ "你的步伐并未像你眼中所见那样抵达应有的距离。" ],
+		"apply_message": "空气泛起涟漪，你踉跄了一下。",
+		"remove_message": "你的眼睛和双腿再次达成一致。",
+		"rating": "bad",
+		"max_duration": 3000, 
+		"dur_add_perc": 5,
+		"base_mods": { "speed_mod": [ -40 ] },
+		"immunity_flags": [ "DIMENSIONAL_ANCHOR", "TELESTOP" ]
+	},
+	{
+		"type": "effect_type",
+		"id": "effect_vita_health",
+		"name": [ "健康光泽" ],
+		"desc": [ "你感觉棒极了。" ],
+		"apply_message": "",
+		"remove_message": "活力的涌动瞬间离开你的身体。",
+		"decay_messages": [ 
+			[ "似乎这一天的艰辛都追上了你。", "bad" ],
+			[ "你的能力赋予你的活力开始消退。", "bad" ] 
+		],
+		"rating": "good",
+		"max_duration": "120 minutes", 
+		"max_intensity": 97,
+		"dur_add_perc": 10,
+		"int_dur_factor": "73 s",
+		"blocks_effects": [ "scurvy", "redcells_anemia", "anemia", "toxin_buildup", "common_cold", "flu" ],
+		"base_mods": { "health_min": [ 1 ], "health_chance": [ 50 ], "h_mod_min": [ 2 ], "h_mod_chance": [ 50 ], "healing_rate": [ 2 ] }
+	}
+]

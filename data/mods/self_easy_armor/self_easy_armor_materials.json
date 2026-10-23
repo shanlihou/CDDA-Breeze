@@ -1,0 +1,104 @@
+[
+  {
+    "type": "material",
+    "id": "nosoft",
+    "name": "硬甲",
+    "density": 5,
+    "bash_resist": 0,
+    "cut_resist": 0,
+    "bullet_resist": 0,
+    "acid_resist": 0,
+    "fire_resist": 0,
+    "soft": false,
+    "chip_resist": 0,
+    "breathability": "GOOD",
+    "dmg_adj": [ "scratched", "cut", "cracked", "shattered" ],
+    "bash_dmg_verb": "dented",
+    "cut_dmg_verb": "gouged"
+  },
+  {
+    "type": "material",
+    "id": "yessoft",
+    "name": "舒适",
+    "density": 5,
+    "bash_resist": 0,
+    "cut_resist": 0,
+    "bullet_resist": 0,
+    "acid_resist": 0,
+    "fire_resist": 0,
+    "soft": true,
+    "chip_resist": 0,
+    "breathability": "GOOD",
+    "dmg_adj": [ "scratched", "cut", "cracked", "shattered" ],
+    "bash_dmg_verb": "dented",
+    "cut_dmg_verb": "gouged"
+  },
+  {
+    "type": "material",
+    "id": "lead",
+    "name": "Lead",
+    "copy-from": "lead",
+    "bash_resist": 1,
+    "cut_resist": 2,
+    "bullet_resist": 1
+  },
+  {
+    "type": "material",
+    "id": "tin",
+    "name": "Tin",
+    "copy-from": "tin",
+    "bash_resist": 1,
+    "cut_resist": 1,
+    "bullet_resist": 2
+  },
+  {
+    "type": "material",
+    "id": "diamond",
+    "name": "Diamond",
+    "copy-from": "diamond",
+    "repaired_with": "diamond"
+  },
+  {
+    "type": "material",
+    "id": "gemstone",
+    "name": "Gemstone",
+    "copy-from": "gemstone",
+    "//": "jin xiang yu",
+    "repaired_with": "gold_small"
+  },
+  {
+    "type": "material",
+    "id": "ceramic",
+    "name": "Ceramic",
+    "copy-from": "ceramic",
+    "repaired_with": "ceramic_shard"
+  },
+  {
+    "type": "material",
+    "id": "acidchitin",
+    "name": "Biosilicified Chitin",
+    "copy-from": "acidchitin",
+    "repaired_with": "acidchitin_piece"
+  },
+  {
+    "type": "material",
+    "id": "stone",
+    "name": "Stone",
+    "copy-from": "stone",
+    "repaired_with": "rock"
+  },
+  {
+    "type": "material",
+    "id": "clay",
+    "name": "Clay",
+    "copy-from": "clay",
+    "repaired_with": "clay_lump"
+  },
+  {
+    "type": "material",
+    "id": "dry_plant",
+    "name": "Dry Plant",
+    "copy-from": "dry_plant",
+    "repaired_with": "cordage_6"
+  }
+]

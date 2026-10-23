@@ -1,0 +1,67 @@
+[
+	{
+		"type": "terrain",
+		"id": "forestry_t_tree_hickory_fertilized",
+		"name": "已经施过肥的山核桃树",
+		"copy-from": "t_tree_hickory",
+		"symbol": "7",
+		"color": [ "light_green", "light_green", "i_light_green", "brown" ],
+		"examine_action": "harvest_ter",
+		"looks_like": "t_tree_hickory",
+		"harvest_by_season": [
+			{
+				"seasons": [ "autumn" ],
+				"id": "forestry_fertilized_hickory_harv"
+			}
+		]
+	},
+	{
+		"id": "forestry_fertilized_hickory_harv",
+		"type": "harvest",
+		"entries": [ { "drop": "hickory_nut", "base_num": [ 8, 18 ], "scale_num": [ 0.1, 0.7 ] } ]
+	},
+
+	{
+		"type": "terrain",
+		"id": "forestry_t_tree_hickory_pruned",
+		"name": "已经修剪过的山核桃树",
+		"copy-from": "t_tree_hickory",
+		"symbol": "7",
+		"color": [ "light_green", "light_green", "i_light_green", "brown" ],
+		"examine_action": "harvest_ter",
+		"looks_like": "t_tree_hickory",
+		"harvest_by_season": [
+			{
+				"seasons": [ "autumn" ],
+				"id": "forestry_pruned_hickory_harv"
+			}
+		]
+	},
+	{
+		"id": "forestry_pruned_hickory_harv",
+		"type": "harvest",
+		"entries": [ { "drop": "hickory_nut", "base_num": [ 6, 13 ], "scale_num": [ 0, 0.6 ] } ]
+	},
+
+	{
+		"type": "terrain",
+		"id": "forestry_t_tree_hickory_fertilized_pruned",
+		"name": "施过肥并修剪过的山核桃树",
+		"copy-from": "t_tree_hickory",
+		"symbol": "7",
+		"color": [ "light_green", "light_green", "i_light_green", "brown" ],
+		"examine_action": "harvest_ter",
+		"looks_like": "t_tree_hickory",
+		"harvest_by_season": [
+			{
+				"seasons": [ "autumn" ],
+				"id": "forestry_fertilized_pruned_hickory_harv"
+			}
+		]
+	},
+	{
+		"id": "forestry_fertilized_pruned_hickory_harv",
+		"type": "harvest",
+		"entries": [ { "drop": "hickory_nut", "base_num": [ 13, 30 ], "scale_num": [ 0.2, 0.8 ] } ]
+	}
+]

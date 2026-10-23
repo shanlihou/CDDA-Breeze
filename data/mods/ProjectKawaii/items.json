@@ -1,0 +1,2467 @@
+[
+  {
+    "id": "kawaii_maid_dress",
+    "copy-from": "maid_dress_short",
+    "type": "ARMOR",
+    "name": {
+      "str": "女仆装"
+    },
+    "description": "来自绅士们的希望与梦想。",
+    "weight": "200 g",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "4 kg",
+        "moves": 80
+      }
+    ],
+    "flags": [
+      "VARSIZE",
+      "FANCY"
+    ],
+    "armor": [
+      {
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_lower"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          4,
+          5
+        ]
+      },
+      {
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_upper"
+        ],
+        "coverage": 30
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_hip_l",
+          "leg_hip_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          2,
+          2
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_upper_l",
+          "leg_upper_r"
+        ],
+        "coverage": 50
+      },
+      {
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "specifically_covers": [
+          "arm_shoulder_l",
+          "arm_shoulder_r"
+        ],
+        "coverage": 30,
+        "encumbrance": [
+          2,
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kawaii_maid_dress_ex",
+    "type": "ARMOR",
+    "name": {
+      "str": "精致女仆装 （夏季版）"
+    },
+    "description": "数百年的女仆缝纫技术被荟萃到了这件女仆装的技术中。一套根据季节不同可以改变样式的服装。可以适应任何天气和季节。",
+    "weight": "830 g",
+    "volume": "4250 ml",
+    "price": 15500,
+    "price_postapoc": 500,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 0.3,
+    "environmental_protection": 1,
+    "symbol": "[",
+    "color": "dark_gray",
+    "looks_like": "kawaii_maid_dress",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "2 L",
+        "max_contains_weight": "4 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "2 L",
+        "max_contains_weight": "4 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "2 kg",
+        "moves": 120
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "2 kg",
+        "moves": 120
+      }
+    ],
+    "warmth": 2,
+    "flags": [
+      "VARSIZE",
+      "POCKETS",
+      "FANCY"
+    ],
+    "use_action": {
+      "type": "transform",
+      "msg": "你修改了女仆的服装，以更好地抵御寒冷。",
+      "target": "kawaii_maid_dress_ex2",
+      "menu_text": "添加防寒衬里"
+    },
+    "armor": [
+      {
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_lower"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          8,
+          16
+        ]
+      },
+      {
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_upper"
+        ],
+        "coverage": 30
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_hip_l",
+          "leg_hip_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          8,
+          8
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_upper_l",
+          "leg_upper_r"
+        ],
+        "coverage": 50
+      },
+      {
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "specifically_covers": [
+          "arm_shoulder_l",
+          "arm_shoulder_r"
+        ],
+        "coverage": 30,
+        "encumbrance": [
+          8,
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kawaii_maid_dress_ex2",
+    "copy-from": "kawaii_maid_dress_ex",
+    "repairs_like": "kawaii_maid_dress_ex",
+    "looks_like": "kawaii_maid_dress_long",
+    "type": "ARMOR",
+    "name": {
+      "str": "精致女仆装 （冬季版）"
+    },
+    "description": "数百年的女仆缝纫技术被荟萃到了这件女仆装的技术中。一套根据季节不同可以改变样式的服装。可以适应任何天气和季节。",
+    "warmth": 40,
+    "use_action": {
+      "type": "transform",
+      "msg": "你修改了女仆的服装，以更好地抵御炎热。",
+      "target": "kawaii_maid_dress_ex",
+      "menu_text": "移除防寒衬里"
+    },
+    "armor": [
+      {
+        "covers": [
+          "torso"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          8,
+          16
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "coverage": 95,
+        "encumbrance": [
+          8,
+          8
+        ]
+      },
+      {
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "coverage": 95,
+        "encumbrance": [
+          8,
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kawaii_maid_dress_lss",
+    "type": "TOOL_ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "战斗女仆制服LSS-PRO（关）"
+    },
+    "description": "普通的女仆装可能不足以在这个危险的新世界生存。这一改进版外表看起来仍然可爱, 而且还有褶边，但实际上隐藏了先进的装甲衬里和气温控制系统，以更好地抵御恶劣的环境。",
+    "weight": "5100 g",
+    "volume": "10500 ml",
+    "charges_per_use": 1,
+    "ammo": "battery",
+    "price": 110000,
+    "price_postapoc": 5000,
+    "material": [
+      "kevlar_layered",
+      "cotton"
+    ],
+    "material_thickness": 4,
+    "environmental_protection": 3,
+    "symbol": "[",
+    "color": "green",
+    "looks_like": "kawaii_maid_dress",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "2 L",
+        "max_contains_weight": "6 kg",
+        "moves": 75
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "2 L",
+        "max_contains_weight": "6 kg",
+        "moves": 75
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1500 ml",
+        "max_contains_weight": "3 kg",
+        "moves": 75
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1500 ml",
+        "max_contains_weight": "3 kg",
+        "moves": 75
+      },
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "flag_restriction": [
+          "BATTERY_LIGHT",
+          "BATTERY_MEDIUM"
+        ],
+        "default_magazine": "medium_battery_cell"
+      }
+    ],
+    "warmth": 10,
+    "flags": [
+      "VARSIZE",
+      "WATERPROOF",
+      "POCKETS",
+      "RAINPROOF",
+      "STURDY",
+      "FANCY"
+    ],
+    "use_action": {
+      "type": "transform",
+      "msg": "你激活了制服的恒温系统。",
+      "target": "kawaii_maid_dress_lss_on",
+      "active": true,
+      "need_charges": 1,
+      "need_charges_msg": "制服没有足够的力量了。"
+    },
+    "armor": [
+      {
+        "covers": [
+          "torso"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          7,
+          15
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          7,
+          7
+        ]
+      },
+      {
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          7,
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kawaii_maid_dress_lss_on",
+    "copy-from": "kawaii_maid_dress_lss",
+    "repairs_like": "kawaii_maid_dress_lss",
+    "type": "TOOL_ARMOR",
+    "name": {
+      "str": "战斗女仆制服LSS-PRO（开）"
+    },
+    "description": "普通的女仆装可能不足以在这个危险的新世界生存。这一改进版外表看起来仍然可爱, 而且还有褶边，但实际上隐藏了先进的装甲衬里和气温控制系统，以更好地抵御恶劣的环境。",
+    "flags": [
+      "VARSIZE",
+      "WATERPROOF",
+      "POCKETS",
+      "RAINPROOF",
+      "STURDY",
+      "FANCY",
+      "TRADER_AVOID"
+    ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ACTIVE",
+          "values": [
+            {
+              "value": "CLIMATE_CONTROL_HEAT",
+              "add": 50
+            },
+            {
+              "value": "CLIMATE_CONTROL_CHILL",
+              "add": 50
+            }
+          ]
+        }
+      ]
+    },
+    "power_draw": "1 kW",
+    "revert_to": "kawaii_maid_dress_lss",
+    "use_action": {
+      "ammo_scale": 0,
+      "type": "transform",
+      "msg": "你关掉制服的温控系统。",
+      "target": "kawaii_maid_dress_lss",
+      "menu_text": "关闭"
+    }
+  },
+  {
+    "id": "kawaii_maid_dress_long",
+    "copy-from": "maid_dress",
+    "type": "ARMOR",
+    "name": {
+      "str": "维多利亚女仆装"
+    },
+    "description": "带有长袖和长裙的女仆制服，更适合冬天穿。",
+    "weight": "350 g",
+    "price": 8000,
+    "price_postapoc": 80,
+    "material_thickness": 0.4,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "4 kg",
+        "moves": 80
+      }
+    ],
+    "warmth": 40,
+    "flags": [
+      "VARSIZE",
+      "FANCY"
+    ]
+  },
+  {
+    "id": "kawaii_wedding_dress",
+    "copy-from": "dress_wedding",
+    "type": "ARMOR",
+    "name": {
+      "str": "婚纱"
+    },
+    "description": "一套纯白色的婚纱。",
+    "armor": [
+      {
+        "covers": [
+          "torso"
+        ],
+        "coverage": 100,
+        "encumbrance": 15
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "coverage": 95,
+        "encumbrance": 15
+      },
+      {
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "coverage": 95,
+        "encumbrance": 15
+      }
+    ]
+  },
+  {
+    "id": "kawaii_sister_dress",
+    "type": "ARMOR",
+    "name": {
+      "str": "修女礼服[kawaii]"
+    },
+    "description": "一套用来服侍上帝的修女服, 散发出神圣的气息。",
+    "weight": "800 g",
+    "volume": "3500 ml",
+    "price": 18000,
+    "price_postapoc": 60,
+    "to_hit": -5,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 0.4,
+    "symbol": "[",
+    "color": "blue",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1250 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 75
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1250 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 75
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "VARSIZE",
+      "FANCY"
+    ],
+    "armor": [
+      {
+        "covers": [
+          "torso"
+        ],
+        "coverage": 95,
+        "encumbrance": [
+          10,
+          12
+        ]
+      },
+      {
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "coverage": 95,
+        "encumbrance": [
+          8,
+          8
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_hip_l",
+          "leg_hip_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          5,
+          7
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_upper_l",
+          "leg_upper_r"
+        ],
+        "coverage": 50
+      }
+    ]
+  },
+  {
+    "id": "kawaii_raincoat",
+    "type": "ARMOR",
+    "name": {
+      "str": "透明雨衣 （带风帽）"
+    },
+    "description": "一种透明的雨衣，由非常薄的乙烯基制成，非常受想要在雨天时髦的女仆们的欢迎。这种材料很薄，因此不用的时候整个雨衣可以折叠起来放进口袋里。",
+    "weight": "120 g",
+    "volume": "750 ml",
+    "price": 5000,
+    "price_postapoc": 50,
+    "material": [
+      "plastic",
+      "cotton"
+    ],
+    "material_thickness": 1,
+    "symbol": "[",
+    "color": "blue",
+    "flags": [
+      "VARSIZE",
+      "POCKETS",
+      "WATERPROOF",
+      "RAINPROOF",
+      "HOOD",
+      "OUTER",
+      "FANCY",
+      "SOFT"
+    ],
+    "use_action": {
+      "type": "transform",
+      "msg": "你摘下兜帽。",
+      "target": "kawaii_raincoat_off",
+      "menu_text": "拨动风帽"
+    },
+    "armor": [
+      {
+        "encumbrance": 10,
+        "coverage": 95,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "head"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kawaii_raincoat_off",
+    "copy-from": "kawaii_raincoat",
+    "repairs_like": "kawaii_raincoat",
+    "type": "ARMOR",
+    "name": {
+      "str": "透明雨衣 （没带风帽）"
+    },
+    "flags": [
+      "VARSIZE",
+      "POCKETS",
+      "WATERPROOF",
+      "RAINPROOF",
+      "OUTER",
+      "FANCY",
+      "SOFT"
+    ],
+    "use_action": {
+      "type": "transform",
+      "msg": "你戴上兜帽。",
+      "target": "kawaii_raincoat",
+      "menu_text": "拨动风帽"
+    },
+    "armor": [
+      {
+        "encumbrance": 7,
+        "coverage": 85,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kawaii_sailor_fuku",
+    "copy-from": "kawaii_sister_dress",
+    "type": "ARMOR",
+    "name": {
+      "str": "JK制服"
+    },
+    "description": "学校为女子高中生设计的制服。"
+  },
+  {
+    "id": "kawaii_sukumizu_kon",
+    "type": "ARMOR",
+    "name": "蓝色水手服",
+    "description": "女学生穿的游衣。",
+    "weight": "200g",
+    "volume": "1 L",
+    "price": 5250,
+    "price_postapoc": 100,
+    "material": [
+      "neoprene",
+      "cotton"
+    ],
+    "symbol": "[",
+    "color": "blue",
+    "armor": [
+      {
+        "coverage": 90,
+        "covers": [
+          "torso"
+        ],
+        "encumbrance": 6
+      },
+      {
+        "coverage": 75,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_hip_l",
+          "leg_hip_r"
+        ],
+        "encumbrance": 0
+      }
+    ],
+    "warmth": 30,
+    "material_thickness": 2,
+    "flags": [
+      "VARSIZE",
+      "SKINTIGHT",
+      "FANCY",
+      "WATER_FRIENDLY"
+    ]
+  },
+  {
+    "id": "kawaii_sukumizu_siro",
+    "copy-from": "kawaii_sukumizu_kon",
+    "type": "ARMOR",
+    "name": "可爱泳衣（白色）",
+    "color": "white"
+  },
+  {
+    "id": "kawaii_nurse",
+    "copy-from": "kawaii_sister_dress",
+    "type": "ARMOR",
+    "name": "护士制服",
+    "description": "护士的制服。",
+    "armor": [
+      {
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_lower"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          4,
+          6
+        ]
+      },
+      {
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_upper"
+        ],
+        "coverage": 30
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_hip_l",
+          "leg_hip_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          2,
+          4
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_upper_l",
+          "leg_upper_r"
+        ],
+        "coverage": 50
+      },
+      {
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "specifically_covers": [
+          "arm_shoulder_l",
+          "arm_shoulder_r"
+        ],
+        "coverage": 30,
+        "encumbrance": [
+          2,
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kawaii_maid_panties",
+    "copy-from": "kawaii_panties_base",
+    "type": "ARMOR",
+    "name": {
+      "str": "纯白内裤"
+    },
+    "description": "纯白色的内裤, 在夏天非常透气和舒适。"
+  },
+  {
+    "id": "kawaii_maid_bra",
+    "copy-from": "kawaii_bra_base",
+    "type": "ARMOR",
+    "name": {
+      "str": "纯白胸罩"
+    },
+    "description": "纯白色的胸罩, 即使是在夏天也非常透气和舒适。"
+  },
+  {
+    "id": "kawaii_maid_simapan_pink",
+    "copy-from": "kawaii_panties_base",
+    "type": "ARMOR",
+    "name": {
+      "str": "粉色条纹内裤"
+    },
+    "description": "有着粉色条纹的内裤。"
+  },
+  {
+    "id": "kawaii_maid_simabura_pink",
+    "copy-from": "kawaii_bra_base",
+    "type": "ARMOR",
+    "name": {
+      "str": "粉色条纹胸罩"
+    },
+    "description": "有着粉色条纹的胸罩。"
+  },
+  {
+    "id": "kawaii_maid_simapan_green",
+    "copy-from": "kawaii_panties_base",
+    "type": "ARMOR",
+    "name": {
+      "str": "绿色条纹内裤"
+    },
+    "description": "有着绿色条纹的内裤。"
+  },
+  {
+    "id": "kawaii_maid_simabura_green",
+    "copy-from": "kawaii_bra_base",
+    "type": "ARMOR",
+    "name": {
+      "str": "绿色条纹胸罩"
+    },
+    "description": "有着绿色条纹的胸罩。"
+  },
+  {
+    "id": "kawaii_bikini_bottom_black",
+    "copy-from": "kawaii_panties_base",
+    "type": "ARMOR",
+    "name": {
+      "str": "黑色比基尼内裤"
+    },
+    "description": "一件黑色比基尼内裤。",
+    "color": "light_red",
+    "extend": {
+      "flags": [
+        "WATER_FRIENDLY"
+      ]
+    }
+  },
+  {
+    "id": "kawaii_bikini_top_black",
+    "copy-from": "kawaii_bra_base",
+    "type": "ARMOR",
+    "name": {
+      "str": "黑色比基尼胸罩"
+    },
+    "description": "一件黑色比基尼内裤。",
+    "color": "light_red",
+    "extend": {
+      "flags": [
+        "WATER_FRIENDLY"
+      ]
+    }
+  },
+  {
+    "id": "kawaii_tailskirt_mini",
+    "type": "ARMOR",
+    "name": {
+      "str": "迷你鱼尾裙"
+    },
+    "description": "一件底部呈喇叭状展开的, 背面稍长的迷你裙。",
+    "weight": "11 g",
+    "volume": "250 ml",
+    "price": 6500,
+    "price_postapoc": 50,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 1,
+    "symbol": "[",
+    "color": "pink",
+    "flags": [
+      "VARSIZE",
+      "FANCY"
+    ],
+    "armor": [
+      {
+        "coverage": 100,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_hip_l",
+          "leg_hip_r"
+        ]
+      },
+      {
+        "coverage": 25,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_upper_l",
+          "leg_upper_r"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kawaii_vest",
+    "copy-from": "vest",
+    "type": "ARMOR",
+    "name": {
+      "str": "工具背心"
+    },
+    "description": "有许多口袋的改良型工具背心"
+  },
+  {
+    "id": "kawaii_maid_hat",
+    "type": "ARMOR",
+    "name": {
+      "str": "女仆头饰"
+    },
+    "description": "女仆装中最重要的部分之一。无论是什么样的天气，女佣都不能把它脱下来。训练有素的女仆可以将她们的意志传入其中，使她们的头部在冬天保持温暖。（切换以更改温度）",
+    "weight": "10 g",
+    "volume": "250 ml",
+    "price": 2500,
+    "price_postapoc": 50,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 1,
+    "symbol": "[",
+    "color": "white",
+    "warmth": 0,
+    "flags": [
+      "VARSIZE",
+      "FANCY",
+      "WATERPROOF",
+      "RAINPROOF"
+    ],
+    "use_action": {
+      "type": "transform",
+      "msg": "身为女仆的骄傲可以防止寒冷困扰你的头部。",
+      "target": "kawaii_maid_hat_kiai",
+      "menu_text": "意志注入"
+    },
+    "armor": [
+      {
+        "encumbrance": 3,
+        "coverage": 25,
+        "covers": [
+          "head"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kawaii_maid_hat_kiai",
+    "copy-from": "kawaii_maid_hat",
+    "repairs_like": "kawaii_maid_hat",
+    "type": "ARMOR",
+    "name": {
+      "str": "女仆头饰"
+    },
+    "warmth": 30,
+    "use_action": {
+      "type": "transform",
+      "msg": "你停止将你的精神力注入头环。",
+      "target": "kawaii_maid_hat",
+      "menu_text": "停止注入意志"
+    }
+  },
+  {
+    "id": "kawaii_maid_hat_thermal_off",
+    "type": "TOOL_ARMOR",
+    "category": "clothing",
+    "name": {
+      "str": "保暖女仆头饰"
+    },
+    "description": "女仆头饰是女仆制服最重要的部分之一。这个头饰包含了一个用电池供电的保暖系统。不管它看起来怎么样, 戴上它会让你有个女仆的样子。",
+    "weight": "15 g",
+    "volume": "250 ml",
+    "price": 5000,
+    "price_postapoc": 250,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 1,
+    "symbol": "[",
+    "color": "white",
+    "looks_like": "kawaii_maid_hat",
+    "warmth": 10,
+    "flags": [
+      "VARSIZE",
+      "FANCY",
+      "WATERPROOF",
+      "RAINPROOF"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "flag_restriction": [
+          "BATTERY_LIGHT",
+          "BATTERY_ULTRA_LIGHT"
+        ],
+        "default_magazine": "light_battery_cell"
+      }
+    ],
+    "charges_per_use": 1,
+    "ammo": "battery",
+    "use_action": {
+      "type": "transform",
+      "msg": "你激活了头饰的加热系统",
+      "target": "kawaii_maid_hat_thermal_on",
+      "active": true,
+      "menu_text": "激活保暖系统",
+      "need_charges": 1,
+      "need_charges_msg": "%s没有足够的电源。"
+    },
+    "armor": [
+      {
+        "encumbrance": 3,
+        "coverage": 25,
+        "covers": [
+          "head"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kawaii_maid_hat_thermal_on",
+    "copy-from": "kawaii_maid_hat_thermal_off",
+    "repairs_like": "kawaii_maid_hat_thermal_off",
+    "type": "TOOL_ARMOR",
+    "name": {
+      "str": "保暖女仆头饰（开）"
+    },
+    "warmth": 80,
+    "power_draw": "75 W",
+    "revert_to": "kawaii_maid_hat_thermal_off",
+    "flags": [
+      "VARSIZE",
+      "FANCY",
+      "WATERPROOF",
+      "RAINPROOF",
+      "TRADER_AVOID"
+    ],
+    "use_action": {
+      "ammo_scale": 0,
+      "type": "transform",
+      "msg": "你关闭了头饰的保暖系统",
+      "target": "kawaii_maid_hat_thermal_off",
+      "menu_text": "关闭保暖系统"
+    }
+  },
+  {
+    "id": "kawaii_maid_hat_lss",
+    "type": "TOOL_ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "女仆头饰LSS-PRO"
+    },
+    "description": "无论环境多么恶劣，女仆都必须保持她们身为女仆的自尊，尽职尽责。女仆的头饰不仅仅是制服的一部分，它是女仆骄傲的象征。",
+    "weight": "628 g",
+    "volume": "500 ml",
+    "price": 58000,
+    "price_postapoc": 3000,
+    "to_hit": -1,
+    "bashing": 10,
+    "material": [
+      "kevlar_layered",
+      "cotton"
+    ],
+    "material_thickness": 4,
+    "environmental_protection": 3,
+    "symbol": "[",
+    "color": "white",
+    "looks_like": "kawaii_maid_hat",
+    "warmth": 20,
+    "flags": [
+      "VARSIZE",
+      "FANCY",
+      "WATERPROOF",
+      "RAINPROOF",
+      "STURDY"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "flag_restriction": [
+          "BATTERY_LIGHT",
+          "BATTERY_ULTRA_LIGHT"
+        ],
+        "default_magazine": "light_battery_cell"
+      }
+    ],
+    "charges_per_use": 1,
+    "ammo": "battery",
+    "use_action": {
+      "type": "transform",
+      "msg": "你激活了头饰的升温模式。",
+      "target": "kawaii_maid_hat_lss1",
+      "active": true,
+      "menu_text": "改变气候控制设置",
+      "need_charges": 1,
+      "need_charges_msg": "%s没有足够的电源。"
+    },
+    "armor": [
+      {
+        "encumbrance": 10,
+        "coverage": 100,
+        "covers": [
+          "head"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kawaii_maid_hat_lss1",
+    "copy-from": "kawaii_maid_hat_lss",
+    "repairs_like": "kawaii_maid_hat_lss",
+    "type": "TOOL_ARMOR",
+    "name": {
+      "str": "女仆头饰 LSS-PRO （保暖）"
+    },
+    "warmth": 65,
+    "power_draw": "75 W",
+    "revert_to": "kawaii_maid_hat_lss",
+    "flags": [
+      "VARSIZE",
+      "FANCY",
+      "WATERPROOF",
+      "RAINPROOF",
+      "STURDY",
+      "TRADER_AVOID"
+    ],
+    "use_action": {
+      "type": "transform",
+      "msg": "你激活了头饰的降温模式。",
+      "target": "kawaii_maid_hat_lss2",
+      "active": true,
+      "menu_text": "改变气候控制设置",
+      "need_charges": 1,
+      "need_charges_msg": "%s没有足够的电源。"
+    }
+  },
+  {
+    "id": "kawaii_maid_hat_lss2",
+    "copy-from": "kawaii_maid_hat_lss",
+    "repairs_like": "kawaii_maid_hat_lss",
+    "type": "TOOL_ARMOR",
+    "name": {
+      "str": "女仆头饰 LSS-PRO （冷却）"
+    },
+    "warmth": 0,
+    "power_draw": "75 W",
+    "revert_to": "kawaii_maid_hat_lss",
+    "flags": [
+      "VARSIZE",
+      "FANCY",
+      "WATERPROOF",
+      "RAINPROOF",
+      "STURDY",
+      "TRADER_AVOID"
+    ],
+    "use_action": {
+      "ammo_scale": 0,
+      "type": "transform",
+      "msg": "你关闭了头饰的温度控制系统。",
+      "target": "kawaii_maid_hat_lss",
+      "menu_text": "改变气候控制设置"
+    }
+  },
+  {
+    "id": "kawaii_hitec_megane",
+    "copy-from": "kawaii_glasses_base",
+    "type": "TOOL_ARMOR",
+    "category": "clothing",
+    "name": {
+      "str": "高科技眼镜 （关）"
+    },
+    "description": "这些先进的眼镜不仅能起到夜视以及红外扫描仪的作用，而且能防炫光，抵抗化学腐蚀，甚至它还能完全阻挡光线，让人可以在明亮的场所入睡。",
+    "weight": "90 g",
+    "price": 92000,
+    "price_postapoc": 3500,
+    "looks_like": "kawaii_maid_megane_02",
+    "qualities": [
+      [
+        "GLARE",
+        1
+      ]
+    ],
+    "flags": [
+      "WATER_FRIENDLY",
+      "FIRESTARTER",
+      "FANCY",
+      "FIX_NEARSIGHT",
+      "FIX_FARSIGHT",
+      "SUN_GLASSES",
+      "FLASH_PROTECTION"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "flag_restriction": [
+          "BATTERY_ULTRA_LIGHT"
+        ],
+        "default_magazine": "light_minus_battery_cell"
+      }
+    ],
+    "charges_per_use": 1,
+    "ammo": "battery",
+    "use_action": [
+      {
+        "type": "transform",
+        "menu_text": "切换视觉模式",
+        "msg": "你把眼镜切换成夜视模式。",
+        "target": "kawaii_hitec_megane_nv",
+        "active": true,
+        "need_charges": 1,
+        "need_charges_msg": "%s没有足够的电源。"
+      },
+      {
+        "type": "firestarter",
+        "moves": 1000,
+        "moves_slow": 25000,
+        "need_sunlight": true
+      }
+    ]
+  },
+  {
+    "id": "kawaii_hitec_megane_nv",
+    "copy-from": "kawaii_hitec_megane",
+    "repairs_like": "kawaii_hitec_megane",
+    "type": "TOOL_ARMOR",
+    "name": {
+      "str": "高科技眼镜 （夜视）"
+    },
+    "flags": [
+      "WATER_FRIENDLY",
+      "FANCY",
+      "FIX_NEARSIGHT",
+      "FIX_FARSIGHT",
+      "GNV_EFFECT",
+      "TRADER_AVOID"
+    ],
+    "power_draw": "10 W",
+    "revert_to": "kawaii_hitec_megane",
+    "use_action": {
+      "type": "transform",
+      "menu_text": "切换视觉模式",
+      "msg": "你把眼镜切换成红外模式。",
+      "target": "kawaii_hitec_megane_ir",
+      "active": true,
+      "need_charges": 1,
+      "need_charges_msg": "%s没有足够的电源。"
+    }
+  },
+  {
+    "id": "kawaii_hitec_megane_ir",
+    "copy-from": "kawaii_hitec_megane",
+    "repairs_like": "kawaii_hitec_megane",
+    "type": "TOOL_ARMOR",
+    "name": {
+      "str": "高科技眼镜 （红外）"
+    },
+    "flags": [
+      "WATER_FRIENDLY",
+      "FANCY",
+      "FIX_NEARSIGHT",
+      "FIX_FARSIGHT",
+      "IR_EFFECT",
+      "TRADER_AVOID"
+    ],
+    "power_draw": "10 W",
+    "revert_to": "kawaii_hitec_megane",
+    "use_action": {
+      "ammo_scale": 0,
+      "type": "transform",
+      "menu_text": "切换视觉模式",
+      "msg": "你把眼镜换成眼罩模式。",
+      "target": "kawaii_hitec_megane_blind"
+    }
+  },
+  {
+    "id": "kawaii_hitec_megane_blind",
+    "copy-from": "kawaii_hitec_megane",
+    "repairs_like": "kawaii_hitec_megane",
+    "type": "TOOL_ARMOR",
+    "name": {
+      "str": "高科技眼镜 （目盲）"
+    },
+    "flags": [
+      "WATER_FRIENDLY",
+      "FANCY",
+      "FIX_NEARSIGHT",
+      "FIX_FARSIGHT",
+      "BLIND",
+      "TRADER_AVOID"
+    ],
+    "use_action": {
+      "ammo_scale": 0,
+      "type": "transform",
+      "menu_text": "切换视觉模式",
+      "msg": "将眼镜恢复到默认模式。",
+      "target": "kawaii_hitec_megane"
+    }
+  },
+  {
+    "id": "kawaii_maid_megane_01",
+    "copy-from": "kawaii_glasses_base",
+    "type": "ARMOR",
+    "name": {
+      "str": "黑色半框眼镜"
+    },
+    "description": "一个带上这种眼镜的一个女仆，决不会错过一点灰尘，也不会放过任何主人健康上的迹象。（切换以调整位置）",
+    "use_action": [
+      {
+        "type": "transform",
+        "msg": "你放下眼镜",
+        "target": "kawaii_maid_megane_02",
+        "menu_text": "调整眼镜"
+      },
+      {
+        "type": "firestarter",
+        "moves": 1000,
+        "moves_slow": 25000,
+        "need_sunlight": true
+      }
+    ]
+  },
+  {
+    "id": "kawaii_maid_megane_02",
+    "copy-from": "kawaii_glasses_base",
+    "type": "ARMOR",
+    "name": {
+      "str": "黑色半框眼镜"
+    },
+    "description": "一个带上这种眼镜的一个女仆，决不会错过一点灰尘，也不会放过任何主人健康上的迹象。（切换以调整位置）",
+    "use_action": [
+      {
+        "type": "transform",
+        "msg": "你举杯",
+        "target": "kawaii_maid_megane_01",
+        "menu_text": "调整眼镜"
+      },
+      {
+        "type": "firestarter",
+        "moves": 1000,
+        "moves_slow": 25000,
+        "need_sunlight": true
+      }
+    ]
+  },
+  {
+    "id": "kawaii_maid_megane_03",
+    "copy-from": "kawaii_glasses_base",
+    "type": "ARMOR",
+    "name": {
+      "str": "红色半框眼镜"
+    },
+    "description": "一个带上这种眼镜的一个女仆，决不会错过一点灰尘，也不会放过任何主人健康上的迹象。（切换以调整位置）",
+    "use_action": {
+      "type": "transform",
+      "msg": "你放下眼镜",
+      "target": "kawaii_maid_megane_04",
+      "menu_text": "调整眼镜"
+    }
+  },
+  {
+    "id": "kawaii_maid_megane_04",
+    "copy-from": "kawaii_glasses_base",
+    "type": "ARMOR",
+    "name": {
+      "str": "红色半框眼镜"
+    },
+    "description": "一个带上这种眼镜的一个女仆，决不会错过一点灰尘，也不会放过任何主人健康上的迹象。（切换以调整位置）",
+    "use_action": {
+      "type": "transform",
+      "msg": "你举杯",
+      "target": "kawaii_maid_megane_03",
+      "menu_text": "调整眼镜"
+    }
+  },
+  {
+    "id": "kawaii_maid_megane_05",
+    "copy-from": "kawaii_glasses_base",
+    "type": "ARMOR",
+    "name": {
+      "str": "大号红色半框眼镜"
+    },
+    "description": "一个带上这种眼镜的一个女仆，决不会错过一点灰尘，也不会放过任何主人健康上的迹象。"
+  },
+  {
+    "id": "kawaii_maid_megane_06",
+    "copy-from": "kawaii_glasses_base",
+    "type": "ARMOR",
+    "name": {
+      "str": "可爱的黄铜单片眼镜"
+    },
+    "description": "一个带上这种眼镜的一个女仆，决不会错过一点灰尘，也不会放过任何主人健康上的迹象。"
+  },
+  {
+    "id": "kawaii_maid_megane_07",
+    "copy-from": "kawaii_glasses_base",
+    "type": "ARMOR",
+    "name": {
+      "str": "可爱的带链黄铜单片眼镜"
+    },
+    "description": "一个带上这种眼镜的一个女仆，决不会错过一点灰尘，也不会放过任何主人健康上的迹象。"
+  },
+  {
+    "id": "kawaii_maid_megane_08",
+    "copy-from": "kawaii_glasses_base",
+    "type": "ARMOR",
+    "name": {
+      "str": "黑色全框眼镜"
+    },
+    "description": "一个带上这种眼镜的一个女仆，决不会错过一点灰尘，也不会放过任何主人健康上的迹象。"
+  },
+  {
+    "id": "kawaii_maid_megane_09",
+    "copy-from": "kawaii_glasses_base",
+    "type": "ARMOR",
+    "name": {
+      "str": "红色全框眼镜"
+    },
+    "description": "一个带上这种眼镜的一个女仆，决不会错过一点灰尘，也不会放过任何主人健康上的迹象。"
+  },
+  {
+    "id": "kawaii_hat_cotton",
+    "type": "ARMOR",
+    "name": {
+      "str": "白色棉帽"
+    },
+    "description": "这是一顶温暖的棉帽，颜色为白色，这样就能更好地搭配女仆装了。",
+    "weight": "78 g",
+    "volume": "250 ml",
+    "price": 2000,
+    "price_postapoc": 50,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 1,
+    "symbol": "[",
+    "color": "dark_gray",
+    "warmth": 20,
+    "flags": [
+      "VARSIZE"
+    ],
+    "armor": [
+      {
+        "coverage": 65,
+        "covers": [
+          "head"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kawaii_balclava",
+    "copy-from": "balclava",
+    "type": "ARMOR",
+    "name": {
+      "str": "时尚巴拉克拉法帽 "
+    },
+    "description": "“我拒绝遮住我可爱的脸！”它的抗寒能力不如普通的巴拉克拉瓦，但这是为了时尚而必须做出的牺牲。（巴拉克拉瓦（Balaclava，/ˌbæləˈklɑːvə/）头套是一种衣物，戴在头上仅暴露出脸的一部分。）",
+    "warmth": 25
+  },
+  {
+    "id": "kawaii_wedding_veil_a",
+    "type": "ARMOR",
+    "name": {
+      "str": "婚礼面纱"
+    },
+    "description": "一顶简单美丽的婚礼面纱。",
+    "weight": "10 g",
+    "volume": "250 ml",
+    "price": 9500,
+    "price_postapoc": 50,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 1,
+    "symbol": "[",
+    "color": "white",
+    "warmth": 15,
+    "flags": [
+      "VARSIZE",
+      "FANCY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 5,
+        "coverage": 70,
+        "covers": [
+          "head"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kawaii_wedding_veil_b",
+    "copy-from": "kawaii_wedding_veil_a",
+    "type": "ARMOR",
+    "name": {
+      "str": "婚礼装饰面纱"
+    },
+    "description": "一顶有着额外装饰品的婚礼面纱。"
+  },
+  {
+    "id": "kawaii_sister_veil",
+    "type": "ARMOR",
+    "name": {
+      "str": "修女头纱[kawaii]"
+    },
+    "description": "一层侍奉神的修女的面纱。",
+    "weight": "10 g",
+    "volume": "250 ml",
+    "price": 9500,
+    "price_postapoc": 50,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 1,
+    "symbol": "[",
+    "color": "white",
+    "warmth": 5,
+    "flags": [
+      "VARSIZE",
+      "FANCY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 5,
+        "coverage": 95,
+        "covers": [
+          "head"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kawaii_nurse_cap",
+    "type": "ARMOR",
+    "name": "护士帽",
+    "description": "护士的帽子。",
+    "weight": "10 g",
+    "volume": "250 ml",
+    "price": 9500,
+    "price_postapoc": 50,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 1,
+    "symbol": "[",
+    "color": "white",
+    "warmth": 5,
+    "flags": [
+      "VARSIZE",
+      "FANCY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 5,
+        "coverage": 95,
+        "covers": [
+          "head"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kawaii_wig_01",
+    "copy-from": "kawaii_acc_base",
+    "type": "ARMOR",
+    "name": {
+      "str": "波浪粉色假长发"
+    },
+    "description": "一卷长长的, 粉色的波浪假发。"
+  },
+  {
+    "id": "kawaii_acc_hobeni",
+    "copy-from": "kawaii_acc_base",
+    "type": "ARMOR",
+    "name": "可爱腮红",
+    "description": "少女心让人脸红。"
+  },
+  {
+    "id": "kawaii_acc_eye_light",
+    "copy-from": "kawaii_acc_base",
+    "type": "ARMOR",
+    "name": "可爱星星眼",
+    "description": "眼睛闪烁着生命的光芒。（用于为没有亮点的眼睛添加高光）"
+  },
+  {
+    "id": "kawaii_wig_02",
+    "copy-from": "kawaii_acc_base",
+    "type": "ARMOR",
+    "name": "可爱的金发辫子",
+    "description": "一根装饰性的长发，配一条白色的缎带，可以提升你的姐力。"
+  },
+  {
+    "id": "kawaii_acc_darkface",
+    "copy-from": "kawaii_acc_base",
+    "type": "ARMOR",
+    "name": "可爱的黑脸",
+    "description": "当你计划做坏事时的表情。"
+  },
+  {
+    "id": "kawaii_acc_headset",
+    "copy-from": "kawaii_acc_base",
+    "type": "ARMOR",
+    "name": "高科技耳机",
+    "description": "采用下一代技术的高科技耳机（装饰性）"
+  },
+  {
+    "id": "kawaii_wig_03",
+    "copy-from": "kawaii_acc_base",
+    "type": "ARMOR",
+    "name": "可爱的金色长辫子",
+    "description": "带有白色缎带的优雅长马尾。"
+  },
+  {
+    "id": "kawaii_wig_04",
+    "copy-from": "kawaii_acc_base",
+    "type": "ARMOR",
+    "name": "金发波波假发",
+    "description": "这是一个蓬松的波波假发。"
+  },
+  {
+    "id": "kawaii_wig_05",
+    "copy-from": "kawaii_acc_base",
+    "type": "ARMOR",
+    "name": "奶茶色鲍勃假发",
+    "description": "这是一个蓬松的波波假发。"
+  },
+  {
+    "id": "kawaii_wig_06",
+    "copy-from": "kawaii_acc_base",
+    "type": "ARMOR",
+    "name": "粉红色波波假发",
+    "description": "这是一个蓬松的波波假发。"
+  },
+  {
+    "id": "kawaii_wig_07",
+    "copy-from": "kawaii_acc_base",
+    "type": "ARMOR",
+    "name": "蓝色遮眼波波假发",
+    "description": "遮住一只眼睛的发型。"
+  },
+  {
+    "id": "kawaii_wig_08",
+    "copy-from": "kawaii_acc_base",
+    "type": "ARMOR",
+    "name": "粉红色遮眼波波假发",
+    "description": "遮住一只眼睛的发型。"
+  },
+  {
+    "id": "kawaii_wig_09",
+    "copy-from": "kawaii_acc_base",
+    "type": "ARMOR",
+    "name": "银色遮眼波波假发",
+    "description": "遮住一只眼睛的发型。"
+  },
+  {
+    "id": "kawaii_wig_10",
+    "copy-from": "kawaii_acc_base",
+    "type": "ARMOR",
+    "name": "浅绿色精灵假发",
+    "description": "模仿精灵设计的发型。"
+  },
+  {
+    "id": "kawaii_wig_11",
+    "copy-from": "kawaii_acc_base",
+    "type": "ARMOR",
+    "name": "金发精灵假发",
+    "description": "模仿精灵设计的发型。"
+  },
+  {
+    "id": "kawaii_wig_12",
+    "copy-from": "kawaii_acc_base",
+    "type": "ARMOR",
+    "name": "金发中长假发",
+    "description": "一个放松的中长头发。"
+  },
+  {
+    "id": "kawaii_wig_13",
+    "copy-from": "kawaii_acc_base",
+    "type": "ARMOR",
+    "name": "奶茶色中长假发",
+    "description": "一个放松的中长头发。"
+  },
+  {
+    "id": "kawaii_wig_14",
+    "copy-from": "kawaii_acc_base",
+    "type": "ARMOR",
+    "name": "黑色中长假发",
+    "description": "一个放松的中长头发。"
+  },
+  {
+    "id": "kawaii_wig_15",
+    "copy-from": "kawaii_acc_base",
+    "type": "ARMOR",
+    "name": "银色半长假发",
+    "description": "一个放松的中长头发。"
+  },
+  {
+    "id": "kawaii_wig_16",
+    "copy-from": "kawaii_acc_base",
+    "type": "ARMOR",
+    "name": "金色长马尾假发",
+    "description": "长发轻轻地扎在一起。"
+  },
+  {
+    "id": "kawaii_wig_17",
+    "copy-from": "kawaii_acc_base",
+    "type": "ARMOR",
+    "name": "奶茶色长马尾假发",
+    "description": "长发轻轻地扎在一起。"
+  },
+  {
+    "id": "kawaii_wig_18",
+    "copy-from": "kawaii_acc_base",
+    "type": "ARMOR",
+    "name": "冰蓝色长马尾假发",
+    "description": "长发轻轻地扎在一起。"
+  },
+  {
+    "id": "kawaii_eff_heart",
+    "copy-from": "kawaii_acc_base",
+    "type": "ARMOR",
+    "name": "爱心气泡特效",
+    "description": "爱心气泡特效。"
+  },
+  {
+    "id": "kawaii_eff_hatena",
+    "copy-from": "kawaii_acc_base",
+    "type": "ARMOR",
+    "name": "？气泡特效",
+    "description": "一个？气泡。"
+  },
+  {
+    "id": "kawaii_eff_bikkuri",
+    "copy-from": "kawaii_acc_base",
+    "type": "ARMOR",
+    "name": "！气泡特效",
+    "description": "一个！气泡。"
+  },
+  {
+    "id": "kawaii_eff_ase",
+    "copy-from": "kawaii_acc_base",
+    "type": "ARMOR",
+    "name": "流汗气泡特效",
+    "description": "流汗气泡特效。"
+  },
+  {
+    "id": "kawaii_eff_tere",
+    "copy-from": "kawaii_acc_base",
+    "type": "ARMOR",
+    "name": "///气泡特效",
+    "description": "尴尬脸红气泡特效。"
+  },
+  {
+    "id": "kawaii_acc_angelring",
+    "copy-from": "kawaii_acc_base",
+    "type": "ARMOR",
+    "name": "天使光环",
+    "description": "这不是飞环。"
+  },
+  {
+    "id": "kawaii_maid_hardcase",
+    "type": "ARMOR",
+    "name": {
+      "str": "硬壳箱"
+    },
+    "description": "一个巨大的长方形硬盒。通常用于携带大型乐器、枪支或敏感的电气设备。",
+    "weight": "3500 g",
+    "volume": "38 L",
+    "longest_side": "105 cm",
+    "price": 9000,
+    "price_postapoc": 3000,
+    "material": [
+      "leather",
+      "steel"
+    ],
+    "material_thickness": 2,
+    "symbol": "[",
+    "color": "dark_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "max_contains_volume": "35 L",
+        "max_contains_weight": "40 kg",
+        "max_item_length": "100 cm",
+        "moves": 300
+      }
+    ],
+    "warmth": 0,
+    "flags": [
+      "BELTED",
+      "WATER_FRIENDLY",
+      "STURDY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 25,
+        "coverage": 100,
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_hanging_back"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kawaii_maid_hardcase_mini",
+    "type": "ARMOR",
+    "name": {
+      "str": "迷你硬壳箱"
+    },
+    "description": "一个相对普通版小一点的硬壳箱。",
+    "weight": "2500 g",
+    "volume": "28 L",
+    "longest_side": "95 cm",
+    "price": 8100,
+    "price_postapoc": 250,
+    "material": [
+      "leather",
+      "steel"
+    ],
+    "material_thickness": 2,
+    "symbol": "[",
+    "color": "dark_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "max_contains_volume": "25 L",
+        "max_contains_weight": "30 kg",
+        "max_item_length": "90 cm",
+        "moves": 300
+      }
+    ],
+    "warmth": 0,
+    "flags": [
+      "BELTED",
+      "WATER_FRIENDLY",
+      "STURDY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 15,
+        "coverage": 80,
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_hanging_back"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kawaii_maid_hardcase_slim",
+    "type": "ARMOR",
+    "name": {
+      "str": "细长硬壳箱"
+    },
+    "description": "一个细长版的硬壳箱。",
+    "weight": "1500 g",
+    "volume": "18 L",
+    "longest_side": "75 cm",
+    "price": 6700,
+    "price_postapoc": 210,
+    "material": [
+      "leather",
+      "steel"
+    ],
+    "material_thickness": 2,
+    "symbol": "[",
+    "color": "dark_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "max_contains_volume": "15 L",
+        "max_contains_weight": "20 kg",
+        "max_item_length": "70 cm",
+        "moves": 300
+      }
+    ],
+    "warmth": 0,
+    "flags": [
+      "BELTED",
+      "WATER_FRIENDLY",
+      "STURDY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 8,
+        "coverage": 60,
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_hanging_back"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kawaii_angel_wing_bag",
+    "type": "ARMOR",
+    "name": "天使翅膀",
+    "description": "如果你有一颗天使般的心，拥有它并不是什么大不了的事。",
+    "weight": "20 g",
+    "volume": "2 L",
+    "price": 6700,
+    "price_postapoc": 210,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 0.2,
+    "symbol": "[",
+    "color": "dark_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": false,
+        "max_contains_volume": "35 L",
+        "max_contains_weight": "40 kg",
+        "max_item_length": "100 cm",
+        "moves": 300
+      }
+    ],
+    "warmth": 0,
+    "flags": [
+      "BELTED",
+      "WATER_FRIENDLY",
+      "STURDY"
+    ],
+    "armor": [
+      {
+        "encumbrance": [
+          5,
+          30
+        ],
+        "coverage": 100,
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_hanging_back"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kawaii_secretpouch",
+    "type": "ARMOR",
+    "name": {
+      "str": "吊袜带钱包"
+    },
+    "description": "一个小储物袋，可以放在裙子下面，用吊袜带托起。",
+    "weight": "250 g",
+    "volume": "500 ml",
+    "price": 3500,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 0.2,
+    "symbol": "[",
+    "color": "dark_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1500 ml",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "15 cm",
+        "moves": 150
+      }
+    ],
+    "flags": [
+      "BELTED",
+      "WATER_FRIENDLY"
+    ],
+    "armor": [
+      {
+        "encumbrance": [
+          1,
+          2
+        ],
+        "coverage": 13,
+        "covers": [
+          "leg_l"
+        ],
+        "specifically_covers": [
+          "leg_upper_l"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kawaii_maid_niso_thick",
+    "type": "ARMOR",
+    "name": {
+      "str": "厚及膝长袜"
+    },
+    "description": "一双厚及膝长袜。厚厚的, 能让穿着它的人的腿部保持温暖。",
+    "weight": "90 g",
+    "volume": "250 ml",
+    "price": 500,
+    "price_postapoc": 250,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 0.2,
+    "symbol": "[",
+    "color": "dark_gray",
+    "warmth": 35,
+    "flags": [
+      "VARSIZE",
+      "SKINTIGHT",
+      "FANCY"
+    ],
+    "armor": [
+      {
+        "coverage": 100,
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ]
+      },
+      {
+        "coverage": 100,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_lower_l",
+          "leg_lower_r",
+          "leg_knee_l",
+          "leg_knee_r"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kawaii_maid_niso_thin",
+    "type": "ARMOR",
+    "name": {
+      "str": "薄及膝长袜"
+    },
+    "description": "一双薄及膝长袜。它很薄，穿上后会有点透明。",
+    "weight": "40 g",
+    "volume": "250 ml",
+    "price": 500,
+    "price_postapoc": 250,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 0.1,
+    "symbol": "[",
+    "color": "dark_gray",
+    "warmth": 2,
+    "flags": [
+      "VARSIZE",
+      "SKINTIGHT",
+      "FANCY"
+    ],
+    "armor": [
+      {
+        "coverage": 100,
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ]
+      },
+      {
+        "coverage": 100,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_lower_l",
+          "leg_lower_r",
+          "leg_knee_l",
+          "leg_knee_r"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kawaii_tights_black",
+    "type": "ARMOR",
+    "name": {
+      "str": "黑色连裤袜"
+    },
+    "description": "温暖的连裤丝袜。",
+    "weight": "100 g",
+    "volume": "250 ml",
+    "price": 500,
+    "price_postapoc": 250,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 0.1,
+    "symbol": "[",
+    "color": "dark_gray",
+    "warmth": 10,
+    "flags": [
+      "VARSIZE",
+      "SKINTIGHT",
+      "FANCY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 0,
+        "coverage": 100,
+        "covers": [
+          "foot_l",
+          "foot_r",
+          "leg_l",
+          "leg_r"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kawaii_tights_white",
+    "copy-from": "kawaii_tights_black",
+    "type": "ARMOR",
+    "name": {
+      "str": "白色连裤袜"
+    },
+    "description": "温暖的连裤丝袜。"
+  },
+  {
+    "id": "kawaii_socks_white",
+    "type": "ARMOR",
+    "name": {
+      "str": "白袜子"
+    },
+    "description": "一对学生们经常穿的白色袜子。",
+    "weight": "10 g",
+    "volume": "250 ml",
+    "price": 100,
+    "price_postapoc": 50,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 0.2,
+    "symbol": "[",
+    "color": "white",
+    "warmth": 5,
+    "flags": [
+      "VARSIZE",
+      "SKINTIGHT"
+    ],
+    "armor": [
+      {
+        "encumbrance": 0,
+        "coverage": 100,
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kawaii_maid_garter",
+    "type": "ARMOR",
+    "name": {
+      "str": "吊袜带"
+    },
+    "description": "一种黑色吊袜带，从设计上一般和长筒丝袜一起穿。",
+    "weight": "10 g",
+    "volume": "250 ml",
+    "price": 500,
+    "price_postapoc": 250,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 0.1,
+    "symbol": "[",
+    "color": "dark_gray",
+    "warmth": 0,
+    "flags": [
+      "VARSIZE",
+      "SKINTIGHT"
+    ],
+    "armor": [
+      {
+        "encumbrance": 1,
+        "coverage": 38,
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_lower"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kawaii_dress_shoes",
+    "type": "ARMOR",
+    "name": {
+      "str": "正装皮鞋"
+    },
+    "description": "与女仆装非常搭配的皮鞋。",
+    "weight": "500 g",
+    "volume": "1250 ml",
+    "price": 12000,
+    "price_postapoc": 250,
+    "material": [
+      "leather"
+    ],
+    "material_thickness": 2,
+    "symbol": "[",
+    "color": "dark_gray",
+    "warmth": 10,
+    "flags": [
+      "VARSIZE",
+      "FANCY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 5,
+        "coverage": 60,
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kawaii_loafer",
+    "copy-from": "kawaii_dress_shoes",
+    "type": "ARMOR",
+    "name": {
+      "str": "棕色休闲鞋"
+    },
+    "description": "一双学生们经常穿棕色便鞋。",
+    "weight": "400 g"
+  },
+  {
+    "id": "kawaii_boots",
+    "type": "ARMOR",
+    "name": {
+      "str": "皮靴"
+    },
+    "description": "皮制的靴，可与多种服装搭配穿着。",
+    "weight": "800 g",
+    "volume": "2 L",
+    "price": 20000,
+    "price_postapoc": 750,
+    "material": [
+      "leather"
+    ],
+    "material_thickness": 2.5,
+    "environmental_protection": 2,
+    "symbol": "[",
+    "color": "dark_gray",
+    "warmth": 20,
+    "flags": [
+      "VARSIZE",
+      "FANCY",
+      "WATERPROOF"
+    ],
+    "armor": [
+      {
+        "encumbrance": 12,
+        "coverage": 90,
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kawaii_boots_hi",
+    "type": "ARMOR",
+    "name": {
+      "str": "女仆高跟靴"
+    },
+    "description": "只有经过挑选的女仆才允许穿的纯白色高跟鞋。它们给穿戴者一种威严的感觉。",
+    "weight": "1000 g",
+    "volume": "2 L",
+    "price": 24000,
+    "price_postapoc": 5000,
+    "material": [
+      "kevlar",
+      "nomex"
+    ],
+    "material_thickness": 2.5,
+    "environmental_protection": 3,
+    "symbol": "[",
+    "color": "white",
+    "warmth": 25,
+    "flags": [
+      "VARSIZE",
+      "FANCY",
+      "WATERPROOF",
+      "STURDY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 12,
+        "coverage": 100,
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kawaii_shoes_hi",
+    "type": "ARMOR",
+    "name": {
+      "str": "女仆高跟鞋"
+    },
+    "description": "只有经过挑选的女仆才允许穿纯白高跟鞋。它们给穿戴者一种威严的感觉。",
+    "weight": "600 g",
+    "volume": "1250 ml",
+    "price": 20000,
+    "price_postapoc": 4000,
+    "material": [
+      "kevlar",
+      "nomex"
+    ],
+    "material_thickness": 2.5,
+    "environmental_protection": 3,
+    "symbol": "[",
+    "color": "white",
+    "warmth": 10,
+    "flags": [
+      "VARSIZE",
+      "FANCY",
+      "WATERPROOF",
+      "STURDY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 10,
+        "coverage": 90,
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kawaii_scarf",
+    "type": "TOOL_ARMOR",
+    "category": "clothing",
+    "symbol": "[",
+    "color": "light_gray",
+    "name": {
+      "str": "可爱的时尚围巾"
+    },
+    "description": "有着可爱图案的围巾。",
+    "price": 2000,
+    "price_postapoc": 100,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 1,
+    "environmental_protection": 3,
+    "weight": "60 g",
+    "volume": "500 ml",
+    "use_action": {
+      "type": "transform",
+      "msg": "你放宽你的%s。",
+      "target": "kawaii_scarf_loose",
+      "menu_text": "围松"
+    },
+    "flags": [
+      "OUTER",
+      "FANCY"
+    ],
+    "warmth": 60,
+    "armor": [
+      {
+        "encumbrance": 15,
+        "coverage": 85,
+        "covers": [
+          "mouth"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kawaii_scarf_loose",
+    "copy-from": "kawaii_scarf",
+    "repairs_like": "kawaii_scarf",
+    "type": "TOOL_ARMOR",
+    "symbol": "[",
+    "color": "light_gray",
+    "name": {
+      "str": "可爱的时尚围巾（松）"
+    },
+    "use_action": {
+      "type": "transform",
+      "msg": "你稍稍裹紧你的 %s。",
+      "target": "kawaii_scarf",
+      "menu_text": "围紧"
+    },
+    "flags": [
+      "OUTER",
+      "ALLOWS_NATURAL_ATTACKS",
+      "FANCY"
+    ],
+    "warmth": 20
+  },
+  {
+    "id": "kawaii_gloves_light",
+    "type": "ARMOR",
+    "name": "女仆手套",
+    "description": "一副用蕾丝装饰的手套。",
+    "weight": "63 g",
+    "volume": "250 ml",
+    "price": 1100,
+    "price_postapoc": 250,
+    "to_hit": 1,
+    "material": [
+      "cotton"
+    ],
+    "symbol": "[",
+    "color": "light_blue",
+    "warmth": 20,
+    "material_thickness": 0.2,
+    "armor": [
+      {
+        "encumbrance": 2,
+        "coverage": 95,
+        "covers": [
+          "hand_l",
+          "hand_r"
+        ]
+      }
+    ],
+    "flags": [
+      "VARSIZE",
+      "WATER_FRIENDLY",
+      "FANCY"
+    ]
+  }
+]

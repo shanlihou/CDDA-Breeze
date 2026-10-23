@@ -1,0 +1,229 @@
+[
+  {
+    "id": "空间储物戒指MK.I",
+    "type": "ARMOR",
+    "name": { "str": "一对实验型空间储物戒指MK.I" },
+    "description": "由“沃尔泊科技有限公司”所研发的个人储存器，外表如同两枚普通的戒指，但在其中有着不小的存储空间，在大灾变发生前好几个月就已经放出了消息，预售价格高的惊人",
+    "weight": "100 g",
+    "volume": "50 ml",
+    "price": "1950000 USD",
+    "material": [ "异界物质", "superalloy" ],
+    "symbol": "[",
+    "looks_like": "opal_gold_ring",
+    "color": "light_cyan",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1500 L",
+        "max_contains_weight": "500000 kg",
+        "max_item_length": "1 km",
+        "spoil_multiplier": 0,
+        "weight_multiplier": 0,
+        "rigid": true,
+        "moves": 10
+      }
+    ],
+    "flags": [ "TARDIS", "NO_WEAR_EFFECT", "UNBREAKABLE" ]
+  },
+  {
+    "id": "空间储物戒指MK.II",
+    "type": "ARMOR",
+    "name": { "str": "一对实验型空间储物戒指MK.II" },
+    "description": "由“沃尔泊科技有限公司”所研发的个人储存器，外表如同两枚普通的戒指，但在其中有着不小的存储空间，这是更加有效率的MK.II型",
+    "weight": "100 g",
+    "volume": "50 ml",
+    "price": "1950000 USD",
+    "material": [ "异界物质", "superalloy" ],
+    "symbol": "[",
+    "looks_like": "opal_gold_ring",
+    "color": "light_cyan",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "90000 L",
+        "max_contains_weight": "500000 kg",
+        "max_item_length": "1 km",
+        "spoil_multiplier": 0,
+        "weight_multiplier": 0,
+        "rigid": true,
+        "moves": 10
+      }
+    ],
+    "flags": [ "TARDIS", "NO_WEAR_EFFECT", "UNBREAKABLE" ]
+  },
+  {
+    "id": "一对幸存者空间储物戒指",
+    "type": "ARMOR",
+    "name": { "str": "一对幸存者空间储物戒指" },
+    "description": "这是一对由幸存者手工打造的空间型储物戒指，已经适配好了，两个空间戒指持续的释放着奇怪的脉冲波以固定你在这个位面的时空锚",
+    "weight": "150 g",
+    "volume": "50 ml",
+    "price": "100000 USD",
+    "material": [ "异界物质", "iron" ],
+    "symbol": "[",
+    "looks_like": "opal_gold_ring",
+    "color": "cyan",
+    "covers": [ "arm_r", "arm_l" ],
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "80 L",
+        "max_contains_weight": "100000 kg",
+        "max_item_length": "1 km",
+        "spoil_multiplier": 0.5,
+        "weight_multiplier": 0.3,
+        "rigid": true,
+        "moves": 50
+      }
+    ],
+    "armor": [ { "covers": [ "hand_r" ], "coverage": 20, "encumbrance": [ 1, 1 ] } ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "flags": [ "TARDIS", "UNBREAKABLE" ]
+  },
+  {
+    "id": "幸存者空间储物戒指",
+    "type": "ARMOR",
+    "name": { "str": "幸存者空间储物戒指" },
+    "description": "由幸存者手工打造的一枚空间型储物戒指，虽然也可以用，但是效率较低，也有可能导致你在这个时空的空间锚错位从而导致被异界的可怖存在所关注，要有两枚互相呼应才能保证空间锚的稳定性",
+    "weight": "70 g",
+    "volume": "20 ml",
+    "price": "40000 USD",
+    "material": [ "异界物质", "iron" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "hit_me_effect": [
+            {
+              "id": "异界注视",
+              "hit_self": true,
+              "once_in": 20,
+              "message": "你感觉有什么不属于这个位面东西正在注视着你......",
+              "npc_message": "你感觉%1$s的身体变得有些虚幻"
+            },
+            {
+              "id": "异界传送",
+              "hit_self": true,
+              "once_in": 20,
+              "message": "你觉得自己被拉向了一个不存在的方向！",
+              "npc_message": "%1$s突然消失了！"
+            }
+          ]
+        }
+      ]
+    },
+    "symbol": "[",
+    "looks_like": "opal_gold_ring",
+    "color": "cyan",
+    "covers": [ "arm_r", "arm_l" ],
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "40 L",
+        "max_contains_weight": "100000 kg",
+        "spoil_multiplier": 0.8,
+        "weight_multiplier": 0.5,
+        "rigid": true,
+        "max_item_length": "1 km",
+        "moves": 50
+      }
+    ],
+    "armor": [ { "covers": [ "hand_r" ], "coverage": 20, "encumbrance": [ 1, 1 ] } ],
+    "warmth": 0,
+    "material_thickness": 2,
+    "flags": [ "TARDIS", "UNBREAKABLE" ]
+  },
+  {
+    "type": "material",
+    "id": "异界物质",
+    "name": "异界物质",
+    "copy-from": "pseudo_fuel"
+  },
+  {
+    "result": "幸存者空间储物戒指",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ARMOR",
+    "subcategory": "CSC_ARMOR_ARMS",
+    "skill_used": "fabrication",
+    "difficulty": 4,
+    "skills_required": [ [ "tailor", 3 ], [ "chemistry", 3 ] ],
+    "time": "1800 s",
+    "autolearn": true,
+    "reversible": false,
+    "qualities": [
+      { "id": "CUT", "level": 2 },
+      { "id": "CUT_FINE", "level": 1 },
+      { "id": "HAMMER", "level": 2 },
+      { "id": "ANVIL", "level": 1 }
+    ],
+    "components": [ [ [ "vortex_stone", 4 ] ], [ [ "plasma", 20 ] ], [ [ "scrap", 10 ] ], [ [ "gold_small", 50 ] ] ]
+  },
+  {
+    "result": "一对幸存者空间储物戒指",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ARMOR",
+    "subcategory": "CSC_ARMOR_ARMS",
+    "skill_used": "fabrication",
+    "difficulty": 7,
+    "skills_required": [ [ "tailor", 4 ], [ "chemistry", 6 ] ],
+    "time": "1 s",
+    "autolearn": true,
+    "reversible": false,
+    "components": [ [ [ "幸存者空间储物戒指", 2 ] ] ]
+  },
+  {
+    "id": "异界注视",
+    "type": "SPELL",
+    "name": { "str": "异界注视" },
+    "description": "你已经被另一个位面的存在标记了",
+    "message": "你觉得有什么东西在看着你…",
+    "valid_targets": [ "self" ],
+    "flags": [ "RANDOM_DURATION" ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "attention",
+    "min_duration": 4000,
+    "max_duration": 12000
+  },
+  {
+    "type": "SPELL",
+    "id": "异界传送",
+    "name": { "str": "异界传送" },
+    "description": "...？",
+    "extra_effects": [ { "id": "异界" } ],
+    "message": "你觉得自己被拉向了一个不存在的方向！",
+    "effect": "short_range_teleport",
+    "shape": "blast",
+    "valid_targets": [ "self" ],
+    "min_range": 10,
+    "max_range": 20
+  },
+  {
+    "id": "异界",
+    "type": "SPELL",
+    "name": { "str": "异界" },
+    "description": "反正你也不会看到这个法术的描述，所以我就写了反正你也不会看到这个法术的描述",
+    "message": "",
+    "valid_targets": [ "self" ],
+    "flags": [ "RANDOM_DURATION" ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "teleglow",
+    "min_duration": 12000,
+    "max_duration": 24000
+  },
+  {
+    "id": "chem_lab",
+    "type": "item_group",
+    "items": [ [ "空间储物戒指MK.II", 1 ], [ "空间储物戒指MK.I", 2 ] ]
+  },
+  {
+    "id": "mut_lab",
+    "type": "item_group",
+    "items": [ [ "空间储物戒指MK.II", 1 ], [ "空间储物戒指MK.I", 2 ] ]
+  }
+]

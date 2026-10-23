@@ -1,0 +1,235 @@
+[
+  {
+    "id": "大型改装外骨骼",
+    "type": "TOOL_ARMOR",
+    "repairs_like": "power_armor_basic",
+    "category": "armor",
+    "symbol": "[",
+    "color": "dark_gray",
+    "name": { "str": "大型改装外骨骼" },
+    "description": "一套非常巨大的改装外骨骼，使用从ASRG发电机的能源供能，无需充电，在增大的外骨骼框架上焊接了许多的军用复合装甲板，内部是复合的高强度织物，可以有效抵御酸液伤害和电击伤害，厚重的装甲甚至可以挡住.50口径的子弹，唯一的缺点是重量过重",
+    "flags": [
+      "STURDY",
+      "RAINPROOF",
+      "RAD_PROOF",
+      "TRADER_AVOID",
+      "NANOFAB_REPAIR",
+      "ELECTRIC_IMMUNE",
+      "PADDED",
+      "COMBAT_TOGGLEABLE",
+      "OVERSIZE",
+      "UNBREAKABLE_MELEE"
+    ],
+    "price": 7920000,
+    "price_postapoc": 850000,
+    "material": [ "carbide", "superalloy", "kevlar_layered", "ceramic" ],
+    "weight": "120000 g",
+    "volume": "200 L",
+    "environmental_protection": 95,
+    "warmth": 10,
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "values": [ { "value": "CLIMATE_CONTROL_HEAT", "add": 100 }, { "value": "CLIMATE_CONTROL_CHILL", "add": 100 } ]
+        }
+      ]
+    },
+    "armor": [
+      {
+        "material": [
+          { "type": "carbide", "covered_by_mat": 100, "thickness": 20 },
+          { "type": "kevlar", "covered_by_mat": 100, "thickness": 20 }
+        ],
+        "encumbrance": 20,
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "cover_vitals": 80,
+        "covers": [ "hand_l", "hand_r" ],
+        "volume_encumber_modifier": 0
+      },
+      {
+        "material": [
+          { "type": "carbide", "covered_by_mat": 100, "thickness": 20 },
+          { "type": "superalloy", "covered_by_mat": 100, "thickness": 20 }
+        ],
+        "encumbrance": 5,
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "cover_vitals": 40,
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [
+          "foot_toes_r",
+          "foot_toes_l",
+          "foot_ankle_r",
+          "foot_ankle_l",
+          "foot_heel_r",
+          "foot_heel_l",
+          "foot_arch_r",
+          "foot_arch_l"
+        ],
+        "volume_encumber_modifier": 0
+      },
+      {
+        "material": [
+          { "type": "carbide", "covered_by_mat": 100, "thickness": 20.0 },
+          { "type": "rubber", "covered_by_mat": 100, "thickness": 20.0 }
+        ],
+        "encumbrance": 0,
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "cover_vitals": 100,
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_sole_r", "foot_sole_l" ],
+        "volume_encumber_modifier": 0
+      },
+      {
+        "material": [
+          { "type": "kevlar", "covered_by_mat": 100, "thickness": 20 },
+          { "type": "carbide", "covered_by_mat": 100, "thickness": 20 },
+          { "type": "ceramic", "covered_by_mat": 100, "thickness": 20 }
+        ],
+        "covers": [ "torso" ],
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "cover_vitals": 90,
+        "encumbrance": 30,
+        "layers": [ "OUTER" ],
+        "volume_encumber_modifier": 0
+      },
+      {
+        "material": [
+          { "type": "kevlar", "covered_by_mat": 100, "thickness": 20 },
+          { "type": "carbide", "covered_by_mat": 100, "thickness": 20 },
+          { "type": "ceramic", "covered_by_mat": 100, "thickness": 20 }
+        ],
+        "covers": [ "arm_l", "arm_r" ],
+        "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r", "arm_upper_l", "arm_upper_r", "arm_elbow_l", "arm_elbow_r" ],
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "cover_vitals": 90,
+        "encumbrance": 10,
+        "layers": [ "OUTER" ],
+        "volume_encumber_modifier": 0
+      },
+      {
+        "material": [
+          { "type": "kevlar", "covered_by_mat": 100, "thickness": 20 },
+          { "type": "carbide", "covered_by_mat": 100, "thickness": 20 }
+        ],
+        "covers": [ "arm_l", "arm_r" ],
+        "specifically_covers": [ "arm_lower_l", "arm_lower_r" ],
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "cover_vitals": 80,
+        "encumbrance": 10,
+        "volume_encumber_modifier": 0
+      },
+      {
+        "material": [
+          { "type": "kevlar", "covered_by_mat": 100, "thickness": 20 },
+          { "type": "carbide", "covered_by_mat": 100, "thickness": 20 },
+          { "type": "ceramic", "covered_by_mat": 100, "thickness": 20 }
+        ],
+        "covers": [ "leg_l", "leg_r" ],
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "cover_vitals": 80,
+        "encumbrance": 20,
+        "layers": [ "OUTER" ],
+        "volume_encumber_modifier": 0
+      }
+    ]
+  },
+  {
+    "id": "大型改装外骨骼头盔",
+    "type": "ARMOR",
+    "repairs_like": "power_armor_helmet_basic",
+    "category": "armor",
+    "name": { "str": "大型改装外骨骼头盔" },
+    "description": "一副巨大的改装外骨骼头盔，在外骨骼头盔的框架上焊接了军用复合装甲板，内部是简单的电路连接着一个拆开的空间锚，与头部佩戴层隔着一层厚厚的复合高强度织物",
+    "weight": "10000 g",
+    "volume": "6000 ml",
+    "price": 455000,
+    "price_postapoc": 255000,
+    "symbol": "[",
+    "color": "green",
+    "warmth": 20,
+    "material_thickness": 5,
+    "environmental_protection": 95,
+    "techniques": [ "WBLOCK_1" ],
+    "flags": [
+      "DIMENSIONAL_ANCHOR",
+      "PORTAL_PROOF",
+      "WATERPROOF",
+      "STURDY",
+      "PADDED",
+      "SUN_GLASSES",
+      "PARTIAL_DEAF",
+      "GAS_PROOF",
+      "ELECTRIC_IMMUNE",
+      "NANOFAB_REPAIR",
+      "RAD_PROOF",
+      "ALARMCLOCK",
+      "THERMOMETER",
+      "WATCH",
+      "OVERSIZE",
+      "UNBREAKABLE_MELEE"
+    ],
+    "armor": [
+      {
+        "material": [
+          { "type": "superalloy", "covered_by_mat": 100, "thickness": 20.0 },
+          { "type": "carbide", "covered_by_mat": 100, "thickness": 20 }
+        ],
+        "covers": [ "head" ],
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "encumbrance": 20
+      },
+      {
+        "material": [ { "type": "superalloy", "covered_by_mat": 100, "thickness": 20 } ],
+        "covers": [ "eyes", "mouth" ],
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "encumbrance": 20,
+        "layers": [ "OUTER" ]
+      }
+    ]
+  },
+  {
+    "id": "大型改装外骨骼携行具",
+    "type": "ARMOR",
+    "repairs_like": "power_armor_basic",
+    "name": { "str": "大型改装外骨骼携行具" },
+    "description": "一套巨大的改装外骨骼携行具，可以携带大量物品",
+    "weight": "5000 g",
+    "volume": "200 L",
+    "price": 798000,
+    "price_postapoc": 798000,
+    "material": [ "superalloy", "carbide" ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "material_thickness": 10,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "volume_encumber_modifier": 0,
+        "max_contains_volume": "200 L",
+        "max_contains_weight": "400 kg",
+        "max_item_length": "250 cm",
+        "moves": 10
+      }
+    ],
+    "flags": [ "TARDIS", "ELECTRIC_IMMUNE", "PADDED", "BELTED", "OVERSIZE", "STURDY", "UNBREAKABLE_MELEE" ],
+    "armor": [
+      {
+        "encumbrance": [ 0, 0 ],
+        "coverage": 85,
+        "covers": [ "torso" ],
+        "rigid_layer_only": true,
+        "specifically_covers": [ "torso_hanging_back" ]
+      }
+    ]
+  }
+]

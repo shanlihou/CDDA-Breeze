@@ -1,0 +1,33 @@
+[
+  {
+    "type": "construction",
+    "id": "teleporter_attuned_ground",
+    "group": "teleporter_attune",
+    "category": "OTHER",
+    "required_skills": [ [ "metaphysics", 4 ] ],
+    "time": "120 m",
+    "components": [ ],
+    "autolearn": true,
+    "pre_special": "check_empty",
+    "post_terrain": "f_teleporter_attuned_ground",
+    "activity_level": "NO_EXERCISE"
+  },
+  {
+    "type": "construction_group",
+    "id": "teleporter_attune",
+    "name": "[Ψ]区域调谐"
+  },
+  {
+    "type": "furniture",
+    "id": "f_teleporter_attuned_ground",
+    "name": "[Ψ]调谐地面",
+    "symbol": "+",
+    "looks-like": "tr_telepad",
+    "description": "对于不经意的观察者来说，这块地面并无特别之处，但你闭着眼睛也能看见它。你对其了如指掌，只需一个念头，就能传送至此。（e）检查以完成调谐。",
+    "color": "light_gray",
+    "required_str": -1,
+    "move_cost_mod": 0,
+    "flags": [ "TRANSLOCATOR", "MOUNTABLE", "TRANSPARENT", "ALLOW_FIELD_EFFECT" ],
+    "examine_action": "translocator"
+  }
+]

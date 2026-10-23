@@ -1,0 +1,37 @@
+[
+  {
+   "id": "mon_SWP_box1",
+   "looks_like": "mon_eyebot",
+   "type": "MONSTER",
+   "default_faction": "",
+   "name": { "str": "SWP礼物盒(十五抽)" },
+  "description": "一个小球形机器，漂浮在半空，似乎在等着你拆开它。内含10发N级抽奖，4发R级抽奖，以及赠送的一发SR抽奖。",
+  "volume": "500 ml",
+  "weight": "500 g",
+  "hp": 1,
+  "speed": 100,
+  "material": [ "steel" ],
+  "symbol": "O",
+  "color": "blue",
+  "aggression": -5,
+  "morale": 50,
+  "melee_damage": [
+    {
+      "damage_type": "cut",
+      "amount": 0
+    }
+  ],
+  "vision_day": 60,
+  "death_drops": {
+    "groups": [ [ "SWP_box1", 1 ] ]
+  },
+  "death_function": {
+    "corpse_type": "NO_CORPSE",
+    "message": "%s留下了你的奖品，然后飞走了。"
+  },
+  "flags": [
+    "IMMOBILE",
+    "FIREPROOF"
+  ]
+ }
+]

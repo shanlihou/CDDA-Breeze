@@ -1,0 +1,23 @@
+[
+   {
+    "type": "enchantment",
+    "id": "GS_SF_heal",
+    "condition": "ACTIVE",
+    "has": "WORN",
+    "ench_effects": [ { "effect": "gundam1","intensity": 1 } ],
+    "intermittent_activation": {
+    "effects": [ { "frequency": "30 s", "spell_effects": [ { "id": "AEA_HEAL" } ] } ]
+    }
+  },
+  {
+    "type": "enchantment",
+    "id": "GS_ench_vampirism1",
+    "condition": "ALWAYS",
+    "has": "WIELD",
+    "hit_you_effect": [ {
+     "id": "GS_spl_vampirism1",
+     "hit_self": true,
+     "message": "利刃纵贯，杀意凛然。",
+     "npc_message": "利刃纵贯，杀意凛然。" } ]
+  }
+]

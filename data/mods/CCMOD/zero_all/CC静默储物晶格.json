@@ -1,0 +1,101 @@
+[
+  {
+        "type" : "recipe",
+    "result": "CCholdout_pocket",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC武器装备",
+    "skill_used": "survival",
+    "time": "1second",
+    "reversible": true,
+    "autolearn": true,
+    "components": [ [ [ "CCMODcoin", 420 ] ] ]
+  },
+  {
+    "id": "CCholdout_pocket",
+    "type": "TOOL",
+    "subtypes": [ "COMESTIBLE" ],
+    "comestible_type": "MED",
+    "looks_like": "diamond",
+    "name": { "str": "CC静默储物晶格核心" },
+    "description": "源自失落技术的无相收纳装置，以静默为律、以晶格为构。它不占体积、不现形态、不生声响，与机体同灵魂绑定，不可脱落、不可窃取。唯有你能触及这片缄默的小空间，外物永远无法窥探。CC静默储物晶格的驱动核心，使用后如果没有 CC静默储物晶格 则获得特殊变异。效果只能使用一次，多次使用不会重复、无法移除变异，请注意。",
+    "weight": "500 g",
+    "volume": "300ml",
+    "symbol": "E",
+    "color": "green",
+    "price": "10 USD",
+    "price_postapoc": "1 USD",
+    "use_action": { "type": "cast_spell", "spell_id": "CCholdout_pocket", "no_fail": true, "level": 0 },
+    "flags": [ "SINGLE_USE", "TRADER_AVOID", "UNBREAKABLE_MELEE" ]
+  },
+  {
+     "type": "SPELL",
+     "id": "CCholdout_pocket",
+     "name": { "str": "CC静默储物晶格" },
+     "description": "源自失落技术的无相收纳装置，以静默为律、以晶格为构。它不占体积、不现形态、不生声响，与机体同灵魂绑定，不可脱落、不可窃取。唯有你能触及这片缄默的小空间，外物永远无法窥探。使用后如果没有 CC静默储物晶格 则获得特殊变异。效果只能使用一次，多次使用不会重复、无法移除变异，请注意。",
+     "message": "CC静默储物晶格 已链接",
+     "valid_targets": [ "self" ],
+     "shape": "blast",
+     "min_damage": 10000,
+     "max_damage": 10000,
+     "effect": "mutate",
+     "effect_str": "CCperk_holdout_pocket",
+     "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "MUTATE_TRAIT" ]
+  },
+  {
+    "type": "mutation",
+    "id": "CCperk_holdout_pocket",
+    "name": { "str": "CC静默储物晶格" }, 
+    "points": 1,
+    "ugliness": -2,
+    "purifiable": false,
+    "valid": false,
+    "starting_trait" : true,
+    "player_display": true,
+    "description": "源自失落技术的无相收纳装置，以静默为律、以晶格为构。它不占体积、不现形态、不生声响，与机体同灵魂绑定，不可脱落、不可窃取。唯有你能触及这片缄默的小空间，外物永远无法窥探。", 
+    "flags": [ "NON_THRESH" ], 
+    "enchantments": [ 
+    { "condition": "ALWAYS", "values": [ 
+    { "value": "REGEN_HP", "multiply": 0.5 },
+    { "value": "MAX_HP", "multiply": 0.2 },
+    { "value": "CARRY_WEIGHT", "multiply": 0.33 },
+    { "value": "PERCEPTION", "add": 1 }
+    ] } ],
+    "vitamin_rates": [ [ "instability", 7200 ] ],
+    "vitamins_absorb_multi": [ [ "all", [ [ "mutant_toxin", 0.5 ] ] ] ],
+    "category": [ "perk" ],
+    "integrated_armor": [ "CCintegrated_holdout_pocket" ]
+  },
+  {
+    "id": "CCintegrated_holdout_pocket",
+    "type": "TOOL",
+    "subtypes": [ "TOOL", "ARMOR" ],
+    "category": "armor",
+    "name": { "str_sp": "CC静默储物晶格" },
+    "description": "源自失落技术的无相收纳装置，以静默为律、以晶格为构。它不占体积、不现形态、不生声响，与机体同灵魂绑定，不可脱落、不可窃取。唯有你能触及这片缄默的小空间，外物永远无法窥探。（被困险境可耗能200kj使用静默晶格撬动空间势能场，通过失序紊流尝试传送，转移脱离。注，过度使用可能会引起异常，导致危险）",
+    "volume": "100ml",
+    "price": "0 USD",
+    "price_postapoc": "0 USD",
+    "material": [ "leather", "flesh", "bone" ],
+    "symbol": "x",
+    "color": "magenta",
+    "flags": [ "NONCONDUCTIVE", "TARDIS", "INTEGRATED", "UNBREAKABLE", "PERSONAL", "NO_SALVAGE", "ZERO_WEIGHT", "USES_BIONIC_POWER" ], 
+    "charges_per_use": 200, 
+    "tool_ammo": [ "battery" ], 
+    "use_action": [ "TELEPORT" ],
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "watertight": true,
+        "rigid": true,
+        "spoil_multiplier": 0.0,
+        "weight_multiplier": 0.0,
+        "max_contains_volume": "100 L",
+        "max_contains_weight": "2000 kg",
+        "max_item_length": "400 cm",
+        "moves": 10
+      }
+    ]
+  }
+]

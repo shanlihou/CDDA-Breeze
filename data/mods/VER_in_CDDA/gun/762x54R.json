@@ -1,0 +1,85 @@
+[
+    {
+        "type": "GUN",
+        "reload_noise_volume": 10,
+        "handling": 15,
+        "name": {
+          "str": "霍特自动步枪"
+        },
+        "symbol": "(",
+        "color": "brown",
+        "ranged_damage": {
+          "damage_type": "bullet",
+          "amount": -2
+        },
+        "copy-from": "rifle_manual",
+        "skill": "rifle",
+        "valid_mod_locations": [
+          [
+            "brass catcher",
+            1
+          ],
+          [
+            "grip mount",
+            1
+          ],
+          [
+            "mechanism",
+            4
+          ],
+          [
+            "muzzle",
+            1
+          ],
+          [
+            "rail mount",
+            1
+          ],
+          [
+            "sights",
+            1
+          ],
+          [
+            "sling",
+            1
+          ],
+          [
+            "stock mount",
+            1
+          ],
+          [
+            "stock accessory",
+            2
+          ],
+          [
+            "underbarrel mount",
+            1
+          ]
+        ],
+        "id": "VER_HAR",
+        "looks_like": "ak47",
+        "description": "霍特自动步枪，全称Huot Automatic Rifle，是一款由加拿大工程师约瑟夫·阿尔冯斯·霍特在一战期间设计的自动步枪。这款步枪的设计初衷是为了满足加拿大军队在一战中对轻重机枪的需求。",
+        "weight": "5900 g",
+        "volume": "4200 ml",
+        "longest_side": "1194mm",
+        "barrel_length": "635 mm",
+        "price": 21000,
+        "price_postapoc": 6000,
+        "to_hit": -1,
+        "modes": [[ "DEFAULT", "3 rd.", 3 ], [ "AUTO", "auto", 5 ] ],
+        "material": [
+          "steel",
+          "wood"
+        ],
+        "ammo": [
+          "762R"
+        ],
+        "range": 3,
+        "dispersion": 130,
+        "durability": 10,
+        "blackpowder_tolerance": 48,
+        "barrel_volume": "500 ml",
+        "pocket_data": [ { "pocket_type": "MAGAZINE_WELL", "item_restriction": [ "HARMAG_rd25" ] } ],
+        "bashing":20
+      }
+]

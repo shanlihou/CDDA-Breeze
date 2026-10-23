@@ -1,0 +1,132 @@
+[
+  {
+    "type": "effect_type",
+    "//":"检测角色",
+    "id": "u_vibrator1"
+  },
+  {
+    "type": "effect_type",
+    "//":"检测角色",
+    "id": "u_vibrator2"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_flag_vibrator1",
+    "condition": {
+      "and": [
+        {
+          "u_has_worn_with_flag": "VIBRATOR1"
+        },
+        {
+          "not":{
+            "u_has_effect": "u_vibrator1"
+          }
+        },
+        "u_female"
+      ]
+    },
+    "effect": [
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "pleasant_rate", "type": "int", "context": "快感获得速率" },
+          "+=",
+          { "const": 40 }
+        ]
+      },
+      {
+        "u_add_effect":"u_vibrator1",
+        "duration": "PERMANENT" 
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_flag_vibrator1-back",
+    "condition": {
+      "and": [
+        {
+          "u_has_effect": "u_vibrator1" 
+        },
+        {
+          "not":{
+            "u_has_worn_with_flag": "VIBRATOR1"
+          }
+        },
+        "u_female"
+      ]
+    },
+    "effect": [
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "pleasant_rate", "type": "int", "context": "快感获得速率" },
+          "-=",
+          { "const": 40 }
+        ]
+      },
+      {
+        "u_lose_effect":"u_vibrator1",
+        "duration": "PERMANENT" 
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_flag_vibrator2",
+    "condition": {
+      "and": [
+        {
+          "u_has_worn_with_flag": "VIBRATOR2"
+        },
+        {
+          "not":{
+            "u_has_effect": "u_vibrator2"
+          }
+        },
+        "u_female"
+      ]
+    },
+    "effect": [
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "pleasant_rate", "type": "int", "context": "快感获得速率" },
+          "+=",
+          { "const": 100 }
+        ]
+      },
+      {
+        "u_add_effect":"u_vibrator2",
+        "duration": "PERMANENT" 
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_flag_vibrator2-back",
+    "condition": {
+      "and": [
+        {
+          "u_has_effect": "u_vibrator2" 
+        },
+        {
+          "not":{
+            "u_has_worn_with_flag": "VIBRATOR2"
+          }
+        },
+        "u_female"
+      ]
+    },
+    "effect": [
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "pleasant_rate", "type": "int", "context": "快感获得速率" },
+          "-=",
+          { "const": 100 }
+        ]
+      },
+      {
+        "u_lose_effect":"u_vibrator2",
+        "duration": "PERMANENT" 
+      }
+    ]
+  }
+]

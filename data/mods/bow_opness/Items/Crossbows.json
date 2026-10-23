@@ -1,0 +1,98 @@
+[
+  {
+    "id": "bullet_crossbow",
+    "copy-from": "bullet_crossbow",
+    "name": {
+      "str": "弹矢弩"
+    },
+    "type": "GUN",
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 8
+    }
+  },
+  {
+    "id": "hand_crossbow",
+    "copy-from": "hand_crossbow",
+    "type": "GUN",
+    "name": {
+      "str": "手弩"
+    },
+    "description": "一个小巧的单手弩。由于其体型小，故威力及拉力均不高，不过相当适用于猎杀小动物。手弩射出的弩矢不易损坏，有很高的几率回收。",
+    "min_strength": 7,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 16
+    }
+  },
+  {
+    "id": "crossbow",
+    "copy-from": "crossbow",
+    "type": "GUN",
+    "name": {
+      "str": "弩"
+    },
+    "description": "一个发射弩矢的武器，也称十字弓，装填缓慢。力量大的人装填较快。用它射出去的弩矢比较不容易坏。",
+    "min_strength": 9,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 20
+    }
+  },
+  {
+    "id": "compositecrossbow",
+    "copy-from": "compositecrossbow",
+    "type": "GUN",
+    "name": {
+      "str": "复合弩"
+    },
+    "description": "一把体型稍大威力也较大的十字弩，采用复合材料制成的弓身以及使用了较为现代的外观设计。",
+    "min_strength": 9,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 24
+    }
+  },
+  {
+    "id": "compcrossbow",
+    "copy-from": "compcrossbow",
+    "type": "GUN",
+    "name": {
+      "str": "合成弩"
+    },
+    "description": "一把威力大的十字弩，带有偏心滑轮组和额外的弓弦，能够射出高速弓箭。由于采用现代上弦装置，装填所费时间更短。",
+    "min_strength": 7,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 24
+    }
+  },
+  {
+    "id": "huge_crossbow",
+    "copy-from": "huge_crossbow",
+    "type": "GUN",
+    "name": {
+      "str": "重弩"
+    },
+    "description": "一张巨大的、来自德国的中世纪弩。它的张力是如此之大，在它发射之后你能感受到它还在抖动。它的装填过程非常缓慢而且十分困难，特别是对于不熟练的使用者来说。发射出去的弩矢有很高的机会可以回收使用。",
+    "min_strength": 9,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 42
+    }
+  },
+  {
+    "id": "rep_crossbow",
+    "copy-from": "rep_crossbow",
+    "type": "GUN",
+    "name": {
+      "str": "连弩"
+    },
+    "description": "一把特制的弩，上面有一个巧妙的机关，可以一次装填并发射弹药，它有一个木制的弹匣，可以容纳40发弹药。射击后有较高概率可以保持弩矢完好。",
+    "min_strength": 7,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 10
+    }
+  }
+]

@@ -1,0 +1,106 @@
+[
+
+
+  {
+    "id": "kawaii_angel_wing_bag",
+    "type": "ARMOR",
+    "name": "天使翅膀",
+    "description": "如果你有一颗天使般的心，拥有它并不是什么大不了的事。",
+    "weight": "20 g",
+    "volume": "2 L",
+    "price": 6700,
+    "price_postapoc": 210,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 0.2,
+    "symbol": "[",
+    "color": "dark_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": false,
+        "max_contains_volume": "35 L",
+        "max_contains_weight": "40 kg",
+        "max_item_length": "100 cm",
+        "moves": 300
+      }
+    ],
+    "warmth": 0,
+    "flags": [
+    "SEMITANGIBLE",
+      "BELTED",
+      "WATER_FRIENDLY",
+      "STURDY"
+    ],
+    "armor": [
+      {
+        "encumbrance": [
+          5,
+          30
+        ],
+        "coverage": 100,
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_hanging_back"
+        ]
+      }
+    ]
+  },
+  {
+    "result": "kawaii_angel_wing_bag",
+    "activity_level": "LIGHT_EXERCISE",
+    "type": "recipe",
+    "category": "CC_ARMOR",
+    "subcategory": "CSC_ARMOR_STORAGE",
+    "skill_used": "tailor",
+    "difficulty": 2,
+    "time": "10 h",
+    "autolearn": true,
+    "using": [
+      [
+        "tailoring_cotton_patchwork",
+        10
+      ],
+      [
+        "fastener_large",
+        2
+      ],
+      [
+        "waterproofing_plastic_sheets",
+        4
+      ]
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_closures"
+      },
+      {
+        "proficiency": "prof_closures_waterproofing"
+      }
+    ]
+  },
+  {
+    "result": "qp_tsgh",
+    "activity_level": "NO_EXERCISE",
+    "type": "recipe",
+    "category": "CC_ARMOR",
+    "subcategory": "CSC_ARMOR_HEAD",
+    "skill_used": "tailor",
+    "difficulty": 0,
+    "time": "2 m",
+    "autolearn": true,
+    "components": [
+      [
+        [
+          "rag",
+          1
+        ]
+      ]
+    ]
+  }
+
+
+]

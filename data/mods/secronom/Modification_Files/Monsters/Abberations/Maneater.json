@@ -1,0 +1,72 @@
+[
+  {
+    "id": "mon_maneater",
+    "type": "MONSTER",
+    "name": {
+      "str": "恐怖食人花"
+    },
+    "description": "一种看起来像三脚兽的生物，由摇摇晃晃的肉和骨头组成。它的“花瓣”排列着锋利的牙齿，纤细的“藤蔓”不连贯地抽动着。独特的适应性本能，它对“营养”的需求驱使它以贪婪的意图面对一切。",
+    "default_faction": "maneater",
+    "species": [
+      "ABERRATION",
+      "SECROSPEC"
+    ],
+    "volume": "92500 ml",
+    "weight": "120000 g",
+    "hp": 275,
+    "speed": 90,
+    "material": [
+      "flesh",
+      "bone"
+    ],
+    "symbol": "☋",
+    "color": "light_red",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 8,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 8
+      }
+    ],
+    "attack_cost": 145,
+    "dodge": 1,
+    "harvest": "zombie",
+    "armor_bash": 4,
+    "armor_cut": 16,
+    "armor_bullet": 12,
+    "armor_stab": 10,
+    "vision_day": 8,
+    "vision_night": 8,
+    "special_attacks": [
+      [
+        "maneater_vineslash",
+        12
+      ],
+      [
+        "maneater_floralbite",
+        26
+      ],
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "mon_maneater_bsuck_target"
+        },
+        "cooldown": 37,
+        "monster_message": "<color_yellow>%1$s的葡萄藤吸引了%3$s！</color>"
+      }
+    ],
+    "looks_like": "mon_triffid",
+    "flags": [
+      "HEARS",
+      "SEES",
+      "SMELLS",
+      "WARM",
+      "GRABS",
+      "CLIMBS"
+    ]
+  }
+]

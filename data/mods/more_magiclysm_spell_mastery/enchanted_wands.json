@@ -1,0 +1,48 @@
+[
+  {
+    "type": "TOOL",
+    "id": "MM_text_wand",
+    "name": { "str": "测试法杖", "str_pl": "测试法杖" },
+    "copy-from": "spell_wand",
+    "description": "用来测试法术的法杖。",
+    "use_action": { "type": "cast_spell", "spell_id": "magic_missile", "no_fail": true, "level": 15, "need_wielding": true }
+  },
+  {
+    "id": "bonespear",
+    "type": "GENERIC",
+    "symbol": "/",
+    "color": "light_gray",
+    "name": { "str": "Wicked Bonespear" },
+    "description": "This is a wicked spear/halberd hybrid entirely created of bone.",
+    "material": [ "bone" ],
+    "flags": [
+      "UNBREAKABLE_MELEE",
+      "REACH_ATTACK",
+      "SPEAR",
+      "NONCONDUCTIVE",
+      "SHEATH_SPEAR",
+      "ONLY_ONE",
+      "NO_REPAIR",
+      "NO_SALVAGE",
+      "MAGIC_FOCUS",
+      "WATERPROOF_GUN",
+      "NEVER_JAMS"
+    ],
+    "techniques": [ "WBLOCK_2", "WIDE", "SWEEP", "BRUTAL" ],
+    "weight": "2175 g",
+    "volume": "2500 ml",
+    "bashing": 16,
+    "cutting": 36,
+    "to_hit": 2,
+    "gun_data" : {
+       "ammo_effects": [ "NEVER_MISFIRES" ],
+       "skill": "melee",
+       "reload_noise_volume": 0,
+       "loudness": 0,
+       "ranged_damage": { "damage_type": "stab", "amount": 29 },
+       "range": 5,
+       "dispersion": 950,
+       "durability": 6
+    }
+  }
+]

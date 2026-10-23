@@ -1,0 +1,56 @@
+[
+  {
+    "type": "profession",
+    "id": "lafei",
+    "name": {
+	  "male": "舰...男人？",
+	  "female": "舰娘拉菲"
+	},
+    "description":"我是备受期待的本森级驱逐舰拉菲，在三次所罗门海战有着极为活跃的表现，战舰？那是什么？",
+    "points": 8,
+    "items": {
+      "both": {
+		  "items":[
+		  "dress_shirt","pants","socks","coat_lab","xinzhi_mofang","wine_cabernet","zhuanshudanmu_lafei","jianniangzhitong","jianmiemoshi"],
+		  "entries": [
+          { "item": "533mm_lafei", "ammo-item": "533mm_yl", "charges":10, "count": 1 },
+		  { "item": "127mm_lafei", "ammo-item": "127mm_gb","charges":100, "count": 1 },
+		  { "item": "40mm_lafei", "ammo-item": "40bfs_pt","charges":1000, "count": 1 }
+        ]
+      },
+      "male": [
+        "briefs","jiangzhuang_lafei"
+      ],
+      "female": [
+        "bra",
+        "panties","jiangzhuang_lafei"
+      ]
+	},
+	"traits": [
+	"BEAUTIFUL3","jianti_DD","0.7_inch","sunguan","lunji_lf","leida","tuijinqi","zjsn","22niang"
+	]
+  },
+  {
+    "type": "profession",
+    "id": "",
+    "name": {
+	  "male": "舰娘爱好者",
+	  "female": "舰娘爱好者"
+	},
+    "description": "你太喜欢舰娘了，以至于你做梦都想变成舰娘，现在你的手里莫名其妙出现了一个心智魔方，你的梦想要实现了？",
+    "points": 2,
+    "items": {
+      "both": {
+		  "items":[
+		  "dress_shirt","pants","socks","coat_lab","xinzhi_mofang"]
+      },
+      "male": [
+        "briefs"
+      ],
+      "female": [
+        "bra",
+        "panties"
+      ]
+	}
+  }
+]

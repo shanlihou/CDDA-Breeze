@@ -1,0 +1,771 @@
+[
+  {
+    "id": "laser_rifle_secro",
+    "copy-from": "laser_rifle",
+    "type": "GUN",
+    "reload_noise_volume": 10,
+    "name": {
+      "str": "S-Slr 激光步枪"
+    },
+    "description": "这款激光步枪没它同类型的兄弟们出名，其较低的UPS能量消耗进行短程射击表现出的高效率和小巧的体型显得十分低调。",
+    "weight": "520 g",
+    "volume": "750 ml",
+    "price": "7100 USD",
+    "to_hit": -2,
+    "bashing": 5,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "(",
+    "color": "magenta",
+    "skill": "rifle",
+    "range": 40,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 7,
+      "armor_penetration": 13
+    },
+    "dispersion": 185,
+    "durability": 6,
+    "loudness": 7,
+    "sight_dispersion": 200,
+    "ups_charges": 9,
+    "reload": 200,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "emitter",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "lens",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "ammo_effects": [
+      "LASER",
+      "INCENDIARY"
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "NO_UNLOAD"
+    ]
+  },
+  {
+    "//": "VERY WIP, CURRENTLY UNOBTAINABLE. NEEDS MORE IDEAL FIXING BEFORE USE, ESP. ITS AMMO.",
+    "id": "SS_grenade_launcher",
+    "type": "GUN",
+    "name": {
+      "str": "SS-gl 下挂式榴弹发射器"
+    },
+    "description": "一个使用定制口径的专用下挂式榴弹发射器。",
+    "weight": "2654 g",
+    "volume": "1500 ml",
+    "price": "5220 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel"
+    ],
+    "symbol": ")",
+    "color": "light_red",
+    "ammo": [
+      "SSgrenade"
+    ],
+    "skill": "launcher",
+    "range": 30,
+    "dispersion": 40,
+    "sight_dispersion": 45,
+    "recoil": 35,
+    "durability": 8,
+    "clip_size": 5,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "SSgrenade": 5
+        }
+      }
+    ],
+    "reload": 500,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        1
+      ]
+    ],
+    "ammo_effects": [
+      "DRAW_AS_LINE",
+      "NO_EMBED"
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "RELOAD_ONE"
+    ]
+  },
+  {
+    "id": "cheytac",
+    "copy-from": "rifle_base",
+    "type": "GUN",
+    "name": {
+      "str": "CheyTac M200 狙击步枪",
+      "str_pl": "CheyTac M200 狙击步枪"
+    },
+    "description": "一把产自美国享誉世界的CheyTac M200 狙击步枪。她的携带不便，较大的后坐力和呐呐的娇喘被其世界级精度破坏性伤害及高射程抵消了",
+    "weight": "12878 g",
+    "volume": "3500 ml",
+    "price": "12665 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel"
+    ],
+    "ammo": [
+      "50"
+    ],
+    "range": 50,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": -15
+    },
+    "//": "A weaker version of Barrett.",
+    "dispersion": 92,
+    "durability": 8,
+    "barrel_volume": "1250 ml",
+    "default_mods": [
+      "bipod",
+      "rifle_scope"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "cheytacmag"
+        ]
+      }
+    ],
+    "flags": [
+      "NEVER_JAMS"
+    ]
+  },
+  {
+    "id": "cheytacmag",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "CheyTac M200 专用弹匣"
+    },
+    "description": "CheyTac M200狙击步枪的标准七发弹匣",
+    "weight": "727 g",
+    "volume": "500 ml",
+    "price": "100 USD",
+    "material": [
+      "steel"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "looks_like": "8x40_50_mag",
+    "ammo_type": [
+      "50"
+    ],
+    "capacity": 7,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "50": 7
+        }
+      }
+    ],
+    "reload_time": 130,
+    "flags": [
+      "MAG_BULKY"
+    ]
+  },
+  {
+    "id": "hecate",
+    "copy-from": "rifle_base",
+    "type": "GUN",
+    "name": {
+      "str": "赫卡忒 II型 狙击步枪",
+      "str_pl": "赫卡忒 II型 狙击步枪"
+    },
+    "description": "一把又大又重的反器材狙击步枪。它那巨大的尺寸，后坐力，以及噪音等劣势，抵消了它高伤害，远距离的优势。",
+    "weight": "13807 g",
+    "volume": "4 L",
+    "price": "7909 USD",
+    "//": "IDK how this gun became cheap on the market. Its effing powerful, so WTF PPL!",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel"
+    ],
+    "ammo": [
+      "50"
+    ],
+    "range": 50,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 0
+    },
+    "dispersion": 80,
+    "durability": 8,
+    "barrel_volume": "1500 ml",
+    "default_mods": [
+      "bipod",
+      "hecate_muzzle_brake",
+      "rifle_scope"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "hecatemag"
+        ]
+      }
+    ],
+    "flags": [
+      "NEVER_JAMS"
+    ]
+  },
+  {
+    "id": "hecate_muzzle_brake",
+    "type": "GUNMOD",
+    "name": {
+      "str": "赫卡忒 II型 专用枪口制退器"
+    },
+    "description": "一种盒状枪口制退器，和她的主人截然不同。能大大降低后坐力，同时增加了体积和噪音",
+    "weight": "420 g",
+    "volume": "250 ml",
+    "price": "840 USD",
+    "install_time": "15 m",
+    "material": [
+      "steel"
+    ],
+    "symbol": ":",
+    "color": "light_gray",
+    "location": "muzzle",
+    "mod_targets": [
+      "rifle",
+      "shotgun"
+    ],
+    "dispersion_modifier": 10,
+    "handling_modifier": 5,
+    "loudness_modifier": 15,
+    "min_skills": [
+      [
+        "weapon",
+        2
+      ]
+    ]
+  },
+  {
+    "id": "hecatemag",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "赫卡忒 II型 专用弹匣"
+    },
+    "description": "黑卡蒂 II 反器材狙击步枪专用七发标准弹匣。",
+    "weight": "727 g",
+    "volume": "500 ml",
+    "price": "100 USD",
+    "material": [
+      "steel"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "looks_like": "8x40_50_mag",
+    "ammo_type": [
+      "50"
+    ],
+    "capacity": 7,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "50": 7
+        }
+      }
+    ],
+    "reload_time": 130,
+    "flags": [
+      "MAG_BULKY"
+    ]
+  },
+  {
+    "id": "kacc",
+    "copy-from": "rifle_auto",
+    "type": "GUN",
+    "name": {
+      "str": "KAC ChainSAW 锯式轻机枪"
+    },
+    "description": "这把来自美国的狂野风KAC ChainSAW 锯式轻机枪安装了类似电锯上使用的后把手，其射击大大降低了后坐力，提高了稳定性和命中率，霸气外露，让你在尸潮中用出电锯般畅爽淋漓的感觉。",
+    "weight": "4586 g",
+    "//": "IDK if they're joking with this -_-.",
+    "volume": "2500 ml",
+    "price": "14675 USD",
+    "to_hit": -1,
+    "bashing": 10,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "(",
+    "color": "dark_gray",
+    "ammo": [
+      "223",
+      "308"
+    ],
+    "dispersion": 215,
+    "durability": 8,
+    "reload": 420,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 2
+    },
+    "modes": [
+      [
+        "DEFAULT",
+        "auto",
+        50
+      ]
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "belt223",
+          "belt308"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "psg1",
+    "copy-from": "rifle_semi",
+    "type": "GUN",
+    "name": {
+      "str": "PSG-1 狙击步枪",
+      "str_pl": "PSG-1 狙击步枪"
+    },
+    "description": "一把来自德国H&K公司的PSG-1 狙击步枪，因其远程射击方面的性能方面光受欢迎，常用于警察的反恐行动中。",
+    "weight": "7420 g",
+    "volume": "2500 ml",
+    "price": "13885 USD",
+    "to_hit": -1,
+    "bashing": 10,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "symbol": "(",
+    "color": "light_gray",
+    "ammo": [
+      "223"
+    ],
+    "range": 40,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 8
+    },
+    "dispersion": 85,
+    "durability": 8,
+    "barrel_volume": "500 ml",
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sights",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "stanag30",
+          "stanag10",
+          "stanag50",
+          "survivor223mag"
+        ]
+      }
+    ],
+    "//": "Since its magazine is similar to stanags, we'd use them too. As a sniper rifle, it can also use drum magazines!"
+  },
+  {
+    "id": "walther2000",
+    "copy-from": "rifle_base",
+    "type": "GUN",
+    "name": {
+      "str": "瓦尔特 WA2000狙击步枪",
+      "str_pl": "瓦尔特 WA2000狙击步枪"
+    },
+    "description": "一把来自德国卡尔·瓦尔特公司的瓦尔塔 WA2000 半自动狙击步枪，使用.300温彻斯特马格南在极端距离下的射击尤其精准，因在市场上的稀缺性令想把她娶回家的枪迷们为之疯狂。",
+    "weight": "6962 g",
+    "volume": "2500 ml",
+    "price": "18290 USD",
+    "//": "The price was actually a wooping 75,000$. IDK if that's true, but lets bend the rules of money here -_-.",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel"
+    ],
+    "ammo": [
+      "300"
+    ],
+    "range": 50,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 10
+    },
+    "dispersion": 80,
+    "durability": 8,
+    "barrel_volume": "1000 ml",
+    "default_mods": [
+      "bipod",
+      "rifle_scope"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "walther2000mag"
+        ]
+      }
+    ],
+    "flags": [
+      "NEVER_JAMS"
+    ]
+  },
+  {
+    "id": "walther2000mag",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "瓦尔特 WA2000 狙击步枪专用弹匣"
+    },
+    "description": "瓦尔特 WA2000狙击步枪专用的标准6发弹匣。",
+    "weight": "727 g",
+    "volume": "500 ml",
+    "price": "100 USD",
+    "material": [
+      "steel"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "looks_like": "8x40_50_mag",
+    "ammo_type": [
+      "300"
+    ],
+    "capacity": 7,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "300": 7
+        }
+      }
+    ],
+    "reload_time": 130,
+    "flags": [
+      "MAG_BULKY"
+    ]
+  },
+  {
+    "//": "Also a hip-fired weapon, but with barrel-rotation.",
+    "id": "xm556",
+    "copy-from": "rifle_auto",
+    "type": "GUN",
+    "name": {
+      "str": "地狱加特林 XM556"
+    },
+    "description": "地狱加特林 XM556，一把射速威力极其恐怖的重型枪械，使用5.56 NATO供弹，需要大量UPS能量驱动射击，如果是这样的话。她的电驱转管系统会在顷刻间倾泻大量蓝色怒火。",
+    "weight": "6240 g",
+    "volume": "2500 ml",
+    "price": "21440 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "ups_charges": 120,
+    "material": [
+      "steel"
+    ],
+    "symbol": "(",
+    "color": "dark_gray",
+    "ammo": [
+      "223",
+      "308"
+    ],
+    "dispersion": 200,
+    "durability": 8,
+    "reload": 400,
+    "modes": [
+      [
+        "DEFAULT",
+        "auto",
+        80
+      ]
+    ],
+    "built_in_mods": [
+      "bipod"
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "belt223",
+          "belt308"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "xm8",
+    "copy-from": "rifle_auto",
+    "type": "GUN",
+    "name": {
+      "str": "XM8 轻型突击步枪"
+    },
+    "description": "一把轻型突击步枪，与H&K G36步枪相似，它以它的精准和模块化而闻名，但需要保持注意，防止故障。",
+    "weight": "3560 g",
+    "volume": "1750 ml",
+    "price": "1970 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "(",
+    "color": "dark_gray",
+    "ammo": [
+      "223",
+      "308"
+    ],
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 0
+    },
+    "dispersion": 170,
+    "durability": 6,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "stanag30",
+          "stanag10",
+          "stanag50",
+          "survivor223mag",
+          "g3mag",
+          "g3bigmag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "zx1sniper",
+    "copy-from": "rifle_base",
+    "type": "GUN",
+    "name": {
+      "str": "ZX-1 反器材狙击步枪"
+    },
+    "skill": "rifle",
+    "description": "专为解决穿有重型装甲的恐怖分子设计的步枪。能够击穿最厚的装甲，也可以把各种怪物打成碎片。尽管她需要使用者一发一发的重新填弹，因为没有像其他武器那样专门设计的弹匣",
+    "weight": "4550 g",
+    "volume": "2000 ml",
+    "price": "4550 USD",
+    "to_hit": -1,
+    "bashing": 11,
+    "material": [
+      "steel"
+    ],
+    "symbol": "(",
+    "color": "dark_gray",
+    "ammo": [
+      "50"
+    ],
+    "range": 60,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 90
+    },
+    "dispersion": 180,
+    "durability": 8,
+    "clip_size": 3,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "50": 3
+        }
+      }
+    ],
+    "reload": 100,
+    "default_mods": [
+      "rifle_scope"
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "RELOAD_ONE"
+    ]
+  },
+  {
+    "id": "lmilaser",
+    "type": "GUN",
+    "name": {
+      "str": "L.M.I.激光步枪"
+    },
+    "skill": "rifle",
+    "description": "时髦又未来主义的激光步枪，L.M.l.是'生命物质焚化炉'的缩写，顾名思义，她能将温度极高的高能激光送给面前的怪物和对你不友好的人类，该武器唯一的警告就是小心你的E.y.E.",
+    "weight": "3800 g",
+    "volume": "1750 ml",
+    "price": "3950 USD",
+    "to_hit": -1,
+    "bashing": 11,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "(",
+    "color": "yellow",
+    "range": 40,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 35,
+      "armor_penetration": 15
+    },
+    "dispersion": 20,
+    "durability": 9,
+    "modes": [
+      [
+        "SINGLE",
+        "semi-auto",
+        1
+      ],
+      [
+        "BURST",
+        "auto",
+        3
+      ]
+    ],
+    "loudness": 20,
+    "ups_charges": 20,
+    "reload": 100,
+    "valid_mod_locations": [
+      [
+        "emitter",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "stock",
+        1
+      ]
+    ],
+    "ammo_effects": [
+      "PLASMA",
+      "INCENDIARY"
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "NO_UNLOAD",
+      "NON-FOULING",
+      "NEEDS_NO_LUBE"
+    ]
+  }
+]

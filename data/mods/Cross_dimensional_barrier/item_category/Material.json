@@ -1,0 +1,21 @@
+{
+  "type": "material",
+  "id": "space_material",
+  "name": "次元材料",
+  "density": 1,
+  "bash_resist": 30,
+  "specific_heat_liquid": 0.82,
+  "specific_heat_solid": 0.45,
+  "latent_heat": 273,
+  "cut_resist": 30,
+  "bullet_resist": 30,
+  "acid_resist": 30,
+  "fire_resist": 30,
+  "conductive": false,
+  "chip_resist": 30,
+  "repaired_with": "steel_chunk",
+  "dmg_adj": [ "标记", "凹陷", "砸碎", "粉碎" ],
+  "bash_dmg_verb": "凹陷",
+  "cut_dmg_verb": "划伤",
+  "burn_products": [ [ "scrap", 1 ] ]
+}

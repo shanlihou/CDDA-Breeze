@@ -1,0 +1,1351 @@
+[
+  {
+    "id": "mon_aegirocassis",
+    "type": "MONSTER",
+    "name": {
+      "str": "埃吉罗卡西斯",
+      "str_pl": "埃吉罗卡西斯"
+    },
+    "description": "一种巨大的食浮游生物的虾。头胸部覆盖着三个\"盾\"，一个在顶部，两个在两侧，三者都保护着悬挂在口部附肢上的滤食器。这种动物有两对短鳍用于移动，附着在肌肉发达（可能非常美味的）尾巴上。如果不是因为它有2米长的身体，这会是一种奇特的宠物。",
+    "volume": "10 L",
+    "weight": "6500 g",
+    "default_faction": "touhou_arthropod_herbivore",
+    "bodytype": "crab",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "ARTHROPOD"
+    ],
+    "harvest": "arthropod_shrimplike_harvest",
+    "hp": 65,
+    "speed": 135,
+    "material": [
+      "flesh"
+    ],
+    "color": "blue",
+    "symbol": "ϒ",
+    "aggression": -15,
+    "morale": 15,
+    "melee_skill": 1,
+    "melee_dice": 2,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 3
+      }
+    ],
+    "dodge": 1,
+    "armor_bash": 2,
+    "armor_cut": 2,
+    "armor_stab": 2,
+    "vision_night": 15,
+    "path_settings": {
+      "max_dist": 8
+    },
+    "reproduction": {
+      "baby_egg": "egg_aegirocassis",
+      "baby_count": 3,
+      "baby_timer": 10
+    },
+    "baby_flags": [
+      "SPRING",
+      "SUMMER",
+      "AUTUMN",
+      "WINTER"
+    ],
+    "anger_triggers": [
+      "HURT"
+    ],
+    "flags": [
+      "ANIMAL",
+      "AQUATIC",
+      "ARTHROPOD_BLOOD",
+      "SEES",
+      "SMELLS",
+      "SWIMS",
+      "WATER_CAMOUFLAGE"
+    ],
+    "//": "Based on Aegirocassis sp.. No weight or reproductive data"
+  },
+  {
+    "id": "mon_aegirocassis_baby",
+    "type": "MONSTER",
+    "name": {
+      "str": "幼年埃吉罗卡西斯",
+      "str_pl": "幼年埃吉罗卡西斯"
+    },
+    "copy-from": "mon_aegirocassis",
+    "description": "一只小埃吉罗卡西斯。也许可以作为老虎虾的替代品。",
+    "volume": "220 ml",
+    "weight": "160 g",
+    "hp": 6,
+    "speed": 145,
+    "color": "light_blue",
+    "aggression": -20,
+    "melee_skill": 1,
+    "melee_dice": 2,
+    "melee_dice_sides": 2,
+    "dodge": 5,
+    "armor_bash": 0,
+    "armor_cut": 1,
+    "armor_stab": 0,
+    "upgrades": {
+      "age_grow": 12,
+      "into": "mon_aegirocassis"
+    },
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_anomalocaris",
+    "type": "MONSTER",
+    "name": {
+      "str": "奇虾",
+      "str_pl": "奇虾"
+    },
+    "description": "一种看起来像龙虾的生物，长约1米，头部前方有两个带倒刺的口部附肢。头部两侧上方有两个大的复眼，仿佛它们是天线或某种古代控制器的按钮。这种动物有一个肉质的“裙边”，通过波动来移动。也许最不显眼的部分是尾巴，它毫无疑问是虾的尾巴，揭示了这种动物的分类和烹饪特性。如果不是因为它水生生活方式，并且它在5亿年前就灭绝了，这会是一种奇特的宠物。",
+    "volume": "4 L",
+    "weight": "4000 g",
+    "default_faction": "touhou_arthropod_aquatic_small",
+    "bodytype": "crab",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "ARTHROPOD"
+    ],
+    "harvest": "arthropod_shrimplike_harvest",
+    "hp": 30,
+    "speed": 155,
+    "material": [
+      "flesh"
+    ],
+    "color": "pink",
+    "symbol": "ϒ",
+    "aggression": 15,
+    "morale": 25,
+    "melee_skill": 3,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      }
+    ],
+    "dodge": 3,
+    "armor_cut": 2,
+    "vision_night": 15,
+    "path_settings": {
+      "max_dist": 8
+    },
+    "reproduction": {
+      "baby_egg": "egg_anomalocaris",
+      "baby_count": 6,
+      "baby_timer": 8
+    },
+    "baby_flags": [
+      "SPRING",
+      "SUMMER",
+      "AUTUMN",
+      "WINTER"
+    ],
+    "anger_triggers": [
+      "HURT"
+    ],
+    "flags": [
+      "ANIMAL",
+      "AQUATIC",
+      "ARTHROPOD_BLOOD",
+      "FISHABLE",
+      "SEES",
+      "SMELLS",
+      "SWIMS",
+      "WATER_CAMOUFLAGE"
+    ],
+    "//": "Based on Anomalocaris sp.. No weight or reproductive data"
+  },
+  {
+    "id": "mon_anomalocaris_baby",
+    "type": "MONSTER",
+    "name": {
+      "str": "幼年奇虾",
+      "str_pl": "幼年奇虾"
+    },
+    "copy-from": "mon_anomalocaris",
+    "description": "一只小奇虾。难以置信地可爱。",
+    "volume": "200 ml",
+    "weight": "160 g",
+    "hp": 6,
+    "speed": 165,
+    "color": "brown",
+    "aggression": 10,
+    "melee_skill": 1,
+    "melee_dice": 2,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
+    "dodge": 5,
+    "armor_cut": 1,
+    "upgrades": {
+      "age_grow": 8,
+      "into": "mon_anomalocaris"
+    },
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_arthropleura",
+    "type": "MONSTER",
+    "name": {
+      "str": "节胸马陆",
+      "str_pl": "节胸马陆"
+    },
+    "description": "一种巨大的多足动物。每一节似乎都长成了看起来像几丁质装甲的东西，覆盖着每一对腿。虽然它看起来非常非常吓人，但它似乎忽略周围的一切，除了植物。",
+    "volume": "60 L",
+    "weight": "50 kg",
+    "default_faction": "touhou_arthropod_herbivore",
+    "bodytype": "snake",
+    "//": "closer than crab ",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "ARTHROPOD"
+    ],
+    "harvest": "arthropod_big_harvest",
+    "hp": 120,
+    "speed": 100,
+    "material": [
+      "iflesh"
+    ],
+    "color": "red",
+    "symbol": "ș",
+    "aggression": -5,
+    "morale": 15,
+    "melee_skill": 3,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      }
+    ],
+    "dodge": 3,
+    "armor_bash": 2,
+    "armor_cut": 4,
+    "armor_stab": 2,
+    "vision_night": 20,
+    "path_settings": {
+      "max_dist": 10
+    },
+    "reproduction": {
+      "baby_egg": "egg_arthropleura",
+      "baby_count": 6,
+      "baby_timer": 10
+    },
+    "baby_flags": [
+      "SPRING",
+      "SUMMER",
+      "AUTUMN",
+      "WINTER"
+    ],
+    "anger_triggers": [
+      "HURT"
+    ],
+    "flags": [
+      "ANIMAL",
+      "ARTHROPOD_BLOOD",
+      "SEES",
+      "SMELLS"
+    ],
+    "//2": "Based on Arthropleura sp.. No reproductive data, was probably herbivore"
+  },
+  {
+    "id": "mon_arthropleura_baby",
+    "type": "MONSTER",
+    "name": {
+      "str": "幼年节胸马陆",
+      "str_pl": "幼年节胸马陆"
+    },
+    "copy-from": "mon_arthropleura",
+    "description": "一只小节胸马陆。如果存在超大的多足动物，人们会把这些误认为是它们。",
+    "volume": "400 ml",
+    "weight": "300 g",
+    "hp": 8,
+    "speed": 115,
+    "color": "brown",
+    "melee_skill": 2,
+    "melee_dice": 2,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
+    "dodge": 3,
+    "armor_bash": 0,
+    "armor_cut": 2,
+    "armor_stab": 0,
+    "upgrades": {
+      "age_grow": 12,
+      "into": "mon_arthropleura"
+    },
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_chasmataspis",
+    "type": "MONSTER",
+    "name": {
+      "str": "查斯马塔斯皮斯",
+      "str_pl": "查斯马塔斯皮斯"
+    },
+    "copy-from": "mon_opabinia",
+    "description": "一种看起来像鲎的动物，与广翅鲎和相关螯肢动物相近。相对于长而分节、带刺的尾巴，头胸部相对较小。它四处爬行，寻找小猎物。",
+    "volume": "110 ml",
+    "weight": "80 g",
+    "harvest": "arthropod_small_harvest",
+    "hp": 5,
+    "speed": 105,
+    "color": "brown",
+    "aggression": 0,
+    "melee_skill": 1,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
+    "reproduction": {
+      "baby_egg": "egg_arthropod_aquatic_small",
+      "baby_count": 8,
+      "baby_timer": 10
+    },
+    "baby_flags": [
+      "SPRING",
+      "SUMMER",
+      "AUTUMN",
+      "WINTER"
+    ],
+    "flags": [
+      "ANIMAL",
+      "AQUATIC",
+      "ARTHROPOD_BLOOD",
+      "FISHABLE",
+      "SEES",
+      "SMELLS",
+      "WATER_CAMOUFLAGE"
+    ],
+    "//": "Based on Chasmataspis sp.. No weight or reproductive data"
+  },
+  {
+    "id": "mon_chasmataspis_baby",
+    "type": "MONSTER",
+    "name": {
+      "str": "幼年查斯马塔斯皮斯",
+      "str_pl": "幼年查斯马塔斯皮斯"
+    },
+    "copy-from": "mon_chasmataspis",
+    "description": "一只小查斯马塔斯皮斯，让人联想到虾，如果虾是扁的而不是弯的。",
+    "volume": "5 ml",
+    "weight": "5 g",
+    "hp": 1,
+    "speed": 110,
+    "aggression": 0,
+    "morale": 0,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 0
+      }
+    ],
+    "dodge": 3,
+    "upgrades": {
+      "age_grow": 12,
+      "into": "mon_chasmataspis"
+    },
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_eusarcana",
+    "type": "MONSTER",
+    "name": {
+      "str": "真蝎鲎",
+      "str_pl": "真蝎鲎"
+    },
+    "description": "一种巨大的、看起来像龙虾的蛛形动物，有许多带倒刺的爪子和一条非常吓人的带刺尾巴。躯干看起来很肥，小头上有一对复眼在顶部。与其他广翅鲎相比，腿相对较短。尾巴上有一个像普通陆蝎子一样的毒刺，只是大约大十倍。",
+    "volume": "15000 ml",
+    "weight": "17500 g",
+    "default_faction": "touhou_arthropod_aquatic_medium",
+    "bodytype": "crab",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "ARTHROPOD"
+    ],
+    "harvest": "arthropod_big_harvest",
+    "hp": 35,
+    "speed": 165,
+    "material": [
+      "flesh"
+    ],
+    "color": "light_gray",
+    "symbol": "ᛉ",
+    "aggression": 20,
+    "morale": 25,
+    "melee_skill": 4,
+    "melee_dice": 3,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      }
+    ],
+    "dodge": 3,
+    "armor_bash": 2,
+    "armor_cut": 2,
+    "armor_stab": 2,
+    "vision_day": 35,
+    "vision_night": 15,
+    "path_settings": {
+      "max_dist": 8
+    },
+    "reproduction": {
+      "baby_egg": "egg_eurypterid",
+      "baby_count": 8,
+      "baby_timer": 12
+    },
+    "baby_flags": [
+      "SPRING",
+      "SUMMER",
+      "AUTUMN",
+      "WINTER"
+    ],
+    "anger_triggers": [
+      "HURT",
+      "PLAYER_CLOSE"
+    ],
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        35
+      ]
+    ],
+    "flags": [
+      "ANIMAL",
+      "AQUATIC",
+      "ARTHROPOD_BLOOD",
+      "SEES",
+      "SMELLS",
+      "SWIMS",
+      "WATER_CAMOUFLAGE"
+    ],
+    "//": "Based on Eusarcana scorpionis. This one's venomous",
+    "//2": "ADD VENOM ATTACK !!!"
+  },
+  {
+    "id": "mon_eusarcana_baby",
+    "type": "MONSTER",
+    "name": {
+      "str": "幼年真蝎鲎",
+      "str_pl": "幼年真蝎鲎"
+    },
+    "copy-from": "mon_eusarcana",
+    "description": "一只小真蝎鲎。有点可爱。",
+    "volume": "1000 ml",
+    "weight": "1000 g",
+    "hp": 6,
+    "speed": 145,
+    "color": "dark_gray",
+    "aggression": 15,
+    "morale": 15,
+    "melee_skill": 2,
+    "melee_dice": 3,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
+    "dodge": 5,
+    "armor_bash": 1,
+    "armor_cut": 1,
+    "armor_stab": 1,
+    "upgrades": {
+      "age_grow": 12,
+      "into": "mon_eusarcana"
+    },
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_hurdia",
+    "type": "MONSTER",
+    "name": {
+      "str": "赫德虾",
+      "str_pl": "赫德虾"
+    },
+    "description": "一种长相滑稽的动物，如果不是因为前面那个奇怪的尖“帽子”或“面具”，你可能会把它误认为是等足类。与其他奇虾类相似，它在头部下方有两个带倒刺的胡须状触手状手指，用于进食。复眼位于两侧上方。这种动物有一个肉质的“裙边”，通过波动来移动。",
+    "volume": "250 L",
+    "weight": "300 g",
+    "default_faction": "touhou_arthropod_aquatic_small",
+    "bodytype": "crab",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "ARTHROPOD"
+    ],
+    "harvest": "arthropod_shrimplike_harvest",
+    "hp": 8,
+    "speed": 150,
+    "material": [
+      "flesh"
+    ],
+    "color": "brown",
+    "symbol": "y",
+    "aggression": 0,
+    "morale": 15,
+    "melee_skill": 2,
+    "melee_dice": 2,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 1
+      }
+    ],
+    "dodge": 2,
+    "armor_bash": 2,
+    "armor_cut": 2,
+    "vision_night": 10,
+    "path_settings": {
+      "max_dist": 8
+    },
+    "reproduction": {
+      "baby_egg": "egg_arthropod_aquatic_small",
+      "baby_count": 10,
+      "baby_timer": 7
+    },
+    "baby_flags": [
+      "SPRING",
+      "SUMMER",
+      "AUTUMN",
+      "WINTER"
+    ],
+    "fear_triggers": [
+      "HURT",
+      "SOUND"
+    ],
+    "flags": [
+      "ANIMAL",
+      "AQUATIC",
+      "ARTHROPOD_BLOOD",
+      "FISHABLE",
+      "SEES",
+      "SMELLS",
+      "SWIMS",
+      "WATER_CAMOUFLAGE"
+    ],
+    "//": "Based on Hurdia sp.. No weight or reproductive data"
+  },
+  {
+    "id": "mon_hurdia_baby",
+    "type": "MONSTER",
+    "name": {
+      "str": "幼年赫德虾",
+      "str_pl": "幼年赫德虾"
+    },
+    "copy-from": "mon_hurdia",
+    "description": "一只小赫德虾。可爱。",
+    "volume": "10 ml",
+    "weight": "10 g",
+    "hp": 2,
+    "aggression": -5,
+    "morale": 0,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 0
+      }
+    ],
+    "dodge": 2,
+    "upgrades": {
+      "age_grow": 12,
+      "into": "mon_hurdia"
+    },
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_jaekelopterus",
+    "type": "MONSTER",
+    "name": {
+      "str": "耶克尔鲎",
+      "str_pl": "耶克尔鲎"
+    },
+    "description": "一种巨大的、看起来像龙虾的蛛形动物，有两只巨大的爪子和一条非常吓人的尾刺。头部呈铲状，复眼在顶部，前方有一对大螯肢，大小和锋利程度如同屠宰刀。有几对腿，最引人注目的是前方第一对腿，长着巨大的爪子，最后一对是拍动的、多肉的附肢，位于身体两侧用于移动。至少尾巴只是用来展示的。",
+    "volume": "170 L",
+    "weight": "170 kg",
+    "default_faction": "touhou_arthropod_aquatic_large",
+    "bodytype": "crab",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "ARTHROPOD"
+    ],
+    "harvest": "arthropod_big_harvest",
+    "hp": 175,
+    "speed": 175,
+    "material": [
+      "flesh"
+    ],
+    "color": "brown",
+    "symbol": "ᛉ",
+    "aggression": 35,
+    "morale": 35,
+    "melee_skill": 4,
+    "melee_dice": 3,
+    "melee_dice_sides": 5,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 7
+      }
+    ],
+    "dodge": 2,
+    "armor_bash": 2,
+    "armor_cut": 3,
+    "armor_stab": 2,
+    "vision_day": 35,
+    "vision_night": 15,
+    "path_settings": {
+      "max_dist": 8
+    },
+    "reproduction": {
+      "baby_egg": "egg_eurypterid",
+      "baby_count": 8,
+      "baby_timer": 12
+    },
+    "baby_flags": [
+      "SPRING",
+      "SUMMER",
+      "AUTUMN",
+      "WINTER"
+    ],
+    "anger_triggers": [
+      "HURT",
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK"
+    ],
+    "flags": [
+      "ANIMAL",
+      "AQUATIC",
+      "ARTHROPOD_BLOOD",
+      "SEES",
+      "SMELLS",
+      "SWIMS",
+      "WATER_CAMOUFLAGE"
+    ],
+    "//": "Based on Jaekelopterus sp."
+  },
+  {
+    "id": "mon_jaekelopterus_baby",
+    "type": "MONSTER",
+    "name": {
+      "str": "幼年广翅鲎",
+      "str_pl": "幼年广翅鲎"
+    },
+    "copy-from": "mon_jaekelopterus",
+    "description": "一只小耶克尔鲎，有两只大爪子和一条非常吓人的尾刺。它几乎看起来很可爱。你想知道在前院养一只作为宠物是否能让那些烦人的亡灵小孩不打扰你的草坪。",
+    "volume": "3 L",
+    "weight": "3000 g",
+    "hp": 16,
+    "speed": 145,
+    "color": "pink",
+    "aggression": 25,
+    "morale": 25,
+    "melee_skill": 2,
+    "melee_dice": 3,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 3
+      }
+    ],
+    "dodge": 4,
+    "armor_bash": 0,
+    "armor_cut": 1,
+    "armor_stab": 1,
+    "upgrades": {
+      "age_grow": 12,
+      "into": "mon_jaekelopterus"
+    },
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_megalograptus",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨笔石鲎",
+      "str_pl": "巨笔石鲎"
+    },
+    "description": "一种巨大的、看起来像龙虾的蛛形动物，有两只巨大的爪子和一条非常吓人的刀片状尾巴。头部呈实际龙虾的形状，带有额外的刺，顶部有一对复眼，前方有一对大的带倒刺的螯肢。有几对腿，最引人注目的是第一对，变成了某种带倒刺的爪状附肢，最后一对是拍动的、多肉的附肢，位于身体两侧用于移动。尾巴上有刀片大小的刀刃，能够进行抓握动作。",
+    "volume": "30000 ml",
+    "weight": "25000 g",
+    "default_faction": "touhou_arthropod_aquatic_medium",
+    "bodytype": "crab",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "ARTHROPOD"
+    ],
+    "harvest": "arthropod_big_harvest",
+    "hp": 40,
+    "speed": 165,
+    "material": [
+      "flesh"
+    ],
+    "color": "light_gray",
+    "symbol": "ᛉ",
+    "aggression": 35,
+    "morale": 30,
+    "melee_skill": 4,
+    "melee_dice": 3,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 6
+      }
+    ],
+    "dodge": 3,
+    "armor_bash": 2,
+    "armor_cut": 2,
+    "armor_stab": 2,
+    "vision_day": 35,
+    "vision_night": 15,
+    "path_settings": {
+      "max_dist": 8
+    },
+    "reproduction": {
+      "baby_egg": "egg_eurypterid",
+      "baby_count": 8,
+      "baby_timer": 12
+    },
+    "baby_flags": [
+      "SPRING",
+      "SUMMER",
+      "AUTUMN",
+      "WINTER"
+    ],
+    "anger_triggers": [
+      "HURT",
+      "PLAYER_WEAK"
+    ],
+    "flags": [
+      "ANIMAL",
+      "AQUATIC",
+      "ARTHROPOD_BLOOD",
+      "SEES",
+      "SMELLS",
+      "SWIMS",
+      "WATER_CAMOUFLAGE"
+    ],
+    "//": "Based on Megalograptus sp. 'Medium-sized' eurypterid for c:dda purposes, actually quite big relative to ancient eurypterids"
+  },
+  {
+    "id": "mon_megalograptus_baby",
+    "type": "MONSTER",
+    "name": {
+      "str": "幼年巨笔石鲎",
+      "str_pl": "幼年巨笔石鲎"
+    },
+    "copy-from": "mon_megalograptus",
+    "description": "一只小巨笔石鲎，有两只大爪子和一条吓人的刀片状尾巴。它几乎看起来很可爱。",
+    "volume": "1500 ml",
+    "weight": "2000 g",
+    "hp": 8,
+    "speed": 145,
+    "color": "dark_gray",
+    "aggression": 15,
+    "morale": 25,
+    "melee_skill": 2,
+    "melee_dice": 3,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
+    "dodge": 5,
+    "armor_bash": 1,
+    "armor_cut": 1,
+    "armor_stab": 1,
+    "upgrades": {
+      "age_grow": 12,
+      "into": "mon_megalograptus"
+    },
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_meganeura",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨脉蜻蜓",
+      "str_pl": "巨脉蜻蜓"
+    },
+    "description": "一种巨大的蜻蜓。翼展有你手臂那么大，它飞来飞去，嗡嗡作响，寻找比它更小的昆虫，这基本上包括除了它自己以外的一切。",
+    "volume": "200 ml",
+    "weight": "150 g",
+    "default_faction": "dragonfly",
+    "bodytype": "insect",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "ARTHROPOD"
+    ],
+    "harvest": "arthropod_small_harvest",
+    "hp": 10,
+    "speed": 150,
+    "material": [
+      "iflesh"
+    ],
+    "color": "green",
+    "symbol": "y",
+    "aggression": -5,
+    "morale": 25,
+    "melee_skill": 3,
+    "melee_dice": 1,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 1
+      }
+    ],
+    "dodge": 3,
+    "path_settings": {
+      "max_dist": 10
+    },
+    "reproduction": {
+      "baby_egg": "egg_meganeura",
+      "baby_count": 4,
+      "baby_timer": 8
+    },
+    "baby_flags": [
+      "SPRING",
+      "SUMMER",
+      "AUTUMN",
+      "WINTER"
+    ],
+    "anger_triggers": [
+      "HURT"
+    ],
+    "special_attacks": [
+      [
+        "PARROT",
+        4
+      ]
+    ],
+    "flags": [
+      "ANIMAL",
+      "ARTHROPOD_BLOOD",
+      "FLIES",
+      "SEES"
+    ],
+    "//2": "Based on Meganeura sp.. No reproductive data"
+  },
+  {
+    "id": "mon_meganeura_nymph",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨脉蜻蜓若虫",
+      "str_pl": "巨脉蜻蜓若虫"
+    },
+    "copy-from": "mon_meganeura",
+    "description": "一只小巨脉蜻蜓若虫。看起来像蟑螂和蟋蟀的混合体。",
+    "volume": "20 ml",
+    "weight": "15 g",
+    "hp": 2,
+    "speed": 165,
+    "color": "brown",
+    "melee_skill": 1,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 0
+      }
+    ],
+    "dodge": 4,
+    "upgrades": {
+      "age_grow": 4,
+      "into": "mon_meganeura"
+    },
+    "flags": [
+      "ANIMAL",
+      "ARTHROPOD_BLOOD",
+      "AQUATIC",
+      "SEES",
+      "WATER_CAMOUFLAGE"
+    ],
+    "delete": {
+      "flags": [
+        "FLIES"
+      ]
+    },
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_opabinia",
+    "type": "MONSTER",
+    "name": {
+      "str": "欧巴宾海蝎",
+      "str_pl": "欧巴宾海蝎"
+    },
+    "description": "一种看起来像小龙虾的小生物，前面有一个奇怪的触手臂，位于它本应是脸的位置。头部上方有五个复眼，让它看起来更加外星。这种动物有一个肉质的“裙边”，通过波动来移动。也许最不显眼的部分是尾巴，它看起来足够像龙虾的尾巴，让你考虑像烹饪龙虾一样烹饪它。",
+    "volume": "90 ml",
+    "weight": "100 g",
+    "//": "Scaled down from 25 cm long tiger prawns",
+    "default_faction": "touhou_arthropod_aquatic_small",
+    "bodytype": "crab",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "ARTHROPOD"
+    ],
+    "harvest": "arthropod_shrimplike_harvest",
+    "hp": 5,
+    "speed": 150,
+    "material": [
+      "flesh"
+    ],
+    "color": "pink",
+    "symbol": "y",
+    "aggression": 0,
+    "morale": 10,
+    "melee_skill": 1,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 1
+      }
+    ],
+    "dodge": 2,
+    "vision_night": 10,
+    "path_settings": {
+      "max_dist": 8
+    },
+    "reproduction": {
+      "baby_egg": "egg_arthropod_aquatic_small",
+      "baby_count": 12,
+      "baby_timer": 7
+    },
+    "baby_flags": [
+      "SPRING",
+      "SUMMER",
+      "AUTUMN",
+      "WINTER"
+    ],
+    "fear_triggers": [
+      "HURT"
+    ],
+    "flags": [
+      "ANIMAL",
+      "AQUATIC",
+      "ARTHROPOD_BLOOD",
+      "FISHABLE",
+      "SEES",
+      "SMELLS",
+      "SWIMS",
+      "WATER_CAMOUFLAGE"
+    ],
+    "//2": "Based on Opabinia sp., this one's slightly oversized. No weight or reproductive data"
+  },
+  {
+    "id": "mon_opabinia_baby",
+    "type": "MONSTER",
+    "name": {
+      "str": "幼年欧巴宾海蝎",
+      "str_pl": "幼年欧巴宾海蝎"
+    },
+    "copy-from": "mon_opabinia",
+    "description": "一只小欧巴宾海蝎。可爱。",
+    "volume": "5 ml",
+    "weight": "5 g",
+    "hp": 1,
+    "aggression": 0,
+    "morale": 0,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 0
+      }
+    ],
+    "dodge": 3,
+    "upgrades": {
+      "age_grow": 12,
+      "into": "mon_opabinia"
+    },
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_pambdelurion",
+    "type": "MONSTER",
+    "name": {
+      "str": "潘德尔螈",
+      "str_pl": "潘德尔螈"
+    },
+    "description": "一种丑陋的节肢动物。有些扁平，两个前部带倒刺的附肢像张开的爪子一样伸在头部前方，实际上是触觉和嗅觉器官。瓣膜下方有像小脚一样的肢体用于移动，因为这种动物似乎不会游泳。",
+    "volume": "300 ml",
+    "weight": "320 g",
+    "default_faction": "touhou_arthropod_aquatic_small",
+    "bodytype": "crab",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "ARTHROPOD"
+    ],
+    "harvest": "arthropod_shrimplike_harvest",
+    "hp": 35,
+    "speed": 105,
+    "material": [
+      "flesh"
+    ],
+    "color": "brown",
+    "symbol": "ϒ",
+    "aggression": -5,
+    "morale": 10,
+    "melee_skill": 2,
+    "melee_dice": 1,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 1
+      }
+    ],
+    "dodge": 2,
+    "vision_day": 15,
+    "vision_night": 15,
+    "path_settings": {
+      "max_dist": 8
+    },
+    "reproduction": {
+      "baby_egg": "egg_arthropod_aquatic_small",
+      "baby_count": 6,
+      "baby_timer": 8
+    },
+    "baby_flags": [
+      "SPRING",
+      "SUMMER",
+      "AUTUMN",
+      "WINTER"
+    ],
+    "anger_triggers": [
+      "HURT",
+      "PLAYER_WEAK"
+    ],
+    "flags": [
+      "ANIMAL",
+      "AQUATIC",
+      "ARTHROPOD_BLOOD",
+      "FISHABLE",
+      "SEES",
+      "SMELLS",
+      "WATER_CAMOUFLAGE"
+    ],
+    "//": "Based on Pambdelurion sp.  No weight or reproductive data"
+  },
+  {
+    "id": "mon_pambdelurion_baby",
+    "type": "MONSTER",
+    "name": {
+      "str": "幼年潘德尔螈",
+      "str_pl": "幼年潘德尔螈"
+    },
+    "copy-from": "mon_pambdelurion",
+    "description": "一只小潘德尔螈，和成年的一样丑。",
+    "volume": "5 ml",
+    "weight": "5 g",
+    "hp": 4,
+    "speed": 115,
+    "color": "dark_gray",
+    "aggression": -10,
+    "morale": 5,
+    "melee_skill": 2,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 0
+      }
+    ],
+    "dodge": 1,
+    "upgrades": {
+      "age_grow": 10,
+      "into": "mon_pambdelurion"
+    },
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_parastylonurus",
+    "type": "MONSTER",
+    "name": {
+      "str": "副柱尾鲎",
+      "str_pl": "副柱尾鲎"
+    },
+    "description": "一种古老的蛛形动物，看起来有点像龙虾。整体形状像扁平的甲壳类，有一个圆形的头胸部和一条长而分节、灵活的尾巴。螯肢是动物前方的小突起，相当多肉的腿朝下，因为它们用于行走，因为这种动物似乎不会游泳。",
+    "volume": "11000 ml",
+    "weight": "10000 g",
+    "default_faction": "touhou_arthropod_aquatic_small",
+    "bodytype": "crab",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "ARTHROPOD"
+    ],
+    "harvest": "arthropod_small_harvest",
+    "hp": 30,
+    "speed": 150,
+    "material": [
+      "flesh"
+    ],
+    "color": "brown",
+    "symbol": "ᛉ",
+    "aggression": 20,
+    "morale": 20,
+    "melee_skill": 2,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
+    "dodge": 3,
+    "armor_bash": 2,
+    "armor_cut": 1,
+    "armor_stab": 1,
+    "vision_day": 25,
+    "vision_night": 20,
+    "path_settings": {
+      "max_dist": 8
+    },
+    "reproduction": {
+      "baby_egg": "egg_eurypterid_small",
+      "baby_count": 6,
+      "baby_timer": 10
+    },
+    "baby_flags": [
+      "SPRING",
+      "SUMMER",
+      "AUTUMN",
+      "WINTER"
+    ],
+    "anger_triggers": [
+      "HURT",
+      "PLAYER_WEAK"
+    ],
+    "flags": [
+      "ANIMAL",
+      "ARTHROPOD_BLOOD",
+      "SEES",
+      "SMELLS",
+      "SWIMS",
+      "WATER_CAMOUFLAGE"
+    ],
+    "//": "Based on Parastylonurus sp. According to Paleos' image this was 21 cm long, that's not very menacing so values are for a bigger one"
+  },
+  {
+    "id": "mon_parastylonurus_baby",
+    "type": "MONSTER",
+    "name": {
+      "str": "幼年副柱尾鲎",
+      "str_pl": "幼年副柱尾鲎"
+    },
+    "copy-from": "mon_parastylonurus",
+    "description": "一只小副柱尾鲎，或者一个奇怪的蝎子-龙虾东西。你决定吧。",
+    "volume": "300 ml",
+    "weight": "400 g",
+    "hp": 6,
+    "speed": 170,
+    "color": "dark_gray",
+    "aggression": 15,
+    "morale": 15,
+    "melee_skill": 2,
+    "melee_dice": 2,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 1
+      }
+    ],
+    "dodge": 4,
+    "armor_bash": 1,
+    "armor_cut": 0,
+    "armor_stab": 0,
+    "upgrades": {
+      "age_grow": 12,
+      "into": "mon_parastylonurus"
+    },
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_sidneyia",
+    "type": "MONSTER",
+    "name": {
+      "str": "西德尼虾",
+      "str_pl": "西德尼虾"
+    },
+    "copy-from": "mon_opabinia",
+    "description": "一种宽大的甲壳类。与虾非常相似，只是这一种更伸展、更扁平、更多肉，并且只有一对粗触角。",
+    "volume": "100 ml",
+    "weight": "110 g",
+    "hp": 6,
+    "speed": 155,
+    "color": "brown",
+    "aggression": 0,
+    "melee_skill": 1,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 1
+      }
+    ],
+    "reproduction": {
+      "baby_egg": "egg_arthropod_aquatic_small",
+      "baby_count": 8,
+      "baby_timer": 10
+    },
+    "baby_flags": [
+      "SPRING",
+      "SUMMER",
+      "AUTUMN",
+      "WINTER"
+    ],
+    "flags": [
+      "ANIMAL",
+      "AQUATIC",
+      "ARTHROPOD_BLOOD",
+      "FISHABLE",
+      "SEES",
+      "SMELLS",
+      "SWIMS",
+      "WATER_CAMOUFLAGE"
+    ],
+    "//": "Based on Sidneyia sp.. No weight or reproductive data"
+  },
+  {
+    "id": "mon_sidneyia_baby",
+    "type": "MONSTER",
+    "name": {
+      "str": "幼年西德尼虾",
+      "str_pl": "幼年西德尼虾"
+    },
+    "copy-from": "mon_sidneyia",
+    "description": "一只小西德尼虾。总有一天会长成一只骄傲的、扁平的虾。",
+    "volume": "5 ml",
+    "weight": "5 g",
+    "hp": 1,
+    "aggression": 0,
+    "morale": 0,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 0
+      }
+    ],
+    "dodge": 3,
+    "upgrades": {
+      "age_grow": 12,
+      "into": "mon_sidneyia"
+    },
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  }
+]

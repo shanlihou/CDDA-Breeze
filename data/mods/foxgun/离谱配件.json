@@ -1,0 +1,22 @@
+[
+   {
+    "id": "Forced_reset_trigger",
+    "type": "GUNMOD",
+    "name": { "str": "强制复位扳机" },
+    "description": "安装给予枪械自动射击模式。",
+    "weight": "60 g",
+    "volume": "250 ml",
+    "integral_volume": "0 ml",
+    "price": 24000,
+    "price_postapoc": 500,
+    "material": [ "steel" ],
+    "symbol": ":",
+    "color": "red",
+    "location": "mechanism",
+    "mod_targets": [ "smg", "rifle", "pistol", "shotgun", "launcher" ],
+    "install_time": "30 s",
+    "mode_modifier": [ [ "semi","burst", 3,"auto", 5 ] ],
+    "min_skills": [ [ "mechanics", 1 ], [ "rifle", 1 ] ],
+    "flags": [ "INSTALL_DIFFICULT", "CONSUMABLE" ]
+  }
+  ]

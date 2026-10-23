@@ -1,0 +1,451 @@
+[
+  {
+    "id": "skill_xxy_sz_copy",
+    "type": "TOOL",
+    "material": [
+      "cyylcaizhi"
+    ],
+    "symbol": "?",
+    "color": "white",
+    "name": { "str": "技能学习仪(数值复制用)" },
+    "description": "你不应该看到这个物品。",
+    "looks_like": "two_way_radio",
+    "price": "5000 USD",
+    "price_postapoc": "50 USD",
+    "weight": "1000 g",
+    "volume": "1000 ml",
+    "bashing": 1,
+    "cutting": 0,
+    "to_hit": -1,
+    "flags": [
+      "TRADER_AVOID",
+      "NONCONDUCTIVE"
+    ]
+  },
+
+  {
+    "id": "cyyl_skill_xxy_stabbing",
+    "type": "TOOL",
+    "copy-from": "skill_xxy_sz_copy",
+    "name": { "str": "次元医疗技能学习仪(刺击武器)" },
+    "description": "刺击武器技能(理论)的快速学习仪器,只要一瞬间就可以学完,还可以加点心情。",
+    "book_data": {
+      "required_level": 0,
+      "max_level": 10,
+      "skill": "stabbing",
+      "intelligence": 0,
+      "time": 0,
+      "fun": 1
+    }
+  },
+  {
+    "id": "cyyl_skill_xxy_bashing",
+    "type": "TOOL",
+    "copy-from": "skill_xxy_sz_copy",
+    "name": { "str": "次元医疗技能学习仪(钝击武器)" },
+    "description": "钝击武器技能(理论)的快速学习仪器,只要一瞬间就可以学完,还可以加点心情。",
+    "book_data": {
+      "required_level": 0,
+      "max_level": 10,
+      "skill": "bashing",
+      "intelligence": 0,
+      "time": 0,
+      "fun": 1
+    }
+  },
+  {
+    "id": "cyyl_skill_xxy_melee",
+    "type": "TOOL",
+    "copy-from": "skill_xxy_sz_copy",
+    "name": { "str": "次元医疗技能学习仪(近战)" },
+    "description": "近战技能(理论)的快速学习仪器,只要一瞬间就可以学完,还可以加点心情。",
+    "book_data": {
+      "required_level": 0,
+      "max_level": 10,
+      "skill": "melee",
+      "intelligence": 0,
+      "time": 0,
+      "fun": 1
+    }
+  },
+  {
+    "id": "cyyl_skill_xxy_dodge",
+    "type": "TOOL",
+    "copy-from": "skill_xxy_sz_copy",
+    "name": { "str": "次元医疗技能学习仪(闪避)" },
+    "description": "闪避技能(理论)的快速学习仪器,只要一瞬间就可以学完,还可以加点心情。",
+    "book_data": {
+      "required_level": 0,
+      "max_level": 10,
+      "skill": "dodge",
+      "intelligence": 0,
+      "time": 0,
+      "fun": 1
+    }
+  },
+  {
+    "id": "cyyl_skill_xxy_unarmed",
+    "type": "TOOL",
+    "copy-from": "skill_xxy_sz_copy",
+    "name": { "str": "次元医疗技能学习仪(徒手格斗)" },
+    "description": "徒手格斗技能(理论)的快速学习仪器,只要一瞬间就可以学完,还可以加点心情。",
+    "book_data": {
+      "required_level": 0,
+      "max_level": 10,
+      "skill": "unarmed",
+      "intelligence": 0,
+      "time": 0,
+      "fun": 1
+    }
+  },
+  {
+    "id": "cyyl_skill_xxy_cutting",
+    "type": "TOOL",
+    "copy-from": "skill_xxy_sz_copy",
+    "name": { "str": "次元医疗技能学习仪(斩击武器)" },
+    "description": "斩击武器技能(理论)的快速学习仪器,只要一瞬间就可以学完,还可以加点心情。",
+    "book_data": {
+      "required_level": 0,
+      "max_level": 10,
+      "skill": "cutting",
+      "intelligence": 0,
+      "time": 0,
+      "fun": 1
+    }
+  },
+
+  {
+    "id": "cyyl_skill_xxy_rifle",
+    "type": "TOOL",
+    "copy-from": "skill_xxy_sz_copy",
+    "name": { "str": "次元医疗技能学习仪(步枪)" },
+    "description": "步枪技能(理论)的快速学习仪器,只要一瞬间就可以学完,还可以加点心情。",
+    "book_data": {
+      "required_level": 0,
+      "max_level": 10,
+      "skill": "rifle",
+      "intelligence": 0,
+      "time": 0,
+      "fun": 1
+    }
+  },
+  {
+    "id": "cyyl_skill_xxy_smg",
+    "type": "TOOL",
+    "copy-from": "skill_xxy_sz_copy",
+    "name": { "str": "次元医疗技能学习仪(冲锋枪)" },
+    "description": "冲锋枪技能(理论)的快速学习仪器,只要一瞬间就可以学完,还可以加点心情。",
+    "book_data": {
+      "required_level": 0,
+      "max_level": 10,
+      "skill": "smg",
+      "intelligence": 0,
+      "time": 0,
+      "fun": 1
+    }
+  },
+  {
+    "id": "cyyl_skill_xxy_archery",
+    "type": "TOOL",
+    "copy-from": "skill_xxy_sz_copy",
+    "name": { "str": "次元医疗技能学习仪(弓术)" },
+    "description": "弓术技能(理论)的快速学习仪器,只要一瞬间就可以学完,还可以加点心情。",
+    "book_data": {
+      "required_level": 0,
+      "max_level": 10,
+      "skill": "archery",
+      "intelligence": 0,
+      "time": 0,
+      "fun": 1
+    }
+  },
+  {
+    "id": "cyyl_skill_xxy_spellcraft",
+    "type": "TOOL",
+    "copy-from": "skill_xxy_sz_copy",
+    "name": { "str": "次元医疗技能学习仪(魔法)" },
+    "description": "魔法技能(理论)的快速学习仪器,只要一瞬间就可以学完,还可以加点心情。",
+    "book_data": {
+      "required_level": 0,
+      "max_level": 10,
+      "skill": "spellcraft",
+      "intelligence": 0,
+      "time": 0,
+      "fun": 1
+    }
+  },
+  {
+    "id": "cyyl_skill_xxy_gun",
+    "type": "TOOL",
+    "copy-from": "skill_xxy_sz_copy",
+    "name": { "str": "次元医疗技能学习仪(枪法)" },
+    "description": "枪法技能(理论)的快速学习仪器,只要一瞬间就可以学完,还可以加点心情。",
+    "book_data": {
+      "required_level": 0,
+      "max_level": 10,
+      "skill": "gun",
+      "intelligence": 0,
+      "time": 0,
+      "fun": 1
+    }
+  },
+  {
+    "id": "cyyl_skill_xxy_pistol",
+    "type": "TOOL",
+    "copy-from": "skill_xxy_sz_copy",
+    "name": { "str": "次元医疗技能学习仪(手枪)" },
+    "description": "手枪技能(理论)的快速学习仪器,只要一瞬间就可以学完,还可以加点心情。",
+    "book_data": {
+      "required_level": 0,
+      "max_level": 10,
+      "skill": "pistol",
+      "intelligence": 0,
+      "time": 0,
+      "fun": 1
+    }
+  },
+  {
+    "id": "cyyl_skill_xxy_throw",
+    "type": "TOOL",
+    "copy-from": "skill_xxy_sz_copy",
+    "name": { "str": "次元医疗技能学习仪(投掷)" },
+    "description": "投掷技能(理论)的快速学习仪器,只要一瞬间就可以学完,还可以加点心情。",
+    "book_data": {
+      "required_level": 0,
+      "max_level": 10,
+      "skill": "throw",
+      "intelligence": 0,
+      "time": 0,
+      "fun": 1
+    }
+  },
+  {
+    "id": "cyyl_skill_xxy_shotgun",
+    "type": "TOOL",
+    "copy-from": "skill_xxy_sz_copy",
+    "name": { "str": "次元医疗技能学习仪(霰弹枪)" },
+    "description": "霰弹枪技能(理论)的快速学习仪器,只要一瞬间就可以学完,还可以加点心情。",
+    "book_data": {
+      "required_level": 0,
+      "max_level": 10,
+      "skill": "shotgun",
+      "intelligence": 0,
+      "time": 0,
+      "fun": 1
+    }
+  },
+  {
+    "id": "cyyl_skill_xxy_launcher",
+    "type": "TOOL",
+    "copy-from": "skill_xxy_sz_copy",
+    "name": { "str": "次元医疗技能学习仪(重武器)" },
+    "description": "重武器技能(理论)的快速学习仪器,只要一瞬间就可以学完,还可以加点心情。",
+    "book_data": {
+      "required_level": 0,
+      "max_level": 10,
+      "skill": "launcher",
+      "intelligence": 0,
+      "time": 0,
+      "fun": 1
+    }
+  },
+
+  {
+    "id": "cyyl_skill_xxy_tailor",
+    "type": "TOOL",
+    "copy-from": "skill_xxy_sz_copy",
+    "name": { "str": "次元医疗技能学习仪(裁缝)" },
+    "description": "裁缝技能(理论)的快速学习仪器,只要一瞬间就可以学完,还可以加点心情。",
+    "book_data": {
+      "required_level": 0,
+      "max_level": 10,
+      "skill": "tailor",
+      "intelligence": 0,
+      "time": 0,
+      "fun": 1
+    }
+  },
+  {
+    "id": "cyyl_skill_xxy_electronics",
+    "type": "TOOL",
+    "copy-from": "skill_xxy_sz_copy",
+    "name": { "str": "次元医疗技能学习仪(电子学)" },
+    "description": "电子学技能(理论)的快速学习仪器,只要一瞬间就可以学完,还可以加点心情。",
+    "book_data": {
+      "required_level": 0,
+      "max_level": 10,
+      "skill": "electronics",
+      "intelligence": 0,
+      "time": 0,
+      "fun": 1
+    }
+  },
+  {
+    "id": "cyyl_skill_xxy_survival",
+    "type": "TOOL",
+    "copy-from": "skill_xxy_sz_copy",
+    "name": { "str": "次元医疗技能学习仪(生存)" },
+    "description": "生存技能(理论)的快速学习仪器,只要一瞬间就可以学完,还可以加点心情。",
+    "book_data": {
+      "required_level": 0,
+      "max_level": 10,
+      "skill": "survival",
+      "intelligence": 0,
+      "time": 0,
+      "fun": 1
+    }
+  },
+  {
+    "id": "cyyl_skill_xxy_cooking",
+    "type": "TOOL",
+    "copy-from": "skill_xxy_sz_copy",
+    "name": { "str": "次元医疗技能学习仪(食品加工)" },
+    "description": "食品加工技能(理论)的快速学习仪器,只要一瞬间就可以学完,还可以加点心情。",
+    "book_data": {
+      "required_level": 0,
+      "max_level": 10,
+      "skill": "cooking",
+      "intelligence": 0,
+      "time": 0,
+      "fun": 1
+    }
+  },
+  {
+    "id": "cyyl_skill_xxy_chemistry",
+    "type": "TOOL",
+    "copy-from": "skill_xxy_sz_copy",
+    "name": { "str": "次元医疗技能学习仪(应用科学)" },
+    "description": "应用科学技能(理论)的快速学习仪器,只要一瞬间就可以学完,还可以加点心情。",
+    "book_data": {
+      "required_level": 0,
+      "max_level": 10,
+      "skill": "chemistry",
+      "intelligence": 0,
+      "time": 0,
+      "fun": 1
+    }
+  },
+  {
+    "id": "cyyl_skill_xxy_fabrication",
+    "type": "TOOL",
+    "copy-from": "skill_xxy_sz_copy",
+    "name": { "str": "次元医疗技能学习仪(制造)" },
+    "description": "制造技能(理论)的快速学习仪器,只要一瞬间就可以学完,还可以加点心情。",
+    "book_data": {
+      "required_level": 0,
+      "max_level": 10,
+      "skill": "fabrication",
+      "intelligence": 0,
+      "time": 0,
+      "fun": 1
+    }
+  },
+
+  {
+    "id": "cyyl_skill_xxy_traps",
+    "type": "TOOL",
+    "copy-from": "skill_xxy_sz_copy",
+    "name": { "str": "次元医疗技能学习仪(操控装置)" },
+    "description": "操控装置技能(理论)的快速学习仪器,只要一瞬间就可以学完,还可以加点心情。",
+    "book_data": {
+      "required_level": 0,
+      "max_level": 10,
+      "skill": "traps",
+      "intelligence": 0,
+      "time": 0,
+      "fun": 1
+    }
+  },
+  {
+    "id": "cyyl_skill_xxy_mechanics",
+    "type": "TOOL",
+    "copy-from": "skill_xxy_sz_copy",
+    "name": { "str": "次元医疗技能学习仪(机械学)" },
+    "description": "机械学技能(理论)的快速学习仪器,只要一瞬间就可以学完,还可以加点心情。",
+    "book_data": {
+      "required_level": 0,
+      "max_level": 10,
+      "skill": "mechanics",
+      "intelligence": 0,
+      "time": 0,
+      "fun": 1
+    }
+  },
+  {
+    "id": "cyyl_skill_xxy_computer",
+    "type": "TOOL",
+    "copy-from": "skill_xxy_sz_copy",
+    "name": { "str": "次元医疗技能学习仪(计算机学)" },
+    "description": "计算机学技能(理论)的快速学习仪器,只要一瞬间就可以学完,还可以加点心情。",
+    "book_data": {
+      "required_level": 0,
+      "max_level": 10,
+      "skill": "computer",
+      "intelligence": 0,
+      "time": 0,
+      "fun": 1
+    }
+  },
+  {
+    "id": "cyyl_skill_xxy_driving",
+    "type": "TOOL",
+    "copy-from": "skill_xxy_sz_copy",
+    "name": { "str": "次元医疗技能学习仪(驾驶)" },
+    "description": "驾驶技能(理论)的快速学习仪器,只要一瞬间就可以学完,还可以加点心情。",
+    "book_data": {
+      "required_level": 0,
+      "max_level": 10,
+      "skill": "driving",
+      "intelligence": 0,
+      "time": 0,
+      "fun": 1
+    }
+  },
+  {
+    "id": "cyyl_skill_xxy_speech",
+    "type": "TOOL",
+    "copy-from": "skill_xxy_sz_copy",
+    "name": { "str": "次元医疗技能学习仪(社交)" },
+    "description": "社交技能(理论)的快速学习仪器,只要一瞬间就可以学完,还可以加点心情。",
+    "book_data": {
+      "required_level": 0,
+      "max_level": 10,
+      "skill": "speech",
+      "intelligence": 0,
+      "time": 0,
+      "fun": 1
+    }
+  },
+  {
+    "id": "cyyl_skill_xxy_firstaid",
+    "type": "TOOL",
+    "copy-from": "skill_xxy_sz_copy",
+    "name": { "str": "次元医疗技能学习仪(医疗)" },
+    "description": "医疗技能(理论)的快速学习仪器,只要一瞬间就可以学完,还可以加点心情。",
+    "book_data": {
+      "required_level": 0,
+      "max_level": 10,
+      "skill": "firstaid",
+      "intelligence": 0,
+      "time": 0,
+      "fun": 1
+    }
+  },
+  {
+    "id": "cyyl_skill_xxy_swimming",
+    "type": "TOOL",
+    "copy-from": "skill_xxy_sz_copy",
+    "name": { "str": "次元医疗技能学习仪(运动)" },
+    "description": "运动技能(理论)的快速学习仪器,只要一瞬间就可以学完,还可以加点心情。",
+    "book_data": {
+      "required_level": 0,
+      "max_level": 10,
+      "skill": "swimming",
+      "intelligence": 0,
+      "time": 0,
+      "fun": 1
+    }
+  }
+
+
+]

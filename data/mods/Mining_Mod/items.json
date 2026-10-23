@@ -1,0 +1,213 @@
+[
+  {
+    "type": "GENERIC",
+    "id": "chunk_copper",
+    "category": "spare_parts",
+    "price": 100,
+    "name": {
+      "str": "铜矿石",
+      "str_pl": "铜矿石"
+    },
+    "symbol": "*",
+    "color": "light_red",
+    "description": "一块很大的铜，纯天然无加工。  它只需要加工成更实用的形状。",
+    "material": "copper",
+    "volume": "1 L",
+    "//": "Density of one liter of copper, item is native metal.",
+    "weight": "8960 g",
+    "bashing": 2
+  },
+  {
+    "type": "GENERIC",
+    "id": "chunk_silver",
+    "category": "spare_parts",
+    "price": 500,
+    "name": {
+      "str": "银矿石",
+      "str_pl": "银矿石"
+    },
+    "symbol": "*",
+    "color": "light_gray",
+    "description": "一块很大的银，纯天然无加工。  它只需要加工成更实用的形状。",
+    "material": "silver",
+    "volume": "1 L",
+    "//": "Density of one liter of silver, item is native metal.",
+    "weight": "10490 g",
+    "bashing": 3
+  },
+  {
+    "type": "GENERIC",
+    "id": "chunk_gold",
+    "category": "spare_parts",
+    "price": 1500,
+    "name": {
+      "str": "金矿石",
+      "str_pl": "金矿石"
+    },
+    "symbol": "*",
+    "color": "yellow",
+    "description": "一块很大的自然金，一个罕见的发现。  它只需要加工成更实用的形状。",
+    "material": "gold",
+    "volume": "1 L",
+    "//": "Density of one liter of gold, item is native metal.  Massivelly heavy.",
+    "weight": "19320 g",
+    "bashing": 4
+  },
+  {
+    "type": "GENERIC",
+    "id": "chunk_aluminum",
+    "category": "spare_parts",
+    "price": 100,
+    "name": {
+      "str": "铝矿石",
+      "str_pl": "铝矿石"
+    },
+    "symbol": "*",
+    "color": "white",
+    "description": "一块很大的天然铝，在提炼方法被发明之前，这就是无价之宝。它需要浇铸成锭。",
+    "material": "aluminum",
+    "volume": "1 L",
+    "//": "Density of one liter of aluminum, item is native metal.",
+    "weight": "2700 g",
+    "bashing": 1
+  },
+  {
+    "type": "GENERIC",
+    "id": "chunk_cassiterite",
+    "category": "spare_parts",
+    "price": 300,
+    "name": {
+      "str": "锡矿石",
+      "str_pl": "锡矿石"
+    },
+    "symbol": "*",
+    "color": "brown",
+    "description": "一块很大的锡石，锡矿石。  它只需要加工成更实用的形状。",
+    "material": "stone",
+    "volume": "1 L",
+    "//": "One liter, roughly 6.26 grams per cubic centimeter.",
+    "weight": "6260 g",
+    "bashing": 2
+  },
+  {
+    "type": "GENERIC",
+    "id": "chunk_galena",
+    "category": "spare_parts",
+    "price": 250,
+    "name": {
+      "str": "方铅矿石",
+      "str_pl": "方铅矿石"
+    },
+    "symbol": "*",
+    "color": "white",
+    "description": "一块很大的方铅矿，含有少量银的铅矿石。  它只需要加工成更实用的形状。",
+    "material": "stone",
+    "volume": "1 L",
+    "//": "One liter, roughly 7.6 grams per cubic centimeter.",
+    "weight": "7600 g",
+    "bashing": 3
+  },
+  {
+    "type": "GENERIC",
+    "id": "chunk_hematite",
+    "category": "spare_parts",
+    "price": 250,
+    "name": {
+      "str": "铁矿石",
+      "str_pl": "铁矿石"
+    },
+    "symbol": "*",
+    "color": "brown",
+    "description": "一块很大的赤铁矿，铁矿石。  它只需要加工成更实用的形状。",
+    "material": "stone",
+    "volume": "1 L",
+    "//": "One liter, roughly 5.04 grams per cubic centimeter.",
+    "weight": "5040 g",
+    "bashing": 2
+  },
+  {
+    "id": "pickaxe_copper",
+    "type": "TOOL",
+    "name": {
+      "str": "铜质鹤嘴锄"
+    },
+    "description": "这是一个手工制作的铜鹤嘴锄，适用于挖掘坚硬的东西或（有足够的技巧）坚硬的目标。甚至挖穿地球！",
+    "sub": "pickaxe",
+    "weight": "6350 g",
+    "volume": "3 L",
+    "price": 1600,
+    "to_hit": -3,
+    "bashing": 12,
+    "cutting": 4,
+    "material": [
+      "wood",
+      "copper"
+    ],
+    "symbol": "/",
+    "color": "light_red",
+    "use_action": "PICKAXE",
+    "flags": [
+      "SPEAR",
+      "NONCONDUCTIVE",
+      "FRAGILE_MELEE",
+      "DIG_TOOL"
+    ]
+  },
+  {
+    "id": "pickaxe_bone",
+    "type": "TOOL",
+    "name": {
+      "str": "骨镐"
+    },
+    "description": "This is a primitive pickaxe, traditionally made from antler or bone, and fire-hardened for greater hardness.  Less than ideal, but still suitable for striking the earth.",
+    "sub": "pickaxe",
+    "weight": "760 g",
+    "volume": 10,
+    "price": 800,
+    "to_hit": -3,
+    "bashing": 10,
+    "cutting": 3,
+    "material": [
+      "wood"
+    ],
+    "symbol": "/",
+    "color": "white",
+    "use_action": "PICKAXE",
+    "flags": [
+      "SPEAR",
+      "FRAGILE_MELEE",
+      "DIG_TOOL"
+    ]
+  },
+  {
+    "id": "boulder_anvil_leveled",
+    "type": "TOOL",
+    "copy-from": "fake_item",
+    "name": {
+      "str": "拆除石砧"
+    },
+    "qualities": [
+      [
+        "ANVIL",
+        3
+      ]
+    ]
+  },
+  {
+    "type": "AMMO",
+    "id": "material_sand_black",
+    "category": "spare_parts",
+    "name": {
+      "str_sp": "黑砂"
+    },
+    "symbol": "=",
+    "color": "dark_gray",
+    "description": "一把沙子，富含从上游某处沉积物中侵蚀出来的矿物质。虽然没有什么用，但这玩意可能是磁铁矿的来源。",
+    "material": "powder_nonflam",
+    "volume": "250 ml",
+    "//": "Roughly half magnetite, which has a density of 7.874 grams per cubic liter, and each unit is 5 mL.",
+    "weight": "23 g",
+    "ammo_type": "components",
+    "count": 50
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "spider_charm",
+    "type": "TOOL",
+    "name": {
+      "str": "蜘蛛护符",
+      "str_pl": "蜘蛛护符"
+    },
+    "description": "一个蜘蛛形状的护符。仅仅把它带在身边，你就感觉……更健康了。",
+    "volume": "5 ml",
+    "weight": "10 g",
+    "longest_side": "3 cm",
+    "price_postapoc": 25000,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "none",
+      "length": "hand",
+      "surface": "any"
+    },
+    "bashing": 1,
+    "material": [
+      "steel"
+    ],
+    "symbol": "🕷",
+    "looks_like": "mon_spider_cellar_small",
+    "color": "brown",
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "HELD",
+          "condition": "ALWAYS",
+          "mutations": [
+            "spider_charm_mut"
+          ]
+        }
+      ]
+    },
+    "flags": [
+      "DURABLE_MELEE"
+    ]
+  }
+]

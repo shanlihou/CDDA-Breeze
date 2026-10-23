@@ -1,0 +1,38 @@
+[
+  {
+    "id": "533mm_lafei",
+    "type": "GUN",
+    "name": {
+      "str": "533mm口径鱼雷发射器舰装"
+    },
+    "description": "533mm Mark17鱼雷是一种长程、高速鱼雷，使用浓缩过氧化氢作为动力。1940年开始由位于罗德岛州纽波特的海军鱼雷中心和华盛顿海军研究实验室研制。也可以将其看成是Mark16潜艇鱼雷的驱逐舰版本。1941年，研究工作暂停，重心转移到生产战时急需的Mark13（航空鱼雷）和Mark15（水面鱼雷）上。然而到1944年，随着美国对日本的93式氧气鱼雷的情报掌握逐渐加深，Mark17鱼雷的设计工作重启。在战争结束前共生产了450套Mark17鱼雷，但没有任何一套投入二战使用。战后，由于重量过大、与Mark16相似、冷战时期鱼雷效用的下降等多方面的原因，Mark17鱼雷于1950年退役。",
+    "weight": "100 g",
+    "volume": "30 ml",
+    "price": "1000000 USD",
+    "to_hit": 5,
+    "bashing": 100,
+    "material": [
+      "steel" 
+    ],
+    "symbol": "(",
+    "color": "brown",
+    "ammo": [
+      "533mm"
+    ],
+    "skill": "rifle",
+    "dispersion": 0,
+    "durability": 10,
+    "barrel_volume": "250 ml", 
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "533mm_dc"
+        ]
+      }
+    ]
+  }
+]

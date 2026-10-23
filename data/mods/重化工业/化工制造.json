@@ -1,0 +1,577 @@
+[
+{
+  "type": "recipe",
+  "activity_level": "LIGHT_EXERCISE",
+  "result": "chem_benzene",
+  "byproduct_group": [
+    {
+      "item": "chem_methanol",
+      "container-item": "null",
+      "charges": 32
+    }
+  ],
+  "category": "CC_CHEM",
+  "subcategory": "CSC_CHEM_CHEMICALS",
+  "skill_used": "chemistry",
+  "difficulty": 4,
+  "charges": 180,
+  "time": "30 m",
+  "batch_time_factors": [
+    80,
+    4
+  ],
+  "autolearn": true,
+  "proficiencies": [
+    {"proficiency": "prof_intro_chemistry"},
+    {"proficiency": "prof_distilling"},
+    {"proficiency": "prof_intro_chem_synth"}
+  ],
+  "qualities": [
+    {
+      "id": "DISTILL",
+      "level": 2
+    },
+    {
+      "id": "FINE_DISTILL",
+      "level": 1
+    }
+  ],
+  "tools": [
+    [
+      ["surface_heat",500,"LIST"]
+    ],
+    [
+      ["thermometer",-1],["glass_thermometer",-1]
+    ],
+    [["platinum_small",-1]]
+  ],
+  "components": [[["splinter",40]]]
+},
+{
+  "type": "recipe",
+  "activity_level": "LIGHT_EXERCISE",
+  "result": "chem_benzene",
+  "id_suffix":"from_lamp_oil",
+  "category": "CC_CHEM",
+  "subcategory": "CSC_CHEM_CHEMICALS",
+  "skill_used": "chemistry",
+  "difficulty": 4,
+  "charges": 180,
+  "byproducts": [
+    [ "chem_toluene", 250 ],
+    [ "plastic_chunk", 5 ]
+  ],
+  "time": "30 m",
+  "batch_time_factors": [
+    50,
+    2
+  ],
+  "autolearn": true,
+  "proficiencies": [
+    {"proficiency": "prof_intro_chemistry"},
+    {"proficiency": "prof_distilling"},
+    {"proficiency": "prof_intro_chem_synth"}
+  ],
+  "qualities": [
+    {
+      "id": "DISTILL",
+      "level": 2
+    },
+    {
+      "id": "FINE_DISTILL",
+      "level": 1
+    },
+    {
+      "id": "COOK",
+      "level": 3
+    },
+    {
+      "id": "EXTRACT",
+      "level": 3
+    }
+  ],
+  "tools": [
+    [ ["surface_heat",500,"LIST"] ],
+    [ [ "catalytic_cracking_reactor_tool", 50000 ] ]
+  ],
+  "components": [[["lamp_oil",1000],["diesel",1000],["gasoline",1000]]]
+},
+{
+  "type": "recipe",
+  "activity_level": "LIGHT_EXERCISE",
+  "result": "thermo_resin_chunk",
+  "category": "CC_OTHER",
+  "subcategory": "CSC_OTHER_MATERIALS",
+  "skill_used": "chemistry",
+  "difficulty": 8,
+  "time": "50 m",
+  "autolearn": true,
+  "proficiencies": [
+    {"proficiency": "prof_intro_chemistry"},
+    {"proficiency": "prof_distilling"},
+    {"proficiency": "prof_intro_chem_synth"},
+    {"proficiency": "prof_chem_synth"},
+    {"proficiency": "prof_organic_chemistry"},
+    {"proficiency": "prof_chemical_engineering"}
+  ],
+  "qualities": [
+    {
+      "id": "DISTILL",
+      "level": 2
+    }
+  ],
+  "tools": [
+    [
+      ["surface_heat",500,"LIST"],
+      ["electrolysis_kit",500]
+    ],
+    [["chem_ferric_chloride",-1]]
+  ],
+  "components": [
+    [["chem_benzene",100]],
+    [["chem_sulphur",25]],
+    [["chem_washing_soda",50]],
+    [["lye",1],["lye_potassium",1]],
+    [["salt_water",2],["saline",10]]
+  ]
+},
+{
+  "result": "硝基纤维素",
+  "type": "recipe",
+  "activity_level": "LIGHT_EXERCISE",
+  "category": "CC_AMMO",
+  "subcategory": "CSC_AMMO_COMPONENTS",
+  "skill_used": "chemistry",
+  "difficulty": 5,
+  "time": "3 h 20 m",
+  "book_learn": [
+    ["recipe_bullets",5]
+  ],
+  "proficiencies": [
+    { "proficiency": "prof_intro_chemistry" },
+    { "proficiency": "prof_inorganic_chemistry" },
+    { "proficiency": "prof_organic_chemistry" }
+  ],
+  "qualities": [
+    {"id": "CHEM","level": 2}
+  ],
+  "tools": [
+    [ [ "surface_heat", 500, "LIST" ] ]
+  ],
+  "components": [
+    [ [ "chem_sulphuric_acid", 2 ] ],
+    [ [ "chem_nitric_acid", 1 ] ],
+    [ [ "ammonia_liquid", 1 ],
+      [ "chem_ethanol", 250 ],
+      [ "denat_alcohol", 250 ],
+      [ "methed_alcohol", 250 ]
+    ],
+    [ [ "thread", 50 ],[ "plant_fibre", 50 ]
+    ]
+  ]
+},
+{
+  "type": "recipe",
+  "activity_level": "LIGHT_EXERCISE",
+  "result": "gunpowder_shotgun",
+  "category": "CC_AMMO",
+  "subcategory": "CSC_AMMO_COMPONENTS",
+  "skill_used": "fabrication",
+  "difficulty": 1,
+  "book_learn": [
+    ["recipe_bullets",1]
+  ],
+  "charges": 12485,
+  "time": "5 m",
+  "qualities": [
+    {
+      "id": "HAMMER",
+      "level": 1
+    },
+    {
+      "id": "FINE_GRIND",
+      "level": 1
+    }
+  ],
+  "components": [
+    [
+      [
+        "硝基纤维素",
+        1
+      ]
+    ]
+  ]
+},
+{
+  "type": "recipe",
+  "activity_level": "LIGHT_EXERCISE",
+  "result": "gunpowder_rifle",
+  "category": "CC_AMMO",
+  "subcategory": "CSC_AMMO_COMPONENTS",
+  "skill_used": "fabrication",
+  "difficulty": 1,
+  "book_learn": [
+    ["recipe_bullets",1]
+  ],
+  "charges": 13620,
+  "time": "5 m",
+  "qualities": [
+    {
+      "id": "HAMMER",
+      "level": 1
+    },
+    {
+      "id": "FINE_GRIND",
+      "level": 1
+    }
+  ],
+  "components": [
+    [ [ "硝基纤维素", 1 ] ],
+    [ [ "dynamite", 1 ] ]
+  ]
+},
+{
+  "type": "recipe",
+  "activity_level": "LIGHT_EXERCISE",
+  "result": "gunpowder_pistol",
+  "category": "CC_AMMO",
+  "subcategory": "CSC_AMMO_COMPONENTS",
+  "skill_used": "fabrication",
+  "difficulty": 1,
+  "book_learn": [
+    ["recipe_bullets",1]
+  ],
+  "charges": 15890,
+  "time": "5 m",
+  "qualities": [
+    {
+      "id": "HAMMER",
+      "level": 1
+    },
+    {
+      "id": "FINE_GRIND",
+      "level": 1
+    }
+  ],
+  "components": [
+    [ [ "硝基纤维素", 1 ] ],
+    [ [ "dynamite", 1 ] ],
+    [ [ "charcoal", 200 ] ]
+  ]
+},
+{
+  "type": "recipe",
+  "activity_level": "LIGHT_EXERCISE",
+  "result": "gunpowder_magnum_pistol",
+  "category": "CC_AMMO",
+  "subcategory": "CSC_AMMO_COMPONENTS",
+  "skill_used": "fabrication",
+  "difficulty": 1,
+  "book_learn": [
+    ["recipe_bullets",1]
+  ],
+  "charges": 15890,
+  "time": "5 m",
+  "qualities": [
+    {
+      "id": "HAMMER",
+      "level": 1
+    },
+    {
+      "id": "FINE_GRIND",
+      "level": 1
+    }
+  ],
+  "components": [
+    [ [ "硝基纤维素", 1 ] ],
+    [ [ "dynamite", 1 ] ],
+    [ [ "chem_rdx", 125 ] ]
+  ]
+},
+{
+  "type": "recipe",
+  "activity_level": "LIGHT_EXERCISE",
+  "result": "gunpowder_large_rifle",
+  "category": "CC_AMMO",
+  "subcategory": "CSC_AMMO_COMPONENTS",
+  "skill_used": "fabrication",
+  "difficulty": 1,
+  "book_learn": [
+    ["recipe_bullets",1]
+  ],
+  "charges": 17025,
+  "time": "5 m",
+  "qualities": [
+    {
+      "id": "HAMMER",
+      "level": 1
+    },
+    {
+      "id": "FINE_GRIND",
+      "level": 1
+    }
+  ],
+  "components": [
+    [ [ "硝基纤维素", 1 ] ],
+    [ [ "dynamite", 1 ] ],
+    [ [ "chem_rdx", 125 ] ],
+    [ [ "oxy_powder", 100 ] ]
+  ]
+},
+{
+  "type": "recipe",
+  "activity_level": "LIGHT_EXERCISE",
+  "result": "chem_phenol",
+  "category": "CC_CHEM",
+  "subcategory": "CSC_CHEM_CHEMICALS",
+  "skill_used": "chemistry",
+  "difficulty": 6,
+  "charges": 250,
+  "time": "15 m",
+  "book_learn": [
+    ["textbook_chemistry",6],
+    ["adv_chemistry",6]
+  ],
+  "proficiencies": [
+    { "proficiency": "prof_intro_chemistry"},
+    { "proficiency": "prof_organic_chemistry" },
+    { "proficiency": "prof_intro_chem_synth"}
+  ],
+  "qualities": [
+    { "id": "BOIL", "level": 2 },
+    { "id": "CHEM", "level": 2 }
+  ],
+  "tools": [
+    [ [ "surface_heat", 50, "LIST" ] ]
+  ],
+  "components": [
+    [["chem_sulphur",25]],
+    [["chem_washing_soda",50]],
+    [["chem_sulphuric_acid",2]],
+    [["chem_benzene",250]]
+  ]
+},
+{
+  "type": "recipe",
+  "activity_level": "LIGHT_EXERCISE",
+  "result": "polycarbonate_sheet",
+  "category": "CC_OTHER",
+  "subcategory": "CSC_OTHER_MATERIALS",
+  "skill_used": "chemistry",
+  "difficulty": 7,
+  "charges": 10,
+  "time": "50 m",
+  "batch_time_factors": [
+    80,
+    4
+  ],
+  "book_learn": [
+    ["textbook_chemistry",6],
+    ["adv_chemistry",6]
+  ],
+  "proficiencies": [
+    {"proficiency": "prof_intro_chemistry"},
+    {"proficiency": "prof_distilling"},
+    {"proficiency": "prof_intro_chem_synth"},
+    {"proficiency": "prof_chem_synth"},
+    {"proficiency": "prof_organic_chemistry"},
+    {"proficiency": "prof_chemical_engineering"}
+  ],
+  "qualities": [
+    { "id": "BOIL", "level": 2 },
+    { "id": "CHEM", "level": 2 }
+  ],
+  "tools": [
+    [ [ "surface_heat", 50, "LIST" ] ],
+    [ [ "ppe_gas", 2, "LIST" ] ]
+  ],
+  "components": [
+    [["chem_hydrogen_peroxide",2]],
+    [["chem_chloroform",100]],
+    [["lye",1],["lye_potassium",1]],
+    [["chem_bpa",250]]
+  ]
+},
+{
+  "type": "recipe",
+  "activity_level": "LIGHT_EXERCISE",
+  "result": "chem_bpa",
+  "category": "CC_OTHER",
+  "subcategory": "CSC_OTHER_MATERIALS",
+  "skill_used": "chemistry",
+  "difficulty": 7,
+  "charges": 500,
+  "time": "50 m",
+  "batch_time_factors": [
+    80,
+    4
+  ],
+  "book_learn": [
+    ["textbook_chemistry",6],
+    ["adv_chemistry",6]
+  ],
+  "proficiencies": [
+    {"proficiency": "prof_intro_chemistry"},
+    {"proficiency": "prof_distilling"},
+    {"proficiency": "prof_intro_chem_synth"},
+    {"proficiency": "prof_organic_chemistry"},
+    {"proficiency": "prof_chemical_engineering"}
+  ],
+  "qualities": [
+    { "id": "BOIL", "level": 2 },
+    { "id": "CHEM", "level": 2 }
+  ],
+  "tools": [
+    [ [ "surface_heat", 50, "LIST" ] ],
+    [ [ "water", 10 ], [ "water_clean", 10 ] ]
+  ],
+  "components": [
+    [["chem_acetone",1]],
+    [["chem_sulphuric_acid",1],["chem_muriatic_acid",1]],
+    [["lye",1],["lye_potassium",1]],
+    [["chem_phenol",500]]
+  ]
+},
+{
+  "result": "chem_hydrogen_peroxide",
+  "id_suffix":"made_by_chem",
+  "type": "recipe",
+  "activity_level": "LIGHT_EXERCISE",
+  "byproduct_group": [
+    {
+      "item": "chem_sulphuric_acid",
+      "container-item": "null",
+      "charges": 2
+    }],
+  "category": "CC_CHEM",
+  "subcategory": "CSC_CHEM_CHEMICALS",
+  "skill_used": "chemistry",
+  "skills_required": [
+    "electronics",
+    2
+  ],
+  "difficulty": 4,
+  "time": "20 m",
+  "batch_time_factors": [
+    80,
+    4
+  ],
+  "book_learn": [
+    [ "adv_chemistry", 3 ],
+    [ "textbook_chemistry", 3 ],
+    [ "recipe_labchem", 3 ]
+  ],
+  "proficiencies": [
+    { "proficiency": "prof_intro_chemistry" },
+    { "proficiency": "prof_inorganic_chemistry" },
+    { "proficiency": "prof_intro_chem_synth" }
+  ],
+  "qualities": [
+    { "id": "CHEM", "level": 2 }
+  ],
+  "tools": [
+    [ [ "electrolysis_kit", 250 ] ],
+    [ [ "surface_heat", 50, "LIST" ] ]
+  ],
+  "components": [
+    [ ["chem_muriatic_acid",1 ] ],
+    [ ["ammonia_hydroxide",5] ],
+    [["chem_sulphuric_acid",2]]
+  ]
+},
+{
+  "type": "recipe",
+  "activity_level": "LIGHT_EXERCISE",
+  "result": "ammonia_hydroxide",
+  "category": "CC_CHEM",
+  "subcategory": "CSC_CHEM_CHEMICALS",
+  "skill_used": "chemistry",
+  "difficulty": 1,
+  "time": "1 m",
+  "autolearn": true,
+  "batch_time_factors": [
+    90,
+    4
+  ],
+  "components": [
+    [ [ "water", 4 ],[ "water_clean", 4 ] ],
+    [ [ "ammonia_liquid", 1 ] ]
+  ],
+  "charges": 5
+},
+{
+  "result": "chem_ethanol",
+  "id_suffix":"no_thermometer",
+  "type": "recipe",
+  "activity_level": "NO_EXERCISE",
+  "byproducts": [
+    [
+      "water_clean"
+    ]
+  ],
+  "category": "CC_CHEM",
+  "subcategory": "CSC_CHEM_FUEL",
+  "skill_used": "chemistry",
+  "difficulty": 4,
+  "time": "30 m",
+  "book_learn": [
+    [
+      "textbook_chemistry"
+    ],
+    [
+      "distilling_cookbook",
+      4
+    ]
+  ],
+  "proficiencies": [
+    {
+      "proficiency": "prof_intro_chemistry"
+    },
+    {
+      "proficiency": "prof_distilling",
+      "required": true
+    }
+  ],
+  "qualities": [
+    {
+      "id": "BOIL",
+      "level": 2
+    },
+    {
+      "id": "DISTILL",
+      "level": 2
+    }
+  ],
+  "tools": [
+    [
+      [
+        "surface_heat",
+        30,
+        "LIST"
+      ]
+    ]
+  ],
+  "components": [
+    [
+      [
+        "mixed_alcohol_strong",
+        14
+      ],
+      [
+        "mixed_alcohol_weak",
+        10
+      ],
+      [
+        "wash_liquor",
+        42,
+        "LIST"
+      ]
+    ]
+  ]
+}
+
+
+
+
+
+]

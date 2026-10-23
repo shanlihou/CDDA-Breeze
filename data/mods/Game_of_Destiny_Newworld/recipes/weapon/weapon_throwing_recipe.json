@@ -1,0 +1,43 @@
+[
+  {
+    "type": "recipe",
+    "result": "GS_wp_dex2_glove_throwing",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_武装",
+    "skill_used": "gun",
+    "skills_required": [ [ "GS_dex", 3 ], [ "GS_int", 3 ], [ "throw", 0 ] ],
+    "difficulty": 0,
+    "time": "2 h",
+    "autolearn": true,
+    "using": [ [ "sewing_standard", 120 ] ],
+    "components": [
+     [ [ "GS_basic_dex", 2 ] ],
+     [ [ "magnetron", 3 ] ],
+     [ [ "cable", 50 ] ],
+     [ [ "e_scrap", 5 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "GS_wp_dex4_glove_throwing",
+    "category": "CC_超凡",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_超凡_武装",
+    "skill_used": "gun",
+    "skills_required": [ [ "GS_dex", 5 ], [ "GS_int", 5 ], [ "throw", 4 ] ],
+    "difficulty": 0,
+    "time": "2 h",
+    "autolearn": true,
+    "using": [ [ "sewing_standard", 120 ] ],
+    "qualities": [ { "id": "SEW", "level": 3 } ],
+    "components": [
+     [ [ "GS_wp_dex2_glove_throwing", 1 ] ],
+     [ [ "GS_basic_dex", 2 ] ],
+     [ [ "magnetron", 10 ] ],
+     [ [ "cable", 200 ] ],
+     [ [ "e_scrap", 10 ] ],
+     [ [ "amplifier", 3 ] ]
+    ]
+  }
+]

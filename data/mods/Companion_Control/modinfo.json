@@ -1,0 +1,27 @@
+[
+{
+"type": "MOD_INFO",
+"ident": "Companion_Control",
+"name": "<color_light_green>多角色控制</color>",
+"dependencies": [ "dda" ],
+"version": "1.01",
+"description": "通过对话切换至同伴视角对其进行控制.",
+"authors": ["青青子衿"],
+"maintainers": ["青青子衿"],
+"category": "misc_additions",
+"path": ""
+},
+{
+    "id": [ "TALK_FRIEND", "TALK_GIVE_ITEM", "TALK_USE_ITEM", "TALK_RADIO" ],
+    "type": "talk_topic",
+    "responses": 
+	[
+	  { "text": "[切换]听我的指挥行动.", 
+	  "effect": "take_control",
+	  "topic": "TALK_DONE" }
+    ]
+}
+]
+
+
+

@@ -1,0 +1,35 @@
+[
+	{
+		"type": "COMESTIBLE",
+		"id": "fishery_egg_whitecatfish",
+		"name": { "str": "鱼卵（白叉尾鮰）" },
+		"copy-from": "fishery_egg",
+		"spoils_in": "10 days",
+		"description": "一些可以食用，也可以等他们孵化出小鱼的白叉尾鮰鱼卵。",
+		"rot_spawn": "FISHERY_GROUP_EGG_whitecatfish",
+		"rot_spawn_chance": 50
+	},
+	{
+		"name": "FISHERY_GROUP_EGG_whitecatfish",
+		"type": "monstergroup",
+		"default": "fishery_mon_whitecatfish_juvenile",
+		"monsters": [ ]
+	},
+	{
+		"id": "fishery_mon_whitecatfish_juvenile",
+		"type": "MONSTER",
+		"name": { "str": "白叉尾鮰鱼苗" },
+		"description": "一条白叉尾鮰幼鱼，过一段时间就会变成成鱼。",
+		"copy-from": "fishery_mon_juvenile",
+		"harvest": "fish_tiny",
+		"upgrades": { "age_grow": 20, "into": "mon_fish_white_catfish" }
+	},
+	{
+		"id": "mon_fish_white_catfish",
+		"type": "MONSTER",
+		"copy-from": "mon_fish_white_catfish",
+		"name": { "str": "白叉尾鮰" },
+		"reproduction": { "baby_egg": "fishery_egg_whitecatfish", "baby_count": 10, "baby_timer": 20 },
+		"baby_flags": [ "SPRING" ]
+	}
+]

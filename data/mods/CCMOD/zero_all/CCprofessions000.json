@@ -1,0 +1,73 @@
+[
+  {
+    "type": "profession",
+    "id": "survivorS",
+    "name": "起源探索者",
+    "description": "你原先只是一名普通的幸存者，意外闯入了神秘的起源异空间，获得了大量不可思议的知识、装备和资源。（若需要原版普通幸存者，请删除CCprofessions000.json文件）",
+    "points": 3,
+        "CBMs": [
+"bio_nanobots",
+"bio_ups",
+"bio_probability_travel",
+"cc_bio_tools",
+"bio_gills",
+"bio_shockwave",
+"bio_batteriesS",
+"bio_fuel_cell_gasolineS",
+"bio_lighter", 
+"bio_fingerhack",
+"bio_night",
+"bio_blood_anal",
+"bio_armor_eyes",
+"bio_cloak",
+"bio_remote",
+"bio_alarm",
+"bio_ods"
+    ],
+    "traits": [ "CCperk_holdout_pocket", "cc_perk_Preyseeker", "CCfind_food", "CCarmor_a" ],
+    "starting_styles": [ "style_eskrima" ], 
+    "proficiencies": [
+  "prof_bow_basic",
+  "prof_helicopter_pilot",
+  "prof_aircraft_mechanic",
+  "prof_intro_chemistry"
+], 
+"skills": [ { "level": 1, "name": "survival" } ],
+    "items": {
+      "both": {
+        "items": [
+         "CCdino_carrier_wooden", 
+         "CCfitness_band_l",
+         "CCfitness_band_r",
+         "CCwearable_rx12",
+         "protein_bar_evac","protein_bar_evac",
+          "CClmil_armor",
+          "CCarmor_riot",
+          "CClaser_rifle",
+          "CCwatercannon", 
+          "10l_platinum",
+          "CCscarmini",
+          "CCspear_steel", 
+          "CC_mon_horse_book", 
+          "CC_mon_dog_book", 
+          "backpack_tactical_large",
+          "heavy_plus_battery_cell",
+          "heavy_plus_battery_cell",
+          "heavy_plus_battery_cell",
+          "CCbatterying",
+          "char_kiln",
+          "grapnel",
+          "textbook_survival",
+          "textbook_fabrication",
+          "textbook_chemistry",
+          "textbook_electronics",
+          "metal_smoking_rack",
+          "gasoline_cooker"
+        ],
+        "entries": [
+        { "item": "CCMODcoin", "charges": 520 }
+        ]
+      }
+    }
+  }
+]

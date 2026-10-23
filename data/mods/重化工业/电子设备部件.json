@@ -1,0 +1,662 @@
+[
+  {
+    "type": "GENERIC",
+    "id": "makeshift_transformer",
+    "symbol": ",",
+    "color": "light_gray",
+    "name": {
+      "str": "makeshift transformer"
+    },
+    "category": "spare_parts",
+    "looks_like": "power_supply",
+    "description": "A bundle of cables around an iron core.  Useful for controlling voltage.",
+    "price": 170,
+    "price_postapoc": 15,
+    "material": [
+      "iron",
+      "copper"
+    ],
+    "weight": "113 g",
+    "volume": "1 L",
+    "to_hit": -1,
+    "melee_damage": {
+      "bash": 5
+    }
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "makeshift_transformer",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_COMPONENTS",
+    "skill_used": "fabrication",
+    "difficulty": 2,
+    "skills_required": [
+      "electronics",
+      1
+    ],
+    "time": "20 m 30 s",
+    "autolearn": true,
+    "using": [
+      [
+        "blacksmithing_standard",
+        8
+      ],
+      [
+        "steel_standard",
+        2
+      ]
+    ],
+    "components": [
+      [
+        [
+          "cable",
+          20
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "power_supply",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_COMPONENTS",
+    "skill_used": "electronics",
+    "difficulty": 4,
+    "time": "1 h",
+    "autolearn": true,
+    "book_learn": [
+      [
+        "manual_electronics",
+        1
+      ],
+      [
+        "textbook_electronics",
+        2
+      ],
+      [
+        "advanced_electronics",
+        2
+      ]
+    ],
+    "using": [
+      [
+        "soldering_standard",
+        3
+      ]
+    ],
+    "qualities": [
+      {
+        "id": "SCREW",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "amplifier",
+          2
+        ],
+        [
+          "makeshift_transformer",
+          2
+        ]
+      ],
+      [
+        [
+          "cable",
+          20
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "motor_micro",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_COMPONENTS",
+    "skill_used": "electronics",
+    "skills_required": [
+      "fabrication",
+      1
+    ],
+    "difficulty": 3,
+    "time": "21 m",
+    "reversible": true,
+    "decomp_learn": 3,
+    "autolearn": true,
+    "using": [
+      [
+        "soldering_standard",
+        5
+      ]
+    ],
+    "qualities": [
+      {
+        "id": "SCREW",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "e_scrap",
+          1
+        ],
+        [
+          "makeshift_transformer",
+          1
+        ]
+      ],
+      [
+        [
+          "scrap",
+          1
+        ]
+      ],
+      [
+        [
+          "cable",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "motor_tiny",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_PARTS",
+    "skill_used": "electronics",
+    "skills_required": [
+      "fabrication",
+      1
+    ],
+    "difficulty": 3,
+    "time": "20 m",
+    "reversible": true,
+    "decomp_learn": 2,
+    "autolearn": true,
+    "using": [
+      [
+        "soldering_standard",
+        5
+      ],
+      [
+        "steel_tiny",
+        1
+      ]
+    ],
+    "qualities": [
+      {
+        "id": "HAMMER",
+        "level": 1
+      },
+      {
+        "id": "SCREW_FINE",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "cable",
+          3
+        ]
+      ],
+      [
+        [
+          "e_scrap",
+          3
+        ],
+        [
+          "makeshift_transformer",
+          3
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "motor_small",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_PARTS",
+    "skill_used": "electronics",
+    "skills_required": [
+      "fabrication",
+      1
+    ],
+    "difficulty": 3,
+    "time": "20 m",
+    "reversible": true,
+    "decomp_learn": 2,
+    "autolearn": true,
+    "using": [
+      [
+        "soldering_standard",
+        5
+      ],
+      [
+        "steel_standard",
+        1
+      ]
+    ],
+    "qualities": [
+      {
+        "id": "HAMMER",
+        "level": 1
+      },
+      {
+        "id": "SCREW",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "e_scrap",
+          5
+        ],
+        [
+          "makeshift_transformer",
+          5
+        ]
+      ],
+      [
+        [
+          "cable",
+          6
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "si",
+    "symbol": ",",
+    "color": "white",
+    "name": {
+      "str": "硅"
+    },
+    "category": "spare_parts",
+    "description": "一些“廉价”的硅单质，大灾变前生产成本不高，大灾变后绝大多数人也用不上。不过，如果你的技术水平够高，你可以考虑用它来制作一些简单的电子元件。",
+    "price": 3000,
+    "price_postapoc": 10,
+    "material": [
+      "aluminum"
+    ],
+    "weight": "14 g",
+    "volume": "5 ml"
+  },
+  {
+    "result": "si",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MATERIALS",
+    "skill_used": "chemistry",
+    "difficulty": 4,
+    "time": "60 m",
+    "batch_time_factors": [
+      99,
+      4
+    ],
+    "autolearn": true,
+    "using": [
+      [
+        "forging_standard",
+        4
+      ]
+    ],
+    "tools": [
+      [
+        [
+          "crucible",
+          -1
+        ],
+        [
+          "crucible_clay",
+          -1
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "glass_shard",
+          1
+        ]
+      ],
+      [
+        [
+          "charcoal",
+          75
+        ]
+      ],
+      [
+        [
+          "lye",
+          1
+        ],
+        [
+          "lye_potassium",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "result": "e_scrap",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MATERIALS",
+    "skill_used": "electronics",
+    "difficulty": 6,
+    "skills_required": [
+      [
+        "fabrication",
+        6
+      ]
+    ],
+    "charges": 2,
+    "time": "60 m",
+    "batch_time_factors": [
+      99,
+      4
+    ],
+    "autolearn": true,
+    "using": [
+      [
+        "soldering_standard",
+        1
+      ]
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_elec_soldering"
+      },
+      {
+        "proficiency": "prof_elec_circuits"
+      },
+      {
+        "proficiency": "prof_elec_semiconductors"
+      }
+    ],
+    "qualities": [
+      {
+        "id": "CUT",
+        "level": 2
+      }
+    ],
+    "components": [
+      [
+        [
+          "si",
+          1
+        ]
+      ],
+      [
+        [
+          "cable",
+          4
+        ]
+      ],
+      [
+        [
+          "plastic_chunk",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "result": "circuit",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MATERIALS",
+    "skill_used": "electronics",
+    "difficulty": 4,
+    "skills_required": [
+      [
+        "fabrication",
+        3
+      ],
+      [
+        "chemistry",
+        1
+      ]
+    ],
+    "charges": 2,
+    "time": "10 m",
+    "autolearn": true,
+    "proficiencies": [
+      {
+        "proficiency": "prof_elec_soldering"
+      },
+      {
+        "proficiency": "prof_elec_circuits"
+      },
+      {
+        "proficiency": "prof_elec_integrated_circuits"
+      }
+    ],
+    "qualities": [
+      {
+        "id": "DRILL",
+        "level": 2
+      },
+      {
+        "id": "CUT",
+        "level": 2
+      }
+    ],
+    "components": [
+      [
+        [
+          "thermo_resin_chunk",
+          1
+        ]
+      ],
+      [
+        [
+          "copper",
+          5
+        ]
+      ],
+      [
+        [
+          "chem_muriatic_acid",
+          1
+        ]
+      ],
+      [
+        [
+          "chem_ferric_chloride",
+          7
+        ]
+      ],
+      [
+        [
+          "candle_wax",
+          20
+        ]
+      ]
+    ]
+  },
+  {
+    "result": "solar_cell",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MATERIALS",
+    "skill_used": "electronics",
+    "difficulty": 6,
+    "skills_required": [
+      [
+        "fabrication",
+        6
+      ]
+    ],
+    "time": "20 m",
+    "autolearn": true,
+    "using": [
+      [
+        "soldering_standard",
+        20
+      ]
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_elec_soldering"
+      },
+      {
+        "proficiency": "prof_elec_circuits"
+      },
+      {
+        "proficiency": "prof_elec_semiconductors"
+      }
+    ],
+    "qualities": [
+      {
+        "id": "SCREW_FINE",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "si",
+          20
+        ]
+      ],
+      [
+        [
+          "cable",
+          10
+        ]
+      ],
+      [
+        [
+          "silver_small",
+          5
+        ]
+      ],
+      [
+        [
+          "circuit",
+          1
+        ]
+      ],
+      [
+        [
+          "lye",
+          1
+        ],
+        [
+          "lye_potassium",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "result": "small_storage_battery",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_PARTS",
+    "skill_used": "electronics",
+    "difficulty": 6,
+    "skills_required": [
+      "fabrication",
+      1
+    ],
+    "time": "30 m",
+    "decomp_learn": 5,
+    "book_learn": [
+      [
+        "manual_electronics",
+        5
+      ],
+      [
+        "mag_electronics",
+        5
+      ],
+      [
+        "manual_mechanics",
+        3
+      ]
+    ],
+    "using": [
+      [
+        "soldering_standard",
+        10
+      ],
+      [
+        "surface_heat",
+        50
+      ],
+      [
+        "plastic_molding",
+        20
+      ]
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_plasticworking"
+      }
+    ],
+    "qualities": [
+      {
+        "id": "SCREW",
+        "level": 1
+      }
+    ],
+    "tools": [
+      [
+        [
+          "electrolysis_kit",
+          250
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "scrap",
+          4
+        ]
+      ],
+      [
+        [
+          "prussian_blue",
+          240
+        ]
+      ],
+      [
+        [
+          "salt_water",
+          2
+        ]
+      ],
+      [
+        [
+          "carbon_electrode",
+          24
+        ]
+      ],
+      [
+        [
+          "thermo_resin_chunk",
+          5
+        ]
+      ]
+    ]
+  }
+]

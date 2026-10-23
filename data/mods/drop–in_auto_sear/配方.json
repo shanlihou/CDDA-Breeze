@@ -1,0 +1,795 @@
+[
+{
+  "type": "recipe",
+  "activity_level": "MODERATE_EXERCISE",
+  "result": "m60semi",
+  "category": "CC_WEAPON",
+  "subcategory": "CSC_WEAPON_MODS",
+  "skill_used": "mechanics",
+  "skills_required": [
+    [
+      "rifle",
+      4
+    ]
+  ],
+  "proficiencies": [
+    {
+      "proficiency": "prof_welding_basic"
+    }
+  ],
+  "difficulty": 4,
+  "time": "5 h",
+  "book_learn": [
+    [
+      "manual_rifle",
+      6
+    ]
+  ],
+  "qualities": [
+    {
+      "id": "HAMMER",
+      "level": 2
+    },
+    {
+      "id": "SCREW",
+      "level": 1
+    },
+    {
+      "id": "WRENCH",
+      "level": 1
+    }
+  ],
+  "using": [
+    [
+      "soldering_standard",
+      20
+    ],
+    [
+      "welding_standard",
+      20
+    ]
+  ],
+  "tools": [
+    [
+      [
+        "m60",
+        -1
+      ],
+      [
+        "m60_semi",
+        -1
+      ]
+    ],
+    [
+      [
+        "small_repairkit",
+        40
+      ],
+      [
+        "large_repairkit",
+        40
+      ]
+    ]
+  ],
+  "components": [
+    [
+      [
+        "sheet_metal_small",
+        6
+      ]
+    ]
+  ]
+},
+{
+  "type": "recipe",
+  "activity_level": "MODERATE_EXERCISE",
+  "result": "wood_rpk_stock",
+  "category": "CC_WEAPON",
+  "subcategory": "CSC_WEAPON_MODS",
+  "skill_used": "fabrication",
+  "skills_required": [
+    [
+      "gun",
+      3
+    ]
+  ],
+  "difficulty": 3,
+  "time": "50 m",
+  "autolearn": true,
+  "book_learn": [
+    [
+      "manual_fabrication",
+      2
+    ],
+    [
+      "manual_rifle",
+      4
+    ],
+    [
+      "manual_launcher",
+      4
+    ]
+  ],
+  "qualities": [
+    {
+      "id": "HAMMER_FINE",
+      "level": 1
+    },
+    {
+      "id": "SAW_W",
+      "level": 2
+    },
+    {
+      "id": "CUT_FINE",
+      "level": 1
+    },
+    {
+      "id": "FILE",
+      "level": 1
+    }
+  ],
+  "proficiencies": [
+    {
+      "proficiency": "prof_carving",
+      "time_multiplier": 1.5
+    }
+  ],
+  "components": [
+    [
+      [
+        "2x4",
+        1
+      ]
+    ],
+    [
+      [
+        "nail",
+        2
+      ]
+    ]
+  ]
+},
+{
+  "type": "recipe",
+  "activity_level": "MODERATE_EXERCISE",
+  "result": "rpk_stock",
+  "category": "CC_WEAPON",
+  "subcategory": "CSC_WEAPON_MODS",
+  "skill_used": "fabrication",
+  "skills_required": [
+    [
+      "gun",
+      3
+    ]
+  ],
+  "difficulty": 6,
+  "time": "30 m",
+  "book_learn": [
+    [
+      "manual_fabrication",
+      3
+    ],
+    [
+      "manual_rifle",
+      4
+    ],
+    [
+      "manual_launcher",
+      4
+    ]
+  ],
+  "qualities": [
+    {
+      "id": "HAMMER_FINE",
+      "level": 1
+    },
+    {
+      "id": "SAW_M_FINE",
+      "level": 1
+    },
+    {
+      "id": "SCREW_FINE",
+      "level": 1
+    }
+  ],
+  "proficiencies": [
+    {
+      "proficiency": "prof_plasticworking",
+      "required": false,
+      "time_multiplier": 1.25,
+      "learning_time_multiplier": 0.1
+    }
+  ],
+  "using": [
+    [
+      "welding_standard",
+      1
+    ]
+  ],
+  "components": [
+    [
+      [
+        "scrap",
+        12
+      ],
+      [
+        "pipe",
+        2
+      ],
+      [
+        "steel_chunk",
+        4
+      ]
+    ],
+    [
+      [
+        "plastic_chunk",
+        6
+      ]
+    ],
+    [
+      [
+        "spring",
+        2
+      ]
+    ]
+  ]
+},
+{
+  "type": "recipe",
+  "activity_level": "LIGHT_EXERCISE",
+  "result": "barrel_rpk_wood",
+  "category": "CC_WEAPON",
+  "subcategory": "CSC_WEAPON_MODS",
+  "skill_used": "mechanics",
+  "skills_required": [
+    [
+      "gun",
+      3
+    ]
+  ],
+  "difficulty": 6,
+  "time": "30 m",
+  "book_learn": [
+    [
+      "textbook_mechanics",
+      3
+    ],
+    [
+      "manual_rifle",
+      4
+    ]
+  ],
+  "tools": [
+    [
+      [
+        "small_repairkit",
+        75
+      ],
+      [
+        "large_repairkit",
+        75
+      ]
+    ],
+    [
+      [
+        "swage",
+        -1
+      ]
+    ]
+  ],
+  "components": [
+    [
+      [
+        "pipe",
+        1
+      ]
+    ],
+    [
+      [
+        "2x4",
+        2
+      ]
+    ],
+    [
+      [
+        "bipod",
+        1
+      ]
+    ]
+  ]
+},
+{
+  "type": "recipe",
+  "activity_level": "LIGHT_EXERCISE",
+  "result": "barrel_rpk",
+  "category": "CC_WEAPON",
+  "subcategory": "CSC_WEAPON_MODS",
+  "skill_used": "mechanics",
+  "skills_required": [
+    [
+      "gun",
+      3
+    ]
+  ],
+  "difficulty": 6,
+  "time": "30 m",
+  "book_learn": [
+    [
+      "textbook_mechanics",
+      3
+    ],
+    [
+      "manual_rifle",
+      4
+    ]
+  ],
+  "tools": [
+    [
+      [
+        "small_repairkit",
+        75
+      ],
+      [
+        "large_repairkit",
+        75
+      ]
+    ],
+    [
+      [
+        "swage",
+        -1
+      ]
+    ],
+    [
+      [
+        "mold_plastic",
+        -1
+      ]
+    ]
+  ],
+  "components": [
+    [
+      [
+        "pipe",
+        1
+      ]
+    ],
+    [
+      [
+        "plastic_chunk",
+        6
+      ]
+    ],
+    [
+      [
+        "bipod",
+        1
+      ]
+    ]
+  ]
+},
+{
+  "result": "akmag100",
+  "type": "recipe",
+  "activity_level": "MODERATE_EXERCISE",
+  "category": "CC_WEAPON",
+  "subcategory": "CSC_WEAPON_MAGAZINES",
+  "skill_used": "fabrication",
+  "difficulty": 2,
+  "skills_required": [
+    "gun",
+    1
+  ],
+  "time": "20 m",
+  "autolearn": true,
+  "tools": [
+    [
+      [
+        "ak47",
+        -1
+      ],
+      [
+        "aksemi",
+        -1
+      ],
+      [
+        "draco",
+        -1
+      ]
+    ],
+    [
+      [
+        "small_repairkit",
+        10
+      ],
+      [
+        "large_repairkit",
+        5
+      ]
+    ]
+  ],
+  "using": [
+    [
+      "762_casehead",
+      1
+    ],
+    [
+      "welding_standard",
+      10
+    ]
+  ],
+  "qualities": [
+    {
+      "id": "SAW_M",
+      "level": 1
+    },
+    {
+      "id": "HAMMER",
+      "level": 1
+    },
+    {
+      "id": "SCREW_FINE",
+      "level": 1
+    }
+  ],
+  "components": [
+    [
+      [
+        "akmag30",
+        3
+      ],
+      [
+        "akmag10",
+        10
+      ],
+      [
+        "akmag20",
+        5
+      ]
+    ],
+    [
+      [
+        "spring",
+        1
+      ]
+    ],
+    [
+      [
+        "duct_tape",
+        40
+      ]
+    ]
+  ]
+},
+{
+  "result": "akdrum100",
+  "type": "recipe",
+  "activity_level": "MODERATE_EXERCISE",
+  "category": "CC_WEAPON",
+  "subcategory": "CSC_WEAPON_MAGAZINES",
+  "skill_used": "fabrication",
+  "difficulty": 2,
+  "skills_required": [
+    "gun",
+    1
+  ],
+  "time": "20 m",
+  "autolearn": true,
+  "tools": [
+    [
+      [
+        "ak47",
+        -1
+      ],
+      [
+        "aksemi",
+        -1
+      ],
+      [
+        "draco",
+        -1
+      ],
+      [
+        "mk47",
+        -1
+      ],
+      [
+        "arx160",
+        -1
+      ]
+    ],
+    [
+      [
+        "small_repairkit",
+        10
+      ],
+      [
+        "large_repairkit",
+        5
+      ]
+    ]
+  ],
+  "using": [
+    [
+      "762_casehead",
+      1
+    ],
+    [
+      "welding_standard",
+      10
+    ]
+  ],
+  "qualities": [
+    {
+      "id": "SAW_M",
+      "level": 1
+    },
+    {
+      "id": "HAMMER",
+      "level": 1
+    },
+    {
+      "id": "SCREW_FINE",
+      "level": 1
+    }
+  ],
+  "components": [
+    [
+      [
+        "sheet_metal",
+        1
+      ]
+    ],
+    [
+      [
+        "spring",
+        1
+      ]
+    ],
+    [
+      [
+        "duct_tape",
+        40
+      ]
+    ]
+  ]
+},
+{
+  "result": "rpk74drum",
+  "type": "recipe",
+  "activity_level": "MODERATE_EXERCISE",
+  "category": "CC_WEAPON",
+  "subcategory": "CSC_WEAPON_MAGAZINES",
+  "skill_used": "fabrication",
+  "difficulty": 2,
+  "skills_required": [
+    "gun",
+    1
+  ],
+  "time": "20 m",
+  "autolearn": true,
+  "tools": [
+    [
+      [
+        "ak74",
+        -1
+      ],
+      [
+        "kord",
+        -1
+      ]
+    ],
+    [
+      [
+        "small_repairkit",
+        10
+      ],
+      [
+        "large_repairkit",
+        5
+      ]
+    ],
+    [
+      [
+        "mold_plastic",
+        -1
+      ]
+    ],
+    [
+      [
+        "surface_heat",
+        4,
+        "LIST"
+      ]
+    ],
+    [
+      [
+        "reloaded_545",
+        -1
+      ],
+      [
+        "bp_545",
+        -1
+      ],
+      [
+        "545_ap",
+        -1
+      ],
+      [
+        "545",
+        -1
+      ],
+      [
+        "reloaded_545_ap",
+        -1
+      ],
+      [
+        "bp_545_ap",
+        -1
+      ]
+    ]
+  ],
+  "components": [
+    [
+      [
+        "plastic_chunk",
+        24
+      ]
+    ],
+    [
+      [
+        "spring",
+        1
+      ]
+    ]
+  ]
+},
+{
+  "type": "recipe",
+  "activity_level": "MODERATE_EXERCISE",
+  "result": "sksauto",
+  "category": "CC_WEAPON",
+  "subcategory": "CSC_WEAPON_MODS",
+  "skill_used": "mechanics",
+  "skills_required": [
+    [
+      "rifle",
+      4
+    ]
+  ],
+  "proficiencies": [
+    {
+      "proficiency": "prof_welding_basic"
+    }
+  ],
+  "difficulty": 4,
+  "time": "5 h",
+  "book_learn": [
+    [
+      "manual_rifle",
+      6
+    ]
+  ],
+  "qualities": [
+    {
+      "id": "HAMMER",
+      "level": 2
+    },
+    {
+      "id": "SCREW",
+      "level": 1
+    },
+    {
+      "id": "WRENCH",
+      "level": 1
+    }
+  ],
+  "using": [
+    [
+      "soldering_standard",
+      20
+    ],
+    [
+      "welding_standard",
+      20
+    ]
+  ],
+  "tools": [
+    [
+      [
+        "sks",
+        -1
+      ]
+    ],
+    [
+      [
+        "small_repairkit",
+        40
+      ],
+      [
+        "large_repairkit",
+        40
+      ]
+    ]
+  ],
+  "components": [
+    [
+      [
+        "sheet_metal_small",
+        6
+      ]
+    ]
+  ]
+},
+{
+  "type": "recipe",
+  "activity_level": "LIGHT_EXERCISE",
+  "result": "sks_stock",
+  "category": "CC_WEAPON",
+  "subcategory": "CSC_WEAPON_MODS",
+  "skill_used": "mechanics",
+  "skills_required": [
+    [
+      "gun",
+      3
+    ]
+  ],
+  "difficulty": 6,
+  "time": "30 m",
+  "book_learn": [
+    [
+      "textbook_mechanics",
+      3
+    ],
+    [
+      "manual_rifle",
+      4
+    ]
+  ],
+  "tools": [
+    [
+      [
+        "small_repairkit",
+        75
+      ],
+      [
+        "large_repairkit",
+        75
+      ]
+    ],
+    [
+      [
+        "swage",
+        -1
+      ]
+    ],
+    [
+      [
+        "mold_plastic",
+        -1
+      ]
+    ]
+  ],
+  "components": [
+    [
+      [
+        "pipe",
+        1
+      ]
+    ],
+    [
+      [
+        "plastic_chunk",
+        6
+      ]
+    ],
+    [
+      [
+        "spring",
+        1
+      ]
+    ]
+  ]
+}
+]

@@ -1,0 +1,432 @@
+[
+  {
+    "type": "overmap_special",
+    "id": "mineore_1",
+    "overmaps": [
+    	{ "point": [ 0, 0, 0 ], "overmap": "mineore_1" },
+    	{ "point": [ 0, 0, -1 ], "overmap": "mineore_2" },
+    	{ "point": [ 0, 0, -2 ], "overmap": "mineore_3" },
+    	{ "point": [ 0, 0, -3 ], "overmap": "mineore_4" },
+    	{ "point": [ 0, 0, -4 ], "overmap": "mineore_last" }
+    ],
+    "locations": [ "wilderness", "forest" ],
+    "city_distance": [ 20, -1 ],
+    "city_sizes": [ 0, -1 ],
+    "occurrences": [ 5, 10 ],
+    "flags": [ "CLASSIC", "WILDERNESS" ]
+  },
+  {
+    "type": "overmap_special",
+    "id": "mineore_2",
+    "overmaps": [
+    	{ "point": [ 0, 0, 0 ], "overmap": "mineore_1" },
+    	{ "point": [ 0, 0, -1 ], "overmap": "mineore_2" },
+    	{ "point": [ 0, 0, -2 ], "overmap": "mineore_3" },
+    	{ "point": [ 0, 0, -3 ], "overmap": "mineore_3" },
+    	{ "point": [ 0, 0, -4 ], "overmap": "mineore_4" },
+    	{ "point": [ 0, 0, -5 ], "overmap": "mineore_4" },
+    	{ "point": [ 0, 0, -6 ], "overmap": "mineore_last" }
+    ],
+    "locations": [ "wilderness", "forest" ],
+    "city_distance": [ 20, -1 ],
+    "city_sizes": [ 0, -1 ],
+    "occurrences": [ 1, 2 ],
+    "flags": [ "CLASSIC", "WILDERNESS" ]
+  },
+  {
+    "type": "overmap_special",
+    "id": "mineore_3",
+    "overmaps": [
+    	{ "point": [ 0, 0, 0 ], "overmap": "mineore_1" },
+    	{ "point": [ 0, 0, -1 ], "overmap": "mineore_2" },
+    	{ "point": [ 0, 0, -2 ], "overmap": "mineore_3" },
+    	{ "point": [ 0, 0, -3 ], "overmap": "mineore_4" },
+    	{ "point": [ 0, 0, -4 ], "overmap": "mineore_4" },
+    	{ "point": [ 0, 0, -5 ], "overmap": "mineore_last" }
+    ],
+    "locations": [ "wilderness", "forest" ],
+    "city_distance": [ 20, -1 ],
+    "city_sizes": [ 0, -1 ],
+    "occurrences": [ 1, 2 ],
+    "flags": [ "CLASSIC", "WILDERNESS" ]
+  },
+  {
+    "type": "overmap_special",
+    "id": "mineore_4",
+    "overmaps": [
+    	{ "point": [ 0, 0, 0 ], "overmap": "mineore_1" },
+    	{ "point": [ 0, 0, -1 ], "overmap": "mineore_2" },
+    	{ "point": [ 0, 0, -2 ], "overmap": "mineore_2" },
+    	{ "point": [ 0, 0, -3 ], "overmap": "mineore_3" },
+    	{ "point": [ 0, 0, -4 ], "overmap": "mineore_4" },
+    	{ "point": [ 0, 0, -5 ], "overmap": "mineore_last" }
+    ],
+    "locations": [ "wilderness", "forest" ],
+    "city_distance": [ 20, -1 ],
+    "city_sizes": [ 0, -1 ],
+    "occurrences": [ 1, 2 ],
+    "flags": [ "CLASSIC", "WILDERNESS" ]
+  },
+  {
+    "type": "overmap_special",
+    "id": "mineore_5",
+    "overmaps": [
+    	{ "point": [ 0, 0, 0 ], "overmap": "mineore_1" },
+    	{ "point": [ 0, 0, -1 ], "overmap": "mineore_last" }
+    ],
+    "locations": [ "wilderness", "forest" ],
+    "city_distance": [ 20, -1 ],
+    "city_sizes": [ 0, -1 ],
+    "occurrences": [ 1, 2 ],
+    "flags": [ "CLASSIC", "WILDERNESS" ]
+  },
+  {
+    "type": "overmap_special",
+    "id": "mineore_6",
+    "overmaps": [
+    	{ "point": [ 0, 0, 0 ], "overmap": "mineore_1" },
+    	{ "point": [ 0, 0, -1 ], "overmap": "mineore_2" },
+    	{ "point": [ 0, 0, -2 ], "overmap": "mineore_2" },
+    	{ "point": [ 0, 0, -3 ], "overmap": "mineore_3" },
+    	{ "point": [ 0, 0, -4 ], "overmap": "mineore_3" },
+    	{ "point": [ 0, 0, -5 ], "overmap": "mineore_4" },
+    	{ "point": [ 0, 0, -6 ], "overmap": "mineore_4" },
+    	{ "point": [ 0, 0, -7 ], "overmap": "mineore_last" }
+    ],
+    "locations": [ "wilderness", "forest" ],
+    "city_distance": [ 20, -1 ],
+    "city_sizes": [ 0, -1 ],
+    "occurrences": [ 1, 2 ],
+    "flags": [ "CLASSIC", "WILDERNESS" ]
+  },
+  {
+    "type": "overmap_terrain",
+    "id": [ "mineore_1" ],
+    "name": "露天矿石",
+    "sym": "O",
+    "color": "dark_gray",
+    "flags": [ "NO_ROTATE" ],
+    "see_cost": 5
+  },
+  {
+    "type": "overmap_terrain",
+    "id": [ "mineore_2" ],
+    "name": "地下矿石",
+    "sym": "O",
+    "color": "dark_gray",
+    "flags": [ "NO_ROTATE" ],
+    "see_cost": 5
+  },
+  {
+    "type": "overmap_terrain",
+    "id": [ "mineore_3" ],
+    "name": "地下矿石",
+    "sym": "O",
+    "color": "dark_gray",
+    "flags": [ "NO_ROTATE" ],
+    "see_cost": 5
+  },
+  {
+    "type": "overmap_terrain",
+    "id": [ "mineore_4" ],
+    "name": "地下矿石",
+    "sym": "O",
+    "color": "dark_gray",
+    "flags": [ "NO_ROTATE" ],
+    "see_cost": 5
+  },
+  {
+    "type": "overmap_terrain",
+    "id": [ "mineore_last" ],
+    "name": "地下矿石",
+    "sym": "O",
+    "color": "dark_gray",
+    "flags": [ "NO_ROTATE" ],
+    "see_cost": 5
+  },
+  {
+    "type": "mapgen",
+    "method": "json",
+    "om_terrain": "mineore_1",
+    "object": {
+      "fill_ter": "t_rock_floor_no_roof",
+      "rows": [
+        "____a________a____a_____",
+        "__________a______a______",
+        "___a___a__a__a___a_aa___",
+        "____aa_______________a__",
+        "__a_____a__a__a______a__",
+        "___a______________a_____",
+        "___a__a_aa___a__a__a____",
+        "_________a______________",
+        "___a_a______a_a_________",
+        "____a____aaaaaaa__a_____",
+        "______a___bbbaa_________",
+        "___a___aa_bdb_a_a_a_____",
+        "____aa____bbbaa_________",
+        "_______a_aa__a____aa____",
+        "_a______________________",
+        "_______a____a_____a____a",
+        "__a___a______a____aa____",
+        "___aa_____a_______a_aa__",
+        "___a____aa_____a_____a__",
+        "_____a__________a_______",
+        "_________________a______",
+        "_______a___a________a___",
+        "___aa_____a___a____a_a__",
+        "________________________"
+      ],
+      "terrain": {
+      	"_": "t_rock_floor_no_roof",
+      	"a": "t_rock_floor_no_roof",
+        "d": "t_open_air"
+      },
+      "furniture": {
+        "_": [
+          [ "f_null", 700 ],
+          [ "f_mineore_base_0", 150 ],
+          [ "f_mineore_base_1", 50 ],
+          [ "f_mineore_base_2", 30 ],
+          [ "f_mineore_base_3", 20 ],
+          [ "f_mineore_base_4", 10 ],
+          [ "f_mineore_base_5", 40 ]
+        ],
+        "a": [
+          [ "f_null", 700 ],
+          [ "f_mineore_base_0", 150 ],
+          [ "f_mineore_plus_1", 5 ],
+          [ "f_mineore_plus_2", 30 ],
+          [ "f_mineore_plus_3", 20 ],
+          [ "f_mineore_plus_4", 10 ],
+          [ "f_mineore_plus_5", 85 ]
+        ],
+        "b": [
+          [ "f_mineore_plus_1", 5 ],
+          [ "f_mineore_plus_2", 30 ],
+          [ "f_mineore_plus_3", 20 ],
+          [ "f_mineore_plus_4", 10 ],
+          [ "f_mineore_plus_5", 85 ]
+        ]
+      }
+    }
+  },
+  {
+    "type": "mapgen",
+    "method": "json",
+    "om_terrain": "mineore_2",
+    "object": {
+      "fill_ter": "t_rock_floor",
+      "rows": [
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "__________#_#___________",
+        "___________d____________",
+        "__________#_#___________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________"
+      ],
+      "terrain": {
+      	"_": "t_rock_floor",
+      	"#": "t_rock",
+        "d": "t_open_air"
+      },
+      "furniture": {
+        "_": [
+          [ "f_null", 500 ],
+          [ "f_mineore_base_0", 290 ],
+          [ "f_mineore_base_1", 50 ],
+          [ "f_mineore_base_2", 30 ],
+          [ "f_mineore_base_3", 20 ],
+          [ "f_mineore_base_4", 10 ],
+          [ "f_mineore_base_5", 40 ],
+          [ "f_mineore_plus_5", 34 ],
+          [ "f_mineore_plus_2", 12 ],
+          [ "f_mineore_plus_3", 8 ],
+          [ "f_mineore_plus_4", 4 ],
+          [ "f_mineore_plus_1", 2 ]
+        ]
+      }
+    }
+  },
+  {
+    "type": "mapgen",
+    "method": "json",
+    "om_terrain": "mineore_3",
+    "object": {
+      "fill_ter": "t_rock_floor",
+      "rows": [
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "__________#_#___________",
+        "___________d____________",
+        "__________#_#___________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________"
+      ],
+      "terrain": {
+      	"_": "t_rock_floor",
+      	"#": "t_rock",
+        "d": "t_open_air"
+      },
+      "furniture": {
+        "_": [
+          [ "f_null", 375 ],
+          [ "f_mineore_base_0", 165 ],
+          [ "f_mineore_base_1", 50 ],
+          [ "f_mineore_base_2", 30 ],
+          [ "f_mineore_base_3", 20 ],
+          [ "f_mineore_base_4", 10 ],
+          [ "f_mineore_base_5", 40 ],
+          [ "f_mineore_plus_5", 34 ],
+          [ "f_mineore_plus_2", 12 ],
+          [ "f_mineore_plus_3", 8 ],
+          [ "f_mineore_plus_4", 4 ],
+          [ "f_mineore_plus_1", 2 ]
+        ]
+      }
+    }
+  },
+  {
+    "type": "mapgen",
+    "method": "json",
+    "om_terrain": "mineore_4",
+    "object": {
+      "fill_ter": "t_rock_floor",
+      "rows": [
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "__________#_#___________",
+        "___________d____________",
+        "__________#_#___________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________"
+      ],
+      "terrain": {
+      	"_": "t_rock_floor",
+      	"#": "t_rock",
+        "d": "t_open_air"
+      },
+      "furniture": {
+        "_": [
+          [ "f_null", 250 ],
+          [ "f_mineore_base_0", 40 ],
+          [ "f_mineore_base_1", 50 ],
+          [ "f_mineore_base_2", 30 ],
+          [ "f_mineore_base_3", 20 ],
+          [ "f_mineore_base_4", 10 ],
+          [ "f_mineore_base_5", 40 ],
+          [ "f_mineore_plus_5", 34 ],
+          [ "f_mineore_plus_2", 12 ],
+          [ "f_mineore_plus_3", 8 ],
+          [ "f_mineore_plus_4", 4 ],
+          [ "f_mineore_plus_1", 2 ]
+        ]
+      }
+    }
+  },
+  {
+    "type": "mapgen",
+    "method": "json",
+    "om_terrain": "mineore_last",
+    "object": {
+      "fill_ter": "t_rock_floor",
+      "rows": [
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "__________#_#___________",
+        "___________d____________",
+        "__________#_#___________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________",
+        "________________________"
+      ],
+      "terrain": {
+      	"_": "t_rock_floor",
+      	"#": "t_rock",
+      	"d": "t_rock_floor_no_roof"
+      },
+      "furniture": {
+        "_": [
+          [ "f_null", 90 ],
+          [ "f_mineore_base_1", 50 ],
+          [ "f_mineore_base_2", 30 ],
+          [ "f_mineore_base_3", 20 ],
+          [ "f_mineore_base_4", 10 ],
+          [ "f_mineore_base_5", 40 ],
+          [ "f_mineore_plus_5", 34 ],
+          [ "f_mineore_plus_2", 12 ],
+          [ "f_mineore_plus_3", 8 ],
+          [ "f_mineore_plus_4", 4 ],
+          [ "f_mineore_plus_1", 2 ]
+        ]
+      }
+    }
+  }
+]

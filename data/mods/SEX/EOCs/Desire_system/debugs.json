@@ -1,0 +1,42 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_desire_level_debug",
+    "condition": {
+      "compare_int": [
+        { "u_val": "var", "var_name": "desire_level", "type": "int", "context": "欲望指数" },
+        "<",
+        { "const": 0 }
+       ]
+    },
+    "effect": [
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "desire_level", "type": "int", "context": "欲望指数" },
+          "=",
+          { "const": 0 }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_desire_debug",
+    "condition": {
+      "compare_int": [
+        { "u_val": "var", "var_name": "desire", "type": "int", "context": "欲望" },
+        ">",
+        { "u_val": "var", "var_name": "desire_level", "type": "int", "context": "欲望指数" }
+       ]
+    },
+    "effect": [
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "desire", "type": "int", "context": "欲望" },
+          "=",
+          { "u_val": "var", "var_name": "desire_level", "type": "int", "context": "欲望指数" }
+        ]
+      }
+    ]
+  }
+]

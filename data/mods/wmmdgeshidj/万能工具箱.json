@@ -1,0 +1,504 @@
+[
+  {
+    "id": "wmdgngj",
+    "type": "TOOL",
+    "name": {
+      "str": "幸存者多功能工具"
+    },
+    "//": "这工具最初其实只是为了拆车用才做的，后来就想做成MOD高很多功能",
+    "description": "这个工具集合了几乎所有OFkanen的工具功能，工具上有一个流泪猫猫头的小图标",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "longest_side": "1 cm",
+    "price": 3000,
+    "price_postapoc": 500,
+    "to_hit": -4,
+    "bashing": 1,
+    "cutting": 4,
+    "material": [
+      "steel"
+    ],
+    "symbol": ";",
+    "color": "light_gray",
+    "charges_per_use": 1,
+    "relic_data": {
+      "charge_info": {
+        "regenerate_ammo": true,
+        "recharge_type": "periodic",
+        "time": "1 m"
+      }
+    },
+    "flags": [
+      "STAB",
+      "TWO_WAY_RADIO",
+      "FIRESTARTER",
+      "FIRE",
+      "ZOOM",
+      "THERMOMETER",
+      "HYGROMETER",
+      "SHEATH_KNIFE",
+      "WATCH",
+      "BAROMETER",
+      "ALARMCLOCK"
+    ],
+    "use_action": [
+      "OXYTORCH",
+      "WASH_ALL_ITEMS",
+      "HAIRKIT",
+      "SHAVEKIT",
+      "WEATHER_TOOL",
+      "HOTPLATE",
+      "TAZER",
+      "ROBOTCONTROL",
+      "EINKTABLETPC",
+      "FITNESS_CHECK",
+      "PORTABLE_GAME",
+      "GUN_REPAIR",
+      "OXYGEN_BOTTLE",
+      "BOLTCUTTERS",
+      "CROWBAR",
+      "HAND_CRANK",
+      "TELEPORT",
+      "PICKAXE",
+      "JACKHAMMER",
+      "REMOTEVEH",
+      "FISH_ROD",
+      "MAKEMOUND",
+      "ECIG",
+      "HAMMER",
+      {
+        "type": "firestarter",
+        "moves": 5
+      },
+      {
+        "type": "place_trap",
+        "outer_layer_trap": "tr_blade",
+        "trap": "tr_engine",
+        "moves": 400,
+        "practice": 12,
+        "done_message": "你在%d格外设置了刀片陷阱。"
+      },
+      {
+        "type": "heal",
+        "bleed": 20,
+        "disinfectant_power": 4,
+        "bandages_power": 4,
+        "bite": 0.95,
+        "move_cost": 100
+      },
+      {
+        "type": "reveal_map",
+        "radius": 90,
+        "terrain": [
+          "hiway",
+          "road",
+          "bridge",
+          "s_pharm",
+          "s_gun",
+          "s_grocery",
+          "s_hunting",
+          "mil_surplus",
+          "s_gas"
+        ],
+        "message": "你在地图上标记了道路和可能的补给点。"
+      },
+      {
+        "type": "repair_item",
+        "item_action_type": "repair_fabric",
+        "materials": [
+          "cotton",
+          "leather",
+          "lycra",
+          "wool",
+          "fur",
+          "faux_fur",
+          "nomex",
+          "kevlar",
+          "kevlar_layered",
+          "kevlar",
+          "plastic",
+          "iron",
+          "steel",
+          "aluminum",
+          "copper",
+          "cotton",
+          "leather",
+          "lycra",
+          "acidchitin",
+          "bone",
+          "chitin",
+          "paper",
+          "cardboard",
+          "wood",
+          "kevlar_rigid",
+          "wool",
+          "fur",
+          "faux_fur",
+          "nomex",
+          "kevlar",
+          "kevlar_layered",
+          "neoprene",
+          "gutskin",
+          "black_dragon_hide",
+          "demon_chitin",
+          "superalloy",
+          "neoprene",
+          "gutskin",
+          "black_dragon_hide",
+          "demon_chitin"
+        ],
+        "skill": "tailor",
+        "tool_quality": 1,
+        "cost_scaling": 0.1,
+        "move_cost": 500
+      },
+      {
+        "type": "sew_advanced",
+        "materials": [
+          "cotton",
+          "leather",
+          "lycra",
+          "wool",
+          "fur",
+          "kevlar",
+          "plastic",
+          "iron",
+          "steel",
+          "aluminum",
+          "copper",
+          "cotton",
+          "leather",
+          "lycra",
+          "acidchitin",
+          "bone",
+          "chitin",
+          "paper",
+          "cardboard",
+          "wood",
+          "kevlar_rigid",
+          "wool",
+          "fur",
+          "faux_fur",
+          "nomex",
+          "kevlar",
+          "kevlar_layered",
+          "neoprene",
+          "gutskin",
+          "black_dragon_hide",
+          "demon_chitin",
+          "superalloy",
+          "faux_fur",
+          "nomex",
+          "kevlar",
+          "neoprene",
+          "gutskin",
+          "plastic",
+          "kevlar_rigid"
+        ],
+        "skill": "tailor",
+        "clothing_mods": [
+          "leather_padded",
+          "steel_padded",
+          "kevlar_padded",
+          "furred",
+          "wooled"
+        ]
+      }
+    ],
+    "ammo": [
+      "battery"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        99
+      ],
+      [
+        "SAW_W",
+        99
+      ],
+      [
+        "SAW_M",
+        99
+      ],
+      [
+        "WRENCH",
+        99
+      ],
+      [
+        "SCREW",
+        99
+      ],
+      [
+        "GLARE",
+        99
+      ],
+      [
+        "CUT_FINE",
+        99
+      ],
+      [
+        "SHEAR",
+        3
+      ],
+      [
+        "CHURN",
+        99
+      ],
+      [
+        "LEATHER_AWL",
+        99
+      ],
+      [
+        "SMOOTH",
+        99
+      ],
+      [
+        "FISHING",
+        20
+      ],
+      [
+        "HAMMER",
+        99
+      ],
+      [
+        "HAMMER_FINE",
+        99
+      ],
+      [
+        "HAMMER_SOFT",
+        99
+      ],
+      [
+        "SAW_M_FINE",
+        99
+      ],
+      [
+        "COOK",
+        99
+      ],
+      [
+        "WELD",
+        99
+      ],
+      [
+        "BOIL",
+        99
+      ],
+      [
+        "CONTAIN",
+        99
+      ],
+      [
+        "CHEM",
+        99
+      ],
+      [
+        "SMOKE_PIPE",
+        1
+      ],
+      [
+        "DISTILL",
+        99
+      ],
+      [
+        "DIG",
+        99
+      ],
+      [
+        "WRENCH_FINE",
+        99
+      ],
+      [
+        "DRILL",
+        99
+      ],
+      [
+        "PRY",
+        99
+      ],
+      [
+        "PUNCH",
+        99
+      ],
+      [
+        "LIFT",
+        99
+      ],
+      [
+        "JACK",
+        99
+      ],
+      [
+        "SELF_JACK",
+        99
+      ],
+      [
+        "HOSE",
+        99
+      ],
+      [
+        "CHISEL",
+        99
+      ],
+      [
+        "CHISEL_WOOD",
+        99
+      ],
+      [
+        "PULL",
+        99
+      ],
+      [
+        "ANVIL",
+        99
+      ],
+      [
+        "SEW",
+        99
+      ],
+      [
+        "SEW_CURVED",
+        99
+      ],
+      [
+        "KNIT",
+        99
+      ],
+      [
+        "ANALYSIS",
+        1
+      ],
+      [
+        "CONCENTRATE",
+        1
+      ],
+      [
+        "SEPARATE",
+        1
+      ],
+      [
+        "FINE_DISTILL",
+        1
+      ],
+      [
+        "GRIND",
+        99
+      ],
+      [
+        "REAM",
+        99
+      ],
+      [
+        "FILE",
+        99
+      ],
+      [
+        "VISE",
+        99
+      ],
+      [
+        "PRESSURIZATION",
+        1
+      ],
+      [
+        "LOCKPICK",
+        99
+      ],
+      [
+        "EXTRACT",
+        99
+      ],
+      [
+        "SCREW_FINE",
+        99
+      ],
+      [
+        "FILTER",
+        99
+      ],
+      [
+        "SUSPENDING",
+        99
+      ],
+      [
+        "ROPE",
+        99
+      ],
+      [
+        "SURFACE",
+        99
+      ],
+      [
+        "WHEEL_FAST",
+        99
+      ],
+      [
+        "DIAMONDPRESS",
+        1
+      ],
+      [
+        "BIONIC_ASSEMBLY",
+        99
+      ],
+      [
+        "MANA_FOCUS",
+        1
+      ],
+      [
+        "MANA_INFUSE",
+        99
+      ],
+      [
+        "MAGIC_MUTAGEN",
+        99
+      ],
+      [
+        "SECRO_FLESH_WEAVING",
+        1
+      ],
+      [
+        "SECRO_FLESH_RECONSTRUCTION",
+        1
+      ],
+      [
+        "SECRO_FINFUSE",
+        1
+      ],
+      [
+        "BINFUSING",
+        1
+      ],
+      [
+        "BUTCHER",
+        40
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "medium_battery_cell",
+          "medium_plus_battery_cell",
+          "medium_atomic_battery_cell",
+          "medium_disposable_cell",
+          "heavy_battery_cell",
+          "heavy_plus_battery_cell",
+          "heavy_atomic_battery_cell",
+          "heavy_disposable_cell",
+          "light_plus_battery_cell",
+          "light_minus_battery_cell",
+          "light_minus_disposable_cell",
+          "light_battery_cell",
+          "light_disposable_cell",
+          "light_atomic_battery_cell",
+          "light_minus_atomic_battery_cell"
+        ]
+      }
+    ]
+  }
+]

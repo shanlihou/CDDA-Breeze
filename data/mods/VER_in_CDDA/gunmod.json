@@ -1,0 +1,143 @@
+[
+    {
+        "type": "GUNMOD",
+        "name": {
+          "str_sp": "GP-25榴弹发射器"
+        },
+        "symbol": ":",
+        "color": "light_red",
+        "id": "GP-25",
+        "description": "这是一款由俄罗斯设计并生产的榴弹发射器，可以安装在OTs-14-4A突击步枪下方。当安装了榴弹发射器后，使用对应的握把与扳机组件，便可通过一个在握把靠近扳机位置左侧的选择开关控制扳机当前操纵的是步枪还是发射器。",
+        "weight": "1500 g",
+        "volume": "400 ml",
+        "price": 65000,
+        "price_postapoc": 800,
+        "install_time": "5 m",
+        "material": [
+          "steel",
+          "plastic"
+        ],
+        "location": "underbarrel",
+        "mod_targets": [
+          "rifle"
+        ],
+        "gun_data": {
+          "ammo": "VOL",
+          "skill": "launcher",
+          "dispersion": 200,
+          "durability": 10,
+          "blackpowder_tolerance": 40,
+          "clip_size": 1
+        },
+        "min_skills": [
+          [
+            "weapon",
+            1
+          ],
+          [
+            "launcher",
+            1
+          ]
+        ],
+        "flags": [
+          "NEVER_JAMS",
+          "RELOAD_EJECT",
+          "IRREMOVABLE"
+        ],
+        "pocket_data": [
+          {
+            "pocket_type": "MAGAZINE",
+            "ammo_restriction": {
+              "VOL": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "VSS_suppressor",
+        "type": "GUNMOD",
+        "name": {
+          "str": "内置消音器"
+        },
+        "description": "VSS的内置消音器.",
+        "weight": "490 g",
+        "volume": "247 ml",
+        "longest_side": "15 cm",
+        "integral_longest_side": "15 cm",
+        "price": 77000,
+        "price_postapoc": 1500,
+        "to_hit": 1,
+        "material": [
+          "steel"
+        ],
+        "symbol": ":",
+        "color": "dark_gray",
+        "location": "muzzle",
+        "mod_targets": [
+          "rifle"
+        ],
+        "install_time": "30 s",
+        "handling_modifier": 2,
+        "consume_chance": 1,
+        "consume_divisor": 840,
+        "loudness_modifier": -5,
+        "melee_damage": {
+          "bash": 3
+        }
+      },
+      {
+        "id": "aksemi_auto_mod",
+        "type": "GUNMOD",
+        "name": {
+          "str": "民用AK自动改件"
+        },
+        "description": "就你AR15能半自动改全自动是吧?",
+        "weight": "60 g",
+        "volume": "250 ml",
+        "integral_volume": "0 ml",
+        "price": 24000,
+        "price_postapoc": 500,
+        "material": [
+          "steel"
+        ],
+        "symbol": ":",
+        "color": "red",
+        "location": "mechanism",
+        "mod_targets": [
+          "aksemi",
+          "minidraco556",
+          "ak556",
+          "ak308"
+        ],
+        "install_time": "25 m",
+        "dispersion_modifier": 20,
+        "consume_chance": 300,
+        "consume_divisor": 110,
+        "mode_modifier": [
+          [
+            "DEFAULT",
+            "semi-auto",
+            1
+          ],
+          [
+            "AUTO",
+            "auto",
+            5
+          ]
+        ],
+        "min_skills": [
+          [
+            "mechanics",
+            2
+          ],
+          [
+            "rifle",
+            3
+          ]
+        ],
+        "flags": [
+          "INSTALL_DIFFICULT",
+          "CONSUMABLE"
+        ]
+    }
+]

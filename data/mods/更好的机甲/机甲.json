@@ -1,0 +1,1767 @@
+[
+  {
+    "id": "X-03:幽灵型号侦察机甲",
+    "type": "TOOL_ARMOR",
+    "repairs_like": "power_armor_basic",
+    "category": "armor",
+    "symbol": "[",
+    "color": "dark_gray",
+    "name": {
+      "str": "X-03:幽灵型号侦察机甲"
+    },
+    "description": "实验计划的最终产物之一，作为完善的单兵武器，它的防御力和负重能力惊人，其内部配备了温度计、湿度计、气压计、时钟，以及红外和夜视视觉感受器，辅助瞄准系统显著提高了命中率，唯一的缺点是电量消耗过大，开启后每秒消耗 20 KJ 能量",
+    "ammo": [
+      "battery"
+    ],
+    "flags": [
+      "STURDY",
+      "RAINPROOF",
+      "RAD_PROOF",
+      "NANOFAB_REPAIR",
+      "ELECTRIC_IMMUNE",
+      "PADDED",
+      "USE_UPS",
+      "COMBAT_TOGGLEABLE",
+      "BAROMETER",
+      "THERMOMETER",
+      "WATCH",
+      "HYGROMETER",
+      "SUN_GLASSES",
+      "UNBREAKABLE_MELEE",
+      "OUTER",
+      "TARDIS"
+    ],
+    "price": 7920000,
+    "price_postapoc": 850000,
+    "weight_capacity_bonus": "100 kg",
+    "material": [
+      "carbide",
+      "superalloy",
+      "kevlar_layered",
+      "ceramic"
+    ],
+    "weight": "1500000 g",
+    "volume": "200 L",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "60000 ml",
+        "max_contains_weight": "160 kg",
+        "max_item_length": "250 cm",
+        "moves": 500,
+        "rigid": true,
+        "item_restriction": [
+          "军用UPS",
+          "UPS_off"
+        ],
+        "volume_encumber_modifier": 0,
+        "description": "UPS储存箱."
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "350000 ml",
+        "max_contains_weight": "350 kg",
+        "max_item_length": "250 cm",
+        "moves": 500,
+        "rigid": true,
+        "item_restriction": [
+          "幽灵隐形",
+          "幽灵隐形_on"
+        ],
+        "volume_encumber_modifier": 0,
+        "description": "幽灵隐形模块储存箱."
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "400 L",
+        "max_contains_weight": "800 kg",
+        "max_item_length": "200 cm",
+        "moves": 500,
+        "rigid": true,
+        "volume_encumber_modifier": 0,
+        "description": "机甲后备箱."
+      }
+    ],
+    "environmental_protection": 300,
+    "warmth": 10,
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ACTIVE",
+          "values": [
+            {
+              "value": "CLIMATE_CONTROL_HEAT",
+              "add": 100
+            },
+            {
+              "value": "CLIMATE_CONTROL_CHILL",
+              "add": 100
+            },
+            {
+              "value": "STRENGTH",
+              "add": 40
+            },
+            {
+              "value": "PERCEPTION",
+              "add": 80
+            },
+            {
+              "value": "WEAPON_DISPERSION",
+              "multiply": -0.99
+            },
+            {
+              "value": "SPEED",
+              "multiply": 1
+            },
+            {
+              "value": "SIGHT_RANGE_ELECTRIC",
+              "add": 1000
+            }
+          ],
+          "mutations": [
+            "幽灵机甲移动",
+            "LEAPING_LEGS"
+          ]
+        }
+      ]
+    },
+    "use_action": {
+      "type": "transform",
+      "msg": "X-03:幽灵型号侦察机甲已开启",
+      "target": "X-03:幽灵型号侦察机甲（开）",
+      "active": true,
+      "need_charges": 1,
+      "need_charges_msg": "未检测到可用电源。"
+    },
+    "armor": [
+      {
+        "material": [
+          {
+            "type": "carbide",
+            "covered_by_mat": 100,
+            "thickness": 6
+          },
+          {
+            "type": "kevlar",
+            "covered_by_mat": 100,
+            "thickness": 6
+          },
+          {
+            "type": "superalloy",
+            "covered_by_mat": 100,
+            "thickness": 9
+          }
+        ],
+        "encumbrance": 20,
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "cover_vitals": 80,
+        "covers": [
+          "hand_l",
+          "hand_r"
+        ],
+        "volume_encumber_modifier": 0
+      },
+      {
+        "material": [
+          {
+            "type": "carbide",
+            "covered_by_mat": 100,
+            "thickness": 9
+          },
+          {
+            "type": "superalloy",
+            "covered_by_mat": 100,
+            "thickness": 9
+          }
+        ],
+        "encumbrance": 0,
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "cover_vitals": 20,
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ],
+        "specifically_covers": [
+          "foot_toes_r",
+          "foot_toes_l",
+          "foot_ankle_r",
+          "foot_ankle_l",
+          "foot_heel_r",
+          "foot_heel_l",
+          "foot_arch_r",
+          "foot_arch_l"
+        ],
+        "volume_encumber_modifier": 0
+      },
+      {
+        "material": [
+          {
+            "type": "carbide",
+            "covered_by_mat": 100,
+            "thickness": 12
+          },
+          {
+            "type": "rubber",
+            "covered_by_mat": 100,
+            "thickness": 12
+          },
+          {
+            "type": "superalloy",
+            "covered_by_mat": 100,
+            "thickness": 12
+          }
+        ],
+        "encumbrance": 10,
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "cover_vitals": 100,
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ],
+        "specifically_covers": [
+          "foot_sole_r",
+          "foot_sole_l"
+        ],
+        "volume_encumber_modifier": 0
+      },
+      {
+        "material": [
+          {
+            "type": "kevlar",
+            "covered_by_mat": 100,
+            "thickness": 12
+          },
+          {
+            "type": "carbide",
+            "covered_by_mat": 100,
+            "thickness": 12
+          },
+          {
+            "type": "ceramic",
+            "covered_by_mat": 100,
+            "thickness": 12
+          },
+          {
+            "type": "superalloy",
+            "covered_by_mat": 100,
+            "thickness": 12
+          }
+        ],
+        "covers": [
+          "torso"
+        ],
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "cover_vitals": 90,
+        "encumbrance": 10,
+        "layers": [
+          "OUTER"
+        ],
+        "volume_encumber_modifier": 0
+      },
+      {
+        "material": [
+          {
+            "type": "kevlar",
+            "covered_by_mat": 100,
+            "thickness": 12
+          },
+          {
+            "type": "carbide",
+            "covered_by_mat": 100,
+            "thickness": 12
+          },
+          {
+            "type": "ceramic",
+            "covered_by_mat": 100,
+            "thickness": 10
+          },
+          {
+            "type": "superalloy",
+            "covered_by_mat": 100,
+            "thickness": 12
+          }
+        ],
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "specifically_covers": [
+          "arm_shoulder_l",
+          "arm_shoulder_r",
+          "arm_upper_l",
+          "arm_upper_r",
+          "arm_elbow_l",
+          "arm_elbow_r"
+        ],
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "cover_vitals": 90,
+        "encumbrance": 10,
+        "layers": [
+          "OUTER"
+        ],
+        "volume_encumber_modifier": 0
+      },
+      {
+        "material": [
+          {
+            "type": "kevlar",
+            "covered_by_mat": 100,
+            "thickness": 9
+          },
+          {
+            "type": "carbide",
+            "covered_by_mat": 100,
+            "thickness": 9
+          },
+          {
+            "type": "superalloy",
+            "covered_by_mat": 100,
+            "thickness": 12
+          }
+        ],
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "specifically_covers": [
+          "arm_lower_l",
+          "arm_lower_r"
+        ],
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "cover_vitals": 80,
+        "encumbrance": 10,
+        "volume_encumber_modifier": 0
+      },
+      {
+        "material": [
+          {
+            "type": "kevlar",
+            "covered_by_mat": 100,
+            "thickness": 12
+          },
+          {
+            "type": "carbide",
+            "covered_by_mat": 100,
+            "thickness": 12
+          },
+          {
+            "type": "ceramic",
+            "covered_by_mat": 100,
+            "thickness": 12
+          },
+          {
+            "type": "superalloy",
+            "covered_by_mat": 100,
+            "thickness": 12
+          }
+        ],
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "cover_vitals": 80,
+        "encumbrance": 10,
+        "layers": [
+          "OUTER"
+        ],
+        "volume_encumber_modifier": 0
+      },
+      {
+        "material": [
+          {
+            "type": "superalloy",
+            "covered_by_mat": 100,
+            "thickness": 12
+          },
+          {
+            "type": "carbide",
+            "covered_by_mat": 100,
+            "thickness": 9
+          },
+          {
+            "type": "superalloy",
+            "covered_by_mat": 100,
+            "thickness": 12
+          }
+        ],
+        "covers": [
+          "head"
+        ],
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "encumbrance": 10
+      },
+      {
+        "material": [
+          {
+            "type": "superalloy",
+            "covered_by_mat": 100,
+            "thickness": 12
+          },
+          {
+            "type": "superalloy",
+            "covered_by_mat": 100,
+            "thickness": 12
+          }
+        ],
+        "covers": [
+          "eyes",
+          "mouth"
+        ],
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "encumbrance": 10,
+        "layers": [
+          "OUTER"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "X-03:幽灵型号侦察机甲（开）",
+    "repairs_like": "power_armor_basic",
+    "type": "TOOL_ARMOR",
+    "name": {
+      "str": "X-03:幽灵型号侦察机甲（开）"
+    },
+    "description": "实验计划的最终产物之一，作为完善的单兵武器，它的防御力和负重能力惊人，其内部配备了温度计、湿度计、气压计、时钟，以及红外和夜视视觉感受器，辅助瞄准系统显著提高了命中率，唯一的缺点是电量消耗过大，开启后每秒消耗 20 KJ 能量",
+    "power_draw": "20 kW",
+    "ammo": [
+      "battery"
+    ],
+    "copy-from": "X-03:幽灵型号侦察机甲",
+    "revert_to": "X-03:幽灵型号侦察机甲",
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ACTIVE",
+          "values": [
+            {
+              "value": "CLIMATE_CONTROL_HEAT",
+              "add": 100
+            },
+            {
+              "value": "CLIMATE_CONTROL_CHILL",
+              "add": 100
+            },
+            {
+              "value": "STRENGTH",
+              "add": 40
+            },
+            {
+              "value": "PERCEPTION",
+              "add": 80
+            },
+            {
+              "value": "WEAPON_DISPERSION",
+              "multiply": -0.99
+            },
+            {
+              "value": "SPEED",
+              "multiply": 1
+            },
+            {
+              "value": "SIGHT_RANGE_ELECTRIC",
+              "add": 1000
+            }
+          ],
+          "mutations": [
+            "幽灵机甲移动",
+            "LEAPING_LEGS"
+          ]
+        }
+      ]
+    },
+    "use_action": {
+      "type": "transform",
+      "menu_text": "Turn off",
+      "msg": "机甲已关闭",
+      "target": "X-03:幽灵型号侦察机甲"
+    },
+    "environmental_protection": 300,
+    "weight_capacity_bonus": "2500 kg",
+    "flags": [
+      "IR_EFFECT",
+      "STURDY",
+      "RAINPROOF",
+      "RAD_PROOF",
+      "TRADER_AVOID",
+      "NANOFAB_REPAIR",
+      "ELECTRIC_IMMUNE",
+      "PADDED",
+      "USE_UPS",
+      "COMBAT_TOGGLEABLE",
+      "BAROMETER",
+      "THERMOMETER",
+      "WATCH",
+      "HYGROMETER",
+      "SUN_GLASSES",
+      "UNBREAKABLE_MELEE",
+      "OUTER",
+      "TARDIS"
+    ]
+  },
+  {
+    "id": "军用UPS",
+    "type": "TOOL",
+    "name": {
+      "str": "军用UPS",
+      "str_pl": "军用UPSes"
+    },
+    "description": "一款在实验中研发的军用UPS，兼容各种型号的钚燃料电池和蓄电池，无法使用正常电池",
+    "weight": "10000 g",
+    "volume": "2000 ml",
+    "price": 280000,
+    "price_postapoc": 1500,
+    "to_hit": -1,
+    "bashing": 8,
+    "material": [
+      "aluminum",
+      "plastic"
+    ],
+    "symbol": ";",
+    "color": "light_gray",
+    "ammo": [
+      "battery"
+    ],
+    "flags": [
+      "IS_UPS"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "item_restriction": [
+          "light_minus_atomic_battery_cell",
+          "light_atomic_battery_cell",
+          "medium_atomic_battery_cell",
+          "heavy_atomic_battery_cell",
+          "huge_atomic_battery_cell",
+          "small_storage_battery",
+          "medium_storage_battery",
+          "storage_battery",
+          "large_storage_battery"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "幽灵隐形",
+    "type": "TOOL_ARMOR",
+    "name": {
+      "str": "幽灵机甲隐形模块"
+    },
+    "description": "幽灵机甲沉重的隐形模块，它发出了奇异的七彩光芒，开启后每秒消耗 20 KJ 能量",
+    "weight": "350000 g",
+    "volume": "35000 ml",
+    "price": 5500000,
+    "price_postapoc": 25000,
+    "to_hit": -1,
+    "material": [
+      "plastic"
+    ],
+    "symbol": "[",
+    "looks_like": "cloak",
+    "color": "light_gray",
+    "warmth": 10,
+    "material_thickness": 0.5,
+    "environmental_protection": 4,
+    "ammo": "battery",
+    "use_action": {
+      "type": "transform",
+      "msg": "幽灵机甲隐形模块闪烁了几下，你开启了隐身",
+      "target": "幽灵隐形_on",
+      "active": true,
+      "need_charges": 20,
+      "need_charges_msg": "幽灵机甲隐形模块闪烁了几下，你解除了隐身"
+    },
+    "relic_data": {
+      "passive_effects": [
+        {
+          "condition": "ACTIVE",
+          "values": [
+            {
+              "value": "SPEED",
+              "add": -20
+            },
+            {
+              "value": "STRENGTH",
+              "add": -4
+            },
+            {
+              "value": "DEXTERITY",
+              "add": -4
+            }
+          ],
+          "ench_effects": [
+            {
+              "effect": "invisibility",
+              "intensity": 1
+            }
+          ]
+        }
+      ]
+    },
+    "flags": [
+      "USE_UPS",
+      "OVERSIZE",
+      "HOOD",
+      "WATERPROOF",
+      "OUTER",
+      "VARSIZE",
+      "SOFT"
+    ],
+    "armor": [
+      {
+        "encumbrance": 1,
+        "coverage": 1,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "leg_l",
+          "leg_r"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "幽灵隐形_on",
+    "copy-from": "幽灵隐形",
+    "repairs_like": "幽灵隐形",
+    "looks_like": "幽灵隐形",
+    "type": "TOOL_ARMOR",
+    "name": {
+      "str": "幽灵机甲隐形模块 (开)",
+      "str_pl": "幽灵机甲隐形模块 (开)"
+    },
+    "description": "幽灵机甲沉重的隐形模块，它现在已经开启，每秒消耗 20 KJ 能量",
+    "flags": [
+      "USE_UPS",
+      "OVERSIZE",
+      "HOOD",
+      "WATERPROOF",
+      "OUTER",
+      "VARSIZE",
+      "SOFT"
+    ],
+    "power_draw": "20 kW",
+    "revert_to": "幽灵隐形",
+    "use_action": {
+      "ammo_scale": 0,
+      "type": "transform",
+      "menu_text": "Turn off",
+      "msg": "幽灵机甲隐形模块闪烁了几下，你解除了隐身",
+      "target": "幽灵隐形"
+    },
+    "relic_data": {
+      "passive_effects": [
+        {
+          "condition": "ACTIVE",
+          "values": [
+            {
+              "value": "SPEED",
+              "add": -20
+            },
+            {
+              "value": "STRENGTH",
+              "add": -4
+            },
+            {
+              "value": "DEXTERITY",
+              "add": -4
+            }
+          ],
+          "ench_effects": [
+            {
+              "effect": "invisibility",
+              "intensity": 1
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "RMES狙击整合系统",
+    "type": "GUN",
+    "reload_noise_volume": 2,
+    "name": {
+      "str": "RMESS狙击整合系统"
+    },
+    "description": "The integral weapon system for the RMES exoskeleton mech-suit, a quiet and accurate marksman laser rifle.",
+    "weight": "125000 g",
+    "volume": "5500 ml",
+    "price": 9500000,
+    "price_postapoc": 8000,
+    "longest_side": "1228 mm",
+    "to_hit": -2,
+    "bashing": 6,
+    "material": [
+      "superalloy",
+      "plastic"
+    ],
+    "symbol": "(",
+    "color": "blue",
+    "skill": "rifle",
+    "range": 45,
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": 60,
+      "armor_penetration": 54
+    },
+    "dispersion": 15,
+    "durability": 8,
+    "loudness": 1,
+    "ups_charges": 50,
+    "reload": 0,
+    "ammo_effects": [
+      "LASER",
+      "PLASMA_BUBBLE",
+      "INCENDIARY"
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "UNBREAKABLE_MELEE",
+      "NON_FOULING",
+      "NEEDS_NO_LUBE"
+    ]
+  },
+  {
+    "id": "CMES激光炮",
+    "type": "GUN",
+    "reload_noise_volume": 20,
+    "name": {
+      "str": "CMES激光炮"
+    },
+    "description": "The integral weapon system for the CMES exoskeleton mech-suit, a rotating-barrel actively-cooled rapid-fire laser system.",
+    "weight": "395000 g",
+    "volume": "11 L",
+    "price": 9500000,
+    "price_postapoc": 8000,
+    "longest_side": "1086 mm",
+    "to_hit": -4,
+    "bashing": 8,
+    "material": [
+      "superalloy",
+      "plastic"
+    ],
+    "symbol": "(",
+    "color": "blue",
+    "skill": "rifle",
+    "range": 30,
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": 40,
+      "armor_penetration": 76
+    },
+    "dispersion": 100,
+    "durability": 8,
+    "loudness": 12,
+    "ups_charges": 20,
+    "reload": 0,
+    "modes": [
+      [
+        "DEFAULT",
+        "3 rd.",
+        3
+      ],
+      [
+        "BURST",
+        "5 rd.",
+        5
+      ],
+      [
+        "AUTO",
+        "high auto",
+        15
+      ]
+    ],
+    "ammo_effects": [
+      "LASER",
+      "PLASMA_BUBBLE",
+      "INCENDIARY"
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "UNBREAKABLE_MELEE",
+      "NON_FOULING"
+    ]
+  },
+  {
+    "id": "X-02:大兵型号战斗机甲",
+    "type": "TOOL_ARMOR",
+    "repairs_like": "power_armor_basic",
+    "category": "armor",
+    "symbol": "[",
+    "color": "dark_gray",
+    "name": {
+      "str": "X-02:大兵型号战斗机甲"
+    },
+    "description": "实验计划的最终产物之一，作为完善的单兵武器，它的防御力和负重能力惊人，其内部配备了温度计、湿度计、气压计、时钟，以及红外和夜视视觉感受器，辅助瞄准系统显著提高了命中率，缺点是电量消耗过大，开启后每秒消耗 40 KJ 能量",
+    "ammo": [
+      "battery"
+    ],
+    "flags": [
+      "STURDY",
+      "RAINPROOF",
+      "RAD_PROOF",
+      "NANOFAB_REPAIR",
+      "ELECTRIC_IMMUNE",
+      "PADDED",
+      "USE_UPS",
+      "COMBAT_TOGGLEABLE",
+      "BAROMETER",
+      "THERMOMETER",
+      "WATCH",
+      "HYGROMETER",
+      "SUN_GLASSES",
+      "UNBREAKABLE_MELEE",
+      "OUTER",
+      "TARDIS"
+    ],
+    "price": 7920000,
+    "price_postapoc": 850000,
+    "weight_capacity_bonus": "200 kg",
+    "material": [
+      "carbide",
+      "superalloy",
+      "kevlar_layered",
+      "ceramic"
+    ],
+    "weight": "3000000 g",
+    "volume": "400 L",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "60000 ml",
+        "max_contains_weight": "160 kg",
+        "max_item_length": "250 cm",
+        "moves": 500,
+        "rigid": true,
+        "item_restriction": [
+          "军用UPS",
+          "UPS_off"
+        ],
+        "volume_encumber_modifier": 0,
+        "description": "UPS储存箱."
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "800 L",
+        "max_contains_weight": "1600 kg",
+        "max_item_length": "400 cm",
+        "moves": 500,
+        "rigid": true,
+        "volume_encumber_modifier": 0,
+        "description": "机甲后备箱."
+      }
+    ],
+    "environmental_protection": 300,
+    "warmth": 10,
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ACTIVE",
+          "values": [
+            {
+              "value": "CLIMATE_CONTROL_HEAT",
+              "add": 200
+            },
+            {
+              "value": "CLIMATE_CONTROL_CHILL",
+              "add": 200
+            },
+            {
+              "value": "STRENGTH",
+              "add": 80
+            },
+            {
+              "value": "PERCEPTION",
+              "add": 80
+            },
+            {
+              "value": "WEAPON_DISPERSION",
+              "multiply": -0.99
+            },
+            {
+              "value": "SPEED",
+              "multiply": 0.5
+            },
+            {
+              "value": "SIGHT_RANGE_ELECTRIC",
+              "add": 1000
+            }
+          ],
+          "mutations": [
+            "大兵机甲移动"
+          ]
+        }
+      ]
+    },
+    "use_action": {
+      "type": "transform",
+      "msg": "X-02:大兵型号战斗机甲",
+      "target": "X-02:大兵型号战斗机甲（开）",
+      "active": true,
+      "need_charges": 1,
+      "need_charges_msg": "未检测到可用电源。"
+    },
+    "armor": [
+      {
+        "material": [
+          {
+            "type": "carbide",
+            "covered_by_mat": 100,
+            "thickness": 12
+          },
+          {
+            "type": "kevlar",
+            "covered_by_mat": 100,
+            "thickness": 12
+          },
+          {
+            "type": "superalloy",
+            "covered_by_mat": 100,
+            "thickness": 18
+          }
+        ],
+        "encumbrance": 20,
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "cover_vitals": 80,
+        "covers": [
+          "hand_l",
+          "hand_r"
+        ],
+        "volume_encumber_modifier": 0
+      },
+      {
+        "material": [
+          {
+            "type": "carbide",
+            "covered_by_mat": 100,
+            "thickness": 18
+          },
+          {
+            "type": "superalloy",
+            "covered_by_mat": 100,
+            "thickness": 18
+          }
+        ],
+        "encumbrance": 0,
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "cover_vitals": 20,
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ],
+        "specifically_covers": [
+          "foot_toes_r",
+          "foot_toes_l",
+          "foot_ankle_r",
+          "foot_ankle_l",
+          "foot_heel_r",
+          "foot_heel_l",
+          "foot_arch_r",
+          "foot_arch_l"
+        ],
+        "volume_encumber_modifier": 0
+      },
+      {
+        "material": [
+          {
+            "type": "carbide",
+            "covered_by_mat": 100,
+            "thickness": 24
+          },
+          {
+            "type": "rubber",
+            "covered_by_mat": 100,
+            "thickness": 24
+          },
+          {
+            "type": "superalloy",
+            "covered_by_mat": 100,
+            "thickness": 24
+          }
+        ],
+        "encumbrance": 20,
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "cover_vitals": 100,
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ],
+        "specifically_covers": [
+          "foot_sole_r",
+          "foot_sole_l"
+        ],
+        "volume_encumber_modifier": 0
+      },
+      {
+        "material": [
+          {
+            "type": "kevlar",
+            "covered_by_mat": 100,
+            "thickness": 24
+          },
+          {
+            "type": "carbide",
+            "covered_by_mat": 100,
+            "thickness": 24
+          },
+          {
+            "type": "ceramic",
+            "covered_by_mat": 100,
+            "thickness": 24
+          },
+          {
+            "type": "superalloy",
+            "covered_by_mat": 100,
+            "thickness": 24
+          }
+        ],
+        "covers": [
+          "torso"
+        ],
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "cover_vitals": 90,
+        "encumbrance": 20,
+        "layers": [
+          "OUTER"
+        ],
+        "volume_encumber_modifier": 0
+      },
+      {
+        "material": [
+          {
+            "type": "kevlar",
+            "covered_by_mat": 100,
+            "thickness": 24
+          },
+          {
+            "type": "carbide",
+            "covered_by_mat": 100,
+            "thickness": 24
+          },
+          {
+            "type": "ceramic",
+            "covered_by_mat": 100,
+            "thickness": 20
+          },
+          {
+            "type": "superalloy",
+            "covered_by_mat": 100,
+            "thickness": 24
+          }
+        ],
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "specifically_covers": [
+          "arm_shoulder_l",
+          "arm_shoulder_r",
+          "arm_upper_l",
+          "arm_upper_r",
+          "arm_elbow_l",
+          "arm_elbow_r"
+        ],
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "cover_vitals": 90,
+        "encumbrance": 20,
+        "layers": [
+          "OUTER"
+        ],
+        "volume_encumber_modifier": 0
+      },
+      {
+        "material": [
+          {
+            "type": "kevlar",
+            "covered_by_mat": 100,
+            "thickness": 18
+          },
+          {
+            "type": "carbide",
+            "covered_by_mat": 100,
+            "thickness": 18
+          },
+          {
+            "type": "superalloy",
+            "covered_by_mat": 100,
+            "thickness": 24
+          }
+        ],
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "specifically_covers": [
+          "arm_lower_l",
+          "arm_lower_r"
+        ],
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "cover_vitals": 80,
+        "encumbrance": 20,
+        "volume_encumber_modifier": 0
+      },
+      {
+        "material": [
+          {
+            "type": "kevlar",
+            "covered_by_mat": 100,
+            "thickness": 24
+          },
+          {
+            "type": "carbide",
+            "covered_by_mat": 100,
+            "thickness": 24
+          },
+          {
+            "type": "ceramic",
+            "covered_by_mat": 100,
+            "thickness": 24
+          },
+          {
+            "type": "superalloy",
+            "covered_by_mat": 100,
+            "thickness": 24
+          }
+        ],
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "cover_vitals": 80,
+        "encumbrance": 20,
+        "layers": [
+          "OUTER"
+        ],
+        "volume_encumber_modifier": 0
+      },
+      {
+        "material": [
+          {
+            "type": "superalloy",
+            "covered_by_mat": 100,
+            "thickness": 24
+          },
+          {
+            "type": "carbide",
+            "covered_by_mat": 100,
+            "thickness": 18
+          },
+          {
+            "type": "superalloy",
+            "covered_by_mat": 100,
+            "thickness": 24
+          }
+        ],
+        "covers": [
+          "head"
+        ],
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "encumbrance": 20
+      },
+      {
+        "material": [
+          {
+            "type": "superalloy",
+            "covered_by_mat": 100,
+            "thickness": 24
+          },
+          {
+            "type": "superalloy",
+            "covered_by_mat": 100,
+            "thickness": 24
+          }
+        ],
+        "covers": [
+          "eyes",
+          "mouth"
+        ],
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "encumbrance": 20,
+        "layers": [
+          "OUTER"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "X-02:大兵型号战斗机甲（开）",
+    "repairs_like": "power_armor_basic",
+    "type": "TOOL_ARMOR",
+    "name": {
+      "str": "X-02:大兵型号战斗机甲（开）"
+    },
+    "description": "实验计划的最终产物之一，作为完善的单兵武器，它的防御力和负重能力惊人，其内部配备了温度计、湿度计、气压计、时钟，以及红外和夜视视觉感受器，辅助瞄准系统显著提高了命中率，缺点是电量消耗过大，开启后每秒消耗 40 KJ 能量",
+    "power_draw": "40 kW",
+    "ammo": [
+      "battery"
+    ],
+    "copy-from": "X-02:大兵型号战斗机甲",
+    "revert_to": "X-02:大兵型号战斗机甲",
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ACTIVE",
+          "values": [
+            {
+              "value": "CLIMATE_CONTROL_HEAT",
+              "add": 200
+            },
+            {
+              "value": "CLIMATE_CONTROL_CHILL",
+              "add": 200
+            },
+            {
+              "value": "STRENGTH",
+              "add": 80
+            },
+            {
+              "value": "PERCEPTION",
+              "add": 80
+            },
+            {
+              "value": "WEAPON_DISPERSION",
+              "multiply": -0.99
+            },
+            {
+              "value": "SPEED",
+              "multiply": 0.5
+            },
+            {
+              "value": "SIGHT_RANGE_ELECTRIC",
+              "add": 1000
+            }
+          ],
+          "mutations": [
+            "大兵机甲移动"
+          ]
+        }
+      ]
+    },
+    "use_action": {
+      "type": "transform",
+      "menu_text": "Turn off",
+      "msg": "机甲已关闭",
+      "target": "X-02:大兵型号战斗机甲"
+    },
+    "environmental_protection": 300,
+    "weight_capacity_bonus": "5000 kg",
+    "flags": [
+      "IR_EFFECT",
+      "STURDY",
+      "RAINPROOF",
+      "RAD_PROOF",
+      "TRADER_AVOID",
+      "NANOFAB_REPAIR",
+      "ELECTRIC_IMMUNE",
+      "PADDED",
+      "USE_UPS",
+      "COMBAT_TOGGLEABLE",
+      "BAROMETER",
+      "THERMOMETER",
+      "WATCH",
+      "HYGROMETER",
+      "SUN_GLASSES",
+      "UNBREAKABLE_MELEE",
+      "OUTER",
+      "TARDIS"
+    ]
+  },
+  {
+    "id": "X-01:千斤顶型号起重机甲",
+    "type": "TOOL_ARMOR",
+    "repairs_like": "power_armor_basic",
+    "category": "armor",
+    "symbol": "[",
+    "color": "dark_gray",
+    "name": {
+      "str": "X-01:千斤顶型号起重机甲"
+    },
+    "description": "实验计划的最终产物之一，作为完善的后勤机甲，它的防御力和负重能力惊人，其内部配备了温度计、湿度计、气压计、时钟，缺点是电量消耗过大，开启后每秒消耗 40 KJ 能量",
+    "ammo": [
+      "battery"
+    ],
+    "flags": [
+      "STURDY",
+      "RAINPROOF",
+      "RAD_PROOF",
+      "NANOFAB_REPAIR",
+      "ELECTRIC_IMMUNE",
+      "PADDED",
+      "USE_UPS",
+      "COMBAT_TOGGLEABLE",
+      "BAROMETER",
+      "THERMOMETER",
+      "WATCH",
+      "HYGROMETER",
+      "SUN_GLASSES",
+      "UNBREAKABLE_MELEE",
+      "OUTER",
+      "TARDIS"
+    ],
+    "price": 7920000,
+    "price_postapoc": 850000,
+    "weight_capacity_bonus": "500 kg",
+    "material": [
+      "carbide",
+      "superalloy",
+      "kevlar_layered",
+      "ceramic"
+    ],
+    "weight": "3000000 g",
+    "volume": "400 L",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "60000 ml",
+        "max_contains_weight": "160 kg",
+        "max_item_length": "250 cm",
+        "moves": 500,
+        "rigid": true,
+        "item_restriction": [
+          "军用UPS",
+          "UPS_off"
+        ],
+        "volume_encumber_modifier": 0,
+        "description": "UPS储存箱."
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1800 L",
+        "max_contains_weight": "5000 kg",
+        "max_item_length": "400 cm",
+        "moves": 500,
+        "rigid": true,
+        "volume_encumber_modifier": 0,
+        "description": "机甲后备箱."
+      }
+    ],
+    "environmental_protection": 300,
+    "warmth": 10,
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ACTIVE",
+          "values": [
+            {
+              "value": "CLIMATE_CONTROL_HEAT",
+              "add": 200
+            },
+            {
+              "value": "CLIMATE_CONTROL_CHILL",
+              "add": 200
+            },
+            {
+              "value": "STRENGTH",
+              "add": 160
+            },
+            {
+              "value": "PERCEPTION",
+              "add": 10
+            }
+          ],
+          "mutations": [
+            "千斤顶机甲移动"
+          ]
+        }
+      ]
+    },
+    "use_action": {
+      "type": "transform",
+      "msg": "X-01:千斤顶型号起重机甲",
+      "target": "X-01:千斤顶型号起重机甲（开）",
+      "active": true,
+      "need_charges": 1,
+      "need_charges_msg": "未检测到可用电源。"
+    },
+    "armor": [
+      {
+        "material": [
+          {
+            "type": "carbide",
+            "covered_by_mat": 100,
+            "thickness": 12
+          },
+          {
+            "type": "kevlar",
+            "covered_by_mat": 100,
+            "thickness": 12
+          },
+          {
+            "type": "superalloy",
+            "covered_by_mat": 100,
+            "thickness": 18
+          }
+        ],
+        "encumbrance": 20,
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "cover_vitals": 80,
+        "covers": [
+          "hand_l",
+          "hand_r"
+        ],
+        "volume_encumber_modifier": 0
+      },
+      {
+        "material": [
+          {
+            "type": "carbide",
+            "covered_by_mat": 100,
+            "thickness": 18
+          },
+          {
+            "type": "superalloy",
+            "covered_by_mat": 100,
+            "thickness": 18
+          }
+        ],
+        "encumbrance": 0,
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "cover_vitals": 20,
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ],
+        "specifically_covers": [
+          "foot_toes_r",
+          "foot_toes_l",
+          "foot_ankle_r",
+          "foot_ankle_l",
+          "foot_heel_r",
+          "foot_heel_l",
+          "foot_arch_r",
+          "foot_arch_l"
+        ],
+        "volume_encumber_modifier": 0
+      },
+      {
+        "material": [
+          {
+            "type": "carbide",
+            "covered_by_mat": 100,
+            "thickness": 24
+          },
+          {
+            "type": "rubber",
+            "covered_by_mat": 100,
+            "thickness": 24
+          },
+          {
+            "type": "superalloy",
+            "covered_by_mat": 100,
+            "thickness": 24
+          }
+        ],
+        "encumbrance": 20,
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "cover_vitals": 100,
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ],
+        "specifically_covers": [
+          "foot_sole_r",
+          "foot_sole_l"
+        ],
+        "volume_encumber_modifier": 0
+      },
+      {
+        "material": [
+          {
+            "type": "kevlar",
+            "covered_by_mat": 100,
+            "thickness": 24
+          },
+          {
+            "type": "carbide",
+            "covered_by_mat": 100,
+            "thickness": 24
+          },
+          {
+            "type": "ceramic",
+            "covered_by_mat": 100,
+            "thickness": 24
+          },
+          {
+            "type": "superalloy",
+            "covered_by_mat": 100,
+            "thickness": 24
+          }
+        ],
+        "covers": [
+          "torso"
+        ],
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "cover_vitals": 90,
+        "encumbrance": 20,
+        "layers": [
+          "OUTER"
+        ],
+        "volume_encumber_modifier": 0
+      },
+      {
+        "material": [
+          {
+            "type": "kevlar",
+            "covered_by_mat": 100,
+            "thickness": 24
+          },
+          {
+            "type": "carbide",
+            "covered_by_mat": 100,
+            "thickness": 24
+          },
+          {
+            "type": "ceramic",
+            "covered_by_mat": 100,
+            "thickness": 20
+          },
+          {
+            "type": "superalloy",
+            "covered_by_mat": 100,
+            "thickness": 24
+          }
+        ],
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "specifically_covers": [
+          "arm_shoulder_l",
+          "arm_shoulder_r",
+          "arm_upper_l",
+          "arm_upper_r",
+          "arm_elbow_l",
+          "arm_elbow_r"
+        ],
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "cover_vitals": 90,
+        "encumbrance": 20,
+        "layers": [
+          "OUTER"
+        ],
+        "volume_encumber_modifier": 0
+      },
+      {
+        "material": [
+          {
+            "type": "kevlar",
+            "covered_by_mat": 100,
+            "thickness": 18
+          },
+          {
+            "type": "carbide",
+            "covered_by_mat": 100,
+            "thickness": 18
+          },
+          {
+            "type": "superalloy",
+            "covered_by_mat": 100,
+            "thickness": 24
+          }
+        ],
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "specifically_covers": [
+          "arm_lower_l",
+          "arm_lower_r"
+        ],
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "cover_vitals": 80,
+        "encumbrance": 20,
+        "volume_encumber_modifier": 0
+      },
+      {
+        "material": [
+          {
+            "type": "kevlar",
+            "covered_by_mat": 100,
+            "thickness": 24
+          },
+          {
+            "type": "carbide",
+            "covered_by_mat": 100,
+            "thickness": 24
+          },
+          {
+            "type": "ceramic",
+            "covered_by_mat": 100,
+            "thickness": 24
+          },
+          {
+            "type": "superalloy",
+            "covered_by_mat": 100,
+            "thickness": 24
+          }
+        ],
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "cover_vitals": 80,
+        "encumbrance": 20,
+        "layers": [
+          "OUTER"
+        ],
+        "volume_encumber_modifier": 0
+      },
+      {
+        "material": [
+          {
+            "type": "superalloy",
+            "covered_by_mat": 100,
+            "thickness": 24
+          },
+          {
+            "type": "carbide",
+            "covered_by_mat": 100,
+            "thickness": 18
+          },
+          {
+            "type": "superalloy",
+            "covered_by_mat": 100,
+            "thickness": 24
+          }
+        ],
+        "covers": [
+          "head"
+        ],
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "encumbrance": 20
+      },
+      {
+        "material": [
+          {
+            "type": "superalloy",
+            "covered_by_mat": 100,
+            "thickness": 24
+          },
+          {
+            "type": "superalloy",
+            "covered_by_mat": 100,
+            "thickness": 24
+          }
+        ],
+        "covers": [
+          "eyes",
+          "mouth"
+        ],
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "encumbrance": 20,
+        "layers": [
+          "OUTER"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "X-01:千斤顶型号起重机甲（开）",
+    "repairs_like": "power_armor_basic",
+    "type": "TOOL_ARMOR",
+    "name": {
+      "str": "X-01:千斤顶型号起重机甲（开）"
+    },
+    "description": "实验计划的最终产物之一，作为完善的后勤机甲，它的防御力和负重能力惊人，其内部配备了温度计、湿度计、气压计、时钟，缺点是电量消耗过大，开启后每秒消耗 40 KJ 能量",
+    "power_draw": "40 kW",
+    "ammo": [
+      "battery"
+    ],
+    "copy-from": "X-01:千斤顶型号起重机甲",
+    "revert_to": "X-01:千斤顶型号起重机甲",
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ACTIVE",
+          "values": [
+            {
+              "value": "CLIMATE_CONTROL_HEAT",
+              "add": 200
+            },
+            {
+              "value": "CLIMATE_CONTROL_CHILL",
+              "add": 200
+            },
+            {
+              "value": "STRENGTH",
+              "add": 160
+            },
+            {
+              "value": "PERCEPTION",
+              "add": 10
+            }
+          ],
+          "mutations": [
+            "千斤顶机甲移动"
+          ]
+        }
+      ]
+    },
+    "use_action": {
+      "type": "transform",
+      "menu_text": "Turn off",
+      "msg": "机甲已关闭",
+      "target": "X-01:千斤顶型号起重机甲"
+    },
+    "environmental_protection": 300,
+    "weight_capacity_bonus": "10000 kg",
+    "flags": [
+      "STURDY",
+      "RAINPROOF",
+      "RAD_PROOF",
+      "TRADER_AVOID",
+      "NANOFAB_REPAIR",
+      "ELECTRIC_IMMUNE",
+      "PADDED",
+      "USE_UPS",
+      "COMBAT_TOGGLEABLE",
+      "BAROMETER",
+      "THERMOMETER",
+      "WATCH",
+      "HYGROMETER",
+      "SUN_GLASSES",
+      "UNBREAKABLE_MELEE",
+      "OUTER",
+      "TARDIS"
+    ]
+  }
+]

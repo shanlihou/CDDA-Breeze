@@ -1,0 +1,242 @@
+[
+ {
+  "id": "v_hemo_whip",
+  "type": "ARMOR",
+  "symbol": "/",
+  "color": "light_red",
+  "name": {
+   "str": "水蛭鞭"
+  },
+  "description": "贪婪的可怕鞭子，以牢不可破的忠诚为它的主人服务。它跳动着，仿佛它是活着的，它的嗜血流经它的持用者，而持用者散发出微弱的天鹅绒般的光环。\n *攻击时有10%几率进行横扫打击。横扫打击在一个非常宽的圆锥体中对敌人造成<color_light_red>点16点切割伤害</color>点。\n*受到攻击时，有20%的几率消耗邻近敌人的生命值，造成<color_green>点生物伤害，并治疗你1点。",
+  "weight": "2110 g",
+  "volume": "1500 ml",
+  "material": [
+   "flesh"
+  ],
+  "techniques": [
+   "PRECISE",
+   "RAPID",
+   "WBLOCK_2"
+  ],
+  "flags": [
+   "REACH_ATTACK",
+   "REACH3",
+   "WHIP",
+   "TRADER_AVOID",
+   "UNBREAKABLE_MELEE",
+   "MAGIC_FOCUS"
+  ],
+  "armor": [
+   {
+    "encumbrance": 5,
+    "coverage": 100,
+    "covers": [
+     "hand_r"
+    ]
+   }
+  ],
+  "relic_data": {
+   "passive_effects": [
+    {
+     "has": "WORN",
+     "condition": "ALWAYS",
+     "hit_you_effect": [
+      {
+       "id": "v_hemo_whip_spell_ss_maybe"
+      }
+     ],
+     "hit_me_effect": [
+      {
+       "id": "v_hemo_whip_spell_d_maybe"
+      }
+     ],
+     "values": [
+      {
+       "value": "STRENGTH",
+       "add": 1
+      },
+      {
+       "value": "SPEED",
+       "add": 5
+      },
+      {
+       "value": "MAX_HP",
+       "add": 10
+      }
+     ]
+    }
+   ]
+  },
+  "cutting": 22,
+  "category": "weapons"
+ },
+ {
+  "id": "v_hemo_crimsoncoat_coat",
+  "type": "ARMOR",
+  "name": {
+   "str": "深红色外套"
+  },
+  "description": "一层浓厚的血液，使你的身体免受伤害。丢下它即可“破除”这层护盾。\n*这层护盾有75%的概率，在被命中时瞬间刺穿攻击者，造成<color_green>12点刺击伤害</color>，并使其<color_yellow>失去知觉</color>，持续1-3回合。",
+  "weight": "3 g",
+  "volume": "3 ml",
+  "price": "0 cent",
+  "material": [
+   "flesh"
+  ],
+  "symbol": "0",
+  "color": "red",
+  "relic_data": {
+   "passive_effects": [
+    {
+     "has": "WORN",
+     "condition": "ALWAYS",
+     "hit_me_effect": [
+      {
+       "id": "v_hemo_crimsoncoat_coat_pr_maybe"
+      }
+     ],
+     "values": [
+      {
+       "value": "ARMOR_BASH",
+       "add": -70
+      },
+      {
+       "value": "ARMOR_CUT",
+       "add": -70
+      },
+      {
+       "value": "ARMOR_STAB",
+       "add": -70
+      }
+     ]
+    }
+   ]
+  },
+  "flags": [
+   "PERSONAL",
+   "OVERSIZE",
+   "BLOCK_WHILE_WORN",
+   "SEMITANGIBLE",
+   "NO_DROP"
+  ],
+  "armor": [
+   {
+    "coverage": 100,
+    "covers": [
+     "head",
+     "torso",
+     "arm_r",
+     "arm_l",
+     "leg_r",
+     "leg_l"
+    ],
+    "material": [
+     "flesh"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v_hemo_form_orus",
+  "type": "GENERIC",
+  "name": {
+   "str": "<color_red>奥卢斯</color>"
+  },
+  "description": "血魔形态:\n <color_red> Orus </color>，热心的操纵者。\n*每20秒有10%的几率在10个方格内的血场附近召唤<color_light_blue>血。\n*被击中时，有10%的几率召唤一次血光。\n*攻击时有20%几率召唤一个<color_light_blue>血统的</color>,有5%几率召唤一个<color_light_blue>血统的前任</color>。",
+  "weight": "3 g",
+  "volume": "3 ml",
+  "price": "0 cent",
+  "material": [
+   "flesh"
+  ],
+  "symbol": "0",
+  "color": "red",
+  "relic_data": {
+   "passive_effects": [
+    {
+     "has": "HELD",
+     "condition": "ALWAYS",
+     "hit_me_effect": [
+      {
+       "id": "v_hemo_crimsoncoat_coat_pr_maybe"
+      }
+     ],
+     "values": [
+      {
+       "value": "MAX_HP",
+       "add": 50
+      },
+      {
+       "value": "SPEED",
+       "add": -15
+      }
+     ],
+     "intermittent_activation": {
+      "effects": [
+       {
+        "frequency": "30 seconds",
+        "spell_effects": [
+         {
+          "id": "v_hemo_orusform_bloodling"
+         }
+        ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "flags": [
+   "NO_DROP"
+  ],
+  "category": "v_form"
+ },
+ {
+  "id": "v_war_etherealenchant",
+  "type": "ARMOR",
+  "name": {
+   "str": "以太附魔"
+  },
+  "description": "把你挥舞的武器（甚至是赤裸的拳头）藏在可怕的雾中。\n*5%召唤一个<color_light_blue>以太轮廓</color>，在攻击时转15-25圈。",
+  "weight": "3 g",
+  "volume": "3 ml",
+  "price": "0 cent",
+  "material": [
+   "ethereal"
+  ],
+  "symbol": "0",
+  "color": "red",
+  "relic_data": {
+   "passive_effects": [
+    {
+     "has": "WORN",
+     "condition": "ALWAYS",
+     "hit_you_effect": [
+      {
+       "id": "v_war_etherealenchant_ss_maybe"
+      }
+     ],
+     "values": []
+    }
+   ]
+  },
+  "flags": [
+   "AURA",
+   "ONLY_ONE",
+   "SEMITANGIBLE",
+   "NO_DROP"
+  ],
+  "armor": [
+   {
+    "coverage": 0,
+    "covers": [
+     "arm_r",
+     "arm_l"
+    ],
+    "material": [
+     "ethereal"
+    ]
+   }
+  ]
+ }
+]

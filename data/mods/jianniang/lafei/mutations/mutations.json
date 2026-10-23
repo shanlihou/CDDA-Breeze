@@ -1,0 +1,269 @@
+[
+ {
+    "type": "mutation",
+    "id": "PRETTY",
+    "copy-from": "PRETTY",
+    "name": {
+      "str": "长相俊美"
+    },
+    "points": 1,
+    "ugliness": -2,
+    "description": "你很引人注目，NPC们或许会对你更加青睐。",
+    "starting_trait": true,
+    "extend": {
+      "category": [
+        "jn_DD"
+      ]
+    },
+    "cancels": [
+      "UGLY",
+      "DEFORMED",
+      "DEFORMED2",
+      "DEFORMED3"
+    ],
+    "changes_to": [
+      "BEAUTIFUL"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "BEAUTIFUL",
+    "copy-from": "BEAUTIFUL",
+    "name": {
+      "str": "迷人美貌"
+    },
+    "points": 2,
+    "visibility": -4,
+    "ugliness": -4,
+    "description": "你的相貌十分英俊，大家很容易接近你并且信任你。",
+    "extend": {
+      "category": [
+        "jn_DD"
+      ]
+    },
+    "cancels": [
+      "UGLY",
+      "DEFORMED",
+      "DEFORMED2",
+      "DEFORMED3"
+    ],
+    "prereqs": [
+      "PRETTY"
+    ],
+    "changes_to": [
+      "BEAUTIFUL2"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "BEAUTIFUL2",
+    "copy-from": "BEAUTIFUL2",
+    "name": {
+      "str": "绝色容颜"
+    },
+    "points": 3,
+    "visibility": -7,
+    "ugliness": -7,
+    "description": "你有一个看起来美丽的外表，一些人会被你外表所吸引，大多数人会信任你。",
+    "extend": {
+      "category": [
+        "jn_DD"
+      ]
+    },
+    "cancels": [
+      "UGLY",
+      "DEFORMED",
+      "DEFORMED2",
+      "DEFORMED3"
+    ],
+    "prereqs": [
+      "BEAUTIFUL"
+    ],
+    "changes_to": [
+      "BEAUTIFUL3"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "BEAUTIFUL3",
+    "copy-from": "BEAUTIFUL3",
+    "name": {
+      "str": "极致容貌"
+    },
+    "points": 4,
+    "visibility": -10,
+    "ugliness": -10,
+    "description": "你有着惊人的美丽容貌，人们不禁被你的容貌所折服，将尽可能的取悦你。",
+    "cancels": [
+      "UGLY",
+      "DEFORMED",
+      "DEFORMED2",
+      "DEFORMED3"
+    ],
+    "prereqs": [
+      "BEAUTIFUL2"
+    ],
+    "extend": {
+      "category": [
+        "jn_DD"
+      ]
+    }
+  },
+    {
+    "type": "mutation",
+    "id": "0.7_inch",
+    "name": {
+      "str": "1英寸装甲"
+    },
+    "points": 1,
+    "description": "你的舰装周围浮现了一圈装甲，能自动抵挡攻击，攻击抗性+100。",
+    "category": [
+      "jn_DD"
+    ],
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth",
+          "eyes"
+        ],
+        "bash": 100,
+        "cut": 100,
+        "stab": 100,
+        "bullet": 100,
+		"heat": 100,
+        "acid": 100
+      }
+    ],
+	 "hp_adjustment": 300 
+  },
+  {
+    "type": "mutation",
+    "id": "sunguan",
+    "name": {
+      "str": "损害管制"
+    },
+    "points": 1,
+    "description": "你周围浮现了一堆小黄鸡来为你修复破损的舰装。",
+    "category": [
+      "jn_DD"
+    ],
+	"healing_awake": 300,
+    "healing_resting": 300
+  },
+  {
+    "type": "mutation",
+    "id": "lunji_lf",
+    "name": {
+      "str": "通用电气型齿轮蒸汽涡轮机"
+    },
+    "points": 1,
+    "description": "你身体里面好像有了两台共计50000匹马力的通用电气型齿轮蒸汽涡轮机，正在往外喷涂着汹涌的动力。",
+    "category": [
+      "jn_DD"
+    ],
+	"passive_mods": {
+	"str_mod": 32,
+    "dex_mod": 32
+	},
+	"stamina_regen_modifier": 5,
+    "cardio_multiplier": 5,
+	"weight_capacity_modifier": 10
+  },
+  {
+    "type": "mutation",
+    "id": "leida",
+    "name": {
+      "str": "Mk 12火控雷达"
+    },
+    "points": 1,
+    "description": "你的脑子里好像多了一个雷达，这使你的感知大大的提升了。",
+    "category": [
+      "jn_DD"
+    ],
+	"passive_mods": {
+	"per_mod": 32,
+    "int_mod": 32
+	},
+	"hearing_modifier": 3,
+	"dodge_modifier": 5
+  },
+  {
+    "type": "mutation",
+    "id": "tuijinqi",
+    "name": {
+      "str": "推进器"
+    },
+    "points": 1,
+    "description": "你的脚底出现了一个可隐藏的推进器，神奇的是，它竟然可以在陆地上工作。",
+    "category": [
+      "jn_DD"
+    ],
+	"enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [
+          {
+            "value": "SPEED",
+            "multiply": 5
+          }
+        ]
+      }
+    ],
+	"dodge_modifier": 5
+  }, 
+  {
+    "type": "mutation",
+    "id": "22niang",
+    "name": {
+      "str": "拉菲33娘皮肤"
+    },
+    "points": 1,
+    "ugliness": -10,
+    "description": "拉菲皮肤（借鉴（大嘘）了VOICEROID的贴图。）。",
+    "category": [
+        "jn_DD"
+      ]
+  },
+  {
+    "type": "mutation",
+    "id": "jianti_DD",
+    "name": {
+      "str": "驱逐舰体"
+    },
+	"points": 1,
+	"description": "本体是1840吨标准排水量的本森级驱逐舰舰体，当然舰装状态下没有这么重" ,
+    "hp_modifier": 3,
+	"stealth_modifier": 50,
+    "noise_modifier": 0.2,
+    "scent_modifier": 0.2,
+	"bleed_resist": 500,
+    "category": [
+    "jn_DD"
+      ]
+  },
+  {
+    "type": "mutation",
+    "id": "zjsn",
+    "name": {
+      "str": "战舰少女"
+    },
+    "points": 1,
+	"ugliness" : -10,
+    "description": "你现在是一个真正的战舰少女了。",
+    "purifiable": false,
+	"threshreq":["jianti_DD","22niang","tuijinqi","leida","lunji_lf","sunguan","0.7_inch","BEAUTIFUL3"],
+	"category": [
+    "jn_DD"
+      ]
+  }
+]

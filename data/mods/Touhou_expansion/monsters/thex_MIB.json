@@ -1,0 +1,506 @@
+[
+  {
+    "id": "mon_mib",
+    "type": "MONSTER",
+    "name": {
+      "str": "黑衣人",
+      "str_pl": "黑衣人"
+    },
+    "description": "一个比常人更高的人，穿着黑色西装，有些人戴着帽子，有些戴着墨镜。有些人似乎没有体毛，比如睫毛，能看到的少量皮肤非常苍白，几乎呈白色。他们非常奇怪的身体动作让你毛骨悚然，有些人似乎过于坚忍，另一些人看起来好像记住了人类应该如何移动。他们似乎在寻找什么东西。",
+    "volume": "95000 ml",
+    "weight": "95000 g",
+    "default_faction": "touhou_mib",
+    "bodytype": "human",
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "YOUKAI_PSEUDO"
+    ],
+    "harvest": "human",
+    "hp": 120,
+    "speed": 95,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "@",
+    "color": "black",
+    "aggression": 10,
+    "morale": 65,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "dodge": 4,
+    "vision_day": 50,
+    "vision_night": 15,
+    "path_settings": {
+      "max_dist": 35
+    },
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "HURT"
+    ],
+    "fear_triggers": [
+      "FRIEND_DIED"
+    ],
+    "armor_bash": 2,
+    "armor_cut": 2,
+    "armor_bullet": 5,
+    "armor_stab": 2,
+    "luminance": 1,
+    "starting_ammo": {
+      "9mmfmj": 20
+    },
+    "special_attacks": [
+      {
+        "gun_type": "glock_17",
+        "type": "gun",
+        "description": "The %s 开枪了！",
+        "ammo_type": "9mmfmj",
+        "cooldown": 3,
+        "fake_dex": 10,
+        "fake_skills": [
+          [
+            "gun",
+            3
+          ],
+          [
+            "pistol",
+            4
+          ]
+        ],
+        "max_ammo": 21,
+        "move_cost": 120,
+        "targeting_cost": 105,
+        "require_targeting_player": true,
+        "ranges": [
+          [
+            2,
+            12,
+            "BURST"
+          ],
+          [
+            13,
+            18,
+            "SEMI_AUTO"
+          ]
+        ]
+      },
+      [
+        "PARROT_AT_DANGER",
+        16
+      ]
+    ],
+    "death_drops": "mib_drops",
+    "death_function": {
+      "effect": {
+        "id": "death_mib_none",
+        "hit_self": true
+      },
+      "message": "The %s 死了！"
+    },
+    "flags": [
+      "BASHES",
+      "CAN_OPEN_DOORS",
+      "DROPS_AMMO",
+      "HEARS",
+      "PATH_AVOID_DANGER_2",
+      "SEES",
+      "WARM"
+    ],
+    "//": "Base (human) MIB",
+    "//2": "Add 'weird' harvest",
+    "//3": "Each death spawning something should print a message, telling the player (defaults are kept below), but I'm not sure how to do that."
+  },
+  {
+    "id": "mon_mib2",
+    "type": "MONSTER",
+    "name": {
+      "str": "黑衣人",
+      "str_pl": "黑衣人"
+    },
+    "copy-from": "mon_mib",
+    "vision_night": 50,
+    "special_attacks": [
+      {
+        "gun_type": "glock_17",
+        "type": "gun",
+        "description": "The %s 开枪了！",
+        "ammo_type": "9mmfmj",
+        "cooldown": 3,
+        "fake_dex": 10,
+        "fake_skills": [
+          [
+            "gun",
+            3
+          ],
+          [
+            "pistol",
+            4
+          ]
+        ],
+        "max_ammo": 21,
+        "move_cost": 120,
+        "targeting_cost": 105,
+        "require_targeting_player": true,
+        "ranges": [
+          [
+            2,
+            12,
+            "BURST"
+          ],
+          [
+            13,
+            18,
+            "SEMI_AUTO"
+          ]
+        ]
+      },
+      [
+        "PARROT_AT_DANGER",
+        18
+      ]
+    ],
+    "death_function": {
+      "effect": {
+        "id": "death_mib_shadowspawn",
+        "hit_self": true
+      },
+      "message": "The %s 倒下了。紧接着，一个漆黑的暗影从“尸体”中浮现！",
+      "corpse_type": "NORMAL"
+    },
+    "flags": [
+      "BASHES",
+      "CAN_OPEN_DOORS",
+      "DROPS_AMMO",
+      "HEARS",
+      "PATH_AVOID_DANGER_2",
+      "SEES"
+    ],
+    "//": " 'Demon' type MIB"
+  },
+  {
+    "id": "mon_mib3",
+    "type": "MONSTER",
+    "name": {
+      "str": "黑衣人",
+      "str_pl": "黑衣人"
+    },
+    "copy-from": "mon_mib",
+    "vision_night": 35,
+    "special_attacks": [
+      {
+        "gun_type": "glock_17",
+        "type": "gun",
+        "description": "The %s 开枪了！",
+        "ammo_type": "9mmfmj",
+        "cooldown": 3,
+        "fake_dex": 10,
+        "fake_skills": [
+          [
+            "gun",
+            3
+          ],
+          [
+            "pistol",
+            4
+          ]
+        ],
+        "max_ammo": 21,
+        "move_cost": 120,
+        "targeting_cost": 105,
+        "require_targeting_player": true,
+        "ranges": [
+          [
+            2,
+            12,
+            "BURST"
+          ],
+          [
+            13,
+            18,
+            "SEMI_AUTO"
+          ]
+        ]
+      },
+      [
+        "PARROT_AT_DANGER",
+        20
+      ]
+    ],
+    "death_function": {
+      "effect": {
+        "id": "death_mib_alienspawn",
+        "hit_self": true
+      },
+      "message": "The %s 停下了脚步，血肉开始融化，有什么东西从身体里钻了出来！",
+      "corpse_type": "NO_CORPSE"
+    },
+    "flags": [
+      "BASHES",
+      "CAN_OPEN_DOORS",
+      "DROPS_AMMO",
+      "HEARS",
+      "PATH_AVOID_DANGER_1",
+      "SEES"
+    ],
+    "//": "Alien type MIB, add pile-of-flesh corpse"
+  },
+  {
+    "id": "mon_mib4",
+    "type": "MONSTER",
+    "name": {
+      "str": "黑衣人",
+      "str_pl": "黑衣人"
+    },
+    "copy-from": "mon_mib",
+    "vision_night": 25,
+    "path_settings": {
+      "max_dist": 25
+    },
+    "special_attacks": [
+      {
+        "gun_type": "glock_17",
+        "type": "gun",
+        "description": "The %s 开枪了！",
+        "ammo_type": "9mmfmj",
+        "cooldown": 3,
+        "fake_dex": 10,
+        "fake_skills": [
+          [
+            "gun",
+            3
+          ],
+          [
+            "pistol",
+            4
+          ]
+        ],
+        "max_ammo": 21,
+        "move_cost": 120,
+        "targeting_cost": 105,
+        "require_targeting_player": true,
+        "ranges": [
+          [
+            2,
+            12,
+            "BURST"
+          ],
+          [
+            13,
+            18,
+            "SEMI_AUTO"
+          ]
+        ]
+      },
+      [
+        "PARROT_AT_DANGER",
+        22
+      ]
+    ],
+    "death_function": {
+      "effect": {
+        "id": "death_mib_alienspawn",
+        "hit_self": true
+      },
+      "message": "The %s 倒下了。不久之后，这名特工又站了起来，双眼闪烁着红光！",
+      "corpse_type": "NO_CORPSE"
+    },
+    "flags": [
+      "BASHES",
+      "CAN_OPEN_DOORS",
+      "DROPS_AMMO",
+      "HEARS",
+      "PATH_AVOID_DANGER_1",
+      "SEES",
+      "WARM"
+    ],
+    "//": "Terminator-like MIB"
+  },
+  {
+    "id": "mon_mib_shadow",
+    "type": "MONSTER",
+    "name": {
+      "str": "暗影人形",
+      "str_pl": "暗影人形"
+    },
+    "description": "一片黑色的...黑暗？它是一个模糊的人形但是要高上许多，它的轮廓并不是很清晰，看不见一点细节，就像黑暗吞没了光明",
+    "volume": "120000 ml",
+    "weight": "12000 g",
+    "default_faction": "touhou_mib",
+    "bodytype": "human",
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "YOUKAI_PSEUDO"
+    ],
+    "harvest": "exempt",
+    "hp": 45,
+    "speed": 200,
+    "symbol": "𓀠",
+    "color": "black",
+    "aggression": 35,
+    "morale": 65,
+    "melee_skill": 5,
+    "melee_dice": 3,
+    "melee_dice_sides": 4,
+    "dodge": 8,
+    "vision_day": 25,
+    "vision_night": 35,
+    "path_settings": {
+      "max_dist": 25
+    },
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "FRIEND_DIED",
+      "HURT"
+    ],
+    "armor_bash": 3,
+    "armor_cut": 3,
+    "armor_bullet": 3,
+    "armor_stab": 3,
+    "armor_acid": 3,
+    "armor_cold": 3,
+    "armor_electric": 3,
+    "armor_fire": 3,
+    "flags": [
+      "CAN_OPEN_DOORS",
+      "HARDTOSHOOT",
+      "HEARS",
+      "PATH_AVOID_DANGER_2",
+      "SEES"
+    ],
+    "//": "Demon-ish component to the MIB urban legend"
+  },
+  {
+    "id": "mon_mib_alien",
+    "type": "MONSTER",
+    "name": {
+      "str": "外星实体",
+      "str_pl": "外星实体"
+    },
+    "description": "一个矮小、畸形的类人生物，覆盖着某种有机或塑料外壳，随着它的移动慢慢脱落。头部很大，有一对非常大的眼睛，一张小嘴，鼻子很难分辨，如果它存在的话。皮肤半透明，你可以看到下面的东西。四肢细长，看起来很脆弱，躯干上有手术疤痕和奇怪的假肢。你看它越多，它似乎就越扭曲，越往非人间的方向变化。",
+    "volume": "65000 ml",
+    "weight": "60000 g",
+    "default_faction": "touhou_mib",
+    "bodytype": "human",
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "YOUKAI_PSEUDO"
+    ],
+    "harvest": "exempt",
+    "hp": 55,
+    "speed": 125,
+    "symbol": "𓀠",
+    "color": "light_gray",
+    "aggression": 25,
+    "morale": 50,
+    "melee_skill": 3,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "dodge": 2,
+    "vision_day": 25,
+    "vision_night": 50,
+    "path_settings": {
+      "max_dist": 25
+    },
+    "anger_triggers": [
+      "HURT"
+    ],
+    "fear_triggers": [
+      "FRIEND_ATTACKED",
+      "FRIEND_DIED"
+    ],
+    "armor_bash": 0,
+    "armor_cut": 0,
+    "armor_bullet": 0,
+    "armor_stab": 0,
+    "armor_acid": 3,
+    "armor_cold": 3,
+    "armor_electric": 3,
+    "armor_fire": 3,
+    "special_attacks": [
+      [
+        "FEAR_PARALYZE",
+        24
+      ],
+      [
+        "STARE",
+        20
+      ],
+      {
+        "spell_data": {
+          "id": "paralyze_200"
+        },
+        "type": "spell",
+        "cooldown": 20
+      }
+    ],
+    "flags": [
+      "CAN_OPEN_DOORS",
+      "HEARS",
+      "PATH_AVOID_DANGER_2",
+      "SEES"
+    ],
+    "//": "Alien component to the MIB urban legend"
+  },
+  {
+    "id": "mon_mib_terminator",
+    "type": "MONSTER",
+    "name": {
+      "str": "终结者实体",
+      "str_pl": "终结者实体"
+    },
+    "description": "你以为已经倒下的那个“人”，现在又站了起来，脸上（或者说是剩下的部分）面无表情。眼睛发出红光，它似乎忽略了你刚才扔向它造成的伤口。",
+    "volume": "85000 ml",
+    "weight": "85000 g",
+    "default_faction": "touhou_mib",
+    "bodytype": "human",
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "YOUKAI_PSEUDO"
+    ],
+    "harvest": "exempt",
+    "hp": 80,
+    "speed": 135,
+    "symbol": "𓀠",
+    "color": "dark_gray",
+    "aggression": 25,
+    "morale": 99,
+    "melee_skill": 4,
+    "melee_dice": 4,
+    "melee_dice_sides": 4,
+    "dodge": 2,
+    "vision_day": 35,
+    "vision_night": 35,
+    "path_settings": {
+      "max_dist": 35
+    },
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "FRIEND_DIED",
+      "HURT"
+    ],
+    "armor_bash": 4,
+    "armor_cut": 4,
+    "armor_bullet": 10,
+    "armor_stab": 4,
+    "armor_acid": 0,
+    "armor_cold": 0,
+    "armor_electric": 3,
+    "armor_fire": 6,
+    "flags": [
+      "BASHES",
+      "CAN_OPEN_DOORS",
+      "HEARS",
+      "PRIORITIZE_TARGETS",
+      "SEES"
+    ],
+    "//": "Unstoppable 'human' component to the MIB urban legend. This should have trash bionics (100% unusable) and other biomechanical stuff inside"
+  }
+]

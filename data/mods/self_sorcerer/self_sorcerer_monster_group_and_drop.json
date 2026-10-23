@@ -1,0 +1,440 @@
+[
+  {
+    "type": "monstergroup",
+    "name": "GROUP_CR_1_3",
+    "monsters": [
+      { "monster": "mon_sor_cr_1", "weight": 40 },
+      { "monster": "mon_sor_cr_2", "weight": 30 },
+      { "monster": "mon_sor_cr_3", "weight": 20 }
+    ]
+  },
+  {
+    "type": "monstergroup",
+    "name": "GROUP_CR_2_5",
+    "monsters": [
+      { "monster": "mon_sor_cr_2", "weight": 40 },
+      { "monster": "mon_sor_cr_3", "weight": 30 },
+      { "monster": "mon_sor_cr_4", "weight": 20 },
+      { "monster": "mon_sor_cr_5", "weight": 10 }
+    ]
+  },
+  {
+    "type": "monstergroup",
+    "name": "GROUP_CR_3_6",
+    "monsters": [
+      { "monster": "mon_sor_cr_3", "weight": 40 },
+      { "monster": "mon_sor_cr_4", "weight": 30 },
+      { "monster": "mon_sor_cr_5", "weight": 20 },
+      { "monster": "mon_sor_cr_6", "weight": 10 }
+    ]
+  },
+  {
+    "type": "monstergroup",
+    "name": "GROUP_CR_4_7",
+    "monsters": [
+      { "monster": "mon_sor_cr_4", "weight": 40 },
+      { "monster": "mon_sor_cr_5", "weight": 30 },
+      { "monster": "mon_sor_cr_6", "weight": 20 },
+      { "monster": "mon_sor_cr_7", "weight": 10 }
+    ]
+  },
+  {
+    "type": "monstergroup",
+    "name": "GROUP_CR_7_9",
+    "monsters": [
+      { "monster": "mon_sor_cr_7", "weight": 40 },
+      { "monster": "mon_sor_cr_8", "weight": 30 },
+      { "monster": "mon_sor_cr_9", "weight": 20 }
+    ]
+  },
+  {
+    "type": "monstergroup",
+    "name": "GROUP_ZOMBIE",
+    "monsters": [
+      { "monster": "mon_sor_cr_1", "weight": 45, "cost_multiplier": 0 },
+      { "monster": "mon_sor_cr_2", "weight": 40, "cost_multiplier": 0 },
+      { "monster": "mon_sor_cr_3", "weight": 35, "cost_multiplier": 0 },
+      { "monster": "mon_sor_cr_4", "weight": 32, "cost_multiplier": 0 },
+      { "monster": "mon_sor_cr_5", "weight": 16, "cost_multiplier": 0 },
+      { "monster": "mon_sor_cr_6", "weight": 8, "cost_multiplier": 0 },
+      { "monster": "mon_sor_cr_7", "weight": 4, "cost_multiplier": 0 },
+      { "monster": "mon_sor_cr_8", "weight": 2, "cost_multiplier": 0 },
+      { "monster": "mon_sor_cr_9", "weight": 1, "cost_multiplier": 0 }
+    ]
+  },
+  {
+    "type": "monstergroup",
+    "name": "GROUP_ZOMBIE_UPGRADE",
+	  "monsters": [
+	    { "monster": "mon_sor_cr_1", "weight": 45 },
+	    { "monster": "mon_sor_cr_2", "weight": 35 },
+	    { "monster": "mon_sor_cr_3", "weight": 25 },
+	    { "monster": "mon_sor_cr_4", "weight": 15 },
+	    { "monster": "mon_sor_cr_5", "weight": 5 }
+	  ]
+  },
+  {
+    "name": "GROUP_CR_1",
+    "type": "monstergroup",
+    "monsters": [
+      { "monster": "mon_sor_cr_1_atk", "weight": 10 },
+      { "monster": "mon_sor_cr_1_def", "weight": 10 },
+      { "monster": "mon_sor_cr_1_mag", "weight": 10 },
+      { "monster": "mon_sor_cr_2", "weight": 10, "cost_multiplier": 2 }
+    ]
+  },
+  {
+    "name": "GROUP_CR_2",
+    "type": "monstergroup",
+    "monsters": [
+      { "monster": "mon_sor_cr_2_atk", "weight": 10 },
+      { "monster": "mon_sor_cr_2_def", "weight": 10 },
+      { "monster": "mon_sor_cr_2_mag", "weight": 10 },
+      { "monster": "mon_sor_cr_3", "weight": 10, "cost_multiplier": 2 }
+    ]
+  },
+  {
+    "name": "GROUP_CR_3",
+    "type": "monstergroup",
+    "monsters": [
+      { "monster": "mon_sor_cr_3_atk", "weight": 10 },
+      { "monster": "mon_sor_cr_3_def", "weight": 10 },
+      { "monster": "mon_sor_cr_3_mag", "weight": 10 },
+      { "monster": "mon_sor_cr_4", "weight": 10, "cost_multiplier": 2 }
+    ]
+  },
+  {
+    "name": "GROUP_CR_4",
+    "type": "monstergroup",
+    "monsters": [
+      { "monster": "mon_sor_cr_4_atk", "weight": 10 },
+      { "monster": "mon_sor_cr_4_def", "weight": 10 },
+      { "monster": "mon_sor_cr_4_mag", "weight": 10 },
+      { "monster": "mon_sor_cr_5", "weight": 10, "cost_multiplier": 2 }
+    ]
+  },
+  {
+    "name": "GROUP_CR_5",
+    "type": "monstergroup",
+    "monsters": [
+      { "monster": "mon_sor_cr_5_atk", "weight": 10 },
+      { "monster": "mon_sor_cr_5_def", "weight": 10 },
+      { "monster": "mon_sor_cr_5_mag", "weight": 10 },
+      { "monster": "mon_sor_cr_6", "weight": 10, "cost_multiplier": 2 }
+    ]
+  },
+  {
+    "name": "GROUP_CR_6",
+    "type": "monstergroup",
+    "monsters": [
+      { "monster": "mon_sor_cr_6_atk", "weight": 10 },
+      { "monster": "mon_sor_cr_6_def", "weight": 10 },
+      { "monster": "mon_sor_cr_6_mag", "weight": 10 },
+      { "monster": "mon_sor_cr_7", "weight": 10, "cost_multiplier": 2 }
+    ]
+  },
+  {
+    "name": "GROUP_CR_7",
+    "type": "monstergroup",
+    "monsters": [
+      { "monster": "mon_sor_cr_7_atk", "weight": 10 },
+      { "monster": "mon_sor_cr_7_def", "weight": 10 },
+      { "monster": "mon_sor_cr_7_mag", "weight": 10 },
+      { "monster": "mon_sor_cr_8", "weight": 10, "cost_multiplier": 2 }
+    ]
+  },
+  {
+    "name": "GROUP_CR_8",
+    "type": "monstergroup",
+    "monsters": [
+      { "monster": "mon_sor_cr_8_atk", "weight": 10 },
+      { "monster": "mon_sor_cr_8_def", "weight": 10 },
+      { "monster": "mon_sor_cr_8_mag", "weight": 10 },
+      { "monster": "mon_sor_cr_9", "weight": 10, "cost_multiplier": 2 }
+    ]
+  },
+  {
+    "name": "GROUP_CR_9",
+    "type": "monstergroup",
+    "monsters": [
+      { "monster": "mon_sor_cr_9_atk", "weight": 10 },
+      { "monster": "mon_sor_cr_9_def", "weight": 10 },
+      { "monster": "mon_sor_cr_9_mag", "weight": 10 }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "mon_sor_cr_1_drop",
+    "subtype": "distribution",
+    "entries": [
+    	{
+	      "collection": [
+          {
+            "distribution": [
+             	{ "group": "default_zombie_items", "prob": 80 },
+             	{ "group": "mon_zombie_survivor_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_paramilitary_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_survivor_elite_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_medical_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_milbase_personnel_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_scientist_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_kevlar_death_drops", "prob": 20 }
+            ]
+          },
+          {
+            "distribution": [
+             	{ "group": "default_zombie_items", "prob": 80 },
+             	{ "group": "group_sor_enchanted_item_1", "prob": 20 }
+            ]
+          }
+	      ]
+      }
+	  ]
+  },
+  {
+    "type": "item_group",
+    "id": "mon_sor_cr_2_drop",
+    "subtype": "distribution",
+    "entries": [
+    	{
+	      "collection": [
+	        {
+            "distribution": [
+             	{ "group": "default_zombie_items", "prob": 80 },
+             	{ "group": "mon_zombie_survivor_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_paramilitary_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_survivor_elite_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_medical_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_milbase_personnel_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_scientist_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_kevlar_death_drops", "prob": 20 }
+            ]
+          },
+          {
+            "distribution": [
+             	{ "group": "default_zombie_items", "prob": 70 },
+             	{ "group": "group_sor_enchanted_item_1", "prob": 30 }
+            ]
+          }
+	      ]
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "mon_sor_cr_3_drop",
+    "subtype": "distribution",
+    "entries": [
+    	{
+    		"collection": [
+	        {
+            "distribution": [
+             	{ "group": "default_zombie_items", "prob": 80 },
+             	{ "group": "mon_zombie_survivor_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_paramilitary_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_survivor_elite_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_medical_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_milbase_personnel_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_scientist_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_kevlar_death_drops", "prob": 20 }
+            ]
+          },
+          {
+            "distribution": [
+             	{ "group": "default_zombie_items", "prob": 60 },
+             	{ "group": "group_sor_enchanted_item_1", "prob": 30 },
+             	{ "group": "group_sor_enchanted_item_2", "prob": 10 }
+            ]
+          }
+	      ]
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "mon_sor_cr_4_drop",
+    "subtype": "distribution",
+    "entries": [
+    	{
+    		"collection": [
+	        {
+            "distribution": [
+             	{ "group": "default_zombie_items", "prob": 80 },
+             	{ "group": "mon_zombie_survivor_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_paramilitary_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_survivor_elite_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_medical_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_milbase_personnel_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_scientist_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_kevlar_death_drops", "prob": 20 }
+            ]
+          },
+          {
+            "distribution": [
+             	{ "group": "default_zombie_items", "prob": 50 },
+             	{ "group": "group_sor_enchanted_item_1", "prob": 30 },
+             	{ "group": "group_sor_enchanted_item_2", "prob": 20 }
+            ]
+          }
+	      ]
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "mon_sor_cr_5_drop",
+    "subtype": "distribution",
+    "entries": [
+    	{
+    		"collection": [
+	        {
+            "distribution": [
+             	{ "group": "default_zombie_items", "prob": 80 },
+             	{ "group": "mon_zombie_survivor_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_paramilitary_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_survivor_elite_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_medical_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_milbase_personnel_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_scientist_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_kevlar_death_drops", "prob": 20 }
+            ]
+          },
+          {
+            "distribution": [
+             	{ "group": "default_zombie_items", "prob": 40 },
+              { "group": "group_sor_enchanted_item_1", "prob": 30 },
+              { "group": "group_sor_enchanted_item_2", "prob": 20 },
+              { "group": "group_sor_enchanted_item_3", "prob": 10 }
+            ]
+          }
+	      ]
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "mon_sor_cr_6_drop",
+    "subtype": "distribution",
+    "entries": [
+    	{
+    		"collection": [
+	        {
+            "distribution": [
+             	{ "group": "default_zombie_items", "prob": 80 },
+             	{ "group": "mon_zombie_survivor_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_paramilitary_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_survivor_elite_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_medical_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_milbase_personnel_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_scientist_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_kevlar_death_drops", "prob": 20 }
+            ]
+          },
+          {
+            "distribution": [
+             	{ "group": "default_zombie_items", "prob": 30 },
+              { "group": "group_sor_enchanted_item_1", "prob": 30 },
+              { "group": "group_sor_enchanted_item_2", "prob": 20 },
+              { "group": "group_sor_enchanted_item_3", "prob": 20 }
+            ]
+          }
+	      ]
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "mon_sor_cr_7_drop",
+    "subtype": "distribution",
+    "entries": [
+    	{
+    		"collection": [
+	        {
+            "distribution": [
+             	{ "group": "default_zombie_items", "prob": 80 },
+             	{ "group": "mon_zombie_survivor_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_paramilitary_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_survivor_elite_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_medical_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_milbase_personnel_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_scientist_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_kevlar_death_drops", "prob": 20 }
+            ]
+          },
+          {
+            "distribution": [
+             	{ "group": "default_zombie_items", "prob": 20 },
+             	{ "group": "group_sor_enchanted_item_1", "prob": 30 },
+             	{ "group": "group_sor_enchanted_item_2", "prob": 20 },
+             	{ "group": "group_sor_enchanted_item_3", "prob": 20 },
+             	{ "group": "group_sor_enchanted_item_4", "prob": 10 }
+            ]
+          }
+	      ]
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "mon_sor_cr_8_drop",
+    "subtype": "distribution",
+    "entries": [
+    	{
+    		"collection": [
+	        {
+            "distribution": [
+             	{ "group": "default_zombie_items", "prob": 80 },
+             	{ "group": "mon_zombie_survivor_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_paramilitary_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_survivor_elite_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_medical_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_milbase_personnel_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_scientist_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_kevlar_death_drops", "prob": 20 }
+            ]
+          },
+          {
+            "distribution": [
+             	{ "group": "default_zombie_items", "prob": 10 },
+             	{ "group": "group_sor_enchanted_item_1", "prob": 30 },
+              { "group": "group_sor_enchanted_item_2", "prob": 20 },
+              { "group": "group_sor_enchanted_item_3", "prob": 20 },
+              { "group": "group_sor_enchanted_item_4", "prob": 20 }
+            ]
+          }
+	      ]
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "mon_sor_cr_9_drop",
+    "subtype": "distribution",
+    "entries": [
+    	{
+    		"collection": [
+	        {
+            "distribution": [
+             	{ "group": "default_zombie_items", "prob": 80 },
+             	{ "group": "mon_zombie_survivor_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_paramilitary_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_survivor_elite_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_medical_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_milbase_personnel_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_scientist_death_drops", "prob": 20 },
+             	{ "group": "mon_zombie_kevlar_death_drops", "prob": 20 }
+            ]
+          },
+          {
+            "distribution": [
+             	{ "group": "group_sor_enchanted_item_1", "prob": 40 },
+             	{ "group": "group_sor_enchanted_item_2", "prob": 20 },
+             	{ "group": "group_sor_enchanted_item_3", "prob": 20 },
+             	{ "group": "group_sor_enchanted_item_4", "prob": 20 }
+            ]
+          }
+	      ]
+      }
+    ]
+  }
+]

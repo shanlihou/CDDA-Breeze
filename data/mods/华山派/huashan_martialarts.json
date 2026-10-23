@@ -1,0 +1,135 @@
+[
+  {
+    "type": "martial_art",
+    "id": "style_huashan",
+    "name": { "str": "华山" },
+    "description": "华山剑气两宗正宗功法",
+    "initiate": [
+      "你脸上紫气一现即隐，浑身散发出凌厉的剑意！",
+      "%s 脸上紫气一现即隐，浑身散发出凌厉的剑意！"
+    ],
+	"allow_all_weapons": true,
+    "primary_skill": "melee",
+    "arm_block": 2,
+    "leg_block": 4,
+    "static_buffs": [
+      {
+        "id": "zxsg",
+        "name": "紫霞神功",
+        "description": "华山气宗内功，中正平和，正气凛然！",
+		"melee_allowed": true,
+        "unarmed_allowed": true,
+        "unarmed_weapons_allowed": true,
+        "flat_bonuses": [
+		  { "stat": "damage", "type": "bash", "scaling-stat": "str", "scale": 0.5 },
+		  { "stat": "damage", "type": "stab", "scaling-stat": "dex", "scale": 0.5 },
+          { "stat": "block", "scaling-stat": "str", "scale": 0.5 },
+          { "stat": "hit", "scaling-stat": "dex", "scale": 0.5 },
+          { "stat": "dodge", "scaling-stat": "per", "scale": 0.5 }
+		]
+	  }
+	  ],
+		"onmove_buffs": [
+      {
+        "id": "buff_fszx",
+        "name": "风送紫霞",
+        "description": "你如一阵清风，舒缓地闪过了敌人的凌厉攻势。\n\n+1闪避尝试，闪避技能增加敏捷的25%，对击倒免疫。\n持续3圈，堆叠2次。",
+        "skill_requirements": [
+          {
+            "name": "melee",
+            "level": 2
+          }
+        ],
+        "unarmed_allowed": true,
+        "melee_allowed": true,
+        "throw_immune": true,
+        "buff_duration": 3,
+        "max_stacks": 3,
+        "bonus_dodges": 1,
+        "flat_bonuses": [
+          {
+            "stat": "dodge",
+            "scaling-stat": "dex",
+            "scale": 0.25
+          }
+        ]
+      }
+    ],
+    "onhit_buffs": [
+      {
+        "id": "buff_clpl",
+        "name": "苍龙盘岭",
+        "description": "你宛若一条矫矢苍龙，围着敌人急速地盘旋了几圈。\n\n+1格挡尝试，格挡伤害增加100%力量。\n持续3回合，堆叠2次。",
+        "skill_requirements": [
+          {
+            "name": "melee",
+            "level": 4
+          }
+        ],
+        "unarmed_allowed": true,
+        "melee_allowed": true,
+        "buff_duration": 3,
+        "max_stacks": 3,
+        "bonus_blocks": 1,
+        "flat_bonuses": [
+          {
+            "stat": "block",
+            "scaling-stat": "str",
+            "scale": 1
+          }
+        ]
+      }
+    ],
+    "onkill_buffs": [
+      {
+        "id": "buff_zqdl",
+        "name": "紫气东来",
+        "description": "你运起紫霞神功，背转身去，脸上突然紫气大盛！\n\n+2次格挡尝试，+2次闪避尝试，闪避技能增加智力的50%，移动速度增加智力的200%，移动产生1/2的噪音。\n最后6圈。",
+        "skill_requirements": [
+          {
+            "name": "melee",
+            "level": 6
+          }
+        ],
+        "unarmed_allowed": true,
+        "melee_allowed": true,
+        "stealthy": true,
+        "buff_duration": 6,
+        "bonus_dodges": 3,
+        "bonus_blocks": 2,
+        "flat_bonuses": [
+          {
+            "stat": "dodge",
+            "scaling-stat": "int",
+            "scale": 0.5
+          },
+          {
+            "stat": "speed",
+            "scaling-stat": "int",
+            "scale": 2
+          }
+        ]
+      }  
+    ],
+    "techniques": [ "tec_qss",
+	"tec_sptj", 
+	"tec_tshm",
+	"tec_qjzd", 
+	"tec_bhfl", 
+	"tec_jgzw", 
+	"tec_fbs", 
+	"tec_fssy", 
+	"tec_fplj", 
+	"tec_fqyy", 
+	"tec_fjcy", 
+	"tec_flys", 
+	"tec_po",
+	"tec_pobian", 
+	"tec_podao",
+	"tec_pojian",
+	"tec_poqi",
+	"tec_poqiang" ,
+	"tec_posuo",
+	"tec_pozhang"]
+  }
+]

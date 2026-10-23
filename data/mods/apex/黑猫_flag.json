@@ -1,0 +1,34 @@
+[
+  {
+    "id": "CLIMATE_CONTROL",
+    "type": "json_flag",
+    "info": "这款衣服具有内置或附加的气候控制</info>，使您保持在<good>舒适的温度</good>。"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "eoc_flag_CLIMATE_CONTROL",
+    "//": "修复被删除的flag",
+    "recurrence": 1,
+    "condition": { "u_has_worn_with_flag": "CLIMATE_CONTROL" },
+    "effect": [ { "u_add_effect": "effect_flag_CLIMATE_CONTROL", "duration": "1 s" } ]
+  },
+  {
+    "id": "effect_flag_CLIMATE_CONTROL",
+    "type": "effect_type",
+    "name": [ "" ],
+    "desc": [ "" ],
+    "int_add_val": 1,
+    "int_decay_remove": true,
+    "show_intensity": true,
+    "rating": "good",
+    "max_intensity": 2147483647,
+    "max_duration": "60 s",
+    "enchantments": [ "enchantment_flag_CLIMATE_CONTROL" ]
+  },
+  {
+    "type": "enchantment",
+    "id": "enchantment_flag_CLIMATE_CONTROL",
+    "condition": "ALWAYS",
+    "values": [ { "value": "CLIMATE_CONTROL_HEAT", "add": 50 }, { "value": "CLIMATE_CONTROL_CHILL", "add": 50 } ]
+  }
+]

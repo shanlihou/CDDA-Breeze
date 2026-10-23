@@ -1,0 +1,26 @@
+[
+  {
+    "type": "vehicle",
+    "id": "MM_magic_force_wall",
+    "name": "力场墙",
+    "blueprint": [ [ "*" ] ],
+    "parts": [ { "x": 0, "y": 0, "parts": [ "MM_magic_force_section", "MM_magic_force_wall" ] } ]
+  },
+  {
+    "type": "vehicle",
+    "id": "MM_magic_force_cell",
+    "name": "相位牢笼",
+    "blueprint": [ [ "***" ],
+                   [ "***" ],
+                   [ "***" ] ],
+    "parts": [ { "x": 0, "y": 0, "parts": [ "MM_magic_force_section" ] },
+               { "x": 0, "y": 1, "parts": [ "MM_magic_force_section", "MM_magic_force_wall" ] },
+               { "x": 0, "y": -1, "parts": [ "MM_magic_force_section", "MM_magic_force_wall" ] },
+               { "x": 1, "y": 0, "parts": [ "MM_magic_force_section", "MM_magic_force_wall" ] },
+               { "x": 1, "y": 1, "parts": [ "MM_magic_force_section", "MM_magic_force_wall" ] },
+               { "x": 1, "y": -1, "parts": [ "MM_magic_force_section", "MM_magic_force_wall" ] },
+               { "x": -1, "y": 0, "parts": [ "MM_magic_force_section", "MM_magic_force_wall" ] },
+               { "x": -1, "y": 1, "parts": [ "MM_magic_force_section", "MM_magic_force_wall" ] },
+               { "x": -1, "y": -1, "parts": [ "MM_magic_force_section", "MM_magic_force_wall" ] } ]
+  }
+]

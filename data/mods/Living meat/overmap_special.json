@@ -1,0 +1,102 @@
+[
+  {
+    "type": "mapgen",
+    "method": "json",
+    "om_terrain": "Giant_tumor0",
+    "object": {
+      "rows": [
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "       -    -   -       ",
+        "     --     -  -   -    ",
+        "     -   +++++++  -     ",
+        "      - //-----+?  -    ",
+        "      --/-------?       ",
+        "     -  /-------? -     ",
+        "    -   /-------?       ",
+        "       -/=-----??-      ",
+        "      -  =======  -     ",
+        "     -      -      -    ",
+        "          -  - ---      ",
+        "         -    -   -     ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        "
+      ],
+      "terrain": {
+        " ": "t_region_groundcover",
+        "=": "t_livingmeat_wall_south",
+        "+": "t_livingmeat_wall_north",
+        "/": "t_livingmeat_wall_west",
+        "?": "t_livingmeat_wall_east",
+        "-": "t_livingmeat_floor"
+      },
+      "place_monster": [
+        { "monster": "活肉", "x": 10, "y": 9, "chance": 80 },
+        { "monster": "活肉", "x": 11, "y": 9, "chance": 80 },
+        { "monster": "活肉", "x": 13, "y": 10, "chance": 80 },
+        { "monster": "活肉", "x": 13, "y": 13, "chance": 80 },
+        { "monster": "活肉", "x": 14, "y": 12, "chance": 80 },
+        { "monster": "活肉", "x": 14, "y": 9, "chance": 80 },
+        { "monster": "活肉", "x": 12, "y": 9, "chance": 80 },
+        { "monster": "活肉", "x": 12, "y": 12, "chance": 80 },
+        { "monster": "活肉", "x": 10, "y": 12, "chance": 80 },
+        { "monster": "活肉", "x": 11, "y": 12, "chance": 80 },
+        { "monster": "活肉", "x": 14, "y": 10, "chance": 80 },
+        { "monster": "肉蛇", "x": 14, "y": 11, "chance": 50 },
+        { "monster": "肉蛇", "x": 13, "y": 11, "chance": 50 },
+        { "monster": "巨型肉蛇", "x": 11, "y": 11, "chance": 30 }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "method": "json",
+    "om_terrain": "Giant_tumor1",
+    "object": {
+      "rows": [
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "         -------        ",
+        "        ---------       ",
+        "        ---------       ",
+        "        ---------       ",
+        "        ---------       ",
+        "        ---------       ",
+        "         -------        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        "
+      ],
+      "terrain": { " ": "t_open_air", "-": "t_livingmeat_floor" }
+    }
+  },
+  {
+    "type": "overmap_special",
+    "id": "Giant_tumor",
+    "overmaps": [ { "point": [ 0, 0, 0 ], "overmap": "Giant_tumor0_north" }, { "point": [ 0, 0, 1 ], "overmap": "Giant_tumor1_north" } ],
+    "locations": [ "land" ],
+    "city_distance": [ 20, -1 ],
+    "occurrences": [ 0, 3 ],
+    "flags": [ "WILDERNESS" ]
+  }
+]

@@ -1,0 +1,429 @@
+[
+  {
+    "id": "ovo_dragon_bone_sword",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": "龙骨剑",
+    "description": "由龙骨打磨拼接制成的武器。",
+    "relic_data": { },
+    "weapon_category": [ "MEDIUM_SWORDS", "LONG_SWORDS", "FENCING_WEAPONRY", "BATONS", "QUARTERSTAVES" ],
+    "weight": "1200 g",
+    "volume": "1200 ml",
+    "longest_side": "80 cm",
+    "price": 80000,
+    "price_postapoc": 80000,
+    "melee_damage": { "cut": 18, "bash": 18, "stab": 18 },
+    "to_hit": 1,
+    "material": [ "ovo_dragon_bone" ],
+    "symbol": "/",
+    "color": "white",
+    "techniques": [ "WBLOCK_1", "RAPID" ],
+    "flags": [ "NONCONDUCTIVE", "DURABLE_MELEE", "SHEATH_SWORD" ]
+  },
+  {
+    "result": "ovo_dragon_bone_sword",
+    "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_CUTTING",
+    "skill_used": "fabrication",
+    "difficulty": 3,
+    "autolearn": true,
+    "time": "24 h",
+    "proficiencies": [
+      { "proficiency": "ovo_dragon_bone_working_base" },
+      { "proficiency": "ovo_dragon_bone_working_plus" },
+      { "proficiency": "ovo_dragon_bone_working_master" }
+    ],
+    "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "CUT", "level": 2 }, { "id": "GRIND", "level": 1 } ],
+    "components": [
+      [ [ "filament", 40, "LIST" ] ],
+      [
+      	[ "ovo_dragon_bone", 8 ],
+      	[ "ovo_dragon_bone_piece", 160 ]
+      ],
+      [ [ "black_dragon_tanned_hide", 1 ] ],
+      [ [ "dragon_essence", 4 ] ]
+    ]
+  },
+  {
+    "id": "ovo_dragon_bone_bow",
+    "type": "GUN",
+    "symbol": "(",
+    "color": "white",
+    "name": "龙骨弓",
+    "description": "由龙骨打磨拼接制成的武器，发射龙骨箭矢时可以发挥不同的威力。",
+    "relic_data": { },
+    "price": 80000,
+    "price_postapoc": 80000,
+    "material": [ "ovo_dragon_bone" ],
+    "flags": [ "NONCONDUCTIVE", "DURABLE_MELEE", "FIRE_TWOHAND", "RELOAD_AND_SHOOT", "PRIMITIVE_RANGED_WEAPON", "SHEATH_BOW", "WATERPROOF_GUN", "NEVER_JAMS" ],
+    "ammo_effects": [ "NEVER_MISFIRES" ],
+    "weapon_category": [ "BATONS", "QUARTERSTAVES" ],
+    "skill": "archery",
+    "min_strength": 12,
+    "ammo": [ "ovo_dragon_bone_arrow", "arrow_orichalcum", "arrow" ],
+    "weight": "2000 g",
+    "volume": "2000 ml",
+    "longest_side": "150 cm",
+    "to_hit": 1,
+    "reload_noise_volume": 3,
+    "loudness": 10,
+    "ranged_damage": { "damage_type": "stab", "amount": 12, "armor_penetration": 6 },
+    "range": 36,
+    "dispersion": 300,
+    "sight_dispersion": 500,
+    "durability": 8,
+    "clip_size": 1,
+    "valid_mod_locations": [ [ "underbarrel", 1 ], [ "sights", 1 ], [ "stabilizer", 1 ], [ "dampening", 1 ] ],
+    "reload": 60,
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "ovo_dragon_bone_arrow": 1, "arrow_orichalcum": 1, "arrow": 1 } } ],
+    "melee_damage": { "bash": 20 }
+  },
+  {
+    "result": "ovo_dragon_bone_bow",
+    "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_RANGED",
+    "skill_used": "fabrication",
+    "difficulty": 3,
+    "autolearn": true,
+    "time": "24 h",
+    "proficiencies": [
+      { "proficiency": "ovo_dragon_bone_working_base" },
+      { "proficiency": "ovo_dragon_bone_working_plus" },
+      { "proficiency": "ovo_dragon_bone_working_master" }
+    ],
+    "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "CUT", "level": 2 }, { "id": "GRIND", "level": 1 } ],
+    "components": [
+      [ [ "filament", 40, "LIST" ] ],
+      [
+      	[ "ovo_dragon_bone", 8 ],
+      	[ "ovo_dragon_bone_piece", 160 ]
+      ],
+      [ [ "black_dragon_tanned_hide", 1 ] ],
+      [ [ "dragon_essence", 4 ] ]
+    ]
+  },
+  {
+    "type": "ammunition_type",
+    "id": "ovo_dragon_bone_arrow",
+    "name": "龙骨箭",
+    "default": "ovo_dragon_bone_arrow"
+  },
+  {
+    "type": "AMMO",
+    "id": "ovo_dragon_bone_arrow",
+    "price": 500,
+    "price_postapoc": 500,
+    "longest_side": "50 cm",
+    "name": "龙骨箭矢",
+    "symbol": "=",
+    "color": "white",
+    "description": "一根龙骨箭，比起普通箭矢有所不同。",
+    "material": [ "ovo_dragon_bone" ],
+    "ammo_type": "ovo_dragon_bone_arrow",
+    "weight": "60 g",
+    "volume": "120 ml",
+    "damage": { "damage_type": "stab", "amount": 36, "armor_penetration": 18 },
+    "dispersion": 18,
+    "loudness": 0,
+    "range": 12,
+    "count": 10,
+    "stack_size": 10,
+    "critical_multiplier": 3,
+    "melee_damage": { "stab": 12 },
+    "effects": [ "RECOVER_35" ],
+    "relic_data": { }
+  },
+  {
+    "result": "ovo_dragon_bone_arrow",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_AMMO",
+    "subcategory": "CSC_AMMO_ARROWS",
+    "skill_used": "fabrication",
+    "difficulty": 3,
+    "charges": 5,
+    "autolearn": true,
+    "time": "20 m",
+    "proficiencies": [
+      { "proficiency": "ovo_dragon_bone_working_base" },
+      { "proficiency": "ovo_dragon_bone_working_plus" },
+      { "proficiency": "ovo_dragon_bone_working_master" }
+    ],
+    "qualities": [ { "id": "HAMMER", "level": 1 }, { "id": "CUT", "level": 1 }, { "id": "GRIND", "level": 1 } ],
+    "components": [
+      [ [ "filament", 10, "LIST" ] ],
+      [ [ "ovo_dragon_bone_piece", 10 ] ],
+      [
+      	[ "ovo_dragon_bone", 1 ],
+      	[ "ovo_dragon_bone_piece", 20 ]
+      ],
+      [ [ "fletching", 1, "LIST" ] ]
+    ]
+  },
+  {
+    "id": "ovo_dragon_bone_sword_fire",
+    "copy-from": "ovo_dragon_bone_sword",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": "火龙剑",
+    "description": "复合龙心后激发了潜在的力量。\n额外造成36火焰伤害。\n手持时力量+4。",
+    "melee_damage": { "cut": 18, "bash": 18, "stab": 18, "heat": 36 },
+    "flags": [ "NONCONDUCTIVE", "DURABLE_MELEE", "SHEATH_SWORD", "MAGIC_FOCUS" ],
+    "relic_data": { "passive_effects": [ { "has": "WIELD", "condition": "ALWAYS", "values": [ { "value": "STRENGTH", "add": 4 } ] } ] }
+  },
+  {
+    "result": "ovo_dragon_bone_sword_fire",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_CUTTING",
+    "skill_used": "fabrication",
+    "difficulty": 5,
+    "autolearn": true,
+    "time": "6 h",
+    "proficiencies": [
+      { "proficiency": "ovo_dragon_bone_working_base" },
+      { "proficiency": "ovo_dragon_bone_working_plus" },
+      { "proficiency": "ovo_dragon_bone_working_master" }
+    ],
+    "tools": [ [ [ "surface_heat", 60, "LIST" ] ] ],
+    "qualities": [ { "id": "CONTAIN", "level": 1 } ],
+    "components": [
+      [ [ "ovo_dragon_heart_fire", 1 ] ],
+      [ [ "ovo_dragon_bone_sword", 1 ] ],
+      [ [ "dragon_essence", 10 ] ]
+    ]
+  },
+  {
+    "id": "ovo_dragon_bone_sword_ice",
+    "copy-from": "ovo_dragon_bone_sword_fire",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": "冰龙剑",
+    "description": "复合龙心后激发了潜在的力量。\n额外造成36寒冷伤害。\n手持时智力+4。",
+    "melee_damage": { "cut": 18, "bash": 18, "stab": 18, "cold": 36 },
+    "relic_data": { "passive_effects": [ { "has": "WIELD", "condition": "ALWAYS", "values": [ { "value": "INTELLIGENCE", "add": 4 } ] } ] }
+  },
+  {
+    "result": "ovo_dragon_bone_sword_ice",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_CUTTING",
+    "skill_used": "fabrication",
+    "difficulty": 5,
+    "autolearn": true,
+    "time": "6 h",
+    "proficiencies": [
+      { "proficiency": "ovo_dragon_bone_working_base" },
+      { "proficiency": "ovo_dragon_bone_working_plus" },
+      { "proficiency": "ovo_dragon_bone_working_master" }
+    ],
+    "tools": [ [ [ "surface_heat", 60, "LIST" ] ] ],
+    "qualities": [ { "id": "CONTAIN", "level": 1 } ],
+    "components": [
+      [ [ "ovo_dragon_heart_ice", 1 ] ],
+      [ [ "ovo_dragon_bone_sword", 1 ] ],
+      [ [ "dragon_essence", 10 ] ]
+    ]
+  },
+  {
+    "id": "ovo_dragon_bone_sword_elect",
+    "copy-from": "ovo_dragon_bone_sword_fire",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": "电龙剑",
+    "description": "复合龙心后激发了潜在的力量。\n额外造成36电击伤害。\n手持时敏捷+4。",
+    "melee_damage": { "cut": 18, "bash": 18, "stab": 18, "electric": 36 },
+    "relic_data": { "passive_effects": [ { "has": "WIELD", "condition": "ALWAYS", "values": [ { "value": "DEXTERITY", "add": 4 } ] } ] }
+  },
+  {
+    "result": "ovo_dragon_bone_sword_elect",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_CUTTING",
+    "skill_used": "fabrication",
+    "difficulty": 5,
+    "autolearn": true,
+    "time": "6 h",
+    "proficiencies": [
+      { "proficiency": "ovo_dragon_bone_working_base" },
+      { "proficiency": "ovo_dragon_bone_working_plus" },
+      { "proficiency": "ovo_dragon_bone_working_master" }
+    ],
+    "tools": [ [ [ "surface_heat", 60, "LIST" ] ] ],
+    "qualities": [ { "id": "CONTAIN", "level": 1 } ],
+    "components": [
+      [ [ "ovo_dragon_heart_elect", 1 ] ],
+      [ [ "ovo_dragon_bone_sword", 1 ] ],
+      [ [ "dragon_essence", 10 ] ]
+    ]
+  },
+  {
+    "id": "ovo_dragon_bone_sword_black",
+    "copy-from": "ovo_dragon_bone_sword_fire",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": "黑龙剑",
+    "description": "复合龙心后激发了潜在的力量。\n额外造成36酸性伤害。\n手持时感知+4。",
+    "melee_damage": { "cut": 18, "bash": 18, "stab": 18, "acid": 36 },
+    "relic_data": { "passive_effects": [ { "has": "WIELD", "condition": "ALWAYS", "values": [ { "value": "PERCEPTION", "add": 4 } ] } ] }
+  },
+  {
+    "result": "ovo_dragon_bone_sword_black",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_CUTTING",
+    "skill_used": "fabrication",
+    "difficulty": 5,
+    "autolearn": true,
+    "time": "6 h",
+    "proficiencies": [
+      { "proficiency": "ovo_dragon_bone_working_base" },
+      { "proficiency": "ovo_dragon_bone_working_plus" },
+      { "proficiency": "ovo_dragon_bone_working_master" }
+    ],
+    "tools": [ [ [ "surface_heat", 60, "LIST" ] ] ],
+    "qualities": [ { "id": "CONTAIN", "level": 1 } ],
+    "components": [
+      [ [ "ovo_dragon_heart_black", 1 ] ],
+      [ [ "ovo_dragon_bone_sword", 1 ] ],
+      [ [ "dragon_essence", 10 ] ]
+    ]
+  },
+  {
+    "id": "ovo_dragon_bone_bow_fire",
+    "copy-from": "ovo_dragon_bone_bow",
+    "type": "GUN",
+    "name": "火龙弓",
+    "description": "复合龙心后激发了潜在的力量。\n附加火焰伤害。\n手持时力量+4。",
+    "ranged_damage": [{ "damage_type": "stab", "amount": 12, "armor_penetration": 6 }, { "damage_type": "heat", "amount": 36 }],
+    "flags": [ "NONCONDUCTIVE", "DURABLE_MELEE", "FIRE_TWOHAND", "RELOAD_AND_SHOOT", "PRIMITIVE_RANGED_WEAPON", "SHEATH_BOW", "WATERPROOF_GUN", "NEVER_JAMS", "MAGIC_FOCUS" ],
+    "relic_data": { "passive_effects": [ { "has": "WIELD", "condition": "ALWAYS", "values": [ { "value": "STRENGTH", "add": 4 } ] } ] }
+  },
+  {
+    "result": "ovo_dragon_bone_bow_fire",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_RANGED",
+    "skill_used": "fabrication",
+    "difficulty": 5,
+    "autolearn": true,
+    "time": "6 h",
+    "proficiencies": [
+      { "proficiency": "ovo_dragon_bone_working_base" },
+      { "proficiency": "ovo_dragon_bone_working_plus" },
+      { "proficiency": "ovo_dragon_bone_working_master" }
+    ],
+    "tools": [ [ [ "surface_heat", 60, "LIST" ] ] ],
+    "qualities": [ { "id": "CONTAIN", "level": 1 } ],
+    "components": [
+      [ [ "ovo_dragon_heart_fire", 1 ] ],
+      [ [ "ovo_dragon_bone_bow", 1 ] ],
+      [ [ "dragon_essence", 10 ] ]
+    ]
+  },
+  {
+    "id": "ovo_dragon_bone_bow_ice",
+    "copy-from": "ovo_dragon_bone_bow_fire",
+    "type": "GUN",
+    "name": "冰龙弓",
+    "description": "复合龙心后激发了潜在的力量。\n附加寒冷伤害。\n手持时智力+4。",
+    "ranged_damage": [{ "damage_type": "stab", "amount": 12, "armor_penetration": 6 }, { "damage_type": "cold", "amount": 36 }],
+    "relic_data": { "passive_effects": [ { "has": "WIELD", "condition": "ALWAYS", "values": [ { "value": "INTELLIGENCE", "add": 4 } ] } ] }
+  },
+  {
+    "result": "ovo_dragon_bone_bow_ice",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_RANGED",
+    "skill_used": "fabrication",
+    "difficulty": 5,
+    "autolearn": true,
+    "time": "6 h",
+    "proficiencies": [
+      { "proficiency": "ovo_dragon_bone_working_base" },
+      { "proficiency": "ovo_dragon_bone_working_plus" },
+      { "proficiency": "ovo_dragon_bone_working_master" }
+    ],
+    "tools": [ [ [ "surface_heat", 60, "LIST" ] ] ],
+    "qualities": [ { "id": "CONTAIN", "level": 1 } ],
+    "components": [
+      [ [ "ovo_dragon_heart_ice", 1 ] ],
+      [ [ "ovo_dragon_bone_bow", 1 ] ],
+      [ [ "dragon_essence", 10 ] ]
+    ]
+  },
+  {
+    "id": "ovo_dragon_bone_bow_elect",
+    "copy-from": "ovo_dragon_bone_bow_fire",
+    "type": "GUN",
+    "name": "电龙弓",
+    "description": "复合龙心后激发了潜在的力量。\n附加电击伤害。\n手持时敏捷+4。",
+  "ranged_damage": [{ "damage_type": "stab", "amount": 12, "armor_penetration": 6 }, { "damage_type": "electric", "amount": 36 }],
+    "relic_data": { "passive_effects": [ { "has": "WIELD", "condition": "ALWAYS", "values": [ { "value": "DEXTERITY", "add": 4 } ] } ] }
+  },
+  {
+    "result": "ovo_dragon_bone_bow_elect",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_RANGED",
+    "skill_used": "fabrication",
+    "difficulty": 5,
+    "autolearn": true,
+    "time": "6 h",
+    "proficiencies": [
+      { "proficiency": "ovo_dragon_bone_working_base" },
+      { "proficiency": "ovo_dragon_bone_working_plus" },
+      { "proficiency": "ovo_dragon_bone_working_master" }
+    ],
+    "tools": [ [ [ "surface_heat", 60, "LIST" ] ] ],
+    "qualities": [ { "id": "CONTAIN", "level": 1 } ],
+    "components": [
+      [ [ "ovo_dragon_heart_elect", 1 ] ],
+      [ [ "ovo_dragon_bone_bow", 1 ] ],
+      [ [ "dragon_essence", 10 ] ]
+    ]
+  },
+  {
+    "id": "ovo_dragon_bone_bow_black",
+    "copy-from": "ovo_dragon_bone_bow_fire",
+    "type": "GUN",
+    "name": "黑龙弓",
+    "description": "复合龙心后激发了潜在的力量。\n附加酸性伤害。\n手持时感知+4。",
+    "ranged_damage": [{ "damage_type": "stab", "amount": 12, "armor_penetration": 6 }, { "damage_type": "acid", "amount": 36 }],
+    "relic_data": { "passive_effects": [ { "has": "WIELD", "condition": "ALWAYS", "values": [ { "value": "PERCEPTION", "add": 4 } ] } ] }
+  },
+  {
+    "result": "ovo_dragon_bone_bow_black",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_RANGED",
+    "skill_used": "fabrication",
+    "difficulty": 5,
+    "autolearn": true,
+    "time": "6 h",
+    "proficiencies": [
+      { "proficiency": "ovo_dragon_bone_working_base" },
+      { "proficiency": "ovo_dragon_bone_working_plus" },
+      { "proficiency": "ovo_dragon_bone_working_master" }
+    ],
+    "tools": [ [ [ "surface_heat", 60, "LIST" ] ] ],
+    "qualities": [ { "id": "CONTAIN", "level": 1 } ],
+    "components": [
+      [ [ "ovo_dragon_heart_black", 1 ] ],
+      [ [ "ovo_dragon_bone_bow", 1 ] ],
+      [ [ "dragon_essence", 10 ] ]
+    ]
+  }
+]

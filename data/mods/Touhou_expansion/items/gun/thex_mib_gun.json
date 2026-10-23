@@ -1,0 +1,289 @@
+[
+  {
+    "id": "mib_pistol_sidearm",
+    "type": "GUN",
+    "name": "标准系列配枪",
+    "description": "一种标准配发的半自动MIB武器。外形设计为手枪以便在战场上隐蔽携带，它经过改造以使用高度先进的外星科技。与大多数MIB武器一样，它由电池供电，并且方便地兼容平民使用的电池。",
+    "volume": "650 ml",
+    "weight": "1000 g",
+    "longest_side": "32 cm",
+    "price_postapoc": 5500,
+    "to_hit": {
+      "balance": "good",
+      "grip": "weapon",
+      "length": "hand",
+      "surface": "any"
+    },
+    "bashing": 10,
+    "material": [
+      "aluminum",
+      "steel"
+    ],
+    "symbol": "(",
+    "looks_like": "m9",
+    "color": "light_gray",
+    "ammo": "battery",
+    "ammo_effects": [
+      "LASER"
+    ],
+    "ammo_to_fire": 9,
+    "dispersion": 160,
+    "durability": 8,
+    "min_cycle_recoil": 450,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ]
+    ],
+    "range": 35,
+    "ranged_damage": [
+      {
+        "damage_type": "electric",
+        "amount": 11,
+        "armor_penetration": 2
+      },
+      {
+        "damage_type": "heat",
+        "amount": 11,
+        "armor_penetration": 2
+      }
+    ],
+    "skill": "pistol",
+    "valid_mod_locations": [
+      [
+        "accessories",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "default_magazine": "medium_battery_cell",
+        "flag_restriction": [
+          "BATTERY_ULTRA_LIGHT",
+          "BATTERY_LIGHT",
+          "BATTERY_MEDIUM"
+        ]
+      }
+    ],
+    "weapon_category": [
+      "AUTOMATIC_PISTOLS"
+    ],
+    "flags": [
+      "NEEDS_NO_LUBE",
+      "NEVER_JAMS",
+      "NON_FOULING",
+      "STURDY",
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "mib_rifle_4",
+    "type": "GUN",
+    "name": {
+      "str": "系列4再扩散器"
+    },
+    "description": "一种标准配发的自动MIB武器。通常在特工需要超过平均水平的火力时部署，它基于标准配发枪械的相同概念，在射速和输出能量上均有所扩展。与大多数MIB武器一样，它由电池供电，并且方便地兼容平民使用的电池。",
+    "volume": "5000 ml",
+    "weight": "5000 g",
+    "longest_side": "1000 cm",
+    "price_postapoc": 12000,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "solid",
+      "length": "long",
+      "surface": "any"
+    },
+    "bashing": 11,
+    "material": [
+      "aluminum",
+      "steel"
+    ],
+    "symbol": "(",
+    "looks_like": "hk_g3",
+    "color": "light_gray",
+    "ammo": "battery",
+    "ammo_effects": [
+      "LASER"
+    ],
+    "ammo_to_fire": 7,
+    "dispersion": 150,
+    "durability": 8,
+    "min_cycle_recoil": 3600,
+    "modes": [
+      [
+        "BURST",
+        "2 rd.",
+        2
+      ],
+      [
+        "DEFAULT",
+        "3 rd.",
+        3
+      ],
+      [
+        "AUTO",
+        "auto",
+        6
+      ]
+    ],
+    "range": 50,
+    "ranged_damage": [
+      {
+        "damage_type": "electric",
+        "amount": 8,
+        "armor_penetration": 3
+      },
+      {
+        "damage_type": "heat",
+        "amount": 8,
+        "armor_penetration": 3
+      }
+    ],
+    "skill": "rifle",
+    "valid_mod_locations": [
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "sights",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "default_magazine": "medium_battery_cell",
+        "flag_restriction": [
+          "BATTERY_LIGHT",
+          "BATTERY_MEDIUM",
+          "BATTERY_HEAVY"
+        ]
+      }
+    ],
+    "weapon_category": [
+      "AUTOMATIC_RIFLES"
+    ],
+    "flags": [
+      "NEEDS_NO_LUBE",
+      "NEVER_JAMS",
+      "NON_FOULING",
+      "STURDY",
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "mib_smg_7",
+    "type": "GUN",
+    "name": {
+      "str": "系列7去散射器"
+    },
+    "description": "一种标准配发的自动MIB武器。外形设计为冲锋枪以便在战场上隐蔽携带，它经过改造以使用高度先进的外星科技。与大多数MIB武器一样，它由电池供电，并且方便地兼容平民使用的电池。",
+    "volume": "3000 ml",
+    "weight": "3000 g",
+    "longest_side": "55 cm",
+    "price_postapoc": 12000,
+    "to_hit": {
+      "balance": "good",
+      "grip": "solid",
+      "length": "short",
+      "surface": "any"
+    },
+    "bashing": 9,
+    "material": [
+      "aluminum",
+      "steel"
+    ],
+    "symbol": "(",
+    "looks_like": "TDI",
+    "color": "light_gray",
+    "ammo": "battery",
+    "ammo_effects": [
+      "LASER"
+    ],
+    "ammo_to_fire": 4,
+    "built_in_mods": [
+      "stock_mib_smg_7_unfolded"
+    ],
+    "dispersion": 120,
+    "durability": 7,
+    "min_cycle_recoil": 540,
+    "modes": [
+      [
+        "DEFAULT",
+        "3 rd.",
+        3
+      ],
+      [
+        "AUTO",
+        "auto",
+        5
+      ]
+    ],
+    "range": 40,
+    "ranged_damage": [
+      {
+        "damage_type": "electric",
+        "amount": 4,
+        "armor_penetration": 2
+      },
+      {
+        "damage_type": "heat",
+        "amount": 4,
+        "armor_penetration": 2
+      }
+    ],
+    "skill": "smg",
+    "valid_mod_locations": [
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "default_magazine": "medium_battery_cell",
+        "flag_restriction": [
+          "BATTERY_LIGHT",
+          "BATTERY_MEDIUM"
+        ]
+      }
+    ],
+    "weapon_category": [
+      "AUTOMATIC_PISTOLS"
+    ],
+    "flags": [
+      "NEEDS_NO_LUBE",
+      "NEVER_JAMS",
+      "NON_FOULING",
+      "TRADER_AVOID"
+    ]
+  }
+]

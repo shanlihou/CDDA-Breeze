@@ -1,0 +1,50 @@
+[
+	{
+		"type": "recipe",
+		"result": "fishery_mobile_fishponds_folded",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_渔业",
+		"skill_used": "fabrication",
+		"difficulty": 2,
+		"autolearn": true,
+		"time": "600 s",
+		"components": [
+			[ [ "fishery_mobile_fishponds_folded_broken", 1 ] ],
+			[ [ "superglue", 10 ] ],
+			[ [ "duct_tape", 10 ] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "fishery_mobile_fishingnets_folding",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_渔业",
+		"skill_used": "tailor",
+		"skills_required": [ "fabrication", 1 ],
+		"difficulty": 3,
+		"autolearn": true,
+		"time": "3600 s",
+		"qualities": [ { "id": "SEW", "level": 1 }, { "id": "CUT", "level": 1 }, { "id": "KNIT", "level": 1 } ],
+		"components": [
+			[ [ "fishery_mobile_fishingnets_pieces", 40 ] ],
+			[ [ "string_floss", 40 ] ]
+		]
+	},
+	{
+		"type": "recipe",
+		"result": "fishery_mobile_fishponds_folded",
+		"id_suffix": "make",
+		"category": "CC_农业拓展",
+		"subcategory": "CSC_农业拓展_渔业",
+		"skill_used": "fabrication",
+		"difficulty": 5,
+		"autolearn": true,
+		"time": "10800 s",
+		"using": [ [ "soldering_standard", 35 ] ],
+		"components": [
+			[ [ "tarp", 121 ], [ "plastic_sheet", 121 ] ],
+			[ [ "pipe", 44 ] ],
+			[ [ "scrap", 30 ] ]
+		]
+	}
+]

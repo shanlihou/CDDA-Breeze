@@ -1,0 +1,565 @@
+[
+  {
+    "//": "I don't know if this NPC will tell you about HIM. Actually, I'm unsure about it",
+    "type": "npc_class",
+    "id": "V_SEEKER",
+    "name": {
+      "str": "Vampire Arcane Seeker"
+    },
+    "job_description": "Seeker of the arcane.",
+    "common": false,
+    "bonus_str": {
+      "rng": [
+        4,
+        6
+      ]
+    },
+    "bonus_dex": {
+      "rng": [
+        4,
+        6
+      ]
+    },
+    "bonus_int": {
+      "rng": [
+        4,
+        6
+      ]
+    },
+    "bonus_per": {
+      "rng": [
+        4,
+        6
+      ]
+    },
+    "skills": [
+      {
+        "skill": "ALL",
+        "level": {
+          "mul": [
+            {
+              "one_in": 2
+            },
+            {
+              "sum": [
+                {
+                  "dice": [
+                    2,
+                    5
+                  ]
+                },
+                {
+                  "constant": -1
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "skill": "dodge",
+        "bonus": {
+          "rng": [
+            1,
+            3
+          ]
+        }
+      },
+      {
+        "skill": "melee",
+        "bonus": {
+          "rng": [
+            1,
+            3
+          ]
+        }
+      },
+      {
+        "skill": "unarmed",
+        "bonus": {
+          "rng": [
+            1,
+            3
+          ]
+        }
+      },
+      {
+        "skill": "speech",
+        "bonus": {
+          "rng": [
+            1,
+            6
+          ]
+        }
+      },
+      {
+        "skill": "cutting",
+        "bonus": {
+          "rng": [
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "skill": "stabbing",
+        "bonus": {
+          "rng": [
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "skill": "survival",
+        "bonus": {
+          "rng": [
+            1,
+            6
+          ]
+        }
+      },
+      {
+        "skill": "bashing",
+        "bonus": {
+          "rng": [
+            1,
+            2
+          ]
+        }
+      }
+    ],
+    "worn_override": "VAMP_UNDERGUARD_worn",
+    "carry_override": "VAMP_carry",
+    "weapon_override": "VAMP_wielded_weapon",
+    "traits": [
+      [
+        "VAMP",
+        100
+      ],
+      [
+        "PALE",
+        100
+      ],
+      [
+        "NOPAIN",
+        100
+      ],
+      [
+        "SUNBURN",
+        100
+      ],
+      [
+        "BEAUTIFUL3",
+        100
+      ],
+      [
+        "QUICK",
+        100
+      ],
+      [
+        "REGEN",
+        100
+      ],
+      [
+        "NIGHTVISION3",
+        100
+      ],
+      [
+        "FANGS",
+        100
+      ],
+      [
+        "CARNIVORE",
+        100
+      ]
+    ]
+  },
+  {
+    "type": "npc",
+    "id": "VAMP_ASEEKER",
+    "name_suffix": "奥术探寻者",
+    "gender": "female",
+    "class": "V_SEEKER",
+    "attitude": 0,
+    "mission": 7,
+    "chat": "VAMP_ASEEKER_main",
+    "faction": "vamps"
+  },
+  {
+    "id": "VAMP_ASEEKER_main",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "npc_has_trait": "metvaseeker",
+      "yes": [
+        "我们又见面了，冒险家。",
+        "这次你的问题是什么...",
+        "嗯，我们又见面了，冒险家。",
+        "你好，我的幸存者伙伴。",
+        "什么风又把你吹来了？"
+      ],
+      "no": "你好，我的冒险伙伴。什么风把你吹来我的避风港？"
+    },
+    "responses": [
+      {
+        "text": "你是谁？",
+        "topic": "VAMP_ASEEKER_main_intro",
+        "condition": {
+          "not": {
+            "npc_has_trait": "vaseekeruaccepttherisk"
+          }
+        }
+      },
+      {
+        "text": "你是谁？",
+        "topic": "VAMP_ASEEKER_main_introduced",
+        "condition": {
+          "and": [
+            {
+              "npc_has_trait": "vaseekeruaccepttherisk"
+            },
+            {
+              "not": {
+                "npc_has_trait": "introducedvaseeker"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "text": "有什么给这次狩猎的建议吗？",
+        "topic": "VAMP_ASEEKER_main_tipsforu",
+        "condition": {
+          "npc_has_trait": "vaseekeruaccepttherisk"
+        }
+      },
+      {
+        "text": "你接受什么样的神秘物品和神器？",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "condition": {
+          "and": [
+            {
+              "not": {
+                "npc_has_trait": "vaseekerigotchaeverything"
+              }
+            },
+            {
+              "npc_has_trait": "vaseekeruaccepttherisk"
+            }
+          ]
+        }
+      },
+      {
+        "text": "我有你感兴趣的东西。",
+        "topic": "VAMP_ASEEKER_questinquire_ihave",
+        "condition": {
+          "npc_has_trait": "vaseekeruaccepttherisk"
+        }
+      },
+      {
+        "text": "我可以用这些代币做什么交易？",
+        "topic": "VAMP_ASEEKER_questinquire_tokenexc",
+        "condition": {
+          "u_has_item": "arcanetoken"
+        }
+      },
+      {
+        "text": "拜拜。",
+        "topic": "TALK_DONE",
+        "condition": {
+          "npc_has_trait": "metvaseeker"
+        }
+      },
+      {
+        "text": "再见。",
+        "topic": "TALK_DONE",
+        "condition": {
+          "not": {
+            "npc_has_trait": "metvaseeker"
+          }
+        },
+        "effect": {
+          "npc_add_trait": "metvaseeker"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_main_intro",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "npc_has_trait": "vaseekerarcanemys",
+      "yes": {
+        "npc_has_trait": "vaseekerartifactwhat",
+        "yes": "那么，你觉得…你要参加这个任务吗？我不能保证你的生命在这旅程中你会上来只是为了收集稀有的东西给我。",
+        "no": "我在这个该死的世界里寻找神秘和不寻常的事物，同时收集文物，利用它们的力量得到更大的利用。"
+      },
+      "no": "你问我是谁？\n我是这个该死的世界中神秘事物和异常现象的探索者，同时也在收集神器，利用它们的力量得到更大的利用。"
+    },
+    "responses": [
+      {
+        "text": "我也越来越喜欢魔术了，也许我们可以合作。",
+        "topic": "VAMP_ASEEKER_main_collaborate",
+        "condition": {
+          "or": [
+            {
+              "u_has_trait": "PROF_SANGUINE"
+            },
+            {
+              "u_has_trait": "PROF_ARCANIST"
+            },
+            {
+              "u_has_trait": "PROF_CLEANSINGFLAME"
+            }
+          ]
+        }
+      },
+      {
+        "text": "神秘事物？",
+        "topic": "VAMP_ASEEKER_main_arcanemys",
+        "effect": {
+          "npc_add_trait": "vaseekerarcanemys"
+        },
+        "condition": {
+          "not": {
+            "npc_has_trait": "vaseekerarcanemys"
+          }
+        }
+      },
+      {
+        "text": "你在收集什么神器？",
+        "topic": "VAMP_ASEEKER_main_artifactwhat",
+        "effect": {
+          "npc_add_trait": "vaseekerartifactwhat"
+        },
+        "condition": {
+          "not": {
+            "npc_has_trait": "vaseekerartifactwhat"
+          }
+        }
+      },
+      {
+        "text": "好！我加入！",
+        "topic": "TALK_DONE",
+        "effect": [
+          {
+            "npc_add_trait": "metvaseeker"
+          },
+          {
+            "npc_add_trait": "vaseekeruaccepttherisk"
+          }
+        ],
+        "condition": {
+          "and": [
+            {
+              "npc_has_trait": "vaseekerartifactwhat"
+            },
+            {
+              "npc_has_trait": "vaseekerarcanemys"
+            }
+          ]
+        }
+      },
+      {
+        "text": "等等，我需要一些时间。",
+        "topic": "TALK_DONE",
+        "condition": {
+          "and": [
+            {
+              "npc_has_trait": "vaseekerartifactwhat"
+            },
+            {
+              "npc_has_trait": "vaseekerarcanemys"
+            }
+          ]
+        }
+      },
+      {
+        "text": "你的工作看起来很冒险…",
+        "topic": "TALK_DONE",
+        "effect": {
+          "npc_add_trait": "metvaseeker"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_main_arcanemys",
+    "type": "talk_topic",
+    "dynamic_line": "的确。神秘，这个世界背后的魔力。有了适当的知识，你可以发现更多关于它的东西，但要警惕它的代价。\n我会送你离开这个地方，寻找这些异常，只要问我你对什么东西好奇。",
+    "responses": [
+      {
+        "text": "好的。",
+        "topic": "VAMP_ASEEKER_main_intro"
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_main_artifactwhat",
+    "type": "talk_topic",
+    "dynamic_line": "文物是散落在这个世界上的至高无上的物品。从被诅咒的剑到不稳定的武器，它们都是神器。\n我会送你离开这个地方去寻找这些古老的东西，只要回答我你是否对什么东西好奇。",
+    "responses": [
+      {
+        "text": "好的。",
+        "topic": "VAMP_ASEEKER_main_intro"
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_main_introduced",
+    "type": "talk_topic",
+    "dynamic_line": "别再重复这个问题了，好吗？",
+    "responses": [
+      {
+        "text": "好吧，抱歉…",
+        "topic": "VAMP_ASEEKER_main",
+        "effect": {
+          "npc_add_trait": "introducedvaseeker"
+        }
+      }
+    ]
+  },
+  {
+    "//": "Collaborate with the seeker for some rewards, BUT! Expect lesser missions from her. It's all up to your decision.",
+    "id": "VAMP_ASEEKER_main_collaborate",
+    "type": "talk_topic",
+    "dynamic_line": "你和我合作的成本是多少？",
+    "responses": [
+      {
+        "text": "把你要的东西换成其他东西作为奖励。",
+        "topic": "VAMP_ASEEKER_main_collaborateforitem",
+        "effect": [
+          {
+            "npc_add_trait": "vaseekerarcanemys"
+          },
+          {
+            "npc_add_trait": "vaseekerartifactwhat"
+          },
+          {
+            "npc_add_trait": "vaseekerrewardingcollabitems"
+          }
+        ]
+      },
+      {
+        "text": "金钱作为你冒着生命危险的任务的报酬。",
+        "topic": "VAMP_ASEEKER_main_collaborateformoney",
+        "effect": [
+          {
+            "npc_add_trait": "vaseekerarcanemys"
+          },
+          {
+            "npc_add_trait": "vaseekerartifactwhat"
+          },
+          {
+            "npc_add_trait": "vaseekerrewardingcollabmoney"
+          }
+        ]
+      },
+      {
+        "text": "你不需要为此付我那么多钱，我很高兴为你服务。",
+        "topic": "VAMP_ASEEKER_main_collaboratefornothing",
+        "effect": [
+          {
+            "npc_add_trait": "vaseekerarcanemys"
+          },
+          {
+            "npc_add_trait": "vaseekerartifactwhat"
+          },
+          {
+            "npc_add_trait": "vaseekernorewardcollab"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "//": "Rewards are literally low.",
+    "id": "VAMP_ASEEKER_main_collaborateforitem",
+    "type": "talk_topic",
+    "dynamic_line": "我同意，但以代币的形式。努力工作，收集更多，并赢得我们的独家项目，以满足您的努力。",
+    "responses": [
+      {
+        "text": "好的，我明白了。",
+        "topic": "TALK_DONE",
+        "effect": [
+          {
+            "npc_add_trait": "vaseekeruaccepttherisk"
+          },
+          {
+            "npc_add_trait": "metvaseeker"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_main_collaborateformoney",
+    "type": "talk_topic",
+    "dynamic_line": "我同意，但你应该知道我们的财富并没有那么高，所以我的资金应该很低。",
+    "responses": [
+      {
+        "text": "好的，我明白了。",
+        "topic": "TALK_DONE",
+        "effect": [
+          {
+            "npc_add_trait": "vaseekeruaccepttherisk"
+          },
+          {
+            "npc_add_trait": "metvaseeker"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_main_collaboratefornothing",
+    "type": "talk_topic",
+    "dynamic_line": "我看你和其他在这种贪婪的情况下绝望的人不同。谢谢你的友好回答。我还是会给你一些利润作为你工作的报酬。",
+    "responses": [
+      {
+        "text": "好吧……",
+        "topic": "TALK_DONE",
+        "effect": [
+          {
+            "npc_add_trait": "vaseekeruaccepttherisk"
+          },
+          {
+            "npc_add_trait": "metvaseeker"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_main_tipsforu",
+    "type": "talk_topic",
+    "dynamic_line": [
+      "你是否愿意把你所有的存货都换掉，这取决于你自己。请记住：除了销售它们，它们可以用于其他地方。",
+      "如果你不努力，你就得不到什么。",
+      "如果你想跟我谈一些像神器之类的东西，一定要一次把它们都带来，这样我就不用浪费时间了。",
+      "死去的生物身上会析出闪闪发光的奇怪汽体，我敢打赌，如果你能把它们收集起来，肯定会对我有用。",
+      "杀死任何生物都可能给你带来奥术元素。",
+      "那些来自过去文明的奇怪遗迹可能留下了一些奇怪的...东西。",
+      "如果你海没做好准备就突袭一个异常的建筑，那差不多是在自杀。",
+      "森林里的建筑肯定藏着什么东西。",
+      "沼泽只你最讨厌的地方之一。",
+      "如果你在寻找奇怪的建筑，你应该穿过森林，而不是高速公路",
+      "你与之战斗的每一个怪物在死后都会掉落一些东西。",
+      "杀死这些异常生物能得到一些好东西。",
+      "稀有怪物会掉落稀有物品。如果你看到其中一个，就立马动手干掉它！",
+      "一件神器拥有很高的赏金，但不是那么容易获得......",
+      "神器很强大，但需要付出比生命还多的代价......",
+      "一个守卫正在保护着神器。如果要去抢，那就靠你了。",
+      "如果你想要快速获利，我建议你去寻找神器并且避开你遇到的任何风险。",
+      "书很常见，我几乎什么都读过。",
+      "别想把你收集的愚蠢的书卖给我。",
+      "我不能接受一些神器，因为我不能。"
+    ],
+    "responses": [
+      {
+        "text": "好的…多谢。",
+        "topic": "VAMP_ASEEKER_main"
+      }
+    ]
+  }
+]

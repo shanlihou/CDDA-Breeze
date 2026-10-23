@@ -1,0 +1,43 @@
+[
+  {
+    "@备注": "核能贝塔电池",
+    "result": "betavoltaic",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_*",
+    "subcategory": "CSC_*_NESTED",
+    "skill_used": "electronics",
+    "difficulty": 8,
+    "time": "30 m",
+    "reversible": true,
+    "autolearn": true,
+	"qualities": [
+	  { "id": "CUT", "level": 2 },
+      { "id": "SAW_M", "level": 1 },
+      { "id": "SCREW", "level": 1 }
+    ],
+    "using": [ [ "soldering_standard", 30 ] ],
+    "components": [
+	  [ [ "scrap", 2 ] ],
+	  [ [ "cable", 10 ] ], 
+	  [ [ "plutonium", 1 ] ] 
+    ]
+  },
+  {
+    "@备注": "钚",
+    "result": "plutonium",
+    "type": "recipe",
+    "activity_level": "NO_EXERCISE",
+    "category": "CC_CHEM",
+    "subcategory": "CSC_CHEM_CHEMICALS",
+    "skill_used": "chemistry",
+    "difficulty": 6,
+    "time": "5 m",
+    "autolearn": true,
+    "qualities": [ { "id": "CHEM", "level": 2 } ],
+    "tools": [ [ [ "surface_heat", 30, "LIST" ] ] ],
+    "components": [
+      [ [ "plut_cell", 15 ] ]
+    ]
+  }
+]

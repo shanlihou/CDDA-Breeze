@@ -1,0 +1,1357 @@
+[
+  {
+    "id": "mon_amphicyon",
+    "type": "MONSTER",
+    "name": {
+      "str": "半犬"
+    },
+    "description": "一种狼一样的熊，或者也许是熊一样的狼，这种巨大、长而低矮的动物看起来两者都像。与熊的一些关键区别是，半犬不能靠后腿站立，口鼻更细，尾巴更长。与狼的一些关键区别是它们明显的熊一样的体型、杂食性饮食、独居生活方式以及对（会呼吸的）人类不寻常的漠不关心。",
+    "volume": "200 L",
+    "weight": "200 kg",
+    "default_faction": "bear",
+    "bodytype": "dog",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "harvest": "mammal_large_fur",
+    "hp": 160,
+    "speed": 125,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "ä",
+    "looks_like": "mon_bear",
+    "color": "light_gray",
+    "aggression": -10,
+    "morale": 50,
+    "melee_skill": 6,
+    "melee_dice": 3,
+    "melee_dice_sides": 7,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 6
+      }
+    ],
+    "dodge": 3,
+    "armor_bash": 2,
+    "armor_cut": 2,
+    "vision_day": 30,
+    "vision_night": 10,
+    "path_settings": {
+      "max_dist": 15
+    },
+    "anger_triggers": [
+      "HURT",
+      "PLAYER_NEAR_BABY"
+    ],
+    "fear_triggers": [
+      "SOUND"
+    ],
+    "reproduction": {
+      "baby_monster": "mon_amphicyon_cub",
+      "baby_count": 3,
+      "baby_timer": 240
+    },
+    "baby_flags": [
+      "SPRING"
+    ],
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        40
+      ]
+    ],
+    "flags": [
+      "ANIMAL",
+      "BASHES",
+      "KEENNOSE",
+      "HEARS",
+      "PATH_AVOID_DANGER_1",
+      "PUSH_MON",
+      "SEES",
+      "WARM"
+    ],
+    "//": "Amphicyon ingens taken as reference when possible, because one exemplar had an estimated of 570 Kg which is a bit too much. No reproductive data. BTW these are oversized wolves, not bears with wolf characteristics"
+  },
+  {
+    "id": "mon_amphicyon_cub",
+    "type": "MONSTER",
+    "name": {
+      "str": "半犬幼崽"
+    },
+    "copy-from": "mon_amphicyon",
+    "description": "一只小狼熊幼崽。头六个月是个可爱的宠物，然后你就需要更大的院子了。",
+    "volume": "25 L",
+    "weight": "30 kg",
+    "hp": 30,
+    "speed": 100,
+    "aggression": -20,
+    "morale": 25,
+    "melee_skill": 3,
+    "melee_dice": 3,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 5
+      }
+    ],
+    "dodge": 1,
+    "armor_bash": 1,
+    "armor_cut": 1,
+    "path_settings": {
+      "max_dist": 10
+    },
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        25
+      ]
+    ],
+    "upgrades": {
+      "age_grow": 75,
+      "into": "mon_amphicyon"
+    },
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_andrewsarchus",
+    "type": "MONSTER",
+    "name": {
+      "str": "安氏中兽"
+    },
+    "description": "一种大型、隐约像猪的掠食者。口鼻让人联想到河马，巨大的牙齿只有在仪式性的哈欠中才能看到。覆盖全身的象皮几乎无毛。注意到它爪子末端的蹄子会让你想知道这东西与什么有亲缘关系。",
+    "volume": "900 L",
+    "weight": "1000 kg",
+    "default_faction": "touhou_stem_whippomorphs",
+    "bodytype": "pig",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "harvest": "mammal_large_boar",
+    "hp": 500,
+    "speed": 140,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "ḍ",
+    "looks_like": "mon_boar_wild",
+    "color": "dark_gray",
+    "aggression": 35,
+    "morale": 50,
+    "melee_skill": 6,
+    "melee_dice": 4,
+    "melee_dice_sides": 6,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 6
+      },
+      {
+        "damage_type": "stab",
+        "amount": 3
+      }
+    ],
+    "dodge": 3,
+    "armor_bash": 6,
+    "armor_cut": 4,
+    "armor_stab": 4,
+    "armor_bullet": 4,
+    "path_settings": {
+      "max_dist": 25
+    },
+    "reproduction": {
+      "baby_monster": "mon_andrewsarchus_calf",
+      "baby_count": 2,
+      "baby_timer": 120
+    },
+    "baby_flags": [
+      "SPRING",
+      "SUMMER",
+      "AUTUMN",
+      "WINTER"
+    ],
+    "biosignature": {
+      "biosig_item": "feces_manure",
+      "biosig_timer": 12
+    },
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "HURT",
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK",
+      "STALK"
+    ],
+    "fear_triggers": [
+      "SOUND"
+    ],
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        80
+      ]
+    ],
+    "flags": [
+      "ANIMAL",
+      "BASHES",
+      "HEARS",
+      "KEENNOSE",
+      "PATH_AVOID_DANGER_1",
+      "PUSH_MON",
+      "SEES",
+      "SMELLS",
+      "WARM"
+    ],
+    "//": "Andrewsarchus mongoliensis used as reference. No reproductive data"
+  },
+  {
+    "id": "mon_andrewsarchus_calf",
+    "type": "MONSTER",
+    "name": {
+      "str": "安氏中兽幼崽"
+    },
+    "copy-from": "mon_andrewsarchus",
+    "description": "一只小安氏中兽。像猫一样的幼崽用蹄子四处走动。",
+    "volume": "10000 ml",
+    "weight": "10000 g",
+    "harvest": "mammal_tiny",
+    "hp": 35,
+    "speed": 150,
+    "color": "light_gray",
+    "aggression": 0,
+    "morale": 20,
+    "melee_skill": 4,
+    "melee_dice": 4,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      },
+      {
+        "damage_type": "stab",
+        "amount": 1
+      }
+    ],
+    "dodge": 3,
+    "armor_bash": 2,
+    "armor_cut": 2,
+    "armor_stab": 2,
+    "armor_bullet": 1,
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        65
+      ]
+    ],
+    "upgrades": {
+      "age_grow": 90,
+      "into": "mon_andrewsarchus"
+    },
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_castoroides",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨河狸"
+    },
+    "copy-from": "mon_beaver",
+    "description": "一只巨大的河狸。缺少带蹼的尾巴让它看起来更像啮齿动物。门牙相对于它们的体型也更大，给这种动物一种诡异的微笑。",
+    "volume": "100 L",
+    "weight": "100 kg",
+    "harvest": "mammal_large_fur",
+    "hp": 105,
+    "speed": 105,
+    "symbol": "ř",
+    "looks_like": "mon_beaver",
+    "aggression": -10,
+    "morale": 30,
+    "melee_skill": 3,
+    "melee_dice": 3,
+    "melee_dice_sides": 6,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 8
+      }
+    ],
+    "dodge": 1,
+    "armor_bash": 2,
+    "armor_cut": 3,
+    "anger_triggers": [
+      "HURT",
+      "PLAYER_CLOSE",
+      "PLAYER_NEAR_BABY"
+    ],
+    "fear_triggers": [
+      "SOUND"
+    ],
+    "reproduction": {
+      "baby_monster": "mon_castoroides_cub",
+      "baby_count": 4,
+      "baby_timer": 150
+    },
+    "baby_flags": [
+      "WINTER"
+    ],
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        35
+      ]
+    ],
+    "flags": [
+      "ANIMAL",
+      "BASHES",
+      "HEARS",
+      "PATH_AVOID_DANGER_1",
+      "PUSH_MON",
+      "SEES",
+      "SMELLS",
+      "SWIMS",
+      "WARM",
+      "WATER_CAMOUFLAGE"
+    ],
+    "//": "Castoroides sp. taken as reference. No reproductive data",
+    "//2": "Would be cool for this to make mini-dungeons on their hypothetical giant dams. Btw there's no evidence these built dams like modern beavers"
+  },
+  {
+    "id": "mon_castoroides_cub",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨河狸幼崽"
+    },
+    "copy-from": "mon_castoroides",
+    "description": "一只小巨河狸。会被当成普通河狸。",
+    "volume": "20 L",
+    "weight": "20 kg",
+    "hp": 16,
+    "speed": 90,
+    "aggression": -30,
+    "morale": 15,
+    "melee_skill": 1,
+    "melee_dice": 3,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 6
+      }
+    ],
+    "dodge": 1,
+    "armor_bash": 0,
+    "armor_cut": 1,
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        25
+      ]
+    ],
+    "upgrades": {
+      "age_grow": 60,
+      "into": "mon_castoroides"
+    },
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_daedon",
+    "type": "MONSTER",
+    "name": {
+      "str": "完齿兽"
+    },
+    "description": "也被称为“地狱猪”，这种仿野牛的动物和成年人类一样高，甚至更高。口鼻类似熊，长着野猪獠牙，这些獠牙不仅仅是为了展示，因为它的嘴大到足以从侧面咬住你的整条手臂，还留有余地。有些个体脸上有白色斑纹，仿佛它们知道在愤怒的家伙身上画骷髅图案是驱赶弱小生物的有效策略。",
+    "volume": "700 L",
+    "weight": "750 kg",
+    "default_faction": "touhou_stem_whippomorphs",
+    "bodytype": "pig",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "harvest": "mammal_large_boar",
+    "hp": 165,
+    "speed": 150,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "ḋ",
+    "looks_like": "mon_boar_wild",
+    "color": "brown",
+    "aggression": 35,
+    "morale": 50,
+    "melee_skill": 6,
+    "melee_dice": 3,
+    "melee_dice_sides": 8,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      },
+      {
+        "damage_type": "stab",
+        "amount": 4
+      }
+    ],
+    "dodge": 4,
+    "armor_bash": 4,
+    "armor_cut": 3,
+    "armor_stab": 2,
+    "armor_bullet": 2,
+    "path_settings": {
+      "max_dist": 20
+    },
+    "reproduction": {
+      "baby_monster": "mon_daedon_piglet",
+      "baby_count": 4,
+      "baby_timer": 90
+    },
+    "baby_flags": [
+      "SPRING",
+      "SUMMER",
+      "AUTUMN",
+      "WINTER"
+    ],
+    "biosignature": {
+      "biosig_item": "feces_manure",
+      "biosig_timer": 6
+    },
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "HURT",
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK"
+    ],
+    "fear_triggers": [
+      "SOUND"
+    ],
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        60
+      ]
+    ],
+    "flags": [
+      "ANIMAL",
+      "BASHES",
+      "HEARS",
+      "KEENNOSE",
+      "PATH_AVOID_DANGER_1",
+      "PUSH_MON",
+      "SEES",
+      "SMELLS",
+      "WARM"
+    ],
+    "//": "Daeodon shoshonensis used as reference. The white marks on their faces is probably made up but sounds cool for a giant murderous boar"
+  },
+  {
+    "id": "mon_daedon_piglet",
+    "type": "MONSTER",
+    "name": {
+      "str": "完齿兽幼崽"
+    },
+    "copy-from": "mon_daedon",
+    "description": "一只不太可爱的完齿兽幼崽。与成年个体足够相似，这些幼崽颜色更深，四肢处有棕色斑块。",
+    "volume": "8000 ml",
+    "weight": "7500 g",
+    "harvest": "mammal_tiny",
+    "hp": 30,
+    "speed": 150,
+    "color": "dark_gray",
+    "aggression": 25,
+    "morale": 35,
+    "melee_skill": 5,
+    "melee_dice": 3,
+    "melee_dice_sides": 6,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 6
+      }
+    ],
+    "dodge": 2,
+    "armor_bash": 2,
+    "armor_cut": 2,
+    "armor_stab": 1,
+    "armor_bullet": 0,
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        35
+      ]
+    ],
+    "upgrades": {
+      "age_grow": 75,
+      "into": "mon_daedon"
+    },
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_glossotherium",
+    "type": "MONSTER",
+    "name": {
+      "str": "舌懒兽"
+    },
+    "description": "一种巨大、肥胖、像熊的树懒。你可以看出它是树懒，因为树懒般的爪子和树懒般的尾巴，更不用说那不像熊的口鼻了。",
+    "volume": "900 L",
+    "weight": "1000 kg",
+    "default_faction": "bear",
+    "bodytype": "bear",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "harvest": "mammal_large_fur",
+    "hp": 400,
+    "speed": 115,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "ṁ",
+    "looks_like": "mon_bear",
+    "color": "brown",
+    "aggression": -10,
+    "morale": 35,
+    "melee_skill": 4,
+    "melee_dice": 3,
+    "melee_dice_sides": 7,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 10
+      }
+    ],
+    "dodge": 2,
+    "armor_bash": 3,
+    "armor_cut": 2,
+    "armor_stab": 1,
+    "vision_day": 30,
+    "vision_night": 10,
+    "path_settings": {
+      "max_dist": 15
+    },
+    "anger_triggers": [
+      "HURT",
+      "PLAYER_NEAR_BABY"
+    ],
+    "reproduction": {
+      "baby_monster": "mon_glossotherium_cub",
+      "baby_count": 3,
+      "baby_timer": 240
+    },
+    "baby_flags": [
+      "SPRING"
+    ],
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        80
+      ]
+    ],
+    "flags": [
+      "ANIMAL",
+      "BASHES",
+      "KEENNOSE",
+      "HEARS",
+      "PATH_AVOID_DANGER_1",
+      "PUSH_MON",
+      "SEES",
+      "WARM"
+    ],
+    "//2": "Glossotherium sp. used as reference. No reproductive data",
+    "//3": "Would be cool for these to dig and live around mini-dungeon paleoburrows"
+  },
+  {
+    "id": "mon_glossotherium_cub",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨爪懒兽幼崽"
+    },
+    "copy-from": "mon_glossotherium",
+    "description": "一只小舌懒兽幼崽，体型有两只大号树懒（或四只中型狗）那么大，但移动速度一般。",
+    "volume": "25 L",
+    "weight": "25 kg",
+    "hp": 30,
+    "speed": 125,
+    "aggression": -20,
+    "morale": 25,
+    "melee_skill": 3,
+    "melee_dice": 3,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 6
+      }
+    ],
+    "dodge": 3,
+    "armor_bash": 1,
+    "armor_cut": 1,
+    "armor_stab": 0,
+    "path_settings": {
+      "max_dist": 10
+    },
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        65
+      ]
+    ],
+    "upgrades": {
+      "age_grow": 75,
+      "into": "mon_glossotherium"
+    },
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_glyptodont",
+    "type": "MONSTER",
+    "name": {
+      "str": "雕齿兽"
+    },
+    "description": "一只巨大的犰狳，有小汽车那么大。它四处走动，寻找植物吃。圆形的甲壳肯定会成为有趣的庇护所。",
+    "volume": "1000 L",
+    "weight": "800 kg",
+    "default_faction": "herbivore",
+    "bodytype": "gator",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "harvest": "mammal_large_osteoderm",
+    "hp": 250,
+    "speed": 90,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "g",
+    "looks_like": "mon_bear",
+    "color": "brown",
+    "aggression": -20,
+    "morale": 50,
+    "melee_skill": 2,
+    "melee_dice": 3,
+    "melee_dice_sides": 6,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      }
+    ],
+    "dodge": 1,
+    "armor_bash": 8,
+    "armor_cut": 16,
+    "armor_stab": 4,
+    "armor_bullet": 4,
+    "vision_day": 25,
+    "vision_night": 10,
+    "path_settings": {
+      "max_dist": 15
+    },
+    "anger_triggers": [
+      "HURT",
+      "PLAYER_NEAR_BABY"
+    ],
+    "reproduction": {
+      "baby_monster": "mon_glyptodont_baby",
+      "baby_count": 2,
+      "baby_timer": 180
+    },
+    "baby_flags": [
+      "SPRING"
+    ],
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        60
+      ]
+    ],
+    "flags": [
+      "ANIMAL",
+      "BASHES",
+      "KEENNOSE",
+      "HEARS",
+      "PATH_AVOID_DANGER_1",
+      "PUSH_MON",
+      "SEES",
+      "WARM"
+    ],
+    "//2": "Glyptodont sp. used as reference. No reproductive data",
+    "//3": "Would be cool for these to dig and live around mini-dungeon paleoburrows"
+  },
+  {
+    "id": "mon_glyptodont_baby",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨爪懒兽幼崽"
+    },
+    "copy-from": "mon_glyptodont",
+    "description": "一只小雕齿兽，有汽车轮子那么大。",
+    "volume": "20 L",
+    "weight": "20 kg",
+    "hp": 25,
+    "speed": 105,
+    "aggression": -20,
+    "morale": 25,
+    "melee_skill": 2,
+    "melee_dice": 3,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
+    "dodge": 2,
+    "armor_bash": 6,
+    "armor_cut": 8,
+    "armor_stab": 1,
+    "armor_bullet": 2,
+    "path_settings": {
+      "max_dist": 10
+    },
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        65
+      ]
+    ],
+    "upgrades": {
+      "age_grow": 75,
+      "into": "mon_glyptodont"
+    },
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_herpetotherium",
+    "type": "MONSTER",
+    "name": {
+      "str": "爬兽"
+    },
+    "copy-from": "mon_opossum",
+    "description": "一种小型、像啮齿动物的动物。它类似于普通的负鼠，但皮毛呈红色，且只有老鼠那么大。",
+    "volume": "90 ml",
+    "weight": "80 g",
+    "hp": 2,
+    "speed": 110,
+    "symbol": "ṗ",
+    "looks_like": "mon_opossum",
+    "color": "red",
+    "aggression": -5,
+    "morale": 5,
+    "melee_skill": 3,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 0
+      }
+    ],
+    "vision_night": 15,
+    "anger_triggers": [
+      "FRIEND_ATTACKED"
+    ],
+    "fear_triggers": [
+      "HURT",
+      "PLAYER_CLOSE"
+    ],
+    "reproduction": {
+      "baby_monster": "mon_herpetotherium_cub",
+      "baby_count": 4,
+      "baby_timer": 135
+    },
+    "baby_flags": [
+      "SPRING",
+      "SUMMER",
+      "AUTUMN",
+      "WINTER"
+    ],
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        50
+      ]
+    ],
+    "flags": [
+      "ANIMAL",
+      "CLIMBS",
+      "HEARS",
+      "PATH_AVOID_DANGER_1",
+      "SEES",
+      "SMELLS",
+      "WARM"
+    ],
+    "//": "Tried to use Herpetotherium sp. as reference, but there's basically no data, so it's mostly copied from mon_opossum and mon_black_rat . No reproductive data"
+  },
+  {
+    "id": "mon_herpetotherium_cub",
+    "type": "MONSTER",
+    "name": {
+      "str": "爬兽幼崽"
+    },
+    "copy-from": "mon_herpetotherium",
+    "description": "一只小爬兽。是的，比成年个体还要小。",
+    "volume": "9 ml",
+    "weight": "10 g",
+    "hp": 1,
+    "speed": 90,
+    "aggression": -65,
+    "morale": 4,
+    "melee_skill": 2,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 0
+      }
+    ],
+    "dodge": 1,
+    "armor_bash": 0,
+    "armor_cut": 0,
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        25
+      ]
+    ],
+    "upgrades": {
+      "age_grow": 65,
+      "into": "mon_herpetotherium"
+    },
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_megatherium",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨爪懒兽"
+    },
+    "description": "像熊一样的巨大树懒，大约高6米，巨大的爪子向内弯曲，如果它想停下来休息，他会用两只后腿站立并且用锥形的尾巴辅助",
+    "volume": "3800 L",
+    "weight": "3500 kg",
+    "default_faction": "bear",
+    "bodytype": "bear",
+    "//": "could stand up like a roo but its arms were definitely not small",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "harvest": "mammal_large_leather",
+    "hp": 600,
+    "speed": 105,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "ṁ",
+    "looks_like": "mon_bear",
+    "color": "light_gray",
+    "aggression": -5,
+    "morale": 40,
+    "melee_skill": 5,
+    "melee_dice": 3,
+    "melee_dice_sides": 8,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 12
+      }
+    ],
+    "dodge": 1,
+    "armor_bash": 8,
+    "armor_cut": 3,
+    "armor_stab": 2,
+    "armor_bullet": 2,
+    "vision_day": 30,
+    "vision_night": 10,
+    "path_settings": {
+      "max_dist": 15
+    },
+    "anger_triggers": [
+      "HURT",
+      "PLAYER_NEAR_BABY"
+    ],
+    "reproduction": {
+      "baby_monster": "mon_megatherium_cub",
+      "baby_count": 4,
+      "baby_timer": 240
+    },
+    "baby_flags": [
+      "SPRING"
+    ],
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        120
+      ]
+    ],
+    "flags": [
+      "ANIMAL",
+      "BASHES",
+      "KEENNOSE",
+      "HEARS",
+      "PATH_AVOID_DANGER_1",
+      "PUSH_MON",
+      "SEES",
+      "WARM"
+    ],
+    "//2": "Megatherium americanum used as reference. No reproductive data",
+    "//3": "Would be cool for these to dig and live around mini-dungeon paleoburrows"
+  },
+  {
+    "id": "mon_megatherium_cub",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨爪懒兽幼崽"
+    },
+    "copy-from": "mon_megatherium",
+    "description": "一只“小”巨兽幼崽.差不多和一名成年男性一样高，前提是要双腿直立（还有尾巴的长度）",
+    "volume": "50 L",
+    "weight": "40 kg",
+    "hp": 80,
+    "speed": 125,
+    "aggression": -15,
+    "morale": 25,
+    "melee_skill": 3,
+    "melee_dice": 3,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 6
+      }
+    ],
+    "dodge": 2,
+    "armor_bash": 2,
+    "armor_cut": 1,
+    "armor_stab": 1,
+    "armor_bullet": 0,
+    "path_settings": {
+      "max_dist": 10
+    },
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        100
+      ]
+    ],
+    "upgrades": {
+      "age_grow": 85,
+      "into": "mon_megatherium"
+    },
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_pakicetus",
+    "type": "MONSTER",
+    "name": {
+      "str": "巴基斯坦鲸",
+      "str_pl": "巴基斯坦鲸"
+    },
+    "description": "一种长相奇怪的动物（或者奇怪的是，还挺可爱？），看起来像一只大老鼠，眼睛位于头顶。它身材矮小，最大的个体能长到1米高，有奇怪的带蹼、略长、爪子厚但钝的手指。它在水域附近游荡，捕鱼为食。",
+    "volume": "45 L",
+    "weight": "45 kg",
+    "default_faction": "touhou_piscivore",
+    "bodytype": "dog",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "harvest": "mammal_fur",
+    "hp": 55,
+    "speed": 115,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "p",
+    "color": "brown",
+    "aggression": -10,
+    "morale": 15,
+    "melee_skill": 5,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 6
+      }
+    ],
+    "dodge": 3,
+    "armor_bash": 1,
+    "armor_cut": 2,
+    "vision_day": 35,
+    "vision_night": 6,
+    "path_settings": {
+      "max_dist": 8
+    },
+    "reproduction": {
+      "baby_monster": "mon_pakicetus_pup",
+      "baby_count": 2,
+      "baby_timer": 60
+    },
+    "baby_flags": [
+      "SPRING",
+      "SUMMER",
+      "AUTUMN",
+      "WINTER"
+    ],
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "FRIEND_DIED",
+      "STALK"
+    ],
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        100
+      ]
+    ],
+    "flags": [
+      "ANIMAL",
+      "HEARS",
+      "PATH_AVOID_DANGER_1",
+      "SEES",
+      "SMELLS",
+      "SWIMS",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_pakicetus_pup",
+    "type": "MONSTER",
+    "name": {
+      "str": "巴基斯坦鲸幼崽"
+    },
+    "copy-from": "mon_pakicetus",
+    "description": "一只绝对可爱的巴基斯坦鲸幼崽。",
+    "volume": "2000 ml",
+    "weight": "2200 kg",
+    "harvest": "mammal_tiny",
+    "hp": 10,
+    "speed": 80,
+    "color": "light_gray",
+    "morale": 5,
+    "melee_skill": 2,
+    "melee_dice": 2,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      }
+    ],
+    "dodge": 1,
+    "armor_bash": 0,
+    "armor_cut": 1,
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        65
+      ]
+    ],
+    "upgrades": {
+      "age_grow": 25,
+      "into": "mon_pakicetus"
+    },
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_taeniolabis",
+    "type": "MONSTER",
+    "name": {
+      "str": "带齿兽"
+    },
+    "copy-from": "mon_beaver",
+    "description": "一种非常大、像啮齿动物的动物。它看起来像水豚和水獭的混合体，但体型是它们的数倍。这种野兽平静地四处走动，寻找食物。",
+    "volume": "100 L",
+    "weight": "100 kg",
+    "harvest": "mammal_large_fur",
+    "hp": 110,
+    "speed": 110,
+    "symbol": "ȓ",
+    "looks_like": "mon_beaver",
+    "aggression": -12,
+    "morale": 30,
+    "melee_skill": 3,
+    "melee_dice": 3,
+    "melee_dice_sides": 6,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      }
+    ],
+    "dodge": 2,
+    "armor_bash": 2,
+    "armor_cut": 2,
+    "anger_triggers": [
+      "HURT",
+      "PLAYER_CLOSE",
+      "PLAYER_NEAR_BABY"
+    ],
+    "fear_triggers": [
+      "SOUND"
+    ],
+    "reproduction": {
+      "baby_monster": "mon_taeniolabis_cub",
+      "baby_count": 4,
+      "baby_timer": 135
+    },
+    "baby_flags": [
+      "SPRING",
+      "SUMMER",
+      "AUTUMN",
+      "WINTER"
+    ],
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        50
+      ]
+    ],
+    "flags": [
+      "ANIMAL",
+      "BASHES",
+      "HEARS",
+      "PATH_AVOID_DANGER_1",
+      "PUSH_MON",
+      "SEES",
+      "SMELLS",
+      "SWIMS",
+      "WARM",
+      "WATER_CAMOUFLAGE"
+    ],
+    "//": "Taeniolabidoidea sp. taken as reference. No reproductive data"
+  },
+  {
+    "id": "mon_taeniolabis_cub",
+    "type": "MONSTER",
+    "name": {
+      "str": "带齿兽幼崽"
+    },
+    "copy-from": "mon_taeniolabis",
+    "description": "一只小带齿兽。像河狸，但有一条胖老鼠的尾巴。",
+    "volume": "22 L",
+    "weight": "22 kg",
+    "hp": 20,
+    "speed": 100,
+    "aggression": -30,
+    "morale": 15,
+    "melee_skill": 2,
+    "melee_dice": 3,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
+    "dodge": 2,
+    "armor_bash": 0,
+    "armor_cut": 1,
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        40
+      ]
+    ],
+    "upgrades": {
+      "age_grow": 65,
+      "into": "mon_taeniolabis"
+    },
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_thylacine",
+    "type": "MONSTER",
+    "name": {
+      "str": "袋狼"
+    },
+    "description": "也被称为塔斯马尼亚狼，或库林纳*，以及其他几个原住民名称。实际上不是犬科成员，而是像袋鼠和负鼠一样的有袋类，这种灰色、长而矮、像狗的动物背部有一系列特征性的黑色条纹。被认为是某些大洋洲地区的顶级掠食者，对这种夜行动物的行为知之甚少。\n（*Coorinna，塔斯马尼亚原住民语言中对袋狼的称呼之一。）",
+    "volume": "16000 ml",
+    "weight": "16 kg",
+    "default_faction": "touhou_thylacine",
+    "bodytype": "dog",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "harvest": "mammal_fur",
+    "hp": 30,
+    "speed": 115,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "t",
+    "color": "light_gray",
+    "aggression": -10,
+    "morale": 15,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
+    "dodge": 4,
+    "vision_night": 20,
+    "path_settings": {
+      "max_dist": 10
+    },
+    "reproduction": {
+      "baby_monster": "mon_thylacine_pup",
+      "baby_count": 3,
+      "baby_timer": 90
+    },
+    "baby_flags": [
+      "SPRING",
+      "SUMMER",
+      "AUTUMN",
+      "WINTER"
+    ],
+    "biosignature": {
+      "biosig_item": "feces_thylacine",
+      "biosig_timer": 8
+    },
+    "anger_triggers": [
+      "HURT",
+      "FRIEND_ATTACKED",
+      "FRIEND_DIED",
+      "PLAYER_NEAR_BABY"
+    ],
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        100
+      ],
+      [
+        "PARROT",
+        4
+      ]
+    ],
+    "flags": [
+      "ANIMAL",
+      "GROUP_MORALE",
+      "HEARS",
+      "KEENNOSE",
+      "PATH_AVOID_DANGER_1",
+      "SEES",
+      "SWARMS",
+      "WARM"
+    ],
+    "//": " Previously extinct in the Outside world, they were passively transferred to Gensokyo at some point in the past. ",
+    "//2": "These technically should have zombie versions, but I don't like that idea"
+  },
+  {
+    "id": "mon_thylacine_pup",
+    "type": "MONSTER",
+    "name": {
+      "str": "袋狼幼崽"
+    },
+    "copy-from": "mon_thylacine",
+    "description": "一只微小、可爱且毫无防备的袋狼幼崽。",
+    "volume": "600 ml",
+    "weight": "750 kg",
+    "harvest": "mammal_tiny",
+    "hp": 8,
+    "speed": 75,
+    "color": "dark_gray",
+    "aggression": -15,
+    "morale": 8,
+    "melee_skill": 2,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 1
+      }
+    ],
+    "dodge": 1,
+    "vision_night": 10,
+    "path_settings": {
+      "max_dist": 6
+    },
+    "upgrades": {
+      "age_grow": 40,
+      "into": "mon_thylacine"
+    },
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        85
+      ],
+      [
+        "PARROT",
+        11
+      ]
+    ],
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  }
+]

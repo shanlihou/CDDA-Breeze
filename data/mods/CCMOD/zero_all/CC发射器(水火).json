@@ -1,0 +1,118 @@
+[
+  {
+    "id": "CCflamethrower",
+    "copy-from": "flamethrower",
+    "type": "GUN",
+    "subtypes": [ "GUN" ],
+    "name": { "str": "CC36发射器（喷火器）" },
+    "description": "一个自制的火焰喷射器，使用手摇泵从内置油箱中抽取燃料。虽然是自制的，但它仍优于许多其他自制武器。并且可以使用多种燃料。它消耗较少的燃料来产生火焰，但威力和范围都减少了。源技术来自c++，已适配cc系列并改装。",
+    "ammo": [ "flammable" ],
+    "weight": "1587 g",
+    "volume": "5 L",
+    "price": "200 USD",
+    "price_postapoc": "6 USD",
+    "to_hit": -1,
+    "melee_damage": {
+      "bash": 10
+    },
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "ranged_damage": {
+      "damage_type": "heat",
+      "amount": -1,
+      "armor_penetration": -1
+    },
+    "range": 33,
+    "dispersion": 150,
+    "durability": 8,
+    "valid_mod_locations": [ [ "sling", 1 ] ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true, 
+        "spoil_multiplier": 0.001,
+        "weight_multiplier": 0.000, 
+        "volume_multiplier": 0.000, 
+        "watertight": true,
+        "ammo_restriction": {
+          "diesel": 1500,
+          "gasoline": 1500,
+          "flammable": 1500,
+          "lamp_oil": 1500,
+          "crude_lamp_oil": 1500,
+          "motor_oil": 1500,
+          "jp8": 1500,
+          "avgas": 1500
+        }
+      }
+    ],
+    "reload": 4,
+    "skill": "launcher",
+    "ammo_to_fire": 50
+  },
+  {
+    "id": "CCwatercannon",
+    "looks_like": "m79",
+    "type": "GUN",
+    "subtypes": [ "GUN" ],
+    "symbol": "&",
+    "color": "dark_gray",
+    "name": { "str": "CC47发射器（水炮）" },
+    "description": "消防水炮改造的水弹发射器，救火专用。虽然没有伤害，但是可以让目标-冷静-几秒钟。强大水压可以让部分机械进水也能“冷静”一下。后坐力很强，通常安装载具使用。",
+    "price": "200 USD",
+    "price_postapoc": "6 USD",
+    "material": [ "steel" ],
+    "flags": [ "NEVER_JAMS", "NON_FOULING" ],
+    "ammo_effects": [ "JET", "BEANBAG", "NEVER_MISFIRES", "RECOVER_10", "ROBOT_DAZZLE", "LARGE_BEANBAG", "BLINDS_EYES" ],
+    "skill": "pistol",
+    "ammo": [ "water" ],
+    "weight": "2500 g",
+    "volume": "1500 ml",
+    "to_hit": -5,
+    "range": 35,
+    "dispersion": 50,
+    "durability": 7,
+    "modes": [ [ "DEFAULT", "burst", 4 ] ],
+    "clip_size": 100,
+    "reload": 0,
+    "valid_mod_locations": [ [ "sling", 1 ] ],
+    "default_mods": [ "shoulder_strap_front" ],
+    "pocket_data": [ { 
+    "pocket_type": "MAGAZINE", 
+    "rigid": true, 
+    "spoil_multiplier": 0.001,
+    "weight_multiplier": 0.000, 
+    "volume_multiplier": 0.000, 
+    "watertight": true, 
+    "ammo_restriction": { "water": 80 } } ],
+    "melee_damage": { "bash": 10 }
+  },
+  {
+        "type" : "recipe",
+    "result": "CCflamethrower",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC武器装备",
+    "skill_used": "survival",
+    "time": "100second",
+    "reversible": true,
+    "autolearn": true,
+    "components": [ [ [ "CCMODcoin", 230 ] ] ]
+  },
+  {
+        "type" : "recipe",
+    "result": "CCwatercannon",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC武器装备",
+    "skill_used": "survival",
+    "time": "100second",
+    "reversible": true,
+    "autolearn": true,
+    "components": [ [ [ "CCMODcoin", 230 ] ] ]
+  }
+]

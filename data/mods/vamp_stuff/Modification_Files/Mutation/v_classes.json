@@ -1,0 +1,68 @@
+[
+  {
+    "type": "mutation",
+    "id": "VAMP_MANA_spellcaster",
+    "name": {
+      "str": "术士"
+    },
+    "points": 0,
+    "description": "术士遵循古代混乱神灵的规则，据说古神们生活在世界诞生之前。他们也被称为暗法，以其超强的魔法破坏力而闻名。尽管他们已经沉入历史的深处，但它们的强大仍然不可估量。",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": false,
+    "cancels": [
+      "VAMP_BLOOD_spellcaster",
+      "VAMP_ELEM_spellcaster"
+    ],
+    "spells_learned": [
+      [
+        "t1_blood_transfusion",
+        1
+      ]
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "VAMP_ELEM_spellcaster",
+    "name": {
+      "str": "亵渎术士"
+    },
+    "points": 0,
+    "description": "亵渎术士居住在远离世界的地方，利用黑暗元素并控制自己的欲望。他们的魔法充满了纯粹的邪恶，注入了让弱者腐化的元素。",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": false,
+    "cancels": [
+      "VAMP_MANA_spellcaster",
+      "VAMP_BLOOD_spellcaster"
+    ],
+    "spells_learned": [
+      [
+        "t1_blood_transfusion",
+        1
+      ]
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "VAMP_BLOOD_spellcaster",
+    "name": {
+      "str": "血魔法师"
+    },
+    "points": 0,
+    "description": "吸血鬼在他们的环境中往往是机敏的，他们可以操纵自己的生命力，夺取他人的生命力以满足他们的需要。他们冒着生命危险去击败他们的敌人。",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": false,
+    "cancels": [
+      "VAMP_ELEM_spellcaster",
+      "VAMP_MANA_spellcaster"
+    ],
+    "spells_learned": [
+      [
+        "t1_blood_transfusion",
+        1
+      ]
+    ]
+  }
+]

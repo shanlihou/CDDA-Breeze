@@ -1,0 +1,45 @@
+[
+  {
+    "type": "mutation",
+    "id": "mut_valkyrur",
+    "name": {
+      "str": "瓦尔基茹尔力量"
+    },
+    "points": 5,
+    "description": "你拥有古代北欧民族瓦尔基茹尔的血脉力量。你的全属性增加5点，平地移动加速25%，拥有两倍负重，并且全身拥有坚不可摧的抵抗力(25点物理防御)。",
+    "starting_trait": true,
+    "category": [
+      "VALKYRURM"
+    ],
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth",
+          "eyes"
+        ],
+        "physical": 25
+      }
+    ],
+    "weight_capacity_modifier": 2,
+    "social_modifiers": {
+      "intimidate": 5
+    },
+    "movecost_flatground_modifier": 0.75,
+    "passive_mods": {
+      "dex_mod": 5,
+      "str_mod": 5,
+      "per_mod": 5,
+      "int_mod": 5
+    }
+  }
+]

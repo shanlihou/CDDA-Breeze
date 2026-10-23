@@ -1,0 +1,55 @@
+[
+  {
+    "//": "枪型.",
+    "id": "bio_mininukeboom",
+    "looks_like": "mininuke",
+    "type": "GUN",
+    "name": { "str": "微型核弹" },
+    "description": "一款威力极强的武器，便携式核弹。你可以激活它的开关，它的威力足以摧毁房屋，产生一个放射性弹坑。",
+    "weight": "23000 g",
+    "volume": "16000 ml",
+    "price": "10000 USD",
+    "to_hit": 0,
+    "bashing": 8,
+    "material": [
+      "steel",
+	  "plastic"
+    ],
+    "symbol": "O",
+    "color": "green",
+    "skill": "launcher",
+    "range": 1,
+    "ranged_damage": {
+      "damage_type": "bash",
+      "amount": 9000000,
+      "armor_penetration": 9000000
+    },
+    "dispersion": 0,
+    "durability": 10,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ]
+    ],
+    "loudness": 365,
+    "reload": 10,
+    "ammo_effects": [
+	  "MININUKE_MOD",
+      "EXPLOSIVE",
+	  "NEVER_MISFIRES",
+	  "TOXICGAS",
+	  "JET"
+    ],
+    "flags": [
+      "NO_UNLOAD",
+      "NO_UNWIELD",
+      "NO_RELOAD",
+      "NEVER_JAMS",
+      "NON-FOULING",
+      "NEEDS_NO_LUBE",
+      "TRADER_AVOID"
+    ]
+  }
+]

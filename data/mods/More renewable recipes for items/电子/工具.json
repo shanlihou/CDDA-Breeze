@@ -1,0 +1,100 @@
+[
+  {
+    "result": "cell_phone",
+    "type": "recipe",
+    "id_suffix":"from_mrrfi_cell_phone",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_TOOLS",
+    "skill_used": "electronics",
+    "difficulty": 5,
+    "skills_required": [ "fabrication", 2 ],
+    "time": "45 m",
+    "autolearn": true,
+    "result_mult": 1,
+    "qualities": [ {"id": "SCREW_FINE", "level": 1}],
+    "using": [ [ "soldering_standard", 5 ] ],
+    "components": 
+    [ 
+      [ [ "scrap_aluminum", 1 ] ], 
+      [ [ "small_lcd_screen", 1 ] ],
+      [ [ "processor", 1 ] ]
+    ]
+  },
+  {
+    "result": "smart_phone",
+    "type": "recipe",
+    "id_suffix":"from_mrrfi_smart_phone",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_TOOLS",
+    "skill_used": "electronics",
+    "difficulty": 5,
+    "skills_required": [ "fabrication", 2 ],
+    "time": "45 m",
+    "autolearn": true,
+    "result_mult": 1,
+    "qualities": [ {"id": "SCREW_FINE", "level": 1}],
+    "using": [ [ "soldering_standard", 5 ] ],
+    "components": 
+    [ 
+      [ [ "scrap_aluminum", 1 ] ], 
+      [ [ "small_lcd_screen", 1 ] ],
+      [ [ "processor", 1 ] ],
+      [ [ "light_plus_battery_cell", 1 ] ],
+      [ [ "lens_small", 1 ] ],
+      [ [ "mobile_memory_card_used", 1 ] ]
+    ]
+  },
+  {
+    "result": "laptop",
+    "type": "recipe",
+    "id_suffix":"from_mrrfi_laptop",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_TOOLS",
+    "skill_used": "electronics",
+    "difficulty": 6,
+    "skills_required": [ "fabrication", 3 ],
+    "time": "120 m",
+    "autolearn": true,
+    "result_mult": 1,
+    "qualities": [ {"id": "SCREW_FINE", "level": 1}],
+    "using": [ [ "soldering_standard", 10 ] ],
+    "components": 
+    [ 
+      [ [ "RAM", 4 ] ], 
+      [ [ "small_lcd_screen", 1 ] ],
+      [ [ "processor", 1 ] ],
+      [ [ "circuit", 1 ] ],
+      [ [ "cable", 6 ] ],
+      [ [ "amplifier", 1 ] ],
+      [ [ "power_supply", 1 ] ],
+      [ [ "plastic_chunk", 1 ] ]
+    ]
+  },
+  {
+    "result": "mp3",
+    "type": "recipe",
+    "id_suffix":"from_mrrfi_mp3",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_TOOLS",
+    "skill_used": "electronics",
+    "difficulty": 5,
+    "skills_required": [ "fabrication", 2 ],
+    "time": "45 m",
+    "autolearn": true,
+    "result_mult": 1,
+    "qualities": [ {"id": "SCREW_FINE", "level": 1}],
+    "using": [ [ "soldering_standard", 5 ] ],
+    "components": 
+    [ 
+      [ [ "scrap_aluminum", 1 ] ], 
+      [ [ "small_lcd_screen", 1 ] ],
+      [ [ "processor", 1 ] ],
+      [ [ "RAM", 1 ] ],
+      [ [ "power_supply", 1 ] ]
+    ]
+  }
+]

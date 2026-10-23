@@ -1,0 +1,61 @@
+[
+  {
+    "id": "生化核质体电浆炮",
+    "type": "GUN",
+    "symbol": "(",
+    "color": "red",
+    "name": { "str": "生化核质体电浆炮" },
+    "description": "骨与肉交织而成的电浆炮。ABB计划生化项目的产物之一，与人们印象中的黏糊糊恶心的生物武器不同，它十分规整，血肉和骨骼被塑造成特定的零件拼接生长在一起，仅有后方的一条神经索呈现出暴露的血肉形态，其内部的细胞器可以进行微型核聚变反应，释放强大的能量，它发射的子弹会产生爆炸和闪电，还具有EMP效应",
+    "price": "5800000 USD",
+    "price_postapoc": "300 USD",
+    "material": [ "flesh", "bone" ],
+    "ammo_effects": [ "NEVER_MISFIRES", "MUZZLE_SMOKE", "PLASMA", "BLINDS_EYES", "EMP", "LIGHTNING", "PLASMA_BUBBLE", "EXPLOSIVE" ],
+    "flags": [ "NEVER_JAMS", "NON_FOULING", "NEEDS_NO_LUBE" ],
+    "skill": "rifle",
+    "weight": "12500 g",
+    "volume": "20 L",
+    "bashing": 8,
+    "to_hit": -1,
+    "ranged_damage": { "damage_type": "stab", "amount": 160, "armor_penetration": 50 },
+    "range": 60,
+    "barrel_volume": "500 ml",
+    "dispersion": 50,
+    "recoil": 1,
+    "durability": 8,
+    "modes": [ [ "DEFAULT", "semi", 1 ], [ "BURST", "burst", 3 ] ],
+    "valid_mod_locations": [ [ "accessories", 1 ], [ "sling", 1 ] ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "values": [ { "value": "PERCEPTION", "add": 10 } ],
+          "mutations": [ "PRED2", "INFRARED", "ELECTRORECEPTORS", "PSYCHOPATH", "HUNGER" ]
+        }
+      ]
+    },
+    "use_action": { "type": "transform", "msg": "刺刀模式", "target": "生化刺刀", "active": true }
+  },
+  {
+    "id": "生化刺刀",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": { "str": "生化刺刀" },
+    "description": "生化刺刀",
+    "weight": "1300 g",
+    "volume": "3500 ml",
+    "longest_side": "100 cm",
+    "price": 0,
+    "price_postapoc": 0,
+    "bashing": 12,
+    "cutting": 30,
+    "to_hit": { "grip": "solid", "length": "long", "surface": "point", "balance": "neutral" },
+    "material": [ "flesh", "bone" ],
+    "symbol": "/",
+    "color": "brown",
+    "techniques": [ "WBLOCK_2", "PRECISE" ],
+    "flags": [ "STAB", "DURABLE_MELEE", "UNBREAKABLE_MELEE" ],
+    "weapon_category": [ "POLEARMS" ],
+    "use_action": { "type": "transform", "msg": "电浆炮模式", "target": "生化核质体电浆炮", "active": true }
+  }
+]

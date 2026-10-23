@@ -1,0 +1,492 @@
+[
+  {
+    "id": "spell_craft_sorcerer_item_0",
+    "type": "SPELL",
+    "name": "术士-额外法术位-Lv0",
+    "description": "获得对应级别的法术位。",
+    "spell_class": "spell_craft_sorcerer_0",
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "spawn_item",
+    "effect_str": "spell_sorcerer_item_0",
+    "min_damage": 80,
+    "damage_increment": 20,
+    "max_damage": 1000,
+    "energy_source": "MANA",
+    "difficulty": 1,
+    "max_level": 50,
+    "flags": [
+      "PERMANENT",
+      "PERMANENT_ALL_LEVELS",
+      "NO_LEGS",
+      "CONCENTRATE",
+      "SOMATIC",
+      "VERBAL",
+      "NO_EXPLOSION_SFX"
+    ],
+    "shape": "blast",
+    "base_casting_time": 6000,
+    "final_casting_time": 6000,
+    "base_energy_cost": 100,
+    "final_energy_cost": 1000
+  },
+  {
+    "id": "spell_craft_sorcerer_item_1",
+    "type": "SPELL",
+    "name": "术士-额外法术位-Lv1",
+    "description": "获得对应级别的法术位。",
+    "spell_class": "spell_craft_sorcerer_1",
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "spawn_item",
+    "effect_str": "spell_sorcerer_item_1",
+    "components": "spell_sorcerer_cost_item_1",
+    "min_damage": 3,
+    "damage_increment": 1,
+    "max_damage": 50,
+    "min_duration": 4320000,
+    "duration_increment": 360000,
+    "max_duration": 17280000,
+    "energy_source": "MANA",
+    "difficulty": 2,
+    "max_level": 50,
+    "flags": [
+      "PERMANENT",
+      "NO_LEGS",
+      "CONCENTRATE",
+      "SOMATIC",
+      "VERBAL",
+      "NO_EXPLOSION_SFX"
+    ],
+    "shape": "blast",
+    "base_casting_time": 12000,
+    "casting_time_increment": -300,
+    "final_casting_time": 1000,
+    "base_energy_cost": 100
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_item_1",
+    "id": "spell_craft_sorcerer_item_2",
+    "type": "SPELL",
+    "name": "术士-额外法术位-Lv2",
+    "description": "获得对应级别的法术位。\n并基于对应法术位等级获得较少的低级法术位。",
+    "spell_class": "spell_craft_sorcerer_2",
+    "effect_str": "spell_sorcerer_item_2",
+    "components": "spell_sorcerer_cost_item_2",
+    "min_damage": 3,
+    "damage_increment": 0.9,
+    "max_damage": 45,
+    "difficulty": 3,
+    "max_level": 50,
+    "base_casting_time": 18000,
+    "casting_time_increment": -600,
+    "final_casting_time": 1000,
+    "base_energy_cost": 200,
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_item_ex_1"
+      }
+    ],
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_item_1",
+    "id": "spell_craft_sorcerer_item_3",
+    "type": "SPELL",
+    "name": "术士-额外法术位-Lv3",
+    "description": "获得对应级别的法术位。\n并基于对应法术位等级获得较少的低级法术位。",
+    "spell_class": "spell_craft_sorcerer_3",
+    "effect_str": "spell_sorcerer_item_3",
+    "components": "spell_sorcerer_cost_item_3",
+    "min_damage": 3,
+    "damage_increment": 0.8,
+    "max_damage": 40,
+    "difficulty": 5,
+    "max_level": 50,
+    "base_casting_time": 24000,
+    "casting_time_increment": -900,
+    "final_casting_time": 1000,
+    "base_energy_cost": 300,
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_item_ex_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_item_ex_2"
+      }
+    ],
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_item_1",
+    "id": "spell_craft_sorcerer_item_4",
+    "type": "SPELL",
+    "name": "术士-额外法术位-Lv4",
+    "description": "获得对应级别的法术位。\n并基于对应法术位等级获得较少的低级法术位。",
+    "spell_class": "spell_craft_sorcerer_4",
+    "effect_str": "spell_sorcerer_item_4",
+    "components": "spell_sorcerer_cost_item_4",
+    "min_damage": 2,
+    "damage_increment": 0.7,
+    "max_damage": 35,
+    "difficulty": 7,
+    "max_level": 50,
+    "base_casting_time": 30000,
+    "casting_time_increment": -1200,
+    "final_casting_time": 1000,
+    "base_energy_cost": 400,
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_item_ex_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_item_ex_2"
+      },
+      {
+        "id": "spell_craft_sorcerer_item_ex_3"
+      }
+    ],
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_item_1",
+    "id": "spell_craft_sorcerer_item_5",
+    "type": "SPELL",
+    "name": "术士-额外法术位-Lv5",
+    "description": "获得对应级别的法术位。\n并基于对应法术位等级获得较少的低级法术位。",
+    "spell_class": "spell_craft_sorcerer_5",
+    "effect_str": "spell_sorcerer_item_5",
+    "components": "spell_sorcerer_cost_item_5",
+    "min_damage": 2,
+    "damage_increment": 0.6,
+    "max_damage": 30,
+    "difficulty": 11,
+    "max_level": 50,
+    "base_casting_time": 36000,
+    "casting_time_increment": -1500,
+    "final_casting_time": 1000,
+    "base_energy_cost": 500,
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_item_ex_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_item_ex_2"
+      },
+      {
+        "id": "spell_craft_sorcerer_item_ex_3"
+      },
+      {
+        "id": "spell_craft_sorcerer_item_ex_4"
+      }
+    ],
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_item_1",
+    "id": "spell_craft_sorcerer_item_6",
+    "type": "SPELL",
+    "name": "术士-额外法术位-Lv6",
+    "description": "获得对应级别的法术位。\n并基于对应法术位等级获得较少的低级法术位。",
+    "spell_class": "spell_craft_sorcerer_6",
+    "effect_str": "spell_sorcerer_item_6",
+    "components": "spell_sorcerer_cost_item_6",
+    "min_damage": 2,
+    "damage_increment": 0.5,
+    "max_damage": 25,
+    "difficulty": 13,
+    "max_level": 50,
+    "base_casting_time": 42000,
+    "casting_time_increment": -1800,
+    "final_casting_time": 1000,
+    "base_energy_cost": 600,
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_item_ex_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_item_ex_2"
+      },
+      {
+        "id": "spell_craft_sorcerer_item_ex_3"
+      },
+      {
+        "id": "spell_craft_sorcerer_item_ex_4"
+      },
+      {
+        "id": "spell_craft_sorcerer_item_ex_5"
+      }
+    ],
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_item_1",
+    "id": "spell_craft_sorcerer_item_7",
+    "type": "SPELL",
+    "name": "术士-额外法术位-Lv7",
+    "description": "获得对应级别的法术位。\n并基于对应法术位等级获得较少的低级法术位。",
+    "spell_class": "spell_craft_sorcerer_7",
+    "effect_str": "spell_sorcerer_item_7",
+    "components": "spell_sorcerer_cost_item_7",
+    "min_damage": 2,
+    "damage_increment": 0.4,
+    "max_damage": 20,
+    "difficulty": 17,
+    "max_level": 50,
+    "base_casting_time": 48000,
+    "casting_time_increment": -2100,
+    "final_casting_time": 1000,
+    "base_energy_cost": 700,
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_item_ex_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_item_ex_2"
+      },
+      {
+        "id": "spell_craft_sorcerer_item_ex_3"
+      },
+      {
+        "id": "spell_craft_sorcerer_item_ex_4"
+      },
+      {
+        "id": "spell_craft_sorcerer_item_ex_5"
+      },
+      {
+        "id": "spell_craft_sorcerer_item_ex_6"
+      }
+    ],
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_item_1",
+    "id": "spell_craft_sorcerer_item_8",
+    "type": "SPELL",
+    "name": "术士-额外法术位-Lv8",
+    "description": "获得对应级别的法术位。\n并基于对应法术位等级获得较少的低级法术位。",
+    "spell_class": "spell_craft_sorcerer_8",
+    "effect_str": "spell_sorcerer_item_8",
+    "components": "spell_sorcerer_cost_item_8",
+    "min_damage": 2,
+    "damage_increment": 0.3,
+    "max_damage": 15,
+    "difficulty": 19,
+    "max_level": 50,
+    "base_casting_time": 54000,
+    "casting_time_increment": -2400,
+    "final_casting_time": 1000,
+    "base_energy_cost": 800,
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_item_ex_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_item_ex_2"
+      },
+      {
+        "id": "spell_craft_sorcerer_item_ex_3"
+      },
+      {
+        "id": "spell_craft_sorcerer_item_ex_4"
+      },
+      {
+        "id": "spell_craft_sorcerer_item_ex_5"
+      },
+      {
+        "id": "spell_craft_sorcerer_item_ex_6"
+      },
+      {
+        "id": "spell_craft_sorcerer_item_ex_7"
+      }
+    ],
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_item_1",
+    "id": "spell_craft_sorcerer_item_9",
+    "type": "SPELL",
+    "name": "术士-额外法术位-Lv9",
+    "description": "获得对应级别的法术位。\n并基于对应法术位等级获得较少的低级法术位。",
+    "spell_class": "spell_craft_sorcerer_9",
+    "effect_str": "spell_sorcerer_item_9",
+    "components": "spell_sorcerer_cost_item_9",
+    "min_damage": 1,
+    "damage_increment": 0.2,
+    "max_damage": 10,
+    "difficulty": 23,
+    "max_level": 50,
+    "base_casting_time": 60000,
+    "casting_time_increment": -3000,
+    "final_casting_time": 1000,
+    "base_energy_cost": 900,
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_item_ex_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_item_ex_2"
+      },
+      {
+        "id": "spell_craft_sorcerer_item_ex_3"
+      },
+      {
+        "id": "spell_craft_sorcerer_item_ex_4"
+      },
+      {
+        "id": "spell_craft_sorcerer_item_ex_5"
+      },
+      {
+        "id": "spell_craft_sorcerer_item_ex_6"
+      },
+      {
+        "id": "spell_craft_sorcerer_item_ex_7"
+      },
+      {
+        "id": "spell_craft_sorcerer_item_ex_8"
+      }
+    ],
+    "energy_source": "NONE"
+  },
+  {
+    "id": "spell_craft_sorcerer_item_ex_1",
+    "type": "SPELL",
+    "name": "术士-附加法术位-Lv1",
+    "description": "获得对应级别的法术位。",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "spawn_item",
+    "effect_str": "spell_sorcerer_item_1",
+    "min_damage": 2,
+    "min_duration": 4320000,
+    "max_damage": 50,
+    "max_duration": 17280000,
+    "energy_source": "MANA",
+    "max_level": 50,
+    "flags": [
+      "PERMANENT",
+      "NO_LEGS",
+      "CONCENTRATE",
+      "SOMATIC",
+      "VERBAL",
+      "NO_EXPLOSION_SFX"
+    ],
+    "shape": "blast"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_item_ex_1",
+    "id": "spell_craft_sorcerer_item_ex_2",
+    "type": "SPELL",
+    "name": "术士-附加法术位-Lv2",
+    "description": "获得对应级别的法术位。",
+    "spell_class": "NONE",
+    "effect_str": "spell_sorcerer_item_2",
+    "min_damage": 2,
+    "min_duration": 4320000,
+    "max_damage": 45,
+    "max_level": 50,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_item_ex_1",
+    "id": "spell_craft_sorcerer_item_ex_3",
+    "type": "SPELL",
+    "name": "术士-附加法术位-Lv3",
+    "description": "获得对应级别的法术位。",
+    "spell_class": "NONE",
+    "effect_str": "spell_sorcerer_item_3",
+    "min_damage": 2,
+    "min_duration": 4320000,
+    "max_damage": 40,
+    "max_level": 50,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_item_ex_1",
+    "id": "spell_craft_sorcerer_item_ex_4",
+    "type": "SPELL",
+    "name": "术士-附加法术位-Lv4",
+    "description": "获得对应级别的法术位。",
+    "spell_class": "NONE",
+    "effect_str": "spell_sorcerer_item_4",
+    "min_damage": 1,
+    "min_duration": 4320000,
+    "max_damage": 35,
+    "max_level": 50,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_item_ex_1",
+    "id": "spell_craft_sorcerer_item_ex_5",
+    "type": "SPELL",
+    "name": "术士-附加法术位-Lv5",
+    "description": "获得对应级别的法术位。",
+    "spell_class": "NONE",
+    "effect_str": "spell_sorcerer_item_5",
+    "min_damage": 1,
+    "min_duration": 4320000,
+    "max_damage": 30,
+    "max_level": 50,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_item_ex_1",
+    "id": "spell_craft_sorcerer_item_ex_6",
+    "type": "SPELL",
+    "name": "术士-附加法术位-Lv6",
+    "description": "获得对应级别的法术位。",
+    "spell_class": "NONE",
+    "effect_str": "spell_sorcerer_item_6",
+    "min_damage": 1,
+    "min_duration": 4320000,
+    "max_damage": 25,
+    "max_level": 50,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_item_ex_1",
+    "id": "spell_craft_sorcerer_item_ex_7",
+    "type": "SPELL",
+    "name": "术士-附加法术位-Lv7",
+    "description": "获得对应级别的法术位。",
+    "spell_class": "NONE",
+    "effect_str": "spell_sorcerer_item_7",
+    "min_damage": 1,
+    "min_duration": 4320000,
+    "max_damage": 20,
+    "max_level": 50,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_item_ex_1",
+    "id": "spell_craft_sorcerer_item_ex_8",
+    "type": "SPELL",
+    "name": "术士-附加法术位-Lv8",
+    "description": "获得对应级别的法术位。",
+    "spell_class": "NONE",
+    "effect_str": "spell_sorcerer_item_8",
+    "min_damage": 1,
+    "min_duration": 4320000,
+    "max_damage": 15,
+    "max_level": 50,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_item_ex_1",
+    "id": "spell_craft_sorcerer_item_ex_9",
+    "type": "SPELL",
+    "name": "术士-附加法术位-Lv9",
+    "description": "获得对应级别的法术位。",
+    "spell_class": "NONE",
+    "effect_str": "spell_sorcerer_item_9",
+    "min_damage": 1,
+    "min_duration": 4320000,
+    "max_damage": 10,
+    "max_level": 50,
+    "energy_source": "NONE"
+  }
+]

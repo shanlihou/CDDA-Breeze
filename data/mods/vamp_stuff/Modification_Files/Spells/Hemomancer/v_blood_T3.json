@@ -1,0 +1,75 @@
+[
+  {
+    "id": "t3_blood_crimsonhaze",
+    "type": "SPELL",
+    "name": {
+      "str": "深红色薄雾"
+    },
+    "description": "蒸发你的血液，创造一个迷失方向的烟雾波<color_yellow>减慢</color>敌人在你周围。\n*在4格半径范围内的敌人受到<color_yellow>失明<color>的影响7回合。\n\n这是一个<color_white>第3层的咒语。",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "v_spell_crimsonhaze",
+    "extra_effects": [
+      {
+        "id": "t3_blood_crimsonhaze_blind",
+        "hit_self": true
+      }
+    ],
+    "base_energy_cost": 7,
+    "final_energy_cost": 17,
+    "energy_source": "HP",
+    "spell_class": "VAMP_BLOOD_spellcaster",
+    "difficulty": 2,
+    "max_level": 15,
+    "min_aoe": 5,
+    "max_aoe": 15,
+    "min_duration": 500,
+    "max_duration": 1500,
+    "field_id": "fd_blood",
+    "min_field_intensity": 1,
+    "max_field_intensity": 2,
+    "field_chance": 15,
+    "flags": [
+      "SOMATIC",
+      "CONCENTRATE",
+      "NO_LEGS"
+    ]
+  },
+  {
+    "id": "t3_blood_suppress",
+    "type": "SPELL",
+    "name": {
+      "str": "抑制"
+    },
+    "description": "严重束缚目标，造成<color_green>点生物伤害</color>并使其失去意识<color_yellow></color>。\n\n这是一个<color_white>第3层的咒语。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "stunned",
+    "base_energy_cost": 500,
+    "energy_source": "MANA",
+    "spell_class": "VAMP_BLOOD_spellcaster",
+    "difficulty": 4,
+    "max_level": 20,
+    "min_damage": 0,
+    "max_damage": 10,
+    "min_range": 10,
+    "max_range": 5,
+    "damage_increment": 2,
+    "min_duration": 300,
+    "max_duration": 1500,
+    "base_casting_time": 125,
+    "flags": [
+      "SOMATIC",
+      "CONCENTRATE",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ]
+  }
+]

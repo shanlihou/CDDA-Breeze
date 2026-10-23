@@ -1,0 +1,81 @@
+[
+  {
+    "type": "mod_tileset",
+    "compatibility": [
+      "Chibi_Ultica",
+      "UltimateCataclysm",
+      "MshockXottoplus",
+      "UNDEAD_PEOPLE",
+      "UNDEAD_PEOPLE_BASE",
+      "UNDEAD_PEOPLE_LEGACY",
+      "UlticaShell",
+      "MshockXottoplus12",
+      "MSX++DEAD_PEOPLE",
+      "MXplus12_for_cosmetics",
+      "MSXotto+"
+    ],
+    "tiles-new": [
+      {
+        "file": "大型物品贴图.png",
+        "tiles": [
+          { "id": "刺舌", "fg": 0, "rotates": false },
+          { "id": "overlay_wielded_刺舌", "fg": 0, "rotates": false },
+          {
+            "id": [ "刺舌_on" ],
+            "animated": true,
+            "fg": [
+              { "weight": 5, "sprite": 1 },
+              { "weight": 5, "sprite": 2 },
+              { "weight": 5, "sprite": 3 },
+              { "weight": 5, "sprite": 4 }
+            ]
+          },
+          {
+            "id": [ "overlay_wielded_刺舌_on" ],
+            "animated": true,
+            "fg": [
+              { "weight": 10, "sprite": 1 },
+              { "weight": 10, "sprite": 2 },
+              { "weight": 10, "sprite": 3 },
+              { "weight": 10, "sprite": 4 }
+            ]
+          },
+          { "id": "震荡腔", "fg": 5, "rotates": false },
+          { "id": "overlay_wielded_震荡腔", "fg": 5, "rotates": false },
+          {
+            "id": [ "震荡腔_on" ],
+            "animated": true,
+            "fg": [
+              { "weight": 20, "sprite": 6 },
+              { "weight": 10, "sprite": 8 },
+              { "weight": 5, "sprite": 7 },
+              { "weight": 10, "sprite": 8 }
+            ]
+          },
+          {
+            "id": [ "overlay_wielded_震荡腔_on" ],
+            "animated": true,
+            "fg": [
+              { "weight": 20, "sprite": 6 },
+              { "weight": 10, "sprite": 8 },
+              { "weight": 5, "sprite": 7 },
+              { "weight": 10, "sprite": 8 }
+            ]
+          },
+          { "id": "骨齿发射器", "fg": 10, "rotates": false },
+          { "id": "overlay_wielded_骨齿发射器", "fg": 10, "rotates": false },
+          { "id": "长射骨齿发射器", "fg": 11, "rotates": false },
+          { "id": "overlay_wielded_长射骨齿发射器", "fg": 11, "rotates": false },
+          { "id": "酸解发射器", "fg": 12, "rotates": false },
+          { "id": "overlay_wielded_酸解发射器", "fg": 12, "rotates": false },
+          { "id": "爆质骨齿发射器", "fg": 13, "rotates": false },
+          { "id": "overlay_wielded_爆质骨齿发射器", "fg": 13, "rotates": false }
+        ],
+        "sprite_width": 96,
+        "sprite_height": 32,
+        "sprite_offset_x": -32,
+        "sprite_offset_y": 0
+      }
+    ]
+  }
+]

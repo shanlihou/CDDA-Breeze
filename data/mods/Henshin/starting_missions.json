@@ -1,0 +1,97 @@
+[
+  {
+    "id": "MISSION_HENSHIN_LOSTER",
+    "type": "mission_definition",
+    "name": { "str": "寻觅往昔" },
+    "description": "你忘记了许多事，这本应该是让你能够重新开始新人生的好契机，但你还是总在不经意间冒出前去探寻自身过往的想法。冥冥之中，你感觉有个地方在呼唤着你，犹如旧友的邀约。你必须做出抉择，决定自己要面对过去，还是面对未来。（注意：极度危险！）",
+    "goal": "MGOAL_KILL_MONSTER",
+    "difficulty": 5,
+    "start": {
+      "assign_mission_target": {
+        "om_terrain": "field",
+		"reveal_radius": 1,
+		"random": true,
+        "search_range": 55,
+        "min_distance": 15,
+        "z": 0
+      },
+      "update_mapgen": {
+        "place_monster": [
+		  { "monster": "mon_henshin_orphnoch_1", "x": 11, "y": 11, "target": true }
+		]
+      }
+    },
+    "origins": [ "ORIGIN_GAME_START" ],
+    "value": 0,
+    "end": {
+      "effect": [
+		{ "u_add_effect": "Henshin_MISSION_COMPLETE", "duration": "30 d" },
+		{ "u_add_trait": "PROF_HENSHIN_MISSION" },
+		{ "assign_mission": "MISSION_HENSHIN_LOSTER_2" }
+      ]
+    }
+  },
+  {
+    "id": "MISSION_HENSHIN_LOSTER_2",
+    "type": "mission_definition",
+    "name": { "str": "画上句号" },
+    "description": "你回忆起了自己与名为奥尔菲诺的存在不断抗争的过去，同时也理解了它们中的一部分同你一样苏醒在这个时代，并且仍然在尝试着唤醒它们那个拥有恐怖力量的王。是时候了，你必须跟过去一样阻止它们的计划，在这一次真正为这漫长的因缘画上句号。（注意：极度危险！）",
+    "goal": "MGOAL_KILL_MONSTER",
+    "difficulty": 6,
+    "start": {
+      "assign_mission_target": {
+        "om_terrain": "field",
+		"reveal_radius": 1,
+		"random": true,
+        "search_range": 75,
+        "min_distance": 35,
+        "z": 0
+      },
+      "update_mapgen": {
+        "place_monster": [
+		  { "monster": "mon_henshin_orphnoch_2", "x": 11, "y": 11, "target": true }
+		]
+      }
+    },
+    "origins": [ "ORIGIN_GAME_START" ],
+    "value": 0,
+    "end": {
+      "effect": [
+		{ "u_lose_effect": "Henshin_MISSION_COMPLETE" },
+		{ "u_add_effect": "Henshin_MISSION_COMPLETE_2", "duration": "30 d" },
+		{ "u_add_trait": "PROF_HENSHIN_MISSION_2" }
+      ]
+    }
+  },
+  {
+    "id": "MISSION_HENSHIN_LOSTER_555",
+    "type": "mission_definition",
+    "name": { "str": "终曲 - Finale -" },
+    "description": "【玩家从来就不是所谓的正版FAIZ，考虑新增一条真正的FAIZ腰带？】最终BOSS（历史改变机器？）死亡时发动的555伤害后死亡？目前place_monster仍为二阶段任务的代码（注意：任务完成将结束游戏！）",
+    "goal": "MGOAL_KILL_MONSTER",
+    "difficulty": 10,
+    "start": {
+      "assign_mission_target": {
+        "om_terrain": "field",
+		"reveal_radius": 1,
+		"random": true,
+        "search_range": 555,
+        "min_distance": 55,
+        "z": 0
+      },
+      "update_mapgen": {
+        "place_monster": [
+		  { "monster": "mon_henshin_orphnoch_2", "x": 11, "y": 11, "target": true }
+		]
+      }
+    },
+    "origins": [ "ORIGIN_GAME_START" ],
+    "value": 0,
+    "end": {
+      "effect": [
+		{ "u_lose_effect": "Henshin_MISSION_COMPLETE_2" },
+		{ "u_add_effect": "Henshin_MISSION_COMPLETE_3", "duration": "555 d" }
+      ]
+    }
+  }
+]

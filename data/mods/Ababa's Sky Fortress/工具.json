@@ -1,0 +1,21 @@
+[
+  {
+    "id": "丧尸笼子",
+    "type": "TOOL",
+    "name": { "str": "丧尸笼子" },
+    "description": "既然动物能抓，那么丧尸也应该可以抓...对吧？",
+    "weight": "10000 g",
+    "volume": "50 L",
+    "price": 2000,
+    "price_postapoc": 200,
+    "bashing": 1,
+    "cutting": 1,
+    "material": [ "steel" ],
+    "symbol": "#",
+    "color": "light_gray",
+    "properties": [ [ "creature_size_capacity", "HUGE" ] ],
+    "use_action": [ "CAPTURE_MONSTER_ACT" ],
+    "flags": [ "TRADER_AVOID" ],
+    "looks_like": "pet_carrier"
+  }
+]

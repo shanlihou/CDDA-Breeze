@@ -1,0 +1,32 @@
+[
+    {
+    "type": "recipe_category",
+    "id": "CC_OTHER",
+    "recipe_subcategories": [
+      "CSC_ALL",
+      "CSC_OTHER_TOOLS",
+      "CSC_OTHER_MEDICAL",
+      "CSC_OTHER_CONTAINERS",
+      "CSC_OTHER_MATERIALS",
+      "CSC_OTHER_PARTS",
+      "CSC_OTHER_TRAPS",
+      "CSC_OTHER_VEHICLE",
+      "CSC_OTHER_OTHER",
+      "CSC_OTHER_STAMINA"
+    ]
+  },
+  {
+    "result": "stamina_band",
+    "type": "recipe",
+    "activity_level": "NO_EXERCISE",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_STAMINA",
+    "skill_used": "survival",
+    "difficulty": 0,
+    "time": "1 m",
+    "autolearn": true,
+    "reversible": false,
+    "components": [ [ [ "scrap", 1 ] ] ],
+    "flags": [ "BLIND_EASY" ]
+  }
+]

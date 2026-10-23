@@ -1,0 +1,939 @@
+[
+  {
+    "ident": "fujiwara_no_mokou",
+    "type": "profession",
+    "name": "蓬莱的人之形",
+    "description": "你一直厮杀的不死之敌(如你这般)在大灾变中神秘消失了,你所认识的所有人也是如此.你要独自一人,带着熊熊烈火去面对被大灾变摧残后的世界了.",
+    "points": 4,
+    "proficiencies": [
+      "prof_food_prep",
+      "prof_wound_care"
+    ],
+    "skills": [
+      {
+        "level": 2,
+        "name": "cooking"
+      },
+      {
+        "level": 1,
+        "name": "dodge"
+      },
+      {
+        "level": 1,
+        "name": "firstaid"
+      },
+      {
+        "level": 3,
+        "name": "melee"
+      },
+      {
+        "level": 2,
+        "name": "survival"
+      },
+      {
+        "level": 2,
+        "name": "tailor"
+      },
+      {
+        "level": 3,
+        "name": "unarmed"
+      }
+    ],
+    "traits": [
+      "HOURAI_SPECIES",
+      "PROF_MOKOU",
+      "SPIRIT_USER"
+    ],
+    "items": {
+      "both": [
+        "mokou_boots",
+        "mokou_hakama",
+        "mokou_ribbon",
+        "mokou_ribbon",
+        "mokou_ribbon",
+        "mokou_ribbon",
+        "mokou_ribbon",
+        "mokou_ribbon",
+        "mokou_ribbon",
+        "mokou_shirt"
+      ],
+      "male": [
+        "boxer_shorts"
+      ],
+      "female": [
+        "bra",
+        "panties"
+      ]
+    },
+    "flags": [
+      "SCEN_ONLY"
+    ],
+    "//": "Lorewise she sould have lots of numbers, skills, proficiencies, etc. Balancewise that's not very good. Also, I took the yakitori joke seriously"
+  },
+  {
+    "ident": "hong_meiling",
+    "type": "profession",
+    "name": "红魔馆的门卫",
+    "description": "又是平淡无奇的一日:看门,重复传话,不能打瞌睡...大小姐在叫你过去了,对大小姐来说在白天还醒着是很不寻常的.出于“安全考虑”,她让你把所有东西都锁好,然后找女仆长领班.你照做了,就差一点就赶上了,但她出现在视线边缘时,她就那样...消失了?随后你也迷失了自我,现在你已经想不起来,上一次人类没有气还能走是什么时候了.",
+    "points": 2,
+    "proficiencies": [
+      "prof_food_prep"
+    ],
+    "//": "A barrier/counter spell would be nice, something like a hit_me_effect trigger to grant a buff_meiling_onblock (her martial arts technique)",
+    "skills": [
+      {
+        "level": 1,
+        "name": "cooking"
+      },
+      {
+        "level": 1,
+        "name": "dodge"
+      },
+      {
+        "level": 2,
+        "name": "melee"
+      },
+      {
+        "level": 3,
+        "name": "unarmed"
+      }
+    ],
+    "traits": [
+      "DEFT",
+      "EASYSLEEPER",
+      "HEAVYSLEEPER",
+      "PROF_MEILING",
+      "YOUKAI_SPECIES",
+      "SPIRIT_USER"
+    ],
+    "items": {
+      "both": [
+        "dress_shoes",
+        "meiling_cheongsam_upper",
+        "meiling_cheongsam_lower",
+        "meiling_hat",
+        "meiling_shirt",
+        "socks",
+        "tai_chi_pants"
+      ],
+      "male": [
+        "boxer_shorts"
+      ],
+      "female": [
+        "bra",
+        "panties"
+      ]
+    },
+    "flags": [
+      "SCEN_ONLY"
+    ],
+    "//2": "Meiling uses the pants in Soku but not in PMiSS"
+  },
+  {
+    "ident": "iku_nagae",
+    "type": "profession",
+    "name": "龙宫使者",
+    "description": "最后那天着实是忙碌.你有个消息要传达给比那名居的族长,等到达他们家族后,他们还有你的上级要你尽快找到天子.灾难发生时,你正跟着她落到了地球上.现在你不仅要完成你的任务,你还被困在了这里",
+    "points": 4,
+    "skills": [
+      {
+        "level": 2,
+        "name": "bashing"
+      },
+      {
+        "level": 1,
+        "name": "cutting"
+      },
+      {
+        "level": 2,
+        "name": "dodge"
+      },
+      {
+        "level": 2,
+        "name": "melee"
+      },
+      {
+        "level": 2,
+        "name": "speech"
+      },
+      {
+        "level": 4,
+        "name": "swimming"
+      }
+    ],
+    "traits": [
+      "OARFISH_SPECIES",
+      "PROF_IKU",
+      "SPIRIT_USER"
+    ],
+    "items": {
+      "both": [
+        "dress_shoes",
+        "iku_dress_shirt",
+        "iku_fedora",
+        "iku_long_scarf",
+        "iku_skirt",
+        "stockings"
+      ],
+      "male": [
+        "boxer_shorts"
+      ],
+      "female": [
+        "bra",
+        "panties"
+      ]
+    },
+    "flags": [
+      "SCEN_ONLY"
+    ]
+  },
+  {
+    "ident": "kaenbyou_rin",
+    "type": "profession",
+    "name": "地狱的车祸",
+    "description": "又是在无聊的地方度过的一天,帮助灵乌路空维护反应炉:烧尸体、怨灵漂浮、提炼聚变燃料、和你的主人一起吃午饭……你想在神社里小睡一会儿,于是偷偷摸摸地去了那里……结果迷路了.你闻到四处都是死亡的气息,如果不是这些尸体还在动、很生气的,还没法和你交流,那就更棒了.",
+    "points": 2,
+    "skills": [
+      {
+        "level": 2,
+        "name": "dodge"
+      },
+      {
+        "level": 4,
+        "name": "driving"
+      },
+      {
+        "level": 2,
+        "name": "mechanics"
+      },
+      {
+        "level": 2,
+        "name": "speech"
+      }
+    ],
+    "vehicle": "kaenbyou_wheelbarrow",
+    "traits": [
+      "KASHA_EARS",
+      "KASHA_SPECIES",
+      "KASHA_TAILS",
+      "PROF_KAENBYOU",
+      "YOUKAI_SPECIES",
+      "SPIRIT_USER"
+    ],
+    "items": {
+      "both": {
+        "items": [
+          "kasha_book",
+          "kaenbyou_dress",
+          "kaenbyou_leg_lace",
+          "kaenbyou_shoes",
+          "kaenbyou_vest",
+          "ribbon_black",
+          "ribbon_black",
+          "ribbon_black",
+          "ribbon_black"
+        ]
+      },
+      "male": [
+        "boxer_shorts"
+      ],
+      "female": [
+        "bra",
+        "panties"
+      ]
+    },
+    "flags": [
+      "SCEN_ONLY"
+    ],
+    "//2": "Investigate about the Necromancy: Communication stuff for her profession !!!"
+  },
+  {
+    "ident": "nitori_kawashiro",
+    "type": "profession",
+    "name": "水平思考的河童",
+    "description": "在制品。",
+    "points": 4,
+    "skills": [
+      {
+        "level": 6,
+        "name": "dodge"
+      },
+      {
+        "level": 8,
+        "name": "electronics"
+      },
+      {
+        "level": 8,
+        "name": "fabrication"
+      },
+      {
+        "level": 8,
+        "name": "mechanics"
+      },
+      {
+        "level": 8,
+        "name": "swimming"
+      }
+    ],
+    "traits": [
+      "YOUKAI_SPECIES",
+      "SPIRIT_USER"
+    ],
+    "items": {
+      "both": {
+        "items": [
+          "hose"
+        ],
+        "entries": [
+          {
+            "item": "rm451_flamethrower",
+            "contents-item": "shoulder_strap"
+          }
+        ]
+      },
+      "male": [
+        "boxer_shorts"
+      ],
+      "female": [
+        "bra",
+        "panties"
+      ]
+    },
+    "flags": [
+      "SCEN_ONLY"
+    ]
+  },
+  {
+    "ident": "reisen_udongein_inaba",
+    "type": "profession",
+    "name": "狂气的月兔",
+    "description": "师傅正在给你进行周例的课程时,她突然接到了某些讯息(可能来自月球?).不久之后,她便一脸严肃地带着很多信件回来,这些信都是寄给各势力的头领的.你完成任务后发现自己迷路了.不知道为什么,月兔通讯也寂静无比.",
+    "points": 4,
+    "proficiencies": [
+      "prof_intro_biology",
+      "prof_intro_chemistry",
+      "prof_inorganic_chemistry",
+      "prof_pharmaceutical"
+    ],
+    "skills": [
+      {
+        "level": 2,
+        "name": "dodge"
+      },
+      {
+        "level": 2,
+        "name": "firstaid"
+      },
+      {
+        "level": 2,
+        "name": "gun"
+      },
+      {
+        "level": 1,
+        "name": "launcher"
+      },
+      {
+        "level": 3,
+        "name": "pistol"
+      },
+      {
+        "level": 2,
+        "name": "rifle"
+      },
+      {
+        "level": 2,
+        "name": "smg"
+      },
+      {
+        "level": 1,
+        "name": "shotgun"
+      }
+    ],
+    "traits": [
+      "GYOKUTO_SPECIES",
+      "GYOKUTO_EARS",
+      "SPIRIT_UNTRAINED"
+    ],
+    "items": {
+      "both": {
+        "items": [
+          "udonge_clip",
+          "udonge_dress_shoes",
+          "ldc_ear_accessory",
+          "lunar_guide1",
+          "udonge_skirt",
+          "udonge_shirt",
+          "socks",
+          "udonge_tie"
+        ],
+        "entries": [
+          {
+            "item": "lunatic_pistol2",
+            "ammo-item": "ammo_lunar_small_2",
+            "charges": 13,
+            "container-item": "lunatic_holster"
+          }
+        ]
+      },
+      "male": [
+        "boxer_shorts"
+      ],
+      "female": [
+        "bra",
+        "panties"
+      ],
+      "//3": "if possible, implement a shot spread effect with 2-3 bullets on a cone and 8-7 illusionary bullets that deal no damage, and change the sprite because I don't like the current * ",
+      "//4": "Finally, see if I can implement her LoLK bomb, or not if that would be outright broken alongside her stealth passive that should have priority"
+    },
+    "flags": [
+      "SCEN_ONLY"
+    ]
+  },
+  {
+    "ident": "reisen_II",
+    "type": "profession",
+    "name": "月兔新兵",
+    "description": "你正在随同绵月姐妹拜访地球时,大灾变突然爆发了!在随后的混乱和恐慌中,结界崩溃了（这是你从别人那里听到的）,你和别人走散了,现在独自一人.更糟糕的是,你无法使用月兔网络联系同伴.你掌握了一些月球防卫队训练的技能,但这些不足以让你生存下去...",
+    "points": 4,
+    "skills": [
+      {
+        "level": 2,
+        "name": "dodge"
+      },
+      {
+        "level": 2,
+        "name": "gun"
+      },
+      {
+        "level": 1,
+        "name": "melee"
+      },
+      {
+        "level": 2,
+        "name": "rifle"
+      },
+      {
+        "level": 2,
+        "name": "stabbing"
+      }
+    ],
+    "traits": [
+      "GYOKUTO_SPECIES",
+      "GYOKUTO_EARS",
+      "LUNARDIET",
+      "SPIRIT_UNTRAINED"
+    ],
+    "items": {
+      "both": {
+        "items": [
+          "ldc_dress_shirt",
+          "ldc_dress_shoes",
+          "ldc_helmet",
+          "ldc_kneesocks",
+          "ldc_skirt",
+          "ldc_suit",
+          "ldc_tie",
+          "ldc_veil_deactivated",
+          "lunar_guide1"
+        ],
+        "entries": [
+          {
+            "item": "lunar_rifle2",
+            "ammo-item": "ammo_lunar_medium_1",
+            "charges": 11,
+            "contents-item": "shoulder_strap"
+          }
+        ]
+      },
+      "male": [
+        "boxer_shorts"
+      ],
+      "female": [
+        "bra",
+        "panties"
+      ]
+    },
+    "flags": [
+      "SCEN_ONLY"
+    ]
+  },
+  {
+    "ident": "remilia_scarlet",
+    "type": "profession",
+    "name": "绯红的恶魔",
+    "description": "那个拒绝详细说明的狡猾妖怪，是她计划中让你行动的一部分。双方都知道这一点，但在处理与你有关的重要事务时，这是一种惯例，所以你不介意。让你生气的是，无辜的各方被卷入了如此大的威胁之中。这最好有趣点。",
+    "points": 5,
+    "skills": [
+      {
+        "level": 2,
+        "name": "dodge"
+      },
+      {
+        "level": 3,
+        "name": "melee"
+      },
+      {
+        "level": 3,
+        "name": "stabbing"
+      },
+      {
+        "level": 3,
+        "name": "throw"
+      }
+    ],
+    "traits": [
+      "TABLEMANNERS",
+      "VAMPIRE_SPECIES",
+      "VAMPIRE_BAT_REMI",
+      "PROF_REMI",
+      "SPIRIT_USER"
+    ],
+    "items": {
+      "both": [
+        "remi_bowbelt",
+        "remi_dress",
+        "remi_hat",
+        "remi_shoes",
+        "remi_socks"
+      ],
+      "male": [
+        "boxer_shorts"
+      ],
+      "female": [
+        "bra",
+        "bloomers"
+      ]
+    },
+    "flags": [
+      "SCEN_ONLY"
+    ]
+  },
+  {
+    "ident": "sakuya_izayoi",
+    "type": "profession",
+    "name": "大小姐的女仆",
+    "description": "尽管你对大小姐让你到大结界外去办事心存疑虑,但你还是去执行了.然而,大灾变的突然爆发打断了你的行程.真是让人不愉快.",
+    "points": 4,
+    "proficiencies": [
+      "prof_food_prep",
+      "prof_knife_skills"
+    ],
+    "skills": [
+      {
+        "level": 4,
+        "name": "cooking"
+      },
+      {
+        "level": 2,
+        "name": "cutting"
+      },
+      {
+        "level": 2,
+        "name": "dodge"
+      },
+      {
+        "level": 1,
+        "name": "melee"
+      },
+      {
+        "level": 4,
+        "name": "throw"
+      }
+    ],
+    "traits": [
+      "MYSTERIOUS",
+      "PSYCHOPATH",
+      "SPIRIT_USER"
+    ],
+    "//": "Change PSYCHOPATH for something like CALLOUS instead: no bonuses like PSYCHOPATH but no demerits for killing and butchering humans and children specifically",
+    "items": {
+      "both": {
+        "items": [
+          "dress_shoes",
+          "knit_scarf",
+          "maid_dress",
+          "maid_hat",
+          "pocketwatch",
+          "sakuya_pads",
+          "stockings"
+        ],
+        "entries": [
+          {
+            "item": "sakuya_knife",
+            "container-item": "sheath"
+          },
+          {
+            "item": "knife_holster_leg",
+            "contents-group": "nested_silver_knife"
+          },
+          {
+            "item": "knife_holster_leg",
+            "contents-group": "nested_silver_knife"
+          }
+        ]
+      },
+      "male": [
+        "boxer_shorts"
+      ],
+      "female": [
+        "bra",
+        "panties"
+      ]
+    },
+    "flags": [
+      "SCEN_ONLY"
+    ]
+  },
+  {
+    "ident": "seiga_kaku",
+    "type": "profession",
+    "name": "邪恶的邪仙",
+    "description": "你是一个邪恶、无道德可言的邪仙,具有穿墙和奴役僵尸的能力.你从不关心别人，只是为了达到目的而操纵他们.在大灾变中活下来也许是一件...有趣的事.",
+    "points": 4,
+    "proficiencies": [
+      "prof_intro_biology",
+      "prof_intro_chemistry",
+      "prof_lockpicking",
+      "prof_pharmaceutical",
+      "prof_physiology"
+    ],
+    "skills": [
+      {
+        "level": 3,
+        "name": "chemistry"
+      },
+      {
+        "level": 1,
+        "name": "dodge"
+      },
+      {
+        "level": 3,
+        "name": "firstaid"
+      },
+      {
+        "level": 2,
+        "name": "speech"
+      },
+      {
+        "level": 2,
+        "name": "survival"
+      }
+    ],
+    "traits": [
+      "LIAR",
+      "PSYCHOPATH",
+      "SPIRITUAL",
+      "SPIRIT_HERMIT"
+    ],
+    "items": {
+      "both": [
+        "dress_shoes",
+        "knit_scarf",
+        "runner_bag",
+        "scalpel",
+        "seiga_dress",
+        "seiga_hairstick",
+        "socks_long"
+      ],
+      "male": [
+        "boxer_shorts"
+      ],
+      "female": [
+        "bra",
+        "panties"
+      ]
+    },
+    "flags": [
+      "SCEN_ONLY"
+    ]
+  },
+  {
+    "ident": "shameimaru_aya",
+    "type": "profession",
+    "name": "鸦天狗记者",
+    "description": "你最近闲来无事,于是你去拜访了一些朋友.第一站是神社巫女,但她比平常更不耐烦.第二站是白玉楼的守矢神子,但她不在家.第三站是村里的图书管理员,但她正在睡觉.穿过迷失的竹林,你知道迟早会遇到.你非常确定这些穿着脏兮兮的外界衣服的人不应该出现在这里,意味着这是个不错的素材!",
+    "points": 1,
+    "skills": [
+      {
+        "level": 2,
+        "name": "cutting"
+      },
+      {
+        "level": 4,
+        "name": "dodge"
+      },
+      {
+        "level": 2,
+        "name": "speech"
+      }
+    ],
+    "//": "Cutting for katana and other Tengu (Japanese) weapons I think",
+    "traits": [
+      "TENGUCROW_SPECIES",
+      "WINGS_TENGUCROW",
+      "YOUKAI_SPECIES",
+      "PROF_AYA",
+      "SPIRIT_USER"
+    ],
+    "items": {
+      "both": {
+        "items": [
+          "aya_shirt",
+          "aya_skirt",
+          "ribbon_neck",
+          "socks_ankle",
+          "tengu_fan",
+          "tengu_geta",
+          "tengu_hat"
+        ],
+        "entries": [
+          {
+            "item": "tengu_reporter_holster",
+            "contents-group": "nested_tengu_reporter"
+          }
+        ]
+      },
+      "male": [
+        "boxer_shorts"
+      ],
+      "female": [
+        "bra",
+        "panties"
+      ]
+    },
+    "flags": [
+      "SCEN_ONLY"
+    ]
+  },
+  {
+    "ident": "tenshi_hinanawi",
+    "type": "profession",
+    "name": "落魄天人",
+    "description": "你在天界里无事可干,感到了厌烦,于是你来到地上去拜访神社和友人.但与此同时,一些事情发生了.一开始你感觉很有趣,然后有些担心,之后感到非常好奇.外面的世界现在看起来…变得不一样了.",
+    "points": 4,
+    "skills": [
+      {
+        "level": 2,
+        "name": "bashing"
+      },
+      {
+        "level": 2,
+        "name": "cutting"
+      },
+      {
+        "level": 1,
+        "name": "dodge"
+      },
+      {
+        "level": 3,
+        "name": "melee"
+      },
+      {
+        "level": 2,
+        "name": "swimming"
+      }
+    ],
+    "traits": [
+      "CELESTIAL_SPECIES",
+      "HATES_BOOKS",
+      "PAINRESIST",
+      "SLOWLEARNER",
+      "PROF_TENKO",
+      "SPIRIT_USER"
+    ],
+    "items": {
+      "both": [
+        "boots",
+        "knit_scarf",
+        "socks",
+        "tenshi_bowbelt",
+        "tenshi_bowhat",
+        "tenshi_jian",
+        "tenshi_shirt",
+        "tenshi_skirt"
+      ],
+      "male": [
+        "boxer_shorts"
+      ],
+      "female": [
+        "bra",
+        "panties"
+      ]
+    },
+    "flags": [
+      "SCEN_ONLY"
+    ]
+  },
+  {
+    "ident": "utsuho_reiuji",
+    "type": "profession",
+    "name": "地底的太阳",
+    "description": "吃午饭后你开始了工作,主人让你去找橙,果然她又失踪了.你去了地面,发现友好的洞穴蜘蛛不在平时的位置,也许她们两人一起走了!你知道她喜欢在神社打盹,于是你去了...错的那一条路.你发现这里没有山,什么也没有.你回过头,发现找不到归路.你知道自己有时会迷路,但这对你来说太离谱了.现在你必须找到橙和土蜘蛛,然后回家.",
+    "points": 2,
+    "skills": [
+      {
+        "level": 1,
+        "name": "bashing"
+      },
+      {
+        "level": 1,
+        "name": "dodge"
+      },
+      {
+        "level": 2,
+        "name": "melee"
+      }
+    ],
+    "traits": [
+      "HELLRAVEN_SPECIES",
+      "WINGS_HELLRAVEN",
+      "YATAGARASU_VESSEL",
+      "YOUKAI_SPECIES",
+      "PROF_OKUU",
+      "SPIRIT_USER"
+    ],
+    "items": {
+      "both": [
+        "dress_shoes",
+        "socks_long",
+        "utsuho_cape",
+        "utsuho_ribbon",
+        "utsuho_rod",
+        "utsuho_shirt",
+        "utsuho_skirt"
+      ],
+      "male": [
+        "boxer_shorts"
+      ],
+      "female": [
+        "bra",
+        "panties"
+      ]
+    },
+    "flags": [
+      "SCEN_ONLY"
+    ]
+  },
+  {
+    "ident": "yamame_kurodani",
+    "type": "profession",
+    "name": "友善的风穴妖怪",
+    "description": "今天是附近市场的打折日，于是你离开家门去尝试新品“咖啡”，也许能在每周的弹幕表演或泡温泉时分享给其他人.但是,你在回家的路上不知道怎么的迷路了,没有认识的地标，也没有遇到可以问路的人.",
+    "points": 4,
+    "skills": [
+      {
+        "level": 2,
+        "name": "dodge"
+      },
+      {
+        "level": 2,
+        "name": "fabrication"
+      },
+      {
+        "level": 2,
+        "name": "speech"
+      },
+      {
+        "level": 2,
+        "name": "tailor"
+      }
+    ],
+    "traits": [
+      "TSUCHIGUMO_SPECIES",
+      "YOUKAI_SPECIES",
+      "PROF_YAMAME",
+      "SPIRIT_USER"
+    ],
+    "items": {
+      "both": {
+        "items": [
+          "dress_shoes",
+          "socks",
+          "yamame_dress",
+          "yamame_ribbon",
+          "yamame_shirt"
+        ]
+      },
+      "male": [
+        "boxer_shorts"
+      ],
+      "female": [
+        "bra",
+        "bloomers"
+      ]
+    },
+    "flags": [
+      "SCEN_ONLY"
+    ],
+    "//2": "WIP!!! There's a lot of fun stuff that can't be implemented, or I don't know how to. Plus she's missing at least two more spells",
+    "//3": "There's no way to check for monsters having effects, so the idea of a base dot disease + applying different effects on top of that can't be used. Worse, this also affects other effects that rely on dot spells, like kaenbyou_immolate ",
+    "//4": "Enchantments don't work on monsters either, so things like reduced attack speed can't be set at all",
+    "//5": "EOCs don't work with monsters, so a disease that causes outburst to spread to nearby enemies currently can't exist",
+    "//6": "There's an issue with the remove_field spell effect that causes it to remove 1 field in the entire aoe, so Yamame can't aoe dismiss webs from yamame_webcapture"
+  },
+  {
+    "ident": "youmu_konpaku",
+    "type": "profession",
+    "name": "半人半灵的庭师",
+    "description": "当你为大小姐准备茶水时,境界妖怪的式神前来传递一条紧急密讯.然后你的大小姐在神社给你下达了一项神秘的任务,并让你“小心”.你当时没理解最后一句话的意思,直到到达神社的前几分钟,你发现周围的事物变了.",
+    "points": 4,
+    "skills": [
+      {
+        "level": 3,
+        "name": "cooking"
+      },
+      {
+        "level": 4,
+        "name": "cutting"
+      },
+      {
+        "level": 3,
+        "name": "dodge"
+      },
+      {
+        "level": 2,
+        "name": "melee"
+      }
+    ],
+    "traits": [
+      "HALF_PHANTOM_SPECIES",
+      "TRUTHTELLER",
+      "PROF_YOUMU",
+      "SPIRIT_UNTRAINED"
+    ],
+    "//": "Add parry and dual wield somewhere",
+    "items": {
+      "both": {
+        "items": [
+          "dress_shirt",
+          "dress_shoes",
+          "knit_scarf",
+          "stockings",
+          "youmu_ribbon",
+          "youmu_skirt",
+          "youmu_vest"
+        ],
+        "entries": [
+          {
+            "item": "youmu_roukanken",
+            "container-item": "youmu_scabbard_rouka"
+          },
+          {
+            "item": "youmu_hakurouken",
+            "container-item": "youmu_scabbard_haku"
+          }
+        ]
+      },
+      "male": [
+        "boxer_shorts"
+      ],
+      "female": [
+        "bra",
+        "bloomers"
+      ]
+    },
+    "flags": [
+      "SCEN_ONLY"
+    ]
+  }
+]

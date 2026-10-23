@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_ZUNDAMON_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"我是俊达萌呐喏哒！(抬手)",
+    "responses":[
+      { "text": "加入我们吧", "topic": "TALK_ZUNDAMON_SAN_2" },
+      { "text": "嗯…", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_ZUNDAMON_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"剩下的就交给俊达萌呐喏哒！",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

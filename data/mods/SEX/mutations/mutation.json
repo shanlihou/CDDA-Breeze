@@ -1,0 +1,19 @@
+[
+  {
+    "type": "mutation",
+    "id": "SEX_LOVE",
+    "name": { "str": "性瘾" },
+    "points": -1,
+    "cancels": [ "SEX_0" ],
+    "description": "你堕落在性爱的欲望里，并乐在其中。"
+  },
+  {
+    "type": "mutation",
+    "id": "SEX_0",
+    "name": { "str": "雏鸟" },
+    "points": 1,
+    "description": "你没有过性经验。",
+    "starting_trait": true,
+    "cancels": [ "SEX_LOVE" ]
+  }
+]

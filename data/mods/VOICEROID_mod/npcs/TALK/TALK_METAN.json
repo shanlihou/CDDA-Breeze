@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_METAN_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"我在故乡女学院就读，高中二年级的学生。是俊子的同学",
+    "responses":[
+      { "text": "请成为我的伙伴", "topic": "TALK_METAN_SAN_2" },
+      { "text": "嗯…", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_METAN_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"那么，就跪在我的面前宣誓吧！",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

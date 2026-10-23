@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_RITHU_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"你是什么人？",
+    "responses":[
+      { "text": "请成为伙伴吧", "topic": "TALK_RITHU_SAN_2" },
+      { "text": "嗯...", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_RITHU_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"没办法了，就帮你一下",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

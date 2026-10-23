@@ -1,0 +1,102 @@
+[
+{
+    "type": "mutation",
+    "id": "cc_perk_Preyseeker",
+    "name": { "str": "CC狩猎-寻找猎物" },
+    "points": 0,
+    "description": "开始寻找猎物。开启后将开始随时间随机找到z，动物，植物等，寻找食物是生存的一大保障。--源技术来自特色升级",
+    "starting_trait" : true,
+    "player_display": true,
+    "purifiable": false,
+    "category": [ "perk" ],
+    "active": true,
+    "activated_is_setup": true,
+    "activated_eocs": [ "EOC_ccPreyseek_on" ],
+    "deactivated_eocs": [ "EOC_ccPreyseek_off" ],
+    "processed_eocs": [ "EOC_ccPreyseeking" ],
+    "time": 30000
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_ccPreyseeking",
+    "effect": [
+      {
+        "u_spawn_monster": "GROUP_FOREST",
+        "group": true,
+        "real_count": 1,
+        "min_radius": 30,
+        "max_radius": 45
+      },
+      {
+        "u_spawn_monster": "GROUP_PARK_ANIMAL",
+        "group": true,
+        "real_count": 1,
+        "min_radius": 30,
+        "max_radius": 45
+      },
+      {
+        "u_spawn_monster": "GROUP_TRIFFID",
+        "group": true,
+        "real_count": 1,
+        "min_radius": 30,
+        "max_radius": 45
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_ccPreyseek_on",
+    "//": "Activation effect",
+    "effect": [ { "u_message": "You start seeking Prey." } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_ccPreyseek_off",
+    "//": "Deactivation effect",
+    "effect": [ { "u_message": "You stop seeking Prey for now." } ]
+  },
+  {
+    "id": "FEET_ITEM_CCPreyseeker",
+    "type": "BOOK",
+    "subtypes": [ "COMESTIBLE" ],
+    "comestible_type": "MED",
+    "looks_like": "diamond",
+    "name": { "str": "CC手册-狩猎" },
+    "description": "CC单兵生存的必备技能。使用后如果没有 CC狩猎-寻找猎物 则获得特殊变异。效果只能使用一次，多次使用不会重复、无法移除变异，请注意。",
+    "weight": "500 g",
+    "volume": "300ml",
+    "symbol": "E",
+    "color": "green",
+    "price": "10 USD",
+    "price_postapoc": "1 USD",
+    "use_action": { "type": "cast_spell", "spell_id": "MANI_CCPreyseeker", "no_fail": true, "level": 0 },
+    "flags": [ "SINGLE_USE", "TRADER_AVOID", "UNBREAKABLE_MELEE" ]
+   },
+  {
+     "type": "SPELL",
+     "id": "MANI_CCPreyseeker",
+     "name": { "str": "CC手册-狩猎" },
+     "description": "使用后如果没有 CC狩猎-寻找猎物 则获得特殊变异。效果只能使用一次，多次使用不会重复、无法移除变异，请注意。",
+     "message": "狩猎-寻找猎物 已学会",
+     "valid_targets": [ "self" ],
+     "shape": "blast",
+     "min_damage": 10000,
+     "max_damage": 10000,
+     "effect": "mutate",
+     "effect_str": "cc_perk_Preyseeker",
+     "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "MUTATE_TRAIT" ]
+    },
+    {
+        "type" : "recipe",
+    "result": "FEET_ITEM_CCPreyseeker",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC食品医疗",
+    "skill_used": "survival",
+    "time": "1second",
+    "reversible": true,
+    "autolearn": true,
+    "components": [ [ [ "CCMODcoin", 480 ] ] ]
+  }
+]

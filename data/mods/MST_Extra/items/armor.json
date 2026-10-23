@@ -1,0 +1,347 @@
+[
+  {
+    "id": "armwrap_leather",
+    "type": "ARMOR",
+    "name": {
+      "str": "皮革裹臂",
+      "str_pl": "皮革裹臂"
+    },
+    "description": "一对缠绕包裹在手臂上的皮革护套,总比没有好.",
+    "weight": "137 g",
+    "volume": "750 ml",
+    "price": 525,
+    "material": [
+      "leather"
+    ],
+    "symbol": "[",
+    "color": "brown",
+    "warmth": 15,
+    "material_thickness": 1,
+    "flags": [
+      "OVERSIZE"
+    ],
+    "armor": [
+      {
+        "encumbrance": 5,
+        "coverage": 50,
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "armwrap_fur",
+    "type": "ARMOR",
+    "name": {
+      "str": "毛皮裹臂",
+      "str_pl": "毛皮裹臂"
+    },
+    "description": "对缠绕包裹在手臂上的毛皮护套,更加暖和,总比没有好.",
+    "weight": "154 g",
+    "volume": "750 ml",
+    "price": 700,
+    "material": [
+      "fur"
+    ],
+    "symbol": "[",
+    "color": "brown",
+    "warmth": 20,
+    "material_thickness": 1,
+    "flags": [
+      "OVERSIZE"
+    ],
+    "armor": [
+      {
+        "encumbrance": 5,
+        "coverage": 50,
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "legwrap_leather",
+    "type": "ARMOR",
+    "name": {
+      "str": "皮革裹腿",
+      "str_pl": "皮革裹腿"
+    },
+    "description": "用皮革条缠绕绑起来的绑腿,可以临时充当护腿.",
+    "weight": "137 g",
+    "volume": "750 ml",
+    "price": 525,
+    "material": [
+      "leather"
+    ],
+    "symbol": "[",
+    "color": "brown",
+    "warmth": 15,
+    "material_thickness": 1,
+    "flags": [
+      "OVERSIZE"
+    ],
+    "armor": [
+      {
+        "encumbrance": 5,
+        "coverage": 50,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "legwrap_fur",
+    "type": "ARMOR",
+    "name": {
+      "str": "毛皮裹腿",
+      "str_pl": "毛皮裹腿"
+    },
+    "description": "用毛皮条缠绕绑起来的绑腿,更加暖和,可以临时充当护腿.",
+    "weight": "154 g",
+    "volume": "750 ml",
+    "price": 700,
+    "material": [
+      "fur"
+    ],
+    "symbol": "[",
+    "color": "brown",
+    "warmth": 20,
+    "material_thickness": 1,
+    "flags": [
+      "OVERSIZE"
+    ],
+    "armor": [
+      {
+        "encumbrance": 5,
+        "coverage": 50,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cloak_makeshift_sheet",
+    "type": "ARMOR",
+    "name": {
+      "str": "简易布料披风"
+    },
+    "description": "一张床单，披在肩上，并在适当的位置上固定，穿起来就像一件披风一样。累赘更小，因为它解放了你的双手，并且不会绊倒你。",
+    "weight": "771 g",
+    "volume": "5 L",
+    "price": 2000,
+    "price_postapoc": 50,
+    "to_hit": -1,
+    "material": [
+      "cotton"
+    ],
+    "symbol": "[",
+    "looks_like": "sheet",
+    "repairs_like": "sheet",
+    "color": "white",
+    "warmth": 10,
+    "material_thickness": 1,
+    "flags": [
+      "OVERSIZE",
+      "OUTER",
+      "ALLOWS_NATURAL_ATTACKS"
+    ],
+    "armor": [
+      {
+        "encumbrance": 10,
+        "coverage": 85,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "leg_l",
+          "leg_r"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cloak_makeshift_blanket",
+    "copy-from": "cloak_makeshift_sheet",
+    "type": "ARMOR",
+    "name": {
+      "str": "简易棉毯披风"
+    },
+    "description": "一张棉毯，披在肩上，并在适当的位置上固定，穿起来就像一件披风一样。累赘更小，因为它解放了你的双手，并且不会绊倒你。",
+    "weight": "1123 g",
+    "volume": "15 L",
+    "price": 5500,
+    "looks_like": "blanket",
+    "repairs_like": "blanket",
+    "material": [
+      "cotton"
+    ],
+    "color": "blue",
+    "warmth": 50,
+    "material_thickness": 3,
+    "environmental_protection": 1,
+    "armor": [
+      {
+        "encumbrance": 30,
+        "coverage": 85,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "leg_l",
+          "leg_r"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cloak_makeshift_down_blanket",
+    "copy-from": "cloak_makeshift_sheet",
+    "type": "ARMOR",
+    "name": {
+      "str": "简易羽绒毯披风"
+    },
+    "description": "一张羽绒毯，披在肩上，并在适当的位置上固定，穿起来就像一件披风一样。累赘更小，因为它解放了你的双手，并且不会绊倒你。",
+    "weight": "3500 g",
+    "volume": "31 L",
+    "price": 5500,
+    "price_postapoc": 150,
+    "material": [
+      "cotton"
+    ],
+    "looks_like": "down_blanket",
+    "repairs_like": "down_blanket",
+    "color": "blue",
+    "warmth": 70,
+    "material_thickness": 3,
+    "environmental_protection": 1,
+    "armor": [
+      {
+        "encumbrance": 40,
+        "coverage": 85,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "leg_l",
+          "leg_r"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cloak_makeshift_fur_blanket",
+    "copy-from": "cloak_makeshift_sheet",
+    "type": "ARMOR",
+    "name": {
+      "str": "简易毛皮毯披风"
+    },
+    "description": "一张厚重的毛皮毯，披在肩上，并在适当的位置上固定，穿起来就像一件披风一样。累赘更小，因为它解放了你的双手，并且不会绊倒你。",
+    "weight": "3500 g",
+    "volume": "31 L",
+    "price": 19500,
+    "price_postapoc": 250,
+    "material": [
+      "cotton",
+      "fur"
+    ],
+    "looks_like": "fur_blanket",
+    "repairs_like": "fur_blanket",
+    "color": "brown",
+    "warmth": 80,
+    "material_thickness": 4,
+    "environmental_protection": 1,
+    "armor": [
+      {
+        "encumbrance": 50,
+        "coverage": 85,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "leg_l",
+          "leg_r"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "quiver_atlatl",
+    "copy-from": "quiver",
+    "type": "ARMOR",
+    "name": {
+      "str": "梭镖筒"
+    },
+    "description": "一种皮革箭筒,可佩戴在腰部,加长可容纳10支梭镖.使用它以存储梭镖.",
+    "weight": "400 g",
+    "volume": "1 L",
+    "material": [
+      "leather"
+    ],
+    "pocket_data": [
+      {
+        "ammo_restriction": {
+          "atlatl": 10
+        },
+        "moves": 30
+      }
+    ],
+    "armor": [
+      {
+        "encumbrance": 5,
+        "coverage": 15,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_upper_l",
+          "leg_upper_r"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "quiver_birchbark_atlatl",
+    "copy-from": "quiver_birchbark",
+    "type": "ARMOR",
+    "name": {
+      "str": "桦皮梭镖筒"
+    },
+    "description": "一种由桦树皮条编织而成的梭镖筒,可佩戴在腰部,加长可容纳10支梭镖.使用它以存储梭镖.",
+    "weight": "800 g",
+    "volume": "1 L",
+    "material": [
+      "wood"
+    ],
+    "pocket_data": [
+      {
+        "ammo_restriction": {
+          "atlatl": 10
+        },
+        "moves": 30
+      }
+    ],
+    "armor": [
+      {
+        "encumbrance": 15,
+        "coverage": 15,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_upper_l",
+          "leg_upper_r"
+        ]
+      }
+    ]
+  }
+]

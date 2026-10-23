@@ -1,0 +1,982 @@
+[
+   {
+    "id": "416combatsuitjacket",
+    "repairs_like": "tshirt",
+    "type": "ARMOR",
+    "name": { "str": "416MOD3作战上衣" },
+    "description": "416的MOD3作战上衣",
+    "weight": "480 g",
+    "volume": "3 L",
+    "price": 3400,
+    "price_postapoc": 800,
+    "material": [ { "type": "nylon", "portion": 7 }, { "type": "cotton", "portion": 3 } ],
+    "symbol": "[",
+    "looks_like": "tshirt",
+    "color": "black",
+    "armor": [
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ], "coverage": 95, "encumbrance": [ 7, 9 ] },
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ], "coverage": 100 }
+    ],
+    "warmth": 20,
+    "material_thickness": 0.5,
+    "valid_mods": [ "steel_padded" ],
+    "flags": [ "VARSIZE", "POCKETS","WATER_FRIENDLY" ]
+  },
+  {
+    "id": "416coat",
+    "repairs_like": "outer",
+    "type": "ARMOR",
+    "name": { "str": "416MOD3外套" },
+    "description": "416的MOD3外套",
+    "weight": "700 g",
+    "volume": "3 L",
+    "price": 6400,
+    "price_postapoc": 1050,
+    "material": [ { "type": "nylon", "portion": 7 }, { "type": "cotton", "portion": 3 } ],
+    "symbol": "[",
+    "looks_like": "outer",
+    "color": "black",
+    "armor": [
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ], "coverage": 95, "encumbrance": [ 7, 9 ] },
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ], "coverage": 100 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": [ 7, 9 ] }
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "900 ml",
+        "max_contains_weight": "5 kg",
+        "max_item_length": "25 cm",
+        "moves": 70
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "900 ml",
+        "max_contains_weight": "5 kg",
+        "max_item_length": "25 cm",
+        "moves": 70
+      }
+    ],
+    "warmth": 30,
+    "material_thickness": 0.7,
+    "valid_mods": [ "steel_padded" ],
+    "flags": [ "VARSIZE", "POCKETS","WATER_FRIENDLY","OUTER","WATERPROOF" ]
+  },
+  {
+    "id": "416tightshorts",
+    "repairs_like": "jeans",
+    "type": "ARMOR",
+    "name": { "str_sp": "416MOD3短裤" },
+    "description": "416的MOD3短裤",
+    "weight": "220 g",
+    "volume": "1500 ml",
+    "price": 5000,
+    "price_postapoc": 250,
+    "material": [ { "type": "nylon", "portion": 7 }, { "type": "cotton", "portion": 3 } ],
+    "symbol": "[",
+    "looks_like": "pants_cargo",
+    "color": "black",
+    "armor": [
+    {
+      "encumbrance": [
+        2,
+        5
+      ],
+      "coverage": 100,
+      "covers": [
+        "leg_l",
+        "leg_r"
+      ],
+      "specifically_covers": [
+        "leg_hip_l",
+        "leg_hip_r"
+      ],
+      "volume_encumber_modifier": 0.7
+    }
+     ],    
+    "warmth": 10,
+    "material_thickness": 0.4,   
+    "flags": [ "VARSIZE", "POCKETS","WATER_FRIENDLY","WATERPROOF"]
+  },
+  {
+  "id": "416gloves",
+  "repairs_like": "gloves_survivor",
+  "type": "ARMOR",
+  "category": "armor",
+  "name": {
+    "str": "416MOD3战术手套"
+  },
+  "description": "416的MOD3战术手套",
+  "weight": "220 g",
+  "volume": "500 ml",
+  "price": 4200,
+  "price_postapoc": 1900,
+  "to_hit": 2,
+  "material": [
+    "kevlar",
+    "leather"
+  ],
+  "symbol": "[",
+  "looks_like": "fire_gauntlets",
+  "color": "dark_gray",
+  "warmth": 20,
+  "material_thickness": 1.5,
+  "environmental_protection": 2,
+  "flags": [
+    "VARSIZE",
+    "STURDY"
+  ],
+  "armor": [
+    {
+      "encumbrance": 13,
+      "coverage": 100,
+      "covers": [
+        "hand_l",
+        "hand_r"
+      ]
+    }
+  ]
+},
+{
+  "id": "416Headphones",
+  "type": "TOOL_ARMOR",
+  "category": "armor",
+  "symbol": "[",
+  "color": "blue",
+  "name": {
+    "str_sp": "416MOD3头戴耳机"
+  },
+  "description": "416的MOD3头戴耳机",
+  "flags": [
+    "DEAF",
+    "BELTED",
+    "ALLOWS_NATURAL_ATTACKS",     "WATERPROOF",
+    "ELECTRONIC"
+  ],
+  "price": 18500,
+  "price_postapoc": 1050,
+  "material": [
+    "plastic"
+  ],
+  "weight": "179 g",
+  "volume": "1 L",
+  "charges_per_use": 1,
+  "ammo": "battery",
+  "use_action": {
+    "type": "transform",
+    "msg": "You turn the earmuffs on.",
+    "target": "416Headphones_on",
+    "active": true,
+    "need_charges": 1,
+    "need_charges_msg": "The earmuff's batteries are dead."
+  },
+  "warmth": 5,
+  "material_thickness": 2,
+  "pocket_data": [
+    {
+      "pocket_type": "MAGAZINE_WELL",
+      "rigid": true,
+      "flag_restriction": [
+        "BATTERY_LIGHT",
+        "BATTERY_ULTRA_LIGHT"
+      ],
+      "default_magazine": "light_plus_battery_cell"
+    }
+  ],
+  "armor": [
+    {
+      "encumbrance": 5,
+      "coverage": 100,
+      "covers": [
+        "head"
+      ],
+      "specifically_covers": [
+        "head_ear_r",
+        "head_ear_l"
+      ]
+    }
+  ]
+},
+{
+  "id": "416Headphones_on",
+  "type": "TOOL_ARMOR",
+  "repairs_like": "416Headphones",
+  "category": "armor",
+  "symbol": "[",
+  "color": "blue",
+  "name": {
+    "str_sp": "416MOD3头戴耳机（激活中）"
+  },
+  "description": "416的MOD3头戴耳机",
+  "flags": [
+    "BELTED",
+    "ALLOWS_NATURAL_ATTACKS",
+    "PARTIAL_DEAF",
+    "WATERPROOF",
+    "ELECTRONIC"
+  ],
+  "price": 18500,
+  "price_postapoc": 1050,
+  "material": [
+    "plastic"
+  ],
+  "weight": "179 g",
+  "volume": "1 L",
+  "//": "3M Peltors claim to go 100 hours on 2 AAs",
+  "power_draw": "60 mW",
+  "ammo": "battery",
+  "charges_per_use": 1,
+  "revert_to": "416Headphones",
+  "use_action": {
+    "ammo_scale": 0,
+    "type": "transform",
+    "menu_text": "Turn off",
+    "msg": "The %s flicks off.",
+    "target": "416Headphones"
+  },
+  "warmth": 5,
+  "material_thickness": 2,
+  "pocket_data": [
+    {
+      "pocket_type": "MAGAZINE_WELL",
+      "rigid": true,
+      "flag_restriction": [
+        "BATTERY_LIGHT",
+        "BATTERY_ULTRA_LIGHT"
+      ],
+      "default_magazine": "light_plus_battery_cell"
+    }
+  ],
+  "armor": [
+    {
+      "encumbrance": 5,
+      "coverage": 100,
+      "covers": [
+        "head"
+      ],
+      "specifically_covers": [
+        "head_ear_r",
+        "head_ear_l"
+      ]
+    }
+  ]
+},
+{
+  "id": "416satchel",
+  "type": "ARMOR",
+  "name": {
+    "str": "416MOD3战术行李包"
+  },
+  "description": "416的MOD3战术行李包",
+  "weight": "933 g",
+  "volume": "6 L",
+  "price": 22000,
+  "price_postapoc": 12500,
+  "material": [
+    "lycra"
+  ],
+  "symbol": "[",
+  "looks_like": "rucksack",
+  "color": "green",
+  "pocket_data": [
+    {
+      "pocket_type": "CONTAINER",
+      "max_contains_volume": "35 L",
+      "max_contains_weight": "60 kg",
+      "max_item_length": "55 cm",
+      "magazine_well": "5 L",
+      "moves": 200
+    },
+    {
+      "//": "items slipped under the top of a duffelbag not well secured",
+      "pocket_type": "CONTAINER",
+      "holster": true,
+      "max_contains_volume": "4 L",
+      "max_contains_weight": "6 kg",
+      "max_item_length": "100 cm",
+      "min_item_length": "40 cm",
+      "moves": 80,
+      "extra_encumbrance": 5,
+      "description": "Tucked under the carry handles.",
+      "ripoff": 1
+    },
+    {
+      "pocket_type": "CONTAINER",
+      "max_item_length": "300 mm",
+      "min_item_volume": "250 ml",
+      "max_contains_volume": "1 L",
+      "max_contains_weight": "2 kg",
+      "flag_restriction": [
+        "MAG_COMPACT",
+        "MAG_BULKY"
+      ],
+      "moves": 60
+    },
+    {
+      "pocket_type": "CONTAINER",
+      "max_item_length": "250 mm",
+      "min_item_volume": "200 ml",
+      "max_contains_volume": "800 ml",
+      "max_contains_weight": "1600 g",
+      "flag_restriction": [
+        "MAG_COMPACT",
+        "MAG_BULKY"
+      ],
+      "moves": 60
+    },
+    {
+      "pocket_type": "CONTAINER",
+      "max_item_length": "250 mm",
+      "min_item_volume": "200 ml",
+      "max_contains_volume": "800 ml",
+      "max_contains_weight": "1600 g",
+      "flag_restriction": [
+        "MAG_COMPACT",
+        "MAG_BULKY"
+      ],
+      "moves": 60
+    },
+    {
+      "pocket_type": "CONTAINER",
+      "max_item_length": "250 mm",
+      "min_item_volume": "200 ml",
+      "max_contains_volume": "800 ml",
+      "max_contains_weight": "1600 g",
+      "flag_restriction": [
+        "MAG_COMPACT",
+        "MAG_BULKY"
+      ],
+      "moves": 60
+    },
+    {
+      "ammo_restriction": {
+        "410shot": 6,
+        "shot": 6,
+        "20x66mm": 6,
+        "signal_flare": 6
+      },
+      "moves": 25
+    }
+  ],
+  "warmth": 10,
+  "material_thickness": 1,
+  "flags": [
+    "BELTED",
+    "WATER_FRIENDLY"
+  ],
+  "armor": [
+    {
+      "encumbrance": 3,
+      "volume_encumber_modifier": 0.15,
+      "coverage": 100,
+      "covers": [
+        "torso"
+      ],
+      "specifically_covers": [
+        "torso_hanging_back"
+      ]
+    }
+  ]
+},
+{
+  "id": "416ManIslandSpecialAttackHalffacegasmask",
+  "type": "TOOL_ARMOR",
+  "name": {
+    "str": "416曼岛特攻半脸防毒面具"
+  },
+  "category": "clothing",
+  "description": "（幸存者军队联动）416全境封锁曼岛特攻半脸防毒面具，国土战略局专门给416配发的",
+  "flags": [
+    "SLEEP_IGNORE"
+  ],
+  "weight": "400 g",
+  "volume": "500 ml",
+  "price": 8200,
+  "price_postapoc": 1550,
+  "material": [
+    "plastic"
+  ],
+  "symbol": "[",
+  "looks_like": "mask_dust",
+  "color": "light_gray",
+  "warmth": 23,
+  "material_thickness": 2,
+  "environmental_protection": 5,
+  "environmental_protection_with_filter": 20,
+  "pocket_data": [
+    {
+      "pocket_type": "MAGAZINE",
+      "rigid": true,
+      "ammo_restriction": {
+        "gasfilter_m": 60
+      }
+    }
+  ],
+  "ammo": "gasfilter_m",
+  "use_action": [
+    "GASMASK"
+  ],
+  "armor": [
+    {
+      "encumbrance": 10,
+      "rigid_layer_only": true,
+      "coverage": 100,
+      "covers": [
+        "mouth"
+      ]
+    }
+  ]
+},
+{
+  "id": "416IsleofManSpecialAttackScarf",
+  "type": "TOOL_ARMOR",
+  "category": "clothing",
+  "symbol": "[",
+  "color": "light_gray",
+  "name": {
+    "str": "416曼岛特攻围巾"
+},
+  "description": "（幸存者军队联动）416全境封锁曼岛特攻围巾，国土战略局专门给416配发的",
+  "price": 6000,
+  "price_postapoc": 200,
+  "material": [
+    "cotton"
+  ],
+  "weight": "60 g",
+  "volume": "500 ml",
+  "to_hit": -3,
+  "flags": [
+    "OUTER"
+  ],
+  "warmth": 30,
+  "environmental_protection": 1,
+  "material_thickness": 0.3,
+  "armor": [
+    {
+      "encumbrance": 3,
+      "coverage": 85,
+      "covers": [
+        "mouth"
+      ]
+    }
+  ]
+},
+{
+    "id": "416IsleofManSpecialAttackCoat",
+    "repairs_like": "outer",
+    "type": "ARMOR",
+    "name": { "str": "416曼岛特攻外套" },
+    "description": "（幸存者军队联动）416全境封锁曼岛特攻外套，国土战略局专门给416配发的",
+    "weight": "700 g",
+    "volume": "3 L",
+    "price": 15400,
+    "price_postapoc": 2000,
+    "material": [ { "type": "nylon", "portion": 7 }, { "type": "cotton", "portion": 3 } ],
+    "symbol": "[",
+    "looks_like": "outer",
+    "color": "black",
+    "armor": [
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ], "coverage": 100, "encumbrance": [ 7, 9 ] },
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ], "coverage": 100 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": [ 7, 9 ] }
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "900 ml",
+        "max_contains_weight": "5 kg",
+        "max_item_length": "25 cm",
+        "moves": 70
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "900 ml",
+        "max_contains_weight": "5 kg",
+        "max_item_length": "25 cm",
+        "moves": 70
+      }
+    ],
+    "warmth": 45,
+    "material_thickness": 0.7,
+    "valid_mods": [ "steel_padded" ],
+    "flags": [ "VARSIZE", "POCKETS","WATER_FRIENDLY","WATERPROOF","OUTER" ]
+  },   
+{
+    "id": "416IsleofManSpecialAttackCombatSuit",
+    "repairs_like": "tshirt",
+    "type": "ARMOR",
+    "name": { "str": "416曼岛特攻作战服" },
+    "description": "（幸存者军队联动）416全境封锁曼岛特攻作战服，国土战略局专门给416配发的",
+    "weight": "300 g",
+    "volume": "1 L",
+    "price": 10900,
+    "price_postapoc": 800,
+    "material": [ { "type": "nylon", "portion": 7 }, { "type": "cotton", "portion": 3 } ],
+    "symbol": "[",
+    "looks_like": "tshirt",
+    "color": "black",
+    "armor": [
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ], "coverage": 95, "encumbrance": [ 7, 9 ] },
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ], "coverage": 100 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": [ 7, 9 ] }
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "900 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "15 cm",
+        "moves": 70
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "900 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "15 cm",
+        "moves": 70
+      }
+    ],
+    "warmth": 20,
+    "material_thickness": 0.4,
+    "valid_mods": [ "steel_padded" ],
+    "flags": [ "VARSIZE", "POCKETS","WATER_FRIENDLY" ]
+  },
+  {
+  "id": "416IsleofManSpecialAttackBulletproofVest",
+  "type": "ARMOR",
+  "category": "armor",
+  "name": {
+    "str": "416曼岛特攻防弹背心"
+  },
+  "description": "（幸存者军队联动）416全境封锁曼岛特攻防弹背心，国土战略局专门给416配发的",
+  "weight": "2300 g",
+  "volume": "6 L",
+  "variant_type": "generic",
+  "price": "5600 USD",
+  "price_postapoc": "100 USD",
+  "symbol": "[",
+  "material": [
+    "nylon",
+    "kevlar_layered"
+  ],
+  "color": "light_gray",
+  "warmth": 15,
+  "flags": [
+    "STURDY",
+    "OUTER",
+    "WATER_FRIENDLY"
+  ],
+  "use_action": [
+    {
+      "type": "attach_molle",
+      "size": 10
+    },
+    {
+      "type": "detach_molle"
+    }
+  ],
+  "pocket_data": [
+    {
+      "pocket_type": "CONTAINER",
+      "ablative": true,
+      "volume_encumber_modifier": 0,
+      "max_contains_volume": "2000 ml",
+      "max_contains_weight": "5 kg",
+      "max_item_length": "33 cm",
+      "moves": 800,
+      "description": "Pocket for a large armor plate.",
+      "//": "Should fit a medium ESAPI plate snugly",
+      "flag_restriction": [
+        "ABLATIVE_LARGE"
+      ]
+    },
+    {
+      "pocket_type": "CONTAINER",
+      "ablative": true,
+      "volume_encumber_modifier": 0,
+      "max_contains_volume": "2000 ml",
+      "max_contains_weight": "5 kg",
+      "max_item_length": "33 cm",
+      "moves": 800,
+      "description": "Pocket for a large armor plate.",
+      "flag_restriction": [
+        "ABLATIVE_LARGE"
+      ]
+    },
+    {
+      "pocket_type": "CONTAINER",
+      "ablative": true,
+      "volume_encumber_modifier": 0,
+      "max_contains_volume": "800 ml",
+      "max_contains_weight": "2 kg",
+      "max_item_length": "21 cm",
+      "moves": 800,
+      "description": "Pocket for a medium armor plate.",
+      "flag_restriction": [
+        "ABLATIVE_MEDIUM"
+      ]
+    },
+    {
+      "pocket_type": "CONTAINER",
+      "ablative": true,
+      "volume_encumber_modifier": 0,
+      "max_contains_volume": "800 ml",
+      "max_contains_weight": "2 kg",
+      "max_item_length": "21 cm",
+      "moves": 800,
+      "description": "Pocket for a medium armor plate.",
+      "flag_restriction": [
+        "ABLATIVE_MEDIUM"
+      ]
+    }
+  ],
+  "armor": [
+    {
+      "material": [
+        {
+          "type": "nylon",
+          "covered_by_mat": 100,
+          "thickness": 1
+        },
+        {
+          "type": "kevlar_layered",
+          "covered_by_mat": 95,
+          "thickness": 4.4
+        }
+      ],
+      "encumbrance": 4,
+      "coverage": 100,
+      "cover_vitals": 90,
+      "covers": [
+        "torso"
+      ],
+      "volume_encumber_modifier": 0.2
+    }
+  ]
+},
+{
+  "id": "416IsleofManSpecialAttackSkirt",
+  "repairs_like": "jeans",
+  "type": "ARMOR",
+  "name": {
+    "str": "416曼岛特攻短裙"
+  },
+  "description": "（幸存者军队联动）416全境封锁曼岛特攻短裙，国土战略局专门给416配发的",
+  "weight": "225 g",
+  "volume": "250 ml",
+  "price": 8500,
+  "price_postapoc": 950,
+  "material": [
+    "cotton"
+  ],
+  "symbol": "[",
+  "looks_like": "kilt",
+  "color": "dark_gray",
+  "pocket_data": [
+    {
+      "pocket_type": "CONTAINER",
+      "max_contains_volume": "250 ml",
+      "max_contains_weight": "1 kg",
+      "moves": 80
+    }
+  ],
+  "warmth": 30,
+  "material_thickness": 0.2,
+  "flags": [
+    "VARSIZE"
+  ],
+  "armor": [
+    {
+      "coverage": 100,
+      "covers": [
+        "leg_l",
+        "leg_r"
+      ],
+      "specifically_covers": [
+        "leg_hip_l",
+        "leg_hip_r"
+      ]
+    },
+    {
+      "coverage": 75,
+      "covers": [
+        "leg_l",
+        "leg_r"
+      ],
+      "specifically_covers": [
+        "leg_upper_l",
+        "leg_upper_r"
+      ]
+    }
+  ]
+},
+{
+  "id": "416IsleofManSpecialAttackSocks",
+  "type": "ARMOR",
+  "name": {
+    "str": "416曼岛特攻长袜"
+},
+  "description": "（幸存者军队联动）416全境封锁曼岛特攻长袜，国土战略局专门给416配发的",
+  "weight": "90 g",
+  "volume": "250 ml",
+  "price": 1000,
+  "price_postapoc": 350,
+  "material": [
+    "cotton"
+  ],
+  "symbol": "[",
+  "looks_like": "leg_warmers",
+  "color": "dark_gray",
+  "warmth": 20,
+  "material_thickness": 0.2,
+  "flags": [
+    "VARSIZE",
+    "SKINTIGHT"
+  ],
+  "armor": [
+    {
+      "encumbrance": 2,
+      "coverage": 100,
+      "covers": [
+        "foot_l",
+        "foot_r"
+      ]
+    },
+    {
+      "covers": [
+        "leg_l",
+        "leg_r"
+      ],
+      "specifically_covers": [
+        "leg_lower_l",
+        "leg_lower_r",
+        "leg_knee_l",
+        "leg_knee_r"
+      ],
+      "coverage": 100,
+      "encumbrance": 2
+    },
+    {
+      "covers": [
+        "leg_l",
+        "leg_r"
+      ],
+      "specifically_covers": [
+        "leg_upper_l",
+        "leg_upper_r"
+      ],
+      "coverage": 70
+    }
+  ]
+},
+{
+  "id": "416IsleofManSpecialAttackCombatShoes",
+  "repairs_like": "boots_survivor",
+  "type": "ARMOR",
+  "category": "armor",
+  "name": {
+    "str": "416曼岛特攻战斗鞋"
+  },
+  "description": "（幸存者军队联动）416全境封锁曼岛特攻战斗鞋，国土战略局专门给416配发的",
+  "weight": "960 g",
+  "volume": "2 L",
+  "price": 10000,
+  "price_postapoc": 2500,
+  "to_hit": -1,
+  "bashing": 1,
+  "symbol": "[",
+  "looks_like": "boots",
+  "color": "dark_gray",
+  "warmth": 30,
+  "material_thickness": 2.5,
+  "environmental_protection": 2,
+  "flags": [
+    "VARSIZE",
+    "WATERPROOF",
+    "STURDY"
+  ],
+  "armor": [
+    {
+      "covers": [
+        "foot_l",
+        "foot_r"
+      ],
+      "specifically_covers": [
+        "foot_toes_r",
+        "foot_toes_l",
+        "foot_ankle_r",
+        "foot_ankle_l",
+        "foot_heel_r",
+        "foot_heel_l",
+        "foot_arch_r",
+        "foot_arch_l"
+      ],
+      "material": [
+        {
+          "type": "leather",
+          "covered_by_mat": 100,
+          "thickness": 1.25
+        },
+        {
+          "type": "kevlar",
+          "covered_by_mat": 100,
+          "thickness": 1.25
+        }
+      ],
+      "encumbrance": 8,
+      "coverage": 100
+    },
+    {
+      "covers": [
+        "foot_l",
+        "foot_r"
+      ],
+      "specifically_covers": [
+        "foot_sole_r",
+        "foot_sole_l"
+      ],
+      "material": [
+        {
+          "type": "leather",
+          "covered_by_mat": 100,
+          "thickness": 0.1
+        },
+        {
+          "type": "rubber",
+          "covered_by_mat": 100,
+          "thickness": 6
+        }
+      ],
+      "coverage": 100
+    }
+  ]
+},
+{
+  "id": "416IsleofManSpecialAttackKneeGuards",
+  "type": "ARMOR",
+  "category": "armor",
+  "name": {
+    "str": "416曼岛特攻护膝"
+  },
+  "description": "（幸存者军队联动）416全境封锁曼岛特攻护膝，国土战略局专门给416配发的",
+  "weight": "700 g",
+  "//": "The weight assumes 3 sheets of about 15cm x 15cm x 1.5mm.",
+  "volume": "1 L",
+  "price": 1000,
+  "price_postapoc": 800,
+  "to_hit": 1,
+  "material": [
+    "lc_steel"
+  ],
+  "repairs_with": [
+    "steel"
+  ],
+  "symbol": "m",
+  "looks_like": "knee_pads",
+  "color": "light_gray",
+  "warmth": 5,
+  "longest_side": "50 cm",
+  "material_thickness": 1.5,
+  "environmental_protection": 1,
+  "flags": [
+    "OUTER",
+    "WATER_FRIENDLY",
+    "ALLOWS_TAIL"
+  ],
+  "armor": [
+    {
+      "covers": [
+        "leg_l",
+        "leg_r"
+      ],
+      "encumbrance": 1,
+      "coverage": 95,
+      "specifically_covers": [
+        "leg_knee_l",
+        "leg_knee_r"
+      ]
+    }
+  ]
+},
+{
+  "id": "416IsleofManSpecialAttackTacticalGloves",
+  "repairs_like": "gloves_light",
+  "type": "ARMOR",
+  "name": {
+    "str": "416曼岛特攻战术手套"
+  },
+  "description": "（幸存者军队联动）416全境封锁曼岛特攻战术手套，国土战略局专门给416配发的",
+  "weight": "200 g",
+  "volume": "750 ml",
+  "price": 9125,
+  "price_postapoc": 450,
+  "to_hit": 1,
+  "material": [
+    "cotton"
+  ],
+  "symbol": "[",
+  "looks_like": "fire_gauntlets",
+  "color": "black",
+  "warmth": 50,
+  "material_thickness": 2,
+  "armor": [
+    {
+      "encumbrance": 10,
+      "coverage": 100,
+      "covers": [
+        "hand_l",
+        "hand_r"
+      ]
+    }
+  ]
+},
+{
+  "id": "416IsleofManSpecialAttackWeaponBox",
+  "type": "ARMOR",
+  "name": {
+    "str": "416曼岛特攻武器箱"
+  },
+  "description": "（幸存者军队联动）416全境封锁曼岛特攻武器箱，国土战略局专门给416配发的",
+  "weight": "2800 g",
+  "volume": "7 L",
+  "price": 38000,
+  "price_postapoc": 2800,
+  "material": [
+    "lycra",
+    "steel"
+  ],
+  "symbol": "[",
+  "looks_like": "slingpack",
+  "color": "black",
+  "pocket_data": [
+    {
+      "pocket_type": "CONTAINER",        "rigid": true,
+      "max_contains_volume": "20000 ml",
+      "max_contains_weight": "32000 g",
+      "max_item_length": "160 cm",
+      "moves": 100
+    }
+  ],
+  "warmth": 1,
+  "material_thickness": 2.5,
+  "flags": [
+    "BELTED",
+    "WATER_FRIENDLY",
+    "ONLY_ONE",
+    "STURDY",
+    "TARDIS"
+  ],
+  "armor": [
+    {
+      "encumbrance": 7,
+      "coverage": 30,
+      "covers": [
+        "torso"
+      ],
+      "specifically_covers": [
+        "torso_hanging_back"
+      ]
+    }
+  ]
+}
+]

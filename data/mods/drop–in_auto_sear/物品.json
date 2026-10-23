@@ -1,0 +1,661 @@
+[
+{
+  "id": "dias",
+  "type": "GUNMOD",
+  "name": {
+    "str": "插入式自动阻铁"
+  },
+  "description": "一个U形金属片和一个T形活动挡板通过转轴组装在一起。把它塞进AR步枪的下机匣里，能够改变射击模式。由于自制挡板的表面不如实际的全自动阻铁好，所以精度和可靠性略有下降。",
+  "weight": "113 g",
+  "volume": "250 ml",
+  "integral_volume": "0 ml",
+  "integral_weight": "0 g",
+  "price": 65000,
+  "price_postapoc": 500,
+  "material": [
+    "steel"
+  ],
+  "symbol": ":",
+  "color": "red",
+  "location": "mechanism",
+  "mod_targets": [
+    "ar15",
+    "ar15_retool_300blk",
+    "ar_pistol",
+    "oa93",
+    "ar10",
+    "mk47"
+  ],
+  "//": "Install time short since it drops in, hinging open the AR being all the 'skill' necessary. Precision drop marginal since it'd change how semi and FA trigger pulls feel.",
+  "install_time": "5 m",
+  "dispersion_modifier": 10,
+  "//durability_modifier": -1,
+  "mode_modifier": [
+    [
+      "AUTO",
+      "auto",
+      4
+    ]
+  ],
+  "min_skills": [
+    [
+      "rifle",
+      2
+    ]
+  ]
+},
+{
+  "id": "m249semi",
+  "type": "GUNMOD",
+  "name": {
+    "str": "M249 semi-auto trigger"
+  },
+  "description": "一套能为M249机枪添加半自动射击模式的枪机模组。",
+  "weight": "60 g",
+  "volume": "250 ml",
+  "integral_volume": "0 ml",
+  "price": 24000,
+  "price_postapoc": 350,
+  "material": [
+    "steel"
+  ],
+  "symbol": ":",
+  "color": "red",
+  "location": "mechanism",
+  "mod_targets": [
+    "m249"
+  ],
+  "install_time": "2 h",
+  "dispersion_modifier": 5,
+  "consume_chance": 50,
+  "consume_divisor": 110,
+  "//durability_modifier": -3,
+  "mode_modifier": [
+    [
+      "DEFAULT",
+      "semi-auto",
+      1
+    ],
+    [
+      "AUTO",
+      "auto",
+      4
+    ]
+  ],
+  "min_skills": [
+    [
+      "mechanics",
+      4
+    ],
+    [
+      "rifle",
+      5
+    ]
+  ],
+  "flags": [
+    "INSTALL_DIFFICULT"
+  ]
+},
+{
+  "id": "m240semi",
+  "type": "GUNMOD",
+  "name": {
+    "str": "M240 semi-auto trigger"
+  },
+  "description": "一套能为M240机枪添加半自动射击模式的枪机模组。",
+  "weight": "60 g",
+  "volume": "250 ml",
+  "integral_volume": "0 ml",
+  "price": 24000,
+  "price_postapoc": 350,
+  "material": [
+    "steel"
+  ],
+  "symbol": ":",
+  "color": "red",
+  "location": "mechanism",
+  "mod_targets": [
+    "m240"
+  ],
+  "install_time": "2 h",
+  "dispersion_modifier": 5,
+  "consume_chance": 50,
+  "consume_divisor": 110,
+  "//durability_modifier": -3,
+  "mode_modifier": [
+    [
+      "DEFAULT",
+      "semi-auto",
+      1
+    ],
+    [
+      "AUTO",
+      "auto",
+      4
+    ]
+  ],
+  "min_skills": [
+    [
+      "mechanics",
+      4
+    ],
+    [
+      "rifle",
+      5
+    ]
+  ],
+  "flags": [
+    "INSTALL_DIFFICULT"
+  ]
+},
+{
+  "id": "m60semi",
+  "type": "GUNMOD",
+  "name": {
+    "str": "M60 改装枪机"
+  },
+  "description": "一套能为M60机枪添加半自动射击模式和连发射击模式的枪机模组。",
+  "weight": "60 g",
+  "volume": "250 ml",
+  "integral_volume": "0 ml",
+  "price": 24000,
+  "price_postapoc": 350,
+  "material": [
+    "steel"
+  ],
+  "symbol": ":",
+  "color": "red",
+  "location": "mechanism",
+  "mod_targets": [
+    "m60",
+    "m60_semi"
+  ],
+  "install_time": "2 h",
+  "dispersion_modifier": 5,
+  "consume_chance": 50,
+  "consume_divisor": 110,
+  "//durability_modifier": -3,
+  "mode_modifier": [
+    [
+      "DEFAULT",
+      "semi-auto",
+      1
+    ],
+    [
+      "AUTO",
+      "auto",
+      4
+    ]
+  ],
+  "min_skills": [
+    [
+      "mechanics",
+      4
+    ],
+    [
+      "rifle",
+      5
+    ]
+  ],
+  "flags": [
+    "INSTALL_DIFFICULT"
+  ]
+},
+{
+  "id": "scar_bars",
+  "type": "GUNMOD",
+  "name": {
+    "str": "balanced recoil system"
+  },
+  "description": "FN SCAR-H的后坐力平衡系统",
+  "weight": "60 g",
+  "volume": "250 ml",
+  "integral_volume": "0 ml",
+  "price": 24000,
+  "price_postapoc": 500,
+  "material": [
+    "steel"
+  ],
+  "symbol": ":",
+  "color": "red",
+  "location": "mechanism",
+  "mod_targets": [
+    "scar_h"
+  ],
+  "install_time": "15 m",
+  "handling_modifier": 15,
+  "min_skills": [
+    [
+      "mechanics",
+      2
+    ],
+    [
+      "rifle",
+      3
+    ]
+  ],
+  "flags": [
+    "IRREMOVABLE"
+  ]
+},
+{
+  "id": "AK_muzzle",
+  "type": "GUNMOD",
+  "name": {
+    "str": "AKM斜枪口"
+  },
+  "description": "AKM的斜枪口",
+  "weight": "0 g",
+  "volume": "0 ml",
+  "longest_side": "0 cm",
+  "integral_longest_side": "0 cm",
+  "price": 84000,
+  "price_postapoc": 500,
+  "install_time": "3 m",
+  "material": [
+    "steel"
+  ],
+  "symbol": ":",
+  "color": "light_gray",
+  "location": "muzzle",
+  "mod_targets": [
+    "ak47"
+  ],
+  "handling_modifier": 4,
+  "min_skills": [
+    [
+      "weapon",
+      2
+    ]
+  ],
+  "flags": [
+    "IRREMOVABLE"
+  ]
+},
+{
+  "id": "AK74_muzzle",
+  "type": "GUNMOD",
+  "name": {
+    "str": "AK-74M枪口防跳器"
+  },
+  "description": "AK-74M的枪口防跳器",
+  "weight": "380 g",
+  "volume": "250 ml",
+  "longest_side": "5 cm",
+  "integral_longest_side": "5 cm",
+  "price": 84000,
+  "price_postapoc": 500,
+  "install_time": "3 m",
+  "material": [
+    "steel"
+  ],
+  "symbol": ":",
+  "color": "light_gray",
+  "location": "muzzle",
+  "mod_targets": [
+    "ak74"
+  ],
+  "handling_modifier": 4,
+  "min_skills": [
+    [
+      "weapon",
+      2
+    ]
+  ]
+},
+{
+  "id": "wood_rpk_stock",
+  "type": "GUNMOD",
+  "name": {
+    "str": "木制RPK枪托"
+  },
+  "description": "一个巨大的木制枪托，可以安装在AK系列枪械上",
+  "weight": "1367 g",
+  "volume": "2731 ml",
+  "integral_volume": "0 ml",
+  "integral_weight": "0 g",
+  "price": 38000,
+  "price_postapoc": 500,
+  "install_time": "10 m",
+  "to_hit": 1,
+  "bashing": 6,
+  "material": [
+    "wood"
+  ],
+  "symbol": ":",
+  "color": "dark_gray",
+  "location": "stock mount",
+  "mod_targets": [
+    "ak74",
+    "ak47",
+    "aksemi"  
+  ],
+  "dispersion_modifier": -3,
+  "handling_modifier": 4,
+  "flags": [
+    "IRREMOVABLE"
+  ]
+},
+{
+  "id": "rpk_stock",
+  "type": "GUNMOD",
+  "name": {
+    "str": "RPK枪托"
+  },
+  "description": "一个巨大的枪托，可以安装在AK系列枪械上",
+  "weight": "1200 g",
+  "volume": "2500 ml",
+  "integral_volume": "0 ml",
+  "integral_weight": "0 g",
+  "price": 38000,
+  "price_postapoc": 500,
+  "install_time": "10 m",
+  "to_hit": 1,
+  "bashing": 6,
+  "material": [
+    "plastic",
+    "steel"
+  ],
+  "symbol": ":",
+  "color": "dark_gray",
+  "location": "stock mount",
+  "mod_targets": [
+    "ak74",
+    "ak47",
+    "aksemi" 
+  ],
+  "dispersion_modifier": -4,
+  "handling_modifier": 6,
+  "flags": [
+    "IRREMOVABLE"
+  ]
+},
+{
+  "id": "barrel_rpk_wood",
+  "type": "GUNMOD",
+  "name": {
+    "str": "RPK枪管（木制护木）"
+  },
+  "description": "一根很长的AK枪管，内置脚架，可以把你的AK改装成RPK，它的护木是木制的。",
+  "weight": "2667 g",
+  "integral_weight": "0 g",
+  "volume": "3043 ml",
+  "integral_volume": "0 ml",
+  "price": 72000,
+  "price_postapoc": 500,
+  "install_time": "5 m",
+  "material": [
+    "steel",
+    "wood"
+  ],
+  "symbol": ":",
+  "color": "light_gray",
+  "location": "barrel",
+  "mod_targets": [
+    "ak74",
+    "ak47",
+    "aksemi"
+  ],
+  "dispersion_modifier": -5,
+  "handling_modifier": 23,
+  "loudness_modifier": 8,
+  "min_skills": [
+    [
+      "weapon",
+      5
+    ]
+  ],
+  "flags": [
+    "IRREMOVABLE",
+    "BIPOD",
+    "SLOW_WIELD"
+  ]
+},
+{
+  "id": "barrel_rpk",
+  "type": "GUNMOD",
+  "name": {
+    "str": "RPK枪管"
+  },
+  "description": "一根很长的AK枪管，内置脚架，可以把你的AK改装成RPK。",
+  "weight": "2200 g",
+  "integral_weight": "0 g",
+  "volume": "2800 ml",
+  "integral_volume": "0 ml",
+  "price": 72000,
+  "price_postapoc": 500,
+  "install_time": "5 m",
+  "material": [
+    "plastic",
+    "steel"
+  ],
+  "symbol": ":",
+  "color": "light_gray",
+  "location": "barrel",
+  "mod_targets": [
+    "ak74",
+    "ak47",
+    "aksemi"
+  ],
+  "dispersion_modifier": -7,
+  "handling_modifier": 25,
+  "loudness_modifier": 8,
+  "min_skills": [
+    [
+      "weapon",
+      5
+    ]
+  ],
+  "add_mod":[
+    [
+      "rail",
+      2
+    ],
+    [
+      "underbarrel",
+      1
+    ]
+  ],
+  "flags": [
+    "IRREMOVABLE",
+    "BIPOD",
+    "SLOW_WIELD"
+  ]
+},
+{
+  "id": "akmag100",
+  "looks_like": "stanag30",
+  "type": "MAGAZINE",
+  "name": {
+    "str": "AK100发弹匣"
+  },
+  "description": "一个弯曲弧度达到180°的弹匣，就是旋风AK用的那种。",
+  "weight": "978 g",
+  "volume": "1137 ml",
+  "longest_side": "21 cm",
+  "integral_longest_side": "21 cm",
+  "price": 3300,
+  "price_postapoc": 330,
+  "material": [
+    "steel"
+  ],
+  "symbol": "#",
+  "color": "light_gray",
+  "ammo_type": [
+    "762"
+  ],
+  "flags": [
+    "MAG_COMPACT"
+  ],
+  "pocket_data": [
+    {
+      "pocket_type": "MAGAZINE",
+      "rigid": true,
+      "ammo_restriction": {
+        "762": 100
+      }
+    }
+  ]
+},
+{
+  "id": "akdrum100",
+  "looks_like": "stanag60drum",
+  "type": "MAGAZINE",
+  "name": {
+    "str": "AK100发弹鼓"
+  },
+  "description": "一个笨重的AK100发弹鼓。",
+  "weight": "1080 g",
+  "volume": "1150 ml",
+  "longest_side": "21 cm",
+  "integral_longest_side": "21 cm",
+  "price": 3300,
+  "price_postapoc": 330,
+  "material": [
+    "steel"
+  ],
+  "symbol": "#",
+  "color": "light_gray",
+  "ammo_type": [
+    "762"
+  ],
+  "flags": [
+    "MAG_COMPACT"
+  ],
+  "pocket_data": [
+    {
+      "pocket_type": "MAGAZINE",
+      "rigid": true,
+      "ammo_restriction": {
+        "762": 100
+      }
+    }
+  ]
+},
+{
+  "id": "rpk74drum",
+  "looks_like": "stanag60drum",
+  "type": "MAGAZINE",
+  "name": {
+    "str": "RPK100发弹鼓"
+  },
+  "description": "一个笨重的545x39100发弹鼓。",
+  "weight": "581 g",
+  "volume": "700 ml",
+  "longest_side": "21 cm",
+  "integral_longest_side": "21 cm",
+  "price": 3300,
+  "price_postapoc": 330,
+  "material": [
+    "plastic"
+  ],
+  "symbol": "#",
+  "color": "light_gray",
+  "ammo_type": [
+    "545x39"
+  ],
+  "flags": [
+    "MAG_COMPACT"
+  ],
+  "pocket_data": [
+    {
+      "pocket_type": "MAGAZINE",
+      "rigid": true,
+      "ammo_restriction": {
+        "545x39": 100
+      }
+    }
+  ]
+},
+{
+  "id": "sksauto",
+  "type": "GUNMOD",
+  "name": {
+    "str": "SKS全自动模组"
+  },
+  "description": "一套能为SKS半自动步枪添加自动射击模式的枪机模组。",
+  "weight": "60 g",
+  "volume": "250 ml",
+  "integral_volume": "0 ml",
+  "price": 24000,
+  "price_postapoc": 350,
+  "material": [
+    "steel"
+  ],
+  "symbol": ":",
+  "color": "red",
+  "location": "mechanism",
+  "mod_targets": [
+    "sks"
+  ],
+  "install_time": "2 h",
+  "dispersion_modifier": 5,
+  "consume_chance": 50,
+  "consume_divisor": 110,
+  "//durability_modifier": -3,
+  "mode_modifier": [
+    [
+      "DEFAULT",
+      "semi-auto",
+      1
+    ],
+    [
+      "AUTO",
+      "auto",
+      5
+    ]
+  ],
+  "min_skills": [
+    [
+      "mechanics",
+      4
+    ],
+    [
+      "rifle",
+      5
+    ]
+  ],
+  "flags": [
+    "INSTALL_DIFFICULT"
+  ]
+},
+{
+  "id": "sks_stock",
+  "type": "GUNMOD",
+  "name": {
+    "str": "SKS无托改件"
+  },
+  "description": "一套流行的SKS步枪无托化改装件。",
+  "volume": "0 ml",
+  "price": 12000,
+  "price_postapoc": 250,
+  "install_time": "1800 s",
+  "material": [
+    "steel",
+    "plastic"
+  ],
+  "symbol": ":",
+  "color": "light_gray",
+  "location": "stock mount",
+  "mod_targets": [
+    "sks"
+  ],
+  "add_mod":[
+    [
+      "rail",
+      2
+    ],
+    [
+      "underbarrel",
+      1
+    ]
+  ],
+  "dispersion_modifier": -7,
+  "handling_modifier": 23,
+  "flags": [
+    "IRREMOVABLE",
+    "REMOVED_STOCK",
+    "ZERO_WEIGHT"
+  ]
+}
+]

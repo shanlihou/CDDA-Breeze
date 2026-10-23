@@ -1,0 +1,35 @@
+[
+{
+    "id": "lbsk_wqb_mklfpnsq",
+    "type": "item_group",
+    "subtype": "collection",
+    "//": "马卡洛夫pm手枪包的物品组",
+    "items": [
+      { "item": "makarov", "count": 1 },
+      { "item": "manual_pistol", "count": 1 },
+      { "item": "makarovmag", "count": [ 3, 4 ] },
+      { "item": "rebel_sup", "count": 1 },
+      { "item": "9x18mmP2", "count": [ 1, 3 ] }
+    ]
+  },
+  {
+    "id": "lbsk_wqb_mklfpnsq",
+    "type": "ARMOR",
+    "name": "马卡洛夫手枪包",
+    "description": "同志打开这个包装，拿上他感受他的红色力量。",
+    "weight": "2800 g",
+    "volume": "2450 ml",
+    "price": 100,
+    "to_hit": 5,
+    "material": [ "cotton", "plastic" ],
+    "symbol": "[",
+    "looks_like": "box_large",
+    "color": "green",
+    "covers": [ "ARMS" ],
+    "coverage": 1,
+    "encumbrance": 1,
+    "warmth": 1,
+    "material_thickness": 3,
+    "use_action": { "type": "unpack", "group": "lbsk_wqb_mklfpnsq", "filthy_volume_threshold": "10 L" }
+  }
+]

@@ -1,0 +1,45 @@
+[
+  {
+    "id": "cc_bio_ears",
+    "type": "bionic",
+    "name": { "str": "CC便携耳机（扩音）" },
+    "description": "耳机的扩音模式，能放大听到的声音。\n这个其实不是cbm，只是一个挂载身上的便携小工具。CC赠送保持背包整洁的小玩具包。",
+    "included": true,
+    "flags": [ "BIONIC_TOGGLED", "IMMUNE_HEARING_DAMAGE" ],
+    "active_flags": [ "SUPER_HEARING" ],
+    "auto_deactivates": [ "cc_bio_earplugs" ],
+    "activated_on_install": true
+  },
+  {
+    "id": "cc_bio_earplugs",
+    "type": "bionic",
+    "name": { "str": "CC便携耳机（降噪）" },
+    "description": "耳机的降噪模式，能隔绝听到的声音，相当于一个耳塞。\n这个其实不是cbm，只是一个挂载身上的便携小工具。CC赠送保持背包整洁的小玩具包。",
+    "included": true,
+    "flags": [ "BIONIC_TOGGLED" ],
+    "active_flags": [ "DEAF" ],
+    "auto_deactivates": [ "cc_bio_ears" ]
+  },
+  {
+    "id": "cc_bio_blindfold",
+    "type": "bionic",
+    "name": { "str": "CC便携眼罩" },
+    "description": "一个便携眼罩。\n这个其实不是cbm，只是一个挂载身上的便携小工具。CC赠送保持背包整洁的小玩具包。",
+    "included": true,
+    "flags": [ "BIONIC_TOGGLED" ],
+    "active_flags": [ "BLIND" ]
+  },
+  {
+    "id": "cc_bio_flashlight_highmode",
+    "type": "bionic",
+    "name": { "str": "CC便携手电" },
+    "description": "一个便携小手电。\n这个其实不是cbm，只是一个挂载身上的便携小工具。CC赠送保持背包整洁的便携小玩具包。",
+    "act_cost": "3 J",
+    "react_cost": "3 J",
+    "time": "1 s",
+    "included": true,
+    "flags": [ "BIONIC_TOGGLED" ],
+    "enchantments": [ { "condition": "ACTIVE", "values": [ { "value": "LUMINATION", "add": 60 } ] } ]
+  }
+  
+]

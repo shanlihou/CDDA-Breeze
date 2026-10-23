@@ -1,0 +1,537 @@
+[
+  {
+    "//": "You get tokens as your reward, and can be traded for some (unique) items. For those who are greedy for money? Good luck getting rich :3",
+    "id": "VAMP_ASEEKER_item_essence",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "npc_has_trait": "vaseekerrewardingcollabitems",
+      "yes": "你每给我带来15种香精，我就给你一个代币。",
+      "no": {
+        "npc_has_trait": "vaseekerrewardingcollabmoney",
+        "yes": "你每给我带来15种香精，我就给你205美元。",
+        "no": {
+          "npc_has_trait": "vaseekernorewardcollab",
+          "yes": "你每给我带来15种香精，我就给你90美元。",
+          "no": "你每给我带来15种香精，我就给你30美元和1个代币。"
+        }
+      }
+    },
+    "responses": [
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekeriessenceval"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_item_bloodessence",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "npc_has_trait": "vaseekerrewardingcollabitems",
+      "yes": "你每给我带来8种血精，我就给你1个代币。",
+      "no": {
+        "npc_has_trait": "vaseekerrewardingcollabmoney",
+        "yes": "你每带8个猩血源质给我，我会付你265美元作为报酬。",
+        "no": {
+          "npc_has_trait": "vaseekernorewardcollab",
+          "yes": "你每带8个猩血源质给我，我会付你90美元作为报酬。",
+          "no": "你每带8个猩血源质给我，我会付你55美元和一个代币作为报酬。"
+        }
+      }
+    },
+    "responses": [
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekeribloodessenceval"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_item_dullessence",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "npc_has_trait": "vaseekerrewardingcollabitems",
+      "yes": "你每给我带来22种无趣的香精，我就给你一个代币。",
+      "no": {
+        "npc_has_trait": "vaseekerrewardingcollabmoney",
+        "yes": "你每给我带22种无趣的香精，我就给你305美元。",
+        "no": {
+          "npc_has_trait": "vaseekernorewardcollab",
+          "yes": "你每给我带22种无趣的香精，我就给你105美元。",
+          "no": "你每带22个阴黯源质给我，我会付你75美元和1个代币作为报酬。"
+        }
+      }
+    },
+    "responses": [
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekeridullessenceval"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_item_pureessence",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "npc_has_trait": "vaseekerrewardingcollabitems",
+      "yes": "你每带给我1个璀璨源质，我会付你5个代币作为报酬。",
+      "no": {
+        "npc_has_trait": "vaseekerrewardingcollabmoney",
+        "yes": "你每带给我1个璀璨源质，我会付你515美元作为报酬。",
+        "no": {
+          "npc_has_trait": "vaseekernorewardcollab",
+          "yes": "你每带1个璀璨源质给我，我会付你190美元作为报酬。",
+          "no": "你每带给我1个璀璨源质，我会付你105美元和5个代币作为报酬。"
+        }
+      }
+    },
+    "responses": [
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekeripureessenceval"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_item_windfrag",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "npc_has_trait": "vaseekerrewardingcollabitems",
+      "yes": "你带给我的每一块风碎片我都会给你4个代币。",
+      "no": {
+        "npc_has_trait": "vaseekerrewardingcollabmoney",
+        "yes": "你带给我的每一块风碎片我都会给你315美元。",
+        "no": {
+          "npc_has_trait": "vaseekernorewardcollab",
+          "yes": "你带给我的每一片风，我就给你110美元。",
+          "no": "我会给你35美元和4个代币为你带来的每一个风碎片给我。"
+        }
+      }
+    },
+    "responses": [
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekeriwindfragmentval"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_item_blobgem",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "npc_has_trait": "vaseekerrewardingcollabitems",
+      "yes": "你给我带来的每一个无定形琥珀，我就给你3个代币。",
+      "no": {
+        "npc_has_trait": "vaseekerrewardingcollabmoney",
+        "yes": "我会给你245美元买一个你带给我的无定形琥珀。",
+        "no": {
+          "npc_has_trait": "vaseekernorewardcollab",
+          "yes": "你带给我的每一个无定形的琥珀我给你95美元。",
+          "no": "我会给你45美元和3个代币为您带来的每一个无定形琥珀给我。"
+        }
+      }
+    },
+    "responses": [
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekeriblobgemval"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_item_monstertear",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "npc_has_trait": "vaseekerrewardingcollabitems",
+      "yes": "你带给我的每一滴蓝色晶泪，我都会给你5个代币。",
+      "no": {
+        "npc_has_trait": "vaseekerrewardingcollabmoney",
+        "yes": "你带给我的每一滴蓝色晶泪，我就给你400美元。",
+        "no": {
+          "npc_has_trait": "vaseekernorewardcollab",
+          "yes": "你带给我的每一滴蓝色晶泪我都会给你110美元。",
+          "no": "我会给你50美元和5个代币为你带来的每一个蓝色晶泪给我。"
+        }
+      }
+    },
+    "responses": [
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekerimonstertearval"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_item_shadowgem",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "npc_has_trait": "vaseekerrewardingcollabitems",
+      "yes": "你带给我的每颗暗影宝石，我都会给你6个代币。",
+      "no": {
+        "npc_has_trait": "vaseekerrewardingcollabmoney",
+        "yes": "你给我带来的每一块暗影宝石我就给你455美元。",
+        "no": {
+          "npc_has_trait": "vaseekernorewardcollab",
+          "yes": "你带给我的每一块暗影宝石我都会给你135美元。",
+          "no": "我会给你70美元和6个代币为你带来的每一个影子宝石给我。"
+        }
+      }
+    },
+    "responses": [
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekerishadowgemval"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_item_bonetwisted",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "npc_has_trait": "vaseekerrewardingcollabitems",
+      "yes": "你带给我的每一根扭曲的骨头，我都会给你3个代币。",
+      "no": {
+        "npc_has_trait": "vaseekerrewardingcollabmoney",
+        "yes": "我会给你195美元买你带给我的每根扭曲的骨头。",
+        "no": {
+          "npc_has_trait": "vaseekernorewardcollab",
+          "yes": "你带给我的每一根扭曲的骨头我给你85美元。",
+          "no": "我会给你25美元和3个代币，你给我的每一个扭曲的骨头。"
+        }
+      }
+    },
+    "responses": [
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekeribonetwistedval"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_item_grackenknuckles",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "npc_has_trait": "vaseekerrewardingcollabitems",
+      "yes": "你带给我的每根指节骨裂开，我就给你3个代币。",
+      "no": {
+        "npc_has_trait": "vaseekerrewardingcollabmoney",
+        "yes": "我会给你170美元买你带给我的每一块断裂的指节骨。",
+        "no": {
+          "npc_has_trait": "vaseekernorewardcollab",
+          "yes": "我给你70美元买你带给我的每一根断裂的指节骨。",
+          "no": "我会给你20美元和3个代币，你给我的每一个关节骨折。"
+        }
+      }
+    },
+    "responses": [
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekerigrackenknucklesval"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_item_wyrmskinpiece",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "npc_has_trait": "vaseekerrewardingcollabitems",
+      "yes": "你给我带来的每一块wyrmskin碎片我会给你3个代币。",
+      "no": {
+        "npc_has_trait": "vaseekerrewardingcollabmoney",
+        "yes": "你带给我的每一块wyrmskin碎片我会给你170美元。",
+        "no": {
+          "npc_has_trait": "vaseekernorewardcollab",
+          "yes": "你带给我的每一块wyrmskin碎片我给你70美元。",
+          "no": "我会给你20美元和3个代币，每wyrmskin碎片你带来给我。"
+        }
+      }
+    },
+    "responses": [
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekeriwyrmskinpieceval"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_item_monsterfang",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "npc_has_trait": "vaseekerrewardingcollabitems",
+      "yes": "你给我带来的每一个大毒牙，我就给你两个代币。",
+      "no": {
+        "npc_has_trait": "vaseekerrewardingcollabmoney",
+        "yes": "你给我带来的每一个大毒牙我就给你120美元。",
+        "no": {
+          "npc_has_trait": "vaseekernorewardcollab",
+          "yes": "你给我带来的每一个大毒牙我就给你30美元。",
+          "no": "我会给你25美元和2个代币为你带来的每一个可怕的牙给我。"
+        }
+      }
+    },
+    "responses": [
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekerimonsterfangval"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_item_iridescentplate",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "npc_has_trait": "vaseekerrewardingcollabitems",
+      "yes": "你带给我的每一个彩虹色的盘子，我会给你4个代币。",
+      "no": {
+        "npc_has_trait": "vaseekerrewardingcollabmoney",
+        "yes": "你带给我的每一个彩虹色的盘子我给你365美元。",
+        "no": {
+          "npc_has_trait": "vaseekernorewardcollab",
+          "yes": "你带给我的每一个彩虹色的盘子我给你50美元。",
+          "no": "我会给你35美元和4个代币为您带来的每一个彩虹板给我。"
+        }
+      }
+    },
+    "responses": [
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekeriiridescentplateval"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_item_engravedstone",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "npc_has_trait": "vaseekerrewardingcollabitems",
+      "yes": "你带给我的每一块刻石，我都会给你15个代币。",
+      "no": {
+        "npc_has_trait": "vaseekerrewardingcollabmoney",
+        "yes": "你带给我的每一块雕刻的石头我给你785美元。",
+        "no": {
+          "npc_has_trait": "vaseekernorewardcollab",
+          "yes": "你带给我的每一块雕刻的石头我给你120美元。",
+          "no": "我会给你90美元和15代币，每刻石头你带来给我。"
+        }
+      }
+    },
+    "responses": [
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekeriengravedstoneval"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_item_draconicheart",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "npc_has_trait": "vaseekerrewardingcollabitems",
+      "yes": "你带给我的每一颗石化的心，我都会给你20个代币。",
+      "no": {
+        "npc_has_trait": "vaseekerrewardingcollabmoney",
+        "yes": "你带给我的每一颗石化的心，我都会给你885美元。",
+        "no": {
+          "npc_has_trait": "vaseekernorewardcollab",
+          "yes": "你带给我的每一颗石化的心，我都会给你190美元。",
+          "no": "我会给你115美元和20个代币，每一个石化的心你带给我。"
+        }
+      }
+    },
+    "responses": [
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekeridraconicheartval"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_item_sun_sword",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "npc_has_trait": "vaseekerrewardingcollabitems",
+      "yes": "你给我带来的每把不朽剑，我都要给你25个记号。",
+      "no": {
+        "npc_has_trait": "vaseekerrewardingcollabmoney",
+        "yes": "你给我带来的每把不朽之剑，我就给你960块钱。",
+        "no": {
+          "npc_has_trait": "vaseekernorewardcollab",
+          "yes": "你给我带来的每把不朽之剑，我要给你220元。",
+          "no": "你给我带来的每把不朽之剑，我要给你125美元和25个代币。"
+        }
+      }
+    },
+    "responses": [
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekerisun_swordval"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_item_hexenhammer",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "npc_has_trait": "vaseekerrewardingcollabitems",
+      "yes": "你带给我的猎人的每把锤子我都会给你22个代币。",
+      "no": {
+        "npc_has_trait": "vaseekerrewardingcollabmoney",
+        "yes": "你带给我的猎人的每把锤子我给你905美元。",
+        "no": {
+          "npc_has_trait": "vaseekernorewardcollab",
+          "yes": "你给我带来的猎人的每把锤子我给你195美元。",
+          "no": "你带给我的猎人的每把锤子我就给你110美元和22个代币。"
+        }
+      }
+    },
+    "responses": [
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekerihexenhammerval"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_item_spear_pestilence",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "npc_has_trait": "vaseekerrewardingcollabitems",
+      "yes": "你每拿一支瘟疫枪给我，我就给你十个记号。",
+      "no": {
+        "npc_has_trait": "vaseekerrewardingcollabmoney",
+        "yes": "你给我带来的每一支瘟疫矛，我就给你675美元。",
+        "no": {
+          "npc_has_trait": "vaseekernorewardcollab",
+          "yes": "你每给我一支瘟疫矛，我就给你155美元。",
+          "no": "你每给我带来一支瘟疫矛，我就给你70块钱和10个代币。"
+        }
+      }
+    },
+    "responses": [
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekerispear_pestilenceval"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_item_staff_druidic",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "npc_has_trait": "vaseekerrewardingcollabitems",
+      "yes": "你给我带来的每根德鲁伊杖我都会给你15个代币。",
+      "no": {
+        "npc_has_trait": "vaseekerrewardingcollabmoney",
+        "yes": "我会给你720美元每德鲁伊工作人员你带来给我。",
+        "no": {
+          "npc_has_trait": "vaseekernorewardcollab",
+          "yes": "我会给你130美元每德鲁伊工作人员你带来给我。",
+          "no": "我会给你80美元和15代币，每德鲁伊工作人员你带来给我。"
+        }
+      }
+    },
+    "responses": [
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekeristaff_druidicval"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_item_stormbringer",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "npc_has_trait": "vaseekerrewardingcollabitems",
+      "yes": "你每给我带来一把被诅咒的剑，我就给你20个代币。",
+      "no": {
+        "npc_has_trait": "vaseekerrewardingcollabmoney",
+        "yes": "你带给我的每一把诅咒之刃，我都会给你815美元。",
+        "no": {
+          "npc_has_trait": "vaseekernorewardcollab",
+          "yes": "你带给我的每一把诅咒之刃，我都会给你110美元。",
+          "no": "你带给我的每一把诅咒之刃，我都会给你75美元和20个代币。"
+        }
+      }
+    },
+    "responses": [
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekeristormbringerval"
+        }
+      }
+    ]
+  },
+  {
+    "id": "VAMP_ASEEKER_item_veilblade",
+    "type": "talk_topic",
+    "dynamic_line": "我不知道我能不能接受…",
+    "responses": [
+      {
+        "text": "哦，好吧…",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekeriveilbladeval"
+        }
+      }
+    ]
+  }
+]

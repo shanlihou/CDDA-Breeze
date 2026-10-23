@@ -1,0 +1,272 @@
+[
+  {
+    "id": "meiling_bloodfm",
+    "type": "SPELL",
+    "name": "血流操控",
+    "description": "集中精神操控你的血压，止住流血的伤口。",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "remove_effect",
+    "effect_str": "bleed",
+    "shape": "blast",
+    "damage_type": "pure",
+    "min_damage": 1,
+    "max_damage": 1,
+    "max_level": 1,
+    "difficulty": -10,
+    "base_casting_time": 300,
+    "base_energy_cost": 100,
+    "energy_source": "MANA",
+    "flags": [
+      "CONCENTRATE",
+      "NO_HANDS",
+      "NO_LEGS",
+      "SOMATIC"
+    ]
+  },
+  {
+    "id": "meiling_mountainbreak",
+    "type": "SPELL",
+    "name": "开山炮",
+    "description": "调动全身以对敌人造成巨大伤害。",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "damage_type": "bash",
+    "min_damage": 50,
+    "max_damage": 200,
+    "damage_increment": 15,
+    "min_range": 1,
+    "max_range": 1,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 166,
+    "final_casting_time": 233,
+    "base_energy_cost": 100,
+    "energy_source": "MANA",
+    "flags": [
+      "NO_LEGS",
+      "RANDOM_DURATION",
+      "SOMATIC"
+    ],
+    "//": "Should have a rainbow aoe field effect"
+  },
+  {
+    "id": "meiling_qiblast",
+    "type": "SPELL",
+    "name": "气爆",
+    "description": "双掌前推，释放气劲穿透你前方的敌人。",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "line",
+    "damage_type": "bash",
+    "min_damage": 20,
+    "max_damage": 150,
+    "damage_increment": 13,
+    "min_pierce": 7,
+    "max_pierce": 50,
+    "pierce_increment": 4.3,
+    "min_range": 3,
+    "max_range": 6,
+    "range_increment": 0.3,
+    "min_aoe": 4,
+    "max_aoe": 4,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 100,
+    "base_energy_cost": 150,
+    "energy_source": "MANA",
+    "flags": [
+      "NO_LEGS",
+      "SOMATIC"
+    ],
+    "//": "Should be merged with tec_meiling_qi_burst , showing a field effect when proccing and hitting with an 'inverted cone' shape"
+  },
+  {
+    "id": "meiling_qiheal",
+    "type": "SPELL",
+    "name": "气疗",
+    "description": "将你的气集中在友方目标上，恢复一些生命值。",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "ally",
+      "self"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "damage_type": "pure",
+    "min_damage": -13,
+    "max_damage": -28,
+    "damage_increment": -1.5,
+    "min_range": 1,
+    "max_range": 1,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 200,
+    "base_energy_cost": 133,
+    "energy_source": "MANA",
+    "flags": [
+      "CONCENTRATE",
+      "NO_LEGS",
+      "SOMATIC"
+    ]
+  },
+  {
+    "id": "meiling_qipunch",
+    "type": "SPELL",
+    "name": "气拳",
+    "description": "用气过度充能你的拳头并击打敌人，将其击飞。",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "extra_effects": [
+      {
+        "id": "meiling_qipunch2"
+      }
+    ],
+    "shape": "blast",
+    "damage_type": "bash",
+    "min_damage": 20,
+    "max_damage": 90,
+    "damage_increment": 7,
+    "min_range": 1,
+    "max_range": 1,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 85,
+    "base_energy_cost": 125,
+    "energy_source": "MANA",
+    "flags": [
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "SOMATIC"
+    ]
+  },
+  {
+    "id": "meiling_qipunch2",
+    "type": "SPELL",
+    "name": "气拳（击退）",
+    "description": "meiling_qipunch 的击退组件",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "directed_push",
+    "shape": "blast",
+    "damage_type": "bash",
+    "min_damage": 2,
+    "max_damage": 5,
+    "damage_increment": 0.3,
+    "min_range": 1,
+    "max_range": 1,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "SILENT"
+    ]
+  },
+  {
+    "id": "meiling_redrelease",
+    "type": "SPELL",
+    "name": "红色能量释放",
+    "description": "聚集附近的大地之气强化自身，对目标生物造成少量伤害，但会严重破坏地形。",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
+    "effect": "attack",
+    "extra_effects": [
+      {
+        "id": "meiling_redrelease2"
+      }
+    ],
+    "shape": "blast",
+    "damage_type": "bash",
+    "min_damage": 20,
+    "max_damage": 20,
+    "min_range": 1,
+    "max_range": 1,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 150,
+    "base_energy_cost": 133,
+    "energy_source": "MANA",
+    "flags": [
+      "NO_LEGS",
+      "SOMATIC"
+    ],
+    "//": "The original spell mentions that this destroys walls, but I'm not sure how to limit it to that, plus maybe it's more interactive this way",
+    "//2": " meiling_redrelease2 should have a red aoe field effect"
+  },
+  {
+    "id": "meiling_redrelease2",
+    "type": "SPELL",
+    "name": "红色能量释放（钝击组件）",
+    "description": "meiling_redrelease 的钝击效果",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "ground",
+      "item"
+    ],
+    "effect": "bash",
+    "shape": "blast",
+    "damage_type": "bash",
+    "min_damage": 120,
+    "max_damage": 420,
+    "damage_increment": 30,
+    "min_range": 1,
+    "max_range": 1,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA"
+  },
+  {
+    "id": "meiling_tigerrelease",
+    "type": "SPELL",
+    "name": "虎气释放",
+    "description": "激活你的一部分气储备，使你的近战攻击更强。",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "spawn_item",
+    "effect_str": "aura_tigerrelease",
+    "shape": "blast",
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_duration": 2500,
+    "max_duration": 7500,
+    "duration_increment": 500,
+    "max_level": 10,
+    "difficulty": -10,
+    "base_casting_time": 80,
+    "base_energy_cost": 150,
+    "energy_source": "MANA",
+    "flags": [
+      "NO_LEGS",
+      "SOMATIC"
+    ],
+    "//": "Her martial arts stuff should very probably be rechecked and rebalanced after this"
+  }
+]

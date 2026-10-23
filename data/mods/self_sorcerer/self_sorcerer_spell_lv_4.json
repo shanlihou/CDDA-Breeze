@@ -1,0 +1,674 @@
+[
+  {
+    "id": "spell_craft_sorcerer_lv4_ice_storm",
+    "type": "SPELL",
+    "name": "术士-Lv4-冰风暴",
+    "description": "在目标点制造一场冰风暴。",
+    "components": "spell_sorcerer_use_item_4",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "max_level": 0,
+    "min_damage": 62,
+    "max_damage": 190,
+    "min_aoe": 5,
+    "min_range": 30,
+    "spell_class": "spell_craft_sorcerer_4",
+    "base_casting_time": 300,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 4,
+    "damage_type": "cold"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv4_stoneskin",
+    "type": "SPELL",
+    "name": "术士-Lv4-石肤术",
+    "description": "降低你受到的伤害，持续20分钟+20x智力秒。",
+    "components": "spell_sorcerer_use_item_4",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "attack",
+    "effect_str": "effect_sorcerer_stoneskin",
+    "shape": "blast",
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_4",
+    "difficulty": 4,
+    "min_range": 8,
+    "max_level": 0,
+    "base_energy_cost": 0,
+    "min_duration": 148000,
+    "max_duration": 148000
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_sorcerer_stoneskin",
+    "name": [
+      "石肤术"
+    ],
+    "desc": [
+      "降低你受到的伤害。"
+    ],
+    "apply_message": "你的防御能力提高了！",
+    "remove_message": "你的防御能力恢复了。",
+    "max_intensity": 999,
+    "int_dur_factor": "5 m",
+    "rating": "good",
+    "enchantments": [
+      {
+        "values": [
+          {
+            "value": "ARMOR_CUT",
+            "add": -20
+          },
+          {
+            "value": "ARMOR_STAB",
+            "add": -15
+          },
+          {
+            "value": "ARMOR_BULLET",
+            "add": -15
+          },
+          {
+            "value": "ARMOR_BASH",
+            "add": -10
+          },
+          {
+            "value": "ARMOR_ACID",
+            "add": -5
+          },
+          {
+            "value": "ARMOR_BIO",
+            "add": -5
+          },
+          {
+            "value": "ARMOR_COLD",
+            "add": -5
+          },
+          {
+            "value": "ARMOR_ELEC",
+            "add": -5
+          },
+          {
+            "value": "ARMOR_HEAT",
+            "add": -5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv4_missile",
+    "type": "SPELL",
+    "name": "术士-Lv4-飞弹风暴",
+    "description": "随机发射最多6发魔法飞弹，对目标及周围的随机敌人造成真实伤害，无视阻挡。",
+    "components": "spell_sorcerer_use_item_4",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "NO_PROJECTILE"
+    ],
+    "min_damage": 12,
+    "max_damage": 38,
+    "damage_type": "pure",
+    "min_range": 30,
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_4",
+    "difficulty": 4,
+    "max_level": 0,
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack",
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_lv4_missile_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv4_missile_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv4_missile_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv4_missile_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv4_missile_1"
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv4_missile_1",
+    "type": "SPELL",
+    "name": "术士-Lv4-飞弹风暴（地面）",
+    "description": "随机选择一个地面，再触发随机选择一个敌人。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "RANDOM_TARGET",
+      "NO_EXPLOSION_SFX",
+      "NO_PROJECTILE"
+    ],
+    "min_damage": 0,
+    "max_damage": 0,
+    "damage_type": "pure",
+    "min_range": 3,
+    "spell_class": "spell_craft_sorcerer_4",
+    "difficulty": 4,
+    "max_level": 0,
+    "base_casting_time": 300,
+    "energy_source": "NONE",
+    "shape": "blast",
+    "effect": "attack",
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_lv4_missile_2"
+      }
+    ],
+    "base_energy_cost": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv4_missile_2",
+    "type": "SPELL",
+    "name": "术士-Lv4-飞弹风暴（敌人）",
+    "description": "对范围内随机敌人造成真实伤害。。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "RANDOM_TARGET",
+      "RANDOM_DAMAGE",
+      "NO_PROJECTILE"
+    ],
+    "min_damage": 12,
+    "max_damage": 38,
+    "damage_type": "pure",
+    "min_range": 5,
+    "spell_class": "spell_craft_sorcerer_4",
+    "difficulty": 4,
+    "max_level": 0,
+    "base_casting_time": 300,
+    "energy_source": "NONE",
+    "shape": "blast",
+    "effect": "attack",
+    "base_energy_cost": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv4_invisibility",
+    "type": "SPELL",
+    "name": "术士-Lv4-隐形",
+    "description": "使你获得手持时隐身的物品，持续5分钟+5x智力秒。",
+    "components": "spell_sorcerer_use_item_4",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "spawn_item",
+    "effect_str": "sor_magic_invstone",
+    "min_damage": 1,
+    "max_damage": 1,
+    "shape": "blast",
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_4",
+    "difficulty": 4,
+    "max_level": 0,
+    "base_energy_cost": 0,
+    "min_duration": 37000,
+    "max_duration": 37000
+  },
+  {
+    "id": "spell_craft_sorcerer_lv4_light",
+    "type": "SPELL",
+    "name": "术士-Lv4-持久光亮术",
+    "description": "制造一个发光源，持续168小时。",
+    "components": "spell_sorcerer_use_item_4",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "spawn_item",
+    "effect_str": "sor_magic_flashlight",
+    "min_damage": 1,
+    "max_damage": 1,
+    "shape": "blast",
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_4",
+    "difficulty": 4,
+    "max_level": 0,
+    "base_energy_cost": 0,
+    "min_duration": 60480000,
+    "max_duration": 60480000
+  },
+  {
+    "id": "sor_magic_flashlight",
+    "type": "TOOL",
+    "name": {
+      "str": "魔法光源",
+      "str_pl": "魔法光源"
+    },
+    "description": "一个发光源，可以让它不发光。",
+    "weight": "5 g",
+    "volume": "5 ml",
+    "price": 0,
+    "material": [
+      "stone"
+    ],
+    "symbol": "o",
+    "color": "light_gray",
+    "flags": [
+      "ALLOWS_REMOTE_USE",
+      "LIGHT_200"
+    ],
+    "relic_data": {},
+    "use_action": {
+      "menu_text": "变暗",
+      "type": "transform",
+      "msg": "你让光源黯淡下来。",
+      "target": "sor_magic_flashlight_off"
+    }
+  },
+  {
+    "id": "sor_magic_flashlight_off",
+    "copy-from": "sor_magic_flashlight",
+    "type": "TOOL",
+    "name": {
+      "str": "魔法光源（无光）",
+      "str_pl": "魔法光源（无光）"
+    },
+    "relic_data": {},
+    "use_action": {
+      "menu_text": "点亮",
+      "type": "transform",
+      "msg": "你让光源发出光亮。",
+      "target": "sor_magic_flashlight"
+    },
+    "flags": [
+      "ALLOWS_REMOTE_USE",
+      "LIGHT_4"
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv4_restoration",
+    "type": "SPELL",
+    "name": "术士-Lv4-复原术",
+    "description": "治愈咬伤，感染，真菌。",
+    "components": "spell_sorcerer_use_item_4",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "min_range": 8,
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_4",
+    "difficulty": 4,
+    "max_level": 0,
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack",
+    "effect_str": "sorcerer_res"
+  },
+  {
+    "type": "effect_type",
+    "id": "sorcerer_res",
+    "removes_effects": [
+      "bite",
+      "infected",
+      "recover",
+      "fungus"
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv4_freedom_movement",
+    "type": "SPELL",
+    "name": "术士-Lv4-行动自如",
+    "description": "使地形对你的影响大幅降低，持续1小时+1x智力分钟。",
+    "components": "spell_sorcerer_use_item_4",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "min_range": 8,
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_4",
+    "difficulty": 4,
+    "max_level": 0,
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "min_duration": 444000,
+    "max_duration": 444000,
+    "effect": "spawn_item",
+    "effect_str": "sorcerer_freedom_movement"
+  },
+  {
+    "type": "effect_type",
+    "id": "sorcerer_freedom_movement",
+    "name": [
+      "无效效果"
+    ],
+    "desc": [
+      "一个无效了的效果。"
+    ]
+  },
+  {
+    "id": "ench_sorcerer_freedom_movement",
+    "type": "enchantment",
+    "has": "WORN",
+    "condition": "ALWAYS",
+    "mutations": [
+      "sor_mut_freedom"
+    ]
+  },
+  {
+    "id": "sorcerer_freedom_movement",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str_sp": "行动自如"
+    },
+    "description": "你理应可以无视那些地形。",
+    "weight": "10 g",
+    "volume": "10 ml",
+    "material": [
+      "sor_magic_armor"
+    ],
+    "symbol": "F",
+    "color": "light_gray",
+    "warmth": 0,
+    "material_thickness": 0,
+    "environmental_protection": 0,
+    "flags": [
+      "AURA",
+      "SEMITANGIBLE",
+      "OVERSIZE",
+      "TRADER_AVOID",
+      "STURDY",
+      "NO_TAKEOFF"
+    ],
+    "armor": [
+      {
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ],
+        "coverage": 100,
+        "encumbrance": 0
+      }
+    ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "id": "ench_sorcerer_freedom_movement"
+        }
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "sor_mut_freedom",
+    "name": {
+      "str": "行动自如"
+    },
+    "points": 0,
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": false,
+    "description": "你理应可以无视那些地形。",
+    "movecost_obstacle_modifier": 0.5,
+    "flags": [
+      "SLUDGEPROOF",
+      "WEBWALK",
+      "SLUDGE_IMMUNE",
+      "ACID_IMMUNE"
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv4_summon_monster",
+    "type": "SPELL",
+    "name": "术士-Lv4-召唤怪物 IV",
+    "description": "在目标范围内召唤1-3怪物4，或者2-5怪物3，或者3-7怪物2，持续10分钟。",
+    "components": "spell_sorcerer_use_item_4",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "WONDER"
+    ],
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 8,
+    "min_aoe": 3,
+    "spell_class": "spell_craft_sorcerer_4",
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "max_level": 0,
+    "min_duration": 60000,
+    "max_duration": 60000,
+    "difficulty": 4,
+    "base_energy_cost": 0,
+    "shape": "blast",
+    "effect": "attack",
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_lv4_summon_monster_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv4_summon_monster_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv4_summon_monster_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv4_summon_monster_2"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv4_summon_monster_2"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv4_summon_monster_3"
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv4_summon_monster_1",
+    "type": "SPELL",
+    "name": "术士-Lv4-召唤怪物4",
+    "description": "在目标范围内召唤1-3只怪物4，持续10分钟。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "message": "",
+    "min_damage": 1,
+    "max_damage": 3,
+    "min_range": 8,
+    "min_aoe": 3,
+    "spell_class": "spell_craft_sorcerer_4",
+    "base_casting_time": 0,
+    "energy_source": "NONE",
+    "max_level": 0,
+    "min_duration": 60000,
+    "max_duration": 60000,
+    "difficulty": 4,
+    "shape": "blast",
+    "effect": "summon",
+    "effect_str": "mon_sor_summon_4",
+    "base_energy_cost": 0
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_lv4_summon_monster_1",
+    "id": "spell_craft_sorcerer_lv4_summon_monster_2",
+    "type": "SPELL",
+    "name": "术士-Lv4-召唤怪物3",
+    "description": "在目标范围内召唤2-5只怪物3，持续10分钟。",
+    "effect_str": "mon_sor_summon_3",
+    "min_damage": 2,
+    "max_damage": 5,
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_lv4_summon_monster_1",
+    "id": "spell_craft_sorcerer_lv4_summon_monster_3",
+    "type": "SPELL",
+    "name": "术士-Lv4-召唤怪物2",
+    "description": "在目标范围内召唤3-7只怪物2，持续10分钟。",
+    "effect_str": "mon_sor_summon_2",
+    "min_damage": 3,
+    "max_damage": 7,
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv4_jackhammer",
+    "type": "SPELL",
+    "name": "术士-Lv4-冲击破",
+    "description": "对最大22格直线范围内的地形或家具造成80+智力x2至80+智力x4强度的冲击。",
+    "components": "spell_sorcerer_use_item_4",
+    "effect": "bash",
+    "shape": "line",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DURATION",
+      "IGNORE_WALLS"
+    ],
+    "max_level": 0,
+    "min_damage": 108,
+    "max_damage": 136,
+    "min_range": 22,
+    "min_aoe": 1,
+    "difficulty": 4,
+    "spell_class": "spell_craft_sorcerer_4",
+    "base_casting_time": 300,
+    "base_energy_cost": 0,
+    "energy_source": "MANA"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv4_door_locked",
+    "type": "SPELL",
+    "name": "术士-Lv4-锁门术",
+    "description": "如果一扇门可以被上锁，就可能被这个法术锁上。",
+    "components": "spell_sorcerer_use_item_4",
+    "valid_targets": [
+      "hostile",
+      "ground",
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "damage_type": "pure",
+    "min_range": 4,
+    "min_aoe": 0,
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_4",
+    "difficulty": 4,
+    "max_level": 0,
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "ter_transform",
+    "effect_str": "trans_lv4_door_locked"
+  },
+  {
+    "type": "ter_furn_transform",
+    "id": "trans_lv4_door_locked",
+    "terrain": [
+      {
+        "result": "t_door_locked",
+        "valid_terrain": [
+          "t_door_o",
+          "t_door_c"
+        ],
+        "message": "门被锁住了！"
+      },
+      {
+        "result": "t_door_locked_peep",
+        "valid_terrain": [
+          "t_door_o_peep",
+          "t_door_c_peep"
+        ],
+        "message": "门被锁住了！"
+      },
+      {
+        "result": "t_door_metal_locked",
+        "valid_terrain": [
+          "t_door_metal_o",
+          "t_door_metal_c"
+        ],
+        "message": "门被锁住了！"
+      },
+      {
+        "result": "t_door_bar_locked",
+        "valid_terrain": [
+          "t_door_bar_o",
+          "t_door_bar_c"
+        ],
+        "message": "门被锁住了！"
+      }
+    ]
+  }
+]

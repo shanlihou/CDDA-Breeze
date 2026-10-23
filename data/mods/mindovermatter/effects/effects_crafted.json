@@ -1,0 +1,18 @@
+{
+  "id": "instability_remover",
+  "type": "effect_type",
+  "name": [ "剧烈瘙痒" ],
+  "desc": [ "你将药膏涂遍了全身。希望这是个好主意。" ],
+  "apply_message": "你的全身奇痒无比！",
+  "remove_message": "瘙痒终于消退了。",
+  "rating": "mixed",
+  "max_duration": "24 hours",
+  "vitamins": [
+    {
+      "vitamin": "instability",
+      "rate": [ [-1, -1] ],
+      "tick": [ "3 m" ]
+    }
+  ],
+  "base_mods": { "speed_mod": [ -10 ], "str_mod": [ -1 ], "dex_mod": [ -1 ], "int_mod": [ -1 ], "h_mod_min": [ -1 ], "h_mod_chance": [ 1 ], "h_mod_chance_bot": [ 5 ], "h_mod_tick": [ 3600 ] }
+}

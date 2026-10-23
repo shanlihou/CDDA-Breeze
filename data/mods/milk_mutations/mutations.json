@@ -1,0 +1,346 @@
+[
+  {
+    "type": "mutation",
+    "id": "THRESH_MILK",
+    "name": { "str": "温顺的母畜" },
+    "points": 1,
+    "description": "你沦为一只温驯诱人的母畜，柔软硕大的胸脯和臀瓣是世间最舒适的枕垫，光润挺立的嫣红乳头里分泌出价比黄金的香甜汁液，在大灾变来临前，不知有多少富豪为购得一只血清而疯狂，每一只进化完全的母畜都能使全世界人为只失神疯癫。",
+    "valid": false,
+    "purifiable": false,
+    "threshold": true,
+    "mutagen_target_modifier": 20
+  },
+  {
+    "type": "mutation",
+    "id": "PHEROMONE_MAMMAL",
+    "copy-from": "PHEROMONE_MAMMAL",
+    "extend": {
+      "category": [
+        "MILK"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "AROMA",
+    "name": { "str": "体怀异香" },
+    "points": 1,
+    "description": "也许是因为分泌过多乳汁，亦或者每天高强度运动的缘故，母畜身体总是会散发出一股异常迷人的香气，让人感到心旷神怡的同时，还能将周围的怪物全部吸引过来。",
+    "starting_trait": true,
+    "category": [ "MILK" ],
+	"threshreq": [
+      "THRESH_MILK"
+    ],
+	"prereqs": [
+      "PHEROMONE_MAMMAL"
+    ],
+	"prereqs2": [
+      "MILKBR"
+    ],
+	"social_modifiers": {
+      "lie": 80
+    },
+    "scent_intensity": 800
+  },
+  {
+    "type": "mutation",
+    "id": "PERSISTENCE_HUNTER",
+    "copy-from": "PERSISTENCE_HUNTER",
+    "extend": {
+      "category": [
+        "MILK"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "PERSISTENCE_MILK",
+    "name": { "str": "爱欲充能" },
+    "points": 1,
+    "description": "作为性爱玩具，你的体能远远超过那些依靠药剂勉强恢复青春的老头子们，但是思维定性迫使你每一次都露出精疲力竭的享受模样，这可能也是药剂的局限性之一吧。",
+    "changes_to": [ "PERSISTENCE_HUNTER2" ],
+    "category": [ "MILK" ],
+	"prereqs": [
+      "PERSISTENCE_HUNTER"
+    ],
+	"threshreq": [
+      "THRESH_MILK"
+    ],
+    "fatigue_modifier": -0.5,
+    "stamina_regen_modifier": 0.5
+  },
+  {
+    "type": "mutation",
+    "id": "BEAUTIFUL3",
+    "copy-from": "BEAUTIFUL3",
+    "extend": {
+      "category": [
+        "MILK"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "STRONG_LEGS",
+    "copy-from": "STRONG_LEGS",
+    "extend": {
+      "category": [
+        "MILK"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "PADDED_FEET",
+    "copy-from": "PADDED_FEET",
+    "extend": {
+      "category": [
+        "MILK"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "REGEN",
+    "copy-from": "REGEN",
+    "extend": {
+      "category": [
+        "MILK"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "PAINREC3",
+    "copy-from": "PAINREC3",
+    "extend": {
+      "category": [
+        "MILK"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "MASOCHIST_MED",
+    "copy-from": "MASOCHIST_MED",
+     "extend": {
+      "threshreq": [
+         "THRESH_MEDICAL"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "CENOBITE",
+    "copy-from": "CENOBITE",
+    "extend": {
+      "threshreq": [
+         "THRESH_MEDICAL"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "THICKSKIN",
+    "copy-from": "THICKSKIN",
+    "extend": {
+      "category": [
+        "MILK"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "FAT",
+    "copy-from": "FAT",
+    "extend": {
+      "category": [
+        "MILK"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "AMBR",
+    "name": "丰乳肥臀",
+    "points": 2,
+    "visibility": 3,
+    "ugliness": -10,
+    "mixed_effect": true,
+    "description": "你体内积攒的脂肪不断朝着乳房和臀瓣汇集，身材愈发窈窕丰满，在大灾变以前母畜血清也时常被称作魔鬼血清，现在看来名不虚传，与此同时胸部的肿胀感愈发强烈……虽然这些部位异常累赘，至少你更能挨打了不是吗？",
+    "encumbrance_always": [ [ "torso", 25 ] ],
+	"armor": [ { "parts": [ "torso", "leg_l", "leg_r" ], "bash": 25, "cut": 15, "stab": 5 } ],
+	"prereqs": [
+      "FAT"
+    ],
+    "category": [ "MILK" ]
+  },
+  {
+    "type": "mutation",
+    "id": "BTFT",
+    "name": "温润玉足",
+    "points": 2,
+    "visibility": 3,
+    "ugliness": -5,
+    "mixed_effect": true,
+    "description": "你脚底的肉垫发生喜人变化，抚摸起来有一种异样的舒适触感，脚部逐渐变得滑嫩白皙，那小巧圆润宛若珍珠般的豆蔻脚趾足以使某些性趣古怪的富豪为之疯狂。现在你的足部累赘减少，移动速度加快。",
+    "encumbrance_always": [ [ "foot_l", -8 ], [ "foot_r", -8 ] ],
+	"armor": [ { "parts": [ "foot_l", "foot_r" ], "bash": 5, "cut": 5, "stab": 5 } ],
+	"movecost_flatground_modifier": 0.70,
+	"prereqs": [
+      "PADDED_FEET"
+    ],
+    "category": [ "MILK" ]
+  },
+  {
+    "type": "mutation",
+    "id": "MILKBR",
+    "name": {
+      "str": "甜蜜乳汁"
+    },
+    "points": 2,
+    "visibility": 10,
+    "ugliness": -10,
+    "description": "你的乳房开始不受控制地溢出香甜的乳汁，红肿诱人的乳头称作水龙头也不为过……大灾变以前富豪都以这种香甜绵密的浓稠汁水招待贵客，或是做成豪华甜点供人品尝。你现在可以花费极低代价产出营养丰富的乳汁。",
+    "prereqs": [
+      "AMBR"
+    ],
+    "threshreq": [
+      "THRESH_MILK"
+    ],
+    "category": [
+      "MILK"
+    ],
+    "active": true,
+    "cost": 50,
+    "hunger": true,
+    "thirst": true,
+	"scent_mask": -200,
+    "social_modifiers": {
+      "lie": 10
+	},
+    "spawn_item": {
+      "type": "milky_milk",
+      "message": "你抓住自己硕大的胸部用力一掐，粘稠的白色乳汁便如同开闸泄洪般喷射而出。"
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "GOODHAND",
+    "name": { "str": "微小吸盘" },
+    "points": 1,
+    "visibility": 3,
+    "ugliness": 1,
+    "mixed_effect": true,
+    "description": "你的手掌内侧生长出许多细小的吸盘，能在服侍主人的时候提升吸力和触感，传说即便是最为老练的家猪都无法在母畜这双宛若魔鬼的双手撑过一分钟。",
+    "encumbrance_always": [ [ "hand_l", -10 ], [ "hand_r", -10 ] ],
+    "restricts_gear": [ "hand_l", "hand_r" ],
+    "craft_skill_bonus": [ [ "electronics", 5 ], [ "tailor", 5 ], [ "mechanics", 5 ] ],
+    "types": [ "HANDS" ],
+	"threshreq": [
+      "THRESH_MILK"
+    ],
+    "category": [ "MILK" ]
+  },
+  {
+    "type": "mutation",
+    "id": "SOFTSKIN",
+    "name": "娇嫩肌肤",
+    "points": 2,
+    "visibility": 3,
+    "ugliness": -5,
+    "mixed_effect": true,
+    "description": "你的皮肤变得愈发娇艳光润，摸起来就像是嫩豆腐一样，这极大减少了你全身的累赘，同时也使得主人在把玩时手感更佳。",
+    "encumbrance_always": [
+      [ "torso", -5 ],
+      [ "head", -5 ],
+      [ "arm_l", -5 ],
+      [ "arm_r", -5 ],
+      [ "hand_l", -5 ],
+      [ "hand_r", -5 ],
+      [ "leg_l", -5 ],
+      [ "leg_r", -5 ],
+      [ "foot_l", -5 ],
+      [ "foot_r", -5 ]
+    ],
+	"wet_protection": [
+      {
+        "part": "head",
+        "good": 7
+      },
+      {
+        "part": "leg_l",
+        "good": 21
+      },
+      {
+        "part": "leg_r",
+        "good": 21
+      },
+      {
+        "part": "foot_l",
+        "good": 6
+      },
+      {
+        "part": "foot_r",
+        "good": 6
+      },
+      {
+        "part": "arm_l",
+        "good": 19
+      },
+      {
+        "part": "arm_r",
+        "good": 19
+      },
+      {
+        "part": "hand_l",
+        "good": 5
+      },
+      {
+        "part": "hand_r",
+        "good": 5
+      },
+      {
+        "part": "torso",
+        "good": 40
+      }
+    ],
+	"armor": [ { "parts": [ "torso", "leg_l", "leg_r" ], "bash": 15, "cut": 15, "stab": 5 } ],
+	"prereqs": [
+      "THICKSKIN"
+    ],
+	"threshreq": [
+      "THRESH_MILK"
+    ],
+    "category": [ "MILK" ]
+  },
+  {
+    "type": "mutation",
+    "id": "BEAUTIFUL4",
+    "name": {
+      "str": "娇艳容颜"
+    },
+    "points": 4,
+    "visibility": 10,
+    "ugliness": -10,
+    "description": "你的容颜娇艳动人，搭配夸张丰满的身材愈发展现出异样的魅惑……将你摁在地板上凌虐到哭泣想必是一副非常有意思的场景。",
+    "prereqs": [
+      "BEAUTIFUL3"
+    ],
+	"threshreq": [
+      "THRESH_MILK"
+    ],
+	"category": [ "MILK" ]
+  },
+  {
+    "type": "mutation",
+    "id": "MASTERMARK",
+    "name": {
+      "str": "主人印记"
+    },
+    "points": 1,
+    "visibility": 1,
+	"ugliness": -1,
+    "description": "你散发出的气质能让母畜轻易辨认，她们会将你视为独一无二的至高主人，你可以对她们做出任何事情……任何事。"
+  }
+]

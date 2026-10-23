@@ -3,66 +3,350 @@
     "type": "scenario",
     "copy-from": "alone",
     "id": "alone",
-    "extend": { "professions": [ "bionic_prepper" ] }
+    "extend": {
+      "professions": [
+        "bionic_prepper"
+      ]
+    }
   },
   {
     "type": "scenario",
     "copy-from": "fungal_start",
     "id": "fungal_start",
-    "blacklist_professions": true,
-    "extend": { "professions": [ "bionic_patient" ] }
+    "professions": [
+      "alcoholic",
+      "amateur_electronics",
+      "archaeologist",
+      "archery",
+      "arts_and_crafts",
+      "assassin",
+      "av_club_mem",
+      "back_yard_grilling",
+      "backpacker",
+      "backpacking",
+      "baseball",
+      "baseball_player",
+      "basketball",
+      "basketball_player",
+      "beekeeper",
+      "bhikkhu",
+      "biker",
+      "birder",
+      "blackbelt",
+      "blackbelt_intermediate",
+      "blackbelt_novice",
+      "blacksmith",
+      "bow_hunter",
+      "burglar",
+      "bus_driver",
+      "bushcraft",
+      "caffeine_junkie",
+      "camping",
+      "captain_inflatable",
+      "car_fan",
+      "car_rebuilding",
+      "car_survivor",
+      "carpentry",
+      "cheerleader",
+      "chef",
+      "chem_cooking",
+      "churl",
+      "clown",
+      "coaching",
+      "combat-engineer",
+      "combat-mechanic",
+      "construction_worker",
+      "convict",
+      "cooking",
+      "cop",
+      "cop_car",
+      "cop_motor",
+      "cosplay",
+      "crackhead",
+      "crazy_cat_lady",
+      "crossbow_hunter",
+      "cyclist",
+      "dancer",
+      "death_row_convict",
+      "demolition_expert",
+      "detective",
+      "diver",
+      "diy_crafts",
+      "dodgeball",
+      "dodgeball_player",
+      "dog_lover",
+      "electrician",
+      "emt",
+      "emt_firefighter",
+      "farmer",
+      "fastfoodcook",
+      "fencer",
+      "fencing",
+      "firefighter",
+      "fireperformance",
+      "fisher",
+      "fishing",
+      "football",
+      "football_player",
+      "frat",
+      "frying",
+      "game_mastering",
+      "gangster",
+      "gardening",
+      "golfing",
+      "gourmand",
+      "gourmand_alt",
+      "groundskeeper",
+      "gunslinger",
+      "gunsmithing",
+      "guru",
+      "gym_teacher",
+      "hacker",
+      "ham_radio_operator",
+      "handloading",
+      "handymanservice",
+      "hates_books",
+      "hazmat_unit",
+      "heli_pilot",
+      "heroin_addict",
+      "hitchhiker",
+      "hitman",
+      "hobby_heli_pilot",
+      "hockey",
+      "homebrewer",
+      "homeless",
+      "homemaker",
+      "imam",
+      "jdelinquent",
+      "jr_survivalist",
+      "k9_cop",
+      "kit_survivor",
+      "knife_throwing",
+      "labtech",
+      "lawyer",
+      "lifeguard",
+      "local_drug_dealer",
+      "lockpicking",
+      "lost_sub",
+      "loves_books",
+      "lumberjack",
+      "mafia_boss",
+      "maid",
+      "major-general",
+      "mall_cop",
+      "marathon_runner",
+      "martial_training",
+      "meatarian",
+      "mechanic",
+      "medic",
+      "meditation",
+      "melee_training",
+      "mil_auto_rifleman",
+      "mil_breacher",
+      "mil_grenadier",
+      "mil_hacker",
+      "mil_marksman",
+      "mil_sniper",
+      "mil_undercover",
+      "mili_burner",
+      "mili_medic",
+      "militia_car",
+      "miner",
+      "modelling",
+      "moshing",
+      "musician",
+      "naked",
+      "national_guard",
+      "naturalist",
+      "nco",
+      "ninja",
+      "old_vet",
+      "otaku",
+      "paintball",
+      "paperboy",
+      "paramedic",
+      "paranormal_investigator",
+      "park_ranger",
+      "parkour",
+      "parkour_practitioner",
+      "patriot",
+      "photojournalist",
+      "pillhead",
+      "pizzaboy",
+      "plinking",
+      "politician",
+      "postman",
+      "pottery",
+      "preacher",
+      "priest",
+      "professional_swimmer",
+      "public_speaking",
+      "punkrockgirl",
+      "rabbi",
+      "rancher",
+      "recruit",
+      "redcross",
+      "reenactor",
+      "reenactor2",
+      "relief_volunteer",
+      "rifle_hunter",
+      "rifleman",
+      "riot_police",
+      "roadie",
+      "roller_derby",
+      "ropemaking",
+      "salesman",
+      "science_club_mem",
+      "scoundrel",
+      "scrapart",
+      "security",
+      "self_defense",
+      "senior",
+      "sewing",
+      "shaolin",
+      "shinto_priest",
+      "shooter",
+      "shotgun_hunter",
+      "skaboy",
+      "skaterkid",
+      "skaterkid_board",
+      "skating",
+      "skeet_shooting",
+      "sleepingpillhead",
+      "smoker",
+      "sniper_police",
+      "socialdance",
+      "specops",
+      "spouse",
+      "street_fighting",
+      "student",
+      "super_biker",
+      "surfer",
+      "survivalist",
+      "svictim",
+      "swat",
+      "swat_heavy",
+      "swimming",
+      "tailor",
+      "teacher",
+      "tourist",
+      "tourist_swimmer",
+      "trap_shooting",
+      "trapper",
+      "trapping",
+      "trickster",
+      "trivia",
+      "trucker",
+      "true_foodperson",
+      "tweaker",
+      "unemployed",
+      "urban_samurai",
+      "urbex",
+      "vagabond",
+      "vegetarian",
+      "veteran",
+      "vid_games",
+      "video_blogger",
+      "zoo_keeper"
+    ]
   },
   {
     "type": "scenario",
     "copy-from": "heli_crash",
     "id": "heli_crash",
-    "extend": { "professions": [ "bio_soldier", "bio_sniper", "bionic_spy" ] }
+    "extend": {
+      "professions": [
+        "bio_soldier",
+        "bio_sniper",
+        "bionic_spy"
+      ]
+    }
   },
   {
     "type": "scenario",
     "copy-from": "lab_chal",
     "id": "lab_chal",
-    "extend": { "professions": [ "broken_cyborg" ] }
+    "extend": {
+      "professions": [
+        "broken_cyborg"
+      ]
+    }
   },
   {
     "type": "scenario",
     "copy-from": "Mine_bottom",
     "id": "Mine_bottom",
-    "extend": { "professions": [ "bionic_worker", "drone_op" ] }
+    "extend": {
+      "professions": [
+        "bionic_worker",
+        "drone_op"
+      ]
+    }
   },
   {
     "type": "scenario",
     "copy-from": "mutant",
     "id": "mutant",
-    "extend": { "professions": [ "broken_cyborg", "faulty_bionic", "cykotic" ] }
+    "extend": {
+      "professions": [
+        "broken_cyborg",
+        "faulty_bionic",
+        "cykotic"
+      ]
+    }
   },
   {
     "type": "scenario",
     "copy-from": "overrun",
     "id": "overrun",
-    "extend": { "professions": [ "bio_soldier", "bio_sniper" ] }
+    "extend": {
+      "professions": [
+        "bio_soldier",
+        "bio_sniper"
+      ]
+    }
   },
   {
     "type": "scenario",
     "copy-from": "patient",
     "id": "patient",
-    "extend": { "professions": [ "bionic_patient", "broken_cyborg" ] }
+    "extend": {
+      "professions": [
+        "bionic_patient",
+        "broken_cyborg"
+      ]
+    }
   },
   {
     "type": "scenario",
     "copy-from": "presort",
     "id": "presort",
-    "extend": { "professions": [ "bio_gangster" ] }
+    "extend": {
+      "professions": [
+        "bio_gangster"
+      ]
+    }
   },
   {
     "type": "scenario",
     "id": "cyberpunk",
     "name": "High Tech, Low Life",
     "description": "Before the world ended, bionics were reserved for the rich and the famous.  You might not have been either, but you wanted in.  Hidden offices sequestered away in basements, anesthetic smuggled out of hospitals, and desperate people with little to lose could get you what you wanted.  If you went too deep, however, your augmentation may have come at a price…",
-    "flags": [ "CITY_START", "LONE_START" ],
+    "flags": [
+      "CITY_START",
+      "LONE_START"
+    ],
     "points": 2,
     "start_name": "Shady Basement",
-    "allowed_locs": [ "sloc_basement_bionic" ],
-    "professions": [ "cyberjunkie", "faulty_bionic", "cykotic", "razorgirl", "bionic_installer" ]
+    "allowed_locs": [
+      "sloc_basement_bionic"
+    ],
+    "professions": [
+      "cyberjunkie",
+      "faulty_bionic",
+      "cykotic",
+      "razorgirl",
+      "bionic_installer"
+    ]
   }
 ]

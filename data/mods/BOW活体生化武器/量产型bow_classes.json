@@ -1,0 +1,143 @@
+[
+  {
+    "type": "npc_class",
+    "id": "人型BOW",
+    "name": "人型BOW",
+    "job_description": "人型BOW",
+    "traits": [
+      [ "THRESH_MEDICAL", 100 ],
+      [ "FACIAL_HAIR_NONE", 100 ],
+      [ "强化力量", 100 ],
+      [ "强化敏捷", 100 ],
+      [ "强化智力", 100 ],
+      [ "强化感知", 100 ],
+      [ "毒素免疫", 100 ],
+      [ "INFIMMUNE", 100 ],
+      [ "DISIMMUNE", 100 ],
+      [ "PARAIMMUNE", 100 ],
+      [ "NONADDICTIVE", 100 ],
+      [ "PAINREC3", 100 ],
+      [ "NOPAIN", 100 ],
+      [ "NIGHTVISION3", 100 ],
+      [ "DEFT", 100 ],
+      [ "PSYCHOPATH", 100 ],
+      [ "TRUTHTELLER", 100 ],
+      [ "SKIN_LIGHT", 100 ],
+      [ "HAIR_BALD", 100 ],
+      [ "丧尸生命", 100 ],
+      [ "生化大脑", 100 ],
+      [ "丧尸再生", 100 ],
+      [ "温度适应", 100 ],
+      [ "超少睡眠", 100 ],
+      [ "强化体质", 100 ],
+      [ "强化内部组织", 100 ],
+      [ "MARTIAL_ARTS", 100 ],
+      [ "MARTIAL_ARTS2", 100 ],
+      [ "MARTIAL_ARTS5", 100 ]
+    ],
+    "skills": [
+      { "skill": "gun", "bonus": { "rng": [ 10, 10 ] } },
+      { "skill": "rifle", "bonus": { "rng": [ 10, 10 ] } },
+      { "skill": "pistol", "bonus": { "rng": [ 10, 10 ] } },
+      { "skill": "survival", "bonus": { "rng": [ 10, 10 ] } },
+      { "skill": "chemistry", "bonus": { "rng": [ 10, 10 ] } },
+      { "skill": "cooking", "bonus": { "rng": [ 10, 10 ] } },
+      { "skill": "fabrication", "bonus": { "rng": [ 10, 10 ] } },
+      { "skill": "launcher", "bonus": { "rng": [ 10, 10 ] } },
+      { "skill": "traps", "bonus": { "rng": [ 10, 10 ] } },
+      { "skill": "speech", "bonus": { "rng": [ -10, -10 ] } },
+      { "skill": "swimming", "bonus": { "rng": [ 10, 10 ] } },
+      { "skill": "driving", "bonus": { "rng": [ 10, 10 ] } },
+      { "skill": "mechanics", "bonus": { "rng": [ 10, 10 ] } },
+      { "skill": "computer", "bonus": { "rng": [ 10, 10 ] } },
+      { "skill": "tailor", "bonus": { "rng": [ 10, 10 ] } },
+      { "skill": "electronics", "bonus": { "rng": [ 10, 10 ] } },
+      { "skill": "shotgun", "bonus": { "rng": [ 10, 10 ] } },
+      { "skill": "smg", "bonus": { "rng": [ 10, 10 ] } },
+      { "skill": "throw", "bonus": { "rng": [ 10, 10 ] } },
+      { "skill": "melee", "bonus": { "rng": [ 10, 10 ] } },
+      { "skill": "bashing", "bonus": { "rng": [ 10, 10 ] } },
+      { "skill": "cutting", "bonus": { "rng": [ 10, 10 ] } },
+      { "skill": "dodge", "bonus": { "rng": [ 10, 10 ] } },
+      { "skill": "stabbing", "bonus": { "rng": [ 10, 10 ] } },
+      { "skill": "unarmed", "bonus": { "rng": [ 10, 10 ] } },
+      { "skill": "firstaid", "bonus": { "rng": [ 10, 10 ] } }
+    ],
+    "common": false,
+    "bonus_str": { "rng": [ 0, 0 ] },
+    "bonus_dex": { "rng": [ 0, 0 ] },
+    "bonus_int": { "rng": [ 0, 0 ] },
+    "bonus_per": { "rng": [ 0, 0 ] },
+    "worn_override": "无物品",
+    "carry_override": "无物品",
+    "weapon_override": "无武器"
+  },
+  {
+    "type": "item_group",
+    "id": "无物品",
+    "subtype": "collection",
+    "entries": [ { "item": "helmet_nomad", "prob": 0 } ]
+  },
+  {
+    "type": "item_group",
+    "id": "无武器",
+    "subtype": "distribution",
+    "entries": [ { "item": "q_staff", "prob": 0 } ]
+  },
+  {
+    "id": "人型BOW对话",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "npc_has_var": "cyborg_abomination_has_talked",
+      "type": "dialogue",
+      "context": "cyborg_abomination",
+      "value": "yes",
+      "no": "等待命令",
+      "yes": "等待命令"
+    },
+    "speaker_effect": {
+      "effect": { "npc_add_var": "cyborg_abomination_has_talked", "type": "dialogue", "context": "cyborg_abomination", "value": "yes" }
+    },
+    "responses": [
+      {
+        "switch": true,
+        "default": true,
+        "text": "命令执行，归位",
+        "trial": { "type": "PERSUADE", "difficulty": 1000 },
+        "success": { "topic": "人型BOW二次对话", "opinion": { "trust": 100, "value": 100 } },
+        "failure": { "topic": "人型BOW二次对话", "opinion": { "anger": 50, "fear": 50 } }
+      },
+      { "switch": true, "default": true, "text": "没有命令", "topic": "TALK_DONE" }
+    ]
+  },
+  {
+    "id": "人型BOW二次对话",
+    "type": "talk_topic",
+    "dynamic_line": "请指示",
+    "responses": [
+      {
+        "text": "跟随我行动",
+        "trial": { "type": "PERSUADE", "difficulty": 1000, "mod": [ [ "value", 2 ] ] },
+        "success": { "topic": "跟随命令", "effect": "follow", "opinion": { "trust": 1, "value": 1 } },
+        "failure": { "topic": "跟随命令", "effect": "follow", "opinion": { "trust": 0, "fear": 0 } }
+      }
+    ]
+  },
+  {
+    "id": "跟随命令",
+    "type": "talk_topic",
+    "dynamic_line": "命令已收到",
+    "responses": [ { "text": "很好", "topic": "TALK_FRIEND" } ]
+  },
+  {
+    "type": "npc",
+    "id": "人型BOW",
+    "name_unique": "人型BOW",
+    "class": "人型BOW",
+    "gender": "male",
+    "attitude": 1,
+    "mission": 0,
+    "chat": "人型BOW对话",
+    "faction": "no_faction"
+  }
+]

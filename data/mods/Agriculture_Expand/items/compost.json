@@ -1,0 +1,810 @@
+[
+  {
+    "type": "COMESTIBLE",
+    "id": "compost_effective_microorganisms_unit",
+    "name": {
+      "str_sp": "EM菌种"
+    },
+    "weight": "11 g",
+    "color": "white",
+    "container": "bag_plastic",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "quench": -1,
+    "calories": 9,
+    "description": "一个单位的EM菌种，可以用来发酵分解废料使其变成堆肥。",
+    "price": 150,
+    "price_postapoc": 50,
+    "material": [
+      "powder"
+    ],
+    "volume": "250 ml",
+    "flags": [
+      "EDIBLE_FROZEN"
+    ],
+    "charges": 15,
+    "fun": -10
+  },
+  {
+    "//1": "发酵桶堆肥",
+    "type": "AMMO",
+    "id": "compost_brew_waste",
+    "name": {
+      "str": "堆肥原料"
+    },
+    "description": "将一堆可分解垃圾与EM菌混合后的堆肥原料，可以放入发酵桶进行发酵分解，但要注意和其他用途的发酵桶区分，如果你介意用发酵过堆肥的木桶酿酒的话（无影响）。",
+    "weight": "3500 g",
+    "color": "light_cyan",
+    "container": "55gal_drum",
+    "flags": [
+      "TRADER_AVOID",
+      "NUTRIENT_OVERRIDE"
+    ],
+    "symbol": "~",
+    "price": 0,
+    "volume": "45000 ml",
+    "material": [
+      "powder",
+      "veggy"
+    ],
+    "price_postapoc": 10,
+    "stack_size": 10,
+    "phase": "liquid",
+    "ammo_type": "composting_raw_materials",
+    "brewable": {
+      "time": "25 days",
+      "results": [
+        "compost_brew_fermentation_products_liquid",
+        "compost_brew_fermentation_products_solid",
+        "compost_effective_microorganisms_unit"
+      ]
+    }
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "compost_brew_fermentation_products_liquid",
+    "name": {
+      "str_sp": "液体肥料原液"
+    },
+    "weight": "67 g",
+    "color": "yellow",
+    "flags": [
+      "NUTRIENT_OVERRIDE"
+    ],
+    "use_action": [
+      "PLANTBLECH"
+    ],
+    "container": "jug_plastic",
+    "sealed": false,
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": -100,
+    "healthy": -20,
+    "calories": 2600,
+    "description": "一份堆肥过程中产生的富含植物所需营养的液体肥料原液，在使用前一定要加水稀释一下，直接倾倒会把植物烧死。",
+    "price": 10000,
+    "price_postapoc": 1000,
+    "volume": "250 ml",
+    "phase": "liquid",
+    "charges": 4,
+    "category": "chems",
+    "fun": -30
+  },
+  {
+    "type": "GENERIC",
+    "id": "compost_brew_fermentation_products_solid",
+    "name": {
+      "str_sp": "一大堆商用等级的肥料"
+    },
+    "weight": "5000 g",
+    "color": "yellow",
+    "use_action": "DISASSEMBLE",
+    "container": "bag_canvas",
+    "symbol": "~",
+    "description": "经过发酵分解后的优质堆肥，不过由于量太大，需要激活分成小份才能正常使用",
+    "price": 10000,
+    "price_postapoc": 10000,
+    "material": [
+      "powder"
+    ],
+    "volume": "8 L",
+    "category": "chems"
+  },
+  {
+    "//": "堆肥流程",
+    "type": "TOOL",
+    "id": "compost_bokashi_barrel_empty",
+    "name": {
+      "str": "波卡西堆肥桶（空）",
+      "str_pl": "波卡西堆肥桶（空）"
+    },
+    "description": "...（原描述不变）...",
+    "weight": "500 g",
+    "volume": "50 L",
+    "symbol": "U",
+    "color": "brown",
+    "price": 1300,
+    "ammo": "composting_raw_materials",
+    "material": [
+      "plastic",
+      "steel"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "composting_raw_materials": 4
+        },
+        "watertight": true
+      }
+    ],
+    "use_action": {
+      "type": "transform",
+      "menu_text": "将堆肥原料装入堆肥桶",
+      "msg": "已将堆肥原料装填进入堆肥桶，开始堆肥过程。",
+      "moves": 500,
+      "need_charges": 4,
+      "need_charges_msg": "请填入堆肥原料。",
+      "target": "compost_bokashi_barrel_composting1"
+    }
+  },
+  {
+    "//": "堆肥流程",
+    "type": "TOOL",
+    "id": "compost_bokashi_barrel_composting1",
+    "name": {
+      "str": "正在发酵的波卡西堆肥桶",
+      "str_pl": "正在发酵的波卡西堆肥桶"
+    },
+    "description": "一个外表平平无奇的有盖桶，靠近桶底的边缘有一个小水龙头，长得有点像啤酒桶，不过打开盖子就会发现桶底有个布满了小眼的排水板，水能通过，但垃圾很难。现在桶里全是用来堆肥的垃圾，你可不想把这玩意儿撒的到处都是。",
+    "weight": "35500 g",
+    "volume": "50 L",
+    "symbol": "U",
+    "color": "brown",
+    "price": 1300,
+    "material": [
+      "plastic",
+      "steel",
+      "veggy"
+    ],
+    "use_action": {
+      "type": "delayed_transform",
+      "menu_text": "检查堆肥情况",
+      "transform_age": 1036800,
+      "not_ready_msg": "别急,垃圾还没有被完全分解成堆肥，请等待一段时间后激活本物品。",
+      "msg": "垃圾经过一段时间的堆肥后产生了一些可以当做液体肥料使用的脏水，需要从桶底的水龙头倒出。",
+      "moves": 200,
+      "target": "compost_bokashi_barrel_fullliquid"
+    }
+  },
+  {
+    "//": "堆肥流程",
+    "type": "TOOL",
+    "id": "compost_bokashi_barrel_fullliquid",
+    "name": {
+      "str": "等待倒出液体肥料的波卡西堆肥桶",
+      "str_pl": "等待倒出液体肥料的波卡西堆肥桶"
+    },
+    "description": "一个外表平平无奇的有盖桶，靠近桶底的边缘有一个小水龙头，长得有点像啤酒桶，不过打开盖子就会发现桶底有个布满了小眼的排水板，水能通过，但垃圾很难。现在桶底全是液体肥料，得把它倒出去，免得把堆肥中的垃圾泡了导致堆肥失败。",
+    "weight": "31000 g",
+    "volume": "50 L",
+    "symbol": "U",
+    "color": "brown",
+    "price": 1300,
+    "material": [
+      "plastic",
+      "steel",
+      "veggy"
+    ],
+    "use_action": "DISASSEMBLE"
+  },
+  {
+    "//": "堆肥流程",
+    "type": "TOOL",
+    "id": "compost_bokashi_barrel_composting2",
+    "name": {
+      "str": "继续发酵的波卡西堆肥桶",
+      "str_pl": "继续发酵的波卡西堆肥桶"
+    },
+    "description": "一个外表平平无奇的有盖桶，靠近桶底的边缘有一个小水龙头，长得有点像啤酒桶，不过打开盖子就会发现桶底有个布满了小眼的排水板，水能通过，但垃圾很难。把桶里的液肥倒出去以后轻快了不少。",
+    "weight": "30000 g",
+    "volume": "50 L",
+    "symbol": "U",
+    "color": "brown",
+    "price": 1300,
+    "material": [
+      "plastic",
+      "steel",
+      "veggy"
+    ],
+    "use_action": {
+      "type": "delayed_transform",
+      "menu_text": "检查堆肥情况",
+      "transform_age": 1123200,
+      "not_ready_msg": "别急,垃圾还没有被完全分解成堆肥，请等待一段时间后激活本物品。",
+      "msg": "原来满满一桶的垃圾经过微生物分解以后变成了小半桶优质肥料。",
+      "moves": 200,
+      "target": "compost_bokashi_barrel_full"
+    }
+  },
+  {
+    "//": "堆肥流程",
+    "type": "TOOL",
+    "id": "compost_bokashi_barrel_full",
+    "name": {
+      "str": "发酵完毕的波卡西堆肥桶",
+      "str_pl": "发酵完毕的波卡西堆肥桶"
+    },
+    "description": "一个外表平平无奇的有盖桶，靠近桶底的边缘有一个小水龙头，长得有点像啤酒桶，不过打开盖子就会发现桶底有个布满了小眼的排水板，水能通过，但垃圾很难。经过了25天左右的发酵分解，原来满满一桶的垃圾变成了小半桶优质肥料。",
+    "weight": "25000 g",
+    "volume": "50 L",
+    "symbol": "U",
+    "color": "brown",
+    "price": 1300,
+    "material": [
+      "plastic",
+      "steel",
+      "veggy"
+    ],
+    "use_action": "DISASSEMBLE"
+  },
+  {
+    "abstract": "compost_composting_bins_abs",
+    "type": "TOOL",
+    "name": {
+      "str": "堆肥箱（模板）"
+    },
+    "description": "一个用来堆肥的木箱（物品）。【正常情况下，你不应该看到这个物品。】",
+    "weight": "35000 g",
+    "volume": "1000 L",
+    "price": 50000,
+    "to_hit": -4,
+    "bashing": 3,
+    "material": [
+      "wood"
+    ],
+    "flags": [
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "abstract": "compost_composting_bins_trigger",
+    "type": "TOOL",
+    "name": {
+      "str": "堆肥箱放置触发器"
+    },
+    "description": "用来自动触发生成堆肥箱家具的触发器。【正常情况下，你不应该看到这个物品。】",
+    "weight": "35000 g",
+    "volume": "10 L",
+    "price": 50000,
+    "to_hit": -4,
+    "bashing": 3,
+    "material": [
+      "wood"
+    ],
+    "flags": [
+      "NO_UNLOAD",
+      "TRADER_AVOID",
+      "MISSION_ITEM"
+    ]
+  },
+  {
+    "type": "furniture",
+    "abstract": "f_compost_composting_bins_abs",
+    "name": "堆肥箱",
+    "description": "一个标准1*1*1大小的空堆肥箱。【正常情况下，你不应该看到这个物品。】",
+    "symbol": "^",
+    "color": "brown",
+    "move_cost_mod": 1,
+    "required_str": -1,
+    "flags": [
+      "FLAT",
+      "PLANT",
+      "SEALED",
+      "TRANSPARENT",
+      "CONTAINER",
+      "TINY",
+      "DONT_REMOVE_ROTTEN",
+      "GROWTH_SEED"
+    ]
+  },
+  {
+    "type": "TOOL",
+    "id": "compost_composting_bins_empty",
+    "copy-from": "compost_composting_bins_abs",
+    "name": {
+      "str": "堆肥箱",
+      "str_pl": "堆肥箱"
+    },
+    "description": "一个标准1*1*1大小的空堆肥箱，可以按a放置在地上以便投入堆肥原料。",
+    "symbol": "#",
+    "color": "brown",
+    "price": 50,
+    "material": [
+      "wood"
+    ],
+    "use_action": [
+      {
+        "type": "place_monster",
+        "monster_id": "compost_mon_trigger_composting_bins_empty",
+        "place_randomly": false,
+        "friendly_msg": "你把堆肥箱放到了地上，一时间尘土飞扬。",
+        "difficulty": 0,
+        "moves": 600
+      }
+    ]
+  },
+  {
+    "id": "compost_composting_bins_empty_dirty",
+    "copy-from": "compost_composting_bins_empty",
+    "type": "TOOL",
+    "name": {
+      "str": "堆肥箱（脏兮兮）",
+      "str_pl": "堆肥箱（脏兮兮）"
+    },
+    "description": "一个标准1*1*1大小的空堆肥箱，现在它变得脏兮兮的，按a放置在地上然后e清理一下，避免真菌过度繁殖和害虫繁殖。",
+    "symbol": "#",
+    "color": "yellow",
+    "use_action": {
+      "type": "deploy_furn",
+      "furn_type": "f_compost_composting_bins_empty_dirty"
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_compost_composting_bins_empty_dirty",
+    "name": "堆肥箱（脏兮兮）",
+    "description": "请按e清理一下堆肥箱。",
+    "symbol": "#",
+    "color": "yellow",
+    "move_cost_mod": 0,
+    "required_str": -1,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "ORGANIC"
+    ],
+    "examine_action": "harvest_furn",
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "spring",
+          "summer",
+          "autumn",
+          "winter"
+        ],
+        "id": "compost_har_composting_bins_empty"
+      }
+    ],
+    "deconstruct": {
+      "items": [
+        {
+          "item": "compost_composting_bins_empty_dirty",
+          "count": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "compost_har_composting_bins_empty",
+    "type": "harvest",
+    "entries": [
+      {
+        "drop": "compost_composting_bins_empty",
+        "base_num": [
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": "compost_mon_trigger_composting_bins_empty",
+    "type": "MONSTER",
+    "name": "飘在空中的灰尘",
+    "description": ".",
+    "default_faction": "factionless",
+    "species": [
+      "UNKNOWN"
+    ],
+    "volume": "1 ml",
+    "weight": "1 g",
+    "hp": 1,
+    "speed": 1,
+    "symbol": "#",
+    "color": "cyan",
+    "aggression": -99,
+    "bodytype": "pig",
+    "morale": -50,
+    "luminance": 0,
+    "dodge": 0,
+    "harvest": "exempt",
+    "special_attacks": [
+      [
+        "DISAPPEAR",
+        0
+      ]
+    ],
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "death_drops": "compost_ig_composting_bins_empty",
+    "flags": [
+      "FLIES",
+      "NO_BREATHE",
+      "NOT_HALLUCINATION",
+      "HARDTOSHOOT",
+      "ELECTRONIC"
+    ]
+  },
+  {
+    "id": "broken_compost_mon_trigger_composting_bins_empty",
+    "copy-from": "seed",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "堆肥中",
+      "str_pl": "堆肥中"
+    },
+    "description": "一个用来堆肥的种子。【正常情况下，你不应该看到这个物品。】",
+    "material": [
+      "wood",
+      "veggy"
+    ],
+    "volume": "10 ml",
+    "weight": "20 g",
+    "symbol": ".",
+    "color": "brown",
+    "price": 120,
+    "flags": [
+      "TRADER_AVOID",
+      "MISSION_ITEM"
+    ],
+    "seed_data": {
+      "plant_name": "堆肥中",
+      "seeds": false,
+      "fruit": "compost_brew_fermentation_products_solid",
+      "byproducts": [
+        "compost_brew_fermentation_products_solid",
+        "compost_brew_fermentation_products_solid",
+        "compost_brew_fermentation_products_solid",
+        "compost_brew_fermentation_products_solid",
+        "compost_brew_fermentation_products_solid"
+      ],
+      "grow": "180 hours"
+    }
+  },
+  {
+    "id": "compost_ig_composting_bins_empty",
+    "type": "item_group",
+    "subtype": "collection",
+    "entries": [
+      {
+        "item": "compost_composting_bins_trigger_little",
+        "prob": 100,
+        "count": [
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": "compost_composting_bins_trigger_little",
+    "copy-from": "compost_composting_bins_trigger",
+    "type": "TOOL",
+    "name": {
+      "str": "空的堆肥箱触发器",
+      "str_pl": "空的堆肥箱触发器"
+    },
+    "description": "用来自动触发生成空的堆肥箱家具的触发器。【正常情况下，你不应该看到这个物品。如果你看到了这个物品，请将其与“堆肥中”一同丢向某个方向，注意要同时丢，不按照使用方法使用所造成的bug恕不负责。】",
+    "symbol": "#",
+    "color": "brown",
+    "drop_action": {
+      "type": "deploy_furn",
+      "furn_type": "f_compost_composting_bins_empty"
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_compost_composting_bins_empty",
+    "name": "空的堆肥箱",
+    "description": "一个标准1*1*1大小的空堆肥箱。请从建筑菜单找到“向堆肥箱初次添加堆肥原料”选项以填充堆肥箱启动堆肥过程。",
+    "flags": [
+      "PLANT",
+      "SEALED",
+      "CONTAINER",
+      "DONT_REMOVE_ROTTEN",
+      "GROWTH_SEED"
+    ],
+    "copy-from": "f_compost_composting_bins_abs",
+    "symbol": "^",
+    "color": "brown",
+    "plant_data": {
+      "transform": "f_compost_composting_bins_empty",
+      "base": "f_compost_composting_bins_empty",
+      "growth_multiplier": 10
+    },
+    "bash": {
+      "str_min": 1,
+      "str_max": 8,
+      "sound_vol": 8,
+      "items": [
+        {
+          "item": "compost_composting_bins_empty_dirty"
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_compost_composting_bins_little_phase_I",
+    "name": "垃圾半满的堆肥箱",
+    "description": "一个标准1*1*1大小的空堆肥箱。箱子里的垃圾正在缓慢分解发酵中。堆肥箱里用来堆肥的垃圾大概占据了一半的空间，看起来还能往里面填一些垃圾。",
+    "flags": [
+      "PLANT",
+      "SEALED",
+      "CONTAINER",
+      "DONT_REMOVE_ROTTEN",
+      "GROWTH_SEEDLING"
+    ],
+    "copy-from": "f_compost_composting_bins_abs",
+    "symbol": "^",
+    "color": "brown",
+    "plant_data": {
+      "transform": "f_compost_composting_bins_little_phase_II",
+      "base": "f_compost_composting_bins_empty",
+      "growth_multiplier": 2
+    },
+    "bash": {
+      "str_min": 1,
+      "str_max": 8,
+      "sound_vol": 8,
+      "items": [
+        {
+          "item": "compost_composting_bins_empty_dirty"
+        },
+        {
+          "item": "compost_brew_waste",
+          "count": [
+            20,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_compost_composting_bins_little_phase_II",
+    "name": "半满的经过初步分解的堆肥箱",
+    "description": "一个标准1*1*1大小的空堆肥箱。箱子里的垃圾已然分解过半。堆肥箱里用来堆肥的垃圾大概占据了一半的空间，看起来还能往里面填一些垃圾。",
+    "flags": [
+      "PLANT",
+      "SEALED",
+      "CONTAINER",
+      "DONT_REMOVE_ROTTEN",
+      "GROWTH_MATURE"
+    ],
+    "copy-from": "f_compost_composting_bins_abs",
+    "symbol": "^",
+    "color": "brown",
+    "plant_data": {
+      "transform": "f_compost_composting_bins_little_phase_III",
+      "base": "f_compost_composting_bins_empty",
+      "growth_multiplier": 5
+    },
+    "bash": {
+      "str_min": 1,
+      "str_max": 8,
+      "sound_vol": 8,
+      "items": [
+        {
+          "item": "compost_composting_bins_empty_dirty"
+        },
+        {
+          "item": "compost_brew_waste",
+          "count": [
+            10,
+            15
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_compost_composting_bins_little_phase_II_flipped",
+    "name": "半满的经过翻动的堆肥箱",
+    "description": "一个标准1*1*1大小的空堆肥箱。箱子里的垃圾被再次翻动过以加快堆肥过程。堆肥箱里用来堆肥的垃圾大概占据了一半的空间，看起来还能往里面填一些垃圾。",
+    "flags": [
+      "PLANT",
+      "SEALED",
+      "CONTAINER",
+      "DONT_REMOVE_ROTTEN",
+      "GROWTH_MATURE"
+    ],
+    "copy-from": "f_compost_composting_bins_abs",
+    "symbol": "^",
+    "color": "brown",
+    "plant_data": {
+      "transform": "f_compost_composting_bins_little_phase_III",
+      "base": "f_compost_composting_bins_empty",
+      "growth_multiplier": 1.3
+    },
+    "bash": {
+      "str_min": 1,
+      "str_max": 8,
+      "sound_vol": 8,
+      "items": [
+        {
+          "item": "compost_composting_bins_empty_dirty"
+        },
+        {
+          "item": "compost_brew_waste",
+          "count": [
+            5,
+            10
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_compost_composting_bins_little_phase_III",
+    "name": "堆肥半满的堆肥箱",
+    "description": "一个标准1*1*1大小的空堆肥箱。箱子里的垃圾已然分解完毕。堆肥箱里的新鲜堆肥大概占据了一半的空间，可以按e收获堆肥了。",
+    "flags": [
+      "PLANT",
+      "SEALED",
+      "CONTAINER",
+      "DONT_REMOVE_ROTTEN",
+      "GROWTH_HARVEST"
+    ],
+    "copy-from": "f_compost_composting_bins_abs",
+    "examine_action": "aggie_plant",
+    "symbol": "^",
+    "color": "brown",
+    "plant_data": {
+      "transform": "f_compost_composting_bins_empty_dirty",
+      "base": "f_compost_composting_bins_empty",
+      "harvest_multiplier": 3
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_compost_composting_bins_full_phase_I",
+    "name": "垃圾全满的堆肥箱",
+    "description": "一个标准1*1*1大小的空堆肥箱。箱子里的垃圾正在缓慢分解发酵中。堆肥箱里用来堆肥的垃圾满的快要溢出来了。",
+    "flags": [
+      "PLANT",
+      "SEALED",
+      "CONTAINER",
+      "DONT_REMOVE_ROTTEN",
+      "GROWTH_SEEDLING"
+    ],
+    "copy-from": "f_compost_composting_bins_abs",
+    "symbol": "^",
+    "color": "brown",
+    "plant_data": {
+      "transform": "f_compost_composting_bins_full_phase_II",
+      "base": "f_compost_composting_bins_empty",
+      "growth_multiplier": 2.3
+    },
+    "bash": {
+      "str_min": 1,
+      "str_max": 8,
+      "sound_vol": 8,
+      "items": [
+        {
+          "item": "compost_composting_bins_empty_dirty"
+        },
+        {
+          "item": "compost_brew_waste",
+          "count": [
+            45,
+            50
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_compost_composting_bins_full_phase_II",
+    "name": "全满的经过初步分解的堆肥箱",
+    "description": "一个标准1*1*1大小的空堆肥箱。箱子里的垃圾已然分解过半。堆肥箱里用来堆肥的垃圾满的快要溢出来了。",
+    "flags": [
+      "PLANT",
+      "SEALED",
+      "CONTAINER",
+      "DONT_REMOVE_ROTTEN",
+      "GROWTH_MATURE"
+    ],
+    "copy-from": "f_compost_composting_bins_abs",
+    "symbol": "^",
+    "color": "brown",
+    "plant_data": {
+      "transform": "f_compost_composting_bins_full_phase_III",
+      "base": "f_compost_composting_bins_empty",
+      "growth_multiplier": 6.5
+    },
+    "bash": {
+      "str_min": 1,
+      "str_max": 8,
+      "sound_vol": 8,
+      "items": [
+        {
+          "item": "compost_composting_bins_empty_dirty"
+        },
+        {
+          "item": "compost_brew_waste",
+          "count": [
+            20,
+            30
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_compost_composting_bins_full_phase_II_flipped",
+    "name": "全满的经过翻动的堆肥箱",
+    "description": "一个标准1*1*1大小的空堆肥箱。箱子里的垃圾被再次翻动过以加快堆肥过程。堆肥箱里用来堆肥的垃圾满的快要溢出来了。",
+    "flags": [
+      "PLANT",
+      "SEALED",
+      "CONTAINER",
+      "DONT_REMOVE_ROTTEN",
+      "GROWTH_MATURE"
+    ],
+    "copy-from": "f_compost_composting_bins_abs",
+    "symbol": "^",
+    "color": "brown",
+    "plant_data": {
+      "transform": "f_compost_composting_bins_full_phase_III",
+      "base": "f_compost_composting_bins_empty",
+      "growth_multiplier": 2
+    },
+    "bash": {
+      "str_min": 1,
+      "str_max": 8,
+      "sound_vol": 8,
+      "items": [
+        {
+          "item": "compost_composting_bins_empty_dirty"
+        },
+        {
+          "item": "compost_brew_waste",
+          "count": [
+            10,
+            15
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_compost_composting_bins_full_phase_III",
+    "name": "堆肥全满的堆肥箱",
+    "description": "一个标准1*1*1大小的空堆肥箱。箱子里的垃圾已然分解完毕。堆肥箱里的新鲜堆肥满满当当，可以按e收获堆肥了。",
+    "flags": [
+      "PLANT",
+      "SEALED",
+      "CONTAINER",
+      "DONT_REMOVE_ROTTEN",
+      "GROWTH_HARVEST"
+    ],
+    "copy-from": "f_compost_composting_bins_abs",
+    "examine_action": "aggie_plant",
+    "symbol": "^",
+    "color": "brown",
+    "plant_data": {
+      "transform": "f_compost_composting_bins_empty_dirty",
+      "base": "f_compost_composting_bins_empty",
+      "harvest_multiplier": 10
+    }
+  }
+]

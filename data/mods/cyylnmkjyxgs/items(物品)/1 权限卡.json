@@ -1,0 +1,197 @@
+[
+  {
+    "id": "cyyl_level_C",
+    "type": "TOOL",
+    "material": [
+      "cyylcaizhi"
+    ],
+    "symbol": "=",
+    "color": "yellow",
+    "name": {
+      "str": "次元医疗C级权限卡"
+    },
+    "description": "可以制作、使用、购买C级及以下次元医疗公司的产品。(可提升至B级权限)",
+    "looks_like": "id_military",
+    "price": "100 USD",
+    "price_postapoc": "100 USD",
+    "weight": "20 g",
+    "volume": "20 ml",
+    "bashing": 1,
+    "cutting": 0,
+    "to_hit": -1,
+    "book_data": {
+      "required_level": 0,
+      "max_level": 2,
+      "skill": "chemistry",
+      "intelligence": 6,
+      "time": 2700,
+      "fun": 0
+    },
+    "qualities": [
+      [
+        "CYYL_jishu",
+        1
+      ]
+    ],
+    "flags": [
+      "TRADER_AVOID",
+      "NONCONDUCTIVE"
+    ]
+  },
+  {
+    "id": "cyyl_level_B",
+    "type": "TOOL",
+    "material": [
+      "cyylcaizhi"
+    ],
+    "symbol": "=",
+    "color": "green",
+    "name": {
+      "str": "次元医疗B级权限卡"
+    },
+    "description": "可以制作、使用、购买B级及以下次元医疗公司的产品。(可提升至A级权限)",
+    "looks_like": "id_science",
+    "price": "500 USD",
+    "price_postapoc": "500 USD",
+    "weight": "20 g",
+    "volume": "20 ml",
+    "bashing": 1,
+    "cutting": 0,
+    "to_hit": -1,
+    "book_data": {
+      "required_level": 0,
+      "max_level": 5,
+      "skill": "chemistry",
+      "intelligence": 8,
+      "time": 1800,
+      "fun": 0
+    },
+    "qualities": [
+      [
+        "CYYL_jishu",
+        2
+      ]
+    ],
+    "flags": [
+      "TRADER_AVOID",
+      "NONCONDUCTIVE"
+    ]
+  },
+  {
+    "id": "cyyl_level_A",
+    "type": "TOOL",
+    "material": [
+      "cyylcaizhi"
+    ],
+    "symbol": "=",
+    "color": "red",
+    "name": {
+      "str": "次元医疗A级权限卡"
+    },
+    "description": "可以制作、使用、购买A级及以下次元医疗公司的产品。(可提升至S级权限)",
+    "looks_like": "fp_loyalty_card",
+    "price": "1000 USD",
+    "price_postapoc": "1000 USD",
+    "weight": "20 g",
+    "volume": "20 ml",
+    "bashing": 1,
+    "cutting": 0,
+    "to_hit": -1,
+    "book_data": {
+      "required_level": 0,
+      "max_level": 8,
+      "skill": "chemistry",
+      "intelligence": 10,
+      "time": 900,
+      "fun": 1
+    },
+    "qualities": [
+      [
+        "CYYL_jishu",
+        3
+      ]
+    ],
+    "flags": [
+      "TRADER_AVOID",
+      "NONCONDUCTIVE"
+    ]
+  },
+  {
+    "id": "cyyl_level_S",
+    "type": "TOOL",
+    "material": [
+      "cyylcaizhi"
+    ],
+    "symbol": "=",
+    "color": "blue",
+    "name": {
+      "str": "次元医疗S级权限卡"
+    },
+    "description": "可以制作、使用、购买所有次元医疗公司的产品。(已达到最高权限)",
+    "looks_like": "id_industrial",
+    "price": "10000 USD",
+    "price_postapoc": "10000 USD",
+    "weight": "20 g",
+    "volume": "20 ml",
+    "bashing": 1,
+    "cutting": 0,
+    "to_hit": -1,
+    "book_data": {
+      "required_level": 0,
+      "max_level": 10,
+      "skill": "chemistry",
+      "intelligence": 12,
+      "time": 600,
+      "fun": 2
+    },
+    "qualities": [
+      [
+        "CYYL_jishu",
+        4
+      ]
+    ],
+    "flags": [
+      "TRADER_AVOID",
+      "NONCONDUCTIVE"
+    ]
+  },
+  {
+    "id": "cyyl_VIP_tsk",
+    "type": "TOOL",
+    "material": [
+      "cyylcaizhi"
+    ],
+    "symbol": "=",
+    "color": "black",
+    "name": {
+      "str": "次元医疗VIP级特殊卡"
+    },
+    "description": "此卡为次元医疗公司隐藏的内部研究卡,只有部分特殊人物才持有此卡,用于特殊道具交易制作。",
+    "looks_like": "id_industrial",
+    "price": "100000 USD",
+    "price_postapoc": "100000 USD",
+    "weight": "10 g",
+    "volume": "10 ml",
+    "bashing": 1,
+    "cutting": 0,
+    "to_hit": -1,
+    "book_data": {
+      "required_level": 2,
+      "max_level": 15,
+      "skill": "chemistry",
+      "intelligence": 20,
+      "time": 3600,
+      "fun": -3
+    },
+    "qualities": [
+      [
+        "CYYL_TSNL_jishu",
+        1
+      ]
+    ],
+    "flags": [
+      "TRADER_AVOID",
+      "NONCONDUCTIVE"
+    ]
+  }
+]

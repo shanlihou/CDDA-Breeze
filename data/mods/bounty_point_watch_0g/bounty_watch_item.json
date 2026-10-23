@@ -1,0 +1,28 @@
+[
+  {
+    "type": "json_flag",
+    "id": "BOUNTY_POINT_WATCH",
+    "info": "佩戴时记录角色获得的击杀经验，并将其转化为悬赏积分。",
+    "restriction": "该标志仅用于识别悬赏积分手表。",
+    "//": "EOC 使用此自定义标志判断玩家是否正戴着积分手表。"
+  },
+  {
+    "type": "ARMOR",
+    "id": "bounty_point_watch",
+    "copy-from": "wristwatch",
+    "looks_like": "wristwatch",
+    "name": { "str": "悬赏积分手表" },
+    "description": "枪匠 Jay Ruckers 制作的离线身份认证终端。戴着它时，由你取得的击杀经验会以同等数量记为悬赏积分。激活手表可查看余额；积分只能在 Jay 处兑换。积分绑定佩戴者，不储存在手表本体内。",
+    "weight": "80 g",
+    "volume": "100 ml",
+    "price": 1,
+    "price_postapoc": 0,
+    "use_action": {
+      "type": "effect_on_conditions",
+      "description": "查看悬赏积分",
+      "effect_on_conditions": [ "EOC_BOUNTY_WATCH_DISPLAY_PREP" ]
+    },
+    "extend": { "flags": [ "BOUNTY_POINT_WATCH", "TRADER_AVOID" ] },
+    "//": "以原版 wristwatch 为模板。灾后价值为 0 且带 TRADER_AVOID，普通商人不会把手表当作可套利商品。"
+  }
+]

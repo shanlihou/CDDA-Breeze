@@ -1,0 +1,331 @@
+[
+  {
+    "type": "COMESTIBLE",
+    "id": "tea_willow",
+    "copy-from": "tea",
+    "name": {
+      "str_sp": "柳树茶"
+    },
+    "container": "bottle_glass",
+    "healthy": -1,
+    "stim": 0,
+    "description": "柳树皮制成的苦茶，从古代就开始用作温和的止痛药了。",
+    "price": 1250,
+    "fun": -3,
+    "use_action": {
+      "type": "consume_drug",
+      "effects": [
+        {
+          "id": "pkill1",
+          "duration": 90
+        }
+      ]
+    }
+  },
+  {
+    "id": "tar_oil",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str_sp": "松馏油"
+    },
+    "description": "一种从桦树皮或松树中干馏制成的粘稠的,液状的松馏油.在历史上有着各种各样的用途,它在过去常常被用作消毒防腐剂.",
+    "weight": "40 g",
+    "volume": "250 ml",
+    "material": [
+      "oil"
+    ],
+    "symbol": "~",
+    "color": "yellow",
+    "phase": "liquid",
+    "use_action": {
+      "type": "heal",
+      "disinfectant_power": 2,
+      "bleed": 2,
+      "bite": 0.8,
+      "move_cost": 100
+    }
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "oil_garlic",
+    "name": {
+      "str_sp": "大蒜油"
+    },
+    "weight": "25 g",
+    "color": "white",
+    "container": "bottle_glass",
+    "comestible_type": "MED",
+    "symbol": "~",
+    "quench": -8,
+    "healthy": 4,
+    "description": "一种味道浓烈的大蒜提取物,具有强力杀菌作用,在历史上用于帮助抵抗病菌感染,特别是在东欧.虽然不如现代的广谱抗生素那么有效,但总比没有强.每12小时使用一次.",
+    "charges": 6,
+    "price": 1000,
+    "material": [
+      "garlic"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "fun": -8,
+    "use_action": "WEAK_ANTIBIOTIC",
+    "flags": [
+      "NPC_SAFE",
+      "NUTRIENT_OVERRIDE"
+    ]
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "garlic_roasted",
+    "copy-from": "garlic",
+    "name": {
+      "str_sp": "烤蒜"
+    },
+    "spoils_in": "180 days",
+    "quench": -1,
+    "description": "几瓣已经剥好的蒜瓣,加入香料稍微调味并经过了烘烤,蒜香不再刺鼻.",
+    "price": 800,
+    "material": [
+      "garlic"
+    ],
+    "fun": 1
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "bread_garlic",
+    "copy-from": "bread",
+    "name": {
+      "str_sp": "蒜蓉面包"
+    },
+    "calories": 105,
+    "quench": -2,
+    "description": "用大蒜和调味料烹制的面包。",
+    "price": 100,
+    "material": [
+      "wheat",
+      "garlic"
+    ],
+    "vitamins": [
+      [
+        "vitC",
+        6
+      ],
+      [
+        "calcium",
+        12
+      ],
+      [
+        "iron",
+        5
+      ]
+    ],
+    "charges": 3,
+    "fun": 3
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "chili_pepper_roasted",
+    "copy-from": "chili_pepper",
+    "name": {
+      "str": "烤辣椒"
+    },
+    "description": "微辣的红辣椒,经过些许调味料调味之后烤熟,椒香扑鼻.“来四川有你好辣椒吃”",
+    "charges": 1,
+    "fun": 1
+  },
+  {
+    "id": "makeshift_poultice",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "简易膏药"
+    },
+    "description": "一种由天然的消毒防腐剂制成的手工药膏,用布条或皮革包裹起来.这种药膏应用宽广,虽然目的是为了避免感染,但也能帮助止血.",
+    "weight": "70 g",
+    "volume": "250 ml",
+    "price": 300,
+    "material": [
+      "veggy"
+    ],
+    "symbol": "!",
+    "color": "light_gray",
+    "charges": 3,
+    "stack_size": 9,
+    "use_action": {
+      "type": "heal",
+      "bandages_power": 3,
+      "bleed": 8,
+      "bite": 0.75,
+      "move_cost": 300
+    }
+  },
+  {
+    "id": "posca",
+    "copy-from": "fruit_wine",
+    "type": "COMESTIBLE",
+    "name": {
+      "str_sp": "波斯卡酒"
+    },
+    "description": "历史悠久的罗马酒,罗马军团行军时常常携带着, 由廉价且味酸的葡萄酒兑水冲淡而成.通常会混合着香草和蜂蜜来增添风味.",
+    "weight": "230 g",
+    "charges": 1,
+    "healthy": 0,
+    "price": 250,
+    "container": "waterskin",
+    "vitamins": [
+      [
+        "vitA",
+        10
+      ],
+      [
+        "vitC",
+        6
+      ],
+      [
+        "calcium",
+        2
+      ],
+      [
+        "iron",
+        1
+      ]
+    ],
+    "calories": 60,
+    "quench": 40,
+    "stim": -1,
+    "fun": 3,
+    "addiction_potential": 1
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "porridge_cooked",
+    "copy-from": "wheat",
+    "name": {
+      "str_sp": "麦片粥"
+    },
+    "weight": "247 g",
+    "spoils_in": "10 days",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "description": "一份小麦或大麦简单煮熟后的粥,容易带来饱腹感,但味道甚是寡淡.",
+    "flags": [
+      "EATEN_HOT"
+    ],
+    "fun": -1
+  },
+  {
+    "id": "jerky_offal",
+    "copy-from": "jerky",
+    "type": "COMESTIBLE",
+    "name": {
+      "str_sp": "烤干杂碎"
+    },
+    "description": "没怎么处理,只经过普通风干,又咸又干的各种内脏. 闻起来像狗粮一样糟糕,但可以很好的长期储存.",
+    "fun": -2,
+    "healthy": -1,
+    "calories": 92,
+    "proportional": {
+      "price": 0.8
+    }
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "tree_bacon",
+    "looks_like": "bacon",
+    "name": {
+      "str_sp": "烤树皮"
+    },
+    "weight": "300 g",
+    "color": "brown",
+    "comestible_type": "FOOD",
+    "spoils_in": "360 days",
+    "symbol": ",",
+    "quench": -3,
+    "healthy": 1,
+    "calories": 240,
+    "description": "一份从桦树或松树上取下来的树内皮,烘烤之后分成了可以吃的小块烤树皮,口感脆脆的.不仅可以直接吃掉,还可以磨干成面粉.虽然经常作为野外的应急食物,但味道相对来讲很美味.",
+    "price": 120,
+    "price_postapoc": 40,
+    "material": [
+      "dried_vegetable"
+    ],
+    "volume": "250 ml",
+    "//": "Not millable as it requires a bit more drying to make into flour, and there may be technical issues if allowed to process less calorie-dense material into flour.",
+    "flags": [
+      "EDIBLE_FROZEN",
+      "NUTRIENT_OVERRIDE"
+    ],
+    "vitamins": [
+      [
+        "vitC",
+        1
+      ],
+      [
+        "vitA",
+        3
+      ]
+    ]
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "potted_meat",
+    "copy-from": "pemmican",
+    "name": {
+      "str_sp": "罐装肉"
+    },
+    "conditional_names": [
+      {
+        "type": "FLAG",
+        "condition": "CANNIBALISM",
+        "name": {
+          "str_sp": "potted person"
+        }
+      },
+      {
+        "type": "COMPONENT_ID",
+        "condition": "mutant",
+        "name": {
+          "str_sp": "potted freak"
+        }
+      }
+    ],
+    "weight": "155 g",
+    "container": "can_medium",
+    "calories": 452,
+    "charges": 2,
+    "description": "将肉类烹调煮熟,浸没在黄油或融化的脂肪中进行保存,这是种在罐装技术出现之前的一种食品保存形式.也被称为油封肉.味道浓郁且富含脂肪,可以保存很长时间.",
+    "price": "12 USD",
+    "price_postapoc": "4 USD",
+    "material": [
+      "flesh"
+    ],
+    "vitamins": [
+      [
+        "vitA",
+        7
+      ],
+      [
+        "vitC",
+        16
+      ],
+      [
+        "calcium",
+        2
+      ],
+      [
+        "iron",
+        69
+      ],
+      [
+        "vitB",
+        781
+      ]
+    ],
+    "fun": 1,
+    "extend": {
+      "flags": [
+        "EATEN_HOT"
+      ]
+    }
+  }
+]

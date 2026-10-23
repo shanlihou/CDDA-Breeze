@@ -1,0 +1,340 @@
+[
+  {
+    "type": "furniture",
+    "id": "f_mineore_base_0",
+    "name": "贫瘠矿",
+    "description": "你能挖到什么？",
+    "symbol": "O",
+    "color": "dark_gray",
+    "looks_like": "f_boulder_large",
+    "move_cost_mod": 4,
+    "coverage": 50,
+    "required_str": 20,
+    "flags": [ "NOITEM", "MINEABLE", "BLOCK_WIND" ],
+    "bash": {
+      "str_min": 30,
+      "str_max": 100,
+      "sound": "smash!",
+      "sound_fail": "thump.",
+      "items": [
+        { "item": "rock", "count": [ 65, 85 ] },
+        { "item": "sharp_rock", "count": [ 5, 9 ] },
+        { "item": "mineore_ore_1", "count": [ 0, 1 ], "prob": 10 },
+        { "item": "mineore_ore_2", "count": [ 0, 1 ], "prob": 10 },
+        { "item": "mineore_ore_3", "count": [ 0, 1 ], "prob": 10 },
+        { "item": "mineore_ore_4", "count": [ 0, 1 ], "prob": 10 },
+        { "item": "mineore_ore_5", "count": [ 0, 1 ], "prob": 10 },
+        { "item": "coal_lump", "charges": [ 100, 400 ], "prob": 10 },
+        { "item": "mineore_gem_1", "count": [ 0, 1 ], "prob": 20 }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_mineore_base_1",
+    "name": "普通矿", 
+    "description": "你能挖到什么？",
+    "symbol": "O",
+    "color": "dark_gray",
+    "looks_like": "f_boulder_large",
+    "move_cost_mod": 4,
+    "coverage": 50,
+    "required_str": 20,
+    "flags": [ "NOITEM", "MINEABLE", "BLOCK_WIND" ],
+    "bash": {
+      "str_min": 30,
+      "str_max": 100,
+      "sound": "smash!",
+      "sound_fail": "thump.",
+      "items": [
+        { "item": "rock", "count": [ 65, 85 ] },
+        { "item": "copper", "count": [ 0, 5 ], "prob": 10 },
+        { "item": "copper", "count": [ 0, 4 ], "prob": 20 },
+        { "item": "copper", "count": [ 0, 3 ], "prob": 30 },
+        { "item": "copper", "count": [ 0, 2 ], "prob": 40 },
+        { "item": "copper", "count": [ 0, 1 ], "prob": 50 },
+        { "item": "sharp_rock", "count": [ 5, 9 ] },
+        { "item": "mineore_ore_1", "count": [ 1, 3 ] },
+        { "item": "mineore_gem_1", "count": [ 0, 2 ], "prob": 20 }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_mineore_base_2",
+    "name": "普通矿", 
+    "description": "你能挖到什么？",
+    "symbol": "O",
+    "color": "dark_gray",
+    "looks_like": "f_boulder_large",
+    "move_cost_mod": 4,
+    "coverage": 50,
+    "required_str": 20,
+    "flags": [ "NOITEM", "MINEABLE", "BLOCK_WIND" ],
+    "bash": {
+      "str_min": 30,
+      "str_max": 100,
+      "sound": "smash!",
+      "sound_fail": "thump.",
+      "items": [
+        { "item": "rock", "count": [ 65, 85 ] },
+        { "item": "sharp_rock", "count": [ 5, 9 ] },
+        { "item": "mineore_ore_2", "count": [ 1, 3 ] },
+        { "item": "mineore_gem_1", "count": [ 0, 2 ], "prob": 20 }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_mineore_base_3",
+    "name": "普通矿", 
+    "description": "你能挖到什么？",
+    "symbol": "O",
+    "color": "dark_gray",
+    "looks_like": "f_boulder_large",
+    "move_cost_mod": 4,
+    "coverage": 50,
+    "required_str": 20,
+    "flags": [ "NOITEM", "MINEABLE", "BLOCK_WIND" ],
+    "bash": {
+      "str_min": 30,
+      "str_max": 100,
+      "sound": "smash!",
+      "sound_fail": "thump.",
+      "items": [
+        { "item": "rock", "count": [ 65, 85 ] },
+        { "item": "lead", "count": [ 0, 5 ], "prob": 10 },
+        { "item": "lead", "count": [ 0, 4 ], "prob": 20 },
+        { "item": "lead", "count": [ 0, 3 ], "prob": 30 },
+        { "item": "lead", "count": [ 0, 2 ], "prob": 40 },
+        { "item": "lead", "count": [ 0, 1 ], "prob": 50 },
+        { "item": "sharp_rock", "count": [ 5, 9 ] },
+        { "item": "mineore_ore_3", "count": [ 1, 3 ] },
+        { "item": "mineore_gem_1", "count": [ 0, 2 ], "prob": 20 }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_mineore_base_4",
+    "name": "普通矿", 
+    "description": "你能挖到什么？",
+    "symbol": "O",
+    "color": "dark_gray",
+    "looks_like": "f_boulder_large",
+    "move_cost_mod": 4,
+    "coverage": 50,
+    "required_str": 20,
+    "flags": [ "NOITEM", "MINEABLE", "BLOCK_WIND" ],
+    "bash": {
+      "str_min": 30,
+      "str_max": 100,
+      "sound": "smash!",
+      "sound_fail": "thump.",
+      "items": [
+        { "item": "rock", "count": [ 65, 85 ] },
+        { "item": "sharp_rock", "count": [ 5, 9 ] },
+        { "item": "mineore_ore_4", "count": [ 1, 3 ] },
+        { "item": "mineore_gem_1", "count": [ 0, 2 ], "prob": 20 }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_mineore_base_5",
+    "name": "普通矿", 
+    "description": "你能挖到什么？",
+    "symbol": "O",
+    "color": "dark_gray",
+    "looks_like": "f_boulder_large",
+    "move_cost_mod": 4,
+    "coverage": 50,
+    "required_str": 20,
+    "flags": [ "NOITEM", "MINEABLE", "BLOCK_WIND" ],
+    "bash": {
+      "str_min": 30,
+      "str_max": 100,
+      "sound": "smash!",
+      "sound_fail": "thump.",
+      "items": [
+        { "item": "rock", "count": [ 65, 85 ] },
+        { "item": "scrap", "count": [ 5, 25 ] },
+        { "item": "sharp_rock", "count": [ 5, 9 ] },
+        { "item": "mineore_ore_5", "count": [ 1, 3 ] },
+        { "item": "mineore_gem_1", "count": [ 0, 2 ], "prob": 20 }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_mineore_plus_1",
+    "name": "高级矿", 
+    "description": "你能挖到什么？",
+    "symbol": "O",
+    "color": "dark_gray",
+    "looks_like": "f_boulder_large",
+    "move_cost_mod": 4,
+    "coverage": 50,
+    "required_str": 20,
+    "flags": [ "NOITEM", "MINEABLE", "BLOCK_WIND" ],
+    "bash": {
+      "str_min": 30,
+      "str_max": 100,
+      "sound": "smash!",
+      "sound_fail": "thump.",
+      "items": [
+        { "item": "rock", "count": [ 65, 85 ] },
+        { "item": "sharp_rock", "count": [ 5, 9 ] },
+        { "item": "mineore_gem_1", "count": [ 1, 2 ] },
+        { "item": "garnet", "count": [ 0, 2 ], "prob": 20 },
+        { "item": "amethyst", "count": [ 0, 2 ], "prob": 20 },
+        { "item": "aquamarine", "count": [ 0, 2 ], "prob": 20 },
+        { "item": "emerald", "count": [ 0, 2 ], "prob": 20 },
+        { "item": "alexandrite", "count": [ 0, 2 ], "prob": 20 },
+        { "item": "malachite", "count": [ 0, 2 ], "prob": 20 },
+        { "item": "pearl", "count": [ 0, 2 ], "prob": 20 },
+        { "item": "ruby", "count": [ 0, 2 ], "prob": 20 },
+        { "item": "peridot", "count": [ 0, 2 ], "prob": 20 },
+        { "item": "sapphire", "count": [ 0, 2 ], "prob": 20 },
+        { "item": "opal", "count": [ 0, 2 ], "prob": 20 },
+        { "item": "tourmaline", "count": [ 0, 2 ], "prob": 20 },
+        { "item": "citrine", "count": [ 0, 2 ], "prob": 20 },
+        { "item": "blue_topaz", "count": [ 0, 2 ], "prob": 20 },
+        { "item": "onyx", "count": [ 0, 2 ], "prob": 20 },
+        { "item": "mineore_ore_6", "count": [ 0, 1 ], "prob": 10 },
+        { "item": "mineore_ore_7", "count": [ 0, 1 ], "prob": 10 }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_mineore_plus_2",
+    "name": "高级矿", 
+    "description": "你能挖到什么？",
+    "symbol": "O",
+    "color": "dark_gray",
+    "looks_like": "f_boulder_large",
+    "move_cost_mod": 4,
+    "coverage": 50,
+    "required_str": 20,
+    "flags": [ "NOITEM", "MINEABLE", "BLOCK_WIND" ],
+    "bash": {
+      "str_min": 30,
+      "str_max": 100,
+      "sound": "smash!",
+      "sound_fail": "thump.",
+      "items": [
+        { "item": "rock", "count": [ 65, 85 ] },
+        { "item": "sharp_rock", "count": [ 5, 9 ] },
+        { "item": "silver_small", "charges": [ 10, 100 ] },
+        { "item": "silver_small", "charges": [ 20, 120 ], "prob": 50 },
+        { "item": "silver_small", "charges": [ 30, 140 ], "prob": 40 },
+        { "item": "silver_small", "charges": [ 40, 160 ], "prob": 30 },
+        { "item": "silver_small", "charges": [ 50, 180 ], "prob": 20 },
+        { "item": "silver_small", "charges": [ 60, 200 ], "prob": 10 },
+        { "item": "mineore_ore_6", "count": [ 0, 1 ], "prob": 10 },
+        { "item": "mineore_ore_7", "count": [ 0, 1 ], "prob": 10 },
+        { "item": "mineore_gem_1", "count": [ 1, 2 ], "prob": 20 }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_mineore_plus_3",
+    "name": "高级矿", 
+    "description": "你能挖到什么？",
+    "symbol": "O",
+    "color": "dark_gray",
+    "looks_like": "f_boulder_large",
+    "move_cost_mod": 4,
+    "coverage": 50,
+    "required_str": 20,
+    "flags": [ "NOITEM", "MINEABLE", "BLOCK_WIND" ],
+    "bash": {
+      "str_min": 30,
+      "str_max": 100,
+      "sound": "smash!",
+      "sound_fail": "thump.",
+      "items": [
+        { "item": "rock", "count": [ 65, 85 ] },
+        { "item": "sharp_rock", "count": [ 5, 9 ] },
+        { "item": "gold_small", "charges": [ 10, 100 ] },
+        { "item": "gold_small", "charges": [ 20, 120 ], "prob": 50 },
+        { "item": "gold_small", "charges": [ 30, 140 ], "prob": 40 },
+        { "item": "gold_small", "charges": [ 40, 160 ], "prob": 30 },
+        { "item": "gold_small", "charges": [ 50, 180 ], "prob": 20 },
+        { "item": "gold_small", "charges": [ 60, 200 ], "prob": 10 },
+        { "item": "mineore_ore_6", "count": [ 0, 1 ], "prob": 10 },
+        { "item": "mineore_ore_7", "count": [ 0, 1 ], "prob": 10 },
+        { "item": "mineore_gem_1", "count": [ 1, 2 ], "prob": 20 }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_mineore_plus_4",
+    "name": "高级矿", 
+    "description": "你能挖到什么？",
+    "symbol": "O",
+    "color": "dark_gray",
+    "looks_like": "f_boulder_large",
+    "move_cost_mod": 4,
+    "coverage": 50,
+    "required_str": 20,
+    "flags": [ "NOITEM", "MINEABLE", "BLOCK_WIND" ],
+    "bash": {
+      "str_min": 30,
+      "str_max": 100,
+      "sound": "smash!",
+      "sound_fail": "thump.",
+      "items": [
+        { "item": "rock", "count": [ 65, 85 ] },
+        { "item": "sharp_rock", "count": [ 5, 9 ] },
+        { "item": "platinum_small", "charges": [ 10, 100 ] },
+        { "item": "platinum_small", "charges": [ 20, 120 ], "prob": 50 },
+        { "item": "platinum_small", "charges": [ 30, 140 ], "prob": 40 },
+        { "item": "platinum_small", "charges": [ 40, 160 ], "prob": 30 },
+        { "item": "platinum_small", "charges": [ 50, 180 ], "prob": 20 },
+        { "item": "platinum_small", "charges": [ 60, 200 ], "prob": 10 },
+        { "item": "mineore_ore_6", "count": [ 0, 1 ], "prob": 10 },
+        { "item": "mineore_ore_7", "count": [ 0, 1 ], "prob": 10 },
+        { "item": "mineore_gem_1", "count": [ 1, 2 ], "prob": 20 }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_mineore_plus_5",
+    "name": "高级矿", 
+    "description": "你能挖到什么？",
+    "symbol": "O",
+    "color": "dark_gray",
+    "looks_like": "f_boulder_large",
+    "move_cost_mod": 4,
+    "coverage": 50,
+    "required_str": 20,
+    "flags": [ "NOITEM", "MINEABLE", "BLOCK_WIND" ],
+    "bash": {
+      "str_min": 30,
+      "str_max": 100,
+      "sound": "smash!",
+      "sound_fail": "thump.",
+      "items": [
+        { "item": "rock", "count": [ 65, 85 ] },
+        { "item": "sharp_rock", "count": [ 5, 9 ] },
+        { "item": "coal_lump", "charges": [ 500, 1000 ] },
+        { "item": "coal_lump", "charges": [ 400, 800 ], "prob": 70 },
+        { "item": "coal_lump", "charges": [ 300, 600 ], "prob": 40 },
+        { "item": "coal_lump", "charges": [ 200, 400 ], "prob": 10 },
+        { "item": "diamond", "count": [ 0, 1 ], "prob": 50 },
+        { "item": "diamond", "count": [ 0, 1 ], "prob": 40 },
+        { "item": "diamond", "count": [ 0, 2 ], "prob": 30 },
+        { "item": "diamond", "count": [ 0, 2 ], "prob": 20 },
+        { "item": "diamond", "count": [ 0, 3 ], "prob": 10 },
+        { "item": "mineore_ore_6", "count": [ 0, 1 ], "prob": 10 },
+        { "item": "mineore_ore_7", "count": [ 0, 1 ], "prob": 10 },
+        { "item": "mineore_coal_1", "count": [ 1, 2 ], "prob": 20 }
+      ]
+    }
+  }
+]

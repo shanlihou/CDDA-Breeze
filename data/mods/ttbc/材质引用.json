@@ -1,0 +1,1397 @@
+[
+	{
+		"type": "mod_tileset",
+		"compatibility": [
+			"UNDEAD_PEOPLE_BASE_v2",
+			"MSX++DEAD_PEOPLE",
+			"UNDEAD_PEOPLE",
+			"UNDEAD_PEOPLE_BASE",
+			"MshockXottoplus"
+		],
+		"tiles-new": [
+			{
+				"file": "枪.png",
+				"sprite_width": 32,
+				"sprite_height": 32,
+				"sprite_offset_x": 0,
+				"sprite_offset_y": 0,
+				"tiles": [
+					{
+						"id": "bigun",
+						"fg": 1,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_bigun",
+						"fg": 2,
+						"rotates": false
+					},
+					{
+						"id": "shark_plushie",
+						"fg": 3,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_shark_plushie",
+						"fg": 4,
+						"rotates": false
+					},
+					{
+						"id": "bodypillow_makeshift",
+						"fg": 5,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_bodypillow_makeshift",
+						"fg": 5,
+						"rotates": false
+					},
+					{
+						"id": "bodypillow_var_bodypillow_generic",
+						"fg": 10,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_bodypillow_var_bodypillow_generic",
+						"fg": 10,
+						"rotates": false
+					},
+					{
+						"id": "bodypillow_var_bodypillow_azurlane",
+						"fg": 6,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_bodypillow_var_bodypillow_azurlane",
+						"fg": 6,
+						"rotates": false
+					},
+					{
+						"id": "bodypillow_var_bodypillow_gfl",
+						"fg": 11,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_bodypillow_var_bodypillow_gfl",
+						"fg": 11,
+						"rotates": false
+					},
+					{
+						"id": "bodypillow_var_bodypillow_boston",
+						"fg": 7,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_bodypillow_var_bodypillow_boston",
+						"fg": 7,
+						"rotates": false
+					},
+					{
+						"id": "bodypillow_var_bodypillow_boston_lewd",
+						"fg": 19,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_bodypillow_var_bodypillow_boston_lewd",
+						"fg": 19,
+						"rotates": false
+					},
+	       			{
+						"id": "bodypillow_var_bodypillow_survivor",
+						"fg": 13,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_bodypillow_var_bodypillow_survivor",
+						"fg": 13,
+						"rotates": false
+					},
+					{
+						"id": "bodypillow_var_bodypillow_furry",
+						"fg": 9,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_bodypillow_var_bodypillow_furry",
+						"fg": 9,
+						"rotates": false
+					},
+					{
+						"id": "bodypillow_var_bodypillow_vocaloid",
+						"fg": 16,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_bodypillow_var_bodypillow_vocaloid",
+						"fg": 16,
+						"rotates": false
+					},
+	                {
+						"id": "bodypillow_var_bodypillow_goth",
+						"fg": 12,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_bodypillow_var_bodypillow_goth",
+						"fg": 12,
+						"rotates": false
+					},
+					{
+						"id": "bodypillow_var_bodypillow_yandere",
+						"fg": 18,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_bodypillow_var_bodypillow_yandere",
+						"fg": 18,
+						"rotates": false
+					},
+					{
+						"id": "bodypillow_var_bodypillow_tomboy",
+						"fg": 14,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_bodypillow_var_bodypillow_tomboy",
+						"fg": 14,
+						"rotates": false
+					},
+					{
+						"id": "bodypillow_var_bodypillow_femboy",
+						"fg": 8,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_bodypillow_var_bodypillow_femboy",
+						"fg": 8,
+						"rotates": false
+					},	
+					{
+						"id": "bodypillow_var_bodypillow_tsundere",
+						"fg": 15,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_bodypillow_var_bodypillow_tsundere",
+						"fg": 15,
+						"rotates": false
+					},
+					{
+						"id": "bodypillow_var_bodypillow_vtuber",
+						"fg": 17,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_bodypillow_var_bodypillow_vtuber",
+						"fg": 17,
+						"rotates": false
+					},
+					{
+						"id": "pamd71z",
+						"fg": 20,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_pamd71z",
+						"fg": 21,
+						"rotates": false
+					},
+					{
+						"id": "pamd68",
+						"fg": 22,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_pamd68",
+						"fg": 23,
+						"rotates": false
+					},
+					{
+						"id": "robofac_gun",
+						"fg": 24,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_robofac_gun",
+						"fg": 25,
+						"rotates": false
+					},
+					{
+						"id": "pamd68rubik",
+						"fg": 26,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_pamd68rubik",
+						"fg": 27,
+						"rotates": false
+					},
+					
+					{
+						"id": "overlay_wielded_american_flag",
+						"fg": 28,
+						"rotates": false
+					},
+					
+					{
+						"id": "overlay_wielded_state_flag_var_massachusetts_flag",
+						"fg": 31,
+						"rotates": false
+					},
+				    {
+						"id": "overlay_worn_state_flag_var_massachusetts_flag",
+						"fg": 54,
+						"rotates": false
+					},
+					
+					{
+						"id": "overlay_wielded_state_flag_var_maine_flag",
+						"fg": 30,
+						"rotates": false
+					},
+					{
+						"id": "overlay__worn_state_flag_var_maine_flag",
+						"fg": 53,
+						"rotates": false
+					},
+					
+					{
+						"id": "overlay_wielded_state_flag_var_new_hampshire_flag",
+						"fg": 33,
+						"rotates": false
+					},
+					{
+						"id": "overlay__worn_state_flag_var_new_hampshire_flag",
+						"fg": 56,
+						"rotates": false
+					},
+					
+					{
+						"id": "overlay_wielded_state_flag_var_vermont_flag",
+						"fg": 34,
+						"rotates": false
+					},
+					{
+						"id": "overlay__worn_state_flag_var_vermont_flag",
+						"fg": 57,
+						"rotates": false
+					},
+					{
+						"id": "state_flag_var_connecticut_flag",
+						"fg": 29,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_state_flag_var_connecticut_flag",
+						"fg": 29,
+						"rotates": false
+					},
+					{
+						"id": "overlay__worn_state_flag_var_connecticut_flag",
+						"fg": 52,
+						"rotates": false
+					},
+					
+					{
+						"id": "overlay_wielded_state_flag_var_rhode_island_flag",
+						"fg": 32,
+						"rotates": false
+					},
+					{
+						"id": "overlay__worn_state_flag_var_rhode_island_flag",
+						"fg": 55,
+						"rotates": false
+					},
+					
+					{
+						"id": "overlay_wielded_pride_flag_var_rainbow_pride_flag",
+						"fg": 50,
+						"rotates": false
+					},
+					{
+						"id": "overlay__worn_pride_flag_var_rainbow_pride_flag",
+						"fg": 73,
+						"rotates": false
+					},
+					
+					{
+						"id": "overlay_wielded_pride_flag_var_progress_pride_flag",
+						"fg": 49,
+						"rotates": false
+					},
+					{
+						"id": "overlay__worn_pride_flag_var_progress_pride_flag",
+						"fg": 72,
+						"rotates": false
+					},
+					
+					{
+    						"id": "overlay_wielded_pride_flag_var_agender_pride_flag",
+						"fg": 35,
+						"rotates": false
+					},
+					{
+						"id": "overlay__worn_pride_flag_var_agender_pride_flag",
+						"fg": 58,
+						"rotates": false
+					},
+					
+					{
+						"id": "overlay_wielded_pride_flag_var_transgender_pride_flag",
+						"fg": 51,
+						"rotates": false
+					},
+					{
+						"id": "overlay__worn_pride_flag_var_transgender_pride_flag",
+						"fg": 74,
+						"rotates": false
+					},	
+					
+					{
+						"id": "overlay_wielded_pride_flag_var_pansexual_pride_flag",
+						"fg": 47,
+						"rotates": false
+					},
+					{
+						"id": "overlay__worn_pride_flag_var_pansexual_pride_flag",
+						"fg": 69,
+						"rotates": false
+					},
+					
+					{
+						"id": "overlay_wielded_pride_flag_var_labrys_lesbian_pride_flag",
+						"fg": 43,
+						"rotates": false
+					},
+					{
+						"id": "overlay__worn_pride_flag_var_labrys_lesbian_pride_flag",
+						"fg": 65,
+						"rotates": false
+					},		
+					
+					{
+						"id": "overlay_wielded_pride_flag_var_lesbian_pride_flag",
+						"fg": 45,
+						"rotates": false
+					},
+					{
+						"id": "overlay__worn_pride_flag_var_lesbian_pride_flag",
+						"fg": 75,
+						"rotates": false
+					},		
+					
+					{
+						"id": "overlay_wielded_pride_flag_var_asexual_pride_flag",
+						"fg": 37,
+						"rotates": false
+					},
+					{
+						"id": "overlay__worn_pride_flag_var_asexual_pride_flag",
+						"fg": 60,
+						"rotates": false
+					},
+					
+					{
+						"id": "overlay_wielded_pride_flag_var_aromantic_pride_flag",
+						"fg": 36,
+						"rotates": false
+					},
+					{
+						"id": "overlay__worn_pride_flag_var_aromantic_pride_flag",
+						"fg": 59,
+						"rotates": false
+					},
+					
+					{
+						"id": "overlay_wielded_pride_flag_var_bisexual_pride_flag",
+						"fg": 39,
+						"rotates": false
+					},
+					{
+						"id": "overlay__worn_pride_flag_var_bisexual_pride_flag",
+						"fg": 62,
+						"rotates": false
+					},
+					
+					{
+						"id": "overlay_wielded_pride_flag_var_genderqueer_pride_flag",
+						"fg": 41,
+						"rotates": false
+					},
+					{
+						"id": "overlay__worn_pride_flag_var_genderqueer_pride_flag",
+						"fg": 64,
+						"rotates": false
+					},
+					
+					{
+						"id": "overlay_wielded_pride_flag_var_intersex_pride_flag",
+						"fg": 42,
+						"rotates": false
+					},
+					{
+						"id": "overlay__worn_pride_flag_var_intersex_pride_flag",
+						"fg": 65,
+						"rotates": false
+					},
+					
+					{
+						"id": "overlay_wielded_pride_flag_var_genderfluid_pride_flag",
+						"fg": 40,
+						"rotates": false
+					},
+					{
+						"id": "overlay_worn_pride_flag_var_genderfluid_pride_flag",
+						"fg": 63,
+						"rotates": false
+					},
+					
+					{
+						"id": "overlay_wielded_pride_flag_var_nonbinary_pride_flag",
+						"fg": 46,
+						"rotates": false
+					},
+					{
+						"id": "overlay__worn_pride_flag_var_nonbinary_pride_flag",
+						"fg": 69,
+						"rotates": false
+					},
+					
+					{
+						"id": "overlay_wielded_pride_flag_var_polysexual_pride_flag",
+						"fg": 48,
+						"rotates": false
+					},
+					{
+						"id": "overlay__worn_pride_flag_var_polysexual_pride_flag",
+						"fg": 71,
+						"rotates": false
+					},
+					
+					{
+						"id": "overlay_wielded_pride_flag_var_leather_pride_flag",
+						"fg": 44,
+						"rotates": false
+					},
+					{
+						"id": "overlay__worn_pride_flag_var_leather_pride_flag",
+						"fg": 67,
+						"rotates": false
+					},
+					
+					{
+						"id": "overlay_wielded_pride_flag_var_bear_pride_flag",
+						"fg": 38,
+						"rotates": false
+					},
+					{
+						"id": "overlay__worn_pride_flag_var_bear_pride_flag",
+						"fg": 61,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_reciprocating_saw",
+						"fg": 76,
+						"rotates": false
+					},
+					{
+						"id": "reciprocating_saw",
+						"fg": 75,
+						"rotates": false
+					},
+					{
+						"id": "mon_grocerybot",
+						"fg": 77,
+						"rotates": false
+					},
+					{
+						"id": "bot_grocerybot",
+						"fg": 78,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_bot_grocerybot",
+						"fg": 78,
+						"rotates": false
+					},
+					{
+						"id": "mon_grocerybot_busted",
+						"fg": 79,
+						"rotates": false
+					},
+					{
+						"id": "bot_grocerybot_busted",
+						"fg": 80,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_bot_grocerybot_busted",
+						"fg": 80,
+						"rotates": false
+					},
+					{
+						"id": "broken_grocerybot",
+						"fg": 81,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_broken_grocerybot",
+						"fg": 81,
+						"rotates": false
+					},
+					{
+						"id": "broken_grocerybot_busted",
+						"fg": 82,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_broken_grocerybot_busted",
+						"fg": 82,
+						"rotates": false
+					},
+					{
+					    "id":"mauser_c96",
+					    "fg": 83,
+					    "rotates": false
+					},
+					{
+					    "id":
+ "overlay_wielded_mauser_c96",
+					    "fg": 84,
+					    "rotates": false
+					},
+					{
+					    "id":
+ "overlay_wielded_mauser_m714",
+					    "fg": 84,
+					    "rotates": false
+					},
+					{
+					    "id":"mauser_m714",
+					    "fg": 85,
+					    "rotates": false
+					},
+					{
+					    "id":"fs2000",
+					    "fg": 86,
+					    "rotates": false
+					},
+					{
+					    "id":"overlay_wielded_fs2000",
+					    "fg": 87,
+					    "rotates": false
+					},
+					{
+					    "id":"ak556",
+					    "fg": 88,
+					    "rotates": false
+					},
+					{
+					    "id":"overlay_wielded_ak556",
+					    "fg": 89,
+					    "rotates": false
+					},
+					{
+					    "id":"mp40",
+					    "fg": 90,
+					    "rotates": false
+					},
+					{
+					    "id":
+ "overlay_wielded_mp40",
+					    "fg": 91,
+					    "rotates": false
+					},
+					{
+					    "id":
+ "overlay_wielded_mp40semi",
+					    "fg": 91,
+					    "rotates": false
+					},
+					{
+					    "id":"mp40semi",
+					    "fg": 90,
+					    "rotates": false
+					},
+					{ 
+					   "id": "vp_ap_drill_press",
+					   "fg": 92, 
+					   "rotates": false
+					},
+					{ 
+					   "id": "vp_ap_arcade_machine",
+					   "fg": 93, 
+					   "rotates": false
+					},
+					{ 
+					   "id": "vp_ap_hydraulic_press",
+					   "fg": 94, 
+					   "rotates": false
+					},
+					{
+					   "id": "vp_ap_tablesaw",
+					   "fg": 95,
+					   "rotates": false
+					},
+					{
+					   "id": "vp_ap_mitresaw",
+					   "fg": 96,
+					   "rotates": false
+					},
+					{
+					   "id": "vp_ap_bandsaw",
+					   "fg": 97,
+					   "rotates": false
+					},
+					{
+					   "id": "vp_ap_router",
+					   "fg": 98,
+					   "rotates": false
+					},
+					{
+					   "id": "vp_ap_planer",
+					   "fg": 99,
+					   "rotates": false
+					},
+					{
+					   "id": "vp_ap_jointer",
+					   "fg": 100,
+					   "rotates": false
+					},
+					{
+					   "id": "ammunition_box_308",
+					   "fg": 101,
+					   "rotates": false
+					},
+					{
+					   "id": "ammunition_box_50bmg",
+					   "fg": 101,
+					   "rotates": false
+					},
+					{
+					   "id": "ammunition_box_223",
+					   "fg": 101,
+					   "rotates": false
+					},
+					{
+					   "id": "ammunition_box_grenade",
+					   "fg": 102,
+					   "rotates": false
+					},
+					{
+					   "id": "ammunition_can_30",
+					   "fg": 103,
+					   "rotates": false
+					},
+					{
+					   "id": "ammunition_can_50",
+					   "fg": 104,
+					   "rotates": false
+					},
+					{
+					   "id": "ammunition_can_pa120",
+					   "fg": 105,
+					   "rotates": false
+					},
+					{
+					   "id": "ammunition_can_fat_50",
+					   "fg": 106,
+					   "rotates": false
+					},
+					{
+					   "id": "training_dummy_light",
+					   "fg": 107,
+					   "rotates": false
+					},
+					{
+					   "id": "f_training_dummy_light",
+					   "fg": 107,
+					   "rotates": false
+					},
+					{
+					   "id": "overlay_wielded_training_dummy_light",
+					   "fg": 107,
+					   "rotates": false
+					},
+					{
+					   "id": "training_dummy_heavy",
+					   "fg": 108,
+					   "rotates": false
+					},
+					{
+					   "id": "f_training_dummy_heavy",
+					   "fg": 108,
+					   "rotates": false
+					},
+					{
+					   "id": "overlay_wielded_training_dummy_heavy",
+					   "fg": 108,
+					   "rotates": false
+					},
+					{
+					   "id": "garandclip",
+					   "fg": 109,
+					   "rotates": false
+					},
+					{
+					   "id": "3006_clip",
+					   "fg": 110,
+					   "rotates": false
+					},
+					{
+					   "id": "clip9mm_10rd",
+					   "fg": 111,
+					   "rotates": false
+					},
+					{
+					   "id": "762x39_clip",
+					   "fg": 112,
+					   "rotates": false
+					},
+					{
+					   "id": "762R_clip",
+					   "fg": 110,
+					   "rotates": false
+					},
+					{
+					   "id": "clip223_10rd",
+					   "fg": 112,
+					   "rotates": false
+					},
+					{
+					   "id": "overlay_wielded_garandclip",
+					   "fg": 109,
+					   "rotates": false
+					},
+					{
+					   "id": "overlay_wielded_3006_clip",
+					   "fg": 110,
+					   "rotates": false
+					},
+					{
+					   "id": "overlay_wielded_clip9mm_10rd",
+					   "fg": 111,
+					   "rotates": false
+					},
+					{
+					   "id": "overlay_wielded_762x39_clip",
+					   "fg": 112,
+					   "rotates": false
+					},
+					{
+					   "id": "overlay_wielded_762R_clip",
+					   "fg": 110,
+					   "rotates": false
+					},
+					{
+					   "id": "overlay_wielded_clip223_10rd",
+					   "fg": 112,
+					   "rotates": false
+					},
+					{
+					   "id": "skull_human",
+					   "fg": 113,
+					   "rotates": false
+					},
+					{
+					   "id": "overlay_wielded_skull_human",
+					   "fg": 113,
+					   "rotates": false
+					},
+					{
+					   "id": "bowl_skull",
+					   "fg": 114,
+					   "rotates": false
+					},
+					{
+					   "id": "overlay_wielded_bowl_skull",
+					   "fg": 115,
+					   "rotates": false
+					},
+					{
+					   "id": "overlay_wielded_mask_skull",
+					   "fg": 116,
+					   "rotates": false
+					},
+					{
+					   "id": "mask_skull",
+					   "fg": 116,
+					   "rotates": false
+					},
+					{
+					   "id": "overlay_worn_mask_skull",
+					   "fg": 117,
+					   "rotates": false
+					},
+					{
+					   "id": "overlay_wielded_balaclava_skull",
+					   "fg": 118,
+					   "rotates": false
+					},
+					{
+					   "id": "balaclava_skull",
+					   "fg": 118,
+					   "rotates": false
+					},
+					{
+					   "id": "overlay_worn_balaclava_skull",
+					   "fg": 119,
+					   "rotates": false
+					},
+					{
+					   "id": "gloves_skeleton",
+					   "fg": 120,
+					   "rotates": false
+					},
+					{
+					   "id": "overlay_wielded_gloves_skeleton",
+					   "fg": 120,
+					   "rotates": false
+					},
+					{
+					   "id": "overlay_worn_gloves_skeleton",
+					   "fg": 121,
+					   "rotates": false
+					},
+					{
+					   "id": "jumpsuit_skeleton",
+					   "fg": 122,
+					   "rotates": false
+					},
+					{
+					   "id": "overlay_wielded_jumpsuit_skeleton",
+					   "fg": 122,
+					   "rotates": false
+					},
+					{
+					   "id": "jumpsuit_skeleton_zipped",
+					   "fg": 122,
+					   "rotates": false
+					},
+					{
+					   "id": "overlay_wielded_jumpsuit_skeleton_zipped",
+					   "fg": 122,
+					   "rotates": false
+					},
+					{
+					   "id": "overlay_male_worn_jumpsuit_skeleton",
+					   "fg": 123,
+					   "rotates": false
+					},
+					{
+					   "id": "overlay_male_worn_jumpsuit_skeleton_zipped",
+					   "fg": 124,
+					   "rotates": false
+					},
+					{
+					   "id": "overlay_female_worn_jumpsuit_skeleton",
+					   "fg": 125,
+					   "rotates": false
+					},
+					{
+					   "id": "overlay_female_worn_jumpsuit_skeleton",
+					   "fg": 126,
+					   "rotates": false
+					},
+					{
+						"id": "inflatable_ghost",
+						"fg": 127,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_inflatable_ghost",
+						"fg": 127,
+						"rotates": false
+					},
+					{
+						"id": "cotton_patchwork",
+						"fg": 128,
+						"rotates": false
+					},
+					{
+						"id": "bundle_rag",
+						"fg": 129,
+						"rotates": false
+					},
+					{
+						"id": "scrap_cotton",
+						"fg": 130,
+						"rotates": false
+					},
+					{
+						"id": "bundle_cotton",
+						"fg": 129,
+						"rotates": false
+					},
+					{
+						"id": "plastic_sheet_small",
+						"fg": 131,
+						"rotates": false
+					},
+					{
+						"id": "cotton_boll",
+						"fg": 132,
+						"rotates": false
+					},
+					{
+						"id": "pseudo_veh_oil_press",
+						"fg": 133,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_pseudo_veh_oil_press",
+						"fg": 133,
+						"rotates": false
+					},
+					{
+						"id": "vp_veh_oil_press_electric",
+						"fg": 133,
+						"rotates": false
+					},
+					{
+						"id": "box_oversize_wood",
+						"fg": 134,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_box_oversize_wood",
+						"fg": 134,
+						"rotates": false
+					},
+					{
+						"id": "box_large_wood",
+						"fg": 135,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_box_large_wood",
+						"fg": 135,
+						"rotates": false
+					},
+					{
+						"id": "box_compact_wood",
+						"fg": 136,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_box_compact_wood",
+						"fg": 136,
+						"rotates": false
+					},
+					{
+						"id": "box_small_wood",
+						"fg": 137,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_box_small_wood",
+						"fg": 137,
+						"rotates": false
+					},
+					{
+						"id": "box_medium_wood",
+						"fg": 138,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_box_medium_wood",
+						"fg": 138,
+						"rotates": false
+					},
+					{
+						"id": "aim_game",
+						"fg": 139,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_aim_game",
+						"fg": 140,
+						"rotates": false
+					},
+					{
+						"id": "vp_ap_foot_locker_recharge_station",
+						"fg": 141,
+						"rotates": false
+					},
+             	   	{ 
+						"id": "vp_ap_box_battery_charger",
+						"fg": 142,
+						"rotates": false
+					},
+					{
+						"id": "minidraco556",
+						"fg": 143,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_minidraco556",
+						"fg": 144,
+						"rotates": false
+					},
+					{
+						"id": "ak308",
+						"fg": 145,
+						"rotates": false
+					},
+					{
+						"id": "overlay_wielded_ak308",
+						"fg": 146,
+						"rotates": false
+					},
+					{
+					    "id": "overlay_wielded_m27_assault_rifle_var_m27iar",
+						"fg": 147,
+						"rotates": false
+					},
+					{
+					    "id": "overlay_wielded_m27iar",
+						"fg": 147,
+						"rotates": false
+					},
+					{
+					    "id": "30carbine",
+						"fg": 148,
+						"rotates": false
+					},
+					{
+					    "id": "vz58_p",
+						"fg": 149,
+						"rotates": false
+					},
+					{
+					    "id": "overlay_wielded_vz58_p",
+						"fg": 150,
+						"rotates": false
+					},
+					{
+					    "id": "vz58_p_var_vz58_v",
+						"fg": 151,
+						"rotates": false
+					},
+					{
+					    "id": "overlay_wielded_vz58_p_var_vz58_v",
+						"fg": 152,
+						"rotates": false
+					},
+					{
+					    "id": "vz58ts",
+						"fg": 153,
+						"rotates": false
+					},
+					{
+					    "id": "overlay_wielded_vz58ts",
+						"fg": 154,
+						"rotates": false
+					},
+					{
+					    "id": "box_oversize_metal",
+						"fg": 155,
+						"rotates": false
+					},
+					{
+					    "id": "overlay_wielded_box_oversize_metal",
+						"fg": 155,
+						"rotates": false
+					},
+					{
+					    "id": "box_large_metal",
+						"fg": 156,
+						"rotates": false
+					},
+					{
+					    "id": "overlay_wielded_box_large_metal",
+						"fg": 156,
+						"rotates": false
+					},
+					{
+					    "id": "box_medium_metal",
+						"fg": 157,
+						"rotates": false
+					},
+					{
+					    "id": "overlay_wielded_box_medium_metal",
+						"fg": 157,
+						"rotates": false
+					},
+					{
+					    "id": "box_small_metal",
+						"fg": 158,
+						"rotates": false
+					},
+					{
+					    "id": "overlay_wielded_box_small_metal",
+						"fg": 158,
+						"rotates": false
+					},
+					{
+					    "id": "backgammon",
+						"fg": 159,
+						"rotates": false
+					},
+					{
+					    "id": "scythe_toy",
+						"fg": 160,
+						"rotates": false
+					},
+					{
+					    "id": "overlay_wielded_scythe_toy",
+						"fg": 161,
+						"rotates": false
+					},
+					{
+					    "id": "sextant",
+						"fg": 162,
+						"rotates": false
+					},
+					{
+					    "id": "welding_wire_steel",
+						"fg": 163,
+						"rotates": false
+					},
+					{
+					    "id": "welding_wire_alloy",
+						"fg": 163,
+						"rotates": false
+					},
+					{
+					    "id": "welding_blanket",
+						"fg": 164,
+						"rotates": false
+					},
+					{
+					    "id": "mon_llama",
+						"fg": 165,
+						"rotates": false
+					},
+					{
+					    "id": "mon_llama_calf",
+						"fg": 166,
+						"rotates": false
+					},
+					{
+					    "id": "mon_zllama",
+						"fg": 167,
+						"rotates": false
+					},
+					{
+					    "id": "mk47",
+					    "fg": 168,
+					    "rotates": false
+					},
+					{
+					    "id": "overlay_wielded_mk47",
+					    "fg": 169,
+					    "rotates": false
+					},
+					{
+					    "id": "overlay_wielded_ak74",
+					    "fg": 170,
+					    "rotates": false
+					},
+					{
+					    "id": "overlay_wielded_sks",
+					    "fg": 171,
+					    "rotates": false
+					},
+					{
+					    "id": "sks",
+					    "fg": 172,
+					    "rotates": false
+					},
+					{
+					    "id": "overlay_wielded_sig_assault_rifle",
+					    "fg": 174,
+					    "rotates": false
+					},
+					{
+					    "id": "sig_assault_rifle",
+					    "fg": 173,
+					    "rotates": false
+					},
+					{
+					    "id": "overlay_wielded_obrez",
+					    "fg": 176,
+					    "rotates": false
+					},
+					{
+					    "id": "obrez",
+					    "fg": 175,
+					    "rotates": false
+					},
+					{
+					    "id": "pressin",
+					    "fg": 177,
+					    "rotates": false
+					},
+					{
+					    "id": "overlay_wielded_pressin",
+					    "fg": 178,
+					    "rotates": false
+					},
+					{
+					    "id": "louverture",
+					    "fg": 179,
+					    "rotates": false
+					},
+					{
+					    "id": "overlay_wielded_louverture",
+					    "fg": 180,
+					    "rotates": false
+					},
+					{
+					    "id": "pulverizer",
+					    "fg": 181,
+					    "rotates": false
+					},
+					{
+					    "id": "overlay_wielded_pulverizer",
+					    "fg": 182,
+					    "rotates": false
+					}
+				],
+				"//": "range 1 to 80"
+			}
+		]
+	},
+	{
+	"type": "mod_tileset",
+    "compatibility": [
+      "UNDEAD_PEOPLE_BASE_v2",
+			"MSX++DEAD_PEOPLE",
+			"UNDEAD_PEOPLE",
+			"UNDEAD_PEOPLE_BASE",
+			"MshockXottoplus"
+    ],
+    "tiles-new": [
+      {
+        "file": "枪.png",
+        "tiles": [
+                    {
+						"id": "american_flag",
+						"fg": 28,
+						"rotates": false
+					},
+                    {
+						"id": "state_flag_var_connecticut_flag",
+						"fg": 29,
+						"rotates": false
+					},
+					{
+						"id": "state_flag_var_maine_flag",
+						"fg": 30,
+						"rotates": false
+					},
+				    {
+						"id": "state_flag_var_massachusetts_flag",
+						"fg": 31,
+						"rotates": false
+					},
+					{
+						"id": "state_flag_var_rhode_island_flag",
+						"fg": 32,
+						"rotates": false
+					},
+					{
+						"id": "state_flag_var_new_hampshire_flag",
+						"fg": 33,
+						"rotates": false
+					},
+					{
+						"id": "state_flag_var_vermont_flag",
+						"fg": 34,
+						"rotates": false
+					},
+					{
+						"id": "pride_flag_var_agender_pride_flag",
+						"fg": 35,
+						"rotates": false
+					},
+					{
+						"id": "pride_flag_var_aromantic_pride_flag",
+						"fg": 36,
+						"rotates": false
+					},
+					{
+						"id": "pride_flag_var_asexual_pride_flag",
+						"fg": 37,
+						"rotates": false
+					},
+					{
+					"id": "pride_flag_var_bear_pride_flag",
+						"fg": 38,
+						"rotates": false
+					},
+					{
+					"id": "pride_flag_var_bisexual_pride_flag",
+						"fg": 39,
+						"rotates": false
+					},
+					{
+					"id": "pride_flag_var_genderfluid_pride_flag",
+						"fg": 40,
+						"rotates": false
+					},
+					{
+					"id": "pride_flag_var_genderqueer_pride_flag",
+						"fg": 41,
+						"rotates": false
+					},
+					{
+					"id": "pride_flag_var_intersex_pride_flag",
+						"fg": 42,
+						"rotates": false
+					},
+					{
+						"id": "pride_flag_var_labrys_lesbian_pride_flag",
+						"fg": 43,
+						"rotates": false
+					},
+					{
+					"id": "pride_flag_var_leather_pride_flag",
+						"fg": 44,
+						"rotates": false
+					},
+					{
+						"id": "pride_flag_var_lesbian_pride_flag",
+						"fg": 45,
+						"rotates": false
+					},
+					{
+					"id": "pride_flag_var_nonbinary_pride_flag",
+						"fg": 46,
+						"rotates": false
+					},
+					{
+						"id": "pride_flag_var_pansexual_pride_flag",
+						"fg": 47,
+						"rotates": false
+					},
+					{
+					"id": "pride_flag_var_polysexual_pride_flag",
+						"fg": 48,
+						"rotates": false
+					},
+					{
+						"id": "pride_flag_var_progress_pride_flag",
+						"fg": 49,
+						"rotates": false
+					},
+					{
+						"id": "pride_flag_var_rainbow_pride_flag",
+						"fg": 50,
+						"rotates": false
+					},
+					{
+						"id": "pride_flag_var_transgender_pride_flag",
+						"fg": 51,
+						"rotates": false
+					}
+				],
+        "sprite_width": 32,
+        "sprite_height": 32,
+        "sprite_offset_x": 0,
+        "sprite_offset_y": 0
+      }
+    ]
+	}
+]

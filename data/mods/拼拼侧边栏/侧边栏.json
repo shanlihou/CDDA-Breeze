@@ -1,0 +1,657 @@
+[
+  {
+    "id": "拼拼侧边栏",
+    "type": "widget",
+    "style": "sidebar",
+    "label": "拼拼侧边栏",
+    "separator": " ",
+    "padding": 1,
+    "width": 54,
+    "widgets": [
+      "sundial_desc_no_label",
+      "环境布局",
+      "肢体血量布局",
+      "属性布局",
+      "行动布局2",
+      "战术布局",
+      "lcom_vehicle_layout",
+      "罗盘布局",
+      "怪数布局",
+      "Y_compass",
+      "compass_all_danger_layout",
+      "bodypart_armor_outer_layout",
+      "行动布局",
+      "需求布局",
+      "疲惫布局",
+      "心肺布局"
+    ]
+  },
+  {
+    "id": "生化能量",
+    "type": "widget",
+    "label": "生",
+    "style": "number",
+    "var": "power_text"
+  },
+  {
+    "id": "辐射",
+    "type": "widget",
+    "copy-from": "rad_badge_desc",
+    "flags": [ "W_LABEL_NONE" ]
+  },
+  {
+    "id": "安全模式",
+    "type": "widget",
+    "style": "text",
+    "copy-from": "safe_mode_desc",
+    "flags": [ "W_LABEL_NONE" ]
+  },
+  {
+    "id": "-",
+    "type": "widget",
+    "style": "text",
+    "string": "-"
+  },
+  {
+    "id": " ",
+    "type": "widget",
+    "style": "text",
+    "string": " "
+  },
+  {
+    "id": "|",
+    "type": "widget",
+    "style": "text",
+    "string": "|"
+  },
+  {
+    "id": "/",
+    "type": "widget",
+    "style": "text",
+    "string": "/"
+  },
+  {
+    "id": "力",
+    "label": "力",
+    "type": "widget",
+    "var": "stat_str",
+    "copy-from": "stat_number"
+  },
+  {
+    "id": "速",
+    "label": "速",
+    "type": "widget",
+    "var": "stat_dex",
+    "copy-from": "stat_number"
+  },
+  {
+    "id": "智",
+    "label": "智",
+    "type": "widget",
+    "var": "stat_int",
+    "copy-from": "stat_number"
+  },
+  {
+    "id": "感",
+    "type": "widget",
+    "label": "感",
+    "var": "stat_per",
+    "copy-from": "stat_number"
+  },
+  {
+    "id": "实际耗时",
+    "type": "widget",
+    "label": "",
+    "style": "text",
+    "var": "move_count_mode_text"
+  },
+  {
+    "id": "能量数值变化",
+    "type": "widget",
+    "label": "",
+    "style": "text",
+    "var": "power_balance_text"
+  },
+  {
+    "id": "声音",
+    "type": "widget",
+    "label": "声",
+    "var": "sound",
+    "style": "number"
+  },
+  {
+    "id": "行动耗时",
+    "type": "widget",
+    "label": "",
+    "style": "number",
+    "var": "move_cost",
+    "colors": [ "c_green", "c_light_green", "c_yellow", "c_light_red", "c_red", "c_red_red" ]
+  },
+  {
+    "id": "数字耐力",
+    "type": "widget",
+    "copy-from": "stamina_widget",
+    "label": "耐",
+    "style": "number"
+  },
+  {
+    "id": "文字耐力",
+    "type": "widget",
+    "label": "耐",
+    "padding": 1,
+    "width": 5,
+    "copy-from": "stamina_graph"
+  },
+  {
+    "id": "月相",
+    "type": "widget",
+    "copy-from": "moon_phase_desc",
+    "flags": [ "W_LABEL_NONE" ]
+  },
+  {
+    "id": "疲惫进程",
+    "type": "widget",
+    "label": "",
+    "style": "graph",
+    "symbols": ".\\|",
+    "copy-from": "weariness_transition_graph"
+  },
+  {
+    "id": "疲惫",
+    "type": "widget",
+    "label": "疲惫",
+    "copy-from": "weariness_desc"
+  },
+  {
+    "id": "小地图",
+    "type": "widget",
+    "label": "",
+    "var": "overmap_text",
+    "style": "text",
+    "width": 15,
+    "height": 7
+  },
+  {
+    "id": "左臂HP",
+    "type": "widget",
+    "style": "layout",
+    "arrange": "columns",
+    "flags": [ "W_NO_PADDING" ],
+    "widgets": [ "bodypart_larm_status_text", "hp_left_arm_num_no_label" ]
+  },
+  {
+    "id": "头部HP",
+    "type": "widget",
+    "style": "layout",
+    "arrange": "columns",
+    "flags": [ "W_NO_PADDING" ],
+    "widgets": [ "bodypart_head_status_text", "hp_head_num_no_label" ]
+  },
+  {
+    "id": "右臂HP",
+    "type": "widget",
+    "style": "layout",
+    "arrange": "columns",
+    "flags": [ "W_NO_PADDING" ],
+    "widgets": [ "bodypart_rarm_status_text", "hp_right_arm_num_no_label" ]
+  },
+  {
+    "id": "左腿HP",
+    "type": "widget",
+    "style": "layout",
+    "arrange": "columns",
+    "flags": [ "W_NO_PADDING" ],
+    "widgets": [ "bodypart_lleg_status_text", "hp_left_leg_num_no_label" ]
+  },
+  {
+    "id": "躯干HP",
+    "type": "widget",
+    "style": "layout",
+    "arrange": "columns",
+    "flags": [ "W_NO_PADDING" ],
+    "widgets": [ "bodypart_torso_status_text", "hp_torso_num_no_label" ]
+  },
+  {
+    "id": "右腿HP",
+    "type": "widget",
+    "style": "layout",
+    "arrange": "columns",
+    "flags": [ "W_NO_PADDING" ],
+    "widgets": [ "bodypart_rleg_status_text", "hp_right_leg_num_no_label" ]
+  },
+  {
+    "id": "竖分割线",
+    "type": "widget",
+    "style": "layout",
+    "arrange": "rows",
+    "flags": [ "W_NO_PADDING" ],
+    "widgets": [ "|", "|", "|", "|", "|", "|", "|" ]
+  },
+  {
+    "id": "心肺布局",
+    "type": "widget",
+    "style": "layout",
+    "label": "心肺",
+    "arrange": "columns",
+    "widgets": [ "cardio_acc_num", "|", "cardio_fit_num" ],
+    "flags": [ "W_NO_PADDING" ]
+  },
+  {
+    "id": "行动布局",
+    "type": "widget",
+    "style": "layout",
+    "label": "行动",
+    "arrange": "columns",
+    "flags": [ "W_NO_PADDING" ],
+    "widgets": [ "speed_num", "/", "行动耗时", "/", "实际耗时", "|", "数字耐力", "|", "声音" ]
+  },
+  {
+    "id": "行动布局2",
+    "type": "widget",
+    "style": "layout",
+    "label": "行动2",
+    "arrange": "columns",
+    "flags": [ "W_NO_PADDING" ],
+    "widgets": [ "speed_num", "/", "行动耗时", "/", "实际耗时", "|", "文字耐力", "|", "声音", "|","疲惫", "疲惫进程" , "weary_malus_desc_no_label"]
+  },
+  {
+    "id": "疲惫布局",
+    "type": "widget",
+    "style": "layout",
+    "label": "疲惫&负重",
+    "arrange": "columns",
+    "flags": [ "W_NO_PADDING" ],
+    "widgets": [ "疲惫", "疲惫进程", "weary_malus_desc_no_label", "|","carry_weight_text_label", "|", "activity_desc_no_label" ]
+  },
+  {
+    "id": "魔力值",
+    "type": "widget",
+    "label": "魔",
+    "style": "number",
+    "var": "mana",
+    "colors": [ "c_red", "c_light_red", "c_yellow", "c_light_blue" ],
+    "flags": [ "W_NO_PADDING" ]
+  },
+  {
+    "id": "魔力量",
+    "type": "widget",
+    "style": "number",
+    "var": "max_mana",
+    "padding": 1,
+    "colors": [ "c_red" , "c_light_red"]
+  },
+  {
+    "id": "左臂&头&右臂&健康布局",
+    "type": "widget",
+    "style": "layout",
+    "arrange": "columns",
+    "flags": [ "W_NO_PADDING" ],
+    "widgets": [ "左臂HP", " ", "头部HP", " ", "右臂HP", "|","cardio_acc_num", "|", "health_num" ]
+  },
+  {
+    "id": "左腿&躯干&右腿体重布局",
+    "type": "widget",
+    "style": "layout",
+    "arrange": "columns",
+    "flags": [ "W_NO_PADDING" ],
+    "widgets": [ "左腿HP", " ", "躯干HP", " ", "右腿HP", "|", "cardio_fit_num", "|", "体重" ]
+  },
+  {
+    "id": "时间布局",
+    "type": "widget",
+    "style": "layout",
+    "label": "",
+    "arrange": "columns",
+    "flags": [ "W_NO_PADDING" ],
+    "widgets": [ "date_desc_no_label", " ", "weather_desc_no_label", " ", "time_desc_no_label" ]
+  },
+  {
+    "id": "战术布局",
+    "type": "widget",
+    "style": "layout",
+    "label": "战术",
+    "arrange": "columns",
+    "flags": [ "W_NO_PADDING" ],
+    "widgets": [ "style_desc_no_label", "|", "ma_buff_legend", "|","wielding_desc_no_label"]
+  },
+  {
+    "id": "环境&生化能量&能量数值变化&辐射",
+    "type": "widget",
+    "style": "layout",
+    "label": "",
+    "arrange": "columns",
+    "flags": [ "W_NO_PADDING" ],
+    "widgets": [ "place_desc_no_label", "|", "生化能量" , "能量数值变化", "辐射"]
+  },
+  {
+    "id": "需求布局",
+    "type": "widget",
+    "style": "layout",
+    "label": "需求",
+    "arrange": "rows",
+    "flags": [ "W_NO_PADDING" ],
+    "widgets": [ "心情&专注&疼痛&体温&表情布局" ]
+  },
+  {
+    "id": "心情&专注&疼痛&体温&表情布局",
+    "type": "widget",
+    "style": "layout",
+    "arrange": "columns",
+    "flags": [ "W_NO_PADDING" ],
+    "widgets": [ "morale_num", "|", "focus_num", "|", "pain_num_label", "|", "body_temp_desc_no_label","mood_desc_no_label"]
+  },
+  {
+    "id": "睡意&渴度&饿度布局",
+    "type": "widget",
+    "style": "layout",
+    "arrange": "columns",
+    "flags": [ "W_NO_PADDING" ],
+    "widgets": [ "睡意", "|", "渴度", "|", "饿度", "|", "focus_num", "|", "pain_num_label"]
+  },
+  {
+    "id": "高度&安全模式布局",
+    "type": "widget",
+    "style": "layout",
+    "arrange": "columns",
+    "flags": [ "W_NO_PADDING" ],
+    "widgets": [ "overmap_location_desc", "|", "安全模式", "|","carry_weight_text_label", "|", "activity_desc_no_label" ]
+  },
+  {
+    "id": "肢体血量布局",
+    "type": "widget",
+    "style": "layout",
+    "label": "血量&健康&体重",
+    "arrange": "rows",
+    "widgets": [ "左臂&头&右臂&健康布局", "左腿&躯干&右腿体重布局" ]
+  },
+  {
+    "id": "属性布局",
+    "type": "widget",
+    "style": "layout",
+    "label": "属性&魔力",
+    "flags": [ "W_NO_PADDING" ],
+    "widgets": [ "力", " ", "速", " ", "智", " ", "感", "|",  "魔力值", "/", "魔力量", "|","生化能量" , "能量数值变化" ]
+  },
+  {
+    "id": "亮度&月相&风况&气温布局",
+    "type": "widget",
+    "style": "layout",
+    "arrange": "columns",
+    "widgets": [ "lighting_desc_no_label", " ", "月相", " ", "wind_desc_no_label", " ","env_temp_desc_no_label", "|", "body_temp_desc_no_label","mood_desc_no_label", "|","morale_num" ],
+    "flags": [ "W_NO_PADDING" ]
+  },
+  {
+    "id": "环境右侧布局",
+    "type": "widget",
+    "style": "layout",
+    "arrange": "rows",
+    "widgets": [ "时间布局","亮度&月相&风况&气温布局","wielding_desc_no_label","style_desc_no_label","睡意&渴度&饿度布局", "高度&安全模式布局","环境&生化能量&能量数值变化&辐射" ],
+    "flags": [ "W_NO_PADDING" ]
+  },
+  {
+    "id": "环境布局",
+    "type": "widget",
+    "style": "layout",
+    "label": "小地图&环境&需求",
+    "arrange": "columns",
+    "widgets": [ "小地图", "竖分割线", "环境右侧布局" ],
+    "flags": [ "W_NO_PADDING" ]
+  },
+  {
+    "id": "饿度",
+    "type": "widget",
+    "label": "",
+    "style": "text",
+    "clauses": [
+      { "id": "engorged", "text": "吃撑", "color": "red", "condition": { "u_has_effect": "hunger_engorged" } },
+      { "id": "full", "text": "饱饱", "color": "yellow", "condition": { "u_has_effect": "hunger_full" } },
+      {
+        "id": "satisfied",
+        "text": "吃饱",
+        "color": "green",
+        "condition": { "u_has_effect": "hunger_satisfied" }
+      },
+      { "id": "blank", "text": "不饿", "color": "light_gray", "condition": { "u_has_effect": "hunger_blank" } },
+      { "id": "hungry", "text": "空腹", "color": "c_light_gray", "condition": { "u_has_effect": "hunger_hungry" } },
+      {
+        "id": "very_hungry",
+        "text": "饿了",
+        "color": "yellow",
+        "condition": { "u_has_effect": "hunger_very_hungry" }
+      },
+      {
+        "id": "near_starving",
+        "text": "很饿",
+        "color": "red",
+        "condition": { "u_has_effect": "hunger_near_starving" }
+      },
+      { "id": "starving", "text": "饿！!", "color": "red", "condition": { "u_has_effect": "hunger_starving" } },
+      {
+        "id": "famished",
+        "text": "饿嗝‌",
+        "color": "light_red",
+        "condition": { "u_has_effect": "hunger_famished" }
+      }
+    ]
+  },
+  {
+    "id": "渴度",
+    "type": "widget",
+    "label": "",
+    "style": "text",
+    "clauses": [
+      {
+        "id": "parched",
+        "text": "无水",
+        "color": "light_red",
+        "condition": { "compare_int": [ { "u_val": "instant_thirst" }, ">", { "const": 520 } ] }
+      },
+      {
+        "id": "dehydrated",
+        "text": "脱水",
+        "color": "light_red",
+        "condition": {
+          "and": [
+            { "compare_int": [ { "u_val": "instant_thirst" }, ">", { "const": 240 } ] },
+            { "compare_int": [ { "u_val": "instant_thirst" }, "<=", { "const": 520 } ] }
+          ]
+        }
+      },
+      {
+        "id": "very_thirsty",
+        "text": "很渴",
+        "color": "yellow",
+        "condition": {
+          "and": [
+            { "compare_int": [ { "u_val": "instant_thirst" }, ">", { "const": 80 } ] },
+            { "compare_int": [ { "u_val": "instant_thirst" }, "<=", { "const": 240 } ] }
+          ]
+        }
+      },
+      {
+        "id": "thirsty",
+        "text": "口渴",
+        "color": "yellow",
+        "condition": {
+          "and": [
+            { "compare_int": [ { "u_val": "instant_thirst" }, ">", { "const": 40 } ] },
+            { "compare_int": [ { "u_val": "instant_thirst" }, "<=", { "const": 80 } ] }
+          ]
+        }
+      },
+      {
+        "id": "neutral",
+        "text": "不渴",
+        "color": "light_gray",
+        "condition": {
+          "and": [
+            { "compare_int": [ { "u_val": "instant_thirst" }, ">=", { "const": 0 } ] },
+            { "compare_int": [ { "u_val": "instant_thirst" }, "<=", { "const": 40 } ] }
+          ]
+        }
+      },
+      {
+        "id": "slaked",
+        "text": "喝足",
+        "color": "green",
+        "condition": {
+          "and": [
+            { "compare_int": [ { "u_val": "instant_thirst" }, ">=", { "const": -20 } ] },
+            { "compare_int": [ { "u_val": "instant_thirst" }, "<", { "const": 0 } ] }
+          ]
+        }
+      },
+      {
+        "id": "hydrated",
+        "text": "喝多",
+        "color": "green",
+        "condition": {
+          "and": [
+            { "compare_int": [ { "u_val": "instant_thirst" }, ">=", { "const": -60 } ] },
+            { "compare_int": [ { "u_val": "instant_thirst" }, "<", { "const": -20 } ] }
+          ]
+        }
+      },
+      {
+        "id": "turgid",
+        "text": "喝撑",
+        "color": "green",
+        "condition": { "compare_int": [ { "u_val": "instant_thirst" }, "<", { "const": -60 } ] }
+      }
+    ]
+  },
+  {
+    "id": "睡意",
+    "type": "widget",
+    "label": "清醒",
+    "style": "text",
+    "clauses": [
+      {
+        "id": "tired1",
+        "text": "",
+        "color": "light_gray",
+        "condition": {
+          "and": [
+            { "compare_int": [ { "u_val": "fatigue" }, ">=", { "const": 0 } ] },
+            { "compare_int": [ { "u_val": "fatigue" }, "<", { "const": 191 } ] }
+          ]
+        }
+      },
+      {
+        "id": "tired",
+        "text": "Tired",
+        "color": "yellow",
+        "condition": {
+          "and": [
+            { "compare_int": [ { "u_val": "fatigue" }, ">=", { "const": 191 } ] },
+            { "compare_int": [ { "u_val": "fatigue" }, "<", { "const": 383 } ] }
+          ]
+        }
+      },
+      {
+        "id": "dead_tired",
+        "text": "Dead Tired",
+        "color": "light_red",
+        "condition": {
+          "and": [
+            { "compare_int": [ { "u_val": "fatigue" }, ">=", { "const": 383 } ] },
+            { "compare_int": [ { "u_val": "fatigue" }, "<", { "const": 575 } ] }
+          ]
+        }
+      },
+      {
+        "id": "exhausted",
+        "text": "Exhausted",
+        "color": "red",
+        "condition": { "compare_int": [ { "u_val": "fatigue" }, ">=", { "const": 575 } ] }
+      }
+    ]
+  },
+  {
+    "id": "体重",
+    "type": "widget",
+    "label": "体重：",
+    "style": "text",
+    "clauses": [
+      {
+        "id": "skeletal",
+        "text": "Skeletal",
+        "color": "red",
+        "condition": { "compare_int": [ { "u_val": "bmi_permil" }, "<=", { "const": 14000 } ] }
+      },
+      {
+        "id": "emaciated",
+        "text": "Emaciated",
+        "color": "light_red",
+        "condition": {
+          "and": [
+            { "compare_int": [ { "u_val": "bmi_permil" }, ">", { "const": 14000 } ] },
+            { "compare_int": [ { "u_val": "bmi_permil" }, "<=", { "const": 16000 } ] }
+          ]
+        }
+      },
+      {
+        "id": "underweight",
+        "text": "Underweight",
+        "color": "yellow",
+        "condition": {
+          "and": [
+            { "compare_int": [ { "u_val": "bmi_permil" }, ">", { "const": 16000 } ] },
+            { "compare_int": [ { "u_val": "bmi_permil" }, "<=", { "const": 18500 } ] }
+          ]
+        }
+      },
+      {
+        "id": "normal",
+        "text": "Normal",
+        "color": "light_gray",
+        "//": "Actually 18.5 - 25",
+        "condition": {
+          "and": [
+            { "compare_int": [ { "u_val": "bmi_permil" }, ">", { "const": 18500 } ] },
+            { "compare_int": [ { "u_val": "bmi_permil" }, "<=", { "const": 25000 } ] }
+          ]
+        }
+      },
+      {
+        "id": "overweight",
+        "text": "Overweight",
+        "color": "yellow",
+        "condition": {
+          "and": [
+            { "compare_int": [ { "u_val": "bmi_permil" }, ">", { "const": 25000 } ] },
+            { "compare_int": [ { "u_val": "bmi_permil" }, "<=", { "const": 30000 } ] }
+          ]
+        }
+      },
+      {
+        "id": "obese",
+        "text": "Obese",
+        "color": "light_red",
+        "condition": {
+          "and": [
+            { "compare_int": [ { "u_val": "bmi_permil" }, ">", { "const": 30000 } ] },
+            { "compare_int": [ { "u_val": "bmi_permil" }, "<=", { "const": 35000 } ] }
+          ]
+        }
+      },
+      {
+        "id": "very_obese",
+        "text": "Very Obese",
+        "color": "red",
+        "condition": {
+          "and": [
+            { "compare_int": [ { "u_val": "bmi_permil" }, ">", { "const": 35000 } ] },
+            { "compare_int": [ { "u_val": "bmi_permil" }, "<=", { "const": 40000 } ] }
+          ]
+        }
+      },
+      {
+        "id": "morbidly_obese",
+        "text": "Morbidly Obese",
+        "color": "red",
+        "condition": { "compare_int": [ { "u_val": "bmi_permil" }, ">", { "const": 40000 } ] }
+      }
+    ]
+  }
+]

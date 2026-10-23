@@ -1,0 +1,2231 @@
+[
+  {
+    "//": "dota里第一次回买就会入手的初级物。",
+    "id": "GS_basic_str",
+    "type": "ARMOR",
+    "category": "GS_equipment",
+    "name": { "str": "力量手环", "str_pl": "力量手环" },
+    "description": "增强力量属性的超凡道具，装备时力量+1，合成进阶武装的基础，不可重复装备。",
+    "weight": "30 g",
+    "volume": "150 ml",
+    "material": [ "super_mt" ],
+    "symbol": "[",
+    "color": "magenta",
+    "flags": [
+    "FANCY",
+    "ONLY_ONE"
+     ],
+    "relic_data": {
+    "passive_effects":
+     [
+      {
+       "has": "WORN",
+       "condition": "ALWAYS",
+       "values": [
+        { "value": "STRENGTH", "add": 1 }
+       ]
+      }
+     ]
+    }
+  },
+  {
+    "id": "GS_basic_dex",
+    "type": "ARMOR",
+    "category": "GS_equipment",
+    "name": { "str": "敏捷之羽", "str_pl": "敏捷之羽" },
+    "description": "增强敏捷属性的超凡道具，装备时敏捷+1，合成进阶武装的基础。不可重复装备。",
+    "weight": "10 g",
+    "volume": "100 ml",
+    "material": [ "super_mt" ],
+    "symbol": "[",
+    "color": "white",
+    "flags": [ "ONLY_ONE", "FANCY" ],
+  "relic_data": {
+   "passive_effects":
+    [
+     {
+      "has": "WORN",
+      "condition": "ALWAYS",
+      "values": [
+       { "value": "DEXTERITY", "add": 1 }
+      ]
+     }
+    ]
+   }
+  },
+  {
+    "id": "GS_basic_int",
+    "type": "ARMOR",
+    "category": "GS_equipment",
+    "name": { "str": "智慧披风", "str_pl": "智慧披风" },
+    "description": "增强智力属性的超凡道具，装备时智力+1，合成进阶武装的基础，不可重复装备。",
+    "weight": "100 g",
+    "volume": "700 ml",
+    "material": [ "super_mt" ],
+    "symbol": "[",
+    "color": "blue",
+    "flags": [ "ONLY_ONE", "FANCY" ],
+    "relic_data": {
+    "passive_effects":
+  [
+   {
+    "has": "WORN",
+    "condition": "ALWAYS",
+    "values": [ { "value": "INTELLIGENCE", "add": 1 } ]
+   }
+  ]
+  }
+  },
+  {
+    "id": "GS_basic_per",
+    "type": "ARMOR",
+    "category": "GS_equipment",
+    "name": { "str": "感知护符", "str_pl": "感知护符" },
+    "description": "增强感知属性的超凡道具，装备时感知+1，合成进阶武装的基础，不可重复装备。",
+    "weight": "25 g",
+    "volume": "200 ml",
+    "material": [ "super_mt" ],
+    "symbol": "[",
+    "color": "green",
+    "flags": [ "ONLY_ONE", "FANCY" ],
+    "relic_data": {
+    "passive_effects":
+  [
+   {
+    "has": "WORN",
+    "condition": "ALWAYS",
+    "values": [ { "value": "PERCEPTION", "add": 1 } ]
+   }
+  ]
+  }
+  },
+  {
+    "id": "GS_eq_str3_shield",
+    "type": "ARMOR",
+    "category": "GS_equipment",
+    "name": "三相机关盾",
+    "description": "力量特质凝结的近战武装，由三面小型盾组合而成，可以快速变形成合适的造型保护持盾者。",
+    "weight": "2000 g",
+    "volume": "12 L",
+    "material": [ "iron", "super_mt" ],
+    "symbol": "[",
+    "color": "brown",
+    "techniques": [ "WBLOCK_1", "BRUTAL" ],
+    "bashing": 25,
+    "to_hit": -1,
+    "sized": true,
+    "armor": [ {
+    "covers": [ "arm_l", "arm_r", "hand_l", "hand_r" ],
+    "coverage": 70, "encumbrance": 12 } ],
+    "material_thickness": 3,
+    "environmental_protection": 5,
+    "flags": [ "OVERSIZE", "STURDY", "OUTER", "BLOCK_WHILE_WORN", "RESTRICT_HANDS" ]
+  },
+  {
+    "id": "GS_eq_str4_shield",
+    "type": "ARMOR",
+    "category": "GS_equipment",
+    "name": "三相精钢盾",
+    "description": "力量特质凝聚的近战武装，由三面精铁盾组合而成，可以快速变形成合适的造型保护持盾者。",
+    "weight": "2500 g",
+    "volume": "12 L",
+    "material": [ "superalloy", "super_mt" ],
+    "material_thickness": 4,
+    "symbol": "[",
+    "color": "light_gray",
+    "techniques": [ "WBLOCK_2", "BRUTAL" ],
+    "bashing": 34,
+    "to_hit": -1,
+    "sized": true,
+    "armor": [
+     {
+     "covers":
+      [ "arm_l", "arm_r", "hand_l", "hand_r" ],
+     "coverage": 85, "encumbrance": 12
+     }
+    ],
+    "environmental_protection": 5,
+    "flags": [
+     "OVERSIZE",
+     "STURDY",
+     "OUTER",
+     "BLOCK_WHILE_WORN",
+     "RESTRICT_HANDS"
+    ]
+  },
+  {
+    "//": "数值参照日式大铠&钢制铠甲，设于两者之间。",
+    "id": "GS_eq_str4_armor_thorns",
+    "looks_like": "armor_metal_sheets",
+    "type": "ARMOR",
+    "category": "GS_equipment",
+    "name": "血荊棘战甲",
+    "description": "力量特质凝聚的近战武装，充满压迫感的纯黑战甲，表面布满棘刺，看上去很危险。内部有超凡材质和凯夫拉夹层，因此可以很轻松地当做正常衣物穿着。\n\n“尽管它不能吸血，也不是由荆棘做的，但依旧很酷。”",
+    "weight": "7500 g",
+    "volume": "32 L",
+    "material": [ "kevlar", "iron", "super_mt" ],
+    "color": "black",
+    "symbol": "[",
+    "material_thickness": 2.5,
+    "warmth": 15,
+    "techniques": [ "WBLOCK_1" ],
+    "pocket_data":
+    [
+     {
+      "pocket_type": "CONTAINER",
+      "rigid": true,
+      "max_contains_volume": "2500 ml",
+      "max_contains_weight": "4 kg",
+      "moves": 20,
+      "max_item_length": "30 cm",
+      "description": "胸甲前的暗槽，可以储存一些中型物品，取起来很方便。"
+    },
+    {
+      "pocket_type": "CONTAINER",
+      "rigid": true,
+      "max_contains_volume": "1500 ml",
+      "max_contains_weight": "3 kg",
+      "moves": 20,
+      "max_item_length": "30 cm",
+      "description": "腹甲下的暗槽，可以储存一些中型物品，取起来很方便。"
+    },
+    {
+      "pocket_type": "CONTAINER",
+      "rigid": true,
+      "max_contains_volume": "1000 ml",
+      "max_contains_weight": "3 kg",
+      "moves": 60,
+      "max_item_length": "15 cm",
+      "description": "腿甲下的暗槽，可以储存一些小型物品。"
+    }
+   ],
+    "armor": [
+     {
+     "material": [
+      {
+       "type": "kevlar",
+       "covered_by_mat": 100,
+       "thickness": 1.2
+      },
+      {
+       "type": "iron",
+       "covered_by_mat": 100,
+       "thickness": 1.5
+      },
+      {
+       "type": "super_mt",
+       "covered_by_mat": 100,
+       "thickness": 1.8
+      }
+   ],
+    "covers": [ "torso" ],
+    "coverage": 100,
+    "encumbrance": 15
+    },
+    {
+     "material": [
+      {
+       "type": "kevlar",
+       "covered_by_mat": 100,
+       "thickness": 1.1
+      },
+      {
+       "type": "iron",
+       "covered_by_mat": 100,
+       "thickness": 1.5
+      },
+      {
+       "type": "super_mt",
+       "covered_by_mat": 100,
+       "thickness": 1.7
+      }
+   ],
+    "covers": [ "arm_l", "arm_r", "leg_l", "leg_r" ],
+    "coverage": 95,
+    "encumbrance": 15
+    }
+  ],
+    "environmental_protection": 5,
+    "flags":
+    [ "BLOCK_WHILE_WORN", "STURDY", "RAINPROOF", "SUPER_FANCY", "NORMAL" ]
+  },
+  {
+    "id": "GS_eq_str5_armor_gundam",
+    "looks_like": "rm13_armor",
+    "type": "TOOL_ARMOR",
+    "category": "GS_equipment",
+    "name": "高达战甲",
+    "description": "全覆盖式，外表炫酷无比的的动力战甲，所有热血少年共同的梦中情人。当你穿上它，没有什么东西能伤到你。\n内置动力齿轮供电，无供电时仍可以穿，但会很累赘，防护效果更差。开启状态下会启动磁能立场，消耗UPS电源，借动力装甲强化使用者的能力，力敏+3，速度+15，并且使用装甲内置的能源为使用者治疗，每分钟回复4hp。\n\n※武装等级已封顶。\n\n对标作战基础外骨骼的装备，但更加灵活。比一百万个限制的外骨骼要好的多。",
+    "weight": "25 kg",
+    "volume": "70 L",
+    "material": [ "superalloy", "super_mt", "kevlar", "steel" ],
+    "color": "light_gray",
+    "symbol": "[",
+    "price": 3600000,
+    "price_postapoc": 3600000,
+    "to_hit": -3,
+    "bashing": 13,
+    "techniques": [ "WBLOCK_2" ],
+    "warmth": 20,
+    "material_thickness": 6,
+    "environmental_protection": 8,
+    "ammo": "battery",
+    "pocket_data": [
+      {
+       "pocket_type": "CONTAINER",
+       "rigid": true,
+       "max_contains_volume": "5200 ml",
+       "max_contains_weight": "12 kg",
+       "description": "容纳2个UPS。",
+       "moves": 120
+      }
+    ],
+    "flags": [
+     "USE_UPS",
+     "OVERSIZE",
+     "WATERPROOF",
+     "RAD_PROOF",
+     "GAS_PROOF",
+     "ELECTRIC_IMMUNE",
+     "BLOCK_WHILE_WORN",
+     "STURDY",
+     "OUTER",
+     "SUPER_FANCY",
+     "PADDED",
+     "WATCH",
+     "ALARMCLOCK",
+     "THERMOMETER",
+     "SUN_GLASSES"
+    ],
+    "charges_per_use": 5,
+    "use_action": [
+     {
+     "type": "transform",
+     "menu_text": "高达合体",
+     "msg": "<color_green>动力装甲调至最大功率，你感觉自己现在能打十个！</color>",
+     "target": "GS_eq_str5_armor_gundam_act",
+     "active": true,
+     "need_charges": 5,
+     "need_charges_msg": "你需要足够的电量才能开启高达战甲。"  
+     }
+    ],
+    "relic_data": 
+    {
+    "passive_effects":
+     [
+      { "id": "GS_SF_heal" }
+     ]
+    },
+     "armor": [
+      {
+      "material": [
+        {
+        "type": "super_mt",
+        "covered_by_mat": 100,
+        "thickness": 4
+        },
+        {
+        "type": "steel",
+        "covered_by_mat": 100,
+        "thickness": 2.5
+        },
+        {
+        "type": "superalloy",
+        "covered_by_mat": 100,
+        "thickness": 4
+        },
+        {
+        "type": "kevlar",
+        "covered_by_mat": 100,
+        "thickness": 2.5
+        }
+      ],
+      "covers": [ "head" ],
+      "coverage": 100,
+      "encumbrance": 30
+      },
+      {
+      "material": [
+        {
+        "type": "super_mt",
+        "covered_by_mat": 100,
+        "thickness": 3
+        },
+        {
+        "type": "steel",
+        "covered_by_mat": 100,
+        "thickness": 1.5
+        },
+        {
+        "type": "superalloy",
+        "covered_by_mat": 100,
+        "thickness": 4
+        },
+        {
+        "type": "kevlar",
+        "covered_by_mat": 100,
+        "thickness": 2.2
+        }
+      ],
+      "covers": [ "eyes", "mouth" ],
+      "coverage": 100,
+      "encumbrance": 15
+    },
+    {
+      "material": [
+        {
+        "type": "super_mt",
+        "covered_by_mat": 100,
+        "thickness": 4
+        },
+        {
+        "type": "steel",
+        "covered_by_mat": 100,
+        "thickness": 2
+        },
+        {
+        "type": "superalloy",
+        "covered_by_mat": 100,
+        "thickness": 6
+        },
+        {
+        "type": "kevlar",
+        "covered_by_mat": 100,
+        "thickness": 2.5
+        }
+      ],
+      "covers": [
+      "torso"
+      ],
+      "coverage": 100,
+      "encumbrance": 30
+    },
+    {
+      "material": [
+        {
+          "type": "super_mt",
+          "covered_by_mat": 100,
+          "thickness": 2.5
+        },
+        {
+          "type": "steel",
+          "covered_by_mat": 90,
+          "thickness": 2
+        },
+        {
+        "type": "superalloy",
+        "covered_by_mat": 100,
+        "thickness": 4
+        },
+        {
+          "type": "kevlar",
+          "covered_by_mat": 100,
+          "thickness": 2.5
+        }
+      ],
+    "covers": [ "hand_l", "hand_r", "arm_l", "arm_r", "leg_l", "leg_r", "foot_l", "foot_r" ],
+    "coverage": 100,
+    "encumbrance": 25
+   }
+  ]
+  },
+  {
+  "id": "GS_eq_str5_armor_gundam_act",
+    "looks_like": "rm13_armor",
+    "type": "TOOL_ARMOR",
+    "category": "GS_equipment",
+    "name": "高达战甲",
+    "description": "全覆盖式的动力战甲，所有热血少年共同的梦中情人。\n高达战甲已开启，正在消耗UPS电源。",
+    "weight": "25 kg",
+    "volume": "70 L",
+    "material": [ "superalloy", "super_mt", "kevlar", "steel", "electric_shield" ],
+    "color": "light_gray",
+    "symbol": "[",
+    "price": 3600000,
+    "price_postapoc": 3600000,
+    "to_hit": -3,
+    "bashing": 13,
+    "techniques": [ "WBLOCK_2" ],
+    "warmth": 20,
+    "material_thickness": 6,
+    "environmental_protection": 8,
+    "ammo": "battery",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "max_contains_volume": "5200 ml",
+        "max_contains_weight": "12 kg",
+        "description": "Compartment for an UPS.",
+        "moves": 120
+      }
+    ],
+    "flags": [
+     "USE_UPS",
+     "OVERSIZE",
+     "WATERPROOF",
+     "RAD_PROOF",
+     "GAS_PROOF",
+     "ELECTRIC_IMMUNE",
+     "BLOCK_WHILE_WORN",
+     "STURDY",
+     "OUTER",
+     "SUPER_FANCY",
+     "PADDED",
+     "WATCH",
+     "ALARMCLOCK",
+     "THERMOMETER",
+     "SUN_GLASSES"
+    ],
+    "use_action": [
+    {
+    "type": "transform",
+    "msg": "供电切断，高达战甲进入自供能模式。",
+    "target": "GS_eq_str5_armor_gundam"
+    } ],
+    "relic_data": {
+     "passive_effects": [
+      { "id": "GS_SF_heal" }
+    ]
+   },
+    "armor": [
+    {
+      "material": [
+        {
+        "type": "super_mt",
+        "covered_by_mat": 100,
+        "thickness": 4
+        },
+        {
+        "type": "steel",
+        "covered_by_mat": 100,
+        "thickness": 2.5
+        },
+        {
+        "type": "superalloy",
+        "covered_by_mat": 100,
+        "thickness": 4
+        },
+        {
+        "type": "kevlar",
+        "covered_by_mat": 100,
+        "thickness": 2.5
+        },
+        {
+        "type": "electric_shield",
+        "covered_by_mat": 100,
+        "thickness": 3
+        }
+      ],
+      "covers": [ "head" ], 
+      "coverage": 100,
+      "encumbrance": 15
+    },
+    {
+      "material": [
+        {
+        "type": "super_mt",
+        "covered_by_mat": 100,
+        "thickness": 3
+        },
+        {
+        "type": "steel",
+        "covered_by_mat": 100,
+        "thickness": 1.5
+        },
+        {
+        "type": "superalloy",
+        "covered_by_mat": 100,
+        "thickness": 4
+        },
+        {
+        "type": "kevlar",
+        "covered_by_mat": 100,
+        "thickness": 2.2
+        },
+        {
+        "type": "electric_shield",
+        "covered_by_mat": 100,
+        "thickness": 3
+        }
+      ],
+      "covers": [ "eyes", "mouth" ],
+      "coverage": 100,
+      "encumbrance": 8
+    },
+    {
+      "material": [
+        {
+        "type": "super_mt",
+        "covered_by_mat": 100,
+        "thickness": 4
+        },
+        {
+        "type": "steel",
+        "covered_by_mat": 100,
+        "thickness": 2
+        },
+        {
+        "type": "superalloy",
+        "covered_by_mat": 100,
+        "thickness": 6
+        },
+        {
+        "type": "kevlar",
+        "covered_by_mat": 100,
+        "thickness": 2.5
+        },
+        {
+        "type": "electric_shield",
+        "covered_by_mat": 100,
+        "thickness": 3
+        }
+      ],
+      "covers": [
+      "torso"
+      ],
+      "coverage": 100,
+      "encumbrance": 15
+    },
+    {
+      "material": [
+        {
+          "type": "super_mt",
+          "covered_by_mat": 100,
+          "thickness": 2.5
+        },
+        {
+          "type": "steel",
+          "covered_by_mat": 100,
+          "thickness": 2
+        },
+        {
+        "type": "superalloy",
+        "covered_by_mat": 100,
+        "thickness": 4
+        },
+        {
+          "type": "kevlar",
+          "covered_by_mat": 100,
+          "thickness": 2.5
+        },
+        {
+        "type": "electric_shield",
+        "covered_by_mat": 100,
+        "thickness": 3
+        }
+      ],
+      "covers": [ "hand_l", "hand_r", "arm_l", "arm_r", "leg_l", "leg_r", "foot_l", "foot_r" ],
+    "coverage": 100,
+    "encumbrance": 12
+      } ],
+   "power_draw": "2 kW",
+   "revert_to": "GS_eq_str5_armor_gundam"
+  },
+  {
+    "id": "GS_eq_dex2_amulet_speed",
+    "type": "TOOL",
+    "category": "GS_item",
+    "name": "风行符",
+    "description": "敏捷系天命武装，激活时能增幅装备者的神经传导速率，行动速度+20，每5回合消耗1天命铜币。",
+    "volume": "10 ml",
+    "material": [ "super_mt" ],
+    "symbol": "[",
+    "color": "white",
+    "ammo": "destiny_copper_type",
+    "pocket_data": [
+     {
+      "pocket_type": "MAGAZINE",
+      "holster": true,
+      "rigid": true,
+      "ammo_restriction": {
+       "destiny_copper_type": 50
+      }
+     }
+    ],
+    "flags": [ "ZERO_WEIGHT" ],
+    "charges_per_use": 1,
+    "use_action": {
+      "type": "transform",
+      "msg": "神行符光芒闪现，你的行动速度突然加快！",
+      "target": "GS_eq_dex2_amulet_speed_active",
+      "active": true,
+      "moves":20,
+      "need_charges": 3,
+      "need_charges_msg": "这件饰品最少要3天命铜铜币才能发动。"
+    },
+    "relic_data": { 
+     "passive_effects":
+      [
+       {
+        "has": "HELD",
+        "condition": "ACTIVE",
+        "values": [
+         {
+          "value": "SPEED",
+          "add": 20
+         }
+        ]
+       }
+      ]
+     }
+  },
+  {
+    "id": "GS_eq_dex2_amulet_speed_active",
+    "type": "TOOL",
+    "category": "GS_item",
+    "name": "疾行符",
+    "description": "敏捷系天命武装，装备者速度+20，持续消耗天命铜币，使用它以关闭(a)。",
+    "volume": "10 ml",
+    "material": [ "super_mt" ],
+    "symbol": "[",
+    "color": "light_gray",
+    "ammo": "destiny_copper_type",
+    "charges_per_use": 1,
+    "turns_per_charge": 5,
+    "pocket_data": [
+     {
+      "pocket_type": "MAGAZINE",
+      "holster": true,
+      "rigid": true,
+      "ammo_restriction": {
+       "destiny_copper_type": 50
+      }
+     }
+    ],
+    "flags": [ "ZERO_WEIGHT" ],
+    "use_action": {
+     "type": "transform",
+     "msg": "疾行符加速效果关闭！",
+     "target": "GS_eq_dex2_amulet_speed",
+     "moves": 20 },
+    "relic_data": { 
+     "passive_effects":
+      [
+       {
+        "has": "HELD",
+        "condition": "ACTIVE",
+        "values": [
+         {
+          "value": "SPEED",
+          "add": 20
+         }
+        ]
+       }
+      ]
+     },
+    "revert_to": "GS_eq_dex2_amulet_speed"
+  },
+  {
+    "id": "GS_eq_dex3_amulet_teleport",
+    "type": "TOOL",
+    "category": "GS_item",
+    "name": "空间之跃",
+    "description": "敏捷系天命武装，短距离随机瞬移，禁止在火山口使用。\n \n主动技能：短距随机瞬移，消耗25天命铜币。",
+    "volume": "10 ml",
+    "material": [ "super_mt" ],
+    "symbol": "[",
+    "color": "white",
+    "ammo": "destiny_copper_type",
+    "pocket_data": [
+     {
+      "pocket_type": "MAGAZINE",
+      "holster": true,
+      "rigid": true,
+      "ammo_restriction": {
+       "destiny_copper_type": 50
+      }
+     }
+    ],
+    "charges_per_use": 25,
+    "flags": [ "ZERO_WEIGHT" ],
+    "use_action": [ { "type": "cast_spell", "spell_id": "AEA_TELEPORT", "level": 1, "no_fail": true } ]
+  },
+  {
+    "id": "GS_eq_dex4_amulet_speed",
+    "type": "TOOL",
+    "category": "GS_item",
+    "name": "神行符",
+    "description": "敏捷系天命武装，主动技能：鬼影神行，短时间内大幅强化反射速度，敏捷+3、速度+40、疲勞+15，激活时消耗25天命铜币，持续时间1分钟。\n \n※装备等级已封顶。",
+    "volume": "10 ml",
+    "material": [ "super_mt" ],
+    "color": "white",
+    "symbol": "[",
+    "pocket_data": [
+     {
+      "pocket_type": "MAGAZINE",
+      "holster": true,
+      "rigid": true,
+      "ammo_restriction": {
+       "destiny_copper_type": 100
+      }
+     }
+    ],
+    "flags": [ "ZERO_WEIGHT" ],
+    "ammo": "destiny_copper_type",
+    "charges_per_use": 25,
+    "use_action": [
+      {
+        "type": "consume_drug",
+        "activation_message": "子弹时间！眼前的一切动作似乎变慢了，持续时间1分钟。",
+        "effects": [ { "id": "dex_speed_1", "duration": "1 m" } ],
+        "moves": 0,
+        "stat_adjustments": { "fatigue": 15 }
+      }
+    ]
+  },
+  {
+    "//": "定位：低消耗防御Buff，激发2件时9mm冲锋枪只剩微伤。",
+    "id": "GS_eq_int2_bell",
+    "type": "TOOL_ARMOR",
+    "category": "GS_equipment",
+    "name": { "str": "音波铛", "str_pl": "音波铛" },
+    "description": "铃铛型法器，防御用天命武装，掌控音波特质并将之具现化为屏障，激活时发动结界保护施法者，效果持续150回合，消耗30天命铜币。",
+    "weight": "50 g",
+    "volume": "1 L",
+    "material": [ "GS_int_sheild" ],
+    "material_thickness": 1,
+    "symbol": "$",
+    "color": "yellow",
+    "environmental_protection": 5,
+    "ammo": "destiny_copper_type",
+    "pocket_data": [
+     {
+      "pocket_type": "MAGAZINE",
+      "holster": true,
+      "rigid": true,
+      "ammo_restriction": {
+       "destiny_copper_type": 30
+      }
+     }
+    ],
+    "flags": [ "STURDY", "OUTER" ],
+    "use_action": {
+      "type": "transform",
+      "msg": "你激发了音波铛的符箓，周身荡漾着一个透明护盾，持续时间150回合。",
+      "target": "GS_eq_int2_bell_active",
+      "moves": 0,
+      "active": true,
+      "need_charges": 10,
+      "need_charges_msg": "音波铛的能量不足以启动。"
+    }
+  },
+  {
+    "id": "GS_eq_int2_bell_active",
+    "type": "TOOL_ARMOR",
+    "category": "GS_equipment",
+    "name": { "str": "音波铛", "str_pl": "音波铛" },
+    "description": "音波铛上的符文正在发动，音波结界可以强化防御，能量耗尽后护盾便会消失。",
+    "weight": "50 g",
+    "volume": "1 L",
+    "material": [ "GS_int_sheild" ],
+    "symbol": "$",
+    "color": "yellow",
+    "ammo": "destiny_copper_type",
+    "pocket_data": [
+     {
+      "pocket_type": "MAGAZINE",
+      "holster": true,
+      "rigid": true,
+      "ammo_restriction": {
+       "destiny_copper_type": 15
+       }
+      }
+     ],
+    "charges_per_use": 1,
+    "turns_per_charge": 10,
+    "revert_to": "GS_eq_int2_bell",
+    "revert_msg": "音波铛的能量用尽，护盾缓缓消失。",
+    "armor":
+    [ {
+    "encumbrance": -1,
+    "coverage": 100,
+    "cover_vitals": 60,
+    "covers": [ "head", "mouth", "eyes", "torso", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r" ] }
+    ],
+    "material_thickness": 0.4,
+    "environmental_protection": 3
+  },
+  {
+    "id": "GS_eq_int3_bell",
+    "type": "TOOL_ARMOR",
+    "category": "GS_equipment",
+    "name": { "str": "金刚铛", "str_pl": "金刚铛" },
+    "description": "铃铛型法器，防御用天命武装，掌控音波特质并将之具现化为屏障，激活时发动结界保护施法者，防御力是音波铛的两倍。效果持续90回合，消耗30天命铜币。",
+    "weight": "50 g",
+    "volume": "1 L",
+    "material": [ "GS_int_sheild" ],
+    "material_thickness": 2,
+    "symbol": "$",
+    "color": "yellow",
+    "environmental_protection": 10,
+    "ammo": "destiny_copper_type",
+    "pocket_data": [
+     {
+      "pocket_type": "MAGAZINE",
+      "holster": true,
+      "rigid": true,
+      "ammo_restriction": {
+       "destiny_copper_type": 30
+       }
+      }
+     ],
+    "flags": [ "STURDY", "OUTER", "ONLY_ONE" ],
+    "use_action": {
+      "type": "transform",
+      "msg": "你激发了金刚铛的符箓，周身荡漾着一个透明护盾，持续时间90回合。",
+      "target": "GS_eq_int3_bell_active",
+      "active": true,
+      "moves": 40,
+      "need_charges": 15,
+      "need_charges_msg": "金刚铛的能量不足以启动。"
+    }
+  },
+  {
+    "id": "GS_eq_int3_bell_active",
+    "type": "TOOL_ARMOR",
+    "category": "GS_equipment",
+    "name": { "str": "金刚铛", "str_pl": "金刚铛" },
+    "description": "金刚铛上的符文正在发动，音波结界可以强化防御，能量耗尽后护盾便会消失。",
+    "weight": "50 g",
+    "volume": "1 L",
+    "material": [ "GS_int_sheild" ],
+    "symbol": "$",
+    "color": "yellow",
+    "ammo": "destiny_copper_type",
+    "charges_per_use": 1,
+    "turns_per_charge": 6,
+    "pocket_data": [
+     {
+      "pocket_type": "MAGAZINE",
+      "holster": true,
+      "rigid": true,
+      "ammo_restriction": {
+       "destiny_copper_type": 15
+       }
+      }
+     ],
+    "revert_to": "GS_eq_int3_bell",
+    "revert_msg": "金刚铛的能量用尽，护盾缓缓消失。",
+    "armor":
+  [ {
+    "encumbrance": -1,
+    "coverage": 100,
+    "cover_vitals": 70,
+    "covers": [ "head", "mouth", "eyes", "torso", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r" ]
+    }
+  ],
+    "flags": [ "ALLOWS_NATURAL_ATTACKS", "STURDY", "ONLY_ONE", "AURA" ],
+    "material_thickness": 0.8,
+    "environmental_protection": 7
+  },
+  {
+    "id": "GS_eq_per2_song",
+    "type": "TOOL_ARMOR",
+    "category": "GS_equipment",
+    "name": { "str": "歌曲渲染", "str_pl": "歌曲渲染" },
+    "description": "感性系特质「动感」的音系技能，通过天命之力实体化为一个轻巧的耳麦。通过歌声暂时强化属性，随时间自动充能。\n \n主动技能：战歌，力量、敏捷+2，体力恢复+3，解除「恐惧」效果，持续时间3分钟。",
+    "weight": "45 g",
+    "volume": "180 ml",
+    "material": [ "super_mt" ],
+    "symbol": "s",
+    "color": "green",
+    "charges_per_use": 1,
+    "relic_data": {
+     "charge_info":
+     {
+      "recharge_type": "periodic",
+      "time": "2 h",
+      "regenerate_ammo": true
+     }
+    },
+    "pocket_data": [
+     {
+      "pocket_type": "MAGAZINE",
+      "rigid": true,
+      "ammo_restriction": {
+       "destiny_fortune_type": 12
+       }
+      }
+     ],
+  "flags": [ "WATER_FRIENDLY", "NO_RELOAD", "NO_UNLOAD" ],
+    "use_action": [
+   {
+    "type": "consume_drug",
+    "activation_message": "<color_green>轻灵的音乐感染了你的心灵！你感觉自己充满了力量。</color>",
+    "moves": 0,
+    "effects": [ { "id": "per_warsong_1", "duration": "3 m" } ]
+   }
+  ]
+  },
+  {
+    "id": "GS_eq_per3_song",
+    "type": "TOOL_ARMOR",
+    "category": "GS_equipment",
+    "name": { "str": "虎豹雷音", "str_pl": "虎豹雷音" },
+    "description": "力量与感性结合的进阶音系技能，利用音振淬筋炼骨，俗称“战吼”。通过天命之力实体化为一个霸气的麦克风。发动时提升近战属性但降低感知，随时间自动充能。\n \n主动技能：虎豹雷音，力量、敏捷+4，感知-2，体力恢复+5，解除恐惧、震慑、晕眩，持续时间5分钟。\n \n※装备等级已封顶 ",
+    "weight": "40 g",
+    "volume": "300 ml",
+    "material": [ "super_mt" ],
+    "symbol": "s",
+    "color": "blue",
+    "charges_per_use": 1,
+    "pocket_data":
+     [
+      {
+       "pocket_type": "MAGAZINE",
+       "rigid": true,
+       "ammo_restriction":
+       {
+        "destiny_fortune_type": 12
+       } 
+      } 
+     ],
+    "relic_data":
+  {
+    "charge_info": { "recharge_type": "periodic", "time": "2 h", "regenerate_ammo": true }
+  },
+    "flags": [ "WATER_FRIENDLY", "NO_RELOAD", "NO_UNLOAD" ],
+    "use_action":
+  [
+    {
+    "type": "consume_drug",
+    "activation_message": "<color_green>你由内而外迸发出一声豪迈的狮吼！你感觉自己充满了野性的力量。</color>",
+    "moves": 40,
+    "effects": [ { "id": "per_warsong_2", "duration": "5 m" } ]
+     }
+  ]
+  },
+  {
+    "//": "定位：高消耗逃命用Buff。",
+    "id": "GS_eq_per2_necklace_unseen",
+    "type": "TOOL_ARMOR",
+    "category": "GS_equipment",
+    "name": "小透明项链",
+    "description": "感性系特质「无」的天命武装，降低装备者的存在感（如降）。\n \n主动技能：隐身，激发「无」特质将身体透明化，隐形时力量-3、速度-20，每回合消耗2天命币。",
+    "weight": "120 g",
+    "volume": "500 ml",
+    "material": [ "super_mt" ],
+    "symbol": "[",
+    "color": "light_gray",
+    "ammo": "destiny_copper_type",
+    "pocket_data": [
+     {
+      "pocket_type": "MAGAZINE",
+      "holster": true,
+      "rigid": true,
+      "ammo_restriction": {
+       "destiny_copper_type": 60
+       }
+      }
+     ],
+    "relic_data": {
+     "passive_effects": [
+      {
+      "has": "WORN",
+      "condition": "ACTIVE",
+      "values": [
+       {
+       "value": "SPEED",
+       "add": -20
+       },
+       {
+       "value": "STRENGTH",
+       "add": -3
+       }
+      ],
+      "ench_effects": [
+     {
+      "effect": "invisibility",
+      "intensity": 1
+     }
+    ]
+   }
+  ]
+   },
+    "use_action": {
+      "type": "transform",
+      "msg": "你的身体变得透明，如融入背景般消失不见。",
+      "target": "GS_eq_per2_necklace_invisible",
+      "active": true,
+      "need_charges": 3,
+      "need_charges_msg": "这个饰品需要足够的天命币才能启动。"
+    },
+    "flags": [ "FANCY" ]
+  },
+  {
+    "id": "GS_eq_per2_necklace_invisible",
+    "type": "TOOL_ARMOR",
+    "category": "GS_equipment",
+    "name": "隐身项链",
+    "description": "激发「无」特质的隐形装备，将身形完全透明化，此状态会飞快地消耗装备能量，隐身时有速度惩罚(-20)。",
+    "material": [ "super_mt" ],
+    "weight": "120 g",
+    "volume": "500 ml",
+    "symbol": "[",
+    "color": "light_gray",
+    "ammo": "destiny_copper_type",
+    "charges_per_use": 2,
+    "turns_per_charge": 1,
+    "pocket_data": [
+     {
+      "pocket_type": "MAGAZINE",
+      "holster": true,
+      "rigid": true,
+      "ammo_restriction": {
+       "destiny_copper_type": 60
+       }
+      }
+     ],
+    "relic_data":
+     {
+      "passive_effects": [
+       {
+        "has": "WORN",
+        "condition": "ACTIVE",
+    "values": [ { "value": "SPEED", "add": -20 }, { "value": "STRENGTH", "add": -3 } ],
+    "ench_effects": [ { "effect": "invisibility", "intensity": 1 } ]
+    } ]
+  },
+    "use_action": {
+      "type": "transform",
+      "msg": "隐形效果消失，你的身体显影而出。",
+      "target": "GS_eq_per2_necklace_unseen"
+    },
+    "revert_to": "GS_eq_per2_necklace_unseen",
+    "flags": [ "FANCY" ]
+  },
+  {
+    "id": "GS_eq_per4_robe_quiet",
+    "looks_like": "grim_reaper_robe_faceless",
+    "type": "TOOL_ARMOR",
+    "category": "GS_equipment",
+    "name": "灵质轻音袍",
+    "description": "凝聚灵质的半透明符文袍，符力能提供一定的防护。被动效果：轻音无跡，减轻穿戴者走动的声响，让行动更加隐蔽。\n \n主动技：完美隐形，激发「无」特质使身体完全透明，隐身时没有速度惩罚，每回合消耗2天命币。\n \n※装备等级已封顶。",
+    "weight": "666 g",
+    "volume": "15 L",
+    "material": [ "GS_int_sheild", "super_mt" ],
+    "symbol": "[",
+    "color": "white",
+    "armor":
+  [
+   {
+    "material": [ { "type": "super_mt", "covered_by_mat": 100, "thickness": 0.6 },
+   { "type": "GS_int_sheild", "covered_by_mat": 100, "thickness": 0.5 } ],
+    "covers": [ "torso" ],
+    "coverage": 95,
+    "cover_vitals": 80,
+    "encumbrance": 5
+   },
+   {
+    "material": [
+   { "type": "super_mt", "covered_by_mat": 100, "thickness": 1.6 } ],
+    "covers": [ "arm_l", "arm_r" ],
+    "coverage": 90,
+    "encumbrance": 3
+   },
+   {
+    "material": [ { "type": "super_mt", "covered_by_mat": 100,"thickness": 1.6 } ],
+    "covers": [ "leg_l", "leg_r" ],
+    "coverage": 60,
+    "encumbrance": 2
+   }
+  ],
+    "environmental_protection": 8,
+    "relic_data": {
+    "passive_effects": [
+    {
+      "has": "WORN",
+      "condition": "ACTIVE",
+      "ench_effects": [
+      {
+       "effect": "invisibility",
+       "intensity": 1
+      }
+     ]
+    },
+    {
+     "has": "WORN",
+     "condition": "ALWAYS",
+     "mutations": [
+      "GS_armor_silence"
+     ]
+    }
+   ]
+  },
+    "ammo": "destiny_copper_type",
+    "pocket_data": [
+     {
+      "pocket_type": "MAGAZINE",
+      "holster": true,
+      "rigid": true,
+      "ammo_restriction": {
+       "destiny_copper_type": 100
+      }
+     }
+    ],
+    "use_action": {
+      "type": "transform",
+      "msg": "「无」特质发动，你的身体倏地透明。",
+      "target": "GS_eq_per4_robe_quiet_active",
+      "active": true,
+      "need_charges": 3,
+      "need_charges_msg": "灵质轻音袍需要足够的天命币才能启动。"
+    },
+    "flags": [
+     "VARSIZE",
+     "OUTER",
+     "STURDY",
+     "HOOD",
+     "RAD_RESIST",
+     "WATERPROOF",
+     "RAINPROOF",
+     "SUPER_FANCY"
+     ]
+  },
+  {
+    "id": "GS_eq_per4_robe_quiet_active",
+    "looks_like": "grim_reaper_robe_faceless",
+    "type": "TOOL_ARMOR",
+    "category": "GS_equipment",
+    "name": "灵质轻音袍",
+    "description": "激发「无」特质的符文袍，让装备者处于不可视的隐形形态，仍会被气味或红外线等侦查技巧感知。",
+    "weight": "666 g",
+    "volume": "15 L",
+    "material": [ "GS_int_sheild", "super_mt" ],
+    "material_thickness": 2,
+    "symbol": "[",
+    "color": "white",
+    "armor":
+  [
+   {
+   "material": [
+    {
+     "type": "super_mt",
+     "covered_by_mat": 100,
+     "thickness": 0.6
+    },
+    {
+     "type": "GS_int_sheild",
+     "covered_by_mat": 100,
+     "thickness": 0.5
+     }
+    ],
+    "covers":
+    [
+     "torso"
+    ],
+    "coverage": 95,
+    "cover_vitals": 80,
+    "encumbrance": 3
+   },
+   {
+    "material": [
+     {
+     "type": "super_mt",
+     "covered_by_mat": 100,
+     "thickness": 1.6
+     }
+    ],
+    "covers": [
+     "arm_l", "arm_r"
+    ],
+    "coverage": 90,
+    "encumbrance": 3
+   },
+   {
+    "material": [
+     {
+      "type": "super_mt",
+      "covered_by_mat": 100,
+      "thickness": 1.6
+     }
+    ],
+    "covers": [
+     "leg_l", "leg_r"
+    ],
+     "coverage": 60,
+     "encumbrance": 2
+   }
+  ], 
+    "environmental_protection": 8,
+    "relic_data": {
+    "passive_effects": [
+    {
+     "has": "WORN",
+     "condition": "ACTIVE",
+     "ench_effects": [
+      {
+       "effect": "invisibility",
+       "intensity": 1
+      }
+     ]
+    },
+    {
+     "has": "WORN",
+     "condition": "ALWAYS",
+     "mutations": [
+      "GS_armor_silence"
+     ]
+    }
+   ]
+   },
+    "ammo": "destiny_copper_type",
+    "charges_per_use": 2,
+    "turns_per_charge": 1,
+    "pocket_data": [
+     {
+      "pocket_type": "MAGAZINE",
+      "holster": true,
+      "rigid": true,
+      "ammo_restriction": {
+       "destiny_copper_type": 100
+       }
+     }
+    ],
+    "use_action": {
+     "type": "transform",
+     "msg": "隐身效果消失，你的身体显影而出。", 
+     "target": "GS_eq_per4_robe_quiet"
+     },
+    "revert_to": "GS_eq_per4_robe_quiet",
+    "revert_msg": "轻音袍的能量用尽，隐形效果消失。",
+    "flags": [
+     "VARSIZE",
+     "OUTER",
+     "STURDY",
+     "HOOD",
+     "RAD_RESIST",
+     "WATERPROOF",
+     "RAINPROOF",
+     "SUPER_FANCY"
+     ]
+  },
+  {
+    "id": "GS_eq_merit1_furnace",
+    "looks_like": "charcoal_cooker",
+    "type": "TOOL",
+    "category": "GS_tool",
+    "name": "炼魂炉(一阶)",
+    "description": "塑造灵体的必要道具，将灵体与灵质放入炼魂炉中融炼，一段时间后即可出炉。由于灵体出炉的方式十分“火爆”，所以你最好离远点。\n“据统计，几乎有90%的初级炼魂师被自己的炉子伤过。死亡率甚至达到了2%”。\n融合少量功德之气的特殊灵体，附身时四维+1，微量增加防御。",
+    "weight": "40 kg",
+    "volume": "25 L",
+    "material": [ "merit_mt" ],
+    "symbol": "&",
+    "color": "black",
+    "use_action": {
+    "need_wielding": true,
+    "type": "delayed_transform",
+    "transform_age": 86400,
+    "//": "24 hours",
+    "not_ready_msg": "炼魂炉中的灵体还未完成。",
+     "target": "GS_eq_merit1_furnace_act",
+     "msg": "灵体融炼完成，即将炸炉，你最好离它远点。",
+     "target_charges": 40,
+     "active": true
+    }
+  },
+  {
+    "id": "GS_eq_merit1_soul",
+    "type": "ARMOR",
+    "category": "GS_equipment",
+    "name": "<color_yellow>功德灵(一阶)</color>",
+    "description": "融合少量功德之气的特殊灵体，附身时四维+1，微量增加防御\n注：初次获得的功德灵必须在洗炼栏进行洗炼才能使用，二阶三阶也是！",
+    "weight": "80 g",
+    "volume": "300 ml",
+    "material": "merit_mt",
+    "symbol": "g",
+    "color": "yellow",
+    "relic_data": {
+     "passive_effects":
+     [
+      {
+       "has": "WORN",
+       "condition": "ALWAYS",
+       "values": [
+       {
+       "value": "STRENGTH",
+       "add": 1
+       },
+       {
+       "value": "DEXTERITY",
+       "add": 1
+       },
+      {
+      "value": "INTELLIGENCE",
+      "add": 1
+      },
+      {
+      "value": "PERCEPTION",
+      "add": 1
+      }
+     ],
+    "mutations": [
+     "ReikiProtect"
+     ]
+    } 
+  ]
+  },
+    "flags": [
+     "UNBREAKABLE",
+     "OVERSIZE",
+     "ONLY_ONE"
+    ]
+  },
+  {
+    "id": "GS_eq_merit2_furnace",
+    "looks_like": "charcoal_cooker",
+    "type": "TOOL",
+    "category": "GS_tool",
+    "name": "炼魂炉(二阶)",
+    "description": "塑造灵体的必要道具，将灵体与灵质放入炼魂炉中融炼，一段时间后即可出炉，建议在空旷的地方激活。“二阶灵体的灵力更强，因此依然有接近20%的中阶炼魂师会被自己的炉子伤到。这个等级的炼魂师如果因此身陨，他可能会成为某些魂炉秘籍上的经典错误案例。”\n “\n功德灵(中阶)：融合部分功德之气，升格为散仙的特殊灵体，附身时四维+1，中量提升全身防御，能够将功德转换为精神力，暂时免疫精神攻击。",
+    "weight": "45 kg",
+    "volume": "20 L",
+    "material": [ "merit_mt" ],
+    "symbol": "&",
+    "color": "black",
+    "use_action": {
+      "type": "delayed_transform",
+      "transform_age": 259200,
+      "//": "3 days",
+      "not_ready_msg": "炼魂炉中的灵体还未融炼完成。",
+      "target": "GS_eq_merit2_furnace_act",
+      "msg": "<color_red>灵体融炼完成，即将炸炉，你最好能跑多远跑多远。</color>",
+      "target_charges": 60,
+      "active": true
+    }
+  },
+  {
+    "id": "GS_eq_merit2_soul",
+    "type": "TOOL_ARMOR",
+    "category": "GS_equipment",
+    "name": "<color_yellow>功德灵(二阶)</color>",
+    "description": "融合部分功德之气，升格为散仙的特殊灵体，附身时四维+1，中量提升全身防御，能够将功德转换为精神力，暂时免疫邪魅的精神攻击（如燃烧之眼）\n注：初次获得的功德灵必须在洗炼栏进行洗炼才能使用。",
+    "weight": "80 g",
+    "volume": "300 ml",
+    "material": "merit_mt",
+    "symbol": "g",
+    "color": "yellow",
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "holster": true, "rigid": true, "ammo_restriction": { "merit_type": 10 } } ],
+    "relic_data": {
+    "passive_effects":
+  [
+  {
+    "has": "WORN",
+    "condition": "ALWAYS",
+    "values": [
+    {
+    "value": "STRENGTH",
+    "add": 1
+    },
+    {
+    "value": "DEXTERITY",
+    "add": 1
+    },
+    {
+    "value": "INTELLIGENCE",
+    "add": 1
+    },
+    {
+    "value": "PERCEPTION",
+    "add": 1
+    }
+    ],  
+   "mutations": [
+    "ReikiProtect"
+    ]
+  }
+  ]
+    },
+    "charges_per_use": 2,
+    "use_action":
+    [
+    {
+    "type": "consume_drug",
+    "menu_text": "功德凝聚",
+    "activation_message": "功德灵将少量功德凝聚实体，你暂时免疫部分负面影响。",
+    "effects": [
+     {
+      "id": "cleric_warding",
+      "duration": "10 m"
+      }
+     ],
+     "need_charges": 2,
+     "need_charges_msg": "功德不足。"
+     }
+    ],
+    "flags": [
+     "OVERSIZE",
+     "ONLY_ONE",
+     "NONCONDUCTIVE",
+     "UNBREAKABLE"
+     ]
+  },
+  {
+    "id": "GS_eq_merit3_furnace",
+    "looks_like": "charcoal_cooker",
+    "type": "TOOL",
+    "category": "GS_tool",
+    "name": "炼魂炉(三阶)",
+    "description": "升级灵体的必要道具，将灵体与灵质放入炼魂炉中融炼，一段时间后即可出炉，建议在空旷的地方激活。\n“这个等级的炼魂师几乎不会被炉子伤到，更不可能因此身陨。如果你恰好做到了，那么恭喜，你可能会被铭记千古。(千古耻辱柱)”\n功德灵(高阶)：融合大量功德之气，升格为地仙的特殊灵体，附身时四维+1，中量提升全身防御力，能够将功德转换为精神力，暂时免疫邪魅的精神攻击（如燃烧之眼）。注：初次获得的功德灵需要经过洗炼才能发挥效果。\n \n主动技能：功德金身，消耗功德之力塑造法相金身，大幅提升防御力，免疫电击，每回合消耗2功德。",
+    "weight": "40 kg",
+    "volume": "25 L",
+    "material": [ "merit_mt" ],
+    "symbol": "&",
+    "color": "black",
+    "use_action": {
+      "type": "delayed_transform",
+      "transform_age": 432000,
+      "//": "5 days",
+      "not_ready_msg": "炼魂炉中的灵体还未融炼完成。",
+      "target": "GS_eq_merit3_furnace_act",
+      "msg": "灵体融炼完成，即将炸炉，如果你不想成为千古笑话，你最好能跑多远跑多远。",
+      "target_charges": 80,
+      "active": true
+    }
+  },
+  {
+    "id": "GS_eq_merit3_soul",
+    "type": "TOOL_ARMOR",
+    "category": "GS_equipment",
+    "name": "<color_yellow>功德灵(三阶)</color>",
+    "description": "融合大量功德之气，升格为地仙的特殊灵体，附身时四维+1，少量提升全身防御力，能够将功德转换为精神力，暂时免疫邪魅的精神攻击（如燃烧之眼）。\n \n主动技能：功德金身，消耗功德之力塑造法相金身，大幅提升防御力，四维额外+2，免疫电击，毒气，辐射，每秒消耗2功德。\n \n※灵体等级已封顶。",
+    "weight": "80 g",
+    "volume": "300 ml",
+    "material": "merit_mt",
+    "symbol": "g",
+    "color": "yellow",
+    "ammo": [ "merit_type" ],
+    "relic_data": {
+    "passive_effects":
+   [
+   {
+    "has": "WORN",
+    "condition": "ALWAYS",
+    "values": [
+    {
+    "value": "STRENGTH",
+    "add": 1
+    },
+    {
+    "value": "DEXTERITY",
+    "add": 1
+    },
+    {
+    "value": "INTELLIGENCE",
+    "add": 1
+    },
+    {
+    "value": "PERCEPTION",
+    "add": 1
+    }
+    ],
+    "mutations": [
+    "NimbusProtect"
+    ]
+    },
+    {
+    "has": "WORN",
+    "condition": "ACTIVE",
+    "values": [
+     {
+      "value": "STRENGTH",
+      "add": 2
+     },
+     {
+      "value": "DEXTERITY",
+      "add": 2
+     },
+     {
+      "value": "INTELLIGENCE",
+      "add": 2
+     },
+     {
+      "value": "PERCEPTION",
+      "add": 2
+     }
+    ]
+   }
+  ]
+    },
+    "pocket_data": [
+     {
+      "pocket_type": "MAGAZINE",
+      "holster": true,
+      "rigid": true,
+      "ammo_restriction":
+       {
+        "merit_type": 200
+       }
+      }
+     ],
+    "charges_per_use": 2,
+    "use_action":
+    [
+    {
+      "type": "transform",
+      "msg": "功德凝聚，金身显化！",
+      "target": "GS_eq_merit3_soul_active",
+      "active": true,
+      "moves": 80
+    },
+    {
+    "type": "consume_drug",
+    "menu_text": "功德凝聚",
+    "activation_message": "你将少量功德凝聚于眉心，你的精神抗性短暂提升。",
+    "effects": [ { "id": "cleric_warding",
+    "duration": "10 m" }
+    ],
+    "need_charges": 2
+    }
+    ],
+    "flags": [
+     "OVERSIZE",
+     "ONLY_ONE",
+     "NONCONDUCTIVE",
+     "UNBREAKABLE"
+     ]
+  },
+  {
+    "//": "定位：威力、消耗都是最强的Buff。",
+    "id": "GS_eq_merit3_soul_active",
+    "type": "TOOL_ARMOR",
+    "category": "GS_equipment",
+    "name": "<color_yellow>功德金身</color>",
+    "description": "功德灵将部分力量短暂传输给你，你现在处于法相金身状态，防御力大幅提升，四维再加2，免疫属性伤害，让你身轻如燕。但相应的，代价也十分沉重，每秒消耗1功德。只建议用来对付持枪敌人。\n“为了跟上时代，我们对法相金身进行了改造，如果你拥有足够的功德，完全可以在炮塔面前弹一首二泉映月。”\n注：初次获得的功德灵必须在洗炼栏进行洗炼才能使用。",
+    "weight": "80 g",
+    "volume": "300 ml",
+    "material": "merit_mt",
+    "symbol": "g",
+    "color": "yellow",
+    "ammo": "merit_type",
+    "charges_per_use": 1,
+    "turns_per_charge": 1,
+    "pocket_data": [
+     {
+      "pocket_type": "MAGAZINE",
+      "holster": true,
+      "rigid": true,
+      "ammo_restriction": {
+       "merit_type": 200
+       }
+      }
+     ],
+    "use_action": {
+     "type": "transform",
+     "need_charges": 0,
+     "msg": "功德金身解除。",
+     "target": "GS_eq_merit3_soul" },
+    "revert_to": "GS_eq_merit3_soul",
+    "revert_msg": "功德耗尽，金身解除。",
+    "relic_data": 
+    {
+    "passive_effects":
+  [
+  {
+    "has": "WORN",
+    "condition": "ALWAYS",
+    "values": [
+    {
+    "value": "STRENGTH",
+    "add": 1
+    },
+    {
+    "value": "DEXTERITY",
+    "add": 1
+    },
+    {
+    "value": "INTELLIGENCE",
+    "add": 1
+    },
+    {
+    "value": "PERCEPTION",
+    "add": 1
+    }
+    ],
+    "mutations": [
+    "NimbusProtect"
+    ]
+    },
+        {
+    "has": "WORN",
+    "condition": "ACTIVE",
+    "values": [
+    {
+    "value": "STRENGTH",
+    "add": 2
+    },
+    {
+    "value": "DEXTERITY",
+    "add": 2
+    },
+    {
+    "value": "INTELLIGENCE",
+    "add": 2
+    },
+    {
+    "value": "PERCEPTION",
+    "add": 2
+    }
+    ]
+    }
+  ]
+  },
+    "armor": [
+    {
+    "encumbrance": -5,
+    "coverage": 100,
+    "cover_vitals": 100,
+    "covers": [ "head", "mouth", "eyes", "torso", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r" ]
+     }
+    ],
+    "material_thickness": 2,
+    "environmental_protection": 20,
+    "flags": [
+      "STURDY",
+      "ONLY_ONE",
+      "BLOCK_WHILE_WORN",
+      "ALLOWS_NATURAL_ATTACKS",
+      "GAS_PROOF",
+      "RAD_PROOF",
+      "ELECTRIC_IMMUNE",
+      "SEMITANGIBLE",
+      "UNBREAKABLE"
+      ]
+  },
+  {
+  "id": "GS_eq_merit1_furnace_act",
+  "looks_like": "charcoal_cooker",
+  "type": "TOOL",
+  "category": "GS_tool",
+  "name": {"str":"炼魂炉(一阶)"},
+  "description": "即将爆炸的炼魂炉，灵体会随着爆炸出炉，你有二十秒的时间跑开。你最好把它放在地上，然后远离二十五米以上。",
+  "weight": "40 kg",
+  "volume": "25 L",
+  "price": 10000,
+  "price_postapoc": 0,
+  "to_hit": -1,
+  "bashing": 30,
+  "material": [ "steel", "merit_mt" ],
+  "symbol": "*",
+  "color": "yellow",
+  "initial_charges": 20,
+  "max_charges": 20,
+  "turns_per_charge": 1,
+  "revert_to": "GS_eq_merit1_soul",
+  "use_action": {
+    "type": "explosion",
+    "no_deactivate_msg": "你现在应该做的是把它放下然后立刻跑开，而不是反复端详它。",
+    "explosion": {
+      "power": 300,
+      "shrapnel": {
+        "casing_mass": 250,
+        "fragment_mass": 0.4
+      }
+    }
+  },
+  "flags": [ "BOMB", "TRADER_AVOID","DANGEROUS" ]
+ },
+ {
+  "id": "GS_eq_merit2_furnace_act",
+  "looks_like": "charcoal_cooker",
+  "type": "TOOL",
+  "category": "GS_tool",
+  "name": {"str":"炼魂炉(二阶)"},
+  "description": "即将爆炸的炼魂炉，灵体会随着爆炸出炉，你有四十秒的时间跑开。你最好把它放在地上，然后远离三十五米以上。",
+  "weight": "40 kg",
+  "volume": "25 L",
+  "price": 10000,
+  "price_postapoc": 0,
+  "to_hit": -1,
+  "bashing": 30,
+  "material": [ "steel", "merit_mt" ],
+  "symbol": "*",
+  "color": "yellow",
+  "initial_charges": 40,
+  "max_charges": 40,
+  "turns_per_charge": 1,
+  "revert_to": "GS_eq_merit2_soul",
+  "use_action": {
+    "type": "explosion",
+    "no_deactivate_msg": "如果你不想成为“低智商炼魂师”的经典案例，你最好赶紧跑开。",
+    "explosion": {
+      "power": 900,
+      "shrapnel": {
+        "casing_mass": 650,
+        "fragment_mass": 0.6
+      }
+    }
+  },
+  "flags": [ "BOMB", "TRADER_AVOID","DANGEROUS" ]
+ },
+ {
+   "id": "GS_eq_merit3_furnace_act",
+   "looks_like": "charcoal_cooker",
+  "type": "TOOL",
+  "category": "GS_tool",
+  "name": {"str":"炼魂炉(三阶)"},
+  "description": "即将爆炸的炼魂炉，威力巨大，会破坏视野里的一切。灵体会随着爆炸出炉，你有60秒的时间跑开。你最好把它放在地上，然后远离四十米以上。",
+  "weight": "40 kg",
+  "volume": "25 L",
+  "price": 10000,
+  "price_postapoc": 0,
+  "to_hit": -1,
+  "bashing": 30,
+  "material": [ "steel", "merit_mt" ],
+  "symbol": "*",
+  "color": "yellow",
+  "initial_charges": 60,
+  "max_charges": 60,
+  "turns_per_charge": 1,
+  "revert_to": "GS_eq_merit3_soul",
+  "use_action": {
+    "type": "explosion",
+    "no_deactivate_msg": "如果你想被铭记千古，这并不是最合适的方法，所以尽可能远离这个炉子。",
+    "explosion": {
+      "power": 1200,
+      "shrapnel": {
+        "casing_mass": 700,
+        "fragment_mass": 0.8
+      }
+    }
+  },
+  "flags": [ "BOMB", "TRADER_AVOID","DANGEROUS" ]
+ },
+ {
+  "id": "OW_ar_heavyplate",
+  "looks_like": "armor_qt_heavyplate",
+  "type": "ARMOR",
+  "category": "armor",
+  "name": { "str": "重型复合钢板甲" },
+  "description": "一件全身式钢板甲，内附凯夫拉缓冲层和化纤内衬。\n看上去比中世纪盔甲更像中世纪盔甲，没有经过任何淬火处理，好在舒适度要强的多，可当做日常衣服穿着。也许能作为某些高级装甲的内层。\n\n“完全由过时的部分组成。但人们似乎忘记了，传统与原始的钢铁，才是这座大厦中最重要的部分。”",
+  "weight": "19 kg",
+  "volume": "17500 ml",
+  "price": 60000,
+  "price_postapoc": 12000,
+  "to_hit": -5,
+  "bashing": 8,
+  "material": [ "steel", "kevlar", "nylon" ],
+  "symbol": "[",
+  "color": "light_gray",
+  "warmth": 20,
+  "longest_side": "60 cm",
+  "material_thickness": 6,
+  "environmental_protection": 7,
+  "flags": [
+    "VARSIZE",
+    "NORMAL",
+    "STURDY",
+    "BLOCK_WHILE_WORN",
+    "ONLY_ONE"
+  ],
+  "armor": [
+    {
+      "material": [
+        {
+          "type": "steel",
+          "covered_by_mat": 100,
+          "thickness": 4
+        },
+        {
+          "type": "kevlar",
+          "covered_by_mat": 100,
+          "thickness": 1
+        },
+        {
+          "type": "nylon",
+          "covered_by_mat": 100,
+          "thickness": 3
+        }
+      ],
+      "covers": [
+        "torso"
+      ],
+      "coverage": 100,
+      "encumbrance": 20
+    },
+    {
+      "material": [
+        {
+          "type": "steel",
+          "covered_by_mat": 95,
+          "thickness": 4
+        },
+        {
+          "type": "kevlar",
+          "covered_by_mat": 100,
+          "thickness": 1
+        },
+        {
+          "type": "nylon",
+          "covered_by_mat": 100,
+          "thickness": 3
+        }
+      ],
+      "covers": [
+        "arm_l",
+        "arm_r"
+      ],
+      "coverage": 100,
+      "encumbrance": 18
+    },
+    {
+      "material": [
+        {
+          "type": "steel",
+          "covered_by_mat": 95,
+          "thickness": 4
+        },
+        {
+          "type": "kevlar",
+          "covered_by_mat": 100,
+          "thickness": 1
+        },
+        {
+          "type": "nylon",
+          "covered_by_mat": 100,
+          "thickness": 3
+        }
+      ],
+      "covers": [
+        "leg_l",
+        "leg_r"
+      ],
+      "coverage": 100,
+      "encumbrance": 18
+     }
+    ]
+   },
+   {
+    "id": "OW_ar_heavyhelm_close",
+    "looks_like": "helmet_plate",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": { "str": "重型复合钢盔" },
+  "description": "一件全覆式钢头盔，内附凯夫拉缓冲层和化纤内衬。\n全覆式钢头盔，佩戴体感比摩托车头盔还要好，可升起面罩。\n\n“完全由过时的部分组成。但人们似乎忘记了，传统与原始的钢铁，才是这座大厦中最重要的部分。”",
+  "weight": "2550 g",
+  "volume": "3 L",
+  "price": 55000,
+  "price_postapoc": 5500,
+  "use_action": {
+    "type": "transform",
+    "msg": "你将头盔的面罩升起。",
+    "target": "OW_ar_heavyhelm_open",
+    "menu_text": "升起面罩"
+  },
+  "bashing": 8,
+  "material": [ "steel", "kevlar", "nylon" ],
+  "symbol": "o",
+  "color": "light_gray",
+  "armor": [
+    {
+      "material": [
+       {
+        "type": "steel",
+        "covered_by_mat": 100,
+        "thickness": 2.3
+       },
+       {
+        "type": "kevlar",
+        "covered_by_mat": 100,
+        "thickness": 2.5
+       },
+       {
+        "type": "nylon",
+        "covered_by_mat": 100,
+        "thickness": 1
+       }
+      ],
+      "covers": [ "head" ],
+      "coverage": 100,
+      "encumbrance": 20,
+      "encumbrance_modifiers": [ "RESTRICTS_NECK", "WELL_SUPPORTED" ]
+    },
+    {
+      "material": [
+       {
+        "type": "steel",
+        "covered_by_mat": 100,
+        "thickness": 2.3
+       },
+       {
+        "type": "kevlar",
+        "covered_by_mat": 100,
+        "thickness": 1
+       },
+       {
+        "type": "nylon",
+          "covered_by_mat": 90,
+          "thickness": 1
+        }
+      ],
+      "covers": [ "eyes", "mouth" ],
+      "coverage": 100,
+      "encumbrance": 10,
+      "layers": [ "OUTER" ],
+      "rigid_layer_only": true
+     }
+  ],
+  "warmth": 15,
+  "environmental_protection": 5,
+  "techniques": [ "WBLOCK_1" ],
+  "flags": [ "STURDY", "CONDUCTIVE", "ONLY_ONE" ]
+  },
+  {
+   "id": "OW_ar_heavyhelm_open",
+   "looks_like": "helmet_barbute",
+   "type": "ARMOR",
+   "category": "armor",
+   "name": { "str": "重型复合钢盔（面罩升起）" },
+  "description": "已经升起面罩的复合钢盔，激活以降下面罩。",
+  "weight": "2550 g",
+  "volume": "3 L",
+  "price": 55000,
+  "price_postapoc": 5500,
+  "use_action": {
+    "type": "transform",
+    "msg": "你将头盔的面罩降下。",
+    "target": "OW_ar_heavyhelm_close",
+    "menu_text": "降下面罩"
+  },
+  "bashing": 8,
+  "material": [ "steel", "kevlar", "nylon" ],
+  "symbol": "o",
+  "color": "light_gray",
+  "armor": [
+    {
+      "material": [
+       {
+        "type": "steel",
+        "covered_by_mat": 100,
+        "thickness": 2.3
+       },
+       {
+        "type": "kevlar",
+        "covered_by_mat": 100,
+        "thickness": 2.5
+       },
+       {
+        "type": "nylon",
+        "covered_by_mat": 100,
+        "thickness": 1
+       }
+      ],
+      "covers": [ "head" ],
+      "coverage": 100,
+      "encumbrance": 20,
+      "encumbrance_modifiers": [ "RESTRICTS_NECK", "WELL_SUPPORTED" ]
+    }
+  ],
+   "warmth": 15,
+   "environmental_protection": 1,
+   "techniques": [ "WBLOCK_1" ],
+   "flags": [ "STURDY", "CONDUCTIVE", "ONLY_ONE" ],
+   "copy-from": "OW_ar_heavyhelm_close"
+  },
+  {
+   "id": "OW_ar_heavysabaton",
+   "type": "ARMOR",
+   "name": { "str": "重型复合钢靴" },
+  "description": "炫酷的中世纪钢靴，内附凯夫拉内衬和化纤防水层。\n一双透气，酷炫，甚至防水的靴子，谁会不喜欢呢？\n\n“完全由过时的部分组成。但人们似乎忘记了，传统与原始的钢铁，才是这座大厦中最重要的部分。”",
+  "weight": "750 g",
+  "volume": "750 ml",
+  "price": 40000,
+  "price_postapoc": 3000,
+  "to_hit": -2,
+  "bashing": 7,
+  "symbol": "[",
+  "looks_like": "boots_steel",
+  "material": [ "steel", "kevlar", "nylon" ],
+  "color": "light_gray",
+  "warmth": 0,
+  "environmental_protection": 5,
+  "flags": [
+    "STURDY",
+    "OUTER",
+    "WATERPROOF"
+  ],
+  "armor": [
+    {
+      "material": [
+        {
+          "type": "steel",
+          "covered_by_mat": 100,
+          "thickness": 3
+        },
+        {
+          "type": "nylon",
+          "covered_by_mat": 100,
+          "thickness": 2
+        },
+        {
+          "type": "kevlar",
+          "covered_by_mat": 100,
+          "thickness": 1
+        }
+      ],
+      "covers": [
+        "foot_l",
+        "foot_r"
+      ],
+      "coverage": 100,
+      "encumbrance": 12,
+      "layers": [
+        "OUTER"
+      ]
+    }
+  ]
+ },
+ {
+  "id": "OW_ar_heavygaunt",
+  "type": "ARMOR",
+  "category": "armor",
+  "name": {
+    "str": "重型复合钢护手" },
+  "description": "一对钢制护手，内附凯夫拉和化纤缓冲层，护手和护指部分是独立的，所以你可以不装护指。\n“比你想象中更加轻便舒适。织物材料与金属材料的结合，为我们提供了更多的可能性。”\n\n“完全由过时的部分组成。但人们似乎忘记了，传统与原始的钢铁，才是这座大厦中最重要的部分。”",
+  "weight": "740 g",
+  "volume": "850 ml",
+  "longest_side": "14 cm",
+  "price": 40000,
+  "price_postapoc": 3000,
+  "to_hit": -1,
+  "bashing": 8,
+  "symbol": "[",
+  "looks_like": "fire_gauntlets",
+  "material": [ "steel", "kevlar", "nylon" ],
+  "color": "light_gray",
+  "warmth": 10,
+  "environmental_protection": 5,
+  "flags": [
+    "VARSIZE",
+    "STURDY",
+    "DURABLE_MELEE",
+    "NORMAL"
+  ],
+  "pocket_data": [ {
+   "pocket_type": "CONTAINER",
+   "ablative": true,
+   "volume_encumber_modifier": 0,
+   "max_contains_volume": "600 ml",
+   "max_contains_weight": "600 g",
+   "max_item_length": "13 cm",
+   "moves": 800,
+   "description": "护指部分。",
+   "flag_restriction": ["ARMOR_FINGER"]
+  } ],
+  "armor": [
+   {
+    "material": [
+     {
+      "type": "steel",
+      "covered_by_mat": 100,
+      "thickness": 2.5
+     },
+     {
+      "type": "kevlar",
+      "covered_by_mat": 100,
+      "thickness": 1.5
+     },
+     {
+      "type": "nylon",
+      "covered_by_mat": 100,
+      "thickness": 1
+     }
+    ],
+    "coverage": 100,
+    "encumbrance": 6,
+    "covers": [ "hand_l", "hand_r" ],
+    "specifically_covers": [
+     "hand_wrist_l",
+     "hand_wrist_r",
+     "hand_palm_l",
+     "hand_palm_r",
+     "hand_back_l",
+     "hand_back_r"
+    ]
+   },
+   {
+    "material": [
+     {
+      "type": "steel",
+      "covered_by_mat": 100,
+      "thickness": 2.5
+     },
+     {
+      "type": "kevlar",
+      "covered_by_mat": 100,
+      "thickness": 1.5
+     },
+     {
+      "type": "nylon",
+      "covered_by_mat": 100,
+      "thickness": 1
+     }
+    ],
+    "coverage": 20,
+    "encumbrance": 0,
+    "covers": [ "hand_l", "hand_r" ],
+    "specifically_covers": [
+     "hand_fingers_l",
+     "hand_fingers_r"
+     ]
+   } 
+  ]
+ },
+ {
+ "id": "OW_ar_heavygaunt_finger",
+  "type": "ARMOR",
+  "category": "armor",
+  "name": { "str": "重型复合钢护指" },
+  "description": "重型钢护手的护指部分，提供保护的同时最大限度减少影响。\n“织物材料与金属材料的结合，为我们提供了更多的可能性。不过它终究无法突破属于人类本身的桎梏。”\n\n“完全由过时的部分组成。但人们似乎忘记了，传统与原始的钢铁，才是这座大厦中最重要的部分。”",
+  "weight": "360 g",
+  "volume": "400 ml",
+  "longest_side": "12 cm",
+  "price": 20000,
+  "price_postapoc": 1000,
+  "to_hit": -1,
+  "bashing": 2,
+  "symbol": "[",
+  "looks_like": "link_sheet",
+  "material": [ "steel", "kevlar", "nylon" ],
+  "color": "light_gray",
+  "warmth": 5,
+  "environmental_protection": 5,
+  "flags": [
+    "VARSIZE",
+    "STURDY",
+    "DURABLE_MELEE",
+    "NORMAL",
+    "ARMOR_FINGER",
+    "CANT_WEAR"
+  ],
+  "armor": [
+     {
+    "material": [
+     {
+      "type": "steel",
+      "covered_by_mat": 100,
+      "thickness": 2.2
+     },
+     {
+      "type": "kevlar",
+      "covered_by_mat": 100,
+      "thickness": 1.2
+     },
+     {
+      "type": "nylon",
+      "covered_by_mat": 100,
+      "thickness": 1.2
+     }
+    ],
+    "coverage": 100,
+    "encumbrance": 2,
+    "covers": [ "hand_l", "hand_r" ],
+    "specifically_covers": [
+     "hand_fingers_l",
+     "hand_fingers_r"
+     ]
+   }
+  ]
+ }
+]

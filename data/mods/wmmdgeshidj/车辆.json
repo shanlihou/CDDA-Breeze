@@ -1,0 +1,2915 @@
+[
+    {
+        "type": "vehicle_part",
+        "id": "CJtrunk_floor",
+        "name": {
+          "str": "超级地板行李箱"
+        },
+        "symbol": "=",
+        "looks_like": "t_carpet_red",
+        "categories": [
+          "cargo"
+        ],
+        "color": "white",
+        "broken_symbol": "#",
+        "broken_color": "light_gray",
+        "durability": 99999999,
+        "description": "An aisle.  A hatch lets you access a cargo space beneath it.",
+        "size": "999999999 ml",
+        "item": "cargo_aisle",
+        "location": "center",
+        "requirements": {
+          "install": {
+            "skills": [
+              [
+                "mechanics",
+                1
+              ]
+            ],
+            "time": "60 m",
+            "using": [
+              [
+                "welding_standard",
+                5
+              ]
+            ]
+          },
+          "removal": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "30 m",
+            "using": [
+              [
+                "vehicle_weld_removal",
+                1
+              ]
+            ]
+          },
+          "repair": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "60 m",
+            "using": [
+              [
+                "repair_welding_standard",
+                1
+              ]
+            ]
+          }
+        },
+        "flags": [
+          "AISLE",
+          "BOARDABLE",
+          "CARGO",
+          "LOCKABLE_CARGO",
+          "COVERED"
+        ],
+        "breaks_into": "ig_vp_sheet_metal",
+        "damage_reduction": {
+          "all": 999999999
+        }
+      },
+      {
+        "id": "CJframe",
+        "type": "vehicle_part",
+        "name": {
+          "str": "超级车架"
+        },
+        "item": "frame",
+        "location": "structure",
+        "standard_symbols": true,
+        "durability": 999999999,
+        "description": "A metal framework.  Other vehicle components can be mounted on it, and it can be attached to other frames to increase the vehicle's size.",
+        "breaks_into": "ig_vp_frame",
+        "requirements": {
+          "install": {
+            "skills": [
+              [
+                "mechanics",
+                1
+              ]
+            ],
+            "time": "20 m",
+            "using": [
+              [
+                "welding_standard",
+                10
+              ]
+            ]
+          },
+          "removal": {
+            "skills": [
+              [
+                "mechanics",
+                1
+              ]
+            ],
+            "time": "10 m",
+            "using": "vehicle_weld_removal"
+          },
+          "repair": {
+            "skills": [
+              [
+                "mechanics",
+                1
+              ]
+            ],
+            "time": "5 m",
+            "using": [
+              [
+                "repair_welding_standard",
+                1
+              ]
+            ]
+          }
+        },
+        "flags": [
+          "MOUNTABLE",
+          "SHOCK_ABSORBER",
+          "ARMOR",
+          "INITIAL_PART"
+        ],
+        "categories": [
+          "hull"
+        ],
+        "damage_reduction": {
+          "all": 999999999
+        }
+      },
+      {
+        "type": "vehicle_part",
+        "id": "CJroof",
+        "name": {
+          "str": "超级车顶"
+        },
+        "symbol": "#",
+        "categories": [
+          "hull"
+        ],
+        "color": "light_gray",
+        "broken_symbol": "#",
+        "broken_color": "dark_gray",
+        "durability": 999999999,
+        "description": "A metal roof.",
+        "item": "sheet_metal",
+        "location": "roof",
+        "requirements": {
+          "install": {
+            "skills": [
+              [
+                "mechanics",
+                1
+              ]
+            ],
+            "time": "60 m",
+            "using": [
+              [
+                "welding_standard",
+                5
+              ]
+            ]
+          },
+          "removal": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "30 m",
+            "using": [
+              [
+                "vehicle_weld_removal",
+                1
+              ]
+            ]
+          },
+          "repair": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "60 m",
+            "using": [
+              [
+                "repair_welding_standard",
+                1
+              ]
+            ]
+          }
+        },
+        "flags": [
+          "ROOF"
+        ],
+        "breaks_into": "ig_vp_sheet_metal",
+        "damage_reduction": {
+          "all": 999999999
+        }
+      },
+      {
+        "type": "vehicle_part",
+        "location": "center",
+        "categories": [
+          "hull"
+        ],
+        "standard_symbols": true,
+        "symbols": {
+          "cover_left": "h",
+          "cover_right": "h",
+          "horizontal_front": "h",
+          "hatch_wheel_left": "b",
+          "hatch_wheel_right": "n",
+          "horizontal_rear": "h",
+          "horizontal_2_front": "=",
+          "horizontal_2_rear": "=",
+          "nw_edge": "j",
+          "ne_edge": "j",
+          "vertical_left": "j",
+          "vertical_right": "j",
+          "vertical_T_left": "[",
+          "vertical_T_right": "]",
+          "vertical_2_left": "H",
+          "vertical_2_right": "H",
+          "wheel_left": "j",
+          "wheel_right": "j"
+        },
+        "flags": [
+          "OBSTACLE",
+          "NO_ROOF_NEEDED",
+          "OPAQUE",
+          "FULL_BOARD"
+        ],
+        "copy-from": "board_abstract",
+        "item": "sheet_metal",
+        "durability": 999999999,
+        "breaks_into": "ig_vp_sheet_metal",
+        "requirements": {
+          "install": {
+            "skills": [
+              [
+                "mechanics",
+                1
+              ]
+            ],
+            "time": "60 m",
+            "using": [
+              [
+                "welding_standard",
+                5
+              ]
+            ]
+          },
+          "removal": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "30 m",
+            "using": [
+              [
+                "vehicle_weld_removal",
+                1
+              ]
+            ]
+          },
+          "repair": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "60 m",
+            "using": [
+              [
+                "repair_welding_standard",
+                1
+              ]
+            ]
+          }
+        },
+        "damage_reduction": {
+          "all": 999999999
+        },
+        "id": "CJboard",
+        "name": {
+          "str": "超级挡板"
+        },
+        "description": "A metal wall.  Keeps zombies outside the vehicle and prevents people from seeing through it."
+      },
+      {
+        "type": "vehicle_part",
+        "id": "CJaisle",
+        "name": {
+          "str": "超级过道"
+        },
+        "symbol": "H",
+        "symbols": {
+          "horizontal": "H",
+          "vertical": "="
+        },
+        "looks_like": "t_metal_floor",
+        "categories": [
+          "hull",
+          "passengers"
+        ],
+        "color": "white",
+        "broken_symbol": "#",
+        "broken_color": "light_gray",
+        "durability": 999999999,
+        "description": "An aisle.",
+        "item": "sheet_metal",
+        "location": "center",
+        "requirements": {
+          "install": {
+            "skills": [
+              [
+                "mechanics",
+                1
+              ]
+            ],
+            "time": "60 m",
+            "using": [
+              [
+                "welding_standard",
+                5
+              ]
+            ]
+          },
+          "removal": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "30 m",
+            "using": [
+              [
+                "vehicle_weld_removal",
+                1
+              ]
+            ]
+          },
+          "repair": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "60 m",
+            "using": [
+              [
+                "repair_welding_standard",
+                1
+              ]
+            ]
+          }
+        },
+        "flags": [
+          "AISLE",
+          "BOARDABLE"
+        ],
+        "breaks_into": "ig_vp_sheet_metal",
+        "damage_reduction": {
+          "all": 999999999
+        }
+      },
+      {
+        "type": "vehicle_part",
+        "location": "center",
+        "categories": [
+          "hull"
+        ],
+        "standard_symbols": true,
+        "symbols": {
+          "cover_left": "h",
+          "cover_right": "h",
+          "horizontal_front": "h",
+          "hatch_wheel_left": "b",
+          "hatch_wheel_right": "n",
+          "horizontal_rear": "h",
+          "horizontal_2_front": "=",
+          "horizontal_2_rear": "=",
+          "nw_edge": "j",
+          "ne_edge": "j",
+          "vertical_left": "j",
+          "vertical_right": "j",
+          "vertical_T_left": "[",
+          "vertical_T_right": "]",
+          "vertical_2_left": "H",
+          "vertical_2_right": "H",
+          "wheel_left": "j",
+          "wheel_right": "j"
+        },
+        "flags": [
+          "OBSTACLE",
+          "NO_ROOF_NEEDED",
+          "HALF_BOARD"
+        ],
+        "copy-from": "board_abstract",
+        "item": "sheet_metal",
+        "durability": 999999999,
+        "breaks_into": "ig_vp_sheet_metal",
+        "requirements": {
+          "install": {
+            "skills": [
+              [
+                "mechanics",
+                1
+              ]
+            ],
+            "time": "60 m",
+            "using": [
+              [
+                "welding_standard",
+                5
+              ]
+            ]
+          },
+          "removal": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "30 m",
+            "using": [
+              [
+                "vehicle_weld_removal",
+                1
+              ]
+            ]
+          },
+          "repair": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "60 m",
+            "using": [
+              [
+                "repair_welding_standard",
+                1
+              ]
+            ]
+          }
+        },
+        "damage_reduction": {
+          "all": 999999999
+        },
+        "id": "CJhalfboard",
+        "name": {
+          "str": "超级半挡板"
+        },
+        "description": "A half-height metal wall.  Keeps zombies outside the vehicle but allows people to see over it."
+      },
+      {
+        "type": "vehicle_part",
+        "breaks_into": [
+          {
+            "count": [
+              25,
+              50
+            ],
+            "item": "glass_shard"
+          }
+        ],
+        "symbol": "\"",
+        "symbols": {
+          "cover_left": "h",
+          "cover_right": "h",
+          "nw": "y",
+          "ne": "u",
+          "sw": "b",
+          "se": "n",
+          "nw_edge": "y",
+          "ne_edge": "u",
+          "sw_edge": "b",
+          "se_edge": "n",
+          "vertical": "j",
+          "vertical_left": "j",
+          "vertical_right": "j",
+          "vertical_2_left": "j",
+          "vertical_2_right": "j",
+          "horizontal_front": "h",
+          "horizontal_front_edge": "^",
+          "horizontal_rear": "h",
+          "horizontal_rear_edge": "=",
+          "wheel_left": "y",
+          "wheel_right": "u"
+        },
+        "broken_color": "light_gray",
+        "broken_symbol": "0",
+        "categories": [
+          "hull"
+        ],
+        "color": "light_cyan",
+        "damage_modifier": 999999999,
+        "description": "A sheet of glass that lets you see outside the vehicle.",
+        "durability": 999999999,
+        "flags": [
+          "OVER",
+          "WINDSHIELD",
+          "OBSTACLE",
+          "WINDOW"
+        ],
+        "item": "glass_sheet",
+        "location": "center",
+        "looks_like": "t_wall_glass",
+        "name": {
+          "str": "超级挡风玻璃"
+        },
+        "requirements": {
+          "install": {
+            "skills": [
+              [
+                "mechanics",
+                1
+              ]
+            ],
+            "time": "15 m",
+            "using": [
+              [
+                "adhesive",
+                2
+              ]
+            ]
+          },
+          "removal": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "10 m",
+            "using": [
+              [
+                "vehicle_nail_removal",
+                1
+              ]
+            ]
+          }
+        },
+        "copy-from": "windshield_abstract",
+        "id": "CJwindshield"
+      },
+      {
+        "id": "CJaisle_lights",
+        "type": "vehicle_part",
+        "name": {
+          "str": "超级过道照明灯"
+        },
+        "item": "flashlight",
+        "location": "on_ceiling",
+        "symbol": "*",
+        "broken_symbol": "*",
+        "categories": [
+          "lighting"
+        ],
+        "color": "white",
+        "durability": 999999999,
+        "//": "essentially an 800lm 10W LED flashlight",
+        "epower": -10,
+        "bonus": 30,
+        "folded_volume": "500 ml",
+        "breaks_into": [
+          {
+            "item": "scrap",
+            "count": [
+              0,
+              2
+            ]
+          }
+        ],
+        "requirements": {
+          "install": {
+            "skills": [
+              [
+                "mechanics",
+                1
+              ]
+            ],
+            "time": "200 s",
+            "using": [
+              [
+                "vehicle_screw",
+                1
+              ]
+            ]
+          },
+          "removal": {
+            "skills": [
+              [
+                "mechanics",
+                1
+              ]
+            ],
+            "time": "200 s",
+            "using": [
+              [
+                "vehicle_screw",
+                1
+              ]
+            ]
+          },
+          "repair": {
+            "skills": [
+              [
+                "mechanics",
+                1
+              ]
+            ],
+            "time": "20 s",
+            "using": [
+              [
+                "adhesive",
+                1
+              ],
+              [
+                "soldering_standard",
+                4
+              ]
+            ]
+          }
+        },
+        "flags": [
+          "AISLE_LIGHT",
+          "ENABLED_DRAINS_EPOWER"
+        ]
+      },
+      {
+        "type": "vehicle_part",
+        "id": "CJwheel_mount_medium",
+        "name": {
+          "str": "超级轮毂"
+        },
+        "symbol": "-",
+        "categories": [
+          "movement"
+        ],
+        "color": "light_gray",
+        "location": "axle",
+        "broken_symbol": "X",
+        "broken_color": "light_gray",
+        "damage_modifier": 999999999,
+        "durability": 999999999,
+        "description": "Connection where wheels can be connected on.  This particular one is fit for normal car wheels.",
+        "item": "wheel_mount_medium",
+        "requirements": {
+          "install": {
+            "skills": [
+              [
+                "mechanics",
+                4
+              ]
+            ],
+            "time": "45 m",
+            "using": [
+              [
+                "welding_standard",
+                10
+              ],
+              [
+                "vehicle_wrench_2",
+                1
+              ]
+            ]
+          },
+          "removal": {
+            "skills": [
+              [
+                "mechanics",
+                3
+              ]
+            ],
+            "time": "15 m",
+            "using": [
+              [
+                "vehicle_weld_removal",
+                1
+              ],
+              [
+                "vehicle_wrench_2",
+                1
+              ]
+            ]
+          },
+          "repair": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "15 m",
+            "using": [
+              [
+                "repair_welding_standard",
+                2
+              ]
+            ]
+          }
+        },
+        "flags": [
+          "WHEEL_MOUNT_MEDIUM",
+          "NEEDS_JACKING"
+        ],
+        "breaks_into": [
+          {
+            "item": "scrap",
+            "count": [
+              1,
+              4
+            ]
+          },
+          {
+            "item": "steel_chunk",
+            "count": [
+              2,
+              5
+            ]
+          }
+        ],
+        "damage_reduction": {
+          "all": 999999999
+        }
+      },
+      {
+        "id": "CJheadlight",
+        "type": "vehicle_part",
+        "name": {
+          "str": "超级车头灯"
+        },
+        "item": "car_headlight",
+        "symbol": "*",
+        "broken_symbol": "*",
+        "categories": [
+          "lighting"
+        ],
+        "color": "white",
+        "broken_color": "white",
+        "durability": 999999999,
+        "description": "A bright light that illuminates a narrow cone outside the vehicle when turned on.  During installation, you can choose what direction to point the light, so multiple headlights can illuminate the sides or rear, as well as the front.",
+        "epower": -10,
+        "bonus": 8000,
+        "damage_modifier": 999999999,
+        "folded_volume": "250 ml",
+        "breaks_into": [
+          {
+            "item": "cable",
+            "charges": [
+              1,
+              4
+            ]
+          },
+          {
+            "item": "scrap",
+            "count": [
+              0,
+              2
+            ]
+          }
+        ],
+        "requirements": {
+          "install": {
+            "skills": [
+              [
+                "mechanics",
+                1
+              ]
+            ],
+            "time": "200 s",
+            "using": [
+              [
+                "vehicle_screw",
+                1
+              ]
+            ]
+          },
+          "removal": {
+            "skills": [
+              [
+                "mechanics",
+                1
+              ]
+            ],
+            "time": "200 s",
+            "using": [
+              [
+                "vehicle_screw",
+                1
+              ]
+            ]
+          },
+          "repair": {
+            "skills": [
+              [
+                "mechanics",
+                1
+              ]
+            ],
+            "time": "20 s",
+            "using": [
+              [
+                "adhesive",
+                1
+              ],
+              [
+                "soldering_standard",
+                4
+              ]
+            ]
+          }
+        },
+        "flags": [
+          "CONE_LIGHT",
+          "ENABLED_DRAINS_EPOWER"
+        ]
+      },
+      {
+        "type": "vehicle_part",
+        "id": "CJtrunk",
+        "name": {
+          "str": "超级后备箱"
+        },
+        "symbol": "H",
+        "looks_like": "f_locker",
+        "categories": [
+          "cargo"
+        ],
+        "color": "brown",
+        "broken_symbol": "#",
+        "broken_color": "brown",
+        "damage_modifier": 999999999,
+        "durability": 999999999,
+        "size": "999999999 ml",
+        "//": "200 L storage based on an average sedan trunk being around 400 L, and our cars having two tiles.  We should get a taller trunk for SUVs and similar.",
+        "item": "frame",
+        "location": "center",
+        "requirements": {
+          "install": {
+            "skills": [
+              [
+                "mechanics",
+                1
+              ]
+            ],
+            "time": "60 m",
+            "using": [
+              [
+                "welding_standard",
+                5
+              ]
+            ]
+          },
+          "removal": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "30 m",
+            "using": [
+              [
+                "vehicle_weld_removal",
+                1
+              ]
+            ]
+          },
+          "repair": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "60 m",
+            "using": [
+              [
+                "repair_welding_standard",
+                2
+              ]
+            ]
+          }
+        },
+        "flags": [
+          "CARGO",
+          "LOCKABLE_CARGO",
+          "COVERED",
+          "BOARDABLE",
+          "SIMPLE_PART"
+        ],
+        "breaks_into": "ig_vp_frame",
+        "damage_reduction": {
+          "all": 999999999
+        }
+      },
+      {
+        "breaks_into": "ig_vp_seat",
+        "broken_color": "red",
+        "broken_symbol": "*",
+        "categories": [
+          "operations",
+          "passengers"
+        ],
+        "color": "red",
+        "comfort": 2,
+        "damage_modifier": 999999999,
+        "damage_reduction": {
+          "all": 999999999,
+          "bash": 999999999
+        },
+        "description": "A place to sit, or sleep if you're desperate.",
+        "durability": 999999999,
+        "flags": [
+          "SEAT",
+          "BOARDABLE",
+          "CARGO",
+          "BELTABLE"
+        ],
+        "floor_bedding_warmth": 200,
+        "item": "seat",
+        "location": "center",
+        "looks_like": "reclining_seat",
+        "name": {
+          "str": "超级座椅"
+        },
+        "requirements": {
+          "install": {
+            "skills": [
+              [
+                "mechanics",
+                1
+              ]
+            ],
+            "time": "30 m",
+            "using": [
+              [
+                "vehicle_wrench_2",
+                1
+              ]
+            ]
+          },
+          "removal": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "15 m",
+            "using": [
+              [
+                "vehicle_wrench_2",
+                1
+              ]
+            ]
+          },
+          "repair": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "30 m",
+            "using": [
+              [
+                "repair_welding_standard",
+                1
+              ],
+              [
+                "sewing_standard",
+                8
+              ]
+            ]
+          }
+        },
+        "size": "999999999 ml",
+        "symbol": "#",
+        "type": "vehicle_part",
+        "copy-from": "seat_abstract",
+        "id": "CJseat_windshield"
+      },
+      {
+        "breaks_into": "ig_vp_frame",
+        "broken_color": "cyan",
+        "broken_symbol": "&",
+        "categories": [
+          "hull"
+        ],
+        "color": "cyan",
+        "damage_modifier": 999999999,
+        "damage_reduction": {
+          "all": 999999999
+        },
+        "description": "A door.  Has a window so you can see out of it, even when closed.",
+        "durability": 999999999,
+        "flags": [
+          "CARGO",
+          "OBSTACLE",
+          "OPENABLE",
+          "BOARDABLE",
+          "WINDOW",
+          "DOOR"
+        ],
+        "item": "frame",
+        "location": "center",
+        "looks_like": "t_door_metal_c",
+        "name": {
+          "str": "超级车门"
+        },
+        "requirements": {
+          "install": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "60 m",
+            "using": [
+              [
+                "vehicle_wrench_2",
+                1
+              ]
+            ]
+          },
+          "removal": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "30 m",
+            "using": [
+              [
+                "vehicle_wrench_2",
+                1
+              ]
+            ]
+          },
+          "repair": {
+            "skills": [
+              [
+                "mechanics",
+                3
+              ]
+            ],
+            "time": "60 m",
+            "using": [
+              [
+                "repair_welding_standard",
+                1
+              ]
+            ]
+          }
+        },
+        "size": "999999999 ml",
+        "symbol": "+",
+        "symbols": {
+          "ne": "+",
+          "nw": "+",
+          "se": "+",
+          "sw": "+",
+          "vertical_left": "+",
+          "vertical_right": "+",
+          "front": "+",
+          "front_left": "+",
+          "front_right": "+",
+          "rear": "+"
+        },
+        "type": "vehicle_part",
+        "copy-from": "door_abstract",
+        "id": "CJdoor"
+      },
+      {
+        "type": "vehicle_part",
+        "id": "CJseatbelt",
+        "name": {
+          "str": "超级安全带"
+        },
+        "symbol": ",",
+        "categories": [
+          "operations",
+          "passengers"
+        ],
+        "color": "light_gray",
+        "broken_symbol": ",",
+        "broken_color": "red",
+        "damage_modifier": 999999999,
+        "durability": 999999999,
+        "description": "A belt, attached to a seat.",
+        "folded_volume": "500 ml",
+        "bonus": 25,
+        "item": "rope_6",
+        "location": "on_seat",
+        "requirements": {
+          "install": {
+            "skills": [
+              [
+                "mechanics",
+                1
+              ]
+            ],
+            "time": "150 s",
+            "using": [
+              [
+                "vehicle_screw",
+                1
+              ]
+            ]
+          },
+          "removal": {
+            "skills": [
+              [
+                "mechanics",
+                1
+              ]
+            ],
+            "time": "150 s",
+            "using": [
+              [
+                "vehicle_screw",
+                1
+              ]
+            ]
+          },
+          "repair": {
+            "skills": [
+              [
+                "mechanics",
+                1
+              ]
+            ],
+            "time": "20 s",
+            "using": [
+              [
+                "adhesive",
+                1
+              ]
+            ]
+          }
+        },
+        "flags": [
+          "SEATBELT",
+          "SIMPLE_PART"
+        ],
+        "breaks_into": [
+          {
+            "item": "string_36",
+            "count": [
+              0,
+              3
+            ]
+          }
+        ],
+        "damage_reduction": {
+          "bash": 999999999
+        }
+      },
+      {
+        "id": "CJtank",
+        "type": "vehicle_part",
+        "name": {
+          "str": "超级油箱 (60L)"
+        },
+        "item": "metal_tank",
+        "location": "fuel_source",
+        "symbol": "O",
+        "broken_color": "red",
+        "durability": 999999999,
+        "description": "A storage space for holding liquids.  If filled with the appropriate fuel for the vehicle's engine, the engine will automatically draw fuel from the tank when the engine is on.  If filled with water, you can access the water from a water faucet, if one is installed in the vehicle.  You can also use a rubber hose to siphon liquids out of a tank.",
+        "categories": [
+          "movement"
+        ],
+        "damage_modifier": 999999999,
+        "breaks_into": [
+          {
+            "item": "steel_lump",
+            "count": [
+              2,
+              2
+            ]
+          },
+          {
+            "item": "steel_chunk",
+            "count": [
+              1,
+              2
+            ]
+          },
+          {
+            "item": "scrap",
+            "count": [
+              1,
+              5
+            ]
+          }
+        ],
+        "requirements": {
+          "install": {
+            "skills": [
+              [
+                "mechanics",
+                1
+              ]
+            ],
+            "time": "90 m",
+            "using": [
+              [
+                "vehicle_wrench_2",
+                1
+              ],
+              [
+                "drilling_standard",
+                50
+              ]
+            ]
+          },
+          "removal": {
+            "skills": [
+              [
+                "mechanics",
+                1
+              ]
+            ],
+            "time": "45 m",
+            "qualities": [
+              {
+                "id": "WRENCH",
+                "level": 2
+              }
+            ]
+          },
+          "repair": {
+            "skills": [
+              [
+                "mechanics",
+                1
+              ]
+            ],
+            "time": "45 m",
+            "using": [
+              [
+                "repair_welding_standard",
+                2
+              ]
+            ]
+          }
+        },
+        "flags": [
+          "FLUIDTANK"
+        ],
+        "damage_reduction": {
+          "all": 999999999,
+          "stab": 999999999
+        }
+      },
+      {
+        "type": "vehicle_part",
+        "id": "CJwheel_mount_medium_steerable",
+        "name": {
+          "str": "超级轮毂 (转向)"
+        },
+        "symbol": "-",
+        "categories": [
+          "movement"
+        ],
+        "color": "light_gray",
+        "location": "axle",
+        "broken_symbol": "X",
+        "broken_color": "light_gray",
+        "damage_modifier": 999999999,
+        "durability": 999999999,
+        "description": "Connection where wheels can be connected on.  This particular one is fit for normal car wheels.",
+        "item": "wheel_mount_medium",
+        "requirements": {
+          "install": {
+            "skills": [
+              [
+                "mechanics",
+                4
+              ]
+            ],
+            "time": "45 m",
+            "using": [
+              [
+                "welding_standard",
+                10
+              ],
+              [
+                "vehicle_wrench_2",
+                1
+              ]
+            ]
+          },
+          "removal": {
+            "skills": [
+              [
+                "mechanics",
+                3
+              ]
+            ],
+            "time": "15 m",
+            "using": [
+              [
+                "vehicle_weld_removal",
+                1
+              ],
+              [
+                "vehicle_wrench_2",
+                1
+              ]
+            ]
+          },
+          "repair": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "15 m",
+            "using": [
+              [
+                "repair_welding_standard",
+                2
+              ]
+            ]
+          }
+        },
+        "flags": [
+          "WHEEL_MOUNT_MEDIUM",
+          "NEEDS_JACKING",
+          "STEERABLE"
+        ],
+        "breaks_into": [
+          {
+            "item": "scrap",
+            "count": [
+              1,
+              4
+            ]
+          },
+          {
+            "item": "steel_chunk",
+            "count": [
+              2,
+              5
+            ]
+          }
+        ],
+        "damage_reduction": {
+          "all": 999999999
+        },
+        "copy-from": "wheel_mount_medium"
+      },
+      {
+        "type": "vehicle_part",
+        "id": "CJwing_mirror",
+        "name": {
+          "str": "超级后视镜"
+        },
+        "symbol": "o",
+        "categories": [
+          "other"
+        ],
+        "color": "light_cyan",
+        "symbols": {
+          "left": "o",
+          "right": "o"
+        },
+        "broken_symbol": "*",
+        "broken_color": "dark_gray",
+        "damage_modifier": 999999999,
+        "durability": 999999999,
+        "description": "A small mirror, mounted outside the vehicle.  If you see the mirror, your vision is expanded as though you were standing where the mirror is.",
+        "folded_volume": "500 ml",
+        "item": "mirror",
+        "location": "structure",
+        "requirements": {
+          "install": {
+            "skills": [
+              [
+                "mechanics",
+                1
+              ]
+            ],
+            "time": "100 s",
+            "using": [
+              [
+                "vehicle_screw",
+                1
+              ]
+            ]
+          },
+          "removal": {
+            "skills": [
+              [
+                "mechanics",
+                1
+              ]
+            ],
+            "time": "100 s",
+            "using": [
+              [
+                "vehicle_screw",
+                1
+              ]
+            ]
+          },
+          "repair": {
+            "skills": [
+              [
+                "mechanics",
+                1
+              ]
+            ],
+            "time": "20 s",
+            "using": [
+              [
+                "adhesive",
+                1
+              ]
+            ]
+          }
+        },
+        "flags": [
+          "VISION",
+          "PROTRUSION",
+          "UNMOUNT_ON_DAMAGE"
+        ],
+        "breaks_into": [
+          {
+            "item": "glass_shard",
+            "count": [
+              0,
+              16
+            ]
+          }
+        ]
+      },
+      {
+        "type": "vehicle_part",
+        "id": "CJdashboard",
+        "name": {
+          "str": "超级仪表板"
+        },
+        "symbol": "$",
+        "categories": [
+          "energy",
+          "lighting"
+        ],
+        "color": "light_cyan",
+        "broken_symbol": "$",
+        "broken_color": "red",
+        "damage_modifier": 999999999,
+        "durability": 999999999,
+        "description": "A frame containing some lights and controls.",
+        "bonus": 10,
+        "epower": -25,
+        "item": "vehicle_dashboard",
+        "requirements": {
+          "install": {
+            "skills": [
+              [
+                "mechanics",
+                1
+              ],
+              [
+                "electronics",
+                1
+              ]
+            ],
+            "time": "350 s",
+            "using": [
+              [
+                "vehicle_screw",
+                1
+              ]
+            ]
+          },
+          "removal": {
+            "skills": [
+              [
+                "mechanics",
+                1
+              ]
+            ],
+            "time": "350 s",
+            "using": [
+              [
+                "vehicle_screw",
+                1
+              ]
+            ]
+          },
+          "repair": {
+            "skills": [
+              [
+                "mechanics",
+                1
+              ]
+            ],
+            "time": "80 s",
+            "using": [
+              [
+                "adhesive",
+                1
+              ]
+            ]
+          }
+        },
+        "flags": [
+          "CTRL_ELECTRONIC",
+          "DOME_LIGHT",
+          "ENABLED_DRAINS_EPOWER"
+        ],
+        "breaks_into": [
+          {
+            "group": "ig_vp_device",
+            "count": [
+              2,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "type": "vehicle_part",
+        "id": "CJbed",
+        "name": {
+          "str": "超级床"
+        },
+        "symbol": "#",
+        "looks_like": "f_bed",
+        "categories": [
+          "passengers"
+        ],
+        "color": "magenta",
+        "broken_symbol": "*",
+        "broken_color": "magenta",
+        "damage_modifier": 999999999,
+        "durability": 999999999,
+        "description": "A small but comfortable bed.",
+        "size": "999999999 ml",
+        "item": "mattress",
+        "comfort": 4,
+        "floor_bedding_warmth": 700,
+        "location": "center",
+        "requirements": {
+          "install": {
+            "skills": [
+              [
+                "mechanics",
+                1
+              ]
+            ],
+            "time": "60 m",
+            "using": [
+              [
+                "welding_standard",
+                2
+              ]
+            ]
+          },
+          "removal": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "30 m",
+            "using": [
+              [
+                "vehicle_weld_removal",
+                1
+              ]
+            ]
+          },
+          "repair": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "60 m",
+            "using": [
+              [
+                "repair_welding_standard",
+                1
+              ],
+              [
+                "sewing_standard",
+                10
+              ]
+            ]
+          }
+        },
+        "flags": [
+          "BED",
+          "BOARDABLE",
+          "CARGO",
+          "MOUNTABLE",
+          "NONBELTABLE"
+        ],
+        "breaks_into": "ig_vp_seat",
+        "damage_reduction": {
+          "all": 999999999,
+          "bash": 999999999
+        }
+      },
+      {
+        "type": "vehicle_part",
+        "id": "CJcontrols",
+        "name": {
+          "str": "超级控制器"
+        },
+        "symbol": "$",
+        "categories": [
+          "operations"
+        ],
+        "color": "light_gray",
+        "broken_symbol": "$",
+        "broken_color": "red",
+        "damage_modifier": 999999999,
+        "durability": 999999999,
+        "description": "A steering wheel and accelerator and brake pedals.",
+        "bonus": 10,
+        "folded_volume": "1500 ml",
+        "item": "vehicle_controls",
+        "requirements": {
+          "install": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "60 m",
+            "using": [
+              [
+                "welding_standard",
+                5
+              ]
+            ]
+          },
+          "removal": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "30 m",
+            "using": [
+              [
+                "vehicle_weld_removal",
+                1
+              ]
+            ]
+          },
+          "repair": {
+            "skills": [
+              [
+                "mechanics",
+                3
+              ]
+            ],
+            "time": "60 m",
+            "using": [
+              [
+                "repair_welding_standard",
+                1
+              ],
+              [
+                "soldering_standard",
+                8
+              ],
+              [
+                "vehicle_wrench_1",
+                1
+              ],
+              [
+                "vehicle_screw",
+                1
+              ]
+            ]
+          }
+        },
+        "flags": [
+          "CONTROLS"
+        ],
+        "breaks_into": [
+          {
+            "item": "steel_lump"
+          },
+          {
+            "item": "steel_chunk",
+            "count": [
+              1,
+              3
+            ]
+          },
+          {
+            "item": "scrap",
+            "count": [
+              1,
+              3
+            ]
+          },
+          {
+            "item": "cable",
+            "charges": [
+              0,
+              4
+            ]
+          }
+        ],
+        "damage_reduction": {
+          "all": 999999999
+        }
+      },
+      {
+        "id": "CJdoor_internal",
+        "breaks_into": "ig_vp_frame",
+        "broken_color": "cyan",
+        "broken_symbol": "&",
+        "categories": [
+          "hull"
+        ],
+        "color": "cyan",
+        "damage_modifier": 999999999,
+        "damage_reduction": {
+          "all": 999999999
+        },
+        "description": "An interior door.  Solid construction means you can't see through it when closed.",
+        "durability": 999999999,
+        "flags": [
+          "OBSTACLE",
+          "OPAQUE",
+          "OPENABLE",
+          "ROOF",
+          "BOARDABLE",
+          "DOOR"
+        ],
+        "item": "frame",
+        "location": "center",
+        "looks_like": "door",
+        "name": {
+          "str": "超级内门"
+        },
+        "requirements": {
+          "install": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "60 m",
+            "using": [
+              [
+                "vehicle_wrench_2",
+                1
+              ]
+            ]
+          },
+          "removal": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "30 m",
+            "using": [
+              [
+                "vehicle_wrench_2",
+                1
+              ]
+            ]
+          },
+          "repair": {
+            "skills": [
+              [
+                "mechanics",
+                3
+              ]
+            ],
+            "time": "60 m",
+            "using": [
+              [
+                "repair_welding_standard",
+                1
+              ]
+            ]
+          }
+        },
+        "symbol": "+",
+        "symbols": {
+          "left": "+",
+          "right": "+",
+          "front": "+",
+          "rear": "+"
+        },
+        "type": "vehicle_part"
+      },
+      {
+        "breaks_into": "ig_vp_frame",
+        "broken_color": "cyan",
+        "broken_symbol": "&",
+        "categories": [
+          "hull"
+        ],
+        "color": "cyan",
+        "damage_modifier": 999999999,
+        "damage_reduction": {
+          "all": 999999999
+        },
+        "description": "A door.  Solid construction means you can't see through it when closed.",
+        "durability": 999999999,
+        "flags": [
+          "CARGO",
+          "OBSTACLE",
+          "OPAQUE",
+          "OPENABLE",
+          "BOARDABLE",
+          "DOOR"
+        ],
+        "item": "frame",
+        "location": "center",
+        "looks_like": "door_opaque",
+        "name": {
+          "str": "超级不透明门"
+        },
+        "requirements": {
+          "install": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "60 m",
+            "using": [
+              [
+                "vehicle_wrench_2",
+                1
+              ]
+            ]
+          },
+          "removal": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "30 m",
+            "using": [
+              [
+                "vehicle_wrench_2",
+                1
+              ]
+            ]
+          },
+          "repair": {
+            "skills": [
+              [
+                "mechanics",
+                3
+              ]
+            ],
+            "time": "60 m",
+            "using": [
+              [
+                "repair_welding_standard",
+                1
+              ]
+            ]
+          }
+        },
+        "size": "999999999 ml",
+        "symbol": "+",
+        "symbols": {
+          "left": "+",
+          "right": "+",
+          "front": "+",
+          "rear": "+"
+        },
+        "type": "vehicle_part",
+        "copy-from": "door_opaque_abstract",
+        "id": "CJdoor_opaque_full"
+      },
+      {
+        "id": "CJspring_plate",
+        "type": "vehicle_part",
+        "name": {
+          "str": "超级减震器"
+        },
+        "item": "spring_plate",
+        "location": "armor",
+        "symbol": "X",
+        "broken_symbol": "*",
+        "categories": [
+          "warfare"
+        ],
+        "color": "dark_gray",
+        "broken_color": "dark_gray",
+        "durability": 999999999,
+        "bonus": 50,
+        "description": "A system of springs and pads, intended to cushion the effects of collisions on the interior of your vehicle.",
+        "breaks_into": [
+          {
+            "item": "scrap",
+            "count": [
+              1,
+              5
+            ]
+          },
+          {
+            "item": "spring",
+            "count": [
+              0,
+              4
+            ]
+          }
+        ],
+        "requirements": {
+          "install": {
+            "skills": [
+              [
+                "mechanics",
+                4
+              ]
+            ],
+            "time": "60 m",
+            "using": [
+              [
+                "welding_standard",
+                5
+              ]
+            ]
+          },
+          "removal": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "30 m",
+            "using": [
+              [
+                "vehicle_weld_removal",
+                1
+              ]
+            ]
+          },
+          "repair": {
+            "skills": [
+              [
+                "mechanics",
+                5
+              ]
+            ],
+            "time": "60 m",
+            "using": [
+              [
+                "repair_welding_standard",
+                1
+              ]
+            ]
+          }
+        },
+        "flags": [
+          "SHOCK_ABSORBER"
+        ],
+        "damage_reduction": {
+          "all": 999999999
+        }
+      },
+      {
+        "type": "vehicle_part",
+        "id": "CJcontrols_electronic",
+        "name": {
+          "str": "超级电子控制模块"
+        },
+        "symbol": "$",
+        "categories": [
+          "energy",
+          "lighting"
+        ],
+        "color": "yellow",
+        "broken_symbol": "$",
+        "broken_color": "red",
+        "damage_modifier": 999999999,
+        "durability": 999999999,
+        "bonus": 10,
+        "epower": -25,
+        "item": "electronics_controls",
+        "description": "Some switches and knobs to control the vehicle's electrical systems.",
+        "folded_volume": "750 ml",
+        "requirements": {
+          "install": {
+            "skills": [
+              [
+                "mechanics",
+                3
+              ],
+              [
+                "electronics",
+                3
+              ]
+            ],
+            "time": "350 s",
+            "using": [
+              [
+                "vehicle_screw",
+                1
+              ]
+            ]
+          },
+          "removal": {
+            "skills": [
+              [
+                "mechanics",
+                3
+              ]
+            ],
+            "time": "350 s",
+            "using": [
+              [
+                "vehicle_screw",
+                1
+              ]
+            ]
+          },
+          "repair": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "80 s",
+            "using": [
+              [
+                "adhesive",
+                1
+              ],
+              [
+                "soldering_standard",
+                10
+              ]
+            ]
+          }
+        },
+        "flags": [
+          "CTRL_ELECTRONIC",
+          "DOME_LIGHT",
+          "ENABLED_DRAINS_EPOWER"
+        ],
+        "breaks_into": "ig_vp_device",
+        "damage_reduction": {
+          "all": 999999999
+        }
+      },
+      {
+        "type": "vehicle_part",
+        "id": "CJplating_steel",
+        "name": {
+          "str": "超级钢制装甲板"
+        },
+        "symbol": ")",
+        "categories": [
+          "warfare"
+        ],
+        "color": "light_cyan",
+        "broken_symbol": ")",
+        "broken_color": "light_cyan",
+        "durability": 999999999,
+        "item": "steel_plate",
+        "location": "armor",
+        "requirements": {
+          "install": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "60 m",
+            "using": [
+              [
+                "welding_standard",
+                5
+              ]
+            ]
+          },
+          "removal": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "30 m",
+            "using": [
+              [
+                "vehicle_weld_removal",
+                1
+              ]
+            ]
+          },
+          "repair": {
+            "skills": [
+              [
+                "mechanics",
+                3
+              ]
+            ],
+            "time": "60 m",
+            "using": [
+              [
+                "repair_welding_standard",
+                3
+              ]
+            ]
+          }
+        },
+        "flags": [
+          "ARMOR"
+        ],
+        "breaks_into": "ig_vp_steel_plate",
+        "damage_reduction": {
+          "all": 999999999
+        }
+      },
+      {
+        "type": "vehicle_part",
+        "categories": [
+          "warfare"
+        ],
+        "location": "structure",
+        "symbol": "X",
+        "symbols": {
+          "rear": "X",
+          "left": "X",
+          "right": "X"
+        },
+        "broken_symbol": "*",
+        "damage_modifier": 999999999,
+        "description": "A reinforced ram.  Place at the edge of vehicle to reduce damage taken in collisions, and to increase damaged delivered in collisions, if the ram is the first vehicle part to collide.",
+        "requirements": {
+          "install": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "60 m",
+            "using": [
+              [
+                "welding_standard",
+                5
+              ]
+            ]
+          },
+          "removal": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "30 m",
+            "using": [
+              [
+                "vehicle_weld_removal",
+                1
+              ]
+            ]
+          },
+          "repair": {
+            "skills": [
+              [
+                "mechanics",
+                3
+              ]
+            ],
+            "time": "60 m",
+            "using": [
+              [
+                "repair_welding_standard",
+                1
+              ]
+            ]
+          }
+        },
+        "flags": [
+          "PROTRUSION",
+          "OBSTACLE"
+        ],
+        "id": "CJram_steel",
+        "copy-from": "ram_blaze",
+        "name": {
+          "str": "超级撞锤"
+        },
+        "item": "steel_plate",
+        "color": "light_cyan",
+        "broken_color": "light_cyan",
+        "durability": 999999999,
+        "breaks_into": "ig_vp_steel_plate",
+        "damage_reduction": {
+          "all": 999999999
+        }
+      },
+      {
+        "type": "vehicle_part",
+        "id": "CJwheel_mount_heavy",
+        "name": {
+          "str": "超级重型轮毂"
+        },
+        "symbol": "-",
+        "categories": [
+          "movement"
+        ],
+        "color": "light_gray",
+        "location": "axle",
+        "broken_symbol": "X",
+        "broken_color": "light_gray",
+        "damage_modifier": 999999999,
+        "durability": 999999999,
+        "description": "Connection where wheels can be connected on.  This particular one is fit for large car wheels.",
+        "item": "wheel_mount_heavy",
+        "requirements": {
+          "install": {
+            "skills": [
+              [
+                "mechanics",
+                5
+              ]
+            ],
+            "time": "60 m",
+            "using": [
+              [
+                "welding_standard",
+                15
+              ],
+              [
+                "vehicle_wrench_2",
+                1
+              ]
+            ]
+          },
+          "removal": {
+            "skills": [
+              [
+                "mechanics",
+                3
+              ]
+            ],
+            "time": "20 m",
+            "using": [
+              [
+                "vehicle_weld_removal",
+                1
+              ],
+              [
+                "vehicle_wrench_2",
+                1
+              ]
+            ]
+          },
+          "repair": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "15 m",
+            "using": [
+              [
+                "repair_welding_standard",
+                3
+              ]
+            ]
+          }
+        },
+        "flags": [
+          "WHEEL_MOUNT_HEAVY",
+          "NEEDS_JACKING"
+        ],
+        "breaks_into": [
+          {
+            "item": "scrap",
+            "count": [
+              1,
+              4
+            ]
+          },
+          {
+            "item": "steel_chunk",
+            "count": [
+              3,
+              7
+            ]
+          }
+        ],
+        "damage_reduction": {
+          "all": 999999999
+        }
+      },
+      {
+        "type": "vehicle_part",
+        "id": "CJwheel_mount_heavy_steerable",
+        "name": {
+          "str": "超级重型轮毂 (转向)"
+        },
+        "symbol": "-",
+        "categories": [
+          "movement"
+        ],
+        "color": "light_gray",
+        "location": "axle",
+        "broken_symbol": "X",
+        "broken_color": "light_gray",
+        "damage_modifier": 999999999,
+        "durability": 999999999,
+        "description": "Connection where wheels can be connected on.  This particular one is fit for large car wheels.",
+        "item": "wheel_mount_heavy",
+        "requirements": {
+          "install": {
+            "skills": [
+              [
+                "mechanics",
+                5
+              ]
+            ],
+            "time": "60 m",
+            "using": [
+              [
+                "welding_standard",
+                15
+              ],
+              [
+                "vehicle_wrench_2",
+                1
+              ]
+            ]
+          },
+          "removal": {
+            "skills": [
+              [
+                "mechanics",
+                3
+              ]
+            ],
+            "time": "20 m",
+            "using": [
+              [
+                "vehicle_weld_removal",
+                1
+              ],
+              [
+                "vehicle_wrench_2",
+                1
+              ]
+            ]
+          },
+          "repair": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "15 m",
+            "using": [
+              [
+                "repair_welding_standard",
+                3
+              ]
+            ]
+          }
+        },
+        "flags": [
+          "WHEEL_MOUNT_HEAVY",
+          "NEEDS_JACKING",
+          "STEERABLE"
+        ],
+        "breaks_into": [
+          {
+            "item": "scrap",
+            "count": [
+              1,
+              4
+            ]
+          },
+          {
+            "item": "steel_chunk",
+            "count": [
+              3,
+              7
+            ]
+          }
+        ],
+        "damage_reduction": {
+          "all": 999999999
+        },
+        "copy-from": "wheel_mount_heavy"
+      },
+      {
+        "type": "vehicle_part",
+        "id": "CJsolar_panel",
+        "name": {
+          "str": "超级太阳板"
+        },
+        "symbol": "#",
+        "categories": [
+          "energy"
+        ],
+        "color": "yellow",
+        "broken_symbol": "x",
+        "broken_color": "yellow",
+        "damage_modifier": 999999999,
+        "durability": 999999999,
+        "description": "A solar panel.",
+        "epower": 10000000,
+        "item": "solar_panel",
+        "location": "on_roof",
+        "requirements": {
+          "install": {
+            "skills": [
+              [
+                "mechanics",
+                4
+              ]
+            ],
+            "time": "60 m",
+            "using": [
+              [
+                "vehicle_wrench_2",
+                1
+              ]
+            ]
+          },
+          "removal": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "30 m",
+            "using": [
+              [
+                "vehicle_wrench_2",
+                1
+              ]
+            ]
+          },
+          "repair": {
+            "skills": [
+              [
+                "electronics",
+                6
+              ]
+            ],
+            "time": "50 m",
+            "using": [
+              [
+                "vehicle_screw",
+                1
+              ],
+              [
+                "solar_panel",
+                1
+              ],
+              [
+                "soldering_standard",
+                8
+              ]
+            ]
+          }
+        },
+        "flags": [
+          "SOLAR_PANEL"
+        ],
+        "breaks_into": [
+          {
+            "item": "steel_lump",
+            "count": [
+              2,
+              4
+            ]
+          },
+          {
+            "item": "steel_chunk",
+            "count": [
+              2,
+              4
+            ]
+          },
+          {
+            "item": "scrap",
+            "count": [
+              2,
+              4
+            ]
+          },
+          {
+            "item": "solar_cell",
+            "count": [
+              1,
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CJfloodlight",
+        "type": "vehicle_part",
+        "name": {
+          "str": "超级泛光灯"
+        },
+        "item": "floodlight",
+        "location": "on_roof",
+        "symbol": "*",
+        "broken_symbol": "-",
+        "categories": [
+          "lighting"
+        ],
+        "color": "white",
+        "broken_color": "blue",
+        "durability": 999999999,
+        "description": "A very bright, circular light that illuminates the area outside the vehicle when turned on.",
+        "epower": -200,
+        "bonus": 8000,
+        "damage_modifier": 999999999,
+        "folded_volume": "2 L",
+        "breaks_into": [
+          {
+            "item": "cable",
+            "charges": [
+              1,
+              4
+            ]
+          },
+          {
+            "item": "steel_chunk",
+            "count": [
+              0,
+              2
+            ]
+          },
+          {
+            "item": "scrap",
+            "count": [
+              1,
+              2
+            ]
+          }
+        ],
+        "requirements": {
+          "install": {
+            "skills": [
+              [
+                "mechanics",
+                1
+              ]
+            ],
+            "time": "200 s",
+            "using": [
+              [
+                "vehicle_screw",
+                1
+              ]
+            ]
+          },
+          "removal": {
+            "skills": [
+              [
+                "mechanics",
+                1
+              ]
+            ],
+            "time": "200 s",
+            "using": [
+              [
+                "vehicle_screw",
+                1
+              ]
+            ]
+          },
+          "repair": {
+            "skills": [
+              [
+                "mechanics",
+                1
+              ]
+            ],
+            "time": "20 s",
+            "using": [
+              [
+                "adhesive",
+                1
+              ],
+              [
+                "soldering_standard",
+                4
+              ]
+            ]
+          }
+        },
+        "flags": [
+          "CIRCLE_LIGHT",
+          "ENABLED_DRAINS_EPOWER"
+        ]
+      },
+      {
+        "type": "vehicle_part",
+        "fuel_type": "battery",
+        "symbol": "*",
+        "color": "yellow",
+        "broken_color": "red",
+        "categories": [
+          "energy"
+        ],
+        "description": "An alternator.",
+        "flags": [
+          "ALTERNATOR"
+        ],
+        "id": "CJalternator_truck",
+        "copy-from": "vehicle_alternator",
+        "name": {
+          "str": "超级发动机"
+        },
+        "//": "110A @12VDC ~ 3HP drain @ 60% efficiency",
+        "item": "alternator_truck",
+        "durability": 999999999,
+        "power": 99999999,
+        "epower": 99999999,
+        "damage_modifier": 999999999,
+        "breaks_into": [
+          {
+            "item": "steel_lump",
+            "count": [
+              4,
+              7
+            ]
+          },
+          {
+            "item": "steel_chunk",
+            "count": [
+              4,
+              7
+            ]
+          },
+          {
+            "item": "scrap",
+            "count": [
+              4,
+              7
+            ]
+          }
+        ],
+        "requirements": {
+          "install": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "60 m",
+            "using": [
+              [
+                "vehicle_wrench_2",
+                1
+              ]
+            ]
+          },
+          "removal": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "30 m",
+            "using": [
+              [
+                "vehicle_wrench_2",
+                1
+              ]
+            ]
+          },
+          "repair": {
+            "skills": [
+              [
+                "mechanics",
+                3
+              ]
+            ],
+            "time": "60 m",
+            "using": [
+              [
+                "repair_welding_standard",
+                2
+              ],
+              [
+                "soldering_standard",
+                10
+              ],
+              [
+                "vehicle_wrench_1",
+                1
+              ],
+              [
+                "vehicle_screw",
+                1
+              ]
+            ]
+          }
+        },
+        "damage_reduction": {
+          "all": 999999999
+        }
+      },
+      {
+        "type": "vehicle_part",
+        "id": "CJworkbench_with_recharger",
+        "name": {
+          "str": "超级充电工作台"
+        },
+        "symbol": "#",
+        "looks_like": "veh_table_wood",
+        "categories": [
+          "utility"
+        ],
+        "color": "red",
+        "broken_symbol": "#",
+        "broken_color": "light_gray",
+        "damage_modifier": 999999999,
+        "durability": 999999999,
+        "size": "999999999 ml",
+        "item": "workbench_with_recharger",
+        "location": "center",
+        "requirements": {
+          "install": {
+            "skills": [
+              [
+                "mechanics",
+                1
+              ]
+            ],
+            "time": "15 m",
+            "using": [
+              [
+                "vehicle_wrench_2",
+                1
+              ]
+            ]
+          },
+          "removal": {
+            "skills": [
+              [
+                "mechanics",
+                2
+              ]
+            ],
+            "time": "15 m",
+            "using": [
+              [
+                "vehicle_wrench_2",
+                1
+              ]
+            ]
+          },
+          "repair": {
+            "skills": [
+              [
+                "mechanics",
+                3
+              ]
+            ],
+            "time": "15 m",
+            "using": [
+              [
+                "repair_welding_standard",
+                3
+              ]
+            ]
+          }
+        },
+        "flags": [
+          "CARGO",
+          "MOUNTABLE",
+          "FLAT_SURF",
+          "WORKBENCH",
+          "ENABLED_DRAINS_EPOWER",
+          "RECHARGE"
+        ],
+        "breaks_into": [
+          {
+            "item": "pipe",
+            "count": [
+              4,
+              6
+            ]
+          },
+          {
+            "item": "sheet_metal",
+            "count": [
+              0,
+              1
+            ]
+          },
+          {
+            "item": "sheet_metal_small",
+            "count": [
+              12,
+              24
+            ]
+          },
+          {
+            "item": "steel_chunk",
+            "count": [
+              4,
+              8
+            ]
+          },
+          {
+            "item": "scrap",
+            "count": [
+              12,
+              24
+            ]
+          },
+          {
+            "item": "plastic_chunk",
+            "prob": 50
+          },
+          {
+            "item": "cable",
+            "charges": [
+              1,
+              4
+            ]
+          },
+          {
+            "item": "e_scrap",
+            "count": [
+              0,
+              2
+            ]
+          },
+          {
+            "item": "scrap",
+            "count": [
+              1,
+              3
+            ]
+          }
+        ],
+        "workbench": {
+          "multiplier": 10,
+          "mass": 300000,
+          "volume": "999999999 L"
+        },
+        "damage_reduction": {
+          "all": 999999999
+        },
+        "copy-from": "workbench",
+        "bonus": 15,
+        "epower": -50
+      }
+]

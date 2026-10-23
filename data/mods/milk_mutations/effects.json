@@ -1,0 +1,31 @@
+[
+  {
+    "type": "effect_type",
+    "id": "exhausted_milk",
+    "name": [ "精疲力尽" ],
+    "desc": [ "疯狂的放纵之后，只余下高潮余韵萦绕在母畜的脑海中，从她疲惫的模样来看短时间内是无法再次这样欢愉了。" ],
+    "permanent": true,
+    "base_mods": { "str_mod": [ -1 ], "dex_mod": [ -1 ], "int_mod": [ -1 ], "per_mod": [ -1 ] },
+    "rating": "bad"
+  },
+  {
+    "type": "effect_type",
+    "id": "mouse_fucked",
+    "name": [ "精华吸收" ],
+    "desc": [ "用嘴巴服侍过主人之后，精华被改造后的肉体吸收消化，予以一定时间的素质提升。" ],
+    "permanent": true,
+    "base_mods": { "str_mod": [ 1 ], "dex_mod": [ 1 ], "int_mod": [ 1 ], "per_mod": [ 1 ] },
+    "rating": "bad"
+  },
+  {
+    "type": "effect_type",
+    "id": "doilove",
+    "name": [ "性瘾" ],
+    "desc": [ "堕入性爱的漩涡当中难以自拔——毕竟在大灾变后娱乐方式本就大大减少，而沦为母畜之后更是少得可怜，那么，就只剩下苦中作乐这一条出路了。" ],
+    "max_intensity": 2,
+    "int_dur_factor": "30 m",
+    "morale": "morale_high",
+    "base_mods": { "per_mod": [ 1 ], "morale": [ 5 ] },
+    "scaling_mods": { "str_mod": [ 2 ], "dex_mod": [ 2 ], "int_mod": [ -1 ], "per_mod": [ -1 ], "morale": [ -10 ] }
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "id": "sex_self_hand",
+    "type": "SPELL",
+    "name": "自慰",
+    "description": "释放你的性欲。请不要随便这么做，尤其是在大街上。\n进行时长5分钟的自慰，如果有些道具的话更有效。",
+    "valid_targets": [
+      "self"
+    ],
+    "spell_class": "NONE",
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "NO_FAIL",
+      "NO_LEGS",
+      "NO_HANDS"
+    ],
+    "difficulty": 0,
+    "min_damage": 1,
+    "max_damage": 1,
+    "max_level": 1,
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_sex_self",
+    "shape": "blast",
+    "base_casting_time": 1,
+    "final_casting_time": 1
+  }
+]

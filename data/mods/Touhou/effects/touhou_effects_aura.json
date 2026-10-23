@@ -1,0 +1,162 @@
+[
+  {
+    "id": "aura_reflectionslash",
+    "type": "effect_type",
+    "name": [
+      "反射下界斩 (aura)"
+    ],
+    "desc": [
+      "通过切割空气制造的屏障。它看起来有折射效果，非常酷。"
+    ],
+    "max_intensity": 1,
+    "max_effective_intensity": 1,
+    "rating": "good",
+    "apply_message": "你切割周围的空气，阻挡来袭的高速弹射物。",
+    "remove_message": "你周围的空气恢复了。",
+    "enchantments": [
+      {
+        "values": [
+          {
+            "value": "ARMOR_BULLET",
+            "multiply": -1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "aura_stickleback",
+    "type": "effect_type",
+    "name": [
+      "雷云刺鱼（光环）"
+    ],
+    "desc": [
+      "一个带刺的、脉动的电壳，似乎渴望电击你的敌人。"
+    ],
+    "max_intensity": 1,
+    "max_effective_intensity": 1,
+    "rating": "good",
+    "remove_message": "外壳消散了。",
+    "enchantments": [
+      {
+        "hit_me_effect": [
+          {
+            "id": "stickleback_shock"
+          },
+          {
+            "id": "stickleback_knockback"
+          }
+        ],
+        "values": [
+          {
+            "value": "LUMINATION",
+            "add": 12
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "stickleback_shock",
+    "type": "SPELL",
+    "name": "雷云刺鱼（电击）",
+    "description": "iku_thundercloud 的伤害组件",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "damage_type": "electric",
+    "min_damage": 9,
+    "max_damage": 13,
+    "min_range": 1,
+    "max_range": 1,
+    "max_level": 1,
+    "difficulty": -10,
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "flags": [
+      "NO_PROJECTILE",
+      "RANDOM_DAMAGE"
+    ]
+  },
+  {
+    "id": "stickleback_knockback",
+    "type": "SPELL",
+    "name": "雷云刺鱼（击退）",
+    "description": "iku_thundercloud 的击退组件",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "directed_push",
+    "shape": "blast",
+    "damage_type": "electric",
+    "min_damage": 1,
+    "max_damage": 3,
+    "min_range": 1,
+    "max_range": 1,
+    "max_level": 1,
+    "difficulty": -10,
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "NO_PROJECTILE",
+      "RANDOM_DAMAGE"
+    ]
+  },
+  {
+    "id": "aura_windsickle",
+    "type": "effect_type",
+    "name": [
+      "风镰帷幕（光环）"
+    ],
+    "desc": [
+      "一道快速旋转的风盾，保护你免受敌人攻击。"
+    ],
+    "max_intensity": 1,
+    "max_effective_intensity": 1,
+    "rating": "good",
+    "apply_message": "你切割周围的空气，阻挡来袭的高速弹射物。",
+    "remove_message": "你周围的空气恢复了。",
+    "enchantments": [
+      {
+        "hit_me_effect": [
+          {
+            "id": "windsickle_dmg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "windsickle_dmg",
+    "type": "SPELL",
+    "name": "风镰（伤害）",
+    "description": "aya_windsickle 的伤害组件",
+    "spell_class": "NONE",
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "damage_type": "cut",
+    "min_damage": 9,
+    "max_damage": 13,
+    "min_range": 1,
+    "max_range": 1,
+    "max_level": 1,
+    "difficulty": -10,
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "flags": [
+      "NO_PROJECTILE",
+      "RANDOM_DAMAGE"
+    ]
+  }
+]

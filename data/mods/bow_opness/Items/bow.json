@@ -1,0 +1,434 @@
+[
+  {
+    "id": "compbow_low",
+    "copy-from": "compbow",
+    "type": "GUN",
+    "name": {"str": "现代复合弓（30磅）"},
+    "description": "一把威力大的弓,带有偏心滑轮组和额外的弓弦,能够射出高速弓箭。当前为30磅拉力，适合初学者。",
+    "min_strength": 5,
+    "range": 16,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 12
+    },
+    "use_action": {
+      "ammo_scale": 0,
+      "menu_text": "系紧弓弦",
+      "type": "transform",
+      "target": "compbow",
+      "qualities_needed": { "SCREW_FINE": 1 },
+      "msg": "你收紧弓弦，增加弓的拉力。"
+    }
+  },
+  {
+    "id": "compbow",
+    "copy-from": "compbow",
+    "type": "GUN",
+    "name": {"str": "现代复合弓（60磅）"},
+    "description": "一把威力大的弓,带有偏心滑轮组和额外的弓弦,能够射出高速弓箭。当前为60磅拉力，适合经过训练的人类使用者。",
+    "min_strength": 9,
+    "range": 18,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 16
+    },
+    "use_action": {
+      "ammo_scale": 0,
+      "menu_text": "系紧弓弦",
+      "type": "transform",
+      "target": "compbow_high",
+      "qualities_needed": { "SCREW_FINE": 1 },
+      "msg": "你收紧弓弦，增加弓的拉力。"
+    }
+  },
+  {
+    "id": "compbow_high",
+    "copy-from": "compbow",
+    "type": "GUN",
+    "name": {"str": "现代复合弓（90磅）"},
+    "description": "一把威力大的弓,带有偏心滑轮组和额外的弓弦,能够射出高速弓箭。当前为90磅拉力，人类中能自如使用它的人寥寥无几。",
+    "min_strength": 13,
+    "range": 20,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 20
+    },
+    "use_action": {
+      "ammo_scale": 0,
+      "menu_text": "系紧弓弦",
+      "type": "transform",
+      "target": "compbow_higher",
+      "qualities_needed": { "SCREW_FINE": 1 },
+      "msg": "你收紧弓弦，增加弓的拉力。"
+    }
+  },
+  {
+    "id": "compbow_higher",
+    "copy-from": "compbow",
+    "type": "GUN",
+    "name": {"str": "现代复合弓（120磅）"},
+    "description": "一把威力大的弓,带有偏心滑轮组和额外的弓弦,能够射出高速弓箭。当前为120磅拉力，主要给经过基因改造的生物使用，这是这类弓的磅数极限，惊人的磅数带来惊人的威力。",
+    "min_strength": 17,
+    "range": 22,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 24
+    },
+    "use_action": {
+      "ammo_scale": 0,
+      "menu_text": "松开弓弦",
+      "type": "transform",
+      "target": "compbow_low",
+      "qualities_needed": { "SCREW_FINE": 1 },
+      "msg": "你放松弓弦，降低弓的拉力。"
+    }
+  },
+  {
+    "id": "compgreatbow",
+    "copy-from": "compgreatbow",
+    "type": "GUN",
+    "name": {"str": "现代复合巨弓（120磅）"},
+	"description": "一把体型巨大且威力强大的现代合成长弓,弓身巨大且弓弦粗壮,能够吸收巨大的能量。需要超乎想象的力量才能拉开弓。当前为120磅拉力。",
+    "min_strength": 15,
+    "range": 22,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 26
+    },
+    "use_action": {
+      "ammo_scale": 0,
+      "menu_text": "系紧弓弦",
+      "type": "transform",
+      "target": "compgreatbow_2",
+      "qualities_needed": { "SCREW_FINE": 1 },
+      "msg": "你收紧弓弦，增加弓的拉力。"
+    }
+  },
+  {
+    "id": "compgreatbow_2",
+    "copy-from": "compgreatbow",
+    "type": "GUN",
+    "name": {"str": "现代复合巨弓（150磅）"},
+	"description": "一把体型巨大且威力强大的现代合成长弓,弓身巨大且弓弦粗壮,能够吸收巨大的能量。需要超乎想象的力量才能拉开弓。当前为150磅拉力。",
+    "min_strength": 19,
+    "range": 24,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 31
+    },
+    "use_action": {
+      "ammo_scale": 0,
+      "menu_text": "系紧弓弦",
+      "type": "transform",
+      "target": "compgreatbow_3",
+      "qualities_needed": { "SCREW_FINE": 1 },
+      "msg": "你收紧弓弦，增加弓的拉力。"
+    }
+  },
+  {
+    "id": "compgreatbow_3",
+    "copy-from": "compgreatbow",
+    "type": "GUN",
+    "name": {"str": "现代复合巨弓（180磅）"},
+	"description": "一把体型巨大且威力强大的现代合成长弓,弓身巨大且弓弦粗壮,能够吸收巨大的能量。需要超乎想象的力量才能拉开弓。当前为180磅拉力。几乎只有使用液压肌肉CBM，才能拉动这把巨弓。",
+    "min_strength": 23,
+    "range": 26,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 36
+    },
+    "use_action": {
+      "ammo_scale": 0,
+      "menu_text": "系紧弓弦",
+      "type": "transform",
+      "target": "compgreatbow_4",
+      "qualities_needed": { "SCREW_FINE": 1 },
+      "msg": "你收紧弓弦，增加弓的拉力。"
+    }
+  },
+  {
+    "id": "compgreatbow_4",
+    "copy-from": "compgreatbow",
+    "type": "GUN",
+    "name": {"str": "现代复合巨弓（210磅）"},
+	"description": "一把体型巨大且威力强大的现代合成长弓,弓身巨大且弓弦粗壮,能够吸收巨大的能量。需要超乎想象的力量才能拉开弓。当前为210磅拉力。几乎只有使用液压肌肉CBM，才能拉动这把巨弓。",
+    "min_strength": 27,
+    "range": 28,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 41
+    },
+    "use_action": {
+      "ammo_scale": 0,
+      "menu_text": "系紧弓弦",
+      "type": "transform",
+      "target": "compgreatbow_5",
+      "qualities_needed": { "SCREW_FINE": 1 },
+      "msg": "你收紧弓弦，增加弓的拉力。"
+    }
+  },
+  {
+    "id": "compgreatbow_5",
+    "copy-from": "compgreatbow",
+    "type": "GUN",
+    "name": {"str": "现代复合巨弓（240磅）"},
+	"description": "一把体型巨大且威力强大的现代合成长弓,弓身巨大且弓弦粗壮,能够吸收巨大的能量。需要超乎想象的力量才能拉开弓。当前为240磅拉力。几乎只有使用液压肌肉CBM，才能拉动这把巨弓。",
+    "min_strength": 31,
+    "range": 30,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 45
+    },
+    "use_action": {
+      "ammo_scale": 0,
+      "menu_text": "系紧弓弦",
+      "type": "transform",
+      "target": "compgreatbow_6",
+      "qualities_needed": { "SCREW_FINE": 1 },
+      "msg": "你收紧弓弦，增加弓的拉力。"
+    }
+  },
+  {
+    "id": "compgreatbow_6",
+    "copy-from": "compgreatbow",
+    "type": "GUN",
+    "name": {"str": "现代复合巨弓（270磅）"},
+	"description": "一把体型巨大且威力强大的现代合成长弓,弓身巨大且弓弦粗壮,能够吸收巨大的能量。需要超乎想象的力量才能拉开弓。当前为270磅拉力。几乎只有使用液压肌肉CBM，才能拉动这把巨弓。",
+    "min_strength": 35,
+    "range": 32,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 50
+    },
+    "use_action": {
+      "ammo_scale": 0,
+      "menu_text": "系紧弓弦",
+      "type": "transform",
+      "target": "compgreatbow_7",
+      "qualities_needed": { "SCREW_FINE": 1 },
+      "msg": "你收紧弓弦，增加弓的拉力。"
+    }
+  },
+  {
+    "id": "compgreatbow_7",
+    "copy-from": "compgreatbow",
+    "type": "GUN",
+    "name": {"str": "现代复合巨弓（360磅）"},
+	"description": "一把体型巨大且威力强大的现代合成长弓,弓身巨大且弓弦粗壮,能够吸收巨大的能量。需要超乎想象的力量才能拉开弓。当前为360磅拉力。几乎只有使用液压肌肉CBM，才能拉动这把巨弓。",
+    "min_strength": 39,
+    "range": 34,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 55
+    },
+    "use_action": {
+      "ammo_scale": 0,
+      "menu_text": "松开弓弦",
+      "type": "transform",
+      "target": "compgreatbow",
+      "qualities_needed": { "SCREW_FINE": 1 },
+      "msg": "你放松弓弦，降低弓的拉力。"
+    }
+  },
+  {
+    "id": "selfbow",
+    "copy-from": "selfbow",
+    "type": "GUN",
+    "name": {
+      "str": "简易弓"
+    },
+    "min_strength": 6,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 7
+    }
+  },
+  {
+    "id": "shortbow",
+    "copy-from": "shortbow",
+    "type": "GUN",
+    "name": {
+      "str": "短弓"
+    },
+    "min_strength": 8,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 10
+    }
+  },
+  {
+    "id": "longbow",
+    "copy-from": "longbow",
+    "type": "GUN",
+    "name": {
+      "str": "长弓"
+    },
+    "min_strength": 9,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 12
+    }
+  },
+  {
+    "id": "woodgreatbow",
+    "copy-from": "woodgreatbow",
+    "type": "GUN",
+    "name": {
+      "str": "木制巨弓"
+    },
+    "min_strength": 17,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 22
+    }
+  },
+  {
+    "id": "compositebow",
+    "copy-from": "compositebow",
+    "type": "GUN",
+    "name": {
+      "str": "复合弓"
+    },
+    "min_strength": 12,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 17
+    }
+  },
+  {
+    "id": "reflexbow",
+    "copy-from": "reflexbow",
+    "type": "GUN",
+    "name": {
+      "str": "反曲弓"
+    },
+    "min_strength": 9,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 14
+    }
+  },
+  {
+    "id": "reflexrecurvebow",
+    "copy-from": "reflexrecurvebow",
+    "type": "GUN",
+    "name": {
+      "str": "硬反曲弓"
+    },
+    "min_strength": 9,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 15
+    }
+  },
+  {
+    "id": "recurbow",
+    "copy-from": "recurbow",
+    "type": "GUN",
+    "name": {
+      "str": "现代反曲弓"
+    },
+    "min_strength": 9,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 16
+    }
+  },
+  {
+    "id": "hybridbow",
+    "looks_like": "longbow",
+    "type": "GUN",
+    "symbol": "(",
+    "color": "yellow",
+    "name": {
+      "str": "混合型长弓"
+    },
+    "description": "一把六英尺长的现代弓，弓身末端反向弯曲远离射手以增加威力，在较为强壮的人的手上十分好用。这把弓是为那些欣赏传统长弓射击流畅度却又渴望现代反曲弓的射击威力的射手们设计的。",
+    "price": "380 USD",
+    "material": [
+      "steel",
+      "plastic",
+      "wood"
+    ],
+    "//": "60in Fiberglass bow at 28in draw with 29in, 52J, 80 lbs draw, 0.6 slugs. bullshit stats, but this is a nonsense bow.",
+    "flags": [
+      "FIRE_TWOHAND",
+      "STR_DRAW",
+      "RELOAD_AND_SHOOT",
+      "PRIMITIVE_RANGED_WEAPON",
+      "BELTED",
+      "WATER_FRIENDLY",
+      "WATERPROOF_GUN",
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES"
+    ],
+    "skill": "archery",
+    "ammo": [
+      "arrow"
+    ],
+    "weight": "600 g",
+    "volume": "3500 ml",
+    "price_postapoc": "50 USD",
+    "bashing": 12,
+    "armor_data": {
+      "armor": [
+        {
+          "covers": [
+            "torso"
+          ],
+          "coverage": 5,
+          "encumbrance": 20,
+          "material_thickness": 1,
+          "material": [
+            "steel",
+            "plastic",
+            "wood"
+          ]
+        }
+      ]
+    },
+    "reload_noise_volume": 3,
+    "loudness": 8,
+    "range": 14,
+    "dispersion": 850,
+    "durability": 6,
+    "clip_size": 1,
+    "valid_mod_locations": [
+      [
+        "underbarrel",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "accessories",
+        2
+      ],
+      [
+        "stabilizer",
+        1
+      ],
+      [
+        "dampening",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "arrow": 1
+        }
+      }
+    ],
+    "min_strength": 9,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 16
+    }
+  }
+]

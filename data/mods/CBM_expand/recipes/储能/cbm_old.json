@@ -1,0 +1,57 @@
+[
+  {
+    "@备注": "储能模块CBM",
+    "result": "bio_power_storage",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_CBM",
+    "skill_used": "electronics",
+    "difficulty": 6,
+    "time": "20 m",
+    "reversible": true,
+    "autolearn": true,
+	"qualities": [
+	  { "id": "CUT", "level": 2 },
+      { "id": "HAMMER", "level": 2 },
+      { "id": "SAW_M", "level": 1 },
+      { "id": "WRENCH", "level": 1 },
+      { "id": "SCREW", "level": 1 }
+    ],
+    "using": [ [ "soldering_standard", 20 ] ],
+    "components": [
+	  [ [ "power_supply", 6 ] ], 
+	  [ [ "amplifier", 4 ] ], 
+	  [ [ "light_battery_cell", 1 ] ], 
+	  [ [ "bionics_core_energy", 1 ] ] 
+    ]
+  },
+  {
+    "@备注": "储能模块MK.II型CBM",
+    "result": "bio_power_storage_mkII",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_CBM",
+    "skill_used": "electronics",
+    "difficulty": 8,
+    "time": "30 m",
+    "reversible": true,
+    "autolearn": true,
+	"qualities": [
+	  { "id": "CUT", "level": 2 },
+      { "id": "HAMMER", "level": 2 },
+      { "id": "SAW_M", "level": 1 },
+      { "id": "WRENCH", "level": 1 },
+      { "id": "SCREW", "level": 1 }
+    ],
+    "using": [ [ "soldering_standard", 30 ] ],
+    "components": [
+      [ [ "power_supply", 10 ] ],
+      [ [ "amplifier", 6 ] ],
+      [ [ "light_plus_battery_cell", 1 ] ],
+      [ [ "light_battery_cell", 1 ] ],
+      [ [ "bionics_core_energy", 1 ] ]
+    ]
+  }
+]

@@ -1,0 +1,1353 @@
+[
+  {
+  "id": "duster",
+  "type": "ARMOR",
+  "copy-from": "duster",
+  "name": {
+    "str": "防尘风衣"
+  },
+  "description": "一件结实的全身长棉制防尘风衣，提供比较可观的储存空间。",
+  "pocket_data": [
+    {
+      "pocket_type": "CONTAINER",
+      "max_contains_volume": "2 L",
+      "max_contains_weight": "3800 g",
+      "moves": 80
+    },
+    {
+      "pocket_type": "CONTAINER",
+      "max_contains_volume": "2 L",
+      "max_contains_weight": "3800 g",
+      "moves": 80
+    },
+    {
+      "pocket_type": "CONTAINER",
+      "max_contains_volume": "1 L",
+      "max_contains_weight": "2 kg",
+      "moves": 80
+    },
+    {
+      "pocket_type": "CONTAINER",
+      "max_contains_volume": "1 L",
+      "max_contains_weight": "2 kg",
+      "moves": 80
+    },
+    {
+      "pocket_type": "CONTAINER",
+      "max_contains_volume": "800 ml",
+      "max_contains_weight": "1 kg",
+      "moves": 80,
+      "max_item_length": "13 cm"
+    },
+    {
+      "pocket_type": "CONTAINER",
+      "max_contains_volume": "800 ml",
+      "max_contains_weight": "1 kg",
+      "moves": 80,
+      "max_item_length": "13 cm"
+    }
+  ],
+  "material": [
+    "cotton",
+    "kevlar_layered"
+  ],
+  "environmental_protection": 2,
+  "flags": [
+    "VARSIZE",
+    "POCKETS",
+    "OUTER",
+    "WATERPROOF",
+    "RAINPROOF"
+  ]
+},
+  {
+    "id": "sleeveless_duster",
+    "type": "ARMOR",
+    "copy-from": "sleeveless_duster",
+    "name": {
+      "str": "无袖防尘风衣"
+    },
+    "description": "一件耐用的、等身长的无袖防尘大衣，让你的手臂不受束缚。它有很多口袋，提供了相当充足的储存空间。",
+    "material": [
+      "cotton",
+      "kevlar_layered"
+    ]
+  },
+  {
+    "id": "sleeveless_duster_survivor",
+    "type": "ARMOR",
+    "copy-from": "sleeveless_duster_survivor",
+    "category": "armor",
+    "name": {
+      "str": "幸存者无袖防尘风衣"
+    },
+    "description": "一件凯夫拉强化的自制全身长防尘风衣，有许多的口袋但是没有袖子，舒适、耐用，可以装很多东西。",
+    "material": [
+      "cotton",
+      "kevlar_layered"
+    ]
+  },
+  {
+    "id": "jacket_leather_mod",
+    "type": "ARMOR",
+    "copy-from": "jacket_leather_mod",
+    "name": {
+      "str": "装甲皮夹克"
+    },
+    "description": "一件由厚实的皮革加上金属板制成的护甲外套。累赘，但是提供了绝佳的伤害保护。",
+    "material": [
+      "leather",
+      "iron"
+    ]
+  },
+  {
+    "id": "vest_leather_mod",
+    "type": "ARMOR",
+    "copy-from": "vest_leather_mod",
+    "name": {
+      "str": "装甲皮背心"
+    },
+    "description": "一件由厚实的皮革加上金属板制成的护甲背心。累赘，但是提供了绝佳的伤害保护。",
+    "material": [
+      "leather",
+      "iron"
+    ]
+  },
+  {
+  "id": "dive_bag",
+  "type": "ARMOR",
+  "copy-from": "dive_bag",
+  "name": {
+    "str": "潜水背包"
+  },
+  "description": "很轻的网眼背包，潜水员经常背着它。",
+  "weight": "512 g",
+  "volume": "2500 ml",
+  "price": "1090 USD",
+  "material": [
+    "plastic"
+  ],
+  "symbol": "[",
+  "color": "yellow",
+  "pocket_data": [
+    {
+      "pocket_type": "CONTAINER",
+      "max_contains_volume": "15 L",
+      "max_contains_weight": "20 kg",
+      "max_item_length": "60 cm",
+      "moves": 150
+    },
+    {
+      "pocket_type": "CONTAINER",
+      "max_contains_volume": "3 L",
+      "max_contains_weight": "5 kg",
+      "moves": 80
+    },
+    {
+      "pocket_type": "CONTAINER",
+      "max_contains_volume": "3 L",
+      "max_contains_weight": "5 kg",
+      "moves": 80
+    },
+    {
+      "pocket_type": "CONTAINER",
+      "max_contains_volume": "1750 ml",
+      "max_contains_weight": "2500 g",
+      "moves": 80
+    },
+    {
+      "pocket_type": "CONTAINER",
+      "max_contains_volume": "1750 ml",
+      "max_contains_weight": "2500 g",
+      "moves": 80
+    }
+  ],
+  "material_thickness": 1,
+  "flags": [
+    "WATER_FRIENDLY",
+    "BELTED"
+  ],
+  "armor": [
+    {
+      "encumbrance": 2,
+      "volume_encumber_modifier": 0.19,
+      "coverage": 40,
+      "covers": [
+        "torso"
+      ]
+    }
+  ]
+},
+  {
+    "id": "leather_cat_ears",
+    "type": "ARMOR",
+    "copy-from": "leather_cat_ears",
+    "name": {
+      "str": "皮猫耳",
+      "str_pl": "皮猫耳"
+    },
+    "description": "一对闪亮的黑色猫耳头带，非常可爱，引“人”注目。",
+    "weight": "20 g",
+    "volume": "250 ml",
+    "price": "30 USD",
+    "material": [
+      "leather",
+      "plastic"
+    ],
+    "symbol": "^",
+    "color": "dark_gray",
+    "warmth": 0,
+    "material_thickness": 1,
+    "flags": [
+      "FANCY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 0,
+        "coverage": 2,
+        "covers": [
+          "head"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fur_cat_ears",
+    "type": "ARMOR",
+    "copy-from": "fur_cat_ears",
+    "name": {
+      "str": "毛绒猫耳",
+      "str_pl": "毛绒猫耳"
+    },
+    "description": "一对毛茸茸的褐色猫耳头带，非常可爱，引“人”注目。",
+    "weight": "20 g",
+    "volume": "250 ml",
+    "price": "15 USD",
+    "material": [
+      "fur",
+      "plastic"
+    ],
+    "symbol": "^",
+    "color": "brown",
+    "warmth": 0,
+    "material_thickness": 1,
+    "flags": [
+      "FANCY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 0,
+        "coverage": 2,
+        "covers": [
+          "head"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "leather_cat_tail",
+    "type": "ARMOR",
+    "copy-from": "leather_cat_tail",
+    "name": {
+      "str": "皮猫尾"
+    },
+    "description": "一个小珠子吊着一条漆黑光滑的皮制尾巴，当你走路时会随之摆动，非常可爱，引“人”注目。",
+    "weight": "80 g",
+    "volume": "250 ml",
+    "price": "25 USD",
+    "bashing": 4,
+    "material": [
+      "leather",
+      "plastic"
+    ],
+    "symbol": "s",
+    "color": "dark_gray",
+    "warmth": 0,
+    "material_thickness": 1,
+    "flags": [
+      "FANCY",
+      "FRAGILE"
+    ],
+    "armor": [
+      {
+        "encumbrance": 0,
+        "coverage": 2,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fur_cat_tail",
+    "type": "ARMOR",
+    "copy-from": "fur_cat_tail",
+    "name": {
+      "str": "毛绒猫尾"
+    },
+    "description": "一串塑料小珠子吊着一条黄色毛茸茸的尾巴，当你走动时会随之摇摆，非常可爱，引“人”注目。",
+    "weight": "80 g",
+    "volume": "250 ml",
+    "price": "10 USD",
+    "bashing": 4,
+    "material": [
+      "fur",
+      "plastic"
+    ],
+    "symbol": "s",
+    "color": "brown",
+    "warmth": 0,
+    "material_thickness": 1,
+    "flags": [
+      "FANCY",
+      "FRAGILE"
+    ],
+    "armor": [
+      {
+        "encumbrance": 0,
+        "coverage": 2,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gold_dental_grill",
+    "type": "ARMOR",
+    "copy-from": "gold_dental_grill",
+    "name": {
+      "str": "金假牙"
+    },
+    "description": "一颗金色假牙，套在牙齿上。带上很不舒服，但是异常的闪亮耀眼。",
+    "weight": "10 g",
+    "volume": "10 ml",
+    "price": "200 USD",
+    "bashing": 2,
+    "cutting": 2,
+    "material": [
+      "gold"
+    ],
+    "symbol": "[",
+    "color": "yellow",
+    "warmth": 0,
+    "material_thickness": 1,
+    "flags": [
+      "FANCY",
+      "SKINTIGHT",
+      "OVERSIZE"
+    ],
+    "armor": [
+      {
+        "encumbrance": 0,
+        "coverage": 1,
+        "covers": [
+          "mouth"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "diamond_dental_grill",
+    "type": "ARMOR",
+    "copy-from": "diamond_dental_grill",
+    "name": {
+      "str": "钻石假牙"
+    },
+    "description": "镶有钻石的假牙。带上很不舒服，但是异常的亮瞎狗眼，说唱歌手的最爱，要要切克闹。",
+    "weight": "10 g",
+    "volume": "10 ml",
+    "price": "500 USD",
+    "bashing": 3,
+    "cutting": 3,
+    "material": [
+      "gold"
+    ],
+    "symbol": "[",
+    "color": "yellow",
+    "warmth": 0,
+    "material_thickness": 1,
+    "flags": [
+      "SUPER_FANCY",
+      "SKINTIGHT",
+      "OVERSIZE"
+    ],
+    "armor": [
+      {
+        "encumbrance": 10,
+        "coverage": 1,
+        "covers": [
+          "mouth"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "wearable_rx12",
+    "type": "TOOL_ARMOR",
+    "copy-from": "wearable_rx12",
+    "category": "clothing",
+    "name": {
+      "str": "佩戴式RX12注射器"
+    },
+    "description": "这是一把改造过的RX12压力注射器，可以穿在身上。上面有一个标签，提醒使用者不要在1小时内使用超过2次。",
+    "weight": "364 g",
+    "volume": "750 ml",
+    "price": "400 USD",
+    "material": [
+      "ceramic",
+      "superalloy"
+    ],
+    "symbol": "[",
+    "color": "blue",
+    "ammo": [
+      "ampoule"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "ampoule": 2
+        }
+      }
+    ],
+    "charges_per_use": 1,
+    "armor_data": {
+      "sided": true,
+      "armor": [
+        {
+          "encumbrance": 0,
+          "coverage": 1,
+          "covers": [
+            "arm_l",
+            "arm_r"
+          ],
+          "material": [
+            "ceramic",
+            "superalloy"
+          ],
+          "material_thickness": 3
+        }
+      ]
+    },
+    "use_action": "JET_INJECTOR",
+    "flags": [
+      "OVERSIZE",
+      "SKINTIGHT"
+    ]
+  },
+  {
+    "id": "rx11_stimpack",
+    "type": "TOOL_ARMOR",
+    "copy-from": "rx11_stimpack",
+    "category": "clothing",
+    "name": {
+      "str": "RX11兴奋剂注射器",
+      "str_pl": "RX11兴奋剂注射器"
+    },
+    "description": "RX11兴奋剂注射器是一台自动注射系统，你仅仅需要简单地按一按启动按钮，不需要扎入针头，强力兴奋剂就能无创地注射进你的血液。",
+    "weight": "212 g",
+    "volume": "750 ml",
+    "price": "400 USD",
+    "material": [
+      "superalloy",
+      "kevlar"
+    ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "ammo": [
+      "stimpack_ammo"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "stimpack_ammo": 5
+        }
+      }
+    ],
+    "charges_per_use": 1,
+    "armor_data": {
+      "sided": true,
+      "armor": [
+        {
+          "encumbrance": 0,
+          "coverage": 1,
+          "covers": [
+            "arm_l",
+            "arm_r"
+          ],
+          "material": [
+            "superalloy",
+            "kevlar"
+          ],
+          "material_thickness": 3
+        }
+      ]
+    },
+    "use_action": "STIMPACK",
+    "flags": [
+      "OVERSIZE",
+      "SKINTIGHT"
+    ]
+  },
+  {
+    "id": "rad_monitor",
+    "type": "TOOL_ARMOR",
+    "copy-from": "rad_monitor",
+    "category": "clothing",
+    "name": {
+      "str": "辐射监测仪"
+    },
+    "description": "戴在手腕上的电池供电的生物识别安全装置。激活以检查您当前的辐射暴露水平。",
+    "weight": "68 g",
+    "volume": "250 ml",
+    "price": "600 USD",
+    "to_hit": -3,
+    "material": [
+      "plastic",
+      "aluminum"
+    ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "ammo": [
+      "battery"
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "50 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "light_battery_cell",
+          "light_plus_battery_cell",
+          "light_minus_battery_cell",
+          "light_minus_atomic_battery_cell",
+          "light_atomic_battery_cell",
+          "light_minus_disposable_cell",
+          "light_disposable_cell"
+        ]
+      }
+    ],
+    "charges_per_use": 1,
+    "armor_data": {
+      "sided": true,
+      "armor": [
+        {
+          "encumbrance": 2,
+          "coverage": 5,
+          "covers": [
+            "hand_l",
+            "hand_r"
+          ],
+          "material": [
+            "plastic",
+            "aluminum"
+          ],
+          "material_thickness": 1
+        }
+      ]
+    },
+    "use_action": "RADGLOVE",
+    "flags": [
+      "OUTER"
+    ]
+  },
+  {
+    "id": "harmonica_holder",
+    "type": "TOOL_ARMOR",
+    "copy-from": "harmonica_holder",
+    "category": "tools",
+    "name": {
+      "str": "带领座的口琴",
+      "str_pl": "口琴架"
+    },
+    "description": "一只口琴，配有领座，你可以不要用手来演奏它。",
+    "weight": "200 g",
+    "volume": "250 ml",
+    "price": "10 USD",
+    "material": [
+      "steel"
+    ],
+    "symbol": "-",
+    "color": "brown",
+    "initial_charges": 1,
+    "max_charges": 1,
+    "material_thickness": 1,
+    "use_action": {
+      "type": "musical_instrument",
+      "volume": 10,
+      "fun": -5,
+      "fun_bonus": 2,
+      "speed_penalty": 10,
+      "description_frequency": 20,
+      "player_descriptions": [
+        "You produce a happy tune on your harmonica.",
+        "You whistle on your harmonica."
+      ]
+    },
+    "flags": [
+      "BELTED"
+    ],
+    "armor": [
+      {
+        "encumbrance": 2,
+        "coverage": 4,
+        "covers": [
+          "head"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "wristwatch",
+    "type": "ARMOR",
+    "copy-from": "wristwatch",
+    "name": {
+      "str": "腕表",
+      "str_pl": "手表"
+    },
+    "description": "一个款式简约的腕表，表带是塑料材质。可以计时，还有闹钟功能。\n“即便灾变后的世界只有无尽的黑夜（Dark days Ahead），但有一个手表还能提醒你黎明还有多远。”",
+    "weight": "50 g",
+    "volume": "250 ml",
+    "price": "50 USD",
+    "to_hit": -1,
+    "material": [
+      "plastic",
+      "steel"
+    ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "armor_data": {
+      "sided": true,
+      "armor": [
+        {
+          "encumbrance": 0,
+          "coverage": 1,
+          "covers": [
+            "hand_l",
+            "hand_r"
+          ],
+          "material": [
+            "plastic",
+            "steel"
+          ],
+          "material_thickness": 1
+        }
+      ]
+    },
+    "flags": [
+      "WATCH",
+      "ALARMCLOCK",
+      "BELTED",
+      "FRAGILE",
+      "ALLOWS_NATURAL_ATTACKS"
+    ]
+  },
+  {
+    "id": "diving_watch",
+    "type": "ARMOR",
+    "copy-from": "diving_watch",
+    "name": {
+      "str": "潜水表",
+      "str_pl": "潜水表"
+    },
+    "description": "一种钢表带上的自动上弦手表。显示时间和当前温度，不透水。激活以检查数字温度计。",
+    "weight": "65 g",
+    "volume": "250 ml",
+    "price": "120 USD",
+    "to_hit": -1,
+    "material": [
+      "steel"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "armor_data": {
+      "sided": true,
+      "armor": [
+        {
+          "encumbrance": 0,
+          "coverage": 1,
+          "covers": [
+            "hand_l",
+            "hand_r"
+          ],
+          "material": [
+            "steel"
+          ],
+          "material_thickness": 1
+        }
+      ]
+    },
+    "use_action": "WEATHER_TOOL",
+    "flags": [
+      "WATCH",
+      "STURDY",
+      "WATER_FRIENDLY",
+      "THERMOMETER",
+      "BELTED",
+      "ALLOWS_NATURAL_ATTACKS"
+    ]
+  },
+  {
+    "id": "gold_watch",
+    "type": "ARMOR",
+    "copy-from": "gold_watch",
+    "name": {
+      "str": "金表",
+      "str_pl": "金表"
+    },
+    "description": "一块镀金的自动发条手表，适合作为退休礼物送人。能够看时间并且很美观。",
+    "weight": "60 g",
+    "volume": "250 ml",
+    "price": "500 USD",
+    "to_hit": -1,
+    "material": [
+      "steel",
+      "gold"
+    ],
+    "symbol": "[",
+    "color": "yellow",
+    "armor_data": {
+      "sided": true,
+      "armor": [
+        {
+          "encumbrance": 0,
+          "coverage": 1,
+          "covers": [
+            "hand_l",
+            "hand_r"
+          ],
+          "material": [
+            "steel",
+            "gold"
+          ],
+          "material_thickness": 1
+        }
+      ]
+    },
+    "flags": [
+      "WATCH",
+      "FANCY",
+      "BELTED",
+      "FRAGILE",
+      "ALLOWS_NATURAL_ATTACKS"
+    ]
+  },
+  {
+    "id": "sf_watch",
+    "type": "ARMOR",
+    "copy-from": "sf_watch",
+    "name": {
+      "str": "名贵手表",
+      "str_pl": "花哨的手表"
+    },
+    "//": "That's about the midpoint for a rolex.",
+    "description": "一块奢华、高档的腕表。上面采用优雅精致的金银装饰告诉你当前的时间。适合拥有极度挑剔品味的成功人士。\n“曾经犹豫过很久也没买的手表，如今就这样免费得到了，事实证明我是一个极富远见的成功人士。”",
+    "weight": "80 g",
+    "volume": "250 ml",
+    "price": "22 kUSD",
+    "to_hit": -1,
+    "material": [
+      "gold",
+      "silver"
+    ],
+    "symbol": "[",
+    "color": "yellow",
+    "armor_data": {
+      "sided": true,
+      "armor": [
+        {
+          "encumbrance": 0,
+          "coverage": 1,
+          "covers": [
+            "hand_l",
+            "hand_r"
+          ],
+          "material": [
+            "gold",
+            "silver"
+          ],
+          "material_thickness": 1
+        }
+      ]
+    },
+    "flags": [
+      "WATCH",
+      "SUPER_FANCY",
+      "BELTED",
+      "FRAGILE",
+      "ALLOWS_NATURAL_ATTACKS"
+    ]
+  },
+  {
+    "id": "fancy_sunglasses",
+    "type": "ARMOR",
+    "copy-from": "fancy_sunglasses",
+    "name": {
+      "str": "时尚太阳镜",
+      "str_pl": "时尚太阳镜"
+    },
+    "description": "超级时髦的太阳镜，看起来酷毙了，同时可以防止狗眼被眩晕。",
+    "weight": "42 g",
+    "volume": "250 ml",
+    "price": "275 USD",
+    "to_hit": -2,
+    "material": [
+      "glass",
+      "plastic"
+    ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "material_thickness": 1,
+    "environmental_protection": 1,
+    "flags": [
+      "SKINTIGHT",
+      "FANCY",
+      "WATER_FRIENDLY",
+      "SUN_GLASSES"
+    ],
+    "armor": [
+      {
+        "encumbrance": 4,
+        "coverage": 95,
+        "covers": [
+          "eyes"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fitover_sunglasses",
+    "type": "ARMOR",
+    "copy-from": "fitover_sunglasses",
+    "name": {
+      "str": "外式太阳镜",
+      "str_pl": "外式太阳镜"
+    },
+    "description": "一副外罩式太阳镜，可罩在普通眼镜外边，避免你的眼睛被太阳光刺激导致眩目。",
+    "weight": "45 g",
+    "volume": "250 ml",
+    "price": "50 USD",
+    "to_hit": -2,
+    "material": [
+      "glass",
+      "plastic"
+    ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "material_thickness": 1,
+    "environmental_protection": 1,
+    "flags": [
+      "WATER_FRIENDLY",
+      "SUN_GLASSES",
+      "VARSIZE"
+    ],
+    "armor": [
+      {
+        "encumbrance": 5,
+        "coverage": 98,
+        "covers": [
+          "eyes"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "glasses_bal",
+    "type": "ARMOR",
+    "copy-from": "glasses_bal",
+    "name": {
+      "str": "战术护目镜",
+      "str_pl": "战术护目镜"
+    },
+    "description": "高科技战术护目镜，能防小口径子弹和破片，三防性能非常好。",
+    "weight": "184 g",
+    "volume": "250 ml",
+    "price": "75 USD",
+    "to_hit": -2,
+    "material": [
+      "kevlar",
+      "plastic"
+    ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "warmth": 5,
+    "material_thickness": 3,
+    "environmental_protection": 4,
+    "flags": [
+      "OUTER",
+      "WATER_FRIENDLY",
+      "SUN_GLASSES",
+      "STURDY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 12,
+        "coverage": 100,
+        "covers": [
+          "eyes"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "glasses_bifocal",
+    "type": "ARMOR",
+    "copy-from": "glasses_bifocal",
+    "name": {
+      "str": "双焦点眼镜",
+      "str_pl": "双焦眼镜"
+    },
+    "description": "为近视眼和远视者准备的一副双焦眼镜。你可以用它们来聚焦阳光。",
+    "weight": "30 g",
+    "volume": "250 ml",
+    "price": "79 USD",
+    "to_hit": -2,
+    "material": [
+      "glass",
+      "plastic"
+    ],
+    "symbol": "[",
+    "color": "cyan",
+    "material_thickness": 1,
+    "environmental_protection": 1,
+    "use_action": {
+      "type": "firestarter",
+      "moves": 1000,
+      "moves_slow": 25000,
+      "need_sunlight": true
+    },
+    "flags": [
+      "SKINTIGHT",
+      "WATER_FRIENDLY",
+      "FIX_FARSIGHT",
+      "FIX_NEARSIGHT"
+    ],
+    "armor": [
+      {
+        "encumbrance": 3,
+        "coverage": 75,
+        "covers": [
+          "eyes"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "glasses_eye",
+    "type": "ARMOR",
+    "copy-from": "glasses_eye",
+    "name": {
+      "str": "近视眼镜",
+      "str_pl": "近视眼镜"
+    },
+    "description": "一副近视眼镜。凹透镜将阳光散射，所以无法用于生火。",
+    "weight": "30 g",
+    "volume": "250 ml",
+    "price": "79 USD",
+    "to_hit": -2,
+    "material": [
+      "glass",
+      "plastic"
+    ],
+    "symbol": "[",
+    "color": "cyan",
+    "material_thickness": 1,
+    "environmental_protection": 1,
+    "flags": [
+      "SKINTIGHT",
+      "WATER_FRIENDLY",
+      "FIX_NEARSIGHT"
+    ],
+    "armor": [
+      {
+        "encumbrance": 3,
+        "coverage": 75,
+        "covers": [
+          "eyes"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "glasses_monocle",
+    "type": "ARMOR",
+    "copy-from": "glasses_monocle",
+    "name": {
+      "str": "单片眼镜"
+    },
+    "//": "DDA monocle is optical-grade.  Costume ones go for about $10.",
+    "description": "扮绅士的必需品，同样校正近视。可以用来聚焦阳光。",
+    "weight": "16 g",
+    "volume": "10 ml",
+    "price": "40 USD",
+    "to_hit": -2,
+    "material": [
+      "glass",
+      "plastic"
+    ],
+    "symbol": "[",
+    "color": "cyan",
+    "material_thickness": 1,
+    "environmental_protection": 1,
+    "use_action": {
+      "type": "firestarter",
+      "moves": 1000,
+      "moves_slow": 25000,
+      "need_sunlight": true
+    },
+    "flags": [
+      "OVERSIZE",
+      "SUPER_FANCY",
+      "WATER_FRIENDLY",
+      "VARSIZE",
+      "FIX_NEARSIGHT"
+    ],
+    "armor": [
+      {
+        "encumbrance": 4,
+        "coverage": 20,
+        "covers": [
+          "eyes"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "glasses_reading",
+    "type": "ARMOR",
+    "copy-from": "glasses_reading",
+    "name": {
+      "str": "老花镜",
+      "str_pl": "老花镜"
+    },
+    "description": "一副远视眼镜。对其他任何人都没用。你可以用它们来聚焦阳光。",
+    "weight": "30 g",
+    "volume": "250 ml",
+    "price": "20 USD",
+    "to_hit": -2,
+    "material": [
+      "glass",
+      "plastic"
+    ],
+    "symbol": "[",
+    "color": "cyan",
+    "material_thickness": 1,
+    "environmental_protection": 1,
+    "use_action": {
+      "type": "firestarter",
+      "moves": 1000,
+      "moves_slow": 25000,
+      "need_sunlight": true
+    },
+    "flags": [
+      "SKINTIGHT",
+      "WATER_FRIENDLY",
+      "FIX_FARSIGHT"
+    ],
+    "armor": [
+      {
+        "encumbrance": 3,
+        "coverage": 75,
+        "covers": [
+          "eyes"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "glasses_safety",
+    "type": "ARMOR",
+    "copy-from": "glasses_safety",
+    "name": {
+      "str": "护目镜",
+      "str_pl": "护目镜"
+    },
+    "description": "一副塑料护目镜。用于工作室，运动以及化学实验室等地方。为眼睛提供了不错的伤害防护。",
+    "weight": "60 g",
+    "volume": "250 ml",
+    "price": "10 USD",
+    "to_hit": -2,
+    "material": [
+      "plastic"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "warmth": 5,
+    "material_thickness": 2,
+    "environmental_protection": 1,
+    "flags": [
+      "WATER_FRIENDLY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 6,
+        "coverage": 98,
+        "covers": [
+          "eyes"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "goggles_ski",
+    "type": "ARMOR",
+    "copy-from": "goggles_ski",
+    "name": {
+      "str": "滑雪护目镜",
+      "str_pl": "成对的滑雪护目镜"
+    },
+    "description": "这个大型的护目镜能够为你的眼睛提供全方位的防护，特别是针对恶劣的气候和有害物质。",
+    "weight": "354 g",
+    "volume": "500 ml",
+    "price": "45 USD",
+    "to_hit": -2,
+    "material": [
+      "plastic"
+    ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "warmth": 50,
+    "material_thickness": 2,
+    "environmental_protection": 6,
+    "flags": [
+      "SUN_GLASSES",
+      "VARSIZE",
+      "WATER_FRIENDLY",
+      "OUTER",
+      "FLASH_PROTECTION"
+    ],
+    "armor": [
+      {
+        "encumbrance": 16,
+        "coverage": 100,
+        "covers": [
+          "eyes"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "goggles_swim",
+    "type": "ARMOR",
+    "copy-from": "goggles_swim",
+    "name": {
+      "str": "游泳护目镜",
+      "str_pl": "游泳护目镜"
+    },
+    "description": "为游泳而制作的一副小的有色护目镜。",
+    "weight": "81 g",
+    "volume": "250 ml",
+    "price": "11 USD",
+    "to_hit": -2,
+    "material": [
+      "plastic"
+    ],
+    "symbol": "[",
+    "color": "light_blue",
+    "warmth": 10,
+    "material_thickness": 1,
+    "environmental_protection": 4,
+    "flags": [
+      "SUN_GLASSES",
+      "SKINTIGHT",
+      "WATER_FRIENDLY",
+      "SWIM_GOGGLES",
+      "VARSIZE"
+    ],
+    "armor": [
+      {
+        "encumbrance": 10,
+        "coverage": 100,
+        "covers": [
+          "eyes"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "goggles_welding",
+    "type": "ARMOR",
+    "copy-from": "goggles_welding",
+    "name": {
+      "str": "电焊护目镜",
+      "str_pl": "电焊护目镜"
+    },
+    "description": "一副采用氧化铁、氧化钴、氧化铬或其他着色剂等进行着色的黑色护目镜，能阻截全部紫外线与大部分红外线，在进行电焊等作业时十分重要。",
+    "weight": "153 g",
+    "volume": "250 ml",
+    "price": "14 USD",
+    "to_hit": -3,
+    "material": [
+      "plastic"
+    ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "warmth": 10,
+    "material_thickness": 4,
+    "environmental_protection": 6,
+    "qualities": [
+      [
+        "GLARE",
+        1
+      ]
+    ],
+    "flags": [
+      "SUN_GLASSES",
+      "FLASH_PROTECTION",
+      "OUTER",
+      "STURDY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 60,
+        "coverage": 100,
+        "covers": [
+          "eyes"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sunglasses",
+    "type": "ARMOR",
+    "copy-from": "sunglasses",
+    "name": {
+      "str": "太阳镜",
+      "str_pl": "太阳镜"
+    },
+    "description": "一副太阳镜，避免你的眼睛被太阳晃坏，还是一件很酷的饰品。",
+    "weight": "35 g",
+    "volume": "250 ml",
+    "price": "50 USD",
+    "to_hit": -2,
+    "material": [
+      "glass",
+      "plastic"
+    ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "material_thickness": 1,
+    "environmental_protection": 1,
+    "flags": [
+      "SKINTIGHT",
+      "WATER_FRIENDLY",
+      "SUN_GLASSES"
+    ],
+    "armor": [
+      {
+        "encumbrance": 4,
+        "coverage": 85,
+        "covers": [
+          "eyes"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "survivor_goggles",
+    "type": "ARMOR",
+    "copy-from": "survivor_goggles",
+    "name": {
+      "str": "幸存者眼镜",
+      "str_pl": "成对的幸存者护目镜"
+    },
+    "description": "一副定制的带有色镜片的装甲护目镜。相对舒适，经久耐用，它们提供了免受环境危险的出色保护。",
+    "weight": "212 g",
+    "volume": "250 ml",
+    "price": "75 USD",
+    "to_hit": -2,
+    "material": [
+      "kevlar",
+      "leather"
+    ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "warmth": 5,
+    "material_thickness": 4,
+    "environmental_protection": 15,
+    "flags": [
+      "WATER_FRIENDLY",
+      "SUN_GLASSES",
+      "OVERSIZE",
+      "VARSIZE",
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 28,
+        "coverage": 100,
+        "covers": [
+          "eyes"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mask_filter",
+    "type": "ARMOR",
+    "copy-from": "mask_filter",
+    "//": "Keeps the filter mask at 20 warmth.  In summer it presents a choice between more prot/warmth here or less warmth for less prot with a dust mask.",
+    "name": {
+      "str": "过滤面罩"
+    },
+    "description": "这个口罩可以遮住你的嘴巴和鼻子，免受尘土、烟雾，以及其他空气中的颗粒物的侵害。",
+    "weight": "260 g",
+    "volume": "500 ml",
+    "price": "35 USD",
+    "to_hit": 1,
+    "material": [
+      "plastic"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "warmth": 15,
+    "material_thickness": 2,
+    "environmental_protection": 7,
+    "armor": [
+      {
+        "encumbrance": 20,
+        "coverage": 100,
+        "covers": [
+          "mouth"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mask_dust",
+    "type": "ARMOR",
+    "copy-from": "mask_dust",
+    "name": {
+      "str": "防尘口罩"
+    },
+    "description": "一个简单的口罩，能抵挡灰尘与病原体的入侵。",
+    "weight": "200 g",
+    "volume": "10 ml",
+    "price": "8 USD",
+    "to_hit": -3,
+    "material": [
+      "cotton"
+    ],
+    "symbol": "[",
+    "color": "white",
+    "warmth": 5,
+    "material_thickness": 1,
+    "environmental_protection": 3,
+    "armor": [
+      {
+        "encumbrance": 8,
+        "coverage": 100,
+        "covers": [
+          "mouth"
+        ]
+      }
+    ]
+  }
+]

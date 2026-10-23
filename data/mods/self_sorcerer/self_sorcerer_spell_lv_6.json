@@ -1,0 +1,737 @@
+[
+  {
+    "id": "spell_craft_sorcerer_lv6_shocking_lash_base",
+    "type": "SPELL",
+    "name": "术士-Lv6-连锁闪电（基础）",
+    "description": "跳跃到命中目标最近的敌人，每次跳跃都会降低伤害。",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "RANDOM_TARGET",
+      "RANDOM_DAMAGE"
+    ],
+    "max_level": 0,
+    "min_damage": 122,
+    "max_damage": 371,
+    "min_range": 60,
+    "spell_class": "spell_craft_sorcerer_6",
+    "base_casting_time": 300,
+    "energy_source": "NONE",
+    "difficulty": 6,
+    "sound_description": "a crackle",
+    "damage_type": "electric",
+    "base_energy_cost": 0
+  },
+  {
+    "id": "spell_craft_sorcerer_lv6_shocking_lash_1",
+    "type": "SPELL",
+    "name": "术士-Lv6-连锁闪电",
+    "description": "跳跃到命中目标5格范围内的敌人，每次跳跃都会降低伤害。",
+    "components": "spell_sorcerer_use_item_6",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "max_level": 0,
+    "min_damage": 122,
+    "max_damage": 371,
+    "min_range": 60,
+    "spell_class": "spell_craft_sorcerer_6",
+    "base_casting_time": 300,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 6,
+    "sound_description": "a crackle",
+    "damage_type": "electric",
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_lv6_shocking_lash_2"
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv6_shocking_lash_2",
+    "type": "SPELL",
+    "name": "术士-Lv6-连锁闪电（连锁1）",
+    "description": "对命中目标5格范围内的随机敌人进行连锁。",
+    "copy-from": "spell_craft_sorcerer_lv6_shocking_lash_base",
+    "field_id": "none",
+    "flags": [
+      "RANDOM_TARGET",
+      "RANDOM_DAMAGE"
+    ],
+    "min_damage": 102,
+    "max_damage": 311,
+    "min_range": 5,
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_lv6_shocking_lash_3"
+      }
+    ],
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv6_shocking_lash_3",
+    "type": "SPELL",
+    "name": "术士-Lv6-连锁闪电（连锁2）",
+    "description": "对命中目标5格范围内的随机敌人进行连锁。",
+    "copy-from": "spell_craft_sorcerer_lv6_shocking_lash_base",
+    "field_id": "none",
+    "flags": [
+      "RANDOM_TARGET",
+      "RANDOM_DAMAGE"
+    ],
+    "min_damage": 82,
+    "max_damage": 251,
+    "min_range": 5,
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_lv6_shocking_lash_4"
+      }
+    ],
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv6_shocking_lash_4",
+    "type": "SPELL",
+    "name": "术士-Lv6-连锁闪电（连锁3）",
+    "description": "对命中目标5格范围内的随机敌人进行连锁。",
+    "copy-from": "spell_craft_sorcerer_lv6_shocking_lash_base",
+    "field_id": "none",
+    "flags": [
+      "RANDOM_TARGET",
+      "RANDOM_DAMAGE"
+    ],
+    "min_damage": 62,
+    "max_damage": 191,
+    "min_range": 5,
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_lv6_shocking_lash_5"
+      }
+    ],
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv6_shocking_lash_5",
+    "type": "SPELL",
+    "name": "术士-Lv6-连锁闪电（连锁4）",
+    "description": "对命中目标5格范围内的随机敌人进行连锁。",
+    "copy-from": "spell_craft_sorcerer_lv6_shocking_lash_base",
+    "field_id": "none",
+    "flags": [
+      "RANDOM_TARGET",
+      "RANDOM_DAMAGE"
+    ],
+    "min_damage": 42,
+    "max_damage": 131,
+    "min_range": 5,
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv6_iceball",
+    "type": "SPELL",
+    "name": "术士-Lv6-冰封球",
+    "description": "发射一颗会爆炸的寒冰球。",
+    "components": "spell_sorcerer_use_item_6",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "max_level": 0,
+    "min_damage": 122,
+    "max_damage": 371,
+    "min_aoe": 5,
+    "min_range": 60,
+    "spell_class": "spell_craft_sorcerer_6",
+    "base_casting_time": 300,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "difficulty": 6,
+    "damage_type": "cold"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv6_heal",
+    "type": "SPELL",
+    "name": "术士-lv6-医疗术",
+    "description": "治疗目标大量生命，并治愈咬伤，感染，真菌。",
+    "components": "spell_sorcerer_use_item_6",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "min_damage": -204,
+    "max_damage": -204,
+    "max_level": 0,
+    "min_range": 8,
+    "effect": "attack",
+    "shape": "blast",
+    "base_casting_time": 300,
+    "base_energy_cost": 0,
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "spell_class": "spell_craft_sorcerer_6",
+    "difficulty": 6,
+    "energy_source": "MANA",
+    "effect_str": "sorcerer_res",
+    "extra_effects": [
+      {
+        "id": "spell_zz_heal_vigor"
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv6_str",
+    "type": "SPELL",
+    "name": "术士-lv6-持久牛之力量",
+    "description": "使目标力量+4，持续12小时+12x智力分钟。",
+    "components": "spell_sorcerer_use_item_6",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "min_range": 8,
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_6",
+    "difficulty": 6,
+    "max_level": 0,
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack",
+    "effect_str": "sorcerer_lv2_str",
+    "min_duration": 5328000,
+    "max_duration": 5328000
+  },
+  {
+    "id": "spell_craft_sorcerer_lv6_dex",
+    "type": "SPELL",
+    "name": "术士-lv6-持久猫之优雅",
+    "description": "使目标敏捷+4，持续12小时+12x智力分钟。",
+    "components": "spell_sorcerer_use_item_6",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "min_range": 8,
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_6",
+    "difficulty": 6,
+    "max_level": 0,
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack",
+    "effect_str": "sorcerer_lv2_dex",
+    "min_duration": 5328000,
+    "max_duration": 5328000
+  },
+  {
+    "id": "spell_craft_sorcerer_lv6_int",
+    "type": "SPELL",
+    "name": "术士-lv6-持久枭之睿智",
+    "description": "使目标智力+4，持续12小时+12x智力分钟。",
+    "components": "spell_sorcerer_use_item_6",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "min_range": 8,
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_6",
+    "difficulty": 6,
+    "max_level": 0,
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack",
+    "effect_str": "sorcerer_lv2_int",
+    "min_duration": 5328000,
+    "max_duration": 5328000
+  },
+  {
+    "id": "spell_craft_sorcerer_lv6_per",
+    "type": "SPELL",
+    "name": "术士-lv6-持久鹰之威仪",
+    "description": "使目标感知+4，持续12小时+12x智力分钟。",
+    "components": "spell_sorcerer_use_item_6",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "min_range": 8,
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_6",
+    "difficulty": 6,
+    "max_level": 0,
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack",
+    "effect_str": "sorcerer_lv2_per",
+    "min_duration": 5328000,
+    "max_duration": 5328000
+  },
+  {
+    "id": "spell_craft_sorcerer_lv6_sta",
+    "type": "SPELL",
+    "name": "术士-lv6-持久熊之坚韧",
+    "description": "使目标体力增加25%，持续12小时+12x智力分钟。",
+    "components": "spell_sorcerer_use_item_6",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "min_range": 8,
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_6",
+    "difficulty": 6,
+    "max_level": 0,
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack",
+    "effect_str": "sorcerer_lv2_sta",
+    "min_duration": 5328000,
+    "max_duration": 5328000
+  },
+  {
+    "id": "spell_craft_sorcerer_lv6_sly",
+    "type": "SPELL",
+    "name": "术士-lv6-持久狐之狡黠",
+    "description": "使目标行动噪音降低，持续12小时+12x智力分钟。",
+    "components": "spell_sorcerer_use_item_6",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "min_range": 8,
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_6",
+    "difficulty": 6,
+    "max_level": 0,
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack",
+    "effect_str": "sorcerer_lv2_sly",
+    "min_duration": 5328000,
+    "max_duration": 5328000
+  },
+  {
+    "id": "spell_craft_sorcerer_lv6_magic_armor",
+    "type": "SPELL",
+    "name": "术士-Lv6-大师法师护甲",
+    "description": "使你被一道可以抵挡伤害的强力无形立场包裹，可以和法师护甲叠加，持续1小时+1x智力分钟。",
+    "components": "spell_sorcerer_use_item_6",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "effect": "spawn_item",
+    "effect_str": "sor_magic_master_armor",
+    "min_damage": 1,
+    "max_damage": 1,
+    "shape": "blast",
+    "affected_body_parts": [
+      "head",
+      "torso",
+      "leg_l",
+      "leg_r",
+      "arm_r",
+      "arm_l"
+    ],
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "spell_class": "spell_craft_sorcerer_6",
+    "difficulty": 6,
+    "max_level": 0,
+    "base_energy_cost": 0,
+    "min_duration": 444000,
+    "max_duration": 444000
+  },
+  {
+    "id": "sor_magic_master_armor",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str_sp": "大师法师护甲"
+    },
+    "description": "强力的无形的盔甲，对物理伤害有额外抗性，对元素伤害有更高抗性。",
+    "weight": "10 g",
+    "volume": "1 L",
+    "material": [
+      "sor_magic_armor"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "warmth": 0,
+    "material_thickness": 10,
+    "environmental_protection": 8,
+    "flags": [
+      "AURA",
+      "SEMITANGIBLE",
+      "ONLY_ONE",
+      "OVERSIZE",
+      "TRADER_AVOID",
+      "STURDY"
+    ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "ARMOR_CUT",
+              "multiply": -0.1
+            },
+            {
+              "value": "ARMOR_BASH",
+              "multiply": -0.1
+            },
+            {
+              "value": "ARMOR_STAB",
+              "multiply": -0.1
+            },
+            {
+              "value": "ARMOR_BULLET",
+              "multiply": -0.1
+            },
+            {
+              "value": "ARMOR_ACID",
+              "multiply": -0.3
+            },
+            {
+              "value": "ARMOR_BIO",
+              "multiply": -0.3
+            },
+            {
+              "value": "ARMOR_COLD",
+              "multiply": -0.3
+            },
+            {
+              "value": "ARMOR_ELEC",
+              "multiply": -0.3
+            },
+            {
+              "value": "ARMOR_HEAT",
+              "multiply": -0.3
+            }
+          ]
+        }
+      ]
+    },
+    "armor": [
+      {
+        "material": [
+          {
+            "type": "sor_magic_armor",
+            "covered_by_mat": 100,
+            "thickness": 10
+          },
+          {
+            "type": "sor_magic_armor",
+            "covered_by_mat": 80,
+            "thickness": 8
+          },
+          {
+            "type": "sor_magic_armor",
+            "covered_by_mat": 60,
+            "thickness": 6
+          },
+          {
+            "type": "sor_magic_armor",
+            "covered_by_mat": 40,
+            "thickness": 4
+          },
+          {
+            "type": "sor_magic_armor",
+            "covered_by_mat": 20,
+            "thickness": 2
+          }
+        ],
+        "covers": [
+          "torso",
+          "head",
+          "eyes",
+          "mouth",
+          "leg_l",
+          "leg_r",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "foot_l",
+          "foot_r"
+        ],
+        "coverage": 100,
+        "encumbrance": 0
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv6_summon_monster",
+    "type": "SPELL",
+    "name": "术士-Lv6-召唤怪物 VI",
+    "description": "在目标范围内召唤1-3怪物6，或者2-5怪物5，或者3-7怪物4，持续10分钟。",
+    "components": "spell_sorcerer_use_item_6",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "WONDER"
+    ],
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 8,
+    "min_aoe": 3,
+    "spell_class": "spell_craft_sorcerer_6",
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "max_level": 0,
+    "min_duration": 60000,
+    "max_duration": 60000,
+    "difficulty": 6,
+    "base_energy_cost": 0,
+    "shape": "blast",
+    "effect": "attack",
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_lv6_summon_monster_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv6_summon_monster_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv6_summon_monster_1"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv6_summon_monster_2"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv6_summon_monster_2"
+      },
+      {
+        "id": "spell_craft_sorcerer_lv6_summon_monster_3"
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv6_summon_monster_1",
+    "type": "SPELL",
+    "name": "术士-Lv6-召唤怪物6",
+    "description": "在目标范围内召唤1-3只怪物6，持续10分钟。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "message": "",
+    "min_damage": 1,
+    "max_damage": 3,
+    "min_range": 8,
+    "min_aoe": 3,
+    "spell_class": "spell_craft_sorcerer_6",
+    "base_casting_time": 0,
+    "energy_source": "NONE",
+    "max_level": 0,
+    "min_duration": 60000,
+    "max_duration": 60000,
+    "difficulty": 6,
+    "shape": "blast",
+    "effect": "summon",
+    "effect_str": "mon_sor_summon_6",
+    "base_energy_cost": 0
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_lv6_summon_monster_1",
+    "id": "spell_craft_sorcerer_lv6_summon_monster_2",
+    "type": "SPELL",
+    "name": "术士-Lv6-召唤怪物5",
+    "description": "在目标范围内召唤2-5只怪物5，持续10分钟。",
+    "effect_str": "mon_sor_summon_5",
+    "min_damage": 2,
+    "max_damage": 5,
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "copy-from": "spell_craft_sorcerer_lv6_summon_monster_1",
+    "id": "spell_craft_sorcerer_lv6_summon_monster_3",
+    "type": "SPELL",
+    "name": "术士-Lv6-召唤怪物4",
+    "description": "在目标范围内召唤3-7只怪物4，持续10分钟。",
+    "effect_str": "mon_sor_summon_4",
+    "min_damage": 3,
+    "max_damage": 7,
+    "base_energy_cost": 0,
+    "energy_source": "NONE"
+  },
+  {
+    "id": "spell_craft_sorcerer_lv6_kill_fungal",
+    "type": "SPELL",
+    "name": "术士-Lv6-治理真菌",
+    "description": "对大范围施加抗真菌喷雾，并将真菌地形变化为沙地，将真菌墙和真菌植物变化为沙堆。\n在释放这个法术前，你或许该先准备好防护。",
+    "components": "spell_sorcerer_use_item_6",
+    "valid_targets": [
+      "hostile",
+      "ground",
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE"
+    ],
+    "damage_type": "pure",
+    "min_range": 0,
+    "min_aoe": 30,
+    "field_id": "fd_fungicidal_gas",
+    "field_chance": 1,
+    "min_field_intensity": 2,
+    "max_field_intensity": 2,
+    "base_energy_cost": 0,
+    "spell_class": "spell_craft_sorcerer_6",
+    "difficulty": 6,
+    "max_level": 0,
+    "base_casting_time": 300,
+    "energy_source": "MANA",
+    "shape": "blast",
+    "effect": "attack",
+    "extra_effects": [
+      {
+        "id": "spell_craft_sorcerer_lv6_trans_fungal"
+      }
+    ]
+  },
+  {
+    "id": "spell_craft_sorcerer_lv6_trans_fungal",
+    "type": "SPELL",
+    "name": "术士-Lv6-清理真菌地形",
+    "description": "将真菌地形变化为沙地，将真菌墙和真菌植物变化为沙堆。",
+    "valid_targets": [
+      "hostile",
+      "ground",
+      "self",
+      "ally"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "damage_type": "pure",
+    "min_range": 0,
+    "min_aoe": 30,
+    "spell_class": "spell_craft_sorcerer_6",
+    "difficulty": 6,
+    "max_level": 0,
+    "base_casting_time": 300,
+    "energy_source": "NONE",
+    "shape": "blast",
+    "effect": "ter_transform",
+    "effect_str": "trans_all_fungal",
+    "base_energy_cost": 0
+  },
+  {
+    "type": "ter_furn_transform",
+    "id": "trans_all_fungal",
+    "terrain": [
+      {
+        "result": "t_sand",
+        "valid_terrain": [
+          "t_fungus",
+          "t_fungus_floor_in",
+          "t_fungus_floor_sup",
+          "t_fungus_floor_out",
+          "t_fungus_mound"
+        ],
+        "message": "真菌地形已清理!"
+      },
+      {
+        "result": "t_sandmound",
+        "valid_terrain": [
+          "t_fungus_wall",
+          "t_fungus_wall_transformed",
+          "t_shrub_fungal",
+          "t_tree_gungal_yound",
+          "t_tree_fungal"
+        ],
+        "message": "真菌地形已清理!"
+      }
+    ]
+  }
+]

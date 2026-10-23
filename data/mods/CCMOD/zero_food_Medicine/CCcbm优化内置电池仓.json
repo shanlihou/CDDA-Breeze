@@ -1,0 +1,93 @@
+[
+  {
+  "type": "BIONIC_ITEM",
+  "category": "bionics",
+  "name": {
+    "str": "电池功能2型CBM"
+  },
+  "weight": "150 g",
+  "volume": "1500 ml",
+  "bashing": 8,
+  "material": [
+    "steel",
+    "plastic"
+  ],
+  "symbol": ":",
+  "color": "yellow",
+  "price_postapoc": 2000,
+  "use_action": [
+    "install_bionic"
+  ],
+  "flags": [
+    "CBM",
+    "BIONIC_NPC_USABLE"
+  ],
+  "is_upgrade": false,
+  "faults": [
+    "fault_bionic_salvaged"
+  ],
+  "copy-from": "bio_batteries",
+  "id": "bio_batteriesS",
+  "looks_like": "bio_int_enhancer",
+  "description": "一款耗电外接组件，能够提取普通民用日常电池中储存的电能。",
+  "price": 80000,
+  "difficulty": 3
+  },
+  {
+  "id": "bio_batteriesS",
+  "copy-from": "bio_batteries",
+  "type": "bionic",
+  "name": {
+    "str": "电池供能系统2型"
+  },
+  "description": "你体内搭载了一套电能抽取接驳结构，可以消耗普通民用电池来获取电能。打开义体菜单即可抽取电池电量，该义体可随时开启或关闭。",
+  "occupied_bodyparts": [
+    [
+      "torso",
+      5
+    ]
+  ],
+  "fuel_options": [
+    "battery"
+  ],
+  "fuel_efficiency": 2,
+  "time": "1 s",
+  "flags": [
+    "BIONIC_POWER_SOURCE",
+    "BIONIC_TOGGLED"
+  ],
+  "passive_pseudo_items": [
+    "internal_battery_compartmentS"
+    ]
+  },
+  {
+    "id": "internal_battery_compartmentS",
+    "copy-from": "internal_battery_compartment",
+    "type": "TOOL_ARMOR",
+    "subtypes": [ "TOOL", "ARMOR" ],
+    "name": { "str": "内置电池仓2型" },
+    "description": "专为仿生供电系统设计的体内舱室，可存放各式电池。",
+    "volume": "750 ml",
+    "weight": "1 g",
+    "price": "0 USD",
+    "material": [ "plastic" ],
+    "symbol": "(",
+    "color": "magenta",
+    "flags": [ "INTEGRATED", "UNBREAKABLE", "PERSONAL", "NO_REPAIR", "ALLOWS_NATURAL_ATTACKS", "BIONIC_FUEL_SOURCE" ],
+    "use_action": { "type": "link_up", "cable_length": 60, "charge_rate": "2000 W" }, 
+    "tool_ammo": [ "battery" ],
+    "pocket_data": [
+    {
+      "pocket_type": "MAGAZINE_WELL",
+      "rigid": true,
+      "flag_restriction": [
+        "BATTERY_MEDIUM",
+        "BATTERY_LIGHT",
+        "BATTERY_HEAVY",
+        "BATTERY_ULTRA_LIGHT"
+      ],
+      "default_magazine": "medium_battery_cell"
+    }
+  ]
+  }
+]

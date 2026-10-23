@@ -1,0 +1,328 @@
+[
+    {
+      "id": "GAS_FUNGICIDAL_M",
+      "type": "ammo_effect",
+      "//": "Creates a cloud of fungicidal gas on hit",
+      "aoe": { "field_type": "fd_fungicidal_gas", "intensity_min": 125, "intensity_max": 125 ,"radius": 10,"radius_z": 1},
+      "do_flashbang": true
+    },
+    {
+      "id": "GAS_INSECTICIDAL_M",
+      "type": "ammo_effect",
+      "//": "Creates a cloud of insecticidal gas on hit",
+      "aoe": { "field_type": "fd_insecticidal_gas", "intensity_min": 125, "intensity_max": 125 ,"radius": 10,"radius_z": 1},
+      "do_flashbang": true
+    },
+    {
+      "id": "shotgun_d_sp",
+      "type":"GUN",
+      "looks_like": "remington_870",
+      "name":{
+        "str":"除虫射菌（休眠）"
+      },
+      "ranged_damage": {
+        "damage_type": "bullet",
+        "amount": 0,
+        "armor_penetration": 0
+      },
+      "description": "这是一把古董级的霰弹枪了，其构造如此之简单，以至于看上去只有两根管子、一个木把和一个用来击发弹药的击锤。\n但这一把似乎尤为特殊，被截短的枪管和握把看似破旧，但握上去，只会感觉到一个对真菌与昆虫无尽愤怒的灵魂在枪管中休息，“哦，看来我等到了有缘人，让我们把该死的真菌和昆虫杀干净吧！！！RIP and TEAR！”",
+      "copy-from":"shotgun_d",
+      "use_action": {
+        "type": "transform",
+        "menu_text": "唤醒",
+        "msg": "你唤醒了 %s ，RIP and TEAR！",
+        "target": "shotgun_d_sp2"
+      },
+      "ammo_effects":[
+      "LARGE_BEAN",
+      "BLINDS_EYES"]
+    },
+    {
+      "id": "shotgun_d_sp2",
+      "type":"GUN",
+      "looks_like": "remington_870",
+      "name":{
+        "str":"除虫射菌（苏醒）"
+      },
+      "ranged_damage": {
+        "damage_type": "bullet",
+        "amount": -10,
+        "armor_penetration": -10
+      },
+      "use_action": {
+        "type": "transform",
+        "menu_text": "猎杀结束",
+        "msg": "你告诉 %s 猎杀结束了",
+        "target": "shotgun_d_sp"
+      },
+      "description": "这把破旧的双管猎枪彻底苏醒了，似乎在它的狂怒下会让所有的子弹造成大范围的杀虫剂与抗真菌喷雾爆炸。“我的仇恨对象只有真菌与昆虫，不会对其他生物有过多的杀伤”“让我们把真菌塔扬成灰！”",
+      "copy-from":"shotgun_d",
+      "ammo_effects":[
+      "FUNGICIDE",
+      "LARGE_BEAN",
+      "BLINDS_EYES",
+      "GAS_FUNGICIDAL_M",
+      "GAS_INSECTICIDAL_M"]
+    },
+    {
+      "id": "PLASMA_sp",
+      "type": "ammo_effect",
+      "//": "Creates a trail of superheated plasma",
+      "aoe": { "field_type": "fd_plasma", "intensity_min": 10, "intensity_max": 15, "chance": 100 },
+      "trail": { "field_type": "fd_plasma", "intensity_min": 10, "intensity_max": 15, "chance": 100 }
+    },
+    {
+      "id": "PLASMA_BUBBLE_sp",
+      "type": "ammo_effect",
+      "//": "Creates a cloud of superheated plasma",
+      "aoe": { "field_type": "fd_plasma", "intensity_min": 10, "intensity_max": 15, "radius": 2, "chance": 50 }
+    },
+    {
+      "id": "EXPLOSIVE_FRISK",
+      "type": "ammo_effect",
+      "explosion": { "power": 80,"distance_factor": 0.2 }
+      
+    },
+    {
+      "id": "frisk_plasma_gun",
+      "looks_like": "modular_ar15",
+      "type": "GUN",
+      "reload_noise_volume": 10,
+      "name": {
+        "str": "人来疯 等离子炮"
+      },
+      "copy-from":"laser_rifle",
+      "description":"人来疯 等离子炮，由洛克希德·马丁公司研发的PPA-5和由研究机构Aerial Labs制造的A7激光枪为蓝图改造而来（毕竟大灾变后不用付专利费了），这种设备通过高度先进的电容器组产生一个环状的过热氢等离子体，并且将其加速到难以置信的速度，通过离子扩散装置形成了这把武器......至少本该如此。\n在研究员Z使用收集到的异界核心与异界技术把这把武器的弹药原型进行改装后，它似乎有了自己的性格（灵魂？——在参考真菌与昆虫杀手这一特例后的结论），它非常喜欢炫耀自己的火力，人越多，火力越猛，不过这改不了它射5发就要过热15分钟的缺陷。“这次的改装还算成功”特化武装与异界技术的研究主管，研究员Z评价到“以及记得关掉爆炸动画再用”",
+      "ranged_damage": {
+        "damage_type": "heat",
+        "amount": 10,
+        "armor_penetration": 10
+      },
+      "modes": [
+        [
+          "DEFAULT",
+          "semi-auto",
+          1
+        ]
+      ],
+      "weight": "6000 g",
+      "volume": "5 L",
+      "skill":"shotgun",
+      "ups_charges": 600,
+      "ammo_effects": [
+        "INCENDIARY",
+        "BOUNCE",
+        "SHOT",
+        "PLASMA",
+        "PLASMA_BUBBLE",
+        "DRAW_PLASMA_BEAM",
+        "HEAVY_HIT",
+        "EXPLOSIVE_FRISK",
+        "MAGIC"
+      ],
+      "flags": [
+        "NEVER_JAMS",
+        "NON_FOULING",
+        "NEEDS_NO_LUBE",
+        "USE_UPS"
+      ],
+      "range":1,
+      "ammo":[
+        "hydrogen_can"
+      ],
+      "clip_size": 5,
+      "pocket_data": [
+        {
+          "pocket_type": "MAGAZINE",
+          "rigid": true,
+          "ammo_restriction": {
+          "hydrogen_can": 5}
+        }
+      ]
+      },
+      {
+        "type": "field_type",
+        "id": "fd_cold_ice",
+        "intensity_levels": [
+          {
+            "name": "薄雪",
+            "sym": "#",
+            "dangerous": true,
+            "translucency": 1,
+            "concentration": 5,
+            "color": "white",
+            "transparent": true,
+            "move_cost": 3
+          },
+          {
+            "name": "积雪",
+            "sym": "#",
+            "dangerous": true,
+            "translucency": 2,
+            "concentration": 10,
+            "color": "light_gray",
+            "transparent": true,
+            "move_cost": 6
+          },
+          {
+            "name": "厚雪",
+            "sym": "#",
+            "color": "white",
+            "dangerous": true,
+            "translucency": 3,
+            "concentration": 15,
+            "transparent": true,
+            "move_cost": 12
+          }
+        ],
+        "phase": "solid",
+        "half_life": 300,
+        "display_field": true,
+        "priority": 10,
+        "decay_amount_factor": 0.95,
+        "outdoor_age_speedup": 2,
+        "percent_spread": 66,
+        "has_fire": false,
+        "has_acid": false,
+        "has_elec": false,
+        "has_fume": false,
+        "looks_like": "fd_fog"
+      },
+      {
+        "id": "ICE_SURFACE",
+        "type": "ammo_effect",
+        "//": "Creates a trail of ICE_SURFACE",
+        "aoe": { "field_type": "fd_cold_ice", "intensity_min": 10, "intensity_max": 20, "chance": 100 }
+      },
+      {
+        "id": "Freeze_jet_rifle",
+        "looks_like": "modular_ar15",
+        "type": "GUN",
+        "reload_noise_volume": 10,
+        "name": {
+          "str": "暴风雪 急冻射流步枪"
+        },
+        "description": "这把枪能射出伴有激光的高速低温液氮与冰晶混合物，凭空生造出一片难以移动的冰面，该技术是以研究员Z为首的特化武装与异界技术研究部在大灾变后解析出的。“一个令人振奋的结果，虽然还是要补充部分冷却剂，但是枪械本身的构造足以节省60%以上理论上直接倾倒液氮等物质降温的需求，这是对冷冻传送门事件研究的结果”研究员Z面带微笑“有人指认我们的研究过于激进，可能对实验室造成灾难性事件，但事实上在吸取旧XEDRA的教训后，至少不会造成小型传送门扩大的之类的后果，无论如何，这种武器的稳定使用大概让我坚定了维护人类生存下去的目标”",
+        "weight": "6000 g",
+        "volume": "8 L",
+        "longest_side": "900 mm",
+        "price": 1600000,
+        "price_postapoc": 200000,
+        "to_hit": -1,
+        "material": [
+          "steel",
+          "plastic"
+        ],
+        "symbol": "(",
+        "color": "yellow",
+        "skill": "rifle",
+        "range": 25,
+        "ranged_damage": {
+          "damage_type": "cold",
+          "amount": 49
+        },
+        "dispersion": 10,
+        "durability": 8,
+        "modes": [
+          [
+            "DEFAULT",
+            "semi-auto",
+            1
+          ],
+          [
+            "AUTO",
+            "auto",
+            2
+          ]
+        ],
+        "loudness": 12,
+        "ups_charges": 200,
+        "reload": 0,
+        "valid_mod_locations": [
+          [
+            "emitter",
+            1
+          ],
+          [
+            "grip",
+            1
+          ],
+          [
+            "lens",
+            1
+          ],
+          [
+            "rail",
+            1
+          ],
+          [
+            "sights",
+            1
+          ],
+          [
+            "sling",
+            1
+          ],
+          [
+            "stock",
+            1
+          ],
+          [
+            "stock accessory",
+            1
+          ],
+          [
+            "underbarrel",
+            1
+          ]
+        ],
+        "ammo":["coolant"],
+        "ammo_effects": [
+          "LASER",
+          "ICE_SURFACE"
+        ],
+        "pocket_data": [
+          {
+            "pocket_type": "MAGAZINE_WELL",
+            "item_restriction": [
+              "coolant_tank"
+            ]
+          }
+        ],
+        "flags": [
+          "NEVER_JAMS",
+          "NON_FOULING",
+          "NEEDS_NO_LUBE",
+          "USE_UPS"
+        ],
+          "bashing": 12
+      },
+      {
+        "id":"robofac_gun",
+        "type": "GUN",
+        "name": {
+          "str": "Hub 01 HWP"
+        },
+        "copy-from":"robofac_gun",
+        "pocket_data":[
+            {
+              "pocket_type": "MAGAZINE_WELL",
+              "item_restriction": [
+                "robofac40",
+                "robofac20",
+                "robofac50",
+                "robofac100",
+                "robofac10",
+                "robofac60",
+                "robofacmultimag",
+                "robofac30",
+                "robofac60_123ln",
+                "robofac40_40",
+                "robofac40_45"
+                ]
+            }
+          ]
+      }
+      
+
+]

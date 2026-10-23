@@ -1,0 +1,35 @@
+[
+	{
+		"type": "COMESTIBLE",
+		"id": "fishery_egg_crayfish",
+		"name": { "str": "鱼卵（螯虾）" },
+		"copy-from": "fishery_egg",
+		"spoils_in": "10 days",
+		"description": "一些可以食用，也可以等他们孵化出小鱼的螯虾鱼卵。",
+		"rot_spawn": "FISHERY_GROUP_EGG_crayfish",
+		"rot_spawn_chance": 50
+	},
+	{
+		"name": "FISHERY_GROUP_EGG_crayfish",
+		"type": "monstergroup",
+		"default": "fishery_mon_crayfish_juvenile",
+		"monsters": [ ]
+	},
+	{
+		"id": "fishery_mon_crayfish_juvenile",
+		"type": "MONSTER",
+		"name": { "str": "螯虾鱼苗" },
+		"description": "一条螯虾幼鱼，过一段时间就会变成成鱼。",
+		"copy-from": "fishery_mon_juvenile",
+		"harvest": "fish_tiny",
+		"upgrades": { "age_grow": 10, "into": "mon_fish_crayfish" }
+	},
+	{
+		"id": "mon_fish_crayfish",
+		"type": "MONSTER",
+		"copy-from": "mon_fish_crayfish",
+		"name": { "str": "螯虾" },
+		"reproduction": { "baby_egg": "fishery_egg_crayfish", "baby_count": 3, "baby_timer": 10 },
+		"baby_flags": [ "SPRING" ]
+	}
+]

@@ -1,0 +1,75 @@
+[
+  {
+    "id": "test_desire_paper",
+    "type": "GENERIC",
+    "name": {
+      "str": "调试用欲望书页$"
+    },
+    "description": "爱。",
+    "weight": "5 g",
+    "volume": "50 ml",
+    "price": 550,
+    "price_postapoc": 1900,
+    "material": [
+      "paper"
+    ],
+    "symbol": "?",
+    "looks_like": "paper",
+    "color": "light_cyan",
+    "use_action":[
+      {
+        "type": "effect_on_conditions",
+        "description": "显示欲望",
+        "effect_on_conditions": 
+	    [
+          {
+            "id": "EOC_显示欲望",
+		    "effect": [ { "run_eocs": [ "EOC_desire_check" ] } ]
+          }
+        ]
+      },
+      {
+        "type": "effect_on_conditions",
+        "description": "调整欲望至0",
+        "effect_on_conditions": 
+	    [
+          {
+            "id": "EOC_调整欲望至0",
+		    "effect": [ { "run_eocs": [ "EOC_desire_change_0" ] } ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sex_check_paper",
+    "type": "GENERIC",
+    "name": {
+      "str": "自我认知页"
+    },
+    "description": "一张空白的纸，用于粗略的判断自己的精神状态",
+    "weight": "5 g",
+    "volume": "50 ml",
+    "price": 550,
+    "price_postapoc": 1900,
+    "material": [
+      "paper"
+    ],
+    "symbol": "?",
+    "looks_like": "paper",
+    "color": "light_cyan",
+    "use_action":[
+      {
+        "type": "effect_on_conditions",
+        "description": "自我认知",
+        "effect_on_conditions": 
+	    [
+          {
+            "id": "EOC_粗略自我认识",
+		    "effect": [ { "run_eocs": [ "EOC_desire_check_2" ] } ]
+          }
+        ]
+      }
+    ]
+  }
+]

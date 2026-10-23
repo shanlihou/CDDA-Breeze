@@ -1,0 +1,375 @@
+[
+  {
+    "id": "vibrator",
+    "type": "TOOL",
+    "name": {
+      "str": "按摩棒（关）"
+    },
+    "description": "一个具有振动、加热等功能的用于保健按摩的按摩器械，激活它以在自慰时使用。\n\"好舒服，要变得奇怪了。\"",
+    "weight": "453 g",
+    "volume": "500 ml",
+    "longest_side": "25 cm",
+    "price": 5500,
+    "price_postapoc": 100,
+    "material": [
+      "aluminum",
+      "plastic"
+    ],
+    "symbol": ";",
+    "color": "dark_gray",
+    "ammo": [
+      "battery"
+    ],
+    "charges_per_use": 1,
+    "bashing": 1,
+    "use_action": {
+      "type": "transform",
+      "target": "vibrator_on",
+      "active": true,
+      "msg": "你按下了按摩棒振动按钮。",
+      "need_charges": 1,
+      "need_charges_msg": "按摩棒没电了。"
+    },
+    "flags": [
+      "RADIO_MODABLE",
+      "RADIO_INVOKE_PROC",
+      "ALLOWS_REMOTE_USE"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "light_battery_cell",
+          "light_plus_battery_cell",
+          "light_minus_battery_cell",
+          "light_atomic_battery_cell",
+          "light_minus_atomic_battery_cell",
+          "light_minus_disposable_cell",
+          "light_disposable_cell"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "vibrator_on",
+    "copy-from": "vibrator",
+    "type": "TOOL",
+    "name": {
+      "str": "按摩棒（振动）"
+    },
+    "bashing": 6,
+    "power_draw": "1 W",
+    "revert_to": "vibrator",
+    "use_action": {
+      "menu_text": "关闭",
+      "type": "transform",
+      "target": "vibrator",
+      "msg": "你关掉了按摩棒。"
+    },
+    "flags": [
+      "RADIO_MODABLE",
+      "RADIO_INVOKE_PROC",
+      "TRADER_AVOID",
+      "ALLOWS_REMOTE_USE"
+    ]
+  },
+  {
+    "id": "atomic_vibrator",
+    "type": "TOOL",
+    "name": {
+      "str": "原子按摩棒"
+    },
+    "description": "利用核衰变产生的能量来进行振动。这种按摩棒相当昂贵，至少可以保证在十年时间内持续振动。即使放在背包里都会感觉到它在振动。",
+    "looks_like": "vibrator",
+    "weight": "653 g",
+    "volume": "500 ml",
+    "longest_side": "25 cm",
+    "price": 225000,
+    "price_postapoc": 3000,
+    "material": [
+      "aluminum",
+      "plastic"
+    ],
+    "symbol": ";",
+    "color": "light_green",
+    "bashing": 6
+  },
+  {
+    "id": "vibrator_egg",
+    "type": "TOOL_ARMOR",
+    "name": {
+      "str": "跳蛋（关）"
+    },
+    "description": "开启后不断振动的小东西，有多个振动等级。",
+    "weight": "12 g",
+    "volume": "30 ml",
+    "price": 1000,
+    "price_postapoc": 50,
+    "material": [
+      "aluminum",
+      "plastic"
+    ],
+    "symbol": "[",
+    "color": "white",
+    "covers": [
+      "leg_l",
+      "leg_r"
+    ],
+    "ammo": [
+      "battery"
+    ],
+    "charges_per_use": 1,
+    "use_action": {
+      "type": "transform",
+      "target": "vibrator_egg_on_1",
+      "active": true,
+      "msg": "你按下了跳蛋的振动按钮。",
+      "need_charges": 1,
+      "need_charges_msg": "跳蛋没电了。"
+    },
+    "flags": [
+      "RADIO_MODABLE",
+      "RADIO_INVOKE_PROC",
+      "ALLOWS_REMOTE_USE"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "light_battery_cell",
+          "light_plus_battery_cell",
+          "light_minus_battery_cell",
+          "light_atomic_battery_cell",
+          "light_minus_atomic_battery_cell",
+          "light_minus_disposable_cell",
+          "light_disposable_cell"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "vibrator_egg_on_1",
+    "copy-from": "vibrator_egg",
+    "type": "TOOL_ARMOR",
+    "name": {
+      "str": "跳蛋（振动）"
+    },
+    "power_draw": "1 W",
+    "revert_to": "vibrator_egg",
+    "charges_per_use": 1,
+    "use_action": {
+      "menu_text": "变档",
+      "type": "transform",
+      "target": "vibrator_egg_on_2",
+      "active": true,
+      "msg": "你按下了跳蛋的振动按钮。",
+      "need_charges": 1,
+      "need_charges_msg": "跳蛋没电了。"
+    },
+    "flags": [
+      "RADIO_MODABLE",
+      "RADIO_INVOKE_PROC",
+      "TRADER_AVOID",
+      "ALLOWS_REMOTE_USE",
+      "VIBRATOR1"
+    ]
+  },
+  {
+    "id": "vibrator_egg_on_2",
+    "copy-from": "vibrator_egg",
+    "type": "TOOL_ARMOR",
+    "name": {
+      "str": "跳蛋（高频振动）"
+    },
+    "revert_to": "vibrator_egg",
+    "power_draw": "1 W",
+    "use_action": {
+      "menu_text": "关闭",
+      "type": "transform",
+      "target": "vibrator_egg",
+      "msg": "你关闭了跳蛋。"
+    },
+    "flags": [
+      "RADIO_MODABLE",
+      "RADIO_INVOKE_PROC",
+      "TRADER_AVOID",
+      "ALLOWS_REMOTE_USE",
+      "VIBRATOR2"
+    ]
+  },
+  {
+    "id": "atomic_vibrator_egg",
+    "type": "TOOL_ARMOR",
+    "name": {
+      "str": "原子跳蛋"
+    },
+    "description": "利用核衰变产生的能量来进行振动。这种跳蛋相当昂贵，至少可以保证在十年时间内持续振动。你无法停止它的振动，至少现在不能。",
+    "weight": "12 g",
+    "volume": "30 ml",
+    "price": 18600,
+    "price_postapoc": 400,
+    "material": [
+      "aluminum",
+      "plastic"
+    ],
+    "symbol": "[",
+    "color": "light_green",
+    "covers": [
+      "leg_l",
+      "leg_r"
+    ],
+    "flags": [
+      "VIBRATOR1"
+    ]
+  },
+  {
+    "id": "masturbator",
+    "type": "TOOL",
+    "name": {
+      "str": "飞机杯"
+    },
+    "description": "杯形状的自慰工具，内部是某位女性阴道的倒模",
+    "weight": "453 g",
+    "volume": "500 ml",
+    "price": 1500,
+    "price_postapoc": 100,
+    "material": [
+      "aluminum",
+      "plastic"
+    ],
+    "symbol": "[",
+    "color": "white"
+  },
+  
+  {
+    "id": "electric_masturbator",
+    "type": "TOOL",
+    "name": {
+      "str": "电动飞机杯"
+    },
+    "description": "杯形状的自慰工具，内置了加温模块和自动模块，需要电才能激活，不过没有电一样能使用。",
+    "weight": "453 g",
+    "volume": "500 ml",
+    "price": 6000,
+    "price_postapoc": 250,
+    "material": [
+      "aluminum",
+      "plastic"
+    ],
+    "symbol": "[",
+    "color": "white",
+    "ammo": [
+      "battery"
+    ],
+    "charges_per_use": 1,
+    "use_action": {
+      "type": "transform",
+      "target": "electric_masturbator_on",
+      "active": true,
+      "msg": "你打开了电动飞机杯。",
+      "need_charges": 1,
+      "need_charges_msg": "电动飞机杯没电了。"
+    },
+    "flags": [
+      "RADIO_MODABLE",
+      "RADIO_INVOKE_PROC",
+      "ALLOWS_REMOTE_USE"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "light_battery_cell",
+          "light_plus_battery_cell",
+          "light_minus_battery_cell",
+          "light_atomic_battery_cell",
+          "light_minus_atomic_battery_cell",
+          "light_minus_disposable_cell",
+          "light_disposable_cell"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "electric_masturbator_on",
+    "copy-from": "electric_masturbator",
+    "type": "TOOL",
+    "name": {
+      "str": "电动飞机杯（开）"
+    },
+    "bashing": 6,
+    "power_draw": "1 W",
+    "revert_to": "vibrator",
+    "use_action": {
+      "menu_text": "关闭",
+      "type": "transform",
+      "target": "vibrator",
+      "msg": "你关掉了按摩棒。"
+    }
+  },
+  {
+    "id": "ass_mould",
+    "type": "TOOL",
+    "name": {
+      "str": "假屁股"
+    },
+    "description": "一位女性整个臀部的硅胶模型，内部也还原的很好。",
+    "weight": "1240 g",
+    "volume": "1980 ml",
+    "price": 3000,
+    "price_postapoc": 250,
+    "material": [
+      "silica_gel"
+    ],
+    "symbol": "[",
+    "color": "white"
+  },
+  {
+    "id": "water_ass_mould",
+    "type": "TOOL",
+    "name": {
+      "str": "幸存者假屁股"
+    },
+    "description": "一个大的塑料袋裹着两个装满了水的塑料袋，做工简易。大塑料袋有一个孔，干什么用的呢？",
+    "weight": "1240 g",
+    "volume": "1980 ml",
+    "price": 100,
+    "price_postapoc": 10,
+    "material": [
+      "plastic"
+    ],
+    "symbol": "[",
+    "color": "blue"
+  },
+  {
+    "id": "wood_dick",
+    "type": "TOOL",
+    "name": {
+      "str": "幸存者假屌"
+    },
+    "description": "手工制作的男性生殖器模型，表面被反复磨光滑。",
+    "weight": "550 g",
+    "volume": "500 ml",
+    "longest_side": "18 cm",
+    "price": 300,
+    "price_postapoc": 150,
+    "material": [
+      "wood"
+    ],
+    "symbol": "[",
+    "color": "brown",
+    "flags": [ "FIREWOOD" ]
+  }
+]

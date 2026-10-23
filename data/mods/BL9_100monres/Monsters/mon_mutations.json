@@ -1,0 +1,1484 @@
+[
+  {
+    "type": "mutation",
+    "id": "BL9_STR1",
+    "name": {
+      "str": "BL9 强化"
+    },
+    "points": 3,
+    "description": "当你穿着这件特殊的神器时，你会感觉力量增加了（+3弦），感觉你不是被一个实体控制而是被一个实体引导，或者你是这么想的...",
+    "cancels": [
+      "BL9_STR2",
+      "BL9_STR3"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "passive_mods": {
+      "str_mod": 3
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_STR_ENDURANCE1",
+    "name": {
+      "str": "BL9耐力"
+    },
+    "points": 3,
+    "description": "You feel that you can endure the hardships of Cataclysm better (+55% to maximal carry weight, -25% to fatigue, slight protection from bleeding) while wearing this particular artifact, it feels not as if you're controlled but guided by an entity or so you think...",
+    "cancels": [
+      "BL9_STR_TENTACLESTAB1",
+      "BL9_STR_TENTACLESTAB2",
+      "BL9_STR_TENTACLESTAB3",
+      "BL9_STR_TENTACLEHIT1",
+      "BL9_STR_TENTACLEHIT2",
+      "BL9_STR_TENTACLEHIT3",
+      "BL9_STR_ARMOREDSKIN1",
+      "BL9_STR_ARMOREDSKIN2",
+      "BL9_STR_ARMOREDSKIN3",
+      "BL9_STR_ENDURANCE2",
+      "BL9_STR_ENDURANCE3"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "weight_capacity_modifier": 1.55,
+    "fatigue_modifier": -0.25,
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth",
+          "eyes"
+        ],
+        "cut": 3,
+        "stab": 3,
+        "bullet": 2
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_STR_TENTACLESTAB1",
+    "name": {
+      "str": "BL9 触手穿刺"
+    },
+    "points": 3,
+    "description": "当你穿着这件特殊的神器时，你会有一种挥舞武器的感觉，这种感觉不是你被控制而是被一个实体引导，或者你是这么想的...",
+    "cancels": [
+      "BL9_STR_ENDURANCE1",
+      "BL9_STR_ENDURANCE2",
+      "BL9_STR_ENDURANCE3",
+      "BL9_STR_TENTACLEHIT1",
+      "BL9_STR_TENTACLEHIT2",
+      "BL9_STR_TENTACLEHIT3",
+      "BL9_STR_ARMOREDSKIN1",
+      "BL9_STR_ARMOREDSKIN2",
+      "BL9_STR_ARMOREDSKIN3",
+      "BL9_STR_TENTACLESTAB2",
+      "BL9_STR_TENTACLESTAB3"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "attacks": {
+      "attack_text_u": "你的神器变成一个触手，猛烈地刺向%s",
+      "attack_text_npc": "%1$s的神器形成一条触须，猛烈地刺穿%2$s",
+      "chance": 20,
+      "base_damage": [
+        {
+          "damage_type": "stab",
+          "amount": 23
+        }
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_STR_TENTACLEHIT1",
+    "name": {
+      "str": "BL9 触手命中"
+    },
+    "points": 3,
+    "description": "当你穿着这件特殊的神器时，你会有一种挥舞武器的感觉，这种感觉不是你被控制而是被一个实体引导，或者你是这么想的...",
+    "cancels": [
+      "BL9_STR_ENDURANCE1",
+      "BL9_STR_ENDURANCE2",
+      "BL9_STR_ENDURANCE3",
+      "BL9_STR_TENTACLESTAB1",
+      "BL9_STR_TENTACLESTAB2",
+      "BL9_STR_TENTACLESTAB3",
+      "BL9_STR_ARMOREDSKIN1",
+      "BL9_STR_ARMOREDSKIN2",
+      "BL9_STR_ARMOREDSKIN3",
+      "BL9_STR_TENTACLEHIT2",
+      "BL9_STR_TENTACLEHIT3"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "attacks": {
+      "attack_text_u": "你的神器形成一条触手，全力猛烈撞击%s",
+      "attack_text_npc": "%1$s的神器成形为触手，全力猛烈撞击%2$s",
+      "chance": 20,
+      "base_damage": [
+        {
+          "damage_type": "bash",
+          "amount": 23
+        }
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_STR_ARMOREDSKIN1",
+    "name": {
+      "str": "BL9装甲皮肤"
+    },
+    "points": 3,
+    "description": "你觉得你的皮肤完全被BL9的保护层覆盖（对所有身体部位的大约+4保护，防止所有类型的伤害，包括元素伤害），当你穿着这件特殊的神器时，感觉你不是被一个实体控制，而是被一个实体引导，或者你是这么认为的...",
+    "cancels": [
+      "BL9_STR_ENDURANCE1",
+      "BL9_STR_ENDURANCE2",
+      "BL9_STR_ENDURANCE3",
+      "BL9_STR_TENTACLEHIT1",
+      "BL9_STR_TENTACLEHIT2",
+      "BL9_STR_TENTACLEHIT3",
+      "BL9_STR_TENTACLESTAB1",
+      "BL9_STR_TENTACLESTAB2",
+      "BL9_STR_TENTACLESTAB3",
+      "BL9_STR_ARMOREDSKIN2",
+      "BL9_STR_ARMOREDSKIN3"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth",
+          "eyes"
+        ],
+        "bash": 5,
+        "cut": 5,
+        "stab": 5,
+        "bullet": 3,
+        "heat": 3,
+        "acid": 3
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_STR2",
+    "name": {
+      "str": "BL9高级强化"
+    },
+    "points": 5,
+    "description": "当你戴上这件特殊的神器时，你会感觉到力量有了惊人的提升（+6 str），这感觉不像是你被一个实体所控制，而是被一个实体所引导，或者你是这么认为的...",
+    "cancels": [
+      "BL9_STR3",
+      "BL9_STR1"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "passive_mods": {
+      "str_mod": 6
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_STR_ENDURANCE2",
+    "name": {
+      "str": "BL9高级耐力"
+    },
+    "points": 5,
+    "description": "You feel that you can endure the hardships of Cataclysm with much greater efficiency (+95% to maximal carry weight, -45% to fatigue, moderate protection from bleeding) while wearing this particular artifact, it feels not as if you're controlled but guided by an entity or so you think...",
+    "cancels": [
+      "BL9_STR_TENTACLESTAB1",
+      "BL9_STR_TENTACLESTAB2",
+      "BL9_STR_TENTACLESTAB3",
+      "BL9_STR_TENTACLEHIT1",
+      "BL9_STR_TENTACLEHIT2",
+      "BL9_STR_TENTACLEHIT3",
+      "BL9_STR_ARMOREDSKIN1",
+      "BL9_STR_ARMOREDSKIN2",
+      "BL9_STR_ARMOREDSKIN3",
+      "BL9_STR_ENDURANCE3",
+      "BL9_STR_ENDURANCE1"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "weight_capacity_modifier": 1.95,
+    "fatigue_modifier": -0.45,
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth",
+          "eyes"
+        ],
+        "cut": 5,
+        "stab": 5,
+        "bullet": 4
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_STR_TENTACLESTAB2",
+    "name": {
+      "str": "BL9 高级触手穿刺"
+    },
+    "points": 5,
+    "description": "当你穿着这件特殊的神器时，你感觉到一种挥舞着一件非常强大的武器的感觉，这种感觉不像是你被一个实体所控制，而是被一个实体所引导，或者你是这么认为的...",
+    "cancels": [
+      "BL9_STR_ENDURANCE1",
+      "BL9_STR_ENDURANCE2",
+      "BL9_STR_ENDURANCE3",
+      "BL9_STR_TENTACLEHIT1",
+      "BL9_STR_TENTACLEHIT2",
+      "BL9_STR_TENTACLEHIT3",
+      "BL9_STR_ARMOREDSKIN1",
+      "BL9_STR_ARMOREDSKIN2",
+      "BL9_STR_ARMOREDSKIN3",
+      "BL9_STR_TENTACLESTAB3",
+      "BL9_STR_TENTACLESTAB1"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "attacks": {
+      "attack_text_u": "你的神器变成一个触手，猛烈地刺向%s",
+      "attack_text_npc": "%1$s的神器形成一条触须，猛烈地刺穿%2$s",
+      "chance": 25,
+      "base_damage": [
+        {
+          "damage_type": "stab",
+          "amount": 35
+        }
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_STR_TENTACLEHIT2",
+    "name": {
+      "str": "BL9 高级触手命中"
+    },
+    "points": 5,
+    "description": "当你穿着这件特殊的神器时，你感觉到一种挥舞着一件非常强大的武器的感觉，这种感觉不像是你被一个实体所控制，而是被一个实体所引导，或者你是这么认为的...",
+    "cancels": [
+      "BL9_STR_ENDURANCE1",
+      "BL9_STR_ENDURANCE2",
+      "BL9_STR_ENDURANCE3",
+      "BL9_STR_TENTACLESTAB1",
+      "BL9_STR_TENTACLESTAB2",
+      "BL9_STR_TENTACLESTAB3",
+      "BL9_STR_ARMOREDSKIN1",
+      "BL9_STR_ARMOREDSKIN2",
+      "BL9_STR_ARMOREDSKIN3",
+      "BL9_STR_TENTACLEHIT3",
+      "BL9_STR_TENTACLEHIT1"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "attacks": {
+      "attack_text_u": "你的神器形成一条触手，全力猛烈撞击%s",
+      "attack_text_npc": "%1$s的神器成形为触手，全力猛烈撞击%2$s",
+      "chance": 25,
+      "base_damage": [
+        {
+          "damage_type": "bash",
+          "amount": 35
+        }
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_STR_ARMOREDSKIN2",
+    "name": {
+      "str": "BL9高级装甲皮肤"
+    },
+    "points": 5,
+    "description": "你觉得你的皮肤完全被BL9的保护层所覆盖（对所有身体部位的大约+6保护，防止所有类型的伤害，包括元素伤害），当你佩戴这个特殊的神器时，感觉你不是被一个实体控制，而是被一个实体引导，或者你是这么认为的...",
+    "cancels": [
+      "BL9_STR_ENDURANCE1",
+      "BL9_STR_ENDURANCE2",
+      "BL9_STR_ENDURANCE3",
+      "BL9_STR_TENTACLEHIT1",
+      "BL9_STR_TENTACLEHIT2",
+      "BL9_STR_TENTACLEHIT3",
+      "BL9_STR_TENTACLESTAB1",
+      "BL9_STR_TENTACLESTAB2",
+      "BL9_STR_TENTACLESTAB3",
+      "BL9_STR_ARMOREDSKIN3",
+      "BL9_STR_ARMOREDSKIN1"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth",
+          "eyes"
+        ],
+        "bash": 7,
+        "cut": 7,
+        "stab": 7,
+        "bullet": 5,
+        "heat": 5,
+        "acid": 5
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_STR3",
+    "name": {
+      "str": "BL9 至高强化"
+    },
+    "points": 7,
+    "description": "在佩戴这件特殊的神器时，你获得了超乎想象或想象的力量（+11弦），感觉你不是被某个实体控制，而是被某个实体引导，或者你是这么认为的...",
+    "cancels": [
+      "BL9_STR1",
+      "BL9_STR2"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "passive_mods": {
+      "str_mod": 11
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_STR_ENDURANCE3",
+    "name": {
+      "str": "BL9 至高耐力"
+    },
+    "points": 7,
+    "description": "You feel that you can endure the hardships of Cataclysm with little to no struggle or problem (+145% to maximal carry weight, -80% to fatigue, bleeding immunity) while wearing this particular artifact, it feels not as if you're controlled but guided by an entity or so you think...",
+    "cancels": [
+      "BL9_STR_TENTACLESTAB1",
+      "BL9_STR_TENTACLESTAB2",
+      "BL9_STR_TENTACLESTAB3",
+      "BL9_STR_TENTACLEHIT1",
+      "BL9_STR_TENTACLEHIT2",
+      "BL9_STR_TENTACLEHIT3",
+      "BL9_STR_ARMOREDSKIN1",
+      "BL9_STR_ARMOREDSKIN2",
+      "BL9_STR_ARMOREDSKIN3",
+      "BL9_STR_ENDURANCE1",
+      "BL9_STR_ENDURANCE2"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "weight_capacity_modifier": 2.45,
+    "fatigue_modifier": -0.8,
+    "flags": [
+      "BLEED_IMMUNE"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_STR_TENTACLESTAB3",
+    "name": {
+      "str": "BL9 至高触手穿刺"
+    },
+    "points": 7,
+    "description": "当你穿着这件特殊的神器时，你会感觉到一种挥舞武器的力量和起源超出了你的想象或概念，这种感觉不是你被控制而是被一个实体引导，或者你是这么认为的...",
+    "cancels": [
+      "BL9_STR_ENDURANCE1",
+      "BL9_STR_ENDURANCE2",
+      "BL9_STR_ENDURANCE3",
+      "BL9_STR_TENTACLEHIT1",
+      "BL9_STR_TENTACLEHIT2",
+      "BL9_STR_TENTACLEHIT3",
+      "BL9_STR_ARMOREDSKIN1",
+      "BL9_STR_ARMOREDSKIN2",
+      "BL9_STR_ARMOREDSKIN3",
+      "BL9_STR_TENTACLESTAB1",
+      "BL9_STR_TENTACLESTAB2"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "attacks": {
+      "attack_text_u": "你的神器变成一个触手，猛烈地刺向%s",
+      "attack_text_npc": "%1$s的神器形成一条触须，猛烈地刺穿%2$s",
+      "chance": 30,
+      "base_damage": [
+        {
+          "damage_type": "stab",
+          "amount": 53
+        }
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_STR_TENTACLEHIT3",
+    "name": {
+      "str": "BL9 至高触手命中"
+    },
+    "points": 7,
+    "description": "当你穿着这件特殊的神器时，你会感觉到一种挥舞武器的力量和起源超出了你的想象或概念，这种感觉不是你被控制而是被一个实体引导，或者你是这么认为的...",
+    "cancels": [
+      "BL9_STR_ENDURANCE1",
+      "BL9_STR_ENDURANCE2",
+      "BL9_STR_ENDURANCE3",
+      "BL9_STR_TENTACLESTAB1",
+      "BL9_STR_TENTACLESTAB2",
+      "BL9_STR_TENTACLESTAB3",
+      "BL9_STR_ARMOREDSKIN1",
+      "BL9_STR_ARMOREDSKIN2",
+      "BL9_STR_ARMOREDSKIN3",
+      "BL9_STR_TENTACLEHIT1",
+      "BL9_STR_TENTACLEHIT2"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "attacks": {
+      "attack_text_u": "你的神器形成一条触手，全力猛烈撞击%s",
+      "attack_text_npc": "%1$s的神器成形为触手，全力猛烈撞击%2$s",
+      "chance": 30,
+      "base_damage": [
+        {
+          "damage_type": "bash",
+          "amount": 53
+        }
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_STR_ARMOREDSKIN3",
+    "name": {
+      "str": "BL9 至高装甲皮肤"
+    },
+    "points": 7,
+    "description": "你觉得你的皮肤完全被一层BL9保护层所覆盖，这种保护层的性质超出了你的想象或想象（大约+9保护所有身体部位免受所有类型的伤害，包括元素的伤害），当你佩戴这个特殊的神器时，你会感觉到你不是被控制的，而是被一个实体左右的引导你认为…",
+    "cancels": [
+      "BL9_STR_ENDURANCE1",
+      "BL9_STR_ENDURANCE2",
+      "BL9_STR_ENDURANCE3",
+      "BL9_STR_TENTACLESTAB1",
+      "BL9_STR_TENTACLESTAB2",
+      "BL9_STR_TENTACLESTAB3",
+      "BL9_STR_TENTACLEHIT1",
+      "BL9_STR_TENTACLEHIT2",
+      "BL9_STR_TENTACLEHIT3",
+      "BL9_STR_ARMOREDSKIN1",
+      "BL9_STR_ARMOREDSKIN2"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth",
+          "eyes"
+        ],
+        "bash": 10,
+        "cut": 10,
+        "stab": 10,
+        "bullet": 8,
+        "heat": 8,
+        "acid": 8
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_DEX1",
+    "name": {
+      "str": "BL9 敏捷"
+    },
+    "points": 3,
+    "description": "当你戴上这件特殊的神器时，你会感觉敏捷增加了（+3 dex），感觉你不是被一个实体控制而是被一个实体引导，或者你是这么想的...",
+    "cancels": [
+      "BL9_DEX2",
+      "BL9_DEX3"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "passive_mods": {
+      "dex_mod": 3
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_DEX_ENERGETICNESS1",
+    "name": {
+      "str": "BL9 能量"
+    },
+    "points": 3,
+    "description": "你觉得你变得更加运动和精力充沛（+45%到最大耐力，+25%到耐力再生）当你戴着这个特殊的神器时，感觉你不是被一个实体控制而是被一个实体引导或者你认为…",
+    "cancels": [
+      "BL9_DEX_DEFTNESS1",
+      "BL9_DEX_DEFTNESS2",
+      "BL9_DEX_DEFTNESS3",
+      "BL9_DEX_AGILITY1",
+      "BL9_DEX_AGILITY2",
+      "BL9_DEX_AGILITY3",
+      "BL9_DEX_ENERGETICNESS2",
+      "BL9_DEX_ENERGETICNESS3"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "cardio_multiplier": 1.45,
+    "stamina_regen_modifier": 0.25
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_DEX_DEFTNESS1",
+    "name": {
+      "str": "BL9 灵巧"
+    },
+    "points": 3,
+    "description": "你觉得你已经变得更快更灵巧（+1闪避，+35%行动点）而穿着这个特殊的神器，它感觉你不是被控制，而是由一个实体或你认为…",
+    "cancels": [
+      "BL9_DEX_ENERGETICNESS1",
+      "BL9_DEX_ENERGETICNESS2",
+      "BL9_DEX_ENERGETICNESS3",
+      "BL9_DEX_AGILITY1",
+      "BL9_DEX_AGILITY2",
+      "BL9_DEX_AGILITY3",
+      "BL9_DEX_DEFTNESS2",
+      "BL9_DEX_DEFTNESS3"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "dodge_modifier": 1,
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [
+          {
+            "value": "SPEED",
+            "multiply": 0.35
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_DEX_AGILITY1",
+    "name": {
+      "str": "BL9 迅捷"
+    },
+    "points": 3,
+    "description": "你觉得你可以在所有的表面上移动得更好，更有效地清除障碍物（在所有的表面上速度增加25%，游泳速度增加25%），当你穿着这种特殊的神器时，感觉你不是被一个实体控制而是被一个实体引导，或者你是这么想的...",
+    "cancels": [
+      "BL9_DEX_ENERGETICNESS1",
+      "BL9_DEX_ENERGETICNESS2",
+      "BL9_DEX_ENERGETICNESS3",
+      "BL9_DEX_DEFTNESS1",
+      "BL9_DEX_DEFTNESS2",
+      "BL9_DEX_DEFTNESS3",
+      "BL9_DEX_AGILITY2",
+      "BL9_DEX_AGILITY3"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "movecost_flatground_modifier": 0.75,
+    "movecost_obstacle_modifier": 0.75,
+    "movecost_swim_modifier": 0.75,
+    "movecost_modifier": 0.75
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_DEX2",
+    "name": {
+      "str": "BL9 高级敏捷"
+    },
+    "points": 5,
+    "description": "当你戴着这个特殊的神器时，你会感觉到一个不可思议的灵巧度提升（+6 dex），感觉不是你被一个实体控制而是被一个实体引导，或者你认为…",
+    "cancels": [
+      "BL9_DEX3",
+      "BL9_DEX1"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "passive_mods": {
+      "dex_mod": 6
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_DEX_ENERGETICNESS2",
+    "name": {
+      "str": "BL9高级能源"
+    },
+    "points": 5,
+    "description": "你觉得你已经变得难以置信的运动和精力充沛（+115%的最大耐力，+55%的耐力再生）而穿着这个特殊的神器，感觉你不是被控制，而是由一个实体或你认为…",
+    "cancels": [
+      "BL9_DEX_DEFTNESS1",
+      "BL9_DEX_DEFTNESS2",
+      "BL9_DEX_DEFTNESS3",
+      "BL9_DEX_AGILITY1",
+      "BL9_DEX_AGILITY2",
+      "BL9_DEX_AGILITY3",
+      "BL9_DEX_ENERGETICNESS3",
+      "BL9_DEX_ENERGETICNESS1"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "cardio_multiplier": 2.15,
+    "stamina_regen_modifier": 0.55
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_DEX_DEFTNESS2",
+    "name": {
+      "str": "BL9 高级灵巧"
+    },
+    "points": 5,
+    "description": "当你戴上这个特殊的神器时，你会觉得你变得难以置信的快，而且更加灵巧（闪避+2，动作点+75%），感觉不是被一个实体控制而是被一个实体引导，或者你认为…",
+    "cancels": [
+      "BL9_DEX_ENERGETICNESS1",
+      "BL9_DEX_ENERGETICNESS2",
+      "BL9_DEX_ENERGETICNESS3",
+      "BL9_DEX_AGILITY1",
+      "BL9_DEX_AGILITY2",
+      "BL9_DEX_AGILITY3",
+      "BL9_DEX_DEFTNESS3",
+      "BL9_DEX_DEFTNESS1"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "dodge_modifier": 2,
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [
+          {
+            "value": "SPEED",
+            "multiply": 0.75
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_DEX_AGILITY2",
+    "points": 5,
+    "name": {
+      "str": "BL9 高级迅捷"
+    },
+    "description": "你觉得你可以在所有表面上移动得更好，并且以难以置信的效率清除障碍物（在所有表面上的速度为+55%，游泳速度为+55%），当你戴着这个特殊的神器时，感觉不是你被控制而是被一个实体引导，或者你认为是这样的…",
+    "cancels": [
+      "BL9_DEX_ENERGETICNESS1",
+      "BL9_DEX_ENERGETICNESS2",
+      "BL9_DEX_ENERGETICNESS3",
+      "BL9_DEX_DEFTNESS1",
+      "BL9_DEX_DEFTNESS2",
+      "BL9_DEX_DEFTNESS3",
+      "BL9_DEX_AGILITY3",
+      "BL9_DEX_AGILITY1"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "movecost_flatground_modifier": 0.45,
+    "movecost_obstacle_modifier": 0.45,
+    "movecost_swim_modifier": 0.45,
+    "movecost_modifier": 0.45
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_DEX3",
+    "name": {
+      "str": "BL9 至高敏捷"
+    },
+    "points": 7,
+    "description": "你已经获得了超出你想象或概念的灵巧度（+11灵巧度），当你戴着这个特殊的神器时，感觉不是你被一个实体控制而是被一个实体引导，或者你认为…",
+    "cancels": [
+      "BL9_DEX1",
+      "BL9_DEX2"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "passive_mods": {
+      "dex_mod": 11
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_DEX_ENERGETICNESS3",
+    "name": {
+      "str": "BL9 至高能量"
+    },
+    "points": 7,
+    "description": "你觉得自己变得非人类般的运动和精力充沛（最大耐力+165%，耐力再生+95%），而穿着这件特殊的神器，感觉你不是被一个实体控制而是被一个实体引导，或者你是这么认为的...",
+    "cancels": [
+      "BL9_DEX_DEFTNESS1",
+      "BL9_DEX_DEFTNESS2",
+      "BL9_DEX_DEFTNESS3",
+      "BL9_DEX_AGILITY1",
+      "BL9_DEX_AGILITY2",
+      "BL9_DEX_AGILITY3",
+      "BL9_DEX_ENERGETICNESS1",
+      "BL9_DEX_ENERGETICNESS2"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "cardio_multiplier": 2.65,
+    "stamina_regen_modifier": 0.95
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_DEX_DEFTNESS3",
+    "name": {
+      "str": "BL9 至高灵巧"
+    },
+    "points": 7,
+    "description": "你觉得自己已经获得了超乎想象或想象的敏捷和反应能力（+3点闪避，+115%的动作点），而穿着这件特殊的神器，感觉你不是被一个实体控制而是被一个实体引导，或者你是这么认为的...",
+    "cancels": [
+      "BL9_DEX_ENERGETICNESS1",
+      "BL9_DEX_ENERGETICNESS2",
+      "BL9_DEX_ENERGETICNESS3",
+      "BL9_DEX_AGILITY1",
+      "BL9_DEX_AGILITY2",
+      "BL9_DEX_AGILITY3",
+      "BL9_DEX_DEFTNESS1",
+      "BL9_DEX_DEFTNESS2"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "dodge_modifier": 3,
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [
+          {
+            "value": "SPEED",
+            "multiply": 1.15
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_DEX_AGILITY3",
+    "name": {
+      "str": "BL9 至尊迅捷"
+    },
+    "points": 7,
+    "description": "你觉得自己获得了超乎想象或想象的敏捷，让你可以在任何表面上以惊人的速度移动（在所有表面上+95%的速度，在游泳速度上+95%），当你穿着这件特殊的神器时，感觉你不是被一个实体控制而是被一个实体引导，或者你是这么想的...",
+    "cancels": [
+      "BL9_DEX_ENERGETICNESS1",
+      "BL9_DEX_ENERGETICNESS2",
+      "BL9_DEX_ENERGETICNESS3",
+      "BL9_DEX_DEFTNESS1",
+      "BL9_DEX_DEFTNESS2",
+      "BL9_DEX_DEFTNESS3",
+      "BL9_DEX_AGILITY1",
+      "BL9_DEX_AGILITY2"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "movecost_flatground_modifier": 0.05,
+    "movecost_obstacle_modifier": 0.05,
+    "movecost_swim_modifier": 0.05,
+    "movecost_modifier": 0.05
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_HP1",
+    "name": {
+      "str": "BL9健康"
+    },
+    "points": 3,
+    "description": "当你戴上这件特殊的神器时，你会感觉到健康水平提高了（+25%），感觉你不是被一个实体控制而是被一个实体引导，或者你是这么认为的...",
+    "cancels": [
+      "BL9_HP2",
+      "BL9_HP3"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "hp_modifier": 0.25
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_HP_REGEN1",
+    "name": {
+      "str": "BL9再生"
+    },
+    "points": 3,
+    "description": "你感觉你的伤害以更快的速度再生（醒着的时候+75%的生命再生，睡着的时候+110%，断肢再生+225%）。当你穿着这件特殊的神器时，感觉你不是被一个实体控制而是被一个实体引导，或者你是这么认为的...",
+    "cancels": [
+      "BL9_HP_AMPLIFIED_METABOLISM1",
+      "BL9_HP_AMPLIFIED_METABOLISM2",
+      "BL9_HP_AMPLIFIED_METABOLISM3",
+      "BL9_HP_WAKEFUL_MIND1",
+      "BL9_HP_WAKEFUL_MIND2",
+      "BL9_HP_WAKEFUL_MIND3",
+      "BL9_HP_REGEN2",
+      "BL9_HP_REGEN3"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "healing_awake": 0.75,
+    "healing_resting": 1.1,
+    "mending_modifier": 2.25
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_HP_WAKEFUL_MIND1",
+    "name": {
+      "str": "BL9 宁神"
+    },
+    "points": 3,
+    "description": "你觉得你现在可以保持更长时间的清醒（35%是疲劳，48%是疲劳再生，对治疗和耐力有很小的促进作用）。当你穿着这件特殊的神器时，感觉你不是被一个实体控制而是被一个实体引导，或者你是这么认为的...",
+    "cancels": [
+      "BL9_HP_REGEN1",
+      "BL9_HP_REGEN2",
+      "BL9_HP_REGEN3",
+      "BL9_HP_AMPLIFIED_METABOLISM1",
+      "BL9_HP_AMPLIFIED_METABOLISM2",
+      "BL9_HP_AMPLIFIED_METABOLISM3",
+      "BL9_HP_WAKEFUL_MIND2",
+      "BL9_HP_WAKEFUL_MIND3"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "fatigue_modifier": -0.35,
+    "fatigue_regen_modifier": 0.48
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_HP_AMPLIFIED_METABOLISM1",
+    "name": {
+      "str": "BL9 代谢增强"
+    },
+    "points": 3,
+    "description": "你觉得你的新陈代谢现在更有效率了（对愈合有一点点促进作用，对疲劳有一点点减少作用，对耐力有一点点促进作用）。当你穿着这件特殊的神器时，感觉你不是被一个实体控制而是被一个实体引导，或者你是这么认为的...",
+    "cancels": [
+      "BL9_HP_REGEN1",
+      "BL9_HP_REGEN2",
+      "BL9_HP_REGEN3",
+      "BL9_HP_WAKEFUL_MIND1",
+      "BL9_HP_WAKEFUL_MIND2",
+      "BL9_HP_WAKEFUL_MIND3",
+      "BL9_HP_AMPLIFIED_METABOLISM2",
+      "BL9_HP_AMPLIFIED_METABOLISM3"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "healing_awake": 0.16,
+    "healing_resting": 0.35,
+    "mending_modifier": 1.85,
+    "fatigue_modifier": -0.22,
+    "fatigue_regen_modifier": 0.33,
+    "cardio_multiplier": 1.25,
+    "stamina_regen_modifier": 0.12
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_HP2",
+    "name": {
+      "str": "BL9高级健康"
+    },
+    "points": 5,
+    "description": "当你穿着这件特殊的神器时，你会感到健康状况有了惊人的提升（+55%），感觉你不是被一个实体控制而是被一个实体引导，或者你是这么认为的...",
+    "cancels": [
+      "BL9_HP3",
+      "BL9_HP1"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "hp_modifier": 0.55
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_HP_REGEN2",
+    "name": {
+      "str": "BL9高级再生"
+    },
+    "points": 5,
+    "description": "你感觉你的伤害以难以置信的速度再生（醒着时+135%的生命再生，睡着时+195%，断肢再生+265%），当你穿着这件特殊的神器时，感觉你不是被一个实体控制而是被一个实体引导，或者你是这么认为的...",
+    "cancels": [
+      "BL9_HP_AMPLIFIED_METABOLISM1",
+      "BL9_HP_AMPLIFIED_METABOLISM2",
+      "BL9_HP_AMPLIFIED_METABOLISM3",
+      "BL9_HP_WAKEFUL_MIND1",
+      "BL9_HP_WAKEFUL_MIND2",
+      "BL9_HP_WAKEFUL_MIND3",
+      "BL9_HP_REGEN3",
+      "BL9_HP_REGEN1"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "healing_awake": 1.35,
+    "healing_resting": 1.95,
+    "mending_modifier": 2.65
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_HP_WAKEFUL_MIND2",
+    "name": {
+      "str": "BL9 高级宁神"
+    },
+    "points": 5,
+    "description": "你觉得你现在可以保持清醒更长的时间（-77%的时间疲劳，+105%的时间疲劳再生）当你穿着这个特殊的神器时，感觉你不是被一个实体控制而是被一个实体引导，或者你是这么想的...",
+    "cancels": [
+      "BL9_HP_REGEN1",
+      "BL9_HP_REGEN2",
+      "BL9_HP_REGEN3",
+      "BL9_HP_AMPLIFIED_METABOLISM1",
+      "BL9_HP_AMPLIFIED_METABOLISM2",
+      "BL9_HP_AMPLIFIED_METABOLISM3",
+      "BL9_HP_WAKEFUL_MIND3",
+      "BL9_HP_WAKEFUL_MIND1"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "fatigue_modifier": -0.77,
+    "fatigue_regen_modifier": 1.05
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_HP_AMPLIFIED_METABOLISM2",
+    "name": {
+      "str": "BL9 高级代谢增强"
+    },
+    "points": 5,
+    "description": "你觉得你的新陈代谢现在非常有效（适度促进愈合，适度减少疲劳，适度增强耐力）。当你穿着这件特殊的神器时，感觉你不是被一个实体控制，而是被一个实体引导，或者你是这么认为的...",
+    "cancels": [
+      "BL9_HP_REGEN1",
+      "BL9_HP_REGEN2",
+      "BL9_HP_REGEN3",
+      "BL9_HP_WAKEFUL_MIND1",
+      "BL9_HP_WAKEFUL_MIND2",
+      "BL9_HP_WAKEFUL_MIND3",
+      "BL9_HP_AMPLIFIED_METABOLISM3",
+      "BL9_HP_AMPLIFIED_METABOLISM1"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "healing_awake": 0.3,
+    "healing_resting": 0.58,
+    "mending_modifier": 2.25,
+    "fatigue_modifier": -0.55,
+    "fatigue_regen_modifier": 0.65,
+    "cardio_multiplier": 1.55,
+    "stamina_regen_modifier": 0.22
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_HP3",
+    "name": {
+      "str": "BL9至尊健康"
+    },
+    "points": 7,
+    "description": "当你穿着这件特殊的神器时，你获得了超乎你想象或想象的健康（+90%的健康），感觉你不是被一个实体控制而是被一个实体引导，或者你是这么认为的...",
+    "cancels": [
+      "BL9_HP1",
+      "BL9_HP2"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "hp_modifier": 0.9
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_HP_REGEN3",
+    "name": {
+      "str": "BL9再生"
+    },
+    "points": 7,
+    "description": "你已经获得了超乎你想象或想象的再生能力（清醒时+225%的健康再生，睡眠时+335%，断肢再生+385%）。当你穿着这件特殊的神器时，感觉你不是被一个实体控制而是被一个实体引导，或者你是这么认为的...",
+    "cancels": [
+      "BL9_HP_AMPLIFIED_METABOLISM1",
+      "BL9_HP_AMPLIFIED_METABOLISM2",
+      "BL9_HP_AMPLIFIED_METABOLISM3",
+      "BL9_HP_WAKEFUL_MIND1",
+      "BL9_HP_WAKEFUL_MIND2",
+      "BL9_HP_WAKEFUL_MIND3",
+      "BL9_HP_REGEN1",
+      "BL9_HP_REGEN2"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "healing_awake": 2.25,
+    "healing_resting": 3.35,
+    "mending_modifier": 3.85
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_HP_WAKEFUL_MIND3",
+    "name": {
+      "str": "BL9 至高宁神"
+    },
+    "points": 7,
+    "description": "你觉得你可以保持清醒一段不人道的时间（-125%是疲劳，+160%是疲劳再生），当你穿着这件特殊的神器时，感觉你不是被一个实体控制而是被一个实体引导，或者你是这么想的...",
+    "cancels": [
+      "BL9_HP_REGEN1",
+      "BL9_HP_REGEN2",
+      "BL9_HP_REGEN3",
+      "BL9_HP_AMPLIFIED_METABOLISM1",
+      "BL9_HP_AMPLIFIED_METABOLISM2",
+      "BL9_HP_AMPLIFIED_METABOLISM3",
+      "BL9_HP_WAKEFUL_MIND1",
+      "BL9_HP_WAKEFUL_MIND2"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "fatigue_modifier": -1.25,
+    "fatigue_regen_modifier": 1.6
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_HP_AMPLIFIED_METABOLISM3",
+    "name": {
+      "str": "BL9 至高代谢增强"
+    },
+    "points": 7,
+    "description": "你觉得你的新陈代谢效率超出了你的想象或构想（极大地促进愈合，极大地减少疲劳，极大地提高耐力）当你戴着这个特殊的神器时，感觉不是你被一个实体所控制而是你认为是这样的…",
+    "cancels": [
+      "BL9_HP_REGEN1",
+      "BL9_HP_REGEN2",
+      "BL9_HP_REGEN3",
+      "BL9_HP_WAKEFUL_MIND1",
+      "BL9_HP_WAKEFUL_MIND2",
+      "BL9_HP_WAKEFUL_MIND3",
+      "BL9_HP_AMPLIFIED_METABOLISM1",
+      "BL9_HP_AMPLIFIED_METABOLISM2"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "healing_awake": 0.48,
+    "healing_resting": 0.9,
+    "mending_modifier": 3,
+    "fatigue_modifier": -0.85,
+    "fatigue_regen_modifier": 0.9,
+    "cardio_multiplier": 1.9,
+    "stamina_regen_modifier": 0.36
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_PER1",
+    "name": {
+      "str": "BL9 洞察"
+    },
+    "points": 3,
+    "description": "当你戴着这个特殊的神器时，你会感觉到感知力的提升（+3%），感觉你不是被一个实体控制而是被一个实体引导，或者你认为…",
+    "cancels": [
+      "BL9_PER2",
+      "BL9_PER3"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "passive_mods": {
+      "per_mod": 3
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_PER_ELEVATEDSENSE1",
+    "name": {
+      "str": "BL9 感知强化"
+    },
+    "points": 3,
+    "description": "当你戴着这个特殊的神器时，你的视觉和听觉感觉得到了提升（5%的视力和25%的听力），感觉不是被一个实体控制而是被一个实体引导，或者你认为…",
+    "cancels": [
+      "BL9_PER_STEALTHAURA1",
+      "BL9_PER_STEALTHAURA2",
+      "BL9_PER_STEALTHAURA3",
+      "BL9_PER_ELEVATEDSENSE2",
+      "BL9_PER_ELEVATEDSENSE3"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "overmap_sight": 5,
+    "hearing_modifier": 1.25
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_PER_STEALTHAURA1",
+    "name": {
+      "str": "BL9 潜行光环"
+    },
+    "points": 3,
+    "description": "你感觉到一种无形的光环包围着你，这会提升你的隐身能力（隐身能力+15%，气味减少+15%，噪音减少+15%），当你戴着这个特殊的神器时，感觉不是你被一个实体控制，而是被一个你认为是的实体所引导…",
+    "cancels": [
+      "BL9_PER_ELEVATEDSENSE1",
+      "BL9_PER_ELEVATEDSENSE2",
+      "BL9_PER_ELEVATEDSENSE3",
+      "BL9_PER_STEALTHAURA2",
+      "BL9_PER_STEALTHAURA3"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "stealth_modifier": 15,
+    "noise_modifier": 0.85,
+    "scent_modifier": 0.85
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_PER2",
+    "name": {
+      "str": "BL9 高级洞察"
+    },
+    "points": 5,
+    "description": "当你穿着这件特殊的神器时，你会感觉到一种不可思议的感知提升（+6%），感觉你不是被一个实体控制而是被一个实体引导，或者你是这么认为的...",
+    "cancels": [
+      "BL9_PER3",
+      "BL9_PER1"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "passive_mods": {
+      "per_mod": 6
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_PER_ELEVATEDSENSE2",
+    "name": {
+      "str": "BL9 高级感知强化"
+    },
+    "points": 5,
+    "description": "当你佩戴这种特殊的神器时，你会感觉到你的视觉和听觉得到了难以置信的提升（视觉增加10%，听觉增加55%），感觉你不是被某个实体控制而是被它引导，或者你是这么认为的...",
+    "cancels": [
+      "BL9_PER_STEALTHAURA1",
+      "BL9_PER_STEALTHAURA2",
+      "BL9_PER_STEALTHAURA3",
+      "BL9_PER_ELEVATEDSENSE3",
+      "BL9_PER_ELEVATEDSENSE1"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "overmap_sight": 10,
+    "hearing_modifier": 1.55
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_PER_STEALTHAURA2",
+    "name": {
+      "str": "BL9 高级潜行光环"
+    },
+    "points": 5,
+    "description": "你感觉到一个无形的光环围绕着你，这极大地增强了你的隐身能力（+35%隐身，+45%减香，+45%减噪）。当你佩戴这个特殊的神器时，感觉你不是被一个实体控制而是被一个实体引导，或者你是这么认为的...",
+    "cancels": [
+      "BL9_PER_ELEVATEDSENSE1",
+      "BL9_PER_ELEVATEDSENSE2",
+      "BL9_PER_ELEVATEDSENSE3",
+      "BL9_PER_STEALTHAURA3",
+      "BL9_PER_STEALTHAURA1"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "stealth_modifier": 35,
+    "noise_modifier": 0.55,
+    "scent_modifier": 0.55
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_PER3",
+    "name": {
+      "str": "BL9 至高洞察"
+    },
+    "points": 7,
+    "description": "当你穿着这件特殊的神器时，你获得了超出你想象或概念的感知（+11%），感觉你不是被一个实体控制而是被一个实体引导，或者你是这么认为的...",
+    "cancels": [
+      "BL9_PER1",
+      "BL9_PER2"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "passive_mods": {
+      "per_mod": 11
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_PER_ELEVATEDSENSE3",
+    "name": {
+      "str": "BL9 至高感知强化"
+    },
+    "points": 7,
+    "description": "当你戴着这个特殊的神器时，你感觉到你的视觉和听觉得到了提升，这超出了你的想象和想象（+25%超过视觉，95%超过听觉），感觉不是你被一个实体控制而是被一个实体引导，或者你认为是这样的…",
+    "cancels": [
+      "BL9_PER_STEALTHAURA1",
+      "BL9_PER_STEALTHAURA2",
+      "BL9_PER_STEALTHAURA3",
+      "BL9_PER_ELEVATEDSENSE1",
+      "BL9_PER_ELEVATEDSENSE2"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "overmap_sight": 25,
+    "hearing_modifier": 1.95
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_PER_STEALTHAURA3",
+    "name": {
+      "str": "BL9 至高潜行光环"
+    },
+    "points": 7,
+    "description": "你感觉到一种无形的光环包围着你，这使你的隐身能力超出了你的想象或概念（+65%隐身，+85%嗅觉降低，+85%噪音降低）当你戴着这个特殊的神器时，感觉不是你被控制而是被一个实体引导，或者你认为是这样的…",
+    "cancels": [
+      "BL9_PER_ELEVATEDSENSE1",
+      "BL9_PER_ELEVATEDSENSE2",
+      "BL9_PER_ELEVATEDSENSE3",
+      "BL9_PER_STEALTHAURA1",
+      "BL9_PER_STEALTHAURA2"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "stealth_modifier": 65,
+    "noise_modifier": 0.15,
+    "scent_modifier": 0.15
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_INT1",
+    "name": {
+      "str": "BL9 智力"
+    },
+    "points": 3,
+    "description": "当你戴着这个特殊的神器时，你会感觉到智力的提升（+3智力），感觉不是被一个实体控制而是被一个实体引导，或者你认为…",
+    "cancels": [
+      "BL9_INT2",
+      "BL9_INT3"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "passive_mods": {
+      "int_mod": 3
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_INT_APTITUDE1",
+    "name": {
+      "str": "BL9 天资"
+    },
+    "points": 3,
+    "description": "你觉得你的信息吸收能力以及与手工艺相关的天赋都在提高（阅读速度提高25%，手工艺技能提高1%），当你戴上这个特殊的神器时，感觉不是被一个实体控制而是被一个实体引导，或者你认为是这样…",
+    "valid": false,
+    "purifiable": false,
+    "craft_skill_bonus": [
+      [
+        "electronics",
+        4
+      ],
+      [
+        "tailor",
+        4
+      ],
+      [
+        "mechanics",
+        4
+      ],
+      [
+        "firstaid",
+        4
+      ],
+      [
+        "computer",
+        4
+      ],
+      [
+        "fabrication",
+        4
+      ],
+      [
+        "traps",
+        4
+      ],
+      [
+        "cooking",
+        4
+      ],
+      [
+        "survival",
+        4
+      ]
+    ],
+    "reading_speed_multiplier": 0.75
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_INT2",
+    "name": {
+      "str": "BL9 高级智力"
+    },
+    "points": 5,
+    "description": "当你戴着这个特殊的神器时，你会感觉到一种不可思议的智力提升（+6智力），感觉不是被一个实体控制而是被一个实体引导，或者你认为…",
+    "cancels": [
+      "BL9_INT3",
+      "BL9_INT1"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "passive_mods": {
+      "int_mod": 6
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_INT_APTITUDE2",
+    "name": {
+      "str": "BL9 高级天资"
+    },
+    "points": 5,
+    "description": "你觉得你的信息吸收能力以及与手工艺相关的天赋都大大提高了（阅读速度提高了65%，手工艺技能提高了1.5%），当你戴上这个特殊的神器时，感觉不是被一个实体控制而是被一个实体引导，或者你认为是这样…",
+    "valid": false,
+    "purifiable": false,
+    "craft_skill_bonus": [
+      [
+        "electronics",
+        4
+      ],
+      [
+        "tailor",
+        8
+      ],
+      [
+        "mechanics",
+        8
+      ],
+      [
+        "firstaid",
+        8
+      ],
+      [
+        "computer",
+        4
+      ],
+      [
+        "fabrication",
+        4
+      ],
+      [
+        "traps",
+        8
+      ],
+      [
+        "cooking",
+        4
+      ],
+      [
+        "survival",
+        8
+      ]
+    ],
+    "reading_speed_multiplier": 0.45
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_INT3",
+    "name": {
+      "str": "BL9 至高智力"
+    },
+    "points": 7,
+    "description": "当你戴着这个特殊的神器时，你已经获得了超出你想象或概念的智力（+11智力），感觉不是你被一个实体控制而是被一个实体引导，或者你认为…",
+    "cancels": [
+      "BL9_INT1",
+      "BL9_INT2"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "passive_mods": {
+      "int_mod": 11
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "BL9_INT_APTITUDE3",
+    "name": {
+      "str": "BL9 至高天资"
+    },
+    "points": 7,
+    "description": "你觉得你对信息的吸收以及与手工艺相关的才能超出了你的想象或概念（+90%是阅读速度，+2%是手工艺技能），当你穿着这件特殊的工艺品时，感觉你不是被一个实体控制而是被一个实体引导，或者你是这么认为的...",
+    "valid": false,
+    "purifiable": false,
+    "craft_skill_bonus": [
+      [
+        "electronics",
+        8
+      ],
+      [
+        "tailor",
+        8
+      ],
+      [
+        "mechanics",
+        8
+      ],
+      [
+        "firstaid",
+        8
+      ],
+      [
+        "computer",
+        8
+      ],
+      [
+        "fabrication",
+        8
+      ],
+      [
+        "traps",
+        8
+      ],
+      [
+        "cooking",
+        8
+      ],
+      [
+        "survival",
+        8
+      ]
+    ],
+    "reading_speed_multiplier": 0.1
+  }
+]

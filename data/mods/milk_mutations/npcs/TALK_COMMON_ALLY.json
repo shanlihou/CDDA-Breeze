@@ -1,0 +1,361 @@
+[
+  {
+    "id": "TALK_FRIEND",
+    "type": "talk_topic",
+    "responses": [
+      {
+        "text": "来吧，这支血清会让你非常——舒服的。",
+        "topic": "TALK_MILKSR",
+        "condition": {
+          "u_has_item": "milky_serum"
+        }
+      }
+    ]
+  },
+  {
+    "id": "TALK_MILKSR",
+    "dynamic_line": "真的会……非常舒服吗？",
+    "type": "talk_topic",
+    "responses": [
+      {
+        "text": "接受它吧，一切烦恼都会离你而去的。",
+        "trial": {
+          "type": "PERSUADE",
+          "difficulty": 0,
+          "mod": [
+            [
+              "TRUST",
+              6
+            ],
+            [
+              "VALUE",
+              3
+            ],
+            [
+              "ANGER",
+              -3
+            ]
+          ]
+        },
+        "success": {
+          "topic": "TALK_MILKSR2"
+        },
+        "failure": {
+          "topic": "TALK_DONE"
+        }
+      },
+      {
+        "text": "看来你还没有意识到自己现在的处境啊，我的奴隶。",
+        "trial": {
+          "type": "INTIMIDATE",
+          "difficulty": 0,
+          "mod": [
+            [
+              "FEAR",
+              8
+            ],
+            [
+              "VALUE",
+              3
+            ],
+            [
+              "BRAVERY",
+              -2
+            ]
+          ]
+        },
+        "success": {
+          "topic": "TALK_MILKSR2"
+        },
+        "failure": {
+          "topic": "TALK_DONE"
+        }
+      },
+      {
+        "text": "算了。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_MILKSR2",
+    "type": "talk_topic",
+    "dynamic_line": "呃……我的……我的身体……好热……主……主人……",
+    "speaker_effect": {
+      "effect": [
+        {
+          "npc_add_trait": "THRESH_MILK"
+        },
+        {
+          "npc_add_trait": "STRONG_LEGS"
+        },
+        {
+          "npc_add_trait": "PADDED_FEET"
+        },
+        {
+          "npc_add_trait": "AMBR"
+        },
+		{
+          "npc_add_trait": "GOODHAND"
+        },
+		{
+          "npc_add_trait": "PHEROMONE_MAMMAL"
+        },
+		{
+          "npc_add_trait": "PAINREC3"
+        },
+		{
+          "npc_add_trait": "CENOBITE"
+        },
+		{
+          "npc_add_trait": "REGEN"
+        },
+		{
+          "npc_add_trait": "PERSISTENCE_HUNTER"
+        },
+		{
+          "npc_add_trait": "PERSISTENCE_MILK"
+        },
+        {
+          "npc_add_trait": "BTFT"
+        },
+        {
+          "npc_add_trait": "MILKBR"
+        },
+		{
+          "npc_add_trait": "AROMA"
+        },
+        {
+          "npc_add_trait": "SOFTSKIN"
+        },
+        {
+          "npc_add_trait": "BEAUTIFUL4"
+        },
+		{
+		  "u_add_trait": "MASTERMARK"
+		},
+        "leave",
+        {
+          "u_consume_item": "milky_serum"
+        },
+        "follow_only",
+        {
+          "npc_first_topic": "TALK_FRIEND"
+        }
+      ],
+	  "opinion": {
+        "trust": 16,
+        "fear": 0,
+        "value": 16,
+        "anger": -8
+      }
+    },
+    "responses": [
+      {
+        "text": "现在你就是我的母畜了。明白吗？",
+        "topic": "TALK_FRIEND"
+      }
+    ]
+  },
+  {
+    "id": "TALK_FRIEND",
+    "type": "talk_topic",
+    "dynamic_line": {
+	  "u_has_any_trait": [
+        "MASTERMARK"
+      ],
+      "yes": "主人贵安~今天也要来一杯香甜可口的牛奶吗？",
+      "no": "主……主人……我，我今天可能有些不舒服……"
+    },
+    "responses": [
+	  {
+        "text": "[做爱][你将母畜扑倒在地，急不可耐地攥住她爆满的乳肉，鼓胀火热的下体粗暴捅入母畜光滑粉嫩的穴位当中……]",
+        "condition": { "npc_has_trait": "THRESH_MILK" },
+		"topic": "TALK_FUCK"
+      },
+	  {
+        "text": "[榨乳]现在把你的衣服脱掉，然后趴下来。",
+        "condition": { "npc_has_trait": "THRESH_MILK" },
+		"topic": "TALK_MILK_TAKE"
+      },
+	  {
+        "text": "[口交]跪下来，然后张开嘴。",
+        "condition": { "npc_has_trait": "THRESH_MILK" },
+		"topic": "TALK_MOUSE_TAKE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_MOUSE_TAKE",
+    "type": "talk_topic",
+    "dynamic_line": "[含糊不清的口水音]唔……嗯……主人……嗯……好吃……",
+    "responses": [
+      {
+        "text": "[你感觉道母畜小巧的舌头滑过顶端，身体中好像流过一道电流，连忙死死按住母畜的脑袋，不让她抬起头]",
+        "topic": "TALK_MOUSE_TAKE2",
+		"condition": {
+          "not": {
+            "npc_has_effect": "mouse_fucked"
+          }
+        }
+      },
+      {
+        "text": "[你恋恋不舍地抽出肉棒，晶莹粘稠的丝线挂在母畜唇边，一道浓郁的液体喷射到她白嫩的脸蛋上，很快又滑落到她深邃的乳沟里]。",
+        "topic": "TALK_DONE",
+		"condition": {
+          "npc_has_effect": "mouse_fucked"
+        }
+      }
+    ]
+  },
+  {
+    "id": "TALK_MOUSE_TAKE2",
+    "type": "talk_topic",
+    "dynamic_line": "[张开嘴巴，向你展示口腔当中满满当当的粘稠白色粘液，接着乖巧地闭上嘴巴，将所有精华都细细吞咽下去]唔姆……哈————主人，味道真的很好吃呢~~",
+    "responses": [
+      {
+        "text": "[你松开母畜，满足地提上裤子拉链]。",
+        "topic": "TALK_DONE"
+      }
+    ],
+	"speaker_effect": {
+      "effect": [
+        {
+          "npc_add_effect": "mouse_fucked",
+          "duration": 2500
+        }
+      ]
+    }
+  },
+  {
+    "id": "TALK_FUCK",
+    "type": "talk_topic",
+    "dynamic_line": "呀~~~主人……主人……不要……嗯，啊~~不要————",
+    "responses": [
+      {
+        "text": "[你不管不顾，双手再度用劲一掐，甜腻的乳汁四散飞溅，下体的碰撞声也愈发激烈。]。",
+        "topic": "TALK_FUCK2",
+		"condition": {
+          "not": {
+            "npc_has_effect": "exhausted_milk"
+          }
+        }
+      },
+      {
+        "text": "先放你一马。",
+        "topic": "TALK_DONE",
+        "condition": {
+          "npc_has_effect": "exhausted_milk"
+        }
+      }
+    ]
+  },
+  {
+    "id": "TALK_FUCK2",
+    "type": "talk_topic",
+    "dynamic_line": "呃……不要……嗯啊……好……好舒服……主人~~主人~~~",
+    "responses": [
+      {
+        "text": "[你将瘫成一团香软白肉的母畜翻了个身，双手依旧攀附在肿胀湿润的乳头上，硕大狰狞对准她娇小紧致的肛门使劲一顶————]。",
+        "topic": "TALK_FUCK3"
+      }
+    ],
+	"speaker_effect": {
+      "effect": [
+        {
+          "u_buy_item": "milky_milk",
+          "count": 5
+        }
+      ],
+	  "opinion": { "trust": 2 }
+    }
+  },
+  {
+    "id": "TALK_FUCK3",
+    "type": "talk_topic",
+    "dynamic_line": "哈……哈……主人……主人~~",
+    "responses": [
+      {
+        "text": "[你松开母畜，满足地提上裤子拉链]。",
+        "topic": "TALK_DONE"
+      },
+	  {
+        "text": "[你意犹未尽地抽离性器，看到白浊液体自母畜不断收张的红肿洞口里汩汩流出，顿时兽性大发，攥住母畜的双脚，扶稳对准，再度狠狠插入！]。",
+        "topic": "TALK_FUCK4"
+      }
+    ],
+	"speaker_effect": {
+      "effect": [
+        {
+          "u_buy_item": "milky_milk",
+          "count": 10
+        },
+        {
+          "npc_add_effect": "exhausted_milk",
+          "duration": 7000
+        }
+      ]
+    }
+  },
+  {
+    "id": "TALK_FUCK4",
+    "type": "talk_topic",
+    "dynamic_line": "[惊恐地望向你，双手娇弱无力地推搡着想要将你推离]不……不要了……主人……我，我受不了了嗯~~~不要……",
+    "responses": [
+      {
+        "text": "[你松开母畜，眼看母畜的双穴皆被搅弄得一片污浊泥泞，终于满足地拍拍她的屁股，提上裤子拉链]",
+        "topic": "TALK_DONE"
+      }
+    ],
+	"speaker_effect": {
+      "effect": [
+        {
+          "npc_add_effect": "doilove",
+          "duration": 38000
+        }
+      ]
+    }
+  },
+  {
+    "id": "TALK_MILK_TAKE",
+    "type": "talk_topic",
+    "dynamic_line": "挤奶时间到♪~请主人温柔一点呦~",
+    "responses": [
+      {
+        "text": "先放你一马。",
+        "topic": "TALK_DONE",
+        "condition": {
+          "npc_has_effect": "exhausted_milk"
+        }
+      },
+      {
+        "text": "[抓住母畜饱满丰硕的乳房，使劲挤压]。",
+        "topic": "TALK_MILK_TAKE2",
+		"condition": {
+          "not": {
+            "npc_has_effect": "maid_milked"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "TALK_MILK_TAKE2",
+    "type": "talk_topic",
+    "dynamic_line": "啊…啊~哦，主人~~主人~~~我……想……想要……[在你粗鲁的揉捏挤压之下，母畜殷红挺翘的乳头飚射出数道白线，一股绵密的乳香顷刻弥漫开来]",
+    "speaker_effect": {
+      "effect": [
+        {
+          "u_buy_item": "milky_milk",
+          "count": 5
+        }
+      ]
+    },
+	"responses": [
+      {
+        "text": "今天的产能依旧相当充足呢。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  }
+]

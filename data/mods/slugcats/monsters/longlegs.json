@@ -1,0 +1,88 @@
+[
+  {
+    "type": "MONSTER",
+    "abstract": "mon_longleg_abstract",
+    "name": { "str": "抽象长腿" },
+    "color": "white",
+    "symbol": "&",
+    "bodytype": "dog",
+    "material": [ "flesh" ],
+    "species": [ "ABERRATION" ],
+    "default_faction": "mutant",
+    "volume": "500 L",
+    "weight": "175 kg",
+    "hp": 300,
+    "speed": 85,
+    "attack_cost": 85,
+    "melee_skill": 3,
+    "melee_dice": 5,
+    "melee_dice_sides": 5,
+    "dodge": 2,
+    "armor_bash": 10,
+    "armor_cut": 20,
+    "armor_stab": 20,
+    "armor_bullet": 25,
+    "armor_acid": 0,
+    "armor_elec": 0,
+    "bleed_rate": 0,
+    "vision_day": 3,
+    "vision_night": 3,
+    "aggression": 100,
+    "morale": 100,
+    "harvest": "longlegs",
+    "//": "TODO: When effects/spells can mess with path settings + flags move smartness to the effect of dedicated coordinatiors",
+    "path_settings": { "avoid_sharp": true, "avoid_traps": true, "max_dist": 400 },
+    "flags": [ "HEARS", "SEES", "WARM" ],
+    "anger_triggers": [ "HURT" ]
+  },
+  {
+    "id": "mon_longleg_brother",
+    "type": "MONSTER",
+    "name": { "str": "长腿兄弟" },
+    "copy-from": "mon_longleg_abstract",
+    "description": "一个巨大的、黑色的球状肉块，点缀着几个棕绿色的“X”形图案。几条长触手从中央肉块伸出，盲目地摸索着猎物。",
+    "color": "brown_green",
+    "regenerates": 25,
+    "special_attacks": [
+      {
+        "id": "stretch_attack",
+        "cooldown": 10,
+        "range": 2,
+        "hit_dmg_u": "%1$s用触手抽打你的%2$s！",
+        "hit_dmg_npc": "%1$s用触手抽打<npcname>的%2$s！",
+        "no_dmg_msg_u": "%1$s用触手抽打你的%2$s，但被你的护甲弹开了！",
+        "no_dmg_msg_npc": "%1$s用触手抽打<npcname>的%2$s，但被护甲弹开了！",
+        "miss_msg_u": "%s用触手抽打你，但你躲开了！",
+        "miss_msg_npc": "%s用触手抽打<npcname>，但他们躲开了！"
+      },
+      [ "RANGED_PULL", 20 ],
+      [ "GRAB_DRAG", 10 ]
+    ]
+  },
+  {
+    "id": "mon_longleg_daddy",
+    "type": "MONSTER",
+    "name": { "str": "长腿爸爸" },
+    "copy-from": "mon_longleg_abstract",
+    "description": "一个巨大的、黑色的球状肉块，点缀着几个蓝色的“X”形图案。几条长触手从中央肉块伸出，盲目地摸索着猎物。",
+    "color": "black_cyan",
+    "hp": 400,
+    "regenerates": 50,
+    "melee_skill": 5,
+    "special_attacks": [
+      {
+        "id": "stretch_attack",
+        "cooldown": 10,
+        "range": 2,
+        "hit_dmg_u": "%1$s用触手抽打你的%2$s！",
+        "hit_dmg_npc": "%1$s用触手抽打<npcname>的%2$s！",
+        "no_dmg_msg_u": "%1$s用触手抽打你的%2$s，但被你的护甲弹开了！",
+        "no_dmg_msg_npc": "%1$s用触手抽打<npcname>的%2$s，但被护甲弹开了！",
+        "miss_msg_u": "%s用触手抽打你，但你躲开了！",
+        "miss_msg_npc": "%s用触手抽打<npcname>，但他们躲开了！"
+      },
+      [ "RANGED_PULL", 10 ],
+      [ "GRAB_DRAG", 5 ]
+    ]
+  }
+]

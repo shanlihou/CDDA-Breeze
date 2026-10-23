@@ -1,0 +1,164 @@
+[
+{
+  "type": "recipe",
+  "activity_level": "LIGHT_EXERCISE",
+  "result": "explosive_powder_paste",
+  "id_suffix": "from_raw_mats",
+  "byproducts": [
+    [
+      "plant_fibre",
+      5
+    ]
+  ],
+  "category": "CC_WEAPON",
+  "subcategory": "CSC_WEAPON_EXPLOSIVE",
+  "skill_used": "survival",
+  "difficulty": 1,
+  "time": "30 m",
+  "batch_time_factors": [
+    53,
+    1
+  ],
+  "autolearn": true,
+  "qualities": [
+    {
+      "id": "HAMMER",
+      "level": 1
+    },
+    {
+      "id": "CUT",
+      "level": 2
+    },
+    {
+      "id": "CONTAIN",
+      "level": 1
+    }
+  ],
+  "components": [
+    [
+      [
+        "explosive_powder",
+        1
+      ]
+    ],
+	[ [ "water_clean", 1 ], [ "water", 1 ] ]
+  ]
+},
+{
+	"type": "recipe",
+	"activity_level": "LIGHT_EXERCISE",
+	"result": "gel_grenade",
+	"id_suffix": "from_raw_mats",
+	"category": "CC_WEAPON",
+	"subcategory": "CSC_WEAPON_EXPLOSIVE",
+	"skill_used": "survival",
+	"difficulty": 1,
+	"time": "5 m",
+	"batch_time_factors": [
+		53,
+		1
+	],
+	"autolearn": true,
+	"qualities": [
+		{
+			"id": "CONTAIN",
+			"level": 1
+		}
+	],
+	"components": [
+		[
+			[
+				"explosive_powder_paste",
+				1
+			]
+		],
+		[
+			["rock", 1]
+		]
+	]
+},
+{
+  "type": "recipe",
+  "activity_level": "LIGHT_EXERCISE",
+  "result": "mutagen_slugcat",
+  "category": "CC_CHEM",
+  "subcategory": "CSC_CHEM_MUTAGEN",
+  "skill_used": "chemistry",
+  "skills_required": [
+    "firstaid",
+    1
+  ],
+  "autolearn": true,
+  "difficulty": 6,
+  "time": "45 m",
+  "batch_time_factors": [
+    80,
+    20
+  ],
+  "using": [
+    [
+      "mutagen_production_standard",
+      25
+    ]
+  ],
+  "components": [
+    [
+      [
+        "mutagen",
+        1
+      ]
+    ],
+    [
+      [
+        "slugcat_sample",
+        2
+      ]
+    ]
+  ],
+  "flags": [
+    "SECRET"
+  ]
+},
+{
+  "type": "recipe",
+  "activity_level": "LIGHT_EXERCISE",
+  "result": "iv_mutagen_slugcat",
+  "category": "CC_CHEM",
+  "subcategory": "CSC_CHEM_MUTAGEN",
+  "skill_used": "chemistry",
+  "skills_required": [
+    "firstaid",
+    3
+  ],
+  "difficulty": 6,
+  "time": "2 h",
+  "batch_time_factors": [
+    20,
+    5
+  ],
+  "autolearn": true,
+  "using": [
+    [
+      "serum_production_standard",
+      37
+    ]
+  ],
+  "components": [
+    [
+      [
+        "iv_mutagen_feline",
+        1
+      ]
+    ],
+    [
+      [
+        "iv_mutagen_snail",
+        1
+      ]
+    ]
+  ],
+  "flags": [
+    "SECRET"
+  ]
+}
+]

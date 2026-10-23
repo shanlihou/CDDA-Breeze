@@ -1,0 +1,35 @@
+[
+	{
+		"id": "portal_storm_config",
+		"type": "TOOL_ARMOR",
+		"name": {
+			"str_sp": "空间风暴调整器"
+		},
+		"description": "这是你的一项能力：通过思考，你可以更改空间风暴的性质。激活以使用该能力。",
+		"weight": "0 g",
+		"volume": "0 ml",
+		"price": "0 USD",
+		"material": [
+			"flesh"
+		],
+		"chat_topics":["TALK_PS_CONFIG"],
+		"symbol": ",",
+		"color": "light_gray",
+		"use_action": [
+			{
+				"type": "effect_on_conditions",
+				"description": "调整空间风暴",
+				"effect_on_conditions": [
+					"dialog_portal_storm_config"
+				]
+			}
+		],
+		"flags": [
+			"UNBREAKABLE",
+			"INTEGRATED",
+			"NO_WEAR_EFFECT",
+			"ZERO_WEIGHT",
+			"TRADER_AVOID"
+		]
+	}
+]

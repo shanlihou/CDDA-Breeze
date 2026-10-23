@@ -1,0 +1,36 @@
+[
+  {
+    "//1": "最大HP上升、最大负重上升、自愈速度加快、骨折恢复速度加快、移动速度上升",
+    "type": "mutation",
+    "id": "ENGAGEMENT",
+    "name": "婚约者",
+    "points": 0,
+    "description": "你有一个发誓度过一生的伴侣",
+    "starting_trait": false,
+    "player_display": true,
+    "valid": false,
+    "purifiable": false,
+    "profession": true,
+    "types": [ "THE_END_ENGAGEMENT" ],
+    "hp_modifier": 0.05,
+    "weight_capacity_modifier": 1.05,
+    "healing_awake": 0.05,
+    "healing_multiplier": 1.1,
+    "mending_modifier": 1.1,
+    "enchantments": [ { "condition": "ALWAYS", "values": [ { "value": "SPEED", "multiply": 0.05 } ] } ]
+  },
+  {
+    "//1": "最大HP上升、最大负重上升、自愈速度加快、骨折恢复速度加快、移动速度上升",
+    "type": "mutation",
+    "id": "奴隶",
+    "name": "奴隶",
+    "points": 0,
+    "description": "这是一个的奴隶",
+    "starting_trait": false,
+    "player_display": true,
+    "valid": false,
+    "purifiable": false,
+    "profession": true,
+    "types": [ "奴隶地位" ]
+  }
+]

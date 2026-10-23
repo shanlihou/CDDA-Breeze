@@ -1,0 +1,67 @@
+[
+	{
+		"type": "terrain",
+		"id": "forestry_t_shrub_blueberry_fertilized",
+		"name": "已经施过肥的蓝莓丛",
+		"copy-from": "t_shrub_blueberry",
+		"symbol": "7",
+		"color": "light_blue_green",
+		"examine_action": "harvest_ter_nectar",
+		"looks_like": "t_shrub_blueberry",
+		"harvest_by_season": [
+			{
+				"seasons": [ "summer" ],
+				"id": "forestry_fertilized_blueberry_harv"
+			}
+		]
+	},
+	{
+		"id": "forestry_fertilized_blueberry_harv",
+		"type": "harvest",
+		"entries": [ { "drop": "blueberries", "base_num": [ 3, 8 ], "scale_num": [ 0.1, 0.7 ] } ]
+	},
+
+	{
+		"type": "terrain",
+		"id": "forestry_t_shrub_blueberry_pruned",
+		"name": "已经修剪过的蓝莓丛",
+		"copy-from": "t_shrub_blueberry",
+		"symbol": "7",
+		"color": "light_blue_green",
+		"examine_action": "harvest_ter_nectar",
+		"looks_like": "t_shrub_blueberry",
+		"harvest_by_season": [
+			{
+				"seasons": [ "summer" ],
+				"id": "forestry_pruned_blueberry_harv"
+			}
+		]
+	},
+	{
+		"id": "forestry_pruned_blueberry_harv",
+		"type": "harvest",
+		"entries": [ { "drop": "blueberries", "base_num": [ 2, 6 ], "scale_num": [ 0, 0.6 ] } ]
+	},
+
+	{
+		"type": "terrain",
+		"id": "forestry_t_shrub_blueberry_fertilized_pruned",
+		"name": "施过肥并修剪过的蓝莓丛",
+		"copy-from": "t_shrub_blueberry",
+		"symbol": "7",
+		"color": "light_blue_green",
+		"examine_action": "harvest_ter_nectar",
+		"looks_like": "t_shrub_blueberry",
+		"harvest_by_season": [
+			{
+				"seasons": [ "summer" ],
+				"id": "forestry_fertilized_pruned_blueberry_harv"
+			}
+		]
+	},
+	{
+		"id": "forestry_fertilized_pruned_blueberry_harv",
+		"type": "harvest",
+		"entries": [ { "drop": "blueberries", "base_num": [ 5, 13 ], "scale_num": [ 0.2, 0.8 ] } ]
+	}
+]

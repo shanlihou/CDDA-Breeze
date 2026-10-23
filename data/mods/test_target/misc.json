@@ -1,0 +1,23 @@
+[
+  {
+    "id": "mon_dummy_tutorial100000",
+    "type": "MONSTER",
+    "name": { "str": "十万血靶子" },
+    "description": "This dummy serves for only one purpose - to teach players how to hit monsters.",
+    "looks_like": "f_mannequin",
+    "default_faction": "",
+    "species": [ "UNKNOWN" ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 100000,
+    "speed": 100,
+    "material": [ "wood" ],
+    "symbol": "X",
+    "color": "white",
+    "melee_damage": [ { "damage_type": "cut", "amount": 0 } ],
+    "vision_day": 1,
+    "harvest": "exempt",
+    "death_function": { "corpse_type": "NO_CORPSE", "message": "The %s is destroyed." },
+    "flags": [ "IMMOBILE", "NOT_HALLUCINATION" ]
+  }
+]

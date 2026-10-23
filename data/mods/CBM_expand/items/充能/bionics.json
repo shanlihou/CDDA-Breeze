@@ -1,0 +1,38 @@
+[
+  {
+    "id": "bio_trickle_mkII",
+    "copy-from": "bionic_general_npc_usable",
+    "type": "BIONIC_ITEM",
+    "name": { "str": "涓流充能Mk.II型CBM" },
+    "description": "一个低功率、持久的的生化供能装置,由小型核衰变供能，这是通过改良得到的第二代改进版。能量输出低,但不需要燃料源。\n可以为受体提供每秒20J的生化能量充能。",
+    "weight": "1000 g",
+    "price": 600000,
+    "price_postapoc": 8000,
+    "difficulty": 3,
+    "installation_data": "AID_bio_trickle"
+  },
+  {
+    "id": "bio_trickle_cascade",
+    "copy-from": "bionic_general_npc_usable",
+    "type": "BIONIC_ITEM",
+    "name": { "str": "涓流储能组CBM" },
+    "description": "一个低功率、持久的的生化供能装置,由小型核衰变供能。能量输出低,但不需要燃料源。\n这是级联版本，共级联了12块涓流储能模块。可以为受体提供每秒24J的生化能量充能。",
+    "weight": "2000 g",
+    "price": 1500000,
+    "price_postapoc": 20000,
+    "difficulty": 3,
+    "installation_data": "AID_bio_trickle"
+  },
+  {
+    "id": "bio_trickle_mkII_cascade",
+    "copy-from": "bionic_general_npc_usable",
+    "type": "BIONIC_ITEM",
+    "name": { "str": "涓流储能Mk.II型组CBM" },
+    "description": "一个低功率、持久的的生化供能装置,由小型核衰变供能，这是通过改良得到的第二代改进版。能量输出低,但不需要燃料源。\n这是级联版本，共级联了12块储能模块CBM。可以为受体提供每秒240J的生化能量充能。",
+    "weight": "4000 g",
+    "price": 8000000,
+    "price_postapoc": 100000,
+    "difficulty": 3,
+    "installation_data": "AID_bio_trickle"
+  }
+]

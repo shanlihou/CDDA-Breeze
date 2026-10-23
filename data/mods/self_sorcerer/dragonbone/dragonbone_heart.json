@@ -1,0 +1,88 @@
+[
+  {
+    "id": "ovo_dragon_heart_fire",
+    "copy-from": "meat",
+    "type": "COMESTIBLE",
+    "symbol": "o",
+    "color": "red",
+    "name": "火龙心",
+    "description": "一颗龙心，遗憾的是吃了它没什么用，但是和龙骨武器复合，则会发挥出强大的力量。",
+    "price": 10000,
+    "price_postapoc": 10000,
+    "weight": "600 g",
+    "volume": "600 ml",
+    "material": [ "flesh" ],
+    "parasites": 0,
+    "spoils_in": 0,
+    "relic_data": { }
+  },
+  {
+    "id": "ovo_dragon_heart_ice",
+    "copy-from": "ovo_dragon_heart_fire",
+    "type": "COMESTIBLE",
+    "name": "冰龙心",
+    "description": "一颗龙心，遗憾的是吃了它没什么用，但是和龙骨武器复合，则会发挥出强大的力量。",
+    "relic_data": { }
+  },
+  {
+    "id": "ovo_dragon_heart_elect",
+    "copy-from": "ovo_dragon_heart_fire",
+    "type": "COMESTIBLE",
+    "name": "电龙心",
+    "description": "一颗龙心，遗憾的是吃了它没什么用，但是和龙骨武器复合，则会发挥出强大的力量。",
+    "relic_data": { }
+  },
+  {
+    "id": "ovo_dragon_heart_black",
+    "copy-from": "ovo_dragon_heart_fire",
+    "type": "COMESTIBLE",
+    "name": "黑龙心",
+    "description": "一颗龙心，遗憾的是吃了它没什么用，但是和龙骨武器复合，则会发挥出强大的力量。",
+    "relic_data": { }
+  },
+  {
+    "id": "ovo_dragon_heart_unknown",
+    "type": "GENERIC",
+    "symbol": "o",
+    "color": "red",
+    "name": "龙心",
+    "description": "这颗龙心需要鉴定一下。",
+    "price": 10000,
+    "price_postapoc": 10000,
+    "weight": "600 g",
+    "volume": "600 ml",
+    "material": [ "flesh" ],
+    "relic_data": { },
+    "use_action": { "type": "unpack", "group": "group_ovo_dragon_heart_unknown" }
+  },
+  {
+    "type": "item_group",
+    "id": "group_ovo_dragon_heart_unknown",
+    "items": [
+      [ "ovo_dragon_heart_fire", 1 ],
+      [ "ovo_dragon_heart_ice", 1 ],
+      [ "ovo_dragon_heart_elect", 1 ],
+      [ "ovo_dragon_heart_black", 1 ]
+    ]
+  },
+  {
+    "result": "ovo_dragon_heart_unknown",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MATERIALS",
+    "skill_used": "fabrication",
+    "difficulty": 0,
+    "autolearn": true,
+    "time": "60 m",
+    "tools": [ [ [ "surface_heat", 60, "LIST" ] ] ],
+    "qualities": [ { "id": "CONTAIN", "level": 1 } ],
+    "components": [
+      [ [ "glow_dust", 10 ] ],
+      [ [ "mana_dust", 20 ] ],
+      [ [ "dragon_essence", 20 ] ],
+      [ [ "ovo_dragon_bone", 40 ], [ "ovo_dragon_bone_piece", 800 ] ],
+      [ [ "mutagen_black_dragon", 1 ] ]
+    ]
+  }
+]

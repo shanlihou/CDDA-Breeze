@@ -1,0 +1,37 @@
+[
+    {
+        "id": "VER_AA12",
+        "copy-from": "shotgun_base",
+        "looks_like": "remington_870",
+        "type": "GUN",
+        "name": { "str": "AA-12" },
+        "description": "AA-12，全称Auto Assault-12，最初被设计并称为Atchisson Assault Shotgun，是由Maxwell Atchisson在1972年开发的一款自动战斗霰弹枪。AA-12的最显著特点是减少了后坐力。当前的2005版本已经在专利被出售给Military Police Systems, Inc.后经过了18年的开发。原始设计是后来包括USAS-12战斗霰弹枪在内的几种武器的基础。该霰弹枪只能在全自动模式下射击。然而，相对较低的循环射速（每分钟约300发）使射手可以通过短暂的扳机拉动实际上进行半自动射击",
+        "handling": 30,
+        "weight": "5200 g",
+        "volume": "3064 ml",
+        "longest_side": "966 mm",
+        "price": 189000,
+        "price_postapoc": 10000,
+        "to_hit": -1,
+        "material": [ "steel" ],
+        "dispersion": 300,
+        "durability": 10,
+        "modes": [ [ "DEFAULT", "semi-auto", 1 ], [ "BURST", "3 rd.", 3 ], [ "AUTO", "auto", 5 ] ],
+        "default_mods": [ "bars" ],
+        "min_cycle_recoil": 1250,
+        "barrel_volume": "81 ml",
+        "valid_mod_locations": [
+          [ "sling", 1 ],
+          [ "stock mount", 1 ],
+          [ "mechanism", 4 ],
+          [ "barrel", 1 ],
+          [ "brass catcher", 1 ],
+          [ "grip mount", 1 ],
+          [ "rail mount", 1 ],
+          [ "sights mount", 1 ],
+          [ "underbarrel mount", 1 ]
+        ],
+        "pocket_data": [ { "pocket_type": "MAGAZINE_WELL", "item_restriction": [ "AA12MAG_rd8", "AA12MAG_rd20","AA12MAG_rd32" ] } ],
+        "bashing":12
+      }
+]

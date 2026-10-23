@@ -1,0 +1,32 @@
+[
+  {
+    "id": "bio_trickle_mkII",
+    "type": "bionic",
+    "name": { "str": "涓流充能Mk.II型" },
+    "description": "您已经配备了涓流充能模块Mk.II型，可以随时缓慢地补充您的生化能量。尽管功率较低，但没有任何成本，可持续数年或者直到您生命的尽头。",
+    "occupied_bodyparts": [ [ "torso", 7 ] ],
+    "dupes_allowed": true,
+    "power_trickle": "20 J",
+    "flags": [ "BIONIC_POWER_SOURCE", "BIONIC_NPC_USABLE" ]
+  },
+  {
+    "id": "bio_trickle_cascade",
+    "type": "bionic",
+    "name": { "str": "涓流充能组" },
+    "description": "您已经配备了涓流充能模块组，可以随时缓慢地补充您的生化能量。尽管功率较低，但没有任何成本，可持续数年或者直到您生命的尽头。",
+    "occupied_bodyparts": [ [ "torso", 7 ] ],
+    "dupes_allowed": true,
+    "power_trickle": "24 J",
+    "flags": [ "BIONIC_POWER_SOURCE", "BIONIC_NPC_USABLE", "BIONIC_SHOCKPROOF" ]
+  },
+  {
+    "id": "bio_trickle_mkII_cascade",
+    "type": "bionic",
+    "name": { "str": "涓流充能Mk.II型组" },
+    "description": "您已经配备了涓流充能模块Mk.II型组，可以随时缓慢地补充您的生化能量。尽管功率不高，但没有任何成本，可持续数年或者直到您生命的尽头。",
+    "occupied_bodyparts": [ [ "torso", 7 ] ],
+    "dupes_allowed": true,
+    "power_trickle": "240 J",
+    "flags": [ "BIONIC_POWER_SOURCE", "BIONIC_NPC_USABLE", "BIONIC_SHOCKPROOF" ]
+  }
+]

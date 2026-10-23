@@ -1,0 +1,169 @@
+[
+  {
+    "//": "目标对象",
+    "type": "effect_type",
+    "id": "sex_target_1"
+  },
+  {
+    "//": "高潮效果",
+    "type": "effect_type",
+    "id": "climax",
+    "name": [ "高潮" ],
+    "desc": [
+      "积攒的快感一瞬间爆发了。"
+    ],
+    "apply_message": "你抵达了高潮。",
+    "remove_message": "高潮的余韵渐渐消褪。",
+    "max_intensity": 20,
+    "base_mods": {
+      "per_mod": [ -2 ],
+      "dex_mod": [ -2 ],
+      "int_mod": [ -2 ],
+      "speed_mod": [ -30 ]
+    },
+    "scaling_mods": {
+      "per_mod": [ -0.3 ],
+      "dex_mod": [ -0.3 ],
+      "int_mod": [ -0.3 ],
+      "speed_mod": [ -3 ]
+    },
+    "rating": "bad"
+  },
+  {
+    "//": "射精效果",
+    "type": "effect_type",
+    "id": "cum",
+    "name": [ "射精" ],
+    "desc": [
+      "积攒的快感一瞬间爆发了。"
+    ],
+    "apply_message": "你射出了粘稠的液体。",
+    "remove_message": "你从射精缓过劲来。",
+    "max_intensity": 20,
+    "base_mods": {
+      "per_mod": [ -1 ],
+      "int_mod": [ -1 ]
+    },
+    "rating": "bad"
+  },
+  {
+    "//": "高潮的影响",
+    "type": "effect_on_condition",
+    "id": "EOC_sex_climax_other",
+    "condition":{
+      "u_has_effect": "climax"
+    },
+    "effect": [
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "pleasant", "type": "int", "context": "快感" }, "=", { "arithmetic": [ { "arithmetic": [ { "arithmetic": [ { "u_val": "var", "var_name": "pleasant", "type": "int", "context": "快感" }, "-", { "const": 1 } ] }, "*", { "const": 2 } ] }, "/", { "const": 3 } ], "min": 0 } 
+        ]
+      },
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "desire", "type": "int", "context": "欲望" }, "=", { "arithmetic": [ { "arithmetic": [ { "arithmetic": [ { "u_val": "var", "var_name": "desire", "type": "int", "context": "欲望" }, "-", { "const": 1 } ] }, "*", { "const": 9 } ] }, "/", { "const": 10 } ], "min": 0 } 
+        ]
+      },
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "desire_level", "type": "int", "context": "欲望指数" }, "+=", { "arithmetic": [ { "rand": 13 }, "/", { "const": 10 } ] }
+        ]
+      }
+    ]
+  },
+  {
+    "//": "射精的影响",
+    "type": "effect_on_condition",
+    "id": "EOC_sex_cum_other",
+    "condition":{
+      "u_has_effect": "cum"
+    },
+    "effect": [
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "pleasant", "type": "int", "context": "快感" }, "=", { "arithmetic": [ { "arithmetic": [ { "arithmetic": [ { "u_val": "var", "var_name": "pleasant", "type": "int", "context": "快感" }, "-", { "const": 1 } ] }, "*", { "const": 2 } ] }, "/", { "const": 3 } ], "min": 0 } 
+        ]
+      },
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "desire", "type": "int", "context": "欲望" }, "=", { "arithmetic": [ { "arithmetic": [ { "arithmetic": [ { "u_val": "var", "var_name": "desire", "type": "int", "context": "欲望" }, "-", { "const": 1 } ] }, "*", { "const": 9 } ] }, "/", { "const": 10 } ], "min": 0 } 
+        ]
+      },
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "desire_level", "type": "int", "context": "欲望指数" }, "+=", { "arithmetic": [ { "rand": 13 }, "/", { "const": 10 } ] }
+        ]
+      }
+    ]
+  },
+  
+  
+  
+  
+  {
+    "type": "effect_type",
+    "//":"检测角色做爱中",
+    "id": "u_sex",
+    "name": [ "做爱" ],
+    "desc": [
+      "正在做爱中。"
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_effect_sex_get",
+    "effect": [
+      {
+        "set_string_var": { "u_val": "desc", "type": "string", "context": "文本" },
+        "target_var": { "u_val": "desc" }
+      },
+      {
+        "u_message": "<u_val:desc>"
+      },
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "sex_worth_bak", "type": "int", "context": "性价值备份" },
+          "=",
+          { "arithmetic": [ { "u_val": "var", "var_name": "sex_worth", "type": "int", "context": "性价值" }, "+", { "arithmetic": [ { "u_val": "skill_level", "skill": "sex" }, "+", { "const": 1 } ] } ] }
+        ]
+      },
+      {
+        "arithmetic":[
+          { "u_val": "var", "var_name": "pleasant_rate", "type": "int", "context": "快感获得速率" },
+          "+=",
+          { "u_val": "var", "var_name": "sex_worth_bak", "type": "int", "context": "性价值备份" }
+        ]
+      },
+      {
+        "u_add_effect":"u_sex",
+        "duration": 299
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_effect_sex_lose",
+    "condition": {
+      "and": [
+        {
+          "u_has_effect": "u_sex" 
+        },
+        {
+          "or":[
+            {
+            "u_has_effect": "climax"
+            },
+            {
+            "u_has_effect": "cum"
+            }
+          ]
+        }
+      ]
+    },
+    "effect": [
+      {
+        "u_lose_effect":"u_sex"
+      }
+    ]
+  }
+]

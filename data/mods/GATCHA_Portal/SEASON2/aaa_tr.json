@@ -1,0 +1,120 @@
+[
+	{
+		"id":"t_ncard_s2_wall",
+		"type":"terrain",
+		"alias":[ "t_ncard_s2_wall_h", "t_ncard_s2_wall_v" ],
+		"name":"未知舱壁",
+		"looks_like":"t_concrete",
+		"description":"none",
+		"symbol":"LINE_OXOX",
+		"color":"cyan",
+		"move_cost":0,
+		"coverage":100,
+		"roof":"t_ncard_s2_roof",
+		"bash":{"str_min": 70,"str_max": 300,"sound": "whump!","sound_fail": "whump!","ter_set": "t_ncard_s2_wall"},
+		"flags":[ "FIRE_CONTAINER","NOITEM", "SUPPORTS_ROOF", "WALL", "NO_SCENT", "AUTO_WALL_SYMBOL", "BLOCK_WIND" ]
+	}
+,
+	{
+		"id":"t_ncard_s2_glass",
+		"type":"terrain",
+		"alias":[ "t_ncard_s2_glass_h", "t_ncard_s2_glass_v" ],
+		"name":"未知玻璃",
+		"looks_like":"t_reinforced_glass",
+		"description":"none",
+		"symbol":"LINE_OXOX",
+		"color":"white",
+		"move_cost":0,
+		"coverage":100,
+		"roof":"t_ncard_s2_roof",
+		"bash":{"str_min": 70,"str_max": 300,"sound": "whump!","sound_fail": "whump!","bash_below": true,"ter_set": "t_ncard_s2_glass"},
+		"flags":[ "FIRE_CONTAINER","NOITEM", "SUPPORTS_ROOF", "WALL", "NO_SCENT", "AUTO_WALL_SYMBOL", "BLOCK_WIND" ]
+	}
+,
+	{
+		"id":"t_ncard_s2_roof",
+		"type":"terrain",
+		"name":"未知舱壁顶",
+		"looks_like":"t_concrete",
+		"description":"none",
+		"symbol":".",
+		"color":"cyan",
+		"move_cost":2,
+		"coverage":100,
+		"roof":"t_ncard_s2_roof",
+		"bash":{"str_min": 70,"str_max": 300,"sound": "whump!","sound_fail": "whump!","bash_below": true,"ter_set": "t_ncard_s2_roof"},
+		"flags":[ "FIRE_CONTAINER","TRANSPARENT", "FLAT" ]
+	}
+,
+	{
+		"id":"t_ncard_s2_floor",
+		"type":"terrain",
+		"name":"未知地板",
+		"description":"none",
+		"connects_to":"CONCRETE",
+		"symbol":"_",
+		"color":"light_cyan",
+		"move_cost":2,
+		"roof":"t_ncard_s2_roof",
+		"bash":{"str_min": 70,"str_max": 300,"sound": "whump!","sound_fail": "whump!","bash_below": true,"ter_set": "t_ncard_s2_floor"},
+		"flags":[ "PLACE_ITEM","FIRE_CONTAINER","TRANSPARENT", "SUPPORTS_ROOF",  "INDOORS", "FLAT", "ROAD" ]
+	}
+,
+	{
+		"id":"t_ncard_s2_floor2",
+		"type":"terrain",
+		"name":"未知地板",
+		"description":"none",
+		"connects_to":"CONCRETE",
+		"symbol":"_",
+		"color":"light_cyan",
+		"move_cost":2,
+		"roof":"t_ncard_s2_roof",
+		"bash":{"str_min": 70,"str_max": 300,"sound": "whump!","sound_fail": "whump!","bash_below": true,"ter_set": "t_ncard_s2_floor2"},
+		"flags":[ "PLACE_ITEM","FIRE_CONTAINER","TRANSPARENT", "SUPPORTS_ROOF",  "INDOORS", "FLAT", "ROAD" ]
+	}
+,
+	{
+		"id":"t_ncard_s2_switch",
+		"type":"terrain",
+		"name":"未知舱壁抬升装置",
+		"description":"它正在反复闪烁以吸引其他人的注意力，除非你做好充分准备，否则最好不要碰它。",
+		"connects_to":"CONCRETE",
+		"symbol":"s",
+		"color":"red",
+		"move_cost":2,
+		"roof":"t_ncard_s2_roof",
+		"bash":{"str_min": 70,"str_max": 300,"sound": "whump!","sound_fail": "whump!","bash_below": true,"ter_set": "t_ncard_s2_switch"},
+		"flags":[ "FIRE_CONTAINER","TRANSPARENT", "SUPPORTS_ROOF",  "INDOORS", "FLAT", "ROAD" ]
+	}
+,
+	{
+		"id":"t_ncard_s2_switch2",
+		"type":"terrain",
+		"name":"未知舱壁抬升装置(已抬升)",
+		"description":"一个危险的家伙已经被放出来了。",
+		"connects_to":"CONCRETE",
+		"symbol":"s",
+		"color":"white",
+		"move_cost":2,
+		"roof":"t_ncard_s2_roof",
+		"bash":{"str_min": 70,"str_max": 300,"sound": "whump!","sound_fail": "whump!","bash_below": true,"ter_set": "t_ncard_s2_switch2"},
+		"flags":[ "FIRE_CONTAINER","TRANSPARENT", "SUPPORTS_ROOF",  "INDOORS", "FLAT", "ROAD" ]
+	}
+,
+	{
+		"id":"t_ncard_s2_danger",
+		"type":"terrain",
+		"name":"未知地板",
+		"description":"none",
+		"connects_to":"CONCRETE",
+		"symbol":"_",
+		"color":"red",
+		"move_cost":2,
+		"roof":"t_ncard_s2_roof",
+		"bash":{"str_min": 70,"str_max": 300,"sound": "whump!","sound_fail": "whump!","bash_below": true,"ter_set": "t_ncard_s2_danger"},
+		"flags":[ "FIRE_CONTAINER","TRANSPARENT", "SUPPORTS_ROOF",  "INDOORS", "FLAT", "ROAD" ]
+	}
+
+
+]

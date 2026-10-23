@@ -1,0 +1,42 @@
+[
+{
+    "id": "cysd_yxxmb",
+    "type": "ARMOR",
+    "name": "一小箱面包",
+    "description": "一个小箱子装着50袋面包，只要不拆开就不会过期变质。",
+    "weight": "180 g",
+    "volume": "1450 ml",
+    "price": 100,
+    "to_hit": 5,
+    "material": [ "cotton", "plastic" ],
+    "symbol": "[",
+    "looks_like": "box_large",
+    "color": "green",
+    "covers": [ "ARMS" ],
+    "coverage": 1,
+    "encumbrance": 1,
+    "warmth": 1,
+    "material_thickness": 3,
+    "use_action": { "type": "unpack", "group": "cysd_yxxmb", "filthy_volume_threshold": "10 L" }
+  },
+  {
+    "id": "cysd_yxxmhmb",
+    "type": "ARMOR",
+    "name": "一小箱盲盒面包",
+    "description": "一个小箱子装着一些袋面包，在拆开之前你永远不知道里面有几袋面包。",
+    "weight": "180 g",
+    "volume": "1450 ml",
+    "price": 100,
+    "to_hit": 5,
+    "material": [ "cotton", "plastic" ],
+    "symbol": "[",
+    "looks_like": "box_large",
+    "color": "green",
+    "covers": [ "ARMS" ],
+    "coverage": 1,
+    "encumbrance": 1,
+    "warmth": 1,
+    "material_thickness": 3,
+    "use_action": { "type": "unpack", "group": "cysd_yxxmhmb", "filthy_volume_threshold": "10 L" }
+  }
+]

@@ -1,0 +1,471 @@
+[
+  {
+    "id": "ldc_dress_shirt",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "礼服衬衫（LDC战斗服）",
+      "str_pl": "礼服衬衫（LDC战斗服）"
+    },
+    "description": "一件白色长袖纽扣衬衫。月球防卫队成员穿着。",
+    "volume": "700 ml",
+    "weight": "200 g",
+    "price": 15000,
+    "price_postapoc": 1500,
+    "material": [
+      "lunarian_cloth"
+    ],
+    "material_thickness": 1,
+    "symbol": "[",
+    "looks_like": "longshirt",
+    "color": "white",
+    "warmth": 10,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "400 ml",
+        "max_contains_weight": "800 g",
+        "moves": 80
+      }
+    ],
+    "armor": [
+      {
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "coverage": 90,
+        "encumbrance": [
+          4,
+          6
+        ]
+      },
+      {
+        "covers": [
+          "torso"
+        ],
+        "coverage": 90,
+        "encumbrance": [
+          4,
+          6
+        ]
+      }
+    ],
+    "flags": [
+      "FANCY",
+      "STURDY",
+      "VARSIZE"
+    ]
+  },
+  {
+    "id": "ldc_dress_shoes",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "月球鞋（LDC战斗服）",
+      "str_pl": "月球鞋（LDC战斗服）"
+    },
+    "description": "精致舒适的皮鞋.月球防卫队成员的装备。",
+    "volume": "1350 ml",
+    "weight": "700 g",
+    "price": 12000,
+    "price_postapoc": 2500,
+    "to_hit": 1,
+    "bashing": 1,
+    "material": [
+      "lunarian_leather"
+    ],
+    "material_thickness": 2.5,
+    "symbol": "[",
+    "looks_like": "dress_shoes",
+    "color": "dark_gray",
+    "warmth": 10,
+    "armor": [
+      {
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ],
+        "coverage": 60,
+        "encumbrance": [
+          6,
+          8
+        ]
+      }
+    ],
+    "flags": [
+      "FANCY",
+      "OUTER",
+      "VARSIZE"
+    ]
+  },
+  {
+    "id": "ldc_ear_accessory",
+    "type": "ARMOR",
+    "name": {
+      "str": "耳扣",
+      "str_pl": "耳扣"
+    },
+    "description": "一对用作耳饰的金色纽扣。触感冰凉，上面有极细微的雕刻，只有触摸才能察觉。这是现代玉兔时尚的好例子吗？",
+    "volume": "5 ml",
+    "weight": "10 g",
+    "price_postapoc": 10,
+    "material": [
+      "steel"
+    ],
+    "symbol": "[",
+    "color": "yellow",
+    "flags": [
+      "NO_WEAR_EFFECT"
+    ]
+  },
+  {
+    "id": "ldc_ear_accessory2",
+    "type": "ARMOR",
+    "name": {
+      "str": "耳夹",
+      "str_pl": "耳夹"
+    },
+    "copy-from": "ldc_ear_accessory",
+    "description": "一个金色的耳夹。触感冰凉，上面有深深的雕刻，互相对比时看起来各不相同。也许这些相当于狗牌？",
+    "//": "OLD DESCRIPTION MOVE TO DIALOGUE OR SOMETHING Looks like a big earring, but it's actually more close to an antenna, working as a enhancer for transmitting to the rest of the Network, now disabled due unforseen circumstances.",
+    "volume": "15 ml",
+    "weight": "20 g",
+    "flags": [
+      "NO_WEAR_EFFECT"
+    ]
+  },
+  {
+    "id": "ldc_ear_accessory3",
+    "type": "ARMOR",
+    "name": {
+      "str": "耳铃",
+      "str_pl": "耳铃"
+    },
+    "copy-from": "ldc_ear_accessory",
+    "description": "金色的耳铃。由数量不等的小球形铃铛组成，大小也各不相同，都不超过一枚硬币。最大的那个带有复杂的标记。这些都不发出声音，或者更确切地说，你听不到声音？",
+    "volume": "20 ml",
+    "weight": "10 g",
+    "flags": [
+      "NO_WEAR_EFFECT"
+    ]
+  },
+  {
+    "id": "ldc_helmet",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "月球头盔",
+      "str_pl": "月球头盔"
+    },
+    "description": "一顶白色的头盔，留有让月兔耳朵伸出的空间。后侧装饰有一个黑色蝴蝶结。月球防卫队成员穿着。",
+    "repairs_like": "xlkevlar",
+    "volume": "1750 ml",
+    "weight": "1383 g",
+    "price": 15000,
+    "price_postapoc": 1500,
+    "to_hit": -1,
+    "bashing": 10,
+    "material": [
+      "kevlar",
+      "plastic"
+    ],
+    "material_thickness": 8,
+    "symbol": "[",
+    "looks_like": "hat_hard",
+    "color": "white",
+    "warmth": 15,
+    "armor": [
+      {
+        "covers": [
+          "head"
+        ],
+        "coverage": 80,
+        "encumbrance": [
+          18,
+          24
+        ]
+      }
+    ],
+    "flags": [
+      "OUTER",
+      "VARSIZE",
+      "WATERPROOF"
+    ]
+  },
+  {
+    "id": "ldc_kneesocks",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "及膝袜（LDC战斗服）",
+      "str_pl": "及膝袜（LDC战斗服）"
+    },
+    "description": "长及膝盖以上的黑色袜子。左侧袜子的左边印有一个新月图案。月球防卫队成员穿着。",
+    "volume": "200 ml",
+    "weight": "100 g",
+    "price": 5000,
+    "price_postapoc": 2500,
+    "material": [
+      "lunarian_cloth"
+    ],
+    "material_thickness": 0.5,
+    "symbol": "[",
+    "looks_like": "leg_warmers",
+    "color": "dark_gray",
+    "warmth": 10,
+    "armor": [
+      {
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          2,
+          4
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_lower_l",
+          "leg_lower_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          2,
+          4
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_knee_l",
+          "leg_knee_r"
+        ],
+        "coverage": 20,
+        "encumbrance": [
+          2,
+          4
+        ]
+      }
+    ],
+    "flags": [
+      "FANCY",
+      "SKINTIGHT",
+      "STURDY"
+    ]
+  },
+  {
+    "id": "ldc_skirt",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "月球短裙（LDC战斗服）",
+      "str_pl": "月球短裙（LDC战斗服）"
+    },
+    "description": "一条浅色的百褶裙。月球防卫队成员穿着。",
+    "volume": "225 ml",
+    "weight": "60 g",
+    "price": 12000,
+    "price_postapoc": 600,
+    "material": [
+      "lunarian_cloth"
+    ],
+    "material_thickness": 2,
+    "symbol": "[",
+    "looks_like": "skirt",
+    "color": "dark_gray",
+    "warmth": 5,
+    "armor": [
+      {
+        "covers": [
+          "leg_r",
+          "leg_l"
+        ],
+        "specifically_covers": [
+          "leg_hip_l",
+          "leg_hip_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          2,
+          4
+        ]
+      },
+      {
+        "covers": [
+          "leg_r",
+          "leg_l"
+        ],
+        "specifically_covers": [
+          "leg_upper_l",
+          "leg_upper_r"
+        ],
+        "coverage": 60,
+        "encumbrance": [
+          2,
+          4
+        ]
+      }
+    ],
+    "flags": [
+      "FANCY",
+      "VARSIZE"
+    ]
+  },
+  {
+    "id": "ldc_suit",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "月球西装（LDC战斗服）",
+      "str_pl": "月球西装（LDC战斗服）"
+    },
+    "description": "一套覆盖躯干和手臂的黑色长袖西装,实际上这是月球防卫队的战斗服.口袋上看得到月球徽章.",
+    "repairs_like": "blazer",
+    "volume": "3000 ml",
+    "weight": "500 g",
+    "price": 20000,
+    "price_postapoc": 500,
+    "material": [
+      "lunarian_cloth"
+    ],
+    "material_thickness": 3,
+    "symbol": "[",
+    "looks_like": "blazer",
+    "color": "light_gray",
+    "environmental_protection": 2,
+    "warmth": 20,
+    "weight_capacity_bonus": "1 kg",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 80
+      }
+    ],
+    "armor": [
+      {
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "coverage": 95,
+        "encumbrance": [
+          8,
+          12
+        ]
+      },
+      {
+        "covers": [
+          "torso"
+        ],
+        "coverage": 90,
+        "encumbrance": [
+          8,
+          12
+        ]
+      }
+    ],
+    "flags": [
+      "FANCY",
+      "POCKETS",
+      "STURDY",
+      "VARSIZE",
+      "WATERPROOF"
+    ]
+  },
+  {
+    "id": "ldc_tie",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "红色领带（LDC战斗服）",
+      "str_pl": "红色领带（LDC战斗服）"
+    },
+    "description": "一条红色领带。月球防卫队成员穿着。",
+    "volume": "25 ml",
+    "weight": "20 g",
+    "price": 1000,
+    "price_postapoc": 100,
+    "material": [
+      "lunarian_cloth"
+    ],
+    "material_thickness": 1,
+    "symbol": "[",
+    "color": "green",
+    "armor": [
+      {
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_upper"
+        ],
+        "coverage": 8,
+        "encumbrance": [
+          0,
+          1
+        ]
+      }
+    ],
+    "flags": [
+      "FANCY",
+      "VARSIZE"
+    ]
+  },
+  {
+    "id": "ldc_veil_deactivated",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "月之羽衣（关）",
+      "str_pl": "月之羽衣（关）"
+    },
+    "description": "一件高度先进的月球科技产品，允许使用者在不同地点之间移动。不过这一件是纪念品，已经停用了。它看起来像一种空灵的围巾。",
+    "volume": "500 ml",
+    "weight": "40 g",
+    "price": 4000,
+    "price_postapoc": 200,
+    "material": [
+      "lunarian_cloth"
+    ],
+    "material_thickness": 0.01,
+    "symbol": "[",
+    "looks_like": "scarf",
+    "color": "dark_gray",
+    "armor": [
+      {
+        "covers": [
+          "mouth"
+        ],
+        "coverage": 85,
+        "encumbrance": [
+          0,
+          2
+        ]
+      }
+    ],
+    "flags": [
+      "FANCY",
+      "OUTER",
+      "STURDY",
+      "VARSIZE"
+    ]
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "type": "mutation",
+    "id": "CCfind_food",
+    "name": { "str": "CC觅食-采集蔬果" },
+    "points": 0,
+    "description": "觅食-采集蔬果。寻找采集各种可以吃的蔬菜水果等，学会识别可食用植物可是一大生存技能。",
+    "starting_trait" : true,
+    "player_display": true,
+    "purifiable": false,
+    "category": [ "perk" ],
+    "active": true,
+    "activated_is_setup": true,
+    "activated_eocs": [ "EOC_find_food_on" ],
+    "deactivated_eocs": [ "EOC_find_food_off" ],
+    "processed_eocs": [ "EOC_finding_food" ],
+    "time": 10000
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_finding_food",
+    "//": "only 50% chance to happen each time",
+    "//2": "Processing effect",
+    "field_chance": 50,
+    "effect": [
+      { "u_message": "Discover a good food!" },
+      { "u_spawn_item": "pre_irradiated_food", "use_item_group": true }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_find_food_on",
+    "//": "Activation effect",
+    "effect": [ { "u_message": "You start hunting for food" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_find_food_off",
+    "//": "Deactivation effect",
+    "effect": [ { "u_message": "You stop looking for food" } ]
+  },
+  {
+    "id": "FEET_ITEM_find_food",
+    "type": "BOOK",
+    "subtypes": [ "COMESTIBLE" ],
+    "comestible_type": "MED",
+    "looks_like": "diamond",
+    "name": { "str": "CC手册-采集" },
+    "description": "CC单兵生存的必备技能。使用后如果没有 CC觅食-采集蔬果 则获得特殊变异。效果只能使用一次，多次使用不会重复、无法移除变异，请注意。",
+    "weight": "500 g",
+    "volume": "300ml",
+    "symbol": "E",
+    "color": "green",
+    "price": "10 USD",
+    "price_postapoc": "1 USD",
+    "use_action": { "type": "cast_spell", "spell_id": "MANI_find_food", "no_fail": true, "level": 0 },
+    "flags": [ "SINGLE_USE", "TRADER_AVOID", "UNBREAKABLE_MELEE" ]
+   },
+  {
+     "type": "SPELL",
+     "id": "MANI_find_food",
+     "name": { "str": "CC手册-采集" },
+     "description": "使用后如果没有 CC觅食-采集蔬果 则获得特殊变异。效果只能使用一次，多次使用不会重复、无法移除变异，请注意。",
+     "message": "觅食-采集蔬果 已学会",
+     "valid_targets": [ "self" ],
+     "shape": "blast",
+     "min_damage": 10000,
+     "max_damage": 10000,
+     "effect": "mutate",
+     "effect_str": "CCfind_food",
+     "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "MUTATE_TRAIT" ]
+    },
+    {
+        "type" : "recipe",
+    "result": "FEET_ITEM_find_food",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC食品医疗",
+    "skill_used": "survival",
+    "time": "1second",
+    "reversible": true,
+    "autolearn": true,
+    "components": [ [ [ "CCMODcoin", 480 ] ] ]
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "type": "construction",
+    "id": "constr_huge_fridge",
+    "group": "install_huge_refrigerator",
+    "category": "WORKSHOP",
+    "required_skills": [  ],
+    "time": "10 m",
+    "qualities": [  ],
+    "components": [ [ [ "huge_freezer", 1 ] ] ],
+    "pre_note": "Will only work if constructed in/on a building that has an electric grid with a mounted battery.",
+    "pre_special": "check_empty",
+    "post_furniture": "f_huge_freezer"
+  },
+  {
+    "type": "construction",
+    "id": "constr_salt_well",
+    "group": "build_salt_well",
+    "category": "CONSTRUCT",
+    "required_skills": [ [ "fabrication", 4 ], [ "survival", 4 ] ],
+    "time": "480 m",
+    "qualities": [ [ { "id": "HAMMER", "level": 2 } ], [ { "id": "DIG", "level": 2 } ] ],
+    "components": [ [ [ "rock", 40 ] ], [ [ "2x4", 4 ], [ "stick", 4 ] ], [ [ "nail", 8 ], [ "rope_natural_short", 2, "LIST" ] ] ],
+    "pre_terrain": "t_pit",
+    "post_terrain": "t_covered_salt_water_well"
+  },
+  {
+    "type": "construction",
+    "id": "constr_salt_pump",
+    "group": "build_salt_well",
+    "category": "CONSTRUCT",
+    "required_skills": [ [ "fabrication", 4 ], [ "mechanics", 2 ] ],
+    "time": "180 m",
+    "qualities": [ [ { "id": "HAMMER", "level": 2 } ], [ { "id": "WRENCH", "level": 1 } ] ],
+    "components": [ [ [ "well_pump", 1 ] ], [ [ "pipe", 6 ] ] ],
+    "pre_terrain": "t_covered_salt_water_well",
+    "post_terrain": "t_salt_water_pump"
+  },
+  {
+    "type": "construction",
+    "id": "constr_scav_fort",
+    "group": "build_scavfort",
+    "category": "CONSTRUCT",
+    "required_skills": [ [ "fabrication", 0 ] ],
+    "time": "30 m",
+    "pre_special": "check_empty",
+    "components": [
+      [ [ "pillow", 19 ], [ "down_pillow", 19 ], [ "mattress", 4 ] ],
+      [ [ "down_blanket", 3 ], [ "blanket", 3 ], [ "fur_blanket", 3 ] ],
+	  [ [ "sleeping_bag_fur_roll", 1 ], [ "box_large", 1 ], [ "tourist_table", 1 ] ]
+    ],
+    "post_furniture": "f_scavfort"
+  }
+]

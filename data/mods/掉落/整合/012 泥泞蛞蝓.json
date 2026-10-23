@@ -1,0 +1,51 @@
+[
+
+ {
+    "type": "item_group",
+    "id": "zhenghe_012",
+    "//": "泥泞蛞蝓",
+    "subtype": "collection",
+    "entries": [
+      {
+        "distribution": [
+          {
+            "item": "wyrmskin_piece",
+            "prob": 50
+          },
+          {
+            "item": "graboid_fang",
+            "prob": 50
+          }
+        ],
+        "prob": 75         
+      },
+      {
+        "item": "essence_blood",
+        "count": [
+          2,
+          4
+        ]
+      },
+      {
+       "item": "destiny_copper", 
+        "count": [
+          20,
+          25
+        ]
+      }, 
+    {
+       "item": "destiny_silver" 
+       }
+    ]
+  },
+ {
+    "id": "mon_sludge_crawler",
+    "copy-from": "mon_sludge_crawler",
+    "hp": 200,
+    "dodge": 10,
+    "type": "MONSTER",
+    "death_drops": "zhenghe_012"
+  }
+ 
+
+]

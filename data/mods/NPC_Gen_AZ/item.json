@@ -1,0 +1,205 @@
+[
+    {
+        "id": "NPC_Magic_AZ",
+        "type": "TOOL",
+        "name": {
+          "str": "熔炉之主生成器"
+        },
+        "description": "生成熔炉之主",
+        "volume": "1 ml",
+        "weight": "1 g",
+        "price": 0,
+        "price_postapoc": 0,
+        "to_hit": -3,
+        "material": [
+          "steel"
+        ],
+        "symbol": ";",
+        "color": "white",
+        "use_action": {
+          "type": "place_npc",
+          "npc_class_id": "forge_lord_merchant",
+          "difficulty": 0,
+          "moves": 50
+        },
+        "flags": [
+        ],
+        "melee_damage": {
+          "bash": 8
+        }
+    },
+    {
+        "id": "NPC_Nomal_AZ",
+        "type": "TOOL",
+        "name": {
+          "str": "难民商人生成器"
+        },
+        "description": "生成难民商人",
+        "volume": "1 ml",
+        "weight": "1 g",
+        "price": 0,
+        "price_postapoc": 0,
+        "to_hit": -3,
+        "material": [
+          "steel"
+        ],
+        "symbol": ";",
+        "color": "white",
+        "use_action": {
+          "type": "place_npc",
+          "npc_class_id": "evac_merchant",
+          "difficulty": 0,
+          "moves": 50
+        },
+        "flags": [
+        ],
+        "melee_damage": {
+          "bash": 8
+        }
+    },
+    {
+        "id": "NPC_Exl_AZ",
+        "type": "TOOL",
+        "name": {
+          "str": "流亡族生成器"
+        },
+        "description": "生成流亡族商人",
+        "volume": "1 ml",
+        "weight": "1 g",
+        "price": 0,
+        "price_postapoc": 0,
+        "to_hit": -3,
+        "material": [
+          "steel"
+        ],
+        "symbol": ";",
+        "color": "white",
+        "use_action": {
+          "type": "place_npc",
+          "npc_class_id": "exodii_merchant",
+          "difficulty": 0,
+          "moves": 50
+        },
+        "flags": [
+        ],
+        "melee_damage": {
+          "bash": 8
+        }
+    },
+    {
+        "id": "NPC_Scrap_AZ",
+        "type": "TOOL",
+        "name": {
+          "str": "废品商人生成器"
+        },
+        "description": "生成废品商人",
+        "volume": "1 ml",
+        "weight": "1 g",
+        "price": 0,
+        "price_postapoc": 0,
+        "to_hit": -3,
+        "material": [
+          "steel"
+        ],
+        "symbol": ";",
+        "color": "white",
+        "use_action": {
+          "type": "place_npc",
+          "npc_class_id": "NPC_scrap_trader",
+          "difficulty": 0,
+          "moves": 50
+        },
+        "flags": [
+        ],
+        "melee_damage": {
+          "bash": 8
+        }
+    },
+    {
+        "id": "NPC_Val_AZ",
+        "type": "TOOL",
+        "name": {
+          "str": "圣殿商人生成器"
+        },
+        "description": "生成圣殿商人",
+        "volume": "1 ml",
+        "weight": "1 g",
+        "price": 0,
+        "price_postapoc": 0,
+        "to_hit": -3,
+        "material": [
+          "steel"
+        ],
+        "symbol": ";",
+        "color": "white",
+        "use_action": {
+          "type": "place_npc",
+          "npc_class_id": "pagan_cult_shopkeep",
+          "difficulty": 0,
+          "moves": 50
+        },
+        "flags": [
+        ],
+        "melee_damage": {
+          "bash": 8
+        }
+    },
+    {
+        "id": "NPC_Wood_AZ",
+        "type": "TOOL",
+        "name": {
+          "str": "伐木商人生成器"
+        },
+        "description": "生成伐木商人",
+        "volume": "1 ml",
+        "weight": "1 g",
+        "price": 0,
+        "price_postapoc": 0,
+        "to_hit": -3,
+        "material": [
+          "steel"
+        ],
+        "symbol": ";",
+        "color": "white",
+        "use_action": {
+          "type": "place_npc",
+          "npc_class_id": "NPC_lumbermill_merchant",
+          "difficulty": 0,
+          "moves": 50
+        },
+        "flags": [
+        ],
+        "melee_damage": {
+          "bash": 8
+        }
+    },
+    {
+      "id": "NPC_Maned_AZ",
+      "type": "TOOL",
+      "name": {
+        "str": "人造人（未激活）"
+      },
+      "description": "生成一个人造人/（此部分仍未完成，抱歉）",
+      "volume": "1 ml",
+      "weight": "1 g",
+      "price": 0,
+      "price_postapoc": 0,
+      "to_hit": -3,
+      "material": [
+        "steel"
+      ],
+      "symbol": ";",
+      "color": "white",
+      "use_action": {
+        "type": "place_npc",
+        "npc_class_id": "NPC_Maned_AZ",
+        "difficulty": 0,
+        "moves": 50
+      },
+      "flags": [
+      ],
+      "melee_damage": {
+        "bash": 8
+      }
+  }
+]

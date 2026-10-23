@@ -1,0 +1,35 @@
+[
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "sor_search_stick",
+    "components": [
+    	[
+    		[ "stick", 1 ]
+    	],
+    	[
+    		[ "spell_sorcerer_item_7", 1 ]
+    	]
+    ],
+    "time": "70 m",
+    "skill_used": "spellcraft",
+    "difficulty": 7,
+    "category": "CC_ENCHANTED",
+    "subcategory": "CSC_ENCHANTED_OTHER",
+    "autolearn": true
+  },
+  {
+  	"copy-from": "stick",
+    "type": "GENERIC",
+    "id": "sor_search_stick",
+    "name": "异常魔力搜索木棍",
+    "description": "它可以探查一定范围内的异常魔力信号。",
+    "flags": [ "SINGLE_USE", "TRADER_AVOID", "FIREWOOD" ],
+    "use_action": {
+      "type": "reveal_map",
+      "radius": 100,
+      "terrain": [ "self_sorcerer_monster_1" ],
+      "message": "你在地图上做了些标记。"
+    }
+  }
+]

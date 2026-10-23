@@ -1,0 +1,413 @@
+[
+  {
+    "type": "technique",
+    "id": "tec_qss",
+    "name": "起手式",
+	"weighting": 1,
+    "unarmed_allowed": true,
+	"melee_allowed": false,
+    "unarmed_weapons_allowed": true,
+    "crit_ok": true,
+    "flat_bonuses": [
+      { "stat": "damage", "type": "bash", "scaling-stat": "str", "scale": 0.25 },
+      { "stat": "arpen", "type": "bash", "scaling-stat": "str", "scale": 0.5 }
+    ],
+    "messages": [ "你右脚立定、左脚虚点，一式「起手式」，左右手一高一低，击向%s！", "<npcname> 右脚立定、左脚虚点，一式「起手式」，左右手一高一低，击向%s！" ],
+	"attack_vectors": [ "HAND" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_sptj",
+    "name": "石破天惊",
+	"weighting": 1,
+	"skill_requirements": [ { "name": "unarmed", "level": 1 } ],
+    "unarmed_allowed": true,
+	"melee_allowed": false,
+    "unarmed_weapons_allowed": true,
+    "block_counter": true,
+    "crit_ok": true,
+	"down_dur": 1,
+    "flat_bonuses": [
+      { "stat": "damage", "type": "bash", "scaling-stat": "str", "scale": 0.3 },
+      { "stat": "arpen", "type": "bash", "scaling-stat": "str", "scale": 0.5 }
+    ],
+    "messages": [ "你左脚虚踏，全身右转，一招「石破天惊」，右拳猛地击向%s！", "<npcname>左脚虚踏，全身右转，一招「石破天惊」，右拳猛地击向%s！" ],
+	"attack_vectors": [ "HAND" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_tshm",
+    "name": "铁栓横门",
+	"weighting": 1,
+	"skill_requirements": [ { "name": "unarmed", "level": 2 } ],
+    "unarmed_allowed": true,
+	"melee_allowed": false,
+    "unarmed_weapons_allowed": true,
+    "dodge_counter": true,
+    "crit_ok": true,
+	"stun_dur": 2,
+    "flat_bonuses": [
+      { "stat": "damage", "type": "bash", "scaling-stat": "str", "scale": 0.4 },
+      { "stat": "arpen", "type": "bash", "scaling-stat": "str", "scale": 0.5 }
+    ],
+    "messages": [
+      "你双手大开大阖，宽打高举，使一招「铁闩横门」，双拳向%s打去！",
+      "<npcname>双手大开大阖，宽打高举，使一招「铁闩横门」，双拳向%s打去！"
+    ],
+	"attack_vectors": [ "HAND" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_qjzd",
+    "name": "千斤坠地",
+	"weighting": 1,
+    "unarmed_allowed": true,
+	"melee_allowed": false,
+	"skill_requirements": [ { "name": "unarmed", "level": 3 } ],
+    "unarmed_weapons_allowed": true,
+	"down_dur": 2,
+    "crit_ok": true,
+    "flat_bonuses": [
+      { "stat": "damage", "type": "bash", "scaling-stat": "str", "scale": 0.45 },
+      { "stat": "arpen", "type": "bash", "scaling-stat": "str", "scale": 0.5 }
+    ],
+    "messages": [ "你左掌圈花扬起，屈肘当胸，右手虎口朝上，一招「千斤坠地」打向%s！", "<npcname> 左掌圈花扬起，屈肘当胸，右手虎口朝上，一招「千斤坠地」打向%s！" ],
+	"attack_vectors": [ "HAND" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_bhfl",
+    "name": "傍花拂柳",
+	"weighting": 2,
+    "unarmed_allowed": true,
+	"melee_allowed": false,
+	"skill_requirements": [ { "name": "unarmed", "level": 4 } ],
+    "unarmed_weapons_allowed": true,
+    "crit_ok": true,
+    "flat_bonuses": [
+      { "stat": "damage", "type": "bash", "scaling-stat": "dex", "scale": 0.5 },
+      { "stat": "arpen", "type": "bash", "scaling-stat": "dex", "scale": 0.5 }
+    ],
+    "messages": [ "你使一招「傍花拂柳」，上身前探，双拳划了个半圈，击向%s！", "<npcname> 使一招「傍花拂柳」，上身前探，双拳划了个半圈，击向%s！" ],
+	"attack_vectors": [ "HAND" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_jgzw",
+    "name": "金刚挚尾",
+	"weighting": 1,
+    "unarmed_allowed": true,
+	"skill_requirements": [ { "name": "unarmed", "level": 4 } ],
+	"melee_allowed": false,
+    "unarmed_weapons_allowed": true,
+	"grab_break": true,
+	"disarms": true,
+    "messages": [ "你双拳划弧，一记「金刚挚尾」，掌出如电，一下子切到%s的手上！", "<npcname> 双拳划弧，一记「金刚挚尾」，掌出如电，一下子切到%s的手上！" ],
+	"attack_vectors": [ "HAND" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_fbs",
+    "name": "封闭手",
+	"weighting": 2,
+    "unarmed_allowed": true,
+	"skill_requirements": [ { "name": "unarmed", "level": 5 } ],
+	"melee_allowed": false,
+	"flat_bonuses": [
+      { "stat": "damage", "type": "bash", "scaling-stat": "str", "scale": 0.6 },
+      { "stat": "arpen", "type": "bash", "scaling-stat": "str", "scale": 0.5 },
+	  { "stat": "movecost", "scaling-stat": "str", "scale": -5 }
+    ],
+	"down_dur": 2,
+    "knockback_dist": 2,
+	"powerful_knockback": true,
+    "unarmed_weapons_allowed": true,
+    "crit_ok": true,
+    "messages": [ "你施出「封闭手」，双拳拳出如风，同时打向%s头，胸，腹三处要害！", "<npcname> 施出「封闭手」，双拳拳出如风，同时打向%s头，胸，腹三处要害！" ],
+	"attack_vectors": [ "HAND" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_fssy",
+    "name": "粉石碎玉",
+	"weighting": 10,
+    "unarmed_allowed": true,
+	"skill_requirements": [ { "name": "unarmed", "level": 6 } ],
+	"melee_allowed": false,
+    "unarmed_weapons_allowed": true,
+    "crit_tec": true,
+	"powerful_knockback": true,
+	"aoe": "spin",
+    "flat_bonuses": [
+      { "stat": "damage", "type": "bash", "scaling-stat": "str", "scale": 1 },
+      { "stat": "arpen", "type": "bash", "scaling-stat": "str", "scale": 0.5 },
+	  { "stat": "movecost", "scaling-stat": "str", "scale": -5 }
+    ],
+    "down_dur": 5,
+    "knockback_dist": 12,
+	"knockback_spread": 1,
+    "messages": [ "你左脚内扣，右腿曲坐，一式「粉石碎玉」，双拳齐齐捶向%s的胸口！", "<npcname> 你左脚内扣，右腿曲坐，一式「粉石碎玉」，双拳齐齐捶向%s的胸口！" ],
+	"attack_vectors": [ "HAND" ]
+  },
+      {
+    "type": "technique",
+    "id": "tec_fplj",
+    "name": "风平浪静",
+	"weighting": 1,
+    "unarmed_allowed": false,
+	"melee_allowed": true,
+	"crit_ok": true,
+    "flat_bonuses": [
+      { "stat": "damage", "type": "stab", "scaling-stat": "str", "scale": 0.2 },
+      { "stat": "arpen", "type": "stab", "scaling-stat": "str", "scale": 0.2 }
+    ],
+    "messages": [ "你纵身跃起使出狂风快剑的「风平浪静」，手中兵器轻挥，斩向%s后颈！", "<npcname> 纵身跃起使出狂风快剑的「风平浪静」，手中兵器轻挥，斩向%s后颈！" ],
+	"attack_vectors": [
+      "WEAPON"
+    ]
+  },
+    {
+    "type": "technique",
+    "id": "tec_fqyy",
+    "name": "风起云涌",
+    "skill_requirements": [ { "name": "stabbing", "level": 1 } ],
+	"weighting": 2,
+    "unarmed_allowed": false,
+	"melee_allowed": true,
+	"crit_ok": true,
+    "mult_bonuses": [
+      { "stat": "damage", "type": "stab", "scale": 0.5 }
+    ],
+    "flat_bonuses": [
+      { "stat": "damage", "type": "stab", "scaling-stat": "str", "scale": 0.25 },
+	  { "stat": "movecost", "scaling-stat": "per", "scale": -0.3 },
+      { "stat": "arpen", "type": "stab", "scaling-stat": "str", "scale": 0.25 }
+    ],
+    "messages": [ "你使出狂风快剑的「风起云涌」，手中兵器连划三个弧形，向%s的右臂齐肩斩落！", "<npcname> 使出狂风快剑的「风起云涌」，手中兵器连划三个弧形，向%s的右臂齐肩斩落！" ],
+	"attack_vectors": [
+      "WEAPON"
+    ]
+  },
+      {
+    "type": "technique",
+    "id": "tec_fjcy",
+    "name": "风卷残云",
+    "skill_requirements": [ { "name": "stabbing", "level": 2 } ],
+	"weighting": 2,
+    "unarmed_allowed": false,
+	"melee_allowed": true,
+	"crit_ok": true,
+    "mult_bonuses": [
+      { "stat": "damage", "type": "stab", "scale": 0.5 }
+    ],
+    "flat_bonuses": [
+      { "stat": "damage", "type": "stab", "scaling-stat": "str", "scale": 0.3 },
+	  { "stat": "movecost", "scaling-stat": "per", "scale": -0.4 },
+      { "stat": "arpen", "type": "stab", "scaling-stat": "str", "scale": 0.3 }
+    ],
+    "messages": [ "你轻吁一声，使出狂风快剑的「风卷残云」，刷刷刷刷四剑，向%s胸，腹，腰，肩四处连刺！", "<npcname> 轻吁一声，使出狂风快剑的「风卷残云」，刷刷刷刷四剑，向%s胸，腹，腰，肩四处连刺！" ],
+	"attack_vectors": [
+      "WEAPON"
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_flys",
+    "name": "风流云散",
+    "skill_requirements": [ { "name": "stabbing", "level": 3 } ],
+	"weighting": 2,
+    "unarmed_allowed": false,
+	"melee_allowed": true,
+	"crit_ok": true,
+    "mult_bonuses": [
+      { "stat": "damage", "type": "stab", "scale": 0.5 }
+    ],
+    "flat_bonuses": [
+      { "stat": "damage", "type": "stab", "scaling-stat": "str", "scale": 0.4 },
+	  { "stat": "movecost", "scaling-stat": "per", "scale": -0.5 },
+      { "stat": "arpen", "type": "stab", "scaling-stat": "str", "scale": 0.4 }
+    ],
+    "messages": [ "你仰天一声清啸，斜行向前，使出狂风快剑的「风流云散」，横削直击，迅捷无比的击向%s！", "<npcname> 仰天一声清啸，斜行向前，使出狂风快剑的「风流云散」，横削直击，迅捷无比的击向%s！" ],
+	"attack_vectors": [
+      "WEAPON"
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_po",
+    "name": "总决式",
+    "skill_requirements": [ { "name": "stabbing", "level": 4 } ],
+	"weighting": 5,
+    "unarmed_allowed": false,
+	"crit_ok": true,
+	"melee_allowed": true,
+    "flat_bonuses": [
+      { "stat": "arpen", "type": "cut", "scaling-stat": "str", "scale": 0.5 },
+      { "stat": "movecost", "scaling-stat": "per", "scale": -0.2 },
+	  { "stat": "damage", "type": "stab", "scale": 2 }
+    ],
+    "messages": [ "你使出独孤九剑「总诀式」，随手一剑妙到颠毫！%s闪避无从，连中数剑受伤！", "<npcname> 使出独孤九剑「总诀式」，随手一剑妙到颠毫！%s闪避无从，连中数剑受伤" ],
+	"attack_vectors": [
+      "WEAPON"
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_pobian",
+    "name": "破鞭式",
+    "skill_requirements": [ { "name": "stabbing", "level": 4 } ],
+	"weighting": 6,
+    "unarmed_allowed": false,
+	"melee_allowed": true,
+	"crit_ok": true,
+    "mult_bonuses": [
+      { "stat": "movecost", "scale": 0.2 },
+      { "stat": "damage", "type": "stab", "scale": 0.7 }
+    ],
+    "flat_bonuses": [
+      { "stat": "damage", "type": "stab", "scaling-stat": "str", "scale": 0.55 },
+      { "stat": "arpen", "type": "stab", "scaling-stat": "str", "scale": 0.5 }
+    ],
+    "messages": [ "你使出独孤九剑的「破鞭式」，剑化流星，迅急无比地点向%s的手腕！", "<npcname> 使出独孤九剑的「破鞭式」，剑化流星，迅急无比地点向%s的手腕！" ],
+	"attack_vectors": [
+      "WEAPON"
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_podao",
+    "name": "破刀式",
+    "skill_requirements": [ { "name": "stabbing", "level": 5 } ],
+	"weighting": 7,
+    "unarmed_allowed": false,
+    "melee_allowed": true,
+	"crit_ok": true,
+	"powerful_knockback": true,
+    "flat_bonuses": [
+      { "stat": "damage", "type": "stab", "scaling-stat": "dex", "scale": 1.5 },
+      { "stat": "arpen", "type": "stab", "scaling-stat": "per", "scale": 0.5 },
+      { "stat": "movecost", "scaling-stat": "dex", "scale": -3 }
+    ],
+    "messages": [
+      "你巧使独孤九剑「破刀式」逼近%s，提剑幻出重重剑影，如柔丝般向其裹去！",
+      "<npcname> 巧使独孤九剑「破刀式」逼近%s，提剑幻出重重剑影，如柔丝般向其裹去！"
+    ],
+    "stun_dur": 4,
+	"knockback_dist": 3,
+	"down_dur": 4,
+	"attack_vectors": [
+      "WEAPON"
+    ]
+   }, 
+   {
+    "type": "technique",
+    "id": "tec_pojian",
+    "name": "破剑式",
+    "messages": [ "你举剑画弧，默潜独孤九剑的「破剑式」，绵绵剑意，漫天铺地袭向%s", "<npcname>举剑画弧，默潜独孤九剑的「破剑式」，绵绵剑意，漫天铺地袭向%s" ],
+    "skill_requirements": [ { "name": "stabbing", "level": 5 } ],
+	"weighting": 8,
+    "unarmed_allowed": false,
+    "melee_allowed": true,
+    "block_counter": true,
+	"crit_ok": true,
+    "mult_bonuses": [
+		{ "stat": "movecost", "scale": 0.5 },
+      { "stat": "damage", "type": "bash", "scale": 0.5 },
+      { "stat": "damage", "type": "cut", "scale": 0.5 },
+      { "stat": "damage", "type": "stab", "scale": 0.5 }
+	  
+    ],
+	"attack_vectors": [
+      "WEAPON"
+    ]
+  },
+	{
+    "type": "technique",
+    "id": "tec_poqi",
+    "name": "破气式",
+    "messages": [ "你潜运独孤九剑「破气式」，运气贯剑使其由利返钝，毫无花俏地直刺%s的要害！", "<npcname> 潜运独孤九剑「破气式」，运气贯剑使其由利返钝，毫无花俏地直刺%s的要害！" ],
+    "skill_requirements": [ { "name": "stabbing", "level": 6 } ],
+	"weighting": 9,
+    "unarmed_allowed": false,
+	"melee_allowed": true,
+    "crit_ok": true,
+    "dodge_counter": true,
+    "down_dur": 1,
+    "flat_bonuses": [
+      { "stat": "arpen", "type": "cut", "scaling-stat": "str", "scale": 0.5 },
+      { "stat": "movecost", "scaling-stat": "per", "scale": -0.2 },
+	  { "stat": "damage", "type": "stab", "scale": 2.2 }
+    ],
+	"attack_vectors": [
+      "WEAPON"
+    ]
+	},
+
+  {
+    "type": "technique",
+    "id": "tec_poqiang",
+    "name": "破枪式",
+    "messages": [ "你一式独孤九剑「破枪式」，剑势灵巧地顺着%s削落", "<npcname>一式独孤九剑「破枪式」，剑势灵巧地顺着%s削落" ],
+    "skill_requirements": [ { "name": "stabbing", "level": 6 } ],
+	"weighting": 10,
+    "unarmed_allowed": false,
+	"melee_allowed": true,
+    "crit_ok": true,
+    "dodge_counter": true,
+    "down_dur": 1,
+    "flat_bonuses": [
+      { "stat": "arpen", "type": "cut", "scaling-stat": "str", "scale": 0.7 },
+      { "stat": "movecost", "scaling-stat": "per", "scale": -0.2 },
+	  { "stat": "damage", "type": "stab", "scale": 2.4 }
+    ],
+	"attack_vectors": [
+      "WEAPON"
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_posuo",
+    "name": "破索式",
+    "messages": [
+      "你剑势突然变得窒郁如举千斤，企图以独孤九剑的「破索式」缠住%s！",
+      "<npcname>剑势突然变得窒郁如举千斤，企图以独孤九剑的「破索式」缠住%s！"
+    ],
+	"skill_requirements": [ { "name": "stabbing", "level": 7 } ],
+	"weighting": 11,
+    "unarmed_allowed": false,
+    "melee_allowed": true,
+    "crit_ok": true,
+	"powerful_knockback": true,
+    "flat_bonuses": [
+      { "stat": "damage", "type": "stab", "scaling-stat": "dex", "scale": 3 },
+      { "stat": "arpen", "type": "stab", "scaling-stat": "per", "scale": 0.5 },
+      { "stat": "movecost", "scaling-stat": "dex", "scale": -5 }
+    ],
+    "attack_vectors": [
+      "WEAPON"
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_pozhang",
+    "name": "破掌式",
+    "messages": [
+      "你运剑使出独孤九剑的「破掌式」，灵动变幻，狂风暴雨般地猛攻%s各处破绽！",
+      "%s运剑使出独孤九剑的「破掌式」，灵动变幻，狂风暴雨般地猛攻%s各处破绽！"
+    ],
+	"skill_requirements": [ { "name": "stabbing", "level": 8 } ],
+	"weighting": 12,
+    "unarmed_allowed": false,
+    "melee_allowed": true,
+    "crit_tec": true,
+	"powerful_knockback": true,
+    "flat_bonuses": [
+      { "stat": "damage", "type": "stab", "scaling-stat": "dex", "scale": 4 },
+      { "stat": "arpen", "type": "stab", "scaling-stat": "per", "scale": 0.5 },
+      { "stat": "movecost", "scaling-stat": "dex", "scale": -10 }
+    ],
+	"attack_vectors": [
+      "WEAPON"
+    ]
+  }
+]

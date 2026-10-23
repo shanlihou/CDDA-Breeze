@@ -1,0 +1,20 @@
+[
+  {
+    "type": "effect_on_condition",
+    "//": "配置用eoc。",
+    "//1": "第10行的'const： 7 '这个影响尸潮的刷新间隔(时间单位是天)但最好不是0(最小是1)，如果有需要，可以自己改",
+    "id": "EOC_设置变量_1",
+    "recurrence": 1,
+    "effect": [
+      {
+        "arithmetic": [ { "u_val": "var", "var_name": "间隔多少天", "type": "int", "context": "int" }, "=", { "const": 2 } ]
+      },
+      {
+        "arithmetic": [ { "u_val": "var", "var_name": "尸潮上限", "type": "int", "context": "int" }, "=", { "const": 50 } ]
+      },
+      {
+        "arithmetic": [ { "u_val": "var", "var_name": "每轮尸潮数量(叠加)", "type": "int", "context": "int" }, "=", { "const": 1 } ]
+      }
+    ]
+  }
+]

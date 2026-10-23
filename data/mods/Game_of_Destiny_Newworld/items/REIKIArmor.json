@@ -1,0 +1,48 @@
+[   
+   {
+    "id": "integrated_reikinimbus",
+    "type": "ARMOR",
+    "name": "灵气环",
+    "description": "你周身萦绕着灵气，这一定程度上能保护你的身体，对于远程武器尤其有效。",
+    "weight": "10 g",
+    "volume": "100 ml",
+    "price": 50000,
+    "price_postapoc": 50000,
+      "material": [ "merit_mt" ],
+    "symbol": "[",
+    "color": "dark_gray",
+       "armor": [
+      {
+        "coverage": 100,
+        "cover_vitals": 100,
+        "encumbrance": 0,
+        "covers": [ "head", "mouth", "eyes", "torso", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r" ]
+      }
+    ],
+    "material_thickness": 0.1,
+    "flags": [ "AURA", "OVERSIZE", "ONLY_ONE", "TRADER_AVOID","NONCONDUCTIVE", "NO_SALVAGE", "NO_TAKEOFF", "SEMITANGIBLE", "UNBREAKABLE" ]
+    },  
+   {
+    "id": "integrated_reikinimbus_2",
+    "type": "ARMOR",
+    "name": "聚合灵气环",
+    "description": "你周身的灵气形成数层光环，能更好地保护你的身体，对于远程武器尤其有效。",
+    "weight": "10 g",
+    "volume": "100 ml",
+    "price": 70000,
+    "price_postapoc": 70000,
+      "material": [ "merit_mt" ],
+    "symbol": "[",
+    "color": "dark_gray",
+       "armor": [
+      {
+        "coverage": 100,
+        "cover_vitals": 100,
+        "encumbrance": 0,
+        "covers": [ "head", "mouth", "eyes", "torso", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r" ]
+      }
+    ],
+    "material_thickness": 0.2,
+    "flags": [ "AURA", "OVERSIZE", "ONLY_ONE", "TRADER_AVOID","NONCONDUCTIVE", "NO_SALVAGE", "NO_TAKEOFF", "SEMITANGIBLE", "UNBREAKABLE" ]
+    }
+]

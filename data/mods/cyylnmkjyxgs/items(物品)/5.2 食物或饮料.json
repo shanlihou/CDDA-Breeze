@@ -1,0 +1,113 @@
+[
+  {
+    "id": "cyyl_ssb",
+    "type": "TOOL",
+    "category": "other",
+    "material": [
+      "cyylcaizhi"
+    ],
+    "symbol": "o",
+    "color": "light_gray",
+    "name": { "str": "次元医疗速食包" },
+    "description": "速食包里有六片次元医疗营养片和6口次元医疗矿泉水。拆解后获得内容物(不会腐坏)。",
+    "looks_like": "mre_veggy_box",
+    "price": "100 USD",
+    "price_postapoc": "100 USD",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "use_action": {
+      "type": "unpack",
+      "group": "cyyl_cj_ssb"
+    },
+    "flags": [
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "cyyl_yyp",
+    "type": "COMESTIBLE",
+    "comestible_type": "FOOD",
+    "material": [
+      "milk"
+    ],
+    "symbol": "o",
+    "color": "yellow",
+    "name": {
+      "str": "次元医疗营养片"
+    },
+    "description": "次元医疗公司发现新型材料可以制作出营养片。",
+    "looks_like": "vitamins",
+    "price": "100 USD",
+    "price_postapoc": "100 USD",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "container": "bottle_plastic_small",
+    "sealed": true,
+    "charges": 500,
+    "fun": 1,
+    "healthy": 3,
+    "calories": 2000,
+    "quench": 0,
+    "freezing_point": -9999,
+    "use_action": [],
+    "vitamins": [
+      [ "vitA", 24, 48 ],
+      [ "vitB", 24, 48 ],
+      [ "vitC", 24, 48 ],
+      [ "calcium", 24, 48 ],
+      [ "iron", 24, 48 ]
+    ],
+    "extend": {
+      "flags": [
+        "TRADER_AVOID",
+        "EDIBLE_FROZEN",
+        "NUTRIENT_OVERRIDE",
+        "EATEN_HOT"
+      ]
+    }
+  },
+  {
+    "id": "cyyl_kqs",
+    "type": "COMESTIBLE",
+    "comestible_type": "DRINK",
+    "material": [
+      "water"
+    ],
+    "symbol": "U",
+    "color": "blue",
+    "name": {
+      "str": "次元医疗矿泉水"
+    },
+    "description": "次元医疗公司发现新型材料经过反应可以产生出的水资源。",
+    "looks_like": "water_mineral",
+    "price": "100 USD",
+    "price_postapoc": "100 USD",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "phase": "liquid",
+    "container": "bottle_plastic_small",
+    "sealed": true,
+    "charges": 500,
+    "fun": 2,
+    "healthy": 1,
+    "calories": 0,
+    "quench": 150,
+    "freezing_point": -9999,
+    "use_action": [],
+    "vitamins": [
+      [ "vitA", 2, 4 ],
+      [ "vitB", 2, 4 ],
+      [ "vitC", 2, 4 ],
+      [ "calcium", 2, 3 ],
+      [ "iron", 2, 3 ]
+    ],
+    "extend": {
+      "flags": [
+        "TRADER_AVOID",
+        "EDIBLE_FROZEN",
+        "NUTRIENT_OVERRIDE",
+        "EATEN_COLD"
+      ]
+    }
+  }
+]

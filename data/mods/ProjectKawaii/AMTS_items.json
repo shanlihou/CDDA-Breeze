@@ -1,0 +1,452 @@
+[
+  {
+    "id": "kawaii_amts_reciver",
+    "type": "TOOL",
+    "symbol": "t",
+    "color": "light_gray",
+    "name": {
+      "str": "<color_pink>[AMTS]</color> 接收器"
+    },
+    "description": "使用这个可以向A&M空间转移系统发送一个请求.",
+    "price": "0 cent",
+    "material": [
+      "kawaii_amsteel"
+    ],
+    "weight": "3 g",
+    "volume": "3 ml",
+    "flags": [
+      "WATCH",
+      "ALARMCLOCK",
+      "THERMOMETER"
+    ],
+    "qualities": [
+      [
+        "AMTS_RECEIVER",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "kawaii_amts_transmitter",
+    "type": "TOOL",
+    "symbol": "t",
+    "color": "light_gray",
+    "name": {
+      "str": "<color_pink>[AMTS]</color> 发信器"
+    },
+    "description": "使用这个可以向A&M空间转移系统发送一个物品用于兑换点数。",
+    "price": "0 cent",
+    "material": [
+      "kawaii_amsteel"
+    ],
+    "weight": "3 g",
+    "volume": "3 ml",
+    "qualities": [
+      [
+        "AMTS_TRANSMITTER",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "kawaii_amts_point",
+    "type": "AMMO",
+    "category": "kawaii_category",
+    "name": {
+      "str": "<color_pink>[AMTS]</color> 点数",
+      "str_pl": "<color_pink>[AMTS]</color> 点数"
+    },
+    "description": "这个设备可以让你看到你现在积累了多少A&M空间转移系统专用货币。",
+    "weight": "0 g",
+    "volume": "0 ml",
+    "price": "0 cent",
+    "material": [
+      "kawaii_amsteel"
+    ],
+    "symbol": "t",
+    "color": "light_gray",
+    "count": 1,
+    "ammo_type": "components",
+    "effects": [
+      "NEVER_MISFIRES"
+    ],
+    "flags": [
+      "ZERO_WEIGHT"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "kawaii_amts_pacsys",
+    "symbol": "*",
+    "color": "light_gray",
+    "name": {
+      "str": "<color_pink>[AMTS]</color> 包装系统"
+    },
+    "category": "spare_parts",
+    "description": "这是用于A&M空间转移系统的包装系统。它可以用来将物资压缩成一个单一包装，并发送到AMTS以换取点数。",
+    "price": "0 cent",
+    "material": [
+      "steel"
+    ],
+    "weight": "1500 g",
+    "volume": "3 L"
+  },
+  {
+    "type": "GENERIC",
+    "id": "kawaii_amts_pac_t1_01",
+    "symbol": "*",
+    "color": "light_gray",
+    "looks_like": "kawaii_amts_pacsys",
+    "name": {
+      "str": "[AMTS] 压缩物资包 （原木 x3）",
+      "str_pl": "[AMTS] 压缩物资包 （原木 x3）"
+    },
+    "category": "spare_parts",
+    "description": "一种A&M的压缩物资包, 已经准备好进行空间转移了, 它们能够用点数进行兑换。",
+    "price": "0 cent",
+    "material": [
+      "steel"
+    ],
+    "weight": "2000 g",
+    "volume": "3 L"
+  },
+  {
+    "type": "GENERIC",
+    "id": "kawaii_amts_pac_t1_02",
+    "symbol": "*",
+    "color": "light_gray",
+    "looks_like": "kawaii_amts_pacsys",
+    "name": {
+      "str": "[AMTS] 压缩物资包 （金属废料 x30）",
+      "str_pl": "[AMTS] 压缩物资包 （金属废料 x30）"
+    },
+    "category": "spare_parts",
+    "description": "一种A&M的压缩物资包, 已经准备好进行空间转移了, 它们能够用点数进行兑换。",
+    "price": "0 cent",
+    "material": [
+      "steel"
+    ],
+    "weight": "2000 g",
+    "volume": "3 L"
+  },
+  {
+    "type": "GENERIC",
+    "id": "kawaii_amts_pac_t1_03",
+    "symbol": "*",
+    "color": "light_gray",
+    "looks_like": "kawaii_amts_pacsys",
+    "name": {
+      "str": "[AMTS] 压缩物资包 （布条 x30）",
+      "str_pl": "[AMTS] Compressed Matter Packages (rags x30)"
+    },
+    "category": "spare_parts",
+    "description": "一种A&M的压缩物资包, 已经准备好进行空间转移了, 它们能够用点数进行兑换。",
+    "price": "0 cent",
+    "material": [
+      "steel"
+    ],
+    "weight": "2000 g",
+    "volume": "3 L"
+  },
+  {
+    "type": "GENERIC",
+    "id": "kawaii_amts_pac_t2_01",
+    "symbol": "*",
+    "color": "light_gray",
+    "looks_like": "kawaii_amts_pacsys",
+    "name": {
+      "str": "[AMTS] 压缩物资包 （原木 x6）",
+      "str_pl": "[AMTS] 压缩物资包 （logs x6）"
+    },
+    "category": "spare_parts",
+    "description": "一种A&M的压缩物资包, 已经准备好进行空间转移了, 它们能够用点数进行兑换。",
+    "price": "0 cent",
+    "material": [
+      "steel"
+    ],
+    "weight": "2500 g",
+    "volume": "3 L"
+  },
+  {
+    "type": "GENERIC",
+    "id": "kawaii_amts_pac_t2_02",
+    "symbol": "*",
+    "color": "light_gray",
+    "looks_like": "kawaii_amts_pacsys",
+    "name": {
+      "str": "[AMTS] 压缩物资包 （金属废料 x60）",
+      "str_pl": "[AMTS] 压缩物资包 （金属废料 x60）"
+    },
+    "category": "spare_parts",
+    "description": "一种A&M的压缩物资包, 已经准备好进行空间转移了, 它们能够用点数进行兑换。",
+    "price": "0 cent",
+    "material": [
+      "steel"
+    ],
+    "weight": "2500 g",
+    "volume": "3 L"
+  },
+  {
+    "type": "GENERIC",
+    "id": "kawaii_amts_pac_t2_03",
+    "symbol": "*",
+    "color": "light_gray",
+    "looks_like": "kawaii_amts_pacsys",
+    "name": {
+      "str": "[AMTS] 压缩物资包 （布条 x60）",
+      "str_pl": "[AMTS] 压缩物资包 （布条 x60）"
+    },
+    "category": "spare_parts",
+    "description": "一种A&M的压缩物资包, 已经准备好进行空间转移了, 它们能够用点数进行兑换。",
+    "price": "0 cent",
+    "material": [
+      "steel"
+    ],
+    "weight": "2500 g",
+    "volume": "3 L"
+  },
+  {
+    "id": "kawaii_UPS",
+    "type": "TOOL",
+    "name": {
+      "str": "大容量UPS"
+    },
+    "description": "一种A&M公司生产的UPS，比普通的UPS模块可以存储更多的电量, 且更轻。",
+    "weight": "500 g",
+    "volume": "2500 ml",
+    "price": "0 cent",
+    "bashing": 9,
+    "material": [
+      "kawaii_amsteel",
+      "kawaii_amplastic"
+    ],
+    "symbol": ";",
+    "color": "light_gray",
+    "ammo": "battery",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "battery": 2000
+        }
+      }
+    ],
+    "flags": [
+      "NO_UNLOAD",
+      "RECHARGE"
+    ]
+  },
+  {
+    "id": "kawaii_portable_kitchen",
+    "type": "TOOL",
+    "name": {
+      "str": "移动式厨房"
+    },
+    "description": "A&M制造的便携式炊具。由于它使用了A&M专有的先进合金建造而成，超高的成本也导致这种产品的数量极其稀缺。",
+    "weight": "600 g",
+    "volume": "1 L",
+    "price": "0 cent",
+    "bashing": 6,
+    "material": [
+      "kawaii_amsteel",
+      "kawaii_amplastic"
+    ],
+    "symbol": ";",
+    "color": "brown",
+    "ammo": "lamp_oil",
+    "sub": "hotplate",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "watertight": true,
+        "rigid": true,
+        "ammo_restriction": {
+          "lamp_oil": 600
+        }
+      }
+    ],
+    "charges_per_use": 1,
+    "qualities": [
+      [
+        "COOK",
+        3
+      ],
+      [
+        "BOIL",
+        2
+      ],
+      [
+        "CONTAIN",
+        1
+      ],
+      [
+        "CHEM",
+        1
+      ]
+    ],
+    "use_action": "HOTPLATE"
+  },
+  {
+    "id": "kawaii_amts_eve",
+    "type": "GUN",
+    "reload_noise_volume": 10,
+    "symbol": "(",
+    "color": "light_blue",
+    "name": {
+      "str": "<color_pink>[AMTS]</color> EVE侦察步枪"
+    },
+    "description": "一种先进的原型步枪。有半自动和二连发两种射击模式。",
+    "price": "0 cent",
+    "material": [
+      "kawaii_amsteel",
+      "kawaii_amplastic"
+    ],
+    "flags": [
+      "MODE_BURST",
+      "NEVER_JAMS"
+    ],
+    "skill": "rifle",
+    "ammo": [
+      "kawaii_308AM"
+    ],
+    "weight": "3 g",
+    "volume": "3 ml",
+    "bashing": 16,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 5
+    },
+    "dispersion": 40,
+    "durability": 9,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "kawaii_eve_mag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kawaii_eve_mag",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "<color_pink>[AMTS]</color> Eve 侦察步枪 .308 弹匣"
+    },
+    "description": "AMTS Eve侦察步枪专用弹匣。它可以容纳20发子弹。",
+    "weight": "3 g",
+    "volume": "3 ml",
+    "price": "0 cent",
+    "material": [
+      "kawaii_amsteel",
+      "kawaii_amplastic"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [
+      "kawaii_308AM"
+    ],
+    "capacity": 20,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "kawaii_308AM": 20
+        }
+      }
+    ]
+  },
+  {
+    "id": "kawaii_book_pacsys_tier1",
+    "type": "BOOK",
+    "category": "manuals",
+    "name": {
+      "str": "<color_pink>[AMTS]</color> A&M员工手册 第1章（关于包装）"
+    },
+    "description": "Alice & Maria（A&M）的员工手册。它解释了如何使用AMTS包装系统来打包物品。",
+    "weight": "454 g",
+    "volume": "750 ml",
+    "price": "0 cent",
+    "material": [
+      "paper"
+    ],
+    "symbol": "?",
+    "color": "blue",
+    "skill": "fabrication",
+    "required_level": 0,
+    "max_level": 0,
+    "intelligence": 5,
+    "time": 30
+  },
+  {
+    "id": "kawaii_book_pacsys_tier2",
+    "type": "BOOK",
+    "category": "manuals",
+    "name": {
+      "str": "<color_pink>[AMTS]</color> A&M员工手册 第2章 （关于高效打包）"
+    },
+    "description": "Alice & Maria（A&M）的员工手册。它解释了如何更有效率地使用AMTS包装系统来打包物品。",
+    "weight": "1000 g",
+    "volume": "1250 ml",
+    "price": "0 cent",
+    "material": [
+      "paper"
+    ],
+    "symbol": "?",
+    "color": "blue",
+    "skill": "fabrication",
+    "required_level": 0,
+    "max_level": 0,
+    "intelligence": 5,
+    "time": 30
+  },
+  {
+    "id": "kawaii_book_pacsys_tier3",
+    "type": "BOOK",
+    "category": "manuals",
+    "name": {
+      "str": "<color_pink>[AMTS]</color> A&M员工手册 第3章 （关于装备打包）"
+    },
+    "description": "Alice & Maria（A&M）的员工手册。它解释了如何使用AMTS包装系统来打包装备。",
+    "weight": "1000 g",
+    "volume": "1250 ml",
+    "price": "0 cent",
+    "material": [
+      "paper"
+    ],
+    "symbol": "?",
+    "color": "blue",
+    "skill": "fabrication",
+    "required_level": 0,
+    "max_level": 0,
+    "intelligence": 5,
+    "time": 30
+  },
+  {
+    "id": "kawaii_book_pacsys_tier_kawaii",
+    "type": "BOOK",
+    "name": {
+      "str": "<color_pink>[AMTS]</color> A&M员工手册 终章（关于KAWAII包装）"
+    },
+    "description": "Alice & Maria（A&M）的员工手册。它解释了如何使用AMTS包装系统来打包有KAWAII标签的任意物品。",
+    "weight": "1000 g",
+    "volume": "1250 ml",
+    "price": "0 cent",
+    "material": [
+      "paper"
+    ],
+    "symbol": "?",
+    "color": "blue",
+    "skill": "fabrication",
+    "required_level": 4,
+    "max_level": 4,
+    "intelligence": 5,
+    "time": 30
+  }
+]

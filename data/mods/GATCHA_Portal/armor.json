@@ -1,0 +1,91 @@
+[
+	{
+		"id":"ncard_misc_bin_prism",
+		"type":"TOOL_ARMOR",
+		"name":"异次元粉末收集器（旧版，移除收集功能）",
+		"description":"一个结合了小瓶、扇片和镜头的奇异工具。随着时间的推移，它会积累材料用来干涉其他维度。 您必须佩戴它才能发挥作用。不过它的作用似乎也只是在空气中收集粉尘...（作者保留这个有可能是为了防止出现bug，别管他就行）",
+		"weight":"50 g",
+		"volume":"150 ml",
+		"price":1,
+		"material":[ "wood","glass" ],
+		"symbol":"_",
+		"color":"white",
+		"flags":[ "ONLY_ONE","TRADER_AVOID","UNBREAKABLE_MELEE","NO_RELOAD","DANGEROUS","POWERARMOR_COMPATIBLE" ],
+		"pocket_data":[ { "pocket_type": "MAGAZINE", "holster": true, "ammo_restriction": { "ncard_misc_powder_d": 140 } } ]
+	}
+,
+	{
+		"id":"ncard_misc_yukari",
+		"type":"TOOL_ARMOR",
+		"name":"ゆかりさん",
+		"description":"none",
+		"weight":"1 g",
+		"volume":"1 ml",
+		"price":1,
+		"material":[ "steel" ],
+		"symbol":"_",
+		"color":"white",
+		"flags":[ "FANCY","AURA","ONLY_ONE","TRADER_AVOID","UNBREAKABLE_MELEE","NO_RELOAD","POWERARMOR_COMPATIBLE" ]
+	}
+,
+	{
+		"id":"ncard_misc_kiritan",
+		"type":"TOOL_ARMOR",
+		"name":"きりたん",
+		"description":"none",
+		"weight":"1 g",
+		"volume":"1 ml",
+		"price":1,
+		"material":[ "steel" ],
+		"symbol":"_",
+		"color":"white",
+		"flags":[ "FANCY","AURA","ONLY_ONE","TRADER_AVOID","UNBREAKABLE_MELEE","NO_RELOAD","POWERARMOR_COMPATIBLE" ]
+	}
+,
+	{
+		"id":"ncard_misc_akari",
+		"type":"TOOL_ARMOR",
+		"name":"あかりちゃん",
+		"description":"none",
+		"weight":"1 g",
+		"volume":"1 ml",
+		"price":1,
+		"material":[ "steel" ],
+		"symbol":"_",
+		"color":"white",
+		"flags":[ "FANCY","AURA","ONLY_ONE","TRADER_AVOID","UNBREAKABLE_MELEE","NO_RELOAD","POWERARMOR_COMPATIBLE" ]
+	}
+,
+	{
+		"id":"ncard_misc_bin_prism_auto",
+		"type":"TOOL_ARMOR",
+		"name":"螺旋式异次元粉末收集器",
+		"description":"它是一种经过调整的异次元粉末收集器，可以收集迄今为止被遗漏的材料。您必须佩戴才能发挥作用。产生的粉末无法通过粉碎机增加，同时生产效率也会下降。如果不佩戴的话，似乎效率还会进一步下降。",
+		"weight":"150 g",
+		"volume":"680 ml",
+		"price":1,
+		"material":[ "wood","glass" ],
+		"symbol":"_",
+		"color":"white",
+		"flags":[ "TRADER_AVOID","UNBREAKABLE_MELEE","NO_RELOAD","POWERARMOR_COMPATIBLE","AURA" ],
+		"relic_data":{ "charge_info": {  "recharge_type": "periodic", "time": "14 h 24 m", "regenerate_ammo": true } },
+		"pocket_data":[ { "pocket_type": "MAGAZINE", "holster": true, "ammo_restriction": { "ncard_misc_powder_d_pure": 140 } } ]
+	}
+,
+	{
+		"id":"ncard_misc_bin_prism_2",
+		"type":"TOOL_ARMOR",
+		"name":"异次元粉末收集器",
+		"description":"一个结合了小瓶、扇片和镜头的奇异工具。随着时间的推移，它会积累材料用来干涉其他维度。 您必须佩戴它才能发挥作用。不过它的作用似乎也只是在空气中收集粉尘...",
+		"weight":"50 g",
+		"volume":"150 ml",
+		"price":1,
+		"material":[ "wood","glass" ],
+		"symbol":"_",
+		"color":"white",
+		"flags":[ "ONLY_ONE","TRADER_AVOID","UNBREAKABLE_MELEE","NO_RELOAD","POWERARMOR_COMPATIBLE","AURA" ],
+		"relic_data":{"passive_effects": [{"mutations": ["mutate_ncard_bin_prism"]}]}
+	}
+
+
+]

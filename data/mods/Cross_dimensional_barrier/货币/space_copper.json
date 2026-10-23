@@ -1,0 +1,22 @@
+[
+	{
+		"type" : "ammunition_type",
+		"id" : "space_copper_type",
+		"name" : "次元铜币",
+		"default" : "space_copper"
+	},{		
+		"type" : "AMMO",
+		"id" : "space_copper",
+		"category" : "space_currency",
+		"name" : "次元铜币",
+		"name_plural" : "次元铜币",
+		"symbol" : "$",
+		"color" : "brown",
+		"weight": "0 g",
+		"volume": "0 ml",
+		"description" : "大灾变来临之后，这玩意儿才出现了，作为等价物进行交易。",
+		"material" : "space_material",
+		"flags": [ "ZERO_WEIGHT" ],
+		"ammo_type" : "space_copper_type"
+	}
+]

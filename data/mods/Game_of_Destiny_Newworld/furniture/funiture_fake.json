@@ -1,0 +1,24 @@
+[
+  {
+   "type": "TOOL",
+   "name": { "str": "SWP烤架" },
+  "description": "这是一个用于SWP猎物处理组具的虚拟物品。",
+  "weight": "1 g",
+  "volume": "1 ml",
+  "symbol": "@",
+  "color": "red",
+  "id": "SWP_fake_butcher_rack",
+  "sub": "char_smoker",
+  "ammo": [ "charcoal" ],
+  "pocket_data": [
+    { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "charcoal": 2000 }
+    }
+  ],
+  "qualities":
+  [
+   [ "SUSPENDING", 2 ], [ "ROPE", 2 ],
+   [ "BUTCHER", 37 ], [ "CUT", 2 ]
+  ],
+   "flags": [ "ZERO_WEIGHT", "ALLOWS_REMOTE_USE" ]
+  }
+]

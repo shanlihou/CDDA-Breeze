@@ -1,0 +1,22 @@
+[
+  {
+  "type": "BIONIC_ITEM", "category": "bionics", "name": { "str": "涓流充能2型CBM" }, "weight": "500 g", "volume": "2500 ml", "bashing": 8, "material": [ "steel", "plastic" ], "symbol": ":", "color": "yellow", "price_postapoc": 1500, "use_action": [ "install_bionic" ], "flags": [ "CBM", "BIONIC_NPC_USABLE" ], "is_upgrade": false, "faults": [ "fault_bionic_salvaged" ], "id": "bio_trickleS", "copy-from": "bio_trickle", "looks_like": "bio_int_enhancer", "description": "一个低功率、持久的的生化供能装置，由小型核衰变供能。能量输出低，但不需要燃料源，此模块可以同时安装多个。", "price": 120000, "difficulty": 1, "installation_data": "AID_bio_trickle"
+  },  
+  {
+  "id": "bio_trickleS", "copy-from": "bio_trickle", "type": "bionic", "name": { "str": "涓流充能2型" }, "description": "你的体内被植入了一个可以随时随地为你缓慢充能的CBM。供能速率低，但无其他消耗，并可持续数年。", "occupied_bodyparts": [ [ "torso", 2 ] ], "dupes_allowed": true, "power_trickle": "100 J", "flags": [ "BIONIC_POWER_SOURCE", "BIONIC_NPC_USABLE" ]
+  },
+  {
+           "type" : "recipe",
+    "result": "bio_trickleS",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC供应CBM",
+    "skill_used": "firstaid",
+    "difficulty": 5,
+    "time": "1second",
+    "reversible": true,
+    "autolearn": true,
+    "components": [ [ [ "CCMODcoin", 280 ] ] ]
+    }
+]

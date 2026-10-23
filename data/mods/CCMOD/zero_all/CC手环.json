@@ -1,0 +1,87 @@
+[
+  {
+    "type": "TOOL_ARMOR",
+    "subtypes": [ "TOOL", "ARMOR" ],
+    "id": "CCfitness_band_l",
+    "name": { "str": "CC健康安全手环l" },
+    "copy-from": "plastic_bag_vac",
+    "material": [ "superalloy" ],
+    "looks_like": "platinum_necklace",
+    "color": "light_blue",
+    "environmental_protection": 2,
+    "description": "智能健康手环，可以检测身体的健康辐射等情况。\n这是戴左手还是右手呢？空间手环，被异界力量扭曲，为了便携二次折叠的CC载具而出现，手环原本是一对这是其中一个。",
+    "flags": [ "VARSIZE", "TARDIS", "OVERSIZE","WATER_FRIENDLY","AURA","SEMITANGIBLE","PADDED","TWO_WAY_RADIO", "POWERARMOR_COMPATIBLE" ],
+    "qualities": [ [ "SUSPENDING", 2 ], [ "ROPE", 2 ] ], 
+    "use_action": [ "FITNESS_CHECK", "RADGLOVE"  ],
+    "armor": [ { "encumbrance": -42,"coverage": 1, "covers": [ "hand_l" ] } ], 
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "watertight": true,
+        "rigid": true,
+        "spoil_multiplier": 0.001,
+        "weight_multiplier": 0.000,
+        "volume_multiplier": 0.000,
+        "max_contains_volume": "200000 ml",
+        "max_contains_weight": "3999 kg",
+        "max_item_length": "2000 cm",
+        "moves": 30
+        }
+    ]
+  },
+  {
+    "type": "TOOL_ARMOR",
+    "subtypes": [ "TOOL", "ARMOR" ],
+    "id": "CCfitness_band_r",
+    "name": { "str": "CC健康安全手环r" },
+    "copy-from": "plastic_bag_vac",
+    "material": [ "superalloy" ],
+    "looks_like": "platinum_necklace",
+    "color": "light_blue",
+    "environmental_protection": 2,
+    "description": "安全手环，有一个小型压缩气罐可以释放存储的二氧化碳气体，能灭火也能喷雾致盲。\n这是戴右手还是左手呢？空间手环，被异界力量扭曲，为了便携二次折叠的CC载具而出现，手环原本是一对这是其中一个。",
+    "flags": [ "VARSIZE", "TARDIS", "OVERSIZE","WATER_FRIENDLY","AURA","SEMITANGIBLE","PADDED","TWO_WAY_RADIO", "POWERARMOR_COMPATIBLE" ],
+    "use_action": [ "EXTINGUISHER" ],
+     "armor": [ { "encumbrance": -42,"coverage": 1, "covers": [ "hand_l" ] } ], 
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "watertight": true,
+        "rigid": true,
+        "spoil_multiplier": 0.001,
+        "weight_multiplier": 0.000,
+        "volume_multiplier": 0.000,
+        "max_contains_volume": "200000 ml",
+        "max_contains_weight": "3999 kg",
+        "max_item_length": "2000 cm",
+        "moves": 30
+        }
+    ]
+  },
+    {
+        "type" : "recipe",
+    "result": "CCfitness_band_l",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC武器装备",
+    "skill_used": "survival",
+    "time": "100second",
+    "reversible": true,
+    "autolearn": true,
+    "components": [ [ [ "CCMODcoin", 80 ] ] ]
+  },
+    {
+        "type" : "recipe",
+    "result": "CCfitness_band_r",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_CC小作坊",
+    "id_suffix": "CC_SSS_0",
+    "subcategory": "CSC_CC小作坊_CC武器装备",
+    "skill_used": "survival",
+    "time": "100second",
+    "reversible": true,
+    "autolearn": true,
+    "components": [ [ [ "CCMODcoin", 80 ] ] ]
+  }
+    ]

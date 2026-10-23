@@ -1,0 +1,91 @@
+[
+  {
+    "id": "manual_meditation",
+    "type": "BOOK",
+    "category": "manuals",
+    "name": { "str": "冥想与你", "str_pl": "《冥想与你》多本" },
+    "description": "一本介绍简单冥想和呼吸技巧的书籍，适合初学者。",
+    "weight": "1454 g",
+    "volume": "1250 ml",
+    "price": 2500,
+    "price_postapoc": 150,
+    "bashing": 3,
+    "material": [ "paper" ],
+    "symbol": "?",
+    "looks-like": "book_nonf_hard_psych_moodalm",
+    "color": "white",
+    "skill": "metaphysics",
+    "required_level": 0,
+    "max_level": 0,
+    "intelligence": 8,
+    "time": "15 m",
+    "fun": 1,
+    "variants": [
+      {
+        "id": "manual_meditation_1",
+        "name": { "str": "禅心，初心", "str_pl": "《禅心，初心》多本" },
+        "description": "这是铃木俊隆（一位在美国创建了第一座禅宗寺庙的日本僧侣）的讲座文字记录，包含对禅修和修行的讨论。"
+      },
+      {
+        "id": "manual_meditation_2",
+        "name": { "str": "如何冥想：与心灵交朋友的实用指南", "str_pl": "《如何冥想：与心灵交朋友的实用指南》多本" },
+        "description": "一本为大众读者撰写的冥想书籍，包含简单的呼吸和正念技巧。"
+      },
+      {
+        "id": "manual_meditation_3",
+        "name": { "str": "游荡的心：中世纪僧侣关于分心的启示", "str_pl": "《游荡的心：中世纪僧侣关于分心的启示》多本" },
+        "description": "一部关于修道院在世俗世界中寻求宁静与平和的尝试史。尽管如今的日常干扰比大灾变前少得多，但你仍能从中汲取一些有用的技巧。"
+      },
+      {
+        "id": "manual_meditation_4",
+        "name": { "str": "正念的奇迹：冥想入门指南", "str_pl": "《正念的奇迹：冥想入门指南》多本" },
+        "description": "这是一封一行禅师写给越南同事的书信译本，着重于正念和呼吸练习。"
+      }
+    ]
+  },
+  {
+    "id": "manual_meditation_int",
+    "type": "BOOK",
+    "category": "manuals",
+    "name": { "str": "禅宗大师的秘密", "str_pl": "《禅宗大师的秘密》多本" },
+    "description": "这本书宣称包含了隐密的技巧，能让你在最严重的灾难面前保持宁静平和——比如，大灾变。",
+    "copy-from": "manual_meditation",
+    "//": "Advanced meditation is controversial but I have to make the distinction somewhere.",
+    "required_level": 3,
+    "max_level": 3,
+    "intelligence": 9,
+    "time": "20 m",
+    "fun": 0,
+    "variants": [
+      {
+        "id": "manual_meditation_int_1",
+        "name": { "str": "观照：融合佛教智慧与脑科学的完整冥想指南", "str_pl": "《观照：融合佛教智慧与脑科学的完整冥想指南》多本" },
+        "description": "本书由一位神经科学家兼冥想修行者撰写，提供了一个将科学与传统冥想技巧相结合的十步冥想计划。"
+      },
+      {
+        "id": "manual_meditation_int_2",
+        "name": { "str": "掌握佛陀核心教义：一本非同寻常的硬核佛法书", "str_pl": "《掌握佛陀核心教义：一本非同寻常的硬核佛法书》多本" },
+        "description": "本书认为冥想并非永恒渐进的过程，而可以像任何其他技能一样被掌握，并会告诉你如何做到。"
+      },
+      {
+        "id": "manual_meditation_int_3",
+        "name": { "str": "并非总是如此：践行禅宗真谛", "str_pl": "《并非总是如此：践行禅宗真谛》多本" },
+        "description": "这是对 \"禅心，初心\" 中所阐述教义的延续，包含大量寓言和公案，以帮助学生领悟冥想的本质。"
+      }
+    ]
+  },
+  {
+    "id": "manual_psionics_advan",
+    "type": "BOOK",
+    "category": "manuals",
+    "name": { "str": "实验室日志——大友", "str_pl": "《实验室日志——大友》多本" },
+    "description": "这本笔记本大部分是对作者交替称为 \"矩阵力学,\" \"维度形而上学,\" 或 \"异界数学,\" 的种种天马行空的推测，有时甚至在同一句话里混用多个术语。大部分内容语无伦次，但其中一些关于 \"有意识地引导异界能量\" 的实验数据引起了你的注意。",
+    "copy-from": "recipe_lab_cvd",
+    "skill": "metaphysics",
+    "required_level": 4,
+    "max_level": 4,
+    "intelligence": 12,
+    "time": "35 m",
+    "fun": -1
+  }
+]

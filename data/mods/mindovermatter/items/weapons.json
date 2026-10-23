@@ -1,0 +1,100 @@
+[
+  {
+    "id": "grenade_inferno",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": { "str": "地狱火手雷" },
+    "description": "这是一种地狱火手雷，设计用于引导异界能量以增强其燃烧威力。一旦投出，你将有五秒钟时间逃离，之后它会爆炸成一场猛烈的火风暴。",
+    "weight": "180 g",
+    "volume": "270 ml",
+    "price": 2000,
+    "price_postapoc": 1500,
+    "to_hit": -1,
+    "bashing": 6,
+    "material": [ "steel", "nether_crystal" ],
+    "symbol": "*",
+    "color": "red",
+    "use_action": {
+      "need_wielding": true,
+      "target": "grenade_inferno_act",
+      "msg": "你拉掉了手雷的保险销。",
+      "target_charges": 5,
+      "active": true,
+      "menu_text": "拔掉保险销",
+      "type": "transform"
+    },
+    "flags": [ "BOMB", "ACT_IN_FIRE", "GRENADE" ]
+  },
+  {
+    "id": "grenade_inferno_act",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": { "str": "已激活的地狱火手雷" },
+    "description": "这是一枚已激活的地狱火手雷。最好赶快扔出去！",
+    "weight": "180 g",
+    "volume": "270 ml",
+    "price": 0,
+    "price_postapoc": 0,
+    "to_hit": -1,
+    "bashing": 6,
+    "material": [ "steel", "nether_crystal" ],
+    "symbol": "*",
+    "color": "red",
+    "initial_charges": 5,
+    "max_charges": 5,
+    "turns_per_charge": 1,
+    "revert_to": "canister_empty",
+    "use_action": [ "GRENADE_INC_ACT" ],
+    "flags": [ "ACT_IN_FIRE", "BOMB", "TRADER_AVOID", "DANGEROUS" ]
+  },
+  {
+    "id": "mom_pulse_rifle",
+    "looks_like": "ar15",
+    "type": "GUN",
+    "reload_noise_volume": 10,
+    "name": { "str": "LV429 脉冲步枪" },
+    "description": "LV429 发射一系列极短的高能激光脉冲，更像是子弹而非传统的激光束，大大缩短了照射时间和武器效能。矩阵水晶技术使该武器足够紧凑，可单人携带，并为其提供了充足的能量，基本可实现无限操作，但散热仍然是一个问题，使其无法在几秒内连续发射超过一次。",
+    "weight": "2950 g",
+    "volume": "3 L",
+    "longest_side": "965 mm",
+    "price": 1600000,
+    "price_postapoc": 6500,
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [ "steel", "plastic", "nether_crystal" ],
+    "symbol": "(",
+    "color": "cyan",
+    "skill": "rifle",
+    "range": 40,
+    "dispersion": 10,
+    "durability": 10,
+    "modes": [ [ "DEFAULT", "semi-auto", 1 ] ],
+    "loudness": 23,
+    "reload": 0,
+    "clip_size": 1,
+    "valid_mod_locations": [
+      [ "accessories", 4 ],
+      [ "emitter", 1 ],
+      [ "grip", 1 ],
+      [ "rail", 1 ],
+      [ "sights", 1 ],
+      [ "sling", 1 ],
+      [ "stock", 1 ],
+      [ "stock accessory", 1 ],
+      [ "underbarrel", 1 ]
+    ],
+    "ammo": [ "mom_pulse_rifle_ammo" ],
+    "ammo_effects": [ "LASER", "INCENDIARY" ],
+    "flags": [ "NEVER_JAMS", "NO_UNLOAD", "NON_FOULING", "NEEDS_NO_LUBE", "NO_REPAIR" ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": { "mom_pulse_rifle_ammo": 1 }
+      }
+    ],
+    "relic_data": {
+      "charge_info": { "recharge_type": "periodic", "time": "8 s", "regenerate_ammo": true } 
+    },
+    "//": "Recharge time is 8 seconds due to bug #48019, making it actually 4 seconds. Reduce to 4 seconds if that ever gets fixed."
+  }
+]

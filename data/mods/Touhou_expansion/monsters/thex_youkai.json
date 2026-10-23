@@ -1,0 +1,1105 @@
+[
+  {
+    "id": "mon_chupacabra",
+    "type": "MONSTER",
+    "name": {
+      "str": "卓柏卡布拉",
+      "str_pl": "卓柏卡布拉"
+    },
+    "description": "一种生物，具有瘦长、弓背的狗或犬科动物的外表和步态。这种动物看起来病态，灰色的皮肤看起来光滑，几乎完全无毛，有些个体肩部有斑块。獠牙看起来比应该的更大，虽然这野兽的整体外表看起来很脆弱，但一旦你看到它移动去捕猎，这种错觉就立刻破灭了。",
+    "volume": "40000 ml",
+    "weight": "30000 g",
+    "default_faction": "touhou_youkai_neutral",
+    "bodytype": "dog",
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "YOUKAI_NEUTRAL_TOUHOU"
+    ],
+    "harvest": "mammal_leather",
+    "hp": 65,
+    "speed": 165,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "δ",
+    "color": "light_gray",
+    "aggression": -5,
+    "morale": 35,
+    "melee_skill": 5,
+    "melee_dice": 3,
+    "melee_dice_sides": 3,
+    "dodge": 5,
+    "path_settings": {
+      "max_dist": 15
+    },
+    "vision_night": 15,
+    "reproduction": {
+      "baby_monster": "mon_chupacabra_young",
+      "baby_count": 3,
+      "baby_timer": 60
+    },
+    "baby_flags": [
+      "SPRING",
+      "SUMMER",
+      "AUTUMN",
+      "WINTER"
+    ],
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "FRIEND_DIED",
+      "HURT",
+      "PLAYER_CLOSE"
+    ],
+    "armor_bash": 4,
+    "armor_cut": 2,
+    "armor_bullet": 8,
+    "armor_stab": 6,
+    "armor_acid": 2,
+    "armor_fire": 6,
+    "special_attacks": [
+      [
+        "ABSORB_MEAT",
+        100
+      ],
+      [
+        "slash_3d3",
+        2
+      ]
+    ],
+    "flags": [
+      "HEARS",
+      "PATH_AVOID_DANGER_1",
+      "SEES",
+      "SMELLS",
+      "WARM"
+    ],
+    "//": "These are what show up when you google 'chupacabra mange'. Former dogs/dog-sized canids, now at the boundary of being diseased animals and newborn youkai",
+    "//2": "Physical armor values should be removed IF the not yet implemented YOUKAI flag gives passive resistances."
+  },
+  {
+    "id": "mon_chupacabra_young",
+    "type": "MONSTER",
+    "copy-from": "mon_chupacabra",
+    "name": {
+      "str": "卓柏卡布拉幼崽"
+    },
+    "description": "一只小卓柏卡布拉。奇怪地可爱，你可以想象在不同情况下，过去有些人会收养它们。",
+    "volume": "1000 ml",
+    "weight": "1000 g",
+    "hp": 35,
+    "melee_skill": 3,
+    "dodge": 4,
+    "armor_bash": 1,
+    "armor_cut": 0,
+    "armor_bullet": 0,
+    "armor_stab": 1,
+    "armor_acid": 1,
+    "armor_fire": 2,
+    "upgrades": {
+      "age_grow": 13,
+      "into": "mon_chupacabra"
+    },
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_chupacabra_small",
+    "type": "MONSTER",
+    "name": {
+      "str": "“树鼩”",
+      "str_pl": "“树鼩”"
+    },
+    "description": "一种小型生物，具有瘦长、无毛的猫或狗的外表和步态。头部相对于身体其他部分较大，有一双大的黑色杏仁形眼睛。四肢末端是长手指和脚趾，每个都有同样长而锋利的爪子。也许这种动物最引人注目的部分是从头顶延伸到下背部的“刺”。",
+    "volume": "3500 ml",
+    "weight": "3500 g",
+    "default_faction": "touhou_youkai_neutral",
+    "bodytype": "dog",
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "YOUKAI_NEUTRAL_TOUHOU"
+    ],
+    "harvest": "mammal_tiny",
+    "hp": 35,
+    "speed": 185,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "ժ",
+    "color": "light_gray",
+    "aggression": -5,
+    "morale": 25,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "dodge": 5,
+    "path_settings": {
+      "max_dist": 16
+    },
+    "vision_night": 16,
+    "anger_triggers": [
+      "HURT"
+    ],
+    "special_attacks": [
+      [
+        "ABSORB_MEAT",
+        100
+      ],
+      [
+        "slash_2d3",
+        2
+      ]
+    ],
+    "flags": [
+      "CLIMBS",
+      "HEARS",
+      "HIT_AND_RUN",
+      "PATH_AVOID_DANGER_1",
+      "SEES",
+      "SMELLS",
+      "WARM"
+    ],
+    "//": "Implement ALCOHOL as placate_triggers...",
+    "//2": "These are the actual chupacabra cryptids, if a very small version"
+  },
+  {
+    "id": "mon_enfield_horror",
+    "type": "MONSTER",
+    "name": {
+      "str": "恩菲尔德恐怖",
+      "str_pl": "恩菲尔德恐怖"
+    },
+    "description": "一只畸形的野兽，用两条肌肉发达的腿行走，第三条萎缩的腿无法履行其功能，从尾巴本该在的位置伸出。皮肤苍白、起皱，有看起来像瘀伤的斑块，部分几乎像鳞片。下腹部伸出一对细小、虚弱的手臂，指向前方。脸有点像猿，张开的嘴露出獠牙，红色的大眼睛在黑暗中发光。",
+    "volume": "100 L",
+    "weight": "110 kg",
+    "default_faction": "touhou_youkai_hostile",
+    "bodytype": "dog",
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "YOUKAI_HOSTILE_TOUHOU"
+    ],
+    "harvest": "mammal_noleather_harvest",
+    "hp": 122,
+    "speed": 220,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "ε",
+    "color": "white",
+    "aggression": 15,
+    "morale": 25,
+    "regen_morale": true,
+    "regenerates": 2,
+    "melee_skill": 4,
+    "melee_dice": 3,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
+    "dodge": 4,
+    "vision_day": 25,
+    "vision_night": 35,
+    "path_settings": {
+      "max_dist": 25
+    },
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK",
+      "STALK"
+    ],
+    "armor_bash": 2,
+    "armor_cut": 2,
+    "armor_stab": 2,
+    "armor_bullet": 8,
+    "bleed_rate": 125,
+    "special_attacks": [
+      [
+        "ABSORB_MEAT",
+        65
+      ],
+      [
+        "bite_5d3",
+        8
+      ],
+      {
+        "spell_data": {
+          "id": "bodyslam"
+        },
+        "type": "spell",
+        "cooldown": 20
+      }
+    ],
+    "flags": [
+      "BASHES",
+      "HEARS",
+      "PATH_AVOID_DANGER_1",
+      "SEES",
+      "SMELLS",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_gevaudan",
+    "type": "MONSTER",
+    "name": {
+      "str": "热沃当之兽",
+      "str_pl": "热沃当之兽"
+    },
+    "description": "一种巨大的黑狼，大约有一头牛那么大，皮毛大多是黑色的，带有几乎看不见的黄褐色条纹。它的骨架很高，每一条腿都比同等大小的犬科动物粗，尾巴比正常长度要长得多，末端呈簇状或军刀状，红色的眼睛似乎在会在黑暗中闪闪发光，充满了对人类的仇恨",
+    "volume": "680 L",
+    "weight": "680 kg",
+    "default_faction": "touhou_youkai_hostile",
+    "bodytype": "dog",
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "harvest": "mammal_large_fur",
+    "hp": 350,
+    "speed": 165,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "W",
+    "looks_like": "mon_wolf_mutant_huge",
+    "color": "black",
+    "aggression": 85,
+    "morale": 99,
+    "regen_morale": true,
+    "regenerates": 1,
+    "melee_skill": 10,
+    "melee_dice": 7,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 6,
+        "armor_penetration": 4
+      }
+    ],
+    "dodge": 3,
+    "vision_day": 25,
+    "vision_night": 35,
+    "path_settings": {
+      "max_dist": 25
+    },
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "FRIEND_DIED",
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK",
+      "STALK"
+    ],
+    "armor_bash": 8,
+    "armor_cut": 8,
+    "armor_stab": 0,
+    "armor_bullet": 0,
+    "armor_fire": 8,
+    "bleed_rate": 166,
+    "special_attacks": [
+      [
+        "ABSORB_MEAT",
+        85
+      ],
+      [
+        "LUNGE",
+        16
+      ],
+      [
+        "bite_neck_6d4",
+        5
+      ]
+    ],
+    "flags": [
+      "BASHES",
+      "CLIMBS",
+      "HEARS",
+      "KEENNOSE",
+      "PATH_AVOID_DANGER_2",
+      "SEES",
+      "WARM"
+    ],
+    "//3": "Should be weaker-than-normal to stab and bullet damage. Should be weaker-than-normal against soul damage. Also anything with silver should do x2-x4 damage"
+  },
+  {
+    "id": "mon_jackalope",
+    "type": "MONSTER",
+    "name": {
+      "str": "鹿角兔"
+    },
+    "description": "一只长角的野兔，体型小，皮毛呈棕色，比普通长耳大野兔略大。",
+    "volume": "5000 ml",
+    "weight": "4500 g",
+    "default_faction": "touhou_youkai_neutral",
+    "bodytype": "pig",
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "harvest": "mammal_small_fur",
+    "hp": 15,
+    "speed": 165,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "ř",
+    "looks_like": "mon_hare",
+    "color": "brown",
+    "aggression": 0,
+    "morale": 12,
+    "melee_skill": 3,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 1,
+        "armor_penetration": 1
+      }
+    ],
+    "dodge": 6,
+    "anger_triggers": [
+      "HURT",
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK",
+      "STALK"
+    ],
+    "special_attacks": [
+      [
+        "ABSORB_MEAT",
+        105
+      ],
+      [
+        "leg_gore_4d2",
+        5
+      ]
+    ],
+    "flags": [
+      "GOODHEARING",
+      "PATH_AVOID_DANGER_1",
+      "SEES",
+      "SMELLS",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_jinmenken",
+    "type": "MONSTER",
+    "name": {
+      "str": "人面犬",
+      "str_pl": "人面犬"
+    },
+    "description": "一只长着人脸的狗。它看起来很可怜，像普通狗一样嗅着地面寻找食物。看起来并不好斗，事实上它似乎更怕你。",
+    "volume": "30000 ml",
+    "weight": "30000 g",
+    "default_faction": "touhou_youkai_neutral",
+    "bodytype": "dog",
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "YOUKAI_NEUTRAL_TOUHOU"
+    ],
+    "harvest": "jinmenken_harvest",
+    "hp": 45,
+    "speed": 135,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "ḍ",
+    "color": "light_gray",
+    "aggression": -20,
+    "morale": 5,
+    "melee_skill": 2,
+    "melee_dice": 2,
+    "melee_dice_sides": 2,
+    "dodge": 1,
+    "path_settings": {
+      "max_dist": 10
+    },
+    "vision_night": 15,
+    "reproduction": {
+      "baby_monster": "mon_jinmenken_young",
+      "baby_count": 2,
+      "baby_timer": 30
+    },
+    "baby_flags": [
+      "SPRING",
+      "SUMMER",
+      "AUTUMN",
+      "WINTER"
+    ],
+    "fear_triggers": [
+      "FRIEND_ATTACKED",
+      "FRIEND_DIED",
+      "HURT"
+    ],
+    "special_attacks": [
+      [
+        "ABSORB_MEAT",
+        100
+      ],
+      [
+        "PARROT",
+        29
+      ],
+      [
+        "PARROT_AT_DANGER",
+        17
+      ]
+    ],
+    "flags": [
+      "HEARS",
+      "PATH_AVOID_DANGER_1",
+      "SEES",
+      "SMELLS",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_jinmenken_young",
+    "type": "MONSTER",
+    "copy-from": "mon_jinmenken",
+    "name": {
+      "str": "人面犬幼崽"
+    },
+    "description": "一只小狗。本来会很可爱，如果不是那张人脸取代了口鼻，同时看起来又老又年轻。太可怕了。",
+    "volume": "750 ml",
+    "weight": "1 kg",
+    "morale": 0,
+    "hp": 12,
+    "melee_skill": 1,
+    "dodge": 0,
+    "upgrades": {
+      "age_grow": 15,
+      "into": "mon_jinmenken"
+    },
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_kunekune",
+    "type": "MONSTER",
+    "name": {
+      "str": "扭扭",
+      "str_pl": "扭扭"
+    },
+    "description": "某种白色的、隐约像人形的东西，如果你能这么称呼它的话，因为它似乎在无头、有两条手臂、有两个带粉色眼睛的头、有一条手臂……之间变换。它挥舞、扭动、摇晃，仿佛在呼唤某人的注意。你内心深处的某种东西告诉你，靠近会是一个非常糟糕的主意。",
+    "volume": "55 L",
+    "weight": "5 kg",
+    "default_faction": "touhou_youkai_hostile",
+    "bodytype": "blob",
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "YOUKAI_HOSTILE_TOUHOU"
+    ],
+    "harvest": "exempt",
+    "hp": 35,
+    "speed": 150,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "ʞ",
+    "color": "white",
+    "aggression": -15,
+    "morale": 50,
+    "regen_morale": true,
+    "regenerates": 2,
+    "melee_skill": 9,
+    "melee_dice": 2,
+    "melee_dice_sides": 6,
+    "melee_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 2,
+        "armor_penetration": 2
+      }
+    ],
+    "dodge": 9,
+    "vision_day": 40,
+    "vision_night": 50,
+    "path_settings": {
+      "max_dist": 50
+    },
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK",
+      "STALK"
+    ],
+    "armor_bash": 6,
+    "armor_cut": 6,
+    "armor_stab": 6,
+    "armor_bullet": 6,
+    "bleed_rate": 0,
+    "special_attacks": [
+      [
+        "FEAR_PARALYZE",
+        32
+      ],
+      [
+        "STARE",
+        28
+      ],
+      {
+        "spell_data": {
+          "id": "paralyze_100"
+        },
+        "type": "spell",
+        "cooldown": 34
+      }
+    ],
+    "death_function": {
+      "message": "%s 消散在空气中。",
+      "corpse_type": "NO_CORPSE"
+    },
+    "flags": [
+      "HEARS",
+      "IMMOBILE",
+      "KEENNOSE",
+      "SEES"
+    ]
+  },
+  {
+    "id": "mon_nightcrawler",
+    "type": "MONSTER",
+    "name": {
+      "str": "夜行者",
+      "str_pl": "夜行者"
+    },
+    "description": "这种生物由两条长腿连接到一个非常小、没有眼睛、没有手臂或尾巴的头躯干组成。它并不大，大约1.5米高，平静地移动，似乎不关心周围的环境。乍一看它可能看起来毫无特征，但一旦你专注于它，你会意识到它们每个都有一对不同形状的“脚”和不同质地的“脸”，这归功于不同的形状和阴影。",
+    "volume": "65 L",
+    "weight": "65 kg",
+    "default_faction": "touhou_youkai_neutral",
+    "bodytype": "ostrich",
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "YOUKAI_NEUTRAL_TOUHOU"
+    ],
+    "harvest": "mammal_leather",
+    "hp": 65,
+    "speed": 95,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "Λ",
+    "color": "white",
+    "aggression": -15,
+    "morale": 15,
+    "melee_skill": 4,
+    "melee_dice": 3,
+    "melee_dice_sides": 3,
+    "dodge": 4,
+    "vision_day": 20,
+    "vision_night": 35,
+    "path_settings": {
+      "max_dist": 20
+    },
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "FRIEND_DIED",
+      "HURT",
+      "PLAYER_CLOSE",
+      "STALK"
+    ],
+    "reproduction": {
+      "baby_monster": "mon_nightcrawler_young",
+      "baby_count": 2,
+      "baby_timer": 13
+    },
+    "baby_flags": [
+      "SPRING",
+      "SUMMER",
+      "AUTUMN",
+      "WINTER"
+    ],
+    "special_attacks": [
+      [
+        "ABSORB_MEAT",
+        100
+      ]
+    ],
+    "flags": [
+      "CLIMBS",
+      "HEARS",
+      "PATH_AVOID_DANGER_1",
+      "SEES",
+      "SMELLS",
+      "SWARMS"
+    ],
+    "//": "Fresno Nightcrawler"
+  },
+  {
+    "id": "mon_nightcrawler_young",
+    "type": "MONSTER",
+    "copy-from": "mon_nightcrawler",
+    "name": {
+      "str": "幼年夜行者"
+    },
+    "hp": 25,
+    "melee_skill": 3,
+    "path_settings": {
+      "max_dist": 6
+    },
+    "upgrades": {
+      "age_grow": 13,
+      "into": "mon_nightcrawler"
+    },
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    },
+    "//": "Just a smaller nightcrawler, with less combat capabilities"
+  },
+  {
+    "id": "mon_olgoi",
+    "type": "MONSTER",
+    "name": {
+      "str": "死亡蠕虫"
+    },
+    "description": "一个巨大的蠕虫状东西。由于它的深红色，这种动物看起来像一条滑行的巨大肠子。它没有眼睛，所以“头部”仅仅由一个圆形的嘴组成，满是黑色的尖牙。它不神圣，也不产生神圣的药物，除非放电算作致幻剂。",
+    "volume": "150 L",
+    "weight": "180 kg",
+    "default_faction": "worm",
+    "bodytype": "snake",
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "YOUKAI_NEUTRAL_TOUHOU"
+    ],
+    "harvest": "meatslug",
+    "hp": 210,
+    "speed": 175,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "ẉ",
+    "color": "pink",
+    "aggression": 25,
+    "morale": 30,
+    "regenerates": 1,
+    "melee_skill": 4,
+    "melee_dice": 3,
+    "melee_dice_sides": 5,
+    "melee_damage": [
+      {
+        "damage_type": "electric",
+        "amount": 4
+      }
+    ],
+    "dodge": 3,
+    "armor_bash": 2,
+    "armor_cut": 0,
+    "armor_bullet": 6,
+    "armor_elec": 16,
+    "armor_fire": 16,
+    "bleed_rate": 110,
+    "emit_fields": [
+      {
+        "emit_id": "emit_shock_burst",
+        "delay": "13 s"
+      }
+    ],
+    "vision_day": 20,
+    "vision_night": 25,
+    "path_settings": {
+      "max_dist": 16
+    },
+    "special_attacks": [
+      [
+        "ABSORB_MEAT",
+        100
+      ],
+      {
+        "spell_data": {
+          "id": "olgoi_poison"
+        },
+        "type": "spell",
+        "cooldown": 7
+      },
+      {
+        "spell_data": {
+          "id": "olgoi_shock"
+        },
+        "type": "spell",
+        "cooldown": 11
+      }
+    ],
+    "death_function": {
+      "message": "%s 蠕动、抽搐，最终死去。",
+      "corpse_type": "NORMAL"
+    },
+    "flags": [
+      "ACIDPROOF",
+      "ATTACK_LOWER",
+      "DIGS",
+      "ELECTRIC",
+      "HEARS",
+      "NOHEAD",
+      "SLUDGEPROOF",
+      "VENOM"
+    ],
+    "//": "Mongolian death worm, bigger than 'official' reports"
+  },
+  {
+    "id": "mon_sasquatch",
+    "type": "MONSTER",
+    "name": {
+      "str": "大脚怪"
+    },
+    "description": "传说中像猿的神秘生物。双足行走、多毛、气势逼人，即使从远处也能闻到臭味。你无法相信它们是真的。",
+    "volume": "160 L",
+    "weight": "145 kg",
+    "default_faction": "touhou_sasquatch",
+    "bodytype": "human",
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "SASQUATCH_TOUHOU"
+    ],
+    "harvest": "sasquatch_harvest",
+    "hp": 200,
+    "speed": 155,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "α",
+    "looks_like": "bear",
+    "color": "brown",
+    "aggression": -30,
+    "morale": 10,
+    "melee_skill": 3,
+    "melee_dice": 6,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 2
+      }
+    ],
+    "dodge": 2,
+    "armor_bash": 2,
+    "armor_cut": 4,
+    "armor_stab": 2,
+    "armor_bullet": 2,
+    "vision_day": 50,
+    "vision_night": 35,
+    "path_settings": {
+      "max_dist": 35
+    },
+    "anger_triggers": [
+      "PLAYER_NEAR_BABY"
+    ],
+    "fear_triggers": [
+      "FRIEND_DIED",
+      "FRIEND_ATTACKED",
+      "HURT"
+    ],
+    "flags": [
+      "BASHES",
+      "CAN_OPEN_DOORS",
+      "GOODHEARING",
+      "KEENNOSE",
+      "PATH_AVOID_DANGER_1",
+      "SEES",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_yeti",
+    "type": "MONSTER",
+    "name": {
+      "str": "大脚怪"
+    },
+    "copy-from": "mon_sasquatch",
+    "description": "可恶的雪人。看起来和走路像一只大猩猩，双足行走，身体覆盖着灰色而非白色的皮毛。似乎在暴风雪中不太可能寻找朋友。",
+    "default_faction": "touhou_yeti",
+    "hp": 190,
+    "speed": 145,
+    "looks_like": "mon_sasquatch",
+    "color": "dark_gray",
+    "aggression": 5,
+    "morale": 35,
+    "melee_skill": 4,
+    "melee_dice": 4,
+    "melee_dice_sides": 5,
+    "melee_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 4
+      }
+    ],
+    "dodge": 3,
+    "armor_bash": 4,
+    "armor_stab": 4,
+    "armor_bullet": 0,
+    "vision_day": 40,
+    "vision_night": 35,
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "HURT",
+      "PLAYER_WEAK",
+      "STALK"
+    ],
+    "fear_triggers": [
+      "FRIEND_DIED"
+    ],
+    "flags": [
+      "BASHES",
+      "CAN_OPEN_DOORS",
+      "GROUP_BASH",
+      "HEARS",
+      "KEENNOSE",
+      "PATH_AVOID_DANGER_1",
+      "SEES",
+      "WARM"
+    ],
+    "//": "Should only show up during WINTER, also should have a mi-go (true) component?"
+  },
+  {
+    "id": "mon_squonk",
+    "type": "MONSTER",
+    "name": {
+      "str": "斯夸克",
+      "str_pl": "斯夸克"
+    },
+    "description": "一只看起来不开心的野兽。它覆盖着无毛、有疣的皮肤，脸上有一根短鼻子。它看起来很悲伤，撕裂着哭泣着，走路时实际上留下了一串眼泪。",
+    "volume": "30000 ml",
+    "weight": "30000 g",
+    "default_faction": "touhou_youkai_neutral",
+    "bodytype": "pig",
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "YOUKAI_NEUTRAL_TOUHOU"
+    ],
+    "harvest": "mammal_noleather_harvest",
+    "hp": 30,
+    "speed": 100,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "p",
+    "looks_like": "pig",
+    "color": "pink",
+    "aggression": -5,
+    "morale": 5,
+    "melee_skill": 2,
+    "melee_dice": 2,
+    "melee_dice_sides": 2,
+    "dodge": 3,
+    "path_settings": {
+      "max_dist": 10
+    },
+    "biosignature": {
+      "biosig_item": "water",
+      "biosig_timer": 4
+    },
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "STALK"
+    ],
+    "fear_triggers": [
+      "FRIEND_ATTACKED",
+      "HURT"
+    ],
+    "special_attacks": [
+      [
+        "ABSORB_MEAT",
+        100
+      ],
+      {
+        "spell_data": {
+          "id": "squonk_dissolve"
+        },
+        "type": "spell",
+        "cooldown": 3
+      }
+    ],
+    "flags": [
+      "HEARS",
+      "PATH_AVOID_DANGER_1",
+      "PACIFIST",
+      "SEES",
+      "SMELLS",
+      "WARM"
+    ],
+    "//": "The squonk should go around, run from the player when encountered, until it reaches the anger_triggers threshold, then casts squonk_dissolve and transforms into the harvest-less, drop-less mon_squonk_death to finish the death process. It would be harvestable only if caught by surprise"
+  },
+  {
+    "id": "mon_squonk_death",
+    "type": "MONSTER",
+    "name": {
+      "str": "斯夸克",
+      "str_pl": "斯夸克"
+    },
+    "copy-from": "mon_squonk",
+    "harvest": "exempt",
+    "hp": 1,
+    "aggression": -99,
+    "morale": 99,
+    "vision_day": 50,
+    "vision_night": 50,
+    "path_settings": {
+      "max_dist": 50
+    },
+    "biosignature": {
+      "biosig_item": "water",
+      "biosig_timer": 1
+    },
+    "death_function": {
+      "message": "%s 在自己的眼泪中溶解了！",
+      "corpse_type": "NO_CORPSE"
+    },
+    "special_attacks": [
+      {
+        "spell_data": {
+          "id": "squonk_death_dissolve"
+        },
+        "type": "spell",
+        "cooldown": 3
+      }
+    ],
+    "flags": [
+      "GOODHEARING",
+      "IMMOBILE",
+      "KEENNOSE",
+      "NO_BREATHE",
+      "PACIFIST",
+      "SEES",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_gyokuto_base",
+    "type": "MONSTER",
+    "name": "月兔",
+    "description": "LDC 征召兵的模板。注意：它们应该是可交互的 NPC，而不是怪物",
+    "default_faction": "factionless",
+    "species": [
+      "MAMMAL"
+    ],
+    "diff": 8,
+    "volume": "46250 ml",
+    "weight": "55 kg",
+    "hp": 100,
+    "speed": 110,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "🐰",
+    "color": "white",
+    "aggression": 0,
+    "harvest": "human",
+    "morale": 10,
+    "melee_skill": 2,
+    "melee_dice": 1,
+    "melee_dice_sides": 6,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 0
+      }
+    ],
+    "dodge": 1,
+    "path_settings": {
+      "max_dist": 20,
+      "avoid_traps": true
+    },
+    "vision_day": 50,
+    "vision_night": 35,
+    "special_attacks": [
+      [
+        "PARROT_AT_DANGER",
+        33
+      ],
+      [
+        "SEARCHLIGHT",
+        50
+      ]
+    ],
+    "death_drops": {
+      "subtype": "collection",
+      "groups": [
+        [
+          "subway",
+          40
+        ],
+        [
+          "sewer",
+          20
+        ],
+        [
+          "trash",
+          5
+        ],
+        [
+          "bedroom",
+          1
+        ],
+        [
+          "dresser",
+          5
+        ],
+        [
+          "ammo",
+          18
+        ]
+      ]
+    },
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "FRIEND_DIED",
+      "HURT"
+    ],
+    "death_function": {
+      "corpse_type": "NORMAL",
+      "message": "%s 死了！"
+    },
+    "flags": [
+      "BASHES",
+      "CAN_OPEN_DOORS",
+      "CLIMBS",
+      "GROUP_BASH",
+      "GROUP_MORALE",
+      "HEARS",
+      "HUMAN",
+      "PATH_AVOID_DANGER_2",
+      "RANGED_ATTACKER",
+      "SEES",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_gyokuto_soldier",
+    "type": "MONSTER",
+    "name": "月兔",
+    "copy-from": "mon_gyokuto_base",
+    "description": "月面防卫队的一员，携带一把月面步枪。如果不是因为兔耳朵，你会把她误认为人类。她看起来自信且极具战斗能力。月兔以前有这么训练有素吗？"
+  }
+]

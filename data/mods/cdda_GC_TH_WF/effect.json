@@ -1,0 +1,81 @@
+[
+    {
+        "type": "effect_type",
+        "id": "TH_WF_Burn_eff",
+        "name": [
+          "Burning"
+        ],
+        "desc": [
+          "Burning yourself."
+        ],
+        "max_duration": "1 seconds",
+        "base_mods": {
+          "hurt_min": [ 1 ],
+          "hurt_chance": [ 1 ],
+          "stamina_min": [ 1000 ],
+          "stamina_chance": [ 1 ],
+          "pain_min": [ -5 ],
+          "pain_chance": [ 1 ]
+        }
+    },
+    {
+      "type": "effect_type",
+      "id": "TH_WF_BodyProf",
+      "name": [
+        "BodyProf"
+      ],
+      "desc": [
+        "desc."
+      ],
+      "max_duration": "1 seconds",
+      "removes_effects": [
+        "bite",
+        "infected"
+      ]
+    },
+    {
+      "type": "effect_type",
+      "id": "TH_WF_PAIN1",
+      "max_duration": "1 seconds",
+      "base_mods": {
+        "pain_min": [ -10 ],
+        "pain_chance": [ 1 ]
+      }
+    },
+    {
+      "type": "effect_type",
+      "id": "TH_WF_PAIN2",
+      "max_duration": "1 seconds",
+      "base_mods": {
+        "pain_min": [ -100 ],
+        "pain_chance": [ 1 ]
+      }
+    },
+    {
+      "id": "TH_WF_Vitamin",
+      "type": "vitamin",
+      "vit_type": "counter",
+      "name": { "str": "白雾" },
+      "excess": "TH_WF_Vitamin",
+      "min": 0,
+      "max": 2500,
+      "rate": "1 h",
+      "disease_excess": [ [ 100, 500 ], [ 501, 2199 ], [ 2200, 2500 ] ]
+    },
+    {
+      "type": "effect_type",
+      "id": "TH_WF_Vitamin",
+      "name": [ "白雾", "白雾", "白雾" ],
+      "desc": [
+        "You make the evolution.",
+        "You make the evolution.",
+        "You make the evolution."
+      ],
+      "max_intensity": 3,
+      "resist_traits": [ "THRESH_TH_WF" ],
+      "base_mods": { "str_mod": [ 0, 2 ], "per_mod": [ 0, -2 ], "dex_mod": [ 0, -1 ], "int_mod": [ 0, 0 ] },
+      "scaling_mods": { "str_mod": [ 0, 4 ], "per_mod": [ 0, -1 ], "dex_mod": [ 0, -1 ], "int_mod": [ 0, 0 ] },
+      "rating": "bad",
+      "blood_analysis_description": "White Fog"
+    }
+]

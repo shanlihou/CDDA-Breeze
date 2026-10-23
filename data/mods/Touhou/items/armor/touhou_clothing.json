@@ -1,0 +1,2206 @@
+[
+  {
+    "id": "aya_shirt",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "文文的衬衫",
+    "description": "一件白色的纽扣衬衫，短而蓬松的袖子。袖口有黑色蕾丝，中间还有一条交叉的蕾丝。领口和纽扣线左侧有一个特殊的枫叶图案。",
+    "weight": "250 g",
+    "volume": "750 ml",
+    "price": 15000,
+    "price_postapoc": 1500,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 1,
+    "symbol": "[",
+    "looks_like": "dress_shirt",
+    "color": "white",
+    "warmth": 10,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "300 ml",
+        "max_contains_weight": "500 g",
+        "moves": 150
+      }
+    ],
+    "armor": [
+      {
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "specifically_covers": [
+          "arm_shoulder_l",
+          "arm_shoulder_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          2,
+          4
+        ]
+      },
+      {
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "specifically_covers": [
+          "arm_upper_l",
+          "arm_upper_r"
+        ],
+        "coverage": 10,
+        "encumbrance": [
+          2,
+          4
+        ]
+      },
+      {
+        "covers": [
+          "torso"
+        ],
+        "coverage": 90,
+        "encumbrance": [
+          4,
+          6
+        ]
+      }
+    ],
+    "flags": [
+      "FANCY",
+      "VARSIZE"
+    ]
+  },
+  {
+    "id": "aya_skirt",
+    "type": "ARMOR",
+    "name": {
+      "str": "文文的短裙"
+    },
+    "description": "一条末端有褶皱的棉质裙子，刚好到膝盖以上。  前面右侧有一个特殊的蓝宝石叶子设计。",
+    "repairs_like": "jeans",
+    "weight": "250 g",
+    "volume": "300 ml",
+    "price": 6500,
+    "price_postapoc": 50,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 1,
+    "symbol": "[",
+    "looks_like": "kilt",
+    "color": "black",
+    "warmth": 12,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "500 g",
+        "moves": 80
+      }
+    ],
+    "armor": [
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_hip_l",
+          "leg_hip_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          2,
+          4
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_upper_l",
+          "leg_upper_r"
+        ],
+        "coverage": 85,
+        "encumbrance": [
+          2,
+          4
+        ]
+      }
+    ],
+    "flags": [
+      "VARSIZE"
+    ]
+  },
+  {
+    "id": "iku_dress_shirt",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "褶边衬衫",
+    "copy-from": "dress_shirt",
+    "description": "一件带有褶边和长袖的白色和红色衬衫。看起来很花哨！",
+    "repairs_like": "tshirt",
+    "flags": [
+      "FANCY",
+      "VARSIZE"
+    ]
+  },
+  {
+    "id": "iku_fedora",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "皇带鱼软呢帽",
+      "str_pl": "皇带鱼软呢帽"
+    },
+    "copy-from": "fedora",
+    "description": "一顶装饰有红色蝴蝶结和两个长丝带的软呢帽。",
+    "flags": [
+      "FANCY",
+      "OUTER",
+      "VARSIZE"
+    ]
+  },
+  {
+    "id": "iku_skirt",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "长裙",
+      "str_pl": "长裙"
+    },
+    "copy-from": "skirt",
+    "description": "一条长款的深蓝色几乎黑色的裙子，末端有褶边。",
+    "warmth": 10,
+    "material_thickness": 1,
+    "color": "black",
+    "armor": [
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_hip_l",
+          "leg_hip_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          2,
+          4
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_upper_l",
+          "leg_upper_r"
+        ],
+        "coverage": 95,
+        "encumbrance": [
+          2,
+          4
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_knee_l",
+          "leg_knee_r"
+        ],
+        "coverage": 45,
+        "encumbrance": [
+          2,
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kaenbyou_dress",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "黑色连衣裙",
+      "str_pl": "黑色连衣裙"
+    },
+    "description": "一件长袖、纯黑色的连衣裙，带有绿色褶边。其设计以旧地狱植物群为特色。",
+    "repairs_like": "dress",
+    "weight": "1000 g",
+    "volume": "4000 ml",
+    "price": 8000,
+    "price_postapoc": 800,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 1,
+    "symbol": "[",
+    "looks_like": "dress",
+    "color": "green",
+    "warmth": 20,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "450 ml",
+        "max_contains_weight": "900 g",
+        "moves": 120
+      }
+    ],
+    "armor": [
+      {
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "coverage": 90,
+        "encumbrance": [
+          4,
+          8
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_hip_l",
+          "leg_hip_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          4,
+          8
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_upper_l",
+          "leg_upper_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          4,
+          8
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_knee_l",
+          "leg_knee_r"
+        ],
+        "coverage": 50,
+        "encumbrance": [
+          2,
+          4
+        ]
+      },
+      {
+        "covers": [
+          "torso"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          4,
+          8
+        ]
+      }
+    ],
+    "flags": [
+      "FANCY",
+      "STURDY",
+      "VARSIZE"
+    ]
+  },
+  {
+    "id": "kaenbyou_leg_lace",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "腿带",
+      "str_pl": "腿带"
+    },
+    "description": "一个小的 ",
+    "repairs_like": "panties",
+    "//": "Smallest related thing I could find, will need to check later when I figure out how materials work",
+    "weight": "50 g",
+    "volume": "50 ml",
+    "price": 4000,
+    "price_postapoc": 800,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 0.5,
+    "symbol": "[",
+    "looks_like": "leg_warmers",
+    "//2": "synonymous: leggings, so",
+    "color": "black",
+    "warmth": 1,
+    "armor": [
+      {
+        "covers": [
+          "leg_l"
+        ],
+        "specifically_covers": [
+          "leg_lower_l"
+        ],
+        "coverage": 5,
+        "encumbrance": [
+          1,
+          1
+        ]
+      }
+    ],
+    "flags": [
+      "FANCY",
+      "NO_WEAR_EFFECT",
+      "SKINTIGHT",
+      "VARSIZE"
+    ],
+    "//3": "This item maybe needs something else to it"
+  },
+  {
+    "id": "kaenbyou_shoes",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "黑色鞋子",
+    "copy-from": "dress_shoes",
+    "description": "一双装饰有黑色丝带的黑色鞋子。",
+    "repairs_like": "dress_shoes",
+    "weight": "750 g",
+    "volume": "1250 ml",
+    "price": 16000,
+    "price_postapoc": 4000,
+    "material_thickness": 2,
+    "symbol": "[",
+    "looks_like": "dress_shoes",
+    "color": "black",
+    "warmth": 10,
+    "armor": [
+      {
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ],
+        "coverage": 50
+      }
+    ],
+    "flags": [
+      "FANCY",
+      "VARSIZE"
+    ]
+  },
+  {
+    "id": "kaenbyou_vest",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "黑色坎肩",
+      "str_pl": "黑色坎肩"
+    },
+    "description": "一件穿在衣服外面的小号黑色无袖防护背心。",
+    "repairs_like": "vest_leather",
+    "weight": "600 g",
+    "volume": "1500 ml",
+    "price": 16000,
+    "price_postapoc": 4000,
+    "material": [
+      "leather"
+    ],
+    "material_thickness": 2,
+    "symbol": "[",
+    "looks_like": "vest_leather",
+    "color": "black",
+    "weight_capacity_bonus": "1 kg",
+    "warmth": 15,
+    "armor": [
+      {
+        "covers": [
+          "torso"
+        ],
+        "coverage": 40,
+        "encumbrance": [
+          8,
+          12
+        ]
+      }
+    ],
+    "flags": [
+      "FANCY",
+      "VARSIZE"
+    ]
+  },
+  {
+    "id": "meiling_cheongsam_upper",
+    "type": "ARMOR",
+    "name": {
+      "str": "美玲的上衣",
+      "str_pl": "美玲的上衣"
+    },
+    "copy-from": "cheongsam",
+    "description": "一件非常优雅的中式服装。比通常的穿着更舒适，它被分成两件以进一步提高使用者的舒适度。与通常款式不同，它没有袖子，所以基本上就是一件夹克。它仍然展示着中国元素，比如用绳结代替纽扣，以及刺绣。",
+    "repairs_like": "cheongsam",
+    "weight": "400 g",
+    "volume": "1200 ml",
+    "price_postapoc": 2500,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 1,
+    "symbol": "[",
+    "looks_like": "jacket_light",
+    "color": "green",
+    "warmth": 6,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "300 ml",
+        "max_contains_weight": "500 g",
+        "moves": 150
+      }
+    ],
+    "armor": [
+      {
+        "covers": [
+          "torso"
+        ],
+        "coverage": 80,
+        "encumbrance": [
+          4,
+          10
+        ]
+      }
+    ],
+    "flags": [
+      "FANCY",
+      "POCKETS",
+      "VARSIZE"
+    ]
+  },
+  {
+    "id": "meiling_cheongsam_lower",
+    "type": "ARMOR",
+    "name": {
+      "str": "美玲的裙褂",
+      "str_pl": "美玲的裙褂"
+    },
+    "copy-from": "cheongsam",
+    "description": "一件非常优雅的中式服装。比通常的穿着更舒适，它被分成两件以进一步提高使用者的舒适度。这是下半部分，形状像一条长裙，有一个隐约可见的开衩。",
+    "repairs_like": "cheongsam",
+    "weight": "600 g",
+    "volume": "2000 ml",
+    "price_postapoc": 2500,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 1,
+    "symbol": "[",
+    "looks_like": "kilt",
+    "color": "green",
+    "warmth": 8,
+    "armor": [
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_hip_l",
+          "leg_hip_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          2,
+          4
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_upper_l",
+          "leg_upper_r"
+        ],
+        "coverage": 90,
+        "encumbrance": [
+          0,
+          4
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_knee_l",
+          "leg_knee_r"
+        ],
+        "coverage": 85,
+        "encumbrance": [
+          0,
+          2
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_lower_l",
+          "leg_lower_r"
+        ],
+        "coverage": 35,
+        "encumbrance": [
+          0,
+          2
+        ]
+      }
+    ],
+    "flags": [
+      "FANCY",
+      "VARSIZE"
+    ]
+  },
+  {
+    "id": "meiling_hat",
+    "type": "ARMOR",
+    "name": {
+      "str": "美铃的软帽"
+    },
+    "copy-from": "beret",
+    "description": "一顶绿色的软帽，帽子上的金色五角星刻有“龍”字。",
+    "repairs_like": "balclava",
+    "weight": "120 g",
+    "volume": "250 ml",
+    "price": 1500,
+    "price_postapoc": 50,
+    "material": [
+      "cotton",
+      "steel"
+    ],
+    "material_thickness": 1,
+    "symbol": "[",
+    "looks_like": "beret",
+    "color": "green",
+    "warmth": 10,
+    "armor": [
+      {
+        "covers": [
+          "head"
+        ],
+        "specifically_covers": [
+          "head_crown"
+        ],
+        "coverage": 80
+      }
+    ],
+    "flags": [
+      "VARSIZE",
+      "WATER_FRIENDLY"
+    ]
+  },
+  {
+    "id": "meiling_shirt",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "美铃的衬衫",
+    "copy-from": "tang_shirt",
+    "description": "一件白色的纽扣衬衫，短而蓬松的袖子。袖口有黑色蕾丝，中间还有一条交叉的蕾丝。领口和纽扣线左侧有一个特殊的枫叶图案。",
+    "weight": "250 g",
+    "volume": "750 ml",
+    "price": 15000,
+    "price_postapoc": 1500,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 1,
+    "symbol": "[",
+    "looks_like": "dress_shirt",
+    "color": "white",
+    "warmth": 8,
+    "armor": [
+      {
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "specifically_covers": [
+          "arm_shoulder_l",
+          "arm_shoulder_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          2,
+          4
+        ]
+      },
+      {
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "specifically_covers": [
+          "arm_upper_l",
+          "arm_upper_r"
+        ],
+        "coverage": 15,
+        "encumbrance": [
+          2,
+          4
+        ]
+      },
+      {
+        "covers": [
+          "torso"
+        ],
+        "coverage": 90,
+        "encumbrance": [
+          4,
+          6
+        ]
+      }
+    ],
+    "flags": [
+      "FANCY",
+      "VARSIZE"
+    ]
+  },
+  {
+    "id": "mokou_boots",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "皮革长靴",
+      "str_pl": "皮革长靴"
+    },
+    "copy-from": "boots_larmor",
+    "description": "由防火材料制成的皮靴。",
+    "price": 25000,
+    "price_postapoc": 3750,
+    "material": [
+      "fireresist_leather"
+    ],
+    "material_thickness": 3,
+    "warmth": 25,
+    "armor": [
+      {
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          16,
+          20
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_lower_l",
+          "leg_lower_r"
+        ],
+        "coverage": 10,
+        "encumbrance": [
+          8,
+          12
+        ]
+      }
+    ],
+    "flags": [
+      "STURDY",
+      "VARSIZE",
+      "WATERPROOF"
+    ]
+  },
+  {
+    "id": "mokou_hakama",
+    "type": "ARMOR",
+    "name": {
+      "str_sp": "红色袴"
+    },
+    "copy-from": "pants_cargo",
+    "description": "一件宽松的深红色背带裤,款式可以追溯到日本的奈良年代.",
+    "//": "That's the specific name for Mokou's pants. According to the wiki, it's 'sashinuki hakama'.",
+    "weight": "1500 g",
+    "volume": "2000 ml",
+    "price": 50000,
+    "price_postapoc": 5000,
+    "material": [
+      "fireproof_cotton"
+    ],
+    "material_thickness": 3,
+    "symbol": "[",
+    "looks_like": "pants",
+    "color": "red",
+    "warmth": 20,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 100
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 100
+      }
+    ],
+    "armor": [
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "coverage": 90,
+        "encumbrance": [
+          8,
+          16
+        ]
+      }
+    ],
+    "flags": [
+      "FANCY",
+      "POCKETS",
+      "STURDY",
+      "VARSIZE"
+    ]
+  },
+  {
+    "id": "mokou_ribbon",
+    "type": "TOOL_ARMOR",
+    "category": "armor",
+    "name": "抗火缎带",
+    "description": "一条纸制的白色丝带,画有红色的纸边和红色符文,用来束头发.可以作为发饰穿戴,具有神奇的抗火效果.",
+    "weight": "100 g",
+    "volume": "400 ml",
+    "price": 10000,
+    "price_postapoc": 1000,
+    "material": [
+      "mokou_paper"
+    ],
+    "material_thickness": 1,
+    "symbol": "[",
+    "color": "white",
+    "armor": [
+      {
+        "covers": [
+          "head"
+        ],
+        "specifically_covers": [
+          "head_crown"
+        ],
+        "coverage": 15,
+        "encumbrance": [
+          0,
+          0
+        ]
+      }
+    ],
+    "flags": [
+      "FANCY",
+      "NO_WEAR_EFFECT",
+      "STURDY"
+    ]
+  },
+  {
+    "id": "mokou_shirt",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "受热褪色的衬衫"
+    },
+    "description": "一件白色的衬衫，烧焦后被反复修补，现在已经没有袖子了。不过这样看起来更酷。已经看不出原来的颜色了。",
+    "repairs_like": "tshirt",
+    "weight": "250 g",
+    "volume": "750 ml",
+    "price": 30000,
+    "price_postapoc": 1500,
+    "material": [
+      "fireresist_cotton"
+    ],
+    "material_thickness": 1,
+    "symbol": "[",
+    "looks_like": "tshirt",
+    "color": "white",
+    "warmth": 10,
+    "armor": [
+      {
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "specifically_covers": [
+          "arm_shoulder_l",
+          "arm_shoulder_r"
+        ],
+        "coverage": 90,
+        "encumbrance": [
+          2,
+          4
+        ]
+      },
+      {
+        "covers": [
+          "torso"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          4,
+          6
+        ]
+      }
+    ],
+    "flags": [
+      "FANCY",
+      "STURDY",
+      "VARSIZE"
+    ]
+  },
+  {
+    "id": "mokou_talisman",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "抗火符",
+    "description": "一大叠纸符,能有效防御火焰和烟雾.",
+    "weight": 0,
+    "volume": 0,
+    "price": 240500,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "solid",
+      "length": "hand",
+      "surface": "any"
+    },
+    "material": [
+      "mokou_paper"
+    ],
+    "material_thickness": 5,
+    "symbol": "[",
+    "color": "light_gray",
+    "warmth": 0,
+    "armor": [
+      {
+        "covers": [
+          "arm_l",
+          "arm_r",
+          "eyes",
+          "hand_l",
+          "hand_r",
+          "head",
+          "leg_l",
+          "leg_r",
+          "mouth",
+          "torso"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          0,
+          0
+        ]
+      }
+    ],
+    "environmental_protection": 10,
+    "flags": [
+      "ALLOWS_NATURAL_ATTACKS",
+      "OUTER",
+      "STURDY",
+      "VARSIZE",
+      "ZERO_WEIGHT"
+    ],
+    "//": "I'm disabling this because I can't a way for the item to cover specific parts + protect those parts from fire + ignore physical attacks so it doesn't get destroyed by melee damage. Instead I'm going the easy way of making a fire immune mat for Mokou's pants (and ribbon) and fire resistant mats for her shirt and booots"
+  },
+  {
+    "id": "remi_bowbelt",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "蕾米莉亚的蝴蝶结",
+      "str_pl": "蕾米莉亚的蝴蝶结"
+    },
+    "copy-from": "obi_gi",
+    "//": "Closest thing to a cotton belt, I should add the specs for this specific bow when I figure out how material definitions work",
+    "description": "一个带有白色缎带的大大的鲜红色蝴蝶结，穿在腰部并在后背打结。用作装饰。",
+    "weight": "400 g",
+    "volume": "600 ml",
+    "price": 18000,
+    "price_postapoc": 600,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 1,
+    "symbol": "[",
+    "color": "light_blue",
+    "armor": [
+      {
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_lower"
+        ],
+        "coverage": 10,
+        "encumbrance": [
+          2,
+          4
+        ]
+      }
+    ],
+    "flags": [
+      "BELTED",
+      "FANCY",
+      "OUTER",
+      "VARSIZE"
+    ]
+  },
+  {
+    "id": "remi_dress",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "蕾米莉亚的裙子",
+    "copy-from": "gown",
+    "description": "一件粉红色的钟形连衣裙，带有猩红色蕾丝。非常优雅。",
+    "repairs_like": "gown",
+    "weight": "750 g",
+    "volume": "3000 ml",
+    "price": 40000,
+    "price_postapoc": 1000,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 1,
+    "symbol": "[",
+    "looks_like": "gown",
+    "color": "light_red",
+    "warmth": 10,
+    "armor": [
+      {
+        "covers": [
+          "torso"
+        ],
+        "coverage": 95,
+        "encumbrance": [
+          4,
+          8
+        ]
+      },
+      {
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "specifically_covers": [
+          "arm_elbow_l",
+          "arm_elbow_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          2,
+          6
+        ]
+      },
+      {
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "specifically_covers": [
+          "arm_upper_l",
+          "arm_upper_r"
+        ],
+        "coverage": 10,
+        "encumbrance": [
+          2,
+          6
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_hip_l",
+          "leg_hip_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          2,
+          6
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_upper_l",
+          "leg_upper_r"
+        ],
+        "coverage": 85,
+        "encumbrance": [
+          2,
+          6
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_knee_l",
+          "leg_knee_r"
+        ],
+        "coverage": 20,
+        "encumbrance": [
+          4,
+          8
+        ]
+      }
+    ],
+    "flags": [
+      "STURDY",
+      "SUPER_FANCY",
+      "VARSIZE"
+    ]
+  },
+  {
+    "id": "remi_hat",
+    "type": "TOOL_ARMOR",
+    "category": "armor",
+    "name": "蕾米莉亚的睡帽",
+    "description": "一顶粉红色的睡帽，带有猩红色蕾丝，饰有一个不对称的猩红色丝带，上面有白色条纹。",
+    "weight": "200 g",
+    "volume": "400 ml",
+    "price": 1000,
+    "price_postapoc": 10,
+    "material": [
+      "plastic"
+    ],
+    "symbol": "[",
+    "color": "light_red",
+    "warmth": 5,
+    "armor": [
+      {
+        "covers": [
+          "head"
+        ],
+        "specifically_covers": [
+          "head_crown"
+        ],
+        "coverage": 80,
+        "encumbrance": [
+          2,
+          6
+        ]
+      }
+    ],
+    "flags": [
+      "FANCY",
+      "OUTER",
+      "STURDY"
+    ]
+  },
+  {
+    "id": "remi_shoes",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "蕾米莉亚的“鞋子保护装置”",
+    "copy-from": "dress_shoes",
+    "description": "十分优雅的红色的鞋子保护装置。蕾米莉亚在外出时会使用它们（这些是真正的鞋子）。",
+    "repairs_like": "dress_shoes",
+    "weight": "600 g",
+    "volume": "1000 ml",
+    "price": 8000,
+    "price_postapoc": 2000,
+    "material_thickness": 2,
+    "symbol": "[",
+    "looks_like": "dress_shoes",
+    "color": "light_red",
+    "warmth": 10,
+    "armor": [
+      {
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ],
+        "coverage": 65
+      }
+    ],
+    "flags": [
+      "SUPER_FANCY",
+      "VARSIZE"
+    ]
+  },
+  {
+    "id": "remi_socks",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "蕾米莉亚的“鞋子”",
+    "copy-from": "socks",
+    "description": "十分优雅的白色鞋子。蕾米莉亚更喜欢穿它们来代替鞋子（这些其实是袜子但她假装不是）。",
+    "repairs_like": "socks",
+    "weight": "30 g",
+    "volume": "200 ml",
+    "price": 8000,
+    "price_postapoc": 2000,
+    "symbol": "[",
+    "looks_like": "socks",
+    "color": "light_red",
+    "warmth": 10,
+    "armor": [
+      {
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          0,
+          2
+        ]
+      }
+    ],
+    "flags": [
+      "SKINTIGHT",
+      "SUPER_FANCY",
+      "VARSIZE"
+    ]
+  },
+  {
+    "id": "sakuya_pads",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "胸垫",
+    "description": "你的女主人的礼物。你怎么能拒绝呢?",
+    "weight": "400 g",
+    "volume": "500 ml",
+    "price": 1000,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "solid",
+      "length": "hand",
+      "surface": "any"
+    },
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 2,
+    "symbol": "o",
+    "color": "white",
+    "covers": [
+      "torso"
+    ],
+    "warmth": 1,
+    "armor": [
+      {
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_upper"
+        ],
+        "coverage": 15,
+        "encumbrance": [
+          0,
+          2
+        ]
+      }
+    ],
+    "flags": [
+      "VARSIZE"
+    ]
+  },
+  {
+    "id": "seiga_dress",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "邪仙连衣裙",
+      "str_pl": "邪仙连衣裙"
+    },
+    "copy-from": "dress",
+    "description": "一件带有白色和蓝色马甲、花卉图案和中国风图案的青色连衣裙。腰间有一条腰带固定着一朵花。",
+    "repairs_like": "jeans",
+    "color": "light_blue",
+    "flags": [
+      "FANCY",
+      "VARSIZE"
+    ]
+  },
+  {
+    "id": "seiga_hairstick",
+    "type": "TOOL_ARMOR",
+    "category": "armor",
+    "name": "发簪",
+    "description": "一根大发簪，用来把你的头发固定成椒盐卷饼的形状。",
+    "volume": "50 ml",
+    "weight": "100 g",
+    "price": 1000,
+    "price_postapoc": 10,
+    "material": [
+      "bronze"
+    ],
+    "symbol": "[",
+    "color": "yellow",
+    "use_action": [
+      "PICK_LOCK"
+    ],
+    "qualities": [
+      [
+        "LOCKPICK",
+        3
+      ]
+    ],
+    "armor": [
+      {
+        "covers": [
+          "head"
+        ],
+        "specifically_covers": [
+          "head_crown"
+        ],
+        "coverage": 5,
+        "encumbrance": [
+          0,
+          0
+        ]
+      }
+    ],
+    "flags": [
+      "ALLOWS_NATURAL_ATTACKS",
+      "FANCY",
+      "OUTER",
+      "OVERSIZE",
+      "WATER_FRIENDLY"
+    ]
+  },
+  {
+    "id": "tenshi_bowbelt",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "天子的蝴蝶结",
+      "str_pl": "天子的蝴蝶结"
+    },
+    "copy-from": "obi_gi",
+    "//": "Closest thing to a cotton belt, I should add the specs for this specific bow when I figure out how material definitions work",
+    "description": "系在背后的大大的蓝色蝴蝶结。用作装饰。",
+    "weight": "400 g",
+    "volume": "600 ml",
+    "price": 18000,
+    "price_postapoc": 600,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 1,
+    "symbol": "[",
+    "color": "light_blue",
+    "armor": [
+      {
+        "covers": [
+          "torso"
+        ],
+        "coverage": 10,
+        "specifically_covers": [
+          "torso_lower"
+        ],
+        "encumbrance": [
+          2,
+          4
+        ]
+      }
+    ],
+    "flags": [
+      "BELTED",
+      "FANCY",
+      "OUTER",
+      "VARSIZE"
+    ]
+  },
+  {
+    "id": "tenshi_bowhat",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "天界帽",
+      "str_pl": "天界帽"
+    },
+    "copy-from": "bowhat",
+    "description": "一顶装饰有蟠桃与叶子的宽檐帽。",
+    "color": "black",
+    "flags": [
+      "FANCY",
+      "OUTER"
+    ]
+  },
+  {
+    "id": "tenshi_skirt",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "天界裙",
+      "str_pl": "天界裙"
+    },
+    "copy-from": "skirt",
+    "description": "一件十分优雅的蓝色短裙。",
+    "material_thickness": 2,
+    "color": "blue",
+    "flags": [
+      "SUPER_FANCY",
+      "VARSIZE"
+    ]
+  },
+  {
+    "id": "tenshi_shirt",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "天界衬衫",
+      "str_pl": "天界衬衫"
+    },
+    "copy-from": "dress",
+    "description": "一件白色衬衫，末端像围裙一样覆盖下半身，带有神秘的天界图案和来自未知天界材料的彩虹碎片设计。",
+    "repairs_like": "dress",
+    "//": "There's no cotton apron, I should add the specs for this specific apron when I figure out how material definitions work",
+    "material_thickness": 3,
+    "color": "white",
+    "armor": [
+      {
+        "covers": [
+          "torso"
+        ],
+        "coverage": 90,
+        "encumbrance": [
+          8,
+          12
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_hip_l",
+          "leg_hip_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          4,
+          8
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_upper_l",
+          "leg_upper_r"
+        ],
+        "coverage": 95,
+        "encumbrance": [
+          4,
+          8
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_knee_l",
+          "leg_knee_r"
+        ],
+        "coverage": 15,
+        "encumbrance": [
+          2,
+          4
+        ]
+      }
+    ],
+    "flags": [
+      "SUPER_FANCY",
+      "VARSIZE"
+    ]
+  },
+  {
+    "id": "udonge_clip",
+    "type": "ARMOR",
+    "name": {
+      "str": "胡萝卜夹"
+    },
+    "copy-from": "badge_abstract",
+    "description": "胡萝卜形状的领带夹。",
+    "looks_like": "carrot"
+  },
+  {
+    "id": "udonge_shirt",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "优昙华的衬衫",
+      "str_pl": "优昙华的衬衫"
+    },
+    "copy-from": "ldc_dress_shirt",
+    "description": "一件白色短袖纽扣衬衫。",
+    "material": [
+      {
+        "type": "cotton",
+        "portion": 5
+      },
+      {
+        "type": "lunarian_cloth",
+        "portion": 5
+      }
+    ],
+    "material_thickness": 0.5,
+    "looks_like": "dress_shirt",
+    "color": "white",
+    "armor": [
+      {
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "specifically_covers": [
+          "arm_shoulder_l",
+          "arm_shoulder_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          2,
+          4
+        ]
+      },
+      {
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "specifically_covers": [
+          "arm_upper_l",
+          "arm_upper_r"
+        ],
+        "coverage": 15,
+        "encumbrance": [
+          2,
+          4
+        ]
+      },
+      {
+        "covers": [
+          "torso"
+        ],
+        "coverage": 90,
+        "encumbrance": [
+          4,
+          6
+        ]
+      }
+    ]
+  },
+  {
+    "id": "udonge_dress_shoes",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "优昙华的鞋子",
+      "str_pl": "优昙华的鞋子"
+    },
+    "copy-from": "ldc_dress_shoes",
+    "description": "精致舒适的皮鞋。",
+    "material": [
+      {
+        "type": "leather",
+        "portion": 5
+      },
+      {
+        "type": "lunarian_leather",
+        "portion": 5
+      }
+    ],
+    "material_thickness": 2,
+    "color": "brown"
+  },
+  {
+    "id": "udonge_skirt",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "优昙华的短裙",
+      "str_pl": "优昙华的短裙"
+    },
+    "copy-from": "ldc_skirt",
+    "description": "一件浅橙色的百褶裙。",
+    "material": [
+      {
+        "type": "cotton",
+        "portion": 5
+      },
+      {
+        "type": "lunarian_cloth",
+        "portion": 5
+      }
+    ],
+    "material_thickness": 1,
+    "looks_like": "skirt",
+    "color": "pink",
+    "armor": [
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_hip_l",
+          "leg_hip_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          2,
+          4
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_upper_l",
+          "leg_upper_r"
+        ],
+        "coverage": 85,
+        "encumbrance": [
+          2,
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "id": "udonge_tie",
+    "type": "ARMOR",
+    "name": {
+      "str": "红色领带"
+    },
+    "copy-from": "ldc_tie",
+    "description": "一条红色的领带。",
+    "material": [
+      {
+        "type": "cotton",
+        "portion": 5
+      },
+      {
+        "type": "lunarian_cloth",
+        "portion": 5
+      }
+    ]
+  },
+  {
+    "id": "utsuho_cape",
+    "type": "ARMOR",
+    "name": {
+      "str": "星空披风",
+      "str_pl": "星空披风"
+    },
+    "description": "一件披在背上的大披风。外面是空白的，但内侧有一个迷人的星星图案。",
+    "volume": "4000 ml",
+    "weight": "1500 g",
+    "price": 20000,
+    "price_postapoc": 500,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 1,
+    "symbol": "[",
+    "looks_like": "blanket",
+    "color": "white",
+    "warmth": 10,
+    "armor": [
+      {
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_hanging_back"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          2,
+          4
+        ]
+      }
+    ],
+    "flags": [
+      "BELTED",
+      "ONLY_ONE",
+      "OUTER",
+      "OVERSIZE",
+      "SLEEP_AID",
+      "SUPER_FANCY"
+    ]
+  },
+  {
+    "id": "utsuho_ribbon",
+    "type": "TOOL_ARMOR",
+    "category": "armor",
+    "name": "绿色丝带",
+    "description": "一条戴在头上的大绿色丝带。设计看起来有些破旧。",
+    "volume": "700 ml",
+    "weight": "300 g",
+    "price": 1000,
+    "price_postapoc": 10,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 1,
+    "symbol": "[",
+    "color": "green",
+    "armor": [
+      {
+        "covers": [
+          "head"
+        ],
+        "specifically_covers": [
+          "head_crown"
+        ],
+        "coverage": 15,
+        "encumbrance": [
+          0,
+          4
+        ]
+      }
+    ],
+    "flags": [
+      "FANCY",
+      "NO_WEAR_EFFECT",
+      "OUTER",
+      "STURDY"
+    ]
+  },
+  {
+    "id": "utsuho_rod",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "第三足",
+      "str_pl": "第三足"
+    },
+    "description": "一根佩戴在手臂上的棱柱形控制棒，作为八咫乌传说中的“第三足”。允许使用者轻松控制核能力。",
+    "volume": "13300 ml",
+    "weight": "3000 g",
+    "longest_side": "60 cm",
+    "//": "60 cm hexagonal prism with 8 cm radius, it's kind of thick though",
+    "price": 16000,
+    "price_postapoc": 8000,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "weapon",
+      "length": "short",
+      "surface": "any"
+    },
+    "bashing": 16,
+    "cutting": 0,
+    "material": "steel",
+    "//2": "Maybe change it to moriya_wood or something",
+    "symbol": "☢",
+    "color": "brown",
+    "techniques": [
+      "WBLOCK_1"
+    ],
+    "armor": [
+      {
+        "covers": [
+          "arm_r"
+        ],
+        "specifically_covers": [
+          "arm_lower_l"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          2,
+          4
+        ]
+      },
+      {
+        "covers": [
+          "arm_r"
+        ],
+        "specifically_covers": [
+          "arm_elbow_l"
+        ],
+        "coverage": 20,
+        "encumbrance": [
+          2,
+          4
+        ]
+      },
+      {
+        "covers": [
+          "hand_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          2,
+          4
+        ]
+      }
+    ],
+    "valid_mods": [
+      "rod_strap"
+    ],
+    "//3": "Should check how to add a strap so the player doesn't have to drop the rod every time Utsuho crafts something",
+    "flags": [
+      "ONLY_ONE",
+      "OUTER",
+      "RAINPROOF",
+      "RESTRICT_HANDS",
+      "STURDY",
+      "TRADER_AVOID",
+      "UNBREAKABLE_MELEE",
+      "WATERPROOF"
+    ]
+  },
+  {
+    "id": "utsuho_shirt",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "阿空的衬衫",
+      "str_pl": "阿空的衬衫"
+    },
+    "copy-from": "dress_shirt",
+    "description": "一件带有黑色褶边的白色短袖蓬松衬衫。为了给八咫乌的赤之目腾出地方而经过修改。",
+    "repairs_like": "tshirt",
+    "flags": [
+      "FANCY",
+      "VARSIZE"
+    ]
+  },
+  {
+    "id": "utsuho_skirt",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "阿空的短裙",
+      "str_pl": "阿空的短裙"
+    },
+    "copy-from": "skirt",
+    "description": "一条绿色的裙子。上面绣着代表核衰变的白色图案。",
+    "color": "green",
+    "flags": [
+      "FANCY"
+    ],
+    "//2": "I remember reading that the pattern corresponds to either Uranium orbitals or the pattern left by subatomic particles on a cloud chamber, but can't remember where"
+  },
+  {
+    "id": "youmu_skirt",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "幻影裙",
+      "str_pl": "幻影裙"
+    },
+    "copy-from": "skirt",
+    "description": "一条绿色的裙子。裙摆边沿分布着幽灵状图案",
+    "color": "green",
+    "flags": [
+      "FANCY"
+    ]
+  },
+  {
+    "id": "yamame_dress",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "蜘蛛连衣裙",
+    "copy-from": "dress",
+    "description": "一件棕色的连衣裙,上面有八颗装饰用的纽扣.裙子在腰以下的下摆非常宽大蓬松,有足够的空间来藏东西,比如说四条蜘蛛腿,以免被人盯着看.",
+    "weight": "900 g",
+    "volume": "8000 ml",
+    "repairs_like": "dress",
+    "color": "brown",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "2000 ml",
+        "max_contains_weight": "2000 g",
+        "moves": 500
+      }
+    ],
+    "armor": [
+      {
+        "covers": [
+          "torso"
+        ],
+        "coverage": 80,
+        "encumbrance": 7
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_hip_l",
+          "leg_upper_l",
+          "leg_hip_r",
+          "leg_upper_r"
+        ],
+        "encumbrance": 2,
+        "coverage": 95
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_knee_l",
+          "leg_knee_r"
+        ],
+        "encumbrance": 2,
+        "coverage": 50
+      }
+    ],
+    "flags": [
+      "FANCY",
+      "VARSIZE"
+    ]
+  },
+  {
+    "id": "yamame_ribbon",
+    "type": "TOOL_ARMOR",
+    "category": "armor",
+    "name": "蜘蛛丝带",
+    "description": "一条带有黄色刺绣的大号深棕色丝带。用来把你的头发扎成发髻。",
+    "volume": "400 ml",
+    "weight": "200 g",
+    "price": 1000,
+    "price_postapoc": 10,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 1,
+    "symbol": "[",
+    "color": "black",
+    "armor": [
+      {
+        "covers": [
+          "head"
+        ],
+        "specifically_covers": [
+          "head_crown"
+        ],
+        "coverage": 15,
+        "encumbrance": [
+          0,
+          0
+        ]
+      }
+    ],
+    "flags": [
+      "FANCY",
+      "NO_WEAR_EFFECT",
+      "OUTER"
+    ]
+  },
+  {
+    "id": "yamame_shirt",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": "蜘蛛衬衫",
+    "description": "一件深棕色的钟形礼服衬衫，有钟形袖子。  它可以穿在你平时的衣服里面，也可以作为一件休闲衬衫使用。",
+    "weight": "250 g",
+    "volume": "750 ml",
+    "price": 15000,
+    "price_postapoc": 1500,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 1,
+    "symbol": "[",
+    "looks_like": "dress_shirt",
+    "color": "black",
+    "warmth": 10,
+    "armor": [
+      {
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "coverage": 85,
+        "encumbrance": [
+          2,
+          4
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_hip_l",
+          "leg_upper_l",
+          "leg_hip_r",
+          "leg_upper_r"
+        ],
+        "encumbrance": [
+          2,
+          4
+        ],
+        "coverage": 80
+      },
+      {
+        "covers": [
+          "torso"
+        ],
+        "coverage": 90,
+        "encumbrance": [
+          2,
+          4
+        ]
+      }
+    ],
+    "flags": [
+      "FANCY",
+      "VARSIZE"
+    ]
+  },
+  {
+    "id": "youmu_ribbon",
+    "type": "TOOL_ARMOR",
+    "category": "armor",
+    "name": "丝带发饰",
+    "description": "一个黑色的丝带发饰。",
+    "volume": "400 ml",
+    "weight": "200 g",
+    "price": 1000,
+    "price_postapoc": 10,
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 1,
+    "symbol": "[",
+    "color": "black",
+    "armor": [
+      {
+        "covers": [
+          "head"
+        ],
+        "specifically_covers": [
+          "head_crown"
+        ],
+        "coverage": 10,
+        "encumbrance": [
+          0,
+          0
+        ]
+      }
+    ],
+    "flags": [
+      "FANCY",
+      "NO_WEAR_EFFECT",
+      "OUTER"
+    ]
+  },
+  {
+    "id": "youmu_scabbard_rouka",
+    "type": "ARMOR",
+    "name": {
+      "str": "楼观剑的刀鞘"
+    },
+    "copy-from": "bscabbard",
+    "description": "一个木制刀鞘，用来装楼观剑。它被漆成黑色，除此之外很朴素，只有两张纸符和一朵系在末端的冥界之花。它准备好在绑在背后时被抽出。使用它来收拔武器。",
+    "volume": "2200 ml",
+    "weight": "1000 g",
+    "price": 18000,
+    "price_postapoc": 900,
+    "bashing": 4,
+    "material": [
+      "leather",
+      "wood"
+    ],
+    "material_thickness": 2,
+    "symbol": "[",
+    "looks_like": "baldric",
+    "color": "black",
+    "pocket_data": [
+      {
+        "max_contains_volume": "2050 ml",
+        "max_contains_weight": "1400 g",
+        "max_item_length": "115 cm",
+        "holster": true,
+        "moves": 30,
+        "rigid": true,
+        "flag_restriction": [
+          "SHEATH_SWORD"
+        ]
+      }
+    ],
+    "use_action": {
+      "type": "holster",
+      "holster_prompt": "收刀",
+      "holster_msg": "你将%s收鞘"
+    },
+    "armor": [
+      {
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_hanging_back"
+        ],
+        "coverage": 10,
+        "encumbrance": [
+          4,
+          5
+        ]
+      }
+    ],
+    "flags": [
+      "BELTED",
+      "OVERSIZE",
+      "WATER_FRIENDLY"
+    ]
+  },
+  {
+    "id": "youmu_scabbard_haku",
+    "type": "ARMOR",
+    "name": {
+      "str": "白楼剑的刀鞘"
+    },
+    "copy-from": "bscabbard",
+    "description": "一个木制的刀鞘，用来装白楼剑。它被漆成黑色，其他地方都很普通。绑在背后就可以抽出剑了。使用它来收拔武器。",
+    "volume": "1750 ml",
+    "weight": "900 g",
+    "price": 18000,
+    "price_postapoc": 900,
+    "bashing": 3,
+    "material": [
+      "leather",
+      "wood"
+    ],
+    "material_thickness": 2,
+    "symbol": "[",
+    "looks_like": "baldric",
+    "color": "black",
+    "pocket_data": [
+      {
+        "max_contains_volume": "1550 ml",
+        "max_contains_weight": "850 g",
+        "max_item_length": "65 cm",
+        "holster": true,
+        "moves": 30,
+        "rigid": true,
+        "flag_restriction": [
+          "SHEATH_SWORD"
+        ]
+      }
+    ],
+    "use_action": {
+      "type": "holster",
+      "holster_prompt": "收刀",
+      "holster_msg": "你将%s收鞘"
+    },
+    "armor": [
+      {
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_hanging_back"
+        ],
+        "coverage": 10,
+        "encumbrance": [
+          4,
+          5
+        ]
+      }
+    ],
+    "flags": [
+      "BELTED",
+      "OVERSIZE",
+      "WATER_FRIENDLY"
+    ]
+  },
+  {
+    "id": "youmu_vest",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "幻影马甲",
+      "str_pl": "幻影马甲"
+    },
+    "description": "一件深绿色和白色的马甲，有一些口袋。  口袋下方有幽灵徽章。",
+    "repairs_like": "jeans",
+    "volume": "2500 ml",
+    "weight": "680 g",
+    "price": 18000,
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "solid",
+      "length": "hand",
+      "surface": "any"
+    },
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 2,
+    "symbol": "[",
+    "looks_like": "vest_leather",
+    "color": "green",
+    "weight_capacity_bonus": "1 kg",
+    "warmth": 15,
+    "armor": [
+      {
+        "covers": [
+          "torso"
+        ],
+        "coverage": 85,
+        "encumbrance": [
+          4,
+          8
+        ]
+      }
+    ],
+    "flags": [
+      "FANCY",
+      "VARSIZE"
+    ]
+  }
+]

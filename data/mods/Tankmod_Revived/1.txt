@@ -1,0 +1,114 @@
+[
+  {
+    "id": "emit_extinguisher_burst12",
+    "type": "emit",
+    "field": "fd_extinguisher",
+    "intensity": 10,
+    "qty": 30
+  },
+  
+  {
+    "id": "emit_clairvoyant",
+    "type": "emit",
+    "field": "fd_clairvoyant",
+    "intensity": 1,
+    "qty": 9
+  }
+  // emit_clairvoyant：通灵透视场地效果，场地fd_clairvoyant，强度1，单次生成9格
+  {
+    "id": "emit_hot_air4_blast",
+    "type": "emit",
+    "field": "fd_hot_air4",
+    "//": "Makes the surrounding area extremely, uncomfortably hot.",
+    "intensity": 3,
+    "qty": 300
+  },
+  // emit_hot_air4_blast：热气4爆发，使周边环境酷热难耐，场地fd_hot_air4，强度3，单次生成300格
+  {
+    "id": "emit_cold_air2_blast",
+    "type": "emit",
+    "field": "fd_cold_air2",
+    "intensity": 3,
+    "qty": 100
+  },
+  // emit_cold_air2_blast：冷气2爆发，场地fd_cold_air2，强度3，单次生成100格
+  
+  {
+    "id": "GAS_FUNGICIDAL_M12",
+    "type": "ammo_effect",
+    "aoe": { "field_type": "fd_fungicidal_gas", "intensity_min": 10, "intensity_max": 10, "radius": 5,"radius_z": 1},
+     "do_flashbang": true
+  },
+  {
+    "id": "GAS_INSECTICIDAL_M12",
+    "type": "ammo_effect",
+    "aoe": { "field_type": "fd_insecticidal_gas", "intensity_min": 10, "intensity_max": 10, "radius": 5,"radius_z": 1},
+     "do_flashbang": true
+  },
+  {
+  "id": "throw_extinguisher12",
+  "copy-from": "throw_extinguisher",
+  "looks_like": "throw_extinguisher",
+  "type": "TOOL",
+  "category": "tools",
+  "name": {
+    "str": "灭火手雷"
+  },
+  "description": "This is a fire extinguisher in grenade form.  While not as effective as a regular fire extinguisher, you can use it from a distance.  It has a plastic plug that can be pulled, but is primarily activated by heat, so just throw it into the flames.",
+  "weight": "630 g",
+  "volume": "250 ml",
+  "price": 3000,
+  "price_postapoc": 50,
+  "to_hit": -1,
+  "bashing": 3,
+  "material": [
+    "steel"
+  ],
+  "symbol": "*",
+  "color": "blue",
+  "use_action": {
+    "target": "throw_extinguisher_act12",
+    "target_charges": 60,
+    "menu_text": "Pull plug",
+    "msg": "You pull the plug on the extinguisher grenade.",
+    "active": true,
+    "type": "transform"
+  },
+  "flags": [
+    "ACT_IN_FIRE",
+    "BOMB"
+  ]
+},
+{
+  "id": "throw_extinguisher_act12",
+  "copy-from": "throw_extinguisher_act",
+  "looks_like": "throw_extinguisher_act",
+  "type": "TOOL",
+  "category": "tools",
+  "name": {
+    "str": "灭火手雷（已启动）"
+  },
+  "description": "This is an active extinguisher grenade, likely to burst any second now.  Better throw it!",
+  "weight": "630 g",
+  "volume": "250 ml",
+  "price": 0,
+  "price_postapoc": 0,
+  "to_hit": -1,
+  "bashing": 6,
+  "material": [
+    "steel"
+  ],
+  "symbol": "*",
+  "color": "light_red",
+  "initial_charges": 60,
+  "max_charges": 60,
+  "turns_per_charge": 1,
+  "emits": [
+    "emit_extinguisher_burst12"
+  ],
+  "revert_to": "canister_empty",
+  "flags": [
+    "TRADER_AVOID"
+  ]
+}
+]

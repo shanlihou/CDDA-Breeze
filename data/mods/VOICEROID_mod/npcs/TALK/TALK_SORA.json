@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_SORA_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"哎呀哎呀，好久没有见到活着的人了呢",
+    "responses":[
+      { "text": "请成为我的伙伴吧(邀请加入队伍)", "topic": "TALK_SORA_SAN_2" },
+      { "text": "嗯…", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_SORA_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"交给大姐姐吧！",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

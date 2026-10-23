@@ -1,0 +1,72 @@
+[
+  {
+    "id": "t2_mana_darkbeam",
+    "type": "SPELL",
+    "name": {
+      "str": "黑暗射线"
+    },
+    "description": "一道亵渎的法力束猛烈爆发，在一条线内打击你的敌人，造成<color_light_gray>点纯伤害</color>。\n\n这是一个<color_light_gray>二阶</color>法术。",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "effect": "attack",
+    "shape": "line",
+    "base_energy_cost": 175,
+    "final_energy_cost": 325,
+    "energy_source": "MANA",
+    "spell_class": "VAMP_MANA_spellcaster",
+    "difficulty": 3,
+    "min_damage": 20,
+    "max_damage": 50,
+    "damage_increment": 2,
+    "max_level": 25,
+    "min_range": 6,
+    "max_range": 12,
+    "min_aoe": 1,
+    "max_aoe": 4,
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
+    "base_casting_time": 175,
+    "damage_type": "pure"
+  },
+  {
+    "id": "t2_mana_etherealstrike",
+    "type": "SPELL",
+    "name": {
+      "str": "以太之爪"
+    },
+    "description": "一个以太轮廓从稀薄的空气中浮现，立即攻击敌人，造成<color_light_gray>点纯伤害</color>，<color_yellow>抓住</color>。\n\n这是一个<color_light_gray>的第2层</color>法术。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "v_spell_etherealstrike",
+    "base_energy_cost": 155,
+    "final_energy_cost": 155,
+    "energy_source": "MANA",
+    "spell_class": "VAMP_MANA_spellcaster",
+    "difficulty": 2,
+    "min_damage": 10,
+    "max_damage": 60,
+    "damage_increment": 2,
+    "max_level": 10,
+    "min_range": 4,
+    "max_range": 20,
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "base_casting_time": 400,
+    "final_casting_time": 100,
+    "min_duration": 200,
+    "max_duration": 600,
+    "damage_type": "pure"
+  }
+]
