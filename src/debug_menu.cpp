@@ -2589,11 +2589,111 @@ struct item_search_hit {
 
 struct item_search_record {
     int id = 0;
-    std::string pattern;
+    std::string kind;            // 搜索种类键名：item/food/function/vehicle/furniture
+                                 // （旧版记录没有该字段，加载时按 pattern 推断）
+    std::string pattern;         // 展示标签（历史列表 / 结果标题用）
+    std::string query;           // “历史搜索”重新搜索用的原始输入（food 不需要，为空；
+                                 //  旧版记录加载时从 pattern 推断）
     std::string world;
     int generated_turn = 0;
     std::vector<item_search_hit> hits;
 };
+
+// 搜索种类：第一层菜单的四个类目 + 物品类目下的“新鲜食物”子模式
+enum class item_search_kind {
+    item,       // 物品通配符
+    food,       // 新鲜食物（未腐败）
+    function,   // 按工具功能 / 品质
+    vehicle,    // 载具组件
+    furniture   // 家具
+};
+
+// 种类 <-> 历史文件里的键名
+static const char *item_search_kind_key( item_search_kind kind )
+{
+    switch( kind ) {
+        case item_search_kind::item:
+            return "item";
+        case item_search_kind::food:
+            return "food";
+        case item_search_kind::function:
+            return "function";
+        case item_search_kind::vehicle:
+            return "vehicle";
+        case item_search_kind::furniture:
+            return "furniture";
+    }
+    return "item";
+}
+
+// 键名 -> 种类；无法识别时按 item 处理（兼容未知/损坏数据）
+static item_search_kind item_search_kind_from_key( const std::string &key )
+{
+    if( key == "food" ) {
+        return item_search_kind::food;
+    }
+    if( key == "function" ) {
+        return item_search_kind::function;
+    }
+    if( key == "vehicle" ) {
+        return item_search_kind::vehicle;
+    }
+    if( key == "furniture" ) {
+        return item_search_kind::furniture;
+    }
+    return item_search_kind::item;
+}
+
+// 种类显示名（菜单标题 / 历史列表用）
+static std::string item_search_kind_label( item_search_kind kind )
+{
+    switch( kind ) {
+        case item_search_kind::item:
+            return _( "Items" );
+        case item_search_kind::food:
+            return _( "Fresh food" );
+        case item_search_kind::function:
+            return _( "Tool function" );
+        case item_search_kind::vehicle:
+            return _( "Vehicle components" );
+        case item_search_kind::furniture:
+            return _( "Furniture" );
+    }
+    return _( "Items" );
+}
+
+// 旧版历史记录（没有 kind 字段）按 pattern 推断种类：
+// “function: X”前缀 -> function（前缀用 string_format 现算，兼容本地化），
+// “fresh food (non-spoiled)”标签 -> food，其余 -> item。
+static item_search_kind item_search_infer_kind( const std::string &pattern )
+{
+    if( pattern == _( "fresh food (non-spoiled)" ) ) {
+        return item_search_kind::food;
+    }
+    const std::string fn_prefix = string_format( _( "function: %s" ), std::string() );
+    if( !fn_prefix.empty() && pattern.rfind( fn_prefix, 0 ) == 0 ) {
+        return item_search_kind::function;
+    }
+    return item_search_kind::item;
+}
+
+// 旧版记录推断 query：function 去掉“function: ”前缀得到原始输入；
+// food 的匹配器固定、query 用不到，保持为空；其余（item）直接用 pattern。
+static std::string item_search_infer_query( const std::string &kind_key,
+                                            const std::string &pattern )
+{
+    if( kind_key == item_search_kind_key( item_search_kind::function ) ) {
+        const std::string fn_prefix = string_format( _( "function: %s" ), std::string() );
+        if( !fn_prefix.empty() && pattern.rfind( fn_prefix, 0 ) == 0 ) {
+            return pattern.substr( fn_prefix.size() );
+        }
+        return pattern;
+    }
+    if( kind_key == item_search_kind_key( item_search_kind::food ) ) {
+        return std::string();
+    }
+    return pattern;
+}
 
 static const std::string &item_search_dir()
 {
@@ -2605,6 +2705,18 @@ static const std::string &item_search_history_path()
 {
     static const std::string p = item_search_dir() + "/item_search_history.json";
     return p;
+}
+
+// 仅对 ASCII 字母做小写（UTF-8 多字节字节 >= 0x80 不受影响），用于英文品质 id 的不区分大小写匹配
+static std::string ascii_lower( const std::string &s )
+{
+    std::string r = s;
+    for( char &c : r ) {
+        if( c >= 'A' && c <= 'Z' ) {
+            c = static_cast<char>( c - 'A' + 'a' );
+        }
+    }
+    return r;
 }
 
 // 对单个 item 调用 visit_items，matcher 命中的节点即记录（递归处理容器内物品）
@@ -2694,6 +2806,106 @@ static void item_search_scan( const std::function<bool( const item & )> &match,
     }
 }
 
+// 内存扫描：载具部件。与全存档版 debug_scan_entire_save_vehicle_parts 的匹配口径
+// 完全一致（中文部件名或英文 id 子串匹配，英文不区分大小写），只是数据来源不同。
+static void item_search_scan_vehicle_parts( const std::string &input,
+                                            std::vector<item_search_hit> &hits )
+{
+    const std::string needle = ascii_lower( input );
+    map &here = get_map();
+    for( wrapped_vehicle &wv : here.get_vehicles() ) {
+        vehicle &veh = *wv.v;
+        for( const vpart_reference &vp : veh.get_all_parts_with_fakes() ) {
+            const vpart_info &vpi = vp.info();
+            const std::string pname = vpi.name();
+            const std::string pid = vpi.get_id().str();
+            // 中文部件名或英文 id 任一命中即可
+            if( ascii_lower( pname ).find( needle ) == std::string::npos &&
+                ascii_lower( pid ).find( needle ) == std::string::npos ) {
+                continue;
+            }
+            item_search_hit hit;
+            hit.name = pname;
+            hit.type_id = pid;
+            hit.pos = here.getglobal( vp.pos() );
+            hit.location = string_format( _( "in vehicle: %s" ), veh.name );
+            hits.push_back( hit );
+        }
+    }
+}
+
+// 内存扫描：家具（所有已载入 z 层；未实际载入的 z 层返回空，扫描无害）。
+// 与全存档版 debug_scan_entire_save_furniture 的匹配口径一致。
+static void item_search_scan_furniture( const std::string &input,
+                                        std::vector<item_search_hit> &hits )
+{
+    const std::string needle = ascii_lower( input );
+    map &here = get_map();
+    const int zmin = -OVERMAP_DEPTH;
+    const int zmax = OVERMAP_HEIGHT;
+    for( int z = zmin; z <= zmax; ++z ) {
+        for( const tripoint &p : here.points_on_zlevel( z ) ) {
+            if( !here.has_furn( p ) ) {
+                continue;
+            }
+            const furn_id furn = here.furn( p );
+            const std::string fname = furn->name();
+            const std::string fid = furn->id.str();
+            // 中文名或英文 id 任一命中即可
+            if( ascii_lower( fname ).find( needle ) == std::string::npos &&
+                ascii_lower( fid ).find( needle ) == std::string::npos ) {
+                continue;
+            }
+            item_search_hit hit;
+            hit.name = fname;
+            hit.type_id = fid;
+            hit.pos = here.getglobal( p );
+            hit.location = _( "furniture" );
+            hits.push_back( hit );
+        }
+    }
+}
+
+// 由“功能 / 工具品质”子串匹配所有已加载品质，返回匹配到的品质 id 列表与
+// 显示名列表（逗号分隔，用于结果展示）。无任何品质命中时返回 nullopt。
+static std::optional<std::pair<std::vector<quality_id>, std::string>>
+item_search_match_qualities( const std::string &input )
+{
+    const std::string needle = ascii_lower( input );
+    std::vector<quality_id> ids;
+    std::string label;
+    for( const quality &q : all_loaded_qualities() ) {
+        const std::string name = q.name.translated();
+        const std::string id = q.id.str();
+        if( ascii_lower( name ).find( needle ) != std::string::npos ||
+            ascii_lower( id ).find( needle ) != std::string::npos ) {
+            ids.push_back( q.id );
+            if( !label.empty() ) {
+                label += ", ";
+            }
+            label += name;
+        }
+    }
+    if( ids.empty() ) {
+        return std::nullopt;
+    }
+    return std::make_pair( ids, label );
+}
+
+// 由品质 id 列表构造物品匹配器：物品（含容器内物品）提供任一品质即命中
+static std::function<bool( const item & )> item_search_quality_matcher(
+    const std::vector<quality_id> &ids )
+{
+    return [ids]( const item &it ) -> bool {
+        for( const quality_id &qid : ids ) {
+            if( it.get_quality( qid ) > 0 ) {
+                return true;
+            }
+        }
+        return false;
+    };
+}
+
 // 把 hits 以 uilist 呈现（封顶 1000 行，其余见 JSON 历史）
 static void item_search_show_results( const std::string &title, const std::string &header,
                                       const std::vector<item_search_hit> &hits )
@@ -2753,9 +2965,18 @@ static std::vector<item_search_record> item_search_load_history()
                 entry.allow_omitted_members();
                 item_search_record rec;
                 rec.id = entry.get_int( "id", 0 );
+                rec.kind = entry.get_string( "kind", "" );
                 rec.pattern = entry.get_string( "pattern", "" );
+                rec.query = entry.get_string( "query", "" );
                 rec.world = entry.get_string( "world", "" );
                 rec.generated_turn = entry.get_int( "generated_turn", 0 );
+                // 旧版记录没有 kind/query 字段：按 pattern 推断，保证历史仍可重新搜索
+                if( rec.kind.empty() ) {
+                    rec.kind = item_search_kind_key( item_search_infer_kind( rec.pattern ) );
+                }
+                if( rec.query.empty() ) {
+                    rec.query = item_search_infer_query( rec.kind, rec.pattern );
+                }
                 if( entry.has_member( "results" ) ) {
                     TextJsonArray res = entry.get_array( "results" );
                     while( res.has_more() ) {
@@ -2804,7 +3025,9 @@ static void item_search_save_history( std::vector<item_search_record> records )
         for( const item_search_record &rec : records ) {
             jsout.start_object();
             jsout.member( "id", rec.id );
+            jsout.member( "kind", rec.kind );
             jsout.member( "pattern", rec.pattern );
+            jsout.member( "query", rec.query );
             jsout.member( "world", rec.world );
             jsout.member( "generated_turn", rec.generated_turn );
             jsout.member( "count", static_cast<int>( rec.hits.size() ) );
@@ -2837,27 +3060,30 @@ static void item_search_save_history( std::vector<item_search_record> records )
     }, "item_search_history" );
 }
 
+// 全存档扫描统计
+struct full_save_scan_stats {
+    int quads = 0;         // 参与扫描的 quad 文件数
+    long long submaps = 0; // 实际扫过的 submap 数
+};
+
 static void debug_search_save_items();
-static void debug_view_item_search_history();
-static void debug_rescan_history_item();
-static void debug_scan_entire_save_core( const std::function<bool( const item & )> &match,
-                                        const std::string &label );
 static void debug_search_save_food();
 static void debug_search_save_by_quality();
 static void debug_search_vehicles_by_part();
 static void debug_search_furniture();
-
-// 仅对 ASCII 字母做小写（UTF-8 多字节字节 >= 0x80 不受影响），用于英文品质 id 的不区分大小写匹配
-static std::string ascii_lower( const std::string &s )
-{
-    std::string r = s;
-    for( char &c : r ) {
-        if( c >= 'A' && c <= 'Z' ) {
-            c = static_cast<char>( c - 'A' + 'a' );
-        }
-    }
-    return r;
-}
+static void debug_view_item_search_history( item_search_kind menu_kind );
+static void item_search_rerun_from_history( item_search_kind menu_kind );
+static void open_item_search_submenu( item_search_kind kind );
+// 全存档扫描核心：各自把命中填进 hits 并返回统计信息；
+// 返回 nullopt 表示玩家取消或无数据可扫（写历史与呈现由调用方负责）
+static std::optional<full_save_scan_stats> debug_scan_entire_save_core(
+    const std::function<bool( const item & )> &match,
+    const std::string &label,
+    std::vector<item_search_hit> &hits );
+static std::optional<full_save_scan_stats> debug_scan_entire_save_vehicle_parts(
+    const std::string &input, std::vector<item_search_hit> &hits );
+static std::optional<full_save_scan_stats> debug_scan_entire_save_furniture(
+    const std::string &input, std::vector<item_search_hit> &hits );
 
 // 搜索范围：仅已载入内存的地图（快）或整个存档的所有 submap（慢，带进度条）。
 // 所有搜索入口（物品/食物/品质/载具部件/家具）都先让玩家选范围，再走对应扫描路径。
@@ -2885,41 +3111,184 @@ static std::optional<item_search_scope> item_search_pick_scope()
     }
 }
 
+// 把一次搜索的结果写入历史缓存（最多 10 条，最新在前）。失败时弹窗并返回 false。
+static bool item_search_history_append( item_search_kind kind, const std::string &pattern,
+                                        const std::string &query,
+                                        const std::vector<item_search_hit> &hits )
+{
+    std::vector<item_search_record> history = item_search_load_history();
+    int next_id = 0;
+    for( const item_search_record &r : history ) {
+        next_id = std::max( next_id, r.id );
+    }
+    item_search_record rec;
+    rec.id = next_id + 1;
+    rec.kind = item_search_kind_key( kind );
+    rec.pattern = pattern;
+    rec.query = query;
+    rec.world = get_avatar().get_save_id();
+    rec.generated_turn = to_turn<int>( calendar::turn );
+    rec.hits = hits;
+    history.insert( history.begin(), rec );
+    try {
+        item_search_save_history( history );
+    } catch( const std::exception &e ) {
+        popup( string_format( _( "Failed to write search cache: %s" ), e.what() ) );
+        return false;
+    }
+    return true;
+}
+
+// “历史搜索”重扫后调用：用新结果【原地刷新】指定 id 的历史记录
+// （更新命中快照 / 世界 / 回合，并移到最新），避免列表里堆重复项。返回是否成功。
+static bool item_search_history_refresh( int rec_id, const std::vector<item_search_hit> &hits )
+{
+    std::vector<item_search_record> history = item_search_load_history();
+    auto it = std::find_if( history.begin(), history.end(),
+    [rec_id]( const item_search_record & r ) {
+        return r.id == rec_id;
+    } );
+    if( it == history.end() ) {
+        return false;
+    }
+    item_search_record rec = *it;
+    rec.hits = hits;
+    rec.world = get_avatar().get_save_id();
+    rec.generated_turn = to_turn<int>( calendar::turn );
+    history.erase( it );
+    history.insert( history.begin(), rec );
+    try {
+        item_search_save_history( history );
+    } catch( const std::exception &e ) {
+        popup( string_format( _( "Failed to write search cache: %s" ), e.what() ) );
+        return false;
+    }
+    return true;
+}
+
+// 搜索收尾：写历史（refresh_id > 0 刷新旧记录，否则追加新记录）+ 呈现结果。
+// extra_info 可附带额外说明（如功能搜索匹配到的品质列表）。
+static void item_search_finish( item_search_kind kind,
+                                const std::string &pattern,
+                                const std::string &query,
+                                const std::vector<item_search_hit> &hits,
+                                int refresh_id,
+                                bool entire_save,
+                                const full_save_scan_stats *stats,
+                                const std::string &extra_info = std::string() )
+{
+    const bool saved = ( refresh_id > 0 )
+                       ? item_search_history_refresh( refresh_id, hits )
+                       : item_search_history_append( kind, pattern, query, hits );
+    const std::string scope_txt = entire_save ? _( "entire save" ) : _( "loaded map" );
+    std::string header = query.empty()
+                         ? string_format( _( "Found %d match(es) in the %s." ),
+                                          static_cast<int>( hits.size() ), scope_txt )
+                         : string_format( _( "Found %d match(es) for \"%s\" in the %s." ),
+                                          static_cast<int>( hits.size() ), pattern, scope_txt );
+    if( !extra_info.empty() ) {
+        header += "\n" + extra_info;
+    }
+    if( entire_save && stats ) {
+        header += string_format( _( " Scanned %lld submaps (%d quads)." ),
+                                 stats->submaps, stats->quads );
+    }
+    if( saved ) {
+        header += refresh_id > 0 ? _( " History record updated." )
+                  : _( " Saved to history (max 10)." );
+    }
+    item_search_show_results(
+        string_format( _( "%s search results (%s)" ),
+                       item_search_kind_label( kind ), scope_txt ),
+        header, hits );
+}
+
+// 第一层菜单：按搜索对象分四个类目（物品 / 载具组件 / 工具功能 / 家具）
 void open_item_search_menu()
 {
     uilist menu;
-    menu.settext( _( "Item search (save)" ) );
-    menu.addentry( 0, true, 's', _( "Search items by wildcard (choose scope: memory or entire save)" ) );
-    menu.addentry( 1, true, 'h', _( "View item search history (cached)" ) );
-    menu.addentry( 2, true, 'r', _( "Re-run a history search (live rescan, choose scope)" ) );
-    menu.addentry( 3, true, 'g', _( "Search FRESH FOOD, non-spoiled (choose scope)" ) );
-    menu.addentry( 4, true, 'q', _( "Search by tool FUNCTION / quality (choose scope)" ) );
-    menu.addentry( 5, true, 'v', _( "Search VEHICLES by COMPONENT name (choose scope)" ) );
-    menu.addentry( 6, true, 'e', _( "Search FURNITURE by name (choose scope)" ) );
+    menu.title = _( "Search the save" );
+    menu.text = _( "Choose what to search for." );
+    menu.addentry( 0, true, 'i', _( "Search ITEMS (by wildcard, or fresh food)" ) );
+    menu.addentry( 1, true, 'v', _( "Search VEHICLE components by name" ) );
+    menu.addentry( 2, true, 'q', _( "Search items by tool FUNCTION / quality" ) );
+    menu.addentry( 3, true, 'f', _( "Search FURNITURE by name" ) );
     menu.query();
     switch( menu.ret ) {
         case 0:
-            debug_search_save_items();
+            open_item_search_submenu( item_search_kind::item );
             break;
         case 1:
-            debug_view_item_search_history();
+            open_item_search_submenu( item_search_kind::vehicle );
             break;
         case 2:
-            debug_rescan_history_item();
+            open_item_search_submenu( item_search_kind::function );
             break;
         case 3:
-            debug_search_save_food();
-            break;
-        case 4:
-            debug_search_save_by_quality();
-            break;
-        case 5:
-            debug_search_vehicles_by_part();
-            break;
-        case 6:
-            debug_search_furniture();
+            open_item_search_submenu( item_search_kind::furniture );
             break;
         default:
+            break;
+    }
+}
+
+// 第二层菜单的动作
+enum class item_search_action {
+    direct,    // 直接搜索
+    food,      // 搜新鲜食物（仅物品类目）
+    history,   // 历史搜索：选一条历史记录实时重扫，并更新历史记录文件
+    view       // 打开历史记录：回放当时缓存的命中快照
+};
+
+// 第二层菜单：直接搜索 / 历史搜索（重新搜索）/ 打开历史记录。
+// 物品类目额外带一个“搜新鲜食物”入口（属于直接搜索的一种）。
+static void open_item_search_submenu( item_search_kind kind )
+{
+    std::vector<std::pair<item_search_action, std::string>> entries;
+    if( kind == item_search_kind::item ) {
+        entries.push_back( { item_search_action::direct,
+                             _( "Direct search by wildcard (choose scope)" ) } );
+        entries.push_back( { item_search_action::food,
+                             _( "Search FRESH FOOD, non-spoiled (choose scope)" ) } );
+    } else {
+        entries.push_back( { item_search_action::direct,
+                             _( "Direct search (choose scope)" ) } );
+    }
+    entries.push_back( { item_search_action::history,
+                         _( "Re-search from history (live rescan, updates the history file)" ) } );
+    entries.push_back( { item_search_action::view,
+                         _( "Open history records (cached snapshot)" ) } );
+
+    uilist menu;
+    menu.title = string_format( _( "%s: choose an action" ), item_search_kind_label( kind ) );
+    static const char *const hotkeys = "drfo";
+    for( size_t i = 0; i < entries.size(); ++i ) {
+        menu.addentry( static_cast<int>( i ), true, hotkeys[i], entries[i].second );
+    }
+    menu.query();
+    if( menu.ret < 0 || static_cast<size_t>( menu.ret ) >= entries.size() ) {
+        return;
+    }
+    switch( entries[static_cast<size_t>( menu.ret )].first ) {
+        case item_search_action::direct:
+            if( kind == item_search_kind::item ) {
+                debug_search_save_items();
+            } else if( kind == item_search_kind::function ) {
+                debug_search_save_by_quality();
+            } else if( kind == item_search_kind::vehicle ) {
+                debug_search_vehicles_by_part();
+            } else {
+                debug_search_furniture();
+            }
+            break;
+        case item_search_action::food:
+            debug_search_save_food();
+            break;
+        case item_search_action::history:
+            item_search_rerun_from_history( kind );
+            break;
+        case item_search_action::view:
+            debug_view_item_search_history( kind );
             break;
     }
 }
@@ -2946,58 +3315,58 @@ static void debug_search_save_items()
     if( !scope ) {
         return;
     }
-    if( *scope == item_search_scope::entire_save ) {
-        // 全存档路径自己写历史缓存并呈现结果
-        debug_scan_entire_save_core( make_wildcard_matcher( pattern ), pattern );
-        return;
-    }
+    const bool entire = ( *scope == item_search_scope::entire_save );
 
-    // 3. 扫描已载入地图（地面 / 家具存储 / 载具货舱）
+    // 3. 扫描（内存：地面 / 家具存储 / 载具货舱；全存档：逐 submap 扫落盘数据）
     std::vector<item_search_hit> hits;
-    item_search_scan( make_wildcard_matcher( pattern ), hits );
-
-    // 4. 写入历史缓存（最多 10 条，最新在前）
-    std::vector<item_search_record> history = item_search_load_history();
-    int next_id = 0;
-    for( const item_search_record &r : history ) {
-        next_id = std::max( next_id, r.id );
-    }
-    item_search_record rec;
-    rec.id = next_id + 1;
-    rec.pattern = pattern;
-    rec.world = get_avatar().get_save_id();
-    rec.generated_turn = to_turn<int>( calendar::turn );
-    rec.hits = hits;
-    history.insert( history.begin(), rec );
-    try {
-        item_search_save_history( history );
-    } catch( const std::exception &e ) {
-        popup( string_format( _( "Failed to write search cache: %s" ), e.what() ) );
-        return;
+    std::optional<full_save_scan_stats> stats;
+    if( entire ) {
+        stats = debug_scan_entire_save_core( make_wildcard_matcher( pattern ), pattern, hits );
+        if( !stats ) {
+            return;
+        }
+    } else {
+        item_search_scan( make_wildcard_matcher( pattern ), hits );
     }
 
-    // 5. 在游戏内呈现本次结果
-    item_search_show_results(
-        _( "Item search results (loaded map)" ),
-        string_format( _( "Found %d match(es) for \"%s\". Saved to history (max 10)." ),
-                       hits.size(), pattern ),
-        hits );
+    // 4. 写历史缓存并在游戏内呈现本次结果
+    item_search_finish( item_search_kind::item, pattern, pattern, hits, 0, entire,
+                        stats ? &*stats : nullptr );
 }
 
-// 从历史缓存列表里选一条记录，供"查看缓存"和"实时重扫"两种模式复用。
-// 列表展示与既有行为完全一致（最新在前），选取消/越界返回 nullopt。
-static std::optional<item_search_record> item_search_pick_from_history()
+// 历史列表的种类过滤器：物品类目同时收录 wildcard 与 fresh food 两种记录
+//（食物是物品类目下的直接搜索模式，历史归在一起）；其余类目只收自己。
+static std::function<bool( item_search_kind )> item_search_kind_filter( item_search_kind menu_kind )
+{
+    return [menu_kind]( item_search_kind k ) {
+        if( menu_kind == item_search_kind::item ) {
+            return k == item_search_kind::item || k == item_search_kind::food;
+        }
+        return k == menu_kind;
+    };
+}
+
+// 从历史缓存列表里选一条记录，供“打开历史记录”和“历史搜索”两种模式复用。
+// accept 决定列表收录哪些种类；列表最新在前，取消/越界返回 nullopt。
+static std::optional<item_search_record> item_search_pick_from_history(
+    const std::function<bool( item_search_kind )> &accept, const std::string &label )
 {
     std::vector<item_search_record> history = item_search_load_history();
-    if( history.empty() ) {
-        popup( _( "No saved item-search history yet. Run a search first." ) );
+    std::vector<size_t> idx;
+    for( size_t i = 0; i < history.size(); ++i ) {
+        if( accept( item_search_kind_from_key( history[i].kind ) ) ) {
+            idx.push_back( i );
+        }
+    }
+    if( idx.empty() ) {
+        popup( string_format( _( "No saved %s search history yet. Run a search first." ), label ) );
         return std::nullopt;
     }
     uilist menu;
-    menu.title = _( "Item search history (newest first)" );
-    menu.text = string_format( _( "%d saved search(es), up to 10 kept." ), history.size() );
-    for( size_t i = 0; i < history.size(); ++i ) {
-        const item_search_record &r = history[i];
+    menu.title = string_format( _( "%s search history (newest first)" ), label );
+    menu.text = string_format( _( "%d saved search(es), up to 10 kept." ), idx.size() );
+    for( size_t i = 0; i < idx.size(); ++i ) {
+        const item_search_record &r = history[idx[i]];
         menu.addentry( static_cast<int>( i ), true, -1,
                        string_format( "#%d  \"%s\"  -> %d hit(s)  @ turn %d  (%s)",
                                       r.id, r.pattern, static_cast<int>( r.hits.size() ),
@@ -3005,59 +3374,112 @@ static std::optional<item_search_record> item_search_pick_from_history()
     }
     menu.query();
     const int sel = menu.ret;
-    if( sel < 0 || static_cast<size_t>( sel ) >= history.size() ) {
+    if( sel < 0 || static_cast<size_t>( sel ) >= idx.size() ) {
         return std::nullopt;
     }
-    return history[sel];
+    return history[idx[sel]];
 }
 
-// 既有行为：点击历史记录 -> 直接回放当时缓存的命中结果（不重新扫描）
-static void debug_view_item_search_history()
+// 打开历史记录：回放当时缓存的命中快照（不重新扫描）
+static void debug_view_item_search_history( item_search_kind menu_kind )
 {
-    std::optional<item_search_record> rec = item_search_pick_from_history();
+    std::optional<item_search_record> rec = item_search_pick_from_history(
+        item_search_kind_filter( menu_kind ), item_search_kind_label( menu_kind ) );
     if( !rec ) {
         return;
     }
     item_search_show_results(
         string_format( _( "History #%d: \"%s\"" ), rec->id, rec->pattern ),
         string_format( _( "%d hit(s) for \"%s\" (world %s, turn %d)" ),
-                       rec->hits.size(), rec->pattern, rec->world, rec->generated_turn ),
+                       static_cast<int>( rec->hits.size() ), rec->pattern,
+                       rec->world, rec->generated_turn ),
         rec->hits );
 }
 
-// 新增：点击历史记录 -> 用其 pattern 重新对当前已载入地图做一次全量扫描，
-// 与"查看历史"的区别在于这里拿到的是实时结果，而非当初缓存的快照。
-static void debug_rescan_history_item()
+// 历史搜索：按记录种类重建匹配口径，选范围后实时重扫，并用新结果
+// 【原地刷新】该历史记录并移到最新（requirement 2#：更新历史记录文件）。
+static void item_search_rerun_from_history( item_search_kind menu_kind )
 {
-    std::optional<item_search_record> rec = item_search_pick_from_history();
-    if( !rec ) {
+    std::optional<item_search_record> picked = item_search_pick_from_history(
+        item_search_kind_filter( menu_kind ), item_search_kind_label( menu_kind ) );
+    if( !picked ) {
         return;
     }
+    const item_search_record rec = *picked;
+    const item_search_kind kind = item_search_kind_from_key( rec.kind );
+
     // 选择搜索范围：仅内存（已载入地图，快）或全量存档（慢，带进度条）
     std::optional<item_search_scope> scope = item_search_pick_scope();
     if( !scope ) {
         return;
     }
-    if( *scope == item_search_scope::entire_save ) {
-        // 全存档路径自己写历史缓存并呈现结果
-        debug_scan_entire_save_core( make_wildcard_matcher( rec->pattern ), rec->pattern );
+    const bool entire = ( *scope == item_search_scope::entire_save );
+
+    std::vector<item_search_hit> hits;
+    std::optional<full_save_scan_stats> stats;
+    std::string extra_info;
+
+    switch( kind ) {
+        case item_search_kind::food: {
+            // 食物的匹配器固定，无需输入
+            if( entire ) {
+                stats = debug_scan_entire_save_core( make_food_matcher(), rec.pattern, hits );
+            } else {
+                item_search_scan( make_food_matcher(), hits );
+            }
+            break;
+        }
+        case item_search_kind::item: {
+            std::function<bool( const item & )> match = make_wildcard_matcher( rec.query );
+            if( entire ) {
+                stats = debug_scan_entire_save_core( match, rec.pattern, hits );
+            } else {
+                item_search_scan( match, hits );
+            }
+            break;
+        }
+        case item_search_kind::function: {
+            std::optional<std::pair<std::vector<quality_id>, std::string>> qm =
+                item_search_match_qualities( rec.query );
+            if( !qm ) {
+                popup( string_format(
+                           _( "No tool quality matches \"%s\" any more (mods changed?)." ),
+                           rec.query ) );
+                return;
+            }
+            extra_info = string_format( _( "Matched quality(ies): %s." ), qm->second );
+            std::function<bool( const item & )> match = item_search_quality_matcher( qm->first );
+            if( entire ) {
+                stats = debug_scan_entire_save_core( match, rec.pattern, hits );
+            } else {
+                item_search_scan( match, hits );
+            }
+            break;
+        }
+        case item_search_kind::vehicle: {
+            if( entire ) {
+                stats = debug_scan_entire_save_vehicle_parts( rec.query, hits );
+            } else {
+                item_search_scan_vehicle_parts( rec.query, hits );
+            }
+            break;
+        }
+        case item_search_kind::furniture: {
+            if( entire ) {
+                stats = debug_scan_entire_save_furniture( rec.query, hits );
+            } else {
+                item_search_scan_furniture( rec.query, hits );
+            }
+            break;
+        }
+    }
+    if( entire && !stats ) {
+        // 玩家取消或无数据可扫
         return;
     }
-    std::vector<item_search_hit> hits;
-    item_search_scan( make_wildcard_matcher( rec->pattern ), hits );
-    item_search_show_results(
-        string_format( _( "Re-scan \"%s\" (live, loaded map)" ), rec->pattern ),
-        string_format( _( "Live re-scan of \"%s\" found %d match(es) in the loaded map. (Cached snapshot had %d.)" ),
-                       rec->pattern, static_cast<int>( hits.size() ),
-                       static_cast<int>( rec->hits.size() ) ),
-        hits );
+    item_search_finish( kind, rec.pattern, rec.query, hits, rec.id, entire,
+                        stats ? &*stats : nullptr, extra_info );
 }
-
-// 全存档扫描统计
-struct full_save_scan_stats {
-    int quads = 0;         // 参与扫描的 quad 文件数
-    long long submaps = 0; // 实际扫过的 submap 数
-};
 
 // 全存档扫描核心（物品 / 载具部件 / 家具共用）：枚举所有已落盘的 submap quad 文件
 // （maps/<seg>/<ox>.<oy>.<oz>.map），逐块加载并对每个 submap 调用 per_submap 回调，
@@ -3183,13 +3605,15 @@ static std::optional<full_save_scan_stats> full_save_scan_submaps(
 
 // 物品向全存档扫描（通配符 / 食物 / 功能品质 等匹配器通用）：
 // 复用 full_save_scan_submaps 逐块加载，扫描地面/家具物品 + 载具货舱。
-// match 决定哪些物品算命中，label 用于历史记录与结果展示。
-static void debug_scan_entire_save_core( const std::function<bool( const item & )> &match,
-                                        const std::string &label )
+// match 决定哪些物品算命中，label 仅用于进度条标题。hits 为输出参数，
+// 返回 nullopt 表示玩家取消或无数据可扫；写历史与呈现由调用方负责。
+static std::optional<full_save_scan_stats> debug_scan_entire_save_core(
+    const std::function<bool( const item & )> &match,
+    const std::string &label,
+    std::vector<item_search_hit> &hits )
 {
-    std::vector<item_search_hit> hits;
-    auto stats = full_save_scan_submaps(
-                     string_format( _( "Scanning save: %s" ), label ), &hits,
+    return full_save_scan_submaps(
+               string_format( _( "Scanning save: %s" ), label ), &hits,
     [&]( submap &sm, const tripoint &tl ) {
         // 地面 / 家具存储物品
         for( int tx = 0; tx < SEEX; ++tx ) {
@@ -3225,49 +3649,18 @@ static void debug_scan_entire_save_core( const std::function<bool( const item & 
             }
         }
     } );
-    if( !stats ) {
-        return;
-    }
-
-    // 写出历史缓存（与既有搜索一致，最多 10 条，最新在前）
-    std::vector<item_search_record> history = item_search_load_history();
-    int next_id = 0;
-    for( const item_search_record &r : history ) {
-        next_id = std::max( next_id, r.id );
-    }
-    item_search_record rec;
-    rec.id = next_id + 1;
-    rec.pattern = label;
-    rec.world = get_avatar().get_save_id();
-    rec.generated_turn = to_turn<int>( calendar::turn );
-    rec.hits = hits;
-    history.insert( history.begin(), rec );
-    try {
-        item_search_save_history( history );
-    } catch( const std::exception &e ) {
-        popup( string_format( _( "Failed to write search cache: %s" ), e.what() ) );
-        return;
-    }
-
-    // 呈现结果
-    item_search_show_results(
-        string_format( _( "Full-save scan: %s" ), label ),
-        string_format( _( "Scanned %lld submaps (%d quads) across the entire save, found %d match(es) for \"%s\". Saved to history (max 10)." ),
-                       stats->submaps, stats->quads,
-                       static_cast<int>( hits.size() ), label ),
-        hits );
 }
 
 // 全存档扫描载具部件：逐 submap 遍历 sm.vehicles 的部件名/id 子串匹配
 // （英文 id 不区分大小写），命中即记录部件名、id、所属载具与坐标。
-// 与内存版 debug_search_vehicles_by_part 的匹配口径完全一致，只是扫描范围不同。
-// 不写入历史缓存（与内存版一致：历史"实时重扫 r"是物品通配符重扫，语义不匹配）。
-static void debug_scan_entire_save_vehicle_parts( const std::string &input )
+// 与内存版 item_search_scan_vehicle_parts 的匹配口径完全一致，只是扫描范围不同。
+// hits 为输出参数，返回 nullopt 表示取消/无数据；写历史与呈现由调用方负责。
+static std::optional<full_save_scan_stats> debug_scan_entire_save_vehicle_parts(
+    const std::string &input, std::vector<item_search_hit> &hits )
 {
     const std::string needle = ascii_lower( input );
-    std::vector<item_search_hit> hits;
-    auto stats = full_save_scan_submaps(
-                     string_format( _( "Scanning save: vehicle parts matching \"%s\"" ), input ), &hits,
+    return full_save_scan_submaps(
+               string_format( _( "Scanning save: vehicle parts matching \"%s\"" ), input ), &hits,
     [&]( submap &sm, const tripoint & ) {
         for( std::unique_ptr<vehicle> &veh : sm.vehicles ) {
             if( !veh ) {
@@ -3292,27 +3685,18 @@ static void debug_scan_entire_save_vehicle_parts( const std::string &input )
             }
         }
     } );
-    if( !stats ) {
-        return;
-    }
-
-    // 呈现本次结果
-    item_search_show_results(
-        _( "Vehicle component search results (entire save)" ),
-        string_format( _( "Scanned %lld submaps (%d quads) across the entire save, found %d matching vehicle part(s) for \"%s\"." ),
-                       stats->submaps, stats->quads, static_cast<int>( hits.size() ), input ),
-        hits );
 }
 
 // 全存档扫描家具：逐 submap 遍历所有 tile 的 furn_id，对家具中文名与英文 id
-// 做子串匹配（英文不区分大小写）。与内存版 debug_search_furniture 的匹配口径一致，
-// 只是扫描范围不同。不写入历史缓存（与内存版一致）。
-static void debug_scan_entire_save_furniture( const std::string &input )
+// 做子串匹配（英文不区分大小写）。与内存版 item_search_scan_furniture 的匹配口径一致，
+// 只是扫描范围不同。hits 为输出参数，返回 nullopt 表示取消/无数据；
+// 写历史与呈现由调用方负责。
+static std::optional<full_save_scan_stats> debug_scan_entire_save_furniture(
+    const std::string &input, std::vector<item_search_hit> &hits )
 {
     const std::string needle = ascii_lower( input );
-    std::vector<item_search_hit> hits;
-    auto stats = full_save_scan_submaps(
-                     string_format( _( "Scanning save: furniture matching \"%s\"" ), input ), &hits,
+    return full_save_scan_submaps(
+               string_format( _( "Scanning save: furniture matching \"%s\"" ), input ), &hits,
     [&]( submap &sm, const tripoint &tl ) {
         for( int tx = 0; tx < SEEX; ++tx ) {
             for( int ty = 0; ty < SEEY; ++ty ) {
@@ -3337,16 +3721,6 @@ static void debug_scan_entire_save_furniture( const std::string &input )
             }
         }
     } );
-    if( !stats ) {
-        return;
-    }
-
-    // 呈现本次结果
-    item_search_show_results(
-        _( "Furniture search results (entire save)" ),
-        string_format( _( "Scanned %lld submaps (%d quads) across the entire save, found %d matching furniture for \"%s\"." ),
-                       stats->submaps, stats->quads, static_cast<int>( hits.size() ), input ),
-        hits );
 }
 
 // g：搜索「新鲜食物（未腐败）」。先让玩家选搜索范围：仅内存（已载入地图，
@@ -3359,42 +3733,25 @@ static void debug_search_save_food()
     if( !scope ) {
         return;
     }
-    if( *scope == item_search_scope::entire_save ) {
-        // 全存档路径自己写历史缓存并呈现结果
-        debug_scan_entire_save_core( make_food_matcher(), _( "fresh food (non-spoiled)" ) );
-        return;
-    }
+    const bool entire = ( *scope == item_search_scope::entire_save );
+    const std::string label = _( "fresh food (non-spoiled)" );
 
-    // 2. 扫描已载入地图（地面 / 家具存储 / 载具货舱），命中判定为"可食用且未腐败"
+    // 2. 扫描（内存：地面 / 家具存储 / 载具货舱；全存档：逐 submap 扫落盘数据），
+    //    命中判定为“可食用且未腐败”
     std::vector<item_search_hit> hits;
-    item_search_scan( make_food_matcher(), hits );
-
-    // 3. 写入历史缓存（最多 10 条，最新在前）
-    std::vector<item_search_record> history = item_search_load_history();
-    int next_id = 0;
-    for( const item_search_record &r : history ) {
-        next_id = std::max( next_id, r.id );
-    }
-    item_search_record rec;
-    rec.id = next_id + 1;
-    rec.pattern = _( "fresh food (non-spoiled)" );
-    rec.world = get_avatar().get_save_id();
-    rec.generated_turn = to_turn<int>( calendar::turn );
-    rec.hits = hits;
-    history.insert( history.begin(), rec );
-    try {
-        item_search_save_history( history );
-    } catch( const std::exception &e ) {
-        popup( string_format( _( "Failed to write search cache: %s" ), e.what() ) );
-        return;
+    std::optional<full_save_scan_stats> stats;
+    if( entire ) {
+        stats = debug_scan_entire_save_core( make_food_matcher(), label, hits );
+        if( !stats ) {
+            return;
+        }
+    } else {
+        item_search_scan( make_food_matcher(), hits );
     }
 
-    // 4. 在游戏内呈现本次结果
-    item_search_show_results(
-        _( "Fresh food search results (loaded map)" ),
-        string_format( _( "Found %d fresh, non-spoiled food item(s) in the loaded map. Saved to history (max 10)." ),
-                       hits.size() ),
-        hits );
+    // 3. 写历史缓存并在游戏内呈现本次结果
+    item_search_finish( item_search_kind::food, label, std::string(), hits, 0, entire,
+                        stats ? &*stats : nullptr );
 }
 
 // 按"功能 / 工具品质"搜索物品。例如输入"金属锯切"或"精工金属锯切"
@@ -3420,91 +3777,48 @@ static void debug_search_save_by_quality()
     }
 
     // 2. 在所有已加载的工具品质里做子串匹配
-    const std::string needle = ascii_lower( input );
-    std::vector<quality_id> matched;
-    std::vector<std::string> matched_labels;
-    for( const quality &q : all_loaded_qualities() ) {
-        const std::string name = q.name.translated();
-        const std::string id = q.id.str();
-        if( ascii_lower( name ).find( needle ) != std::string::npos ||
-            ascii_lower( id ).find( needle ) != std::string::npos ) {
-            matched.push_back( q.id );
-            matched_labels.push_back( name );
-        }
-    }
-    if( matched.empty() ) {
+    std::optional<std::pair<std::vector<quality_id>, std::string>> qm =
+        item_search_match_qualities( input );
+    if( !qm ) {
         popup( string_format( _( "No tool quality matches \"%s\". Try e.g. 金属锯切 / SAW_M / 锯." ),
                               input ) );
         return;
     }
+    const std::string pattern = string_format( _( "function: %s" ), input );
+    const std::string extra_info = string_format( _( "Matched quality(ies): %s." ), qm->second );
 
     // 3. 构造命中判定：物品（或容器内物品）提供任一匹配品质即命中
-    std::function<bool( const item & )> match = [&matched]( const item &it ) -> bool {
-        for( const quality_id &qid : matched ) {
-            if( it.get_quality( qid ) > 0 ) {
-                return true;
-            }
-        }
-        return false;
-    };
+    std::function<bool( const item & )> match = item_search_quality_matcher( qm->first );
 
     // 4. 选择搜索范围：仅内存（已载入地图，快）或全量存档（慢，带进度条）
     std::optional<item_search_scope> scope = item_search_pick_scope();
     if( !scope ) {
         return;
     }
-    if( *scope == item_search_scope::entire_save ) {
-        // 全存档路径自己写历史缓存并呈现结果
-        debug_scan_entire_save_core( match, string_format( _( "function: %s" ), input ) );
-        return;
-    }
+    const bool entire = ( *scope == item_search_scope::entire_save );
 
-    // 5. 扫描已载入地图（地面 / 家具存储 / 载具货舱）
+    // 5. 扫描（内存：地面 / 家具存储 / 载具货舱；全存档：逐 submap 扫落盘数据）
     std::vector<item_search_hit> hits;
-    item_search_scan( match, hits );
-
-    // 6. 写入历史缓存（最多 10 条，最新在前）
-    std::vector<item_search_record> history = item_search_load_history();
-    int next_id = 0;
-    for( const item_search_record &r : history ) {
-        next_id = std::max( next_id, r.id );
-    }
-    item_search_record rec;
-    rec.id = next_id + 1;
-    rec.pattern = string_format( _( "function: %s" ), input );
-    rec.world = get_avatar().get_save_id();
-    rec.generated_turn = to_turn<int>( calendar::turn );
-    rec.hits = hits;
-    history.insert( history.begin(), rec );
-    try {
-        item_search_save_history( history );
-    } catch( const std::exception &e ) {
-        popup( string_format( _( "Failed to write search cache: %s" ), e.what() ) );
-        return;
-    }
-
-    // 7. 在游戏内呈现本次结果
-    std::string matched_label;
-    for( size_t i = 0; i < matched_labels.size(); ++i ) {
-        if( i > 0 ) {
-            matched_label += ", ";
+    std::optional<full_save_scan_stats> stats;
+    if( entire ) {
+        stats = debug_scan_entire_save_core( match, pattern, hits );
+        if( !stats ) {
+            return;
         }
-        matched_label += matched_labels[i];
+    } else {
+        item_search_scan( match, hits );
     }
-    item_search_show_results(
-        _( "Tool-function search results (loaded map)" ),
-        string_format( _( "Matched %d quality(ies): %s.\nFound %d item(s) providing them in the loaded map. Saved to history (max 10)." ),
-                       static_cast<int>( matched.size() ),
-                       matched_label,
-                       static_cast<int>( hits.size() ) ),
-        hits );
+
+    // 6. 写历史缓存并在游戏内呈现本次结果
+    item_search_finish( item_search_kind::function, pattern, input, hits, 0, entire,
+                        stats ? &*stats : nullptr, extra_info );
 }
 
 // 按"载具组件（车辆部件）"名搜索载具。
 // 输入组件名子串（如 车轮 / wheel / 引擎），对所有载具部件的中文部件名与英文 id 做子串匹配
 // （英文 id 不区分大小写），命中即列出该部件所属载具名、部件名与坐标。
 // 先让玩家选搜索范围：仅内存（已载入地图，轻量）或全量存档（逐 submap 扫落盘数据）。
-// 注意：两种范围都不写入历史缓存——历史"实时重扫 r"是物品通配符重扫，语义与载具部件不匹配。
+// 两种范围都写入历史缓存，之后可从"历史搜索"重扫（requirement 1#）。
 static void debug_search_vehicles_by_part()
 {
     // 1. 让玩家输入组件名子串
@@ -3527,48 +3841,29 @@ static void debug_search_vehicles_by_part()
     if( !scope ) {
         return;
     }
-    if( *scope == item_search_scope::entire_save ) {
-        debug_scan_entire_save_vehicle_parts( input );
-        return;
-    }
+    const bool entire = ( *scope == item_search_scope::entire_save );
 
-    const std::string needle = ascii_lower( input );
-
-    // 3. 扫描已载入地图里的所有载具及其部件
-    map &here = get_map();
+    // 3. 扫描（内存：已载入地图里的所有载具及其部件；全存档：逐 submap 扫落盘数据）
     std::vector<item_search_hit> hits;
-    for( wrapped_vehicle &wv : here.get_vehicles() ) {
-        vehicle &veh = *wv.v;
-        for( const vpart_reference &vp : veh.get_all_parts_with_fakes() ) {
-            const vpart_info &vpi = vp.info();
-            const std::string pname = vpi.name();
-            const std::string pid = vpi.get_id().str();
-            // 中文部件名或英文 id 任一命中即可
-            if( ascii_lower( pname ).find( needle ) == std::string::npos &&
-                ascii_lower( pid ).find( needle ) == std::string::npos ) {
-                continue;
-            }
-            item_search_hit hit;
-            hit.name = pname;
-            hit.type_id = pid;
-            hit.pos = here.getglobal( vp.pos() );
-            hit.location = string_format( _( "in vehicle: %s" ), veh.name );
-            hits.push_back( hit );
+    std::optional<full_save_scan_stats> stats;
+    if( entire ) {
+        stats = debug_scan_entire_save_vehicle_parts( input, hits );
+        if( !stats ) {
+            return;
         }
+    } else {
+        item_search_scan_vehicle_parts( input, hits );
     }
 
-    // 4. 呈现本次结果
-    item_search_show_results(
-        _( "Vehicle component search results (loaded map)" ),
-        string_format( _( "Found %d matching vehicle part(s) for \"%s\" in the loaded map." ),
-                       static_cast<int>( hits.size() ), input ),
-        hits );
+    // 4. 写历史缓存并在游戏内呈现本次结果
+    item_search_finish( item_search_kind::vehicle, input, input, hits, 0, entire,
+                        stats ? &*stats : nullptr );
 }
 
 // e：按家具名搜索（如 电冰箱 / 电脑 / 划船机 / fridge / computer）。
 // 先让玩家选搜索范围：仅内存（已载入地图的地面家具，所有已载入 z 层，轻量）
 // 或全量存档（逐 submap 扫落盘数据）。两种范围都对家具中文名与英文 id
-// 做子串匹配（英文不区分大小写）。
+// 做子串匹配（英文不区分大小写），且都写入历史缓存（requirement 1#）。
 static void debug_search_furniture()
 {
     // 1. 让玩家输入家具名子串
@@ -3591,46 +3886,23 @@ static void debug_search_furniture()
     if( !scope ) {
         return;
     }
-    if( *scope == item_search_scope::entire_save ) {
-        debug_scan_entire_save_furniture( input );
-        return;
-    }
+    const bool entire = ( *scope == item_search_scope::entire_save );
 
-    const std::string needle = ascii_lower( input );
-
-    // 3. 扫描已载入地图的全部 z 层上的家具（未实际载入的 z 层返回空，扫描无害）
-    map &here = get_map();
+    // 3. 扫描（内存：已载入地图的全部 z 层；全存档：逐 submap 扫落盘数据）
     std::vector<item_search_hit> hits;
-    const int zmin = -OVERMAP_DEPTH;
-    const int zmax = OVERMAP_HEIGHT;
-    for( int z = zmin; z <= zmax; ++z ) {
-        for( const tripoint &p : here.points_on_zlevel( z ) ) {
-            if( !here.has_furn( p ) ) {
-                continue;
-            }
-            const furn_id furn = here.furn( p );
-            const std::string fname = furn->name();
-            const std::string fid = furn->id.str();
-            // 中文名或英文 id 任一命中即可
-            if( ascii_lower( fname ).find( needle ) == std::string::npos &&
-                ascii_lower( fid ).find( needle ) == std::string::npos ) {
-                continue;
-            }
-            item_search_hit hit;
-            hit.name = fname;
-            hit.type_id = fid;
-            hit.pos = here.getglobal( p );
-            hit.location = _( "furniture" );
-            hits.push_back( hit );
+    std::optional<full_save_scan_stats> stats;
+    if( entire ) {
+        stats = debug_scan_entire_save_furniture( input, hits );
+        if( !stats ) {
+            return;
         }
+    } else {
+        item_search_scan_furniture( input, hits );
     }
 
-    // 4. 呈现本次结果
-    item_search_show_results(
-        _( "Furniture search results (loaded map)" ),
-        string_format( _( "Found %d matching furniture for \"%s\" in the loaded map." ),
-                       static_cast<int>( hits.size() ), input ),
-        hits );
+    // 4. 写历史缓存并在游戏内呈现本次结果
+    item_search_finish( item_search_kind::furniture, input, input, hits, 0, entire,
+                        stats ? &*stats : nullptr );
 }
 
 void debug()

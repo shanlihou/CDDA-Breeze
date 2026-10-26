@@ -249,6 +249,15 @@ class item_contents
          */
         ret_val<item_pocket *> insert_item( const item &it, item_pocket::pocket_type pk_type );
         void force_insert_item( const item &it, item_pocket::pocket_type pk_type );
+        /**
+         * force_insert_item 的前置检查：物品能否塞进指定类型的口袋。
+         * 与 can_contain 的区别：不过滤 forbidden 口袋（尸体主口袋就是 forbidden 的，
+         * 只能靠 force_insert_item 绕过），但仍然受容积 / 重量 / 单件上限（max_item_volume）约束。
+         * 调用方应在 force_insert_item 之前先问这个——塞不下就自行处理（如掉落在地），
+         * 否则会造出读档时被 item_contents::combine 拒收的物品
+         * （"cannot fit into pocket while loading"），只能进 MIGRATION 口袋。
+         */
+        bool can_force_insert( const item &it, item_pocket::pocket_type pk_type ) const;
         bool can_unload_liquid() const;
 
         /**

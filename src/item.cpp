@@ -1573,6 +1573,11 @@ void item::force_insert_item( const item &it, item_pocket::pocket_type pk_type )
     update_inherited_flags();
 }
 
+bool item::can_force_insert( const item &it, item_pocket::pocket_type pk_type ) const
+{
+    return contents.can_force_insert( it, pk_type );
+}
+
 void item::set_var( const std::string &name, const int value )
 {
     std::ostringstream tmpstream;

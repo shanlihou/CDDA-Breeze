@@ -802,6 +802,19 @@ void item_contents::force_insert_item( const item &it, item_pocket::pocket_type 
     debugmsg( "ERROR: Could not insert item %s as contents does not have pocket type", it.tname() );
 }
 
+bool item_contents::can_force_insert( const item &it, item_pocket::pocket_type pk_type ) const
+{
+    for( const item_pocket &pocket : contents ) {
+        // 注意：这里故意不像 item_contents::can_contain 那样跳过 forbidden 口袋——
+        // 尸体主口袋就是 forbidden 的（只能靠 force_insert_item 绕过），
+        // 但容积 / 重量 / 单件上限仍然要查，否则造出读档时被 combine 拒收的存档。
+        if( pocket.is_type( pk_type ) && pocket.can_contain( it ).success() ) {
+            return true;
+        }
+    }
+    return false;
+}
+
 std::pair<item_location, item_pocket *> item_contents::best_pocket( const item &it,
         item_location &this_loc, const item *avoid, const bool allow_sealed, const bool ignore_settings,
         const bool nested, bool ignore_rigidity )

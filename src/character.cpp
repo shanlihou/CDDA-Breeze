@@ -9431,7 +9431,14 @@ void Character::place_corpse()
         body.set_item_temperature( units::from_celsius( 37 ) );
         map &here = get_map();
         for( item *itm : tmp ) {
-            body.force_insert_item(*itm, item_pocket::pocket_type::CONTAINER);
+            // 尸体口袋有 150 L 单件上限（corpses.json 的 max_item_volume），
+            // force_insert_item 不检查——塞不进的（如 55 加仑鼓）会在下次读档时被
+            // item_contents::combine 拒收。直接掉在原地，别造出读不回来的存档。
+            if( body.can_force_insert( *itm, item_pocket::pocket_type::CONTAINER ) ) {
+                body.force_insert_item( *itm, item_pocket::pocket_type::CONTAINER );
+            } else {
+                here.add_item_or_charges( pos(), *itm );
+            }
         }
         for( const bionic &bio : *my_bionics ) {
             if( item::type_is_defined( bio.info().itype() ) ) {
@@ -9473,7 +9480,13 @@ void Character::place_corpse( const tripoint_abs_omt &om_target )
     std::vector<item *> tmp = inv_dump();
     item body = item::make_corpse( mtype_id::NULL_ID(), calendar::turn, get_name() );
     for( item *itm : tmp ) {
-        body.force_insert_item(*itm, item_pocket::pocket_type::CONTAINER);
+        // 同 place_corpse()：塞不进尸体口袋（超过 150 L 单件上限等）就掉在落点，
+        // 避免造出读档时被 item_contents::combine 拒收的物品。
+        if( body.can_force_insert( *itm, item_pocket::pocket_type::CONTAINER ) ) {
+            body.force_insert_item( *itm, item_pocket::pocket_type::CONTAINER );
+        } else {
+            bay.add_item_or_charges( fin, *itm );
+        }
     }
     for( const bionic &bio : *my_bionics ) {
         if( item::type_is_defined( bio.info().itype() ) ) {

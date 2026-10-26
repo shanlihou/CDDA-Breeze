@@ -920,6 +920,8 @@ class item : public visitable
         ret_val<void> put_in( const item &payload, item_pocket::pocket_type pk_type,
                               bool unseal_pockets = false );
         void force_insert_item( const item &it, item_pocket::pocket_type pk_type );
+        /** force_insert_item 的前置检查，详见 item_contents::can_force_insert。 */
+        bool can_force_insert( const item &it, item_pocket::pocket_type pk_type ) const;
 
         /**
          * Returns this item into its default container. If it does not have a default container,

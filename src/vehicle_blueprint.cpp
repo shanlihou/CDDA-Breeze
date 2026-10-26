@@ -7,6 +7,7 @@
 #include <vector>
 
 #include "cata_utility.h"
+#include "debug.h"
 #include "filesystem.h"
 #include "flexbuffer_json.h"
 #include "json_loader.h"
@@ -87,32 +88,45 @@ vehicle *spawn_at( const std::string &name, const tripoint &p )
         return nullptr;
     }
 
-    std::string data;
+    // 蓝图目录是玩家手工放文件的地方，格式写错不能把游戏崩掉（JsonError 会直接
+    // std::terminate）。整个解析过程都兜住，失败一律返回 nullptr，由调用方弹
+    // 「蓝图可能已损坏」的提示。
     try {
-        data = read_entire_file( path );
-    } catch( const std::exception & ) {
-        return nullptr;
-    }
-    if( data.empty() ) {
-        return nullptr;
-    }
+        const std::string data = read_entire_file( path );
+        if( data.empty() ) {
+            return nullptr;
+        }
 
-    std::optional<JsonValue> jv = json_loader::from_string_opt( data );
-    if( !jv ) {
-        return nullptr;
-    }
-    const JsonObject jo = jv->get_object();
-    if( !jo.has_object( "vehicle" ) ) {
-        return nullptr;
-    }
-    const JsonObject vdata = jo.get_object( "vehicle" );
-    if( !vdata.has_array( "parts" ) ) {
-        return nullptr;
-    }
+        std::optional<JsonValue> jv = json_loader::from_string_opt( data );
+        if( !jv ) {
+            DebugLog( D_ERROR, D_MAIN ) << "blueprint " << name << ": not valid json";
+            return nullptr;
+        }
+        if( !jv->test_object() ) {
+            // 最常见的手滑：把 data/json/vehicles/ 下的载具模板整个拷进来了。
+            // 模板顶层是数组（一个文件可以放多辆车），跟导出的蓝图不是同一种格式。
+            DebugLog( D_ERROR, D_MAIN ) << "blueprint " << name
+                           << ": root is not an object (looks like a vehicle template)";
+            return nullptr;
+        }
+        const JsonObject jo = jv->get_object();
+        if( !jo.has_object( "vehicle" ) ) {
+            DebugLog( D_ERROR, D_MAIN ) << "blueprint " << name << ": missing \"vehicle\"";
+            return nullptr;
+        }
+        const JsonObject vdata = jo.get_object( "vehicle" );
+        if( !vdata.has_array( "parts" ) ) {
+            DebugLog( D_ERROR, D_MAIN ) << "blueprint " << name << ": missing \"parts\"";
+            return nullptr;
+        }
 
-    // 整辆车的落位 / 碰撞检查 / 地图缓存注册全部交给 map::add_vehicle_from_json，
-    // 这里只负责把 JSON 解析出来。地图里现存的载具一辆都不会被碰。
-    return get_map().add_vehicle_from_json( vdata, p );
+        // 整辆车的落位 / 碰撞检查 / 地图缓存注册全部交给 map::add_vehicle_from_json，
+        // 这里只负责把 JSON 解析出来。地图里现存的载具一辆都不会被碰。
+        return get_map().add_vehicle_from_json( vdata, p );
+    } catch( const std::exception &err ) {
+        DebugLog( D_ERROR, D_MAIN ) << "blueprint " << name << ": " << err.what();
+        return nullptr;
+    }
 }
 
 } // namespace vehicle_blueprint

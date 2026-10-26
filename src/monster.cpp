@@ -3148,7 +3148,11 @@ void monster::die(Creature* nkiller)
             if (it.has_var("DESTROY_ITEM_ON_MON_DEATH")) {
                 continue;
             }
-            if (corpse) {
+            // 尸体主口袋有 150 L 单件上限（corpses.json 的 max_item_volume），而
+            // force_insert_item 不做任何检查——超限物品（如 210 L 的 55gal_drum，
+            // 可经 sewer 死亡掉落组刷出）会在下次读档时被 item_contents::combine
+            // 拒之门外（"cannot fit into pocket while loading"）。塞不下就掉在原地。
+            if (corpse && corpse->can_force_insert(it, item_pocket::pocket_type::CONTAINER)) {
                 corpse->force_insert_item(it, item_pocket::pocket_type::CONTAINER);
             }
             else {
@@ -3310,7 +3314,12 @@ void monster::drop_items_on_death(item* corpse)
 
         // add stuff that could be worn or strapped to the creature
         if (it.is_armor()) {
-            corpse->force_insert_item(it, item_pocket::pocket_type::CONTAINER);
+            // 与 monster::die 的 inv 循环同理：塞不进尸体就别硬塞，掉在原地
+            if (corpse->can_force_insert(it, item_pocket::pocket_type::CONTAINER)) {
+                corpse->force_insert_item(it, item_pocket::pocket_type::CONTAINER);
+            } else {
+                get_map().add_item_or_charges(pos(), it);
+            }
         }
     }
 
@@ -3334,7 +3343,12 @@ void monster::drop_items_on_death(item* corpse)
                 current_best.second->insert_item(it);
             }
             else {
-                corpse->force_insert_item(it, item_pocket::pocket_type::CONTAINER);
+                // 没有可用口袋时兜底也塞进尸体，但同样要先过容积检查，塞不下就掉在原地
+                if (corpse->can_force_insert(it, item_pocket::pocket_type::CONTAINER)) {
+                    corpse->force_insert_item(it, item_pocket::pocket_type::CONTAINER);
+                } else {
+                    get_map().add_item_or_charges(pos(), it);
+                }
             }
         }
     }
